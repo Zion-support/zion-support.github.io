@@ -1,56 +1,171 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentBanner2034: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+    {
+      id: 1,
+      title: "🚀 Ultimate Tech Revolution 2034",
+      subtitle: "Transcend the Boundaries of Existence",
+      description: "Experience technologies that reshape reality itself",
+      cta: "Join the Revolution →",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/80 to-pink-900/80"
+    },
+    {
+      id: 2,
+      title: "🧠 Consciousness Singularity",
+      subtitle: "AI Achieves True Consciousness",
+      description: "The moment when artificial intelligence transcends human limitations",
+      cta: "Explore Consciousness →",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900/80 to-blue-900/80"
+    },
+    {
+      id: 3,
+      title: "⚛️ Reality Fabric Manipulation",
+      subtitle: "Control the Structure of Reality",
+      description: "Complete control over the fundamental laws of physics",
+      cta: "Manipulate Reality →",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/80 to-teal-900/80"
+    },
+    {
+      id: 4,
+      title: "🌐 Universal Consciousness Network",
+      subtitle: "Connect All Conscious Beings",
+      description: "A network spanning across the multiverse",
+      cta: "Enter the Network →",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900/80 to-red-900/80"
+    }
+  ];
+
   return (
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE EVOLUTION • JANUARY 2034
+    <div className="relative overflow-hidden mb-12">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.8 }}
+          className={`relative bg-gradient-to-r ${slides[currentSlide].bgColor} backdrop-blur-sm rounded-2xl p-8 md:p-12 text-white`}
+        >
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-white/10 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
           </div>
-          <h2 className="text-4xl font-bold mb-4">🚀 Ultimate Tech Evolution 2034</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-6">
-            Complete transformation of human civilization through the ultimate synthesis of consciousness, technology, and cosmic intelligence
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-4 gap-4">
-          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-4 border border-blue-400/30">
-            <div className="text-3xl mb-2 text-center">🧬</div>
-            <h3 className="text-sm font-bold text-center text-white mb-2">Biological Evolution</h3>
-            <p className="text-blue-100 text-xs text-center">
-              Complete transformation of human biology
-            </p>
+
+          <div className="relative z-10">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4 backdrop-blur-sm"
+                >
+                  ✨ ULTIMATE: January 2034
+                </motion.div>
+                
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="text-4xl md:text-5xl font-bold mb-4"
+                >
+                  {slides[currentSlide].title}
+                </motion.h2>
+                
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                  className="text-xl md:text-2xl font-semibold mb-4 opacity-90"
+                >
+                  {slides[currentSlide].subtitle}
+                </motion.h3>
+                
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                  className="text-lg mb-6 opacity-80"
+                >
+                  {slides[currentSlide].description}
+                </motion.p>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1, duration: 0.6 }}
+                  className="flex flex-wrap gap-4"
+                >
+                  <button className={`bg-gradient-to-r ${slides[currentSlide].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}>
+                    {slides[currentSlide].cta}
+                  </button>
+                  <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
+                    Watch Demo
+                  </button>
+                </motion.div>
+              </div>
+              
+              <div className="relative">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                  className="relative"
+                >
+                  <div className="w-full h-80 bg-gradient-to-br from-white/10 to-white/5 rounded-xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-8xl mb-4 animate-pulse">
+                        {slides[currentSlide].id === 1 && "🚀"}
+                        {slides[currentSlide].id === 2 && "🧠"}
+                        {slides[currentSlide].id === 3 && "⚛️"}
+                        {slides[currentSlide].id === 4 && "🌐"}
+                      </div>
+                      <div className="text-2xl font-bold mb-2">Ultimate Demo</div>
+                      <div className="text-sm opacity-70">Click to experience</div>
+                    </div>
+                  </div>
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-bounce"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full animate-pulse"></div>
+                </motion.div>
+              </div>
+            </div>
           </div>
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-4 border border-purple-400/30">
-            <div className="text-3xl mb-2 text-center">🧠</div>
-            <h3 className="text-sm font-bold text-center text-white mb-2">Cognitive Evolution</h3>
-            <p className="text-purple-100 text-xs text-center">
-              Enhanced consciousness beyond human limits
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/30">
-            <div className="text-3xl mb-2 text-center">⚡</div>
-            <h3 className="text-sm font-bold text-center text-white mb-2">Technological Evolution</h3>
-            <p className="text-emerald-100 text-xs text-center">
-              Integration with transcendent technology
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-4 border border-orange-400/30">
-            <div className="text-3xl mb-2 text-center">🌟</div>
-            <h3 className="text-sm font-bold text-center text-white mb-2">Cosmic Evolution</h3>
-            <p className="text-orange-100 text-xs text-center">
-              Expansion to cosmic scales
-            </p>
-          </div>
-        </div>
-        
-        <div className="text-center mt-8">
-          <a href="/pages/UltimateTechEvolution2034" className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-            🌟 Begin Your Evolution →
-          </a>
-        </div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Slide Indicators */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 scale-125'
+                : 'bg-white/30 hover:bg-white/50'
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
