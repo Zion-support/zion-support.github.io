@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { getPostById } from '../../../data/blog';
+>>>>>>> origin/feat/blog-content-and-promo
 
-interface BlogPostMeta {
-  id: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  author: string;
-  date: string;
-  readTime: string;
-}
+type Params = { params: { id: string } };
 
+<<<<<<< HEAD
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -441,56 +438,48 @@ export function generateStaticParams() {
 
 export default function BlogDetailPage({ params }: { params: { id: string } }) {
   const post = POSTS[params.id];
+=======
+export default function BlogPostPage({ params }: Params) {
+  const post = getPostById(params.id);
+>>>>>>> origin/feat/blog-content-and-promo
 
   if (!post) {
     return (
-      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl font-bold mb-4">Article not found</h1>
-          <p className="text-gray-500 mb-6">The article you are looking for does not exist.</p>
-          <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
-            ← Back to Blog
-          </Link>
-        </div>
+      <div className="max-w-3xl mx-auto px-4 py-16">
+        <h1 className="text-3xl font-bold mb-4">Article not found</h1>
+        <p className="text-gray-600 mb-6">The article you are looking for does not exist or has been moved.</p>
+        <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">{post.category}</span>
-            <span className="text-gray-500 text-sm">{post.readTime}</span>
+    <article className="min-h-screen">
+      <header className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="mb-3 flex items-center gap-2">
+            <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">{post.category}</span>
+            <span className="text-xs text-blue-100">{new Date(post.date).toLocaleDateString()}</span>
+            <span className="text-xs text-blue-100">• {post.readTime}</span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
-          <div className="flex items-center gap-3 text-gray-600 text-sm">
-            <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-              <span className="text-gray-700 text-sm font-medium">
-                {post.author.split(' ').map((n) => n[0]).join('')}
-              </span>
-            </div>
-            <span className="font-medium">{post.author}</span>
-            <span>•</span>
-            <span>{new Date(post.date).toLocaleDateString()}</span>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">{post.title}</h1>
+          <p className="text-blue-100 mt-4 max-w-2xl">{post.excerpt}</p>
+        </div>
+      </header>
+
+      <div className="max-w-3xl mx-auto px-4 py-10">
+        <div className="prose prose-lg max-w-none prose-invert">
+          <p>{post.content || 'Content coming soon.'}</p>
         </div>
 
-        <p className="text-xl text-gray-700 mb-8">{post.excerpt}</p>
-
-        <article className="prose prose-lg max-w-none">
-          {post.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </article>
-
-        <div className="mt-12">
-          <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
-            ← Back to Blog
-          </Link>
+        <div className="mt-10">
+          <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
         </div>
       </div>
-    </div>
+    </article>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/feat/blog-content-and-promo

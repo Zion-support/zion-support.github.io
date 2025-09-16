@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 <<<<<<< HEAD
 import Link from 'next/link';
+=======
+import React from 'react';
+>>>>>>> origin/feat/blog-content-and-promo
 import FeatureCard from './components/FeatureCard';
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
@@ -439,6 +443,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
 =======
@@ -466,6 +471,10 @@ export default function HomePage() {
               <a href="/blog/ai-governance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance 2025
 >>>>>>> origin/feat/blog-ai-governance
+=======
+              <a href="/blog/ai-safety-audit-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Safety Audit 2025
+>>>>>>> origin/feat/blog-content-and-promo
               </a>
 >>>>>>> origin/feature/new-content-promotion
             </div>
