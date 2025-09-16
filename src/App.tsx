@@ -113,22 +113,17 @@ import EdgeAICompliance2026 from './pages/EdgeAICompliance2026';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
-import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
 import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
 import NextGenAIRevolution2026 from './pages/NextGenAIRevolution2026';
 import NextGenTechShowcase2025 from './pages/NextGenTechShowcase2025';
 import OperationalEvalGates2026 from './pages/OperationalEvalGates2026';
-import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
 import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import QuantumConsciousnessRevolution2025 from './pages/QuantumConsciousnessRevolution2025';
 import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
 import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
-import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
 import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
-import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
 import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthrough2025';
-import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import SpaceTechRevolution2025 from './pages/SpaceTechRevolution2025';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
@@ -492,8 +487,6 @@ const App: React.FC = () => {
           <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
-          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
@@ -502,7 +495,6 @@ const App: React.FC = () => {
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedAnalyticsInsights2025" element={<AdvancedAnalyticsInsights2025 />} />
           <Route path="/pages/TrustedRAGPlaybook2026" element={<TrustedRAGPlaybook2026 />} />
@@ -526,9 +518,7 @@ const App: React.FC = () => {
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/QuantumConsciousnessRevolution2025" element={<QuantumConsciousnessRevolution2025 />} />
           <Route path="/pages/SyntheticIntelligenceRevolution2025" element={<SyntheticIntelligenceRevolution2025 />} />
-          <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
           <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
-          <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
