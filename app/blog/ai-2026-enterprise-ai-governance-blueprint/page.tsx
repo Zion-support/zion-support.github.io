@@ -1,20 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
+
+export const metadata = {
+  title: 'AI 2026: Enterprise AI Governance Blueprint | Zion Tech Group',
+  description: 'A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly in 2026.',
+  keywords: [
+    'AI governance', 'policy-as-code', 'model risk management', 'AI compliance', 'AI monitoring', 'guardrails'
+  ],
+};
 
 const EnterpriseAIGovernanceBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
         title="AI 2026: Enterprise AI Governance Blueprint"
-        description="A practical blueprint for establishing robust, scalable AI governance across the enterprise in 2026."
-        keywords="AI governance, risk management, AI policy, model oversight, 2026"
+        description="A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly."
+        keywords="AI governance, policy-as-code, model risk management, AI compliance, AI monitoring, guardrails"
         url="/blog/ai-2026-enterprise-ai-governance-blueprint"
       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Enterprise AI</p>
+          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Governance</p>
           <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Enterprise AI Governance Blueprint</h1>
           <p className="text-lg text-gray-600 mt-4">How to implement policy-as-code, model risk management, and continuous monitoring to scale AI safely and compliantly.</p>
         </header>

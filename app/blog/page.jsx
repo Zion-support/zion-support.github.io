@@ -9,10 +9,26 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+<<<<<<< HEAD:app/blog/page.jsx
       title: "AI 2026: Agent Risk Maturity Matrix",
       description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
       slug: "ai-2026-agent-risk-maturity-matrix",
       category: "AI Governance",
+=======
+      title: "AI 2026: Enterprise AI Governance Blueprint",
+      description: "Policy-as-code, model risk tiers, and runtime monitoring to scale AI safely across the enterprise.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/ai-governance-blueprint-2026.jpg"
+    },
+    {
+      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
+      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
+      slug: "ai-2026-secure-agent-architecture",
+      category: "Security Architecture",
+>>>>>>> origin/feature/add-governance-blueprint-content:app/blog/page.tsx
       date: "2025-09-15",
       featured: true,
       image: "/images/agent-risk-maturity-2026.jpg"
