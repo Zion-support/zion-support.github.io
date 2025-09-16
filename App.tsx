@@ -202,6 +202,9 @@ import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBanner2026';
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import NewServicesShowcase2026 from './src/components/NewServicesShowcase2026';
+import NewContentShowcase2026 from './src/pages/NewContentShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -250,6 +253,16 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Banner - highlights new 2026 content */}
                 <div className="mb-12">
                   <RevolutionaryContentBanner2026 />
+                </div>
+                
+                {/* NEW: New Content Promotion Banner 2026 */}
+                <div className="mb-12">
+                  <NewContentPromotionBanner2026 />
+                </div>
+                
+                {/* NEW: New Services Showcase 2026 */}
+                <div className="mb-12">
+                  <NewServicesShowcase2026 />
                 </div>
                 
                 {/* New Content Advertising Banner */}
