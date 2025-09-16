@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2028: React.FC = () => {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
 
   const technologies = {
@@ -52,7 +51,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
         'Interdimensional Reality'
       ],
       color: 'from-orange-500 to-red-500'
-=======
   const [activeTab, setActiveTab] = useState('breakthrough');
 
   const tabs = [
@@ -108,7 +106,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-16 mb-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -117,7 +114,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
           </h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Explore our cutting-edge technologies with interactive demonstrations and real-time capabilities
-=======
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -131,7 +127,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-<<<<<<< HEAD
         <div className="flex flex-wrap justify-center mb-12 gap-4">
           {Object.entries(technologies).map(([key, tech]) => (
             <button
@@ -199,7 +194,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
             {tabs.map((tab) => (
@@ -230,7 +224,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Technology Stats */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="text-center">
@@ -263,7 +256,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {content[activeTab as keyof typeof content].features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300">
