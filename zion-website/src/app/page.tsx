@@ -1,8 +1,6 @@
 // @ts-nocheck
-import React from 'react'
-import Link from 'next/link'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
+import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
@@ -36,14 +34,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Autonomous Experimentation Toolkit v1.0 —
-            <a href="/updates/autonomous-experimentation-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
+            New: Evidence Vault v1.1 —
+            <a href="/updates/agent-evidence-vault-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also: Agent Risk Dashboard v1.1 —
+            <a href="/updates/agent-risk-dashboard-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Guide: Multimodal Agents Guardrails (2026) —
             <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Also: Cost Optimizer v2.0 Deep Dive —
-            <a href="/updates/real-time-agent-cost-optimizer-2-0-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">architecture & KPIs</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
