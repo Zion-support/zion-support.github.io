@@ -1,20 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Accessibility, 
   Eye, 
   EyeOff, 
   Type, 
-=======
   Palette, 
   MousePointer, 
   Keyboard, 
@@ -24,7 +19,6 @@ import {
   Check,
   AlertTriangle,
   Info,
-=======
   Sun,
   Moon,
   Smartphone,
@@ -36,7 +30,6 @@ import {
   RotateCcw,
   HelpCircle,
   Zap
-=======
   Contrast, 
   ZoomIn, 
   ZoomOut,
@@ -45,7 +38,6 @@ import {
   Monitor,
   Smartphone,
   Tablet
-=======
   ZoomIn, 
   ZoomOut, 
   Contrast, 
@@ -55,7 +47,6 @@ import {
   Keyboard,
   MousePointer,
   BookOpen
-=======
   MousePointer, 
   Keyboard,
   Sun,
@@ -66,7 +57,6 @@ import {
   Plus,
   Minus,
   RotateCcw
-=======
   Volume2, 
   VolumeX, 
   MousePointer, 
@@ -98,7 +88,6 @@ interface AccessibilitySettings {
   // Visual
   highContrast: boolean;
   largeText: boolean;
-=======
   fontSize: number;
   EyeIcon, 
   EyeSlashIcon, 
@@ -119,7 +108,6 @@ interface AccessibilitySettings {
   largeText: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
-=======
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
@@ -134,11 +122,9 @@ interface AccessibilitySettings {
   showKeyboardShortcuts: boolean;
   showScreenReaderHints: boolean;
   showAccessibilityInfo: boolean;
-=======
   fontSize: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   deviceMode: 'desktop' | 'tablet' | 'mobile';
-=======
   theme: 'light' | 'dark' | 'auto';
 }
 
@@ -148,14 +134,12 @@ interface EnhancedAccessibilityProps {
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ 
   position = 'bottom-right' 
-=======
   theme: 'light' | 'dark' | 'auto';
 }
 
 const EnhancedAccessibility: React.FC<{ position?: 'top-right' | 'bottom-right' | 'top-left' | 'bottom-left' }> = ({ 
   position = 'bottom-right' 
 }) => {
-=======
 interface EnhancedAccessibilityProps {
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 }
@@ -163,14 +147,12 @@ interface EnhancedAccessibilityProps {
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ 
   position = 'bottom-right' 
 }) => {
-=======
   soundEnabled: boolean;
   focusIndicator: boolean;
   screenReader: boolean;
 }
 
 export const EnhancedAccessibility: React.FC = () => {
-=======
 }
 
 const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }> = ({ 
@@ -181,9 +163,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
-=======
     largeText: false,
-=======
     fontSize: 100,
     reducedMotion: false,
     fontSize: 16,
@@ -191,7 +171,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     screenReader: false,
     keyboardNavigation: false,
     colorBlindness: 'none',
-=======
     focusIndicator: true,
     colorBlindness: 'none',
     dyslexia: false,
@@ -245,7 +224,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     } else {
       root.classList.remove('reduced-motion');
       root.style.removeProperty('--animation-duration');
-=======
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -589,7 +567,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     
     // High contrast mode
     if (settings.highContrast) {
-=======
     fontSize: 16,
     colorBlindMode: 'none',
     deviceMode: 'desktop'
@@ -672,7 +649,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     if (!settings.keyboardNavigation) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-=======
   fontSize: number; // 50% to 200%
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   reducedMotion: boolean;
@@ -747,7 +723,6 @@ const EnhancedAccessibility: React.FC = () => {
     { command: 'reduced motion', action: 'reducedMotion', description: 'Toggle reduced motion' },
     { command: 'help', action: 'help', description: 'Show keyboard shortcuts' }
   ];
-=======
       const focusableElements = document.querySelectorAll(
         'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
       );
@@ -910,7 +885,6 @@ const EnhancedAccessibility: React.FC = () => {
   // Get position classes
   const getPositionClasses = () => {
     switch (position) {
-=======
   const announceToScreenReader = (message: string) => {
     if (settings.screenReader) {
       setAnnouncements(prev => [...prev, message]);
@@ -1211,14 +1185,12 @@ const EnhancedAccessibility: React.FC = () => {
         className={`fixed ${getPositionClasses()} z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 ${className}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-=======
       {/* Accessibility Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed ${getPositionClasses()} z-50 p-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50`}
         aria-label="Accessibility settings"
         aria-expanded={isOpen}
-=======
       {/* Screen Reader Announcements */}
       <div 
         aria-live="polite" 
@@ -1234,7 +1206,6 @@ const EnhancedAccessibility: React.FC = () => {
       >
         <Eye className="w-6 h-6" />
       </button>
-=======
     soundEnabled: true,
     focusIndicator: true,
     screenReader: false
@@ -1422,7 +1393,6 @@ const EnhancedAccessibility: React.FC = () => {
       >
         <Accessibility className="w-6 h-6" />
       </button>
-=======
       case 'top-right':
         return 'top-6 right-6';
       case 'top-left':
@@ -1490,7 +1460,6 @@ const EnhancedAccessibility: React.FC = () => {
                   >
                     <X className="w-5 h-5" />
                   </button>
-=======
       {/* Accessibility Panel */}
       <div 
         ref={accessibilityRef}
@@ -1663,7 +1632,6 @@ const EnhancedAccessibility: React.FC = () => {
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-=======
       {isOpen && (
         <div
           ref={panelRef}
@@ -1710,7 +1678,6 @@ const EnhancedAccessibility: React.FC = () => {
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
-=======
       {isOpen && (
         <div className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700`}>
           {/* Header */}
@@ -1893,7 +1860,6 @@ const EnhancedAccessibility: React.FC = () => {
                     aria-label={`Set font size to ${size}`}
                   >
                     {size.charAt(0).toUpperCase() + size.slice(1)}
-=======
             {/* Theme Selection */}
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -1914,7 +1880,6 @@ const EnhancedAccessibility: React.FC = () => {
                     {theme === 'light' && <Sun className="w-4 h-4" />}
                     {theme === 'dark' && <Moon className="w-4 h-4" />}
                     {theme === 'auto' && <Monitor className="w-4 h-4" />}
-=======
               {/* Motion and Interaction */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center">
@@ -2155,7 +2120,6 @@ const EnhancedAccessibility: React.FC = () => {
           </filter>
         </defs>
       </svg>
-=======
       {/* Screen Reader Announcements */}
       {announcements.length > 0 && (
         <div
@@ -2268,7 +2232,6 @@ const EnhancedAccessibility: React.FC = () => {
           font-size: var(--font-size-base);
         }
       `}</style>
-=======
 
               {/* Footer */}
               <div className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-3 text-center">
@@ -2296,8 +2259,6 @@ const EnhancedAccessibility: React.FC = () => {
         </AnimatePresence>
       </div>
     </>
-=======
-=======
   }, [isVisible, settings]);
 
   // Apply accessibility settings to DOM
@@ -3091,14 +3052,12 @@ const EnhancedAccessibility: React.FC = () => {
         </audio>
       </motion.div>
     </AnimatePresence>
-=======
           {/* Help Text */}
           <div className="mt-4 p-3 bg-gray-100 dark:bg-gray-700 rounded-md">
             <p className="text-xs text-gray-600 dark:text-gray-400">
               Use Tab to navigate, Enter/Space to activate, and Escape to close. 
               These settings are saved automatically.
             </p>
-=======
             {/* Reduced Motion */}
             <div className="flex items-center justify-between">
               <div className="flex items-center">

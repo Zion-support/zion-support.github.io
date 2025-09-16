@@ -17,7 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -68,7 +67,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
     };
     posts.unshift(post);
     writePosts(posts);

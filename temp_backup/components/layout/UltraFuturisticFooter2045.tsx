@@ -242,7 +242,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
                 {quickLinks.map((link) => (
                   <Link
                     <social.icon />
-=======
                     key={link.name}
                     href={link.href}
                     className="text-sm text-white/70 hover:text-cyan-400 transition-colors"

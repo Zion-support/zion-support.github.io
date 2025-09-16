@@ -38,7 +38,6 @@ const Pricing: React.FC = () => {
         'Standard response time'
       ],
       color: 'from-blue-500 to-cyan-500',
-=======
       price: {
         monthly: 99,
         annual: 79
@@ -71,7 +70,6 @@ const Pricing: React.FC = () => {
         'No dedicated account manager'
       ],
       color: 'from-purple-500 to-pink-500',
-=======
       price: {
         monthly: 299,
         annual: 239
@@ -110,7 +108,6 @@ const Pricing: React.FC = () => {
       ],
       limitations: [],
       color: 'from-orange-500 to-red-500',
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -166,7 +163,6 @@ export default function Pricing() {
         'SLA Guarantees'
       ],
       cta: 'Contact Sales',
-=======
       price: {
         monthly: 999,
         annual: 799
@@ -342,7 +338,6 @@ export default function Pricing() {
             {/* Billing Toggle */}
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-=======
   const addOns = [
     {
       name: 'AI Model Training',
@@ -995,7 +990,6 @@ export default function Pricing() {
               <Phone className="w-5 h-5 mr-2" />
               Call Us
             </a>
-=======
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -1019,7 +1013,6 @@ export default function Pricing() {
             Questions? Our team is here to help you choose the right plan.
           </p>
         </div>
-=======
       </div>
 
       {/* CTA Section */}
@@ -1042,7 +1035,6 @@ export default function Pricing() {
               >
                 Contact Sales
               </Link>
-=======
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
@@ -1169,7 +1161,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-=======
       </div>
     </div>
   );

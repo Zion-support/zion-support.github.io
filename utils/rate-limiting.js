@@ -30,38 +30,3 @@ class RateLimiter {
   }
 }
 
-<<<<<<< HEAD
-=======
-export const rate_limiter = new RateLimiter ();
-export { RateLimiter }
-;
-}
-export const rate_limiter = new RateLimiter ();
-export { RateLimiter }
-}}
-}};
-export const rateLimiter = new RateLimiter();
-export { RateLimiter }
-}
-export const rateLimiter = new RateLimiter();
-
-export const rate_limiter = new RateLimiter ();
-export { RateLimiter }
-;
-}}export const rateLimiter = new RateLimiter()export { RateLimiter }
-}
-export const rateLimiter = new RateLimiter()export const rateLimiter = new RateLimiter()export { RateLimiter }
-}
-export const rateLimiter  = new RateLimiter()export const rate_limiter = new RateLimiter ()export { RateLimiter }}}export const rate_limiter = new RateLimiter ()export { RateLimiter }}
-export const rate_limiter = new RateLimiter ()export { RateLimiter }}export const rateLimiter = new RateLimiter()export { RateLimiter }export { RateLimiter };
-export { RateLimiter }}export const rateLimiter = new RateLimiter()export { RateLimiter }}
-export const rate_limiter = new RateLimiter ()export { RateLimiter }export { RateLimiter }
-export const rate_limiter = new RateLimiter ();
-export { RateLimiter }
-;
-;
-
-};
->>>>>>> origin/merge-pr-12271
-export const rateLimiter = new RateLimiter();
-export { RateLimiter };

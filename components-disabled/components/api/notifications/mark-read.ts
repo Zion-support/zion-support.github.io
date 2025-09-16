@@ -16,7 +16,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
     if (error) return res.status(200).json({ ok: true }); // tolerate in dev
 
     return res.status(200).json({ ok: true });

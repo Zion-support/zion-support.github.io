@@ -40,7 +40,6 @@
 
   
     'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
-=======
     'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
   ];
 

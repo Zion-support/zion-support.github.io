@@ -91,7 +91,6 @@ const Terms: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-=======
 import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -139,7 +138,6 @@ export default function Terms() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
               </h2>
@@ -162,7 +160,6 @@ export default function Terms() {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
                 User Obligations
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -212,8 +209,6 @@ export default function Terms() {
         </section>
 
         {/* Liability Limitations */}
-=======
-=======
         {/* Intellectual Property Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,8 +221,6 @@ export default function Terms() {
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Liability & Limitations
-=======
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Intellectual Property
               </h2>
@@ -237,7 +230,6 @@ export default function Terms() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -294,7 +286,6 @@ export default function Terms() {
           </div>
         </section>
 
-=======
         {/* Limitation of Liability Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,8 +298,6 @@ export default function Terms() {
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Questions About Terms?
-=======
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Limitation of Liability
               </h2>
@@ -354,12 +343,9 @@ export default function Terms() {
         </section>
 
         {/* CTA Section */}
-=======
-=======
         {/* Contact Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
         {/* Contact Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
@@ -367,7 +353,6 @@ export default function Terms() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Questions About These Terms?
               </h2>
@@ -388,7 +373,6 @@ export default function Terms() {
                 >
                   General Contact
                 </a>
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Questions About These Terms?
@@ -418,7 +402,6 @@ export default function Terms() {
         </section>
       </div>
     </Layout>
-=======
       {/* Terms Overview */}
       <section id="terms-sections" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

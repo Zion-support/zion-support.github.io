@@ -16,7 +16,6 @@ export default function AIAutonomousVehiclePlatform(props: any) {
         'White-label solutions available',;
         'Regulatory compliance tools';
       ]};
-=======
         'Unlimited vehicle management','
         'Custom autonomous algorithms','
         '24/7 dedicated support',;'

@@ -16,12 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-<<<<<<< HEAD
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": ["vite/client", "node"]
   },
-<<<<<<< HEAD
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
@@ -38,19 +37,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "coverage"
+    "**/*.spec.tsx"
   ]
 }
-=======
-  "include": ["src", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-}
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
-    "types": ["vite/client", "node"]
-  },
-  "include": ["**/*"],
-  "exclude": ["node_modules", "dist", "build", "coverage"]
-}
->>>>>>> cursor/create-and-deploy-new-content-b9ff
