@@ -31,6 +31,13 @@ export default function Footer() {
         <div className="text-center">
           <p className="text-base text-gray-400">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
         </div>
+<<<<<<< HEAD
+=======
+        <div className="mt-12 border-t border-gray-800 pt-8">
+          <p className="text-base text-gray-400 xl:text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+        </div>
+        <p className="mt-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Zion Tech Group</p>
+>>>>>>> cursor/create-and-deploy-new-content-d07c
       </div>
     </footer>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 
+<<<<<<< HEAD
 function RealTimeModelRoutingPlaybookInner() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-white">
@@ -18,6 +19,8 @@ function RealTimeModelRoutingPlaybookInner() {
   )
 }
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d07c
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
