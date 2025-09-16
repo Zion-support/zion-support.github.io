@@ -141,6 +141,21 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Policy‑as‑Code Approvals Starter (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-blue-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Policy‑as‑Code Approvals Starter</h2>
+              <p className="text-gray-600 mt-2">Minimal approval policies with risk tiers and evidence you can ship today.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/content/ai-2026-policy-approvals-starter" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">Read Starter</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* New Promos: Newly published on Sept 16, 2025 */}
       <section className="py-6 bg-gradient-to-r from-emerald-50 to-emerald-100/30">
@@ -161,6 +176,21 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Cost Controls — Deep Dive</h3>
               <p className="text-gray-600">Policy‑aware budgets, approvals, and cost scorecards for predictable spend.</p>
             </Link>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Incident Lifecycle Playbook (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-rose-50 to-red-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-red-100">
+            <div>
+              <p className="text-sm font-semibold text-rose-700">New guide</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Incident Lifecycle Playbook</h2>
+              <p className="text-gray-600 mt-2">Detect, triage, contain, and learn with evidence at every step.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/content/ai-2026-incident-lifecycle-playbook" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Open Playbook</Link>
+            </div>
           </div>
         </div>
       </section>
