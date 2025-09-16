@@ -267,12 +267,8 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
-<<<<<<< HEAD
       </div>
     </>
-=======
-    </div>
->>>>>>> cursor/create-and-deploy-new-content-ed0b
   );
 };
 

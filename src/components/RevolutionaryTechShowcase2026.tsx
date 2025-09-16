@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -42,7 +38,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -73,56 +68,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg`
                     : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
-=======
-        <divdiv
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY TECH SHOWCASE • 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the most advanced technologies of 2026 with our comprehensive showcase 
-            of AI innovations, quantum computing breakthroughs, and neural interface technologies.
-          </p>
-        </divdiv>
-
-        {/* Featured Showcase Items */}
-        <divdiv
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
-          {showcaseItems.filter(item => item.featured).map((item, index) => (
-            <divdiv
-              key={item.id}
-              className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => window.location.href = item.link}
-            >
-              <div className="text-6xl mb-6 text-center">{item.image}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{item.title}</h3>
-              <p className="text-white/80 mb-6 text-center">{item.description}</p>
-              <div className="text-center">
-                <span className="inline-block bg-white/20 text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold">
-                  Explore →
-                </span>
-              </div>
-            </divdiv>
-          ))}
-        </divdiv>
-
-        {/* All Showcase Items */}
-        <divdiv
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12">All Technologies</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {showcaseItems.map((item, index) => (
-              <divdiv
-                key={item.id}
-                className={`bg-gradient-to-br ${item.gradient}/10 backdrop-blur-sm rounded-xl p-6 border border-white/5 hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => window.location.href = item.link}
->>>>>>> cursor/create-and-deploy-new-content-79ca
               >
                 <span className="text-2xl mr-3">{tech.icon}</span>
                 <span className="font-semibold">{tech.title.split(' ')[0]}</span>
@@ -251,7 +196,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               </divdiv>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* CTA Section */}
@@ -260,47 +204,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Join us in the most significant technological revolution in human history. 
             Transform your reality with our breakthrough technologies.
-=======
-        </divdiv>
-
-        {/* Technology Categories */}
-        <divdiv
-          className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12">Technology Categories</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4">🤖</div>
-              <h4 className="text-xl font-bold mb-2">Artificial Intelligence</h4>
-              <p className="text-purple-200 text-sm">Advanced AI systems and machine learning technologies</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">⚡</div>
-              <h4 className="text-xl font-bold mb-2">Quantum Computing</h4>
-              <p className="text-purple-200 text-sm">Next-generation quantum processors and algorithms</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">🧬</div>
-              <h4 className="text-xl font-bold mb-2">Neural Interfaces</h4>
-              <p className="text-purple-200 text-sm">Brain-computer interfaces and neural technologies</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">📊</div>
-              <h4 className="text-xl font-bold mb-2">Analytics</h4>
-              <p className="text-purple-200 text-sm">Advanced analytics and data processing systems</p>
-            </div>
-          </div>
-        </divdiv>
-
-        {/* Call to Action */}
-        <divdiv
-          className="text-center"
-        >
-          <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Explore our revolutionary technology showcase and discover the innovations 
-            that are shaping the future of humanity.
->>>>>>> cursor/create-and-deploy-new-content-79ca
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -310,11 +213,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               Contact Our Experts
             </button>
           </div>
-<<<<<<< HEAD
         </div>
-=======
-        </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
     </div>
   );
