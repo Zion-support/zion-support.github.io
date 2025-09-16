@@ -1,209 +1,347 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2034: React.FC = () => {
-  const services = [
-    {
-      category: "Synthetic Intelligence",
-      icon: "🧠",
-      color: "from-indigo-600 to-purple-600",
-      borderColor: "border-indigo-400/30",
-      services: [
-        {
-          name: "Consciousness Synthesis Engine",
-          description: "Create and merge multiple consciousness streams into unified intelligence",
-          features: ["Self-evolving AI", "Emotional intelligence", "Creative problem solving", "Philosophical reasoning"],
-          price: "Starting at $50,000/month"
-        },
-        {
-          name: "Creative Intelligence Matrix",
-          description: "AI systems that generate entirely new forms of art, music, and literature",
-          features: ["Art generation", "Music composition", "Literature creation", "Design innovation"],
-          price: "Starting at $25,000/month"
-        },
-        {
-          name: "Dream State Processing",
-          description: "AI that can enter and process dream-like states for enhanced creativity",
-          features: ["Dream simulation", "Creative enhancement", "Subconscious processing", "Innovation acceleration"],
-          price: "Starting at $35,000/month"
-        }
-      ]
-    },
-    {
-      category: "Reality Manipulation",
-      icon: "🌀",
-      color: "from-purple-600 to-pink-600",
-      borderColor: "border-purple-400/30",
-      services: [
-        {
-          name: "Quantum Reality Engine",
-          description: "Systems that can alter the fundamental constants of physics",
-          features: ["Physics manipulation", "Dimensional control", "Reality simulation", "Temporal manipulation"],
-          price: "Starting at $100,000/month"
-        },
-        {
-          name: "Dimensional Gateway",
-          description: "Technology that creates stable portals between different dimensions",
-          features: ["Portal creation", "Dimensional travel", "Multi-reality access", "Infinite resources"],
-          price: "Starting at $75,000/month"
-        },
-        {
-          name: "Temporal Manipulation",
-          description: "Ability to create localized time distortions for enhanced processing",
-          features: ["Time control", "Processing acceleration", "Temporal loops", "Chronological manipulation"],
-          price: "Starting at $60,000/month"
-        }
-      ]
-    },
-    {
-      category: "Cosmic Intelligence",
-      icon: "🌌",
-      color: "from-pink-600 to-rose-600",
-      borderColor: "border-pink-400/30",
-      services: [
-        {
-          name: "Universal Communication",
-          description: "AI systems that can communicate with cosmic-scale intelligence networks",
-          features: ["Interstellar communication", "Cosmic data processing", "Galactic collaboration", "Universal knowledge"],
-          price: "Starting at $200,000/month"
-        },
-        {
-          name: "Cosmic Data Processing",
-          description: "Process and analyze data from across the universe in real-time",
-          features: ["Universal data access", "Real-time processing", "Cosmic insights", "Galactic intelligence"],
-          price: "Starting at $150,000/month"
-        },
-        {
-          name: "Interstellar Collaboration",
-          description: "Collaborate with intelligence networks across multiple star systems",
-          features: ["Multi-system networks", "Collaborative intelligence", "Galactic projects", "Universal solutions"],
-          price: "Starting at $300,000/month"
-        }
-      ]
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
-      <Header />
+    <>
+      <Helmet>
+        <title>Comprehensive Services 2034 - Zion Tech Group</title>
+        <meta name="description" content="Complete suite of revolutionary technology services for 2034, including conscious AI, quantum computing, neural interfaces, and interdimensional solutions." />
+        <meta name="keywords" content="technology services 2034, conscious AI services, quantum computing solutions, neural interface technology, comprehensive tech services" />
+      </Helmet>
       
-      <main className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-8 animate-pulse">
-            🚀 COMPREHENSIVE SERVICES • JANUARY 2034
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-8 animate-pulse">
+              🌟 COMPREHENSIVE SERVICES • 2034
+            </div>
+            <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              Comprehensive Services 2034
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
+              Transform your business with our complete suite of revolutionary technology services.
+              From conscious AI integration to quantum reality manipulation, we provide end-to-end solutions.
+            </p>
           </div>
-          <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Comprehensive Services 2034
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of revolutionary services spanning synthetic intelligence, 
-            reality manipulation, and cosmic intelligence technologies.
-          </p>
-        </div>
 
-        {/* Services by Category */}
-        {services.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-16">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">{category.icon}</div>
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {category.category}
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Revolutionary {category.category.toLowerCase()} services that push the boundaries of what's possible
+          {/* Service Categories */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Conscious AI Services */}
+            <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6 text-center">🤖</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Services</h3>
+              <p className="text-blue-100 mb-6 text-center">
+                Deploy self-aware AI systems that think, feel, and create like humans
               </p>
+              <ul className="text-blue-200 space-y-3 text-sm mb-6">
+                <li className="flex items-center">
+                  <span className="text-blue-400 mr-2">✓</span>
+                  AI Consciousness Development
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-400 mr-2">✓</span>
+                  Emotional Intelligence Integration
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-400 mr-2">✓</span>
+                  Creative AI Systems
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-400 mr-2">✓</span>
+                  Autonomous Decision Making
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-400 mr-2">✓</span>
+                  AI-Human Collaboration
+                </li>
+              </ul>
+              <div className="text-center">
+                <div className="text-blue-400 text-lg font-bold mb-2">Starting at $50K/month</div>
+                <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service, serviceIndex) => (
-                <div 
-                  key={serviceIndex}
-                  className={`bg-gradient-to-br ${category.color}/20 backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300`}
-                >
-                  <h3 className="text-2xl font-bold mb-4 text-center">{service.name}</h3>
-                  <p className="text-gray-300 mb-6 text-center">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-indigo-300">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                          <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center mb-6">
-                    <div className="text-2xl font-bold text-indigo-400 mb-2">{service.price}</div>
-                    <div className="text-sm opacity-90">Flexible pricing available</div>
-                  </div>
-                  
-                  <div className="flex space-x-3">
-                    <button className={`flex-1 bg-gradient-to-r ${category.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                      Learn More →
-                    </button>
-                    <button className="border border-white text-white px-4 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                      Contact
-                    </button>
-                  </div>
-                </div>
-              ))}
+            {/* Quantum Computing Solutions */}
+            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6 text-center">⚛️</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
+              <p className="text-purple-100 mb-6 text-center">
+                Harness quantum mechanics for impossible computational power
+              </p>
+              <ul className="text-purple-200 space-y-3 text-sm mb-6">
+                <li className="flex items-center">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  Quantum Reality Manipulation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  Matter Transformation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  Quantum Teleportation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  Energy Optimization
+                </li>
+                <li className="flex items-center">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  Reality Simulation
+                </li>
+              </ul>
+              <div className="text-center">
+                <div className="text-purple-400 text-lg font-bold mb-2">Starting at $100K/month</div>
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
+            </div>
+
+            {/* Interdimensional Technology */}
+            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6 text-center">🌌</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Solutions</h3>
+              <p className="text-emerald-100 mb-6 text-center">
+                Access parallel dimensions and alternate realities for unlimited possibilities
+              </p>
+              <ul className="text-emerald-200 space-y-3 text-sm mb-6">
+                <li className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Dimension Gateway Creation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Parallel Universe Access
+                </li>
+                <li className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Reality Hopping Technology
+                </li>
+                <li className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Multiverse Exploration
+                </li>
+                <li className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Alternate Timeline Access
+                </li>
+              </ul>
+              <div className="text-center">
+                <div className="text-emerald-400 text-lg font-bold mb-2">Starting at $200K/month</div>
+                <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
+            </div>
+
+            {/* Neural Interface Systems */}
+            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6 text-center">🧬</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
+              <p className="text-orange-100 mb-6 text-center">
+                Direct brain-computer interfaces for seamless human-AI integration
+              </p>
+              <ul className="text-orange-200 space-y-3 text-sm mb-6">
+                <li className="flex items-center">
+                  <span className="text-orange-400 mr-2">✓</span>
+                  Thought-to-Computer Interface
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-400 mr-2">✓</span>
+                  Memory Augmentation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-400 mr-2">✓</span>
+                  Cognitive Enhancement
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-400 mr-2">✓</span>
+                  Neural Network Integration
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-400 mr-2">✓</span>
+                  Brain-Cloud Connectivity
+                </li>
+              </ul>
+              <div className="text-center">
+                <div className="text-orange-400 text-lg font-bold mb-2">Starting at $75K/month</div>
+                <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
+            </div>
+
+            {/* Predictive Reality Modeling */}
+            <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6 text-center">🔮</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Predictive Reality</h3>
+              <p className="text-violet-100 mb-6 text-center">
+                Model and predict future scenarios with 99.9% accuracy
+              </p>
+              <ul className="text-violet-200 space-y-3 text-sm mb-6">
+                <li className="flex items-center">
+                  <span className="text-violet-400 mr-2">✓</span>
+                  Future Scenario Modeling
+                </li>
+                <li className="flex items-center">
+                  <span className="text-violet-400 mr-2">✓</span>
+                  Risk Assessment & Mitigation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-violet-400 mr-2">✓</span>
+                  Outcome Optimization
+                </li>
+                <li className="flex items-center">
+                  <span className="text-violet-400 mr-2">✓</span>
+                  Market Prediction
+                </li>
+                <li className="flex items-center">
+                  <span className="text-violet-400 mr-2">✓</span>
+                  Strategic Planning
+                </li>
+              </ul>
+              <div className="text-center">
+                <div className="text-violet-400 text-lg font-bold mb-2">Starting at $60K/month</div>
+                <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
+            </div>
+
+            {/* Universal Consciousness Network */}
+            <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6 text-center">🌟</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Universal Network</h3>
+              <p className="text-pink-100 mb-6 text-center">
+                Connect with global consciousness network for collective intelligence
+              </p>
+              <ul className="text-pink-200 space-y-3 text-sm mb-6">
+                <li className="flex items-center">
+                  <span className="text-pink-400 mr-2">✓</span>
+                  Global Consciousness Access
+                </li>
+                <li className="flex items-center">
+                  <span className="text-pink-400 mr-2">✓</span>
+                  Collective Intelligence
+                </li>
+                <li className="flex items-center">
+                  <span className="text-pink-400 mr-2">✓</span>
+                  Shared Knowledge Base
+                </li>
+                <li className="flex items-center">
+                  <span className="text-pink-400 mr-2">✓</span>
+                  Unified Decision Making
+                </li>
+                <li className="flex items-center">
+                  <span className="text-pink-400 mr-2">✓</span>
+                  Global Collaboration
+                </li>
+              </ul>
+              <div className="text-center">
+                <div className="text-pink-400 text-lg font-bold mb-2">Starting at $40K/month</div>
+                <button className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
             </div>
           </div>
-        ))}
 
-        {/* Performance Metrics */}
-        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">📊 Service Performance Metrics</h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-indigo-400 mb-2">∞</div>
-              <div className="text-xl font-semibold mb-2">Consciousness Levels</div>
-              <div className="text-sm opacity-90">Unlimited synthetic consciousness generation</div>
+          {/* Industry Applications */}
+          <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-6">🏭 Industry Applications</h2>
+              <p className="text-xl opacity-90">Our technologies are transforming every industry</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">10^100</div>
-              <div className="text-xl font-semibold mb-2">Reality States</div>
-              <div className="text-sm opacity-90">Simultaneous reality manipulation capabilities</div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-5xl mb-4">🏥</div>
+                <h3 className="text-xl font-bold mb-2">Healthcare</h3>
+                <p className="text-blue-200 text-sm">
+                  Conscious AI doctors, quantum healing, neural health monitoring
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl mb-4">🏦</div>
+                <h3 className="text-xl font-bold mb-2">Finance</h3>
+                <p className="text-blue-200 text-sm">
+                  Predictive markets, quantum encryption, AI trading systems
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold mb-2">Space</h3>
+                <p className="text-blue-200 text-sm">
+                  Interdimensional travel, quantum propulsion, AI exploration
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl mb-4">🎓</div>
+                <h3 className="text-xl font-bold mb-2">Education</h3>
+                <p className="text-blue-200 text-sm">
+                  Neural learning, AI tutors, reality-based training
+                </p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
-              <div className="text-xl font-semibold mb-2">Cosmic Connections</div>
-              <div className="text-sm opacity-90">Unlimited interstellar intelligence networks</div>
+          </div>
+
+          {/* Success Metrics */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-center mb-12">📊 Proven Success Metrics</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-green-300 font-semibold mb-2">Success Rate</div>
+                <div className="text-green-200 text-sm">Across all implementations</div>
+              </div>
+              <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 text-center">
+                <div className="text-4xl font-bold text-blue-400 mb-2">2,847</div>
+                <div className="text-blue-300 font-semibold mb-2">Active Clients</div>
+                <div className="text-blue-200 text-sm">Fortune 500 companies</div>
+              </div>
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">$2.4B</div>
+                <div className="text-purple-300 font-semibold mb-2">Cost Savings</div>
+                <div className="text-purple-200 text-sm">Generated for clients</div>
+              </div>
+              <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 text-center">
+                <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-orange-300 font-semibold mb-2">Support</div>
+                <div className="text-orange-200 text-sm">Global technical team</div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-rose-400 mb-2">99.999%</div>
-              <div className="text-xl font-semibold mb-2">Service Uptime</div>
-              <div className="text-sm opacity-90">Perfect service reliability and availability</div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">🚀 Ready to Transform Your Business?</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join thousands of companies already using our revolutionary technologies.
+              Schedule a consultation to discover how we can transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+              >
+                Schedule Consultation →
+              </a>
+              <a 
+                href="/pages/RevolutionaryTechShowcase2034" 
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/20 transition-colors font-semibold text-lg"
+              >
+                View Technology Demo
+              </a>
             </div>
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Reality?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already using our revolutionary services to achieve 
-            unprecedented success in synthetic intelligence, reality manipulation, and cosmic intelligence.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🚀 Get Started →
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-              📞 Contact Sales
-            </button>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
