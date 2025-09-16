@@ -144,7 +144,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 
   const filteredCases = selectedCategory === 'all' 
     ? caseStudies 
-    : caseStudies.filter(case => case.category === selectedCategory);
+    : caseStudies.filter(caseStudy => caseStudy.category === selectedCategory);
 
   const currentCase = filteredCases[selectedCase];
 
