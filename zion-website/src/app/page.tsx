@@ -160,9 +160,160 @@ export default function HomePage() {
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 =======
                 href="/updates/autonomous-ops-sre-for-agents"
+=======
+                href="/blog/ai-2026-policy-as-code-production-blueprint"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Blueprint: Policy‑as‑Code in Production
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-real-time-retrieval-architectures"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                New: Real‑Time Retrieval Architectures
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-sovereign-ai-commerce"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                New: Sovereign AI Commerce
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-enterprise-rag-observability"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Guide: Enterprise RAG Observability
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/real-time-agent-debugger-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-500/10 px-4 py-2 text-sm font-semibold text-lime-200 hover:bg-lime-500/20 transition-colors duration-200"
+              >
+                Launch: Agent Debugger v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-compliance-auditor-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Auditor v1.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-policy-as-code-starter-kit"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Policy-as-Code Starter Kit
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-datasets-portal"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Report: Research Datasets Portal
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/secure-agent-operations-blueprint-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Blueprint: Secure Agent Ops 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-control-center-2-2"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Ops Control Center v2.2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-compliance-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-procurement-playbook-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: AI Procurement 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-content-studio-2-1"
+                className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-500/10 px-4 py-2 text-sm font-semibold text-violet-200 hover:bg-violet-500/20 transition-colors duration-200"
+              >
+                Product: Content Studio 2.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-portal-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: AI Lab Research Portal 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/production-rag-evals-starter-pack"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Production RAG Evals Pack
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-research-copilot-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Research Copilot v1.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/state-of-real-time-rag-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                Report: Real-Time RAG 2026 Preview
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-incident-response-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-red-400/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-200 hover:bg-red-500/20 transition-colors duration-200"
+              >
+                Launch: Incident Response v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/enterprise-retrieval-observability-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Report: Retrieval Observability 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-portal"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: AI Lab Research Portal
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-ops-control-center-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: Ops Control Center 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/mentor-office-hours"
+>>>>>>> origin/feat/content-policy-as-code
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
                 New: Autonomous Ops & SRE for Agents
@@ -261,6 +412,7 @@ export default function HomePage() {
               {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
 <<<<<<< HEAD
@@ -303,6 +455,24 @@ export default function HomePage() {
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
                 href: '/updates/web3-learning-path'
 >>>>>>> origin/feature/updates-content
+=======
+                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
+                summary:
+                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
+                href: '/blog/ai-2026-policy-as-code-production-blueprint'
+              },
+              {
+                title: 'AI 2026: Real‑Time Retrieval Architectures',
+                summary:
+                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
+                href: '/blog/ai-2026-real-time-retrieval-architectures'
+              },
+              {
+                title: 'AI 2026: Generative AI Risk Register',
+                summary:
+                  'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
+                href: '/blog/ai-2026-generative-ai-risk-register'
+>>>>>>> origin/feat/content-policy-as-code
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">

@@ -12,11 +12,23 @@ export const siteUpdates: SiteUpdate[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
 =======
     title: 'Guide: Agent Platform Operations (2026)',
 =======
     title: 'Launch: Autonomous Ops and SRE for Agents',
+=======
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+    summary:
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot v1.0',
+>>>>>>> origin/feat/content-policy-as-code
     summary:
       'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
     href: '/updates/autonomous-ops-sre-for-agents',
