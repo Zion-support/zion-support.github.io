@@ -37,10 +37,7 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "coverage"
+    "coverage",
+    "App.tsx"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/create-and-deploy-new-content-a7bf

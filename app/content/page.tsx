@@ -13,6 +13,32 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Just published: Safe Rollouts + Evidence-Led Ops */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-safe-rollouts-in-production" className="hover:underline">
+              Safe Rollouts in Production (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Eval-gated deployments, progressive exposure, and rollback strategies for autonomous agents.
+          </p>
+          <Link href="/content/ai-2026-safe-rollouts-in-production" className="text-purple-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-autonomous-evidence-led-operations" className="hover:underline">
+              Autonomous Evidence‑Led Operations (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Operate with audit‑ready evidence, evaluation gates, and SLOs across the lifecycle.
+          </p>
+          <Link href="/blog/ai-2026-autonomous-evidence-led-operations" className="text-purple-700 font-semibold">Read Article →</Link>
+        </article>
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
