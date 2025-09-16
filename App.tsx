@@ -45,6 +45,12 @@ import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcas
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+
+// Import NEW REVOLUTIONARY 2025 CONTENT
+import RevolutionaryAIConsciousness2025 from './src/pages/RevolutionaryAIConsciousness2025';
+import QuantumRealityManipulation2025 from './src/pages/QuantumRealityManipulation2025';
+import NeuralInterfaceEvolution2025 from './src/pages/NeuralInterfaceEvolution2025';
+import InteractiveContentShowcase2025 from './src/components/InteractiveContentShowcase2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechShowcase2025 from './src/components/RevolutionaryTechShowcase2025';
@@ -324,6 +330,12 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Revolutionary Ad Banner 2025 - Breakthrough Alert */}
                 <RevolutionaryAdBanner2025 />
+
+                {/* NEW: Revolutionary Content Banner 2025 - AI Consciousness, Quantum Reality, Neural Interface */}
+                <RevolutionaryContentBanner2025 />
+
+                {/* NEW: Interactive Content Showcase 2025 */}
+                <InteractiveContentShowcase2025 />
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
@@ -1138,6 +1150,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
           <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
           <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
+          
+          {/* NEW REVOLUTIONARY 2025 CONTENT ROUTES */}
+          <Route path="/pages/RevolutionaryAIConsciousness2025" element={<RevolutionaryAIConsciousness2025 />} />
+          <Route path="/pages/QuantumRealityManipulation2025" element={<QuantumRealityManipulation2025 />} />
+          <Route path="/pages/NeuralInterfaceEvolution2025" element={<NeuralInterfaceEvolution2025 />} />
           <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
           <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
           <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
