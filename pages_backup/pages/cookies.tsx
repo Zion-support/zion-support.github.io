@@ -1,20 +1,20 @@
+<<<<<<< HEAD
+=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
-import { motion } from 'framer-motion';
+
 import {
 
 
@@ -122,7 +122,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+
 import {;
   Shield,;
   Settings,;
@@ -784,15 +784,15 @@ if (return) {
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -814,64 +814,26 @@ export default function CookiesPage() {
           </p>
           <ul className='list-disc list-inside text-gray-300 space-y-1'>
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { Helmet } from 'react-helmet-async';
 
-
-import React from 'react',
-import SEO from '../components/SEO',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-
-
-
-export default function CookiesPage() {
+const cookies: React.FC = () => {
   return (
-    <UltraAdvancedFuturisticBackground>
-      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
-
-origin/automation-improvements-final
-
-      <div className="container mx-auto px-4 py-24 text-white">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
-          <p className="text-gray-300">We use minimal, privacyrespecting analytics. Some thirdparty embeds may set cookies. You can block nonessential cookies via your browser.</p>
-          <ul className="list-disc list-inside text-gray-300 space-y-1">
-
-origin/automation-improvements-final
-            <li>Purpose: performance and security</li>
-<li>Purpose: performance and security</li>
-
-
-            <li>Retention: session or short‑term</li>
-            <li>Opt‑out: browser settings and extensions</li>
-          </ul>
-
-
-
-
-
-
-  );
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
- <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>cookies | Zion Tech Group</title>
+        <meta name="description" content="cookies - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">cookies</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
-  )
+    </div>
+  );
+};
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
+export default cookies;

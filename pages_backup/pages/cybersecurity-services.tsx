@@ -1,9 +1,32 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
+const cybersecurity-services: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>cybersecurity-services | Zion Tech Group</title>
+        <meta name="description" content="cybersecurity-services - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">cybersecurity-services</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default cybersecurity-services;
+=======
 import React from 'react',
 import Head from 'next/head',
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database,} from 'lucide-react';
 import { Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud;
   CheckCircle, ArrowRight, Star, Clock, Target;
@@ -114,7 +137,7 @@ const benefits = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
@@ -189,7 +212,7 @@ const benefits = [
 ];
 
 
-import { motion } from 'framer-motion';
+
 import {;
   Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud,;
   CheckCircle, ArrowRight, Star, Clock, Target,;
@@ -302,15 +325,12 @@ const benefits = [;
 
 export default function CybersecurityServices() {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     color: 'text-purple-400',;
   },];
 
 export default function CybersecurityServices() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <Layout>
@@ -421,13 +441,9 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -447,12 +463,8 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 Next-Generation
@@ -491,14 +503,10 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -517,12 +525,8 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   <span>Get Protected</span>
@@ -537,7 +541,6 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
         <div className='absolute top-20 left-10 opacity-20 animate-float'>;
           <div className='w-4 h-4 bg-red-400 rounded-full'></div>;
@@ -552,7 +555,6 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -678,13 +680,9 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -928,7 +926,6 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -948,12 +945,10 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     </Link>
@@ -1158,12 +1153,8 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   <span>Start Your Security Journey</span>
@@ -1184,12 +1175,8 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   <span>View All Services</span>
@@ -1206,12 +1193,8 @@ export default function CybersecurityServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               <div>
@@ -1327,3 +1310,4 @@ export default function CybersecurityServices() {;
 
 
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

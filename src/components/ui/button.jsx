@@ -17,14 +17,22 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
     xl: 'px-8 py-4 text-lg',
     icon: 'w-10 h-10 p-0'
   };
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  if (asChild) {
-    return <span className={classes}>{children}</span>;
+  const classes = `${baseClasses} ${variantClasses[variant] || variantClasses.default} ${sizeClasses[size] || sizeClasses.md} ${className}`;
+
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children, {
+      className: [children.props?.className, classes].filter(Boolean).join(' '),
+      onClick,
+      type,
+      disabled
+    });
   }
+
   return (
-    <button className={classes} onClick={onClick} type={type} disabled={disabled}>
+    <button type={type} className={classes} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );
 }
 
+export default Button;

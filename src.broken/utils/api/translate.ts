@@ -17,15 +17,6 @@ async function translateWithOpenAI(text: string, to: string, from?: string): Pro
     model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
     messages: [
       { role: 'system', content: system },
-<<<<<<< HEAD
-      { role: 'user', content: user }],
-    temperature: 0.2});
-=======
-      { role: 'user', content: user },
-    ],
-    temperature: 0.2,
-  });
->>>>>>> origin/auto/autonomy-17186719616
   return (completion.choices?.[0]?.message?.content || '').trim();
 }
 
@@ -40,15 +31,6 @@ async function translateWithDeepL(text: string, to: string, from?: string): Prom
     method: 'POST',
     headers: {
       'Authorization': `DeepL-Auth-Key ${key}`,
-<<<<<<< HEAD
-      'Content-Type': 'application/x-www-form-urlencoded'},
-    body: params.toString()});
-=======
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: params.toString(),
-  });
->>>>>>> origin/auto/autonomy-17186719616
   const data = await res.json();
   if (!res.ok) throw new Error(data?.message || 'DeepL error');
   return data?.translations?.[0]?.text || '';

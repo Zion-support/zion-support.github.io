@@ -1,439 +1,502 @@
-import React, { useEffect, useState, useCallback } from 'react';
+"use client";
+import React{ useEffectuseState } from 'react';
+
+/**
+ * Analytics and Monitoring Component
+ * 
+ * Provides comprehensive analytics and monitoring including:
+ * - Google Analytics 4 integration
+ * - Performance monitoring
+ * - Error tracking
+ * - User behavior analytics
+ * - Real-time metrics
+ */
+
+interface AnalyticsConfig {
+  ga4MeasurementId?: string;
+  enablePerformanceMonitoring?: boolean;
+  enableErrorTracking?: boolean;
+  enableUserBehaviorTracking?: boolean;
+}
+
+interface PerformanceMetrics {
+  pageLoadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+}
+
+interface UserBehavior {
+  sessionId: string;
+  pageViews: number;
+  timeOnSite: number;
+  bounceRate: number;
+  conversionEvents: number;
+}
+
+export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
+  ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID,
+  enablePerformanceMonitoring = true,
+  enableErrorTracking = true,
+  enableUserBehaviorTracking = true
+}) => {
+  const [metricsetMetrics] = useState<PerformanceMetrics | null>(null);
+  const [userBehaviorsetUserBehavior] = useState<UserBehavior | null>(null);
+  const [errorsetErrors] = useState<any[]>([]);
+
+  useEffect(() => {
+    // Initialize Google Analytics 4
+    if (ga4MeasurementId && typeof window !== 'undefined') {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`;
+      document.head.appendChild(script);
+
+      window.gtag = window.gtag || function() {
+        (window.gtag as any).q = (window.gtag as any).q || [];
+        (window.gtag as any).q.push(arguments);
+      };
+      
+      (window.gtag as any)(', 'js', 'new Date());
+      (window.gtag as any)(', 'config', 'ga4MeasurementId);
+    }
+
+    // Performance monitoring
+    if (enablePerformanceMonitoring) {
+      initializePerformanceMonitoring();
+    }
+
+    // Error tracking
+    if (enableErrorTracking) {
+      initializeErrorTracking();
+    }
+
+    // User behavior tracking
+    if (enableUserBehaviorTracking) {
+      initializeUserBehaviorTracking();
+    }
+  }[ga4MeasurementIdenablePerformanceMonitoringenableErrorTrackingenableUserBehaviorTracking]);
+
+  const initializePerformanceMonitoring = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Core Web Vitals
+      import('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
+        getCLS((metric) => {
+          setMetrics(prev => ({ ...prevcumulativeLayoutShift: metric.value } as PerformanceMetrics));
+          trackEvent(', 'web_vitals', 'cls'metric.value);
+        });
+
+        getFID((metric) => {
+          setMetrics(prev => ({ ...prevfirstInputDelay: metric.value } as PerformanceMetrics));
+          trackEvent(', 'web_vitals', 'fid'metric.value);
+        });
+
+        getFCP((metric) => {
+          setMetrics(prev => ({ ...prevfirstContentfulPaint: metric.value } as PerformanceMetrics));
+          trackEvent(', 'web_vitals', 'fcp'metric.value);
+        });
+
+        getLCP((metric) => {
+          setMetrics(prev => ({ ...prevlargestContentfulPaint: metric.value } as PerformanceMetrics));
+          trackEvent(', 'web_vitals', 'lcp'metric.value);
+        });
+
+        getTTFB((metric) => {
+          setMetrics(prev => ({ ...prevtimeToInteractive: metric.value } as PerformanceMetrics));
+          trackEvent(', 'web_vitals', 'ttfb'metric.value);
+        });
+      });
+
+      // Page load time
+      window.addEventListener('load'() => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        setMetrics(prev => ({ ...prevpageLoadTime: loadTime } as PerformanceMetrics));
+        trackEvent(', 'performance', 'page_load_time'loadTime);
+      });
+    }
+  };
+
+  const initializeErrorTracking = () => {
+    if (typeof window !== 'undefined') {
+      // JavaScript errors
+      window.addEventListener('error'(event) => {
+        const error = {
+          message: event.message,
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+          error: event.error,
+          timestamp: new Date().toISOString()
+        };
+        
+        setErrors(prev => [...preverror]);
+        trackEvent(', 'error', 'javascript_error'error.message);
+      });
+
+      // Unhandled promise rejections
+      window.addEventListener('unhandledrejection'(event) => {
+        const error = {
+          reason: event.reason,
+          timestamp: new Date().toISOString()
+        };
+        
+        setErrors(prev => [...preverror]);
+        trackEvent(', 'error', 'unhandled_promise_rejection'event.reason);
+      });
+    }
+  };
+
+  const initializeUserBehaviorTracking = () => {
+    if (typeof window !== 'undefined') {
+      const sessionId = generateSessionId();
+      let pageViews = 0;
+      let timeOnSite = 0;
+      let startTime = Date.now();
+
+      // Track page views
+      const trackPageView = () => {
+        pageViews++;
+        timeOnSite += Date.now() - startTime;
+        startTime = Date.now();
+
+        setUserBehavior({
+          sessionId,
+          pageViews,
+          timeOnSite,
+          bounceRate: calculateBounceRate(),
+          conversionEvents: 0
+        });
+
+        trackEvent(', 'user_behavior', 'page_view'pageViews);
+      };
+import React{ useEffect } from 'react';
 
 interface AnalyticsEvent {
-  id: string;
-  type: string;
+  event: string;
   category: string;
   action: string;
   label?: string;
   value?: number;
   timestamp: number;
-  sessionId: string;
-  userId?: string;
-  pageUrl: string;
-  userAgent: string;
-  referrer: string;
 }
 
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  domLoad: number;
-  windowLoad: number;
-}
-
-interface UserBehavior {
-  pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: string[];
-  userJourney: string[];
-}
-
-export const AnalyticsMonitor: React.FC = () => {
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
-  const [performance, setPerformance] = useState<PerformanceMetrics | null>(null);
-  const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    pageViews: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
-    topPages: [],
-    userJourney: []
-  });
-  const [isTracking, setIsTracking] = useState(false);
-  const [sessionId] = useState(() => generateSessionId());
-
-  // Generate unique session ID
-  function generateSessionId(): string {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-  }
-
-  // Track custom event
-  const trackEvent = useCallback((category: string, action: string, label?: string, value?: number) => {
-    const event: AnalyticsEvent = {
-      id: generateEventId(),
-      type: 'custom',
-      category,
-      action,
-      label,
-      value,
-      timestamp: Date.now(),
-      sessionId,
-      pageUrl: window.location.href,
-      userAgent: navigator.userAgent,
-      referrer: document.referrer
-    };
-
-    setEvents(prev => [...prev, event]);
-    
-    // Send to analytics service (replace with your actual analytics endpoint)
-    sendToAnalytics(event);
-    
-    // Store in localStorage for persistence
-    storeEventLocally(event);
-  }, [sessionId, sendToAnalytics, storeEventLocally]);
-
-  // Generate unique event ID
-  function generateEventId(): string {
-    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-  }
-
-  // Send event to analytics service
-  const sendToAnalytics = useCallback(async (event: AnalyticsEvent) => {
-    try {
-      // Store event locally instead of sending to non-existent API
-      // TODO: Implement actual analytics service when available
-      storeEventLocally(event);
-      
-      // Log event for debugging (remove in production)
+export default function AnalyticsMonitor() {
+  useEffect(() => {
+    // Initialize analytics tracking
+    const trackEvent = (event: AnalyticsEvent) => {
+      // Send to Google Analytics (if configured)
+      if (typeof gtag !== 'undefined') {
+        gtag(', 'event', 'event.action{
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+        });
+      }
+      // Send to custom analytics endpoint
+      fetch('/api/analytics'{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(event),
+      }).catch(console.error);
+      // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics event stored locally:', event);
-      }
-    } catch (error) {
-      console.warn('Error storing analytics event locally:', error);
-    }
-  }, [storeEventLocally]);
-
-  // Store event locally
-  const storeEventLocally = useCallback((event: AnalyticsEvent) => {
-    try {
-      const storedEvents = localStorage.getItem('analytics-events');
-      const events = storedEvents ? JSON.parse(storedEvents) : [];
-      events.push(event);
-      
-      // Keep only last 1000 events
-      if (events.length > 1000) {
-        events.splice(0, events.length - 1000);
-      }
-      
-      localStorage.setItem('analytics-events', JSON.stringify(events));
-    } catch (error) {
-      console.warn('Error storing event locally:', error);
-    }
-  }, []);
-
-  // Track page view
-  const trackPageView = useCallback((url: string) => {
-    const event: AnalyticsEvent = {
-      id: generateEventId(),
-      type: 'pageview',
-      category: 'navigation',
-      action: 'page_view',
-      label: url,
-      timestamp: Date.now(),
-      sessionId,
-      pageUrl: url,
-      userAgent: navigator.userAgent,
-      referrer: document.referrer
-    };
-
-    setEvents(prev => [...prev, event]);
-    sendToAnalytics(event);
-    storeEventLocally(event);
-    
-    // Update user behavior
-    setUserBehavior(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1,
-      topPages: [...new Set([...prev.topPages, url])].slice(0, 10),
-      userJourney: [...prev.userJourney, url].slice(-10)
-    }));
-  }, [sessionId, sendToAnalytics, storeEventLocally]);
-
-  // Track user interaction
-  const trackInteraction = useCallback((element: string, action: string, details?: any) => {
-    trackEvent('interaction', action, element, details?.value);
-  }, [trackEvent]);
-
-  // Track conversion
-  const trackConversion = useCallback((goal: string, value?: number) => {
-    trackEvent('conversion', 'goal_completed', goal, value);
-    
-    // Update conversion rate
-    setUserBehavior(prev => ({
-      ...prev,
-      conversionRate: ((prev.conversionRate * prev.pageViews) + 1) / (prev.pageViews + 1)
-    }));
-  }, [trackEvent]);
-
-  // Performance monitoring
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      try {
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              setPerformance(prev => ({
-                ...prev,
-                fcp: Math.round(entry.startTime)
-              } as PerformanceMetrics));
-            }
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
-            setPerformance(prev => ({
-              ...prev,
-              lcp: Math.round(lastEntry.startTime)
-            } as PerformanceMetrics));
-          }
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            setPerformance(prev => ({
-              ...prev,
-              fid: Math.round(entry.processingStart - entry.startTime)
-            } as PerformanceMetrics));
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Cumulative Layout Shift
-        const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0;
-          list.getEntries().forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          setPerformance(prev => ({
-            ...prev,
-            cls: Math.round(clsValue * 1000) / 1000
-          } as PerformanceMetrics));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-        return () => {
-          fcpObserver.disconnect();
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-        };
-      } catch (error) {
-        console.warn('Performance monitoring not supported:', error);
-      }
-    }
-
-    // Fallback performance metrics
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        setPerformance({
-          fcp: 0,
-          lcp: 0,
-          fid: 0,
-          cls: 0,
-          ttfb: Math.round(navigation.responseStart - navigation.requestStart),
-          domLoad: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
-          windowLoad: Math.round(navigation.loadEventEnd - navigation.loadEventStart)
-        });
+        console.log('Analytics Event:'event);
       }
     };
-
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-      return () => window.removeEventListener('load', measurePerformance);
+    // Track page views
+    const trackPageView = () => {
+      trackEvent({
+        event: 'page_view',
+        category: 'Navigation',
+        action: 'Page View',
+        label: window.location.pathname,
+        timestamp: Date.now(),
+      });
+    };
+    // Track user interactions
+    const trackInteractions = () => {
+      // Track button clicks
+      document.addEventListener('click'(e) => {
+        const target = e.target as HTMLElement;
+        if (target.tagName === 'BUTTON' || target.closest('button')) {
+          const button = target.closest('button') || target;
+          trackEvent({
+            event: 'button_click',
+            category: 'Interaction',
+            action: 'Button Click',
+            label: button.textContent?.trim() || 'Unknown Button',
+            timestamp: Date.now(),
+          });
+        }
+        // Track link clicks
+        if (target.tagName === 'A' || target.closest('a')) {
+          const link = target.closest('a') || target;
+          const href = link.getAttribute('href');
+          trackEvent({
+            event: 'link_click',
+            category: 'Navigation',
+            action: 'Link Click',
+            label: href || 'Unknown Link',
+            timestamp: Date.now(),
+          });
+        }
+      });
+      // Track form submissions
+      document.addEventListener('submit'(e) => {
+        const form = e.target as HTMLFormElement;
+        trackEvent({
+          event: 'form_submit',
+          category: 'Interaction',
+          action: 'Form Submit',
+          label: form.id || form.className || 'Unknown Form',
+          timestamp: Date.now(),
+        });
+      });
+      // Track scroll depth
+      let maxScrollDepth = 0;
+      const trackScrollDepth = () => {
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (scrollDepth > maxScrollDepth) {
+          maxScrollDepth = scrollDepth;
+          trackEvent(', 'user_behavior', 'scroll_depth'scrollDepth);
+        }
+      };
+      // Track clicks
+      const trackClicks = (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        const tagName = target.tagName.toLowerCase();
+        const className = target.className;
+        const id = target.id;
+        trackEvent(', 'user_behavior', 'click'{
+          tagName,
+          className,
+          id,
+          text: target.textContent?.slice(050)
+        });
+      };
+      // Initialize tracking
+      trackPageView();
+      window.addEventListener(', 'scroll', 'trackScrollDepth);
+      document.addEventListener(', 'click', 'trackClicks);
+      // Cleanup
+      return () => {
+        window.removeEventListener(', 'scroll', 'trackScrollDepth);
+        document.removeEventListener(', 'click', 'trackClicks);
+      };
     }
-  }, []);
-
-  // Session tracking
-  useEffect(() => {
-    const startTime = Date.now();
-    
-    const handleBeforeUnload = () => {
-      const sessionDuration = Date.now() - startTime;
-      setUserBehavior(prev => ({
+  };
+  const generateSessionId = (): string => {
+    return 'session_' + Math.random().toString(36).substr(29) + '_' + Date.now();
+  };
+  const calculateBounceRate = (): number => {
+    // Simplified bounce rate calculation
+    return Math.random() * 100; // Replace with actual calculation
+  };
+  const trackEvent = (category: stringaction: stringvalue?: any) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag(', 'event', 'action{
+        event_category: category,
+        event_label: value?.toString() || ', ',
+        value: typeof value === 'number' ? value : undefined
+      });
+    }
+  };
+  // Custom hooks for analytics
+  const usePageView = (pageName: string) => {
+    useEffect(() => {
+      trackEvent(', 'page_view', 'pageName);
+    }[pageName]);
+  };
+  const useConversion = (conversionName: string) => {
+    const trackConversion = (value?: number) => {
+      trackEvent(', 'conversion', 'conversionNamevalue);
+      setUserBehavior(prev => prev ? {
         ...prev,
-        sessionDuration: Math.round(sessionDuration / 1000)
-      }));
-      
-      // Track session end
-      trackEvent('session', 'session_end', 'session_completed', Math.round(sessionDuration / 1000));
+        conversionEvents: prev.conversionEvents + 1
+      } : null);
     };
-
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        trackEvent('session', 'page_hidden', 'user_left_page');
-      } else {
-        trackEvent('session', 'page_visible', 'user_returned');
-      }
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    // Track session start
-    trackEvent('session', 'session_start', 'new_session');
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [trackEvent]);
-
-  // Auto-track common interactions
-  useEffect(() => {
-    if (!isTracking) return;
-
-    const trackClick = (event: Event) => {
-      const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase();
-      const text = target.textContent?.trim() || '';
-      const href = (target as HTMLAnchorElement).href;
-      
-      if (tagName === 'a' && href) {
-        trackInteraction('link', 'click', { text, href });
-      } else if (tagName === 'button') {
-        trackInteraction('button', 'click', { text });
-      } else if (tagName === 'input' || tagName === 'textarea') {
-        trackInteraction('form_field', 'focus', { type: (target as HTMLInputElement).type });
-      }
-    };
-
-    const trackScroll = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-      if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-        trackEvent('engagement', 'scroll_depth', `${scrollDepth}%`, scrollDepth);
-      }
-    };
-
-    const trackFormSubmit = (event: Event) => {
-      const form = event.target as HTMLFormElement;
-      trackEvent('form', 'submit', form.action || 'unknown_form');
-    };
-
-    document.addEventListener('click', trackClick);
-    window.addEventListener('scroll', trackScroll);
-    document.addEventListener('submit', trackFormSubmit);
-
-    return () => {
-      document.removeEventListener('click', trackClick);
-      window.removeEventListener('scroll', trackScroll);
-      document.removeEventListener('submit', trackFormSubmit);
-    };
-  }, [isTracking, trackEvent, trackInteraction]);
-
-  // Start tracking when component mounts
-  useEffect(() => {
-    setIsTracking(true);
-    trackPageView(window.location.href);
-  }, [trackPageView]);
-
-  // Export analytics data
-  const exportAnalytics = useCallback(() => {
-    const data = {
-      events,
-      performance,
-      userBehavior,
-      sessionId,
-      timestamp: new Date().toISOString()
-    };
-
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `analytics-${sessionId}-${Date.now()}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }, [events, performance, userBehavior, sessionId]);
-
-  // Clear analytics data
-  const clearAnalytics = useCallback(() => {
-    setEvents([]);
-    setPerformance(null);
-    setUserBehavior({
-      pageViews: 0,
-      sessionDuration: 0,
-      bounceRate: 0,
-      conversionRate: 0,
-      topPages: [],
-      userJourney: []
-    });
-    localStorage.removeItem('analytics-events');
-  }, []);
-
+    return trackConversion;
+  };
+  return {
+    metrics,
+    userBehavior,
+    errors,
+    usePageView,
+    useConversion,
+    trackEvent
+  };
+};
+/**
+ * Real-time Analytics Dashboard Component
+ */
+export const AnalyticsDashboard: React.FC = () => {
+  const { metricsuserBehaviorerrors } = AnalyticsMonitor({});
+  const [isVisiblesetIsVisible] = useState(false);
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        title="View Analytics"
+      >
+        📊
+    );
+  }
   return (
-    <div className="fixed bottom-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-gray-900">Analytics Monitor</h3>
-        <div className="flex gap-2">
-          <button
-            onClick={exportAnalytics}
-            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
-            title="Export analytics data"
-          >
-            Export
-          </button>
-          <button
-            onClick={clearAnalytics}
-            className="px-2 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700"
-            title="Clear analytics data"
-          >
-            Clear
-          </button>
-        </div>
-      </div>
-
-      <div className="space-y-3 text-xs">
-        {/* Performance Metrics */}
-        {performance && (
-          <div className="bg-gray-50 p-2 rounded">
-            <h4 className="font-medium text-gray-700 mb-2">Performance</h4>
-            <div className="grid grid-cols-2 gap-1">
-              <div>FCP: {performance.fcp}ms</div>
-              <div>LCP: {performance.lcp}ms</div>
-              <div>FID: {performance.fid}ms</div>
-              <div>CLS: {performance.cls}</div>
-            </div>
-          </div>
-        )}
-
-        {/* User Behavior */}
-        <div className="bg-gray-50 p-2 rounded">
-          <h4 className="font-medium text-gray-700 mb-2">User Behavior</h4>
-          <div className="space-y-1">
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold">Analytics Dashboard</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-gray-600"
+        >
+          ✕
+      {metrics && (
+        <div className="space-y-2">
+          <h4 className="font-medium">Performance</h4>
+          <div className="text-sm space-y-1">
+            <div>Page Load: {metrics.pageLoadTime?.toFixed(2)}ms</div>
+            <div>FCP: {metrics.firstContentfulPaint?.toFixed(2)}ms</div>
+            <div>LCP: {metrics.largestContentfulPaint?.toFixed(2)}ms</div>
+            <div>CLS: {metrics.cumulativeLayoutShift?.toFixed(4)}</div>
+      )}
+      {userBehavior && (
+        <div className="space-y-2 mt-4">
+          <h4 className="font-medium">User Behavior</h4>
+          <div className="text-sm space-y-1">
             <div>Page Views: {userBehavior.pageViews}</div>
-            <div>Session: {userBehavior.sessionDuration}s</div>
-            <div>Conversion: {(userBehavior.conversionRate * 100).toFixed(1)}%</div>
-          </div>
-        </div>
-
-        {/* Recent Events */}
-        <div className="bg-gray-50 p-2 rounded">
-          <h4 className="font-medium text-gray-700 mb-2">Recent Events</h4>
-          <div className="space-y-1 max-h-20 overflow-y-auto">
-            {events.slice(-5).map(event => (
-              <div key={event.id} className="text-gray-600">
-                {event.category}: {event.action}
-              </div>
+            <div>Time on Site: {Math.round(userBehavior.timeOnSite / 1000)}s</div>
+            <div>Conversions: {userBehavior.conversionEvents}</div>
+      )}
+      {errors.length > 0 && (
+        <div className="space-y-2 mt-4">
+          <h4 className="font-medium text-red-600">Errors ({errors.length})</h4>
+          <div className="text-sm space-y-1 max-h-20 overflow-y-auto">
+            {errors.slice(-3).map((errorindex) => (
+              <div key={index} className="text-red-600">
+                {error.message || error.reason}
             ))}
-          </div>
-        </div>
-
-        {/* Session Info */}
-        <div className="text-gray-500 text-xs">
-          Session: {sessionId.slice(-8)}
-        </div>
-      </div>
-    </div>
+      )}
   );
 };
+export default AnalyticsMonitor;
+        const scrollDepth = Math.round(
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+        );
+        if (scrollDepth > maxScrollDepth) {
+          maxScrollDepth = scrollDepth;
+          // Track at 25%50%75%and 100%
+          if ([25075100].includes(scrollDepth)) {
+            trackEvent({
+              event: 'scroll_depth',
+              category: 'Engagement',
+              action: 'Scroll Depth',
+              label: `${scrollDepth}%`,
+              value: scrollDepth,
+              timestamp: Date.now(),
+            });
+          }
+        }
+      };
+      window.addEventListener(', 'scroll', 'trackScrollDepth{ passive: true });
+      // Track time on page
+      const startTime = Date.now();
+      const trackTimeOnPage = () => {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        trackEvent({
+          event: 'time_on_page',
+          category: 'Engagement',
+          action: 'Time on Page',
+          label: `${timeOnPage} seconds`,
+          value: timeOnPage,
+          timestamp: Date.now(),
+        });
+      };
+      // Track time on page every 30 seconds
+      const timeInterval = setInterval(trackTimeOnPage30000);
+      // Track when user leaves the page
+      window.addEventListener('beforeunload'() => {
+        trackTimeOnPage();
+        clearInterval(timeInterval);
+      });
+      return () => {
+        clearInterval(timeInterval);
+        window.removeEventListener(', 'scroll', 'trackScrollDepth);
+      };
+    };
+    // Track performance metrics
+    const trackPerformance = () => {
+      // Track Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          let metricName = ', ';
+          let value = 0;
+          switch (entry.entryType) {
+            case 'largest-contentful-paint':
+              metricName = 'LCP';
+              value = entry.startTime;
+              break;
+            case 'first-input':
+              metricName = 'FID';
+              value = entry.processingStart - entry.startTime;
+              break;
+            case 'layout-shift':
+              metricName = 'CLS';
+              value = entry.value;
+              break;
+          }
+          if (metricName) {
+            trackEvent({
+              event: 'performance_metric',
+              category: 'Performance',
+              action: metricName,
+              label: `${metricName} Measurement`,
+              value: Math.round(value),
+              timestamp: Date.now(),
+            });
+          }
+        });
+      });
+      observer.observe({
+        entryTypes: ['largest-contentful-'paint', 'first-'input', 'layout-shift']
+      });
+      return () => observer.disconnect();
+    };
+    // Track errors
+    const trackErrors = () => {
+      window.addEventListener('error'(e) => {
+        trackEvent({
+          event: 'javascript_error',
+          category: 'Error',
+          action: 'JavaScript Error',
+          label: e.message,
+          timestamp: Date.now(),
+        });
+      });
+      window.addEventListener('unhandledrejection'(e) => {
+        trackEvent({
+          event: 'promise_rejection',
+          category: 'Error',
+          action: 'Unhandled Promise Rejection',
+          label: e.reason?.toString() || 'Unknown Error',
+          timestamp: Date.now(),
+        });
+      });
+    };
+    // Initialize all tracking
+    trackPageView();
+    const cleanupInteractions = trackInteractions();
+    const cleanupPerformance = trackPerformance();
+    trackErrors();
+    return () => {
+      cleanupInteractions?.();
+      cleanupPerformance?.();
+    };
+  }[]);
+  return null;
+}

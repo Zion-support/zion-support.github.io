@@ -1,47 +1,22 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-
-export default function OrderConfirmationPage() {
-  const router = useRouter(),
-  const { orderId } = router.query,
-=======
 import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { Helmet } from 'react-helmet-async';
 
-export default function OrderConfirmationPage() {
-  const router = useRouter();
-  const { orderId } = router.query;
->>>>>>> origin/auto/autonomy-17186719616
-
+const [orderId]: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Order Confirmation - Zion Tech Group</title>
-        <meta name="description" content="Order confirmation details" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Order Confirmation</h1>
-        {orderId && (
-          <p className="text-lg mb-4">Order ID: {orderId}</p>
-        )}
-        <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>
-        <div className="mt-4">
-<<<<<<< HEAD
-          <a href="/" className="text-blue-600 hover: underline">
-=======
-          <a href="/" className="text-blue-600 hover:underline">
->>>>>>> origin/auto/autonomy-17186719616
-            ← Back to Home
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>[orderId] | Zion Tech Group</title>
+        <meta name="description" content="[orderId] - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">[orderId]</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
-  )
-=======
+    </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
-}
+};
+
+export default [orderId];

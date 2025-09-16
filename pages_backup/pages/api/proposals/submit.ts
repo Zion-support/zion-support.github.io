@@ -20,7 +20,6 @@ import {
   updateArtifacts,;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -54,11 +53,8 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   const host = process.env.EMAIL_HOST;
@@ -94,11 +90,9 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default async function handler(
   req: NextApiRequest
@@ -250,7 +244,6 @@ export default async function handler(req, res) {
       .json ({ error: error?.message || "Submission failed" });
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 
 }
@@ -260,7 +253,6 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
   }
 }
@@ -290,11 +282,7 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

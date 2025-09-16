@@ -39,7 +39,6 @@ async function fetchJson(url: string) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -64,7 +63,6 @@ function readJson(p: string) {
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 function readJson(p: string) {;
@@ -78,12 +76,10 @@ function readJson(p: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 }
 
@@ -115,15 +111,12 @@ export default async function handler(
 ;
 export default async function handler(req, res) {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
@@ -319,15 +312,11 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 interface ServiceStatus {
 
   name: string
@@ -26,13 +29,10 @@ class ErrorBoundary extends React.Component {
 ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
@@ -217,7 +217,7 @@ export default function Status() {;
         return <Clock className="h-5 w-5 text-blue-500" />,;
       default:;
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+ const [isRefreshing, setIsRefreshing] = useState(false)
 }
 
   const formatUptime = (seconds: number) => {
@@ -230,8 +230,16 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
     parts.push(`${minutes}m`),
     return parts.join(' ')
   },
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const Status: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Status</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <>
       <SEO
         title="API Status"
@@ -389,14 +397,13 @@ interface ServiceStatus {
         return <Clock className="h - 5 w - 5 text - blue - 500" />;
       default:;
         return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
+ export default /**
  * Status - Function description
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
-}
+};
 
-
-
-
+export default Status;

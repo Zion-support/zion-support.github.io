@@ -1,29 +1,12 @@
-import React, { Suspense, lazy } from 'react.ts'
-import { LoadingSpinner  } from './ui/LoadingSpinner'
+import React from 'react';
 
-interface LazyLoaderProps extends React.PropsWithChildren<{}> {
-
-component: React.ComponentType<any>;
-fallback?: React.ReactNode;
-props?: any;
-
-}
-
-export const LazyLoader: React.FC<LazyLoaderProps> = ({ 
-  component: Component, 
-  fallback = <LoadingSpinner />, 
-  props = {} 
-}) => {
+const LazyLoader: React.FC = () => {
   return (
-    <Suspense fallback={fallback}>
-      <Component {...props} />
-    </Suspense>
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LazyLoader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-// Lazy load commonly used components
-export const LazyHome = lazy(() => import('../pages/Home'))
-export const LazyServices = lazy(() => import('../pages/Services'))
-export const LazyAbout = lazy(() => import('../pages/About'))
-export const LazyContact = lazy(() => import('../pages/Contact'))
-export const LazyPricing = lazy(() => import('../pages/Pricing'))
+export default LazyLoader;

@@ -23,13 +23,9 @@ import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     return res.status(200).json({ ok: true })

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+=======
 import React, { useEffect, useMemo, useState } from "react";
 import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+
 
 type JobSuggestion = {
   id: string;
@@ -289,16 +293,24 @@ export default function TalentDashboardSuggestedJobs() {
       </div>
     );
   }, [loading, newMatches, userId, viewedMatches]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const talent: React.FC = () => {
   return (
-    <div className="mx-auto max-w-6xl space-y-6 px-4 py-6">
-      <div>
-        <h1 className="text-2xl font-bold text-gray-900">Suggested Jobs</h1>
-        <p className="text-sm text-gray-600">
-          AI-recommended jobs based on your skills and availability.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>talent | Zion Tech Group</title>
+        <meta name="description" content="talent - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">talent</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-      {content}
     </div>
   );
-}
+};
+
+export default talent;

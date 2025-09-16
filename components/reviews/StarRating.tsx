@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 
 type Props = {
   value: number;
@@ -12,17 +6,6 @@ type Props = {
   readOnly?: boolean;
 };
 
-<<<<<<< HEAD
-export const StarRating: React.FC<Props> = ({ valueonChangesize = 24readOnly }) => {
-  const [hoveredsetHovered] = useState<number | null>(null);
-
-  const stars = [12345];
-=======
-export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-  const [hovered, setHovered] = useState<number | null>(null);
-
-  const stars = [1, 2, 3, 4, 5];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="flex items-center gap-1">

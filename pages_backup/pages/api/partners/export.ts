@@ -16,7 +16,6 @@ export default async function handler(
 ) {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const code = (req.query.code as string)?.toLowerCase();
@@ -132,10 +131,8 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

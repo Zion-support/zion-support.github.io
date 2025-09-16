@@ -1,2 +1,12 @@
-import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+import React from 'react';
+
+const _document: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">_document</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default _document;
