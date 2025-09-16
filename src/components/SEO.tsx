@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 
 export type SEOProps = {
   title?: string;
@@ -19,7 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   type = 'website'
 }) => {
   return (
-    <Head>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -34,7 +34,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
+    </Helmet>
   );
 };
 

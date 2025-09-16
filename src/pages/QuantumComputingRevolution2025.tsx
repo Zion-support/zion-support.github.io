@@ -13,7 +13,22 @@ const QuantumComputingRevolution2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
 =======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+          </div>
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Quantum Computing Revolution 2025
+          </h1>
+          <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
+            Enter the quantum realm where impossible problems become solvable. Experience computing power that defies classical limitations.
+          </p>
+
+const QuantumComputingRevolution2025: React.FC = () => {
+  return (
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -887,7 +902,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Request Quantum Demo
 >>>>>>> cursor/create-and-deploy-new-content-e058
 =======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
+              Learn More
+=======
+            <button className="border-2 border-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-cyan-900 transition-all duration-300">
+              Request Quantum Demo
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </button>
           </div>
         </div>

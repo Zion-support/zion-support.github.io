@@ -68,13 +68,17 @@ const UltimateTechRevolution2032: React.FC = () => {
             The most comprehensive technological revolution that will redefine what's possible
           </p>
 =======
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+>>>>>>> cursor/create-and-deploy-new-content-63f0
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
->>>>>>> cursor/create-and-deploy-new-content-a7bf
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
@@ -369,6 +373,9 @@ const UltimateTechRevolution2032: React.FC = () => {
                     A global AI consciousness that manages and optimizes all planetary systems for maximum efficiency
                   </p>
                 </div>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
               </div>
 
               <div className="flex items-start space-x-4">
@@ -554,6 +561,18 @@ const UltimateTechRevolution2032: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
+=======
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -575,8 +594,10 @@ const UltimateTechRevolution2032: React.FC = () => {
           </divdiv>
         </div>
       </section>
+<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
+>>>>>>> cursor/create-and-deploy-new-content-63f0
+>>>>>>> origin/cursor/create-and-deploy-new-content-2565
     </div>
   );
 };
