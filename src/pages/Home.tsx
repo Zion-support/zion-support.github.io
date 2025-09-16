@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -13,6 +14,8 @@ import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
 import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
 import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -102,6 +105,7 @@ const Home: React.FC = () => {
               Discover the most comprehensive collection of cutting-edge technologies including
               Biotech AI, Space Technology, and Advanced Quantum Systems
             </p>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -267,6 +271,41 @@ const Home: React.FC = () => {
         {/* Call to Action */}
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
+=======
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-4xl mb-4">⚛️</div>
+            <h3 className="text-2xl font-semibold text-white mb-4">Quantum Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Revolutionary quantum computing technologies that will reshape 
+              the future of computation and problem-solving.
+            </p>
+            <Link 
+              to="/pages/TechTrends2026" 
+              className="text-purple-400 hover:text-purple-300 font-semibold"
+            >
+              Explore Trends →
+            </Link>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive cybersecurity solutions to protect your business 
+              from evolving threats in the digital landscape.
+            </p>
+            <Link 
+              to="/pages/ComprehensiveTechInsights2026" 
+              className="text-green-400 hover:text-green-300 font-semibold"
+            >
+              Get Insights →
+            </Link>
+          </div>
+        </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-079e
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
