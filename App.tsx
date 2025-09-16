@@ -46,6 +46,7 @@ import RevolutionaryInnovationHub2027 from './src/pages/RevolutionaryInnovationH
 import SyntheticBiologyRevolution2027 from './src/pages/SyntheticBiologyRevolution2027';
 import UltimateAIConsciousness2025 from './src/pages/UltimateAIConsciousness2025';
 import QuantumRealityEngineering2025 from './src/pages/QuantumRealityEngineering2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 
 // Import components
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
@@ -82,6 +83,8 @@ import InfiniteTechShowcase2030 from './src/components/InfiniteTechShowcase2030'
 import AbsoluteTechShowcase2031 from './src/components/AbsoluteTechShowcase2031';
 import NewsletterSignup from './src/components/NewsletterSignup';
 import PromotionalBanner from './src/components/PromotionalBanner';
+import RevolutionaryTechBreakthroughBanner2025 from './src/components/RevolutionaryTechBreakthroughBanner2025';
+import UltimateTechRevolutionBanner2025 from './src/components/UltimateTechRevolutionBanner2025';
 
 const App: React.FC = () => {
   return (
@@ -104,6 +107,16 @@ const App: React.FC = () => {
               {/* NEW: Innovation Showcase Banner */}
               <div className="mb-12">
                 <InnovationShowcaseBanner />
+              </div>
+
+              {/* NEW: Revolutionary Tech Breakthrough Banner 2025 */}
+              <div className="mb-12">
+                <RevolutionaryTechBreakthroughBanner2025 />
+              </div>
+
+              {/* NEW: Ultimate Tech Revolution Banner 2025 */}
+              <div className="mb-12">
+                <UltimateTechRevolutionBanner2025 />
               </div>
 
               {/* Featured Content Section */}
@@ -310,6 +323,7 @@ const App: React.FC = () => {
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/UltimateAIConsciousness2025" element={<UltimateAIConsciousness2025 />} />
           <Route path="/pages/QuantumRealityEngineering2025" element={<QuantumRealityEngineering2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
         </Routes>
         
         <Footer />
