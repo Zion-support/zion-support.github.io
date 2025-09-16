@@ -466,6 +466,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Promo: Operational Evals + Agent Platform SLOs (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Operational Evals + Agent Platform SLOs</h2>
+              <p className="text-gray-600 mt-2">Gate every change with evidence and track the SLOs that actually matter.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-operational-evals-evidence-gates" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Operational Evals</Link>
+              <Link href="/blog/agent-platform-slos-practical-blueprint" className="inline-block border border-amber-600 text-amber-700 px-5 py-3 rounded-lg font-semibold hover:bg-amber-50">Agent Platform SLOs</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Readiness Scorecards (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
