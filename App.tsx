@@ -31,6 +31,7 @@ import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
 import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
 import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
 import NotificationSystem from './src/components/NotificationSystem';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import PerformanceEnhancer from './src/components/PerformanceEnhancer';
@@ -91,6 +92,8 @@ import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
 import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030';
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
+import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
+import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
@@ -236,6 +239,11 @@ export default function App(): JSX.Element {
                 {/* NEW: Interactive Advertising Banner 2026 */}
                 <div className="mb-12">
                   <InteractiveAdvertisingBanner2026 />
+                </div>
+
+                {/* Latest Content Promotion Banner 2026 */}
+                <div className="mb-12">
+                  <LatestContentPromotionBanner2026 />
                 </div>
 
                 {/* NEW: Advanced Content Showcase 2026 */}
@@ -1333,6 +1341,11 @@ export default function App(): JSX.Element {
           <Route path="/consciousness-transfer-2028" element={<ConsciousnessTransfer2028 />} />
           <Route path="/interdimensional-computing-2028" element={<InterdimensionalComputing2028 />} />
           <Route path="/neural-reality-engine-2028" element={<NeuralRealityEngine2028 />} />
+          
+          {/* New Content Routes 2026 */}
+          <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
+          <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
