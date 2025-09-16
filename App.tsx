@@ -28,6 +28,7 @@ import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+import BlogPost2025Q4 from './src/pages/BlogPost2025Q4';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
 import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
@@ -1065,6 +1066,17 @@ export default function App(): JSX.Element {
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-rose-100 text-rose-700 text-xs rounded-full">NEW • Q4</span>
+                        <span className="text-sm text-gray-500">October 10, 2025</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Autonomous AI in Production: Q4 2025 Guide</h3>
+                      <p className="text-gray-600 mb-4">Field-tested patterns for deploying reliable agentic systems at scale...</p>
+                      <a href="/pages/BlogPost2025Q4" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Full Article →
+                      </a>
+                    </div>
+                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
                         <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">FEATURED</span>
                         <span className="text-sm text-gray-500">January 18, 2025</span>
                       </div>
@@ -1322,6 +1334,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+          <Route path="/pages/BlogPost2025Q4" element={<BlogPost2025Q4 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
