@@ -1,4 +1,44 @@
 import Head from 'next/head'
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
+
+export default function AgenticEvidenceGraphsPage() {
+  return (
+    <UltraFuturisticBackground intensity="medium">
+      <Head>
+        <title>Agentic Evidence Graphs (2026) | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Connect evals, traces, policy events, and incidents into an auditable evidence graph."
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/blog/ai-2026-agentic-evidence-graphs"
+        />
+      </Head>
+      <article className="container mx-auto px-4 py-16 prose prose-invert max-w-3xl">
+        <h1>Agentic Evidence Graphs (2026)</h1>
+        <p>
+          Production AI needs verifiable decision trails. Evidence graphs connect evaluations,
+          traces, policy events, and incidents so every action and outcome is explainable and
+          auditable.
+        </p>
+        <h2>Nodes and Edges</h2>
+        <ul>
+          <li>Nodes: evaluations, spans, artifacts, policy events, incidents</li>
+          <li>Edges: causedBy, derivedFrom, approves, rolledBackBy</li>
+        </ul>
+        <h2>Operational Use</h2>
+        <ol>
+          <li>Tie rollbacks to scorecards and policy thresholds</li>
+          <li>Automate postmortems with traversals over incidents</li>
+          <li>Generate executive views from queries over the graph</li>
+        </ol>
+      </article>
+    </UltraFuturisticBackground>
+  )
+}
+
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function AgenticEvidenceGraphs() {

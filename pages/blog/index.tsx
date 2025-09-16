@@ -130,6 +130,13 @@ export default function BlogIndexPage() {
             <Link href={`/blog/ai-2026-agentic-evidence-graphs`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
           </div>
 
+          {/* New: Governed Runtime Observability */}
+          <div key="ai-2026-governed-runtime-observability" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
+            <h2 className="text-white text-xl font-semibold mb-2">Governed Runtime Observability</h2>
+            <p className="text-gray-400 mb-4">Streaming metrics, governed traces, and evidence bundles for reliable autonomy.</p>
+            <Link href={`/blog/ai-2026-governed-runtime-observability`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+          </div>
+
           {/* New: Reliable Agent Change Windows */}
           <div key="ai-2026-reliable-agent-change-windows" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
             <h2 className="text-white text-xl font-semibold mb-2">Reliable Agent Change Windows</h2>
