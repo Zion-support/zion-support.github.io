@@ -1,101 +1,83 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-  });
-
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const updateMetric = (metric: any) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value,
-      }));
+    // Only show in development
+    if (process.env.NODE_ENV !== 'development') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const renderTime = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      
+      // Memory usage (if available)
+      const memoryInfo = (performance as any).memory;
+      const memoryUsage = memoryInfo ? Math.round(memoryInfo.usedJSHeapSize / 1048576) : undefined;
+
+      setMetrics({
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(renderTime),
+        memoryUsage
+      });
     };
 
-    getCLS(updateMetric);
-    getFID(updateMetric);
-    getFCP(updateMetric);
-    getLCP(updateMetric);
-    getTTFB(updateMetric);
-
-    // Show performance monitor in development
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
-  }, []);
 
-  if (!isVisible) return null;
+    // Keyboard shortcut to toggle visibility
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        setIsVisible(!isVisible);
+      }
+    };
 
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
-    if (value === null) return 'text-gray-500';
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    window.addEventListener('keydown', handleKeyPress);
 
-  const formatValue = (value: number | null, unit: string = 'ms') => {
-    if (value === null) return 'N/A';
-    return `${value.toFixed(2)}${unit}`;
-  };
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [isVisible]);
+
+  if (process.env.NODE_ENV !== 'development' || !isVisible || !metrics) {
+    return null;
+  }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Performance Metrics</h3>
+        <span className="font-bold">Performance Monitor</span>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
+          className="text-gray-400 hover:text-white"
         >
           ×
         </button>
       </div>
-      <div className="space-y-1 text-xs">
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {formatValue(metrics.cls, '')}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {formatValue(metrics.fid)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {formatValue(metrics.fcp)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {formatValue(metrics.lcp)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {formatValue(metrics.ttfb)}
-          </span>
-        </div>
+      <div className="space-y-1">
+        <div>Load Time: <span className="text-green-400">{metrics.loadTime}ms</span></div>
+        <div>Render Time: <span className="text-blue-400">{metrics.renderTime}ms</span></div>
+        {metrics.memoryUsage && (
+          <div>Memory: <span className="text-yellow-400">{metrics.memoryUsage}MB</span></div>
+        )}
+      </div>
+      <div className="mt-2 text-gray-400 text-xs">
+        Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );
