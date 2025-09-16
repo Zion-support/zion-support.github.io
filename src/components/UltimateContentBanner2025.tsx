@@ -1,64 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 
 const UltimateContentBanner2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const slides = [
-    {
-      title: "🚀 Revolutionary Tech Showcase 2025",
-      description: "Experience the most advanced technologies reshaping our world",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/90 to-pink-900/90"
-    },
-    {
-      title: "🤖 AI Solutions Comprehensive 2025",
-      description: "Transform your business with our comprehensive AI solutions",
-      link: "/pages/AISolutionsComprehensive2025",
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900/90 to-cyan-900/90"
-    },
-    {
-      title: "🌟 Ultimate Tech Breakthrough 2025",
-      description: "Witness the most revolutionary technological breakthroughs in history",
-      link: "/pages/UltimateTechBreakthrough2025",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900/90 to-teal-900/90"
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
   return (
+<<<<<<< HEAD
     <motion.div
 <<<<<<< HEAD
       initial={{ opacity: 0, y: 50 }}
@@ -108,29 +57,52 @@ const UltimateContentBanner2025: React.FC = () => {
       {/* Background with animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
+=======
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-8 mb-8 rounded-2xl shadow-2xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse">
+            🌟 ULTIMATE: Revolutionary Content 2025
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            The Ultimate Technology Experience
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-6 max-w-4xl mx-auto">
+            Immerse yourself in the most advanced technological innovations that will define the future of humanity
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a 
+              href="/pages/NextGenTechRevolution2025" 
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              🚀 Next-Gen Revolution →
+            </a>
+            <a 
+              href="/pages/UltimateTechBreakthrough2025" 
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              ⚡ Ultimate Breakthrough →
+            </a>
+            <a 
+              href="/pages/RevolutionaryTechShowcase2025" 
+              className="bg-white text-pink-600 px-8 py-3 rounded-lg hover:bg-pink-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              🌟 Interactive Showcase →
+            </a>
+          </div>
+        </div>
+      </div>
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
       
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-ping"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute bottom-10 left-20 w-12 h-12 bg-white/10 rounded-full animate-ping delay-2000"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-ping delay-3000"></div>
       </div>
+<<<<<<< HEAD
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
         {/* Header */}
@@ -252,6 +224,9 @@ const UltimateContentBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e495
       </div>
     </motion.div>
+=======
+    </div>
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
   );
 };
 

@@ -105,7 +105,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
             </a>
           </div>
         </div>
-=======
 
         {/* Dots Indicator */}
         <div className="flex justify-center mt-8 space-x-2">

@@ -1,66 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 
 const UltimateContentShowcase2025: React.FC = () => {
-  const contentCategories = [
-    {
-      title: "AI & Machine Learning",
-      icon: "🧠",
-      description: "Revolutionary AI technologies and consciousness systems",
-      technologies: ["Quantum AI", "Neural Networks", "Consciousness Computing", "Predictive Analytics"],
-      color: "from-purple-600 to-indigo-600",
-      borderColor: "border-purple-400/30",
-      bgColor: "from-purple-600/30 to-indigo-600/30"
-    },
-    {
-      title: "Quantum Computing",
-      icon: "⚛️",
-      description: "Breakthrough quantum computing and quantum consciousness",
-      technologies: ["Quantum Processors", "Quantum Cryptography", "Quantum AI", "Quantum Networks"],
-      color: "from-cyan-600 to-blue-600",
-      borderColor: "border-cyan-400/30",
-      bgColor: "from-cyan-600/30 to-blue-600/30"
-    },
-    {
-      title: "Space Technology",
-      icon: "🚀",
-      description: "Advanced space exploration and colonization technologies",
-      technologies: ["Neural Space Travel", "Dimensional Portals", "Space Colonies", "Interstellar Communication"],
-      color: "from-orange-600 to-red-600",
-      borderColor: "border-orange-400/30",
-      bgColor: "from-orange-600/30 to-red-600/30"
-    },
-    {
-      title: "Neural Interfaces",
-      icon: "🧬",
-      description: "Direct brain-computer interfaces and neural enhancement",
-      technologies: ["BCI Technology", "Neural Implants", "Thought Control", "Memory Enhancement"],
-      color: "from-emerald-600 to-teal-600",
-      borderColor: "border-emerald-400/30",
-      bgColor: "from-emerald-600/30 to-teal-600/30"
-    },
-    {
-      title: "Reality Manipulation",
-      icon: "🔮",
-      description: "Control and manipulate reality through quantum fields",
-      technologies: ["Matter Control", "Time Manipulation", "Gravity Control", "Dimensional Access"],
-      color: "from-violet-600 to-purple-600",
-      borderColor: "border-violet-400/30",
-      bgColor: "from-violet-600/30 to-purple-600/30"
-    },
-    {
-      title: "Energy Revolution",
-      icon: "⚡",
-      description: "Unlimited clean energy from quantum sources",
-      technologies: ["Zero-Point Energy", "Dimensional Harvesting", "Fusion Power", "Wireless Energy"],
-      color: "from-yellow-600 to-orange-600",
-      borderColor: "border-yellow-400/30",
-      bgColor: "from-yellow-600/30 to-orange-600/30"
-    }
-  ];
-
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -222,6 +167,7 @@ const UltimateContentShowcase2025: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
+<<<<<<< HEAD
           <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
           <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
             Join thousands of innovators, researchers, and visionaries who are already using our revolutionary technology to reshape the world. The future is here, and it's waiting for you.
@@ -364,6 +310,36 @@ const UltimateContentShowcase2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e495
           </div>
         </motion.div>
+=======
+          <div className="inline-flex items-center space-x-6 mb-8">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Live Technology</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Interactive Demos</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Revolutionary Content</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Future Ready</span>
+            </div>
+          </div>
+          
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore All Content
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+              Watch Demo
+            </button>
+          </div>
+        </div>
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
       </div>
     </motion.div>
   );
