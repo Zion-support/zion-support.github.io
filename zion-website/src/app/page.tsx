@@ -1,7 +1,4 @@
 // @ts-nocheck
-import React from 'react'
-import Link from 'next/link'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
 import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
@@ -37,22 +34,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
             New: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Guide: Real-Time Evals Control Plane —
-            <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">build the plane</a>
-=======
-            New: Production RAG Observability Suite v1.0 —
-            <a href="/updates/production-rag-observability-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            Launch: Autonomous Marketing Copilot —
+            <a href="/updates/autonomous-marketing-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">details</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Agentic Change Management (2026 Preview) —
-            <a href="/updates/agentic-change-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Also: GenAI Engineering Masterclass —
-            <a href="/updates/genai-engineering-masterclass" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">course details</a>
->>>>>>> 7c7e7d1125d0 (content(updates): add new updates + pages; advertise on home; fix duplicate exports and client directive; build passes)
+            Report: State of AI Evaluations (2026 Preview) —
+            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -83,19 +72,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
             Fresh: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">evals control plane</a>
-=======
-            Fresh: Production RAG Observability Suite —
-            <a href="/updates/production-rag-observability-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Launch: Autonomous Marketing Copilot —
+            <a href="/updates/autonomous-marketing-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/agentic-change-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">change management guide</a>
->>>>>>> 7c7e7d1125d0 (content(updates): add new updates + pages; advertise on home; fix duplicate exports and client directive; build passes)
-            <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/genai-engineering-masterclass" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">masterclass</a>
+            Report: State of AI Evaluations —
+            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">preview</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
