@@ -247,7 +247,6 @@ function DetailsStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
-=======
   
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
@@ -329,7 +328,6 @@ function DetailsStep() {
       <div className="space-y-2">;
         <Label htmlFor="requirements">Specific Requirements</Label>;
         <Textarea
-=======
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
                 onClick={() => removeSkill(skill)}
@@ -368,7 +366,6 @@ function DetailsStep() {
 
 
 
-=======
   );
 }
 
@@ -468,7 +465,6 @@ function PreviewStep() {
 
 
 
-=======
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>

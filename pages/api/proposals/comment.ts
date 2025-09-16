@@ -25,7 +25,6 @@ export default async function handler(
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -49,7 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
-=======
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -69,7 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-=======
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
       text: body.text || '',
@@ -80,7 +77,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(405).json({ error: 'Method not allowed' })
 }
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';

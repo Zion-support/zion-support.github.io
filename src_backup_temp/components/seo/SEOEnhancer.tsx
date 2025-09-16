@@ -1,4 +1,3 @@
-=======
 import React, { useEffect } from 'react';""',';';
     ';';';
 import React, {useEffect } from 'react';"',';';
@@ -20,7 +19,6 @@ import Head from 'next/head';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
-=======
   keywords?: string;
   canonical?: string;
   ogImage?: string;';
@@ -301,7 +299,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name="twitter: imag e" content={ogImage} /" >;
       ";
       {/* Canonical URL */}"";
-=======
       {canonical && <link rel="canonical" href={canonical} /" >}
       {/* Structured Data */}"
       <script ""
@@ -367,7 +364,6 @@ export default SEOEnhancer;";
       <meta name="twitter: imag e" content={ogImage} /"" >;
       "";
       {/* Canonical URL */}"";
-=======
       {canonical && <link rel="canonical" href={canonical} /"" >}
       {/* Structured Data */}""
       <script ""

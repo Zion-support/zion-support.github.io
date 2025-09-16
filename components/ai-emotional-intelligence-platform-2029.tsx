@@ -433,7 +433,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         />      </Head>        {/* Open Graph */}
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -652,7 +651,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               </span>
               <br />
               <span className='text-white'>Platform</span>            </motion.h1>            >
-=======
 
       <UltraFuturisticNavigation2029 />
 
@@ -711,7 +709,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Revolutionary AI platform that reads, understands, and responds to
               human emotions in real-time across all communication channels.
               Transform your business with emotional intelligence.            </motion.p>              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-=======
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -787,7 +784,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 </span>;
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
               </Link>;
-=======
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -876,7 +872,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   $8.2B
                 </div>
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
-=======
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -920,7 +915,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -938,7 +932,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             className="text-center mb-16"
           >
 
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1001,7 +994,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   {feature.description}
                 </p>              </motion.div>              >
                 <div className={`flex justify-center mb-6`}>
-=======
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1020,7 +1012,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             ))}
           </div>
         </div>
@@ -1040,7 +1031,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       </section>
 
 
-=======
       {/* Benefits Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1049,7 +1039,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1067,7 +1056,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             className="text-center mb-16"
           >
 
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1079,7 +1067,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
           </motion.div>
 
 
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
@@ -1129,7 +1116,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1138,7 +1124,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1156,7 +1141,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             className="text-center mb-16"
           >
 
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1219,7 +1203,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   {useCase.description}
                 </p>              </motion.div>              >
                 <div className={`flex justify-center mb-6`}>
-=======
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1238,7 +1221,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             ))}
           </div>
         </div>
@@ -1258,7 +1240,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       </section>
 
 
-=======
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1267,7 +1248,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1285,7 +1265,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             className="text-center mb-16"
           >
 
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1304,7 +1283,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
           <motion&& motion.div
 
 
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
@@ -1370,7 +1348,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
-=======
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1391,7 +1368,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             className="text-center mb-16"
           >
 
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1487,7 +1463,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 Get Started Today;
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >;
 
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
@@ -1612,7 +1587,6 @@ export default AIEmotionalIntelligencePlatform2029;
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
             >
               <span className="flex items-center">
@@ -1632,7 +1606,6 @@ export default AIEmotionalIntelligencePlatform2029;
 
 
 
-=======
 
       <UltraFuturisticFooter2028 />
     </>

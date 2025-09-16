@@ -38,7 +38,6 @@ const MobileAppPage: React.FC = () => {
     <AppLayout>;
 
       <SEO
-=======
 import React from "react";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
@@ -61,7 +60,6 @@ const MobileAppPage: React.FC = () => {
 
 export default MobileAppPage;
 
-=======
       
       <MobileAppHero />
       

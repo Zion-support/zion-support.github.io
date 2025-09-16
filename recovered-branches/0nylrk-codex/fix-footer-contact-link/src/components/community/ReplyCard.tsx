@@ -33,7 +33,6 @@
             )}
           </div>;
           <div className="text-xs text-muted-foreground">;
-=======
                 {reply.authorRole}
               </Badge>
             )}
@@ -71,7 +70,6 @@
 
 export default ReplyCard;
 
-=======
       </CardFooter>
     </Card>
   );

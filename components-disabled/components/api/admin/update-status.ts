@@ -101,7 +101,6 @@ if ( {) {
   res.status(200).json({ ok: true })
 }
 
-=======
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
   res.status(200).json({ ok: true });
 }

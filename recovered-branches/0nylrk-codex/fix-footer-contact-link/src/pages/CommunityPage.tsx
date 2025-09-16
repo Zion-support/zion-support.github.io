@@ -79,6 +79,5 @@ const featuredPosts: ForumPost[] = [
 }
 ;
 
-=======
   );
 }

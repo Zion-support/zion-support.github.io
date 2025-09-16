@@ -78,7 +78,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 <span>Get Started</span>;
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -227,7 +226,6 @@ export default function ServicesShowcase2028() {
 
 
 
-=======
               </div>
             </div>
           </motion.div>
@@ -256,7 +254,6 @@ export default function ServicesShowcase2028() {
 
                     <Link
 
-=======
                         </div>
                       ))}
                     </div>
@@ -301,7 +298,6 @@ export default function ServicesShowcase2028() {
 
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-=======
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -387,7 +383,6 @@ export default function ServicesShowcase2028() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
-=======
       {/* Market Analysis */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -490,7 +485,6 @@ export default function ServicesShowcase2028() {
 
 
 
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
@@ -604,7 +598,6 @@ export default function ServicesShowcase2028() {
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />                <span>Money-Back Guarantee</span>              <div className="flex items-center space-x-2">
-=======
             className="space-y-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -652,7 +645,6 @@ export default function ServicesShowcase2028() {
 
 
 
-=======
 
       <UltraFuturisticFooter2028 />
     </>

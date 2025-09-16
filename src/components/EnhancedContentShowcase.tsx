@@ -25,9 +25,9 @@ const EnhancedContentShowcase: React.FC = () => {
         },
         {
           title: "Neural Reality Engine",
-          description: "Direct brain-computer interfaces",
+          description: "Direct brain-computer interface technology",
           link: "/pages/RevolutionaryTechBreakthrough2025",
-          stats: "Full Immersion",
+          stats: "Real-time",
           gradient: "from-emerald-600 to-teal-600"
         }
       ]
@@ -39,168 +39,165 @@ const EnhancedContentShowcase: React.FC = () => {
       content: [
         {
           title: "Autonomous AI Systems",
-          description: "Self-evolving AI without human intervention",
+          description: "Self-evolving AI with independent decision making",
           link: "/pages/NextGenInnovationHub2026",
-          stats: "24/7 Learning",
+          stats: "24/7 Active",
           gradient: "from-indigo-600 to-purple-600"
         },
         {
           title: "Metaverse Integration",
-          description: "Seamless physical-virtual world integration",
+          description: "Seamless virtual and physical world convergence",
           link: "/pages/NextGenInnovationHub2026",
-          stats: "Holographic UI",
-          gradient: "from-cyan-600 to-blue-600"
+          stats: "Infinite Scale",
+          gradient: "from-violet-600 to-fuchsia-600"
         },
         {
           title: "Biotech Revolution",
-          description: "AI-powered biotechnology solutions",
+          description: "AI-powered biological system optimization",
           link: "/pages/NextGenInnovationHub2026",
-          stats: "Personalized Medicine",
-          gradient: "from-emerald-600 to-teal-600"
+          stats: "Life Extension",
+          gradient: "from-green-600 to-emerald-600"
         }
       ]
     },
-    showcase: {
-      title: "Ultimate Showcase",
+    showcases: {
+      title: "Ultimate Showcases",
       icon: "🎯",
       color: "blue",
       content: [
         {
           title: "Interactive Demos",
-          description: "Experience technologies in action",
+          description: "Hands-on experience with cutting-edge technology",
           link: "/pages/UltimateTechShowcase2026",
           stats: "Live Demo",
-          gradient: "from-blue-600 to-indigo-600"
+          gradient: "from-blue-600 to-cyan-600"
         },
         {
-          title: "Quantum Simulator",
-          description: "Interactive quantum computing concepts",
+          title: "Technology Previews",
+          description: "Exclusive access to future innovations",
           link: "/pages/UltimateTechShowcase2026",
-          stats: "Real-time",
-          gradient: "from-purple-600 to-pink-600"
+          stats: "Exclusive",
+          gradient: "from-rose-600 to-pink-600"
         },
         {
-          title: "Bio AI Lab",
-          description: "Explore biotechnology with AI",
+          title: "Industry Impact",
+          description: "Real-world applications and transformations",
           link: "/pages/UltimateTechShowcase2026",
-          stats: "Hands-on",
-          gradient: "from-green-600 to-emerald-600"
+          stats: "Global Impact",
+          gradient: "from-orange-600 to-red-600"
         }
       ]
     }
   };
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      purple: {
-        bg: "bg-purple-600",
-        text: "text-purple-600",
-        border: "border-purple-600",
-        hover: "hover:bg-purple-50"
-      },
-      indigo: {
-        bg: "bg-indigo-600",
-        text: "text-indigo-600",
-        border: "border-indigo-600",
-        hover: "hover:bg-indigo-50"
-      },
-      blue: {
-        bg: "bg-blue-600",
-        text: "text-blue-600",
-        border: "border-blue-600",
-        hover: "hover:bg-blue-50"
-      }
-    };
-    return colors[color as keyof typeof colors] || colors.purple;
+  const colorClasses = {
+    purple: {
+      bg: "bg-purple-500",
+      text: "text-purple-600",
+      border: "border-purple-200"
+    },
+    indigo: {
+      bg: "bg-indigo-500",
+      text: "text-indigo-600",
+      border: "border-indigo-200"
+    },
+    blue: {
+      bg: "bg-blue-500",
+      text: "text-blue-600",
+      border: "border-blue-200"
+    }
   };
 
-  const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
-  const colorClasses = getColorClasses(currentCategory.color);
-
   return (
-    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-8 text-white">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Enhanced Content Showcase</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our revolutionary content across breakthrough technologies, next-gen innovations, and interactive showcases
+    <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold text-white mb-6">
+            🚀 ENHANCED CONTENT SHOWCASE
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Explore Revolutionary Content
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our comprehensive collection of cutting-edge technology content, 
+            breakthrough innovations, and interactive showcases.
           </p>
         </div>
-      </div>
 
-      {/* Tab Navigation */}
-      <div className="bg-gray-50 px-8 py-4">
-        <div className="flex justify-center space-x-2">
-          {Object.entries(contentCategories).map(([key, category]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === key
-                  ? `${colorClasses.bg} text-white shadow-lg`
-                  : `text-gray-600 hover:bg-gray-200`
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.title}
-            </button>
-          ))}
+        {/* Tab Navigation */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white rounded-xl p-2 shadow-lg">
+            {Object.entries(contentCategories).map(([key, category]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === key
+                    ? `${colorClasses[category.color as keyof typeof colorClasses].bg} text-white shadow-lg`
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+              >
+                <span className="mr-2">{category.icon}</span>
+                {category.title}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Content Grid */}
-      <div className="p-8">
+        {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {currentCategory.content.map((item, index) => (
+          {contentCategories[activeTab as keyof typeof contentCategories].content.map((item, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-gray-300"
+              className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-gray-300 hover:-translate-y-1"
             >
               <div className="mb-4">
-                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${colorClasses.bg} text-white mb-3`}>
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${item.gradient} text-white mb-3`}>
                   {item.stats}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 mb-4">
                   {item.description}
                 </p>
               </div>
-              
               <a
                 href={item.link}
-                className={`inline-flex items-center justify-center w-full bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
               >
-                Explore Content
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                Explore Now
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </a>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-8 py-6">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">Ready to Explore?</h3>
-          <p className="text-gray-600 mb-4">
-            Dive deeper into our revolutionary content and discover the future of technology
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              View All Breakthroughs
-            </a>
-            <a
-              href="/pages/NextGenInnovationHub2026"
-              className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors font-semibold"
-            >
-              Explore Innovations
-            </a>
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-lg mb-6 opacity-90">
+              Join thousands of innovators exploring the next generation of technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/pages/RevolutionaryTechBreakthrough2025"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              >
+                Start Exploring
+              </a>
+              <a
+                href="/pages/UltimateTechShowcase2026"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300"
+              >
+                View All Content
+              </a>
+            </div>
           </div>
         </div>
       </div>
