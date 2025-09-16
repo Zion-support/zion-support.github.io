@@ -193,6 +193,8 @@ import AIExecutiveBriefQ1_2026 from './src/pages/AIExecutiveBriefQ1_2026';
 import AgenticRAGBlueprint2026 from './src/pages/AgenticRAGBlueprint2026';
 import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalBanner2026';
 import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
+import AdvancedTechShowcase2025 from './src/pages/AdvancedTechShowcase2025';
+import AdvancedTechBanner2025 from './src/components/AdvancedTechBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -323,6 +325,9 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Content Banner 2040 */}
                 <RevolutionaryContentBanner2040 />
+
+                {/* NEW: Advanced Tech Banner 2025 */}
+                <AdvancedTechBanner2025 />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -605,6 +610,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryTechShowcase2040" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       ⚡ REVOLUTIONARY: Tech Showcase 2040 →
+                    </a>
+                    <a href="/pages/AdvancedTechShowcase2025" className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 ADVANCED: Tech Showcase 2025 →
                     </a>
                   </div>
                 </div>
@@ -1282,6 +1290,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2037" element={<RevolutionaryTechShowcase2037 />} />
           <Route path="/pages/UltimateTechBreakthrough2040" element={<UltimateTechBreakthrough2040 />} />
           <Route path="/pages/RevolutionaryTechShowcase2040" element={<RevolutionaryTechShowcase2040 />} />
+          <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
