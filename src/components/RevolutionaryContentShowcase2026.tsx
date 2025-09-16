@@ -1,168 +1,284 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
-  const contentItems = [
+  const [activeTab, setActiveTab] = useState(0);
+
+  const contentTabs = [
     {
-      title: "Revolutionary Tech Breakthrough 2026",
-      description: "Experience the most revolutionary technological breakthroughs reshaping our world",
+      id: 0,
+      title: "Holographic Reality",
+      icon: "👁️",
+      description: "Advanced holographic technology that blurs the line between digital and physical worlds",
+      color: "from-purple-600 to-pink-600",
+      borderColor: "border-purple-400",
+      bgColor: "bg-purple-600/30",
+      link: "/pages/AdvancedHolographicReality2026"
+    },
+    {
+      id: 1,
+      title: "Space Technology",
       icon: "🚀",
-      link: "/pages/RevolutionaryTechBreakthrough2026",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Quantum Supremacy", "Neural Interfaces", "Autonomous AI", "Space Technology"]
+      description: "Revolutionary space technologies enabling interplanetary travel and cosmic exploration",
+      color: "from-blue-600 to-cyan-600",
+      borderColor: "border-blue-400",
+      bgColor: "bg-blue-600/30",
+      link: "/pages/AdvancedSpaceTech2026"
     },
     {
-      title: "Next-Gen Innovation Hub 2026",
-      description: "The ultimate destination for cutting-edge innovation and breakthrough technologies",
-      icon: "🌟",
-      link: "/pages/NextGenInnovationHub2026",
-      gradient: "from-cyan-600 to-blue-600",
-      features: ["Research Labs", "Innovation Process", "Global Network", "Breakthrough Ideas"]
-    },
-    {
-      title: "Advanced Space Technology 2026",
-      description: "Revolutionary space exploration technologies enabling interplanetary travel",
-      icon: "🛸",
-      link: "/pages/AdvancedSpaceTech2026",
-      gradient: "from-orange-600 to-red-600",
-      features: ["Mars Colonization", "Asteroid Mining", "Space Manufacturing", "Interstellar Travel"]
-    },
-    {
-      title: "Quantum Computing Revolution 2026",
-      description: "Breakthrough quantum computing with exponential processing power",
-      icon: "⚛️",
-      link: "/pages/QuantumComputingRevolution2026",
-      gradient: "from-violet-600 to-purple-600",
-      features: ["1000+ Qubits", "Quantum Algorithms", "Cryptography", "Simulation"]
-    },
-    {
-      title: "Advanced Robotics 2026",
-      description: "Next-generation autonomous robotics with human-like capabilities",
-      icon: "🤖",
-      link: "/pages/AdvancedRobotics2026",
-      gradient: "from-emerald-600 to-teal-600",
-      features: ["Humanoid Robots", "AI Integration", "Autonomous Systems", "Precision Control"]
-    },
-    {
-      title: "Neural Interface Revolution 2026",
-      description: "Direct brain-computer interfaces enabling thought-controlled technology",
+      id: 2,
+      title: "Biotech Revolution",
       icon: "🧬",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      gradient: "from-rose-600 to-pink-600",
-      features: ["Non-Invasive BCI", "Thought Control", "Neural Data", "Medical Applications"]
+      description: "Cutting-edge biotechnology enhancing human capabilities and curing diseases",
+      color: "from-green-600 to-emerald-600",
+      borderColor: "border-green-400",
+      bgColor: "bg-green-600/30",
+      link: "/pages/AdvancedBiotechRevolution2026"
+    },
+    {
+      id: 3,
+      title: "Quantum Computing",
+      icon: "⚡",
+      description: "Next-generation quantum computing solving impossible problems with exponential speed",
+      color: "from-cyan-600 to-blue-600",
+      borderColor: "border-cyan-400",
+      bgColor: "bg-cyan-600/30",
+      link: "/pages/QuantumComputingRevolution2026"
+    },
+    {
+      id: 4,
+      title: "Neural Interfaces",
+      icon: "🧠",
+      description: "Direct neural interfaces bridging the gap between mind and machine",
+      color: "from-emerald-600 to-teal-600",
+      borderColor: "border-emerald-400",
+      bgColor: "bg-emerald-600/30",
+      link: "/pages/NeuralInterfaceRevolution2026"
+    },
+    {
+      id: 5,
+      title: "AI Revolution",
+      icon: "🤖",
+      description: "Artificial intelligence reshaping industries and creating new opportunities",
+      color: "from-indigo-600 to-purple-600",
+      borderColor: "border-indigo-400",
+      bgColor: "bg-indigo-600/30",
+      link: "/pages/NextGenAIRevolution2026"
+    }
+  ];
+
+  const features = [
+    {
+      title: "Immersive Experience",
+      description: "Experience technology like never before with our cutting-edge interfaces",
+      icon: "🌟"
+    },
+    {
+      title: "Real-time Interaction",
+      description: "Interact with advanced systems in real-time with minimal latency",
+      icon: "⚡"
+    },
+    {
+      title: "Future-Ready",
+      description: "Built for the future with scalable and adaptable technology",
+      icon: "🚀"
+    },
+    {
+      title: "Industry Leading",
+      description: "Leading the industry with breakthrough innovations and solutions",
+      icon: "🏆"
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+    <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT 2026 • EXCLUSIVE
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-            Revolutionary Content Showcase 2026
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
-          </p>
-        </motion.div>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 REVOLUTIONARY TECHNOLOGY • 2026
+            </div>
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Revolutionary Technology Showcase
+            </h2>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              Explore our groundbreaking technologies that are reshaping the future of humanity. 
+              From holographic reality to space exploration, discover innovations that were once science fiction.
+            </p>
+          </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group"
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {contentTabs.map((tab) => (
+            <motion.button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? `bg-gradient-to-r ${tab.color} text-white shadow-lg`
+                  : `bg-white/10 text-white/80 hover:bg-white/20 border ${tab.borderColor}`
+              }`}
             >
-              <div className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 h-full`}>
-                <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-4 text-center">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  {item.description}
-                </p>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold mb-3 text-center">Key Features:</h4>
-                  <div className="flex flex-wrap justify-center gap-2">
-                    {item.features.map((feature, featureIndex) => (
-                      <span
-                        key={featureIndex}
-                        className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <a
-                    href={item.link}
-                    className={`inline-block bg-gradient-to-r ${item.gradient} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
-                  >
-                    Explore Now →
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+              <span className="mr-2">{tab.icon}</span>
+              {tab.title}
+            </motion.button>
           ))}
         </div>
 
-        {/* Additional Content Highlights */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">🌟 Exclusive Content Access</h3>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Get early access to our most revolutionary content and be the first to experience the future of technology
-            </p>
-          </div>
+        {/* Content Display */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 border border-white/20"
+            >
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Content Info */}
+                <div>
+                  <div className="text-6xl mb-6">{contentTabs[activeTab].icon}</div>
+                  <h3 className="text-4xl font-bold mb-4">{contentTabs[activeTab].title}</h3>
+                  <p className="text-xl opacity-90 mb-8">{contentTabs[activeTab].description}</p>
+                  
+                  <div className="space-y-4 mb-8">
+                    {features.map((feature, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className="flex items-center space-x-4"
+                      >
+                        <div className="text-2xl">{feature.icon}</div>
+                        <div>
+                          <h4 className="font-semibold">{feature.title}</h4>
+                          <p className="text-sm opacity-80">{feature.description}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex space-x-4">
+                    <a
+                      href={contentTabs[activeTab].link}
+                      className={`bg-gradient-to-r ${contentTabs[activeTab].color} px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
+                    >
+                      Explore Technology
+                    </a>
+                    <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold">
+                      Watch Demo
+                    </button>
+                  </div>
+                </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🔬</div>
-              <h4 className="text-xl font-bold mb-2">Research Insights</h4>
-              <p className="text-gray-300">Exclusive access to cutting-edge research and development insights</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h4 className="text-xl font-bold mb-2">Early Access</h4>
-              <p className="text-gray-300">Be among the first to experience breakthrough technologies</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">💡</div>
-              <h4 className="text-xl font-bold mb-2">Innovation Updates</h4>
-              <p className="text-gray-300">Regular updates on the latest technological breakthroughs</p>
-            </div>
-          </div>
+                {/* Visual Element */}
+                <div className="relative">
+                  <div className={`w-full h-96 rounded-2xl ${contentTabs[activeTab].bgColor} border ${contentTabs[activeTab].borderColor} flex items-center justify-center`}>
+                    <motion.div
+                      animate={{ 
+                        scale: [1, 1.1, 1],
+                        rotate: [0, 5, -5, 0]
+                      }}
+                      transition={{ 
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      className="text-8xl"
+                    >
+                      {contentTabs[activeTab].icon}
+                    </motion.div>
+                  </div>
+                  
+                  {/* Floating Elements */}
+                  <motion.div
+                    animate={{ 
+                      y: [0, -20, 0],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{ 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
+                  />
+                  <motion.div
+                    animate={{ 
+                      y: [0, 20, 0],
+                      opacity: [0.3, 0.8, 0.3]
+                    }}
+                    transition={{ 
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1
+                    }}
+                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-          <div className="text-center mt-8">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 mr-4">
-              Get Early Access
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View All Content
-            </button>
+        {/* Stats Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Revolutionary Impact</h3>
+            <p className="text-xl opacity-80">Transforming industries and human potential</p>
           </div>
-        </motion.div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <p className="text-purple-200">Technologies Developed</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-blue-400 mb-2">1M+</div>
+              <p className="text-blue-200">Lives Impacted</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
+              <p className="text-green-200">Success Rate</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+              <p className="text-cyan-200">Innovation</p>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );
