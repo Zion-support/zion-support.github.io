@@ -1,8 +1,6 @@
 // @ts-nocheck
-import React from 'react'
-import Link from 'next/link'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
+import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
@@ -36,14 +34,20 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Agent Reliability — 2026 Blueprint —
-            <a href="/blog/ai-2026-agent-reliability-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read blueprint</a>
+            New: Agent Evidence Bundles —
+            <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Continuous Agent Evidence Bundles —
-            <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read article</a>
+            Enterprise Agent Risk Scorecards —
+            <a href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Cost Optimizer v2.0 Deep Dive —
-            <a href="/updates/real-time-agent-cost-optimizer-2-0-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">architecture & KPIs</a>
+            Production Evals Control Plane —
+            <a href="/blog/ai-2026-production-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Multimodal Guardrails —
+            <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">patterns</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Cost Optimizer v2.0 —
+            <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -74,13 +78,17 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Agent Reliability — 2026 Blueprint —
-            <a href="/blog/ai-2026-agent-reliability-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
+            Fresh: Agent Evidence Bundles —
+            <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Continuous Agent Evidence Bundles —
-            <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
+            Enterprise Agent Risk Scorecards —
+            <a href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">multimodal guardrails</a>
+            Multimodal Guardrails —
+            <a href="/blog/ai-2026-multimodal-guardrails-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Cost Optimizer v2.0 —
+            <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -146,8 +154,8 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real‑Time Agent FinOps Dashboard v1.0 —
-            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Autonomous Ops Control Center v2.4 —
+            <a href="/updates/autonomous-ops-control-center-2-4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Also read: <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>

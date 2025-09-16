@@ -5,6 +5,18 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react
 export default function Blog() {
   const blogPosts = [
     {
+      id: 'ai-2026-trusted-rag-guardrailed-retrieval',
+      title: 'Trusted RAG — Guardrailed Retrieval That Ships',
+      excerpt: 'Groundedness evals, freshness windows, and rollback contracts wired to scorecards for safe, reliable RAG in production.',
+      author: 'AI Reliability Team',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Evaluations',
+      tags: ['RAG', 'Guardrails', 'Evaluations'],
+      featured: true,
+      image: '/blog/trusted-rag-2026.jpg'
+    },
+    {
       id: 'ai-2026-autonomous-incident-response-blueprint',
       title: 'Autonomous Incident Response Blueprint (2026)',
       excerpt: 'AI-first incident response: autonomous detection, triage, containment, and post-incident learning.',

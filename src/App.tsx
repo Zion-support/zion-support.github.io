@@ -44,6 +44,10 @@ import NewContentPromoBannerClean from './components/NewContentPromoBannerClean'
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
+import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
+import AgentOpsControlPlane2026 from './pages/AgentOpsControlPlane2026';
+import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
+import OperationalEvalGates2026 from './pages/OperationalEvalGates2026';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
 import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
@@ -380,6 +384,10 @@ const App: React.FC = () => {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
+          <Route path="/pages/TrustedRAGPlaybook2026" element={<TrustedRAGPlaybook2026 />} />
+          <Route path="/pages/AgentOpsControlPlane2026" element={<AgentOpsControlPlane2026 />} />
+          <Route path="/pages/ResponsibleAutonomyGuide2026" element={<ResponsibleAutonomyGuide2026 />} />
+          <Route path="/pages/OperationalEvalGates2026" element={<OperationalEvalGates2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} />

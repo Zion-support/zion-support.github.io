@@ -184,6 +184,11 @@ import RevolutionaryContentCarousel2037 from './src/components/RevolutionaryCont
 import NewContentPromotion2037 from './src/components/NewContentPromotion2037';
 import UltimateTechBreakthrough2037 from './src/pages/UltimateTechBreakthrough2037';
 import RevolutionaryTechShowcase2037 from './src/pages/RevolutionaryTechShowcase2037';
+import NewContentSeptember2025 from './src/pages/NewContentSeptember2025';
+import UltimateTechBreakthrough2040 from './src/pages/UltimateTechBreakthrough2040';
+import RevolutionaryTechShowcase2040 from './src/pages/RevolutionaryTechShowcase2040';
+import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
+import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
 
 export default function App(): JSX.Element {
   return (
@@ -309,10 +314,16 @@ export default function App(): JSX.Element {
                 {/* NEW: Content Promotion 2037 */}
                 <NewContentPromotion2037 />
 
+                {/* NEW: Ultimate Tech Banner 2040 */}
+                <UltimateTechBanner2040 />
+
+                {/* NEW: Revolutionary Content Banner 2040 */}
+                <RevolutionaryContentBanner2040 />
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-lg font-bold mb-4 animate-pulse">
-                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2037 - Transcendent Evolution, Interdimensional Technology & Ultimate Breakthrough
+                    🚀 NEW: Revolutionary Tech Breakthrough 2028-2040 - Transcendent Evolution, Interdimensional Technology & Ultimate Breakthrough
                   </div>
                   <h1 className="text-5xl font-bold text-gray-900 mb-6">
                     Welcome to Zion Tech Group
@@ -585,6 +596,12 @@ export default function App(): JSX.Element {
                     <a href="/pages/InterdimensionalTechRevolution2037" className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 NEW: Interdimensional Tech 2037 →
                     </a>
+                    <a href="/pages/UltimateTechBreakthrough2040" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 ULTIMATE: Tech Breakthrough 2040 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2040" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ REVOLUTIONARY: Tech Showcase 2040 →
+                    </a>
                   </div>
                 </div>
 
@@ -843,6 +860,17 @@ export default function App(): JSX.Element {
                         Explore Solutions →
                       </a>
                     </div>
+                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">NEW</span>
+                        <span className="text-sm text-gray-500">September 16, 2025</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">State of AI Systems • Sep 2025</h3>
+                      <p className="text-gray-600 mb-4">Practical agent ops patterns, ROI winners, and architecture notes...</p>
+                      <a href="/pages/NewContentSeptember2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Full Update →
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1090,6 +1118,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
           <Route path="/pages/BlogPost2025Q4" element={<BlogPost2025Q4 />} />
+          <Route path="/pages/NewContentSeptember2025" element={<NewContentSeptember2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
@@ -1217,6 +1246,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
           <Route path="/pages/UltimateTechBreakthrough2037" element={<UltimateTechBreakthrough2037 />} />
           <Route path="/pages/RevolutionaryTechShowcase2037" element={<RevolutionaryTechShowcase2037 />} />
+          <Route path="/pages/UltimateTechBreakthrough2040" element={<UltimateTechBreakthrough2040 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2040" element={<RevolutionaryTechShowcase2040 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">

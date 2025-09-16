@@ -11,9 +11,65 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Deep Dive: Real‑Time Agent Cost Optimizer v2.0',
+        summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
+        href: '/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Guide: Agent Evidence Bundles — 2026 Blueprint',
+        summary: 'Design signed evidence bundles with provenance, policy checks, and eval signals.',
+        href: '/blog/ai-2026-agent-evidence-bundles-blueprint',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Guide: Enterprise Agent Risk Scorecards',
+        summary: 'Standardize cross-team risk metrics, thresholds, and alerts for autonomous agents.',
+        href: '/blog/ai-2026-enterprise-agent-risk-scorecards',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Launch: Autonomous Ops Control Center v2.4',
+        summary: 'New playbooks, real-time eval gates, and risk scorecards for safer ops.',
+        href: '/updates/autonomous-ops-control-center-2-4',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Agent Observability Blueprint (2026)',
+        summary: 'End-to-end traces, SLIs/SLOs, eval overlays, and evidence bundles for agents.',
+        href: '/updates/agent-observability-blueprint-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Guide: Agent Reliability — 2026 Blueprint',
         summary: 'Standardize SLOs, eval gates, and evidence bundles for reliable production agents.',
         href: '/blog/ai-2026-agent-reliability-blueprint',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Guide: Agent Safety Evidence Bundles',
+        summary: 'Design evidence bundles with evals, lineage, and policy checks for audits.',
+        href: '/blog/ai-2026-agent-safety-evidence-bundles',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Production Evals Control Plane',
+        summary: 'Centralize rubrics, thresholds, and rollout gates with live scorecards.',
+        href: '/blog/ai-2026-production-evals-control-plane',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Guide: Multimodal Guardrails — 2026',
+        summary: 'Layered guardrails for image/audio/video agents with risk tiers and eval gates.',
+        href: '/blog/ai-2026-multimodal-guardrails-blueprint',
         date: '2025-09-16',
         tag: 'Guide',
     },
@@ -243,9 +299,23 @@ export const updates: UpdateItem[] = [
 	},
   // Newly added updates (2025-09-16)
   {
-    title: 'Launch: Real‑Time Agent Cost Optimizer v2.0 — Deep Dive',
-    summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
-    href: '/updates/real-time-agent-cost-optimizer-2-0-deep-dive',
+    title: 'Blueprint: Production Evidence Bundles (2026)',
+    summary: 'Standardized artifacts for audits: inputs, outputs, policies, evals, and traces.',
+    href: '/updates/production-evidence-bundles-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Field Guide: Canary + Shadow Testing for Agents (2026)',
+    summary: 'Incremental rollout patterns with objective gates to de-risk production launches.',
+    href: '/updates/canary-and-shadow-testing-for-agents-2026',
+    date: '2025-09-16',
+    tag: 'Field Guide'
+  },
+  {
+    title: 'Blueprint: Grounded Generation Guardrails (2026)',
+    summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
+    href: '/updates/grounded-generation-guardrails-2026',
     date: '2025-09-16',
     tag: 'Launch',
   },

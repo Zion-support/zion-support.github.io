@@ -3,6 +3,36 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-agent-evidence-bundles-blueprint',
+    title: 'AI 2026: Agent Evidence Bundles — Blueprint',
+    summary:
+      'Design evidence bundles with provenance, policy checks, eval signals, and approvals.'
+  },
+  {
+    slug: 'ai-2026-enterprise-agent-risk-scorecards',
+    title: 'AI 2026: Enterprise Agent Risk Scorecards — Field Guide',
+    summary:
+      'Standardize shared risk metrics, thresholds, and alerts for autonomous agents.'
+  },
+  {
+    slug: 'ai-2026-agent-safety-evidence-bundles',
+    title: 'AI 2026: Agent Safety Evidence Bundles — Practical Guide',
+    summary:
+      'Design and operationalize evidence bundles for safe, auditable agent actions in production.'
+  },
+  {
+    slug: 'ai-2026-production-evals-control-plane',
+    title: 'AI 2026: Production Evals Control Plane — Blueprint',
+    summary:
+      'Centralize rubrics, thresholds, and rollout gates with live scorecards across services.'
+  },
+  {
+    slug: 'ai-2026-multimodal-guardrails-blueprint',
+    title: 'AI 2026: Multimodal Guardrails — Blueprint',
+    summary:
+      'Layered guardrails for image/audio/video agents with risk tiers and eval gates.'
+  },
+  {
     slug: 'ai-2026-evidence-led-governance-blueprint',
     title: 'AI 2026: Evidence‑Led Governance — From Policy to Runtime Controls',
     summary:
