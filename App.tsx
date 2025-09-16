@@ -61,20 +61,21 @@ import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough20
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
 import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
-<<<<<<< HEAD
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
-=======
 import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTechRevolution2026';
 import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
-import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import UltimateTechBreakthrough2028 from './src/pages/UltimateTechBreakthrough2028';
 import RevolutionaryTechBlog2028 from './src/pages/RevolutionaryTechBlog2028';
 import InteractiveTechShowcase2028 from './src/pages/InteractiveTechShowcase2028';
 import UltimateTechTrends2028 from './src/pages/UltimateTechTrends2028';
->>>>>>> cursor/create-and-deploy-new-content-de02
+import NewContentShowcaseBanner from './src/components/NewContentShowcaseBanner';
+import FeaturedContentSection from './src/components/FeaturedContentSection';
+import AIFutureInnovation2025 from './src/pages/AIFutureInnovation2025';
+import QuantumLeapTechnology2025 from './src/pages/QuantumLeapTechnology2025';
+import DigitalTransformationHub2025 from './src/pages/DigitalTransformationHub2025';
 
 export default function App(): JSX.Element {
   return (
@@ -93,15 +94,19 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* New Content Showcase Banner */}
+                <NewContentShowcaseBanner />
+                
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
 
-<<<<<<< HEAD
-=======
-                {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
+                {/* New Content Showcase Banner */}
+                <NewContentShowcaseBanner />
+
+                {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
                   <div className="relative z-10">
@@ -187,14 +192,14 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, consciousness computing, and revolutionary solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🤖 NEW: AI Transformation →
+                    <a href="/pages/AIFutureInnovation2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🤖 NEW: AI Future Innovation →
                     </a>
-                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      ⚡ NEW: Quantum Revolution →
+                    <a href="/pages/QuantumLeapTechnology2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Leap Tech →
                     </a>
-                    <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🧬 NEW: Neural Interface →
+                    <a href="/pages/DigitalTransformationHub2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🔄 NEW: Digital Transformation →
                     </a>
                     <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Next-Gen Tech →
@@ -246,6 +251,9 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
+
+                {/* Featured Content Section */}
+                <FeaturedContentSection />
 
                 {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">
@@ -693,17 +701,17 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
-<<<<<<< HEAD
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
-=======
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2028" element={<UltimateTechBreakthrough2028 />} />
           <Route path="/pages/RevolutionaryTechBlog2028" element={<RevolutionaryTechBlog2028 />} />
           <Route path="/pages/InteractiveTechShowcase2028" element={<InteractiveTechShowcase2028 />} />
           <Route path="/pages/UltimateTechTrends2028" element={<UltimateTechTrends2028 />} />
->>>>>>> cursor/create-and-deploy-new-content-de02
+          <Route path="/pages/AIFutureInnovation2025" element={<AIFutureInnovation2025 />} />
+          <Route path="/pages/QuantumLeapTechnology2025" element={<QuantumLeapTechnology2025 />} />
+          <Route path="/pages/DigitalTransformationHub2025" element={<DigitalTransformationHub2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
