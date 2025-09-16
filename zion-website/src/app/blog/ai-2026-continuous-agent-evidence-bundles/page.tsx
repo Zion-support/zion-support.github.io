@@ -1,3 +1,38 @@
+// @ts-nocheck
+import React from 'react'
+
+export default function BlogPost() {
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
+        <p className="text-sm text-blue-300">Announcement • 2025-09-16</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Continuous Agent Evidence Bundles</h1>
+        <p className="mt-6 text-lg leading-8 text-gray-300">
+          Designing continuous evidence capture for autonomous agents with policy gates, provenance, and signed
+          lineage for every change and action in production.
+        </p>
+        <div className="mt-10 space-y-6 text-gray-300">
+          <p>
+            Evidence bundles bring together traces, prompts, tool results, eval scores, and policy decisions into a
+            tamper‑evident package. They accelerate incident response, audits, and cross‑team collaboration.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Policy‑as‑code gates produce verifiable approvals</li>
+            <li>Eval overlays quantify quality and risk at each step</li>
+            <li>Signed lineage ensures integrity across environments</li>
+          </ul>
+          <p>
+            In upcoming guides we will share reference implementations and templates you can adopt today.
+          </p>
+        </div>
+        <div className="mt-10">
+          <a href="/updates" className="text-sm font-semibold text-blue-400 hover:text-blue-300">See latest updates →</a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 import Link from 'next/link'
 
 export default function ContinuousAgentEvidenceBundles() {
