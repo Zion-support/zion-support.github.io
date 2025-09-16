@@ -236,6 +236,17 @@ export default function HomePage() {
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* New content (added now) */}
+            <Link href="/blog/ai-2026-evidence-led-approvals-starter" className="bg-blue-50 rounded-xl shadow p-6 hover:shadow-md transition border border-blue-100">
+              <div className="text-sm font-semibold text-blue-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Evidence‑Led Approvals — Starter Templates</h3>
+              <p className="text-gray-600">Minimal, auditable approvals wired to eval gates and runtime guardrails.</p>
+            </Link>
+            <Link href="/blog/ai-2026-executive-ai-security-playbook" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Executive AI Security Playbook</h3>
+              <p className="text-gray-600">Board‑ready controls: policy‑as‑code, eval gates, guardrails, and evidence.</p>
+            </Link>
             <Link href="/blog/ai-2026-autonomous-change-management-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Autonomous Change Management — Blueprint</h3>
