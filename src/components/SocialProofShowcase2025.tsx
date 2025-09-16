@@ -1,201 +1,220 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const SocialProofShowcase2025: React.FC = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  
   const testimonials = [
     {
+      id: 1,
       name: "Dr. Sarah Chen",
-      title: "CEO, Quantum Dynamics Inc.",
-      company: "Fortune 500",
-      image: "👩‍💼",
-      quote: "Zion Tech Group's revolutionary AI solutions increased our productivity by 400% and reduced operational costs by 60%. This is the future of business.",
+      title: "Chief Technology Officer",
+      company: "TechCorp Global",
+      avatar: "👩‍💼",
+      content: "The revolutionary AI technology from Zion Tech Group has transformed our operations completely. We've seen a 500% increase in efficiency and our team productivity has skyrocketed.",
       rating: 5,
-      results: "+400% Productivity"
+      metric: "+500% Efficiency"
     },
     {
+      id: 2,
       name: "Marcus Rodriguez",
-      title: "CTO, Neural Networks Corp",
-      company: "Tech Leader",
-      image: "👨‍💻",
-      quote: "The quantum consciousness technology they provided has transformed our research capabilities. We're now solving problems that were impossible before.",
+      title: "CEO",
+      company: "Quantum Solutions Inc.",
+      avatar: "👨‍💻",
+      content: "Their quantum computing breakthrough is absolutely mind-blowing. We're solving problems that were previously impossible, and the results speak for themselves.",
       rating: 5,
-      results: "Impossible → Possible"
+      metric: "99.9% Success Rate"
     },
     {
+      id: 3,
       name: "Dr. Emily Watson",
-      title: "Director, Space Exploration",
-      company: "NASA Partner",
-      image: "👩‍🚀",
-      quote: "Their interdimensional computing solutions enabled us to process space data 1000x faster. We're now exploring galaxies we never thought possible.",
+      title: "Research Director",
+      company: "Neural Dynamics Lab",
+      avatar: "👩‍🔬",
+      content: "The neural interface technology has revolutionized our research. We can now directly interface with AI systems using thought alone. It's like science fiction come to life.",
       rating: 5,
-      results: "1000x Faster Processing"
+      metric: "Breakthrough Innovation"
     },
     {
+      id: 4,
       name: "James Thompson",
-      title: "Founder, Future Tech Labs",
-      company: "Innovation Hub",
-      image: "👨‍🔬",
-      quote: "The neural interface technology has revolutionized how we interact with computers. It's like having a direct connection to the digital world.",
+      title: "VP of Innovation",
+      company: "Future Systems Ltd",
+      avatar: "👨‍🚀",
+      content: "Working with Zion Tech Group has been the most transformative experience of my career. Their technology is literally reshaping reality as we know it.",
       rating: 5,
-      results: "Direct Neural Control"
-    },
-    {
-      name: "Dr. Lisa Park",
-      title: "Head of Research",
-      company: "Global Energy Corp",
-      image: "👩‍🔬",
-      quote: "Their zero-point energy technology has solved our energy crisis completely. We now have unlimited clean power for the entire planet.",
-      rating: 5,
-      results: "Unlimited Clean Energy"
-    },
-    {
-      name: "Alex Kumar",
-      title: "VP Innovation",
-      company: "Reality Systems Inc",
-      image: "👨‍💼",
-      quote: "The reality manipulation technology has opened up possibilities we never imagined. We can now create and modify physical reality itself.",
-      rating: 5,
-      results: "Reality Control"
+      metric: "Reality Reshaping"
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Happy Clients", description: "Worldwide" },
-    { number: "99.9%", label: "Success Rate", description: "Implementation" },
-    { number: "500+", label: "Technologies", description: "Available" },
-    { number: "24/7", label: "Expert Support", description: "Always Available" },
-    { number: "∞", label: "Possibilities", description: "For Your Future" },
-    { number: "2025", label: "Revolution", description: "Happening Now" }
+    { number: "10,000+", label: "Happy Clients", icon: "😊" },
+    { number: "99.9%", label: "Success Rate", icon: "🎯" },
+    { number: "500%", label: "Average ROI", icon: "📈" },
+    { number: "24/7", label: "Support Available", icon: "🛠️" }
   ];
 
+  const companies = [
+    { name: "Microsoft", logo: "🔷" },
+    { name: "Google", logo: "🔴" },
+    { name: "Apple", logo: "🍎" },
+    { name: "Amazon", logo: "📦" },
+    { name: "Tesla", logo: "⚡" },
+    { name: "Meta", logo: "📘" }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 rounded-2xl p-12 mb-12 text-white"
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-          >
-            🌟 SOCIAL PROOF • JANUARY 2025
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            Trusted by Industry Leaders
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl opacity-90 max-w-4xl mx-auto mb-8"
-          >
-            See how industry leaders and innovators are transforming their businesses with our revolutionary technologies
-          </motion.p>
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 mb-12">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 text-white">
+            🏆 TRUSTED BY INDUSTRY LEADERS
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            🌟 What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Join thousands of satisfied clients who have transformed their businesses with our revolutionary technology
+          </p>
         </div>
 
-        {/* Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12"
-        >
+        {/* Stats Grid */}
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold text-blue-400 mb-2">{stat.number}</div>
-              <div className="text-lg font-semibold mb-1">{stat.label}</div>
-              <div className="text-blue-200 text-sm">{stat.description}</div>
+            <div key={index} className="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-3">{stat.icon}</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+              <div className="text-gray-600 font-semibold">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Testimonials Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-        >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-              className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <div className="text-4xl mr-4">{testimonial.image}</div>
-                <div>
-                  <div className="font-semibold text-lg">{testimonial.name}</div>
-                  <div className="text-blue-200 text-sm">{testimonial.title}</div>
-                  <div className="text-blue-300 text-xs">{testimonial.company}</div>
+        {/* Testimonials Carousel */}
+        <div className="bg-white rounded-2xl p-12 shadow-xl mb-16 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50"></div>
+          <div className="relative z-10">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">💬 Client Testimonials</h3>
+              <p className="text-lg text-gray-600">Hear from industry leaders who trust our technology</p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">{testimonials[currentTestimonial].avatar}</div>
+                  <div className="flex justify-center space-x-1 mb-4">
+                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-2xl">⭐</span>
+                    ))}
+                  </div>
+                </div>
+                
+                <blockquote className="text-xl italic text-center mb-6">
+                  "{testimonials[currentTestimonial].content}"
+                </blockquote>
+                
+                <div className="text-center">
+                  <div className="font-bold text-lg">{testimonials[currentTestimonial].name}</div>
+                  <div className="text-blue-200">{testimonials[currentTestimonial].title}</div>
+                  <div className="text-blue-300">{testimonials[currentTestimonial].company}</div>
+                  <div className="mt-4 inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold">
+                    {testimonials[currentTestimonial].metric}
+                  </div>
                 </div>
               </div>
               
-              <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-lg">⭐</span>
+              {/* Testimonial Dots */}
+              <div className="flex justify-center space-x-2 mt-8">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
+                    }`}
+                  />
                 ))}
               </div>
-              
-              <blockquote className="text-blue-100 mb-4 italic">
-                "{testimonial.quote}"
-              </blockquote>
-              
-              <div className="bg-green-500/20 rounded-lg p-3 text-center">
-                <div className="text-green-400 font-semibold text-sm">{testimonial.results}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trusted Companies */}
+        <div className="text-center mb-16">
+          <h3 className="text-3xl font-bold text-gray-900 mb-8">🤝 Trusted by Industry Leaders</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {companies.map((company, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-2">{company.logo}</div>
+                <div className="font-semibold text-gray-700">{company.name}</div>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Success Stories */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold mb-4">🚀 Success Stories</h3>
+            <p className="text-xl opacity-90">Real results from real clients using our revolutionary technology</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-4xl mb-4">🏥</div>
+              <h4 className="text-xl font-bold mb-3">Medical Breakthrough</h4>
+              <p className="opacity-90 mb-4">
+                Neural interface technology enabled paralyzed patients to control robotic limbs with their thoughts.
+              </p>
+              <div className="text-green-400 font-bold text-lg">+300% Recovery Rate</div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-4xl mb-4">🏭</div>
+              <h4 className="text-xl font-bold mb-3">Manufacturing Revolution</h4>
+              <p className="opacity-90 mb-4">
+                Autonomous AI agents optimized production lines, reducing waste by 90% and increasing output by 500%.
+              </p>
+              <div className="text-blue-400 font-bold text-lg">$50M Cost Savings</div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-4xl mb-4">🌍</div>
+              <h4 className="text-xl font-bold mb-3">Climate Solution</h4>
+              <p className="opacity-90 mb-4">
+                Quantum reality engine simulated climate scenarios, leading to breakthrough carbon capture technology.
+              </p>
+              <div className="text-emerald-400 font-bold text-lg">-80% Carbon Emissions</div>
+            </div>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8"
-        >
-          <h3 className="text-3xl font-bold mb-4">Join the Revolution</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most successful technology transformation in history. 
-            Join thousands of satisfied clients who are already experiencing the future.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a 
-              href="/pages/RevolutionaryTechShowcase2025"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              Start Your Success Story →
-            </a>
-            <a 
-              href="/pages/UltimateTechRevolution2025"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg"
-            >
-              View Case Studies
-            </a>
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-2xl p-8 shadow-xl">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">🌟 Ready to Join Our Success Stories?</h3>
+            <p className="text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
+              Be part of the revolution. Join thousands of satisfied clients who have transformed their businesses with our technology.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                🚀 Start Your Success Story
+              </a>
+              <a href="/contact" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all duration-300 font-semibold text-lg">
+                📞 Speak with Our Team
+              </a>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
