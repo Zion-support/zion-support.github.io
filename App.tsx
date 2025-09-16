@@ -38,7 +38,9 @@ import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
@@ -48,6 +50,7 @@ import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcas
 import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -171,7 +174,6 @@ import RevolutionaryContentBanner2025 from './src/components/RevolutionaryConten
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
 import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
-import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
@@ -230,12 +232,15 @@ export default function App(): JSX.Element {
                 {/* NEW: New Content Promotion Banner 2025 */}
                 <NewContentPromotionBanner2025 />
                 
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <DynamicContentCarousel2025 />
+                
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
-                
+
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
 
