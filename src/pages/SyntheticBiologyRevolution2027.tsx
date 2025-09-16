@@ -74,79 +74,19 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Disease eradication</li>
               <li>• Longevity enhancement</li>
             </ul>
-        
-            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Bio-Energy →
+            <a href="#contact" className="inline-block bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Discover Medicine →
             </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Bio-Computing</h3>
-            <p className="text-blue-100 mb-6 text-center">
-              Living computers that use biological processes for computation, memory, and data processing
-            </p>
-            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
-              <li>• DNA-based data storage</li>
-              <li>• Protein computing systems</li>
-              <li>• Neural-biological interfaces</li>
-              <li>• Living memory systems</li>
-            </ul>
-            <a href="/pages/BioComputing2027" className="block w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center">
-              Explore Bio-Computing →
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌍</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Environmental Restoration</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Pollution-eating bacteria</li>
-              <li>• Carbon capture organisms</li>
-              <li>• Ocean cleanup systems</li>
-              <li>• Ecosystem restoration</li>
-            </ul>
-            <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Restoration →
-            </a>
-          </div>
-        </div>
-
-        {/* Technology Impact Stats */}
-        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-white">Revolutionary Impact Statistics</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">100%</div>
-              <div className="text-lg text-green-200 mb-2">Disease Elimination</div>
-              <div className="text-sm text-gray-400">Synthetic medicine success rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">10x</div>
-              <div className="text-lg text-emerald-200 mb-2">Food Production</div>
-              <div className="text-sm text-gray-400">Bio-agriculture yield increase</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-400 mb-2">∞</div>
-              <div className="text-lg text-teal-200 mb-2">Possibilities</div>
-              <div className="text-sm text-gray-400">Programmable living systems</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">0%</div>
-              <div className="text-lg text-cyan-200 mb-2">Environmental Impact</div>
-              <div className="text-sm text-gray-400">Carbon-neutral bio-systems</div>
-            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Biology?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the synthetic biology revolution and create the future of life itself.
+        <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
+          <h2 className="text-6xl font-bold text-white mb-8">
+            Ready for the Bio Revolution?
+          </h2>
+          <p className="text-3xl text-gray-300 mb-16 max-w-6xl mx-auto">
+            Join the transformation that's redefining life itself through synthetic biology
           </p>
           <div className="flex justify-center space-x-8">
             <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-20 py-8 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-3xl transform hover:scale-105">
