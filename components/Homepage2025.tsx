@@ -51,6 +51,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Production Agent Postmortems — Playbook (2026)',
+      href: '/blog/ai-2026-production-agent-postmortems-playbook',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
       title: 'Exec Guide — Agent SLO Scorecards (2026)',
       href: '/blog/ai-2026-exec-guide-to-agent-slo-scorecards',
       tag: 'New',
@@ -536,6 +542,10 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
                 <p className="opacity-90">Real-time evals, edge agents, and trustworthy routing now live.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
+                <a href="/blog/ai-2026-production-agent-postmortems-playbook" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Production Agent Postmortems — Playbook (2026)</div>
+                  <div className="text-xs opacity-90">6 min • Reliability</div>
+                </a>
                 <a href="/blog/ai-2026-real-time-evals-inference-guardrails" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Real-Time Evals & Inference Guardrails (2026)</div>
                   <div className="text-xs opacity-90">7 min • Safety</div>
