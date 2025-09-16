@@ -48,9 +48,12 @@ import RevolutionaryContentPromoBanner2025 from './components/RevolutionaryConte
 import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
+import NewContent2026PromotionBanner from './components/NewContent2026PromotionBanner';
+import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
 import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
 import TrendingContentSection from './components/TrendingContentSection';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026Page from './pages/UltimateContentShowcase2026';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
 import UltimateContentShowcase2026Banner from './components/UltimateContentShowcase2026Banner';
@@ -134,6 +137,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* New Content 2026 Promotion Banner */}
+              <div className="mb-12">
+                <NewContent2026PromotionBanner />
+              </div>
+
+              {/* Revolutionary Content 2026 Banner */}
+              <div className="mb-12">
+                <RevolutionaryContent2026Banner />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -502,6 +515,9 @@ const App: React.FC = () => {
           
           {/* NEW: Advanced AI Solutions 2027 */}
           <Route path="/advanced-ai-solutions-2027" element={<AdvancedAISolutions2027 />} />
+          
+          {/* NEW: Ultimate Content Showcase 2026 */}
+          <Route path="/ultimate-content-showcase-2026" element={<UltimateContentShowcase2026Page />} />
         </Routes>
         
         <Footer />
