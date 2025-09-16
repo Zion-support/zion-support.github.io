@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-db2e
 import { motion } from 'framer-motion';
 
 const RevolutionaryTechBreakthrough2025: React.FC = () => {
