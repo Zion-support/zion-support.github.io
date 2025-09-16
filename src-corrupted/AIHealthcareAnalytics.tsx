@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -19,7 +18,6 @@ import {
   TrendingUp,
   Stethoscope,
   Database
-=======
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
@@ -60,7 +58,6 @@ import {
   DollarSign,
   Zap,
   Target
-=======
 } from 'lucide-react';
 
 export default function AIHealthcareAnalytics() {
@@ -81,7 +78,6 @@ const AIHealthcareAnalytics: React.FC = () => {
     {
       icon: Activity,
       title: "Real-time Monitoring",
-=======
       icon: Brain,
       title: "Predictive Patient Analytics",
       description: "AI-powered prediction of patient outcomes and risk assessment"
@@ -100,7 +96,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: BarChart3,
       title: "Population Health Analytics",
       description: "Comprehensive analysis of population health trends and patterns"
-=======
       description: "Continuous monitoring of patient vital signs and health metrics with instant alerts for critical changes.",
       benefits: ["24/7 monitoring", "Early warning systems", "Real-time alerts"]
     },
@@ -109,13 +104,11 @@ const AIHealthcareAnalytics: React.FC = () => {
       title: "Population Health Insights",
       description: "Comprehensive analytics that identify health trends, risk factors, and opportunities for preventive care.",
       benefits: ["Trend analysis", "Risk stratification", "Preventive strategies"]
-=======
       description: "Comprehensive analysis of population health trends and patterns"
     },
     {
       icon: Zap,
       title: "Clinical Decision Support",
-=======
       description: "Intelligent assistance for healthcare professionals"
     },
     {
@@ -149,7 +142,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Clock,
       title: "Treatment Optimization",
       description: "AI-powered recommendations for personalized treatment plans and medication management."
-=======
       description: "Intelligent systems that provide evidence-based recommendations to healthcare providers for better patient care.",
       benefits: ["Evidence-based guidance", "Clinical pathways", "Best practice recommendations"]
     }
@@ -179,7 +171,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       description: "Research support tools that accelerate medical discoveries and clinical trial optimization.",
       icon: Microscope,
       features: ["Clinical trial analytics", "Research data mining", "Biomarker discovery", "Drug development support"]
-=======
       icon: Heart,
       title: "Patient Outcome Prediction",
       description: "AI models that predict patient outcomes and treatment effectiveness based on medical data."
@@ -208,7 +199,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Users,
       title: "Care Coordination",
       description: "AI-powered care coordination that optimizes patient care pathways and resource allocation."
-=======
     }
   ];
 
@@ -266,7 +256,6 @@ const AIHealthcareAnalytics: React.FC = () => {
         "24/7 phone support",
         "Custom development"
       ]
-=======
     {
       title: "Improve Patient Outcomes",
       value: "35%",
@@ -287,7 +276,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       value: "50%",
       description: "Improved operational efficiency and resource utilization"
     }
-=======
     "Improve patient outcomes by 25-40% with predictive analytics",
     "Reduce hospital readmissions by 30-50% through risk prediction",
     "Cut healthcare costs by 20-35% with optimized care pathways",
@@ -349,7 +337,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       step: "06",
       title: "Performance Analytics",
       description: "Comprehensive reporting and performance insights"
-=======
       title: "Hospitals",
       description: "Comprehensive healthcare analytics for large medical centers and hospital systems.",
       icon: Building,
@@ -372,7 +359,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       description: "Risk assessment and cost prediction for insurance companies.",
       icon: Shield,
       features: ["Risk modeling", "Cost prediction", "Fraud detection", "Claims optimization"]
-=======
       industry: "Hospitals",
       description: "Patient monitoring, readmission prediction, and resource optimization",
       metrics: ["Patient Outcomes", "Readmission Rate", "Resource Utilization"]
@@ -490,7 +476,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize patient care with AI-powered analytics that predict health outcomes, 
               optimize treatments, and enable proactive healthcare interventions.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -591,7 +576,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience unprecedented improvements in patient care and healthcare efficiency.
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               AI-Powered Features That Transform Healthcare
             </h2>
@@ -685,7 +669,6 @@ const AIHealthcareAnalytics: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
         {/* Features Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -765,7 +748,6 @@ const AIHealthcareAnalytics: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-=======
 
         {/* Pricing */}
         <div className="mb-20">
@@ -784,7 +766,6 @@ const AIHealthcareAnalytics: React.FC = () => {
                     </span>
                   </div>
                 )}
-=======
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
@@ -812,7 +793,6 @@ const AIHealthcareAnalytics: React.FC = () => {
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-=======
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -886,7 +866,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </div>
-=======
     "Improve patient outcomes by 25-40%",
     "Reduce hospital readmissions by 30%",
     "Lower healthcare costs by 20-35%",
@@ -1127,7 +1106,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of healthcare providers who have already revolutionized patient care with AI analytics.
-=======
       </section>
 
       {/* CTA Section */}
@@ -1155,7 +1133,6 @@ const AIHealthcareAnalytics: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
-=======
         </div>
       </section>
     </div>
@@ -1163,9 +1140,7 @@ const AIHealthcareAnalytics: React.FC = () => {
 };
 
 export default AIHealthcareAnalytics;
-=======
     </div>
   );
 }
-=======
 }

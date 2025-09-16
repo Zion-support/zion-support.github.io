@@ -47,7 +47,6 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   }
   },
 
-=======
 import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -108,7 +107,6 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
-=======
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}

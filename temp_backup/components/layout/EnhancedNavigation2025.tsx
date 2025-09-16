@@ -519,7 +519,6 @@ export default function EnhancedNavigation2025() {
                 >
                   Get Started
                 </Link>
-=======
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}

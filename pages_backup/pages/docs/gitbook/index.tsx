@@ -11,7 +11,6 @@ import Link from 'next/link',;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 function list(dir: string, baseDir: string) {
@@ -63,7 +62,6 @@ function list(dir: string, baseDir: string) {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -171,7 +169,6 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

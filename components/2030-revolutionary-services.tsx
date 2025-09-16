@@ -1,5 +1,4 @@
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -202,7 +201,6 @@ export default function Revolutionary2030ServicesPage() {
               },
 
 
-=======
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -251,7 +249,6 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
-=======
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -311,7 +308,6 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-=======
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
@@ -369,7 +365,6 @@ export default function Revolutionary2030ServicesPage() {
                   <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
 
 
-=======
                     )}
                   </div>
 
@@ -448,7 +443,6 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
-=======
           {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -524,7 +518,6 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
-=======
 
       {/* Footer */}
       <UltraFuturisticFooter2030 />

@@ -2,7 +2,6 @@ import React from 'react';
 			<SEO title="Services Advertising | Zion Tech Group" description="Featuresbenefitsand market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-=======
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
