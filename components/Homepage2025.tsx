@@ -95,7 +95,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
-      title: 'Agentic CRM: Autonomous Revenue Workflows',
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
       href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
       tag: 'RevOps',
       gradient: 'from-fuchsia-500 to-indigo-500'
