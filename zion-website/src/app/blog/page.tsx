@@ -9,6 +9,12 @@ const posts = [
       'A pragmatic framework to set, monitor, and enforce latency budgets for production RAG systems.'
   },
   {
+    slug: 'ai-2026-safe-agent-actions-blueprint',
+    title: 'AI 2026: Safe Agent Actions — Blueprint',
+    summary:
+      'Risk‑tiered tools, approvals, budgets, and policy checks for safe agent actions.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:
