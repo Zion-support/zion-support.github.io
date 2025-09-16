@@ -978,6 +978,12 @@ export default function HomePage() {
               <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
                 📰 New: Agent Safety Red Teaming 2025
               </a>
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift">
+                📰 New: Agentic Supply Chains 2025
+              </a>
+              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift">
+                📰 New: Edge AI Compliance 2025
+              </a>
             </div>
           </div>
         </div>
