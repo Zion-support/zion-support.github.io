@@ -1,7 +1,8 @@
  
 import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-import { getLatestUpdates } from '@/data/updates'
+import HomePage from './page.jsx'
+
+export default HomePage
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   {
     name: 'Quantum Computing',
