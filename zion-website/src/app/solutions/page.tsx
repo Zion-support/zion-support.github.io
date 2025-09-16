@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 =======
@@ -115,11 +116,20 @@ const solutions = [
   { name: 'Autonomous Operations', desc: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business', icon: RocketLaunchIcon },
 >>>>>>> origin/feat/news-and-fixes
 ]
+=======
+import React from 'react'
+>>>>>>> origin/feat/research-article-promo
 
 export default function SolutionsPage() {
+  const solutions = [
+    { name: 'Autonomous Research Assistant', href: '/solutions/ai-autonomous-research' },
+    { name: 'Quantum Neural Networks', href: '/solutions/quantum-neural-networks' },
+    { name: 'Autonomous Business Operations', href: '/solutions/autonomous-business' },
+  ]
   return (
     <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
+<<<<<<< HEAD
         <div className="mx-auto max-w-2xl py-24 sm:py-40">
           <div className="text-center">
 <<<<<<< HEAD
@@ -132,6 +142,13 @@ export default function SolutionsPage() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Discover our cutting-edge AI and technology solutions designed to transform your business 
               operations and drive unprecedented growth and innovation.
+=======
+        <div className="mx-auto max-w-2xl py-24 sm:py-32 lg:py-40">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Explore our flagship platforms and accelerators.
+>>>>>>> origin/feat/research-article-promo
             </p>
 =======
             <p className="mt-6 text-lg leading-8 text-gray-300">Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation.</p>
@@ -146,6 +163,7 @@ export default function SolutionsPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -925,11 +943,22 @@ export default function SolutionsPage() {
             <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Services <span aria-hidden="true">→</span></a>
           </div>
+=======
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {solutions.map((s) => (
+            <a key={s.name} href={s.href} className="group block bg-white/5 p-6 rounded-2xl hover:bg-white/10 transition">
+              <h3 className="text-xl font-semibold text-white group-hover:text-blue-400">{s.name}</h3>
+              <span className="mt-2 inline-block text-sm text-blue-400">Learn more →</span>
+            </a>
+          ))}
+>>>>>>> origin/feat/research-article-promo
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
@@ -939,3 +968,6 @@ export default function SolutionsPage() {
 >>>>>>> origin/feat/new-updates-ads
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+
+>>>>>>> origin/feat/research-article-promo

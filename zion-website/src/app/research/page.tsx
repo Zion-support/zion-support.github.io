@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/news-and-fixes
 import React from 'react'
@@ -90,6 +91,16 @@ import {
   UserGroupIcon,
   RocketLaunchIcon,
   ShieldCheckIcon
+=======
+import {
+  AcademicCapIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  UserGroupIcon,
+>>>>>>> origin/feat/research-article-promo
 } from '@heroicons/react/24/outline'
 
 const researchAreas = [
@@ -104,8 +115,13 @@ const researchAreas = [
       'Computer Vision & Image Recognition',
       'Reinforcement Learning',
       'Federated Learning',
+<<<<<<< HEAD
       'Explainable AI'
     ]
+=======
+      'Explainable AI',
+    ],
+>>>>>>> origin/feat/research-article-promo
   },
   {
     name: 'Quantum Computing & AI',
@@ -118,8 +134,13 @@ const researchAreas = [
       'Quantum-Classical Hybrid Systems',
       'Quantum Error Correction',
       'Quantum Algorithms for AI',
+<<<<<<< HEAD
       'Quantum Supremacy Applications'
     ]
+=======
+      'Quantum Supremacy Applications',
+    ],
+>>>>>>> origin/feat/research-article-promo
   },
   {
     name: 'Autonomous Systems & Robotics',
@@ -132,8 +153,13 @@ const researchAreas = [
       'Robotic Learning & Adaptation',
       'Human-Robot Interaction',
       'Autonomous Navigation',
+<<<<<<< HEAD
       'Swarm Intelligence'
     ]
+=======
+      'Swarm Intelligence',
+    ],
+>>>>>>> origin/feat/research-article-promo
   },
   {
     name: 'AI Ethics & Governance',
@@ -146,9 +172,15 @@ const researchAreas = [
       'AI Safety & Alignment',
       'Ethical AI Guidelines',
       'AI Regulation & Policy',
+<<<<<<< HEAD
       'Human-AI Collaboration'
     ]
   }
+=======
+      'Human-AI Collaboration',
+    ],
+  },
+>>>>>>> origin/feat/research-article-promo
 ]
 
 const recentPublications = [
@@ -160,7 +192,11 @@ const recentPublications = [
     doi: '10.1038/s42256-024-00001-x',
     abstract:
       'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
+<<<<<<< HEAD
     impact: 'High Impact'
+=======
+    impact: 'High Impact',
+>>>>>>> origin/feat/research-article-promo
   },
   {
     title: 'Autonomous Business Operations: AI-Driven Process Optimization',
@@ -170,7 +206,11 @@ const recentPublications = [
     doi: '10.1000/hbr.2024.001',
     abstract:
       'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
+<<<<<<< HEAD
     impact: 'Industry Leading'
+=======
+    impact: 'Industry Leading',
+>>>>>>> origin/feat/research-article-promo
   },
   {
     title: 'Multi-Modal AI Research Assistant: Accelerating Scientific Discovery',
@@ -180,7 +220,11 @@ const recentPublications = [
     doi: '10.1126/science.abc1234',
     abstract:
       'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
+<<<<<<< HEAD
     impact: 'Breakthrough'
+=======
+    impact: 'Breakthrough',
+>>>>>>> origin/feat/research-article-promo
   },
   {
     title: 'Ethical AI Development: A Framework for Responsible Innovation',
@@ -190,6 +234,7 @@ const recentPublications = [
     doi: '10.1000/aie.2023.001',
     abstract:
       'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
+<<<<<<< HEAD
     impact: 'Foundational'
   }
 ]
@@ -248,6 +293,24 @@ const academicPartners = [
   { title: 'Reasoning Systems', desc: 'Agents with planning, tool-use, and verifiable reasoning.', icon: LightBulbIcon },
   { title: 'Quantum NN', desc: 'Hybrid quantum-classical models for optimization and simulation.', icon: CpuChipIcon },
 >>>>>>> origin/feat/news-and-fixes
+=======
+    impact: 'Foundational',
+  },
+]
+
+const researchImpact = [
+  { metric: 'Research Papers Published', value: '150+', description: 'Peer-reviewed publications in top-tier journals and conferences' },
+  { metric: 'Citations', value: '10,000+', description: 'Academic citations demonstrating research influence' },
+  { metric: 'Patents Filed', value: '25+', description: 'Intellectual property protecting our innovations' },
+  { metric: 'Research Collaborations', value: '50+', description: 'Partnerships with leading academic institutions' },
+]
+
+const academicPartners = [
+  { name: 'Stanford University', location: 'Stanford, CA', focus: 'AI & Machine Learning', collaboration: 'Joint research programs and student exchanges' },
+  { name: 'MIT', location: 'Cambridge, MA', focus: 'Quantum Computing & AI', collaboration: 'Shared research facilities and joint publications' },
+  { name: 'University of Oxford', location: 'Oxford, UK', focus: 'AI Ethics & Governance', collaboration: 'Policy research and ethical AI development' },
+  { name: 'University of Tokyo', location: 'Tokyo, Japan', focus: 'Robotics & Autonomous Systems', collaboration: 'Robotic learning and human-robot interaction' },
+>>>>>>> origin/feat/research-article-promo
 ]
 
 export default function ResearchPage() {
@@ -257,12 +320,19 @@ export default function ResearchPage() {
         <div className="mx-auto max-w-2xl py-24 sm:py-40">
           <div className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Research & <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Innovation</span>
             </h1>
 <<<<<<< HEAD
             <p className="mt-6 text-lg leading-8 text-gray-300">Pushing the boundaries of AI through groundbreaking research, innovative discoveries, and academic collaboration.</p>
 =======
+=======
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Research &{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Innovation</span>
+            </h1>
+>>>>>>> origin/feat/research-article-promo
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Pushing the boundaries of artificial intelligence through groundbreaking research, 
               innovative discoveries, and academic collaboration.
@@ -273,7 +343,10 @@ export default function ResearchPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/feat/research-article-promo
       {/* Research Focus Areas */}
 >>>>>>> origin/feat/content-promo
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
@@ -281,8 +354,11 @@ export default function ResearchPage() {
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Research</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Focus Areas</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Our research spans the cutting edge of AI and technology, driving innovation and advancing the state of the art.</p>
 =======
+=======
+>>>>>>> origin/feat/research-article-promo
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research spans the cutting edge of AI and technology, driving innovation and advancing the state of the art.
           </p>
@@ -314,14 +390,20 @@ export default function ResearchPage() {
 <<<<<<< HEAD
 =======
       {/* Recent Publications */}
+<<<<<<< HEAD
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/research-article-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Recent Research</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Our latest research contributions to AI and technology.</p>
 =======
+=======
+>>>>>>> origin/feat/research-article-promo
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our latest research contributions to the field of artificial intelligence and technology.
           </p>
@@ -381,14 +463,20 @@ export default function ResearchPage() {
 <<<<<<< HEAD
 =======
       {/* Research Impact */}
+<<<<<<< HEAD
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/research-article-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Research Influence</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Our research has significantly influenced academia and industry.</p>
 =======
+=======
+>>>>>>> origin/feat/research-article-promo
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research has made significant contributions to the field, influencing both academia and industry.
           </p>
@@ -410,14 +498,20 @@ export default function ResearchPage() {
 <<<<<<< HEAD
 =======
       {/* Academic Collaborations */}
+<<<<<<< HEAD
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/research-article-promo
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Academic Partnerships</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">We collaborate with leading institutions to advance AI research.</p>
 =======
+=======
+>>>>>>> origin/feat/research-article-promo
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We collaborate with leading academic institutions worldwide to advance the frontiers of AI research and innovation.
           </p>
@@ -458,6 +552,7 @@ export default function ResearchPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our research community</h2>
@@ -467,6 +562,12 @@ export default function ResearchPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our research community</h2>
+=======
+      {/* CTA section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our research community</h2>
+>>>>>>> origin/feat/research-article-promo
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? Let's explore opportunities to work together.
           </p>
@@ -499,6 +600,7 @@ export default function ResearchPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/feat/case-studies-content
@@ -795,3 +897,6 @@ export default function ResearchPage() {
 >>>>>>> origin/feat/new-content-home-20250915
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+
+>>>>>>> origin/feat/research-article-promo

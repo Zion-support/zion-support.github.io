@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['next/core-web-vitals'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -32,6 +33,8 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
 >>>>>>> origin/feat/news-updates-home-teaser
+=======
+>>>>>>> origin/feat/research-article-promo
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
 =======
@@ -137,10 +138,14 @@ const faqs = [
   { question: 'What security measures do you have?', answer: 'Enterprise-grade security: end-to-end encryption, SOC 2, regular audits, strict access controls.' },
 >>>>>>> origin/feat/news-and-fixes
 ]
+=======
+import React from 'react'
+>>>>>>> origin/feat/research-article-promo
 
 export default function ContactPage() {
   return (
     <div className="bg-black">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,6 +182,14 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Ready to transform your business with AI? Let's discuss how our cutting-edge technology can accelerate your growth and innovation.
+=======
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-24 sm:py-32 lg:py-40">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Contact Us</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Reach out to explore partnerships, solutions, or research collaborations.
+>>>>>>> origin/feat/research-article-promo
             </p>
 >>>>>>> origin/feature/content-updates-and-merge-fixes
 =======
@@ -191,6 +204,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -526,11 +540,17 @@ export default function ContactPage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
 >>>>>>> origin/feat/news-and-fixes
           </div>
+=======
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <a href="mailto:hello@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">hello@ziontechgroup.com</a>
+>>>>>>> origin/feat/research-article-promo
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1097,3 +1117,6 @@ export default function ContactPage() {
 >>>>>>> origin/feat/new-updates-ads
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+
+>>>>>>> origin/feat/research-article-promo

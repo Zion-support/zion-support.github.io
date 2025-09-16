@@ -96,12 +96,16 @@ const navigation = [
 ]
 
 export default function Navigation() {
+<<<<<<< HEAD
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+>>>>>>> origin/feat/research-article-promo
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -273,6 +277,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -399,3 +404,6 @@ export default function Navigation() {
 =======
 
 >>>>>>> origin/feat/news-and-fixes
+=======
+
+>>>>>>> origin/feat/research-article-promo

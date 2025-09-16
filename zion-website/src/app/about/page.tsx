@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 =======
@@ -83,6 +84,9 @@ const team = [
   { name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon },
   { name: 'Research Excellence', description: 'Our researchers drive breakthrough discoveries and innovations.', icon: AcademicCapIcon },
 ]
+=======
+import React from 'react'
+>>>>>>> origin/feat/research-article-promo
 
 const team = [
   { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision.', image: '/images/team/sarah-chen.jpg' },
@@ -121,6 +125,7 @@ export default function AboutPage() {
   return (
     <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
+<<<<<<< HEAD
         <div className="mx-auto max-w-2xl py-24 sm:py-40">
           <div className="text-center">
 <<<<<<< HEAD
@@ -142,6 +147,13 @@ export default function AboutPage() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential through technology.
 >>>>>>> origin/feat/content-promo
+=======
+        <div className="mx-auto max-w-2xl py-24 sm:py-32 lg:py-40">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">About Zion Tech Group</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are a research-driven technology company advancing AI, automation, and quantum solutions.
+>>>>>>> origin/feat/research-article-promo
             </p>
 =======
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">About Zion Tech Group</h1>
@@ -150,6 +162,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -791,3 +804,18 @@ export default function AboutPage() {
   )
 }
 >>>>>>> origin/feat/news-and-fixes
+=======
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Mission</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Innovation with Purpose</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We build trustworthy, impactful technology that empowers organizations and society.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+>>>>>>> origin/feat/research-article-promo

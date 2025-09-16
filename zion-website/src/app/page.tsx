@@ -3,12 +3,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/research-article-promo
 import {
   ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
   LightBulbIcon,
   ShieldCheckIcon,
+<<<<<<< HEAD
 =======
 =======
 import React from 'react'
@@ -46,10 +50,14 @@ import {
 	ChartBarIcon,
 	UserGroupIcon
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+  UserGroupIcon,
+>>>>>>> origin/feat/research-article-promo
 } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
 
 const features = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   {
@@ -113,6 +121,14 @@ const features = [
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+  { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
+  { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for solving complex computational problems.', icon: CpuChipIcon },
+  { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
+  { name: 'Enterprise Security', description: 'Military-grade security protocols protecting your most valuable digital assets.', icon: ShieldCheckIcon },
+  { name: 'Data Analytics', description: 'Advanced analytics and insights driving informed decision-making.', icon: ChartBarIcon },
+  { name: 'Expert Team', description: 'World-class researchers and engineers pushing the boundaries of technology.', icon: UserGroupIcon },
+>>>>>>> origin/feat/research-article-promo
 ]
 
 const stats = [
@@ -124,6 +140,7 @@ const stats = [
 ]
 
 const solutions = [
+<<<<<<< HEAD
   {
     name: 'AI Research Assistant',
     description: 'Autonomous research platform that accelerates scientific discovery.',
@@ -167,6 +184,12 @@ const solutions = [
     href: '/solutions/it-asset-management',
   },
 >>>>>>> origin/feat/news-and-fixes
+=======
+  { name: 'AI Research Assistant', description: 'Autonomous research platform that accelerates scientific discovery.', href: '/solutions/ai-autonomous-research' },
+  { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
+  { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
+  { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
+>>>>>>> origin/feat/research-article-promo
 ]
 
 export default function HomePage() {
@@ -179,6 +202,7 @@ export default function HomePage() {
     <div className="bg-black min-h-screen">
 =======
     <div className="bg-black">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 >>>>>>> cursor/create-and-deploy-new-content-d7eb
@@ -196,6 +220,9 @@ export default function HomePage() {
       {/* Hero section */}
       <div className="relative isolate px-6 pt-8 lg:px-8">
 =======
+=======
+      {/* Hero section with promo for latest research */}
+>>>>>>> origin/feat/research-article-promo
       <div className="relative isolate px-6 pt-14 lg:px-8">
 >>>>>>> origin/feat/case-studies-content
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -206,8 +233,12 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
               Join the revolution that's reshaping industries worldwide.
+=======
+              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. Join the revolution that's reshaping industries worldwide.
+>>>>>>> origin/feat/research-article-promo
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -215,6 +246,7 @@ export default function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               </a>
@@ -242,6 +274,8 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> origin/feat/research-article-promo
               </a>
               <a
                 href="/updates/autonomous-sales-copilot-1-0"
@@ -253,6 +287,7 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/content-promo
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <a
                 href="/blog/ai-2026-real-time-retrieval-architectures"
@@ -461,10 +496,19 @@ export default function HomePage() {
 >>>>>>> origin/feat/content-sept15-1757928952
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+            </div>
+            {/* Promo banner */}
+            <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-white/5 px-5 py-2 text-sm text-gray-200 ring-1 ring-white/10">
+              <span className="inline-flex h-2 w-2 rounded-full bg-purple-400"></span>
+              <span>New research: Quantum Neural Networks in Production</span>
+              <a href="/research" className="font-semibold text-blue-400 hover:text-blue-300">Read now →</a>
+>>>>>>> origin/feat/research-article-promo
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -672,16 +716,21 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/news-and-fixes
 
+=======
+
+>>>>>>> origin/feat/research-article-promo
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to accelerate innovation
-          </p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Everything you need to accelerate innovation</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
             and maintain competitive advantage in the digital age.
+=======
+            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results and maintain competitive advantage in the digital age.
+>>>>>>> origin/feat/research-article-promo
           </p>
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -721,6 +770,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Trusted by leading organizations worldwide
             </h2>
@@ -730,6 +780,9 @@ export default function HomePage() {
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
+>>>>>>> origin/feat/research-article-promo
             <p className="mt-4 text-lg leading-8 text-gray-300">Our track record speaks for itself</p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
@@ -815,7 +868,11 @@ export default function HomePage() {
               <article key={solution.name} className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime="2024" className="text-gray-400">2024</time>
+<<<<<<< HEAD
                   <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300">AI Platform</span>
+=======
+                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">AI Platform</span>
+>>>>>>> origin/feat/research-article-promo
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
@@ -859,7 +916,11 @@ export default function HomePage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
+<<<<<<< HEAD
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our technology can accelerate your growth and innovation.</p>
+=======
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
+>>>>>>> origin/feat/research-article-promo
           <div className="mt-10 flex items-center justify-center gap-x-6">
 <<<<<<< HEAD
             <a
@@ -873,6 +934,7 @@ export default function HomePage() {
             </a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
@@ -881,6 +943,8 @@ export default function HomePage() {
 >>>>>>> origin/feat/content-promo
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> origin/feat/research-article-promo
           </div>
         </div>
       </div>
@@ -888,6 +952,7 @@ export default function HomePage() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1150,3 +1215,6 @@ export default function HomePage() {
 =======
 
 >>>>>>> origin/feat/news-and-fixes
+=======
+
+>>>>>>> origin/feat/research-article-promo

@@ -3,17 +3,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/feat/content-promo
 const navigation = {
   main: [
+=======
+export default function Footer() {
+  const links = [
+>>>>>>> origin/feat/research-article-promo
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Research', href: '/research' },
     { name: 'Contact', href: '/contact' },
+<<<<<<< HEAD
     { name: 'Privacy', href: '/privacy' },
     { name: 'Terms', href: '/terms' },
   ],
@@ -243,12 +249,25 @@ export default function Footer() {
 >>>>>>> origin/feat/news-and-fixes
         </div>
         <p className="mt-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+=======
+  ]
+  return (
+    <footer className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <div className="flex flex-wrap gap-4 justify-center">
+        {links.map((l) => (
+          <a key={l.name} href={l.href} className="text-sm text-gray-400 hover:text-blue-400">
+            {l.name}
+          </a>
+        ))}
+>>>>>>> origin/feat/research-article-promo
       </div>
+      <p className="mt-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Zion Tech Group</p>
     </footer>
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -529,3 +548,6 @@ export default function Footer() {
 >>>>>>> origin/feat/new-updates-ads
 =======
 >>>>>>> origin/feat/news-and-fixes
+=======
+
+>>>>>>> origin/feat/research-article-promo
