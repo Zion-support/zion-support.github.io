@@ -40,21 +40,18 @@ const InteractiveTechShowcase2027: React.FC = () => {
   ];
 
   useEffect(() => {
-  return (
-    <div className="bg-gradient-to-br from-gray-900 to-black text-white py-16 rounded-2xl">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
   }, [activeTab]);
 
   return (
+    <div className="bg-gradient-to-br from-gray-900 to-black text-white py-16 rounded-2xl">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2027
           </h2>
@@ -64,9 +61,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-              onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="text-center mb-6">
