@@ -91,6 +91,18 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/blog/ai-2026-safe-rollouts-in-production" className="text-indigo-700 font-semibold">Read Article →</Link>
         </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Optimization</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-cost-aware-agent-operations" className="hover:underline">
+              AI 2026: Cost‑Aware Agent Operations
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Governed routing, caching, and eval‑driven optimization to cut costs 30–70%.
+          </p>
+          <Link href="/content/ai-2026-cost-aware-agent-operations" className="text-emerald-700 font-semibold">Read Guide →</Link>
+        </article>
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
@@ -115,6 +127,18 @@ export default function ContentIndexPage() {
             Detect, triage, contain, and learn from agent incidents with evidence-first playbooks.
           </p>
           <Link href="/content/ai-2026-agent-incident-response-runbook" className="text-rose-700 font-semibold">Open Runbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Incident Response</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-led-incident-review" className="hover:underline">
+              AI 2026: Evidence‑Led Incident Review
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Blameless reviews powered by eval traces, policy events, and action tracking.
+          </p>
+          <Link href="/content/ai-2026-evidence-led-incident-review" className="text-rose-700 font-semibold">Open Guide →</Link>
         </article>
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
