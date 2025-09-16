@@ -210,8 +210,8 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Measure what matters and standardize incident response for reliable autonomy.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2026-eval-gates-success-metrics" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Eval Metrics</Link>
-              <Link href="/blog/ai-2026-agent-runbooks-checklists" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Runbooks</Link>
+              <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Agent SLOs</Link>
+              <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Governed Tool Use</Link>
             </div>
           </div>
         </div>

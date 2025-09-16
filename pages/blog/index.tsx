@@ -31,6 +31,12 @@ const posts = [
   ,{ slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' }
 ]
 
+// Newly added posts (Sept 2025)
+posts.unshift(
+  { slug: 'ai-2026-agent-slo-blueprint', title: 'Agent Platform SLO Blueprint (2026)', excerpt: 'A concise SLO set for safety, quality, reliability, and cost.' },
+  { slug: 'ai-2026-governed-tool-use-case-studies', title: 'Governed Tool Use — Case Studies (2026)', excerpt: 'Risk‑tiered adapters, approvals, and runtime checks in practice.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">

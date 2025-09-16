@@ -1,6 +1,5 @@
-import React from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 // Simple registry mapping ids used by pages/blog and Homepage to components in /blog
 const registry: Record<string, React.ComponentType> = {
@@ -19,6 +18,8 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-real-time-rag-architectures': require('../../blog/ai-2026-real-time-rag-architectures').default,
   'ai-2026-guardrailed-tooling-risk-tiers': require('../../blog/ai-2026-guardrailed-tooling-risk-tiers').default,
   'ai-2026-production-evidence-hub-blueprint': require('../../blog/ai-2026-production-evidence-hub-blueprint').default,
+  'ai-2026-agent-slo-blueprint': require('../../blog/ai-2026-agent-slo-blueprint').default,
+  'ai-2026-governed-tool-use-case-studies': require('../../blog/ai-2026-governed-tool-use-case-studies').default,
 }
 
 export default function BlogPostRouter() {
