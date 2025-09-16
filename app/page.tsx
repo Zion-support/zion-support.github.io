@@ -120,6 +120,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Runtime Guardrails + Eval Runbook (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Runtime Guardrails + Evaluation Runbook</h2>
+              <p className="text-gray-600 mt-2">Safe tool use at scale and a production‑ready SOP to add eval gates.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Guardrails Blueprint</Link>
+              <Link href="/resources/ai-2026-evaluation-runbook-starter" className="inline-block border border-cyan-600 text-cyan-700 px-5 py-3 rounded-lg font-semibold hover:bg-cyan-50">Eval Runbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
