@@ -1,50 +1,12 @@
+import React from 'react';
 
-
-interface StickyActionProps {
-  className?: string;
-  children: React.ReactNode;
-  showAfterScroll?: number;
-  position?: "bottom" | "top";
-}
-
-export function StickyAction({
-  className,
-  children,
-  showAfterScroll = 300,
-  position = "bottom"
-}: StickyActionProps) {
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > showAfterScroll) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-
-  const positionClasses = {
-    bottom: "bottom-4",
-    top: "top-20"
-  };
-
+const sticky-action: React.FC = () => {
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          transition={{ duration: 0.2 }}
-          className={cn(
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4",
-            positionClasses[position],
-            className
-          )}
-        >
-          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">
-            {children}
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">sticky-action</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default sticky-action;

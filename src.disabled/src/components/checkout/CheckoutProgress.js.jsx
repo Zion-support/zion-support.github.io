@@ -1,4 +1,12 @@
-import _React from 'react';'''; import { Steps,Step } from '@/components/ui/steps'; export default function CheckoutProgress({ currentStep,className }) {}; return null} return (<Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping"/> <Step status="incomplete" label="Payment"/> <Step status="incomplete" label="Review"/> </Steps>)} export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress };
-import React from \'react\';\''\'; import { Steps,Step } from \'@/components/ui/steps\'; export default function CheckoutProgress({ currentStep,className }) {}; return null} return (<Steps currentStep={currentStep} className={className}> <Step status=\"incomplete\" label=\"Shipping\"/> <Step status=\"incomplete\" label=\"Payment\"/> <Step status=\"incomplete\" label=\"Review\"/> </Steps>)} export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress };
-const React from "react";"""; import { Steps,Step } from "@/components/ui/steps"; export default function CheckoutProgress({ currentStep,className }) {}; return null} return (<Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping"/> <Step status="incomplete" label="Payment"/> <Step status="incomplete" label="Review"/> </Steps>)} export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress };"""
-import _React from 'react';'''; import { Steps,Step } from '@/components/ui/steps'; export default function CheckoutProgress({ currentStep,className }) {}; return null} return (<Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping"/> <Step status="incomplete" label="Payment"/> <Step status="incomplete" label="Review"/> </Steps>)} export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress }; export { CheckoutProgress };
+import React from 'react';
+
+const CheckoutProgress.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CheckoutProgress.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default CheckoutProgress.js;

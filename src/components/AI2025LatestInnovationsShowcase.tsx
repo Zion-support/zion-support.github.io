@@ -1,74 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
-
-const AI2025LatestInnovationsShowcase = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % innovations.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const innovations = [
-    {
-      id: 1,
-      title: "Quantum-Neural AI Fusion",
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
-      icon: Brain,
-      stats: "10,000x faster processing",
-      color: "from-purple-600 to-blue-600"
-    },
-    {
-      id: 2,
-      title: "Autonomous Business Orchestration",
-      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",
-      icon: Target,
-      stats: "95% efficiency increase",
-      color: "from-green-600 to-teal-600"
-    },
-    {
-      id: 3,
-      title: "Synthetic Intelligence Platforms",
-      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",
-      icon: Sparkles,
-      stats: "Self-evolving capabilities",
-      color: "from-orange-600 to-red-600"
-    },
-    {
-      id: 4,
-      title: "Global Transformation Engine",
-      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",
-      icon: Globe,
-      stats: "15,000% ROI average",
-      color: "from-indigo-600 to-purple-600"
-    }
-  ];
-
-  const features = [
-    {
-      icon: TrendingUp,
-      title: "Exponential Growth",
-      description: "Achieve unprecedented business growth with AI-driven strategies"
-    },
-    {
-      icon: Users,
-      title: "Global Impact",
-      description: "Transform organizations worldwide with our proven methodologies"
-    },
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Implement solutions in daysnot monthswith our rapid deployment"
-    }
-  ];
-
+const AI2025LatestInnovationsShowcase: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -76,7 +8,7 @@ const AI2025LatestInnovationsShowcase = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -92,12 +24,12 @@ const AI2025LatestInnovationsShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
-        </divdiv>
+        </div>
 
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
-              <divdiv
+              <div
                 key={currentSlide}
                 className="absolute inset-0"
               >
@@ -124,7 +56,7 @@ const AI2025LatestInnovationsShowcase = () => {
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
                   <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping"></div>
                 </div>
-              </divdiv>
+              </div>
             </div>
           </div>
 
@@ -145,7 +77,7 @@ const AI2025LatestInnovationsShowcase = () => {
         </div>
 
         {/* Features Grid */}
-        <divdiv
+        <div
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           {features.map((featureindex) => (
@@ -160,10 +92,10 @@ const AI2025LatestInnovationsShowcase = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -183,7 +115,7 @@ const AI2025LatestInnovationsShowcase = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

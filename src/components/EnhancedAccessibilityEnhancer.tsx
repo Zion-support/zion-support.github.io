@@ -1,128 +1,6 @@
-"use client";
-import React, { useState, useEffect, useCallback } from 'react';
-import { 
-  RotateCcw, Accessibility, CheckCircle, AlertCircle
-} from 'lucide-react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  highSaturation: boolean;
-  focusIndicator: boolean;
-  screenReader: boolean;
-}
+import React from 'react';
 
 const EnhancedAccessibilityEnhancer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    highSaturation: false,
-    focusIndicator: true,
-    screenReader: false
-  });
-  const [fontSize, setFontSize] = useState(16);
-  const [lineHeight, setLineHeight] = useState(1.5);
-  const [letterSpacing, setLetterSpacing] = useState(0);
-
-  // Load saved settings from localStorage
-  useEffect(() => {
-    const savedSettings = localStorage.getItem('zion-accessibility-settings');
-    if (savedSettings) {
-      const parsed = JSON.parse(savedSettings);
-      setSettings(parsed);
-      applyAccessibilitySettings(parsed);
-    }
-  }, []);
-
-  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    // Apply high contrast mode
-    if (newSettings.highContrast) {
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--text-secondary', '#e5e7eb');
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--bg-secondary', '#1f2937');
-    } else {
-      root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--text-secondary');
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--bg-secondary');
-    }
-
-    // Apply large text
-    if (newSettings.largeText) {
-      root.style.setProperty('--font-size-base', '18px');
-      root.style.setProperty('--line-height-base', '1.6');
-    } else {
-      root.style.removeProperty('--font-size-base');
-      root.style.removeProperty('--line-height-base');
-    }
-
-    // Apply reduced motion
-    if (newSettings.reducedMotion) {
-      root.style.setProperty('--animation-duration', '0.1s');
-      root.style.setProperty('--transition-duration', '0.1s');
-    } else {
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--transition-duration');
-    }
-
-    // Apply high saturation
-    if (newSettings.highSaturation) {
-      root.style.setProperty('--saturation', '1.2');
-    } else {
-      root.style.removeProperty('--saturation');
-    }
-
-    // Apply focus indicator
-    if (newSettings.focusIndicator) {
-      root.style.setProperty('--focus-ring', '2px solid #3b82f6');
-    } else {
-      root.style.removeProperty('--focus-ring');
-    }
-
-    // Save settings
-    localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
-  }, []);
-
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applyAccessibilitySettings(newSettings);
-  }, [settings, applyAccessibilitySettings]);
-
-  const resetSettings = useCallback(() => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      highSaturation: false,
-      focusIndicator: true,
-      screenReader: false
-    };
-    setSettings(defaultSettings);
-    applyAccessibilitySettings(defaultSettings);
-  }, [applyAccessibilitySettings]);
-
-  const updateFontSize = useCallback((newSize: number) => {
-    setFontSize(newSize);
-    document.documentElement.style.setProperty('--font-size-base', `${newSize}px`);
-  }, []);
-
-  const updateLineHeight = useCallback((newHeight: number) => {
-    setLineHeight(newHeight);
-    document.documentElement.style.setProperty('--line-height-base', newHeight.toString());
-  }, []);
-
-  const updateLetterSpacing = useCallback((newSpacing: number) => {
-    setLetterSpacing(newSpacing);
-    document.documentElement.style.setProperty('--letter-spacing', `${newSpacing}px`);
-  }, []);
-
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {/* Accessibility Toggle Button */}
@@ -137,7 +15,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       {/* Accessibility Panel */}
       <div>
         {isOpen && (
-          <divdiv
+          <div
             className="absolute bottom-16 right-0 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6"
           >
             <div className="flex items-center justify-between mb-4">
@@ -308,7 +186,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 <span>Changes saved automatically</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         )}
       </div>
     </div>

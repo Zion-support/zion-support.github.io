@@ -1,44 +1,10 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-BrainZapTrendingUpUsersArrowRightXCheckCircleStar
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('neural-consensus-banner-dismissed');
-    if (!dismissed) {
-      const timer = setTimeout(() => setIsVisible(true)2000);
-      return () => clearTimeout(timer);
-    }
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('neural-consensus-banner-'dismissed', 'true');
-  };
-
-  const handleLearnMore = () => {
-    // Track banner interaction
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag(', 'event', 'neural_consensus_banner_click'{
-        event_category: 'engagement',
-        event_label: 'learn_more_clicked'
-      });
-    }
-  };
-
-  if (isDismissed) return null;
-
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white shadow-2xl"
         >
           <div className="relative overflow-hidden">
@@ -53,13 +19,13 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   {/* Icon with animation */}
-                  <divdiv
+                  <div
                     className="flex-shrink-0"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
                       <Brain className="w-6 h-6 text-white" />
                     </div>
-                  </divdiv>
+                  </div>
 
                   {/* Main content */}
                   <div className="flex-1">
@@ -135,15 +101,16 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
 
             {/* Progress bar */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600">
-              <divdiv
+              <div
                 className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
               />
             </div>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default NeuralConsensus2026PromotionBanner;
+</div></div></div>

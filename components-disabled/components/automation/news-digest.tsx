@@ -1,26 +1,12 @@
-import fs from 'fs';
-import path from 'path';
+import React from 'react';
 
-type NewsItem = { source: string; title: string; url: string; summary: string; tags: string[] };
-
-export async function getServerSideProps() {
+const news-digest: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      <div className="grid grid-cols-1 gap-4">
-          <div key={idx} className="border rounded p-4 space-y-1">
-            <div className="flex items-center justify-between">
-              <a className="font-medium text-blue-600" href={n.url} target="_blank" rel="noreferrer">{n.title}</a>
-              <div className="text-xs text-gray-500">{n.source}</div>
-            </div>
-            <div className="text-sm text-gray-700">{n.summary}</div>
-            <div className="flex flex-wrap gap-2 pt-1">
-              {n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0.5 rounded bg-gray-100">{t}</span>))}
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">news-digest</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default news-digest;

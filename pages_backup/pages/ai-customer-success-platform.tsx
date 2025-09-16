@@ -1,102 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-
-
-
-
-
-
-
-
-export default function AICustomerSuccessPlatform() {
-	return (
-		<ServiceLanding
-
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-export default function AICustomerSuccessPlatform() {
-	return (
-		<ServiceLanding
-
-
-			title="AI Customer Success Platform"
-			slug="ai-customer-success-platform"
-			description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue."
-			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health."
-
-			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation: 2–4 weeks"
-			roiNote="Average ROI 4–10x within 90 days"
-			features={[
-				"Unified customer health scoring (usage, support, sentiment, billing)"
-				"Churn risk prediction with explainable insights"
-				"Playbook automation (email, CS tasks, in-app guides, offers)"
-				"Expansion signals for upsell/cross-sell"
-				"Executive QBR reports and cohort analytics"
-
-				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
-			]}
-			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
-
-			pricePerMonthUSD={1999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 2–4 weeks"
-			roiNote="Average ROI 4–10x within 90 days"
-			features={[
-				"Unified customer health scoring (usage, support, sentiment, billing)",
-				"Churn risk prediction with explainable insights",
-				"Playbook automation (email, CS tasks, in-app guides, offers)",
-				"Expansion signals for upsell/cross-sell",
-				"Executive QBR reports and cohort analytics",
-				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
-
-			]}
-			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
-			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
-		/>
-	)
+const ai-customer-success-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-customer-success-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-customer-success-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-customer-success-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Fintech", "Media", "E‑commerce"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-customer-success-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default ai-customer-success-platform;

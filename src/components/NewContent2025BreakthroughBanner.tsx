@@ -9,31 +9,23 @@ export default function NewContent2025BreakthroughBanner() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">🔥 JUST PUBLISHED - JANUARY 2025</span>
-          </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             🚀 Revolutionary New Content Just Dropped
-          </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover our latest breakthrough content: Enterprise Automation Revolution Guide
             $2.4B Manufacturing Success Storyand comprehensive 150+ page Implementation Master Guide. 
             Everything you need to dominate AI in 2025.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="/blog/ai-2025-enterprise-automation-revolution"
               className="bg-white text-red-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
               🚀 Read Enterprise Guide
-            </a>
             <a
               href="/case-studies/ai-2025-global-manufacturing-transformation-breakthrough"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors text-lg"
             >
               🏆 View $2.4B Success Story
-            </a>
-          </div>
-        </div>
-
         {/* Featured New Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <a href="/blog/ai-2025-enterprise-automation-revolution" className="group">
@@ -45,10 +37,6 @@ export default function NewContent2025BreakthroughBanner() {
                 <span>25 min read</span>
                 <span className="mx-2">•</span>
                 <span>BREAKTHROUGH</span>
-              </div>
-            </div>
-          </a>
-          
           <a href="/case-studies/ai-2025-global-manufacturing-transformation-breakthrough" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
@@ -58,10 +46,6 @@ export default function NewContent2025BreakthroughBanner() {
                 <span>Case Study</span>
                 <span className="mx-2">•</span>
                 <span>NEW</span>
-              </div>
-            </div>
-          </a>
-
           <a href="/resources/ai-2025-implementation-master-guide" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
@@ -71,26 +55,16 @@ export default function NewContent2025BreakthroughBanner() {
                 <span>Free Download</span>
                 <span className="mx-2">•</span>
                 <span>COMPREHENSIVE</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
         <div className="text-center mt-12">
           <a
             href="/blog"
             className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4"
           >
             View All Articles
-          </a>
           <a
             href="/resources"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors inline-block"
           >
             Download All Resources
-          </a>
-        </div>
-      </div>
-    </section>
   );
 }

@@ -1,84 +1,15 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  TrendingUp
-  ArrowRight,
-  Play,
-  X,
-  ChevronRight,
-  Award,
-  Users,
-  Clock
-} from 'lucide-react';
-
-const UltimateContentShowcase2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'Neural Interface Revolution',
-      description: 'Direct brain-computer interfaces',
-      color: 'from-purple-500 to-blue-500'
-    },
-    {
-      icon: Zap,
-      title: 'Quantum AI Processing',
-      description: '1000x faster processing speeds',
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Holographic Interfaces',
-      description: '3D immersive experiences',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      icon: Award,
-      title: '99.8% Success Rate',
-      description: 'Proven reliability',
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
-
-  const stats = [
-    { value: '2.5M+'label: 'Active Users' },
-    { value: '500%'label: 'ROI Increase' },
-    { value: '99.8%'label: 'Success Rate' },
-    { value: '10M+'label: 'Hours Saved' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (isDismissed) return null;
-
+const UltimateContentShowcase2027PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <divdiv
+            <div
               className="absolute inset-0 opacity-30"
                 background: [
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
@@ -119,7 +50,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
 
                 {/* Rotating Features */}
                 <div className="flex items-center gap-4 mb-4">
-                    <divdiv
+                    <div
                       key={currentFeature}
                       className="flex items-center gap-2"
                     >
@@ -134,7 +65,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
                           {features[currentFeature].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
 
@@ -176,7 +107,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </divdiv>
+        </div>
       )}
     </div>
   );

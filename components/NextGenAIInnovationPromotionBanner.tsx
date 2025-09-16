@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 "use client";
 'use client';
 
@@ -56,8 +59,16 @@ const NextGenAIInnovationPromotionBanner = () => {
   if (!isVisible) return null;
 
   const currentAnnouncement = announcements[currentSlide];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const NextGenAIInnovationPromotionBanner: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NextGenAIInnovationPromotionBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <motion.div
       initial={{ y: -100opacity: 0 }}
       animate={{ y: 0opacity: 1 }}
@@ -202,6 +213,7 @@ const NextGenAIInnovationPromotionBanner = () => {
         </div>
       </div>
     </motion.div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

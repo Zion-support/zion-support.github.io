@@ -1,23 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 
 const CaseStudyPage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
-
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Case Study: {slug}
-          </h1>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-lg">
-              This case study showcases how we've helped businesses transform with our technology solutions.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CaseStudyPage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

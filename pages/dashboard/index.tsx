@@ -1,38 +1,22 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import EmptyState from '../../components/ui/EmptyState',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const Dashboard: NextPage = () => {
+const index: React.FC = () => {
   return (
-    <div className="space-y-6 pb-16">
-      <Head>
-        <title>Dashboard - Zion</title>
-      </Head>
-
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
-
-      <section>
-        <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
-        <EmptyState
-          title="No jobs yet"
-          description="Post your first job to get quotes from top talent."
-          icon={<span>🧰</span>}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
-        />
-      </section>
-
-      <section>
-        <h2 className="text-lg font-semibold mb-2">Messages</h2>
-        <EmptyState
-          title="No messages yet"
-          description="When conversations start, they’ll show up here."
-          icon={<span>💬</span>}
-          primaryAction={{ label: 'Browse services', href: '/services' }}
-        />
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  ),
-},
+  );
+};
 
-export default Dashboard,
+export default index;

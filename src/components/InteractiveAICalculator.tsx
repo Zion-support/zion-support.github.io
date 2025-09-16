@@ -1,98 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-
-interface CalculatorInputs {
-  currentRevenue: number;
-  currentCosts: number;
-  aiInvestment: number;
-  expectedEfficiency: number;
-  timeframe: number;
-}
-
-interface CalculationResult {
-  currentROI: number;
-  projectedROI: number;
-  roiImprovement: number;
-  monthlySavings: number;
-  annualSavings: number;
-  paybackPeriod: number;
-  netBenefit: number;
-}
+import React from 'react';
 
 const InteractiveAICalculator: React.FC = () => {
-  const [inputs, setInputs] = useState<CalculatorInputs>({
-    currentRevenue: 1000000,
-    currentCosts: 600000,
-    aiInvestment: 100000,
-    expectedEfficiency: 25,
-    timeframe: 12
-  });
-
-  const [result, setResult] = useState<CalculationResult | null>(null);
-  const [isCalculating, setIsCalculating] = useState(false);
-  const [showAnimation, setShowAnimation] = useState(false);
-
-  const calculateROI = useCallback(() => {
-    setIsCalculating(true);
-    
-    // Simulate calculation delay for better UX
-    setTimeout(() => {
-      const { currentRevenue, currentCosts, aiInvestment, expectedEfficiency, timeframe } = inputs;
-      
-      const currentROI = ((currentRevenue - currentCosts) / currentCosts) * 100;
-      
-      const efficiencyMultiplier = 1 + (expectedEfficiency / 100);
-      const newCosts = currentCosts / efficiencyMultiplier;
-      const newRevenue = currentRevenue * efficiencyMultiplier;
-      
-      const projectedROI = ((newRevenue - newCosts) / newCosts) * 100;
-      const roiImprovement = projectedROI - currentROI;
-      
-      const monthlySavings = (currentCosts - newCosts) / 12;
-      const annualSavings = currentCosts - newCosts;
-      
-      const paybackPeriod = aiInvestment / monthlySavings;
-      const netBenefit = (annualSavings * (timeframe / 12)) - aiInvestment;
-      
-      setResult({
-        currentROI,
-        projectedROI,
-        roiImprovement,
-        monthlySavings,
-        annualSavings,
-        paybackPeriod,
-        netBenefit
-      });
-      
-      setIsCalculating(false);
-      setShowAnimation(true);
-    }, 1500);
-  }, [inputs]);
-
-  useEffect(() => {
-    calculateROI();
-  }, [calculateROI]);
-
-  const handleInputChange = (field: keyof CalculatorInputs, value: number) => {
-    setInputs(prev => ({
-      ...prev,
-      [field]: value
-    }));
-    setShowAnimation(false);
-  };
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
-  };
-
-  const formatPercentage = (value: number) => {
-    return `${value.toFixed(1)}%`;
-  };
-
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
       <div className="text-center mb-8">
@@ -196,7 +104,7 @@ const InteractiveAICalculator: React.FC = () => {
             </div>
           ) : result ? (
             <div>
-              <divdiv
+              <div
                 className="space-y-4"
               >
                 <div className="grid grid-cols-2 gap-4">
@@ -251,7 +159,7 @@ const InteractiveAICalculator: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
           ) : null}
         </div>

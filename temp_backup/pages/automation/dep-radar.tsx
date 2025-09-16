@@ -1,52 +1,22 @@
-import fs from 'fs',
-import path from 'path',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
-
-export async function getServerSideProps() {
-  const file = path.join(process.cwd()'data'dep-radar.json');
-  let outdated: Outdated[] = [];
-  let generatedAt = '';
-  try {
-    const raw = fs.readFileSync(file'utf-8');
-    const json = JSON.parse(raw);
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || '';
-  } catch {}
-  return { props: { outdatedgeneratedAt } };
-}
-
-export default function DepRadarPage({ outdatedgeneratedAt }: { outdated: Outdated[]; generatedAt: string }) {
+const dep-radar: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      {outdated.length === 0 ? (
-        <div className="text-sm text-gray-600">All dependencies up to date.</div>
-      ) : (
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="text-left p-2">Package</th>
-                <th className="text-left p-2">Current</th>
-                <th className="text-left p-2">Latest</th>
-                <th className="text-left p-2">Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              {outdated.map(o => (
-                <tr key={o.name} className="border-t">
-                  <td className="p-2">{o.name}</td>
-                  <td className="p-2">{o.current}</td>
-                  <td className="p-2">{o.latest}</td>
-                  <td className="p-2">{o.type}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>dep-radar | Zion Tech Group</title>
+        <meta name="description" content="dep-radar - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">dep-radar</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      )}
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default dep-radar;

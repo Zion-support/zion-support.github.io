@@ -1,17 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ApiHubPage() {
-	return (
-		<>
-			<Head>
-				<title>API | Zion Tech Group</title>
-				<meta name="description" content="Zion Tech Group API hub and documentation." />
-			</Head>
-			<Layout>
-				<section className="min-h-[60vh] px-4 py-24">
-					<h1 className="text-5xl font-bold mb-4">API</h1>
-					<p className="text-gray-300 mb-6">Access our API documentation and developer resources.</p>
-					<Link className="text-cyan-300 underline" href="/api-documentation">Go to API Documentation</Link>
-				</section>
-			</Layout>
-		</>
-}
+const index: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default index;

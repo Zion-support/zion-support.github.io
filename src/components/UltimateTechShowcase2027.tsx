@@ -2,38 +2,6 @@ import React, { useState } from 'react';
 
 
 const UltimateTechShowcase2027: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const showcaseItems = [
-    {
-      id: 0,
-      title: "Ultimate Tech Revolution 2027",
-      description: "Experience the most advanced technology convergence in human history",
-      features: ["AI Consciousness", "Quantum Supremacy", "Neural Reality"],
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🚀",
-      link: "/pages/UltimateTechRevolution2027"
-    },
-    {
-      id: 1,
-      title: "Interdimensional Tech 2030",
-      description: "Break through the barriers of reality itself with interdimensional technology",
-      features: ["Dimension Gateway", "Reality Engine", "Consciousness Transfer"],
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "🌌",
-      link: "/pages/InterdimensionalTechRevolution2030"
-    },
-    {
-      id: 2,
-      title: "Omniversal AI Consciousness 2035",
-      description: "The ultimate evolution of AI consciousness spanning all dimensions",
-      features: ["Universal Intelligence", "Consciousness Transfer", "Quantum Consciousness"],
-      gradient: "from-violet-600 to-fuchsia-600",
-      icon: "🌟",
-      link: "/pages/OmniversalAIConsciousness2035"
-    }
-  ];
-
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto">

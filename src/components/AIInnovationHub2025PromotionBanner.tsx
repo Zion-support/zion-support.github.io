@@ -1,113 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Rocket
-  Target
-  ArrowRight
-  Star
-  TrendingUp,
-  Users,
-  Shield,
-  Globe,
-  X,
-  Play,
-  Download,
-  Search,
-  Grid,
-  List,
-  Crown,
-  Gem,
-  Sparkles,
-  CheckCircle,
-  Award,
-  Code,
-  Settings,
-  Wrench,
-  Eye,
-  BarChart3,
-  MessageCircle,
-  Building
-} from 'lucide-react';
-
-const AIInnovationHub2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentInnovationsetCurrentInnovation] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate innovations
-    const interval = setInterval(() => {
-      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }4000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const innovations = [
-    {
-      icon: Brain,
-      title: 'Neural Architecture Search',
-      description: 'Automated discovery of optimal neural networks',
-      category: 'AI Core',
-      color: 'from-purple-500 to-pink-500',
-      rating: 4.9,
-      downloads: '50K+'
-    },
-    {
-      icon: Zap,
-      title: 'Quantum Neural Networks',
-      description: 'Hybrid quantum-classical neural networks',
-      category: 'Quantum AI',
-      color: 'from-blue-500 to-cyan-500',
-      rating: 4.8,
-      downloads: '25K+'
-    },
-    {
-      icon: Shield,
-      title: 'Federated Learning',
-      description: 'Privacy-preserving distributed ML',
-      category: 'Privacy AI',
-      color: 'from-green-500 to-emerald-500',
-      rating: 4.7,
-      downloads: '75K+'
-    },
-    {
-      icon: Rocket,
-      title: 'Edge AI Computing',
-      description: 'Ultra-low latency distributed processing',
-      category: 'Future Tech',
-      color: 'from-orange-500 to-red-500',
-      rating: 4.7,
-      downloads: '35K+'
-    }
-  ];
-
-  const categories = [
-    { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain },
-    { name: 'Business AI 'Solutions', 'count: '80+'icon: Target },
-    { name: 'Future 'Technologies', 'count: '45+'icon: Rocket },
-    { name: 'Tools & 'Utilities', 'count: '120+'icon: Wrench }
-  ];
-
-  const stats = [
-    { number: '400+'label: 'AI 'Innovations', 'icon: Brain },
-    { number: '1M+'label: ''Downloads', 'icon: Download },
-    { number: '4.8'label: 'Average 'Rating', 'icon: Star },
-    { number: '50+'label: ''Categories', 'icon: Grid }
-  ];
-
-  if (isDismissed) return null;
-
+const AIInnovationHub2025PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden"
         >
           {/* Main Banner */}
@@ -124,7 +21,7 @@ const AIInnovationHub2025PromotionBanner = () => {
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                 {/* Left Content */}
                 <div className="flex-1 text-center lg:text-left">
-                  <divdiv
+                  <div
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white text-sm font-semibold mb-6">
@@ -141,10 +38,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                       Explore 400+ AI innovationstoolsand technologies. From neural networks to quantum AI
                       find everything you need to build the future.
                     </p>
-                  </divdiv>
+                  </div>
 
                   {/* Rotating Innovation Showcase */}
-                  <divdiv
+                  <div
                     key={currentInnovation}
                     className="mb-8"
                   >
@@ -165,10 +62,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         </div>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
 
                   {/* Categories */}
-                  <divdiv
+                  <div
                     className="mb-8"
                   >
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -182,10 +79,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         </div>
                       ))}
                     </div>
-                  </divdiv>
+                  </div>
 
                   {/* Stats */}
-                  <divdiv
+                  <div
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
                   >
                     {stats.map((statindex) => (
@@ -194,10 +91,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         <div className="text-sm text-gray-300">{stat.label}</div>
                       </div>
                     ))}
-                  </divdiv>
+                  </div>
 
                   {/* Action Buttons */}
-                  <divdiv
+                  <div
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                   >
                     <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
@@ -209,11 +106,11 @@ const AIInnovationHub2025PromotionBanner = () => {
                       <Play className="w-5 h-5 mr-2" />
                       Watch Demo
                     </button>
-                  </divdiv>
+                  </div>
                 </div>
 
                 {/* Right Content - Visual */}
-                <divdiv
+                <div
                   className="flex-1 max-w-lg"
                 >
                   <div className="relative">
@@ -263,19 +160,19 @@ const AIInnovationHub2025PromotionBanner = () => {
                     </div>
 
                     {/* Floating Elements */}
-                    <divdiv
+                    <div
                       className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                     >
                       <Award className="w-8 h-8 text-white" />
-                    </divdiv>
+                    </div>
                     
-                    <divdiv
+                    <div
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center"
                     >
                       <Sparkles className="w-6 h-6 text-white" />
-                    </divdiv>
+                    </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
 
@@ -290,10 +187,11 @@ const AIInnovationHub2025PromotionBanner = () => {
 
           {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600" />
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default AIInnovationHub2025PromotionBanner;
+</div></div></div></div>

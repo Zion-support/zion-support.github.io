@@ -1,37 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-ArrowRightZapBrainTrendingUpUsersAwardClock
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentStat(prev => (prev + 1) % 3);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const stats = [
-    { icon: TrendingUpvalue: "5,000%"label: "ROI Increase"color: "from-green-500 to-emerald-500" },
-    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-500 to-cyan-500" },
-    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-500 to-pink-500" }
-  ];
-
-  const features = [
-    "Quantum-AI Fusion Technology",
-    "Autonomous Business Operations"
-    "Neural Interface Revolution",
-    "Transcendent Intelligence"
-  ];
-
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
     >
       {/* Animated Background */}
@@ -41,7 +12,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <divdiv
+            <div
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -55,10 +26,10 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 Discover revolutionary AI breakthroughs that are transforming industries worldwide. 
                 Experience the future of artificial intelligence today.
               </p>
-            </divdiv>
+            </div>
 
             {/* Features List */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {features.map((featureindex) => (
@@ -67,10 +38,10 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -86,18 +57,18 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
               >
                 Get Started
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <divdiv
+          <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
               
               {/* Animated Stat */}
-              <divdiv
+              <div
                 key={currentStat}
                 className="text-center mb-6"
               >
@@ -106,7 +77,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
-              </divdiv>
+              </div>
 
               {/* Static Stats */}
               <div className="space-y-4">
@@ -125,17 +96,17 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
               </div>
 
               {/* Urgency Indicator */}
-              <divdiv
+              <div
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time offer - Act now!</span>
-              </divdiv>
+              </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

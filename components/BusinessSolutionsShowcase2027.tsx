@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 "use client";
 'use client';
 
@@ -157,8 +160,15 @@ const BusinessSolutionsShowcase2027 = () => {
     { number: "300%"label: "Average ROI"icon: TrendingUp },
     { number: "24/7"label: "Support Available"icon: Shield }
   ];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const BusinessSolutionsShowcase2027: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">BusinessSolutionsShowcase2027</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -375,6 +385,7 @@ const BusinessSolutionsShowcase2027 = () => {
           </div>
         </motion.div>
       </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

@@ -1,4 +1,12 @@
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'";
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
+import React from 'react';
+
+const index.xpage: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">index.xpage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default index.xpage;

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const FuturisticNeonButton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticNeonButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default FuturisticNeonButton;
+=======
 
 
 export const FuturisticNeonButton = ("props": "any) => {;
@@ -165,3 +179,4 @@ export default FuturisticNeonButton;
 </motion>
 </motion>;';';
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

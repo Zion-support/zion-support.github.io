@@ -1,194 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Rocket
-  Brain
-  Zap
-  Globe
-  Star
-  TrendingUp
-  Users
-  Award,
-  ChevronRight,
-  Play,
-  Download,
-  Lightbulb,
-  Target,
-  Shield,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  CheckCircle,
-  ArrowRight,
-  Eye,
-  Sparkles
-} from 'lucide-react';
-
-const FutureTechnologyShowcase2026 = () => {
-  const [activeCategorysetActiveCategory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const categories = [
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing',
-      icon: Rocket,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Revolutionary quantum computing solutions for exponential performance',
-      technologies: [
-        {
-          name: 'Quantum Neural Networks',
-          description: 'Hybrid quantum-classical neural networks for superior pattern recognition',
-          status: 'Available Now',
-          impact: '1000x faster processing',
-          applications: ['Drug 'Discovery', 'Financial 'Modeling', 'Climate Simulation']
-        },
-        {
-          name: 'Quantum Cryptography',
-          description: 'Unbreakable encryption using quantum principles',
-          status: 'Beta Testing',
-          impact: 'Theoretically unbreakable',
-          applications: ['Secure 'Communications', 'Data 'Protection', 'Blockchain Security']
-        },
-        {
-          name: 'Quantum Optimization',
-          description: 'Solving complex optimization problems in seconds',
-          status: 'In Development',
-          impact: 'Exponential speedup',
-          applications: [', 'Logistics', 'Supply 'Chain', 'Resource Allocation']
-        }
-      ]
-    },
-    {
-      id: 'neural-interfaces',
-      title: 'Neural Interfaces',
-      icon: Brain,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Direct brain-computer interfaces for thought-controlled computing',
-      technologies: [
-        {
-          name: 'Thought-Controlled Computing',
-          description: 'Control devices and applications using only your thoughts',
-          status: 'Available Now',
-          impact: '95% accuracy in neural signal processing',
-          applications: [', 'Accessibility', 'Gaming'Medical Devices']
-        },
-        {
-          name: 'Memory Enhancement',
-          description: 'AI-powered memory augmentation and cognitive enhancement',
-          status: 'Beta Testing',
-          impact: '300% memory improvement',
-          applications: [', 'Learning', 'Medical 'Treatment', 'Cognitive Therapy']
-        },
-        {
-          name: 'Emotional AI',
-          description: 'AI systems that understand and respond to human emotions',
-          status: 'In Development',
-          impact: '99.7% emotional recognition',
-          applications: ['Mental 'Health', 'Customer 'Service', 'Education']
-        }
-      ]
-    },
-    {
-      id: 'space-technology',
-      title: 'Space Technology',
-      icon: Globe,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Advanced space-based technology solutions for global connectivity',
-      technologies: [
-        {
-          name: 'Satellite Internet Networks',
-          description: 'Global high-speed internet coverage from space',
-          status: 'Available Now',
-          impact: 'Global coverage with 1ms latency',
-          applications: ['Remote 'Areas', 'IoT 'Connectivity', 'Emergency Communications']
-        },
-        {
-          name: 'Space Manufacturing',
-          description: 'Manufacturing in zero-gravity for superior materials',
-          status: 'Beta Testing',
-          impact: 'Revolutionary material properties',
-          applications: [', 'Semiconductors', 'Pharmaceuticals'Advanced Materials']
-        },
-        {
-          name: 'Asteroid Mining',
-          description: 'Extracting rare materials from asteroids',
-          status: 'In Development',
-          impact: 'Unlimited rare earth elements',
-          applications: [', 'Electronics', 'Renewable 'Energy', 'Space Exploration']
-        }
-      ]
-    },
-    {
-      id: 'biotech-ai',
-      title: 'Biotech AI',
-      icon: Zap,
-      color: 'from-orange-600 to-red-600',
-      description: 'Combining biotechnology with AI for personalized medicine',
-      technologies: [
-        {
-          name: 'Personalized Medicine',
-          description: 'AI-powered personalized treatment plans based on genetics',
-          status: 'Available Now',
-          impact: '50% better treatment outcomes',
-          applications: ['Cancer 'Treatment', 'Rare 'Diseases', 'Preventive Care']
-        },
-        {
-          name: 'Synthetic Biology',
-          description: 'Designing biological systems using AI',
-          status: 'Beta Testing',
-          impact: 'Revolutionary drug development',
-          applications: ['Drug 'Discovery', 'Biofuels'Environmental Cleanup']
-        },
-        {
-          name: 'Longevity Research',
-          description: 'AI-driven research into extending human lifespan',
-          status: 'In Development',
-          impact: 'Potential 50% lifespan extension',
-          applications: ['Anti-'Aging', 'Disease 'Prevention', 'Health Optimization']
-        }
-      ]
-    }
-  ];
-
-  const stats = [
-    { label: ''Technologies', 'value: '50+'icon: Lightbulb },
-    { label: ''Patents', 'value: '200+'icon: Award },
-    { label: 'Research 'Papers', 'value: '500+'icon: Star },
-    { label: 'Global 'Impact', 'value: '1M+'icon: Users }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Quantum PhysicistMIT',
-      content: 'The quantum computing platform has revolutionized our research capabilities. We can now solve problems that would take classical computers centuries.',
-      rating: 5,
-      company: 'MIT'
-    },
-    {
-      name: 'Prof. Michael Rodriguez',
-      role: 'NeuroscientistStanford',
-      content: 'The neural interface technology is groundbreaking. It has opened up entirely new possibilities for human-computer interaction.',
-      rating: 5,
-      company: 'Stanford University'
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Biotech ResearcherHarvard',
-      content: 'The biotech AI integration has accelerated our drug discovery process by 1000x. We are seeing results that were impossible before.',
-      rating: 5,
-      company: 'Harvard Medical'
-    }
-  ];
-
+const FutureTechnologyShowcase2026: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -196,7 +8,7 @@ const FutureTechnologyShowcase2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -217,10 +29,10 @@ const FutureTechnologyShowcase2026 = () => {
             Explore cutting-edge technologies that will define the future of humanity
             from quantum computing to neural interfaces and space technology.
           </p>
-        </divdiv>
+        </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => (
@@ -232,10 +44,10 @@ const FutureTechnologyShowcase2026 = () => {
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Category Navigation */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -258,7 +70,7 @@ const FutureTechnologyShowcase2026 = () => {
           </div>
 
           {/* Category Content */}
-            <divdiv
+            <div
               key={activeCategory}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
@@ -273,7 +85,7 @@ const FutureTechnologyShowcase2026 = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {categories[activeCategory].technologies.map((techindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="group"
                   >
@@ -314,15 +126,15 @@ const FutureTechnologyShowcase2026 = () => {
                         Learn More
                       </button>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -330,7 +142,7 @@ const FutureTechnologyShowcase2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
@@ -345,13 +157,13 @@ const FutureTechnologyShowcase2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-indigo-400 text-sm">{testimonial.company}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -376,7 +188,7 @@ const FutureTechnologyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

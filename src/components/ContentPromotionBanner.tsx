@@ -1,6 +1,5 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { getFeaturedBlogPosts, getRecentBlogPosts } from '@/data/blog-posts';
+import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
 
 const ContentPromotionBanner: React.FC = () => {
   const featured = getFeaturedBlogPosts();

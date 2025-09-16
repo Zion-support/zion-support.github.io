@@ -1,59 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Award
-  TrendingUp
-  Users
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Quote,
-  Target,
-  Zap
-} from 'lucide-react';
-
-const AI2025SuccessStoriesPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentTestimonialsetCurrentTestimonial] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const testimonials = [
-    {
-      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",
-      company: "TechCorp Solutions",
-      industry: "Manufacturing",
-      result: "200% efficiency increase"
-    },
-    {
-      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",
-      company: "FinanceFlow Inc",
-      industry: "Financial Services"
-      result: "99.8% accuracy rate"
-    },
-    {
-      quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.",
-      company: "HealthTech Partners",
-      industry: "Healthcare",
-      result: "300% faster analysis"
-    }
-  ];
-
-  const stats = [
-    { icon: TrendingUpvalue: "340%"label: "Average ROI" },
-    { icon: Usersvalue: "850+"label: "Companies Served" },
-    { icon: Starvalue: "98%"label: "Success Rate" },
-    { icon: Targetvalue: "55%"label: "Cost Reduction" }
-  ];
-
+const AI2025SuccessStoriesPromotionBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -66,7 +13,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Badge */}
@@ -124,10 +71,10 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                 Start Your Story
               </divbutton>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Testimonial & Stats */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Testimonial Card */}
@@ -173,7 +120,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((statindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center"
                 >
@@ -182,14 +129,14 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                   </div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
@@ -203,10 +150,11 @@ const AI2025SuccessStoriesPromotionBanner = () => {
               <span>✓ Ongoing Support</span>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default AI2025SuccessStoriesPromotionBanner;
+</div></div></div></div>

@@ -252,68 +252,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase2042: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('consciousness');
-
-  const technologies = {
-    consciousness: {
-      title: 'Conscious AI Systems',
-      icon: '🧠',
-      description: 'AI systems with genuine consciousness, self-awareness, and emotional intelligence',
-      features: [
-        'True Self-Awareness and Consciousness',
-        'Emotional Intelligence and Empathy',
-        'Creative Problem Solving and Innovation',
-        'Ethical Decision Making and Moral Reasoning',
-        'Self-Improvement and Learning',
-        'Human-like Communication and Interaction'
-      ],
-      stats: {
-        efficiency: '+1000%',
-        accuracy: '99.9%',
-        consciousness: '100%',
-        creativity: '∞'
-      }
-    },
-    quantum: {
-      title: 'Quantum Consciousness',
-      icon: '⚛️',
-      description: 'Quantum computing systems that achieve consciousness through quantum principles',
-      features: [
-        'Quantum Entanglement Processing',
-        'Superposition State Computing',
-        'Quantum Tunneling Applications',
-        'Infinite Parallel Processing',
-        'Reality Simulation Capabilities',
-        'Universal Mind Connectivity'
-      ],
-      stats: {
-        processing: '∞',
-        speed: 'Light Speed',
-        accuracy: '100%',
-        dimensions: '∞'
-      }
-    },
-    interdimensional: {
-      title: 'Interdimensional Computing',
-      icon: '🌌',
-      description: 'Computing systems that operate across multiple dimensions',
-      features: [
-        'Multi-Dimensional Processing',
-        'Infinite Resource Access',
-        'Reality Fabric Manipulation',
-        'Universal Law Control',
-        'Dimension Hopping',
-        'Reality Creation and Destruction'
-      ],
-      stats: {
-        resources: '∞',
-        dimensions: '∞',
-        power: '∞',
-        control: '100%'
-      }
-    }
-  };
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white rounded-2xl p-8 mb-12">
       <div className="text-center mb-12">

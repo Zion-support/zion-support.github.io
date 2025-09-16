@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RevolutionaryAIContentBanner2025 = () => {
+const RevolutionaryAIContentBanner2025= () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}

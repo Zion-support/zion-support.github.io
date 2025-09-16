@@ -1,16 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const EnhancedNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate subscription
-    setIsSubscribed(true);
-    setTimeout(() => setIsSubscribed(false), 3000);
-  };
-
   return (
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 relative overflow-hidden">
       {/* Background Pattern */}

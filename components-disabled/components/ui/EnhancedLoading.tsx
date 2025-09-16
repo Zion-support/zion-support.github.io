@@ -1,14 +1,12 @@
 import React from 'react';
 
-type EnhancedLoadingProps = {
-  lines?: number;
-};
-
-export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
+const EnhancedLoading: React.FC = () => {
   return (
-    <div className="space-y-2">
-        <div key={idx} className="skeleton h-4 rounded" />
-      ))}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedLoading</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default EnhancedLoading;

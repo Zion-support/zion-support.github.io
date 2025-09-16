@@ -9,7 +9,6 @@ export default function IndustrySolutions() {
         <title>Industry Solutions | Zion Tech Group</title>
         <meta name="description" content="Industry-specific AIquantumand micro SaaS solutions for healthcarefinancemanufacturingretaileducationgovernmentenergybiotech and more." />
         <link rel="canonical" href="https://ziontechgroup.com/industry-solutions" />
-      </Head>
       <div className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold mb-6">Industry Solutions</h1>
@@ -24,9 +23,6 @@ export default function IndustrySolutions() {
             <a className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/energy-utilities-solutions">Energy & Utilities</a>
             <a className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/biotech-ai">Biotech & Healthcare AI</a>
             <a className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/space-technology">Space Technology</a>
-          </div>
-        </section>
-      </div>
     </>
   );
 }

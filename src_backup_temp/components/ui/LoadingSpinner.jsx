@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const LoadingSpinner: React.FC = () => {
+=======
 
 import React from 'react';
 
@@ -134,18 +139,18 @@ export default LoadingSpinner;
 }
 // Skeleton loading component for content
 export function SkeletonLoader($1) {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
-    <div className={cn('space-y-3', className)}>
-      {Array.from({ "length": lines }).map((_, index) => (
-        <motion .div';
-          key={index}
-          className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)}
-          initial={{ "opacity": 0 }}
-          animate={{ "opacity": 1 }}
-          transition={{ "delay": index * 0.1 }}
-         />
-      ))}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LoadingSpinner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default LoadingSpinner;
+=======
     );
 }
 // Page loading component
@@ -171,3 +176,4 @@ export default LoadingSpinner;
 </motion>
 </motion>;';';
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

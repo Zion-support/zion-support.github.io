@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const EnhancedContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');

@@ -1,33 +1,6 @@
-'use client';
-
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-ArrowRightSparklesZapStarUsersGlobeBrainRocket
 
-const NewContent2025RevolutionaryShowcaseBanner = () => {
-  const highlights = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Conscious AI",
-      description: "Self-aware artificial intelligence"
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: "Quantum Leap",
-      description: "Breakthrough quantum computing"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Impact",
-      description: "Worldwide transformation"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Lightning Fast",
-      description: "Ultra-high performance"
-    }
-  ];
-
+const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 relative overflow-hidden">
       {/* Animated Background */}

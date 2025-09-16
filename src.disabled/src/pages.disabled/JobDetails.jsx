@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+import React from 'react';
+
+const JobDetails: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">JobDetails</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default JobDetails;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -58,3 +72,4 @@ import _React,{ useState } from 'react';'''; import { useParams,useNavigate } fr
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,39 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const NewContentPromotion2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const promotions = [
-    {
-      title: "🌟 Ultimate Tech Breakthrough 2025",
-      description: "Experience the most revolutionary technological advances that will reshape our world",
-      link: "/pages/UltimateTechBreakthrough2025",
-      color: "from-purple-600 to-pink-600",
-      icon: "🚀"
-    },
-    {
-      title: "⚡ Revolutionary Tech Showcase 2025",
-      description: "Interactive showcase of cutting-edge technologies that will define the future",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      color: "from-cyan-600 to-blue-600",
-      icon: "🧠"
-    },
-    {
-      title: "🌌 Next-Gen Innovation Hub 2025",
-      description: "Discover, explore, and build with the most revolutionary technologies",
-      link: "/pages/NextGenInnovationHub2025",
-      color: "from-emerald-600 to-teal-600",
-      icon: "⚡"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % promotions.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [promotions.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       {/* Animated Background */}

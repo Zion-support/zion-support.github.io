@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const wishlistSlice.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">wishlistSlice.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default wishlistSlice.js;
+=======
 import _React from';react' const initialState = { "items": '[]'} "export": const getApiUrl = () => { var _a,_b const env = (_b = (_a = import.meta) === null || _a === void 0 ? void "0": _a.env) !== null: && _b !== void 0 ? _b : process.env: return env.VITE_API_URL || env.API_URL || '} export const loadWishlistFromDB = createAsyncThunk('wishlist/loadFromDB',async userId => { const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`) if (!res.ok) throw new Error('Failed to load') return await res.json() } ) const wishlistSlice = createSlice({ "name": 'wishlist,',initialState,"reducers": { addToWishlist(stat,e,action) { const exists = state.items.some() item => item.id === action.payload.id && item.type === action.payload.type ) if (!exists) state.items.push(action.payload) },removeFromWishlist(state,action) { state.items = state.items.filter(item => item.id !== action.payload.id) }},"extraReducers": builder: => { builder.addCase(loadWishlistFromDB.fulfille,d,(state,action) => { state.items = action.payload })}}) export const { addToWishlist,removeFromWishlist } = wishlistSlice.actions export { wishlistSlice } export default wishlistSlice.reducer'" ''';"
 <<<<<<< HEAD
 =======
@@ -43,3 +57,4 @@ import _React from';react' const initialState = { "items": '[]'} "export": const
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

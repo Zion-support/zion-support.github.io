@@ -1,77 +1,9 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Bot
-  MessageCircle
-  Send
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star,
-  Play,
-  X,
-  ChevronRight,
-  Clock,
-  Users,
-  TrendingUp
-} from 'lucide-react';
-
-const InteractiveAIDemo2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const demos = [
-    {
-      icon: Brain,
-      title: 'Neural Interface Demo',
-      description: 'Experience 500% efficiency boost',
-      color: 'from-purple-500 to-pink-500',
-      users: '2.5K+ active'
-    },
-    {
-      icon: Zap,
-      title: 'Quantum AI Demo',
-      description: 'See 1000x faster processing',
-      color: 'from-blue-500 to-cyan-500',
-      users: '1.8K+ active'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Business Automation',
-      description: 'Witness 90% cost reduction',
-      color: 'from-green-500 to-emerald-500',
-      users: '3.2K+ active'
-    },
-    {
-      icon: Star,
-      title: 'Future Predictions',
-      description: 'Explore 95% accuracy rate',
-      color: 'from-orange-500 to-red-500',
-      users: '4.1K+ active'
-    }
-  ];
-
-  if (isDismissed || !isVisible) return null;
-
+const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-blue-900 via-slate-900 to-purple-900 border-b border-blue-500/30 overflow-hidden"
       >
         {/* Animated Background */}
@@ -84,7 +16,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
-              <divdiv
+              <div
                 className="flex items-center gap-3"
               >
                 <div className="relative">
@@ -104,13 +36,13 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                     Chat with the Future of AI Technology
                   </p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Rotating Demo Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-blue-500/30"></div>
                 <div className="flex items-center gap-3">
-                    <divdiv
+                    <div
                       key={currentDemo}
                       className="flex items-center gap-2"
                     >
@@ -125,7 +57,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                           {demos[currentDemo].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -180,7 +112,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           {/* Mobile Demo Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="flex items-center gap-2"
                 >
@@ -195,7 +127,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                       {demos[currentDemo].description}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -203,10 +135,10 @@ const InteractiveAIDemo2025PromotionBanner = () => {
 
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <divdiv
+        <div
           className="absolute bottom-0 left-0 h-1 bg-white"
-        ></divdiv>
-      </divdiv>
+        ></div>
+      </div>
     </div>
   );
 };

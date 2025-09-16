@@ -1,17 +1,22 @@
-import Head from 'next/head'
-import ResumeWizard from '../../components/talent/ResumeWizard'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ResumeBuilderPage() {
+const resume-builder: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Zion Talent — Resume & Portfolio Builder</title>
-      </Head>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-bold">Resume & Portfolio Builder</h1>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Create polished resumes, manage projects, and publish to your public profile.</p>
-        <ResumeWizard />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>resume-builder | Zion Tech Group</title>
+        <meta name="description" content="resume-builder - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">resume-builder</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
+
+export default resume-builder;
