@@ -114,6 +114,9 @@ import UltimateInnovation2027 from './src/pages/UltimateInnovation2027';
 import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
 import UltimateTechBlog2026 from './src/pages/UltimateTechBlog2026';
+import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import LatestContentShowcase2026 from './src/components/LatestContentShowcase2026';
+import LatestContent2026 from './src/pages/LatestContent2026';
 import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
 import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
 import RevolutionaryTechInsights2027 from './src/pages/RevolutionaryTechInsights2027';
@@ -322,6 +325,9 @@ export default function App(): JSX.Element {
 <<<<<<< HEAD
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: 2026 Content Banner - Latest Revolutionary Content */}
+                <NewContentBanner2026 />
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
@@ -1332,6 +1338,9 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
+                
+                {/* NEW: Latest Content Showcase 2026 */}
+                <LatestContentShowcase2026 />
               </main>
             </div>
           } />
@@ -1393,6 +1402,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechTrends2026" element={<UltimateTechTrends2026 />} />
           <Route path="/pages/RevolutionaryCaseStudies2026" element={<RevolutionaryCaseStudies2026 />} />
           <Route path="/pages/UltimateTechBlog2026" element={<UltimateTechBlog2026 />} />
+          <Route path="/latest-content-2026" element={<LatestContent2026 />} />
           <Route path="/pages/RevolutionaryTech2027" element={<RevolutionaryTech2027 />} />
           <Route path="/pages/UltimateInnovation2027" element={<UltimateInnovation2027 />} />
           <Route path="/pages/NextGenTechRevolution2027" element={<NextGenTechRevolution2027 />} />
