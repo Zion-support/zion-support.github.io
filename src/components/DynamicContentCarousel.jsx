@@ -1,40 +1,37 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  
   const carouselItems = [
     {
-      id: 1,
-      title: "AI Innovation Hub 2026",
-      description: "Explore cutting-edge AI technologies and breakthrough innovations",
-      image: "🧠",
+      title: "AI-Powered Business Solutions",
+      description: "Transform your business with cutting-edge AI technology that automates processes and drives growth.",
+      image: "🤖",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AIInnovationHub2026"
+      features: ["Automated Workflows", "Predictive Analytics", "Smart Decision Making", "Cost Reduction"]
     },
     {
-      id: 2,
       title: "Quantum Computing Revolution",
-      description: "Discover the power of quantum computing and its applications",
-      image: "⚛️",
-      gradient: "from-blue-600 to-cyan-600",
-      link: "/pages/QuantumComputingRevolution2026"
+      description: "Experience the power of quantum computing that solves complex problems in seconds.",
+      image: "⚡",
+      gradient: "from-cyan-600 to-blue-600",
+      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation", "Optimization"]
     },
     {
-      id: 3,
       title: "Neural Interface Technology",
-      description: "Experience the future of brain-computer interfaces",
-      image: "🧬",
-      gradient: "from-green-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026"
+      description: "Connect your mind directly to digital systems with revolutionary brain-computer interfaces.",
+      image: "🧠",
+      gradient: "from-emerald-600 to-teal-600",
+      features: ["Thought Control", "Neural Feedback", "Mind-Machine Fusion", "Enhanced Cognition"]
     },
     {
-      id: 4,
-      title: "AI Transformation Guide",
-      description: "Complete guide to AI transformation for your organization",
-      image: "📚",
+      title: "Interdimensional Networks",
+      description: "Access unlimited data and processing power through interdimensional computing networks.",
+      image: "🌌",
       gradient: "from-indigo-600 to-purple-600",
-      link: "/pages/AITransformationGuide2026"
+      features: ["Infinite Bandwidth", "Cross-Dimensional Access", "Universal Computing", "Reality Hopping"]
     }
   ];
 
@@ -43,40 +40,48 @@ const DynamicContentCarousel = () => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [carouselItems.length]);
+  }, []);
 
   return (
-    <div className="relative max-w-6xl mx-auto">
-      <div className="relative overflow-hidden rounded-2xl">
-        <div
-          key={currentSlide}
-          className="relative transition-all duration-500"
-        >
-          <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative h-96 overflow-hidden rounded-2xl">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className={`absolute inset-0 bg-gradient-to-br ${carouselItems[currentSlide].gradient} text-white p-8 flex items-center`}
+          >
+            <div className="grid md:grid-cols-2 gap-8 w-full">
+              <div className="space-y-6">
                 <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
-                <h3 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h3>
-                <p className="text-xl mb-6 max-w-2xl">{carouselItems[currentSlide].description}</p>
-                <a
-                  href={carouselItems[currentSlide].link}
-                  className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
-                >
-                  Explore Now →
-                </a>
+                <h2 className="text-4xl font-bold">{carouselItems[currentSlide].title}</h2>
+                <p className="text-xl opacity-90">{carouselItems[currentSlide].description}</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {carouselItems[currentSlide].features.map((feature, index) => (
+                    <div key={index} className="bg-white/20 rounded-lg p-2 text-sm text-center">
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Learn More →
+                </button>
               </div>
-              <div className="hidden md:block">
-                <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-8xl">{carouselItems[currentSlide].image}</span>
+              <div className="hidden md:flex items-center justify-center">
+                <div className="text-8xl opacity-20">
+                  {carouselItems[currentSlide].image}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
-
+      
       {/* Navigation Dots */}
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center space-x-2 mt-6">
         {carouselItems.map((_, index) => (
           <button
             key={index}
