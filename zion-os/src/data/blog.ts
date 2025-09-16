@@ -25,6 +25,18 @@ export const blogPosts: BlogPost[] = [
     content: 'In 2025, AI governance requires a practical dual-layer approach...'
   },
   {
+    id: 'agent-observability-blueprint-2026',
+    title: 'Agent Observability Blueprint 2026: Traces, Evals, and Safety Signals',
+    excerpt: 'A practical blueprint for end-to-end observability of autonomous agents: distributed traces, live evals, budgets, and safety signals.',
+    category: 'AI Operations',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-16',
+    readTime: '9 min read',
+    image: '/blog/agent-observability-blueprint.jpg',
+    featured: true,
+    content: 'This blueprint covers production-grade patterns for observing and governing autonomous agents including tracing spans across tools, datasets, and actions, real-time evals for regressions, policy budgets and circuit breakers, and safety signal aggregation for auditability.'
+  },
+  {
     id: 'quantum-risk-modeling-2025',
     title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
     excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
