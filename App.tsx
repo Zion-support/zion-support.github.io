@@ -173,6 +173,10 @@ import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalB
 import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
 import AdvancedTechShowcase2025 from './src/pages/AdvancedTechShowcase2025';
 import AdvancedTechBanner2025 from './src/components/AdvancedTechBanner2025';
+import NewContentShowcase2026 from './src/pages/NewContentShowcase2026';
+import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import UltimateContentPromotionBanner2026 from './src/components/UltimateContentPromotionBanner2026';
 import AutonomousAgentRiskPlaybook2026 from './src/pages/AutonomousAgentRiskPlaybook2026';
 import ComprehensiveServices2035 from './src/pages/ComprehensiveServices2035';
 import InterdimensionalTechRevolution2036 from './src/pages/InterdimensionalTechRevolution2036';
@@ -227,6 +231,7 @@ export default function App(): JSX.Element {
         <MobileOptimizer2025 />
         <Header />
         <UltimatePromotionalBanner2026 />
+        <UltimateContentPromotionBanner2026 />
         
         <Routes>
           <Route path="/" element={
@@ -242,7 +247,7 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Content Banner - highlights new 2026 content */}
                 <div className="mb-12">
-                  <RevolutionaryContentPromotionBanner2026 />
+                  <RevolutionaryContentBanner2026 />
                 </div>
                 
                 {/* New Content Advertising Banner */}
@@ -1217,6 +1222,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
           <Route path="/pages/BlogPost2025Q4" element={<BlogPost2025Q4 />} />
           <Route path="/pages/NewContentSeptember2025" element={<NewContentSeptember2025 />} />
+          <Route path="/pages/NewContentShowcase2026" element={<NewContentShowcase2026 />} />
           <Route path="/pages/AIExecutiveBriefQ1_2026" element={<AIExecutiveBriefQ1_2026 />} />
           <Route path="/pages/AgenticRAGBlueprint2026" element={<AgenticRAGBlueprint2026 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />

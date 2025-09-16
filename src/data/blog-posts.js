@@ -1,4 +1,7 @@
+import { newBlogPosts2026 } from './newContent2026';
+
 export const blogPosts = [
+  ...newBlogPosts2026,
   {
     id: 9901,
     title: "AI 2026: Shipping Safe Agents — Playbook in 24 Hours",
