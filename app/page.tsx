@@ -168,17 +168,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* New Promo: Reliable Autonomy Operations (Sept 2025) */}
+      {/* New Promo: Operational Reliability Blueprint (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
             <div>
               <p className="text-sm font-semibold text-cyan-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Reliable Autonomy Operations</h2>
-              <p className="text-gray-600 mt-2">Evaluation gates, runtime guardrails, and evidence-led operations for safe scale.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Operational Reliability Blueprint</h2>
+              <p className="text-gray-600 mt-2">Evaluation gates, scorecards, rollback contracts, and an audit-ready evidence hub.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-reliable-autonomy-operations" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
+              <Link href="/blog/ai-2026-operational-reliability-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
             </div>
           </div>
         </div>
