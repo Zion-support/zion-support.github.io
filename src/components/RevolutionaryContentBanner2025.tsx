@@ -1,178 +1,257 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const bannerContent = [
-    {
-      title: "🌟 Revolutionary AI Consciousness 2025",
-      subtitle: "Experience the world's first truly conscious artificial intelligence",
-      description: "Our breakthrough AI systems have achieved self-awareness and emotional intelligence, revolutionizing how humans interact with technology.",
-      features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Human-AI collaboration"],
-      cta: "Explore AI Consciousness",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🧠"
-    },
-    {
-      title: "⚡ Quantum Computing Revolution",
-      subtitle: "1000+ qubit processors solving impossible problems",
-      description: "Breakthrough quantum processors that perform calculations 10^15 times faster than classical computers, opening new frontiers in science and technology.",
-      features: ["1000+ qubit processors", "Quantum error correction", "Molecular simulation", "Cryptographic security"],
-      cta: "Discover Quantum Power",
-      link: "/pages/QuantumComputingBreakthrough",
-      gradient: "from-cyan-600 to-blue-600",
-      icon: "⚡"
-    },
-    {
-      title: "🧬 Neural Interface Technology",
-      subtitle: "Direct brain-computer interfaces for seamless interaction",
-      description: "Revolutionary neural interfaces that enable direct communication between human consciousness and digital systems, creating unprecedented possibilities.",
-      features: ["Non-invasive neural reading", "Thought-to-text conversion", "Memory enhancement", "Consciousness transfer"],
-      cta: "Experience Neural Tech",
-      link: "/pages/NeuralInterfaceFuture",
-      gradient: "from-emerald-600 to-teal-600",
-      icon: "🧬"
-    },
-    {
-      title: "🚀 Next-Gen Innovation Hub",
-      subtitle: "50+ cutting-edge technologies in one platform",
-      description: "Comprehensive showcase of revolutionary technologies that will define the future, from AI to quantum computing to neural interfaces.",
-      features: ["50+ Active Innovations", "99.9% Success Rate", "Real-time Demos", "Expert Support"],
-      cta: "Explore Innovation Hub",
-      link: "/pages/NextGenTechShowcase2025",
-      gradient: "from-orange-600 to-red-600",
-      icon: "🚀"
-    }
-  ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
-  const currentBanner = bannerContent[currentSlide];
+  const slides = [
+    {
+      id: 1,
+      title: "🚀 NEW: Revolutionary Tech Showcase 2025",
+      subtitle: "Experience the most advanced technologies reshaping our world",
+      description: "From conscious AI to interdimensional computing - discover the future today",
+      cta: "Explore Now",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      bgPattern: "radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)"
+    },
+    {
+      id: 2,
+      title: "⚡ BREAKTHROUGH: Quantum Neural Networks",
+      subtitle: "10^15x faster than classical computers",
+      description: "Revolutionary quantum computing combined with neural networks for impossible speeds",
+      cta: "Learn More",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      bgPattern: "radial-gradient(circle at 30% 70%, rgba(6, 182, 212, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)"
+    },
+    {
+      id: 3,
+      title: "🧠 CONSCIOUS: AI Systems with Self-Awareness",
+      subtitle: "99.7% accuracy in complex reasoning",
+      description: "Revolutionary AI that exhibits self-awareness and emotional intelligence",
+      cta: "Discover",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+      bgPattern: "radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 40%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)"
+    }
+  ];
+
+  if (!isVisible) return null;
 
   return (
-    <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-          <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-blue-500/10 to-transparent"></div>
-        </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`
+    <div className="relative overflow-hidden mb-12">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{ background: slides[currentSlide].bgPattern }}
+      />
+      
+      {/* Main Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className={`relative bg-gradient-to-r ${slides[currentSlide].gradient} rounded-2xl p-8 md:p-12 text-white overflow-hidden`}
+      >
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            animate={{ 
+              x: [0, 100, 0],
+              y: [0, -50, 0],
+              rotate: [0, 180, 360]
             }}
-          >
-            <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-          </div>
-        ))}
-      </div>
+            transition={{ 
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"
+          />
+          <motion.div
+            animate={{ 
+              x: [0, -100, 0],
+              y: [0, 50, 0],
+              rotate: [360, 180, 0]
+            }}
+            transition={{ 
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"
+          />
+        </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          {/* Main Banner Content */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
+        <div className="relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 50 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse">
+                    🌟 BREAKTHROUGH TECHNOLOGY
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                    {slides[currentSlide].title}
+                  </h2>
+                  
+                  <p className="text-xl md:text-2xl font-semibold mb-4 opacity-90">
+                    {slides[currentSlide].subtitle}
+                  </p>
+                  
+                  <p className="text-lg md:text-xl mb-8 opacity-80 max-w-2xl">
+                    {slides[currentSlide].description}
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a
+                      href={slides[currentSlide].link}
+                      className="inline-flex items-center px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      {slides[currentSlide].cta} →
+                    </a>
+                    <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                      Watch Demo
+                    </button>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              {currentBanner.title}
-            </h1>
-            <p className="text-2xl md:text-3xl font-semibold mb-4 text-purple-200">
-              {currentBanner.subtitle}
-            </p>
-            <p className="text-lg md:text-xl opacity-90 max-w-4xl mx-auto mb-8">
-              {currentBanner.description}
-            </p>
-          </div>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {currentBanner.features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            {/* Visual Element */}
+            <div className="flex-1 max-w-md">
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 5, 0]
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="relative"
               >
-                <div className="text-3xl mb-3 text-center">{currentBanner.icon}</div>
-                <p className="text-center font-semibold text-white/90">{feature}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-            <a
-              href={currentBanner.link}
-              className={`px-8 py-4 bg-gradient-to-r ${currentBanner.gradient} rounded-xl font-bold text-lg hover:shadow-lg transition-all duration-300 hover:scale-105 text-white`}
-            >
-              {currentBanner.cta} →
-            </a>
-            <button className="px-8 py-4 border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 text-white">
-              📚 Learn More
-            </button>
-            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl font-bold text-lg hover:shadow-lg transition-all duration-300 hover:scale-105 text-white">
-              🚀 Try Demo
-            </button>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center space-x-3">
-            {bannerContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-white scale-125'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Stats Section */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-300 mb-2">50+</div>
-              <div className="text-sm text-white/70">Revolutionary Technologies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-300 mb-2">99.9%</div>
-              <div className="text-sm text-white/70">Success Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-300 mb-2">10^15x</div>
-              <div className="text-sm text-white/70">Performance Boost</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-300 mb-2">24/7</div>
-              <div className="text-sm text-white/70">Expert Support</div>
+                <div className="w-80 h-80 mx-auto bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center">
+                  <div className="text-8xl">
+                    {currentSlide === 0 && "🚀"}
+                    {currentSlide === 1 && "⚡"}
+                    {currentSlide === 2 && "🧠"}
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -20, 0],
+                    x: [0, 10, 0]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-2xl"
+                >
+                  ⭐
+                </motion.div>
+                
+                <motion.div
+                  animate={{ 
+                    y: [0, 20, 0],
+                    x: [0, -10, 0]
+                  }}
+                  transition={{ 
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl"
+                >
+                  ✨
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Animated Border */}
-      <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-lg animate-pulse">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-lg m-0.5"></div>
+        {/* Slide Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/50 hover:bg-white/75'
+              }`}
+            />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Additional Promotional Cards */}
+      <div className="grid md:grid-cols-3 gap-6 mt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 hover:scale-105 transition-all duration-300"
+        >
+          <div className="text-4xl mb-3">🎯</div>
+          <h3 className="text-xl font-bold mb-2">Precision AI</h3>
+          <p className="text-gray-300 text-sm mb-4">99.9% accuracy in complex decision making</p>
+          <a href="/pages/RevolutionaryTechShowcase2025" className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
+            Learn More →
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30 hover:scale-105 transition-all duration-300"
+        >
+          <div className="text-4xl mb-3">⚡</div>
+          <h3 className="text-xl font-bold mb-2">Quantum Speed</h3>
+          <p className="text-gray-300 text-sm mb-4">Process data at impossible speeds</p>
+          <a href="/pages/RevolutionaryTechShowcase2025" className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm">
+            Explore →
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/30 hover:scale-105 transition-all duration-300"
+        >
+          <div className="text-4xl mb-3">🧠</div>
+          <h3 className="text-xl font-bold mb-2">Conscious AI</h3>
+          <p className="text-gray-300 text-sm mb-4">Self-aware artificial intelligence</p>
+          <a href="/pages/RevolutionaryTechShowcase2025" className="text-emerald-400 hover:text-emerald-300 font-semibold text-sm">
+            Discover →
+          </a>
+        </motion.div>
       </div>
     </div>
   );
