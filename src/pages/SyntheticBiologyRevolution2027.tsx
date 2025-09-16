@@ -139,13 +139,14 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <div className="text-lg text-cyan-200 mb-2">Environmental Impact</div>
               <div className="text-sm text-gray-400">Carbon-neutral bio-systems</div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-8799
->>>>>>> cursor/create-and-deploy-new-content-4f5e
           </div>
         </div>
 
         {/* Call to Action */}
->>>>>>> cursor/create-and-deploy-new-content-4f5e
+        <div className="text-center">
+          <h2 className="text-5xl font-bold mb-6">Ready to Revolutionize Biology?</h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Join us in creating the future of synthetic biology and bio-engineering.
           </p>
           <div className="flex justify-center space-x-8">
             <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-20 py-8 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-3xl transform hover:scale-105">
