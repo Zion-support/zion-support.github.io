@@ -693,6 +693,13 @@ export default function HomePage() {
 >>>>>>> origin/feat/content-promo
               </a>
 >>>>>>> origin/feat/new-content-promos
+              <a
+                href="/blog/ai-2026-production-evidence-hub-blueprint"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                New: Production Evidence Hub
+                <span aria-hidden>→</span>
+              </a>
                 href="/blog/ai-2026-sovereign-ai-commerce"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
@@ -1124,6 +1131,18 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            <article className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              <h3 className="text-lg font-semibold leading-6 text-white">
+                <a href="/blog/ai-2026-production-evidence-hub-blueprint" className="hover:text-blue-400 transition-colors duration-200">
+                  <span className="absolute inset-0" />
+                  AI 2026: Production Evidence Hub — Blueprint
+                </a>
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-gray-300">Centralize evals, incidents, approvals, and KPIs for audit‑ready, gate‑driven operations.</p>
+              <a href="/blog/ai-2026-production-evidence-hub-blueprint" className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+                Read more <span aria-hidden="true">→</span>
+              </a>
+            </article>
             {[
               {
 =======
