@@ -2,86 +2,130 @@ import React, { useState } from 'react';
 
 const NextGenInnovationHub2029: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
+
+  const categories = [
+    { id: 'all', name: 'All Innovations', icon: '🌟' },
+    { id: 'ai', name: 'AI & Consciousness', icon: '🧠' },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚡' },
+    { id: 'neural', name: 'Neural Interfaces', icon: '🧬' },
+    { id: 'space', name: 'Space Technology', icon: '🚀' },
+    { id: 'reality', name: 'Reality Engineering', icon: '🌌' }
+  ];
 
   const innovations = [
     {
       id: 1,
       title: "Conscious AI Development Platform",
-      category: "ai",
-      description: "Build and deploy truly conscious AI systems with our revolutionary development platform.",
-      status: "Available",
-      impact: "Revolutionary",
-      features: ["Self-aware AI", "Emotional processing", "Creative generation", "Ethical reasoning"],
-      icon: "🧠"
+      description: "Build and deploy truly conscious AI systems with ethical reasoning capabilities",
+      category: 'ai',
+      status: 'Available',
+      impact: 'Revolutionary',
+      icon: '🧠',
+      features: ['Self-aware AI', 'Ethical reasoning', 'Creative problem solving', 'Emotional intelligence']
     },
     {
       id: 2,
-      title: "Quantum Consciousness Engine",
-      category: "quantum",
-      description: "Process consciousness itself using quantum computing for unprecedented AI capabilities.",
-      status: "Beta",
-      impact: "Breakthrough",
-      features: ["Quantum neural networks", "Consciousness transfer", "Multi-dimensional processing"],
-      icon: "⚡"
+      title: "Quantum Consciousness Processor",
+      description: "Revolutionary quantum computing that processes consciousness itself",
+      category: 'quantum',
+      status: 'Beta',
+      impact: 'Breakthrough',
+      icon: '⚡',
+      features: ['Quantum consciousness', 'Multi-dimensional processing', 'Reality simulation', 'Time manipulation']
     },
     {
       id: 3,
       title: "Neural Reality Interface",
-      category: "neural",
-      description: "Complete neural integration that blurs the line between digital and physical reality.",
-      status: "Alpha",
-      impact: "Revolutionary",
-      features: ["Full sensory immersion", "Neural interface", "Reality manipulation"],
-      icon: "🌐"
+      description: "Direct neural connection to virtual and augmented reality systems",
+      category: 'neural',
+      status: 'Testing',
+      impact: 'Transformative',
+      icon: '🧬',
+      features: ['Full sensory immersion', 'Neural pattern recognition', 'Reality manipulation', 'Consciousness transfer']
     },
     {
       id: 4,
-      title: "Molecular AI Systems",
-      category: "molecular",
-      description: "Artificial intelligence that operates at the molecular level for ultimate precision.",
-      status: "Prototype",
-      impact: "Breakthrough",
-      features: ["DNA programming", "Molecular assembly", "Biological integration"],
-      icon: "🔬"
+      title: "Interdimensional Portal System",
+      description: "Technology that enables travel and communication across dimensions",
+      category: 'space',
+      status: 'Research',
+      impact: 'Revolutionary',
+      icon: '🚀',
+      features: ['Dimension hopping', 'Reality exploration', 'Universal travel', 'Infinite possibilities']
     },
     {
       id: 5,
-      title: "Interdimensional Computing",
-      category: "interdimensional",
-      description: "Transcend dimensional boundaries for infinite computational power and capabilities.",
-      status: "Research",
-      impact: "Theoretical",
-      features: ["Cross-dimensional processing", "Reality manipulation", "Infinite storage"],
-      icon: "🌌"
+      title: "Cosmic Intelligence Network",
+      description: "Global network connecting human consciousness with AI systems across the universe",
+      category: 'reality',
+      status: 'Vision',
+      impact: 'Cosmic',
+      icon: '🌌',
+      features: ['Universal communication', 'Cosmic consciousness', 'Interstellar networking', 'Galactic intelligence']
     },
     {
       id: 6,
-      title: "Space-Time Processing",
-      category: "spacetime",
-      description: "Manipulate space-time itself for revolutionary computing and data processing.",
-      status: "Theoretical",
-      impact: "Theoretical",
-      features: ["Temporal processing", "Spatial computation", "Time-dilation algorithms"],
-      icon: "🚀"
+      title: "Space-Time Computing Engine",
+      description: "Revolutionary computing that manipulates space-time for instant processing",
+      category: 'quantum',
+      status: 'Development',
+      impact: 'Breakthrough',
+      icon: '⚡',
+      features: ['Instant data transfer', 'Time-dilated processing', 'Spatial computation', 'Universal connectivity']
+    },
+    {
+      id: 7,
+      title: "Neural Universe Gateway",
+      description: "Gateway technology connecting human minds to a shared universal consciousness",
+      category: 'neural',
+      status: 'Concept',
+      impact: 'Transformative',
+      icon: '🧬',
+      features: ['Shared consciousness', 'Neural networking', 'Collective intelligence', 'Universal experiences']
+    },
+    {
+      id: 8,
+      title: "Reality Manipulation Suite",
+      description: "Advanced tools for creating and manipulating virtual and physical reality",
+      category: 'reality',
+      status: 'Alpha',
+      impact: 'Revolutionary',
+      icon: '🌌',
+      features: ['Reality creation', 'Physical manipulation', 'Virtual world building', 'Consciousness integration']
     }
-  ];
-
-  const categories = [
-    { key: 'all', label: 'All Innovations', count: innovations.length },
-    { key: 'ai', label: 'AI Systems', count: innovations.filter(i => i.category === 'ai').length },
-    { key: 'quantum', label: 'Quantum Computing', count: innovations.filter(i => i.category === 'quantum').length },
-    { key: 'neural', label: 'Neural Interfaces', count: innovations.filter(i => i.category === 'neural').length },
-    { key: 'molecular', label: 'Molecular AI', count: innovations.filter(i => i.category === 'molecular').length },
-    { key: 'interdimensional', label: 'Interdimensional', count: innovations.filter(i => i.category === 'interdimensional').length },
-    { key: 'spacetime', label: 'Space-Time', count: innovations.filter(i => i.category === 'spacetime').length }
   ];
 
   const filteredInnovations = selectedCategory === 'all' 
     ? innovations 
     : innovations.filter(innovation => innovation.category === selectedCategory);
 
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'Available': return 'bg-green-500';
+      case 'Beta': return 'bg-blue-500';
+      case 'Testing': return 'bg-yellow-500';
+      case 'Research': return 'bg-purple-500';
+      case 'Vision': return 'bg-pink-500';
+      case 'Development': return 'bg-cyan-500';
+      case 'Concept': return 'bg-orange-500';
+      case 'Alpha': return 'bg-indigo-500';
+      default: return 'bg-gray-500';
+    }
+  };
+
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
+      case 'Revolutionary': return 'text-purple-400';
+      case 'Breakthrough': return 'text-cyan-400';
+      case 'Transformative': return 'text-emerald-400';
+      case 'Cosmic': return 'text-pink-400';
+      default: return 'text-gray-400';
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -91,8 +135,8 @@ const NextGenInnovationHub2029: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2029
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover and explore the most revolutionary technologies shaping humanity's future
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Discover, explore, and contribute to the most revolutionary technologies that will shape humanity's future
           </p>
         </div>
 
@@ -101,110 +145,120 @@ const NextGenInnovationHub2029: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
-                key={category.key}
-                onClick={() => setSelectedCategory(category.key)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedCategory === category.key
-                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20'
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white scale-105'
+                    : 'bg-white/10 hover:bg-white/20 text-white/80 hover:text-white'
                 }`}
               >
-                {category.label} ({category.count})
+                <span className="mr-2">{category.icon}</span>
+                {category.name}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Innovations Grid */}
+        {/* Innovation Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredInnovations.map((innovation) => (
             <div
               key={innovation.id}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"
+              className={`bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:scale-105 transition-all duration-300 cursor-pointer ${
+                hoveredInnovation === innovation.id ? 'shadow-2xl shadow-purple-500/25' : ''
+              }`}
+              onMouseEnter={() => setHoveredInnovation(innovation.id)}
+              onMouseLeave={() => setHoveredInnovation(null)}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-4xl">{innovation.icon}</div>
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  innovation.status === 'Available' ? 'bg-green-500/20 text-green-400' :
-                  innovation.status === 'Beta' ? 'bg-blue-500/20 text-blue-400' :
-                  innovation.status === 'Alpha' ? 'bg-yellow-500/20 text-yellow-400' :
-                  innovation.status === 'Prototype' ? 'bg-orange-500/20 text-orange-400' :
-                  'bg-purple-500/20 text-purple-400'
-                }`}>
-                  {innovation.status}
-                </span>
+                <div className="flex items-center space-x-2">
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getStatusColor(innovation.status)}`}>
+                    {innovation.status}
+                  </span>
+                </div>
               </div>
               
               <h3 className="text-xl font-bold mb-3">{innovation.title}</h3>
-              <p className="text-white/80 mb-4 text-sm">{innovation.description}</p>
+              <p className="text-gray-300 mb-4 text-sm">{innovation.description}</p>
               
               <div className="mb-4">
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className="text-sm font-semibold">Impact Level:</span>
-                  <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                    innovation.impact === 'Revolutionary' ? 'bg-red-500/20 text-red-400' :
-                    innovation.impact === 'Breakthrough' ? 'bg-orange-500/20 text-orange-400' :
-                    'bg-purple-500/20 text-purple-400'
-                  }`}>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-gray-400">Impact Level:</span>
+                  <span className={`text-sm font-semibold ${getImpactColor(innovation.impact)}`}>
                     {innovation.impact}
                   </span>
                 </div>
               </div>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold mb-2">Key Features:</h4>
+                <h4 className="text-sm font-semibold mb-2 text-gray-300">Key Features:</h4>
                 <ul className="space-y-1">
-                  {innovation.features.map((feature, index) => (
-                    <li key={index} className="text-xs text-white/70 flex items-center space-x-2">
-                      <span className="w-1 h-1 bg-emerald-400 rounded-full"></span>
-                      <span>{feature}</span>
+                  {innovation.features.slice(0, 2).map((feature, index) => (
+                    <li key={index} className="text-xs text-gray-400 flex items-center">
+                      <span className="w-1 h-1 bg-emerald-400 rounded-full mr-2"></span>
+                      {feature}
                     </li>
                   ))}
+                  {innovation.features.length > 2 && (
+                    <li className="text-xs text-emerald-400">
+                      +{innovation.features.length - 2} more features
+                    </li>
+                  )}
                 </ul>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
                 Explore Innovation
               </button>
             </div>
           ))}
         </div>
 
-        {/* Statistics */}
-        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-emerald-400/30">
-          <h2 className="text-4xl font-bold text-center mb-8">Innovation Statistics</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+        {/* Innovation Stats */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">📊 Innovation Hub Statistics</h2>
+            <p className="text-xl opacity-90">Real-time data on our revolutionary technology development</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">50+</div>
-              <div className="text-lg opacity-90">Active Innovations</div>
+              <div className="text-4xl font-bold text-emerald-400 mb-2">{innovations.length}</div>
+              <div className="text-lg opacity-90 mb-2">Active Innovations</div>
+              <div className="text-sm opacity-75">In development and testing</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-teal-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-90">Success Rate</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-90 mb-2">Success Rate</div>
+              <div className="text-sm opacity-75">Proven technology reliability</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
-              <div className="text-lg opacity-90">Possibilities</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
+              <div className="text-lg opacity-90 mb-2">Possibilities</div>
+              <div className="text-sm opacity-75">Unlimited potential applications</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
-              <div className="text-lg opacity-90">Innovation Support</div>
+              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+              <div className="text-lg opacity-90 mb-2">Development</div>
+              <div className="text-sm opacity-75">Continuous innovation cycle</div>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced innovation ecosystem in the world. Access cutting-edge technologies and shape the future.
+            Join our innovation hub and be part of creating the most revolutionary technologies in human history
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Innovation Hub
             </button>
-            <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
-              View All Innovations
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              Submit Your Innovation
             </button>
           </div>
         </div>
