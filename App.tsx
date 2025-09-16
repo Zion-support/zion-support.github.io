@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
+import EnhancedNavigation from './src/components/EnhancedNavigation';
+import EnhancedFooter from './src/components/EnhancedFooter';
+import EnhancedSearch from './src/components/EnhancedSearch';
+import AnalyticsDashboard from './src/components/AnalyticsDashboard';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
@@ -124,6 +128,13 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* Enhanced Search Section */}
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect AI Solution</h2>
+                  <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
+                  <EnhancedSearch />
+                </div>
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -221,6 +232,11 @@ export default function App(): JSX.Element {
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <EnhancedContentShowcase />
+                </div>
+
+                {/* Analytics Dashboard */}
+                <div className="mb-12">
+                  <AnalyticsDashboard />
                 </div>
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -671,7 +687,7 @@ export default function App(): JSX.Element {
           } />
         </Routes>
         
-        <Footer />
+        <EnhancedFooter />
       </div>
     </Router>
   );
