@@ -14,24 +14,6 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:app/blog/page.jsx
-<<<<<<< HEAD:app/blog/page.jsx
-<<<<<<< HEAD:app/blog/page.jsx
-      title: "AI 2026: Agent Risk Maturity Matrix",
-      description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
-      slug: "ai-2026-agent-risk-maturity-matrix",
-      category: "AI Governance",
-=======
-      title: "AI 2026: Enterprise AI Governance Blueprint",
-      description: "Policy-as-code, model risk tiers, and runtime monitoring to scale AI safely across the enterprise.",
-      slug: "ai-2026-enterprise-ai-governance-blueprint",
-      category: "Governance",
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
@@ -40,18 +22,6 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/enterprise-ai-governance-2026.jpg"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      title: "AI 2025: Multimodal AI Agents – Practical Enterprise Guide",
-      description: "A hands-on 2025 playbook to design, deploy, and govern multimodal AI agents that drive measurable outcomes.",
-      slug: "ai-2025-multimodal-agents-practical-guide",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/multimodal-agents-2025.jpg"
->>>>>>> origin/feat/new-blog-content:app/blog/page.tsx
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -75,14 +45,6 @@ const BlogPage = () => {
       image: "/images/ai-governance-blueprint-2026.jpg"
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
-      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
-      slug: "ai-2026-secure-agent-architecture",
-      category: "Security Architecture",
->>>>>>> origin/feature/add-governance-blueprint-content:app/blog/page.tsx
       date: "2025-09-15",
 =======
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
