@@ -2,10 +2,6 @@ import React from 'react';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
           </div>
         </div>
@@ -31,9 +27,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
   }, [bannerMessages.length]);
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -84,8 +77,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           </a>
         </div>
       </div>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-4 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 animate-pulse"></div>
@@ -124,7 +115,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
       <div className="absolute top-2 right-4 text-2xl animate-bounce delay-1000">⚡</div>
       <div className="absolute bottom-2 left-1/4 text-2xl animate-bounce delay-500">🧬</div>
       <div className="absolute bottom-2 right-1/4 text-2xl animate-bounce delay-1500">🌟</div>
-<<<<<<< HEAD
     </div>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -197,46 +187,8 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           <div className="mt-8 text-sm text-gray-300">
             <p>✨ Free access to all revolutionary technologies • 🚀 No setup required • 💫 Experience the future today</p>
           </div>
-<<<<<<< HEAD
-=======
-    <div className="bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-violet-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="flex items-center justify-center space-x-3 mb-4">
-          <span className="text-3xl animate-bounce">🔬</span>
-          <h3 className="text-2xl font-bold">REVOLUTIONARY INNOVATION HUB 2025</h3>
-          <span className="text-3xl animate-bounce">🔬</span>
-        </div>
-        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-          The world's most advanced innovation laboratory where breakthrough technologies are born, 
-          tested, and deployed. Experience the future of human-AI collaboration.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-          <a href="/pages/RevolutionaryInnovationHub2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold border border-white/30">
-            🧠 AI Research Lab →
-          </a>
-          <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold border border-white/30">
-            ⚛️ Quantum Lab →
-          </a>
-          <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold border border-white/30">
-            🧬 Neural Lab →
-          </a>
-          <a href="/pages/InterdimensionalTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold border border-white/30">
-            🌌 Interdimensional Lab →
-          </a>
-        </div>
-        <div className="mt-6">
-          <a href="/pages/RevolutionaryInnovationHub2025" className="inline-block bg-gradient-to-r from-violet-500 to-indigo-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
-            🔬 NEW: Innovation Hub 2025 →
-          </a>
->>>>>>> cursor/create-and-deploy-new-content-3887
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
     </div>
   );
 };

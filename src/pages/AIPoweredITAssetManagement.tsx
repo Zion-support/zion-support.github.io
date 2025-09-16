@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { 
   Monitor, 
   Shield, 
@@ -19,15 +16,8 @@ import {
   Zap, 
   Target, 
   Rocket
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
-=======
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
-import { Cpu, Database, Shield, TrendingUp, Users, Globe, ArrowRight, Network, Code, BarChart3 } from 'lucide-react';
->>>>>>> cursor/create-and-deploy-new-content-79ca
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 import SEOHead from '../components/SEOHead';
 import { Helmet } from 'react-helmet-async';
   Settings,
@@ -37,10 +27,6 @@ import { Helmet } from 'react-helmet-async';
   Monitor,
   HardDrive,
   Server
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { Cpu, Shield, TrendingUp, Database, ArrowRight, Zap, Target, BarChart3 } from 'lucide-react';
@@ -458,12 +444,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
 import { Server, Shield, BarChart3, Zap, Users, Globe, Settings, Database } from 'lucide-react';
@@ -504,10 +485,6 @@ import { Link } from 'react-router-dom';
 const AIPoweredITAssetManagement: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
       <Helmet>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered IT asset management platform that automatically tracks, monitors, and optimizes your entire IT infrastructure. Reduce costs and improve efficiency." />
@@ -634,12 +611,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
         keywords="IT asset management, AI asset tracking, IT inventory, asset optimization, IT compliance, AI management"
       />
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -1730,10 +1702,6 @@ const AIPoweredITAssetManagement: React.FC = () => {
       />
       
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
