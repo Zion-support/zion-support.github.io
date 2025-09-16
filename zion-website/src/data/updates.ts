@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Agentic Observability',
+    summary: 'Unified traces, metrics, logs, and policy events for reliable autonomous agents.',
+    href: '/updates/agentic-observability-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Deep Dive: Production Eval Gates in the Wild',
+    summary: 'Real-world patterns for pre-merge checks, canary evals, and automated rollbacks.',
+    href: '/updates/production-eval-gates-in-the-wild',
+    date: '2025-09-16',
+    tag: 'Deep Dive'
+  },
+  {
     title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
     summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
     href: '/updates/real-time-rag-benchmark-suite-1-0',
