@@ -16,14 +16,14 @@ const Home = () => {
             <Link to="/blog" className="text-indigo-300 hover:text-white underline-offset-4 hover:underline">View all</Link>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <Link to="/blog/agentic-ops-2026-blueprint" className="block rounded-lg bg-white/10 backdrop-blur border border-white/20 p-5 hover:bg-white/15 transition">
-              <h3 className="text-xl font-semibold">Agentic Ops 2026: Practical Enterprise Blueprint</h3>
-              <p className="text-sm text-zinc-200 mt-1">Deploy evaluation gates, observability, and risk-tiered tooling.</p>
+            <Link to="/blog/ai-2026-runtime-evidence-bundles" className="block rounded-lg bg-white/10 backdrop-blur border border-white/20 p-5 hover:bg-white/15 transition">
+              <h3 className="text-xl font-semibold">Runtime Evidence Bundles (2026)</h3>
+              <p className="text-sm text-zinc-200 mt-1">Bundle evals, traces, policy events, and incidents per release.</p>
               <span className="text-xs text-zinc-300 mt-2 inline-block">Published Sep 16, 2025</span>
             </Link>
-            <Link to="/blog/trustworthy-model-routing" className="block rounded-lg bg-white/10 backdrop-blur border border-white/20 p-5 hover:bg_white/15 transition">
-              <h3 className="text-xl font-semibold">Trustworthy Model Routing: Production Patterns</h3>
-              <p className="text-sm text-zinc-200 mt-1">Balance cost, latency, and safety with robust routing.</p>
+            <Link to="/blog/ai-2026-eval-scorecards-in-practice" className="block rounded-lg bg-white/10 backdrop-blur border border-white/20 p-5 hover:bg-white/15 transition">
+              <h3 className="text-xl font-semibold">Evaluation Scorecards in Practice (2026)</h3>
+              <p className="text-sm text-zinc-200 mt-1">Translate raw evals into executive‑friendly scorecards wired to gates.</p>
               <span className="text-xs text-zinc-300 mt-2 inline-block">Published Sep 16, 2025</span>
             </Link>
           </div>

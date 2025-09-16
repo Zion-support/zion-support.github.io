@@ -57,6 +57,13 @@ posts.unshift(
   { slug: 'ai-2026-enterprise-agent-risk-mitigation', title: 'Enterprise Agent Risk Mitigation (2026)', excerpt: 'Practical patterns to reduce safety, reliability, cost, and compliance risks.' }
 )
 
+// Newly added posts (Sept 16, 2025)
+posts.unshift(
+  { slug: 'ai-2026-runtime-evidence-bundles', title: 'Runtime Evidence Bundles (2026)', excerpt: 'Bundle evals, traces, policy events, and incidents per release.' },
+  { slug: 'ai-2026-eval-scorecards-in-practice', title: 'Evaluation Scorecards in Practice (2026)', excerpt: 'Executive‑friendly scorecards wired to gates and incidents.' },
+  { slug: 'ai-2026-governed-tool-approvals', title: 'Governed Tool Approvals (2026)', excerpt: 'Risk‑tiered adapters, budgets, and JIT approvals for safe actions.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
