@@ -122,7 +122,7 @@ export default function HomePage() {
         url="/"
       />
 <<<<<<< HEAD
-      {/* Promo: Real-Time RAG + Autonomous Ops (New) */}
+      {/* Promo: Resilient Architectures (New) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
@@ -133,7 +133,7 @@ export default function HomePage() {
             </div>
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-resilient-agent-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
-              <Link href="/content/ai-2026-operational-excellence-handbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">OpEx Handbook</Link>
+              <Link href="/blog/ai-2026-production-evidence-hub-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evidence Hub</Link>
             </div>
           </div>
         </div>

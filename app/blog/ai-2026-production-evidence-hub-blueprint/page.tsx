@@ -1,7 +1,69 @@
-import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+
+export const metadata = {
+  title: 'AI 2026: Production Evidence Hub — Blueprint',
+  description: 'Centralize evals, incidents, approvals, and KPIs for audit-ready, evidence-led operations.',
+};
+
+export default function Page() {
+  return (
+    <main className="min-h-screen bg-white">
+      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="inline-flex items-center bg-white/20 rounded-full px-4 py-1 mb-5 text-sm font-semibold">NEW • September 2025</div>
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">AI 2026: Production Evidence Hub — Blueprint</h1>
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl">
+            Build a single source of truth for evaluations, incidents, approvals, quality, and cost to power safer, faster releases.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-6 prose prose-lg">
+          <p>
+            Organizations need an evidence backbone to scale autonomous systems responsibly. This blueprint describes a
+            practical hub that ingests eval results, observability traces, incident records, and change approvals—linking
+            them to product and compliance outcomes.
+          </p>
+
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Ingest evaluation artifacts and scorecards from CI/CD and runtime.</li>
+            <li>Correlate incidents and regressions with model/routing changes.</li>
+            <li>Track approvals, exemptions, and audit‑relevant decisions.</li>
+            <li>Expose KPIs across quality, reliability, safety, and cost.</li>
+          </ul>
+
+          <h2>Architecture Overview</h2>
+          <ol>
+            <li>Collector: standardized inputs from pipelines and platforms.</li>
+            <li>Evidence Store: versioned artifacts with lineage and retention.</li>
+            <li>Policy Gates: pass/fail rules for release and runtime overrides.</li>
+            <li>Insights: dashboards and APIs for audits, SLOs, and ROI.</li>
+          </ol>
+
+          <h2>Adoption Steps</h2>
+          <p>
+            Start with evaluation artifacts and incident linkage. Add approval tracking, then wire gates into release
+            workflows. Within a quarter, you will enable faster, safer delivery with audit‑ready evidence.
+          </p>
+
+          <div className="not-prose mt-10 p-6 border rounded-xl bg-gray-50">
+            <div className="text-sm font-semibold text-emerald-700 mb-2">Related</div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-llm-evals-maturity-model" className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Evals Maturity</Link>
+              <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Agent Observability</Link>
+              <Link href="/blog/ai-2026-realtime-evals-at-scale" className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Real‑Time Evals</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
 import ErrorBoundary from '../../components/ErrorBoundary';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Production Evidence Hub — Blueprint',
