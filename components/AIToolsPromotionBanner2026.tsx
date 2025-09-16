@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 "use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Sparkles
   Zap
@@ -90,110 +93,14 @@ const AIToolsPromotionBanner2026 = () => {
   const currentFeature = featuredTools[currentTool];
 
   if (!isVisible) return null;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const AIToolsPromotionBanner2026: React.FC = () => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="relative overflow-hidden"
-      >
-        {/* Main Banner */}
-        <div className={`${currentFeature.bgColor} border-b ${currentFeature.borderColor} backdrop-blur-lg`}>
-          <div className="container mx-auto px-4 py-6">
-            <div className="flex items-center justify-between">
-              {/* Left Content */}
-              <div className="flex items-center gap-4 flex-1">
-                <motion.div
-                  key={currentTool}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${currentFeature.color} rounded-xl flex items-center justify-center`}>
-                    <currentFeature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white">
-                      {currentFeature.name}
-                    </h3>
-                    <p className="text-sm text-gray-300">
-                      {currentFeature.description}
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Center Benefits */}
-              <div className="hidden lg:flex items-center gap-6">
-                {benefits.map((benefitindex) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-sm text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Right Actions */}
-              <div className="flex items-center gap-3">
-                <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
-                  <Play className="w-4 h-4" />
-                  Try Free
-                </button>
-                <button className="flex items-center gap-2 border border-white/30 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300">
-                  View All Tools
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Animated Progress Bar */}
-        <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
-          <motion.div
-            key={currentTool}
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
-            transition={{ duration: 3ease: 'linear' }}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-          />
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(8)].map((_i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
-              style={{
-                left: `${10 + i * 10}%`,
-                top: '50%',
-              }}
-              animate={{
-                y: [0-150],
-                opacity: [0.30.80.3],
-                scale: [0.510.5],
-              }}
-              transition={{
-                duration: 2 + i * 0.3,
-                repeat: Infinity,
-                delay: i * 0.4,
-              }}
-            />
-          ))}
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AIToolsPromotionBanner2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

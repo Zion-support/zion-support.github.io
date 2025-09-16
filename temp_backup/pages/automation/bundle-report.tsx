@@ -1,9 +1,22 @@
-export default function BundleReportPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const bundle-report: React.FC = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold text-white">Bundle Size Report</h1>
-      <p className="text-white/80 mt-2">Build artifact sizes are summarized in <code className="text-white/90">data/perf/bundles.json</code>.</p>
-      <p className="text-white/70 mt-2">Runs every 30 minutes and auto-PRs updates.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>bundle-report | Zion Tech Group</title>
+        <meta name="description" content="bundle-report - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">bundle-report</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default bundle-report;

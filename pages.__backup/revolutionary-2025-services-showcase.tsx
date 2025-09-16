@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React{ useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+
 import { 
   SearchFilterStarUsersTrendingUp
   DollarSignClockCheckCircleArrowRight,
@@ -11,20 +14,20 @@ import {
   PhoneMailMapPinExternalLinkChevronDown,
   AwardTargetZap as ZapIconGlobe as GlobeIcon
 } from 'lucide-react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-// Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-
-const allServices = [...revolutionary2025Services...revolutionary2025ITServices];
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+const revolutionary-2025-services-showcase: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">revolutionary-2025-services-showcase</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
+<<<<<<< HEAD
+export default revolutionary-2025-services-showcase;
+=======
 const serviceCategories = [
   {
     id: 'ai-consciousness',
@@ -161,7 +164,7 @@ export default function Revolutionary2025ServicesShowcase() {
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
           
           <div className="container mx-auto relative z-10">
             <motion.div
@@ -600,3 +603,4 @@ export default function Revolutionary2025ServicesShowcase() {
     </>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,7 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+
 import {
   Settings,
   Brain,
@@ -16,7 +17,6 @@ import {
   FileText,
   Users;
 } from 'lucide-react';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -85,7 +85,6 @@ const services = [
       'Scenario planning'';
     ];
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const benefits = [
   {
@@ -108,7 +107,6 @@ const benefits = [
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3;
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 export default function ManufacturingPage() {
   return (
@@ -129,147 +127,15 @@ export default function ManufacturingPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <Settings className="w-12 h-12 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Manufacturing
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Technology Solutions
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
-                IoT networks, predictive maintenance, and digital twin solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Manufacturing Consultation
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Manufacturing Case Studies
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Manufacturing Technology Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive Industry 4.0 solutions designed for modern manufacturing operations,
-                from small workshops to large industrial facilities.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>,
-                    ))}
-                  </ul>,
-                </motion.div>;
-              ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Why Choose Our Manufacturing Solutions?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our manufacturing technology solutions deliver measurable improvements in efficiency,
-                quality, and cost reduction.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center""
-                >;
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";
-                    <benefit.icon className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
-                </motion.div>;
-              ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
-          <div className="container mx-auto px-4 text-center">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Manufacturing?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let our manufacturing technology experts help you implement Industry 4.0 solutions
-                that improve efficiency and reduce costs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your Manufacturing Project
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Our Expertise
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
+const manufacturing: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">manufacturing</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default manufacturing;

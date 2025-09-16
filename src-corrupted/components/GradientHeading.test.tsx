@@ -1,14 +1,12 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function GradientHeading.test() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="GradientHeading.test - Zion Tech Group" description="Professional GradientHeading.test services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">GradientHeading.test</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional GradientHeading.test services to help your business grow.
-        </p>
-      </div>
-  );"}"
+import React from 'react';
 
-</div>
+const GradientHeading.test: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">GradientHeading.test</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default GradientHeading.test;

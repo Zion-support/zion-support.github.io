@@ -1,34 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
-const QualityAssuranceTestingChat = () => {
+const quality-assurance-testing-chat: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
-        <meta name="description" content="QualityAssuranceTestingChat service" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>quality-assurance-testing-chat | Zion Tech Group</title>
+        <meta name="description" content="quality-assurance-testing-chat - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main>
-        <h1>QualityAssuranceTestingChat</h1>
-        <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
-      </main>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">quality-assurance-testing-chat</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default QualityAssuranceTestingChat,
-=======
   );
 };
 
-export default QualityAssuranceTestingChat;
->>>>>>> origin/auto/autonomy-17186719616
+export default quality-assurance-testing-chat;

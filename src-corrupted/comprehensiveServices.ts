@@ -3,7 +3,6 @@ export interface ComprehensiveService {
   title: string;
   description: string;
   category: string;
-=======
   subcategory: string;
   price: number;
   currency: string;
@@ -13,7 +12,6 @@ export interface ComprehensiveService {
   useCases: string[];
   marketPrice: string;
   contactLink: string;
-=======
   subcategory: string;
   price: number;
   currency: string;
@@ -50,7 +48,6 @@ export const comprehensiveServices: ComprehensiveService[] = [
     category: "AI Services",
     subcategory: "Chatbot Development",
     price: 2500,
-=======
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -1521,7 +1518,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     rating: 4.8,
     reviewCount: 134,
     estimatedDelivery: "6-8 weeks",
-=======
   {
     id: "iot-predictive-maintenance-platform",
     title: "IoT Predictive Maintenance Platform",
@@ -2932,7 +2928,6 @@ export const serviceCategories = [
     description: "Artificial Intelligence and Machine Learning solutions",
     icon: "🤖",
     count: 3
-=======
 import { ProductListing } from "@/types/listings";
 
 export interface ServiceCategory {
@@ -3002,11 +2997,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   }
 ];
 
-=======
 import { ProductListing } from "@/types/listings";
 
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-=======
   supportLevel: 'basic' | 'premium' | 'enterprise';
 }
 
@@ -3021,11 +3014,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2500,
     currency: "$",
     tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation"],
-=======
 import { ProductListing } from "@/types/listings";
 
 // Comprehensive Micro SAAS Services & Solutions
-=======
 import { ProductListing } from "@/types/listings";
 
 // Comprehensive Micro SAAS Services and Solutions
@@ -3035,7 +3026,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     id: "ai-chatbot-enterprise",
     title: "Enterprise AI Chatbot Platform",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-=======
     description: "Custom AI chatbot solution for enterprise customer service, sales, and support. Features multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.",
     category: "AI & Machine Learning",
     subcategory: "Chatbots & Conversational AI",
@@ -3051,13 +3041,11 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-=======
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-=======
     reviewCount: 156,
     featured: true,
     location: "Global",
@@ -3077,8 +3065,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-=======
-=======
     id: "ai-content-generation-suite",
     title: "AI Content Generation Suite Pro",
     description: "Complete AI-powered content creation platform for blogs, social media, marketing copy, and technical documentation. Features SEO optimization, brand voice consistency, and plagiarism detection. Includes 50,000 words/month and API access.",
@@ -3147,9 +3133,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "Immediate"
   },
   {
-=======
     reviewCount: 234,
-=======
     reviewCount: 89,
     location: "Global",
     availability: "Immediate",
@@ -3168,7 +3152,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-=======
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T09:15:00.000Z",
@@ -3263,7 +3246,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 156,
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium"
-=======
       "Multi-language support (up to 10 languages)",
       "CRM integration (Salesforce, HubSpot, Zendesk)",
       "Sentiment analysis and emotion detection",
@@ -3399,7 +3381,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 93
-=======
     id: "aws-cost-optimization",
     title: "AWS Cost Optimization & Management",
     description: "Comprehensive AWS cost analysis, optimization strategies, and ongoing monitoring to reduce cloud spending by 30-50%.",
@@ -3956,7 +3937,6 @@ export const SERVICES_BY_PRICE = {
   midRange: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 5000 && s.price < 15000),
   enterprise: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 15000)
 };
-=======
   { id: "ai-ml", name: "AI & Machine Learning", description: "Artificial intelligence and machine learning solutions" },
   { id: "cloud-devops", name: "Cloud & DevOps", description: "Cloud infrastructure and development operations" },
   { id: "cybersecurity", name: "Cybersecurity", description: "Security solutions and protection services" },
@@ -3991,10 +3971,8 @@ export const SUBSCRIPTION_TIERS = [
     features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"]
   }
 ];
-=======
   website: "https://ziontechgroup.com"
 };
-=======
   "Process Automation",
   "Governance",
   "Quantum Computing",

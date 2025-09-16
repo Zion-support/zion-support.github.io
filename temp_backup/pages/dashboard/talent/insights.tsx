@@ -1,35 +1,22 @@
-import React, { useEffect, useState } from 'react',
-import SimpleBarChart from '../../../components/charts/SimpleBarChart',
-import { KpiBadge } from '../../../components/ui/InteractiveStats',
-import { exportCsv } from '../../../utils/exporters',
-import useRole from '../../../hooks/useRole',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function TalentInsightsPage() {
-  const [data, setData] = useState<any>(null),
-  const { role, loading } = useRole(),
-
-  useEffect(() => {
-    fetch('/api/analytics/talent').then(r => r.json()).then(setData).catch(() => setData(null)),
-  }, []),
-
-  if (loading) return <div>Loading...</div>,
-  if (role !== 'talent' && role !== 'admin') return <div>Unauthorized</div>,
-
+const insights: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Talent Insights</h1>
-
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <KpiBadge label="Profile Views" value={data?.profileViews ?? 0} />
-        <KpiBadge label="Quote Invites" value={data?.quoteInvites ?? 0} />
-        <KpiBadge label="Applications Sent" value={data?.jobApplications ?? 0} />
-        <KpiBadge label="Success Rate" value={`${(data?.successRate ?? 0).toFixed(1)}%`} tone="success" />
-      </div>
-
-      <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">
-        <h2 className="font-semibold mb-2">Top Search Tags Matched</h2>
-        <SimpleBarChart data={data?.topTags || []} onExportCsv={(rows) => exportCsv('talent-top-tags.csv', rows)} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>insights | Zion Tech Group</title>
+        <meta name="description" content="insights - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">insights</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
-  ),
-}
+  );
+};
+
+export default insights;

@@ -1,6 +1,19 @@
-import React, { useEffect, useState } from 'react' import { motion } from 'framer-motioninterface PerformanceMetrics {fcp: number;';
+<<<<<<< HEAD
+import React from 'react';
+
+const AdvancedPerformanceMonitor: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedPerformanceMonitor</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
 =======
-import React, { useEffect, useState } from 'react' import { motion } from 'framer-motioninterface PerformanceMetrics {"fcp": "number;';
+
+
    "lcp": number;
    "fid": number;
    "cls": number;
@@ -8,15 +21,13 @@ import React, { useEffect, useState } from 'react' import { motion } from 'frame
    "fmp": number"} const "AdvancedPerformanceMonitor": "React.FC = () => { const [metrics", setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState<any>(false) useEffect(() => {;
 </any>;
 </PerformanceMetrics>;
-=======
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState<any>(false) useEffect(() => {;
 </any>;
 </PerformanceMetrics>;
-=======
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState<any>(false) useEffect(() => {
 </any>
 </PerformanceMetrics>
-=======
 import { useEffect } from 'react';,
 import { useState } from 'react';,
-import _React,{ useEffect,useState } from 'react' import { motion } from 'framer-motioninterface PerformanceMetrics {fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: Reac t.FC = () => { const [metrics,setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible,setIsVisible] = useState<any>(false) useEffect(() => { </any> </PerformanceMetrics>;';';
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

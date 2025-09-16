@@ -1,9 +1,22 @@
-export default function QuoteRequestsPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const quote-requests: React.FC = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold text-white">Quote Requests Log</h1>
-      <p className="text-white/80 mt-2">Recent quote requests are synced to <code className="text-white/90">data/quote-requests/log.json</code>.</p>
-      <p className="text-white/70 mt-2">This runs hourly and auto-PRs updates.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>quote-requests | Zion Tech Group</title>
+        <meta name="description" content="quote-requests - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">quote-requests</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  ),
-}
+  );
+};
+
+export default quote-requests;

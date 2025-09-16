@@ -1,6 +1,20 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const AdvancedServicePortfolioDashboard.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedServicePortfolioDashboard.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AdvancedServicePortfolioDashboard.js;
+=======
 import React, {useState, useMemo} from 'react';'''';';
 import React, {useState, useMemo} from 'react';'''
-import {motion} from 'framer-motion';
+
 import {}
   BarChart3,
   PieChart,
@@ -135,7 +149,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}';';
       complexity: 'Enterprise','';';
       marketDemand: 'Exploding','';';
 import React, {useState, useMemo} from 'react';
-import {motion} from 'framer-motion';
+
 import {}
   BarChart3,;
   PieChart,;
@@ -1763,3 +1777,4 @@ export {AdvancedServicePortfolioDashboard};
 </motion>
 </motion>
 </motion>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

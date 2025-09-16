@@ -1,21 +1,12 @@
-type Speaker = {
-  name: string;
-  role: string;
-  org: string;
-  type: 'Founder' | 'Nation' | 'DAO';
-};
+import React from 'react';
 
-export default function Keynotes({ speakers }: { speakers: Speaker[] }) {
+const Keynotes: React.FC = () => {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {speakers.map(s => (
-        <div key={s.name} className="p-4 border rounded-lg">
-          <div className="text-xs px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-800 inline-block mb-2">{s.type}</div>
-          <div className="font-medium">{s.name}</div>
-          <div className="text-sm opacity-80">{s.role}</div>
-          <div className="text-sm opacity-60">{s.org}</div>
-        </div>
-      ))}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Keynotes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default Keynotes;

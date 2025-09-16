@@ -1,32 +1,22 @@
-<<<<<<< HEAD
-import React from 'react',
-import AdminLayout from '@/components/admin/AdminLayout',
-
-export default function FeatureFlagsAdminPage() {
-  const url = process.env.UNLEASH_URL || '',
-=======
 import React from 'react';
-import AdminLayout from '@/components/admin/AdminLayout';
+import { Helmet } from 'react-helmet-async';
 
-export default function FeatureFlagsAdminPage() {
-  const url = process.env.UNLEASH_URL || '';
->>>>>>> origin/auto/autonomy-17186719616
+const FeatureFlagsAdminPage: React.FC = () => {
   return (
-    <AdminLayout>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-bold">Feature Flags</h1>
-        <p>
-          Manage flags in the{' '}
-          <a href={url} className="text-blue-600 underline">
-            Unleash admin UI
-          </a>
-          .
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>FeatureFlagsAdminPage | Zion Tech Group</title>
+        <meta name="description" content="FeatureFlagsAdminPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">FeatureFlagsAdminPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </AdminLayout>
-<<<<<<< HEAD
-  ),
-=======
+    </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
-}
+};
+
+export default FeatureFlagsAdminPage;

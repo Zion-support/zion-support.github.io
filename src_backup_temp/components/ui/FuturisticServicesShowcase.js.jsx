@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const FuturisticServicesShowcase.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticServicesShowcase.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default FuturisticServicesShowcase.js;
+=======
 import React, {useState} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+
 import {Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle} from 'lucide-react';
 const services = [;
     {"id": 'ai-automation';
@@ -259,3 +273,4 @@ export default function FuturisticServicesShowcase()() {
 </motion>
 </motion>
 </motion>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -18,7 +18,6 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -68,7 +67,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         ],
 
       });
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
@@ -97,6 +95,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 

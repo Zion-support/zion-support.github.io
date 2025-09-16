@@ -1,12 +1,13 @@
+import React from 'react';
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export default function GreenIT() {
+const GreenIT: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">GreenIT</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <>
       <SEO
         title="Green IT Solutions | Zion Tech Group"
@@ -248,8 +249,7 @@ export default function GreenIT() {
                   <div className="mt-4 text-white font-semibold">
                     — Sarah Johnson, CTO at TechCorp
                   </div>
-=======
-import { motion } from 'framer-motion';
+
 import { Leaf, Zap, Globe, Sun, Wind, Droplets, Recycle, TreePine } from 'lucide-react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -428,7 +428,6 @@ const GreenIT = () => {
       name: 'Carbon Trust',
       description: 'Carbon Reduction Certification',
       icon: '🌱'
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -571,8 +570,6 @@ export default function GreenIT() {
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
-=======
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -809,5 +806,8 @@ export default function GreenIT() {
         </div>
       </main>
     
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
-}
+};
+
+export default GreenIT;

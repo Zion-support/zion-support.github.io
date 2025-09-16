@@ -1,5 +1,12 @@
+import React from 'react';
 
-import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name=\"description\" content=\"AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group.\" /> </Head> <main className=\"min-h-screen bg-gray-50\"> <section className=\"max-w-6xl mx-auto px-4 py-16 text-center\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">Zion Tech Group</h1> <p className=\"text-lg text-gray-600 mb-8\">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\"> <Link href=\"/services\" className=\"bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700\">Explore Services</Link> </div> </section> </main> </> )}
-const React from "react"; import Head from "next/head"; import Link from "next/link"; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}'"'"
-import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}
+const index.page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">index.page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
+export default index.page;

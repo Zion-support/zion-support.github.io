@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const DynamicComponentLoader: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">DynamicComponentLoader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
 'use client';
 
 import React, {;
@@ -7,7 +17,7 @@ import React, {;
   useEffect,;
   ComponentType,;
 } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -781,53 +791,8 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 
 
     />;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 
-// Predefined dynamic loaders for common heavy components;
-// Note: These are examples - uncomment and install types as needed;
-
-// export const DynamicChartComponent = createDynamicComponent(;
-//   (,) => import('recharts').then(module => ({ default: module && module.LineChart })),;
-//   {;
-//     loadingComponent: () => (;
-//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading chart...</span>;
-//       </div>;
-//     ),;
-//     prefetch: true;
-//   }
-// );
-
-// export const DynamicThreeComponent = createDynamicComponent(;
-//   (,) => import('three').then(module => ({ default: module && module.WebGLRenderer })),;
-//   {;
-//     loadingComponent: () => (;
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
-//       </div>;
-//     );
-//   }
-// );
-
-export default DynamicComponentLoader;export default DynamicComponentLoader ;
-
-
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
-//   {
-//     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
-//       </div>
-//     )
-//   }
-
-// );
-export default DynamicComponentLoader; export default DynamicComponentLoader;
-
-
-// );
-
-
 export default DynamicComponentLoader;
-

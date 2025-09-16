@@ -4,6 +4,7 @@ description: "Evaluation-first operations with policy gates, observability, and 
 date: 2025-09-15
 tags: [AI Operations, Evaluations, SLOs, Policy-as-Code, Reliability, 2026]
 featured: true
+layout: page
 ---
 
 # AI 2026: Evidence-Driven AI Operations

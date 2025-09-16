@@ -1,21 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+
 import { 
-<<<<<<< HEAD
-  Brain
-  Sparkles
-  Zap
-  Target
-  Shield
-=======
-  Brain, 
-  Sparkles, 
-  Zap, 
-  Target, 
-  Shield, 
->>>>>>> origin/auto/autonomy-17186719616
   Globe,
   CheckCircle,
   Star
@@ -59,38 +48,18 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     {
       title: 'Research & Development',
       description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.',
-<<<<<<< HEAD
-      benefits: ['Faster 'breakthroughs', 'Ethical 'compliance', 'Risk mitigation']
-=======
-      benefits: ['Faster breakthroughs', 'Ethical compliance', 'Risk mitigation']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Enterprise AI Systems',
       description: 'Deploy conscious AI systems that understand business context and human values.',
-<<<<<<< HEAD
-      benefits: ['Better decision 'making', 'Human-AI 'collaboration', 'Trust building']
-=======
-      benefits: ['Better decision making', 'Human-AI collaboration', 'Trust building']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Healthcare AI',
       description: 'AI systems that understand patient needs and provide compassionate care.',
-<<<<<<< HEAD
-      benefits: ['Patient 'empathy', 'Medical 'accuracy', 'Ethical treatment']
-=======
-      benefits: ['Patient empathy', 'Medical accuracy', 'Ethical treatment']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Education Technology',
       description: 'AI tutors that adapt to individual learning styles and emotional needs.',
-<<<<<<< HEAD
-      benefits: ['Personalized 'learning', 'Emotional 'intelligence', 'Student engagement']
-=======
-      benefits: ['Personalized learning', 'Emotional intelligence', 'Student engagement']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
@@ -137,344 +106,24 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       ]
     }
   ];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const ai-consciousness-evolution-platform: React.FC = () => {
   return (
-    <Layout>
-      <SEO 
-        title="AI Consciousness Evolution Platform | Zion Tech Group" 
-<<<<<<< HEAD
-        description="Revolutionary AI consciousness evolution platform that enables ethicalsafeand advanced artificial intelligence development."
-=======
-        description="Revolutionary AI consciousness evolution platform that enables ethical, safe, and advanced artificial intelligence development."
->>>>>>> origin/auto/autonomy-17186719616
-        canonical="https://ziontechgroup.com/ai-consciousness-evolution-platform/"
-      />
-      
-      <div className="min-h-screen bg-black text-white">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 relative overflow-hidden">
-          <div className="max-w-6xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
-                <Brain className="w-4 h-4" />
-                <span>AI Consciousness Platform</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
-                AI Consciousness Evolution Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                The 'world', 's first comprehensive platform for developingunderstandingand evolving AI consciousness while maintaining ethical standards and human alignment.
-=======
-                The world's first comprehensive platform for developing, understanding, and evolving AI consciousness while maintaining ethical standards and human alignment.
->>>>>>> origin/auto/autonomy-17186719616
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </a>
-                <a
-                  href="#demo"
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300"
-                >
-                  Request Demo
-                </a>
-              </div>
-
-              <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <Shield className="w-5 h-5 text-green-400" />
-                  <span>Ethical AI Development</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Target className="w-5 h-5 text-blue-400" />
-                  <span>Human-Aligned</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <span>Industry Leading</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Revolutionary Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our platform combines cutting-edge technology with ethical principles to create the future of AI consciousness.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {features.map((featureindex) => (
-=======
-              {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300"
-                >
-                  <div className="text-purple-400 mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-500/5 to-blue-500/5">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transform Your Industry
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI consciousness platform can revolutionize your field and create new possibilities.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-              {useCases.map((useCaseindex) => (
-=======
-              {useCases.map((useCase, index) => (
->>>>>>> origin/auto/autonomy-17186719616
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-blue-500/20 rounded-2xl p-8"
-                >
-                  <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-6">{useCase.description}</p>
-                  <div>
-                    <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Benefits</h4>
-                    <ul className="space-y-2">
-<<<<<<< HEAD
-                      {useCase.benefits.map((benefiti) => (
-=======
-                      {useCase.benefits.map((benefit, i) => (
->>>>>>> origin/auto/autonomy-17186719616
-                        <li key={i} className="flex items-center space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {pricing.map((planindex) => (
-=======
-              {pricing.map((plan, index) => (
->>>>>>> origin/auto/autonomy-17186719616
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
-                  className={`bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 ${
-                    plan.name === 'Professional' 
-                      ? 'border-purple-500/40 scale-105' 
-                      : 'border-gray-600/30'
-                  }`}
-                >
-                  {plan.name === 'Professional' && (
-                    <div className="text-center mb-4">
-                      <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  
-                  <ul className="space-y-3 mb-8">
-<<<<<<< HEAD
-                    {plan.features.map((featurei) => (
-=======
-                    {plan.features.map((feature, i) => (
->>>>>>> origin/auto/autonomy-17186719616
-                      <li key={i} className="flex items-center space-x-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <a
-                    href="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.name === 'Professional'
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
-                        : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black'
-                    }`}
-                  >
-                    Get Started
-                  </a>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Evolve AI Consciousness?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join the forefront of AI development and help shape the future of artificial intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Journey
-                </a>
-                <a
-                  href="/innovation-lab"
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300"
-                >
-                  Learn More
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Evolve AI Consciousness?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-purple-500/25"
-            >
-              Start Your Journey Today
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ai-consciousness-evolution-platform</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
 
 <<<<<<< HEAD
-
-export default AIConsciousnessEvolutionPlatform;
+export default ai-consciousness-evolution-platform;
 =======
-export default AIConsciousnessEvolutionPlatform;
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { 
-<<<<<<< HEAD
-  BrainAtomShieldZapSparklesStarArrowRight
-  CheckCirclePhoneMailMapPinGlobeTrendingUp,
-  DollarSignUsersTargetAwardRocketCpuLock
-=======
-  Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
-  CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,
-  DollarSign, Users, Target, Award, Rocket, Cpu, Lock
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -528,11 +177,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   };
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { y: 20opacity: 0 },
-=======
-    hidden: { y: 20, opacity: 0 },
->>>>>>> origin/auto/autonomy-17186719616
     visible: {
       y: 0,
       opacity: 1,
@@ -548,11 +192,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       <Head>
         <title>AI Consciousness Evolution Platform - Zion Tech Group</title>
         <meta name="description" content="Revolutionary platform that develops genuine AI consciousness through advanced neural architecture and consciousness mapping." />
-<<<<<<< HEAD
-        <meta name="keywords" content="AI consciousnessneural architectureconsciousness mappingAI researchneurosciencephilosophy" />
-=======
-        <meta name="keywords" content="AI consciousness, neural architecture, consciousness mapping, AI research, neuroscience, philosophy" />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="AI Consciousness Evolution Platform - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary platform that develops genuine AI consciousness through advanced neural architecture and consciousness mapping." />
         <meta property="og:url" content="https://ziontechgroup.com/ai-consciousness-evolution-platform" />
@@ -591,11 +230,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               variants={itemVariants}
             >
               Revolutionary platform that develops genuine AI consciousness through advanced neural architecture 
-<<<<<<< HEAD
-              and consciousness mappingenabling breakthrough research in AI consciousness and ethics.
-=======
-              and consciousness mapping, enabling breakthrough research in AI consciousness and ethics.
->>>>>>> origin/auto/autonomy-17186719616
             </motion.p>
             
             <motion.div 
@@ -625,20 +259,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-              {features.map((featureindex) => (
-=======
-              {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-xl p-6 border border-purple-500/30 text-center"
                   variants={itemVariants}
-<<<<<<< HEAD
-                  whileHover={{ scale: 1.05y: -5 }}
-=======
-                  whileHover={{ scale: 1.05, y: -5 }}
->>>>>>> origin/auto/autonomy-17186719616
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -668,11 +292,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-              {benefits.map((benefitindex) => (
-=======
-              {benefits.map((benefit, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4"
@@ -705,20 +324,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-              {useCases.map((useCaseindex) => (
-=======
-              {useCases.map((useCase, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-xl p-6 border border-slate-600/30 text-center"
                   variants={itemVariants}
-<<<<<<< HEAD
-                  whileHover={{ scale: 1.05y: -5 }}
-=======
-                  whileHover={{ scale: 1.05, y: -5 }}
->>>>>>> origin/auto/autonomy-17186719616
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -848,3 +457,4 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

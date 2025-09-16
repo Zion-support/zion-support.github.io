@@ -6,7 +6,6 @@
 
     const existingIdx = state && state.connections.findIndex(
       (c) => c && c.providerId === providerId,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
@@ -64,7 +63,6 @@ if (state.connections[existing_idx] = connection) {
 
 }
 
-=======
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
@@ -86,15 +84,10 @@ if (state.connections[existing_idx] = connection) {
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   res.status (200).json ({
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

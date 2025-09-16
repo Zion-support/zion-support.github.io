@@ -12,7 +12,6 @@ export function Web3Login() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
@@ -23,7 +22,6 @@ export function Web3Login() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

@@ -1,16 +1,12 @@
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 
-interface GettingstartedProps {
-  // Add props here as needed
-}
-
-export default function Gettingstarted({ }: GettingstartedProps) {
+const getting-started: React.FC = () => {
   return (
-    <div>
-      <h1>Gettingstarted</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">getting-started</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+};
+
+export default getting-started;

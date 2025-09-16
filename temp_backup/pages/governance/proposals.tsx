@@ -1,31 +1,22 @@
-import fs from 'fs'
-import path from 'path'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export async function getStaticProps(){
-  try{
-    const p = path.join(process.cwd(),'data','governance','proposals.json')
-    const raw = fs.readFileSync(p,'utf8')
-    return { props: { data: JSON.parse(raw) } }
-  }catch{
-    return { props: { data: { updatedAt: nullproposals: [] } } }
-  }
-}
-
-export default function Proposals({ data }: { data: { updatedAt: string|nullproposals: any[] } }){
+const proposals: React.FC = () => {
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-4">
-      <h1 className="text-2xl font-semibold">DAO Proposals</h1>
-      <div className="text-sm opacity-70">Updated: {data.updatedAt || '—'}</div>
-      <ul className="space-y-3">
-        {data.proposals?.map((p:any)=> (
-          <li key={p.id} className="border rounded p-3">
-            <div className="font-medium">#{p.id} {p.title}</div>
-            <div className="text-sm opacity-70">by {p.author} · {new Date(p.created_at).toLocaleString()}</div>
-            <a className="text-blue-600 underline" href={p.url} target="_blank" rel="noreferrer">View</a>
-          </li>
-        ))}
-        {(!data.proposals || data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
-      </ul>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>proposals | Zion Tech Group</title>
+        <meta name="description" content="proposals - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">proposals</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default proposals;

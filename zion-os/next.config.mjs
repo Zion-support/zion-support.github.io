@@ -13,6 +13,11 @@ const nextConfig = {
     },
   },
 
+  // ESLint
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],

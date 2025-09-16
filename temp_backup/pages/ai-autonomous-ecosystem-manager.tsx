@@ -1,48 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
-			title="AI Autonomous Ecosystem Manager"
-<<<<<<< HEAD
-			description="Coordinate and optimize complex, multi-system environments with autonomous agents that observe, decide, and act across your stack."
-			subtitle="Autonomous agents orchestrating your business operations"
-			pricePerMonthUSD={4999}
-			implementationWeeks="Implementation: 4-8 weeks"
-			roiNote="Typical ROI: 300-600% through automation and reduced toil"
-			features={[
-				"Policy-driven autonomous agents",
-				"LLM + tools planning and execution",
-				"Guardrails, approvals, and rollback safety",
-				"Observability and drift detection",
-				"Cross-system workflows (DevOps, SecOps, FinOps)",
-				"Integrations: Jira, GitHub, PagerDuty, ServiceNow"
-			]}
-			industries={["Enterprise IT", "SaaS", "Telecom", "Fintech"]}
-			ctaHref="/contact"
-			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	);
-}
-=======
-			slug="ai-autonomous-ecosystem-manager"
-			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
-			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
-			features={[
-				"Agent registry, roles, and capabilities graph",
-				"Policy engine with human-in-the-loop controls",
-				"Observability: traces, metrics, red-teaming",
-				"Sandboxing and E2E approvals for sensitive actions",
-				"Cost and performance optimization",
-				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
-			]}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	);
-}
->>>>>>> origin/auto/autonomy-17186719616
+const ai-autonomous-ecosystem-manager: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-autonomous-ecosystem-manager | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-ecosystem-manager - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-autonomous-ecosystem-manager</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-autonomous-ecosystem-manager;

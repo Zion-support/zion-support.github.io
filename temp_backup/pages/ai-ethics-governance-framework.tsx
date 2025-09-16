@@ -1,48 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIEthicsGovernanceFramework() {
-	return (
-		<ServiceLanding
-			title="AI Ethics & Governance Framework"
-<<<<<<< HEAD
-			description="Operationalize responsible AI with policy, risk controls, monitoring, and compliance automation aligned to global standards."
-			subtitle="Responsible AI, end-to-end"
-			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation: 3-6 weeks"
-			roiNote="Reduce compliance risk and accelerate AI adoption"
-			features={[
-				"Policy templates aligned to NIST AI RMF, ISO/IEC",
-				"Model cards, data lineage, and audit trails",
-				"Bias detection, red-teaming, and evals",
-				"PII handling, privacy impact assessments",
-				"Human-in-the-loop controls and approvals",
-				"Integrations: OpenAI, Vertex, Bedrock, Databricks"
-			]}
-			industries={["Regulated industries", "Healthcare", "Finance", "Public Sector"]}
-			ctaHref="/contact"
-			canonical="https://ziontechgroup.com/ai-ethics-governance-framework"
-		/>
-	);
-}
-=======
-			slug="ai-ethics-governance-framework"
-			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
-			subtitle="Ship trustworthy AI with auditable controls and continuous oversight."
-			pricePerMonthUSD={1599}
-			implementationWeeks="Implementation: 3–6 weeks"
-			roiNote="Reduce compliance risk and accelerate approvals"
-			features={[
-				"AI risk register and DPIA templates",
-				"Bias/fairness tests, red-teaming workflows",
-				"Model cards, data sheets, and change logs",
-				"Prompt governance and access controls",
-				"Regulatory mapping (EU AI Act, NIST AI RMF)",
-				"Training and incident response runbooks"
-			]}
-			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
-			canonical="https://ziontechgroup.com/ai-ethics-governance-framework"
-		/>
-	);
-}
->>>>>>> origin/auto/autonomy-17186719616
+const ai-ethics-governance-framework: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-ethics-governance-framework | Zion Tech Group</title>
+        <meta name="description" content="ai-ethics-governance-framework - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-ethics-governance-framework</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-ethics-governance-framework;

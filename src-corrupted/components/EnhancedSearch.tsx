@@ -1,10 +1,24 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const EnhancedSearch: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedSearch</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default EnhancedSearch;
+=======
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
  from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
+
 
   icon?: React.ComponentType < any>}
 ];
@@ -520,3 +534,4 @@ setFilters(prev: > ({;
 </SearchResult>
 </any>
 </any>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

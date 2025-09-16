@@ -1,0 +1,4 @@
+interface EnhancedNavigationProps {
+  className?: string;
+}
+

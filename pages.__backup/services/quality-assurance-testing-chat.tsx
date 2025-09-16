@@ -1,22 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react';
 
-const QualityAssuranceTestingChat: NextPage = () => {
+const quality-assurance-testing-chat: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
-        <meta name="description" content="QualityAssuranceTestingChat service" />
-      </Head>
-      
-      <main>
-        <h1>QualityAssuranceTestingChat</h1>
-        <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
-      </main>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">quality-assurance-testing-chat</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
 
-export default QualityAssuranceTestingChat;
+export default quality-assurance-testing-chat;

@@ -1,35 +1,22 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-=======
 import React from 'react';
-import Head from 'next/head';
->>>>>>> origin/auto/autonomy-17186719616
+import { Helmet } from 'react-helmet-async';
 
-export default function ForbiddenPage() {
+const 403: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>403 - Zion App</title>
-        <meta name="description" content="403 page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">403 - Access Forbidden</h1>
-        <p className="text-lg mb-4">You don't have permission to access this resource.</p>
-        <div className="mt-4">
-<<<<<<< HEAD
-          <a href="/" className="text-blue-600 hover: underline">
-=======
-          <a href="/" className="text-blue-600 hover:underline">
->>>>>>> origin/auto/autonomy-17186719616
-            ← Back to Home
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>403 | Zion Tech Group</title>
+        <meta name="description" content="403 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">403</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
-  )
-=======
+    </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
-}
+};
+
+export default 403;

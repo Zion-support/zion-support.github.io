@@ -1,27 +1,22 @@
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function Placeholder() {
+const favicon.ico: React.FC = () => {
   return (
-    <main className="min-h-screen p-8">
-      <Head>
-        <title>Favicon.ico - Placeholder</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl font-semibold mb-2">Favicon.ico</h1>
-        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/favicon.ico</code>.</p>
-        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>favicon.ico | Zion Tech Group</title>
+        <meta name="description" content="favicon.ico - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">favicon.ico</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </main>
-<<<<<<< HEAD
-  )
-=======
+    </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
-}
+};
+
+export default favicon.ico;

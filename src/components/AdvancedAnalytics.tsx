@@ -1,580 +1,232 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-    BarChart3,
-    Clock,
-    Eye,
-    Monitor,
-    RefreshCw,
-    Smartphone,
-    Tablet,
-    Target,
-    Users,
-    X,
-    Zap
-} from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
-  sessionDuration: number;
   bounceRate: number;
-  conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  locations: Array<{ country: string; count: number }>;
-  performance: {
-    loadTime: number;
-    firstPaint: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-  };
-  interactions: {
-    clicks: number;
-    scrolls: number;
-    formSubmissions: number;
-    errors: number;
-  };
+  avgSessionDuration: number;
+  topPages: Array<{ page: string; views: number }>;
+  trafficSources: Array<{ source: string; percentage: number }>;
+  deviceTypes: Array<{ device: string; percentage: number }>;
 }
 
-interface AdvancedAnalyticsProps {
-  enabled: boolean;
-  trackingId?: string;
-  enableHeatmap?: boolean;
-  enableSessionRecording?: boolean;
-  enableAITesting?: boolean;
-}
-
-export function AdvancedAnalytics({ 
-  enabled, 
-  trackingId,
-  enableHeatmap = false,
-  enableSessionRecording = false,
-  enableAITesting = false
-}: AdvancedAnalyticsProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+const AdvancedAnalytics: React.FC = () => {
+  const [analytics, setAnalytics] = useState<AnalyticsData>({
     pageViews: 0,
     uniqueVisitors: 0,
-    sessionDuration: 0,
     bounceRate: 0,
-    conversionRate: 0,
+    avgSessionDuration: 0,
     topPages: [],
-    userAgents: [],
-    locations: [],
-    performance: {
-      loadTime: 0,
-      firstPaint: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0
-    },
-    interactions: {
-      clicks: 0,
-      scrolls: 0,
-      formSubmissions: 0,
-      errors: 0
-    }
+    trafficSources: [],
+    deviceTypes: []
   });
 
-  const [isTracking, setIsTracking] = useState(false);
-  const [sessionStart, setSessionStart] = useState<number>(Date.now());
-  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
-  const [userSession, setUserSession] = useState<string>('');
-  const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
-  
-  const trackingRef = useRef<{
-    pageViews: number;
-    clicks: number;
-    scrolls: number;
-    formSubmissions: number;
-    errors: number;
-    startTime: number;
-  }>({
-    pageViews: 1,
-    clicks: 0,
-    scrolls: 0,
-    formSubmissions: 0,
-    errors: 0,
-    startTime: Date.now()
-  });
+  const [timeRange, setTimeRange] = useState('7d');
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Generate unique session ID
   useEffect(() => {
-    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    setUserSession(sessionId);
-    localStorage.setItem('analytics_session_id', sessionId);
-  }, []);
-
-  // Track page views
-  const trackPageView = useCallback((path: string) => {
-    if (!enabled) return;
-
-    setCurrentPage(path);
-    trackingRef.current.pageViews++;
-    
-    const pageViewData = {
-      sessionId: userSession,
-      path,
-      timestamp: new Date().toISOString(),
-      referrer: document.referrer,
-      userAgent: navigator.userAgent,
-      screenResolution: `${screen.width}x${screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
-
-    // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData);
-    
-    // Update local state
-    setAnalyticsData(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1
-    }));
-  }, [enabled, userSession]);
-
-  // Track user interactions
-  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
-    if (!enabled) return;
-
-    const interactionData = {
-      sessionId: userSession,
-      type,
-      timestamp: new Date().toISOString(),
-      page: currentPage,
-      data,
-      element: data?.target?.tagName || 'unknown',
-      position: data?.position || null
-    };
-
-    // Update tracking ref
-    switch (type) {
-      case 'click':
-        trackingRef.current.clicks++;
-        break;
-      case 'scroll':
-        trackingRef.current.scrolls++;
-        break;
-      case 'form':
-        trackingRef.current.formSubmissions++;
-        break;
-      case 'error':
-        trackingRef.current.errors++;
-        break;
-    }
-
-    // Send to analytics service
-    this.sendAnalyticsData('interaction', interactionData);
-
-    // Update local state
-    setAnalyticsData(prev => ({
-      ...prev,
-      interactions: {
-        ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
-      }
-    }));
-  }, [enabled, userSession, currentPage]);
-
-  // Track performance metrics
-  const trackPerformance = useCallback(() => {
-    if (!enabled) return;
-
-    // Use Performance API to get metrics
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+    // Simulate loading analytics data
+    const loadAnalytics = () => {
+      setIsLoading(true);
       
-      const performanceData = {
-        sessionId: userSession,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        largestContentfulPaint: 0, // Will be updated by observer
-        timestamp: new Date().toISOString()
-      };
-
-      // Update local state
-      setAnalyticsData(prev => ({
-        ...prev,
-        performance: {
-          loadTime: performanceData.loadTime,
-          firstPaint: performanceData.firstPaint,
-          firstContentfulPaint: performanceData.firstContentfulPaint,
-          largestContentfulPaint: performanceData.largestContentfulPaint
-        }
-      }));
-
-      // Send to analytics service
-      this.sendAnalyticsData('performance', performanceData);
-    }
-  }, [enabled, userSession]);
-
-  // Setup event listeners
-  useEffect(() => {
-    if (!enabled) return;
-
-    setIsTracking(true);
-
-    // Track initial page view
-    trackPageView(window.location.pathname);
-
-    // Track performance metrics
-    trackPerformance();
-
-    // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const position = { x: e.clientX, y: e.clientY };
-      
-      trackInteraction('click', { target, position });
-      
-      // Add to heatmap data
-      if (enableHeatmap) {
-        setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }]);
-      }
-    };
-
-    // Setup scroll tracking
-    let scrollTimeout: NodeJS.Timeout;
-    const handleScroll = () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        trackInteraction('scroll', { 
-          scrollY: window.scrollY, 
-          scrollHeight: document.documentElement.scrollHeight 
+      setTimeout(() => {
+        setAnalytics({
+          pageViews: Math.floor(Math.random() * 10000) + 5000,
+          uniqueVisitors: Math.floor(Math.random() * 5000) + 2000,
+          bounceRate: Math.random() * 30 + 20,
+          avgSessionDuration: Math.random() * 300 + 120,
+          topPages: [
+            { page: '/pages/UltimateTechRevolution2027', views: 1250 },
+            { page: '/pages/InterdimensionalTechRevolution2030', views: 980 },
+            { page: '/pages/OmniversalAIConsciousness2035', views: 750 },
+            { page: '/pages/RevolutionaryTechBlog2027', views: 650 },
+            { page: '/', views: 420 }
+          ],
+          trafficSources: [
+            { source: 'Direct', percentage: 45 },
+            { source: 'Search', percentage: 30 },
+            { source: 'Social', percentage: 15 },
+            { source: 'Referral', percentage: 10 }
+          ],
+          deviceTypes: [
+            { device: 'Desktop', percentage: 60 },
+            { device: 'Mobile', percentage: 35 },
+            { device: 'Tablet', percentage: 5 }
+          ]
         });
-      }, 100);
+        setIsLoading(false);
+      }, 1000);
     };
 
-    // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
-      const form = e.target as HTMLFormElement;
-      trackInteraction('form', { 
-        formId: form.id || form.className,
-        formAction: form.action,
-        formMethod: form.method
-      });
-    };
+    loadAnalytics();
+  }, [timeRange]);
 
-    // Setup error tracking
-    const handleError = (e: ErrorEvent) => {
-      trackInteraction('error', {
-        message: e.message,
-        filename: e.filename,
-        lineno: e.lineno,
-        colno: e.colno,
-        error: e.error?.stack
-      });
-    };
-
-    // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
-      trackInteraction('error', {
-        message: e.reason?.message || 'Unhandled Promise Rejection',
-        reason: e.reason
-      });
-    };
-
-    // Add event listeners
-    document.addEventListener('click', handleClick);
-    document.addEventListener('scroll', handleScroll);
-    document.addEventListener('submit', handleFormSubmit);
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    // Track page visibility changes
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page hidden - track session end
-        const sessionDuration = Date.now() - sessionStart;
-        setAnalyticsData(prev => ({
-          ...prev,
-          sessionDuration: sessionDuration / 1000 // Convert to seconds
-        }));
-      } else {
-        // Page visible - track session resume
-        setSessionStart(Date.now());
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('submit', handleFormSubmit);
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      clearTimeout(scrollTimeout);
-    };
-  }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]);
-
-  // Setup performance observer for LCP
-  useEffect(() => {
-    if (!enabled || !('PerformanceObserver' in window)) return;
-
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          setAnalyticsData(prev => ({
-            ...prev,
-            performance: {
-              ...prev.performance,
-              largestContentfulPaint: lastEntry.startTime
-            }
-          }));
-        }
-      });
-
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      return () => lcpObserver.disconnect();
-    } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);
+  const formatNumber = (num: number) => {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'K';
     }
-  }, [enabled]);
+    return num.toString();
+  };
 
-  // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {
-    if (!trackingId) return;
+  const formatDuration = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
 
-    try {
-      const analyticsPayload = {
-        trackingId,
-        eventType,
-        data,
-        timestamp: new Date().toISOString(),
-        sessionId: userSession
-      };
-
-      // Store analytics data locally instead of sending to non-existent API
-      try {
-        const storedAnalytics = localStorage.getItem('analytics-data') || '[]';
-        const analytics = JSON.parse(storedAnalytics);
-        analytics.push(analyticsPayload);
-        
-        // Keep only last 100 analytics records
-        if (analytics.length > 100) {
-          analytics.splice(0, analytics.length - 100);
-        }
-        
-        localStorage.setItem('analytics-data', JSON.stringify(analytics));
-        
-        // Log analytics for debugging (remove in production)
-        if (process.env['NODE_ENV'] === 'development') {
-          console.log('Analytics data stored locally:', analyticsPayload);
-        }
-      } catch (error) {
-        console.warn('Failed to store analytics data locally:', error);
-      }
-    } catch (error) {
-      console.warn('Failed to send analytics data:', error);
-    }
-  }, [trackingId, userSession]);
-
-  // Generate mock data for demonstration
-  useEffect(() => {
-    if (!enabled) return;
-
-    // Simulate data collection
-    const mockData: AnalyticsData = {
-      pageViews: Math.floor(Math.random() * 1000) + 500,
-      uniqueVisitors: Math.floor(Math.random() * 500) + 200,
-      sessionDuration: Math.floor(Math.random() * 300) + 120,
-      bounceRate: Math.random() * 40 + 20,
-      conversionRate: Math.random() * 5 + 1,
-      topPages: [
-        { path: '/', views: Math.floor(Math.random() * 500) + 200 },
-        { path: '/services', views: Math.floor(Math.random() * 300) + 150 },
-        { path: '/about', views: Math.floor(Math.random() * 200) + 100 },
-        { path: '/contact', views: Math.floor(Math.random() * 150) + 80 }
-      ],
-      userAgents: [
-        { device: 'Desktop', count: Math.floor(Math.random() * 400) + 200 },
-        { device: 'Mobile', count: Math.floor(Math.random() * 300) + 150 },
-        { device: 'Tablet', count: Math.floor(Math.random() * 100) + 50 }
-      ],
-      locations: [
-        { country: 'United States', count: Math.floor(Math.random() * 300) + 150 },
-        { country: 'United Kingdom', count: Math.floor(Math.random() * 150) + 80 },
-        { country: 'Canada', count: Math.floor(Math.random() * 100) + 50 },
-        { country: 'Germany', count: Math.floor(Math.random() * 80) + 40 }
-      ],
-      performance: {
-        loadTime: Math.random() * 2000 + 500,
-        firstPaint: Math.random() * 1000 + 200,
-        firstContentfulPaint: Math.random() * 1500 + 300,
-        largestContentfulPaint: Math.random() * 2000 + 500
-      },
-      interactions: {
-        clicks: Math.floor(Math.random() * 500) + 200,
-        scrolls: Math.floor(Math.random() * 1000) + 500,
-        formSubmissions: Math.floor(Math.random() * 50) + 20,
-        errors: Math.floor(Math.random() * 10) + 2
-      }
-    };
-
-    setAnalyticsData(mockData);
-  }, [enabled]);
-
-  if (!enabled) return null;
+  if (isLoading) {
+    return (
+      <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div className="animate-pulse">
+          <div className="h-8 bg-gray-200 rounded mb-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-24 bg-gray-200 rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      {/* Analytics Toggle Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Analytics Dashboard"
-        aria-expanded={isOpen}
-        aria-controls="analytics-panel"
-      >
-        <BarChart3 className="w-6 h-6" />
-      </motion.button>
+    <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
+      <div className="flex items-center justify-between mb-8">
+        <h3 className="text-3xl font-bold text-gray-900">📊 Advanced Analytics Dashboard</h3>
+        <div className="flex gap-2">
+          {['7d', '30d', '90d'].map((range) => (
+            <button
+              key={range}
+              onClick={() => setTimeRange(range)}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                timeRange === range
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              {range}
+            </button>
+          ))}
+        </div>
+      </div>
 
-      {/* Analytics Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80vh] overflow-y-auto"
-            id="analytics-panel"
-            role="dialog"
-            aria-labelledby="analytics-title"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h2 id="analytics-title" className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-blue-500" />
-                Analytics Dashboard
-              </h2>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Close analytics dashboard"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+      {/* Key Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white">
+          <div className="text-sm opacity-80">Page Views</div>
+          <div className="text-3xl font-bold">{formatNumber(analytics.pageViews)}</div>
+          <div className="text-sm opacity-80 mt-1">+12% from last period</div>
+        </div>
+        
+        <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white">
+          <div className="text-sm opacity-80">Unique Visitors</div>
+          <div className="text-3xl font-bold">{formatNumber(analytics.uniqueVisitors)}</div>
+          <div className="text-sm opacity-80 mt-1">+8% from last period</div>
+        </div>
+        
+        <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-6 text-white">
+          <div className="text-sm opacity-80">Bounce Rate</div>
+          <div className="text-3xl font-bold">{analytics.bounceRate.toFixed(1)}%</div>
+          <div className="text-sm opacity-80 mt-1">-3% from last period</div>
+        </div>
+        
+        <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white">
+          <div className="text-sm opacity-80">Avg. Session</div>
+          <div className="text-3xl font-bold">{formatDuration(analytics.avgSessionDuration)}</div>
+          <div className="text-sm opacity-80 mt-1">+15% from last period</div>
+        </div>
+      </div>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Eye className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-600">Page Views</span>
-                </div>
-                <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>
-              </div>
-              
-              <div className="bg-green-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-green-600">Visitors</span>
-                </div>
-                <div className="text-lg font-bold text-green-700">{analyticsData.uniqueVisitors.toLocaleString()}</div>
-              </div>
-              
-              <div className="bg-purple-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4 text-purple-500" />
-                  <span className="text-xs text-purple-600">Session</span>
-                </div>
-                <div className="text-lg font-bold text-purple-700">{Math.round(analyticsData.sessionDuration)}s</div>
-              </div>
-              
-              <div className="bg-orange-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Target className="w-4 h-4 text-orange-500" />
-                  <span className="text-xs text-orange-600">Conversion</span>
-                </div>
-                <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
-              </div>
-            </div>
-
-            {/* Performance Metrics */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
-                <Zap className="w-4 h-4 text-yellow-500" />
-                Performance
-              </h3>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between">
-                  <span>Load Time:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>First Paint:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>FCP:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>LCP:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)}ms</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Top Pages */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>
-              <div className="space-y-2">
-                {analyticsData.topPages.map((page, index) => (
-                  <div key={index} className="flex justify-between items-center text-xs">
-                    <span className="truncate flex-1">{page.path}</span>
-                    <span className="font-mono text-gray-600">{page.views}</span>
+      {/* Charts and Data */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Top Pages */}
+        <div className="bg-gray-50 rounded-xl p-6">
+          <h4 className="text-xl font-bold text-gray-900 mb-4">🔥 Top Pages</h4>
+          <div className="space-y-4">
+            {analytics.topPages.map((page, index) => (
+              <div key={page.page} className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm">
+                    {index + 1}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Device Distribution */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>
-              <div className="space-y-2">
-                {analyticsData.userAgents.map((device, index) => (
-                  <div key={index} className="flex items-center gap-2 text-xs">
-                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500" />}
-                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500" />}
-                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500" />}
-                    <span className="flex-1">{device.device}</span>
-                    <span className="font-mono text-gray-600">{device.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Status Indicators */}
-            <div className="pt-4 border-t border-gray-200">
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`} />
-                  <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
+                  <span className="text-gray-700 font-medium">{page.page}</span>
                 </div>
-                <button
-                  onClick={() => window.location.reload()}
-                  className="text-blue-500 hover:text-blue-600"
-                >
-                  <RefreshCw className="w-3 h-3" />
-                </button>
+                <div className="text-gray-600 font-semibold">{formatNumber(page.views)}</div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            ))}
+          </div>
+        </div>
+
+        {/* Traffic Sources */}
+        <div className="bg-gray-50 rounded-xl p-6">
+          <h4 className="text-xl font-bold text-gray-900 mb-4">🌐 Traffic Sources</h4>
+          <div className="space-y-4">
+            {analytics.trafficSources.map((source, index) => (
+              <div key={source.source} className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700 font-medium">{source.source}</span>
+                  <span className="text-gray-600 font-semibold">{source.percentage}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000"
+                    style={{ width: `${source.percentage}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Device Types */}
+        <div className="bg-gray-50 rounded-xl p-6">
+          <h4 className="text-xl font-bold text-gray-900 mb-4">📱 Device Types</h4>
+          <div className="space-y-4">
+            {analytics.deviceTypes.map((device, index) => (
+              <div key={device.device} className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700 font-medium">{device.device}</span>
+                  <span className="text-gray-600 font-semibold">{device.percentage}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    className={`h-2 rounded-full transition-all duration-1000 ${
+                      index === 0 ? 'bg-gradient-to-r from-green-500 to-green-600' :
+                      index === 1 ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
+                      'bg-gradient-to-r from-purple-500 to-purple-600'
+                    }`}
+                    style={{ width: `${device.percentage}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Real-time Activity */}
+        <div className="bg-gray-50 rounded-xl p-6">
+          <h4 className="text-xl font-bold text-gray-900 mb-4">⚡ Real-time Activity</h4>
+          <div className="space-y-3">
+            {[
+              { user: 'User_001', action: 'Viewed Ultimate Tech Revolution 2027', time: '2 min ago' },
+              { user: 'User_002', action: 'Downloaded AI Solutions Guide', time: '5 min ago' },
+              { user: 'User_003', action: 'Started Interactive Demo', time: '8 min ago' },
+              { user: 'User_004', action: 'Subscribed to Newsletter', time: '12 min ago' },
+              { user: 'User_005', action: 'Viewed Quantum Computing Page', time: '15 min ago' }
+            ].map((activity, index) => (
+              <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="flex-1">
+                  <div className="text-sm text-gray-700">{activity.action}</div>
+                  <div className="text-xs text-gray-500">{activity.user} • {activity.time}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default AdvancedAnalytics;

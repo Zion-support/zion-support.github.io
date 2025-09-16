@@ -8,13 +8,6 @@ interface LogoProps {
   customColor?: string;
 }
 
-<<<<<<< HEAD
-export function Logo({ customLogocustomColor }: LogoProps) {
-  const { isWhitelabelogoUrlbrandNameprimaryColor } = useWhitelabel();
-=======
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
->>>>>>> origin/auto/autonomy-17186719616
   
   // Use the white-label logo if available and no specific customLogo is provided
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
