@@ -139,6 +139,11 @@ import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough20
 import RevolutionaryTechShowcase2029 from './src/pages/RevolutionaryTechShowcase2029';
 import NextGenInnovationHub2029 from './src/pages/NextGenInnovationHub2029';
 import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
+import UltimateContentBanner2031 from './src/components/UltimateContentBanner2031';
+import RevolutionaryAdBanner2031 from './src/components/RevolutionaryAdBanner2031';
+import UltimateTechBreakthrough2031 from './src/pages/UltimateTechBreakthrough2031';
+import RevolutionaryTechShowcase2031 from './src/pages/RevolutionaryTechShowcase2031';
+import UltimateContentShowcase2031 from './src/pages/UltimateContentShowcase2031';
 
 export default function App(): JSX.Element {
   return (
@@ -166,6 +171,12 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
+
+                {/* NEW: Ultimate Content Banner 2031 */}
+                <UltimateContentBanner2031 />
+
+                {/* NEW: Revolutionary Ad Banner 2031 */}
+                <RevolutionaryAdBanner2031 />
 
                 {/* Ultimate Tech Banner 2029 */}
                 <UltimateTechBanner2029 />
@@ -360,6 +371,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateContentShowcase2030" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🔮 Ultimate Content 2030 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2031" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 Ultimate Tech 2031 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2031" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ Revolutionary 2031 →
+                    </a>
+                    <a href="/pages/UltimateContentShowcase2031" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🔮 Ultimate Content 2031 →
                     </a>
                   </div>
                 </div>
@@ -839,6 +859,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
           <Route path="/pages/RevolutionaryTechShowcase2030" element={<RevolutionaryTechShowcase2030 />} />
           <Route path="/pages/UltimateContentShowcase2030" element={<UltimateContentShowcase2030 />} />
+          <Route path="/pages/UltimateTechBreakthrough2031" element={<UltimateTechBreakthrough2031 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2031" element={<RevolutionaryTechShowcase2031 />} />
+          <Route path="/pages/UltimateContentShowcase2031" element={<UltimateContentShowcase2031 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
