@@ -2972,32 +2972,22 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
-    id: 'ai-security-blueprint',
-    title: 'Guide: AI Security Blueprint 2025',
-=======
     id: 'ai-agents-lab-opening',
     title: 'Launch: AI Agents Innovation Lab',
     summary:
       'Hands-on lab with real-world agentic workflows, evals, and governance. Apply to join the first cohort.',
     href: '/updates/ai-agents-lab-opening',
     date: '2025-09-15',
-    tag: 'Announcement',
+    tag: 'Announcement'
   },
   {
-    id: 'quantum-partnership-announcement',
-    title: 'Partnership: Quantum Computing Center of Excellence',
-    summary:
-      'We partnered with leading research institutions to accelerate quantum neural networks for enterprise.',
-    href: '/updates/quantum-partnership',
-    date: '2025-09-14',
-=======
     id: 'ai-governance-bootcamp',
     title: 'New Bootcamp: Enterprise AI Governance (Oct 2025)',
     summary:
       'Hands-on governance bootcamp covering risk management, policy, evals, and controls for enterprise AI.',
     href: '/updates/ai-governance-bootcamp',
     date: '2025-09-15',
-    tag: 'Course',
+    tag: 'Course'
   },
   {
     id: 'agent-research-insights-2025q3',
@@ -3006,7 +2996,7 @@ export const updates: UpdateItem[] = [
       'Key findings on monitoring agent behaviors, failure modes, and safe interventions at scale.',
     href: '/updates/agent-observability-q3-2025',
     date: '2025-09-14',
-    tag: 'Research',
+    tag: 'Research'
   },
   {
     id: 'zion-website-refresh',
@@ -3015,18 +3005,7 @@ export const updates: UpdateItem[] = [
       'Improved navigation, better performance, and WCAG-focused accessibility enhancements across the site.',
     href: '/updates/website-ux-refresh-2025',
     date: '2025-09-13',
->>>>>>> origin/feat/updates-and-fixes
-    tag: 'Announcement',
-  },
-  {
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
->>>>>>> origin/feat/new-updates-ads
-    summary:
-      'Best practices for securing AI systems in production: model, data, and pipeline.',
-    href: '/updates/ai-security-blueprint-2025',
-    date: '2025-09-14',
-    tag: 'Announcement',
+    tag: 'Announcement'
   },
   {
     id: 'genai-engineering-course',
@@ -3035,7 +3014,7 @@ export const updates: UpdateItem[] = [
       'Hands-on masterclass on RAG, agents, evals, safety, and productionization.',
     href: '/updates/genai-engineering-masterclass',
     date: '2025-09-13',
-    tag: 'Course',
+    tag: 'Course'
   },
   {
     id: 'ai-lab-research-update',
@@ -3044,24 +3023,16 @@ export const updates: UpdateItem[] = [
       'Our latest results show scalable planning via hierarchical tool-use and memory.',
     href: '/updates/long-horizon-tool-agents',
     date: '2025-09-12',
-    tag: 'Research',
+    tag: 'Research'
   },
   {
-    id: 'advanced-blockchain-dev-course',
->>>>>>> origin/feature/updates-2025-09
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-    date: '2025-09-10',
-    href: '/updates/advanced-blockchain-course',
-=======
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
       'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
     href: '/updates/advanced-blockchain-development',
     date: '2025-09-10',
-    tag: 'Course',
+    tag: 'Course'
   },
   {
     id: 'web3-fundamentals-path',
@@ -3070,19 +3041,15 @@ export const updates: UpdateItem[] = [
       'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
     href: '/updates/web3-fundamentals',
     date: '2025-09-08',
-    tag: 'Course',
->>>>>>> origin/feat/updates-content-and-advertising
+    tag: 'Course'
   },
   {
     id: 'dapp-challenge',
     title: 'Community Challenge: Build a DApp',
     summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
     href: '/updates/dapp-challenge',
     date: '2025-09-05',
-    tag: 'Challenge',
+    tag: 'Challenge'
   },
   {
     id: 'ai-research-release',
@@ -3090,7 +3057,7 @@ export const updates: UpdateItem[] = [
     summary: 'New paper and demo exploring agentic automation for enterprise IT workflows.',
     href: '/updates/ai-research-it-ops',
     date: '2025-09-03',
-    tag: 'Research',
+    tag: 'Research'
   },
   {
     id: 'zion-os-1-2-release',
@@ -3098,8 +3065,8 @@ export const updates: UpdateItem[] = [
     summary: 'Performance improvements, modular deployments, and enhanced governance tooling.',
     href: '/updates/zion-os-1-2',
     date: '2025-09-01',
-    tag: 'Release',
-  },
+    tag: 'Release'
+  }
 ];
 
 export const getLatestUpdates = (limit = 6) => {
@@ -3107,50 +3074,3 @@ export const getLatestUpdates = (limit = 6) => {
     .sort((a, b) => (a.date < b.date ? 1 : -1))
     .slice(0, limit);
 };
-
->>>>>>> origin/feat/updates-content-and-advertising
->>>>>>> cursor/create-and-deploy-new-content-376e
-  }
-]
-
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-=======
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
->>>>>>> cursor/create-and-deploy-new-content-6f93
