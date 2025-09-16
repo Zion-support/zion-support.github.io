@@ -7,6 +7,14 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Fresh content added 2025-09-16 (new)
+  {
+    title: 'Blueprint: Real-Time Agent Incident Response (2026)',
+    summary: 'Playbooks and eval gates for safe, fast incident response across autonomous agent fleets.',
+    href: '/updates/real-time-agent-incident-response-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
   // Fresh content added 2025-09-16
   {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
