@@ -137,9 +137,14 @@ import RevolutionaryTechBreakthrough2036 from './src/pages/RevolutionaryTechBrea
 import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
 import UltimateTechRevolution2037 from './src/pages/UltimateTechRevolution2037';
 import UltimateContentBanner2037 from './src/components/UltimateContentBanner2037';
+
 import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
 import RevolutionaryTechShowcase2036 from './src/pages/RevolutionaryTechShowcase2036';
 import ComprehensiveServices2036 from './src/pages/ComprehensiveServices2036';
+
+import NewContentBanner2025 from './src/components/NewContentBanner2025';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -164,6 +169,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: 2025 Content Banner */}
+                <NewContentBanner2025 />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -243,6 +251,12 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 NEW: Ultimate Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Revolutionary Showcase 2025 →
+                    </a>
                     <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🤖 NEW: AI Transformation →
                     </a>
@@ -438,6 +452,16 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Carousel 2029 */}
                 <div className="mb-12">
                   <RevolutionaryContentCarousel2029 />
+                </div>
+
+                {/* NEW: Enhanced Content Carousel 2025 */}
+                <div className="mb-12">
+                  <EnhancedContentCarousel2025 />
+                </div>
+
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
                 </div>
 
                 {/* Revolutionary Content Showcase */}
@@ -901,6 +925,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
           <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
