@@ -26,7 +26,6 @@ import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
 import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
 import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
 import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
-import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
@@ -166,7 +165,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
           <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
           <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
-          <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
