@@ -26,6 +26,36 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Featured section */}
+      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-purple-300">Featured</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Spotlight</p>
+          <p className="mt-4 text-lg leading-8 text-gray-300">Don’t miss our newest blueprints and releases.</p>
+        </div>
+        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 lg:mt-14 lg:max-w-none lg:grid-cols-3">
+          <a href="/updates/ai-risk-mitigation-guide-2026" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Guide</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">AI Risk Mitigation in Production (2026)</h3>
+            <p className="mt-2 text-sm text-gray-300">Controls, eval gates, and incident playbooks for safe AI ops.</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Read more →</span>
+          </a>
+          <a href="/updates/real-time-agent-cost-optimizer-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Release</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Real-Time Agent Cost Optimizer v1.0</h3>
+            <p className="mt-2 text-sm text-gray-300">Dynamic budgets and routing to cut inference costs.</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Explore →</span>
+          </a>
+          <a href="/blog/ai-2026-enterprise-agent-observability-deep-dive" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Deep Dive</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Enterprise Agent Observability</h3>
+            <p className="mt-2 text-sm text-gray-300">Traces, metrics, and alerting patterns for production agents.</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Learn →</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Latest updates */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
@@ -54,6 +84,9 @@ export default function HomePage() {
               </a>
             </article>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400">View all updates →</a>
         </div>
       </div>
 
