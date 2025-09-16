@@ -1,140 +1,146 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Brain, Cpu, Shield } from 'lucide-react';
 
 const NewContentPromotionBanner2026: React.FC = () => {
   const newContent = [
     {
-      title: "AI Innovation Hub 2026",
-      description: "Revolutionary AI breakthroughs",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      link: "/ai-innovation-hub-2026"
+      title: "AI-Powered Business Automation",
+      description: "Transform operations with 300% efficiency gains",
+      icon: <Zap className="w-6 h-6" />,
+      color: "from-blue-500 to-purple-600"
     },
     {
-      title: "Advanced Tech Solutions",
-      description: "Next-gen technology solutions",
-      icon: Cpu,
-      color: "from-blue-500 to-cyan-500",
-      link: "/advanced-tech-solutions-2026"
+      title: "Quantum Computing Breakthrough",
+      description: "Revolutionary enterprise applications",
+      icon: <Cpu className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Quantum Computing Guide",
-      description: "Master quantum fundamentals",
-      icon: Zap,
-      color: "from-green-500 to-emerald-500",
-      link: "/quantum-computing-guide-2026"
+      title: "Neural Interface Technology",
+      description: "Future of human-computer interaction",
+      icon: <Brain className="w-6 h-6" />,
+      color: "from-green-500 to-teal-600"
+    },
+    {
+      title: "Conscious AI Systems",
+      description: "Understanding artificial consciousness",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "from-orange-500 to-red-600"
     }
   ];
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative py-16 px-4 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden"
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-xl"></div>
-        <div className="absolute top-32 right-20 w-32 h-32 bg-purple-400/10 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-pink-400/10 rounded-full blur-xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 px-4 py-2 rounded-full border border-cyan-400/30 mb-4">
-            <Sparkles className="w-5 h-5 text-cyan-400" />
-            <span className="text-cyan-400 font-semibold">NEW CONTENT</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
+            <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-purple-300 font-medium">New Content 2026</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary Content
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Just Released
+            Revolutionary
+            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Technology Content
             </span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our latest groundbreaking content that's pushing the boundaries of technology and innovation
+            Discover the latest breakthroughs in AI, quantum computing, neural interfaces, and conscious AI systems. 
+            Stay ahead with cutting-edge insights and practical implementations.
           </p>
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((content, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {newContent.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="group cursor-pointer"
-              onClick={() => window.location.href = content.link}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group relative"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 h-full hover:scale-105">
-                <div className="flex items-center mb-6">
-                  <div className={`bg-gradient-to-r ${content.color} p-4 rounded-2xl mr-4`}>
-                    <content.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{content.title}</h3>
-                    <p className="text-gray-300">{content.description}</p>
-                  </div>
+              <div className="relative p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${item.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  {item.icon}
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
                 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                    <span className="text-gray-300 text-sm ml-2">5.0</span>
-                  </div>
-                  
-                  <div className="flex items-center text-cyan-400 group-hover:text-white transition-colors duration-300">
-                    <span className="text-sm font-medium mr-2">Explore</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </div>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl p-8 border border-cyan-400/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Explore the Future?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of innovators who are already leveraging our cutting-edge content to transform their businesses
-            </p>
+          <div className="inline-flex flex-col sm:flex-row gap-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl font-semibold text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+            >
+              <span className="relative z-10 flex items-center">
+                Explore New Content
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.button>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
-                Explore All Content
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors duration-300">
-                View Blog
-              </button>
-            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 border-2 border-purple-500/50 rounded-xl font-semibold text-purple-300 hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300"
+            >
+              View All Services
+            </motion.button>
+          </div>
+        </motion.div>
+
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+        >
+          <div className="space-y-2">
+            <div className="text-3xl font-bold text-white">50+</div>
+            <div className="text-gray-400">New Articles</div>
+          </div>
+          <div className="space-y-2">
+            <div className="text-3xl font-bold text-white">15+</div>
+            <div className="text-gray-400">Expert Authors</div>
+          </div>
+          <div className="space-y-2">
+            <div className="text-3xl font-bold text-white">100K+</div>
+            <div className="text-gray-400">Monthly Readers</div>
           </div>
         </motion.div>
       </div>
-    </motion.section>
+    </div>
   );
 };
 
