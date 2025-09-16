@@ -140,8 +140,12 @@
     "web-vitals": "^5.1.0",
     "workbox-build": "^7.3.0",
     "workbox-window": "^7.3.0",
+<<<<<<< HEAD
     "zod": "4.1.8"
 >>>>>>> origin/feat/new-content-2025-09-15
+=======
+    "zod": "^4.1.8"
+>>>>>>> origin/feat/new-content-sept-15-2025
   },
   "devDependencies": {
 <<<<<<< HEAD

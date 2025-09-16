@@ -11,6 +11,7 @@ export const latestContent: ContentItem[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "ai-2026-trusted-genai-patterns-regulated-enterprises",
     title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
     summary: "Compliant, observable, and cost-aware GenAI architectures that scale safely.",
@@ -53,10 +54,17 @@ export const latestContent: ContentItem[] = [
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
     href: "/blog/ai-2026-autonomous-customer-support-agents",
 >>>>>>> origin/feat/new-content-2025-09-15
+=======
+    id: "ai-2026-eval-cookbook",
+    title: "AI 2026: Evaluations Cookbook",
+    summary: "Hands-on recipes and templates to operationalize evals in CI/CD.",
+    href: "/content/ai-2026-eval-cookbook",
+>>>>>>> origin/feat/new-content-sept-15-2025
     tag: "Guide",
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "agent-platform-slos-2026",
     title: "AI 2026: Agent Platform SLOs That Matter",
@@ -173,6 +181,16 @@ export const latestContent: ContentItem[] = [
 >>>>>>> origin/feat/latest-content-home
 =======
 >>>>>>> origin/feat/new-content-2025-09-15
+=======
+    id: "ai-2026-reliability-checklists",
+    title: "AI 2026: Reliability Release Checklists",
+    summary: "Preflight, rollout, and incident guides to ship dependable autonomous agents.",
+    href: "/content/ai-2026-reliability-checklists",
+    tag: "Checklist",
+    date: "2025-09-15",
+  },
+  {
+>>>>>>> origin/feat/new-content-sept-15-2025
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",

@@ -145,7 +145,10 @@ export default function HomePage() {
 =======
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
+<<<<<<< HEAD
 >>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/feat/new-content-sept-15-2025
       
       <div className='min-h-screen bg-white'>
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
@@ -159,11 +162,20 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
+<<<<<<< HEAD
                 <p className="text-gray-600 mt-2">Now featuring GenAI Governance 2026 and Agent Observability 2026.</p>
               </div>
               <div className="flex gap-3">
                 <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">GenAI Governance</Link>
                 <Link href="/content/agent-observability-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
+=======
+                <p className="text-gray-600 mt-2">Now featuring Evaluations Cookbook, Reliability Release Checklists, and Evals Maturity Model 2026.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/content/ai-2026-eval-cookbook" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evals Cookbook</Link>
+                <Link href="/content/ai-2026-reliability-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Reliability Checklists</Link>
+                <Link href="/content/ai-2026-evals-maturity-model" className="hidden md:inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evals Maturity</Link>
+>>>>>>> origin/feat/new-content-sept-15-2025
               </div>
 >>>>>>> origin/feature/new-content-and-promotions
             </div>

@@ -14,10 +14,80 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
 =======
     id: "autonomous-support-agents-2026",
+=======
+    id: "ai-2026-eval-cookbook",
+    title: "AI 2026: Evaluations Cookbook",
+    description:
+      "Practical, ready-to-run eval recipes for reliability, safety, and regression testing.",
+    ctaLabel: "Use Recipes",
+    href: "/content/ai-2026-eval-cookbook",
+    emoji: "📚",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-2026-reliability-checklists",
+    title: "AI 2026: Reliability Release Checklists",
+    description:
+      "Ship confidently with preflight, rollout, and incident playbooks for autonomous agents.",
+    ctaLabel: "Get Checklists",
+    href: "/content/ai-2026-reliability-checklists",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "llm-evals-maturity-model-2026-content",
+    title: "AI 2026: LLM Evals Maturity Model",
+    description:
+      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-evals-maturity-model",
+    emoji: "📈",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-certification-2026-content",
+    title: "AI 2026: Agent Safety Certification",
+    description:
+      "Structured certification to validate agent safety with scenario test suites and governance.",
+    ctaLabel: "Read Certification",
+    href: "/content/ai-2026-agent-safety-certification",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-evals-blueprint-2026",
+    title: "AI 2026: Autonomous Evals Blueprint",
+    description:
+      "Eval-first, guardrail-driven blueprint to ship reliable autonomous agents at scale.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-autonomous-evals-blueprint",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-risk-and-safety-playbook-2026",
+    title: "AI 2026: Agentic Risk and Safety Playbook",
+    description:
+      "Safeguards, monitoring, and governance patterns for production agent systems.",
+    ctaLabel: "Read Playbook",
+    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-customer-support-agents-2026",
+>>>>>>> origin/feat/new-content-sept-15-2025
     title: "AI 2026: Autonomous Customer Support Agents",
     description:
       "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
