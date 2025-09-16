@@ -12,7 +12,6 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -39,10 +38,11 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
-=======
-  'ai-governance-framework-2025': {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
+    ]
+  },
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Building Trust in Autonomous Systems',
     excerpt:
       'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
     category: 'AI Governance',
@@ -56,7 +56,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     ]
   },
   'agent-safety-red-teaming-2025': {
@@ -89,8 +88,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
     ]
   },
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
     title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
@@ -303,4 +300,3 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
     </div>
   );
 }
-
