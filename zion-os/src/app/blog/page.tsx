@@ -91,6 +91,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-safety-governance-blueprint-2025',
+      title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
+      excerpt: 'Operationalize AI safety with policy, red‑teaming, guardrails, and monitoring at scale.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '11 min read',
+      image: '/blog/ai-safety-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt:
@@ -262,6 +273,7 @@ export default function BlogPage() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: 'agent-safety-tooling',
       title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
       excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
@@ -277,6 +289,16 @@ export default function BlogPage() {
       date: '2025-09-12',
       readTime: '9 min read',
       image: '/blog/agent-safety.jpg'
+=======
+      id: 'edge-ai-inference-acceleration',
+      title: 'Accelerating Edge AI Inference: Patterns for Low-Latency, Low-Cost Deployment',
+      excerpt: 'Achieve sub‑100ms inference with quantization, batching, caching, and split inference.',
+      category: 'Infrastructure',
+      author: 'Michael Rodriguez',
+      date: '2025-09-13',
+      readTime: '8 min read',
+      image: '/blog/edge-ai-inference.jpg'
+>>>>>>> origin/feature/blog-content-2025
     },
     {
       id: 'sovereign-ai-commerce-2025',
@@ -369,16 +391,24 @@ export default function BlogPage() {
     { name: 'Research & Development', count: 3, active: false },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'AI Solutions', count: 4, active: false },
 =======
     { name: 'AI Solutions', count: 3, active: false },
 >>>>>>> origin/feature/content-sept15-2025
+=======
+    { name: 'AI Solutions', count: 3, active: false },
+>>>>>>> origin/feature/blog-content-2025
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
+<<<<<<< HEAD
     { name: 'Accessibility', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
+=======
+    { name: 'Infrastructure', count: 2, active: false },
+>>>>>>> origin/feature/blog-content-2025
     { name: 'Content Marketing', count: 1, active: false }
   ];
 
@@ -425,6 +455,7 @@ export default function BlogPage() {
           <a
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             href="/blog/ai-ops-cost-optimization-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
@@ -448,6 +479,15 @@ export default function BlogPage() {
 =======
                 AS
 >>>>>>> origin/feature/add-ai-agent-safety-post
+=======
+            href="/blog/ai-safety-governance-blueprint-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                AG
+>>>>>>> origin/feature/blog-content-2025
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -455,6 +495,7 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
@@ -467,6 +508,12 @@ export default function BlogPage() {
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
 >>>>>>> origin/feature/new-content-2025-09-15
+=======
+                  AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  How to implement policy, evals, guardrails, and monitoring without slowing delivery.
+>>>>>>> origin/feature/blog-content-2025
                 </p>
 =======
                   AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems

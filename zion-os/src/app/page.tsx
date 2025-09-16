@@ -32,12 +32,22 @@ export default function HomePage() {
               </Link>
               <Link href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
+<<<<<<< HEAD
               </Link>
 =======
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
 >>>>>>> origin/feature/new-blog-content-and-promo
+=======
+              </a>
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 See what's new in 2025
+              </a>
+              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
+                ✅ New: AI Safety & Governance 2025
+              </a>
+>>>>>>> origin/feature/blog-content-2025
             </div>
           </div>
         </div>
