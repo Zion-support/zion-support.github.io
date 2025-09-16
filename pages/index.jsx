@@ -62,55 +62,20 @@ const Home = () => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Link href="/blog/ai-2026-agentic-benchmarking-field-guide" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Reliability • 8 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Agentic Benchmarking Field Guide</h3>
-                  <p className="text-white/80">Design production-like scenario suites and SLIs for agentic workflows.</p>
+                <Link href="/blog/ai-2026-agent-observability-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Observability • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Agent Observability Scorecards</h3>
+                  <p className="text-white/80">Turn traces, evals, and policy events into trust signals leaders can act on.</p>
                 </Link>
-                <Link href="/blog/ai-2026-operationalizing-ai-safety-controls" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Governance • 7 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Operationalizing AI Safety Controls</h3>
-                  <p className="text-white/80">Translate policy into approvals, runtime checks, and evidence hubs.</p>
+                <Link href="/blog/ai-2026-governed-tooling-approvals-in-practice" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Governed Tooling in Practice</h3>
+                  <p className="text-white/80">Implement approvals, scoped permissions, and runtime checks for safe agents.</p>
                 </Link>
-                <Link href="/blog/ai-2026-autonomous-incident-response-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Operations • 8 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Autonomous Incident Response</h3>
-                  <p className="text-white/80">Close the loop from detection to remediation with safe, auditable autonomy.</p>
-                </Link>
-                <Link href="/blog/ai-2026-evidence-driven-ai-governance" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Governance • 7 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Evidence-Driven Governance</h3>
-                  <p className="text-white/80">Make governance operational with evidence hubs and audit-ready workflows.</p>
-                </Link>
-                <Link href="/blog/ai-2026-reliable-autonomy-operations" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">AI Ops • 7 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Reliable Autonomy Operations (2026)</h3>
-                  <p className="text-white/80">Operate agents safely with SLOs, eval gates, incident playbooks, and governed tool use.</p>
-                </Link>
-                <Link href="/blog/ai-2026-agent-safety-playbook" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Safety • 9 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Agent Safety Playbook</h3>
-                  <p className="text-white/80">Actionable patterns to ship safe, governed, and trustworthy agentic systems.</p>
-                </Link>
-                <Link href="/blog/ai-2026-production-evidence-hub-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Observability • 8 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Production Evidence Hub Blueprint</h3>
-                  <p className="text-white/80">Unify traces, evals, policy events, and incidents for audit-ready AI.</p>
-                </Link>
-                <Link href="/blog/ai-2026-agentic-systems-risk-matrix" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Governance • 7 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">AI 2026: Agentic Systems Risk Matrix</h3>
-                  <p className="text-white/80">Assess risk by capability, scope, and impact to guide safe rollout.</p>
-                </Link>
-                <Link href="/blog/ai-2026-low-latency-agent-orchestration" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Performance • 7 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Low-Latency Agent Orchestration</h3>
-                  <p className="text-white/80">Stream, speculate, and overlap I/O to deliver sub‑200ms perceived latency.</p>
-                </Link>
-                <Link href="/blog/ai-2026-secure-tool-use-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Governance • 8 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Secure Tool Use Blueprint</h3>
-                  <p className="text-white/80">Ship governed tool-enabled agents with approvals and runtime guardrails.</p>
+                <Link href="/blog/ai-2026-production-eval-gates-live-ops" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Evaluations • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Production Eval Gates</h3>
+                  <p className="text-white/80">Enforce gates pre‑merge, pre‑deploy, and continuously to ship without regret.</p>
                 </Link>
               </div>
               <div className="mt-6">
