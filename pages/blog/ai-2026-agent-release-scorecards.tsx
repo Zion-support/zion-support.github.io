@@ -1,4 +1,32 @@
 import Head from 'next/head'
+
+export default function AgentReleaseScorecards() {
+  return (
+    <>
+      <Head>
+        <title>Agent Release Scorecards — Evidence‑First (2026) | Zion Tech Group</title>
+        <meta name="description" content="Executive scorecards wired to SLOs, evals, incidents, and budgets for safe, reliable agent releases." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agent-release-scorecards" />
+      </Head>
+      <main className="container mx-auto px-4 py-16 prose prose-invert">
+        <h1>Agent Release Scorecards — Evidence‑First (2026)</h1>
+        <p>
+          A practical framework for summarizing release health using objective signals:
+          service SLOs, eval results, guardrail events, incident trends, and spend.
+        </p>
+        <h2>What to Track</h2>
+        <ul>
+          <li>Reliability: pass rates, MTTR, incident density</li>
+          <li>Safety: policy violations, override rates, red‑team findings</li>
+          <li>Quality: eval pass/fail by scenario, groundedness</li>
+          <li>Efficiency: latency percentiles, cost per action</li>
+        </ul>
+      </main>
+    </>
+  )
+}
+
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function AgentReleaseScorecards2026() {

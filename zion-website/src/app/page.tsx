@@ -34,7 +34,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Real‑Time Model Routing Playbook —
+            New: Agent Rollback Patterns —
+            <a href="/blog/ai-2026-agent-rollback-patterns" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Real‑Time Model Routing Playbook —
             <a href="/updates/real-time-model-routing-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Real‑Time Retrieval Architectures —
