@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useNotifications } from '../components/NotificationSystem';
-=======
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { useNotifications } from '../components/NotificationSystem';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
@@ -13,10 +10,7 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertisingBanner';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -83,19 +77,6 @@ const Home: React.FC = () => {
             >
               Learn More →
             </Link>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🌟 Ultimate Tech Showcase →
-              </a>
-              <a href="/pages/ComprehensiveServicesShowcase2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🚀 Comprehensive Services →
-              </a>
-              <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                📚 Tech Blog 2026 →
-              </a>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-376e
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -129,10 +110,6 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Revolutionary Content Banner */}
-        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-=======
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
@@ -151,10 +128,11 @@ const Home: React.FC = () => {
         {/* Interactive Tech Showcase */}
         <InteractiveTechShowcase />
 
-        {/* Call to Action */}
-        <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-20">
->>>>>>> cursor/create-and-deploy-new-content-376e
+        {/* Ultimate Tech Advertising Banner */}
+        <UltimateTechAdvertisingBanner />
+
+        {/* Revolutionary Content Banner */}
+        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Technology Showcase 2026
