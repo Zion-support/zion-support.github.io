@@ -35,11 +35,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: State of Agent Reliability (2026 Preview) —
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            New: Production RAG Latency Budgets (2026 Preview) —
+            <a href="/updates/production-rag-latency-budgets-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            Real-Time Evals Starter Kit —
+            <a href="/updates/real-time-evals-starter-kit" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">get started</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -70,12 +70,12 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            Fresh: Enterprise Agent Observability (2026 Preview) —
+            <a href="/updates/enterprise-agent-observability" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability report</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">guardrails release</a>
+            <a href="/updates/real-time-evals-starter-kit" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">evals starter kit</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>

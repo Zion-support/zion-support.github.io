@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Guide: Production RAG Latency Budgets (2026 Preview)',
+		summary: 'Set and enforce end-to-end latency budgets with streaming retrieval and eval gates.',
+		href: '/updates/production-rag-latency-budgets-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Launch: Real-Time Evals Starter Kit',
+		summary: 'Drop-in templates for live evals, incident drills, and guardrail checks in prod.',
+		href: '/updates/real-time-evals-starter-kit',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Report: Enterprise Agent Observability (2026 Preview)',
+		summary: 'Blueprints, SLOs, and production telemetry patterns for agent systems at scale.',
+		href: '/updates/enterprise-agent-observability',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',
