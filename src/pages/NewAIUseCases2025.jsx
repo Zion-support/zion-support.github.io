@@ -2,46 +2,53 @@ import React from "react";
 
 const NewAIUseCases2025 = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">NewAIUseCases2025</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            NewAIUseCases2025
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            New AI Use Cases 2025
           </h1>
-          <p className="text-xl text-gray-600">
-            Welcome to NewAIUseCases2025
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover innovative AI applications transforming industries
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Description of feature 1.
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">Healthcare AI</h3>
+            <p className="text-gray-300 mb-4">
+              AI-powered diagnostic tools and treatment optimization
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Medical image analysis</li>
+              <li>• Drug discovery</li>
+              <li>• Personalized treatment</li>
+            </ul>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Description of feature 2.
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Financial AI</h3>
+            <p className="text-gray-300 mb-4">
+              Intelligent financial services and risk management
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Fraud detection</li>
+              <li>• Algorithmic trading</li>
+              <li>• Credit scoring</li>
+            </ul>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Description of feature 3.
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Manufacturing AI</h3>
+            <p className="text-gray-300 mb-4">
+              Smart manufacturing and quality control systems
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Predictive maintenance</li>
+              <li>• Quality inspection</li>
+              <li>• Supply chain optimization</li>
+            </ul>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-79ca
         </div>
       </div>
     </div>
