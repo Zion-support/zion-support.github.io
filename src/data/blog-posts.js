@@ -1,5 +1,20 @@
 export const blogPosts = [
   {
+    id: 58,
+    title: "AI 2026: Production Evidence Hub — Blueprint",
+    excerpt: "Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.",
+    content: "A practical blueprint for building a production evidence hub that aggregates evaluation results, guardrail signals, incidents, approvals, and operational KPIs. Learn how to wire change management to evidence thresholds and publish exec‑ready reports.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Evaluations", "Incidents", "Approvals", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/production-evidence-hub-blueprint-2026.jpg",
+    slug: "ai-2026-production-evidence-hub-blueprint"
+  },
+  {
     id: 35,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
