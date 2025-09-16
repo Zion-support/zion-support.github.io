@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RevolutionaryContentBanner2033: React.FC = () => {
+const RevolutionaryContentBanner2033 = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-8 mb-12 text-white text-center relative overflow-hidden">
       {/* Animated Background */}

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { useToast } from '@/components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-// Tooltip components temporarily removed due to missing module path
-import z from 'zod';
-import { ChatAssistant } from '@/components/ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-export default function Contact() {
-  const { showToast: toast } = useToast();
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-fc88
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -327,61 +303,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
-              <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
-                  <Card
-                    key={index}
-                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
-                  >
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {office.name}
-                    </h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.address}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.phone}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <a
-                          href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
-                        >
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-=======
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven business strategies to deliver 
-              exceptional results for our clients.
-            </p>
-          </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-376e
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
