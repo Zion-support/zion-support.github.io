@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
@@ -40,6 +39,13 @@ import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
+import RevolutionaryTechInsights2025 from './src/pages/RevolutionaryTechInsights2025';
+import UltimateTechShowcase2025 from './src/pages/UltimateTechShowcase2025';
+import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
+import AdvancedTechTrends2027 from './src/pages/AdvancedTechTrends2027';
+import ConsciousnessComputingRevolution2034 from './src/pages/ConsciousnessComputingRevolution2034';
+import RevolutionaryTechBreakthrough2035 from './src/pages/RevolutionaryTechBreakthrough2035';
+import UltimateTechRevolution2036 from './src/pages/UltimateTechRevolution2036';
 import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import AIAutonomousResearchAssistant from './src/pages/AIAutonomousResearchAssistant';
@@ -70,23 +76,17 @@ import ConsciousnessComputing2026 from './src/pages/ConsciousnessComputing2026';
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateContentShowcase from './src/components/UltimateContentShowcase';
 import UltimateTechShowcase2029 from './src/pages/UltimateTechShowcase2029';
-
-export default function App(): JSX.Element {
-=======
 import Home from './src/pages/Home';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import ComprehensiveServicesShowcase2027 from './src/pages/ComprehensiveServicesShowcase2027';
 import RevolutionaryTechAdvertisingBanner from './src/components/RevolutionaryTechAdvertisingBanner';
-import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 
 const App: React.FC = () => {
->>>>>>> cursor/create-and-deploy-new-content-376e
   return (
     <Router>
       <div className="App">
         <Routes>
-<<<<<<< HEAD
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
@@ -167,6 +167,9 @@ const App: React.FC = () => {
                     </a>
                     <a href="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧬 Neural Interface
+                    </a>
+                    <a href="/pages/UltimateTechRevolution2036" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Ultimate Revolution 2036
                     </a>
                     <a href="/pages/ComprehensiveTechInsights2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔍 Tech Insights 2026
@@ -771,6 +774,8 @@ const App: React.FC = () => {
           <Route path="/pages/SpaceTechAI2025" element={<SpaceTechAI2025 />} />
           <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
           <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2035" element={<RevolutionaryTechBreakthrough2035 />} />
+          <Route path="/pages/UltimateTechRevolution2036" element={<UltimateTechRevolution2036 />} />
           <Route path="/pages/QuantumReality2026" element={<QuantumReality2026 />} />
           <Route path="/pages/NeuralInterfaceEvolution2026" element={<NeuralInterfaceEvolution2026 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
@@ -805,12 +810,9 @@ const App: React.FC = () => {
               <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
             </main>
           } />
-=======
-          <Route path="/" element={<Home />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/ComprehensiveServicesShowcase2027" element={<ComprehensiveServicesShowcase2027 />} />
->>>>>>> cursor/create-and-deploy-new-content-376e
         </Routes>
       </div>
     </Router>
