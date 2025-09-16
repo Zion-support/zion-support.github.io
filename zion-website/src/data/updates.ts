@@ -8,36 +8,28 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
-    title: 'Launch: Autonomous Ops and SRE for Agents',
+    title: 'Guide: Agent Platform Operations (2026)',
     summary:
-      'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
-    href: '/updates/autonomous-ops-sre-for-agents',
+      'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
+    href: '/updates/agent-platform-operations',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Production Guardrails Playbook',
+    summary:
+      'Operational guardrails, policy-as-code, and runtime protections for safe AI scale in production.',
+    href: '/updates/production-guardrails-playbook',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Launch: AI Agent Safety Certification (Beta)',
+    title: 'Guide: Enterprise Agent Observability',
     summary:
-      'New certification program validating safety practices for autonomous agents across design, evals, and operations.',
-    href: '/updates/ai-agent-safety-certification-beta',
+      'Traces, evals, and safety telemetry to operate autonomous agents in production environments.',
+    href: '/updates/enterprise-agent-observability',
     date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
-    summary:
-      'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',
-    href: '/updates/autonomous-ops-playbook-2026',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
-    summary:
-      'Design patterns for low-latency hybrid retrieval powering agentic systems and copilots.',
-    href: '/updates/real-time-retrieval-architectures-2026',
-    date: '2025-09-15',
-    tag: 'Blueprint'
+    tag: 'Guide'
   },
   {
     title: 'Launch: AI Governance Toolkit (v2)',
