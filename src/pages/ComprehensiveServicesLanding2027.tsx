@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -221,6 +224,7 @@ export default function ComprehensiveServicesLanding2027() {
     }
     return `$${price}`;
   };
+>>>>>>> cursor/create-and-deploy-new-content-5863
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

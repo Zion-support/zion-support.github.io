@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
+>>>>>>> cursor/create-and-deploy-new-content-5863
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-01e2
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -17,6 +24,14 @@ import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -77,6 +92,13 @@ const Home: React.FC = () => {
               From machine learning to autonomous systems.
             </p>
 <<<<<<< HEAD
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• AI-powered automation</li>
+              <li>• Quantum computing breakthroughs</li>
+              <li>• Neural interface technology</li>
+            </ul>
+=======
+<<<<<<< HEAD
             <Link 
               to="/pages/AIInnovationHub2026" 
               className="text-cyan-400 hover:text-cyan-300 font-semibold"
@@ -96,6 +118,7 @@ const Home: React.FC = () => {
               </a>
             </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-5863
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -120,6 +143,13 @@ const Home: React.FC = () => {
               Comprehensive cybersecurity solutions to protect your business 
               from evolving threats in the digital landscape.
             </p>
+<<<<<<< HEAD
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
+            </ul>
+=======
             <Link 
               to="/pages/ComprehensiveTechInsights2026" 
               className="text-green-400 hover:text-green-300 font-semibold"
@@ -201,6 +231,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
+>>>>>>> cursor/create-and-deploy-new-content-5863
           </div>
         </div>
       </div>
