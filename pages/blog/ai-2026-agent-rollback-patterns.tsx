@@ -1,4 +1,32 @@
 import Head from 'next/head'
+
+export default function AgentRollbackPatterns() {
+  return (
+    <>
+      <Head>
+        <title>Agent Rollback Patterns — Safe Recovery (2026) | Zion Tech Group</title>
+        <meta name="description" content="Staged deploys, eval gates, evidence bundles, and containment for safe recovery of AI agents in production." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agent-rollback-patterns" />
+      </Head>
+      <main className="container mx-auto px-4 py-16 prose prose-invert">
+        <h1>Agent Rollback Patterns — Safe Recovery (2026)</h1>
+        <p>
+          Ship fast while staying safe. This guide covers evidence‑driven rollback
+          patterns for AI agents: staged rollouts, auto‑rollback via eval gates,
+          containment modes, and post‑incident improvement loops.
+        </p>
+        <h2>Key Patterns</h2>
+        <ul>
+          <li>Shadow + canary releases with guardrail score thresholds</li>
+          <li>Automatic rollback on policy violations or SLO breaches</li>
+          <li>Evidence bundles: traces, evals, incidents, approvals</li>
+        </ul>
+      </main>
+    </>
+  )
+}
+
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function AgentRollbackPatterns2026() {
