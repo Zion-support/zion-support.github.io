@@ -77,6 +77,14 @@ import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -127,6 +135,13 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,6 +176,14 @@ export default function HomePage() {
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
         <NewMultimodalAgents2025Banner />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
 =======
         {/* Promo: Fresh Content */}
@@ -463,6 +486,13 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
@@ -533,6 +563,14 @@ export default function HomePage() {
                 <p className="text-gray-600 max-w-2xl">How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.</p>
               </div>
               <div className="shrink-0">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
@@ -687,6 +725,13 @@ export default function HomePage() {
               <Link href="/blog/ai-2026-multimodal-agents-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
 >>>>>>> origin/feature/multimodal-agents-blueprint-2026
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
                 Read the Blueprint →
               </Link>
             </div>
@@ -725,6 +770,14 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -826,6 +879,13 @@ export default function HomePage() {
 
 >>>>>>> origin/feature/new-content-and-promotions
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-011f
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -191,7 +191,12 @@ export default function ComprehensiveServicesLanding2027() {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

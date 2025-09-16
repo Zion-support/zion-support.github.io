@@ -14,14 +14,26 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-5863
 import React from 'react';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 >>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+import React from 'react';
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useNotifications } from '../components/NotificationSystem';
@@ -50,12 +62,24 @@ import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertising
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+<<<<<<< HEAD
 >>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -334,9 +358,17 @@ const Home: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -384,6 +416,14 @@ const Home: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
           </div>
         </div>
         </motion.section>
