@@ -91,7 +91,7 @@ import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryCont
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
-import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
+// import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import EnhancedContentShowcase2026 from './src/components/EnhancedContentShowcase2026';
@@ -145,7 +145,7 @@ import InteractiveTechDemo2030 from './src/components/InteractiveTechDemo2030';
 import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase2030';
 import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
-import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
+// import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
 import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
 import RevolutionaryTechShowcase2028 from './src/pages/RevolutionaryTechShowcase2028';
 import AIBusinessRevolution2028 from './src/pages/AIBusinessRevolution2028';
@@ -1363,7 +1363,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
-          <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
+          {/* <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} /> */}
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
