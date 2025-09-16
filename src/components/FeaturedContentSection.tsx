@@ -5,6 +5,20 @@ const FeaturedContentSection: React.FC = () => {
 
   const featuredContent = [
     {
+      id: 'agent-safety-observability-2026',
+      title: 'Agent Safety & Observability Blueprint',
+      subtitle: 'Gate >95% and Rollback <5 min',
+      description: 'Instrument agents with traces, evals, and policy gates to ensure safe tool use and reliable operations.',
+      link: '/blog/ai-2026-agent-safety-observability-blueprint',
+      gradient: 'from-indigo-600 to-blue-600',
+      icon: '🛡️',
+      stats: ['>95% gate pass', '<5m rollback', 'Audit-ready'],
+      features: ['Traces & telemetry', 'Eval suites & thresholds', 'Policy-as-code gates'],
+      category: 'Reliability',
+      readTime: '14 min read',
+      difficulty: 'Advanced'
+    },
+    {
       id: 'post-quantum-consciousness-2026',
       title: 'Post-Quantum Consciousness 2026',
       subtitle: '2000% ROI Breakthrough',

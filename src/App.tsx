@@ -6,6 +6,7 @@ import ContentSpotlight from './components/ContentSpotlight';
 import Footer from './Footer';
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
+import EmbodiedAI2026Banner from './components/EmbodiedAI2026Banner';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import './index.css';
@@ -97,6 +98,11 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* Embodied AI 2026 Promo */}
+              <div className="mb-12">
+                <EmbodiedAI2026Banner />
+              </div>
               
               {/* New Content Promo Banner */}
               <div className="mb-12">

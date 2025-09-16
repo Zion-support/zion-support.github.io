@@ -453,6 +453,21 @@ content_index:
         reliability: "99.9%"
         rollback_time: "< 5 min"
         audit_ready: true
+    - id: "ai-2026-agent-safety-observability-blueprint"
+      type: "blog"
+      title: "AI 2026: Agent Safety & Observability Blueprint"
+      file_path: "/content/blog/ai-2026-agent-safety-observability-blueprint.md"
+      url: "/blog/ai-2026-agent-safety-observability-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Agents", "Observability", "Evals", "Safety", "Governance"]
+      featured: true
+      is_new: true
+      reading_time: "14 min read"
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        audit_ready: true
     - id: "ai-2026-live-evals-in-production-practical-guide"
       type: "blog"
       title: "AI 2026: Live Evals in Production — Practical Guide"
@@ -468,6 +483,21 @@ content_index:
         gate_pass_rate: "> 95%"
         rollback_time: "< 5 min"
         audit_ready: true
+    - id: "agent-observability-starter-kit-2026"
+      type: "resource"
+      title: "Agent Observability Starter Kit 2026"
+      file_path: "/content/resources/agent-observability-starter-kit-2026.md"
+      url: "/resources/agent-observability-starter-kit-2026"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Observability", "Evals", "Policy-as-Code", "Reliability"]
+      featured: true
+      is_new: true
+      reading_time: "10 min read"
+      metrics:
+        gate_pass_rate: "> 95%"
+        incident_mttr: "< 10 min"
+        approval_speed: "2x"
     - id: "ai-2026-production-safety-checklist"
       type: "blog"
       title: "AI 2026: Production Safety Checklist"
