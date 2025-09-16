@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react',
-
-export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResults, setAnalysisResults] = useState(null),
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-
-export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -26,46 +5,21 @@ export default function WebsitePerformanceMonitorPage() {
       title: 'Real-Time Monitoring',
       description: '24/7 monitoring of your website performance with instant alerts and notifications.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-<<<<<<< HEAD
-      gradient: 'from-blue-400 to-cyan-500'},
-=======
-      gradient: 'from-blue-400 to-cyan-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
       title: 'Performance Metrics',
       description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-<<<<<<< HEAD
-      gradient: 'from-green-400 to-emerald-500'},
-=======
-      gradient: 'from-green-400 to-emerald-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <AlertTriangle className="w-8 h-8 text-white" />,
       title: 'Issue Detection',
       description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-<<<<<<< HEAD
-      gradient: 'from-orange-400 to-red-500'},
-=======
-      gradient: 'from-orange-400 to-red-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
       title: 'Performance Optimization',
       description: 'AI-powered recommendations to improve your website speed and user experience.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-<<<<<<< HEAD
-      gradient: 'from-purple-400 to-indigo-500'}],
-=======
-      gradient: 'from-purple-400 to-indigo-500',
-    },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const metrics = [
     {
@@ -104,11 +58,6 @@ export default function WebsitePerformanceMonitorPage() {
       icon: '👥',
       color: 'text-pink-400'
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const pricing = [
     {
@@ -117,18 +66,6 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-<<<<<<< HEAD
-        '5 websites monitoredBasic performance metrics',
-        'Daily monitoringEmail alerts',
-        'Basic reportingCore Web Vitals tracking'
-=======
-        '5 websites monitored',
-        'Basic performance metrics',
-        'Daily monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Core Web Vitals tracking'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false
     },
@@ -138,21 +75,6 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
-<<<<<<< HEAD
-        '25 websites monitoredAdvanced performance metrics',
-        'Real-time monitoringSMS & email alerts',
-        'Advanced reportingPerformance optimization tips',
-        'API accessTeam collaboration'
-=======
-        '25 websites monitored',
-        'Advanced performance metrics',
-        'Real-time monitoring',
-        'SMS & email alerts',
-        'Advanced reporting',
-        'Performance optimization tips',
-        'API access',
-        'Team collaboration'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true
     },
@@ -162,35 +84,6 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'For large organizations with critical performance requirements',
       features: [
-<<<<<<< HEAD
-        'Unlimited websitesEnterprise-grade monitoring',
-        'Custom alerting rules24/7 support',
-        'Custom integrationsWhite-label reporting',
-        'SLA guaranteesOn-premise options'
-      ],
-      popular: false
-    }
-  ],
-
-  const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true),
-=======
-        'Unlimited websites',
-        'Enterprise-grade monitoring',
-        'Custom alerting rules',
-        '24/7 support',
-        'Custom integrations',
-        'White-label reporting',
-        'SLA guarantees',
-        'On-premise options'
-      ],
-      popular: false
-    }
-  ];
-
-  const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true);
->>>>>>> origin/auto/autonomy-17186719616
     // Simulate website analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -201,25 +94,6 @@ export default function WebsitePerformanceMonitorPage() {
         cls: '0.08',
         loadTime: '1.8s',
         recommendations: [
-<<<<<<< HEAD
-          'Optimize images and implement lazy loadingMinimize render-blocking resources',
-          'Enable compression and cachingConsider using a CDN for global performance'
-        ]
-      }),
-      setIsAnalyzing(false),
-    }, 4000),
-  },
-=======
-          'Optimize images and implement lazy loading',
-          'Minimize render-blocking resources',
-          'Enable compression and caching',
-          'Consider using a CDN for global performance'
-        ]
-      });
-      setIsAnalyzing(false);
-    }, 4000);
-  };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -491,11 +365,6 @@ export default function WebsitePerformanceMonitorPage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-=======
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
->>>>>>> origin/auto/autonomy-17186719616
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Monitor Your Website Performance?
@@ -524,9 +393,4 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

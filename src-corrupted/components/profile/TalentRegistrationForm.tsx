@@ -230,7 +230,6 @@ export function TalentRegistrationForm() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
 
@@ -606,7 +605,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   // Send notification email
@@ -687,7 +685,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -1829,7 +1826,6 @@ if (throw error) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         </AspectRatio>
@@ -1938,7 +1934,6 @@ if (throw error) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                       <FormControl>

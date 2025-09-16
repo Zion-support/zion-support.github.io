@@ -58,7 +58,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 };  const handleRemoveEntry = (id: string,) => {
@@ -263,9 +262,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 };
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
           </div>;
         </div>;

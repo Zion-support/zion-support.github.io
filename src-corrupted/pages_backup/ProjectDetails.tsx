@@ -1371,7 +1371,6 @@ function ProjectDetailsContent() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               {/* Conditional Footer Based on Status */}
@@ -1482,7 +1481,6 @@ function ProjectDetailsContent() {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
   )

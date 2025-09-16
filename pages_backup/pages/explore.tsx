@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react',
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
  } from 'lucide-react';
-import {motion, AnimatePresence} from 'framer-motion';
+
 import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
 
 import SmartHeader from '../components/SmartHeader';
@@ -304,7 +304,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 
 
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {;
   Search, Filter, Grid, List, ArrowRight, ChevronRight,;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
@@ -496,12 +496,9 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
         return 0;    }
   });
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   return (
@@ -564,12 +561,8 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           >
@@ -623,12 +616,8 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   <input
@@ -653,12 +642,8 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 <select
@@ -707,13 +692,9 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -913,7 +894,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -941,12 +921,8 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                   </div>
                   
@@ -962,8 +938,6 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
@@ -1012,7 +986,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1032,13 +1005,10 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               <motion.div
 
 
@@ -1309,12 +1279,8 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                           Explore Category

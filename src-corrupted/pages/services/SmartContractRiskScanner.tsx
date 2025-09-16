@@ -13,13 +13,11 @@
 
   
   ;
-=======
 '
   marketSize: '$2.8 billion','
     growthRate: '23.4% CAGR','
     averageMarketPrice: '$500-$2,000/month','
     setupTime: '1-2 weeks',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -730,7 +728,6 @@
 </motion>
 </motion>
 </SEO>
-=======
 import React from 'react';
 
 export default function SmartContractRiskScanner() {
@@ -747,4 +744,3 @@ export default function SmartContractRiskScanner() {
     </main>
   );
 }
->>>>>>> origin/main

@@ -45,12 +45,8 @@ export default function GovernanceTrustPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
               </div>
             ))}
@@ -80,12 +76,8 @@ export default function GovernanceTrustPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             </div>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
@@ -324,7 +316,6 @@ import Link from 'next / link';
               <div className='text-sm text-gray-600 dark:text-gray-400'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -429,7 +420,6 @@ export default function GovernanceTrustPage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

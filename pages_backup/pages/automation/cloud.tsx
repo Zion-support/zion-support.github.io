@@ -22,7 +22,6 @@ import { useEffect, useState } from 'react',
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default function CloudAutomationHub() {
@@ -76,12 +75,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -105,7 +100,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -179,17 +173,12 @@ export default function CloudAutomationHub(req, res) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

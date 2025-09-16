@@ -4,7 +4,6 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -74,7 +73,6 @@ const LoginPage = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 } from '@/components/ui/card';
@@ -90,13 +88,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -598,7 +594,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   const handleLogin = async (e: FormEvent) => {
@@ -718,14 +713,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   // --- Rendering Logic ---
@@ -796,7 +787,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   return (
@@ -818,22 +808,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     );
     return null; // Or a minimal loader/empty div  }
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -957,13 +942,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -1019,15 +1000,11 @@ export default LoginPage,
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

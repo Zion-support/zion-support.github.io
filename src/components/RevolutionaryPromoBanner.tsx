@@ -1,146 +1,146 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryPromoBanner: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentPromo, setCurrentPromo] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const banners = [
+  const promos = [
     {
-      id: 1,
-      title: "🚀 BREAKTHROUGH 2026 CONTENT NOW LIVE!",
-      subtitle: "Experience the most advanced technology showcase featuring AI, Quantum Computing, Neural Interfaces, and Space Technology",
-      cta: "Explore Now",
-      link: "/pages/NextGenTechShowcase2026",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      bgGradient: "from-purple-500/20 via-pink-500/20 to-red-500/20"
+      title: "🚀 Revolutionary Tech Breakthrough 2026",
+      description: "Experience the most revolutionary technological breakthroughs reshaping our world",
+      link: "/pages/RevolutionaryTechBreakthrough2026",
+      color: "from-purple-600 to-pink-600",
+      icon: "🚀"
     },
     {
-      id: 2,
-      title: "🧬 NEW: Advanced Biotech Solutions 2026",
-      subtitle: "Revolutionary biotechnology solutions transforming healthcare, agriculture, and environmental sustainability",
-      cta: "Discover Biotech",
-      link: "/pages/AdvancedBiotechSolutions2026",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      bgGradient: "from-emerald-500/20 via-teal-500/20 to-cyan-500/20"
+      title: "🌟 Ultimate Tech Showcase 2026",
+      description: "Interactive exploration of the most advanced technologies revolutionizing human existence",
+      link: "/pages/UltimateTechShowcase2026",
+      color: "from-indigo-600 to-purple-600",
+      icon: "🌟"
     },
     {
-      id: 3,
-      title: "🤖 Advanced Robotics 2026 - Now Available!",
-      subtitle: "Next-generation robotics with AI, advanced sensors, and autonomous capabilities revolutionizing industries",
-      cta: "View Robotics",
-      link: "/pages/AdvancedRobotics2026",
-      gradient: "from-slate-600 via-gray-600 to-zinc-600",
-      bgGradient: "from-slate-500/20 via-gray-500/20 to-zinc-500/20"
-    },
-    {
-      id: 4,
-      title: "🌌 Space Technology Innovation 2026",
-      subtitle: "Pioneering space technologies enabling interplanetary exploration and space colonization",
-      cta: "Explore Space Tech",
-      link: "/pages/SpaceTechInnovation2026",
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      bgGradient: "from-indigo-500/20 via-purple-500/20 to-pink-500/20"
+      title: "🧠 Consciousness Computing 2026",
+      description: "The first AI systems to achieve true consciousness and self-awareness",
+      link: "/pages/ConsciousnessComputing2026",
+      color: "from-emerald-600 to-cyan-600",
+      icon: "🧠"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 8000);
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentPromo((prev) => (prev + 1) % promos.length);
+        setIsAnimating(false);
+      }, 500);
+    }, 4000);
+
     return () => clearInterval(interval);
-  }, [banners.length]);
-
-  const closeBanner = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
+  }, [promos.length]);
 
   return (
-    <div className="relative overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentBanner}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className={`relative bg-gradient-to-r ${banners[currentBanner].bgGradient} backdrop-blur-sm border-b border-white/20`}
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-1"></div>
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce">
+            🌟 BRAND NEW • REVOLUTIONARY CONTENT 2026
           </div>
-          
-          <div className="relative z-10 container mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="flex items-center space-x-4"
-                >
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl animate-bounce">🌟</span>
-                    <h2 className="text-lg font-bold text-white">
-                      {banners[currentBanner].title}
-                    </h2>
-                  </div>
-                  <p className="text-sm text-white/90 hidden md:block max-w-2xl">
-                    {banners[currentBanner].subtitle}
-                  </p>
-                </motion.div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Content Experience
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Discover our most advanced and revolutionary content that showcases the future of technology
+          </p>
+        </div>
+
+        {/* Rotating Promo Display */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+            <div className={`bg-gradient-to-br ${promos[currentPromo].color}/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 relative overflow-hidden`}>
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+                <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-white/20 to-transparent rounded-full transform translate-x-32 translate-y-32"></div>
               </div>
               
-              <div className="flex items-center space-x-4">
-                <motion.a
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.4 }}
-                  href={banners[currentBanner].link}
-                  className={`bg-gradient-to-r ${banners[currentBanner].gradient} text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-semibold text-sm whitespace-nowrap`}
-                >
-                  {banners[currentBanner].cta} →
-                </motion.a>
-                
-                <button
-                  onClick={closeBanner}
-                  className="text-white/70 hover:text-white transition-colors p-1"
-                  aria-label="Close banner"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+              <div className="relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                    <div className="text-8xl mb-6 animate-bounce">{promos[currentPromo].icon}</div>
+                    <h3 className="text-4xl font-bold mb-6">{promos[currentPromo].title}</h3>
+                    <p className="text-xl opacity-90 mb-8">{promos[currentPromo].description}</p>
+                    
+                    <div className="flex flex-wrap gap-4">
+                      <a 
+                        href={promos[currentPromo].link}
+                        className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105"
+                      >
+                        Explore Now →
+                      </a>
+                      <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+                        Watch Demo
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 backdrop-blur-sm border border-white/20">
+                      <div className="text-center mb-6">
+                        <div className="text-6xl mb-4">⚡</div>
+                        <h4 className="text-2xl font-bold mb-2">Revolutionary Features</h4>
+                        <p className="opacity-90">Experience the future in action</p>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="bg-white/20 rounded-lg p-4">
+                          <div className="text-sm opacity-90 mb-2">Innovation Level</div>
+                          <div className="w-full bg-gray-700 rounded-full h-3">
+                            <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full w-5/6 animate-pulse"></div>
+                          </div>
+                        </div>
+                        <div className="bg-white/20 rounded-lg p-4">
+                          <div className="text-sm opacity-90 mb-2">Future Impact</div>
+                          <div className="w-full bg-gray-700 rounded-full h-3">
+                            <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full w-full animate-pulse"></div>
+                          </div>
+                        </div>
+                        <div className="bg-white/20 rounded-lg p-4">
+                          <div className="text-sm opacity-90 mb-2">Revolutionary Score</div>
+                          <div className="w-full bg-gray-700 rounded-full h-3">
+                            <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-3 rounded-full w-4/5 animate-pulse"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          <div className="flex justify-center space-x-3 mt-8">
+            {promos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentPromo(index)}
+                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                  index === currentPromo ? 'bg-purple-500 scale-125' : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
+        </div>
 
-          {/* Progress Bar */}
-          <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
-            <motion.div
-              className={`h-full bg-gradient-to-r ${banners[currentBanner].gradient}`}
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 8, ease: "linear" }}
-            />
           </div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Banner Indicators */}
-      <div className="absolute bottom-2 right-4 flex space-x-1">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentBanner ? 'bg-white' : 'bg-white/30'
-            }`}
-          />
-        ))}
+        </div>
       </div>
     </div>
   );

@@ -28,11 +28,9 @@ export default function TestSimple(req, res) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

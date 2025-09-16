@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const Innovations: NextPage = () => {
   const functions = [
@@ -88,11 +79,6 @@ const Innovations: NextPage = () => {
     {
       name: 'Deep Link Health (from Site Index)',
       id: 'deep_link_health_from_index',
-<<<<<<< HEAD
-      desc: 'Checks all discovered links from the site index and commits a deep health report, optionally opens an issue on high failure ratio.'
-=======
-      desc: 'Checks all discovered links from the site index and commits a deep health report; optionally opens an issue on high failure ratio.'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Sitemap Submitter',
@@ -107,11 +93,6 @@ const Innovations: NextPage = () => {
     {
       name: 'External Link Audit',
       id: 'external_link_audit',
-<<<<<<< HEAD
-      desc: 'Audits external links discovered across key pages and commits a health report, opens an issue if failure rate is high.'
-=======
-      desc: 'Audits external links discovered across key pages and commits a health report; opens an issue if failure rate is high.'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Automation Summary',
@@ -123,11 +104,6 @@ const Innovations: NextPage = () => {
       id: 'readme_badges_updater',
       desc: 'Updates README.md badges to reflect the latest automation status.'
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div>
@@ -149,23 +125,7 @@ const Innovations: NextPage = () => {
         </div>
         <div className="mt-8">
           <Link href="/">
-<<<<<<< HEAD
-            <a className="text-indigo-700 font-semibold hover: underline">← Back to Home</a>
-=======
-            <a className="text-indigo-700 font-semibold hover:underline">← Back to Home</a>
->>>>>>> origin/auto/autonomy-17186719616
           </Link>
         </div>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-},
-
-export default Innovations,
-=======
-  );
-};
-
-export default Innovations;
->>>>>>> origin/auto/autonomy-17186719616

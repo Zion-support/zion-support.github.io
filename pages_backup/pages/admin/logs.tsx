@@ -4,8 +4,6 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 import fs from 'fs';
@@ -25,7 +23,6 @@ import {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 } from 'lucide-react';
 
@@ -140,12 +137,8 @@ interface LogsPageProps {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   logs: LogEntry[];
@@ -165,7 +158,6 @@ interface LogsPageProps {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -245,11 +237,9 @@ export default function LogsPage(): any ({;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -410,8 +400,6 @@ export default function LogsPage(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
@@ -474,7 +462,6 @@ export default function LogsPage(): any ({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
@@ -567,7 +554,6 @@ const formatTimestamp = (timestamp: string) => {
 
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
@@ -585,9 +571,6 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -618,13 +601,9 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -688,12 +667,8 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       <Card>
@@ -749,8 +724,6 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -776,11 +749,8 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -816,12 +786,8 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   {log.context && Object.keys(log.context).length > 0 && (
@@ -856,13 +822,9 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -884,7 +846,6 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1085,9 +1046,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 

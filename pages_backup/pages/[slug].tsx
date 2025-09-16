@@ -83,7 +83,6 @@ import path from 'path';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -578,11 +577,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								{(service.features || []).slice(0, 12).map((f: string) => (
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
@@ -632,11 +628,9 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -847,13 +841,9 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

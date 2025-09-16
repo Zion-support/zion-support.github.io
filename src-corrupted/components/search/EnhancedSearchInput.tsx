@@ -354,8 +354,6 @@ function handleClickOutside() {
         // setHighlightedIndex (-1), // Already handled in on_blur generally;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
       if (suggestionObj.id) {
@@ -372,8 +370,6 @@ function handleClickOutside() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
       }
     }
@@ -797,7 +793,6 @@ if ( {) {
 
     switch(e && e.key) {;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

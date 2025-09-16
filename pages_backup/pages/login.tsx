@@ -3,14 +3,14 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { motion } from "framer-motion";
+
 import Layout from "./components/Layout";
 
 import {
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import Layout from './components/Layout';
 origin/automation-improvements-final
 import {
@@ -193,8 +193,6 @@ import {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from "lucide-react";

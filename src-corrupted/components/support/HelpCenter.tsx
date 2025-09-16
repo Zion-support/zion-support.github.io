@@ -35,7 +35,6 @@ function HelpCenter() {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   },
   const handleArticleSelect = (article_id: string, ) =>: any {

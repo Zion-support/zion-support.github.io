@@ -7,17 +7,6 @@ import { cn } from "@/lib/utils"
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
-<<<<<<< HEAD
->(({ className...props }ref) => {
-  return (
-    <RadioGroupPrimitive.Root
-      className={cn("grid gap-2"className)}
-=======
->(({ className, ...props }, ref) => {
-  return (
-    <RadioGroupPrimitive.Root
-      className={cn("grid gap-2", className)}
->>>>>>> origin/auto/autonomy-17186719616
       {...props}
       ref={ref}
     />
@@ -28,11 +17,6 @@ RadioGroup.displayName = RadioGroupPrimitive.Root.displayName
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
-<<<<<<< HEAD
->(({ className...props }ref) => {
-=======
->(({ className, ...props }, ref) => {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <RadioGroupPrimitive.Item
       ref={ref}
@@ -50,8 +34,3 @@ const RadioGroupItem = React.forwardRef<
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
-<<<<<<< HEAD
-export { RadioGroupItem }
-=======
-export { RadioGroup, RadioGroupItem }
->>>>>>> origin/auto/autonomy-17186719616

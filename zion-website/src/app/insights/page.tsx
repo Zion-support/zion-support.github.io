@@ -33,6 +33,14 @@ const articles = [
     tag: 'Playbook',
     date: '2025-07-30',
   },
+  {
+    title: 'Autonomous Experimentation Playbook (2026)',
+    description:
+      'How to run continuous, policy-safe experiments with eval gates and auto-rollback.',
+    href: '/blog/ai-2026-autonomous-experimentation-playbook',
+    tag: 'Playbook',
+    date: '2025-09-15',
+  },
 ]
 
 export default function InsightsPage() {

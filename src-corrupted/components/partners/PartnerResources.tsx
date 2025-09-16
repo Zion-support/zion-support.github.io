@@ -38,7 +38,6 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface ResourceItem {
   id: string;

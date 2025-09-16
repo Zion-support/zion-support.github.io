@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
-=======
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
->>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
@@ -22,11 +17,6 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-<<<<<<< HEAD
-              <Input placeholder="San FranciscoCA" {...field} />
-=======
-              <Input placeholder="San Francisco, CA" {...field} />
->>>>>>> origin/auto/autonomy-17186719616
             </FormControl>
             <FormMessage />
           </FormItem>

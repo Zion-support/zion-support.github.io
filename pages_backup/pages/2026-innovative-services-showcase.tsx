@@ -2,14 +2,14 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
@@ -417,13 +417,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -658,7 +654,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                     }`}
@@ -669,7 +664,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 ))}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -853,8 +847,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                         </div>
@@ -950,7 +942,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       {/* Features Preview */}
                       <div className='mb-4'>
@@ -1211,13 +1202,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1407,7 +1394,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { SendPaperclipIconChevronLeftMoreVerticalVideoPhone } from "lucide-react";
-=======
-import React, { useState } from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -38,13 +25,6 @@ interface MobileChatViewProps {
   onSendMessage: (content: string) => void;
 }
 
-<<<<<<< HEAD
-export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileChatViewProps) {
-  const [newMessagesetNewMessage] = useState("");
-=======
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
->>>>>>> origin/auto/autonomy-17186719616
   const navigate = useNavigate();
   
   const handleSend = () => {
@@ -63,11 +43,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
-<<<<<<< HEAD
-    toast.success("Starting video call"{
-=======
-    toast.success("Starting video call", {
->>>>>>> origin/auto/autonomy-17186719616
       description: `Connecting with ${contact.name}...`
     });
     
@@ -77,11 +52,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
-<<<<<<< HEAD
-    toast.success("Starting audio call"{
-=======
-    toast.success("Starting audio call", {
->>>>>>> origin/auto/autonomy-17186719616
       description: `Connecting with ${contact.name}...`
     });
     

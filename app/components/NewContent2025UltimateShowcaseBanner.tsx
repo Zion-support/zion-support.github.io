@@ -38,17 +38,15 @@ export default function NewContent2025UltimateShowcaseBanner() {
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
             <div className="flex items-start space-x-4">
-              <div className="text-4xl">⚡</div>
+              <div className="text-4xl">💸</div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Hyperautomation Playbook</h3>
-                <p className="text-white opacity-90 mb-4">
-                  Complete implementation guide for AI-driven hyperautomation across your enterprise.
-                </p>
+                <h3 className="text-xl font-bold mb-2">Autonomous Cost Optimization</h3>
+                <p className="text-white opacity-90 mb-4">A blueprint to reduce cloud and AI spend safely.</p>
                 <Link 
-                  href="/blog/ai-2026-hyperautomation-business-playbook"
+                  href="/content/ai-2026-autonomous-cost-optimization-blueprint"
                   className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Playbook →
+                  Read Blueprint →
                 </Link>
               </div>
             </div>

@@ -74,8 +74,6 @@ import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
 import { ArrowRight, Star, Download, Eye, Code, Database, Shield, Zap, CheckCircle } from 'lucide-react';
 const "Products": NextPage = () => {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const products = [{
       title: \'ZionAI Platform\',
       \"description\": \'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.\',
@@ -200,8 +198,6 @@ const "Products": NextPage = () => {
     'Data Analytics',
     'IoT Platforms',
     'Blockchain'
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ];
   const benefits = [{
       \"title\": \'Enterprise Ready\',
@@ -272,8 +268,6 @@ const "Products": NextPage = () => {
               your most complex business challenges.
             </p>
           </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             {products.map((product) => (
               <div
                 key={product.title}
@@ -293,8 +287,6 @@ const "Products": NextPage = () => {
                       <span className=\"ml-1 text-sm text-gray-500\">({product.reviews})</span>
                     </div>
                   </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     {product.title}
                   </h3>
                   <p className=\"text-gray-600 mb-4\">
@@ -308,8 +300,6 @@ const "Products": NextPage = () => {
                     <p className="text-lg font-semibold text-blue-600">{product.pricing}</p>
                   </div>
                   <ul className="space-y-2 mb-6">
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     {product.features.slice(0, 3).map((feature) => (
                       <li key={feature} className=\"flex items-center text-sm text-gray-600\">
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
@@ -317,8 +307,6 @@ const "Products": NextPage = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     <Link
                       href={product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\"
@@ -347,8 +335,6 @@ const "Products": NextPage = () => {
               Built with enterprise-grade technology and designed for real-world business needs.
             </p>
           </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             {benefits.map((benefit) => (
               <div key={benefit.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -376,8 +362,6 @@ const "Products": NextPage = () => {
               Choose the plan that best fits your business needs and scale as you grow.
             </p>
           </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             {[{
                 name: \'Starter\',
                 \"price\": \'$299\',
@@ -448,11 +432,9 @@ const "Products": NextPage = () => {
                 </div>
                 <ul className=\"space-y-3 mb-8\">
                 <ul className="space-y-3 mb-8">
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                   </div>
                   <p className=\"text-gray-600\">{plan.description}</p>
                 </div>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   {plan.features.map((feature) => (
                     <li key={feature} className=\"flex items-center\">
                       <CheckCircle className=\"h-5 w-5 text-green-500 mr-3\" />
@@ -502,5 +484,3 @@ const "Products": NextPage = () => {
   );
 };
 export default Products;
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

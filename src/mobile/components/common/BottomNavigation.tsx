@@ -19,7 +19,7 @@ export function BottomNavigation() {
       {navItems.map((item) => {
         const isActive = router.pathname === item.path;
         return (
-          <Link 
+          <a 
             key={item.path} 
             href={item.path}
             className={cn(
@@ -33,7 +33,7 @@ export function BottomNavigation() {
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
-          </Link>
+          </a>
         );
       })}
     </div>

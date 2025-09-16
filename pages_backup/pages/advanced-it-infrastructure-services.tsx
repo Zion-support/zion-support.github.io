@@ -2,13 +2,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -145,7 +145,7 @@ const contactInfo = {;
 const testimonials = [
 import Head from 'next / head';
 import Link from 'next / link';
-import {motion} from 'framer-motion';
+
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 const contact_info = {
@@ -268,7 +268,7 @@ export default function AdvancedITInfrastructureServices() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
@@ -547,12 +547,8 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           >
@@ -594,8 +590,6 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -768,7 +762,6 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -821,8 +814,6 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -950,12 +941,8 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     >
@@ -1014,12 +1001,8 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                           </div>
@@ -1161,8 +1144,6 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1245,8 +1226,6 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1288,12 +1267,8 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               >
@@ -1332,15 +1307,10 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 

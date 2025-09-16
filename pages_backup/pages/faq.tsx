@@ -211,12 +211,10 @@ export default function FAQ() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <section className="py-16 px-4 bg-slate-900/40">

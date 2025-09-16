@@ -210,10 +210,8 @@ export default function AIFinancialRiskPage(req, res) {
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 </div>              </div>;
->>>>>>> origin/feature/merge-conflicts-and-improvements
             </div>;
           </div>;
         </div>;
@@ -226,11 +224,8 @@ export default function AIFinancialRiskPage(req, res) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

@@ -102,7 +102,6 @@ export function SEOHead({ ;
   );
 }
 export default SEOHead;
-=======
       </script>;
     </Helmet>;
   );

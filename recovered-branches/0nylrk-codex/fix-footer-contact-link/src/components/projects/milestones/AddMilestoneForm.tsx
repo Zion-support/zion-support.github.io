@@ -3,11 +3,6 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-<<<<<<< HEAD
-CalendarIconLoader2
-=======
-import { CalendarIcon, Loader2 } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { format } from 'date-fns';
 
 import { Button } from '@/components/ui/button';
@@ -18,39 +13,15 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage} from '@/components/ui/form';
-=======
-  FormMessage,
-} from '@/components/ui/form';
->>>>>>> origin/auto/autonomy-17186719616
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
   Popover,
   PopoverContent,
-<<<<<<< HEAD
-  PopoverTrigger} from '@/components/ui/popover';
-=======
-  PopoverTrigger,
-} from '@/components/ui/popover';
->>>>>>> origin/auto/autonomy-17186719616
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 
 const formSchema = z.object({
-<<<<<<< HEAD
-  title: z.string().min(1'Title is required'),
-  description: z.string().optional(),
-  due_date: z.date().optional(),
-  amount: z.coerce.number().min(0'Amount must be greater than or equal to 0')});
-=======
-  title: z.string().min(1, 'Title is required'),
-  description: z.string().optional(),
-  due_date: z.date().optional(),
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0'),
-});
->>>>>>> origin/auto/autonomy-17186719616
 
 type MilestoneFormValues = z.infer<typeof formSchema>;
 
@@ -78,13 +49,6 @@ export function AddMilestoneForm({
     defaultValues: {
       title: '',
       description: '',
-<<<<<<< HEAD
-      amount: 0}});
-=======
-      amount: 0,
-    },
-  });
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values);
@@ -92,41 +56,21 @@ export function AddMilestoneForm({
   };
 
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
-<<<<<<< HEAD
-    // If there's only one milestonesubmit it directly
-=======
-    // If there's only one milestone, submit it directly
->>>>>>> origin/auto/autonomy-17186719616
     if (milestones.length === 1) {
       const milestone = milestones[0];
       onSubmit({
         title: milestone.title,
         description: milestone.description,
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
-<<<<<<< HEAD
-        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount
-=======
-        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
->>>>>>> origin/auto/autonomy-17186719616
       });
       return;
     }
 
-<<<<<<< HEAD
-    // If there are multiple milestonesubmit them one by one
-=======
-    // If there are multiple milestones, submit them one by one
->>>>>>> origin/auto/autonomy-17186719616
     milestones.forEach(milestone => {
       onSubmit({
         title: milestone.title,
         description: milestone.description,
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
-<<<<<<< HEAD
-        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount
-=======
-        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
->>>>>>> origin/auto/autonomy-17186719616
       });
     });
   };
@@ -136,11 +80,6 @@ export function AddMilestoneForm({
       title: milestone.title,
       description: milestone.description,
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
-<<<<<<< HEAD
-      amount: milestone.estimatedHours * 10// Convert hours to a default payment amount
-=======
-      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
->>>>>>> origin/auto/autonomy-17186719616
     });
   };
 
@@ -207,11 +146,6 @@ export function AddMilestoneForm({
                           className="w-full pl-3 text-left font-normal"
                         >
                           {field.value ? (
-<<<<<<< HEAD
-                            format(field.value"PPP")
-=======
-                            format(field.value, "PPP")
->>>>>>> origin/auto/autonomy-17186719616
                           ) : (
                             <span className="text-muted-foreground">
                               Pick a date

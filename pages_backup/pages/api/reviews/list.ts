@@ -158,7 +158,6 @@ if (author_name = "Anonymous") {
 ;
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
     const summary: ReviewsSummary = {
       average_rating,
@@ -327,5 +326,4 @@ export default async function handler(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 

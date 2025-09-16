@@ -83,7 +83,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
 
 
   DialogTrigger} from "@/components/ui/dialog",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
   Card
@@ -112,7 +111,6 @@ type: 'credit' | 'feature' | 'course'
 }
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 const REWARD_OPTIONS: RewardOption[] = [
   {
@@ -145,9 +143,6 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -156,8 +151,7 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
   return (
@@ -278,7 +272,6 @@ const REWARD_OPTIONS: RewardOption[] = [
               <DialogDescription>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     </Button>

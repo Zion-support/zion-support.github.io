@@ -58,10 +58,8 @@ export default function PitchGenerator() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -169,8 +167,6 @@ export default function PitchGenerator() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     setLoading(true);
@@ -376,12 +372,10 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     setLoading(true);
@@ -527,7 +521,6 @@ if (return) {
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
@@ -577,12 +570,8 @@ if (return) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {type === 'timeline' && (
@@ -653,8 +642,6 @@ if (return) {
     )
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
   return (
 
@@ -676,8 +663,6 @@ if (return) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
         </div>
       </div>
@@ -874,13 +859,9 @@ if (return) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

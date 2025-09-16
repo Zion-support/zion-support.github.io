@@ -1,4 +1,3 @@
-import { useState, useEffect, useCallback } from 'react';
 
 export interface Webhook {
   id: string;
@@ -6,9 +5,6 @@ export interface Webhook {
   url: string;
   events: string[];
   secret?: string;
-  isActive: boolean;
-  createdAt: string;
-  lastTriggered?: string;
   failureCount: number;
 }
 
@@ -36,8 +32,6 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const [events, setEvents] = useState<WebhookEvent[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Fetch webhooks
   const fetchWebhooks = useCallback(async () => {
     try {
       setLoading(true);
@@ -243,4 +237,3 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   };
 };
 
-export default useWebhooks;

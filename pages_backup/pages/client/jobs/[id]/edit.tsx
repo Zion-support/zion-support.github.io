@@ -22,12 +22,10 @@ export default function EditJobPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   const router = useRouter();
@@ -110,7 +108,6 @@ export default function EditJobPage(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   if (!job) return <div>Loading…</div>;
 
@@ -120,8 +117,6 @@ export default function EditJobPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       body: JSON && JSON.stringify({ title, description, category }),;
@@ -135,7 +130,6 @@ export default function EditJobPage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

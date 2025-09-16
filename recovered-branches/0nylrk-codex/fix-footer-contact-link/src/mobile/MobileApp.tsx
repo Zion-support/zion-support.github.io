@@ -1,10 +1,5 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { RoutesRouteNavigate } from "react-router-dom";
-=======
-import { Routes, Route, Navigate } from "react-router-dom";
->>>>>>> origin/auto/autonomy-17186719616
 import { MobileThemeProvider } from "./theme/MobileThemeProvider";
 import { MobileOnboarding } from "./pages/MobileOnboarding";
 import { MobileHome } from "./pages/MobileHome";

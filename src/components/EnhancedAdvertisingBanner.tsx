@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedAdvertisingBanner: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
@@ -8,47 +7,43 @@ const EnhancedAdvertisingBanner: React.FC = () => {
   const advertisements = [
     {
       id: 1,
-      title: "🚀 NEW: Ultimate Tech Showcase 2026",
-      subtitle: "Experience Revolutionary Technologies",
-      description: "Discover cutting-edge AI, quantum computing, neural interfaces, and blockchain innovations that are reshaping our world.",
+      title: "🚀 BREAKTHROUGH: Next-Gen AI 2026",
+      subtitle: "Experience Revolutionary Synthetic Intelligence",
+      description: "Discover the future of AI with our groundbreaking synthetic intelligence systems that transcend traditional computing",
       cta: "Explore Now",
-      link: "/pages/UltimateTechShowcase2026",
+      link: "/pages/SyntheticIntelligence2026",
       gradient: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🌟",
-      features: ["Interactive Demos", "Live Analytics", "Future Predictions"]
+      icon: "🧠"
     },
     {
       id: 2,
-      title: "🧠 AI Innovation Showcase 2026",
-      subtitle: "The Future of Artificial Intelligence",
-      description: "Experience autonomous AI agents, quantum-enhanced processing, neural interfaces, and synthetic intelligence.",
-      cta: "Try AI Demo",
-      link: "/pages/AIInnovationShowcase2026",
+      title: "⚡ QUANTUM REVOLUTION 2026",
+      subtitle: "Advanced Quantum Computing Solutions",
+      description: "Unlock exponential processing power with 1000+ qubit quantum processors and quantum supremacy technology",
+      cta: "Go Quantum",
+      link: "/pages/AdvancedQuantumComputing2026",
       gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      icon: "🤖",
-      features: ["Autonomous Agents", "Quantum AI", "Neural Interfaces"]
+      icon: "⚛️"
     },
     {
       id: 3,
-      title: "⚡ Quantum Computing Revolution",
-      subtitle: "Exponential Computing Power",
-      description: "Unlock quantum supremacy with 1000+ qubit processors, molecular simulation, and unbreakable encryption.",
-      cta: "Go Quantum",
-      link: "/pages/QuantumComputingRevolution2026",
+      title: "🧬 NEURAL INTERFACE 2026",
+      subtitle: "Direct Brain-Computer Communication",
+      description: "Bridge mind and machine with revolutionary neural interface technology for thought-controlled devices",
+      cta: "Connect Mind & Machine",
+      link: "/pages/NeuralInterfaceRevolution2026",
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "⚛️",
-      features: ["Quantum Supremacy", "Molecular Simulation", "Instant Transactions"]
+      icon: "🧬"
     },
     {
       id: 4,
-      title: "🧬 Neural Interface Technology",
-      subtitle: "Mind-Machine Fusion",
-      description: "Direct brain-computer interfaces enabling thought control, memory enhancement, and telepathic communication.",
-      cta: "Connect Mind",
-      link: "/pages/NeuralInterfaceRevolution2026",
+      title: "🌟 ULTIMATE TECH SHOWCASE",
+      subtitle: "Interactive Technology Experience",
+      description: "Experience the most advanced technologies with live demos, real-time simulations, and hands-on experiments",
+      cta: "Explore Ultimate Showcase",
+      link: "/pages/UltimateTechShowcase2026",
       gradient: "from-orange-600 via-red-600 to-pink-600",
-      icon: "🧬",
-      features: ["Thought Control", "Memory Enhancement", "Neural Networking"]
+      icon: "🌟"
     }
   ];
 
@@ -56,109 +51,90 @@ const EnhancedAdvertisingBanner: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentAd((prev) => (prev + 1) % advertisements.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, [advertisements.length]);
 
-  const currentAdvertisement = advertisements[currentAd];
-
   if (!isVisible) return null;
+
+  const currentAdvertisement = advertisements[currentAd];
 
   return (
     <div className="relative overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentAd}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-          className={`bg-gradient-to-r ${currentAdvertisement.gradient} text-white relative overflow-hidden`}
-        >
-          {/* Background Animation */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
-          
-          <div className="relative z-10 container mx-auto px-4 py-8">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <div className="flex items-center space-x-4 mb-4">
-                  <span className="text-4xl animate-bounce">{currentAdvertisement.icon}</span>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold mb-1">
-                      {currentAdvertisement.title}
-                    </h2>
-                    <p className="text-lg opacity-90">
-                      {currentAdvertisement.subtitle}
-                    </p>
-                  </div>
+      {/* Main Advertising Banner */}
+      <div className={`bg-gradient-to-r ${currentAdvertisement.gradient} text-white py-4 px-6 relative`}>
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-4xl animate-bounce">{currentAdvertisement.icon}</div>
+              <div>
+                <div className="flex items-center space-x-2 mb-1">
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-bold animate-pulse">
+                    NEW
+                  </span>
+                  <h3 className="text-xl font-bold">{currentAdvertisement.title}</h3>
                 </div>
-                
-                <p className="text-base md:text-lg opacity-95 mb-4 max-w-3xl">
-                  {currentAdvertisement.description}
-                </p>
-                
-                <div className="flex flex-wrap items-center gap-4">
-                  <a
-                    href={currentAdvertisement.link}
-                    className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {currentAdvertisement.cta} →
-                  </a>
-                  
-                  <div className="flex space-x-2">
-                    {currentAdvertisement.features.map((feature, index) => (
-                      <span
-                        key={index}
-                        className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <div className="hidden md:block ml-8">
-                <div className="text-6xl opacity-20">
-                  {currentAdvertisement.icon}
-                </div>
+                <p className="text-sm opacity-90">{currentAdvertisement.subtitle}</p>
               </div>
             </div>
+            
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:block text-right">
+                <p className="text-sm opacity-90 max-w-md">{currentAdvertisement.description}</p>
+              </div>
+              <a
+                href={currentAdvertisement.link}
+                className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                {currentAdvertisement.cta} →
+              </a>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                ✕
+              </button>
+            </div>
           </div>
-          
-          {/* Close Button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          
-          {/* Progress Indicator */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-            <motion.div
-              className="h-full bg-white"
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 5, ease: "linear" }}
-            />
-          </div>
-        </motion.div>
-      </AnimatePresence>
-      
-      {/* Ad Indicators */}
-      <div className="flex justify-center space-x-2 mt-4">
+        </div>
+      </div>
+
+      {/* Progress Indicators */}
+      <div className="flex justify-center space-x-2 py-2 bg-gray-50">
         {advertisements.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentAd(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentAd ? 'bg-purple-600' : 'bg-gray-300'
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentAd ? 'bg-blue-600' : 'bg-gray-300'
             }`}
           />
         ))}
+      </div>
+
+      {/* Additional Promotional Banners */}
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-center space-x-8 text-sm">
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">⚡</span>
+              <span>Lightning Fast Processing</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">🎯</span>
+              <span>99.9% Accuracy</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">🚀</span>
+              <span>Cutting-Edge Innovation</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">🌟</span>
+              <span>Revolutionary Technology</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

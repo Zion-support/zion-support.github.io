@@ -32,4 +32,3 @@ export const LanguageProvider = ({ children, authState }) => {
       {children}
     </LanguageContext.Provider>
   );
-};

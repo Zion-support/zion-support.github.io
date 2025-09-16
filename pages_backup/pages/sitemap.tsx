@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { 
   Home, 
@@ -56,7 +56,6 @@ const sitemapData = [
     ]
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const sitemapData = [;
@@ -113,10 +112,10 @@ export default function SitemapPage() {
           <div className="max-w-7xl mx-auto px-4">
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+
 import Link from 'next/link';
 import { FileText, ExternalLink, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';

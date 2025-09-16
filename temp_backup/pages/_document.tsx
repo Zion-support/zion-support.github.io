@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
-import { Html, Head, Main, NextScript } from 'next/document';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function Document() {
   return (

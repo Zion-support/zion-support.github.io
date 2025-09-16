@@ -33,7 +33,6 @@ import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from 'react';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';
@@ -80,10 +79,7 @@ function handle_report() {
     await fetch ('/api / reviews / report', {
       method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ review_id: id, reason: 'Inappropriate content' })});
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   }
 }
@@ -146,7 +142,6 @@ export default ClientPage;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -175,11 +170,8 @@ export default ClientPage;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       </section>
     </main>
@@ -189,9 +181,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

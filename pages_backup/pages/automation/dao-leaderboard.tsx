@@ -47,7 +47,6 @@ export default function DaoLeaderboardPage() {
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">DAO Leaderboard</h1>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <ul className="mt-6 space-y-2">
           {items.map((it, idx) => (
             <li key={idx} className="p-3 border border-gray-200 dark:border-gray-800 rounded-lg flex items-center justify-between">

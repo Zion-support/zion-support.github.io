@@ -13,7 +13,6 @@ import Link from 'next / link';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -140,7 +139,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   const recentReports = [
@@ -184,7 +182,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -220,11 +217,8 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   return (
@@ -246,12 +240,8 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <div className="mb-8">
@@ -276,12 +266,8 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
@@ -313,8 +299,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -385,7 +369,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -409,12 +392,10 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   </span>
@@ -430,14 +411,10 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -477,12 +454,8 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <div className="mb-8">
@@ -499,13 +472,9 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 ensuring consistent improvement across all metrics.
@@ -549,12 +518,10 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             href="/reports"
@@ -598,7 +565,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

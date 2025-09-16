@@ -1,6 +1,4 @@
-=======
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-=======
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, ComprehensiveService } from '@/data/comprehensiveServices';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -223,7 +221,6 @@ export default function ComprehensiveServicesPage() {
             >
               Get Quote
             </a>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="pt-24 pb-16">
@@ -272,7 +269,6 @@ export default function ComprehensiveServicesPage() {
               <option value="medium">$5,000 - $15,000</option>
               <option value="high">$15,000+</option>
             </select>
-=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -301,7 +297,6 @@ import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } fro
 import { SEO } from "@/components/SEO";
 
 export default function ComprehensiveServicesPage() {
-=======
   DollarSign, 
   CheckCircle, 
   TrendingUp, 
@@ -393,7 +388,6 @@ export default function ComprehensiveServicesPage() {
         return 'Project-based';
       default:
         return model;
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -522,7 +516,6 @@ const ComprehensiveServicesPage = () => {
               <MapPin className="h-5 w-5" />
               <span className="font-medium">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
-=======
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -541,7 +534,6 @@ const ComprehensiveServicesPage = () => {
               <Mail className="h-5 w-5 mr-2" />
               kleber@ziontechgroup.com
             </Button>
-=======
       {/* Contact Information Banner */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
@@ -690,7 +682,6 @@ const ComprehensiveServicesPage = () => {
                   </CardDescription>
                 </CardHeader>
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-=======
   Globe, 
   Shield, 
   Cloud, 
@@ -832,7 +823,6 @@ export default function ComprehensiveServicesPage() {
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
               <a href={`tel:${CONTACT_INFO.mobile}`}>Call Now: {CONTACT_INFO.mobile}</a>
             </Button>
-=======
 const categoryIcons = {
   "AI & Machine Learning": <Brain className="h-6 w-6" />,
   "Cloud & DevOps": <Cloud className="h-6 w-6" />,
@@ -1123,7 +1113,6 @@ export default function ComprehensiveServicesPage() {
                   </div>
                 </Card>
               ))}
-=======
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -1163,7 +1152,6 @@ export default function ComprehensiveServicesPage() {
                 Clear Filters
               </button>
             </div>
-=======
               {/* Pricing Tier Filter */}
               <select
                 value={selectedPricingTier}
@@ -1237,7 +1225,6 @@ export default function ComprehensiveServicesPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
-=======
                 <CardContent className="pt-0">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2 text-zion-cyan">
@@ -1247,7 +1234,6 @@ export default function ComprehensiveServicesPage() {
                     <div className="flex items-center gap-2 text-zion-slate-light">
                       <Clock className="h-4 w-4" />
                       <span className="text-sm">{service.availability}</span>
-=======
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1415,7 +1401,6 @@ export default function ComprehensiveServicesPage() {
               <Mail className="mr-2 h-5 w-5" />
               Email: kleber@ziontechgroup.com
             </Button>
-=======
       {/* Pricing Overview */}
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -1542,7 +1527,6 @@ export default function ComprehensiveServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Flexible Scheduling</h3>
               <p className="text-zion-slate-light">Work around your schedule with minimal disruption</p>
-=======
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -1553,7 +1537,6 @@ export default function ComprehensiveServicesPage() {
                     </div>
                     <Link to={`/services?service=${service.id}`}>
                       <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-=======
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -1603,14 +1586,12 @@ export default function ComprehensiveServicesPage() {
                     <div>{service.contactInfo.email}</div>
                   </div>
                 </CardFooter>
-=======
               </Card>
             ))}
           </div>
         </div>
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple text-white">
-=======
       </div>
 
       {/* Pricing Information */}

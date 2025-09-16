@@ -43,11 +43,8 @@ type Props = { items: TalentItem[] },
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -86,7 +83,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   } catch {}

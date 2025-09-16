@@ -1,52 +1,816 @@
 #!/bin/bash
 
-echo "🔧 Resolving all merge conflicts in the codebase..."
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
+echo "🔧 Resolving ALL remaining merge conflicts..."
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
-    
-    # Remove all merge conflict markers and keep the HEAD version
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> .*/d' "$file"
-    
-    # Remove any empty lines that might be left
-    sed -i '/^[[:space:]]*$/d' "$file"
-    
-    echo "✅ Resolved conflicts in: $file"
-}
+# Find all files with merge conflict markers
+files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
 
-# Find all files with merge conflicts
-echo "🔍 Searching for files with merge conflicts..."
-conflict_files=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
-
-if [ -z "$conflict_files" ]; then
-    echo "✅ No merge conflicts found!"
-    exit 0
-fi
-
-echo "📋 Found files with conflicts:"
-echo "$conflict_files"
+echo "Found files with conflicts:"
+echo "$files_with_conflicts"
 
 # Process each file
-for file in $conflict_files; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Use git checkout --ours to resolve conflicts
+    git checkout --ours "$file" 2>/dev/null || echo "Could not resolve $file with git checkout --ours"
+    
+    # If git checkout didn't work, try manual resolution
+    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+        echo "Manual resolution needed for $file"
+        # Remove all conflict markers and keep the first version (HEAD)
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
     fi
 done
 
-echo ""
-echo "🎉 All merge conflicts have been resolved!"
-echo "📝 Files processed:"
-echo "$conflict_files"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+echo "🎉 All conflict resolution complete!"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+>>>>>>> cursor/create-and-deploy-new-content-079e
+echo "Resolving all merge conflicts by using main branch version..."
 
-# Check if there are any remaining conflicts
-remaining_conflicts=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
+# Find all files with merge conflicts
+conflicted_files=$(grep -r -l "<<<<<<< HEAD" src/ 2>/dev/null || true)
 
-if [ -z "$remaining_conflicts" ]; then
-    echo "✅ Verification: No remaining conflicts found!"
-else
-    echo "❌ Warning: Some conflicts may still exist in:"
-    echo "$remaining_conflicts"
+if [ -z "$conflicted_files" ]; then
+    echo "No merge conflicts found."
+    exit 0
 fi
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+
+# For each conflicted file, resolve conflicts by using main branch version
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    
+    # Use git checkout --theirs to resolve conflicts
+    git checkout --theirs "$file" 2>/dev/null || {
+        echo "Failed to resolve conflicts in $file, trying manual approach..."
+        
+        # Manual approach: remove conflict markers and keep the content after =======
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    }
+    
+    # Add the resolved file
+    git add "$file"
+done
+
+echo "All merge conflicts resolved!"
+echo "All merge conflicts resolved!"
+<<<<<<< HEAD
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+echo "All merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-87a1
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab

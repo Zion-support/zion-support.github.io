@@ -305,7 +305,6 @@ headers=headers) data = response.json () print (data) `
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 });'

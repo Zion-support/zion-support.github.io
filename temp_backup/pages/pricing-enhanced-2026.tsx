@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -237,24 +237,12 @@ export default function PricingEnhanced2026Page() {
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
-<<<<<<< HEAD
-          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026/" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-          <meta property="og:image:type" content="image/svg+xml" />
-=======
-          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/auto/autonomy-17186719616
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
-<<<<<<< HEAD
-          <meta name="twitter:image:type" content="image/svg+xml" />
-=======
->>>>>>> origin/auto/autonomy-17186719616
         </Head>
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">

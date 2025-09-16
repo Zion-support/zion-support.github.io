@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -191,24 +191,11 @@ export default function Services2026ShowcaseEnhancedPage() {
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
-<<<<<<< HEAD
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced/" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-          <meta property="og:image:type" content="image/svg+xml" />
-=======
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/auto/autonomy-17186719616
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
-<<<<<<< HEAD
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-=======
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/auto/autonomy-17186719616
         </Head>
 
         {/* Enhanced Header Section */}

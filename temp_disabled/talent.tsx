@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget
 import Layout from '../components/Layout';
 
@@ -181,7 +181,6 @@ export default function TalentPage() {
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-=======
           
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -201,7 +200,6 @@ export default function TalentPage() {
                 <Link
                   href="#positions"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
                 >
                   <Briefcase className="w-5 h-5 mr-2" />
                   View Open Positions

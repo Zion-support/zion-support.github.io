@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -22,19 +9,6 @@ export default function CaseStudies() {
       challenge: 'Complex supply chain management with 50+ locations worldwide, manual processes causing delays and inefficiencies.',
       solution: 'Implemented AI Autonomous Business Manager with predictive analytics and automated decision-making.',
       results: [
-<<<<<<< HEAD
-        '40% reduction in supply chain delays25% improvement in inventory management',
-        '30% cost savings in operations99.9% uptime achieved'
-      ],
-      technologies: ['AI/MLPredictive Analytics', 'AutomationCloud Infrastructure'],
-=======
-        '40% reduction in supply chain delays',
-        '25% improvement in inventory management',
-        '30% cost savings in operations',
-        '99.9% uptime achieved'
-      ],
-      technologies: ['AI/ML', 'Predictive Analytics', 'Automation', 'Cloud Infrastructure'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '6 months',
       roi: '300%',
       image: '🏭'
@@ -47,19 +21,6 @@ export default function CaseStudies() {
       challenge: 'Increasing cyber threats, manual security monitoring, compliance requirements, and 24/7 security operations.',
       solution: 'Deployed AI-Powered Enterprise Security with autonomous threat detection and response.',
       results: [
-<<<<<<< HEAD
-        '95% faster threat detection80% reduction in false positives',
-        '100% compliance achievementZero security breaches'
-      ],
-      technologies: ['AI SecurityThreat Intelligence', 'AutomationCompliance'],
-=======
-        '95% faster threat detection',
-        '80% reduction in false positives',
-        '100% compliance achievement',
-        'Zero security breaches'
-      ],
-      technologies: ['AI Security', 'Threat Intelligence', 'Automation', 'Compliance'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '4 months',
       roi: '400%',
       image: '🔒'
@@ -72,19 +33,6 @@ export default function CaseStudies() {
       challenge: 'High content creation costs, inconsistent quality, slow turnaround times, and scaling challenges.',
       solution: 'Integrated AI Content Generation Platform with personalized content creation and optimization.',
       results: [
-<<<<<<< HEAD
-        '70% reduction in content creation time60% improvement in content quality',
-        '3x increase in content output45% cost savings'
-      ],
-      technologies: ['NLPContent AI', 'PersonalizationAnalytics'],
-=======
-        '70% reduction in content creation time',
-        '60% improvement in content quality',
-        '3x increase in content output',
-        '45% cost savings'
-      ],
-      technologies: ['NLP', 'Content AI', 'Personalization', 'Analytics'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '3 months',
       roi: '250%',
       image: '📝'
@@ -97,19 +45,6 @@ export default function CaseStudies() {
       challenge: 'Complex computational problems, limited computing resources, and need for breakthrough research capabilities.',
       solution: 'Deployed Quantum Cloud Infrastructure with AI-powered research automation.',
       results: [
-<<<<<<< HEAD
-        '1000x faster computation for specific problemsBreakthrough discoveries in 3 research areas',
-        '50% reduction in research timeNew patent applications filed'
-      ],
-      technologies: ['Quantum ComputingAI Research', 'Cloud NativeResearch Automation'],
-=======
-        '1000x faster computation for specific problems',
-        'Breakthrough discoveries in 3 research areas',
-        '50% reduction in research time',
-        'New patent applications filed'
-      ],
-      technologies: ['Quantum Computing', 'AI Research', 'Cloud Native', 'Research Automation'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '12 months',
       roi: '500%',
       image: '⚛️'
@@ -122,19 +57,6 @@ export default function CaseStudies() {
       challenge: 'High diagnostic error rates, long wait times, limited specialist availability, and increasing patient load.',
       solution: 'Implemented AI Autonomous Healthcare Physician with diagnostic assistance and patient monitoring.',
       results: [
-<<<<<<< HEAD
-        '90% reduction in diagnostic errors60% faster diagnosis times',
-        '40% improvement in patient outcomes24/7 diagnostic availability'
-      ],
-      technologies: ['Medical AIComputer Vision', 'DiagnosticsPatient Monitoring'],
-=======
-        '90% reduction in diagnostic errors',
-        '60% faster diagnosis times',
-        '40% improvement in patient outcomes',
-        '24/7 diagnostic availability'
-      ],
-      technologies: ['Medical AI', 'Computer Vision', 'Diagnostics', 'Patient Monitoring'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '8 months',
       roi: '350%',
       image: '🏥'
@@ -147,28 +69,10 @@ export default function CaseStudies() {
       challenge: 'Complex blockchain transactions, regulatory compliance, fraud detection, and market analysis needs.',
       solution: 'Built AI Blockchain Analytics platform with governance and compliance automation.',
       results: [
-<<<<<<< HEAD
-        '99.9% fraud detection accuracyReal-time compliance monitoring',
-        '50% reduction in regulatory reporting timeEnhanced market insights'
-      ],
-      technologies: ['BlockchainAI Analytics', 'ComplianceReal-time Processing'],
-=======
-        '99.9% fraud detection accuracy',
-        'Real-time compliance monitoring',
-        '50% reduction in regulatory reporting time',
-        'Enhanced market insights'
-      ],
-      technologies: ['Blockchain', 'AI Analytics', 'Compliance', 'Real-time Processing'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '5 months',
       roi: '280%',
       image: '⛓️'
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -430,11 +334,6 @@ export default function CaseStudies() {
               <p className="text-xl text-white/80 mb-8">
                 Join the growing list of companies transforming their business with AI
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
                 <Link 
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -455,9 +354,4 @@ export default function CaseStudies() {
         <SmartFooter />
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

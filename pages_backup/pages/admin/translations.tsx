@@ -10,7 +10,6 @@ const TranslationPreview = dynamic(() => import('../../components/admin/Translat
 
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function TranslationsAdminPage() {
   return (

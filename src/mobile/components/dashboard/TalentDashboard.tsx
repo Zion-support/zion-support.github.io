@@ -12,11 +12,11 @@ export function TalentDashboard() {
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">New Job Matches</h2>
-          <Link href="/mobile/marketplace">
+          <a href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
               View all <ChevronRight className="h-4 w-4" />
             </Button>
-          </Link>
+          </a>
         </div>
         
         <div className="space-y-3">

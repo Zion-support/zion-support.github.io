@@ -17,7 +17,6 @@ origin/automation-improvements-final
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import React from 'react';
 
@@ -31,7 +30,6 @@ export default function Services() {
 
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 
 import Link from 'next / link';
@@ -2056,10 +2054,8 @@ origin/automation-improvements-final
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -2129,10 +2125,7 @@ origin/automation-improvements-final
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 import Head from 'next/head';
@@ -2367,13 +2360,8 @@ import Footer from '../components/Footer';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   return (
@@ -2528,8 +2516,6 @@ export default function Services() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -3141,9 +3127,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
               <Link href="/contact" className="btn-secondary">;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
@@ -3284,7 +3268,6 @@ export default function Services() {
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -3323,7 +3306,6 @@ export default function Services() {
               ))}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -3461,11 +3443,9 @@ export default function Services() {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

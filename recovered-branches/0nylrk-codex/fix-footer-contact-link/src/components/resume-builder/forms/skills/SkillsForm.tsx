@@ -2,37 +2,16 @@
 import { useState } from 'react';
 import { Skill } from '@/types/resume';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-import { AlertDescription } from '@/components/ui/alert';
-=======
-import { Alert, AlertDescription } from '@/components/ui/alert';
->>>>>>> origin/auto/autonomy-17186719616
 import { useResume } from '@/hooks/useResume';
 import { SkillsFormProps } from './types';
 import { SkillsList } from './SkillsList';
 import { AddSkillForm } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
 
-<<<<<<< HEAD
-export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) {
-  const { addSkilldeleteSkillfetchResume } = useResume();
-  const [errorsetError] = useState<string | null>(null);
-  const [localSkillsetLocalSkills] = useState<Skill[]>(skills);
-=======
-export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
-  const { addSkill, deleteSkill, fetchResume } = useResume();
-  const [error, setError] = useState<string | null>(null);
-  const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleAddSkill = async (data: Skill) => {
     try {
       setError(null);
-<<<<<<< HEAD
-      const success = await addSkill(resumeIdata);
-=======
-      const success = await addSkill(resumeId, data);
->>>>>>> origin/auto/autonomy-17186719616
       if (success) {
         // Refresh the skills list
         await refreshSkills();
@@ -44,11 +23,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     }
   };
 
-<<<<<<< HEAD
-  const handleDeleteSkill = async (id: stringcategory: string = 'Other') => {
-=======
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
->>>>>>> origin/auto/autonomy-17186719616
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id);
       if (success) {
@@ -69,11 +43,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     }
   };
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <div>

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import AdminLayout from '@/components/admin/AdminLayout',
-
-export default function FeatureFlagsAdminPage() {
-  const url = process.env.UNLEASH_URL || '',
-=======
-import React from 'react';
-import AdminLayout from '@/components/admin/AdminLayout';
-
-export default function FeatureFlagsAdminPage() {
-  const url = process.env.UNLEASH_URL || '';
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <AdminLayout>
       <div className="space-y-4">
@@ -24,9 +11,4 @@ export default function FeatureFlagsAdminPage() {
         </p>
       </div>
     </AdminLayout>
-<<<<<<< HEAD
-  ),
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

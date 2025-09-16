@@ -27,12 +27,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     title: "Resume Builder",
 
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."

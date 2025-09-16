@@ -10,11 +10,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -616,7 +613,7 @@ export default function EdgeComputingPage() {;
             className="text-center"
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import {;
   Cpu, Network, Zap, Shield, Database, Globe,;
   ArrowRight, CheckCircle, Star, TrendingUp, Users;
@@ -798,7 +795,6 @@ export default function EdgeComputingPage(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -929,7 +925,7 @@ export default function EdgeComputingPage(req, res) {
               <p className='text-lg text-slate-600 leading-relaxed mb-8'>;
 
 import Head from 'next / head';
-import {motion} from 'framer-motion';
+
 import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users, } from 'lucide-react';
 import EnhancedNavigation from '../components / EnhancedNavigation';
 import EnhancedFooter from '../components / EnhancedFooter';
@@ -1188,7 +1184,6 @@ function EdgeComputingPage() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1976,16 +1971,12 @@ function EdgeComputingPage() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 

@@ -466,7 +466,6 @@ export function WebhookManager() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
@@ -556,9 +555,6 @@ export function WebhookManager() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -729,7 +725,6 @@ export function WebhookManager() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         : 'Never triggered'}
@@ -778,7 +773,6 @@ export function WebhookManager() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

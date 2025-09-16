@@ -121,8 +121,6 @@ export default function ClientDashboard(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               </div>
             </div>
           </div>
@@ -161,11 +159,9 @@ export default function ClientDashboard(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

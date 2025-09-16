@@ -18,12 +18,8 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 export default function AIEvalsPage() {
 	const contactInfo = {
@@ -74,7 +70,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 					</div>
 				</div>
@@ -103,7 +98,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -136,7 +130,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 					</div>
 				</div>
@@ -154,7 +147,6 @@ export default function AIEvalsPage() {
 
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -172,10 +164,7 @@ export default function AIEvalsPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 					</div>
 				</div>
@@ -207,10 +196,7 @@ export default function AIEvalsPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -242,10 +228,7 @@ export default function AIEvalsPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 					</div>
 				</div>
@@ -270,14 +253,10 @@ export default function AIEvalsPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

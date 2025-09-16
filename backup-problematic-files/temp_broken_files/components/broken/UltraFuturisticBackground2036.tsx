@@ -710,7 +710,6 @@ ref={canvasRef}
         )}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {/* Quantum field lines */}
 {variant === 'quantum' && (

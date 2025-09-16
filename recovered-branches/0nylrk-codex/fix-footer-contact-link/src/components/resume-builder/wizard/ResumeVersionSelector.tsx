@@ -1,27 +1,11 @@
 
 import { useState } from 'react';
 import { 
-<<<<<<< HEAD
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-=======
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
->>>>>>> origin/auto/autonomy-17186719616
   DropdownMenuSeparator,
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-<<<<<<< HEAD
-import { DialogContentDialogFooterDialogHeaderDialogTitle } from '@/components/ui/dialog';
-SaveChevronDownPlusLoader2
-=======
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { Resume } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
 
@@ -30,21 +14,6 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void;
 }
 
-<<<<<<< HEAD
-export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVersionSelectorProps) {
-  const { createResumefetchResume } = useResume();
-  const [saveDialogOpensetSaveDialogOpen] = useState(false);
-  const [newResumeTitlesetNewResumeTitle] = useState('');
-  const [existingResumesetExistingResumes] = useState<Resume[]>([]);
-  const [isLoadingsetIsLoading] = useState(false);
-=======
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {

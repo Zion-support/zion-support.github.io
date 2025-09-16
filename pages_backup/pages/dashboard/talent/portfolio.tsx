@@ -70,7 +70,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 import PdfExportButton from '../../../components / ui / PdfExportButton';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
 return { props: {} }
@@ -78,8 +77,6 @@ return { props: {} }
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

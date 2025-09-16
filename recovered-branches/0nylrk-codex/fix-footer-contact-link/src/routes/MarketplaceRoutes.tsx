@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-import { Routes } from "react-router-dom";
-=======
-import { Route, Routes } from "react-router-dom";
->>>>>>> origin/auto/autonomy-17186719616
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";

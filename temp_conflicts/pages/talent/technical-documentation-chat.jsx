@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const TechnicalDocumentationChat = () => {
   return (
@@ -21,14 +14,3 @@ const TechnicalDocumentationChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default TechnicalDocumentationChat,
-=======
-  );
-};
-
-export default TechnicalDocumentationChat;
->>>>>>> origin/auto/autonomy-17186719616

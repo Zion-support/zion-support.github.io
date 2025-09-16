@@ -52,7 +52,6 @@ import { toast } from 'sonner';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -507,7 +506,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     <span>{milestone.dueDate}</span>

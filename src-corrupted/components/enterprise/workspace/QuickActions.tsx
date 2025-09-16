@@ -24,8 +24,6 @@ import { Button } from "@/components/ui/button",
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -70,10 +68,8 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               key={action.id}
               variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
             >;
@@ -82,7 +78,6 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
                   {action.icon}
                   <span>{action.label}</span>;
                 </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
                 <span className='mt - 1 text - xs text - muted - foreground'>;

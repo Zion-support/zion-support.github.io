@@ -26,9 +26,7 @@ const FILES_TO_CACHE = [
 
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const CACHE_NAME =';static-cache-v1'';
@@ -41,7 +39,6 @@ const FILES_TO_CACHE = [
   '/', '';/index && index.html', '';/offline && offline.html', '';/manifest && manifest.json', '';/vite && vite.svg']';;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const CACHE_NAME =';static-cache-v1'';
 const DATA_CACHE_NAME =';data-cache-v1'';
@@ -100,7 +97,6 @@ origin/automation-improvements-final
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         response |
 const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
@@ -153,13 +149,8 @@ origin/main
 
 
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/feature/merge-conflicts-and-improvements
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
         fetch(event.request).catch(() => caches.match('/offline.html'))
@@ -167,14 +158,10 @@ const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1''
   )});
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

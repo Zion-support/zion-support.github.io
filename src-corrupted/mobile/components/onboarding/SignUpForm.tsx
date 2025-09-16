@@ -37,7 +37,6 @@ function SignUpForm() {
     name: ""}),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
     }
@@ -105,7 +104,6 @@ export function SignUpForm() {
 
 
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -296,7 +294,6 @@ export function SignUpForm() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       {/* Error Alert */}
@@ -337,7 +334,6 @@ export function SignUpForm() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
               placeholder="Enter your full name"
@@ -353,7 +349,6 @@ export function SignUpForm() {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

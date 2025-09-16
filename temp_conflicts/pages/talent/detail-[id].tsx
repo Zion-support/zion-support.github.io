@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { getServiceById } from '../../data/micro-saas-services',
-import ServiceDetail from '../../components/sections/ServiceDetail',
-import Button from '../../components/ui/Button',
-import { ArrowLeft, ExternalLink } from 'lucide-react',
-
-export default function ServiceDetailPage() {
-  const router = useRouter(),
-  const { id } = router.query,
-=======
-import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { getServiceById } from '../../data/micro-saas-services';
-import ServiceDetail from '../../components/sections/ServiceDetail';
-import Button from '../../components/ui/Button';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
-
-export default function ServiceDetailPage() {
-  const router = useRouter();
-  const { id } = router.query;
->>>>>>> origin/auto/autonomy-17186719616
   
   if (!id || typeof id !== 'string') {
     return (
@@ -36,17 +11,6 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-    ),
-  }
-
-  const service = getServiceById(id),
-=======
-    );
-  }
-
-  const service = getServiceById(id);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!service) {
     return (
@@ -60,11 +24,6 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-    ),
-=======
-    );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -108,11 +67,6 @@ export default function ServiceDetailPage() {
 
         {/* Related Services CTA */}
         <section className="py-16 bg-gray-900/50">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-=======
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/auto/autonomy-17186719616
             <h2 className="text-3xl font-bold text-white mb-6">
               Looking for Something Else?
             </h2>
@@ -141,9 +95,4 @@ export default function ServiceDetailPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

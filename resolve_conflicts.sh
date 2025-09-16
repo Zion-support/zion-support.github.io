@@ -1,33 +1,42 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+<<<<<<< HEAD
+echo "Resolving merge conflicts by accepting our changes..."
 
-echo "Resolving merge conflicts by keeping main branch version..."
+# Find all files with merge conflicts
+find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Resolving conflicts in: $file"
+    # Accept our changes (HEAD)
+    git checkout --ours "$file"
+  fi
+done
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+echo "All merge conflicts resolved!"
+=======
+echo "Resolving merge conflicts..."
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
+# Function to resolve merge conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "Processing: $file"
+    
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+    
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+}
 
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
-        git add "$file"
+# Find all files with merge conflicts in src directory
+find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        resolve_conflicts "$file"
     fi
-done < conflicted_files.txt
+done
 
-# Clean up
-rm conflicted_files.txt
-
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
-
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
-
-echo "Merge completed successfully!"
+echo "Merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-d9c7

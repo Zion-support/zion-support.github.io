@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const CloudMigrationServicesChat = () => {
   return (
@@ -21,14 +14,3 @@ const CloudMigrationServicesChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default CloudMigrationServicesChat,
-=======
-  );
-};
-
-export default CloudMigrationServicesChat;
->>>>>>> origin/auto/autonomy-17186719616

@@ -32,7 +32,6 @@ export default function QuantumCybersecurityPlatform() {
 }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -47,7 +46,6 @@ export default function QuantumCybersecurityPlatform() {
 
 };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   } catch (error) {
     console.error("Error:", error);

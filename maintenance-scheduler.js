@@ -38,5 +38,3 @@ if (arg === "daily") {
   scheduler.runDailyMaintenance()} else if (arg === "weekly") {
   scheduler.runWeeklyMaintenance()} else {
   console.log(""Usage": node maintenance-scheduler.js [daily|weekly]")}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

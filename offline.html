@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
-<<<<<<< HEAD
-  <meta name="theme-color" content="#0a0f1f" />
-=======
-<<<<<<< HEAD
-  <meta name="theme-color" content="#000000" />
-  <link rel="manifest" href="/manifest.json" />
-=======
-  <meta name="theme-color" content="#0a0f1f" />
->>>>>>> origin/bw06m0-codex/fix-typescript-errors-in-components
->>>>>>> origin/auto/autonomy-17186719616
   <style>
     body {
       font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -126,18 +112,10 @@
 </head>
 <body>
   <h1>Zion Tech Nexus - Offline Development</h1>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div class="status-box offline">
     <span class="network-indicator"></span>
     <strong>OFFLINE MODE</strong> - Running with minimal functionality
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div class="card">
     <h2>💻 Offline Development Mode</h2>
     <p>You're currently running in offline placeholder mode. This is a minimal server that doesn't require npm dependencies.</p>
@@ -145,10 +123,6 @@
       Checking network status...
     </div>
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div class="card warning">
     <h2>⚠️ TypeScript and Dependency Errors</h2>
     <p>The errors you're seeing are expected in offline mode because the required dependencies aren't available:</p>
@@ -161,19 +135,11 @@
     </div>
     <p>We've created temporary type declarations in <code>src/types/offline-shims.d.ts</code> to help with development, but these are only placeholders.</p>
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div class="tabs">
     <div class="tab active" onclick="showTab('online')">Online Solution</div>
     <div class="tab" onclick="showTab('offline')">Offline Workarounds</div>
     <div class="tab" onclick="showTab('proxy')">Proxy Settings</div>
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div id="online" class="tab-content active">
     <div class="steps">
       <h2>🌐 When Internet is Available</h2>
@@ -184,10 +150,6 @@
       <div class="command">npm run dev</div>
     </div>
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div id="offline" class="tab-content">
     <div class="steps">
       <h2>🔌 Offline Development Options</h2>
@@ -198,10 +160,6 @@
       </ol>
     </div>
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <div id="proxy" class="tab-content">
     <div class="steps">
       <h2>🔒 Behind a Corporate Proxy?</h2>
@@ -213,33 +171,16 @@ npm config set strict-ssl false  # Only if needed</div>
       <div class="command">./setup.sh npm</div>
     </div>
   </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/auto/autonomy-17186719616
   <script>
     function showTab(tabId) {
       // Hide all tab contents
       document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
       });
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/auto/autonomy-17186719616
       // Deactivate all tabs
       document.querySelectorAll('.tab').forEach(tab => {
         tab.classList.remove('active');
       });
-<<<<<<< HEAD
-      // Show selected tab content
-      document.getElementById(tabId).classList.add('active');
-=======
-      
-      // Show selected tab content
-      document.getElementById(tabId).classList.add('active');
-      
->>>>>>> origin/auto/autonomy-17186719616
       // Activate selected tab
       document.querySelectorAll('.tab').forEach(tab => {
         if (tab.textContent.toLowerCase().includes(tabId.toLowerCase())) {
@@ -247,10 +188,6 @@ npm config set strict-ssl false  # Only if needed</div>
         }
       });
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
     // Check if we're online periodically
     function checkOnlineStatus() {
       fetch('/online-check')
@@ -270,10 +207,6 @@ npm config set strict-ssl false  # Only if needed</div>
           statusBox.classList.add('offline');
         });
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
     // Check immediately and then every 30 seconds
     checkOnlineStatus();
     setInterval(checkOnlineStatus, 30000);

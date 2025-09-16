@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function LatestContentShowcase2025() {
@@ -43,47 +42,19 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Evaluations in Production</h3>
+            <div className="text-4xl mb-4">🧭</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Trustworthy Autonomous Agents Blueprint</h3>
             <p className="text-gray-600 mb-4">
-              Operationalize LLM and agent evals with live metrics and rollbacks.
+              Governance-by-design with evals, policy, and safety telemetry for reliable autonomy.
             </p>
-            <Link 
-              href="/blog/ai-2026-evaluations-in-production"
-              className="text-purple-600 font-semibold hover:text-purple-800"
-            >
-              Read Article →
-            </Link>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">📏</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
-            <p className="text-gray-600 mb-4">
-              A practical playbook to model, track, and realize ROI from enterprise AI agents.
-            </p>
-            <Link 
-              href="/content/ai-agents-roi-playbook-2026"
-              className="text-purple-600 font-semibold hover:text-purple-800"
-            >
-              Read Playbook →
-            </Link>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Join thousands of companies already using our AI solutions to drive innovation and growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/content/ai-governance-blueprint-2026" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Read AI Governance Blueprint</Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Get Started Today
-            </Link>
+            <div className="flex items-center gap-4">
+              <Link href="/blog/ai-2026-trustworthy-autonomous-agents-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">
+                Read Article →
+              </Link>
+              <Link href="/content/trustworthy-autonomous-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">
+                Implementation Guide →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

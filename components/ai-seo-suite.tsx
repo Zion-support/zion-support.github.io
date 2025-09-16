@@ -2,11 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-SearchTrendingUpTargetBarChart3GlobeZapUsersCheckCircleArrowRightPlayStarEyeBrainShieldLockSparklesChartBarLightbulbRocketSettings
-=======
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function AISeosuitePage() {
   const features = [
@@ -15,105 +10,48 @@ export default function AISeosuitePage() {
       title: 'AI Keyword Research',
       description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-<<<<<<< HEAD
-      gradient: 'from-blue-400 to-cyan-500'},
-=======
-      gradient: 'from-blue-400 to-cyan-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
       title: 'Ranking Analytics',
       description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-<<<<<<< HEAD
-      gradient: 'from-green-400 to-emerald-500'},
-=======
-      gradient: 'from-green-400 to-emerald-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Target className="w-8 h-8 text-white" />,
       title: 'Content Optimization',
       description: 'AI-powered content analysis and optimization suggestions to improve search visibility.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-<<<<<<< HEAD
-      gradient: 'from-purple-400 to-indigo-500'},
-=======
-      gradient: 'from-purple-400 to-indigo-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-<<<<<<< HEAD
-      gradient: 'from-orange-400 to-red-500'},
-=======
-      gradient: 'from-orange-400 to-red-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Globe className="w-8 h-8 text-white" />,
       title: 'Local SEO',
       description: 'Optimize for local search with location-based keyword research and citation management.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-<<<<<<< HEAD
-      gradient: 'from-teal-400 to-blue-500'},
-=======
-      gradient: 'from-teal-400 to-blue-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Automated Reports',
       description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-<<<<<<< HEAD
-      gradient: 'from-pink-400 to-rose-500'}];
-=======
-      gradient: 'from-pink-400 to-rose-500',
-    },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const seoTools = [
     {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
-<<<<<<< HEAD
-      tools: ['Long-tail keyword 'finder', 'Competitor keyword 'analysis', 'Search volume 'estimation', 'Keyword difficulty 'scoring', 'Trending keywords']
-=======
-      tools: ['Long-tail keyword finder', 'Competitor keyword analysis', 'Search volume estimation', 'Keyword difficulty scoring', 'Trending keywords']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
-<<<<<<< HEAD
-      tools: ['Content 'optimization', 'Meta tag 'generator', 'Schema markup 'builder', 'Internal linking 'suggestions', 'Image optimization']
-=======
-      tools: ['Content optimization', 'Meta tag generator', 'Schema markup builder', 'Internal linking suggestions', 'Image optimization']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
-<<<<<<< HEAD
-      tools: ['Site audit 'tool', 'Page speed 'analyzer', 'Mobile 'optimization', 'Core Web 'Vitals', 'XML sitemap generator']
-=======
-      tools: ['Site audit tool', 'Page speed analyzer', 'Mobile optimization', 'Core Web Vitals', 'XML sitemap generator']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-<<<<<<< HEAD
-      tools: ['Ranking 'tracker', 'Traffic 'analysis', 'Conversion 'tracking', 'Competitor 'monitoring', 'Custom dashboards']
-=======
-      tools: ['Ranking tracker', 'Traffic analysis', 'Conversion tracking', 'Competitor monitoring', 'Custom dashboards']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
@@ -176,103 +114,26 @@ export default function AISeosuitePage() {
   ];
 
   const integrations = [
-<<<<<<< HEAD
-    { name: 'Google 'Analytics', 'icon: '📊'description: 'Traffic data integration' },
-    { name: 'Google Search 'Console', 'icon: '🔍'description: 'Search performance data' },
-    { name: ''WordPress', 'icon: '🔌'description: 'Plugin integration' },
-    { name: ''Shopify', 'icon: '🛒'description: 'E-commerce optimization' },
-    { name: ''HubSpot', 'icon: '📈'description: 'Marketing automation sync' },
-    { name: ''Slack', 'icon: '💬'description: 'Team notifications' },
-    { name: ''Zapier', 'icon: '⚡'description: '500+ app integrations' },
-    { name: 'API 'Access', 'icon: '🔑'description: 'Custom integrations' }
-=======
-    { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
-    { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
-    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce optimization' },
-    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const useCases = [
     {
       title: 'E-commerce Websites',
-<<<<<<< HEAD
-      description: 'Optimize product pagescategory pagesand search functionality for better conversions.',
-      icon: '🛍️',
-      benefits: ['Higher search 'rankings', 'Increased organic 'traffic', 'Better conversion 'rates', 'Competitive advantage']
-    },
-    {
-      title: 'Content Marketing',
-      description: 'Optimize blog postsarticlesand content for search engines and user engagement.',
-      icon: '📝',
-      benefits: ['Better content 'visibility', 'Higher engagement 'rates', 'More organic 'traffic', 'Authority building']
-=======
-      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
-      icon: '🛍️',
-      benefits: ['Higher search rankings', 'Increased organic traffic', 'Better conversion rates', 'Competitive advantage']
-    },
-    {
-      title: 'Content Marketing',
-      description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
-      icon: '📝',
-      benefits: ['Better content visibility', 'Higher engagement rates', 'More organic traffic', 'Authority building']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
       icon: '📍',
-<<<<<<< HEAD
-      benefits: ['Local search 'dominance', 'Increased foot 'traffic', 'Better customer 'acquisition', 'Competitive positioning']
-    },
-    {
-      title: 'SaaS Companies',
-      description: 'Optimize landing pagesfeature pagesand documentation for better user acquisition.',
-      icon: '💻',
-      benefits: ['Higher conversion 'rates', 'Better user 'experience', 'Reduced acquisition 'costs', 'Market expansion']
-=======
-      benefits: ['Local search dominance', 'Increased foot traffic', 'Better customer acquisition', 'Competitive positioning']
-    },
-    {
-      title: 'SaaS Companies',
-      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
-      icon: '💻',
-      benefits: ['Higher conversion rates', 'Better user experience', 'Reduced acquisition costs', 'Market expansion']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
   const successMetrics = [
-<<<<<<< HEAD
-    { metric: 'Organic 'Traffic', 'value: '+150%'description: 'Average increase in organic traffic' },
-    { metric: 'Search 'Rankings', 'value: '+45%'description: 'Improvement in search rankings' },
-    { metric: 'Conversion 'Rate', 'value: '+80%'description: 'Increase in conversion rates' },
-    { metric: ''ROI', 'value: '400%'description: 'Average return on investment' }
-=======
-    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
-    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
-    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
-    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   return (
     <>
       <Head>
         <title>AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics</title>
-<<<<<<< HEAD
-        <meta name="description" content="Comprehensive AI-powered SEO suite with keyword researchcontent optimizationtechnical SEO auditsand real-time analytics. Boost your search rankings and organic traffic." />
-        <meta property="og:title" content="AI-Powered SEO Suite | Zion Tech Group" />
-        <meta property="og:description" content="Advanced SEO tools with AI-powered optimizationkeyword researchand comprehensive analytics." />
-=======
-        <meta name="description" content="Comprehensive AI-powered SEO suite with keyword research, content optimization, technical SEO audits, and real-time analytics. Boost your search rankings and organic traffic." />
-        <meta property="og:title" content="AI-Powered SEO Suite | Zion Tech Group" />
-        <meta property="og:description" content="Advanced SEO tools with AI-powered optimization, keyword research, and comprehensive analytics." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -295,11 +156,6 @@ export default function AISeosuitePage() {
             AI-Powered SEO Suite
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
-<<<<<<< HEAD
-            Dominate search rankings with AI-powered SEO toolscomprehensive analyticsand intelligent optimization
-=======
-            Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization
->>>>>>> origin/auto/autonomy-17186719616
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
@@ -357,11 +213,6 @@ export default function AISeosuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {features.map((featureindex) => (
-=======
-            {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
@@ -397,11 +248,6 @@ export default function AISeosuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {seoTools.map((toolindex) => (
-=======
-            {seoTools.map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -413,11 +259,6 @@ export default function AISeosuitePage() {
                       {tool.category}
                     </h3>
                     <div className="grid grid-cols-1 gap-2">
-<<<<<<< HEAD
-                      {tool.tools.map((toolNametoolIndex) => (
-=======
-                      {tool.tools.map((toolName, toolIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                           {toolName}
@@ -445,11 +286,6 @@ export default function AISeosuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-            {successMetrics.map((metricindex) => (
-=======
-            {successMetrics.map((metric, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
@@ -478,11 +314,6 @@ export default function AISeosuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {useCases.map((useCaseindex) => (
-=======
-            {useCases.map((useCase, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -497,11 +328,6 @@ export default function AISeosuitePage() {
                       {useCase.description}
                     </p>
                     <div className="grid grid-cols-2 gap-2">
-<<<<<<< HEAD
-                      {useCase.benefits.map((benefitIndex) => (
-=======
-                      {useCase.benefits.map((benefit, benefitIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
@@ -521,11 +347,6 @@ export default function AISeosuitePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-<<<<<<< HEAD
-              SimpleTransparent Pricing
-=======
-              Simple, Transparent Pricing
->>>>>>> origin/auto/autonomy-17186719616
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the plan that fits your SEO needs
@@ -533,11 +354,6 @@ export default function AISeosuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {pricingPlans.map((planindex) => (
-=======
-            {pricingPlans.map((plan, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
@@ -559,11 +375,6 @@ export default function AISeosuitePage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                  {plan.features.map((featureIndex) => (
-=======
-                  {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -598,11 +409,6 @@ export default function AISeosuitePage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-<<<<<<< HEAD
-            {integrations.map((integrationindex) => (
-=======
-            {integrations.map((integration, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"

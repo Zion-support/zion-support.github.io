@@ -128,10 +128,7 @@ export default function ComposePage(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     const res = await fetch('/api/messages/compose', {
@@ -262,8 +259,6 @@ export default function ComposePage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         : 'New Message';
@@ -275,7 +270,6 @@ export default function ComposePage(req, res) {
         : { type: 'general' }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -288,7 +282,6 @@ export default function ComposePage(req, res) {
         attachmentName: file?.name
         context
       })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     const data = await res.json ();
     set_sending (false);

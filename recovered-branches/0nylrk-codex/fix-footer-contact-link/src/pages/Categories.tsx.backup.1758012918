@@ -1,0 +1,22 @@
+
+
+export default function Categories() {
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center mb-12">
+            <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
+              Browse Categories
+            </GradientHeading>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
+          {/* Reuse the Categories Section component */}
+          <CategoriesSection showTitle={false} />
+        </div>
+      </div>
+      <Footer />
+    </>
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

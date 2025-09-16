@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import EnhancedLayout from '../components/layout/EnhancedLayout',
-=======
-import Head from 'next/head';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> origin/auto/autonomy-17186719616
 
 const About = () => {
   const values = [
@@ -29,11 +22,6 @@ const About = () => {
       description: "We operate with transparency, honesty, and ethical business practices.",
       icon: "🔒"
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const team = [
     {
@@ -60,11 +48,6 @@ const About = () => {
       expertise: "Cloud Solutions, Blockchain",
       experience: "14+ years"
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <EnhancedLayout>
@@ -170,11 +153,6 @@ const About = () => {
         {/* Stats Section */}
         <div className="bg-blue-900 text-white rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-8">By the Numbers</h2>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-4 gap-8">
-=======
-          <div className="grid md:grid-cols-4 gap-8">
->>>>>>> origin/auto/autonomy-17186719616
             <div>
               <div className="text-3xl font-bold mb-2">100+</div>
               <div className="text-blue-100">Happy Clients</div>
@@ -195,14 +173,3 @@ const About = () => {
         </div>
       </main>
     </EnhancedLayout>
-<<<<<<< HEAD
-  )
-},
-
-export default About,
-=======
-  );
-};
-
-export default About;
->>>>>>> origin/auto/autonomy-17186719616

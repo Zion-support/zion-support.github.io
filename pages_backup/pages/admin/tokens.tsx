@@ -9,11 +9,8 @@ export default function AdminTokens() {
   const [config, setConfig] = useState<any>(null),
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   async function load() {
     const [txRes, cfgRes] = await Promise.all([

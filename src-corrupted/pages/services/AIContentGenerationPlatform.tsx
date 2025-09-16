@@ -88,7 +88,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
   
         '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
       ],;
-=======
       features[;'
         '10,000 words per month','
         '100 AI-generated images','
@@ -96,7 +95,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Basic templates','
         'Email support','        'Standard quality output'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: fals e
     },

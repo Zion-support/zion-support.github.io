@@ -8,33 +8,14 @@ interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
   isSaved: boolean;
-<<<<<<< HEAD
-  onToggleSave?: (id: stringisSaved: boolean) => void;
-=======
-  onToggleSave?: (id: string, isSaved: boolean) => void;
->>>>>>> origin/auto/autonomy-17186719616
   isAuthenticated: boolean;
 }
 
 export function TalentCardSaveButton({ 
-<<<<<<< HEAD
-  profileId
-  profileName,
-  isSaved
-=======
-  profileId, 
-  profileName,
-  isSaved, 
->>>>>>> origin/auto/autonomy-17186719616
   onToggleSave,
   isAuthenticated 
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
-<<<<<<< HEAD
-  const [localIsSavedsetLocalIsSaved] = React.useState(isSaved);
-=======
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
->>>>>>> origin/auto/autonomy-17186719616
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -51,11 +32,6 @@ export function TalentCardSaveButton({
     
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {
-<<<<<<< HEAD
-      onToggleSave(profileId!localIsSaved);
-=======
-      onToggleSave(profileId, !localIsSaved);
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     toast({
@@ -75,11 +51,6 @@ export function TalentCardSaveButton({
     >
       <Heart 
         className={cn(
-<<<<<<< HEAD
-          "h-4 w-4 transition-colors"
-=======
-          "h-4 w-4 transition-colors", 
->>>>>>> origin/auto/autonomy-17186719616
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )} 
       />

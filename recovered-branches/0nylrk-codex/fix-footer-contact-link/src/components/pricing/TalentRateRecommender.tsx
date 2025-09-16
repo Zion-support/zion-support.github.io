@@ -1,15 +1,4 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  getTalentRateSuggestion
-=======
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  getTalentRateSuggestion, 
->>>>>>> origin/auto/autonomy-17186719616
   PricingSuggestion,
   TalentRateParams,
   trackPricingSuggestion
@@ -31,16 +20,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   yearsExperience,
   location,
   onSuggestionApplied,
-<<<<<<< HEAD
-  rateType}) => {
-  const [isLoadingsetIsLoading] = useState(false);
-  const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null);
-=======
-  rateType,
-}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
   const { user } = useAuth();
 
   const generateSuggestion = async () => {
@@ -53,21 +32,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       const params: TalentRateParams = {
         skills,
         yearsExperience,
-<<<<<<< HEAD
-        location};
-=======
-        location,
-      };
->>>>>>> origin/auto/autonomy-17186719616
 
       const result = await getTalentRateSuggestion(params);
       setSuggestion(result);
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error generating rate suggestion:"error);
-=======
-      console.error("Error generating rate suggestion:", error);
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsLoading(false);
     }

@@ -191,7 +191,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
             >
@@ -208,7 +207,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className='flex items-center gap-2'              onClick={() => onShare('facebook')}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -236,7 +234,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
             <Button 
@@ -251,7 +248,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               LinkedIn

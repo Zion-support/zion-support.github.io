@@ -182,7 +182,6 @@ export default ReputationDisplay
 }
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export const ReputationDisplay = ({;
   reputation,;
   size = 'md',}: ReputationDisplayProps) => {;

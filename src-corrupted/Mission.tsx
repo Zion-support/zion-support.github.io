@@ -11,7 +11,6 @@ import React from 'react';
       number: '100%',
       label: 'Carbon Neutral',
       description: 'Committed to sustainable technology development'
-=======
 import { Link } from 'react-router-dom';
 import { 
   Target, 
@@ -292,7 +291,6 @@ export default function Mission() {
                   </div>
                 </div>
               ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -328,7 +326,6 @@ export default function Mission() {
 
       {/* Core Values */}
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -360,7 +357,6 @@ export default function Mission() {
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {metric.number}
-=======
       </div>
 
       {/* Mission Pillars */}
@@ -485,7 +481,6 @@ export default function Mission() {
       </div>
 
       </div>
-=======
       {/* Call to Action */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">

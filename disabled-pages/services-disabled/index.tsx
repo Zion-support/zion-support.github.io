@@ -88,7 +88,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <Check className="w-3 h-3 text-green-500 mr-2 flex-shrink-0"  />
-=======
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';

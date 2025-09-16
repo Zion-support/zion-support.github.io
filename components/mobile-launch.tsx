@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import Head from 'next/head';
-import { useEffectuseMemouseState } from 'react';
-=======
-import Head from 'next/head';
-import { useEffect, useMemo, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
@@ -67,29 +59,10 @@ function GoogleBadge({ href }: { href: string }) {
   );
 }
 
-<<<<<<< HEAD
-function SmartBanner({ iosUrlandroidUrldeepLink }: { iosUrl: string; androidUrl: string; deepLink: string }) {
-  const [visiblesetVisible] = useState(false);
-=======
-function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string; androidUrl: string; deepLink: string }) {
-  const [visible, setVisible] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
     if (dismissed) return;
-<<<<<<< HEAD
-    const ua = navigator.userAgent || ', ';
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
-    if (isMobile) setVisible(true);
-  }[]);
-
-=======
-    const ua = navigator.userAgent || '';
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
-    if (isMobile) setVisible(true);
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!visible) return null;
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -109,11 +82,6 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string; android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>
             <button
               aria-label="Dismiss"
-<<<<<<< HEAD
-              onClick={() => { localStorage.setItem('smartBannerDismissed'1'); setVisible(false); }}
-=======
-              onClick={() => { localStorage.setItem('smartBannerDismissed', '1'); setVisible(false); }}
->>>>>>> origin/auto/autonomy-17186719616
               className="text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               ✕
@@ -129,75 +97,15 @@ const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.c
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
 
-<<<<<<< HEAD
-const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || ', ';
-
-const testimonials = [
-  { name: 'Priya K.'role: 'Startup 'Founder', 'quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.'role: ''CTO', 'quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.'role: 'Project 'Lead', 'quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }];
-
-export default function MobileLaunchPage() {
-  const [emailsetEmail] = useState('');
-  const [statusetStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
-  const [errorsetError] = useState('');
-
-  // Auto-rotate testimonial index
-  const [idxsetIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length)4000);
-    return () => clearInterval(t);
-  }[]);
-=======
-const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
-
-const testimonials = [
-  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' },
-];
-
-export default function MobileLaunchPage() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
-  const [error, setError] = useState('');
-
-  // Auto-rotate testimonial index
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
-    return () => clearInterval(t);
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
     const encoded = encodeURIComponent(target);
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
-<<<<<<< HEAD
-  }[]);
-=======
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus('loading');
-<<<<<<< HEAD
-    setError(', ');
-    try {
-      const res = await fetch('/api/subscribe'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ email }) });
-      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail(', ');
-=======
-    setError('');
-    try {
-      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) });
-      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail('');
->>>>>>> origin/auto/autonomy-17186719616
     } catch (err: any) {
       setStatus('error');
       setError(err?.message || 'Something went wrong.');
@@ -208,11 +116,6 @@ export default function MobileLaunchPage() {
     <EnhancedLayout>
       <Head>
         <title>Zion Mobile App — iOS & Android</title>
-<<<<<<< HEAD
-        <meta name="description" content="Hire from anywhereAI-match instantlyand track milestones on the go with the Zion app." />
-=======
-        <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="canonical" href="/download" />
         <meta property="og:title" content="Zion Mobile App" />
         <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." />
@@ -225,11 +128,6 @@ export default function MobileLaunchPage() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">Zion App</h1>
-<<<<<<< HEAD
-            <p className="mt-3 text-base md:text-lg opacity-90">Hire from anywhereAI-match instantlyand track milestones on the go.</p>
-=======
-            <p className="mt-3 text-base md:text-lg opacity-90">Hire from anywhere, AI-match instantly, and track milestones on the go.</p>
->>>>>>> origin/auto/autonomy-17186719616
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <AppleBadge href={IOS_APP_URL} />
               <GoogleBadge href={ANDROID_APP_URL} />
@@ -282,11 +180,6 @@ export default function MobileLaunchPage() {
         </div>
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <div className="text-lg font-semibold">Track milestones</div>
-<<<<<<< HEAD
-          <p className="mt-2 text-sm opacity-80">Manage deliverablesapprovalsand progress on the go.</p>
-=======
-          <p className="mt-2 text-sm opacity-80">Manage deliverables, approvals, and progress on the go.</p>
->>>>>>> origin/auto/autonomy-17186719616
           <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />
         </div>
       </section>
@@ -294,22 +187,12 @@ export default function MobileLaunchPage() {
       {/* Trust & Community */}
       <section className="mt-12">
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
-          {[...Array(5)].map((_i) => (
-=======
-          {[...Array(5)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <StarIcon key={i} />
           ))}
           <span className="text-sm opacity-80">4.9 average rating</span>
         </div>
         <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>
         <div className="relative mt-4 overflow-hidden">
-<<<<<<< HEAD
-          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`width: `${testimonials.length * 100}%` }}>
-=======
-          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }}>
->>>>>>> origin/auto/autonomy-17186719616
             {testimonials.map((t) => (
               <div key={t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">
                 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">

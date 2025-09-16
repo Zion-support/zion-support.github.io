@@ -2,32 +2,31 @@ import React from 'react';
 
 const InteractiveTechShowcase = () => {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-        <div className="text-4xl mb-4">🤖</div>
-        <h3 className="text-xl font-semibold mb-2">AI Solutions</h3>
-        <p className="text-gray-600 mb-4">Cutting-edge artificial intelligence solutions for your business needs.</p>
-        <a href="/pages/AdvancedAISolutions2026" className="text-blue-600 hover:text-blue-700 font-semibold">
-          Explore AI →
-        </a>
-      </div>
-      
-      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-        <div className="text-4xl mb-4">⚡</div>
-        <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
-        <p className="text-gray-600 mb-4">Revolutionary quantum computing solutions for complex problems.</p>
-        <a href="/pages/AdvancedQuantumComputing2026" className="text-blue-600 hover:text-blue-700 font-semibold">
-          Discover Quantum →
-        </a>
-      </div>
-      
-      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-        <div className="text-4xl mb-4">🧬</div>
-        <h3 className="text-xl font-semibold mb-2">Neural Interfaces</h3>
-        <p className="text-gray-600 mb-4">Direct brain-computer interfaces for seamless communication.</p>
-        <a href="/pages/AdvancedNeuralInterface2026" className="text-blue-600 hover:text-blue-700 font-semibold">
-          Connect Mind & Machine →
-        </a>
+    <div className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          Interactive Tech Showcase
+        </h2>
+        <p className="text-xl text-gray-300 mb-12">
+          Experience the future of technology through interactive demonstrations
+        </p>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold text-white mb-4">AI Demo</h3>
+            <p className="text-gray-300">Interactive AI demonstrations</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold text-white mb-4">Quantum Demo</h3>
+            <p className="text-gray-300">Quantum computing showcase</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-2xl font-bold text-white mb-4">Neural Demo</h3>
+            <p className="text-gray-300">Neural interface technology</p>
+          </div>
+        </div>
       </div>
     </div>
   );
