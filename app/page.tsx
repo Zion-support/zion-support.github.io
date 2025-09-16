@@ -77,6 +77,10 @@ import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
+>>>>>>> origin/feat/content-sept15
 import Link from 'next/link';
 =======
 >>>>>>> origin/feature/new-content-and-promotions
@@ -387,6 +391,9 @@ export default function HomePage() {
         
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
+
+        {/* Promo: Autonomous Analytics Platform 2025 - NEW */}
+        <AutonomousAnalytics2025PromoBanner />
 
         {/* Promo: New Article - Enterprise AI Agents 2025 */}
         <section className="py-12 bg-gray-50">
