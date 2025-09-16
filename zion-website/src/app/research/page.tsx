@@ -1,4 +1,4 @@
-]
+// Fix stray bracket
 
 const researchImpact = [
   { metric: 'Research Papers Published', value: '150+', description: 'Peer-reviewed publications in top-tier journals and conferences' },

@@ -94,7 +94,7 @@ export default function AI2026AutonomousOpsSreForAgentsPage() {
   )
 }
 
-export default function Article() {
+function Article() {
   return (
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
