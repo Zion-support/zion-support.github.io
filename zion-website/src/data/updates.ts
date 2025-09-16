@@ -11,39 +11,25 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
-		title: 'Launch: AI Security Evidence Vault v1.0',
-		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
-		href: '/updates/ai-security-evidence-vault-v1',
+		title: 'Launch: AI Governance Dashboard v5',
+		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
+		href: '/updates/ai-governance-dashboard-v5',
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
 	{
-		title: 'Launch: Autonomous Marketing Copilot v1.0',
-		summary: 'Campaign generation, eval-gated creatives, and governed tool-use for growth teams.',
-		href: '/updates/autonomous-marketing-copilot-1-0',
-		date: '2025-09-16',
-		tag: 'Launch',
-	},
-	{
-		title: 'Report: State of AI Evaluations (2026 Preview)',
-		summary: 'Methods, metrics, and real-world eval gate patterns shaping production AI.',
-		href: '/updates/state-of-ai-evaluations-2026',
+		title: 'Report: State of Real-Time RAG (2026 Preview)',
+		summary: 'Streaming retrieval benchmarks for latency, hit rate, and answer quality.',
+		href: '/updates/state-of-real-time-rag-2026',
 		date: '2025-09-16',
 		tag: 'Report',
 	},
 	{
-		title: 'Launch: Production RAG Observability Suite v1.0',
-		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
-		href: '/updates/production-rag-observability-suite-1-0',
+		title: 'Launch: Agent Reliability Scorecards v1.0',
+		summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability.',
+		href: '/updates/agent-reliability-scorecards-1-0',
 		date: '2025-09-16',
 		tag: 'Launch',
-	},
-	{
-		title: 'Guide: Agentic Change Management in Production (2026 Preview)',
-		summary: 'Safe rollout strategies with canaries, eval gates, and policy‑as‑code.',
-		href: '/updates/agentic-change-management-2026',
-		date: '2025-09-16',
-		tag: 'Guide',
 	},
 	{
 		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
