@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Guide: Agentic Finetuning Blueprint (2026)',
+		summary: 'Practical patterns to adapt agent behaviors safely with eval gates and telemetry.',
+		href: '/updates/agentic-finetuning-blueprint-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',
