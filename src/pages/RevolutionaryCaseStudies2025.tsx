@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-63f0
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -17,6 +20,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
     {
       id: 1,
       title: "Fortune 500 Manufacturing Revolution",
+<<<<<<< HEAD
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
       category: "ai",
@@ -33,6 +37,23 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         timeframe: "6 months",
         team: "15 AI specialists"
       },
+=======
+      category: "manufacturing",
+      company: "Global Manufacturing Corp",
+      industry: "Automotive Manufacturing",
+      challenge: "Reduce production costs while increasing output quality and efficiency",
+      solution: "Implemented autonomous AI agents for production line optimization and predictive maintenance",
+      results: {
+        efficiency: "+400%",
+        costReduction: "40%",
+        qualityImprovement: "99.9%",
+        timeline: "6 months"
+      },
+      description: "A leading automotive manufacturer transformed their production line with our AI solutions, achieving unprecedented efficiency gains while maintaining the highest quality standards.",
+      technologies: ["Autonomous AI Agents", "Predictive Analytics", "Computer Vision", "IoT Integration"],
+      testimonial: "The AI implementation exceeded our wildest expectations. We've never seen such dramatic improvements in such a short time.",
+      author: "Sarah Johnson, CEO",
+>>>>>>> cursor/create-and-deploy-new-content-63f0
       image: "🏭",
       color: "from-blue-500 to-cyan-500"
     },
@@ -189,18 +210,31 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               📊 REVOLUTIONARY CASE STUDIES • 2025
             </div>
+<<<<<<< HEAD
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Success Stories
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Discover how our revolutionary technologies have transformed businesses across industries, delivering unprecedented results and measurable impact.
+=======
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              Revolutionary Case Studies 2025
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+              Discover how leading companies are transforming their businesses with our cutting-edge AI and technology solutions
+>>>>>>> cursor/create-and-deploy-new-content-63f0
             </p>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
+=======
+      <div className="container mx-auto px-4 py-16">
+        {/* Category Filter */}
+>>>>>>> cursor/create-and-deploy-new-content-63f0
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
@@ -212,17 +246,28 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
               }`}
             >
+<<<<<<< HEAD
               <span className="mr-2">{category.icon}</span>
+=======
+              <span className="text-xl mr-2">{category.icon}</span>
+>>>>>>> cursor/create-and-deploy-new-content-63f0
               {category.name}
             </button>
           ))}
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-8">
           {filteredCaseStudies.map((study) => (
+=======
+
+        {/* Case Study Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {filteredCases.map((caseStudy, index) => (
+>>>>>>> cursor/create-and-deploy-new-content-63f0
             <div
               key={study.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
@@ -295,6 +340,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Statistics Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
@@ -330,6 +376,84 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Project
+=======
+        {/* Detailed Case Study View */}
+        {currentCase && (
+          <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="text-6xl">{currentCase.image}</div>
+                  <div>
+                    <h2 className="text-3xl font-bold mb-2">{currentCase.title}</h2>
+                    <p className="text-xl text-white/80">{currentCase.company}</p>
+                    <p className="text-white/60">{currentCase.industry}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Challenge</h3>
+                    <p className="text-white/90">{currentCase.challenge}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Solution</h3>
+                    <p className="text-white/90">{currentCase.solution}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Technologies Used</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {currentCase.technologies.map((tech, index) => (
+                        <span key={index} className="px-3 py-1 bg-white/20 rounded-full text-sm">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="bg-white/10 rounded-xl p-8 mb-8">
+                  <h3 className="text-2xl font-bold mb-6 text-center">Results</h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    {Object.entries(currentCase.results).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-4xl font-bold text-yellow-300 mb-2">{value}</div>
+                        <div className="text-sm text-white/70 capitalize">
+                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-400/30">
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">💬</div>
+                    <blockquote className="text-lg italic text-white/90 mb-4">
+                      "{currentCase.testimonial}"
+                    </blockquote>
+                    <div className="text-white/70">- {currentCase.author}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Call to Action */}
+        <div className="text-center mt-20">
+          <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join these industry leaders and transform your business with our revolutionary AI solutions
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Transformation
+>>>>>>> cursor/create-and-deploy-new-content-63f0
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation

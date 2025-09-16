@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';

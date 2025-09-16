@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 import { Link as RouterLink  } from 'react-router-dom.ts';

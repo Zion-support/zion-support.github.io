@@ -1,6 +1,6 @@
 "use client";
 import React{ useEffectuseRef } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;

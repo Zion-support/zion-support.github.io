@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, Target, CheckCircle, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Button from '../ui/Button';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, Settings, Shield, Cookie, Info } from 'lucide-react';
 
 interface CookiePreferences {

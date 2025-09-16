@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, Star, Zap, Crown, Gem, Brain, 
   Atom, Rocket, Globe, Cpu, Database, Shield

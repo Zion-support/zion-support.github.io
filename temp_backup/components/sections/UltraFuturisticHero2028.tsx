@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Shield, Cloud, Database, Code, 
   BarChart3, Star, Zap, Sparkles, ArrowRight, CheckCircle,

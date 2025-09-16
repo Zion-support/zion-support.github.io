@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services';
 import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard';
 

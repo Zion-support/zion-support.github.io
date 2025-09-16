@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2036 from './ui/UltraFuturisticServiceCard2036';
-
+import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 

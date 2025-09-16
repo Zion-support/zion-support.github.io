@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen, 
   FileText, 
@@ -284,13 +284,13 @@ const ContentShowcase: React.FC = () => {
                       </div>
                     </div>
                     
-                    <button
+                    <motion.button
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
                     >
                       <span>Read More</span>
                       <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
               </motion.article>
@@ -302,7 +302,7 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
-              <div
+              <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -360,15 +360,15 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button
+                  <motion.button
                     whileHover={{ scale: 1.05 }}
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
                   >
                     <span>View Full Study</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         );
@@ -377,7 +377,7 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webinars.map((webinar, index) => (
-              <div
+              <motion.div
                 key={webinar.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -425,15 +425,15 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button
+                  <motion.button
                     whileHover={{ scale: 1.05 }}
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Register Now</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         );
@@ -442,7 +442,7 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
-              <div
+              <motion.div
                 key={paper.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -487,15 +487,15 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button
+                  <motion.button
                     whileHover={{ scale: 1.05 }}
                     className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Download PDF</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         );
@@ -509,7 +509,7 @@ const ContentShowcase: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -528,10 +528,10 @@ const ContentShowcase: React.FC = () => {
             Stay ahead with our latest insights, case studies, and expert resources. 
             Discover how cutting-edge technology is transforming businesses worldwide.
           </p>
-        </div>
+        </motion.div>
 
         {/* Tab Navigation */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -542,7 +542,7 @@ const ContentShowcase: React.FC = () => {
             const isActive = activeTab === tab.id;
             
             return (
-              <button
+              <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 whileHover={{ scale: 1.05 }}
@@ -557,14 +557,14 @@ const ContentShowcase: React.FC = () => {
               >
                 <Icon className="w-5 h-5" />
                 <span>{tab.name}</span>
-              </button>
+              </motion.button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Content */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -572,11 +572,11 @@ const ContentShowcase: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             {renderContent()}
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Newsletter Signup */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -595,16 +595,16 @@ const ContentShowcase: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Subscribe
-              </button>
+              </motion.button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

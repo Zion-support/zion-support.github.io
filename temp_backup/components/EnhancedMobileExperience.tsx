@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-
+import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion';
 import { 
   Smartphone, Tablet, Monitor, Wifi, Battery,
   Hand, Settings

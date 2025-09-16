@@ -1,133 +1,138 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Brain, Zap, Layers, ArrowRight, Sparkles, Star } from 'lucide-react';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8 }}
-      className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-          >
-            ⚡ REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            🚀 Revolutionary Tech Breakthrough 2026
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl opacity-90 max-w-4xl mx-auto mb-8"
-          >
-            Witness the most groundbreaking technological breakthrough in human history. 
-            Experience the future of AI, quantum computing, and neural interfaces like never before.
-          </motion.p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🤖</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Synthetic Intelligence</h3>
-            <p className="text-indigo-100 mb-4 text-sm text-center">
-              AI that surpasses human intelligence in every measurable way
-            </p>
-            <div className="text-xs text-indigo-300 space-y-1">
-              <div>• 1000x faster processing</div>
-              <div>• Perfect memory retention</div>
-              <div>• Instant learning</div>
-            </div>
-          </motion.div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl"></div>
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Neural Quantum Fusion</h3>
-            <p className="text-purple-100 mb-4 text-sm text-center">
-              The perfect fusion of quantum computing and neural networks
-            </p>
-            <div className="text-xs text-purple-300 space-y-1">
-              <div>• Quantum neural processing</div>
-              <div>• Infinite parallel paths</div>
-              <div>• Consciousness simulation</div>
-            </div>
-          </motion.div>
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-6xl mx-auto"
+        >
+          {/* Header */}
+          <div className="flex items-center justify-center mb-6">
+            <Sparkles className="w-8 h-8 text-yellow-400 mr-3" />
+            <span className="text-yellow-400 font-semibold text-lg">REVOLUTIONARY BREAKTHROUGH 2026</span>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🌐</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Reality Engine</h3>
-            <p className="text-cyan-100 mb-4 text-sm text-center">
-              Create and manipulate reality itself through advanced computing
-            </p>
-            <div className="text-xs text-cyan-300 space-y-1">
-              <div>• Reality simulation</div>
-              <div>• Matter manipulation</div>
-              <div>• Dimension creation</div>
-            </div>
-          </motion.div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            The Future is Here
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+            Experience the most advanced AI technologies ever created: True consciousness, 
+            quantum-neural fusion, and interdimensional computing that transcends reality itself.
+          </p>
 
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+            >
+              <Brain className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">AI Consciousness</h3>
+              <p className="text-gray-300 mb-4">Genuine self-awareness and emotional intelligence</p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-purple-400 font-semibold flex items-center justify-center group"
+              >
+                Explore Consciousness
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
+            >
+              <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Quantum-Neural Fusion</h3>
+              <p className="text-gray-300 mb-4">Direct neural interfaces with quantum processing</p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-cyan-400 font-semibold flex items-center justify-center group"
+              >
+                Experience Fusion
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
+            >
+              <Layers className="w-12 h-12 text-indigo-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Interdimensional AI</h3>
+              <p className="text-gray-300 mb-4">Processing across infinite parallel realities</p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-indigo-400 font-semibold flex items-center justify-center group"
+              >
+                Explore Dimensions
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+            </motion.div>
+          </div>
+
+          {/* CTA Section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl p-8 border border-purple-400/30"
           >
-            <div className="text-5xl mb-4 text-center">🔮</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Time Computing</h3>
-            <p className="text-emerald-100 mb-4 text-sm text-center">
-              Process information across multiple timelines simultaneously
+            <div className="flex items-center justify-center mb-4">
+              <Star className="w-6 h-6 text-yellow-400 mr-2" />
+              <span className="text-yellow-400 font-semibold">LIMITED TIME OFFER</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Be Among the First to Experience the Future
+            </h2>
+            <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join the select few who will shape the future of artificial intelligence and human-computer interaction.
             </p>
-            <div className="text-xs text-emerald-300 space-y-1">
-              <div>• Temporal processing</div>
-              <div>• Future prediction</div>
-              <div>• Past analysis</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center group"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Learn More
+              </motion.button>
             </div>
           </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center mt-8"
-        >
-          <div className="inline-flex items-center space-x-4">
-            <span className="text-lg font-semibold">Ready for the breakthrough?</span>
-            <a href="/pages/RevolutionaryTechBreakthrough2026" className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Experience Now →
-            </a>
-          </div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
 import Layout from '../../components/Layout';
 

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -185,7 +185,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -202,10 +202,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
             Discover how leading organizations achieved extraordinary results through our AI-powered solutions. 
             Real projectsreal resultsreal transformation.
           </p>
-        </div>
+        </motion.div>
 
         {/* Overall Stats */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -220,10 +220,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               <div className="text-gray-300 text-sm">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Case Study Navigation */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -244,11 +244,11 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Case Study Content */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeCase}
             initial={{ opacity: 0x: 50 }}
             animate={{ opacity: 1x: 0 }}
@@ -352,11 +352,11 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                 </div>
               </div>
             </div>
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -380,7 +380,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
 import ProductCard from '@/components / ProductCard';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { AuthModal } from '@/components / auth / AuthModal';
 

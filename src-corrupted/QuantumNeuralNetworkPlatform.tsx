@@ -410,7 +410,7 @@ export default function QuantumNeuralNetworkPlatform() {
               </button>
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Schedule Demo
-
+import { motion } from 'framer-motion';
 import { Brain, Zap, Cpu, Network, Shield, TrendingUp } from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {

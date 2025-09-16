@@ -247,7 +247,7 @@ export const useAICodeGeneration = () => {
     // Helper functions for code generation
     const generateReactTypeScriptCode = (prompt, options) => {
         return `import React, { useState, useEffect, useCallback } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}

@@ -12,39 +12,42 @@ const InnovationLanding2025 = () => {
             Revolutionary technology solutions and insights for the future
           </p>
         </div>
-
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-2xl font-bold mb-4">AI Innovation</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced artificial intelligence systems that will transform every industry
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
+            <p className="text-gray-300 mb-4">
+              Cutting-edge solutions that push the boundaries of what's possible
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              Learn More
-            </button>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• AI-powered automation</li>
+              <li>• Quantum computing breakthroughs</li>
+              <li>• Neural interface technology</li>
+            </ul>
           </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Innovation</h3>
-            <p className="text-gray-300 mb-6">
-              Quantum computing breakthroughs that will solve impossible problems
+          
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
+            <p className="text-gray-300 mb-4">
+              Discover the latest developments in technology and innovation
             </p>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              Explore
-            </button>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Research and development</li>
+              <li>• Industry partnerships</li>
+              <li>• Future technology trends</li>
+            </ul>
           </div>
-
-          <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-4">Neural Innovation</h3>
-            <p className="text-gray-300 mb-6">
-              Direct brain-computer interfaces that will revolutionize human-computer interaction
+          
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive technology solutions for modern challenges
             </p>
-            <button className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              Discover
-            </button>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
+            </ul>
           </div>
         </div>
       </div>

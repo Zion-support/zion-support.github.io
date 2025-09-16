@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';

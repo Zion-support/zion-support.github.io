@@ -1,10 +1,10 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-
+import {motion} from 'framer-motion';
 import Head from 'next/head',
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
 
@@ -20,7 +20,7 @@ export default function FrontLanding() {
         <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
       </Head>
 
-
+import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
 
@@ -469,7 +469,7 @@ export default function FrontLanding() {
                 <motion.div;
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 export default function FrontLanding(req, res) {
   try {
   return (;

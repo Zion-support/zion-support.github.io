@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, ArrowRight, Star, Sparkles,
   Brain, Atom, Shield, Cpu, Code, Rocket, Users,
