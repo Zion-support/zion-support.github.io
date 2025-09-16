@@ -1132,6 +1132,37 @@ export const newContent2026 = [
     imageUrl: "/images/blog/temporal-business-optimization-2026.jpg",
     slug: "temporal-business-optimization-profiting-time-itself"
   }
+  ,
+  {
+    id: 8101,
+    title: "AI 2026: Operational Evals — Evidence That Gates Every Change",
+    excerpt: "A minimal, shippable pattern to gate merges and rollouts with online evals.",
+    content: "Stop shipping on vibes. This concise guide shows how to wire online evaluations (groundedness, override, violation, cost) into scorecards that gate merges and progressive rollouts. Includes a minimal schema, example thresholds, and a reference adapter you can drop into CI/CD to block risky changes and trigger deterministic rollback.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Evaluations",
+    tags: ["Eval Gates", "Scorecards", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-operational-evals-evidence-gates.jpg",
+    slug: "ai-2026-operational-evals-evidence-gates"
+  },
+  {
+    id: 8102,
+    title: "Agent Platform SLOs: A Practical, Copy‑Paste Blueprint",
+    excerpt: "Four SLOs that matter (safety, quality, reliability, cost) with targets you can adopt.",
+    content: "Most SLOs for agent platforms are noise. This blueprint distills a pragmatic set: violation rate (safety), groundedness (quality), incident MTTR (reliability), and budget adherence (cost). We include suggested targets, dashboard snippets, and how to thread these into release scorecards so SLO drift blocks risky change automatically.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["SLOs", "Reliability", "Safety", "Cost"],
+    featured: true,
+    imageUrl: "/images/blog/agent-platform-slos-practical-2026.jpg",
+    slug: "agent-platform-slos-practical-blueprint"
+  }
 ];
 
 // Merge new content with existing blog posts
