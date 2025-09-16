@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
 =======
 
@@ -115,6 +116,8 @@ const features: Feature[] = [
     ],
   },
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc88
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -184,7 +187,10 @@ const features: Feature[] = [
 			"Cross-chain bridges"
 		]
 	}
+<<<<<<< HEAD
 >>>>>>> origin/feature/add-news-and-promo
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc88
 ];
 
 export function FeatureShowcase() {
@@ -195,6 +201,7 @@ export function FeatureShowcase() {
 		setIsVisible(true);
 	}, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const getColorClasses = (color: Feature["color"]) => {
     const colorMap = {
@@ -404,6 +411,8 @@ function FeatureShowcase() {const [active_feature, setActiveFeature] = useState 
 
 export default FeatureShowcase;
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc88
 	const getColorClasses = (color: string) => {
 		const colorMap = {
 			blue: "from-blue-500 to-blue-600",
@@ -545,4 +554,7 @@ export default FeatureShowcase;
 		</section>
 	);
 }
+<<<<<<< HEAD
 >>>>>>> origin/feature/add-news-and-promo
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fc88
