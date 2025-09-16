@@ -33,25 +33,17 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-            New: AI Governance Dashboard v5 —
-            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            New: AI Security Evidence Vault v1.0 —
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            State of Real‑Time RAG (2026) —
-            <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Agent Reliability Scorecards v1.0 —
-            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see details</a>
-=======
-            New: E2E AI Change Evidence Playbook —
-            <a href="/updates/ai-change-evidence-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            Production RAG Observability Suite —
+            <a href="/updates/production-rag-observability-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Case Study: 70% Content Velocity —
             <a href="/updates/ai-content-factory-velocity-70" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">how</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            AI Security Evidence Vault —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
->>>>>>> cursor/create-and-deploy-new-content-30c4
+            Also: GenAI Engineering Masterclass —
+            <a href="/updates/genai-engineering-masterclass" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">course details</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -82,19 +74,12 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-            Fresh: AI Governance Dashboard v5 —
-            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: AI Security Evidence Vault v1.0 —
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">real‑time RAG report</a>
+            <a href="/updates/production-rag-observability-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">observability suite</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability scorecards</a>
-=======
-            Fresh: E2E AI Change Evidence Playbook —
-            <a href="/updates/ai-change-evidence-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Case Study: 70% Content Velocity —
-            <a href="/updates/ai-content-factory-velocity-70" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
+            <a href="/updates/agentic-change-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">change management guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             AI Security Evidence Vault —
             <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
