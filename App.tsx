@@ -218,6 +218,8 @@ import NewContentPromotionBanner2025 from './src/components/NewContentPromotionB
 import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
+import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
+import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
 
 export default function App(): JSX.Element {
   return (
@@ -250,6 +252,9 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Ad Banner 2025 */}
+                <RevolutionaryAdBanner2025 />
                 
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
@@ -635,6 +640,15 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Revolutionary Content Carousel 2025 */}
+                <div className="mb-12">
+                  <div className="text-center mb-8">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 NEW: Revolutionary Technology Showcase 2025</h2>
+                    <p className="text-xl text-gray-600">Experience the most advanced technologies with interactive demonstrations</p>
+                  </div>
+                  <RevolutionaryContentCarousel2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
