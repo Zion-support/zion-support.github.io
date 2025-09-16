@@ -11,13 +11,21 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+<<<<<<< HEAD
+        title: 'Guide: Agent Reliability — 2026 Blueprint',
+        summary: 'Standardize SLOs, eval gates, and evidence bundles for reliable production agents.',
+        href: '/blog/ai-2026-agent-reliability-blueprint',
+=======
         title: 'Guide: Evals‑in‑Prod Control Plane (2026)',
         summary: 'Blueprint for live evals, policy gates, and evidence bundles across environments.',
         href: '/updates/evals-in-prod-control-plane-2026',
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a0e
         date: '2025-09-16',
         tag: 'Guide',
     },
     {
+<<<<<<< HEAD
+=======
         title: 'Report: Autonomous Failure Analysis Toolkit (2026)',
         summary: 'Trace diffs, lineage captures, and reproducible post‑mortems for agent incidents.',
         href: '/updates/autonomous-failure-analysis-toolkit-2026',
@@ -25,6 +33,7 @@ export const updates: UpdateItem[] = [
         tag: 'Report',
     },
     {
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a0e
         title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
         summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
         href: '/updates/real-time-agent-finops-dashboard-1-0',
