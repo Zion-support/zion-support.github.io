@@ -1,12 +1,13 @@
+import React from 'react'
+import { getLatestUpdates } from '../data/updates'
 import {
-  ChartBarIcon,
+  LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
-  LightBulbIcon,
   ShieldCheckIcon,
+  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
-import { getLatestUpdates } from '../data/updates'
 
 const features = [
   {
@@ -77,22 +78,10 @@ const solutions = [
 ]
 
 export default function HomePage() {
-  const latest = getLatestUpdates(6)
   return (
     <div className="bg-black">
-      {/* Promo banner */}
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
-            <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New today: Enterprise Agent Observability Deep Dive, Autonomous Business Operations Guide, and more —
-              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see all updates</a>
-            </p>
-          </div>
-        </div>
-      </div>
       {/* Hero section */}
-      <div className="relative isolate px-6 pt-8 lg:px-8">
+      <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -112,30 +101,37 @@ export default function HomePage() {
               >
                 Get Started
               </a>
-              <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
+              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                Learn More <span aria-hidden="true">→</span>
               </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
+                href="/updates/autonomous-ops-sre-for-agents"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Autonomous Ops & SRE for Agents
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-governance-toolkit"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                New: AI Governance Toolkit v2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-ops-playbook-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
-                Deep Dive: Agent Observability
+                Launch: Autonomous Ops Playbook
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/blog/ai-2026-autonomous-business-operations-complete-guide"
+                href="/updates/rag-production-patterns"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                Guide: Autonomous Business Ops
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/blog/ai-2026-policy-as-code-production-blueprint"
-                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
-              >
-                Blueprint: Policy‑as‑Code
+                Guide: RAG Production Patterns
                 <span aria-hidden>→</span>
               </a>
             </div>
@@ -154,7 +150,7 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {latest.map((item) => (
+            {getLatestUpdates(3).map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
@@ -185,22 +181,19 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
-                summary:
-                  'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
-                href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
+                title: 'AI 2026: Autonomous Ops and SRE for Agents',
+                summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
+                href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
               },
               {
-                title: 'AI 2026: Autonomous Business Operations — Complete Guide',
-                summary:
-                  'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.',
-                href: '/blog/ai-2026-autonomous-business-operations-complete-guide'
+                title: 'AI 2026: LLM Evals Maturity Model',
+                summary: 'Evaluation-first framework with quality gates and policy-as-code.',
+                href: '/blog/ai-2026-llm-evals-maturity-model'
               },
               {
-                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
-                summary:
-                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
-                href: '/blog/ai-2026-policy-as-code-production-blueprint'
+                title: 'Enterprise AI Security Blueprint (2025)',
+                summary: 'Layered controls across model, data, runtime, and supply chain.',
+                href: '/blog/ai-2025-enterprise-ai-security-blueprint'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
@@ -299,3 +292,4 @@ export default function HomePage() {
     </div>
   )
 }
+
