@@ -1,3 +1,47 @@
+export const metadata = {
+  title: 'Agentic Evidence Hub — Executive Overview | Zion Tech Group',
+  description:
+    'Centralize evals, releases, incidents, and guardrails for audit‑ready autonomy and safer change.',
+};
+
+export default function AgenticEvidenceHubOverviewPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      <header className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <h1 className="text-3xl md:text-5xl font-bold">Agentic Evidence Hub — Executive Overview</h1>
+          <p className="mt-3 text-purple-100/90">
+            A unified, auditable system of record for evals, decisions, and incidents across agent platforms.
+          </p>
+        </div>
+      </header>
+
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <div className="prose prose-lg max-w-none">
+          <p>
+            The Evidence Hub aggregates evaluation results, policy events, release scorecards, and incident logs
+            into a single source of truth. It powers safe change by making approvals, rollbacks, and risk posture
+            transparent.
+          </p>
+          <h2>Core capabilities</h2>
+          <ul>
+            <li>Release scorecards and gate outcomes by environment</li>
+            <li>Incident and regression timelines mapped to evals</li>
+            <li>Policy decisions, tool approvals, and budget checks</li>
+            <li>APIs for programmatic evidence ingestion and queries</li>
+          </ul>
+          <h2>Adoption path</h2>
+          <ol>
+            <li>Start with one product area; ship scorecards and basic gates.</li>
+            <li>Integrate policy and cost events; standardize runbooks.</li>
+            <li>Scale to portfolio views with posture scoring and SLOs.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  );
+}
+
 import Link from 'next/link';
 
 export const metadata = {

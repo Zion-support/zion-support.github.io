@@ -17,6 +17,22 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-16",
   },
   {
+    id: "ai-2026-agentic-billing-controls",
+    title: "AI 2026: Agentic Billing Controls",
+    summary: "Budgets, approvals, and eval‑gated execution for predictable agent costs.",
+    href: "/blog/ai-2026-agentic-billing-controls",
+    tag: "Governance",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-agentic-evidence-hub-overview",
+    title: "Agentic Evidence Hub — Executive Overview",
+    summary: "Centralize evals, releases, incidents, and guardrails for audit‑ready autonomy.",
+    href: "/content/ai-2026-agentic-evidence-hub-overview",
+    tag: "Overview",
+    date: "2025-09-16",
+  },
+  {
     id: "evals-and-guardrails",
     title: "Evals, Guardrails, and Safety",
     summary: "Stand up eval suites and policy guardrails for production agents.",
