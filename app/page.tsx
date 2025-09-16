@@ -259,6 +259,21 @@ export default function HomePage() {
           </div>
         </section>
       {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
+            <div>
+              <p className="text-sm font-semibold text-indigo-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Agentic Sandbox Patterns</h2>
+              <p className="text-gray-600 mt-2">Isolation domains, least privilege, and runtime guards for safe tool use.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agentic-sandbox-patterns" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Overview</Link>
+              <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Permissions Blueprint</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-8 bg-gradient-to-r from-purple-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
