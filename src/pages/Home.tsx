@@ -6,6 +6,7 @@ import { useNotifications } from '../context/notifications/NotificationContext';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import LatestContentPromotion2029 from '@/components/LatestContentPromotion2029';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -29,6 +30,9 @@ const Home: React.FC = () => {
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
+        <div className="mb-12">
+          <LatestContentPromotion2029 />
+        </div>
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Zion Tech Group 2026
