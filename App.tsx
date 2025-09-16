@@ -227,8 +227,6 @@ export default function App(): JSX.Element {
                   <DynamicContentCarousel />
                 </div>
 
-<<<<<<< HEAD
-=======
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
@@ -253,7 +251,6 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <EnhancedContentShowcase />
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-bc17
                 {/* Featured New Services */}
                 <section className="mb-12">
                   <div className="text-center mb-6">
@@ -639,8 +636,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
-<<<<<<< HEAD
-=======
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
@@ -663,7 +658,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/FutureTechPredictions2025" element={<FutureTechPredictions2025 />} />
           <Route path="/pages/AutonomousSystemsRevolution2025" element={<AutonomousSystemsRevolution2025 />} />
           <Route path="/pages/QuantumAIRevolution2025" element={<QuantumAIRevolution2025 />} />
->>>>>>> cursor/create-and-deploy-new-content-bc17
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
