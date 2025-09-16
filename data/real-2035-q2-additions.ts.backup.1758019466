@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+=======
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = {
+	mobile: '+1 302 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+		trialDays: 7,
+		setupTime: '15 minutes',
+		category: 'Developer Tools',
+		realService: true,
+		trialDays: 7,
+		setupTime: '1 hour',
+		category: 'Developer Tools',
+		realService: true,
+	}
+];
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

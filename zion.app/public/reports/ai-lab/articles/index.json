@@ -159,5 +159,26 @@
     "createdAt": "2025-09-16T18:00:00.000Z",
     "tags": ["evals", "reliability", "product"],
     "source": "Zion AI Lab"
+  },
+  {
+    "title": "Agent Runbooks: Incident Response for LLM Agents",
+    "url": "/reports/ai-lab/articles/agent-runbooks-incident-response-1758070800000.md",
+    "createdAt": "2025-09-16T19:00:00.000Z",
+    "tags": ["operations", "reliability", "agents"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Observability Traces Blueprint: Evidence for Auditable AI",
+    "url": "/reports/ai-lab/articles/observability-traces-blueprint-1758074400000.md",
+    "createdAt": "2025-09-16T20:00:00.000Z",
+    "tags": ["observability", "evidence", "governance"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Cost Controls for Agents: Budgets, Quotas, and Safe Degradation",
+    "url": "/reports/ai-lab/articles/cost-controls-for-agents-1758078000000.md",
+    "createdAt": "2025-09-16T21:00:00.000Z",
+    "tags": ["cost", "governance", "product"],
+    "source": "Zion AI Lab"
   }
 ]
