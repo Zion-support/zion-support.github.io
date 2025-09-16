@@ -1,5 +1,50 @@
 export const blogPosts = [
   {
+    id: 9001,
+    title: "AI 2026: Practical Guardrails That Unblock Shipping",
+    excerpt: "Field-tested policies and evals that let teams ship faster without breaking prod.",
+    content: "Ship reliably by enforcing guardrails that matter: groundedness checks, violation monitors, budget caps, and deterministic rollback. This post includes minimal policy bundles, CI/CD wiring, and dashboards you can adopt in hours, not weeks.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Safety",
+    tags: ["Guardrails", "Policy-as-Code", "Release"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-practical-guardrails.jpg",
+    slug: "ai-2026-practical-guardrails-that-unblock-shipping"
+  },
+  {
+    id: 9002,
+    title: "Eval-Driven Roadmaps: Plan by Evidence, Not Opinions",
+    excerpt: "Use online evals and scorecards to prioritize the right bets each quarter.",
+    content: "Quarterly planning is better with evidence. Learn how to wire online evals into roadmap scorecards so prioritization reflects safety, quality, and cost signals from production, not gut feel.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["Roadmaps", "Evals", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/eval-driven-roadmaps-2026.jpg",
+    slug: "eval-driven-roadmaps-plan-by-evidence"
+  },
+  {
+    id: 9003,
+    title: "RAG Freshness at Scale: Drift Control That Sticks",
+    excerpt: "Keep retrieval fresh without unstable costs using temporal pinning and budgets.",
+    content: "We show a pragmatic recipe for RAG freshness: temporal pinning windows, freshness budgets, and change-gated deployments. Includes example tracing views and alert thresholds that catch drift before customers do.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/rag-freshness-at-scale-2026.jpg",
+    slug: "rag-freshness-at-scale-drift-control"
+  },
+  {
     id: 8001,
     title: "AI 2026: Agent Posture Management — Executive Guide",
     excerpt: "Continuously assess and harden agent systems with evidence-led posture metrics.",
@@ -979,8 +1024,6 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-
-export const BLOG_POSTS = blogPosts;
 
 // New content added for enhanced engagement
 export const newContent2026 = [
