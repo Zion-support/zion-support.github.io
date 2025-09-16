@@ -764,6 +764,20 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
+    - id: "ai-2026-runtime-guardrails-blueprint"
+      type: "blog"
+      title: "AI 2026: Runtime Guardrails Blueprint"
+      file_path: "/app/blog/ai-2026-runtime-guardrails-blueprint/page.tsx"
+      url: "/blog/ai-2026-runtime-guardrails-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Guardrails", "Security", "Policy-as-Code", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollback_time: "< 5 min"
+        incident_reduction: "40%"
+        audit_ready: true
     - id: "ai-2026-secure-agent-operations-blueprint"
       type: "blog"
       title: "AI 2026: Secure Agent Operations — Blueprint"

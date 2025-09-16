@@ -137,6 +137,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Guardrails + Eval-Driven Releases (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Runtime Guardrails + Eval‑Driven Releases</h2>
+              <p className="text-gray-600 mt-2">Isolation, permissions, and policy gates—plus rollouts with canary scorecards and auto‑rollback.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Guardrails</Link>
+              <Link href="/blog/ai-2026-evaluation-driven-release-engineering" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval‑Driven Releases</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 <<<<<<< HEAD
       {/* Promo: Real-Time RAG + Autonomous Ops (New) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
