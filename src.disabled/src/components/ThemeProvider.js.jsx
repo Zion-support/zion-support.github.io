@@ -1,4 +1,12 @@
-"use client";"; import * as _React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}
-"use client\";\"; import * as React from \"react\"; export const ThemeProvider({ children }) {}}; \"use client\"; const initialState = {}; \"setTheme\": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;\"; root.classList.remove(\"light\",\"dark\");\"; root.classList.add(\"dark\")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)\"; throw new Error(\"useTheme must be used within a ThemeProvider\"); return context}; \"}
-"use client";"; import * as React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; setTheme: () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}""
-"use client";"; import * as _React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}
+import React from 'react';
+
+const ThemeProvider.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ThemeProvider.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ThemeProvider.js;

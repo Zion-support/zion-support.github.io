@@ -1,52 +1,45 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+=======
 import Link from 'next/link';
+import { useState } from 'react';
 
-import { 
+import {
   ArrowRight,
-  Award,
   BarChart3,
-  Shield,
-  Code,
-  Zap,
-  Globe,
-  Home,
-  Building,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
   BookOpen,
   Brain,
-  Calculator,
-  Camera,
-  CheckCircle,
+  Building,
+  Calendar,
+  Car,
   ChevronDown,
-  Clock,
   Cloud,
-  CreditCard,
+  Code,
+  Cpu,
   DollarSign,
   Eye,
-  Gamepad2,
+  FileText,
+  Globe,
+  GraduationCap,
   Heart,
+  Home,
   Lock,
   Mail,
-  MapPin,
   Menu,
-  Music,
+  MessageSquare,
   Network,
   Phone,
   Rocket,
   Settings,
-  Star,
+  Shield,
+  ShoppingCart,
+  Sprout,
   Target,
   TrendingUp,
-  Cpu,
-  Car,
-  Sprout,
-  Wifi,
-  GraduationCap,
   Users,
-  Truck
+  Wifi,
+  Zap
 } from 'lucide-react';
 
 const navigationItems = [
@@ -393,8 +386,22 @@ const quickLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const Navigation: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Navigation | Zion Tech Group</title>
+        <meta name="description" content="Navigation - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Navigation</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-blue-600 text-white py-2">
@@ -411,8 +418,8 @@ export default function Navigation() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="/blog/autonomous-evaluation-playbooks-2025" className="bg-white text-blue-700 rounded-full px-3 py-1 font-medium hover:bg-blue-50 transition-colors">
-                New: Autonomous Evaluation Playbooks →
+              <Link href="/blog/ai-2026-agent-release-health-scorecards" className="bg-white text-blue-700 rounded-full px-3 py-1 font-medium hover:bg-blue-50 transition-colors">
+                New: Agent Release Health Scorecards →
               </Link>
               <Link href="/contact" className="hover:text-blue-200 transition-colors">
                 Get Free Consultation
@@ -422,161 +429,11 @@ export default function Navigation() {
               </Link>
             </div>
           </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
-
-      {/* Main Navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <div>
-              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
-              <div className="text-sm text-gray-500">AI & Technology Solutions</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div
-                key={item.title}
-                className="relative group"
-                onMouseEnter={() => setActiveSubmenu(item.title)}
-                onMouseLeave={() => setActiveSubmenu(null)}
-              >
-                <Link
-                  href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span>{item.title}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </Link>
-
-                {/* Submenu */}
-                {activeSubmenu === item.title && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
-                  >
-                    <div className="grid grid-cols-1 gap-2">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.title}
-                          href={subItem.href}
-                          className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
-                        >
-                          <subItem.icon className="w-5 h-5 text-blue-600 mt-0.5" />
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2">
-                              <span className="font-medium text-gray-900">{subItem.title}</span>
-                              {subItem.popular && (
-                                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">
-                                  Popular
-                                </span>
-                              )}
-                            </div>
-                            <p className="text-sm text-gray-500 mt-1">{subItem.description}</p>
-                          </div>
-                          <ArrowRight className="w-4 h-4 text-gray-400" />
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </div>
-            ))}
-
-            {/* Quick Links */}
-            <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  <link.icon className="w-4 h-4" />
-                  <span>{link.title}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-200 py-4"
-          >
-            <div className="space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.title}</span>
-                  </Link>
-                  <div className="ml-7 space-y-2 mt-2">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.title}
-                        href={subItem.href}
-                        className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600 transition-colors py-1"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <subItem.icon className="w-4 h-4" />
-                        <span>{subItem.title}</span>
-                        {subItem.popular && (
-                          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">
-                            Popular
-                          </span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              
-              {/* Mobile Quick Links */}
-              <div className="pt-4 border-t border-gray-200">
-                <div className="grid grid-cols-2 gap-2">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.title}
-                      href={link.href}
-                      className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.title}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </div>
-    </nav>
+    </div>
   );
-}
+};
+
+export default Navigation;

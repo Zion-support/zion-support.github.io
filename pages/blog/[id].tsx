@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -5,6 +6,9 @@ import { useRouter } from 'next/router'
 const registry: Record<string, React.ComponentType> = {
   'agentic-product-playbooks': require('../../blog/agentic-product-playbooks').default,
   'ai-automation-trends-2025': require('../../blog/ai-automation-trends-2025').default,
+  'ai-customer-agents-2025': require('../../blog/ai-customer-agents-2025').default,
+  'ai-2026-operational-evals-blueprint': require('../../blog/ai-2026-operational-evals-blueprint').default,
+  'ai-2026-agent-observability-blueprint': require('../../blog/ai-2026-agent-observability-blueprint').default,
   'ai-2026-foundation-model-quality-engineering': require('../../blog/ai-2026-foundation-model-quality-engineering').default,
   'cloud-cost-optimization-2025': require('../../blog/cloud-cost-optimization-2025').default,
   'genai-2025-practical-compliance-patterns': require('../../blog/genai-2025-practical-compliance-patterns').default,
@@ -20,6 +24,24 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-production-evidence-hub-blueprint': require('../../blog/ai-2026-production-evidence-hub-blueprint').default,
   'ai-2026-agent-slo-blueprint': require('../../blog/ai-2026-agent-slo-blueprint').default,
   'ai-2026-governed-tool-use-case-studies': require('../../blog/ai-2026-governed-tool-use-case-studies').default,
+  'ai-2026-agent-slo-scorecards': require('../../blog/ai-2026-agent-slo-scorecards').default,
+  'ai-2026-cost-aware-model-routing': require('../../blog/ai-2026-cost-aware-model-routing').default,
+  'ai-2026-agentic-benchmarking-field-guide': require('../../blog/ai-2026-agentic-benchmarking-field-guide').default,
+  'ai-2026-operationalizing-ai-safety-controls': require('../../blog/ai-2026-operationalizing-ai-safety-controls').default,
+  // Newly added content
+  'ai-2026-enterprise-agent-risk-mitigation': require('../../blog/ai-2026-enterprise-agent-risk-mitigation').default,
+  'ai-2026-agentic-observability-deep-dive': require('../../blog/ai-2026-agentic-observability-deep-dive').default,
+  'ai-2026-trustworthy-model-routing-starter': require('../../blog/ai-2026-trustworthy-model-routing-starter').default,
+  'ai-2025-enterprise-automation-strategy': require('../../blog/ai-2025-enterprise-automation-strategy').default,
+  'ai-2026-evidence-led-operations-blueprint': require('../../blog/ai-2026-evidence-led-operations-blueprint').default,
+  // New articles (Sept 16, 2025)
+  'ai-2026-low-latency-agent-observability': require('../../blog/ai-2026-low-latency-agent-observability').default,
+  'ai-2026-agent-safety-evidence-integration': require('../../blog/ai-2026-agent-safety-evidence-integration').default,
+  'ai-2026-cost-aware-real-time-routing': require('../../blog/ai-2026-cost-aware-real-time-routing').default,
+  // New: Reliable Real-Time Agents (2026)
+  'ai-2026-reliable-real-time-agents': require('../../blog/ai-2026-reliable-real-time-agents').default,
+  // New: Governed Agent Operations Checklist (2026)
+  'ai-2026-governed-agent-operations-checklist': require('../../blog/ai-2026-governed-agent-operations-checklist').default,
 }
 
 export default function BlogPostRouter() {

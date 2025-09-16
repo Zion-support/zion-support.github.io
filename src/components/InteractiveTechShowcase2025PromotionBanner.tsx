@@ -1,75 +1,22 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  ArrowRight
-  Star
-  Zap
-  TrendingUp,
-  Users,
-  Award,
-  Rocket,
-  Brain,
-  Shield,
-  Cloud,
-  BarChart3,
-  Eye,
-  MousePointer,
-  Settings,
-  Code,
-  Database,
-  Cpu,
-  Network
-} from 'lucide-react';
-
-const InteractiveTechShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    { icon: Braintext: 'AI 'Automation', 'color: 'from-blue-500 to-purple-500' },
-    { icon: Shieldtext: ''Cybersecurity', 'color: 'from-red-500 to-orange-500' },
-    { icon: Cloudtext: 'Cloud 'Solutions', 'color: 'from-green-500 to-teal-500' },
-    { icon: BarChart3text: 'Data 'Analytics', 'color: 'from-purple-500 to-pink-500' }
-  ];
-
-  const stats = [
-    { value: '10'x', 'label: 'Performance Gain' },
-    { value: '99.7%'label: 'Accuracy Rate' },
-    { value: '<2's', 'label: 'Response Time' },
-    { value: '500+'label: 'Live Demos' }
-  ];
-
-  const demoSteps = [
-    'Real-time Process Analysis',
-    'AI-Powered Optimization',
-    'Live Performance Metrics',
-    'Instant Results Display'
-  ];
-
-  if (!isVisible) return null;
-
+const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-transparent to-purple-600/20"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6"
           >
             <Play className="w-4 h-4" />
             🎮 NEW: Interactive Technology Demo 2025
-          </divdiv>
+          </div>
 
           <divh2
             className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -88,7 +35,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </divp>
 
           {/* Interactive Demo Preview */}
-          <divdiv
+          <div
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -136,7 +83,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
                   {demoSteps.map((step, index) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="flex items-center gap-3"
                     >
@@ -144,21 +91,21 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                         <span className="text-white text-xs font-bold">{index + 1}</span>
                       </div>
                       <span className="text-gray-300">{step}</span>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
 
           {/* Feature Icons */}
-          <divdiv
+          <div
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
@@ -166,13 +113,13 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-white font-medium">{feature.text}</span>
-                </divdiv>
+                </div>
               );
             })}
-          </divdiv>
+          </div>
 
           {/* CTA Buttons */}
-          <divdiv
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -185,7 +132,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
               Watch Live Stream
               <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-          </divdiv>
+          </div>
         </div>
 
         {/* Floating Elements */}
@@ -198,3 +145,4 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 };
 
 export default InteractiveTechShowcase2025PromotionBanner;
+</div></div>

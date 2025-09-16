@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const analytics-dashboard.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">analytics-dashboard.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default analytics-dashboard.js;
+=======
 import React, {useState, useEffect, useCallback} from 'react';
 
 import {TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target} from 'lucide-react';
@@ -227,3 +241,4 @@ export function AnalyticsDashboard("props": "any) {;
 </motion>
 </motion>
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

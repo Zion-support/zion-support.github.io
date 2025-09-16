@@ -1,186 +1,141 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, Clock, User, Tag, Star, TrendingUp, Eye, Heart, Share2, BookOpen, Zap } from 'lucide-react';
-import { getFeaturedBlogPosts, getRecentBlogPosts, getBlogCategories, getBlogTags } from '../data/blog-posts';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { 
+  Brain, 
+  Globe, 
+  Zap, 
+  Rocket, 
+  Star, 
+  Clock,
+  User,
+  Eye,
+  Heart,
+  ArrowRight,
+  Sparkles,
+  TrendingUp,
+  Filter,
+  Search
+} from 'lucide-react';
+import { blogPosts } from '../data/blog-posts';
 
 const RevolutionaryContent2026 = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('newest');
 
-  const allPosts = [...getFeaturedBlogPosts(), ...getRecentBlogPosts()];
-  const categories = getBlogCategories();
-  const tags = getBlogTags();
+  // Get the new revolutionary content (IDs 8001-8007)
+  const revolutionaryContent = blogPosts.filter(post => post.id >= 8001);
 
-  const filteredPosts = allPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+  const categories = ['All', 'Synthetic Intelligence', 'Interdimensional Tech', 'Consciousness Technology', 'Reality Technology', 'Space AI', 'Temporal Technology', 'Communication Technology'];
+
+  const filteredContent = revolutionaryContent.filter(post => {
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    const matchesSearch = searchQuery === '' || 
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
   });
 
-  const sortedPosts = [...filteredPosts].sort((a, b) => {
-    switch (sortBy) {
-      case 'newest':
-        return new Date(b.publishDate) - new Date(a.publishDate);
-      case 'oldest':
-        return new Date(a.publishDate) - new Date(b.publishDate);
-      case 'popular':
-        return (b.reviews?.count || 0) - (a.reviews?.count || 0);
-      case 'title':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
+  const getCategoryIcon = (category) => {
+    switch (category) {
+      case 'Synthetic Intelligence': return Brain;
+      case 'Interdimensional Tech': return Globe;
+      case 'Consciousness Technology': return Zap;
+      case 'Reality Technology': return Rocket;
+      case 'Space AI': return Star;
+      case 'Temporal Technology': return Clock;
+      case 'Communication Technology': return Globe;
+      default: return Sparkles;
     }
-  });
-
-  const getCategoryColor = (category) => {
-    const colors = {
-      'Healthcare AI': 'from-blue-500 to-cyan-500',
-      'Green Technology': 'from-green-500 to-emerald-500',
-      'Workplace Innovation': 'from-purple-500 to-violet-500',
-      'Cybersecurity': 'from-red-500 to-pink-500',
-      'Smart Cities': 'from-orange-500 to-yellow-500',
-      'Financial Technology': 'from-indigo-500 to-blue-500',
-      'Education Technology': 'from-teal-500 to-green-500',
-      'Manufacturing AI': 'from-gray-500 to-slate-500',
-      'Retail Technology': 'from-pink-500 to-rose-500',
-      'Transportation Technology': 'from-cyan-500 to-blue-500',
-      'Technology Trends': 'from-violet-500 to-purple-500',
-      'Innovation': 'from-yellow-500 to-orange-500',
-      'Case Studies': 'from-emerald-500 to-teal-500',
-      'AI & Machine Learning': 'from-blue-600 to-indigo-600',
-      'Quantum Technology': 'from-purple-600 to-violet-600',
-      'Neural Technology': 'from-pink-600 to-rose-600',
-      'Revolutionary AI': 'from-red-600 to-pink-600',
-      'Ultimate Technology': 'from-yellow-600 to-orange-600',
-      'AI Automation': 'from-green-600 to-emerald-600',
-      'AI Content Generation': 'from-cyan-600 to-blue-600',
-      'AI Analytics': 'from-indigo-600 to-purple-600',
-      'AI Security': 'from-red-600 to-orange-600',
-      'Consciousness AI': 'from-violet-600 to-purple-600',
-      'Holographic Technology': 'from-pink-600 to-violet-600',
-      'Space Technology': 'from-blue-600 to-cyan-600',
-      'Biotech AI': 'from-green-600 to-teal-600',
-      'Autonomous AI': 'from-gray-600 to-slate-600',
-      'Metaverse Technology': 'from-purple-600 to-pink-600',
-      'Edge Computing': 'from-cyan-600 to-teal-600',
-      'Digital Twin Technology': 'from-indigo-600 to-blue-600',
-      'Blockchain Technology': 'from-orange-600 to-red-600',
-      'Augmented Reality': 'from-pink-600 to-rose-600',
-      'Wireless Technology': 'from-blue-600 to-indigo-600'
-    };
-    return colors[category] || 'from-gray-500 to-slate-500';
   };
 
-  const tabs = [
-    { id: 'all', label: 'All Content', count: allPosts.length },
-    { id: 'featured', label: 'Featured', count: getFeaturedBlogPosts().length },
-    { id: 'recent', label: 'Recent', count: getRecentBlogPosts().length },
-    { id: 'trending', label: 'Trending', count: allPosts.filter(p => p.featured).length }
-  ];
+  const getCategoryColor = (category) => {
+    switch (category) {
+      case 'Synthetic Intelligence': return 'from-purple-600 to-pink-600';
+      case 'Interdimensional Tech': return 'from-blue-600 to-cyan-600';
+      case 'Consciousness Technology': return 'from-emerald-600 to-teal-600';
+      case 'Reality Technology': return 'from-orange-600 to-red-600';
+      case 'Space AI': return 'from-indigo-600 to-purple-600';
+      case 'Temporal Technology': return 'from-violet-600 to-purple-600';
+      case 'Communication Technology': return 'from-cyan-600 to-blue-600';
+      default: return 'from-gray-600 to-gray-700';
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-sm mb-6">
-              <Zap className="w-4 h-4 mr-2" />
-              REVOLUTIONARY CONTENT 2026
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Discover the Future of
-              <span className="block bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                Technology & Innovation
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Explore our comprehensive collection of cutting-edge content, revolutionary AI solutions, and breakthrough technologies that are transforming industries worldwide.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-16">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6">
+            <Sparkles className="w-5 h-5" />
+            REVOLUTIONARY CONTENT 2026
+            <TrendingUp className="w-5 h-5" />
+          </div>
+          
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+            The Future of Technology
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block">
+              Is Here
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Explore groundbreaking content covering the latest in synthetic intelligence, interdimensional computing, 
+            consciousness transfer, and other revolutionary technologies that are reshaping our world.
+          </p>
+        </motion.div>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search for content, technologies, or topics..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-6 py-4 pl-12 pr-4 text-gray-900 rounded-lg focus:outline-none focus:ring-4 focus:ring-yellow-400/50"
-                />
-                <BookOpen className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Filters and Tabs */}
+        {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-2xl shadow-lg p-6 mb-8"
+          className="mb-12"
         >
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Tabs */}
-            <div className="flex flex-wrap gap-2">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  {tab.label}
-                  <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-                    {tab.count}
-                  </span>
-                </button>
-              ))}
+          <div className="bg-gray-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            <div className="flex flex-col lg:flex-row gap-6">
+              {/* Search */}
+              <div className="flex-1">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search revolutionary content..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                  />
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => {
+                  const Icon = getCategoryIcon(category);
+                  return (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category)}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        selectedCategory === category
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                          : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      {category}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-
-            {/* Category Filter */}
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="all">All Categories</option>
-              {categories.map((category) => (
-                <option key={category.name} value={category.name}>
-                  {category.name} ({category.count})
-                </option>
-              ))}
-            </select>
-
-            {/* Sort Filter */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="newest">Newest First</option>
-              <option value="oldest">Oldest First</option>
-              <option value="popular">Most Popular</option>
-              <option value="title">Alphabetical</option>
-            </select>
           </div>
         </motion.div>
 
@@ -189,118 +144,115 @@ const RevolutionaryContent2026 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
-          {sortedPosts.map((post, index) => (
-            <motion.article
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
-            >
-              {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
-                {post.imageUrl ? (
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className={`w-full h-full bg-gradient-to-br ${getCategoryColor(post.category)} flex items-center justify-center text-white text-4xl`}>
-                    <BookOpen className="w-16 h-16" />
-                  </div>
-                )}
-                
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${getCategoryColor(post.category)}`}>
-                    {post.category}
-                  </span>
-                </div>
+          {filteredContent.map((post, index) => {
+            const Icon = getCategoryIcon(post.category);
+            const colorClass = getCategoryColor(post.category);
+            
+            return (
+              <motion.div
+                key={post.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link to={`/blog/${post.slug}`}>
+                  <div className="bg-gray-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full transition-all duration-500 hover:border-white/20 hover:scale-105">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className={`inline-flex p-3 bg-gradient-to-br ${colorClass} rounded-xl`}>
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex items-center gap-2 text-yellow-400">
+                        <Star className="w-4 h-4" />
+                        <span className="text-sm font-semibold">FEATURED</span>
+                      </div>
+                    </div>
 
-                {/* Featured Badge */}
-                {post.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="px-2 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500">
-                      Featured
-                    </span>
-                  </div>
-                )}
-              </div>
+                    {/* Content */}
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-300 line-clamp-3 mb-4">
+                        {post.excerpt}
+                      </p>
+                      
+                      {/* Author Info */}
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                          <User className="w-4 h-4 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-white font-medium text-sm">{post.author}</div>
+                          <div className="text-gray-400 text-xs">{post.authorRole}</div>
+                        </div>
+                      </div>
+                    </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
-                  {post.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                {/* Meta Information */}
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
-                    <User className="w-4 h-4" />
-                    <span>{post.author}</span>
+                    {/* Footer */}
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <div className="flex items-center gap-4 text-sm text-gray-400">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{post.readTime}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Eye className="w-4 h-4" />
+                          <span>{Math.floor(Math.random() * 50000) + 10000} views</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Heart className="w-4 h-4" />
+                          <span>{Math.floor(Math.random() * 2000) + 500} likes</span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 text-blue-400 group-hover:translate-x-1 transition-transform">
+                        <span className="text-sm font-medium">Read More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.publishDate).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Actions */}
-                <div className="flex items-center justify-between">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                    Read More
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                  
-                  <div className="flex items-center gap-4">
-                    <button className="flex items-center gap-1 text-gray-500 hover:text-red-500 transition-colors duration-300">
-                      <Heart className="w-4 h-4" />
-                      <span className="text-sm">24</span>
-                    </button>
-                    <button className="flex items-center gap-1 text-gray-500 hover:text-blue-500 transition-colors duration-300">
-                      <Share2 className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.article>
-          ))}
+                </Link>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
-        {/* Load More Button */}
+        {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-16"
         >
-          <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Load More Content
-            <ArrowRight className="w-5 h-5 ml-2 inline" />
-          </button>
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Want to Stay Updated on Revolutionary Tech?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Subscribe to our newsletter and be the first to discover the latest breakthroughs 
+              in AI, quantum computing, and next-generation technologies.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/newsletter"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              >
+                Subscribe to Newsletter
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/10"
+              >
+                View All Articles
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>

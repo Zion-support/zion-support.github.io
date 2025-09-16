@@ -1,81 +1,17 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  ArrowRight
-  Play,
-  Globe,
-  Shield,
-  Target,
-  Lightbulb,
-  TrendingUp,
-  Users,
-  Code
-} from 'lucide-react';
-
-const RevolutionaryTechShowcase2026Banner = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const slides = [
-    {
-      title: "Neural Interface Revolution",
-      subtitle: "Direct Brain-Computer Integration",
-      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.",
-      icon: Brain,
-      color: "from-purple-600 to-blue-600",
-      stats: "2.3M+ Users",
-      features: ["Thought Control"Real-time Processing"Zero Latency"]
-    },
-    {
-      title: "Quantum AI Fusion",
-      subtitle: "Exponential Processing Power",
-      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.",
-      icon: Zap,
-      color: "from-green-600 to-teal-600",
-      stats: "10,000x Faster",
-      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"]
-    },
-    {
-      title: "Synthetic Intelligence",
-      subtitle: "Consciousness-Level AI",
-      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.",
-      icon: Rocket,
-      color: "from-orange-600 to-red-600",
-      stats: "99.9% Accuracy",
-      features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"]
-    }
-  ];
-
-  const currentSlideData = slides[currentSlide];
-
-  if (!isVisible) return null;
-
+const RevolutionaryTechShowcase2026Banner: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv 
+        <div 
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -94,12 +30,12 @@ const RevolutionaryTechShowcase2026Banner = () => {
             Experience groundbreaking technologies that are reshaping our world and 
             defining the next decade of human progress.
           </p>
-        </divdiv>
+        </div>
 
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Slide Content */}
-            <divdiv
+            <div
               key={currentSlide}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
@@ -129,12 +65,12 @@ const RevolutionaryTechShowcase2026Banner = () => {
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                   {currentSlideData.features.map((featureindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
                     >
                       <div className="text-white font-semibold">{feature}</div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
 
@@ -171,7 +107,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-xl"></div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Slide Indicators */}
@@ -191,7 +127,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
         </div>
 
         {/* Bottom Stats */}
-        <divdiv 
+        <div 
           className="mt-20"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -201,7 +137,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
               { icon: Codelabel: "Technologies"value: "500+" },
               { icon: Starlabel: "Success Rate"value: "99.9%" }
             ].map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -210,10 +146,10 @@ const RevolutionaryTechShowcase2026Banner = () => {
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

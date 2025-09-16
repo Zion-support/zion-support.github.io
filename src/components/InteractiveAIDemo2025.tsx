@@ -1,148 +1,24 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Bot
-  MessageCircle
-  Send
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star,
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Lightbulb,
-  Target,
-  TrendingUp
-} from 'lucide-react';
-
-const InteractiveAIDemo2025 = () => {
-  const [messagesetMessages] = useState([
-    {
-      id: 1,
-      type: 'ai',
-      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
-      timestamp: new Date(),
-      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
-    }
-  ]);
-  const [inputValuesetInputValue] = useState('');
-  const [isTypingsetIsTyping] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const aiResponses = [
-    {
-      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
-      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
-      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
-      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
-      icon: Target,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
-      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const handleSendMessage = async () => {
-    if (!inputValue.trim() || isTyping) return;
-
-    const userMessage = {
-      id: messages.length + 1,
-      type: 'user',
-      content: inputValue,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prevuserMessage]);
-    setInputValue(', ');
-    setIsTyping(true);
-
-    // Simulate AI response delay
-    setTimeout(() => {
-      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
-      const aiMessage = {
-        id: messages.length + 2,
-        type: 'ai',
-        content: randomResponse.content,
-        timestamp: new Date(),
-        features: randomResponse.features,
-        icon: randomResponse.icon,
-        color: randomResponse.color
-      };
-      setMessages(prev => [...prevaiMessage]);
-      setIsTyping(false);
-    }1500);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
-
-  if (!isVisible) return null;
-
+const InteractiveAIDemo2025: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
       </div>
 
-      <divdiv
+      <div
         className="relative z-10 container mx-auto px-4 py-16"
       >
         {/* Header */}
-          <divdiv
+          <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
           >
             <Bot className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
-          </divdiv>
+          </div>
           
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Chat with the
@@ -156,10 +32,10 @@ const InteractiveAIDemo2025 = () => {
             Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
             quantum computingbusiness automationand future predictions.
           </p>
-        </divdiv>
+        </div>
 
         {/* Chat Interface */}
-        <divdiv
+        <div
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
         >
           {/* Chat Header */}
@@ -183,7 +59,7 @@ const InteractiveAIDemo2025 = () => {
           <div className="h-96 overflow-y-auto p-6 space-y-6">
             <div>
               {messages.map((message) => (
-                <divdiv
+                <div
                   key={message.id}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
@@ -211,20 +87,20 @@ const InteractiveAIDemo2025 = () => {
                       {message.timestamp.toLocaleTimeString()}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Typing Indicator */}
             {isTyping && (
-              <divdiv
+              <div
                 className="flex justify-start"
               >
                 <div className="bg-white/10 text-gray-100 rounded-2xl p-4 flex items-center gap-2">
                   <Loader2 className="w-4 h-4 animate-spin" />
                   <span className="text-sm">AI is thinking...</span>
                 </div>
-              </divdiv>
+              </div>
             )}
           </div>
 
@@ -256,10 +132,10 @@ const InteractiveAIDemo2025 = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Features Showcase */}
-        <divdiv
+        <div
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
@@ -270,7 +146,7 @@ const InteractiveAIDemo2025 = () => {
           ].map((featureindex) => {
             const Icon = feature.icon;
             return (
-              <divdiv
+              <div
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
               >
@@ -279,11 +155,11 @@ const InteractiveAIDemo2025 = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-purple-300 text-sm">{feature.description}</p>
-              </divdiv>
+              </div>
             );
           })}
-        </divdiv>
-      </divdiv>
+        </div>
+      </div>
     </div>
   );
 };

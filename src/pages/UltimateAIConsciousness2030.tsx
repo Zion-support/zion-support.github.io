@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 
 export default function UltimateAIConsciousness2030(): JSX.Element {
@@ -6,21 +5,5 @@ export default function UltimateAIConsciousness2030(): JSX.Element {
     <div className="p-6">
       <h1 className="text-3xl font-bold">Ultimate AI Consciousness 2030</h1>
       <p className="text-gray-600 mt-2">Placeholder page to resolve missing import.</p>
-    </div>
   )
 }
-=======
-import React from 'react';
-
-const UltimateAIConsciousness2030: React.FC = () => {
-  return (
-    <div style={{ padding: 24 }}>
-      <h1>Ultimate AI Consciousness 2030</h1>
-      <p>This is a placeholder page to satisfy build dependencies.</p>
-    </div>
-  );
-};
-
-export default UltimateAIConsciousness2030;
->>>>>>> content-updates-2025-09-16
-

@@ -1,5 +1,4 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
@@ -8,16 +7,16 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%224%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6"
           >
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
-          </divdiv>
+          </div>
           
           <divh2
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
@@ -35,7 +34,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Content Card */}
-          <divdiv
+          <div
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
           >
             <div className="flex items-center mb-4">
@@ -67,10 +66,10 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               Read Complete Guide
               <span className="ml-2">→</span>
             </a>
-          </divdiv>
+          </div>
 
           {/* Case Study Card */}
-          <divdiv
+          <div
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
           >
             <div className="flex items-center mb-4">
@@ -107,11 +106,11 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               View Case Study
               <span className="ml-2">→</span>
             </a>
-          </divdiv>
+          </div>
         </div>
 
         {/* Key Statistics */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
           <div className="text-center">
@@ -130,10 +129,10 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
             <div className="text-gray-300 text-sm">Success Rate</div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,10 +149,11 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               Get Implementation Consultation
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </divsection>
   );
 };
 
 export default NewContent2025AutomationRevolutionBanner;
+</div></div></div>

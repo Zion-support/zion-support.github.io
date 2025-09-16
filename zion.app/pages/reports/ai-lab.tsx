@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+=======
 import { useEffect, useState } from 'react';
 
 interface ArticleEntry {
@@ -11,7 +15,9 @@ interface ArticleEntry {
 export default function AILabPage() {
   const [items, setItems] = useState<ArticleEntry[]>([]);
   const [loading, setLoading] = useState(true);
-  const featured = items.find(it => it.title.startsWith('The Agentic Observability Blueprint')) || items.find(it => it.title.startsWith('Enterprise Agent Safety Playbook'));
+  const featured = items
+    .slice()
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0];
 
   useEffect(() => {
     async function load() {
@@ -28,8 +34,25 @@ export default function AILabPage() {
     }
     load();
   }, []);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const ai-lab: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-lab | Zion Tech Group</title>
+        <meta name="description" content="ai-lab - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-lab</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+=======
     <main className="max-w-5xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-4">AI Lab: Fresh Insights</h1>
       <p className="text-gray-600 mb-8">Continuously generated articles derived from public AI/IT research and news.</p>
@@ -59,5 +82,8 @@ export default function AILabPage() {
         ))}
       </ul>
     </main>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
-}
+};
+
+export default ai-lab;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const NextGenAIRevolution2026: React.FC = () => {
   return (

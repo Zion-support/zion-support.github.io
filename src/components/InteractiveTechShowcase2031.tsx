@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const InteractiveTechShowcase2031: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');

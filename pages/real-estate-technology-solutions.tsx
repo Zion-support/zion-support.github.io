@@ -1,20 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function RealEstateTechnologySolutions() {
+const real-estate-technology-solutions: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Real Estate Technology Solutions | Zion Tech Group</title>
-        <meta name="description" content="Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations." />
-        <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">Real Estate Technology Solutions</h1>
-          <p className="text-gray-300">Unlock data-driven decisions and automation across property lifecycle, valuation, and operations.</p>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>real-estate-technology-solutions | Zion Tech Group</title>
+        <meta name="description" content="real-estate-technology-solutions - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">real-estate-technology-solutions</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </>
-  ),
-}
+    </div>
+  );
+};
+
+export default real-estate-technology-solutions;

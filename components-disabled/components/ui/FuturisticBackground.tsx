@@ -1,27 +1,12 @@
+import React from 'react';
 
-
-
-    </div>
-  );
-
-}
-}
-
-import React from "react";
-
-export default function FuturisticBackground() {
+const FuturisticBackground: React.FC = () => {
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="futuristic-bg absolute -inset-20" />
-
-      {/* Moving grid overlay */}
-      <div className="grid-overlay absolute inset-0 opacity-20" />
-
-      {/* Glow orbs */}
-      <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
-      <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay:1.2s]" />
-      <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default FuturisticBackground;

@@ -1,83 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  SparklesIcon, 
-  RocketLaunchIcon, 
-  ChartBarIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  FireIcon,
-  BoltIcon
-} from '@heroicons/react/24/outline';
-
-const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const features = [
-    {
-      icon: <SparklesIcon className="w-8 h-8" />,
-      title: "Revolutionary Content Generation",
-      description: "50000% ROI with neural content architecture",
-      metric: "50000%",
-      metricLabel: "ROI Increase"
-    },
-    {
-      icon: <BoltIcon className="w-8 h-8" />,
-      title: "Quantum-Enhanced Processing",
-      description: "1000x faster content generation",
-      metric: "1000x",
-      metricLabel: "Speed Boost"
-    },
-    {
-      icon: <ChartBarIcon className="w-8 h-8" />,
-      title: "Enterprise Intelligence",
-      description: "98% accuracy with autonomous optimization",
-      metric: "98%",
-      metricLabel: "Accuracy Rate"
-    },
-    {
-      icon: <FireIcon className="w-8 h-8" />,
-      title: "Revolutionary Breakthrough",
-      description: "Transform your content strategy today",
-      metric: "340%",
-      metricLabel: "Efficiency Gain"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
+const AI2025UltimateContentShowcaseRevolutionaryBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
@@ -108,7 +31,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 Experience <span className="text-yellow-400 font-bold">50000% ROI</span> with revolutionary 
                 neural architectures and quantum-enhanced processing.
               </p>
-            </divdiv>
+            </div>
 
             {/* Interactive Feature Showcase */}
               <div className="space-y-8">
@@ -118,7 +41,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 
                 <div className="space-y-6">
                   {features.map((feature, index) => (
-                    <divdiv
+                    <div
                       key={index}
                       className={`p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer ${
                         currentFeature === index
@@ -142,13 +65,13 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                           </div>
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
               </div>
 
               <div className="relative">
-                <divdiv
+                <div
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
                   key={currentFeature}
                 >
@@ -168,7 +91,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                     
                     {/* Animated Progress Bar */}
                     <div className="w-full bg-white/20 rounded-full h-3 mb-6">
-                      <divdiv
+                      <div
                         className="bg-gradient-to-r from-yellow-400 to-orange-500 h-3 rounded-full"
                       />
                     </div>
@@ -177,9 +100,9 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                       Performance Score: 98.7%
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Success Metrics */}
               <div className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
@@ -198,7 +121,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-2">340%</div>
                 <div className="text-gray-300">Efficiency Gain</div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Call to Action */}
               <div className="space-y-6">
@@ -232,7 +155,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Floating Elements */}
@@ -246,3 +169,4 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
 };
 
 export default AI2025UltimateContentShowcaseRevolutionaryBanner;
+</div></div></div></div>

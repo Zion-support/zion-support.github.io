@@ -1,100 +1,18 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Mail
-  CheckCircle
-  X
-  Sparkles,
-  Bell,
-  TrendingUp,
-  Users,
-  Star,
-  ArrowRight,
-  Shield,
-  Zap,
-  Brain,
-  Target,
-  Lightbulb,
-  Rocket
-} from 'lucide-react';
-
-const NewsletterSignup2026 = () => {
-  const [emailsetEmail] = useState('');
-  const [isSubscribedsetIsSubscribed] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [isLoadingsetIsLoading] = useState(false);
-  const [errorsetError] = useState('');
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError(', ');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve2000));
-      
-      // Simulate success
-      setIsSubscribed(true);
-      setEmail(', ');
-    } catch (err) {
-      setError('Something went wrong. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const benefits = [
-    {
-      icon: Brain,
-      title: 'AI Breakthrough Alerts',
-      description: 'Get notified about the latest AI breakthroughs and research'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Trending Content',
-      description: 'Weekly digest of the most popular and trending articles'
-    },
-    {
-      icon: Target,
-      title: 'Personalized Recommendations',
-      description: 'AI-powered content recommendations based on your interests'
-    },
-    {
-      icon: Zap,
-      title: 'Exclusive Early Access',
-      description: 'Be the first to access new content and features'
-    }
-  ];
-
-  const stats = [
-    { number: '50K+'label: 'Subscribers' },
-    { number: '4.9/5'label: 'Rating' },
-    { number: '24/7'label: 'Updates' },
-    { number: '100%'label: 'Free' }
-  ];
-
-  if (!isVisible || isDismissed) return null;
-
+const NewsletterSignup2026: React.FC = () => {
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-blue-900/20" />
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"
               x: [0Math.random() * 200 - 100],
@@ -124,7 +42,7 @@ const NewsletterSignup2026 = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
           >
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
@@ -149,7 +67,7 @@ const NewsletterSignup2026 = () => {
               {benefits.map((benefitindex) => {
                 const Icon = benefit.icon;
                 return (
-                  <divdiv
+                  <div
                     key={benefit.title}
                     className="flex items-start space-x-3"
                   >
@@ -160,7 +78,7 @@ const NewsletterSignup2026 = () => {
                       <h3 className="text-white font-medium mb-1">{benefit.title}</h3>
                       <p className="text-gray-400 text-sm">{benefit.description}</p>
                     </div>
-                  </divdiv>
+                  </div>
                 );
               })}
             </div>
@@ -168,23 +86,23 @@ const NewsletterSignup2026 = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((statindex) => (
-                <divdiv
+                <div
                   key={stat.label}
                   className="text-center"
                 >
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Newsletter Form */}
-          <divdiv
+          <div
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
           >
               {!isSubscribed ? (
-                <divdiv
+                <div
                   key="form"
                 >
                   <div className="text-center mb-6">
@@ -216,11 +134,11 @@ const NewsletterSignup2026 = () => {
                     </div>
 
                     {error && (
-                      <divdiv
+                      <div
                         className="text-red-400 text-sm"
                       >
                         {error}
-                      </divdiv>
+                      </div>
                     )}
 
                     <button
@@ -247,9 +165,9 @@ const NewsletterSignup2026 = () => {
                       <span>We respect your privacy. Unsubscribe at any time.</span>
                     </div>
                   </form>
-                </divdiv>
+                </div>
               ) : (
-                <divdiv
+                <div
                   key="success"
                   className="text-center"
                 >
@@ -282,14 +200,14 @@ const NewsletterSignup2026 = () => {
                   >
                     Subscribe another email
                   </button>
-                </divdiv>
+                </div>
               )}
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -315,10 +233,11 @@ const NewsletterSignup2026 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
 export default NewsletterSignup2026;
+</div></div></div>

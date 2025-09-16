@@ -1,49 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  Users, 
-  Zap, 
-  Settings, 
-  Search,
-  MessageSquare, 
-  Sparkles,
-  BarChart3,
-  Smartphone
-      {/* Quick Access Tools Section */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
-              {t("home.explore_tools")}
-            </h2>
-            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              {t("home.tools_description")}
-            </p>
-          </div>
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
-              >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <span>{t("general.explore")}</span>
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-                </div>
-              </Link>
-
-
-
-
-            ))}
-          </div>
+const Index: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Index | Zion Tech Group</title>
+        <meta name="description" content="Index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </section>
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
-      <WaitlistSection />
-      <FloatingCTA />
-      <Footer />
+      </div>
     </div>
+  );
+};
+
+export default Index;

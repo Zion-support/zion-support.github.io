@@ -1,83 +1,22 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  TrendingUp
-  ArrowRight,
-  Play,
-  X,
-  ChevronRight,
-  Clock
-} from 'lucide-react';
-
-const UltimateContentShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'Neural Interface Revolution',
-      description: '500% efficiency boost',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Quantum AI Fusion',
-      description: '1000x faster processing',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Enterprise Automation',
-      description: '90% cost reduction',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Star,
-      title: 'Future Predictions',
-      description: '95% accuracy rate',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  if (isDismissed || !isVisible) return null;
-
+const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-purple-900 via-slate-900 to-blue-900 border-b border-purple-500/30 overflow-hidden"
       >
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-blue-600/20"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx="20" cy="20" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
-              <divdiv
+              <div
                 className="flex items-center gap-3"
               >
                 <div className="relative">
@@ -97,13 +36,13 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                     Revolutionary AI Innovation & Future Predictions
                   </p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Rotating Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-purple-500/30"></div>
                 <div className="flex items-center gap-3">
-                    <divdiv
+                    <div
                       key={currentFeature}
                       className="flex items-center gap-2"
                     >
@@ -118,7 +57,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                           {features[currentFeature].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -163,7 +102,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
           {/* Mobile Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-                <divdiv
+                <div
                   key={currentFeature}
                   className="flex items-center gap-2"
                 >
@@ -178,7 +117,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                       {features[currentFeature].description}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -186,10 +125,10 @@ const UltimateContentShowcase2025PromotionBanner = () => {
 
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
-        <divdiv
+        <div
           className="absolute bottom-0 left-0 h-1 bg-white"
-        ></divdiv>
-      </divdiv>
+        ></div>
+      </div>
     </div>
   );
 };

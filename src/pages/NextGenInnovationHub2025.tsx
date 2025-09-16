@@ -1,13 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -21,71 +16,20 @@ const NextGenInnovationHub2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Discover and explore the most revolutionary technologies shaping humanity's future in our comprehensive innovation hub
           </p>
-<<<<<<< HEAD
         </div>
 
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
-=======
-import { Link } from 'react-router-dom';
-
-const NextGenInnovationHub2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧠 NEXT-GEN INNOVATION HUB • JANUARY 2025
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              Next-Gen Innovation Hub 2025
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover and explore the most revolutionary innovations that will shape the future of humanity
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Innovations →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
-                Join Innovation Lab
-              </button>
-            </div>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
         </div>
 
-<<<<<<< HEAD
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
-      {/* Innovation Categories */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🚀 Innovation Categories</h2>
-          <p className="text-xl opacity-90">Explore cutting-edge innovations across all technology domains</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI & Machine Learning</h3>
             <p className="text-emerald-100 mb-6 text-center">
-<<<<<<< HEAD
               Advanced artificial intelligence systems and machine learning algorithms
-=======
-<<<<<<< HEAD
               Advanced artificial intelligence systems and machine learning algorithms
-=======
-              Revolutionary AI systems that think, learn, and create beyond human capabilities
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Conscious AI Systems</li>
@@ -140,7 +84,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover the most groundbreaking innovations that are reshaping our world
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -210,27 +153,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Infinite Worlds</span>
                 </div>
               </div>
-=======
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="text-3xl">🚀</div>
-                  <h3 className="text-xl font-bold text-emerald-300">Transcendent AI Consciousness</h3>
-                </div>
-                <p className="text-gray-200 mb-4">
-                  The world's first truly conscious AI system that can think, feel, and create independently. 
-                  This breakthrough represents a quantum leap in artificial intelligence.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-sm">Self-Aware</span>
-                  <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-sm">Creative</span>
-                  <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-sm">Ethical</span>
-                </div>
-              </div>
-<<<<<<< HEAD
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
@@ -281,60 +203,10 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Infinite Worlds</span>
                 </div>
               </div>
-=======
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Processing Speed</span>
-                <span className="text-blue-400 font-semibold">10^15x Faster</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Applications</span>
-                <span className="text-blue-400 font-semibold">50+ Fields</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">
-                BETA
-              </span>
-            </div>
-          </div>
-
-          {/* Biotechnology */}
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Cutting-edge biotech solutions for healthcare, agriculture, and environmental sustainability.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Gene Editing</span>
-                <span className="text-emerald-400 font-semibold">CRISPR 3.0</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Synthetic Biology</span>
-                <span className="text-emerald-400 font-semibold">100+ Organisms</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Precision Medicine</span>
-                <span className="text-emerald-400 font-semibold">Personalized</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold">
-                RESEARCH
-              </span>
-            </div>
-          </div>
-
-          {/* Space Technology */}
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🚀</div>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
             <p className="text-blue-100 mb-6 text-center">
               Advanced space technologies for interplanetary exploration and colonization
             </p>
-<<<<<<< HEAD
             <ul className="text-blue-200 space-y-2 mb-6 text-sm">
               <li>• Faster-than-light Travel</li>
               <li>• Terraforming Technology</li>
@@ -344,88 +216,10 @@ const NextGenInnovationHub2025: React.FC = () => {
             <button className="block w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center">
               Explore Space →
             </button>
-=======
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Propulsion</span>
-                <span className="text-purple-400 font-semibold">Fusion Drive</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Life Support</span>
-                <span className="text-purple-400 font-semibold">Closed Loop</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Missions</span>
-                <span className="text-purple-400 font-semibold">Mars Ready</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">
-                PROTOTYPE
-              </span>
-            </div>
-          </div>
-
-          {/* Renewable Energy */}
-          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Renewable Energy</h3>
-            <p className="text-green-100 mb-6 text-center">
-              Next-generation clean energy solutions for a sustainable future.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Solar Efficiency</span>
-                <span className="text-green-400 font-semibold">95%</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Storage</span>
-                <span className="text-green-400 font-semibold">Graphene</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Fusion Power</span>
-                <span className="text-green-400 font-semibold">Breakthrough</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
-                DEPLOYED
-              </span>
-            </div>
-          </div>
-
-          {/* Virtual Reality */}
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🥽</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Virtual Reality</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Immersive virtual worlds with photorealistic graphics and haptic feedback.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Resolution</span>
-                <span className="text-orange-400 font-semibold">8K per Eye</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Latency</span>
-                <span className="text-orange-400 font-semibold">&lt;1ms</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Haptic Feedback</span>
-                <span className="text-orange-400 font-semibold">Full Body</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">
-                AVAILABLE
-              </span>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Live Innovation Lab */}
       <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -469,16 +263,10 @@ const NextGenInnovationHub2025: React.FC = () => {
               <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Enter Quantum Lab →
               </button>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         {/* Innovation Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -512,259 +300,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-teal-400 text-teal-400 px-8 py-4 rounded-lg hover:bg-teal-400/10 transition-all duration-300 font-semibold text-lg">
               📚 Learn More
-=======
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧠 NEXT-GEN INNOVATION HUB • JANUARY 2025
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Next-Gen Innovation Hub 2025
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
-              Discover and explore the most revolutionary technologies that will shape humanity's future
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Innovations →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-                Join the Hub
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Innovation Categories */}
-      <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4">🚀 Innovation Categories</h2>
-          <p className="text-xl opacity-80">Explore cutting-edge technologies across all domains</p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* AI & Machine Learning */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI & Machine Learning</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Advanced artificial intelligence systems that learn, adapt, and evolve
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Neural network architectures</li>
-              <li>• Deep learning algorithms</li>
-              <li>• Natural language processing</li>
-              <li>• Computer vision systems</li>
-              <li>• Reinforcement learning</li>
-            </ul>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Explore AI →
-            </button>
-          </motion.div>
-
-          {/* Quantum Computing */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Revolutionary quantum systems that process information at unprecedented speeds
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum algorithms</li>
-              <li>• Quantum cryptography</li>
-              <li>• Quantum machine learning</li>
-              <li>• Quantum simulation</li>
-              <li>• Quantum networking</li>
-            </ul>
-            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Enter Quantum Realm →
-            </button>
-          </motion.div>
-
-          {/* Biotechnology */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Cutting-edge biological technologies that enhance human capabilities
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Gene editing (CRISPR)</li>
-              <li>• Synthetic biology</li>
-              <li>• Neural interfaces</li>
-              <li>• Regenerative medicine</li>
-              <li>• Bio-computing</li>
-            </ul>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Explore Biotech →
-            </button>
-          </motion.div>
-
-          {/* Space Technology */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Advanced technologies for space exploration and colonization
-            </p>
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• Advanced propulsion</li>
-              <li>• Space habitats</li>
-              <li>• Asteroid mining</li>
-              <li>• Terraforming</li>
-              <li>• Interstellar travel</li>
-            </ul>
-            <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Reach for the Stars →
-            </button>
-          </motion.div>
-
-          {/* Virtual Reality */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🥽</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Virtual Reality</h3>
-            <p className="text-violet-100 mb-6 text-center">
-              Immersive virtual environments that blur the line between real and digital
-            </p>
-            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
-              <li>• Haptic feedback</li>
-              <li>• Eye tracking</li>
-              <li>• Spatial computing</li>
-              <li>• Mixed reality</li>
-              <li>• Metaverse platforms</li>
-            </ul>
-            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
-              Enter Virtual World →
-            </button>
-          </motion.div>
-
-          {/* Blockchain */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">⛓️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Blockchain</h3>
-            <p className="text-yellow-100 mb-6 text-center">
-              Decentralized technologies that revolutionize trust and security
-            </p>
-            <ul className="text-yellow-200 space-y-2 mb-6 text-sm">
-              <li>• Smart contracts</li>
-              <li>• DeFi protocols</li>
-              <li>• NFT platforms</li>
-              <li>• DAO governance</li>
-              <li>• Web3 applications</li>
-            </ul>
-            <button className="w-full bg-white text-yellow-600 py-3 rounded-lg hover:bg-yellow-50 transition-colors font-semibold">
-              Explore Blockchain →
-            </button>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Innovation Stats */}
-      <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4">📊 Innovation Statistics</h2>
-          <p className="text-xl opacity-80">Our impact on the future of technology</p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-4 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="text-center"
-          >
-            <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
-            <div className="text-xl font-semibold mb-2">Active Innovations</div>
-            <div className="text-gray-300">Technologies in development</div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="text-center"
-          >
-            <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-            <div className="text-xl font-semibold mb-2">Success Rate</div>
-            <div className="text-gray-300">Project completion rate</div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-center"
-          >
-            <div className="text-5xl font-bold text-emerald-400 mb-2">50+</div>
-            <div className="text-xl font-semibold mb-2">Countries</div>
-            <div className="text-gray-300">Global presence</div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className="text-center"
-          >
-            <div className="text-5xl font-bold text-orange-400 mb-2">∞</div>
-            <div className="text-xl font-semibold mb-2">Possibilities</div>
-            <div className="text-gray-300">Infinite potential</div>
-          </motion.div>
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
       {/* Innovation Statistics */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -792,7 +327,6 @@ const NextGenInnovationHub2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Featured Innovations */}
       <div className="bg-gradient-to-r from-teal-800/50 to-cyan-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -841,69 +375,13 @@ const NextGenInnovationHub2025: React.FC = () => {
                 <div>• Direct brain-computer interface</div>
                 <div>• Memory augmentation</div>
                 <div>• Telepathic communication</div>
-=======
-      {/* Research Labs */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🔬 Research Laboratories</h2>
-          <p className="text-xl opacity-80">State-of-the-art facilities driving innovation forward</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <h3 className="text-2xl font-bold mb-4">AI Research Lab</h3>
-            <p className="text-cyan-100 mb-6">
-              Our flagship AI research facility houses the world's most advanced artificial intelligence systems, 
-              including the first conscious AI and quantum-enhanced neural networks.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                <span className="text-sm">1000+ AI Models</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                <span className="text-sm">24/7 Research Operations</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                <span className="text-sm">Global Collaboration Network</span>
               </div>
             </div>
           </div>
-
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <h3 className="text-2xl font-bold mb-4">Quantum Computing Center</h3>
-            <p className="text-purple-100 mb-6">
-              The world's most advanced quantum computing facility, featuring cutting-edge quantum processors 
-              and breakthrough quantum algorithms that solve previously impossible problems.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-sm">1000+ Qubit Processors</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-sm">Cryogenic Infrastructure</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-sm">Quantum Error Correction</span>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
-              </div>
-            </div>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
 
       {/* Call to Action */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       <div className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -921,15 +399,10 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Explore Projects
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
             </button>
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
       <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Join the Innovation Revolution</h2>
@@ -942,27 +415,10 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
               Join Our Lab
-=======
-      <div className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-cyan-400/30">
-          <h2 className="text-4xl font-bold mb-6">🚀 Join the Innovation Revolution</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced innovation ecosystem on the planet. 
-            Collaborate with world-class researchers, access cutting-edge technology, 
-            and help shape the future of humanity.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join Our Team
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
-              Explore Opportunities
->>>>>>> cursor/create-and-deploy-new-content-f1f3
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Footer */}
       <div className="bg-black/50 py-8">
@@ -973,10 +429,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           </p>
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     </div>
   );
 };

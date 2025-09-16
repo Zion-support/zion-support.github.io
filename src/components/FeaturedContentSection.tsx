@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const FeaturedContentSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const featuredContent = [
+    {
+      id: 'agent-safety-observability-2026',
+      title: 'Agent Safety & Observability Blueprint',
+      subtitle: 'Gate >95% and Rollback <5 min',
+      description: 'Instrument agents with traces, evals, and policy gates to ensure safe tool use and reliable operations.',
+      link: '/blog/ai-2026-operational-eval-gates-real-world-playbook',
+      gradient: 'from-indigo-600 to-blue-600',
+      icon: '🛡️',
+      stats: ['>95% gate pass', '<5m rollback', 'Audit-ready'],
+      features: ['Traces & telemetry', 'Eval suites & thresholds', 'Policy-as-code gates'],
+      category: 'Reliability',
+      readTime: '14 min read',
+      difficulty: 'Advanced'
+    },
+    {
+      id: 'agent-ops-scorecards-2026',
+      title: 'Agent Ops Safety Scorecards',
+      subtitle: 'Make Safety Measurable',
+      description: 'Turn policy into action with production scorecards that gate releases and reduce risk.',
+      link: '/blog/ai-2026-agent-ops-safety-scorecards-in-production',
+      gradient: 'from-emerald-600 to-teal-600',
+      icon: '📊',
+      stats: ['-60% incidents', 'SLO-aligned', 'Exec-ready'],
+      features: ['Weighted scoring', 'Realtime dashboards', 'Release gating'],
+      category: 'Operations',
+      readTime: '12 min read',
+      difficulty: 'Intermediate'
+    },
     {
       id: 'post-quantum-consciousness-2026',
       title: 'Post-Quantum Consciousness 2026',
@@ -17,6 +45,20 @@ const FeaturedContentSection: React.FC = () => {
       category: 'Post-Quantum AI',
       readTime: '25 min read',
       difficulty: 'Expert'
+    },
+    {
+      id: 'eval-gates-starter-kit',
+      title: 'Operational Eval Gates Starter Kit',
+      subtitle: 'Ship Gates in Days',
+      description: 'Templates, workflows, and dashboards to stand up eval-gated releases quickly.',
+      link: '/content/resources/ai-2026-operational-eval-gates-starter-kit',
+      gradient: 'from-indigo-600 to-cyan-600',
+      icon: '🧰',
+      stats: ['<7 days setup', '>95% pass stability', '<5m rollback'],
+      features: ['CI/CD gates', 'Threshold templates', 'Incident runbooks'],
+      category: 'Starter Kit',
+      readTime: '8 min read',
+      difficulty: 'Advanced'
     },
     {
       id: 'fortune-100-success-story',

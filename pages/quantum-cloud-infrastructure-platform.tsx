@@ -1,33 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function QuantumCloudInfrastructurePlatformPage() {
-	return (
-		<>
-			<Head>
-				<title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>
-				<meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
-				<link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure-platform" />
-			</Head>
-			<ServiceLanding
-				title="Quantum Cloud Infrastructure Platform"
-				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations."
-				subtitle="Next-gen compute for critical workloads"
-				pricePerMonthUSD={28999}
-				implementationWeeks="1-2 weeks"
-				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost"
-				features={[
-					"Managed quantum accelerators",
-					"Zero-trust and quantum-safe security",
-					"Observability and SLOs",
-					"Automated cost controls",
-					"Cross-region DR and backup",
-					"Compliance and audit kits"
-				]}
-				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}
-				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
-			/>
-		</>
-	)
-}
+const quantum-cloud-infrastructure-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>quantum-cloud-infrastructure-platform | Zion Tech Group</title>
+        <meta name="description" content="quantum-cloud-infrastructure-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">quantum-cloud-infrastructure-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default quantum-cloud-infrastructure-platform;

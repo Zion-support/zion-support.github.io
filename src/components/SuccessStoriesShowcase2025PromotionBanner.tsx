@@ -1,41 +1,8 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Award
-  TrendingUp
-  DollarSign
-  Users
-  ArrowRight,
-  X,
-  CheckCircle,
-  Star,
-  BarChart3
-} from 'lucide-react';
-
-const SuccessStoriesShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  const stats = [
-    { value: "500+"label: "Companies Transformed"icon: Users },
-    { value: "$50M+"label: "Total Savings"icon: DollarSign },
-    { value: "95%"label: "Efficiency Gain"icon: TrendingUp },
-    { value: "99%"label: "Satisfaction Rate"icon: Star }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
+const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-green-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -55,11 +22,11 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-                <divdiv
+                <div
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Award className="w-3 h-3" />
-                </divdiv>
+                </div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
                   NEW: Success Stories Showcase 2025
                 </span>
@@ -71,7 +38,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
               
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <span className="text-lg opacity-90">Featuring:</span>
-                <divdiv
+                <div
                   key={currentStat}
                   className="flex items-center gap-2"
                 >
@@ -79,7 +46,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
                   <span className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full">
                     {stats[currentStat].value} {stats[currentStat].label}
                   </span>
-                </divdiv>
+                </div>
               </div>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
@@ -103,7 +70,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
               {stats.map((statindex) => {
                 const Icon = stat.icon;
                 return (
-                  <divdiv
+                  <div
                     key={index}
                       scale: currentStat === index ? 1.1 : 1,
                       opacity: currentStat === index ? 1 : 0.7
@@ -113,7 +80,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
                     <Icon className="w-8 h-8 mx-auto mb-2" />
                     <div className="text-2xl font-bold">{stat.value}</div>
                     <div className="text-xs opacity-80">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 );
               })}
             </div>
@@ -148,13 +115,14 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
 
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
-          <divdiv
+          <div
             className="h-full bg-white"
           />
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
 export default SuccessStoriesShowcase2025PromotionBanner;
+</div></div></div></div></div></div></div></div></div>

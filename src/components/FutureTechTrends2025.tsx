@@ -113,7 +113,7 @@ const FutureTechTrends2025 = () => {
     <div className="relative py-20 px-4 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M40%2040c0-22.091-17.909-40-40-40v80c22.091%200%2040-17.909%2040-40z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252280%2522%2520height%253D%252280%2522%2520viewBox%253D%25220%25200%252080%252080%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.03%2522%253E%253Cpath%2520d%253D%2522M40%252040c0-22.091-17.909-40-40-40v80c22.091%25200%252040-17.909%252040-40z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40" />
       
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
@@ -338,3 +338,4 @@ const FutureTechTrends2025 = () => {
 };
 
 export default FutureTechTrends2025;
+</div></div></div></div></div>

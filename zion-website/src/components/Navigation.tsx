@@ -1,15 +1,39 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const Navigation: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Navigation</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default Navigation;
+=======
 "use client"
 
 import React from 'react'
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const navigation = [
+=======
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 const navLinks = [
 	{ name: 'About', href: '/about' },
 	{ name: 'Services', href: '/services' },
 	{ name: 'Solutions', href: '/solutions' },
 	{ name: 'Research', href: '/research' },
-	{ name: 'Updates', href: '/updates' },
+	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
 
+<<<<<<< HEAD
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 export default function Navigation() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -17,7 +41,12 @@ export default function Navigation() {
 				<a href="/" className="text-white font-bold">Zion</a>
 				<div className="hidden md:flex gap-x-6">
 					{navLinks.map((item) => (
-						<a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">{item.name}</a>
+						<a key={item.name} href={item.href} className="relative inline-flex items-center gap-1 text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">
+							<span>{item.name}</span>
+							{(item as any).badge ? (
+								<span className="ml-1 rounded bg-blue-600 px-1.5 py-0.5 text-[10px] font-bold text-white">{(item as any).badge}</span>
+							) : null}
+						</a>
 					))}
 				</div>
 				<div className="hidden md:flex">
@@ -27,3 +56,4 @@ export default function Navigation() {
 		</header>
 	)
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

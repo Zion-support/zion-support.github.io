@@ -55,6 +55,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
     }
   ];
 
+const InteractiveContentShowcase2034-2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">
       <div
@@ -187,13 +188,8 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
         </AnimatePresence>
-=======
-          </divdiv>
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-eb8d
       </div>
 
       {/* Additional Features */}
@@ -223,4 +219,4 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
   );
 };
 
-export default InteractiveContentShowcase2034_2036;
+export default InteractiveContentShowcase2034-2036;

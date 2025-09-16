@@ -1,0 +1,193 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { realMarketServices } from '../data/real-market-services';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { realOperationalServices } from '../data/real-operational-services';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { professionalServices } from '../data/professional-services';
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
+import { real2029Q2Additions } from '../data/real-2029-q2-additions';
+export type ServiceRecord = any;
+=======
+
+<<<<<<< HEAD
+export type ServiceRecord = any;
+
+>>>>>>> origin/auto/autonomy-17186719616
+const allServiceArrays: ServiceRecord[][] = [
+	enhancedRealMicroSaasServices,
+	innovativeMicroSaasServices,
+	additionalEnhancedServices,
+	innovativeAIServices,
+	enterpriseITServices,
+	nextGenerationAIServices,
+	emergingTechnologyServices,
+	comprehensiveITSolutions,
+	realMarketServices,
+	serviceExpansions2025,
+	realOperationalServices,
+	newOperationalServices2025,
+	verifiedRealServices2025Batch2,
+	innovative2025Services,
+	emergingTech2025Services,
+	professionalServices
+<<<<<<< HEAD
+	,real2029Q2Additions
+];
+=======
+];
+
+>>>>>>> origin/auto/autonomy-17186719616
+export function findServiceBySlug(slug: string): ServiceRecord | undefined {
+	for (const arr of allServiceArrays) {
+		const hit = arr.find((s: any) => {
+			if (!s) return false;
+			if (s.id && s.id === slug) return true;
+			if (s.link && typeof s.link === 'string') {
+				try {
+					const url = new URL(s.link);
+					return url.pathname.replace(/^\/+|\/+$/g, '') === slug;
+				} catch {
+					return s.link.endsWith('/' + slug);
+				}
+			}
+			return false;
+		});
+		if (hit) return hit;
+	}
+	return undefined;
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
+export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
+	const results: ServiceRecord[] = [];
+	for (const arr of allServiceArrays) {
+		for (const s of arr) {
+			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+				results.push(s);
+			}
+		}
+	}
+	// Deduplicate by id or link
+	const seen = new Set<string>();
+	return results.filter((s) => {
+		const key = s.id || s.link || s.name;
+		if (seen.has(key)) return false;
+		seen.add(key);
+		return true;
+	});
+}
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price?: number;
+  features: string[];
+}
+export const findService = (query: string, services: Service[]): Service[] => {
+  const searchTerm = query.toLowerCase();
+  return services.filter(service => 
+    service.name.toLowerCase().includes(searchTerm) ||
+    service.description.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm)
+  );
+};
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
+  return services.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase()
+  );
+};
+export default {
+  findService,
+  getServicesByCategory
+};
+// Service finder utility
+export const findService = ("_serviceName": string) => {
+  // Implementation placeholder
+  return null;
+};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

@@ -1,47 +1,6 @@
-'use client';
-
 import React from 'react';
-ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAward
 
-const UltimateTechShowcase2026Banner = () => {
-  const technologies = [
-    {
-      name: "Quantum AI Fusion",
-      description: "Revolutionary combination of quantum computing and artificial intelligence",
-      icon: <Brain className="w-8 h-8 text-blue-400" />,
-      progress: 95,
-      status: "Production Ready"
-    },
-    {
-      name: "Neural Interface Pro",
-      description: "Direct brain-computer interface technology for seamless interaction",
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      progress: 87,
-      status: "Beta Testing"
-    },
-    {
-      name: "Predictive Analytics AI",
-      description: "Advanced AI systems that predict future trends with 99% accuracy",
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
-      progress: 92,
-      status: "Live Deployment"
-    },
-    {
-      name: "Global AI Network",
-      description: "Distributed AI infrastructure spanning across 150+ countries",
-      icon: <Globe className="w-8 h-8 text-indigo-400" />,
-      progress: 78,
-      status: "Expanding"
-    }
-  ];
-
-  const achievements = [
-    { number: "500+"label: "Enterprise Clients"icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%"label: "Uptime Guarantee"icon: <Shield className="w-6 h-6" /> },
-    { number: "50+"label: "Industry Awards"icon: <Award className="w-6 h-6" /> },
-    { number: "1M+"label: "Daily Active Users"icon: <Star className="w-6 h-6" /> }
-  ];
-
+const UltimateTechShowcase2026Banner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
       {/* Animated background elements */}
@@ -53,7 +12,7 @@ const UltimateTechShowcase2026Banner = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -73,15 +32,15 @@ const UltimateTechShowcase2026Banner = () => {
             Discover the most advanced AIquantum computingand neural interface technologies 
             that are reshaping industries and transforming the way we work and live.
           </p>
-        </divdiv>
+        </div>
 
         {/* Technology Showcase */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {technologies.map((techindex) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
@@ -110,18 +69,18 @@ const UltimateTechShowcase2026Banner = () => {
                   <span>{tech.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <divdiv
+                  <div
                     whileInView={{ width: `${tech.progress}%` }}
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                  ></divdiv>
+                  ></div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Achievements */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
@@ -131,7 +90,7 @@ const UltimateTechShowcase2026Banner = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {achievements.map((achievementindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
@@ -143,13 +102,13 @@ const UltimateTechShowcase2026Banner = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{achievement.number}</div>
                 <div className="text-gray-300 text-sm">{achievement.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center"
         >
@@ -181,10 +140,11 @@ const UltimateTechShowcase2026Banner = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default UltimateTechShowcase2026Banner;
+</div></div>

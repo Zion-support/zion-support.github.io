@@ -1,3 +1,52 @@
+import React from 'react'
+
+export const metadata = {
+  title: 'AI 2026: Production Evidence Hub — Blueprint',
+  description:
+    'Design an audit‑ready evidence hub that captures evals, scorecards, rollbacks, and approvals across the autonomy lifecycle.'
+}
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <header className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div className="max-w-5xl mx-auto px-6 py-14">
+          <p className="text-purple-200 text-sm font-semibold">Blueprint • September 2025</p>
+          <h1 className="text-3xl md:text-5xl font-bold mt-2">AI 2026: Production Evidence Hub — Blueprint</h1>
+          <p className="mt-3 text-purple-100/90 max-w-3xl">
+            Build an evidence system of record for AI operations: evaluation results, release gates, rollback scorecards, incidents, and approvals — all queryable and audit‑ready.
+          </p>
+        </div>
+      </header>
+      <main className="max-w-5xl mx-auto px-6 py-10 prose prose-lg">
+        <h2>Why an Evidence Hub</h2>
+        <p>
+          Enterprise autonomy demands objective signals. An evidence hub consolidates eval outputs, scorecards, guardrail events, and change approvals to support safe rollouts and audits.
+        </p>
+        <h2>Reference Architecture</h2>
+        <ul>
+          <li>Ingestion: CI/CD gates, runtime evaluators, policy engines</li>
+          <li>Storage: immutable event log + queryable warehouse</li>
+          <li>Models: runs, scenarios, metrics, incidents, approvals</li>
+          <li>APIs: search, attestations, release scorecards</li>
+          <li>Dashboards: reliability, safety, cost, and audit trails</li>
+        </ul>
+        <h2>Rollout Scorecards</h2>
+        <p>
+          Combine canary metrics, eval pass rates, and guardrail violations into a release score. Enforce thresholds for promotion or automated rollback.
+        </p>
+        <h2>Operating Practices</h2>
+        <ol>
+          <li>Define policy‑as‑code for gates and metrics</li>
+          <li>Version scenarios and rubrics; store alongside results</li>
+          <li>Stream runtime signals; retain incident timelines</li>
+          <li>Issue attestations for audits and partner reviews</li>
+        </ol>
+      </main>
+    </div>
+  )
+}
+
 import React from 'react';
 import Link from 'next/link';
 

@@ -1,7 +1,61 @@
+<<<<<<< HEAD
 import React from 'react';
+
+const FeaturedContent: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FeaturedContent</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
 import ContentCard from './ContentCard';
 
 const featuredContent = [
+  {
+    title: "AI 2026: Enterprise AI Readiness Checklist",
+    description: "A step-by-step readiness framework covering governance, evals, observability, security, and reliability.",
+    href: "/blog/ai-2026-enterprise-ai-readiness-checklist",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Readiness", "Governance", "Evals", "2026"]
+  },
+  {
+    title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
+    description: "Gate each lifecycle phase with evals and audit‑ready evidence.",
+    href: "/blog/ai-2026-evidence-driven-agent-lifecycle-blueprint",
+    category: "Operations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Evals", "Lifecycle", "Evidence"]
+  },
+  {
+    title: "AI 2026: Governed Agent Tool‑Use Patterns",
+    description: "Risk‑tiered autonomy, eval‑gated tools, and policy‑as‑code patterns for safe, scalable tool‑use.",
+    href: "/blog/ai-2026-governed-agent-tool-use-patterns",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Agents", "Tool‑Use", "Policy‑as‑Code"]
+  },
+  {
+    title: "AI 2026: Policy‑as‑Code Blueprint",
+    description: "Encode approvals, risk tiers, and evaluation gates as versioned policy.",
+    href: "/blog/ai-2026-policy-as-code-blueprint",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Policy-as-Code", "Governance", "Evals"]
+  },
+  {
+    title: "AI 2026: Agentic Observability — Deep Dive",
+    description: "Traces, evals, incidents, and KPIs to run agent platforms reliably.",
+    href: "/blog/ai-2026-agentic-observability-deep-dive",
+    category: "Observability",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Observability", "Evals", "Incidents"]
+  },
   {
     title: "AI 2025: The Enterprise Automation Revolution",
     description: "Discover how AI is transforming enterprise operations in 2025 with intelligent automation, predictive analytics, and autonomous decision-making systems.",
@@ -10,6 +64,24 @@ const featuredContent = [
     date: "2025-01-14",
     featured: true,
     tags: ["AI", "Enterprise", "Automation", "2025"]
+  },
+  {
+    title: "AI 2026: Trusted GenAI Operations",
+    description: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
+    href: "/content/trusted-genai-operations-2026",
+    category: "Operations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Governance", "Evaluations", "Policy-as-Code"]
+  },
+  {
+    title: "AI 2026: Production Evals — Practical Cookbook",
+    description: "Scenario recipes, metrics, and wiring patterns for evaluation‑first teams.",
+    href: "/blog/ai-2026-production-evals-practical-cookbook",
+    category: "Evaluations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Evals", "Metrics", "Cookbook"]
   },
   {
     title: "AI 2025: Next-Generation Cybersecurity Revolution",
@@ -64,16 +136,17 @@ export default function FeaturedContent() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
-            <ContentCard
-              key={index}
-              title={content.title}
-              description={content.description}
-              href={content.href}
-              category={content.category}
-              date={content.date}
-              featured={content.featured}
-              tags={content.tags}
-            />
+            <div key={index}>
+              <ContentCard
+                title={content.title}
+                description={content.description}
+                href={content.href}
+                category={content.category}
+                date={content.date}
+                featured={content.featured}
+                tags={content.tags}
+              />
+            </div>
           ))}
         </div>
         
@@ -87,5 +160,8 @@ export default function FeaturedContent() {
         </div>
       </div>
     </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
-}
+};
+
+export default FeaturedContent;

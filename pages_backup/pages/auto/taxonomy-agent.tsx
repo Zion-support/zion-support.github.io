@@ -1,39 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const TaxonomyAgent: NextPage = () => {
+const taxonomy-agent: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>AI Taxonomy Tagger Agent</title>
-        <meta name="description" content="Daily AI-generated page tags." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
-        <p>Suggests topic tags for each page to improve discovery and navigation.</p>
-
-        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</a></Link>
-      </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>taxonomy-agent | Zion Tech Group</title>
+        <meta name="description" content="taxonomy-agent - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">taxonomy-agent</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  )
-}
-export default TaxonomyAgent;
+  );
+};
 
-        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
-        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
-
-      </main>
-    </div>
-  )
-},
-
-
-
-
-
-
-
-
-
-
-
-
+export default taxonomy-agent;

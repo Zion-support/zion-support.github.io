@@ -1,253 +1,13 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Rocket
-  Target
-  Globe,
-  ArrowRight,
-  Play,
-  BookOpen,
-  Code,
-  Lightbulb,
-  Star,
-  Award,
-  ChevronRight,
-  ExternalLink,
-  Sparkles,
-  Cpu,
-  Shield,
-  Database,
-  Network,
-  Microscope,
-  Atom,
-  Layers,
-  Search,
-  Calendar,
-  Users,
-  BarChart3,
-  PieChart,
-  LineChart
-} from 'lucide-react';
-
-interface TrendItem {
-  id: string;
-  title: string;
-  description: string;
-  category: 'ai' | 'quantum' | 'automation' | 'biotech' | 'robotics' | 'sustainability';
-  impact: 'low' | 'medium' | 'high' | 'transformative';
-  timeline: string;
-  adoption: number; // percentage
-  marketSize: string;
-  growth: number; // percentage
-  tags: string[];
-  image: string;
-  url: string;
-  featured: boolean;
-  predictions: {
-    shortTerm: string;
-    mediumTerm: string;
-    longTerm: string;
-  };
-  keyPlayers: string[];
-  challenges: string[];
-}
+import React from 'react';
 
 const TechnologyTrends2026: React.FC = () => {
-  const [activeCategorysetActiveCategory] = useState('all');
-  const [selectedTrendsetSelectedTrend] = useState<TrendItem | null>(null);
-  const [searchQuerysetSearchQuery] = useState('');
-  const [viewModesetViewMode] = useState<'grid' | 'timeline'>('grid');
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Trends', 'icon: Globecount: 45color: 'blue' },
-    { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: Braincount: 18color: 'purple' },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: 12color: 'cyan' },
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8color: 'yellow' },
-    { id: ''biotech', 'name: ''Biotechnology', 'icon: Microscopecount: 5color: 'green' },
-    { id: ''robotics', 'name: ''Robotics', 'icon: Cpucount: 7color: 'red' },
-    { id: ''sustainability', 'name: ''Sustainability', 'icon: Shieldcount: 5color: 'emerald' }
-  ];
-
-  const trends: TrendItem[] = [
-    {
-      id: '1',
-      title: 'Consciousness-Level AI Systems',
-      description: 'AI systems that demonstrate self-awarenessmeta-cognitionand genuine understandingrepresenting the next frontier in artificial intelligence.',
-      category: 'ai',
-      impact: 'transformative',
-      timeline: '2026-2028',
-      adoption: 15,
-      marketSize: '$2.3T',
-      growth: 450,
-      tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'AGI'],
-      image: '/api/placeholder/600/400',
-      url: '/consciousness-ai-trends-2026',
-      featured: true,
-      predictions: {
-        shortTerm: 'First commercial consciousness-level AI systems deployed',
-        mediumTerm: 'Widespread adoption in research and development',
-        longTerm: 'Integration into everyday applications and services'
-      },
-      keyPlayers: [', 'OpenAI', 'Google 'DeepMind', 'Anthropic'Microsoft'],
-      challenges: ['Ethical 'implications', 'Computational 'requirements', 'Safety concerns']
-    },
-    {
-      id: '2',
-      title: 'Quantum-Neural Hybrid Computing',
-      description: 'Revolutionary computing architecture combining quantum processors with neural networks for unprecedented problem-solving capabilities.',
-      category: 'quantum',
-      impact: 'transformative',
-      timeline: '2026-2030',
-      adoption: 8,
-      marketSize: '$1.8T',
-      growth: 680,
-      tags: ['Quantum 'Computing', 'Neural 'Networks', 'Hybrid 'Systems', 'Breakthrough'],
-      image: '/api/placeholder/600/400',
-      url: '/quantum-neural-hybrid-trends-2026',
-      featured: true,
-      predictions: {
-        shortTerm: 'First commercial quantum-neural processors',
-        mediumTerm: 'Integration into cloud computing platforms',
-        longTerm: 'Consumer-level quantum-neural devices'
-      },
-      keyPlayers: [', 'IBM', 'Google', 'Microsoft', 'IonQ'Rigetti'],
-      challenges: ['Technical 'complexity', 'Cost 'barriers', 'Scalability issues']
-    },
-    {
-      id: '3',
-      title: 'Autonomous Business Ecosystems',
-      description: 'Complete business operations managed by AI systems with minimal human interventioncreating self-sustaining digital enterprises.',
-      category: 'automation',
-      impact: 'high',
-      timeline: '2026-2027',
-      adoption: 35,
-      marketSize: '$4.2T',
-      growth: 320,
-      tags: ['Business 'Automation', 'Autonomous 'Systems', 'Digital 'Transformation', 'AI Operations'],
-      image: '/api/placeholder/600/400',
-      url: '/autonomous-business-trends-2026',
-      featured: false,
-      predictions: {
-        shortTerm: 'Pilot programs in major corporations',
-        mediumTerm: 'Widespread adoption across industries',
-        longTerm: 'Standard business model for new enterprises'
-      },
-      keyPlayers: [', 'Salesforce', 'Microsoft', 'Oracle', 'SAP'ServiceNow'],
-      challenges: ['Regulatory 'compliance', 'Job 'displacement', 'System reliability']
-    },
-    {
-      id: '4',
-      title: 'Neural Interface Revolution',
-      description: 'Direct brain-computer interfaces enabling thought-based control of digital systems and enhanced human cognitive capabilities.',
-      category: 'biotech',
-      impact: 'transformative',
-      timeline: '2026-2029',
-      adoption: 5,
-      marketSize: '$850B',
-      growth: 890,
-      tags: ['Neural 'Interface', 'Brain-'Computer', 'BCI'Human Enhancement'],
-      image: '/api/placeholder/600/400',
-      url: '/neural-interface-trends-2026',
-      featured: true,
-      predictions: {
-        shortTerm: 'Medical applications for disabilities',
-        mediumTerm: 'Consumer applications for productivity',
-        longTerm: 'Integration with everyday devices'
-      },
-      keyPlayers: [', 'Neuralink', 'Kernel', 'Synchron', 'Blackrock Neurotech'],
-      challenges: ['Safety 'concerns', 'Ethical 'implications', 'Technical limitations']
-    },
-    {
-      id: '5',
-      title: 'Self-Evolving Robotic Systems',
-      description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent automation.',
-      category: 'robotics',
-      impact: 'high',
-      timeline: '2026-2028',
-      adoption: 25,
-      marketSize: '$1.2T',
-      growth: 280,
-      tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptive Systems'],
-      image: '/api/placeholder/600/400',
-      url: '/self-evolving-robots-trends-2026',
-      featured: false,
-      predictions: {
-        shortTerm: 'Industrial and service applications',
-        mediumTerm: 'Consumer and household robots',
-        longTerm: 'Human-robot collaboration in all sectors'
-      },
-      keyPlayers: ['Boston 'Dynamics', 'Tesla', 'Honda', 'SoftBank'ABB'],
-      challenges: ['Safety and 'reliability', 'Cost 'optimization', 'Human acceptance']
-    },
-    {
-      id: '6',
-      title: 'AI-Powered Climate Solutions',
-      description: 'Advanced AI systems dedicated to solving climate change through optimizationpredictionand automated environmental management.',
-      category: 'sustainability',
-      impact: 'high',
-      timeline: '2026-2027',
-      adoption: 40,
-      marketSize: '$3.1T',
-      growth: 420,
-      tags: ['Climate 'AI', 'Sustainability'Environmental 'Tech', 'Green AI'],
-      image: '/api/placeholder/600/400',
-      url: '/climate-ai-trends-2026',
-      featured: false,
-      predictions: {
-        shortTerm: 'Energy optimization and carbon tracking',
-        mediumTerm: 'Automated environmental monitoring',
-        longTerm: 'Global climate management systems'
-      },
-      keyPlayers: [', 'Google', 'Microsoft', 'IBM', 'ClimateAI'Carbon Clean'],
-      challenges: ['Data 'accuracy', 'Global 'coordination', 'Implementation costs']
-    }
-  ];
-
-  const filteredTrends = trends.filter(trend => {
-    const matchesCategory = activeCategory === 'all' || trend.category === activeCategory;
-    const matchesSearch = searchQuery === ', ' || 
-      trend.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      trend.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      trend.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const featuredTrends = trends.filter(trend => trend.featured);
-
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'low': return 'bg-gray-100 text-gray-800';
-      case 'medium': return 'bg-blue-100 text-blue-800';
-      case 'high': return 'bg-orange-100 text-orange-800';
-      case 'transformative': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
-
-  const getGrowthColor = (growth: number) => {
-    if (growth >= 500) return 'text-red-500';
-    if (growth >= 300) return 'text-orange-500';
-    if (growth >= 100) return 'text-yellow-500';
-    return 'text-green-500';
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -295,13 +55,13 @@ const TechnologyTrends2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Featured Trends */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <div
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
@@ -312,7 +72,7 @@ const TechnologyTrends2026: React.FC = () => {
             {featuredTrends.map((trendindex) => {
               const CategoryIcon = getCategoryIcon(trend.category);
               return (
-                <divdiv
+                <div
                   key={trend.id}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedTrend(trend)}
@@ -368,14 +128,14 @@ const TechnologyTrends2026: React.FC = () => {
                       <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-indigo-400 transition-colors" />
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8">Browse by Category</h2>
@@ -401,16 +161,16 @@ const TechnologyTrends2026: React.FC = () => {
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Trends Grid */}
-        <divdiv
+        <div
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredTrends.map((trendindex) => {
               const CategoryIcon = getCategoryIcon(trend.category);
               return (
-                <divdiv
+                <div
                   key={trend.id}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedTrend(trend)}
@@ -461,21 +221,21 @@ const TechnologyTrends2026: React.FC = () => {
                       <ChevronRight className="h-4 w-4 group-hover:text-indigo-400 transition-colors" />
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
       </div>
 
       {/* Trend Detail Modal */}
       <div>
         {selectedTrend && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedTrend(null)}
           >
-            <divdiv
+            <div
               className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -605,8 +365,8 @@ const TechnologyTrends2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </div>

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/create-and-deploy-new-content-99e3
 
 const ComprehensiveServices2025: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
       name: "Dr. Sarah Chen",
       role: "CTO, TechCorp",
       content: "Zion Tech Group's AI solutions have revolutionized our entire operation. We've seen a 500% increase in efficiency.",
@@ -32,15 +23,6 @@ const ComprehensiveServices2025: React.FC = () => {
       content: "The neural interface technology has opened up possibilities we never thought possible.",
       rating: 5,
       avatar: "👩‍⚕️"
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ComprehensiveServices2025: React.FC = () => {
-  const services = [
-    {
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
       category: "AI & Machine Learning",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
@@ -147,16 +129,10 @@ const ComprehensiveServices2025: React.FC = () => {
           price: "Starting at $500,000/month"
         }
       ]
-<<<<<<< HEAD
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -178,10 +154,8 @@ const ComprehensiveServices2025: React.FC = () => {
               Discover our complete range of revolutionary services that are transforming industries and creating infinite possibilities
             </p>
           </motion.div>
-=======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2025: React.FC = () => {
   return (
@@ -198,8 +172,6 @@ const ComprehensiveServices2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Innovation</h3>
             <p className="text-blue-100">Cutting-edge technology solutions</p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -232,9 +204,6 @@ const ComprehensiveServices2025: React.FC = () => {
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                         <div className={`w-16 h-1 bg-gradient-to-r ${serviceCategories[activeCategory as keyof typeof serviceCategories].color} rounded-full`}></div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <Helmet>
         <title>Comprehensive Services 2025 | Zion Tech Group</title>
@@ -255,25 +224,6 @@ const ComprehensiveServices2025: React.FC = () => {
             Transform your business with our revolutionary technology services that push the boundaries of what's possible
           </p>
         </div>
-=======
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Technology</h3>
-            <p className="text-blue-100">Revolutionary technological advances</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Future</h3>
-            <p className="text-blue-100">Next-generation solutions</p>
-          </div>
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
-<<<<<<< HEAD
-=======
-        </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
         {/* Call to Action */}
         <div className="text-center">
@@ -291,25 +241,6 @@ const ComprehensiveServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Technology</h3>
-            <p className="text-blue-100">Revolutionary technological advances</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Future</h3>
-            <p className="text-blue-100">Next-generation solutions</p>
-          </div>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

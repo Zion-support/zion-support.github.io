@@ -1,72 +1,12 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
 const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
-  const [currentContent, setCurrentContent] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const breakthroughContent = [
-    {
-      id: 'neural-consciousness',
-      title: 'Neural Consciousness Breakthrough',
-      description: 'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',
-      metrics: '99.8% Decision Accuracy',
-      savings: '$15.8B Annual Savings',
-      roi: '2,400% ROI',
-      url: '/blog/ai-2025-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence',
-      badge: '🧠 NEW BREAKTHROUGH',
-      category: 'Conscious AI Innovation'
-    },
-    {
-      id: 'enterprise-transformation',
-      title: 'Global Enterprise Transformation',
-      description: 'How a Fortune 500 manufacturing giant achieved $15.8 billion ROI in 18 months through comprehensive conscious AI transformation.',
-      metrics: '2,400% Efficiency Improvement',
-      savings: '$15.8B ROI Success',
-      roi: '1,500% Innovation Increase',
-      url: '/case-studies/global-enterprise-conscious-ai-transformation-2025-15-billion-roi',
-      badge: '💰 $15B SUCCESS',
-      category: 'Case Study'
-    },
-    {
-      id: 'autonomous-business-guide',
-      title: 'Autonomous Business Revolution Guide',
-      description: 'Complete implementation guide to autonomous business operations. Master AI-powered business transformation with proven strategies.',
-      metrics: '1,500% ROI Framework',
-      savings: 'Complete Roadmap',
-      roi: 'Zero Error Operations',
-      url: '/resources/ai-2025-autonomous-business-revolution-complete-guide',
-      badge: '📚 COMPLETE GUIDE',
-      category: 'Implementation Guide'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % breakthroughContent.length);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, [breakthroughContent.length]);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('neural-consciousness-banner-dismissed', 'true');
-  };
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('neural-consciousness-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  if (!isVisible) return null;
-
-  const current = breakthroughContent[currentContent];
-
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NeuralConsciousnessBreakthroughBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -161,6 +101,7 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500"></div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

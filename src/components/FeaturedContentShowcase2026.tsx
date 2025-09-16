@@ -1,188 +1,206 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, User, Tag, Eye, Heart, Share2, BookOpen } from 'lucide-react';
-import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Calendar, Clock, User, TrendingUp, Eye, Heart } from 'lucide-react';
 
 const FeaturedContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('featured');
-  const featuredPosts = getFeaturedBlogPosts();
-  const recentPosts = getRecentBlogPosts(6);
-
-  const tabs = [
-    { id: 'featured', label: 'Featured Content', count: featuredPosts.length },
-    { id: 'recent', label: 'Latest Articles', count: recentPosts.length },
-    { id: 'trending', label: 'Trending Now', count: 8 }
+  const featuredContent = [
+    {
+      id: 1,
+      title: "AI Innovation Hub 2026: The Future of Artificial Intelligence",
+      excerpt: "Explore the revolutionary AI innovations that are reshaping technology and transforming industries worldwide.",
+      author: "Dr. Sarah Chen",
+      authorRole: "Chief AI Officer",
+      publishDate: "2025-09-16",
+      readTime: "8 min read",
+      category: "AI Innovation",
+      views: "12.5K",
+      likes: 847,
+      image: "/images/blog/ai-innovation-hub-2026.jpg",
+      featured: true,
+      link: "/ai-innovation-hub-2026"
+    },
+    {
+      id: 2,
+      title: "Advanced Tech Solutions 2026: Transforming Business Operations",
+      excerpt: "Comprehensive guide to next-generation technology solutions that deliver 10x performance improvements.",
+      author: "Marcus Rodriguez",
+      authorRole: "CTO",
+      publishDate: "2025-09-16",
+      readTime: "10 min read",
+      category: "Technology",
+      views: "8.3K",
+      likes: 623,
+      image: "/images/blog/advanced-tech-solutions-2026.jpg",
+      featured: true,
+      link: "/advanced-tech-solutions-2026"
+    },
+    {
+      id: 3,
+      title: "Quantum Computing Guide 2026: Mastering the Fundamentals",
+      excerpt: "Complete guide to quantum computing fundamentals, applications, and implementation strategies.",
+      author: "Dr. Elena Volkov",
+      authorRole: "Quantum Computing Expert",
+      publishDate: "2025-09-16",
+      readTime: "12 min read",
+      category: "Quantum Computing",
+      views: "15.7K",
+      likes: 1.2,
+      image: "/images/blog/quantum-computing-guide-2026.jpg",
+      featured: true,
+      link: "/quantum-computing-guide-2026"
+    }
   ];
 
-  const getContentForTab = () => {
-    switch (activeTab) {
-      case 'featured':
-        return featuredPosts.slice(0, 6);
-      case 'recent':
-        return recentPosts;
-      case 'trending':
-        return [...featuredPosts, ...recentPosts].slice(0, 6);
-      default:
-        return featuredPosts.slice(0, 6);
-    }
-  };
-
-  const content = getContentForTab();
+  const categories = [
+    { name: "AI Innovation", count: 24, color: "bg-purple-500" },
+    { name: "Technology", count: 18, color: "bg-blue-500" },
+    { name: "Quantum Computing", count: 12, color: "bg-green-500" },
+    { name: "Future Tech", count: 8, color: "bg-pink-500" }
+  ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 mb-6">
-            <BookOpen className="w-5 h-5 text-blue-600 mr-2" />
-            <span className="text-sm font-medium text-blue-700">CONTENT SHOWCASE</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover Our Latest
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI Insights</span>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Featured Content
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Showcase 2026
+            </span>
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead of the curve with cutting-edge AI research, breakthrough technologies, 
-            and revolutionary insights from industry experts.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our most popular and groundbreaking content that's shaping the future of technology
           </p>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
-            >
-              {tab.label}
-              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-                {tab.count}
-              </span>
-            </button>
-          ))}
-        </div>
+        </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {content.map((post, index) => (
-            <article
-              key={post.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          {featuredContent.map((content, index) => (
+            <motion.article
+              key={content.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group cursor-pointer"
+              onClick={() => window.location.href = content.link}
             >
-              {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 text-gray-800 text-xs font-semibold rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-                <div className="absolute bottom-4 right-4">
-                  <div className="flex items-center text-white/80 text-sm">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {post.readTime}
-                  </div>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <User className="w-4 h-4 mr-1" />
-                    {post.author}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {new Date(post.publishDate).toLocaleDateString()}
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
-
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                    >
-                      {tag}
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300 h-full hover:scale-105">
+                {/* Image */}
+                <div className="relative h-48 bg-gradient-to-br from-purple-600 to-blue-600 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {content.category}
                     </span>
-                  ))}
+                  </div>
+                  <div className="absolute top-4 right-4 flex items-center gap-2">
+                    <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1">
+                      <Eye className="w-4 h-4 text-white" />
+                      <span className="text-white text-sm">{content.views}</span>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Actions */}
-                <div className="flex items-center justify-between">
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                    {content.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {content.excerpt}
+                  </p>
 
-                  <div className="flex items-center space-x-4 text-gray-400">
-                    <button className="hover:text-red-500 transition-colors">
-                      <Heart className="w-4 h-4" />
-                    </button>
-                    <button className="hover:text-blue-500 transition-colors">
-                      <Share2 className="w-4 h-4" />
-                    </button>
-                    <button className="hover:text-green-500 transition-colors">
-                      <Eye className="w-4 h-4" />
-                    </button>
+                  {/* Author Info */}
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                      <User className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">{content.author}</p>
+                      <p className="text-gray-400 text-sm">{content.authorRole}</p>
+                    </div>
+                  </div>
+
+                  {/* Meta Info */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {content.publishDate}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {content.readTime}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Heart className="w-4 h-4 text-red-400" />
+                      <span>{content.likes}K</span>
+                    </div>
+                  </div>
+
+                  {/* Read More */}
+                  <div className="flex items-center text-cyan-400 group-hover:text-white transition-colors duration-300">
+                    <span className="font-semibold mr-2">Read More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Dive Deeper?
-            </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Explore our comprehensive collection of AI insights, case studies, and breakthrough technologies. 
-              Join thousands of professionals who are already transforming their industries with our expertise.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/blog"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+        {/* Categories Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
+        >
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            Popular Categories
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {categories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                className="text-center cursor-pointer group"
               >
-                View All Content
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              
-              <Link
-                to="/newsletter-signup"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
-              >
-                Subscribe for Updates
-              </Link>
-            </div>
+                <div className={`${category.color} w-16 h-16 rounded-2xl mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-white font-semibold mb-1">{category.name}</h4>
+                <p className="text-gray-400 text-sm">{category.count} articles</p>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 flex items-center gap-2 mx-auto">
+            View All Content
+            <ArrowRight className="w-5 h-5" />
+          </button>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

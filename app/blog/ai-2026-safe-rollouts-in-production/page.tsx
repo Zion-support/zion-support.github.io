@@ -1,3 +1,23 @@
+import React from 'react';
+
+export const metadata = {
+	title: 'AI 2026: Safe Rollouts in Production',
+	description:
+		'Progressive delivery with evaluation gates, scorecards, and automated rollback.',
+};
+
+export default function Page() {
+	return (
+		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<h1 className="text-3xl font-bold text-gray-900">Safe Rollouts in Production</h1>
+			<p className="mt-4 text-gray-700">
+				Apply eval‑gated rollouts with canaries and rollback contracts to reduce risk while
+				speeding up delivery.
+			</p>
+		</main>
+	);
+}
+
 import Link from 'next/link';
 
 export const metadata = {

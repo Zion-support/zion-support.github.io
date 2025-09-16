@@ -1,29 +1,22 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import CertificateView from '../../components/academy/CertificateView';
-import { founderCourseModules } from '../../components/academy/courseData';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const STORAGE_KEY = 'founder_course_progress_v1';
-
-export default function CertificatePage() {
-  const [completed, setCompleted] = useState<Record<string, boolean>>({});
-
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) setCompleted(JSON.parse(raw));
-    } catch {}
-  }, []);
-
-  const totalCount = founderCourseModules.length;
-  const completedCount = useMemo(
-    () => founderCourseModules.filter((m) => completed[m.id]).length,
-    [completed]
-  );
-
+const certificate: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl sm:text-3xl font-semibold">Certificate</h1>
-      <CertificateView completedCount={completedCount} totalCount={totalCount} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>certificate | Zion Tech Group</title>
+        <meta name="description" content="certificate - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">certificate</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default certificate;

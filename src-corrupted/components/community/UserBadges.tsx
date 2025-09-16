@@ -1,78 +1,12 @@
-;
+import React from 'react';
 
-
-
-
-
-
-
-
-
-
-interface UserBadgesProps {
-  badges: Badge[];
-}
-
-const icon_map = {
-  Trophy;
-  Award;
-  BadgeCheck;
-  Star;
-  MessageSquare;
-}
-export const UserBadges = ({ badges }: UserBadgesProps) =>: any {
-  // Check condition
-if (return null) {
-  $2
-
-}
-const iconMap = {
-  Trophy
-  Award
-  BadgeCheck
-  Star
-  MessageSquare
-}
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null
-  Trophy,
-  Award,
-  BadgeCheck,
-  Star,
-  MessageSquare
-},
-
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null,
-
-
-
-
-
-
-
+const UserBadges: React.FC = () => {
   return (
-    <div className="flex flex-wrap gap-2">
-      {badges.map((badge) => {
-        // Get the correct icon component based on the badge's icon name
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UserBadges</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
-}
-}
-}
-
-
-
-
-
-

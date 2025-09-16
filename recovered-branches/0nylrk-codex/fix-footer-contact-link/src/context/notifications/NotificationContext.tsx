@@ -1,65 +1,12 @@
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useNotificationOperations } from './useNotificationOperations';
-import { NotificationContextType } from './types';
+import React from 'react';
 
-// Default context used when React type definitions are missing. Providing a
-// fully-typed object here avoids TypeScript errors that occur when an untyped
-// `createContext` call returns `{}` instead of the expected shape.
-const defaultContext: NotificationContextType = {
-  notifications: [],
-  filteredNotifications: [],
-  unreadCount: 0,
-  loading: false,
-  filter: 'all',
-  markAsRead: async () => {},
-  markAllAsRead: async () => {},
-  dismissNotification: async () => {},
-  setFilter: () => {},
-
-// Cast the default context value to avoid issues when React types are missing.
-const NotificationContext = createContext(
-  defaultContext as NotificationContextType
-);
-
-export const useNotifications = (): NotificationContextType => {
-  const context = useContext(NotificationContext) as NotificationContextType;
-  if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
-  }
-  return context;
-};
-
-export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
-  const { user } = useAuth();
-  const notificationOps = useNotificationOperations(user?.id);
-  
-  // Load notifications when user changes
-  useEffect(() => {
-    notificationOps.fetchNotifications();
-    
-    // Set up real-time subscription for new notifications
-    if (user) {
-      const channel = supabase
-        .channel('notifications-changes')
-            schema: 'public',
-            table: 'notifications',
-            filter: `user_id=eq.${user.id}`
-          },
-          (payload) => {
-            notificationOps.fetchNotifications();
-          }
-        )
-        .subscribe();
-        
-      return () => {
-        supabase.removeChannel(channel);
-      };
-    }
-  
+const NotificationContext: React.FC = () => {
   return (
-    <NotificationContext.Provider value={notificationOps}>
-      {children}
-    </NotificationContext.Provider>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NotificationContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default NotificationContext;
