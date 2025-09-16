@@ -38,10 +38,17 @@ import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import NextGenTechRevolution2025 from './src/pages/NextGenTechRevolution2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -249,22 +256,7 @@ export default function App(): JSX.Element {
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
-<<<<<<< HEAD
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
-                <RevolutionaryContentBanner2025 />
-                
-                {/* NEW: Ultimate Tech Revolution Banner 2025 */}
-                <UltimateTechRevolutionBanner2025 />
-                
-                {/* NEW: Revolutionary Breakthrough Banner 2026 */}
-                <RevolutionaryBreakthroughBanner2026 />
-                
-                {/* NEW: Revolutionary Case Studies Banner 2026 */}
-                <RevolutionaryCaseStudiesBanner2026 />
-                
-=======
->>>>>>> 89a254a0a173a29cdfd88acafae4795fcc926b43
-                {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
@@ -380,7 +372,13 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                    <a href="/pages/NextGenTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: Next-Gen Tech Revolution 2025 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Ultimate Tech Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌟 NEW: Revolutionary Tech Showcase 2025 →
                     </a>
                     <a href="/pages/AISolutionsComprehensive2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
@@ -627,6 +625,15 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <div className="mb-12">
+                  <div className="text-center mb-8">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 NEW: Interactive Technology Carousel 2025</h2>
+                    <p className="text-xl text-gray-600">Experience the future with our interactive technology showcase</p>
+                  </div>
+                  <DynamicContentCarousel2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
@@ -1148,7 +1155,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
           <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
+          <Route path="/pages/NextGenTechRevolution2025" element={<NextGenTechRevolution2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
