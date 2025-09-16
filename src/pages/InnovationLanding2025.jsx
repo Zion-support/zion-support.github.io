@@ -2,7 +2,6 @@ import React from "react";
 
 const InnovationLanding2025 = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -11,21 +10,10 @@ const InnovationLanding2025 = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Revolutionary technology solutions and insights for the future
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Innovation Landing 2025
-          </h1>
-          <p className="text-xl text-gray-600">
-            Welcome to the future of technology and innovation
->>>>>>> cursor/create-and-deploy-new-content-79ca
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
             <p className="text-gray-300 mb-4">
@@ -41,47 +29,32 @@ const InnovationLanding2025 = () => {
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
             <p className="text-gray-300 mb-4">
-              Discover the latest developments in technology and innovation
+              A central platform for discovering and implementing breakthrough technologies
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research and development</li>
-              <li>• Industry partnerships</li>
-              <li>• Future technology trends</li>
+              <li>• Research & development</li>
+              <li>• Technology partnerships</li>
+              <li>• Innovation consulting</li>
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Future Solutions</h3>
             <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
+              Preparing for tomorrow's challenges with today's innovations
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
+              <li>• Sustainable technology</li>
+              <li>• Smart infrastructure</li>
+              <li>• Digital transformation</li>
             </ul>
-=======
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">AI Innovation</h3>
-            <p className="text-gray-600">
-              Cutting-edge artificial intelligence solutions.
-            </p>
           </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Quantum Computing</h3>
-            <p className="text-gray-600">
-              Revolutionary quantum computing technologies.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>
-            <p className="text-gray-600">
-              Advanced security solutions for the digital age.
-            </p>
->>>>>>> cursor/create-and-deploy-new-content-79ca
-          </div>
+        </div>
+        
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Explore Innovation
+          </button>
         </div>
       </div>
     </div>
