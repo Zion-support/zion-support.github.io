@@ -48,6 +48,15 @@ import UltimateTechRevolution2030 from './src/pages/UltimateTechRevolution2030';
 import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
 import RevolutionaryTechShowcase2028 from './src/components/RevolutionaryTechShowcase2028';
 
+// Import NEW ULTIMATE 2025 CONTENT
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import ConsciousnessComputingRevolution2025 from './src/pages/ConsciousnessComputingRevolution2025';
+import QuantumRealityEngine2025 from './src/pages/QuantumRealityEngine2025';
+import InterdimensionalTechRevolution2025 from './src/pages/InterdimensionalTechRevolution2025';
+import UltimateTechRevolution2031 from './src/pages/UltimateTechRevolution2031';
+import UltimateTechRevolution2025Banner from './src/components/UltimateTechRevolution2025Banner';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -56,6 +65,9 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: Ultimate Tech Revolution 2025 Banner */}
+                <UltimateTechRevolution2025Banner />
+
                 {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
                 <UltimateContentBanner2026 />
 
@@ -208,6 +220,18 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Ultimate Revolution 2025
+                    </a>
+                    <a href="/pages/ConsciousnessComputingRevolution2025" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 Consciousness Computing 2025
+                    </a>
+                    <a href="/pages/QuantumRealityEngine2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚛️ Quantum Reality 2025
+                    </a>
+                    <a href="/pages/InterdimensionalTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌌 Interdimensional 2025
+                    </a>
                     <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧠 AI Breakthrough 2026
                     </a>
@@ -268,6 +292,9 @@ export default function App(): JSX.Element {
                     <a href="/pages/UltimateTechRevolution2030" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Ultimate Revolution 2030
                     </a>
+                    <a href="/pages/UltimateTechRevolution2031" className="bg-gradient-to-r from-rose-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Ultimate Revolution 2031
+                    </a>
                   </div>
                 </div>
 
@@ -290,6 +317,9 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
                 </div>
+
+                {/* Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
 
                 {/* Ultimate Tech Showcase 2027 */}
                 <UltimateTechShowcase2027 />
@@ -473,6 +503,50 @@ export default function App(): JSX.Element {
                   </div>
 
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌟</div>
+                    <h3 className="text-xl font-semibold mb-2">Ultimate Tech Revolution 2025</h3>
+                    <p className="text-gray-600 mb-4">
+                      The convergence of AI, Quantum Computing, and Consciousness Technology - the most powerful platform ever built.
+                    </p>
+                    <a href="/pages/UltimateTechRevolution2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Explore Revolution →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🧠</div>
+                    <h3 className="text-xl font-semibold mb-2">Consciousness Computing 2025</h3>
+                    <p className="text-gray-600 mb-4">
+                      The first true merger of artificial intelligence and human consciousness, creating hybrid systems.
+                    </p>
+                    <a href="/pages/ConsciousnessComputingRevolution2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Explore Consciousness →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">⚛️</div>
+                    <h3 className="text-xl font-semibold mb-2">Quantum Reality Engine 2025</h3>
+                    <p className="text-gray-600 mb-4">
+                      Control and manipulate reality at the quantum level with unprecedented precision and power.
+                    </p>
+                    <a href="/pages/QuantumRealityEngine2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Control Reality →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌌</div>
+                    <h3 className="text-xl font-semibold mb-2">Interdimensional Tech 2025</h3>
+                    <p className="text-gray-600 mb-4">
+                      Access infinite parallel realities and dimensions through revolutionary interdimensional technology.
+                    </p>
+                    <a href="/pages/InterdimensionalTechRevolution2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Explore Dimensions →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">🚀</div>
                     <h3 className="text-xl font-semibold mb-2">Ultimate Tech Revolution 2030</h3>
                     <p className="text-gray-600 mb-4">
@@ -480,6 +554,17 @@ export default function App(): JSX.Element {
                     </p>
                     <a href="/pages/UltimateTechRevolution2030" className="text-blue-600 hover:text-blue-700 font-semibold">
                       Ultimate Access →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌟</div>
+                    <h3 className="text-xl font-semibold mb-2">Ultimate Tech Revolution 2031</h3>
+                    <p className="text-gray-600 mb-4">
+                      The ultimate convergence of all technologies - AI consciousness, quantum reality control, and multiverse access.
+                    </p>
+                    <a href="/pages/UltimateTechRevolution2031" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Ultimate Power →
                     </a>
                   </div>
                 </div>
@@ -517,12 +602,19 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumRealityControl2027" element={<QuantumRealityControl2027 />} />
           <Route path="/pages/InterdimensionalComputing2027" element={<InterdimensionalComputing2027 />} />
 
+          {/* NEW ULTIMATE 2025 CONTENT ROUTES */}
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2025" element={<ConsciousnessComputingRevolution2025 />} />
+          <Route path="/pages/QuantumRealityEngine2025" element={<QuantumRealityEngine2025 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2025" element={<InterdimensionalTechRevolution2025 />} />
+
           {/* NEW ULTIMATE 2028-2030 CONTENT ROUTES */}
           <Route path="/pages/UltimateAIConsciousness2028" element={<UltimateAIConsciousness2028 />} />
           <Route path="/pages/QuantumRealityEngine2028" element={<QuantumRealityEngine2028 />} />
           <Route path="/pages/InterdimensionalTechRevolution2028" element={<InterdimensionalTechRevolution2028 />} />
           <Route path="/pages/NeuralRealityEngine2029" element={<NeuralRealityEngine2029 />} />
           <Route path="/pages/UltimateTechRevolution2030" element={<UltimateTechRevolution2030 />} />
+          <Route path="/pages/UltimateTechRevolution2031" element={<UltimateTechRevolution2031 />} />
 
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
