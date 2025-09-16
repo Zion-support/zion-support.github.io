@@ -9,6 +9,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Guide: Batch vs. Streaming RAG — Trade‑offs (2026)',
+    summary: 'Practical decision framework for RAG architectures with latency budgets, costs, and eval guardrails.',
+    href: '/blog/ai-2026-batch-vs-streaming-rag-tradeoffs',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
     title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
     summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
     href: '/updates/real-time-rag-benchmark-suite-1-0',

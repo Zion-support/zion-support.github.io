@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-batch-vs-streaming-rag-tradeoffs',
+    title: 'AI 2026: Batch vs. Streaming RAG — Practical Trade‑offs',
+    summary:
+      'When to pick batch pipelines vs. streaming architectures for RAG under latency, cost, and quality constraints.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:

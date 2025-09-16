@@ -34,3 +34,6 @@ function RagAgentsCaseStudy() {
   )
 }
 
+
+export default RagAgentsCaseStudy
+
