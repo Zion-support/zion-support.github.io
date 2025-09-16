@@ -1,23 +1,23 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default class ZionDocument extends Document {
+export default class MyDocument extends Document {
+	static async getInitialProps(ctx: any) {
+		const initialProps = await Document.getInitialProps(ctx);
+		return { ...initialProps };
+	}
+
 	render() {
 		return (
 			<Html lang="en">
 				<Head>
-        <title>_document</title>
-
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<meta name="theme-color" content="#020617" />
-					<meta name="twitter:card" content="summary_large_image" />
-					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-					<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-				
-        <meta name="description" content="_document — automatically suggested description." />
-        <meta property="og:title" content="_document" />
-        <meta property="og:description" content="_document — automatically suggested description." /></Head>
-				<body className="bg-slate-950 text-white">
+					<meta name="theme-color" content="#000000" />
+					<link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
+					<link rel="dns-prefetch" href="//plausible.io" />
+					<link rel="icon" href="/favicon.svg" />
+					<link rel="manifest" href="/site.webmanifest" />
+					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+				</Head>
+				<body>
 					<Main />
 					<NextScript />
 				</body>
@@ -25,5 +25,3 @@ export default class ZionDocument extends Document {
 		);
 	}
 }
-
-

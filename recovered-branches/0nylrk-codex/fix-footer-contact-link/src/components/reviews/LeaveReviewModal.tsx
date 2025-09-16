@@ -1,0 +1,72 @@
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+import { ReviewForm } from "./ReviewForm";
+import { useReviews } from "@/hooks/useReviews";
+
+interface LeaveReviewModalProps {
+  projectId: string;
+  revieweeId: string;
+  revieweeName: string;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function LeaveReviewModal({
+  projectId,
+  revieweeId,
+  revieweeName,
+  isOpen,
+  
+  const handleOpenChange = (open: boolean) => {
+    setOpen(open);
+    if (!open) {
+      onClose();
+    }
+  };
+  
+  const handleSubmit = async (formValues: any) => {
+    if (userReview) {
+      // Update existing review
+      if (success) {
+        handleOpenChange(false);
+      }
+      return success;
+    } else {
+      // Create new review
+      const success = await submitReview(formValues);
+      if (success) {
+        handleOpenChange(false);
+      }
+      return success;
+    }
+  };
+  
+  return (
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogContent className="max-w-md">
+        <DialogHeader>
+          <DialogTitle>
+            {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
+          </DialogTitle>
+          <DialogDescription>
+            Your feedback helps build a trustworthy community. It will be visible after moderation.
+          </DialogDescription>
+        </DialogHeader>
+        
+        <ReviewForm
+          projectId={projectId}
+          revieweeId={revieweeId}
+          revieweeName={revieweeName}
+          onSubmit={handleSubmit}
+          defaultValues={userReview || undefined}
+          isSubmitting={isSubmitting}
+        />
+      </DialogContent>
+    </Dialog>
+  );
+}

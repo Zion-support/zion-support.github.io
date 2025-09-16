@@ -1,19 +1,25 @@
 {
-  "generatedAt": "2025-08-13T21:52:27.914Z",
   "items": [
     {
-      "title": "Innovation Insight — 2025-08-13 21-52",
-      "href": "/reports/innovations/insight-2025-08-13T21-52",
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-000055",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-13T21:52:27.845Z",
-      "source": "cloud-content-factory"
+      "createdAt": "2025-08-15T00:00:55.974Z",
+      "source": "cloud-blueprint-factory"
     },
     {
-      "title": "Autonomous Update — 2025-08-13 21-52",
-      "href": "/reports/updates/update-2025-08-13T21-52",
+      "title": "Playbook — Autonomous Delivery",
+      "href": "/reports/playbooks/playbook-2025-08-15-000055",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-13T21:52:27.845Z",
-      "source": "cloud-content-factory"
+      "createdAt": "2025-08-15T00:00:55.909Z",
+      "source": "cloud-playbook-factory"
+    },
+    {
+      "title": "Case Study — Trigger Homepage",
+      "href": "/reports/cases/case-2025-08-15-000055",
+      "desc": "New autonomous content",
+      "source": "cloud-deep-research-factory"
     }
   ]
 }
+>>>>>>> origin/auto/autonomy-17186719616

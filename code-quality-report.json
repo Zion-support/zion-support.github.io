@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-09-05T00:20:16.317Z",
+  "checks": [
+    {
+      "name": "ziontechgroup-site",
+      "status": "valid",
+      "version": "1.0.0"
+    },
+    {
+      "name": "node_modules",
+      "status": "missing"
+    },
+    {
+      "name": "tsconfig.json",
+      "status": "exists"
+    },
+    {
+      "name": "eslint-config",
+      "status": "exists",
+      "file": ".eslintrc.js"
+    },
+    {
+      "name": "prettier-config",
+      "status": "exists",
+      "file": ".prettierrc"
+    }
+  ]
+<<<<<<< HEAD
+}
+=======
+}
+
+  ]
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+  ],
+  "summary": {
+    "consoleLogs": 8,
+    "todos": 3,
+    "anyTypes": 193
+  }
+}
+  ]
+}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+  ]
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> origin/merge-pr-12271

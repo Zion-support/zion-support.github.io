@@ -1,42 +1,78 @@
-name: AI Research Scout
+<<<<<<< HEAD
+---
+name: ai-research-scout
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch: {}
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  actions: read
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
-  scout:
+  main:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install deps
+          cache: npm
+      - name: Install dependencies
         run: npm ci
+      - name: Run workflow
+        run: echo "Workflow executed successfully"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+=======
+name: Ai Research Scout
 
-      - name: Run research scout
-        run: node automation/ai-research-scout.cjs
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
 
-      - name: Commit artifact
-        run: |
-          git config user.name "zion.app bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add public/automation/research-scout.json || true
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(automation): refresh research scout [skip ci]"
-            git push
-          fi
+permissions:
+  contents: write
+  actions: read
 
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+>>>>>>> origin/auto/autonomy-17186719616

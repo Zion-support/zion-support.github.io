@@ -1,15 +1,45 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+const path = require('path');
+
+module.exports = {
+  reactStrictMode: true,
+<<<<<<< HEAD
+  images: {
+    domains: ["localhost"],
+=======
+  eslint: {
+    ignoreDuringBuilds: true,
+    dirs: []
+>>>>>>> origin/merge-pr-12271
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+<<<<<<< HEAD
+  eslint: {
+    ignoreDuringBuilds: true,
+=======
+  images: {
+    domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
+    unoptimized: true
+>>>>>>> origin/merge-pr-12271
+  },
   async redirects() {
     return [
-      { source: '/main', destination: '/', permanent: true },
-      { source: '/front', destination: '/', permanent: true },
-      { source: '/front/index', destination: '/', permanent: true }
+      { source: '/zion/gitbook', destination: '/docs/gitbook', permanent: true },
     ];
   },
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  webpack: (config) => {
+    // Support TS path alias '@/...' by mapping it to the project root
+    config.resolve = config.resolve || {};
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
+  },
 };
+<<<<<<< HEAD
+=======
 
-module.exports = nextConfig;
+export default nextConfig;
+>>>>>>> origin/merge-pr-12271

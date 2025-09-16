@@ -1,25 +1,40 @@
-frontend:
+area/automation:
+  - 'automation/**'
+area/frontend:
   - 'pages/**'
   - 'components/**'
   - 'styles/**'
+  - 'public/**'
+area/backend:
+  - 'utils/**'
+  - 'hooks/**'
 
-workflows:
-  - '.github/workflows/**'
-
-automation:
-  - 'automation/**'
-
-docs:
+type/docs:
   - 'docs/**'
+  - '**/*.md'
 
-config:
-  - '**/*.json'
-  - '**/*.yml'
-  - '**/*.yaml'
+type/ci:
+  - '.github/**'
+  - 'netlify.toml'
 
-security:
-  - 'automation/security-*.cjs'
+type/test:
+  - '__tests__/**'
 
-marketing:
-  - 'automation/*marketing*'
-  - '.github/workflows/*marketing*'
+type/security:
+  - 'automation/security-**'
+
+type/performance:
+  - 'automation/**performance**'
+  - 'automation/**optimizer**'
+
+type/dependencies:
+  - 'package.json'
+  - 'package-lock.json'
+
+type/chore:
+  - '*.config.*'
+  - '.editorconfig'
+  - '.eslintrc.*'
+  - 'tsconfig.*'
+  - 'postcss.config.js'
+  - 'tailwind.config.js'

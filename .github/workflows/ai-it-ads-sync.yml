@@ -1,17 +1,65 @@
-name: AI-IT Ads Sync
+<<<<<<< HEAD
+---
+name: ai-it-ads-sync
 
 on:
   schedule:
-    - cron: '*/7 * * * *'
-  workflow_dispatch: {}
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
-  advertise:
+  main:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 30
     steps:
       - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run workflow
+        run: echo "Workflow executed successfully"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+=======
+name: Ai It Ads Sync
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -22,22 +70,11 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install
+      - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-      - name: Build ads payload from registry
-        run: node automation/ai-it-front-advertiser.cjs || true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore(automation): update ads payload [skip ci]"
-            git push origin HEAD:main
-          fi
-
-
+>>>>>>> origin/auto/autonomy-17186719616

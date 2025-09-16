@@ -1,30 +1,56 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+<<<<<<< HEAD
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
+<<<<<<< HEAD
   "include": [
-    "next-env.d.ts",
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "tailwind.config.js",
+    "postcss.config.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "coverage"
   ]
 }
+=======
+  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+    "types": ["vite/client", "node"]
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}
+>>>>>>> cursor/create-and-deploy-new-content-b9ff

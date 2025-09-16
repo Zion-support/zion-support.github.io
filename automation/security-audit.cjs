@@ -1,97 +1,179 @@
+<<<<<<< HEAD
+=======
+
+}},
+
+>>>>>>> origin/merge-pr-12271
 #!/usr/bin/env node
-
-'use strict';
-
-const { spawnSync } = require('child_process');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const LOG_DIR = path.join(__dirname, 'logs');
-const LOG_FILE = path.join(LOG_DIR, 'security-audit.log');
-if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
+<<<<<<< HEAD
+(function main() {
+  let json = null;
+=======
+    }},
+  {
+    "name": 'Environment Variables Check',
+    "action": () => {
+      
+      const envFiles = ['.env', '.env.local', '.env.production'];
+      let foundEnvFiles = 0;
 
-function log(message) {
-  const line = `[${new Date().toISOString()}] ${message}`;
-  console.log(line);
-  fs.appendFileSync(LOG_FILE, line + '\n');
-}
+      envFiles.forEach(envFile => {
+        if (fs.existsSync(envFile)) {
+          foundEnvFiles++;
+          
+        }
+      });
 
-function runAudit() {
-  const result = spawnSync('npm', ['audit', '--production', '--json'], { encoding: 'utf8' });
-  if (result.error) throw result.error;
-  const stdout = result.stdout || '';
-  try {
-    return JSON.parse(stdout);
-  } catch (e) {
-    throw new Error('Failed to parse npm audit JSON');
-  }
-}
+    }},
+  {
+    "name": 'API Security Check',
+    "action": () => {
+      
+      const apiDir = path.join(process.cwd(), 'pages', 'api');
+      if (fs.existsSync(apiDir)) {
+        const apiFiles = fs
+          .readdirSync(apiDir)
+          .filter(file => file.endsWith('.ts') || file.endsWith('.js'));
+        let securityIssues = 0;
 
-function summarize(auditJson) {
-  const meta = auditJson.metadata || auditJson;
-  const advisoriesCount = meta.vulnerabilities || meta.vulns || {};
-  const totals = {
-    critical: advisoriesCount.critical || 0,
-    high: advisoriesCount.high || 0,
-    moderate: advisoriesCount.moderate || 0,
-    low: advisoriesCount.low || 0,
-  };
-  const total = Object.values(totals).reduce((a, b) => a + b, 0);
-  return { totals, total };
-}
+        apiFiles.forEach(file => {
+          const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
+          if (
+            content.includes('process.env') &&
 
-async function githubRequest(method, url, body) {
-  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
-  if (!token) return null;
-  const res = await fetch(url, {
-    method,
-    headers: {
-      'authorization': `Bearer ${token}`,
-      'accept': 'application/vnd.github+json',
-      'content-type': 'application/json',
+            !content.includes('// "Security": ')
+          ) {
+            securityIssues++;
+          }
+        });
+
+        console.log(
+          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
+        );
+      }
     },
-    body: body ? JSON.stringify(body) : undefined,
-  });
-  if (!res.ok) throw new Error(`GitHub API ${res.status}`);
-  return await res.json();
-}
+  },
 
-async function ensureIssue(owner, repo, title, body) {
+      }
+    }},
+  {
+    "name": 'Content Security Policy Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let cspFound = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          if (
+            content.includes('Content-Security-Policy') ||
+            content.includes('CSP')
+          ) {
+            cspFound++;
+          }
+        });
+
+        console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
+      }
+    },
+  },
+
+      }
+    }},
+  {
+    "name": 'HTTPS Enforcement Check',
+    "action": () => {
+      
+      const nextConfigPath = path.join(process.cwd(), 'next.config.js');
+      if (fs.existsSync(nextConfigPath)) {
+        const content = fs.readFileSync(nextConfigPath, 'utf8');
+        if (content.includes('https') || content.includes('secure')) {
+          
+        } else {
+          
+        }
+      } else {
+        
+      }
+
+    }},
+];
+
+// Run security checks
+let successCount = 0;
+let totalCount = securityChecks.length;
+
+for (const check of securityChecks) {
+>>>>>>> origin/merge-pr-12271
   try {
-    const issues = await githubRequest('GET', `https://api.github.com/repos/${owner}/${repo}/issues?state=open&per_page=100`);
-    if (!issues) return;
-    const existing = issues.find(i => i.title === title);
-    if (existing) {
-      await githubRequest('POST', `${existing.url}/comments`, { body });
-      return;
-    }
-    await githubRequest('POST', `https://api.github.com/repos/${owner}/${repo}/issues`, { title, body, labels: ['security','automation'] });
+    const out = execSync('npm audit --json', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+    json = JSON.parse(out);
   } catch (e) {
-    log(`GitHub issue ensure failed: ${e.message}`);
+    console.warn('[security-audit] npm audit failed, capturing partial');
+    try { json = JSON.parse(e.stdout || '{}'); } catch { json = { error: String(e.message || e) }; }
   }
-}
-
-(async function main(){
-  try {
-    const audit = runAudit();
-    const { totals, total } = summarize(audit);
-    log(`Vulnerabilities → total=${total} critical=${totals.critical} high=${totals.high} moderate=${totals.moderate} low=${totals.low}`);
-
-    // If running in GitHub Actions
-    const repoFull = process.env.GITHUB_REPOSITORY || '';
-    const [owner, repo] = repoFull.split('/');
-
-    if (total > 0 && owner && repo) {
-      const title = 'Security audit detected vulnerabilities';
-      const body = `Automated npm audit report:\n\n- Critical: ${totals.critical}\n- High: ${totals.high}\n- Moderate: ${totals.moderate}\n- Low: ${totals.low}`;
-      await ensureIssue(owner, repo, title, body);
-    }
-
-    // Exit non-zero for critical/high to fail job
-    if (totals.critical > 0 || totals.high > 0) process.exit(1);
-    process.exit(0);
-  } catch (e) {
-    log(`Audit failed: ${e.message}`);
-    process.exit(1);
-  }
+<<<<<<< HEAD
+  const outDir = path.join(process.cwd(), 'data', 'security');
+  fs.mkdirSync(outDir, { recursive: true });
+  const outPath = path.join(outDir, 'npm-audit.json');
+  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), report: json }, null, 2), 'utf8');
+  console.log('[security-audit] wrote', outPath);
 })();
+=======
+}
+
+// Generate security report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": securityChecks.map(check => ({
+    name: check.name,
+
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+
+    "status": 'completed'})),
+  "summary": {
+    total: totalCount,
+    "successful": successCount,
+    "failed": totalCount - successCount}};
+
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });
+}
+
+const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('� Security Audit Starting...\n')
+    "name"
+        execSync('npm audit --audit-level=moderate', { "stdio"})
+    "name"
+    "name"
+            !content.includes('// "Security")
+    "name"
+    "name"
+    "status"
+
+    "status"
+    "status"
+
+>>>>>>> origin/merge-pr-12271

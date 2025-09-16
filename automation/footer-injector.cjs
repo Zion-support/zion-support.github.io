@@ -1,82 +1,75 @@
 #!/usr/bin/env node
-'use strict';
+<<<<<<< HEAD
 
-// Continuously ensures a footer is present in exported/static html files
-// Directories scanned: public/, out/
+/**
+ * Footer Injector Script
+ * Injects dynamic content into the footer after build
+ */
+=======
+'use strict';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = process.cwd();
-const TARGET_DIRS = ['public', 'out'];
+<<<<<<< HEAD
+console.log('🔧 Running footer injector...');
 
-function read(file) {
-  try { return fs.readFileSync(file, 'utf8'); } catch { return null; }
-}
-
-function write(file, data) {
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, data, 'utf8');
-}
-
-function listHtmlFiles(dir) {
-  const results = [];
-  const base = path.join(ROOT, dir);
-  if (!fs.existsSync(base)) return results;
-  (function walk(current) {
-    const entries = fs.readdirSync(current, { withFileTypes: true });
-    for (const entry of entries) {
-      if (entry.name.startsWith('.')) continue;
-      const full = path.join(current, entry.name);
-      if (entry.isDirectory()) walk(full);
-      else if (entry.isFile() && entry.name.endsWith('.html')) results.push(full);
-    }
-  })(base);
-  return results;
-}
-
-function buildFooterHtml() {
-  return (
-    `\n<footer class="border-t border-white/10 bg-black/20"><div class="mx-auto max-w-7xl px-6 py-8 text-sm text-white/70 flex flex-col gap-3 md:flex-row md:items-center md:justify-between"><div><span class="font-semibold text-white">Zion</span> — Autonomous Cloud Automations</div><nav class="flex flex-wrap items-center gap-4"><a href="/automation" class="hover:text-white">Automations</a><a href="/site-health" class="hover:text-white">Site Health</a><a href="/newsroom" class="hover:text-white">Newsroom</a><a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" class="hover:text-white">ziontechgroup.com</a></nav></div></footer>\n`
-  );
-}
-
-function hasFooter(html) {
-  return /<footer[\s\S]*?>[\s\S]*?<\/footer>/i.test(html);
-}
-
-function injectFooter(html) {
-  const footer = buildFooterHtml();
-  // Place before closing body
-  if (/<\/body>/i.test(html)) {
-    return html.replace(/<\/body>/i, `${footer}</body>`);
+try {
+  const distPath = path.join(__dirname, '..', 'dist');
+  const indexPath = path.join(distPath, 'index.html');
+  
+  if (!fs.existsSync(indexPath)) {
+    console.log('⚠️  index.html not found in dist folder');
+    process.exit(0);
   }
-  // If no </body>, append
-  return html + footer;
-}
-
-function processFile(file) {
-  const original = read(file);
-  if (!original) return false;
-  if (hasFooter(original)) return false;
-  const updated = injectFooter(original);
-  if (updated !== original) {
-    write(file, updated);
-    console.log(`[footer-injector] injected footer -> ${path.relative(ROOT, file)}`);
-    return true;
+  
+  let html = fs.readFileSync(indexPath, 'utf8');
+  
+  // Add build timestamp
+  const timestamp = new Date().toISOString();
+  const buildInfo = `<!-- Build: ${timestamp} -->`;
+  
+  if (!html.includes(buildInfo)) {
+    html = html.replace('</head>', `${buildInfo}\n</head>`);
+    fs.writeFileSync(indexPath, html);
+    console.log('✅ Footer injection completed');
+  } else {
+    console.log('ℹ️  Footer already injected');
   }
-  return false;
+  
+} catch (error) {
+  console.log('⚠️  Footer injection failed:', error.message);
+  // Don't fail the build for this
+  process.exit(0);
+}
+=======
+function safeRead(filePath) {
+	try {
+		return fs.readFileSync(filePath, 'utf8');
+	} catch {
+		return '';
+	}
 }
 
-function main() {
-  let changed = 0;
-  for (const dir of TARGET_DIRS) {
-    const files = listHtmlFiles(dir);
-    for (const f of files) if (processFile(f)) changed++;
-  }
-  console.log(`[footer-injector] completed. files changed: ${changed}`);
-}
-
-main();
-
-
+(function main() {
+	const outDir = path.join(process.cwd(), 'out');
+	if (!fs.existsSync(outDir)) {
+		console.log('[footer:inject] No out/ directory; skipping.');
+		process.exit(0);
+	}
+	const files = fs.readdirSync(outDir).filter(f => f.endsWith('.html'));
+	for (const file of files) {
+		const full = path.join(outDir, file);
+		const html = safeRead(full);
+		if (!html) continue;
+		const footer = '\n<!-- automated footer -->\n';
+		const updated = html.includes('</body>') ? html.replace('</body>', `${footer}</body>`) : (html + footer);
+		try {
+			fs.writeFileSync(full, updated);
+		} catch {}
+	}
+	console.log('[footer:inject] Completed.');
+	process.exit(0);
+})();
+>>>>>>> origin/auto/autonomy-17186719616

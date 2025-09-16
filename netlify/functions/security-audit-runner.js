@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -7,23 +8,36 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = {
-  schedule: '19 */6 * * *',
-};
+exports.config = { schedule: '15 */12 * * *' };
 
 exports.handler = async () => {
+=======
+
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe'
+    encoding: 'utf8'
+  });
+  return {
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || ''
+  };
+exports && exports.config = { schedule: '15 */12 * * *' };
+exports && exports.handler = async () => {
+>>>>>>> origin/merge-pr-12271
   const logs = [];
-  function logStep(name, fn) {
+  const step = (name, fn) => {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
-  }
+  };
 
-  logStep('security:audit', () => runNode('automation/security-audit.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  step('security:audit', () => runNode('automation/security-audit.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-  return { statusCode: 200, body: logs.join('\n') };
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };
