@@ -6,7 +6,20 @@ export default function HomePage() {
 
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 pt-24">
+      {/* Promo banner for fresh content */}
+      <div className="mx-auto max-w-7xl px-6 pt-6">
+        <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
+          <p className="text-sm sm:text-base font-semibold text-blue-200">
+            New: Grounded Generation Blueprint & Real-Time Model Routing —
+            <a href="/blog/ai-2026-grounded-generation-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            <a href="/blog/ai-2026-real-time-model-routing-playbook" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">routing playbook</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
+          </p>
+        </div>
+      </div>
+      <div className="mx-auto max-w-7xl px-6 pt-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Leading the Future of{' '}

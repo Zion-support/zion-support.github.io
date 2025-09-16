@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Deep Dive: Grounded Generation in Production (2026)',
+    summary: 'Techniques to ensure factual, traceable outputs with retrieval, constraints, and eval gates.',
+    href: '/blog/ai-2026-grounded-generation-blueprint',
+    date: '2025-09-16',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Playbook: Real-Time Model Routing (2026)',
+    summary: 'Latency- and cost-aware routing strategies with safety envelopes and fallback policies.',
+    href: '/blog/ai-2026-real-time-model-routing-playbook',
+    date: '2025-09-16',
+    tag: 'Playbook'
+  },
+  {
     title: 'Guide: Production RAG Latency Budgets (2026)',
     summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
     href: '/blog/ai-2026-production-rag-latency-budgets',
