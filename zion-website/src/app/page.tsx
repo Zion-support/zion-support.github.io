@@ -52,6 +52,9 @@ export default function HomePage() {
             Evals‑in‑Prod Control Plane (2026) —
             <a href="/updates/evals-in-prod-control-plane-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Trustworthy AI Evidence Vault —
+            <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -113,6 +116,9 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Agent Evidence Bundles —
             <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new blog</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Trustworthy AI Evidence Vault —
+            <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Secure Tool Access —
             <a href="/updates/secure-tool-access-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blueprint</a>
