@@ -1,48 +1,33 @@
 export const blogPosts = [
   {
     id: 9001,
-    title: "AI 2026: Incident-Ready Agents — Playbooks That Ship",
-    excerpt: "Practical runbooks, rollback contracts, and evidence hubs for safe autonomy.",
-    content: "Make agent systems incident-ready with eval‑gated runbooks, deterministic rollback, and audit‑ready evidence hubs. This guide includes minimal YAML playbooks, on‑call checklists, and dashboards wired to release scorecards so you can ship fast without breaking prod.",
-    author: "Casey Morgan",
-    authorRole: "Principal Engineer",
+    title: "AI 2026: Agent Platform SLOs — Best Practices",
+    excerpt: "A concise SLO set for safety, quality, reliability, and cost—ready to adopt.",
+    content: "Define and operationalize SLOs tailored for autonomous agent platforms. This guide provides a minimal, pragmatic SLO set across safety, groundedness, override rate, reliability, and cost. Learn how to wire SLOs to release scorecards, alerts, and rollback policies so changes remain safe and auditable.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
     publishDate: "2025-09-16",
     readTime: "6 min read",
     category: "Operations",
-    tags: ["Runbooks", "Rollback", "Evidence"],
+    tags: ["SLOs", "Reliability", "Policy"],
     featured: true,
-    imageUrl: "/images/blog/incident-ready-agents-2026.jpg",
-    slug: "ai-2026-incident-ready-agents-playbooks"
+    imageUrl: "/images/blog/agent-platform-slos-2026.jpg",
+    slug: "ai-2026-agent-slo-blueprint"
   },
   {
     id: 9002,
-    title: "Groundedness at Scale: Online Evals That Block Bad Merges",
-    excerpt: "Wire groundedness checks to PRs, canaries, and rollbacks—copyable today.",
-    content: "We show how to operationalize groundedness with lightweight datasets, online metrics, and scorecard thresholds enforced in CI/CD. Includes example configs for pre‑merge checks, shadow runs, and progressive delivery with auto‑rollback.",
-    author: "Nina Patel",
-    authorRole: "Applied AI Architect",
+    title: "AI 2026: Agents‑On‑Call Automation",
+    excerpt: "Eval‑gated triage, mitigation, and escalation with autonomous agents in prod.",
+    content: "Design agents that assist on‑call responders safely. We cover gated triage flows, mitigation playbooks, escalation paths, and the telemetry you need for audit‑ready post‑incident learning. Includes a reference SOP and guardrail adapters you can adopt today.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
     publishDate: "2025-09-16",
     readTime: "7 min read",
-    category: "Evaluations",
-    tags: ["Groundedness", "Evals", "Scorecards"],
+    category: "Reliability",
+    tags: ["Incidents", "Runbooks", "Evals"],
     featured: true,
-    imageUrl: "/images/blog/groundedness-at-scale-2026.jpg",
-    slug: "groundedness-at-scale-online-evals"
-  },
-  {
-    id: 9003,
-    title: "Cost-Aware Agents: 30% Savings With Safe Routing",
-    excerpt: "Budget caps, approval tiers, and model ladders that keep quality steady.",
-    content: "Implement cost‑aware routing with confidence thresholds, fallback ladders, and sampling dials. Pair with online evals to maintain SLOs and groundedness while cutting spend. We include a minimal policy bundle and dashboard queries.",
-    author: "Miguel Alvarez",
-    authorRole: "FinOps Lead",
-    publishDate: "2025-09-16",
-    readTime: "5 min read",
-    category: "FinOps",
-    tags: ["Routing", "Budgets", "Approvals"],
-    featured: true,
-    imageUrl: "/images/blog/cost-aware-agents-2026.jpg",
-    slug: "cost-aware-agents-30-percent-savings"
+    imageUrl: "/images/blog/agents-oncall-automation-2026.jpg",
+    slug: "ai-2026-agents-oncall-automation"
   },
   {
     id: 8001,
@@ -1315,10 +1300,7 @@ export const newContent2026 = [
   }
 ];
 
-// Import new revolutionary content
-import { newBlogPosts2026 } from './newBlogPosts2026.js';
-
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026, ...newBlogPosts2026];
+export const allBlogPosts = [...blogPosts, ...newContent2026];
 
 export const BLOG_POSTS = allBlogPosts;
