@@ -1,4 +1,29 @@
 ---
+title: "AI 2026: Real‑Time Evals at Scale — From Offline Suites to Live Gates"
+description: "How to evolve from offline evaluation suites to live, policy‑gated evals in production."
+date: 2025-09-16
+tags: [Evaluations, Reliability, Progressive Delivery, Observability, 2026]
+status: published
+---
+
+# AI 2026: Real‑Time Evals at Scale — From Offline Suites to Live Gates
+
+Most teams start with offline evaluation suites. Leaders graduate to real‑time evals that gate actions, releases, and rollouts in production.
+
+Key practices:
+
+- Attach eval IDs to traces and decisions
+- Gate risky actions and releases with thresholds
+- Roll back automatically on budget burn or drift
+- Feed incidents back into scenario suites
+
+Outcomes: p95 rollback time under 5 minutes, 99.9% reliability on critical actions, audit‑ready change history.
+
+Read next:
+
+- /blog/ai-2026-evaluation-harness-blueprint
+- /blog/ai-2026-evidence-driven-release-checklists
+---
 title: "AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates"
 date: 2025-09-15
 slug: ai-2026-realtime-evals-at-scale
