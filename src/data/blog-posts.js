@@ -2028,6 +2028,51 @@ export const getBlogTags = () => {
 // New content added for enhanced engagement
 export const newContent2026 = [
   {
+    id: 9501,
+    title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
+    excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
+    content: "A concise executive guide with minimal YAML, JSON scorecard schemas, and a reference GitHub Check that blocks merges on failing evals. Includes rollout ladders, budget dials, and audit‑ready evidence capture.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Eval Gates", "Scorecards", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/exec-guide-eval-gates-2026.jpg",
+    slug: "exec-guide-eval-gates-ship-tomorrow"
+  },
+  {
+    id: 9502,
+    title: "FinServ Case Study: 35% Savings With Policy Routing",
+    excerpt: "Spend bands, confidence ladders, and online evals—quality held, cost down 35%.",
+    content: "A practical case study from a Fortune 100 bank: route by confidence and latency, hold quality with online groundedness evals, and enforce budgets via policy. We share the exact thresholds, dashboards, and failure drills.",
+    author: "Priya Shah",
+    authorRole: "FinOps Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Groundedness"],
+    featured: true,
+    imageUrl: "/images/blog/finserv-policy-routing-35-2026.jpg",
+    slug: "finserv-case-study-policy-routing-35-savings"
+  },
+  {
+    id: 9503,
+    title: "Journey Scorecards Starter: KPIs That Actually Gate Change",
+    excerpt: "JSON KPI templates, policy examples, and CI wiring to make changes safe.",
+    content: "Stop debating risk. This starter ships journey‑level KPIs for quality, safety, latency, and cost. Wire them to policy and CI so merges and rollouts are automatically gated. Includes dashboards and incident tie‑ins.",
+    author: "Morgan Reyes",
+    authorRole: "Principal Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["KPIs", "Policy", "Progressive Delivery"],
+    featured: true,
+    imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
+    slug: "journey-scorecards-starter-kpis"
+  },
+  {
     id: 9401,
     title: "AI 2026: Production Guardrails You Can Ship Today",
     excerpt: "Drop-in eval gates, rollback contracts, and scorecards that block risky merges.",
