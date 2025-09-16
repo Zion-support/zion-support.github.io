@@ -15,6 +15,7 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
 =======
@@ -450,6 +451,12 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     title: "AI 2026: Safe Tool Use Blueprint",
     description:
       "Permissioned tool use with risk tiers, sandboxes, policy‑as‑code, and runtime checks.",
+=======
+    id: "safe-tool-use-blueprint-2026",
+    title: "AI 2026: Safe Tool Use Blueprint",
+    description:
+      "Permissioned tool use with risk tiers, policy-as-code, sandboxes, and runtime checks.",
+>>>>>>> origin/feat/new-content-sept15-2025
     ctaLabel: "Read Article",
     href: "/blog/ai-2026-safe-tool-use-blueprint",
     emoji: "🧰",
@@ -457,8 +464,22 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/new-content-runbooks-platform-ops
+=======
+    id: "agents-oncall-automation-2026-new",
+    title: "AI 2026: Agents‑On‑Call Automation",
+    description:
+      "Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agents-oncall-automation",
+    emoji: "📟",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+>>>>>>> origin/feat/new-content-sept15-2025
     id: "agent-fleet-management-handbook-2026",
     title: "AI 2026: Agent Fleet Management Handbook",
     description:
