@@ -88,15 +88,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-fuchsia-500 to-indigo-500'
     },
     {
-      title: 'AI 2026: Real-Time Retrieval Architectures',
-      href: '/blog/ai-2026-real-time-retrieval-architectures',
-      tag: 'Article',
+      title: 'AI 2026: Operational Risk Metrics for Agents',
+      href: '/blog/ai-2026-operational-risk-metrics-for-agents',
+      tag: 'Risk',
       gradient: 'from-purple-500 to-blue-500'
     },
     {
-      title: 'AI 2026: Autonomous Ops Playbook',
-      href: '/content/ai-2026-autonomous-ops-playbook',
-      tag: 'Playbook',
+      title: 'AI 2026: Production Evidence Hub — Blueprint',
+      href: '/blog/ai-2026-production-evidence-hub-blueprint',
+      tag: 'Blueprint',
       gradient: 'from-cyan-500 to-blue-600'
     }
   ];
