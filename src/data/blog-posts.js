@@ -2300,6 +2300,36 @@ export const newContent2026 = [
     slug: "agent-guardrails-prod-five-checks"
   },
   {
+    id: 9301,
+    title: "AI 2026: Production Evals Starter — Copy-Paste Suite",
+    excerpt: "Drop in a minimal online eval suite to gate risky changes day one.",
+    content: "Start measuring what matters without heavy lift. This starter packs response correctness, groundedness, and safety checks you can run in CI and in prod. Wire pass/fail to your release scorecard and enable automatic rollback when signals breach.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Evaluations",
+    tags: ["Online Evals", "Scorecards", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/production-evals-starter-2026.jpg",
+    slug: "ai-2026-production-evals-starter"
+  },
+  {
+    id: 9302,
+    title: "Trusted Agents: Incident-Aware Guardrails That Ship",
+    excerpt: "Wire incidents, budgets, and policy to agent behavior in real time.",
+    content: "Make agents auditable and safe with incident-aware guardrails. We show how to cap spend, enforce capability scopes, and escalate to humans using simple, testable policies. Includes adapters you can copy into your platform and dashboards to see protections in action.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Safety",
+    tags: ["Guardrails", "Incidents", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-agents-incident-aware-guardrails-2026.jpg",
+    slug: "trusted-agents-incident-aware-guardrails-2026"
+  },
+  {
     id: 9105,
     title: "Cost-Aware Model Routing: A Copy-Paste Policy",
     excerpt: "Drop-in routing policy with confidence thresholds and budget caps.",
@@ -2322,3 +2352,14 @@ export const allBlogPosts = [...blogPosts, ...newContent2026];
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
+
+// Helpers for UI components
+export function getFeaturedBlogPosts() {
+  return BLOG_POSTS.filter(p => p.featured === true);
+}
+
+export function getRecentBlogPosts(limit = 5) {
+  return [...BLOG_POSTS]
+    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+    .slice(0, limit);
+}
