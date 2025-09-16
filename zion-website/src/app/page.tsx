@@ -193,6 +193,7 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+<<<<<<< HEAD
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
 <<<<<<< HEAD
@@ -213,6 +214,12 @@ export default function HomePage() {
 =======
                   'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
                 href: '/updates/advanced-blockchain-course'
+=======
+                title: 'New Article: AI Governance Blueprint 2025',
+                summary:
+                  'Practical guardrails for deploying autonomous AI with verifiable policy and audits.',
+                href: '/blog/ai-governance-blueprint-2025'
+>>>>>>> origin/feature/new-content-2025
               },
               {
                 title: 'Community Challenge: Build a DApp',

@@ -13,6 +13,7 @@ interface BlogPostMeta {
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -146,6 +147,23 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
 >>>>>>> origin/feature/new-content-2025-09-15
     ]
+=======
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A step-by-step framework to design, implement, and audit governance for autonomous AI in production.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'As organizations adopt autonomous AI, governance must evolve from policy documents to executable guardrails. This blueprint provides a practical approach to building verifiable, adaptive governance that scales.',
+      'We cover policy definition (goals, constraints, metrics), enforcement via policy engines, safe action gates with human-in-the-loop, and continuous assurance through telemetry and audits.',
+      'Implementation patterns include risk-tiered action pipelines, signed policies with provenance, and sandboxed evaluation environments. We map responsibilities across product, security, compliance, and operations.',
+      'The result is a governance system that enables faster iteration while reducing risk, with transparent accountability across stakeholders.'
+    ],
+>>>>>>> origin/feature/new-content-2025
   },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
