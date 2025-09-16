@@ -12,14 +12,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Tech Breakthrough 2036
           </h1>
-<<<<<<< HEAD
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
-=======
-          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
-            The most revolutionary technological advancement in human history - 
-            transcending the boundaries of what was once thought impossible
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-pink-600 to-purple-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
@@ -210,12 +202,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
             </button>
             <button className="border border-pink-400 px-12 py-5 rounded-lg hover:bg-pink-500/20 transition-colors text-xl">
               Schedule Demo
-<<<<<<< HEAD
-=======
-            </button>
-            <button className="border border-purple-400 px-12 py-5 rounded-lg hover:bg-purple-500/20 transition-colors text-xl">
-              Contact Us
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
             </button>
           </div>
         </div>

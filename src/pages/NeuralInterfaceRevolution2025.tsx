@@ -452,19 +452,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div
-=======
-          </motion.div>
-        </div>
-
-        {/* Call to Action */}
-        <motion.div
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -749,33 +736,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
-          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
-            Experience the next evolution of human-computer interaction with our revolutionary neural interface technology.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Neural Journey
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
-              Learn More
-            </button>
-=======
-        <div className="text-center bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-6">Connect Mind and Machine</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Experience the future of human-computer interaction with our revolutionary neural interface technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Neural Journey
-            </a>
-            <a href="/pages/ComprehensiveServices2025" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
-              Explore All Services
-            </a>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </div>
         </div>
         </div>
