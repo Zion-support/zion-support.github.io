@@ -11,6 +11,26 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+<<<<<<< HEAD
+    id: "operational-evals-blueprint-2026",
+    title: "AI 2026: Operational Evals — Blueprint",
+    description:
+      "Ship faster with eval gates, rapid rollbacks, and audit‑ready evidence.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-operational-evals-blueprint",
+    emoji: "🧩",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "agent-benchmarking-best-practices-2026",
+    title: "AI 2026: Agent Benchmarking Best Practices",
+    description:
+      "From toy tasks to production: suites, policy gates, and observability for reliable agents.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-benchmarking-best-practices",
+    emoji: "🧪",
+=======
     id: "realtime-agent-routing-2026",
     title: "AI 2026: Real‑Time Agent Routing — Best Practices",
     description:
@@ -18,6 +38,7 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     ctaLabel: "Read Best Practices",
     href: "/blog/ai-2026-realtime-agent-routing-best-practices",
     emoji: "🧭",
+>>>>>>> origin/cursor/create-and-deploy-new-content-81be
     highlight: true,
     date: "2025-09-16",
   },
