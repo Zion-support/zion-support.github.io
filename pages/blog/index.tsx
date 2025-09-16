@@ -7,6 +7,7 @@ const posts = [
   { slug: 'responsible-autonomy-checklist', title: 'Responsible Autonomy Checklist', excerpt: 'A pragmatic preflight checklist for deploying autonomous features safely.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
+  { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
@@ -15,12 +16,15 @@ const posts = [
   { slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Practical blueprints for shipping agentic workflows into production.' },
   { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
   { slug: 'genai-2025-practical-compliance-patterns', title: 'GenAI for Regulated Industries (2025)', excerpt: 'Practical compliance patterns for GenAI rollouts in regulated sectors.' },
+  { slug: 'genai-2025-evidence-driven-ai-governance', title: 'Evidence‑Driven AI Governance (2025)', excerpt: 'Policies, evals, approvals, and audit‑ready evidence across the AI lifecycle.' },
   { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' },
   { slug: 'ai-2026-foundation-model-quality-engineering', title: 'Foundation Model Quality Engineering (2026)', excerpt: 'Evals, safety, and release health for production-grade foundation model apps.' },
   { slug: 'ai-2026-operationalizing-agentic-workflows', title: 'Operationalizing Agentic Workflows (2026)', excerpt: 'Design SLIs/SLOs, guardrails, and evals to ship reliable agentic systems.' }
   ,{ slug: 'ai-2026-operational-risk-metrics-for-agents', title: 'Operational Risk Metrics for Agents (2026)', excerpt: 'Standardize override rates, violations, groundedness, and MTTR.' }
   ,{ slug: 'ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', excerpt: 'Centralize evals, traces, policy events, and incidents for audits.' }
   ,{ slug: 'ai-2026-secure-tooling-permissions-blueprint', title: 'Secure Tooling Permissions — Blueprint (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.' }
+  ,{ slug: 'ai-2026-guardrailed-tooling-risk-tiers', title: 'Guardrailed Tooling: Risk Tiers (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe tool actions.' }
+  ,{ slug: 'ai-2026-real-time-rag-architectures', title: 'Real-Time RAG Architectures (2026)', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' }
 ]
 
 export default function BlogIndexPage() {

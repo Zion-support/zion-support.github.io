@@ -13,6 +13,32 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* New: Sept 2025 additions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Quickstart</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="hover:underline">
+              Evidence‑Driven Operations (Quickstart)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation‑first delivery with policy gates, incident runbooks, and auditable evidence.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="text-purple-700 font-semibold">Start Here →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blog</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-safe-rollouts-in-production" className="hover:underline">
+              Safe Rollouts in Production
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Progressive exposure with eval gates, observability, and automated rollbacks.
+          </p>
+          <Link href="/blog/ai-2026-safe-rollouts-in-production" className="text-indigo-700 font-semibold">Read Article →</Link>
+        </article>
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>

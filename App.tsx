@@ -28,6 +28,7 @@ import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+import BlogPost2025Q4 from './src/pages/BlogPost2025Q4';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
 import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
@@ -86,11 +87,12 @@ import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevoluti
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import AIExecutiveStrategy2026 from './src/pages/AIExecutiveStrategy2026';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
-import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
+// import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import EnhancedContentShowcase2026 from './src/components/EnhancedContentShowcase2026';
@@ -98,9 +100,13 @@ import RevolutionaryContentShowcase2026 from './src/pages/RevolutionaryContentSh
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
+import RevolutionaryServices2026 from './src/pages/RevolutionaryServices2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
+import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
+import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import PostQuantumConsciousnessBanner2026 from './src/components/PostQuantumConsciousnessBanner2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
 import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
@@ -140,7 +146,7 @@ import InteractiveTechDemo2030 from './src/components/InteractiveTechDemo2030';
 import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase2030';
 import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
-import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
+// import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
 import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
 import RevolutionaryTechShowcase2028 from './src/pages/RevolutionaryTechShowcase2028';
 import AIBusinessRevolution2028 from './src/pages/AIBusinessRevolution2028';
@@ -297,8 +303,16 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* New Content Advertising Banner */}
+                <div className="mb-12">
+                  <NewContentAdvertisingBanner2026 />
+                </div>
+                
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
+                
+                {/* Post-Quantum Consciousness Banner 2026 */}
+                <PostQuantumConsciousnessBanner2026 />
                 
                 {/* Advanced Search Component */}
                 <div className="mb-8">
@@ -1055,6 +1069,17 @@ export default function App(): JSX.Element {
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-rose-100 text-rose-700 text-xs rounded-full">NEW • Q4</span>
+                        <span className="text-sm text-gray-500">October 10, 2025</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Autonomous AI in Production: Q4 2025 Guide</h3>
+                      <p className="text-gray-600 mb-4">Field-tested patterns for deploying reliable agentic systems at scale...</p>
+                      <a href="/pages/BlogPost2025Q4" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Full Article →
+                      </a>
+                    </div>
+                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
                         <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">FEATURED</span>
                         <span className="text-sm text-gray-500">January 18, 2025</span>
                       </div>
@@ -1307,6 +1332,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+          <Route path="/pages/BlogPost2025Q4" element={<BlogPost2025Q4 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
@@ -1348,10 +1374,12 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
-          <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
+          {/* <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} /> */}
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
+          <Route path="/pages/RevolutionaryServices2026" element={<RevolutionaryServices2026 />} />
+          <Route path="/revolutionary-content-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
@@ -1383,6 +1411,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/pages/AIExecutiveStrategy2026" element={<AIExecutiveStrategy2026 />} />
           <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
           <Route path="/pages/RevolutionaryTechShowcase2028" element={<RevolutionaryTechShowcase2028 />} />

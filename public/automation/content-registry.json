@@ -129,5 +129,34 @@
       "createdAt": "2025-09-16T00:20:00.000Z",
       "source": "cloud-deep-research-factory"
     }
+    ,
+    {
+      "title": "Guide — Practical GenAI Patterns for Teams",
+      "href": "/reports/guides/genai-patterns-for-teams-2025-09",
+      "desc": "Battle-tested prompts and workflows for real adoption",
+      "createdAt": "2025-09-16T09:30:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Autonomous Support Desk v2",
+      "href": "/reports/blueprints/blueprint-2025-09-autonomous-support-v2",
+      "desc": "Closed-loop L3 assist with safe auto-remediation",
+      "createdAt": "2025-09-16T09:40:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Brief — CFO’s Guide to AI Cost Controls",
+      "href": "/reports/briefs/brief-2025-09-cfo-ai-cost-controls",
+      "desc": "A lightweight playbook to align AI with FinOps",
+      "createdAt": "2025-09-16T09:50:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Production Eval Gates in the Wild: Lessons from Real Deployments",
+      "href": "/reports/ai-lab/articles/production-eval-gates-in-the-wild-1758049200000.md",
+      "desc": "What works when moving evaluation gates into live release workflows",
+      "createdAt": "2025-09-16T12:00:00.000Z",
+      "source": "Zion AI Lab"
+    }
   ]
 }

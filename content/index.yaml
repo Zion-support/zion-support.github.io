@@ -509,6 +509,34 @@ content_index:
         coverage: "> 70% initial"
         gate_pass_rate: "> 95%"
         audit_ready: true
+    - id: "ai-2026-eval-gated-ci-cd-blueprint"
+      type: "blog"
+      title: "AI 2026: Eval‑Gated CI/CD Blueprint — Shipping Fast Without Breaking Things"
+      file_path: "/content/blog/ai-2026-eval-gated-ci-cd-blueprint.md"
+      url: "/blog/ai-2026-eval-gated-ci-cd-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        change_failure_rate: "< 3%"
+    - id: "ai-2026-agentic-observability-deep-dive"
+      type: "blog"
+      title: "AI 2026: Agentic Observability Deep Dive — Traces, Evals, and Safety Telemetry"
+      file_path: "/content/blog/ai-2026-agentic-observability-deep-dive.md"
+      url: "/blog/ai-2026-agentic-observability-deep-dive"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Observability", "Agents", "Evals", "Safety", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        latency_p95: "< 600ms"
+        citation_density: "> 0.9"
+        audit_ready: true
 =======
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"
