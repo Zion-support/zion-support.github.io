@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+<<<<<<< HEAD
 import { getPostById } from '../../../data/blog';
 >>>>>>> origin/feat/blog-content-and-promo
 
@@ -18,6 +19,8 @@ type Params = { params: { id: string } };
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -38,6 +41,7 @@ type Params = { params: { id: string } };
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
 =======
+<<<<<<< HEAD
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -79,6 +83,9 @@ type Params = { params: { id: string } };
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-af01
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -97,6 +104,10 @@ type Params = { params: { id: string } };
     date: '2025-09-15',
     readTime: '9 min read',
     content: [
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -179,6 +190,7 @@ type Params = { params: { id: string } };
     category: 'AI Governance',
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
+<<<<<<< HEAD
     readTime: '8 min read',
 >>>>>>> origin/feat/content-promo
     content: [
@@ -520,3 +532,6 @@ export default function BlogPostPage({ params }: Params) {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-af01
