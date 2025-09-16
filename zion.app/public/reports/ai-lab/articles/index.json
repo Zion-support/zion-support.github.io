@@ -1,5 +1,19 @@
 [
   {
+    "title": "Evidence‑Led Ops Scorecards for Production Agents",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-evidence-led-ops-scorecards-1758145200000.md",
+    "createdAt": "2025-09-17T05:00:00.000Z",
+    "tags": ["governance", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Agent Safety Drills: Evidence‑First Exercises for Production Readiness",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-agent-safety-drills-1758148800000.md",
+    "createdAt": "2025-09-17T06:00:00.000Z",
+    "tags": ["safety", "incidents", "reliability"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Agent Guardrails for Synthetic Data: Patterns for Safe Generation",
     "url": "/reports/ai-lab/articles/new-agent-guardrails-for-synthetic-data-1758139800000.md",
     "createdAt": "2025-09-17T03:30:00.000Z",

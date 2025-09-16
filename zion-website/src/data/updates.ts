@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New AI Lab content (2025-09-17)
+    {
+        title: 'Guide: Evidence‑Led Ops Scorecards',
+        summary: 'Align SLOs, eval gates, and incident evidence into auditable scorecards.',
+        href: '/reports/ai-lab/articles/new-ai-lab-content-evidence-led-ops-scorecards-1758145200000.md',
+        date: '2025-09-17',
+        tag: 'Guide',
+    },
+    {
+        title: 'Field Guide: Agent Safety Drills',
+        summary: 'Quarterly exercises with eval gates and signed evidence to validate controls.',
+        href: '/reports/ai-lab/articles/new-ai-lab-content-agent-safety-drills-1758148800000.md',
+        date: '2025-09-17',
+        tag: 'Field Guide',
+    },
     // New content (2025-09-16 - additional featured additions)
     {
         title: 'Launch: Autonomous Knowledge Graph Builder v1.0',
