@@ -33,14 +33,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Autonomous Analytics Copilot v1.1 —
-            <a href="/updates/autonomous-analytics-copilot-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            New: Agent Risk Dashboard v1.0 —
+            <a href="/updates/agent-risk-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: Agent Benchmark Suite v3 —
-            <a href="/updates/agent-benchmark-suite-v3" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            Guide: Production Prompt Risk Scoring —
+            <a href="/updates/production-prompt-risk-scoring-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">details</a>
+            Report: State of AI Evaluations (2026 Preview) —
+            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">preview</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -71,11 +71,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Autonomous Analytics Copilot v1.1 —
-            <a href="/updates/autonomous-analytics-copilot-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: Agent Risk Dashboard v1.0 —
+            <a href="/updates/agent-risk-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: Agent Benchmark Suite v3 —
-            <a href="/updates/agent-benchmark-suite-v3" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">details</a>
+            Guide: Production Prompt Risk Scoring —
+            <a href="/updates/production-prompt-risk-scoring-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Also: AI Security Evidence Vault v1.0 —
             <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">explore</a>
