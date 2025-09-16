@@ -83,7 +83,6 @@ const NewContentPromotionalBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: -100 }}
@@ -176,21 +175,6 @@ const NewContentPromotionalBanner: React.FC = () => {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-=======
-    <section className="relative py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-600/20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
->>>>>>> cursor/create-and-deploy-new-content-c963
           <motion.div
             animate={{
               y: [0, -10, 0],

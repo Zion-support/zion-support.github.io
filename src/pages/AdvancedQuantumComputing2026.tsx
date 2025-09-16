@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -177,18 +170,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       </main>
       
       <Footer />
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 import { motion } from 'framer-motion';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
@@ -434,24 +415,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
     </div>
   );
 };
