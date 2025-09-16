@@ -87,9 +87,9 @@ import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
 // Import new 2026 breakthrough promotional banners
+import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
 import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
 import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
-import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -122,7 +122,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/content/ai-2026-agentic-evidence-hub-overview" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
+              <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
               <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Architecture</Link>
             </div>
           </div>
@@ -466,6 +466,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Promo: Operational Evals + Agent Platform SLOs (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Operational Evals + Agent Platform SLOs</h2>
+              <p className="text-gray-600 mt-2">Gate every change with evidence and track the SLOs that actually matter.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-operational-evals-evidence-gates" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Operational Evals</Link>
+              <Link href="/blog/agent-platform-slos-practical-blueprint" className="inline-block border border-amber-600 text-amber-700 px-5 py-3 rounded-lg font-semibold hover:bg-amber-50">Agent Platform SLOs</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Readiness Scorecards (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -483,8 +500,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={8} />
+      {/* What's New dynamic section (disabled: component not present) */}
+      {/* <WhatsNew highlightOnly limit={8} /> */}
       
       <div className='min-h-screen bg-white'>
         {/* NEW FEATURED: AI 2026 Breakthrough Banners */}
@@ -705,8 +722,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={8} />
+      {/* What's New dynamic section (disabled) */}
+      {/* <WhatsNew highlightOnly limit={8} /> */}
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -716,6 +733,12 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Incident Response Playbook</h3>
               <p className="text-gray-600 mb-4">Eval‑gated triage, mitigation, and escalation with autonomous agents.</p>
               <Link href="/content/ai-2026-agent-incident-response-playbook" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Reliability</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Post‑Incident Learning Loops — Operational Excellence</h3>
+              <p className="text-gray-600 mb-4">Turn incidents into durable improvements with evidence‑led scorecards.</p>
+              <Link href="/blog/ai-2026-post-incident-learning-loops" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
             </div>
             <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Operations</div>
@@ -728,6 +751,31 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Continuous Eval Gates at Scale</h3>
               <p className="text-gray-600 mb-4">Ship faster with policy‑gated scenario suites and automated rollbacks.</p>
               <Link href="/blog/ai-2026-continuous-eval-gates-at-scale" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New: Fresh blog highlights (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Foundational Model Routing Patterns</h3>
+              <p className="text-gray-600 mb-4">Balance cost, quality, and latency with policy‑gated routing.</p>
+              <Link href="/blog/ai-2026-foundational-model-routing-patterns" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Causal Evaluation Blueprint</h3>
+              <p className="text-gray-600 mb-4">Gate behavior with counterfactuals, interventions, and scorecards.</p>
+              <Link href="/blog/ai-2026-causal-evaluation-blueprint" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Postmortems: Lessons Learned</h3>
+              <p className="text-gray-600 mb-4">From incidents to policies, evals, and runbooks that stick.</p>
+              <Link href="/blog/ai-2026-agent-postmortems-lessons-learned" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
             </div>
           </div>
         </div>
@@ -819,7 +867,7 @@ export default function HomePage() {
         <NewMultimodalAgents2025Banner />
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
-        
+      
         {/* New Content Promo: Sept 15, 2025 - Agent Safety + Observability + Evals */}
         <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -861,7 +909,7 @@ export default function HomePage() {
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
-        
+      
         {/* New Content Promo: Risk Management & Compliance (2026) */}
         <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -899,13 +947,13 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
+      
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
-        
+      
         {/* New Content 2025 Advanced Automation Banner - NEW FEATURED */}
         <NewContent2025AdvancedAutomationBanner />
-        
+      
         {/* Advanced Automation Content Showcase 2025 - NEW FEATURED */}
         <AdvancedAutomationContentShowcase2025 />
         
@@ -1052,7 +1100,6 @@ export default function HomePage() {
           </div>
         </section>
 
-=======
         {/* New Content Promo: Multimodal Agents Blueprint 2026 */}
         <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1119,8 +1166,7 @@ export default function HomePage() {
         <NewContent2026UltimateBanner />
         <AI2026ContentShowcaseBanner />
 
-=======
-=======
+        
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 

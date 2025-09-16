@@ -11,18 +11,25 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
-		title: 'Launch: Production RAG Observability Suite v1.0',
-		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
-		href: '/updates/production-rag-observability-suite-1-0',
+		title: 'Launch: AI Governance Dashboard v5',
+		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
+		href: '/updates/ai-governance-dashboard-v5',
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
 	{
-		title: 'Guide: Agentic Change Management in Production (2026 Preview)',
-		summary: 'Safe rollout strategies with canaries, eval gates, and policy‑as‑code.',
-		href: '/updates/agentic-change-management-2026',
+		title: 'Report: State of Real-Time RAG (2026 Preview)',
+		summary: 'Streaming retrieval benchmarks for latency, hit rate, and answer quality.',
+		href: '/updates/state-of-real-time-rag-2026',
 		date: '2025-09-16',
-		tag: 'Guide',
+		tag: 'Report',
+	},
+	{
+		title: 'Launch: Agent Reliability Scorecards v1.0',
+		summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability.',
+		href: '/updates/agent-reliability-scorecards-1-0',
+		date: '2025-09-16',
+		tag: 'Launch',
 	},
 	{
 		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',

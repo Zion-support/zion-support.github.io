@@ -529,7 +529,7 @@ content_index:
     - id: "ai-2026-eval-gated-ci-cd-blueprint"
       type: "blog"
       title: "AI 2026: Eval‑Gated CI/CD Blueprint — Shipping Fast Without Breaking Things"
-      file_path: "/contentblog/ai-2026-eval-gated-ci-cd-blueprint.md"
+      file_path: "/content/blog/ai-2026-eval-gated-ci-cd-blueprint.md"
       url: "/blog/ai-2026-eval-gated-ci-cd-blueprint"
       status: "published"
       created: "2025-09-16"
@@ -543,7 +543,7 @@ content_index:
     - id: "ai-2026-agentic-observability-deep-dive"
       type: "blog"
       title: "AI 2026: Agentic Observability Deep Dive — Traces, Evals, and Safety Telemetry"
-      file_path: "/contentblog/ai-2026-agentic-observability-deep-dive.md"
+      file_path: "/content/blog/ai-2026-agentic-observability-deep-dive.md"
       url: "/blog/ai-2026-agentic-observability-deep-dive"
       status: "published"
       created: "2025-09-16"
@@ -632,6 +632,21 @@ content_index:
         rollback_time: "< 5 min"
         change_failure_rate: "< 3%"
 
+    - id: "ai-2026-agentic-billing-controls"
+      type: "blog"
+      title: "AI 2026: Agentic Billing Controls — Budgets, Approvals, and Guardrails"
+      file_path: "/content/blog/ai-2026-agentic-billing-controls.md"
+      url: "/blog/ai-2026-agentic-billing-controls"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["AI", "Cost", "Governance", "Budgets", "Approvals", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        budget_breaches: "-60%"
+        approval_lead_time: "-50%"
+        cost_slo_coverage: "100% gated"
+
     - id: "ai-2026-autonomous-evidence-led-operations"
       type: "blog"
       title: "AI 2026: Autonomous Evidence‑Led Operations — Centralizing Evals, Incidents, and KPIs"
@@ -661,6 +676,21 @@ content_index:
         availability: "99.9%"
         eval_pass_rate: "> 95%"
         cost_per_task: "tracked"
+
+    - id: "ai-2026-evidence-hub-architecture"
+      type: "blog"
+      title: "AI 2026: Evidence Hub Architecture — Evals, Incidents, and Releases"
+      file_path: "/content/blog/ai-2026-evidence-hub-architecture.md"
+      url: "/blog/ai-2026-evidence-hub-architecture"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["AI", "Observability", "Governance", "Evals", "Incidents", "Releases", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        time_to_audit: "hours, not weeks"
+        release_reliability: "> 95% pass"
+        incident_learnings: "centralized"
     
     - id: "ai-2026-zero-trust-agent-architecture"
       type: "blog"
@@ -841,6 +871,48 @@ content_index:
         coverage: "Top 10 journeys"
         adoption_time: "< 1 day"
         audit_ready: true
+    - id: "ai-2026-foundational-model-routing-patterns"
+      type: "blog"
+      title: "AI 2026: Foundational Model Routing Patterns — Cost, Quality, and Latency"
+      file_path: "/content/blog/ai-2026-foundational-model-routing-patterns.md"
+      url: "/blog/ai-2026-foundational-model-routing-patterns"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Model Routing", "Cost Optimization", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "30-60%"
+        latency_p95: "stable"
+        quality: ">= target"
+    - id: "ai-2026-causal-evaluation-blueprint"
+      type: "blog"
+      title: "AI 2026: Causal Evaluation Blueprint — Measure Cause‑Effect Correctness"
+      file_path: "/content/blog/ai-2026-causal-evaluation-blueprint.md"
+      url: "/blog/ai-2026-causal-evaluation-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Causality", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        uplift_detection: ">= 5pp"
+        rollback_time: "< 5 min"
+        audit_ready: true
+    - id: "ai-2026-agent-postmortems-lessons-learned"
+      type: "blog"
+      title: "AI 2026: Agent Postmortems — Lessons Learned from Real Incidents"
+      file_path: "/content/blog/ai-2026-agent-postmortems-lessons-learned.md"
+      url: "/blog/ai-2026-agent-postmortems-lessons-learned"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Incidents", "Postmortems", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        repeat_incidents: "-40%"
+        remediation_lead_time: "-50%"
+        verification_evals: "wired"
   latest_2026_content:
     - id: "ai-2026-autonomous-evals-blueprint"
       type: "blog"

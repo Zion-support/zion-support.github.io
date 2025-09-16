@@ -56,6 +56,7 @@ import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanne
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import FeaturedContentShowcase from './components/FeaturedContentShowcase';
+import ContentPromotionBanner from './components/ContentPromotionBanner';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
@@ -65,6 +66,8 @@ import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
 import NewsletterSignup from './components/NewsletterSignup';
 import PromotionalBanner from './components/PromotionalBanner';
+import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
+import NewRevolutionaryServicesShowcase from './components/NewRevolutionaryServicesShowcase';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
@@ -174,6 +177,16 @@ const App: React.FC = () => {
                 <RevolutionaryContentBanner2026 />
               </div>
 
+              {/* Revolutionary Content Showcase */}
+              <div className="mb-12">
+                <RevolutionaryContentShowcase />
+              </div>
+
+              {/* New Revolutionary Services Showcase */}
+              <div className="mb-12">
+                <NewRevolutionaryServicesShowcase />
+              </div>
+
               {/* New Services Showcase 2026 */}
               <div className="mb-12">
                 <NewServicesShowcase2026 />
@@ -182,6 +195,11 @@ const App: React.FC = () => {
               {/* New Content Promo Banner */}
               <div className="mb-12">
                 <NewlyAddedContentPromo />
+              </div>
+
+              {/* Blog Content Promotion Banner */}
+              <div className="mb-12">
+                <ContentPromotionBanner />
               </div>
 
               {/* NEW: Advanced Tech Breakthrough Banner */}

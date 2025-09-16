@@ -21,6 +21,9 @@ export interface Service {
   };
 }
 
+// Import new revolutionary services
+import { newServices2026 } from './newServices2026';
+
 export const COMPREHENSIVE_SERVICES: Service[] = [
   {
     id: "ai-consciousness-001",
@@ -477,5 +480,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "24-32 weeks",
     support: "Quantum computing experts",
     reviews: { rating: 4.9, count: 45 }
-  }
+  },
+  ...newServices2026
 ];
