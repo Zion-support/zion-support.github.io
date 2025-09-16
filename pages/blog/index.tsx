@@ -3,7 +3,11 @@ import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  { slug: 'ai-2026-agent-slo-scorecards', title: 'Agent SLO Scorecards (2026)', excerpt: 'Objective gates for safe autonomy rollouts.' },
+  { slug: 'ai-2026-cost-aware-model-routing', title: 'Cost-Aware Model Routing (2026)', excerpt: 'Route by budget, latency, and quality with evals.' },
   { slug: 'ai-2026-operational-evals-blueprint', title: 'Operational Evals — Blueprint (2026)', excerpt: 'Eval gates, safe rollbacks, and audit‑ready evidence.' },
+  { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
+  { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
@@ -31,6 +35,12 @@ const posts = [
   ,{ slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' }
   ,{ slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
 ]
+
+// Newly added posts (Sept 2025)
+posts.unshift(
+  { slug: 'ai-2026-agent-slo-blueprint', title: 'Agent Platform SLO Blueprint (2026)', excerpt: 'A concise SLO set for safety, quality, reliability, and cost.' },
+  { slug: 'ai-2026-governed-tool-use-case-studies', title: 'Governed Tool Use — Case Studies (2026)', excerpt: 'Risk‑tiered adapters, approvals, and runtime checks in practice.' }
+)
 
 export default function BlogIndexPage() {
   return (

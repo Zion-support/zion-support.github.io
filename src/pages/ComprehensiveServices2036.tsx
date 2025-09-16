@@ -151,7 +151,6 @@ const ComprehensiveServices2036: React.FC = () => {
                   Learn More →
                 </button>
               </div>
-<<<<<<< HEAD
               
               <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="flex items-center space-x-2 mb-3">
@@ -165,8 +164,6 @@ const ComprehensiveServices2036: React.FC = () => {
                 </button>
               </div>
               </button>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </div>
           ))}
         </div>

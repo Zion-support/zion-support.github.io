@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const InteractiveTechShowcase2042: React.FC = () => {
   const [activeTech, setActiveTech] = useState('conscious-ai');
@@ -250,22 +244,10 @@ const InteractiveTechShowcase2042: React.FC = () => {
           <p className="text-xl opacity-90 mb-8">
             Join us in exploring the most advanced technology ever created
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
               href="/pages/UltimateTechRevolution2042" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Interactive Experience
-            </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
-              Schedule Private Demo
-            </button>
-          </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -351,7 +333,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                   : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             >
               🚀 Explore Full Revolution →
             </a>
@@ -362,71 +343,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
               ⚡ View All Showcases
             </a>
           </div>
-<<<<<<< HEAD
-=======
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h4 className="text-xl font-semibold mb-4">Key Features</h4>
-            <ul className="space-y-2">
-              {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <span className="text-purple-400">✓</span>
-                  <span className="text-white/90">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="space-y-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h4 className="text-xl font-semibold mb-4">Performance Metrics</h4>
-            <div className="grid grid-cols-2 gap-4">
-              {Object.entries(technologies[activeTab as keyof typeof technologies].stats).map(([key, value]) => (
-                <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-purple-300 mb-1">{value}</div>
-                  <div className="text-sm opacity-75 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h4 className="text-xl font-semibold mb-4">Interactive Demo</h4>
-            <div className="space-y-4">
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                🎮 Launch Interactive Demo
-              </button>
-              <button className="w-full border border-purple-400 py-3 rounded-lg hover:bg-purple-500/20 transition-colors">
-                📹 Watch Video Tutorial
-              </button>
-              <button className="w-full border border-purple-400 py-3 rounded-lg hover:bg-purple-500/20 transition-colors">
-                📚 Read Documentation
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Call to Action */}
-      <div className="text-center mt-12">
-        <h3 className="text-2xl font-bold mb-4">Ready to Experience the Future?</h3>
-        <p className="text-lg opacity-90 mb-6">Join the ultimate technological revolution and be part of the most advanced systems ever created</p>
-        <div className="flex justify-center space-x-4">
-          <a 
-            href="/pages/UltimateTechRevolution2042"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-          >
-            Explore Full Revolution →
-          </a>
-          <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors text-lg">
-            Contact Our Team
-          </button>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
     </div>
