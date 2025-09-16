@@ -196,6 +196,11 @@ import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBanner2026';
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
+import AIInnovationBreakthrough2025 from './src/pages/AIInnovationBreakthrough2025';
+import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import NewContentBanner2025 from './src/components/NewContentBanner2025';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -234,6 +239,16 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Revolutionary Tech Banner 2025 - showcases breakthrough technologies */}
+                <div className="mb-12">
+                  <RevolutionaryTechBanner2025 />
+                </div>
+                
+                {/* NEW: New Content Banner 2025 - highlights latest content */}
+                <div className="mb-12">
+                  <NewContentBanner2025 />
+                </div>
                 
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
@@ -1211,6 +1226,9 @@ export default function App(): JSX.Element {
           {/* Revolutionary Content 2025 Routes */}
           <Route path="/ai-consciousness-revolution-2025" element={<AIConsciousnessRevolution2025 />} />
           <Route path="/quantum-business-automation-2025" element={<QuantumBusinessAutomation2025 />} />
+          <Route path="/ai-innovation-breakthrough-2025" element={<AIInnovationBreakthrough2025 />} />
+          <Route path="/quantum-computing-revolution-2025" element={<QuantumComputingRevolution2025 />} />
+          <Route path="/neural-interface-revolution-2025" element={<NeuralInterfaceRevolution2025 />} />
           
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />

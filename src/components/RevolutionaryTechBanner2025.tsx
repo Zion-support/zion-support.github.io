@@ -1,138 +1,99 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 mb-8">
+      <div className="absolute inset-0 bg-black/10"></div>
+      <div className="relative container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-white/20 rounded-full text-sm font-bold mb-6 animate-pulse">
+            ⚡ REVOLUTIONARY TECHNOLOGY • 2025
           </div>
-        </div>
-      </div>
-import React, { useState, useEffect } from 'react';
-
-const RevolutionaryTechBanner2025: React.FC = () => {
-  const [currentMessage, setCurrentMessage] = useState(0);
-
-  const bannerMessages = [
-    "🚀 NEW: Revolutionary Tech Breakthrough 2025 - Experience AI Consciousness!",
-    "⚡ BREAKTHROUGH: Quantum Reality Engine - Manipulate Reality Itself!",
-    "🧬 REVOLUTIONARY: Neural Interface Technology - Control with Your Mind!",
-    "🌟 BREAKTHROUGH: Consciousness Transfer - Achieve Digital Immortality!",
-    "🌌 NEW: Interdimensional Computing - Access Parallel Universe Power!"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % bannerMessages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [bannerMessages.length]);
-
-  return (
-    <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ REVOLUTIONARY SHOWCASE • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Tech Showcase 2025
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            The Future is Here
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover the most revolutionary technologies reshaping our world with infinite possibilities
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience breakthrough technologies that are transforming every aspect of human life
           </p>
         </div>
         
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-4 border border-blue-400/30 text-center">
-            <div className="text-3xl mb-2">🤖</div>
-            <h3 className="text-lg font-bold mb-1">Autonomous AI</h3>
-            <p className="text-blue-100 text-xs">Self-operating systems</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-4 border border-purple-400/30 text-center">
-            <div className="text-3xl mb-2">⚛️</div>
-            <h3 className="text-lg font-bold mb-1">Quantum Neural</h3>
-            <p className="text-purple-100 text-xs">Infinite processing</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/30 text-center">
-            <div className="text-3xl mb-2">🧬</div>
-            <h3 className="text-lg font-bold mb-1">Neural Interface</h3>
-            <p className="text-emerald-100 text-xs">Thought control</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-4 border border-orange-400/30 text-center">
-            <div className="text-3xl mb-2">🌌</div>
-            <h3 className="text-lg font-bold mb-1">Interdimensional</h3>
-            <p className="text-orange-100 text-xs">Multi-dimensional</p>
-          </div>
-        </div>
-
-        {/* Additional Features */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center">
-            <div className="text-4xl mb-3">🌟</div>
-            <h4 className="text-lg font-semibold mb-2">Cutting-Edge Innovation</h4>
-            <p className="text-sm opacity-80">Latest breakthroughs in technology</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">⚡</div>
-            <h4 className="text-lg font-semibold mb-2">Lightning Fast</h4>
-            <p className="text-sm opacity-80">Ultra-low latency performance</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">🔒</div>
-            <h4 className="text-lg font-semibold mb-2">Secure & Safe</h4>
-            <p className="text-sm opacity-80">Enterprise-grade security</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">🚀</div>
-            <h4 className="text-lg font-semibold mb-2">Future Ready</h4>
-            <p className="text-sm opacity-80">Built for tomorrow's challenges</p>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <a 
-            href="/pages/RevolutionaryTechShowcase2025" 
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
-          >
-            ⚡ Explore Revolutionary Tech →
-          </a>
-        </div>
-      </div>
-    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-4 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-      
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between">
-          {/* Animated Message */}
-          <div className="flex-1 text-center">
-            <div className="text-lg font-bold animate-bounce">
-              {bannerMessages[currentMessage]}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-3xl font-bold mb-6">Revolutionary Breakthroughs</h3>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">🧠</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">AI Innovation Breakthrough</h4>
+                  <p className="opacity-90">Revolutionary AI innovations transforming industries with cognitive systems, research automation, and creative AI studios.</p>
+                  <Link to="/ai-innovation-breakthrough-2025" className="text-emerald-300 hover:text-white transition-colors duration-300 font-semibold">
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">⚛️</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">Quantum Computing Revolution</h4>
+                  <p className="opacity-90">Experience exponential computing power with quantum processors, algorithms, and simulations solving impossible problems.</p>
+                  <Link to="/quantum-computing-revolution-2025" className="text-emerald-300 hover:text-white transition-colors duration-300 font-semibold">
+                    Explore Quantum →
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">🔮</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">Neural Interface Revolution</h4>
+                  <p className="opacity-90">Bridge mind and machine with brain-computer interfaces, neural stimulation, and cognitive enhancement technologies.</p>
+                  <Link to="/neural-interface-revolution-2025" className="text-emerald-300 hover:text-white transition-colors duration-300 font-semibold">
+                    Discover Neural →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
           
-          {/* Action Buttons */}
-          <div className="flex space-x-4 ml-8">
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Explore Now →
-            </a>
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white text-purple-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Watch Demo
-            </a>
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h4 className="text-2xl font-bold mb-6">Technology Impact</h4>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-4xl font-bold text-emerald-300 mb-2">10,000x</div>
+                  <div className="text-sm opacity-90">Computing Speed</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-teal-300 mb-2">95%</div>
+                  <div className="text-sm opacity-90">Accuracy Rate</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-cyan-300 mb-2">99.9%</div>
+                  <div className="text-sm opacity-90">Reliability</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-blue-300 mb-2">∞</div>
+                  <div className="text-sm opacity-90">Possibilities</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-white/5 rounded-full animate-ping"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white/5 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white/5 rounded-full animate-ping delay-2000"></div>
       </div>
     </div>
   );
