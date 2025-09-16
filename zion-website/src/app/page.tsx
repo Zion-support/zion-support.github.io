@@ -57,12 +57,16 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Trustworthy AI Evidence Vault —
             <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+=======
+            New: Production Evidence Bundles (2026) —
+            <a href="/updates/production-evidence-bundles-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d190
             <span className="mx-2 text-blue-300/60">|</span>
-            Agent Evidence Bundles —
-            <a href="/blog/ai-2026-agent-evidence-bundles-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            Canary + Shadow Testing for Agents —
+            <a href="/updates/canary-and-shadow-testing-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">field guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Enterprise Agent Risk Scorecards —
-            <a href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            Grounded Generation Guardrails —
+            <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Failure Analysis Toolkit (2026) —
             <a href="/updates/autonomous-failure-analysis-toolkit-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">report</a>
@@ -125,15 +129,16 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Trustworthy AI Evidence Vault —
             <a href="/updates/trustworthy-ai-evidence-vault-1-2" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+=======
+            Fresh: Canary + Shadow Testing —
+            <a href="/updates/canary-and-shadow-testing-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d190
             <span className="mx-2 text-blue-300/60">|</span>
-            Secure Tool Access —
-            <a href="/updates/secure-tool-access-for-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blueprint</a>
+            Evidence Bundles —
+            <a href="/updates/production-evidence-bundles-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Evaluating Multimodal RAG —
-            <a href="/updates/field-guide-evaluating-multimodal-rag" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">field guide</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Safer Agent Rollouts —
-            <a href="/blog/ai-2026-canary-shadow-for-agent-rollouts" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">blog</a>
+            Grounded Generation Guardrails —
+            <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
