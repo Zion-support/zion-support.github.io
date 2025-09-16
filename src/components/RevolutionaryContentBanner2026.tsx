@@ -1,131 +1,124 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryContentBanner2026: React.FC = () => {
-  const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const announcements = [
+  const banners = [
     {
-      title: "🚀 ULTIMATE TECH REVOLUTION 2026",
-      subtitle: "Quantum Neural Networks • Reality Manipulation • Universal Consciousness",
-      link: "/pages/UltimateTechRevolution2026",
-      color: "from-blue-600 via-purple-600 to-pink-600"
+      title: "Revolutionary Tech Showcase 2026",
+      subtitle: "Experience the convergence of AI consciousness, quantum supremacy, and neural interfaces",
+      icon: "🌟",
+      color: "from-purple-600 via-indigo-600 to-blue-600",
+      link: "/pages/RevolutionaryTechShowcase2026"
     },
     {
-      title: "🤖 REVOLUTIONARY AI BREAKTHROUGH 2026",
-      subtitle: "Conscious AI Systems • Quantum Processing • Neural Reality Interface",
-      link: "/pages/RevolutionaryAIBreakthrough2026",
-      color: "from-purple-600 via-pink-600 to-rose-600"
+      title: "Ultimate Innovation Hub 2026",
+      subtitle: "The world's most advanced technology showcase featuring breakthrough innovations",
+      icon: "🚀",
+      color: "from-cyan-600 via-blue-600 to-purple-600",
+      link: "/pages/UltimateInnovationHub2026"
     },
     {
-      title: "🌌 NEXT-GEN SPACE TECH 2026",
-      subtitle: "Warp Drive Technology • Dyson Spheres • Galactic Exploration",
-      link: "/pages/NextGenSpaceTech2026",
-      color: "from-indigo-600 via-blue-600 to-purple-600"
+      title: "Interdimensional Tech Revolution",
+      subtitle: "Step beyond reality into new dimensions of technological possibilities",
+      icon: "🌌",
+      color: "from-indigo-600 via-purple-600 to-pink-600",
+      link: "/pages/InterdimensionalTechRevolution2026"
     }
   ];
 
   useEffect(() => {
-    setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentAnnouncement((prev) => (prev + 1) % announcements.length);
-    }, 8000);
+      setCurrentSlide((prev) => (prev + 1) % banners.length);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [announcements.length]);
-
-  const currentAnnouncementData = announcements[currentAnnouncement];
+  }, [banners.length]);
 
   return (
-    <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      {/* Main Revolutionary Banner */}
-      <div className={`bg-gradient-to-r ${currentAnnouncementData.color} rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden animate-pulse`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <div className="relative overflow-hidden mb-12">
+      <motion.div
+        key={currentSlide}
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.8 }}
+        className={`bg-gradient-to-r ${banners[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}
+      >
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
         
         <div className="relative z-10">
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            <span className="text-5xl animate-bounce">🌟</span>
-            <h2 className="text-5xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h2>
-            <span className="text-5xl animate-bounce">🌟</span>
-          </div>
-          
-          <div className="mb-8">
-            <h3 className="text-3xl font-bold mb-4 animate-pulse">{currentAnnouncementData.title}</h3>
-            <p className="text-xl opacity-95 max-w-4xl mx-auto">
-              {currentAnnouncementData.subtitle}
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href={currentAnnouncementData.link}
-              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              🚀 Experience Revolutionary Content →
-            </a>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300">
-              📚 Learn More
-            </button>
-          </div>
-
-          {/* Progress Indicators */}
-          <div className="flex justify-center space-x-3">
-            {announcements.map((_, index) => (
-              <div
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentAnnouncement ? 'bg-white scale-125' : 'bg-white/40'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
-        {announcements.map((announcement, index) => (
-          <div
-            key={index}
-            className={`bg-gradient-to-br ${announcement.color}/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-            onClick={() => window.location.href = announcement.link}
-          >
-            <div className="text-center">
-              <div className="text-4xl mb-4">
-                {announcement.title.includes('TECH') ? '🚀' : 
-                 announcement.title.includes('AI') ? '🤖' : '🌌'}
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl animate-bounce">{banners[currentSlide].icon}</span>
+                <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold">
+                  🚀 NEW REVOLUTIONARY CONTENT 2026
+                </div>
               </div>
-              <h4 className="text-lg font-bold mb-2">{announcement.title}</h4>
-              <p className="text-sm opacity-90 mb-4 line-clamp-2">{announcement.subtitle}</p>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 text-sm font-semibold">
-                Explore Now →
+              <h2 className="text-4xl font-bold mb-4">
+                {banners[currentSlide].title}
+              </h2>
+              <p className="text-xl opacity-95 mb-6 max-w-3xl">
+                {banners[currentSlide].subtitle}
+              </p>
+              <div className="flex space-x-4">
+                <a
+                  href={banners[currentSlide].link}
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg"
+                >
+                  Explore Now →
+                </a>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-lg">
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="text-8xl opacity-20">
+                {banners[currentSlide].icon}
               </div>
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* Revolutionary Stats */}
-      <div className="bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-        <div className="grid md:grid-cols-4 gap-6 text-center">
-          <div>
-            <div className="text-3xl font-bold text-blue-400 mb-2">3</div>
-            <div className="text-sm opacity-90">Revolutionary Technologies</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-400 mb-2">∞</div>
-            <div className="text-sm opacity-90">Infinite Possibilities</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-pink-400 mb-2">2026</div>
-            <div className="text-sm opacity-90">Future Technology</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-rose-400 mb-2">100%</div>
-            <div className="text-sm opacity-90">Revolutionary</div>
-          </div>
         </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {banners.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Additional Promotional Cards */}
+      <div className="grid md:grid-cols-3 gap-6 mt-8">
+        {banners.map((banner, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className={`bg-gradient-to-br ${banner.color} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 cursor-pointer`}
+            onClick={() => window.location.href = banner.link}
+          >
+            <div className="text-3xl mb-3">{banner.icon}</div>
+            <h3 className="text-xl font-bold mb-2">{banner.title}</h3>
+            <p className="text-sm opacity-90 mb-4">{banner.subtitle}</p>
+            <div className="flex items-center text-sm font-semibold">
+              Explore →
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
