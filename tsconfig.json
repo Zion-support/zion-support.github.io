@@ -34,6 +34,8 @@
     "types": ["vite/client", "node"]
   },
   "include": [
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
@@ -47,6 +49,7 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "coverage"
   ]
 }
