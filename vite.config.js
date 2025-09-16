@@ -18,7 +18,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring'],
+      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring', 'framer-motion'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],

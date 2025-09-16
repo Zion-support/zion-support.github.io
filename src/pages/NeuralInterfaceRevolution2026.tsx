@@ -1,122 +1,132 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const NeuralInterfaceRevolution2026: React.FC = () => {
-  const [activeInterface, setActiveInterface] = useState('non-invasive');
-  const [neuralActivity, setNeuralActivity] = useState(0);
-  const [isConnected, setIsConnected] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
+  const [isLoading, setIsLoading] = useState(true);
+  const [neuralData, setNeuralData] = useState({
+    signalStrength: 0,
+    accuracy: 0,
+    latency: 0
+  });
 
   useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+    
+    // Simulate neural data updates
     const interval = setInterval(() => {
-      setNeuralActivity(Math.random() * 100);
-    }, 100);
-    return () => clearInterval(interval);
+      setNeuralData({
+        signalStrength: Math.floor(Math.random() * 100) + 85,
+        accuracy: Math.floor(Math.random() * 100) + 92,
+        latency: Math.floor(Math.random() * 10) + 2
+      });
+    }, 1500);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
-  const interfaceTypes = [
-    {
-      type: "Non-Invasive BCI",
-      description: "Advanced EEG and fNIRS technology for seamless brain-computer interaction",
-      icon: "🧠",
-      features: ["No surgery required", "Real-time processing", "High accuracy", "Portable design"],
-      applications: ["Gaming", "Medical rehabilitation", "Communication", "Entertainment"]
-    },
-    {
-      type: "Invasive Neural Implant",
-      description: "Microelectrode arrays for direct neural signal recording and stimulation",
-      icon: "🔬",
-      features: ["Direct neural access", "Ultra-high resolution", "Bidirectional communication", "Long-term stability"],
-      applications: ["Paralysis treatment", "Memory enhancement", "Sensory restoration", "Cognitive augmentation"]
-    },
-    {
-      type: "Optogenetics Interface",
-      description: "Light-based neural control using genetically modified neurons",
-      icon: "💡",
-      features: ["Precise cell targeting", "Temporal control", "Reversible effects", "Minimal invasiveness"],
-      applications: ["Research", "Therapy", "Behavioral control", "Disease treatment"]
-    },
-    {
-      type: "Quantum Neural Link",
-      description: "Quantum-enhanced neural interfaces for unprecedented data transfer",
-      icon: "⚡",
-      features: ["Quantum entanglement", "Instantaneous transfer", "Unhackable security", "Infinite bandwidth"],
-      applications: ["Telepathy", "Shared consciousness", "Remote control", "Neural cloud computing"]
-    }
-  ];
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 flex items-center justify-center">
+        <div className="text-white text-2xl font-bold animate-pulse">Initializing Neural Interface...</div>
+      </div>
+    );
+  }
 
-  const neuralCapabilities = [
+  const neuralTechnologies = [
     {
-      capability: "Thought Control",
-      description: "Control devices and applications with pure thought",
-      accuracy: "99.7%",
-      latency: "< 50ms",
-      color: "from-purple-500 to-pink-500"
+      id: 'non-invasive-bci',
+      title: 'Non-Invasive Brain-Computer Interface',
+      description: 'Advanced EEG-based interface for seamless thought-to-computer communication',
+      features: ['Real-time signal processing', 'High accuracy recognition', 'Wireless operation'],
+      applications: ['Gaming', 'Accessibility', 'Medical diagnosis', 'Research'],
+      status: 'Production Ready',
+      accuracy: '95%'
     },
     {
-      capability: "Memory Enhancement",
-      description: "Augment human memory with digital storage and retrieval",
-      accuracy: "100%",
-      latency: "Instant",
-      color: "from-blue-500 to-cyan-500"
+      id: 'invasive-bci',
+      title: 'Invasive Neural Implants',
+      description: 'Surgical implants for direct neural signal capture and stimulation',
+      features: ['Direct neural access', 'High-resolution signals', 'Bidirectional communication'],
+      applications: ['Medical treatment', 'Paralysis recovery', 'Memory enhancement', 'Research'],
+      status: 'Clinical Trials',
+      accuracy: '99%'
     },
     {
-      capability: "Sensory Augmentation",
-      description: "Add new senses and enhance existing ones",
-      accuracy: "98.5%",
-      latency: "< 20ms",
-      color: "from-green-500 to-emerald-500"
+      id: 'optical-interface',
+      title: 'Optical Neural Interface',
+      description: 'Light-based interface using optogenetics for precise neural control',
+      features: ['Precise targeting', 'Minimal invasiveness', 'High temporal resolution'],
+      applications: ['Research', 'Therapy', 'Enhancement', 'Treatment'],
+      status: 'Research Phase',
+      accuracy: '98%'
     },
     {
-      capability: "Emotional Regulation",
-      description: "Monitor and regulate emotional states in real-time",
-      accuracy: "96.2%",
-      latency: "< 100ms",
-      color: "from-orange-500 to-red-500"
+      id: 'magnetic-interface',
+      title: 'Magnetic Neural Interface',
+      description: 'Magnetic field-based interface for non-invasive neural stimulation',
+      features: ['Completely non-invasive', 'Deep brain access', 'Safe operation'],
+      applications: ['Depression treatment', 'Pain management', 'Cognitive enhancement', 'Therapy'],
+      status: 'FDA Approved',
+      accuracy: '90%'
     }
   ];
 
   const applications = [
     {
-      category: "Medical",
-      title: "Paralysis Recovery",
-      description: "Restore movement to paralyzed patients through neural bypass technology",
-      impact: "10,000+ patients treated",
-      icon: "🏥"
+      category: 'Medical',
+      title: 'Paralysis Recovery',
+      description: 'Restore movement in paralyzed patients through neural interface technology',
+      benefits: ['Motor function restoration', 'Improved quality of life', 'Reduced dependence'],
+      status: 'Clinical Success'
     },
     {
-      category: "Entertainment",
-      title: "Immersive Gaming",
-      description: "Control games with thoughts and experience virtual reality through neural input",
-      impact: "Revolutionary gaming experience",
-      icon: "🎮"
+      category: 'Gaming',
+      title: 'Immersive Gaming',
+      description: 'Control games directly with your thoughts for unprecedented immersion',
+      benefits: ['Hands-free control', 'Faster reaction times', 'New gaming experiences'],
+      status: 'Consumer Ready'
     },
     {
-      category: "Communication",
-      title: "Silent Speech",
-      description: "Communicate without speaking through direct thought-to-text conversion",
-      impact: "Break language barriers",
-      icon: "💬"
+      category: 'Communication',
+      title: 'Silent Communication',
+      description: 'Communicate thoughts directly to others through neural interfaces',
+      benefits: ['Privacy', 'Speed', 'Accessibility', 'Multilingual'],
+      status: 'Beta Testing'
     },
     {
-      category: "Education",
-      title: "Knowledge Transfer",
-      description: "Direct knowledge upload and skill acquisition through neural interfaces",
-      impact: "Instant learning",
-      icon: "📚"
+      category: 'Enhancement',
+      title: 'Cognitive Enhancement',
+      description: 'Boost memory, focus, and learning through neural stimulation',
+      benefits: ['Improved memory', 'Enhanced focus', 'Faster learning', 'Better performance'],
+      status: 'Research Phase'
+    }
+  ];
+
+  const caseStudies = [
+    {
+      patient: 'Sarah M.',
+      condition: 'Spinal Cord Injury',
+      treatment: 'Invasive BCI for motor control',
+      results: ['Regained arm movement', 'Independent daily tasks', 'Improved quality of life'],
+      timeline: '18 months'
     },
     {
-      category: "Workplace",
-      title: "Enhanced Productivity",
-      description: "Control multiple systems simultaneously through neural multitasking",
-      impact: "10x productivity increase",
-      icon: "💼"
+      patient: 'John D.',
+      condition: 'Severe Depression',
+      treatment: 'Magnetic neural stimulation',
+      results: ['90% symptom reduction', 'Medication-free', 'Return to work'],
+      timeline: '6 months'
     },
     {
-      category: "Space",
-      title: "Space Communication",
-      description: "Maintain communication across vast distances using quantum neural links",
-      impact: "Enable deep space missions",
-      icon: "🚀"
+      patient: 'Maria L.',
+      condition: 'Memory Loss',
+      treatment: 'Optical neural enhancement',
+      results: ['Memory restoration', 'Improved cognition', 'Independent living'],
+      timeline: '12 months'
     }
   ];
 
@@ -126,274 +136,335 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-center"
-          >
+          <div className="text-center mb-12">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧬 BREAKTHROUGH 2026 • NEURAL INTERFACE REVOLUTION
+              🧬 NEURAL INTERFACE REVOLUTION 2026 • MIND-MACHINE FUSION
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Neural Interface Revolution 2026
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Bridge the gap between mind and machine with the most advanced neural interface technology ever created. 
-              Control the digital world with your thoughts.
+              Bridge the gap between mind and machine with revolutionary neural interface technology. 
+              Experience direct brain-computer communication and unlock new possibilities for human potential.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button 
-                onClick={() => setIsConnected(!isConnected)}
-                className={`px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold ${
-                  isConnected 
-                    ? 'bg-gradient-to-r from-red-600 to-pink-600' 
-                    : 'bg-gradient-to-r from-emerald-600 to-cyan-600'
-                }`}
-              >
-                {isConnected ? 'Disconnect Neural Link' : 'Connect Neural Interface →'}
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Technology
               </button>
-              <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors">
-                Try Demo
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+                Schedule Demo
               </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Neural Activity Visualization */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🧠 Real-Time Neural Activity</h2>
-          <p className="text-xl opacity-80">Monitor brain activity in real-time</p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-6xl mb-4">⚡</div>
-                <h3 className="text-2xl font-bold mb-2">Neural Activity</h3>
-                <div className="w-full bg-emerald-900/30 rounded-full h-4 mb-2">
-                  <motion.div 
-                    className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-4 rounded-full"
-                    style={{ width: `${neuralActivity}%` }}
-                    animate={{ width: `${neuralActivity}%` }}
-                    transition={{ duration: 0.1 }}
-                  />
-                </div>
-                <p className="text-emerald-200">{neuralActivity.toFixed(1)}%</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">🔗</div>
-                <h3 className="text-2xl font-bold mb-2">Connection Status</h3>
-                <p className={`text-2xl font-bold ${isConnected ? 'text-green-400' : 'text-red-400'}`}>
-                  {isConnected ? 'CONNECTED' : 'DISCONNECTED'}
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">📡</div>
-                <h3 className="text-2xl font-bold mb-2">Signal Quality</h3>
-                <p className="text-emerald-200">99.8% Clear</p>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Interface Types */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🔬 Neural Interface Types</h2>
-          <p className="text-xl opacity-80">Choose the perfect interface for your needs</p>
+      {/* Live Neural Data */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 mb-12">
+          <h2 className="text-3xl font-bold text-center mb-8">Live Neural Interface Status</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-400 mb-2">{neuralData.signalStrength}%</div>
+              <div className="text-lg opacity-80">Signal Strength</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">{neuralData.accuracy}%</div>
+              <div className="text-lg opacity-80">Recognition Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-teal-400 mb-2">{neuralData.latency}ms</div>
+              <div className="text-lg opacity-80">Response Latency</div>
+            </div>
+          </div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {interfaceTypes.map((interfaceType, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                activeInterface === interfaceType.type.toLowerCase().replace(' ', '-') ? 'ring-2 ring-emerald-400' : ''
+
+        {/* Navigation */}
+        <div className="flex flex-wrap justify-center space-x-2 mb-8">
+          {['overview', 'technologies', 'applications', 'case-studies', 'contact'].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === tab
+                  ? 'bg-gradient-to-r from-emerald-600 to-cyan-600 text-white'
+                  : 'bg-white/10 text-white hover:bg-white/20'
               }`}
-              onClick={() => setActiveInterface(interfaceType.type.toLowerCase().replace(' ', '-'))}
             >
-              <div className="text-6xl mb-4 text-center">{interfaceType.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{interfaceType.type}</h3>
-              <p className="text-emerald-100 mb-6 text-center">{interfaceType.description}</p>
-              <div className="space-y-2 mb-6">
-                {interfaceType.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm">
-                    <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                    {feature}
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm text-emerald-300">
-                <strong>Applications:</strong> {interfaceType.applications.join(', ')}
-              </div>
-            </motion.div>
+              {tab.charAt(0).toUpperCase() + tab.slice(1).replace('-', ' ')}
+            </button>
           ))}
         </div>
-      </div>
 
-      {/* Neural Capabilities */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🚀 Neural Capabilities</h2>
-          <p className="text-xl opacity-80">Unprecedented brain-computer integration</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {neuralCapabilities.map((capability, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4 text-center">🧠</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{capability.capability}</h3>
-              <p className="text-emerald-100 mb-6 text-center">{capability.description}</p>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Accuracy:</span>
-                  <span className={`font-bold bg-gradient-to-r ${capability.color} bg-clip-text text-transparent`}>
-                    {capability.accuracy}
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Latency:</span>
-                  <span className={`font-bold bg-gradient-to-r ${capability.color} bg-clip-text text-transparent`}>
-                    {capability.latency}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Applications */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🌟 Revolutionary Applications</h2>
-          <p className="text-xl opacity-80">Transforming every aspect of human life</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {applications.map((application, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">{application.icon}</div>
-                <div className="flex-1">
-                  <div className="text-sm text-emerald-300 mb-2">{application.category}</div>
-                  <h3 className="text-xl font-bold mb-3">{application.title}</h3>
-                  <p className="text-emerald-100 mb-4">{application.description}</p>
-                  <div className="text-sm font-semibold text-cyan-300">{application.impact}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Safety and Ethics */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🛡️ Safety & Ethics</h2>
-          <p className="text-xl opacity-80">Your safety and privacy are our top priorities</p>
-        </div>
-        
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <h3 className="text-2xl font-bold mb-6">Safety Features</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Neural Safety Protocols:</strong> Advanced monitoring prevents neural damage
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Emergency Disconnect:</strong> Instant disconnection in case of issues
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Signal Filtering:</strong> Advanced algorithms prevent harmful signals
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Medical Supervision:</strong> Continuous monitoring by neural specialists
-                  </div>
-                </li>
-              </ul>
+        {/* Overview Tab */}
+        {activeTab === 'overview' && (
+          <div className="space-y-12">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-6">The Future of Human-Computer Interaction</h2>
+              <p className="text-xl opacity-90 max-w-4xl mx-auto">
+                Neural interfaces represent the next frontier in human-computer interaction, enabling direct 
+                communication between the brain and digital systems. Our revolutionary technology opens up 
+                unprecedented possibilities for human enhancement and medical treatment.
+              </p>
             </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <h3 className="text-2xl font-bold mb-6">Privacy & Ethics</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Neural Privacy:</strong> Your thoughts remain completely private
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Consent Framework:</strong> Full control over what data is shared
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Ethical Guidelines:</strong> Strict adherence to neural interface ethics
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong>Transparent AI:</strong> Complete transparency in AI decision-making
-                  </div>
-                </li>
-              </ul>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
+                <div className="text-5xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold mb-2">Direct Brain Control</h3>
+                <p className="text-emerald-100 text-sm">Control devices with your thoughts</p>
+              </div>
+              <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-teal-400/30 text-center">
+                <div className="text-5xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold mb-2">Real-time Processing</h3>
+                <p className="text-teal-100 text-sm">Instantaneous neural signal processing</p>
+              </div>
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
+                <div className="text-5xl mb-4">🔬</div>
+                <h3 className="text-xl font-bold mb-2">Medical Applications</h3>
+                <p className="text-cyan-100 text-sm">Revolutionary medical treatments</p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 text-center">
+                <div className="text-5xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold mb-2">Human Enhancement</h3>
+                <p className="text-blue-100 text-sm">Augment human capabilities</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {/* Technologies Tab */}
+        {activeTab === 'technologies' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-6">Neural Interface Technologies</h2>
+              <p className="text-xl opacity-90 max-w-4xl mx-auto">
+                Our comprehensive suite of neural interface technologies covers the full spectrum from 
+                non-invasive to invasive solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {neuralTechnologies.map((tech) => (
+                <div key={tech.id} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold">{tech.title}</h3>
+                    <div className="flex space-x-2">
+                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                        tech.status === 'Production Ready' ? 'bg-green-500/30 text-green-300' :
+                        tech.status === 'Clinical Trials' ? 'bg-yellow-500/30 text-yellow-300' :
+                        tech.status === 'FDA Approved' ? 'bg-blue-500/30 text-blue-300' :
+                        'bg-purple-500/30 text-purple-300'
+                      }`}>
+                        {tech.status}
+                      </span>
+                      <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold">
+                        {tech.accuracy} Accuracy
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-white/80 mb-6">{tech.description}</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {tech.features.map((feature, index) => (
+                          <li key={index} className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></span>
+                            <span className="text-white/70">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">Applications:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {tech.applications.map((app, index) => (
+                          <span key={index} className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm">
+                            {app}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <button className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Applications Tab */}
+        {activeTab === 'applications' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-6">Real-World Applications</h2>
+              <p className="text-xl opacity-90 max-w-4xl mx-auto">
+                Discover how neural interface technology is transforming industries and improving lives
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {applications.map((app, index) => (
+                <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold">{app.title}</h3>
+                    <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold">
+                      {app.category}
+                    </span>
+                  </div>
+                  <p className="text-white/80 mb-6">{app.description}</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">Benefits:</h4>
+                      <ul className="space-y-2">
+                        {app.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></span>
+                            <span className="text-white/70">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-white/60">Status: {app.status}</span>
+                      <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                        Explore
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Case Studies Tab */}
+        {activeTab === 'case-studies' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-6">Success Stories</h2>
+              <p className="text-xl opacity-90 max-w-4xl mx-auto">
+                Real patient outcomes demonstrating the transformative power of neural interface technology
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-4">{study.patient}</h3>
+                  <p className="text-white/80 mb-4 font-semibold">{study.condition}</p>
+                  <p className="text-white/70 mb-6">{study.treatment}</p>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-lg">Results:</h4>
+                    <ul className="space-y-2">
+                      {study.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></span>
+                          <span className="text-white/70">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mt-6 flex justify-between items-center">
+                    <span className="text-sm text-white/60">Timeline: {study.timeline}</span>
+                    <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      Full Story
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Contact Tab */}
+        {activeTab === 'contact' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-6">Begin Your Neural Journey</h2>
+              <p className="text-xl opacity-90 max-w-4xl mx-auto">
+                Ready to explore the possibilities of neural interface technology? 
+                Let's discuss how it can transform your life or business.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl">📧</span>
+                    <span>neural@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl">📞</span>
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl">🌐</span>
+                    <span>www.ziontechgroup.com/neural</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold mb-6">Request Consultation</h3>
+                <form className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                  <select className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <option value="">Select Interest Area</option>
+                    <option value="medical">Medical Applications</option>
+                    <option value="gaming">Gaming & Entertainment</option>
+                    <option value="communication">Communication</option>
+                    <option value="enhancement">Human Enhancement</option>
+                  </select>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  >
+                    Request Consultation
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">🌟 Ready to Connect Your Mind?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Experience the future of human-computer interaction. Connect your mind to the digital world 
-            and unlock capabilities you never thought possible.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Neural Interface Journey →
-            </button>
-            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors text-lg">
-              Schedule Consultation
-            </button>
+      {/* Footer CTA */}
+      <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm border-t border-white/20">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Connect Mind and Machine?</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              Join the neural interface revolution and unlock the full potential of human-computer interaction
+            </p>
+            <div className="flex justify-center space-x-4">
+              <Link
+                to="/pages/ComprehensiveServices2025"
+                className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+              >
+                View All Services
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>
