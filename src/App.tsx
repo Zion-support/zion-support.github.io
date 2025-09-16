@@ -115,6 +115,9 @@ import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import CaseStudyTechCorp2025 from './pages/CaseStudyTechCorp2025';
+import AIEnterpriseSolutions2025 from './pages/AIEnterpriseSolutions2025';
+import NewContentPromotionBanner2025 from './components/NewContentPromotionBanner2025';
 
 const App: React.FC = () => {
   return (
@@ -128,6 +131,11 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+
+              {/* New Content Promotion Banner 2025 */}
+              <div className="mb-8">
+                <NewContentPromotionBanner2025 />
+              </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
               <div className="mb-12">
@@ -476,6 +484,10 @@ const App: React.FC = () => {
           {/* NEW: Next Gen Content Routes 2026 */}
           <Route path="/next-gen-ai-content-hub-2026" element={<NextGenAIContentHub2026 />} />
           <Route path="/ai-trends-insights-2026" element={<AITrendsInsights2026 />} />
+          
+          {/* NEW: 2025 Content Routes */}
+          <Route path="/case-study-techcorp-2025" element={<CaseStudyTechCorp2025 />} />
+          <Route path="/ai-enterprise-solutions-2025" element={<AIEnterpriseSolutions2025 />} />
         </Routes>
         
         <Footer />
