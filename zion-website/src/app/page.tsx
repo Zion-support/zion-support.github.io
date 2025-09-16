@@ -10,10 +10,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Grounded Generation Blueprint & Real-Time Model Routing —
-            <a href="/blog/ai-2026-grounded-generation-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            New: Realtime Agent Observatory 1.0 & Evals Control Plane —
+            <a href="/updates/realtime-agent-observatory-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">observatory</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/blog/ai-2026-real-time-model-routing-playbook" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">routing playbook</a>
+            <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">evals control plane</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -39,12 +39,13 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Promo banner for new content */}
+      {/* Promo banner for new content */
+      }
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Agentic SLO Dashboards (2026) —
-            <a href="/blog/ai-2026-agentic-slo-dashboards-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
+            New: State of Agent Tooling (2026) —
+            <a href="/updates/state-of-agent-tooling-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -112,10 +113,10 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Secure Tooling Permissions —
-            <a href="/blog/ai-2026-secure-tooling-permissions-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
+            New: Real-Time Evals Control Plane —
+            <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/blog/ai-2026-operational-risk-metrics-for-agents" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Operational Risk Metrics for Agents</a>
+            Also see: <a href="/updates/realtime-agent-observatory-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Realtime Agent Observatory 1.0</a>
           </p>
         </div>
       </div>

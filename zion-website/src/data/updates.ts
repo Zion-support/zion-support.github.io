@@ -7,6 +7,28 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // New content added 2025-09-16 (advertised on homepage)
+  {
+    title: 'Blueprint: Real-Time Evals Control Plane (2026)',
+    summary: 'Unify datasets, rubrics, live canaries, and rollback policies under one control plane.',
+    href: '/updates/real-time-evals-control-plane',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Realtime Agent Observatory 1.0',
+    summary: 'End-to-end traces, metrics, and guardrails with evidence capture for agent actions.',
+    href: '/updates/realtime-agent-observatory-1-0',
+    date: '2025-09-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Deep Dive: State of Agent Tooling (2026)',
+    summary: 'An objective look at the rapidly evolving agent tool ecosystem and integration patterns.',
+    href: '/updates/state-of-agent-tooling-2026',
+    date: '2025-09-16',
+    tag: 'Deep Dive'
+  },
   // Fresh content added 2025-09-16
   {
     title: 'Blueprint: Secure Tooling Permissions (2026)',
