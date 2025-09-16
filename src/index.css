@@ -323,7 +323,6 @@ a {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
   .text-6xl {
     font-size: 2.5rem;
   }
@@ -336,21 +335,3 @@ a {
     font-size: 1.75rem;
   }
 }
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Custom styles */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-}
-
-/* Custom animations */

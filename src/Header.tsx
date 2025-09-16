@@ -53,6 +53,9 @@ const Header: React.FC = () => {
             <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
               Content Showcase
             </a>
+            <a href="/latest-content-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+              Latest 2026
+            </a>
             <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Services
             </a>
