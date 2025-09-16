@@ -15,6 +15,21 @@ export const blogPosts = [
     slug: "ai-2026-release-scorecards"
   },
   {
+    id: 5003,
+    title: "AI 2026: Agentic Observability Deep Dive",
+    excerpt: "Traces, evals, incidents, and KPIs for reliable autonomous systems.",
+    content: "Deep dive on instrumenting agent systems for production. We cover end-to-end tracing, critical online evals (groundedness, override, violations), incident telemetry, and KPIs wired to release scorecards. Learn dashboards, alerts, and evidence bundles to support safe change and audits.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Observability",
+    tags: ["Observability", "Evals", "Tracing", "Incidents"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-observability-deep-dive-2026.jpg",
+    slug: "ai-2026-agentic-observability-deep-dive"
+  },
+  {
     id: 5002,
     title: "Enterprise AI Security Blueprint (2026)",
     excerpt: "Defense-in-depth for agentic systems: permissions, approvals, budgets, and audits.",
