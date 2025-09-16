@@ -1,31 +1,45 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
 import Footer from './Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import './index.css';
-import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
-import InnovationShowcase2026 from './pages/InnovationShowcase2026';
-import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
-import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
-import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
-import NextGenTechShowcase2025 from './pages/NextGenTechShowcase2025';
-import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
-import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
-import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
-import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
-import NextGenAIRevolution2026 from './pages/NextGenAIRevolution2026';
-import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
-import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
-import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026';
-import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
-import BiotechRevolution2026 from './pages/BiotechRevolution2026';
-import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
+
+// Loading component for better UX
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
+  </div>
+);
+
+// Lazy load page components for better performance
+const LazyPage = (importFunc: () => Promise<{ default: React.ComponentType }>) => 
+  lazy(importFunc);
+// Lazy load page components for better performance
+const AdvancedTechSolutions2026 = LazyPage(() => import('./pages/AdvancedTechSolutions2026'));
+const InnovationShowcase2026 = LazyPage(() => import('./pages/InnovationShowcase2026'));
+const AdvancedAITransformation2025 = LazyPage(() => import('./pages/AdvancedAITransformation2025'));
+const QuantumComputingRevolution2025 = LazyPage(() => import('./pages/QuantumComputingRevolution2025'));
+const NeuralInterfaceRevolution2025 = LazyPage(() => import('./pages/NeuralInterfaceRevolution2025'));
+const NextGenTechShowcase2025 = LazyPage(() => import('./pages/NextGenTechShowcase2025'));
+const AdvancedQuantumComputing2026 = LazyPage(() => import('./pages/AdvancedQuantumComputing2026'));
+const NeuralInterfaceRevolution2026 = LazyPage(() => import('./pages/NeuralInterfaceRevolution2026'));
+const AdvancedAISystems2026 = LazyPage(() => import('./pages/AdvancedAISystems2026'));
+const SyntheticIntelligence2026 = LazyPage(() => import('./pages/SyntheticIntelligence2026'));
+const QuantumNeuralFusion2026 = LazyPage(() => import('./pages/QuantumNeuralFusion2026'));
+const NextGenAIRevolution2026 = LazyPage(() => import('./pages/NextGenAIRevolution2026'));
+const QuantumComputingRevolution2026 = LazyPage(() => import('./pages/QuantumComputingRevolution2026'));
+const RevolutionaryTechBlog2026 = LazyPage(() => import('./pages/RevolutionaryTechBlog2026'));
+const ComprehensiveTechInsights2026 = LazyPage(() => import('./pages/ComprehensiveTechInsights2026'));
+const AdvancedAnalyticsDashboard2026 = LazyPage(() => import('./pages/AdvancedAnalyticsDashboard2026'));
+const BiotechRevolution2026 = LazyPage(() => import('./pages/BiotechRevolution2026'));
+const SpaceTechInnovation2026 = LazyPage(() => import('./pages/SpaceTechInnovation2026'));
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
@@ -61,12 +75,14 @@ import TransdimensionalAI2026 from './pages/TransdimensionalAI2026';
 
 export default function App(): JSX.Element {
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-white">
         <ScrollToTop />
         <Header />
         
-        <Routes>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
@@ -577,10 +593,13 @@ export default function App(): JSX.Element {
               <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
             </main>
           } />
-        </Routes>
+          </Routes>
+        </Suspense>
         
-        <Footer />
-      </div>
-    </Router>
+          <Footer />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
