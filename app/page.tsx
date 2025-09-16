@@ -127,12 +127,12 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Autonomous Ops</h2>
-              <p className="text-gray-600 mt-2">Low‑latency retrieval architectures and an ops playbook for safe autonomy.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Resilient Agent Architectures</h2>
+              <p className="text-gray-600 mt-2">Fault‑tolerant, eval‑gated, and cost‑aware patterns to harden agents.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
-              <Link href="/content/ai-2026-real-time-rag-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">RAG Blueprint</Link>
+              <Link href="/blog/ai-2026-resilient-agent-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
+              <Link href="/content/ai-2026-operational-excellence-handbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">OpEx Handbook</Link>
             </div>
           </div>
         </div>
