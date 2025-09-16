@@ -19,6 +19,8 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-real-time-rag-architectures': require('../../blog/ai-2026-real-time-rag-architectures').default,
   'ai-2026-guardrailed-tooling-risk-tiers': require('../../blog/ai-2026-guardrailed-tooling-risk-tiers').default,
   'ai-2026-production-evidence-hub-blueprint': require('../../blog/ai-2026-production-evidence-hub-blueprint').default,
+  'ai-2026-agent-slo-scorecards': require('../../blog/ai-2026-agent-slo-scorecards').default,
+  'ai-2026-cost-aware-model-routing': require('../../blog/ai-2026-cost-aware-model-routing').default,
 }
 
 export default function BlogPostRouter() {
