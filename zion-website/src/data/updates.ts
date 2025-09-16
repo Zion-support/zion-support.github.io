@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: Autonomous Knowledge Ops Suite v1.1',
+		summary: 'Deeper integrations, evidence bundling, and safer tool-use across workflows.',
+		href: '/updates/autonomous-knowledge-ops-suite-1-1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Announcement: ZionGPT 2.1 Real‑Time Reasoning',
+		summary: 'Faster step planning, improved tool arbitration, and lower latency streaming.',
+		href: '/updates/ziongpt-2-1-real-time-reasoning',
+		date: '2025-09-16',
+		tag: 'Announcement',
+	},
+	{
+		title: 'Report: State of Agent Observability (2026 Preview)',
+		summary: 'Traces, metrics, and eval overlays that speed up incident resolution.',
+		href: '/updates/state-of-agent-observability-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Launch: AI Governance Dashboard v5',
 		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
 		href: '/updates/ai-governance-dashboard-v5',
