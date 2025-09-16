@@ -46,6 +46,9 @@ const posts = [
 
 // Newly added posts (Sept 2025)
 posts.unshift(
+  { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
+  { slug: 'ai-2026-agent-safety-evidence-integration', title: 'Agent Safety Evidence Integration (2026)', excerpt: 'Unify evals, incidents, and policy events for audits.' },
+  { slug: 'ai-2026-cost-aware-real-time-routing', title: 'Cost‑Aware Real‑Time Routing (2026)', excerpt: 'Balance latency, quality, and spend with policy‑driven routing.' },
   { slug: 'ai-2026-safe-autonomy-in-production', title: 'AI 2026: Safe Autonomy in Production', excerpt: 'Deploy autonomous agents with guardrails, SLOs, and audit-ready evidence.' },
   { slug: 'ai-2026-evidence-hub-in-practice', title: 'AI 2026: Evidence Hub in Practice', excerpt: 'Centralize evals, traces, policy events, and incidents to ship faster, safer.' },
   { slug: 'ai-2026-agent-safety-playbook', title: 'AI 2026: Agent Safety Playbook', excerpt: 'Actionable patterns to ship safe, governed, and trustworthy agentic systems.' },

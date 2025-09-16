@@ -50,6 +50,25 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    // Newly added content (Sept 16, 2025)
+    {
+      title: 'Low‑Latency Agent Observability (2026)',
+      href: '/blog/ai-2026-low-latency-agent-observability',
+      tag: 'New',
+      gradient: 'from-sky-500 to-blue-600'
+    },
+    {
+      title: 'Agent Safety Evidence Integration (2026)',
+      href: '/blog/ai-2026-agent-safety-evidence-integration',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Cost‑Aware Real‑Time Routing (2026)',
+      href: '/blog/ai-2026-cost-aware-real-time-routing',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
     {
       title: 'Production Agent Postmortems — Playbook (2026)',
       href: '/blog/ai-2026-production-agent-postmortems-playbook',
