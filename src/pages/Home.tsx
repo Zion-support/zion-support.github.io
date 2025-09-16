@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useNotifications } from '../context/notifications/NotificationContext';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <NewContentPromotionBanner2026 />
       <Helmet>
         <title>Zion Tech Group 2026 - Revolutionary AI, Quantum Computing & Cybersecurity Solutions</title>
         <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business." />
@@ -80,6 +82,54 @@ const Home: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 py-16">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">🔥 Latest Revolutionary Content 2026</h2>
+            <p className="text-xl text-gray-300">Explore our newest groundbreaking content and technologies</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div 
+              className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Trends 2026 Insights</h3>
+              <p className="text-gray-300 mb-6">Discover the revolutionary AI technologies shaping the future</p>
+              <Link to="/pages/AITrends2026Insights" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Trends →</Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="text-4xl mb-4">⭐</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Revolutionary Case Studies</h3>
+              <p className="text-gray-300 mb-6">Explore groundbreaking success stories across industries</p>
+              <Link to="/pages/RevolutionaryCaseStudies2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">View Success Stories →</Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="text-4xl mb-4">✨</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Ultimate Tech Showcase</h3>
+              <p className="text-gray-300 mb-6">Experience the pinnacle of revolutionary technologies</p>
+              <Link to="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Technologies →</Link>
+            </motion.div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
               <h3 className="text-3xl font-bold text-white mb-4">New: 2026 AI Executive Strategy</h3>
