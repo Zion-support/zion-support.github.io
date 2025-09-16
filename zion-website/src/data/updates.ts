@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Secure Tooling Permissions (2026)',
+    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.',
+    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Risk: Operational Metrics for Agents (2026)',
+    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
+    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
+    date: '2025-09-16',
+    tag: 'Risk'
+  },
+  {
     title: 'Guide: Production RAG Latency Budgets (2026)',
     summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
     href: '/blog/ai-2026-production-rag-latency-budgets',

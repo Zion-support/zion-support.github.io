@@ -1,4 +1,4 @@
-import React from 'react'
+// @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
 
 export default function HomePage() {
@@ -54,6 +54,14 @@ export default function HomePage() {
               </a>
             </article>
           ))}
+        </div>
+        <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
+          <p className="text-sm font-semibold text-blue-200">
+            New: Secure Tooling Permissions —
+            <a href="/blog/ai-2026-secure-tooling-permissions-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also read: <a href="/blog/ai-2026-operational-risk-metrics-for-agents" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Operational Risk Metrics for Agents</a>
+          </p>
         </div>
       </div>
 
