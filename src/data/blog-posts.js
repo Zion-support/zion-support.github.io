@@ -3337,7 +3337,6 @@ export const additionalContent2026 = [
 ];
 
 // Additional fresh content (2029 preview)
->>>>>>> bb6d824a5e7e83351983fdb432aa9f870d0b1dba
 export const extraContent2029 = [
   {
     id: 9901,
