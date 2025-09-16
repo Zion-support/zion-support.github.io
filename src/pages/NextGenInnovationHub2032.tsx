@@ -193,8 +193,6 @@ const NextGenInnovationHub2032: React.FC = () => {
                   Explore →
                 </a>
               </div>
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 
 const NextGenInnovationHub2032: React.FC = () => {
@@ -468,8 +466,6 @@ const NextGenInnovationHub2032: React.FC = () => {
                 <li>• Consciousness upload protocols</li>
                 <li>• Reality simulation engines</li>
               </ul>
-=======
->>>>>>> add127a95c94686548b7646e0b4fa8ee2f7013a8
             </div>
           </div>
         </div>
@@ -487,8 +483,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             <a href="/pages/RevolutionaryTechBreakthrough2032" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Explore Breakthroughs
             </a>
-<<<<<<< HEAD
-=======
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-indigo-600/30 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
@@ -501,8 +495,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Submit Innovation
             </button>
-=======
->>>>>>> add127a95c94686548b7646e0b4fa8ee2f7013a8
           </div>
         </div>
       </div>

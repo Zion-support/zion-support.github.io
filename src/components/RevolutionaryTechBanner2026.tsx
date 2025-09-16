@@ -61,7 +61,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-<<<<<<< HEAD
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -181,7 +180,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </div>
         </motion.div>
       </AnimatePresence>
-=======
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 animate-pulse"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -323,7 +321,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
     </div>
   );
 };

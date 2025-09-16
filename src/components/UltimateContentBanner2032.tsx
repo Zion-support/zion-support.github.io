@@ -62,7 +62,6 @@ const UltimateContentBanner2032: React.FC = () => {
             <span>Revolutionary Technology</span>
             <span>•</span>
             <span>2032 Breakthrough</span>
-=======
 import React, { useState, useEffect } from 'react';
 
 const UltimateContentBanner2032: React.FC = () => {

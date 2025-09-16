@@ -191,8 +191,6 @@ const UltimateTechRevolution2032: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -388,8 +386,6 @@ const UltimateTechRevolution2032: React.FC = () => {
             </button>
           </div>
         </div>
-=======
->>>>>>> add127a95c94686548b7646e0b4fa8ee2f7013a8
       </div>
     </div>
   );
