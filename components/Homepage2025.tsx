@@ -51,18 +51,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
-      title: 'Safe Tooling Permissions — In Practice (2026)',
-      href: '/blog/ai-2026-safe-tooling-permissions-in-practice',
-      tag: 'New',
-      gradient: 'from-amber-500 to-red-500'
-    },
-    {
-      title: 'Eval Runbooks in Production (2026)',
-      href: '/blog/ai-2026-eval-runbooks-in-production',
-      tag: 'New',
-      gradient: 'from-cyan-500 to-blue-600'
-    },
-    {
       title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
       href: '/reports/guides/guide-2025-09-agent-slo-blueprints',
       tag: 'New',
