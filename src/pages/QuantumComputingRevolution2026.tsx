@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -24,6 +25,9 @@ import {
 import React from 'react';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
+=======
+import React from 'react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-4899
 
 const QuantumComputingRevolution2026: React.FC = () => {
   const quantumServices = [
@@ -101,6 +105,7 @@ const QuantumComputingRevolution2026: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -584,6 +589,19 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </Link>
         </div>
       </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="py-32 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-6xl font-bold text-white mb-8">
+            QuantumComputingRevolution2026
+          </h1>
+          <p className="text-2xl text-gray-300 mb-12">
+            Experience the future of technology.
+          </p>
+        </div>
+      </section>
+>>>>>>> origin/cursor/create-and-deploy-new-content-4899
     </div>
   );
 };
