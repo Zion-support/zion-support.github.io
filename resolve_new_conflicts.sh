@@ -1,23 +1,44 @@
 #!/bin/bash
 
-echo "🔧 Resolving ALL remaining merge conflicts..."
+echo "🔧 Resolving new merge conflicts after rebase..."
 
 # Find all files with merge conflicts
 conflict_files=$(find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
 echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 
-# For each file, resolve conflicts by keeping the cleaner version
+# For each file, resolve conflicts by keeping both versions when possible
 for file in $conflict_files; do
     echo "🔧 Resolving conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Use sed to remove conflict markers and keep the first version (HEAD)
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+    # Use a more sophisticated approach - try to resolve conflicts by keeping both versions
+    awk '
+    /^<<<<<<< HEAD/ { 
+        in_head = 1
+        next
+    }
+    /^=======/ { 
+        in_head = 0
+        in_other = 1
+        next
+    }
+    /^>>>>>>> / { 
+        in_other = 0
+        next
+    }
+    in_head { 
+        print
+    }
+    in_other { 
+        print
+    }
+    !in_head && !in_other { 
+        print
+    }
+    ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
     
     # Check if conflicts were resolved
     if ! grep -q "<<<<<<< HEAD" "$file"; then
@@ -29,4 +50,4 @@ for file in $conflict_files; do
     fi
 done
 
-echo "🎉 All conflict resolution complete!"
+echo "🎉 New conflict resolution complete!"
