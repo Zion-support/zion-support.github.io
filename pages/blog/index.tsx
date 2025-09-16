@@ -29,6 +29,7 @@ const posts = [
   ,{ slug: 'ai-2026-real-time-rag-architectures', title: 'Real-Time RAG Architectures (2026)', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' }
   ,{ slug: 'ai-2026-runtime-guardrails-blueprint', title: 'AI 2026: Runtime Guardrails Blueprint', excerpt: 'Runtime checks, policy-as-code, and safe tool envelopes.' }
   ,{ slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' }
+  ,{ slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
 ]
 
 export default function BlogIndexPage() {
