@@ -161,7 +161,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience the future of technology with our interactive demonstrations of cutting-edge AI and quantum computing solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Interactive Tech Display */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
