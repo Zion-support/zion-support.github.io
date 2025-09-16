@@ -36,10 +36,12 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-3">
           {latest.map((item) => (
-            <article key={item.id} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            <article key={item.href} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               <div className="flex items-center gap-2 text-xs text-blue-300">
                 <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-0.5 ring-1 ring-inset ring-blue-500/20">{item.tag}</span>
-                <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
+                {item.date ? (
+                  <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
+                ) : null}
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                 <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
