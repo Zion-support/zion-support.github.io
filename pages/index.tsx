@@ -1,6 +1,3 @@
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React from 'react';
 import Homepage2025 from '../components/Homepage2025';
 
