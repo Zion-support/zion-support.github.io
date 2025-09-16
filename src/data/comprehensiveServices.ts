@@ -23,8 +23,11 @@ export interface Service {
 
 // Import new revolutionary services
 import { newServices2026 } from './newServices2026';
+import { NEW_SERVICES_2026 } from './newContent2026';
 
 export const COMPREHENSIVE_SERVICES: Service[] = [
+  // NEW 2026 SERVICES
+  ...NEW_SERVICES_2026,
   {
     id: "ai-consciousness-001",
     title: "AI Consciousness Development",

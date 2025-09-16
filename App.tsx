@@ -32,6 +32,8 @@ import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor'
 import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import NewContentBanner2026 from './src/components/NewContentBanner2026';
 import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import ComprehensiveContentShowcase2026 from './src/components/ComprehensiveContentShowcase2026';
 import NotificationSystem from './src/components/NotificationSystem';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import PerformanceEnhancer from './src/components/PerformanceEnhancer';
@@ -94,6 +96,7 @@ import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough20
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
 import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
+import NewServices2026 from './src/pages/NewServices2026';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
@@ -286,6 +289,11 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
+                
+                {/* NEW: Comprehensive Content Showcase 2026 */}
+                <div className="mb-12">
+                  <ComprehensiveContentShowcase2026 />
+                </div>
                 
                 {/* Post-Quantum Consciousness Banner 2026 */}
                 <PostQuantumConsciousnessBanner2026 />
@@ -1396,6 +1404,7 @@ export default function App(): JSX.Element {
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          <Route path="/services/2026" element={<NewServices2026 />} />
           
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
