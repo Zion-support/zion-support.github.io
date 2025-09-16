@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-runtime-policy-enforcement-blueprint',
+    title: 'AI 2026: Runtime Policy Enforcement — Blueprint',
+    summary:
+      'Tiered permissions, runtime checks, and signed evidence for safer production agents.'
+  },
+  {
     slug: 'ai-2026-agent-evidence-bundles-blueprint',
     title: 'AI 2026: Agent Evidence Bundles — Blueprint',
     summary:
