@@ -1,46 +1,39 @@
+// @ts-nocheck
 export default function GroundedGenerationGuardrails2026() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
-        <header className="mb-10">
-          <div className="text-sm text-blue-300 mb-4">Blueprint • 2026</div>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Grounded Generation Guardrails (2026)
-          </h1>
-          <p className="mt-4 text-gray-300 text-lg">
-            Practical guardrails to reduce hallucinations in production using retrieval, constraints, and eval gates.
-          </p>
-        </header>
-
-        <article className="prose prose-invert max-w-none">
-          <h2>Why Grounding Matters</h2>
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
+        <div className="mb-6 flex items-center gap-3 text-xs text-gray-400">
+          <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Blueprint</span>
+          <time dateTime="2025-09-16">September 16, 2025</time>
+        </div>
+        <h1 className="text-4xl font-bold tracking-tight text-white">Grounded Generation Guardrails (2026)</h1>
+        <p className="mt-4 text-lg leading-8 text-gray-300">
+          Reduce hallucinations in production using retrieval, constraints, and objective eval gates.
+          This blueprint outlines reference architectures and controls to ensure responses remain faithful to sources.
+        </p>
+        <div className="mt-10 space-y-6 text-gray-300">
           <p>
-            Production systems require reliable outputs. This blueprint outlines reference patterns that combine
-            retrieval, policy checks, and objective evaluations to keep responses anchored to verified context.
+            The approach combines retrieval augmentation, policy-as-code constraints, and live evaluation gates to
+            ensure safe and reliable outputs. It supports streaming generation, tool-use with allowlists, and
+            budget-aware fallbacks when uncertainty is detected.
           </p>
-
-          <h3>Core Patterns</h3>
-          <ul>
-            <li>Retriever-first prompting with source attributions and citation checks.</li>
-            <li>Policy-as-code validators for sensitive tools and actions.</li>
-            <li>Objective eval gates (groundedness, factuality, and coverage) in CI/CD and runtime.</li>
-            <li>Feedback loops with issue taxonomies and automated rollbacks.</li>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Groundedness checks with citation coverage and answerability tests</li>
+            <li>Structured outputs validated against JSON Schemas and policy constraints</li>
+            <li>Risk-tiered routing with conservative fallbacks for high-uncertainty queries</li>
+            <li>Objective eval gates for launch, canary, and rollback decisions</li>
           </ul>
-
-          <h3>Rollout Checklist</h3>
-          <ol>
-            <li>Define SLIs and thresholds for groundedness and hallucination rate.</li>
-            <li>Instrument traces with retrieval and policy signals.</li>
-            <li>Introduce canaries and shadow tests before full traffic.</li>
-            <li>Adopt evidence bundles for audits and incident reviews.</li>
-          </ol>
-
           <p>
-            See also the Real-Time Retrieval Architectures and Eval-Ready Pipelines guides for deeper integrations.
+            Adopt these guardrails to improve trust, reduce incident rates, and maintain quality under cost and latency budgets.
           </p>
-        </article>
+        </div>
+        <div className="mt-10">
+          <a href="/contact" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+            Request implementation workshop →
+          </a>
+        </div>
       </div>
     </div>
   )
 }
-

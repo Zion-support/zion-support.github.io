@@ -1,182 +1,90 @@
-export type SiteUpdate = {
-  title: string
-  summary: string
-  href: string
-  date?: string
-  tag?: string
+export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release'
+
+export interface UpdateItem {
+	title: string
+	summary: string
+	href: string
+	date: string
+	tag: UpdateTag
 }
 
-export const siteUpdates: SiteUpdate[] = [
-  // Fresh content added 2025-09-16 (new)
-  {
-    title: 'Blueprint: Real-Time Agent Incident Response (2026)',
-    summary: 'Playbooks and eval gates for safe, fast incident response across autonomous agent fleets.',
-    href: '/updates/real-time-agent-incident-response-2026',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  // Fresh content added 2025-09-16
-  {
-    title: 'Blueprint: Grounded Generation Guardrails (2026)',
-    summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
-    href: '/updates/grounded-generation-guardrails-2026',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Case Studies: Evidence‑Driven Routing (2026)',
-    summary: 'Real‑world results from objective routing with evals, risk signals, and budgets.',
-    href: '/updates/evidence-driven-routing-case-studies-2026',
-    date: '2025-09-16',
-    tag: 'Case Studies'
-  },
-  {
-    title: 'Release: Production-Ready Agent Guardrails v1.0',
-    summary: 'Executable policies, scoped tooling, and eval gates for safe agent deployments.',
-    href: '/updates/production-ready-agent-guardrails-1-0',
-    date: '2025-09-16',
-    tag: 'Release'
-  },
-  {
-    title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
-    summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
-    href: '/updates/real-time-rag-benchmark-suite-1-0',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Blueprint: Secure Tooling Permissions (2026)',
-    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.',
-    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Risk: Operational Metrics for Agents (2026)',
-    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
-    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
-    date: '2025-09-16',
-    tag: 'Risk'
-  },
-  {
-    title: 'Guide: Production RAG Latency Budgets (2026)',
-    summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
-    href: '/blog/ai-2026-production-rag-latency-budgets',
-    date: '2025-09-16',
-    tag: 'Guide'
-  },
-  {
-    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
-    summary: 'Design patterns and reference topologies for low-latency, high-recall real-time retrieval.',
-    href: '/blog/ai-2026-real-time-retrieval-architectures',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Guide: AI Risk Mitigation in Production (2026)',
-    summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
-    href: '/updates/ai-risk-mitigation-guide-2026',
-    date: '2025-09-16',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: Real-Time Agent Cost Optimizer v1.0',
-    summary: 'Automated routing and dynamic budgets to reduce agent inference costs by 27%.',
-    href: '/updates/real-time-agent-cost-optimizer-1-0',
-    date: '2025-09-16',
-    tag: 'Release'
-  },
-  {
-    title: 'Blueprint: Eval‑Ready AI Pipelines (2026)',
-    summary: 'From datasets to live canaries with objective rubrics and automated rollbacks.',
-    href: '/updates/eval-ready-ai-pipelines-guide',
-    date: '2025-09-16',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Deep Dive: Enterprise Retrieval Observability (2026)',
-    summary: 'Tracing, SLIs, and evals for reliable retrieval‑augmented systems in production.',
-    href: '/updates/enterprise-retrieval-observability-2026',
-    date: '2025-09-16',
-    tag: 'Deep Dive'
-  },
-  {
-    title: 'Launch: Agent Reliability Scorecards v1.0',
-    summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability at scale.',
-    href: '/updates/agent-reliability-scorecards-1-0',
-    date: '2025-09-16',
-    tag: 'Release'
-  },
-  {
-    title: 'Field Guide: Trustworthy Model Routing (2026)',
-    summary: 'Objective routing with evals, risk signals, and cost-latency tradeoffs backed by evidence.',
-    href: '/blog/ai-2026-trustworthy-model-routing',
-    date: '2025-09-16',
-    tag: 'Field Guide'
-  },
-
-  // Existing content
-  {
-    title: 'Deep Dive: Enterprise Agent Observability (2026)',
-    summary:
-      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
-    href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
-    date: '2025-09-15',
-    tag: 'Deep Dive'
-  },
-  {
-    title: 'Complete Guide: Autonomous Business Operations (2026)',
-    summary:
-      'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.',
-    href: '/blog/ai-2026-autonomous-business-operations-complete-guide',
-    date: '2025-09-15',
-    tag: 'Complete Guide'
-  },
-  {
-    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
-    summary:
-      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
-    href: '/blog/ai-2026-policy-as-code-production-blueprint',
-    date: '2025-09-15',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
-    summary:
-      'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
-    href: '/updates/real-time-ai-analytics-dashboard-v3-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: AI Agent Orchestration Platform v2.0',
-    summary:
-      'Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.',
-    href: '/updates/ai-agent-orchestration-platform-2-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: AI Autonomous Testing Framework v1.0',
-    summary:
-      'Self-healing test automation with intelligent test generation, execution, and maintenance for enterprise applications.',
-    href: '/updates/ai-autonomous-testing-framework-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: AI Autonomous Workflow Engine v1.0',
-    summary:
-      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
-    href: '/updates/ai-autonomous-workflow-engine-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  }
+// Consolidated, deduplicated updates list (most recent first)
+export const updates: UpdateItem[] = [
+	{
+		title: 'Launch: Autonomous Support Copilot v1.2',
+		summary: 'Faster resolutions with evidence bundles, safer tool-use, and proactive guardrails.',
+		href: '/updates/autonomous-support-copilot-1-2',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
+		summary: 'Evaluate retrieval quality, sync, and latency across text, image, and video pipelines.',
+		href: '/updates/multimodal-rag-benchmarking-2026',
+		date: '2025-09-15',
+		tag: 'Guide',
+	},
+	{
+		title: 'Case Study: 50% MTTR Reduction with Evals-in-Prod',
+		summary: 'Incident-driven improvements using live evals, guardrails, and cost-aware routing.',
+		href: '/updates/mttr-reduction-evals-in-prod',
+		date: '2025-09-14',
+		tag: 'Case Study',
+	},
+	{
+		title: 'Launch: Compliance Auditor v1.0',
+		summary: 'Automated compliance checks with policy-as-code and evidence collection.',
+		href: '/updates/compliance-auditor-1-0',
+		date: '2025-09-15',
+		tag: 'Launch',
+	},
+	{
+		title: 'Report: State of AI Automation (2026 Preview)',
+		summary: 'Trends, metrics, and adoption patterns shaping the next wave of AI-led automation.',
+		href: '/insights/state-of-ai-automation-2025',
+		date: '2025-09-15',
+		tag: 'Report',
+	},
+	{
+		title: 'Announcement: Website UX Refresh and Accessibility Upgrades',
+		summary: 'Improved navigation, performance, and WCAG-focused accessibility enhancements across the site.',
+		href: '/updates/website-ux-refresh-2025',
+		date: '2025-09-13',
+		tag: 'Announcement',
+	},
+	{
+		title: 'New Course: GenAI Engineering Masterclass',
+		summary: 'Hands-on RAG, agents, evals, safety, and productionization.',
+		href: '/updates/genai-engineering-masterclass',
+		date: '2025-09-13',
+		tag: 'Course',
+	},
+	{
+		title: 'Community Challenge: Build a DApp',
+		summary: 'Join the DApp challenge and win prizes up to $1000 in ZION tokens.',
+		href: '/updates/dapp-challenge',
+		date: '2025-09-05',
+		tag: 'Challenge',
+	},
+	{
+		title: 'Research Release: Autonomous Agents for IT Operations',
+		summary: 'New paper and demo exploring agentic automation for enterprise IT workflows.',
+		href: '/updates/ai-research-it-ops',
+		date: '2025-09-03',
+		tag: 'Research',
+	},
+	{
+		title: 'Zion OS v1.2 Released',
+		summary: 'Performance improvements, modular deployments, and enhanced governance tooling.',
+		href: '/updates/zion-os-1-2',
+		date: '2025-09-01',
+		tag: 'Release',
+	},
 ]
 
-export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
-  const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
-  return [...siteUpdates]
-    .sort((a, b) => safeDate(b.date) - safeDate(a.date))
-    .slice(0, limit)
+export const getLatestUpdates = (limit = 6): UpdateItem[] => {
+	return [...updates]
+		.sort((a, b) => (a.date < b.date ? 1 : -1))
+		.slice(0, limit)
 }
+

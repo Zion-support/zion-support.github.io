@@ -214,6 +214,41 @@
       "desc": "Guardrails, incident response, and observability for agentic systems",
       "createdAt": "2025-09-16T13:40:00.000Z",
       "source": "release-notes"
+    },
+    {
+      "title": "Guide — Shipping Agentic Apps Faster (Q4 2025)",
+      "href": "/reports/guides/guide-2025-09-ship-agentic-apps-fast",
+      "desc": "Templates, checklists, and guardrails to accelerate safe delivery",
+      "createdAt": "2025-09-16T14:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — AI Ops Control Plane",
+      "href": "/reports/blueprints/blueprint-2025-09-ai-ops-control-plane",
+      "desc": "Reference patterns for observability, eval gates, and rollback",
+      "createdAt": "2025-09-16T14:05:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — Agent CRM Increases Pipeline by 27%",
+      "href": "/reports/cases/case-2025-09-agent-crm-pipeline-uplift",
+      "desc": "Operational playbook behind measurable revenue impact",
+      "createdAt": "2025-09-16T14:10:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Evaluations that Actually Move Metrics",
+      "href": "/reports/briefs/brief-2025-09-evals-that-matter",
+      "desc": "From vanity evals to production signal alignment",
+      "createdAt": "2025-09-16T14:15:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Playbook — Responsible Autonomy Field Guide",
+      "href": "/reports/playbooks/playbook-2025-09-responsible-autonomy-field-guide",
+      "desc": "Incident response, kill-switches, and safety reviews",
+      "createdAt": "2025-09-16T14:20:00.000Z",
+      "source": "release-notes"
     }
   ]
 }

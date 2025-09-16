@@ -52,3 +52,4 @@ export const metadata = {
   title: 'Guide: Production RAG Latency Budgets (2026)',
   description: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
 }
+ 
