@@ -16,13 +16,36 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+<<<<<<< HEAD
+    title: 'Blueprint: Production Evidence Hub (2026)',
+    summary: 'Centralize evals, traces, policy events, and incidents for audits and incident response.',
+    href: '/blog/ai-2026-production-evidence-hub-blueprint',
+=======
     title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
     summary: 'Design patterns and reference topologies for low-latency, high-recall real-time retrieval.',
     href: '/blog/ai-2026-real-time-retrieval-architectures',
+>>>>>>> origin/cursor/create-and-deploy-new-content-9210
     date: '2025-09-16',
     tag: 'Blueprint'
   },
   {
+<<<<<<< HEAD
+    title: 'Blueprint: Secure Tooling Permissions (2026)',
+    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions in production.',
+    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
+    date: '2025-09-16',
+    tag: 'Security'
+  },
+  {
+    title: 'Guide: Operational Risk Metrics for Agents (2026)',
+    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
+    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9210
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
     href: '/updates/ai-risk-mitigation-guide-2026',
