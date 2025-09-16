@@ -44,10 +44,13 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
@@ -582,6 +585,11 @@ export default function App(): JSX.Element {
                   <DynamicContentCarousel2025 />
                 </div>
 
+                {/* NEW: Revolutionary Content Carousel 2025 */}
+                <div className="mb-12">
+                  <DynamicContentCarousel2025 />
+                </div>
+
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2025 />
@@ -1045,6 +1053,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
           <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
