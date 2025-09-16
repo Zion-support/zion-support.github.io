@@ -48,6 +48,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Production Evidence Hub — Blueprint (2026)',
+      href: '/blog/ai-2026-production-evidence-hub-blueprint',
+      tag: 'Blueprint',
+      gradient: 'from-rose-500 to-amber-500'
+    },
+    {
+      title: 'Agent SLO Scorecards (2026)',
+      href: '/blog/ai-2026-agent-slo-scorecards',
+      tag: 'SLOs',
+      gradient: 'from-emerald-500 to-cyan-600'
+    },
+    {
       title: '2025-09 Research Brief — Agentic Business Ops',
       href: '/reports/briefs/brief-2025-09-agentic-business-ops',
       tag: 'Brief',

@@ -38,8 +38,8 @@ const posts = [
 
 // Newly added posts (Sept 2025)
 posts.unshift(
-  { slug: 'ai-2026-agent-slo-blueprint', title: 'Agent Platform SLO Blueprint (2026)', excerpt: 'A concise SLO set for safety, quality, reliability, and cost.' },
-  { slug: 'ai-2026-governed-tool-use-case-studies', title: 'Governed Tool Use — Case Studies (2026)', excerpt: 'Risk‑tiered adapters, approvals, and runtime checks in practice.' }
+  { slug: 'ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', excerpt: 'Centralize evals, traces, policy events, and incidents for audits.' },
+  { slug: 'ai-2026-agent-slo-scorecards', title: 'Agent SLO Scorecards (2026)', excerpt: 'Objective gates for safe autonomy rollouts.' }
 )
 
 export default function BlogIndexPage() {
