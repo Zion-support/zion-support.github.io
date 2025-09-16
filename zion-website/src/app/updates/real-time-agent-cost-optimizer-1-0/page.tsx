@@ -36,5 +36,5 @@ export default function Page() {
   )
 }
 
-// Additional details moved to the main Page component above to avoid duplicate default export.
+// Additional details are included in the Page component above.
 
