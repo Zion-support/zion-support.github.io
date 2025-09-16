@@ -102,6 +102,16 @@ const Home = () => {
                   <h3 className="text-2xl font-semibold mb-2">AI 2026: Agentic Systems Risk Matrix</h3>
                   <p className="text-white/80">Assess risk by capability, scope, and impact to guide safe rollout.</p>
                 </Link>
+                <Link href="/blog/ai-2026-low-latency-agent-orchestration" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Performance • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Low-Latency Agent Orchestration</h3>
+                  <p className="text-white/80">Stream, speculate, and overlap I/O to deliver sub‑200ms perceived latency.</p>
+                </Link>
+                <Link href="/blog/ai-2026-secure-tool-use-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 8 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Secure Tool Use Blueprint</h3>
+                  <p className="text-white/80">Ship governed tool-enabled agents with approvals and runtime guardrails.</p>
+                </Link>
               </div>
               <div className="mt-6">
                 <Link href="/blog" className="text-blue-200 hover:text-white font-semibold">View all articles →</Link>
