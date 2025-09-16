@@ -1,48 +1,36 @@
 // @ts-nocheck
-import React from 'react'
-
 export default function RealTimeAgentFinOpsDashboardPage() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-        <p className="text-xs text-blue-300">Launch • 2025-09-16</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Real‑Time Agent FinOps Dashboard v1.0
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-300">
-          Live spend, latency, and quality scorecards with budget alerts and routing controls for
-          production agent systems. Balance cost, performance, and safety with transparent metrics and
-          policy‑as‑code guardrails.
-        </p>
-        <div className="mt-10 grid gap-6">
-          <div className="rounded-2xl bg-white/5 p-6 text-gray-200">
-            <h2 className="text-xl font-semibold text-white">What’s inside</h2>
-            <ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
-              <li>Real‑time cost per request, per tool, and per route</li>
-              <li>Latency and quality SLIs with target bands and alerts</li>
-              <li>Budget policies with automated throttles and safe fallbacks</li>
-              <li>Evidence bundles tying decisions to eval gates and policy checks</li>
-              <li>Executive and engineering drill‑downs with exportable reports</li>
-            </ul>
-          </div>
-          <div className="rounded-2xl bg-white/5 p-6 text-gray-200">
-            <h2 className="text-xl font-semibold text-white">Key benefits</h2>
-            <ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
-              <li>Cut spend by routing based on live price‑performance signals</li>
-              <li>Prevent overruns with budget alerts and automatic guardrails</li>
-              <li>Improve reliability with eval‑gated rollouts and rollbacks</li>
-              <li>Prove compliance with audit‑ready evidence and lineage</li>
-            </ul>
-          </div>
-          <a href="/updates" className="text-sm font-semibold text-blue-400 hover:text-blue-300">Back to updates →</a>
+      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Launch • 2025-09-16</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Launch: Real‑Time Agent FinOps Dashboard v1.0</h1>
+          <p className="mt-4 text-lg leading-8 text-gray-300">
+            Live spend, latency, and quality scorecards with budget alerts and routing controls for production agent systems.
+          </p>
+        </div>
+        <div className="prose prose-invert max-w-none">
+          <h2>Overview</h2>
+          <p>
+            The Real‑Time Agent FinOps Dashboard centralizes cost, latency, and quality signals to help teams make informed
+            trade‑offs. It integrates with evaluation pipelines to budget for quality while enforcing spend guardrails.
+          </p>
+          <h2>Key capabilities</h2>
+          <ul>
+            <li>Live cost and token usage with per‑agent drill‑downs</li>
+            <li>Latency and quality scorecards with SLO alignment</li>
+            <li>Budget alerts and automated routing policy hooks</li>
+            <li>Evidence bundles for audits and governance reviews</li>
+          </ul>
+          <h2>Get started</h2>
+          <p>
+            Connect your observability and evaluation streams. Define budget thresholds and routing policies, then monitor
+            outcomes in real‑time to optimize cost without sacrificing quality.
+          </p>
         </div>
         <div className="mt-10">
-          <a
-            href="/contact"
-            className="inline-flex items-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200"
-          >
-            Request a demo
-          </a>
+          <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">Back to updates →</a>
         </div>
       </div>
     </div>
