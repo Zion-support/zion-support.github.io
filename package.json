@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "project",
   "private": true,
@@ -108,3 +109,6 @@
     "vitest": "^0.34.1"
   }
 }
+=======
+    "framer-motion": "^10.18.0",
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

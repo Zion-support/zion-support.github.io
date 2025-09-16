@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
@@ -24,3 +25,5 @@ const AIAutonomousResearchAssistant: React.FC = () => {
 };
 
 export default AIAutonomousResearchAssistant;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

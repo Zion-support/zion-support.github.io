@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -305,3 +306,8 @@ export const safeStorage = {
 };
 
 export default safeStorage;
+=======
+    try {
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

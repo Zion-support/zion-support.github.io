@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const notifications = {
   // Request notification permission
   requestPermission: async () => {
@@ -69,3 +70,5 @@ export const notifications = {
 
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default notifications;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

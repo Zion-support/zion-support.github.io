@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
@@ -405,3 +406,5 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2027;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

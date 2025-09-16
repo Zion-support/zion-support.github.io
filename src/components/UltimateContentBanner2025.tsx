@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const UltimateContentBanner2025: React.FC = () => {
@@ -380,3 +381,5 @@ const UltimateContentBanner2025: React.FC = () => {
 };
 
 export default UltimateContentBanner2025;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

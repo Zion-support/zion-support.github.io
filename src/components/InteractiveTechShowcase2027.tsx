@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveTechShowcase2027: React.FC = () => {
@@ -14,6 +15,36 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const techCategories = [
     {
       id: 0,
+=======
+      id: 'ai-revolution',
+      title: 'Next-Gen AI Revolution 2027',
+      description: 'Conscious AI systems with quantum-enhanced processing',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      borderColor: 'border-purple-400',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      link: '/pages/NextGenAIRevolution2027'
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution 2027',
+      description: '1000+ qubit quantum computers achieving true supremacy',
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600',
+      borderColor: 'border-cyan-400',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      link: '/pages/QuantumComputingRevolution2027'
+    },
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface Revolution 2027',
+      description: 'Direct brain-computer communication and thought control',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      borderColor: 'border-emerald-400',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      link: '/pages/NeuralInterfaceRevolution2027'
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -26,6 +57,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
+<<<<<<< HEAD
       id: 0,
     },
     {
@@ -60,6 +92,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
       id: 2,
       title: "Reality Manipulation",
       icon: "🔮",
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       description: "Immersive holographic interfaces that blur the line between reality and virtuality",
       features: [
         "3D Holographic Displays",
@@ -70,6 +104,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       color: "from-emerald-600 to-teal-600",
       link: "/pages/RevolutionaryTechTrends2027"
+<<<<<<< HEAD
       title: "Quantum Technologies",
       icon: "⚡",
       color: "from-cyan-500 to-blue-500",
@@ -191,6 +226,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
         <div className="flex justify-center space-x-4 mb-12">
           {techCategories.map((category, index) => (
             <button
@@ -206,6 +243,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
               {category.title}
             </button>
           ))}
+<<<<<<< HEAD
         </div>
 
         {/* Technology Cards */}
@@ -345,3 +383,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2027;
+=======
+              className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
+                isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

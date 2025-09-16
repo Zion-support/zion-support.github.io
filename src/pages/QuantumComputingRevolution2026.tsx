@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -254,3 +255,5 @@ const QuantumComputingRevolution2026: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2026;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -171,3 +172,11 @@ export default QuantumRealityEngine2026;
               Learn About AI Consciousness
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default QuantumRealityEngine2026;
+=======
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

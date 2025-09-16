@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -176,9 +177,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </div>
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       </div>
-    </div>
-  );
-};
-
-export default RevolutionaryTechShowcase2025;
+    </>

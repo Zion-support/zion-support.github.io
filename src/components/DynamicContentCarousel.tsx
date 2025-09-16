@@ -2,6 +2,7 @@ import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">DynamicContentCarousel</h3>
@@ -42,3 +43,7 @@ const DynamicContentCarousel: React.FC = () => {
 };
 
 export default DynamicContentCarousel;
+=======
+export default DynamicContentCarousel;
+export default DynamicContentCarousel;
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

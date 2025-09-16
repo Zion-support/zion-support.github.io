@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -1491,3 +1492,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default AIPoweredITAssetManagement;
+=======
+import { motion } from 'framer-motion';
+import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

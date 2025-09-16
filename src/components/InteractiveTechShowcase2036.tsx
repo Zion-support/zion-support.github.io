@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveTechShowcase2036: React.FC = () => {
@@ -49,6 +50,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
     },
     {
       id: 5,
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
       icon: "🌍",
@@ -60,6 +63,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       ],
       gradient: "from-pink-600 to-red-600",
       bgGradient: "from-pink-600/20 to-red-600/20"
+<<<<<<< HEAD
     }
   ];
 
@@ -74,6 +78,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
     return () => clearInterval(timer);
   }, [technologies.length]);
 
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -82,6 +88,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }
+<<<<<<< HEAD
   };
 
   const currentTech = technologies[activeTech];
@@ -212,3 +219,5 @@ const InteractiveTechShowcase2036: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2036;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

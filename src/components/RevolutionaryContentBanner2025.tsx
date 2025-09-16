@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -54,12 +55,15 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
 =======
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
+<<<<<<< HEAD
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -126,6 +130,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 NEW: Revolutionary Content 2025
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Technology Content
@@ -141,6 +147,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <h3 className="text-xl font-bold mb-3 text-center">Reality Manipulation</h3>
             <p className="text-indigo-100 mb-4 text-sm text-center">
               Technology that can manipulate the fundamental fabric of reality itself
+<<<<<<< HEAD
             </p>
             <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
               Explore Reality →
@@ -200,3 +207,5 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 };
 
 export default RevolutionaryContentBanner2025;
+=======
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

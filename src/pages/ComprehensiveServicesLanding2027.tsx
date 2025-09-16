@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -489,3 +490,35 @@ function Dna({ className }: { className?: string }) {
   );
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+=======
+  Zap as ZapIconDup,
+  Shield as ShieldIconDup,
+  Cloud as CloudIconDup,
+  Brain as BrainIconDup,
+  Rocket as RocketIconDup,
+  Leaf as LeafIconDup
+          <divdiv 
+          </divdiv>
+
+          {/* Quick Stats */}
+          <divdiv 
+          </divdiv>
+          <divdiv 
+          </divdiv>
+              <divbutton
+              </divbutton>
+          <divdiv 
+          </divdiv>
+              <divdiv
+                <div>
+                  {expandedService === service.id && (
+                    <divdiv
+                    </divdiv>
+                  )}
+                </div>
+              </divdiv>
+              <divdiv 
+              </divdiv>
+          <divdiv 
+          </divdiv>
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
