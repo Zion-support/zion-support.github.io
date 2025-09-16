@@ -25,6 +25,7 @@
     "jsx": "react-jsx",
     "incremental": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "declaration": false,
     "sourceMap": true,
@@ -136,8 +137,20 @@
   "include": [
     "app/**/*",
 >>>>>>> origin/feat/new-blog-content
+=======
+    "baseUrl": ".",
+    "types": ["vite/client", "node"]
+  },
+  "include": [
+    "app/**/*",
+    "components/**/*",
+    "pages/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+>>>>>>> origin/feat/new-content-ads
     "tailwind.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
@@ -150,6 +163,7 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -167,6 +181,9 @@
     { "path": "./tsconfig.node.json" }
   ]
 >>>>>>> origin/feat/latest-content-home
+=======
+  ]
+>>>>>>> origin/feat/new-content-ads
 }
 =======
     "types": ["vite/client", "node"]

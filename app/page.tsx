@@ -681,6 +681,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/feature/content-sep-2025
@@ -689,6 +690,10 @@ export default function HomePage() {
 
         {/* Promo: New Blueprint - Operational Evals 2026 */}
         <section className="py-12 bg-gray-50">
+=======
+        {/* Featured Content Grid */}
+        <section className="py-16">
+>>>>>>> origin/feat/new-content-ads
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -732,10 +737,43 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 >>>>>>> origin/feature/operational-evals-blueprint-2026
 =======
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
+=======
+        {/* Latest Content Showcase 2025 - NEW FEATURED */}
+        <LatestContentShowcase2025 />
+
+        {/* Promos: New Articles (Sept 2025) */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Framework</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: LLM Evals Maturity Model</h3>
+                  <p className="text-gray-600">Evaluation-first roadmap with metrics, harnesses, and governance.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2026-llm-evals-maturity-model" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Governance</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Governance Blueprint</h3>
+                  <p className="text-gray-600">Policy-as-code, risk tiers, and continuous monitoring at scale.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2026-enterprise-ai-governance-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/feat/new-content-ads
 
 >>>>>>> origin/feature/new-content-and-promotions
         {/* Key Statistics */}
