@@ -90,28 +90,6 @@ export default function AnalyticsDashboard() {
     );
   }
 
-  if (!analyticsData) {
-    return (
-      <div className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">No Analytics Data Available</h2>
-          <p className="text-gray-600">Unable to load analytics data at this time.</p>
-        </div>
-      </div>
-    );
-  }
-
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num.toString();
-  };
-
-  const formatDuration = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = Math.floor(seconds % 60);
-    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-  };
 
   return (
     <div className="py-20 px-4 bg-gray-50">
@@ -195,8 +173,6 @@ export default function AnalyticsDashboard() {
           </div>
         </div>
 
-        {/* Charts and Tables */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Top Pages */}
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
@@ -234,24 +210,6 @@ export default function AnalyticsDashboard() {
             </div>
           </div>
 
-          {/* Device Types */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Types</h3>
-            <div className="space-y-3">
-              {analyticsData.deviceTypes.map((device, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="text-sm text-gray-900">{device.type}</span>
-                  <div className="flex items-center">
-                    <div className="w-20 bg-gray-200 rounded-full h-2 mr-3">
-                      <div 
-                        className="bg-green-600 h-2 rounded-full" 
-                        style={{ width: `${device.percentage}%` }}
-                      ></div>
-                    </div>
-                    <span className="text-sm font-semibold text-gray-900 w-12 text-right">{device.percentage}%</span>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -263,19 +221,6 @@ export default function AnalyticsDashboard() {
                 <span className="text-sm text-gray-900">First Contentful Paint</span>
                 <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.fcp.toFixed(0)}ms</span>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-900">Largest Contentful Paint</span>
-                <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.lcp.toFixed(0)}ms</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-900">First Input Delay</span>
-                <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.fid.toFixed(0)}ms</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-900">Cumulative Layout Shift</span>
-                <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.cls.toFixed(3)}</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

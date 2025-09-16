@@ -178,4 +178,3 @@ export default function NewContentShowcase() {
     </div>
   );
 }
-export default NewContentShowcase;

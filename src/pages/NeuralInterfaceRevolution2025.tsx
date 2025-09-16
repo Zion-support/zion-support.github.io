@@ -329,6 +329,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
             </div>
             <div className="text-center">
               <div className="text-5xl mb-4">⚖️</div>

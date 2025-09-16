@@ -99,24 +99,6 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-        {/* Active Demo Display */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Demo Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-4">
-                {demos[activeDemo].title}
-              </h2>
-              <p className="text-gray-300 mb-6">
-                {demos[activeDemo].description}
-              </p>
-              
-              <div className="space-y-3 mb-8">
-                {demos[activeDemo].features.map((featureindex) => (
-                  <div key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    {feature}
-                  </div>
                 ))}
               </div>
 
