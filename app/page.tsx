@@ -146,6 +146,11 @@ export default function HomePage() {
       <section className="py-6 bg-gradient-to-r from-emerald-50 to-emerald-100/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-eval-gated-safety-scorecards" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eval‑Gated Safety Scorecards (2026)</h3>
+              <p className="text-gray-600">Objective safety gates wired into CI/CD and runtime policy.</p>
+            </Link>
             <Link href="/blog/ai-2026-zero-downtime-agent-rollouts" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Zero‑Downtime Agent Rollouts</h3>
