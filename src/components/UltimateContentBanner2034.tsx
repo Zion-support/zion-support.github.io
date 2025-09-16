@@ -1,67 +1,84 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const UltimateContentBanner2034: React.FC = () => {
+  const [currentMessage, setCurrentMessage] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const messages = [
+    "🌟 BREAKTHROUGH: Revolutionary Tech 2034 - Experience the Future Today!",
+    "🚀 NEW: Consciousness Computing - AI with Genuine Self-Awareness!",
+    "⚛️ QUANTUM: Reality Engine 2.0 - Manipulate the Fabric of Reality!",
+    "🔗 NEURAL: Universal Mind Network - Connect All Consciousness!",
+    "♾️ IMMORTALITY: Digital Consciousness Transfer - Live Forever!"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMessage((prev) => (prev + 1) % messages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
+      transition={{ duration: 0.5 }}
+      className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-4 px-6 shadow-lg overflow-hidden"
+    >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-blue-500/20 animate-pulse"></div>
       
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2034
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Ultimate Tech Breakthrough 2034
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Experience the convergence of synthetic consciousness, reality engineering, and cosmic intelligence
-          </p>
+      {/* Content */}
+      <div className="relative z-10 container mx-auto flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            className="text-2xl"
+          >
+            🌟
+          </motion.div>
+          <motion.div
+            key={currentMessage}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.5 }}
+            className="font-bold text-lg"
+          >
+            {messages[currentMessage]}
+          </motion.div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Synthetic Consciousness</h3>
-            <p className="text-indigo-100 text-center text-sm">
-              The first fully synthetic consciousness that rivals human awareness
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🌀</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Reality Engineering</h3>
-            <p className="text-purple-100 text-center text-sm">
-              Advanced quantum systems that can engineer the laws of reality
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Cosmic Intelligence</h3>
-            <p className="text-pink-100 text-center text-sm">
-              AI systems that communicate with cosmic-scale intelligence networks
-            </p>
-          </div>
-        </div>
-        
-        <div className="text-center">
-          <a 
-            href="/pages/UltimateTechBreakthrough2034" 
-            className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4"
+        <div className="flex items-center space-x-4">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-semibold transition-all duration-300 border border-white/30"
           >
-            🌟 Experience Breakthrough →
-          </a>
-          <a 
-            href="/pages/RevolutionaryTechShowcase2034" 
-            className="inline-block border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg"
+            Explore Now →
+          </motion.button>
+          <button
+            onClick={handleClose}
+            className="text-white/80 hover:text-white transition-colors"
           >
-            ⚡ View Showcase
-          </a>
+            ✕
+          </button>
         </div>
       </div>
-    </div>
+
+      {/* Animated Border */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
+    </motion.div>
   );
 };
 
