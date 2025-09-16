@@ -31,9 +31,7 @@ const EnhancedNavigation: React.FC = () => {
       title: 'Neural Interfaces',
       path: '/neural',
       icon: '🧬',
-            </button>
-          </div>
-        </div>
+    },
 
         {/* Mobile Navigation */}
         {isOpen && (

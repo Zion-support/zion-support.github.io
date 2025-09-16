@@ -36,6 +36,10 @@ import ComprehensiveContentShowcase2026 from './components/ComprehensiveContentS
 import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
+// Import our new enhanced content components
+import NewContentPromotionBanner2025 from './components/NewContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from './components/InteractiveContentDiscoveryWidget2025';
+
 // Import new promotional components
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
@@ -116,6 +120,13 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* NEW: Enhanced Content Promotion Banner 2025 */}
+      <NewContentPromotionBanner2025 />
+      
+      {/* NEW: Ultimate Content Showcase 2025 */}
+      <UltimateContentShowcase2025 />
+
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

@@ -569,7 +569,7 @@ const ContentShowcase: React.FC = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
