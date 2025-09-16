@@ -18,6 +18,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       {/* Features Section */}
@@ -96,6 +97,8 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
           </motion.div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de62
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ac6f
         {/* Revolutionary Technologies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white shadow-2xl">
@@ -186,9 +189,12 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f7d1
 >>>>>>> cursor/create-and-deploy-new-content-de62
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ac6f
         </div>
       </div>
     </div>
