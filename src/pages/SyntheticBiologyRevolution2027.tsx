@@ -4,8 +4,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
-      <div className="container mx-auto px-4 py-20">
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -92,10 +90,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <a href="/pages/BioManufacturing" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
               Start Manufacturing →
             </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
             <p className="text-lime-100 mb-6 text-center">
               Engineering biological systems for sustainable solutions
@@ -250,8 +244,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
           </div>
         </div>
 
-            <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Restoration →
             </a>
           </div>
         </div>
@@ -289,7 +281,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
-              Learn More
               Learn More
               Learn More
               Learn More

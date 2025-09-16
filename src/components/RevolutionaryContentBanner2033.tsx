@@ -1,103 +1,73 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryContentBanner2033: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  
-  const banners = [
-    {
-      title: "🌟 ULTIMATE TECH BREAKTHROUGH 2033",
-      subtitle: "Transcendent AI Consciousness • Quantum Reality Engine • Interdimensional Networks",
-      cta: "Explore Breakthrough",
-      link: "/pages/UltimateTechBreakthrough2033",
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🌟"
-    },
-    {
-      title: "🚀 REVOLUTIONARY TECH SHOWCASE 2033",
-      subtitle: "Consciousness Transfer • Reality Manipulation • Cosmic AI Networks",
-      cta: "View Showcase",
-      link: "/pages/RevolutionaryTechShowcase2033",
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "🚀"
-    },
-    {
-      title: "🧠 NEXT-GEN INNOVATION HUB 2033",
-      subtitle: "50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities",
-      cta: "Enter Innovation Hub",
-      link: "/pages/NextGenInnovationHub2033",
-      gradient: "from-emerald-600 to-teal-600",
-      icon: "🧠"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative overflow-hidden mb-12">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentBanner}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className={`bg-gradient-to-r ${banners[currentBanner].gradient} text-white rounded-2xl p-8 relative overflow-hidden`}
-        >
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
-          
-          <div className="relative z-10">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="text-4xl animate-pulse">{banners[currentBanner].icon}</div>
-                  <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold">
-                    NEW • JANUARY 2033
-                  </div>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                  {banners[currentBanner].title}
-                </h2>
-                <p className="text-lg md:text-xl opacity-90 mb-6 max-w-3xl">
-                  {banners[currentBanner].subtitle}
-                </p>
-                <a
-                  href={banners[currentBanner].link}
-                  className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
-                >
-                  {banners[currentBanner].cta} →
-                </a>
-              </div>
-              
-              <div className="hidden md:block">
-                <div className="text-8xl opacity-20 animate-pulse">
-                  {banners[currentBanner].icon}
-                </div>
-              </div>
-            </div>
+    <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            ⚡ QUANTUM BREAKTHROUGH • JANUARY 2033
           </div>
-        </motion.div>
-      </AnimatePresence>
-      
-      {/* Banner Indicators */}
-      <div className="flex justify-center space-x-2 mt-4">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentBanner === index ? 'bg-purple-600' : 'bg-gray-300'
-            }`}
-          />
-        ))}
+          <h2 className="text-4xl font-bold mb-4">🌊 Quantum Reality 2033</h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-6">
+            Step into a world where quantum computing has transcended the boundaries of reality itself
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
+            <div className="text-4xl mb-3 text-center">🌊</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Quantum Wave Computing</h3>
+            <p className="text-cyan-100 text-sm text-center mb-4">
+              Harness quantum waves to process infinite possibilities simultaneously
+            </p>
+            <Link 
+              to="/pages/QuantumReality2033" 
+              className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm"
+            >
+              Ride the Wave →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+            <div className="text-4xl mb-3 text-center">🌀</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Reality Manipulation</h3>
+            <p className="text-purple-100 text-sm text-center mb-4">
+              Quantum systems that can alter the fundamental fabric of reality
+            </p>
+            <Link 
+              to="/pages/QuantumReality2033" 
+              className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm"
+            >
+              Manipulate Reality →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
+            <div className="text-4xl mb-3 text-center">🌌</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Universal Quantum Network</h3>
+            <p className="text-emerald-100 text-sm text-center mb-4">
+              A quantum network spanning across galaxies for instant communication
+            </p>
+            <Link 
+              to="/pages/QuantumReality2033" 
+              className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm"
+            >
+              Join the Network →
+            </Link>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <Link 
+            to="/pages/QuantumReality2033" 
+            className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+          >
+            Enter the Quantum Realm →
+          </Link>
+        </div>
       </div>
     </div>
   );
