@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-production-rag-latency-budgets',
+    title: 'AI 2026: Production RAG Latency Budgets',
+    summary:
+      'A pragmatic framework to set, monitor, and enforce latency budgets for production RAG systems.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:
