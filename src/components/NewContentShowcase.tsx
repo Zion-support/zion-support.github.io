@@ -178,7 +178,3 @@ export default function NewContentShowcase() {
     </div>
   );
 }
-<<<<<<< HEAD
-export default NewContentShowcase;
-=======
->>>>>>> cursor/create-and-deploy-new-content-d7eb

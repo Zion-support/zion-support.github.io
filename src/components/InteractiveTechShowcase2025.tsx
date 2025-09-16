@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -34,52 +35,27 @@ const InteractiveTechShowcase2025: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 mb-12">
       {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           🎮 INTERACTIVE TECH SHOWCASE 2025 • LIVE DEMOS
-=======
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">
-      <div className="text-center mb-8">
-        <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-4">
-          🚀 INTERACTIVE TECH SHOWCASE 2025
->>>>>>> cursor/create-and-deploy-new-content-d7eb
         </div>
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Revolutionary Technologies</h2>
-        <p className="text-xl text-gray-600">Click on each technology to discover its groundbreaking capabilities</p>
+        <h2 className="text-4xl font-bold text-white mb-4">Explore Revolutionary Technologies</h2>
+        <p className="text-xl text-gray-300">Click on each technology to discover its groundbreaking capabilities</p>
       </div>
 
-<<<<<<< HEAD
-      {/* Demo Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {demos.map((demo, index) => (
-          <button
-            key={demo.id}
-            onClick={() => handleDemoClick(index)}
-            className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeDemo === index
-                ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
-                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-            }`}
-          >
-            <span className="text-2xl">{demo.icon}</span>
-            <span>{demo.title}</span>
-          </button>
-        ))}
-=======
       {/* Tab Navigation */}
       <div className="flex justify-center mb-8">
-        <div className="bg-white rounded-lg p-2 shadow-lg">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 shadow-lg border border-white/20">
           {technologies.map((tech, index) => (
             <button
               key={tech.id}
               onClick={() => setActiveTab(index)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === index
-                  ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
-                  : 'text-gray-600 hover:bg-gray-100'
+                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
+                  : 'text-gray-300 hover:text-white hover:bg-white/20'
               }`}
             >
               <span className="text-2xl mr-2">{tech.icon}</span>
@@ -87,61 +63,123 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
       </div>
 
-      {/* Active Technology Display */}
-      <div className="max-w-6xl mx-auto">
-        <div className={`bg-gradient-to-br ${technologies[activeTab].color} rounded-2xl p-8 text-white shadow-2xl`}>
-          <div className="text-center mb-8">
-            <div className="text-8xl mb-4">{technologies[activeTab].icon}</div>
-            <h3 className="text-4xl font-bold mb-4">{technologies[activeTab].title}</h3>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">{technologies[activeTab].description}</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {technologies[activeTab].features.map((feature, index) => (
-              <div key={index} className="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl mb-3">✨</div>
-                <h4 className="text-lg font-bold mb-2">{feature}</h4>
-                <p className="text-sm opacity-90">
-                  Revolutionary capability that transforms how we interact with technology
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <a
-              href={technologies[activeTab].link}
-              className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg shadow-lg"
-            >
-              Explore {technologies[activeTab].title} →
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Technology Grid */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-bold text-center mb-6 text-gray-900">All Revolutionary Technologies</h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          {technologies.map((tech) => (
-            <div
-              key={tech.id}
-              className={`bg-gradient-to-br ${tech.color} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(tech.id)}
-            >
-              <div className="text-4xl mb-4 text-center">{tech.icon}</div>
-              <h4 className="text-xl font-bold mb-3 text-center">{tech.title}</h4>
-              <p className="text-sm opacity-90 text-center mb-4">{tech.description}</p>
-              <div className="text-center">
-                <span className="text-xs bg-white/20 px-3 py-1 rounded-full">
-                  Click to explore
-                </span>
+      {/* Technology Display */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Technology Info */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-white"
+        >
+          <div className={`bg-gradient-to-br ${technologies[activeTab].color}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20`}>
+            <div className="text-8xl mb-6 text-center animate-pulse">
+              {technologies[activeTab].icon}
+            </div>
+            <h3 className="text-4xl font-bold mb-6 text-center">
+              {technologies[activeTab].title}
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              {technologies[activeTab].description}
+            </p>
+            
+            {/* Features */}
+            <div className="mb-8">
+              <h4 className="text-2xl font-bold mb-4">Key Features</h4>
+              <div className="grid grid-cols-1 gap-3">
+                {technologies[activeTab].features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                    <span className="text-gray-300">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+
+            {/* Demo Button */}
+            <div className="text-center">
+              <motion.a
+                href={technologies[activeTab].link}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${technologies[activeTab].color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
+              >
+                <span className="mr-2">Explore Technology</span>
+                <span>→</span>
+              </motion.a>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Technology Visual */}
+        <motion.div
+          key={`visual-${activeTab}`}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative"
+        >
+          <div className="relative h-96">
+            <div className={`absolute inset-0 bg-gradient-to-br ${technologies[activeTab].color} rounded-2xl opacity-20`}></div>
+            <div className="relative z-10 flex items-center justify-center h-full">
+              <motion.div
+                key={activeTab}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-9xl"
+              >
+                {technologies[activeTab].icon}
+              </motion.div>
+            </div>
+            
+            {/* Floating Elements */}
+            <div className="absolute inset-0 overflow-hidden rounded-2xl">
+              {[...Array(20)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-2 h-2 bg-white rounded-full opacity-30"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                  }}
+                  animate={{
+                    y: [0, -100, 0],
+                    opacity: [0.3, 1, 0.3],
+                    scale: [1, 2, 1],
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Technology Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        <div className="text-center">
+          <div className="text-3xl font-bold text-white mb-2">∞</div>
+          <div className="text-gray-300">Computational Power</div>
+        </div>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-white mb-2">0ms</div>
+          <div className="text-gray-300">Processing Latency</div>
+        </div>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-white mb-2">100%</div>
+          <div className="text-gray-300">Accuracy Rate</div>
+        </div>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-white mb-2">∞</div>
+          <div className="text-gray-300">Learning Capacity</div>
         </div>
       </div>
     </div>

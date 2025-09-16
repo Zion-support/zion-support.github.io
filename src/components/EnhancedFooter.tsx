@@ -19,7 +19,6 @@ const EnhancedFooter: React.FC = () => {
     {
       title: 'Resources',
       links: [
-<<<<<<< HEAD
         { name: 'Tech Insights 2026', path: '/pages/ComprehensiveTechInsights2026' },
         { name: 'Revolutionary Blog', path: '/pages/RevolutionaryTechBlog2026' },
         { name: 'AI Transformation', path: '/pages/AdvancedAITransformation2026' },
@@ -37,14 +36,6 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Universal Tech 2030', path: '/pages/UniversalTechMastery2030' },
         { name: 'Ultimate Tech 2033', path: '/pages/UltimateTechRevolution2033' },
         { name: 'Transcendent AI 2033', path: '/pages/TranscendentAI2033' }
-=======
-        { name: 'Tech Blog', path: '/pages/RevolutionaryTechBlog2026' },
-        { name: 'Tech Insights', path: '/pages/ComprehensiveTechInsights2026' },
-        { name: 'Case Studies', path: '/case-studies' },
-        { name: 'Documentation', path: '/docs' },
-        { name: 'Research', path: '/research' },
-        { name: 'Pricing', path: '/pricing' }
->>>>>>> cursor/create-and-deploy-new-content-d7eb
       ]
     },
     {
@@ -55,9 +46,6 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Services', path: '/services' },
         { name: 'Blog', path: '/blog' },
         { name: 'Careers', path: '/careers' },
-<<<<<<< HEAD
-        { name: 'Privacy Policy', path: '/privacy' }
-=======
         { name: 'News', path: '/news' },
         { name: 'Partners', path: '/partners' },
         { name: 'Investors', path: '/investors' }
@@ -72,7 +60,6 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Accessibility', path: '/accessibility' },
         { name: 'Security', path: '/security' },
         { name: 'Compliance', path: '/compliance' }
->>>>>>> cursor/create-and-deploy-new-content-d7eb
       ]
     }
   ];
@@ -86,7 +73,6 @@ const EnhancedFooter: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
@@ -97,30 +83,20 @@ const EnhancedFooter: React.FC = () => {
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <h3 className="text-2xl font-bold">Zion Tech Group</h3>
-=======
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="text-3xl">🚀</span>
-              <span className="text-2xl font-bold">Zion Tech Group</span>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading the future of technology with revolutionary AI, quantum computing, and next-generation solutions 
-              that transform industries and shape tomorrow.
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Leading the future of technology with revolutionary AI, quantum computing, and neural interfaces. 
+              We're building the next generation of intelligent systems that will transform how we live, work, and interact.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
                   aria-label={social.name}
                 >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d={social.icon} />
                   </svg>
                 </a>
@@ -132,12 +108,12 @@ const EnhancedFooter: React.FC = () => {
           {footerSections.map((section, index) => (
             <div key={index}>
               <h4 className="text-lg font-semibold mb-4">{section.title}</h4>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link
                       to={link.path}
-                      className="text-gray-300 hover:text-white transition-colors duration-200"
+                      className="text-gray-400 hover:text-white transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -150,47 +126,40 @@ const EnhancedFooter: React.FC = () => {
 
         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="max-w-md">
-            <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-            <p className="text-gray-300 mb-4">
-              Get the latest insights on revolutionary technology and AI breakthroughs.
+          <div className="max-w-md mx-auto text-center">
+            <h4 className="text-xl font-semibold mb-4">Stay Updated with Revolutionary Tech</h4>
+            <p className="text-gray-400 mb-6">
+              Get the latest insights on AI, quantum computing, and breakthrough technologies.
             </p>
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-r-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
 
-        {/* Bottom Footer */}
+        {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-<<<<<<< HEAD
             <div className="flex space-x-6 text-sm">
-              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
-              </a>
-=======
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">🌍 English (US)</span>
-              <span className="text-gray-400 text-sm">🔒 Secure</span>
-              <span className="text-gray-400 text-sm">⚡ Fast</span>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
+              </Link>
             </div>
           </div>
         </div>
