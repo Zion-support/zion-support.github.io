@@ -1,26 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTech2027: React.FC = () => {
   return (
-            </button>
-          </div>
-        </div>
-
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-            </button>
-          </div>
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryTech2027</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>

@@ -1,46 +1,16 @@
-import * as React from "react";
+import React from "react";
 
-type PopoverRootProps = {
-  children: React.ReactNode;
-  open?: boolean;
-  onOpenChange?: (open: boolean) => void;
-  className?: string;
-};
-
-export function Popover({ children, className }: PopoverRootProps) {
-  return <div className={className}>{children}</div>;
-}
-
-type PopoverTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  asChild?: boolean;
-};
-
-export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTriggerProps>(
-  ({ children, className = "", ...props }, ref) => {
-    return (
-      <button ref={ref} className={className} type={props.type ?? "button"} {...props}>
-        {children}
-      </button>
-    );
-  }
-);
-PopoverTrigger.displayName = "PopoverTrigger";
-
-type PopoverContentProps = React.HTMLAttributes<HTMLDivElement> & {
-  align?: "start" | "center" | "end";
-  side?: "top" | "right" | "bottom" | "left";
-};
-
-export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
-  ({ children, className = "z-50 rounded-md border bg-white p-3 shadow-md", ...props }, ref) => {
-    return (
-      <div ref={ref} role="dialog" className={className} {...props}>
-        {children}
+const Popover = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">Popover</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
       </div>
-    );
-  }
-);
-PopoverContent.displayName = "PopoverContent";
+    </div>
+  );
+};
 
 export default Popover;
-

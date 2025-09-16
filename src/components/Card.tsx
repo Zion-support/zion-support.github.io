@@ -1,48 +1,16 @@
-import React from 'react';
+import React from "react";
 
-interface CardProps {
-
-
-  title: string;
-  description: string;
-
-
-  className?: string;
-
-
-  children?: React.ReactNode;
-}
-
-
-
-
-const Card: React.FC<CardProps> = ({
-  children,
-  title,
-  description,
-  className = '',
-  hover = true,
-  glass = true,
-}) => {
-  const baseClasses = 'rounded-xl p-6 transition-all duration-300';
-  const hoverClasses = hover ? 'transform hover:scale-105 hover:shadow-xl' : '';
-  const glassClasses = glass ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-slate-800';
-  
-  const classes = `${baseClasses} ${hoverClasses} ${glassClasses} ${className}`;
-  
+const Card = () => {
   return (
-
-
-    <div className={classes}>
-      {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
-      {description && <p className="text-gray-300 mb-4">{description}</p>}
-
-
-      {children}
-
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">Card</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export { Card };
 export default Card;
