@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 60,
+    title: "AI 2026: Safe Change Management — Blueprint",
+    excerpt: "Progressive delivery, eval gates, and audit‑ready approvals for agent changes in production.",
+    content: "Ship safer changes with progressive rollout strategies gated by evaluation harnesses. This blueprint covers risk tiers, policy‑as‑code approvals, rollback automation, and evidence capture to keep autonomy reliable at scale.",
+    author: "Alexandra Patel",
+    authorRole: "Chief Governance Architect",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Operations",
+    tags: ["Change Management", "Evaluations", "Progressive Delivery", "Governance"],
+    featured: true,
+    imageUrl: "/images/blog/safe-change-management-blueprint-2026.jpg",
+    slug: "ai-2026-safe-change-management-blueprint"
+  },
+  {
+    id: 61,
+    title: "AI 2026: Agentic Sandbox Patterns",
+    excerpt: "Isolation domains, least privilege, and runtime guards for safe tool use.",
+    content: "Design sandboxed agent execution with isolation domains, scoped credentials, rate‑limited tools, and runtime guardrails. Learn how to enforce least privilege, prevent escalation paths, and monitor policy violations with actionable telemetry.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Security",
+    tags: ["Sandboxing", "Zero Trust", "Tool Use", "Policy‑as‑Code"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-sandbox-patterns-2026.jpg",
+    slug: "ai-2026-agentic-sandbox-patterns"
+  },
+  {
     id: 58,
     title: "AI 2026: Production Evidence Hub — Blueprint",
     excerpt: "Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.",

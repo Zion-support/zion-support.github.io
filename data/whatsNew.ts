@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "safe-change-management-blueprint-2026",
+    title: "AI 2026: Safe Change Management — Blueprint",
+    description:
+      "Progressive delivery, eval gates, and audit‑ready approvals for agent changes in prod.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-safe-change-management-blueprint",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "agentic-sandbox-patterns-2026",
+    title: "AI 2026: Agentic Sandbox Patterns",
+    description:
+      "Isolation domains, least privilege, and runtime guards for safe tool use.",
+    ctaLabel: "Read Overview",
+    href: "/blog/ai-2026-agentic-sandbox-patterns",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "agent-platform-slos-best-practices-2026",
     title: "AI 2026: Agent Platform SLOs — Best Practices",
     description:
