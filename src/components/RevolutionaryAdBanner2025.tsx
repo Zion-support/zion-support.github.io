@@ -1,142 +1,190 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2025: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentOffer, setCurrentOffer] = useState(0);
+
+  const offers = [
+    {
+      title: "🚀 LIMITED TIME: Ultimate Tech Package",
+      description: "Get access to ALL revolutionary technologies for just $99/month",
+      originalPrice: "$999",
+      currentPrice: "$99",
+      discount: "90% OFF",
+      cta: "Claim Offer Now",
+      bg: "from-red-600 to-orange-600",
+      accent: "from-yellow-400 to-orange-400"
+    },
+    {
+      title: "🧠 AI Consciousness Access",
+      description: "Experience conscious AI systems - First 100 users get FREE access",
+      originalPrice: "$299",
+      currentPrice: "FREE",
+      discount: "100% OFF",
+      cta: "Get Free Access",
+      bg: "from-purple-600 to-pink-600",
+      accent: "from-pink-400 to-purple-400"
+    },
+    {
+      title: "⚛️ Quantum Computing Trial",
+      description: "Try our quantum reality engine for 30 days - No commitment",
+      originalPrice: "$499",
+      currentPrice: "$0",
+      discount: "FREE TRIAL",
+      cta: "Start Trial",
+      bg: "from-cyan-600 to-blue-600",
+      accent: "from-blue-400 to-cyan-400"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentOffer((prev) => (prev + 1) % offers.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [offers.length]);
+
+  const currentOfferData = offers[currentOffer];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gradient-to-r from-orange-900 via-red-900 to-pink-900 rounded-2xl p-8 mb-12 text-white"
-    >
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-orange-500/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-pink-500/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
+    <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${
+      isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+    }`}>
+      <div className={`absolute inset-0 bg-gradient-to-br ${currentOfferData.bg} transition-all duration-1000`}></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
       
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce"
-          >
-            🔥 LIMITED TIME OFFER • JANUARY 2025
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            Revolutionary Tech Access
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl opacity-90 max-w-4xl mx-auto mb-8"
-          >
-            Get exclusive access to the most revolutionary technologies before they go public. 
-            Transform your business and life with cutting-edge innovations.
-          </motion.p>
-        </div>
-
-        {/* Offer Features */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30"
-          >
-            <div className="text-5xl mb-4 text-center">⚡</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Instant Access</h3>
-            <p className="text-orange-100 text-center mb-4">
-              Get immediate access to all revolutionary technologies
-            </p>
-            <ul className="text-orange-200 space-y-1 text-sm mb-4">
-              <li>• 500+ Technologies</li>
-              <li>• Real-time Updates</li>
-              <li>• Priority Support</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-red-400/30"
-          >
-            <div className="text-5xl mb-4 text-center">🎯</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Exclusive Content</h3>
-            <p className="text-red-100 text-center mb-4">
-              Access to exclusive content not available anywhere else
-            </p>
-            <ul className="text-red-200 space-y-1 text-sm mb-4">
-              <li>• Beta Technologies</li>
-              <li>• Expert Insights</li>
-              <li>• Case Studies</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30"
-          >
-            <div className="text-5xl mb-4 text-center">🚀</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Future Ready</h3>
-            <p className="text-pink-100 text-center mb-4">
-              Stay ahead with the latest breakthrough innovations
-            </p>
-            <ul className="text-pink-200 space-y-1 text-sm mb-4">
-              <li>• Early Adoption</li>
-              <li>• Competitive Edge</li>
-              <li>• Future Proofing</li>
-            </ul>
-          </motion.div>
-        </div>
-
-        {/* Pricing and CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center bg-gradient-to-r from-orange-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8"
-        >
-          <div className="mb-6">
-            <div className="text-4xl font-bold text-orange-400 mb-2">FREE</div>
-            <div className="text-xl text-orange-200 mb-4">Limited Time Offer</div>
-            <div className="text-sm text-orange-300 line-through">Regular Price: $999/month</div>
-          </div>
-          
-          <div className="flex justify-center space-x-4 mb-6">
-            <a 
-              href="/pages/RevolutionaryTechShowcase2025"
-              className="bg-gradient-to-r from-orange-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse"
-            >
-              Get Free Access Now →
-            </a>
-            <a 
-              href="/pages/UltimateTechRevolution2025"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-orange-900 transition-all duration-300 font-semibold text-lg"
-            >
-              Learn More
-            </a>
-          </div>
-          
-          <div className="text-sm text-orange-200">
-            ⏰ Offer expires in 24 hours • No credit card required
-          </div>
-        </motion.div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full animate-bounce"></div>
+        <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-white/5 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-white/5 rounded-full animate-pulse delay-2000"></div>
       </div>
-    </motion.div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 left-10 text-6xl animate-pulse">🎯</div>
+        <div className="absolute top-20 right-20 text-4xl animate-bounce delay-500">⚡</div>
+        <div className="absolute bottom-20 left-20 text-5xl animate-pulse delay-1000">🔥</div>
+        <div className="absolute bottom-10 right-10 text-3xl animate-bounce delay-1500">💎</div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-12">
+        <div className="text-center text-white">
+          {/* Offer Indicators */}
+          <div className="flex justify-center space-x-2 mb-6">
+            {offers.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentOffer(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentOffer ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Main Offer Content */}
+          <div className="max-w-4xl mx-auto">
+            <div className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${currentOfferData.accent} rounded-full text-sm font-bold mb-6 animate-pulse`}>
+              ⚡ EXCLUSIVE OFFER • LIMITED TIME
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+              {currentOfferData.title}
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+              {currentOfferData.description}
+            </p>
+
+            {/* Price Display */}
+            <div className="flex justify-center items-center space-x-4 mb-8">
+              <div className="text-6xl md:text-7xl font-bold text-white">
+                {currentOfferData.currentPrice}
+              </div>
+              <div className="text-right">
+                <div className="text-2xl text-white/60 line-through">
+                  {currentOfferData.originalPrice}
+                </div>
+                <div className={`text-2xl font-bold bg-gradient-to-r ${currentOfferData.accent} bg-clip-text text-transparent`}>
+                  {currentOfferData.discount}
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+              <button className={`bg-gradient-to-r ${currentOfferData.accent} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105 animate-pulse`}>
+                {currentOfferData.cta} →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                Learn More
+              </button>
+            </div>
+
+            {/* Urgency Elements */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl mb-2">⏰</div>
+                <div className="text-sm font-semibold">Limited Time</div>
+                <div className="text-xs text-white/70">Offer expires soon</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl mb-2">👥</div>
+                <div className="text-sm font-semibold">Join 1M+ Users</div>
+                <div className="text-xs text-white/70">Already using our tech</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl mb-2">✅</div>
+                <div className="text-sm font-semibold">No Risk</div>
+                <div className="text-xs text-white/70">30-day guarantee</div>
+              </div>
+            </div>
+
+            {/* Countdown Timer */}
+            <div className="mt-8 bg-black/20 backdrop-blur-sm rounded-lg p-6 max-w-md mx-auto">
+              <div className="text-center">
+                <div className="text-lg font-semibold mb-4">⏰ Offer Expires In:</div>
+                <div className="grid grid-cols-4 gap-4">
+                  <div className="bg-white/10 rounded-lg p-3">
+                    <div className="text-2xl font-bold">23</div>
+                    <div className="text-xs">Hours</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-3">
+                    <div className="text-2xl font-bold">45</div>
+                    <div className="text-xs">Minutes</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-3">
+                    <div className="text-2xl font-bold">12</div>
+                    <div className="text-xs">Seconds</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-3">
+                    <div className="text-2xl font-bold">99</div>
+                    <div className="text-xs">MS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Close Button */}
+      <button className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors">
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+        <div 
+          className="h-full bg-white transition-all duration-100 ease-linear"
+          style={{ width: `${((currentOffer + 1) / offers.length) * 100}%` }}
+        ></div>
+      </div>
+    </div>
   );
 };
 

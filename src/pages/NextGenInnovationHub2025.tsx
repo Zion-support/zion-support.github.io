@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
   return (
@@ -8,272 +7,306 @@ const NextGenInnovationHub2025: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🧠 NEXT-GEN INNOVATION HUB • JANUARY 2025
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Next-Gen Innovation Hub 2025
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
-              Discover and explore the most revolutionary technologies that will shape humanity's future
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Welcome to the world's most advanced innovation laboratory. 
+              Discover, explore, and experience the cutting-edge technologies that are shaping tomorrow's world today.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Innovations →
+                Enter Innovation Hub →
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-                Join the Hub
+              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+                View Portfolio
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Innovation Categories */}
-      <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4">🚀 Innovation Categories</h2>
-          <p className="text-xl opacity-80">Explore cutting-edge technologies across all domains</p>
-        </motion.div>
-
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">🔬 Innovation Categories</h2>
+          <p className="text-xl opacity-80">Explore our comprehensive portfolio of revolutionary technologies</p>
+        </div>
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🤖</div>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI & Machine Learning</h3>
             <p className="text-cyan-100 mb-6 text-center">
-              Advanced artificial intelligence systems that learn, adapt, and evolve
+              Advanced artificial intelligence systems that learn, adapt, and evolve to solve complex problems.
             </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Neural network architectures</li>
-              <li>• Deep learning algorithms</li>
-              <li>• Natural language processing</li>
-              <li>• Computer vision systems</li>
-              <li>• Reinforcement learning</li>
-            </ul>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Explore AI →
-            </button>
-          </motion.div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Neural Networks</span>
+                <span className="text-cyan-400 font-semibold">50+ Models</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Deep Learning</span>
+                <span className="text-cyan-400 font-semibold">99.9% Accuracy</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Natural Language</span>
+                <span className="text-cyan-400 font-semibold">100+ Languages</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-semibold">
+                ACTIVE
+              </span>
+            </div>
+          </div>
 
           {/* Quantum Computing */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">⚛️</div>
+          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Revolutionary quantum systems that process information at unprecedented speeds
+            <p className="text-blue-100 mb-6 text-center">
+              Revolutionary quantum processors that solve problems impossible for classical computers.
             </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum algorithms</li>
-              <li>• Quantum cryptography</li>
-              <li>• Quantum machine learning</li>
-              <li>• Quantum simulation</li>
-              <li>• Quantum networking</li>
-            </ul>
-            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Enter Quantum Realm →
-            </button>
-          </motion.div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Qubits</span>
+                <span className="text-blue-400 font-semibold">1000+</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Processing Speed</span>
+                <span className="text-blue-400 font-semibold">10^15x Faster</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Applications</span>
+                <span className="text-blue-400 font-semibold">50+ Fields</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">
+                BETA
+              </span>
+            </div>
+          </div>
 
           {/* Biotechnology */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🧬</div>
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Cutting-edge biological technologies that enhance human capabilities
+              Cutting-edge biotech solutions for healthcare, agriculture, and environmental sustainability.
             </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Gene editing (CRISPR)</li>
-              <li>• Synthetic biology</li>
-              <li>• Neural interfaces</li>
-              <li>• Regenerative medicine</li>
-              <li>• Bio-computing</li>
-            </ul>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Explore Biotech →
-            </button>
-          </motion.div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Gene Editing</span>
+                <span className="text-emerald-400 font-semibold">CRISPR 3.0</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Synthetic Biology</span>
+                <span className="text-emerald-400 font-semibold">100+ Organisms</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Precision Medicine</span>
+                <span className="text-emerald-400 font-semibold">Personalized</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold">
+                RESEARCH
+              </span>
+            </div>
+          </div>
 
           {/* Space Technology */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🚀</div>
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Advanced technologies for space exploration and colonization
+            <p className="text-purple-100 mb-6 text-center">
+              Advanced space exploration technologies for interplanetary travel and colonization.
             </p>
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• Advanced propulsion</li>
-              <li>• Space habitats</li>
-              <li>• Asteroid mining</li>
-              <li>• Terraforming</li>
-              <li>• Interstellar travel</li>
-            </ul>
-            <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Reach for the Stars →
-            </button>
-          </motion.div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Propulsion</span>
+                <span className="text-purple-400 font-semibold">Fusion Drive</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Life Support</span>
+                <span className="text-purple-400 font-semibold">Closed Loop</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Missions</span>
+                <span className="text-purple-400 font-semibold">Mars Ready</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">
+                PROTOTYPE
+              </span>
+            </div>
+          </div>
+
+          {/* Renewable Energy */}
+          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Renewable Energy</h3>
+            <p className="text-green-100 mb-6 text-center">
+              Next-generation clean energy solutions for a sustainable future.
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Solar Efficiency</span>
+                <span className="text-green-400 font-semibold">95%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Storage</span>
+                <span className="text-green-400 font-semibold">Graphene</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Fusion Power</span>
+                <span className="text-green-400 font-semibold">Breakthrough</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                DEPLOYED
+              </span>
+            </div>
+          </div>
 
           {/* Virtual Reality */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">🥽</div>
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🥽</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Virtual Reality</h3>
-            <p className="text-violet-100 mb-6 text-center">
-              Immersive virtual environments that blur the line between real and digital
+            <p className="text-orange-100 mb-6 text-center">
+              Immersive virtual worlds with photorealistic graphics and haptic feedback.
             </p>
-            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
-              <li>• Haptic feedback</li>
-              <li>• Eye tracking</li>
-              <li>• Spatial computing</li>
-              <li>• Mixed reality</li>
-              <li>• Metaverse platforms</li>
-            </ul>
-            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
-              Enter Virtual World →
-            </button>
-          </motion.div>
-
-          {/* Blockchain */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-6xl mb-4 text-center">⛓️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Blockchain</h3>
-            <p className="text-yellow-100 mb-6 text-center">
-              Decentralized technologies that revolutionize trust and security
-            </p>
-            <ul className="text-yellow-200 space-y-2 mb-6 text-sm">
-              <li>• Smart contracts</li>
-              <li>• DeFi protocols</li>
-              <li>• NFT platforms</li>
-              <li>• DAO governance</li>
-              <li>• Web3 applications</li>
-            </ul>
-            <button className="w-full bg-white text-yellow-600 py-3 rounded-lg hover:bg-yellow-50 transition-colors font-semibold">
-              Explore Blockchain →
-            </button>
-          </motion.div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Resolution</span>
+                <span className="text-orange-400 font-semibold">8K per Eye</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Latency</span>
+                <span className="text-orange-400 font-semibold">&lt;1ms</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Haptic Feedback</span>
+                <span className="text-orange-400 font-semibold">Full Body</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">
+                AVAILABLE
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Innovation Stats */}
-      <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4">📊 Innovation Statistics</h2>
-          <p className="text-xl opacity-80">Our impact on the future of technology</p>
-        </motion.div>
-
+      {/* Innovation Statistics */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">📊 Innovation Impact</h2>
+          <p className="text-xl opacity-80">The numbers that showcase our innovation excellence</p>
+        </div>
+        
         <div className="grid md:grid-cols-4 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
-            <div className="text-xl font-semibold mb-2">Active Innovations</div>
-            <div className="text-gray-300">Technologies in development</div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="text-center"
-          >
+            <div className="text-lg opacity-80">Active Projects</div>
+          </div>
+          <div className="text-center">
+            <div className="text-5xl font-bold text-blue-400 mb-2">50+</div>
+            <div className="text-lg opacity-80">Countries Served</div>
+          </div>
+          <div className="text-center">
+            <div className="text-5xl font-bold text-emerald-400 mb-2">1000+</div>
+            <div className="text-lg opacity-80">Patents Filed</div>
+          </div>
+          <div className="text-center">
             <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-            <div className="text-xl font-semibold mb-2">Success Rate</div>
-            <div className="text-gray-300">Project completion rate</div>
-          </motion.div>
+            <div className="text-lg opacity-80">Success Rate</div>
+          </div>
+        </div>
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-center"
-          >
-            <div className="text-5xl font-bold text-emerald-400 mb-2">50+</div>
-            <div className="text-xl font-semibold mb-2">Countries</div>
-            <div className="text-gray-300">Global presence</div>
-          </motion.div>
+      {/* Research Labs */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">🔬 Research Laboratories</h2>
+          <p className="text-xl opacity-80">State-of-the-art facilities driving innovation forward</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+            <h3 className="text-2xl font-bold mb-4">AI Research Lab</h3>
+            <p className="text-cyan-100 mb-6">
+              Our flagship AI research facility houses the world's most advanced artificial intelligence systems, 
+              including the first conscious AI and quantum-enhanced neural networks.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                <span className="text-sm">1000+ AI Models</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                <span className="text-sm">24/7 Research Operations</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                <span className="text-sm">Global Collaboration Network</span>
+              </div>
+            </div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className="text-center"
-          >
-            <div className="text-5xl font-bold text-orange-400 mb-2">∞</div>
-            <div className="text-xl font-semibold mb-2">Possibilities</div>
-            <div className="text-gray-300">Infinite potential</div>
-          </motion.div>
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+            <h3 className="text-2xl font-bold mb-4">Quantum Computing Center</h3>
+            <p className="text-purple-100 mb-6">
+              The world's most advanced quantum computing facility, featuring cutting-edge quantum processors 
+              and breakthrough quantum algorithms that solve previously impossible problems.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-sm">1000+ Qubit Processors</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-sm">Cryogenic Infrastructure</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-sm">Quantum Error Correction</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30"
-        >
-          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
+        <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-cyan-400/30">
+          <h2 className="text-4xl font-bold mb-6">🚀 Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced innovation hub in the world. Collaborate with leading scientists, engineers, and visionaries to create the future.
+            Be part of the most advanced innovation ecosystem on the planet. 
+            Collaborate with world-class researchers, access cutting-edge technology, 
+            and help shape the future of humanity.
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join the Hub
+              Join Our Team
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-              Explore Projects
+            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+              Explore Opportunities
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
