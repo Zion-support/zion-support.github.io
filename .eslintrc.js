@@ -165,6 +165,7 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'spaced-comment': ['error', 'always'],
   },
+<<<<<<< HEAD
   settings: {
     react: {
       version: 'detect',
@@ -196,3 +197,20 @@ module.exports = {
     },
   ],
 };
+=======
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/'
+  ]
+};
+>>>>>>> origin/feat/blog-content-ads

@@ -47,6 +47,7 @@ export default function BlogPage() {
       featured: true
     },
     {
+<<<<<<< HEAD
       id: 'ai-governance-2025',
       title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
       excerpt: 'Implement measurable, reversible, and auditable controls for production AI.',
@@ -55,6 +56,16 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '8 min read',
       image: '/blog/ai-governance.jpg',
+=======
+      id: 'edge-ai-marketplaces',
+      title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+      excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-marketplaces.jpg',
+>>>>>>> origin/feat/blog-content-ads
       featured: true
     },
     {
@@ -282,6 +293,16 @@ export default function BlogPage() {
       readTime: '8 min read',
       image: '/blog/ai-governance.jpg'
 >>>>>>> origin/feat/blog-ai-governance
+    },
+    {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+      excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg'
     },
     {
       id: 'autonomous-it-operations',

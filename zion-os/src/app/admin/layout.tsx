@@ -1,14 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/blog-ai-governance
+=======
+>>>>>>> origin/feat/blog-content-ads
 import { ReactNode } from "react";
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/feat/blog-content-ads
       <div className="glass border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -19,18 +25,28 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               <h1 className="text-xl font-bold text-white">Admin Dashboard</h1>
             </div>
             <nav className="flex items-center space-x-6">
+<<<<<<< HEAD
               <a href="/admin/instances" className="text-white/70 hover:text-white font-medium">Instances</a>
               <a href="/admin/os-deploy" className="text-white/70 hover:text-white font-medium">Deploy</a>
               <a href="/" className="text-white/70 hover:text-white font-medium">← Back to Dashboard</a>
+=======
+              <a href="/admin/instances" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">Instances</a>
+              <a href="/admin/os-deploy" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">Deploy</a>
+              <a href="/" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">← Back to Dashboard</a>
+>>>>>>> origin/feat/blog-content-ads
             </nav>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/feat/blog-ai-governance
+=======
+>>>>>>> origin/feat/blog-content-ads
       <div className="py-8">{children}</div>
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -99,3 +115,5 @@ export default function AdminLayout({ children }: { children: ReactNode }) {retu
 =======
 
 >>>>>>> origin/feat/blog-ai-governance
+=======
+>>>>>>> origin/feat/blog-content-ads

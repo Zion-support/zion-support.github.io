@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import "./globals.css";
@@ -37,6 +38,11 @@ export const metadata = {title: "Zion OS - Launch Sovereign AI-Powered Digital E
                     Instances;
                   </a>;
                   <a href="/admin / os - deploy" className="text - white / 80 hover:text - white px - 3 py - 2 rounded - md text - sm font - medium transition - colors">;
+=======
+import "./globals.css";
+import type { ReactNode } from "react";
+import { Metadata } from "next";
+>>>>>>> origin/feat/blog-content-ads
 
 
 import "./globals.css",
