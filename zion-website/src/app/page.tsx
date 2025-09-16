@@ -33,14 +33,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Agent Risk Dashboard v1.0 —
-            <a href="/updates/agent-risk-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            New: Autonomous Knowledge Ops Suite v1.1 —
+            <a href="/updates/autonomous-knowledge-ops-suite-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Guide: Production Prompt Risk Scoring —
-            <a href="/updates/production-prompt-risk-scoring-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            ZionGPT 2.1 Real‑Time Reasoning —
+            <a href="/updates/ziongpt-2-1-real-time-reasoning" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">announcement</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: State of AI Evaluations (2026 Preview) —
-            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">preview</a>
+            State of Agent Observability (2026) —
+            <a href="/updates/state-of-agent-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -71,14 +71,12 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Agent Risk Dashboard v1.0 —
-            <a href="/updates/agent-risk-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: Autonomous Knowledge Ops Suite v1.1 —
+            <a href="/updates/autonomous-knowledge-ops-suite-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Guide: Production Prompt Risk Scoring —
-            <a href="/updates/production-prompt-risk-scoring-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
+            <a href="/updates/ziongpt-2-1-real-time-reasoning" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">ZionGPT 2.1</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">explore</a>
+            <a href="/updates/state-of-agent-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Observability 2026</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -144,12 +142,12 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: AI Governance Dashboard v5 —
-            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Autonomous Knowledge Ops Suite v1.1 —
+            <a href="/updates/autonomous-knowledge-ops-suite-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Real‑Time RAG Report</a>
+            Also read: <a href="/updates/state-of-agent-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Agent Observability 2026</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Reliability Scorecards</a>
+            <a href="/updates/ziongpt-2-1-real-time-reasoning" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">ZionGPT 2.1</a>
           </p>
         </div>
       </div>
