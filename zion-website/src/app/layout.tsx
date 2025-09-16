@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
 	title: 'Zion Tech Group - Leading AI and Technology Solutions',
 	description:
 		'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
@@ -43,6 +44,13 @@ export const metadata: Metadata = {
 	},
 	viewport: 'width=device-width, initial-scale=1',
 	themeColor: '#000000',
+=======
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description:
+    'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
+>>>>>>> origin/feature/updates-content
 }
 
 export default function RootLayout({
@@ -50,6 +58,7 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
+<<<<<<< HEAD
 	return (
 		<html lang="en" className="scroll-smooth">
 			<body className={`${inter.className} bg-black text-white antialiased`}>
@@ -59,4 +68,15 @@ export default function RootLayout({
 			</body>
 		</html>
 	)
+=======
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        <Navigation />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  )
+>>>>>>> origin/feature/updates-content
 }

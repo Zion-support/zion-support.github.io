@@ -195,6 +195,7 @@ export default function HomePage() {
               {
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
+<<<<<<< HEAD
                   'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
                 href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
               },
@@ -209,6 +210,20 @@ export default function HomePage() {
                 summary:
                   'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
                 href: '/blog/ai-2026-policy-as-code-production-blueprint'
+=======
+                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                href: '/updates/advanced-blockchain-course'
+              },
+              {
+                title: 'Community Challenge: Build a DApp',
+                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+                href: '/updates/dapp-challenge'
+              },
+              {
+                title: 'New Learning Path: Web3 Fundamentals',
+                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                href: '/updates/web3-learning-path'
+>>>>>>> origin/feature/updates-content
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
