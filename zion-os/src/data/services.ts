@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -11,6 +12,8 @@ export interface Service {id: string;
   features: string[];  pricing: {starter: string;
 
 >>>>>>> origin/merge-pr-12271
+=======
+>>>>>>> origin/feat/blog-ai-governance
 export interface Service {
   id: string;
   name: string;
@@ -557,6 +560,7 @@ export const getServiceById = (id: string) => {
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };
+<<<<<<< HEAD
 export interface Service {
   id: string;
   name: string;
@@ -582,3 +586,5 @@ export interface Service {
     address: string;
   };
 }
+=======
+>>>>>>> origin/feat/blog-ai-governance

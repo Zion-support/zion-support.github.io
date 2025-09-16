@@ -47,6 +47,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-governance-2025',
+      title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Implement measurable, reversible, and auditable controls for production AI.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -198,6 +209,7 @@ export default function BlogPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: 'ai-ops-cost-optimization-2025',
       title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
       excerpt: 'A 6-week rollout to reduce cloud and ops costs by 30–50% using AI-driven rightsizing and autoscaling.',
@@ -260,6 +272,16 @@ export default function BlogPage() {
       readTime: '7 min read',
       image: '/blog/ai-accessibility-2025.jpg'
 >>>>>>> origin/feature/content-sept15-2025
+=======
+      id: 'ai-governance-2025',
+      title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Field guide to programmable guardrails with real-time oversight.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg'
+>>>>>>> origin/feat/blog-ai-governance
     },
     {
       id: 'autonomous-it-operations',
@@ -456,6 +478,7 @@ export default function BlogPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             href="/blog/ai-ops-cost-optimization-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
@@ -488,6 +511,15 @@ export default function BlogPage() {
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
                 AG
 >>>>>>> origin/feature/blog-content-2025
+=======
+            href="/blog/ai-governance-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: AI Governance 2025: Practical Guardrails for Autonomous Systems"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                AG
+>>>>>>> origin/feat/blog-ai-governance
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -495,6 +527,7 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -514,6 +547,12 @@ export default function BlogPage() {
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   How to implement policy, evals, guardrails, and monitoring without slowing delivery.
 >>>>>>> origin/feature/blog-content-2025
+=======
+                  AI Governance 2025: Practical Guardrails for Autonomous Systems
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A field guide to measurable, reversible, and auditable controls for production AI.
+>>>>>>> origin/feat/blog-ai-governance
                 </p>
 =======
                   AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems
