@@ -1,5 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
@@ -283,6 +290,11 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
               Explore Applications
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import { motion } from 'framer-motion';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -511,9 +523,21 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-011f
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-011f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
             </button>
 =======
         <section className="text-center">
