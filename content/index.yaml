@@ -577,6 +577,22 @@ content_index:
         rollback_time: "< 5 min"
         audit_ready: true
 
+    - id: "ai-2026-agent-observability-blueprint"
+      type: "blog"
+      title: "AI 2026: Agent Observability Blueprint"
+      file_path: "/app/blog/ai-2026-agent-observability-blueprint/page.tsx"
+      url: "/blog/ai-2026-agent-observability-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Observability", "Evals", "Traces", "SLOs", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "12 min read"
+      metrics:
+        eval_pass_rate: "> 95%"
+        incident_mttd: "< 5 min"
+        audit_ready: true
+
     - id: "ai-2026-safe-rollouts-in-production"
       type: "blog"
       title: "AI 2026: Safe Rollouts in Production — Eval‑Gated Releases and Automated Rollback"
@@ -591,6 +607,22 @@ content_index:
         gate_pass_rate: "> 95%"
         rollback_time: "< 5 min"
         change_failure_rate: "< 3%"
+
+    - id: "ai-2026-runtime-guardrails-blueprint"
+      type: "blog"
+      title: "AI 2026: Runtime Guardrails Blueprint"
+      file_path: "/app/blog/ai-2026-runtime-guardrails-blueprint/page.tsx"
+      url: "/blog/ai-2026-runtime-guardrails-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Guardrails", "Policy-as-Code", "Safety", "Tooling", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "10 min read"
+      metrics:
+        rollback_time: "< 5 min"
+        policy_coverage: "> 90% high-risk tools"
+        audit_ready: true
 
     - id: "ai-2026-autonomous-evidence-led-operations"
       type: "blog"
