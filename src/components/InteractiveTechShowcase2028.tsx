@@ -1,147 +1,130 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2028: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('consciousness');
+  const [activeTab, setActiveTab] = useState(0);
 
-  const technologies = {
-    consciousness: {
-      title: 'Consciousness AI 2028',
-      icon: '🧠',
-      description: 'AI systems with genuine consciousness and self-awareness',
-      features: [
-        'Self-aware decision making',
-        'Emotional intelligence',
-        'Creative problem solving',
-        'Ethical reasoning'
-      ],
-      color: 'from-purple-600 to-pink-600'
+  const techCategories = [
+    {
+      title: "Neural Interfaces",
+      icon: "🧠",
+      description: "Direct brain-computer interfaces for thought-controlled computing",
+      features: ["Mind-controlled devices", "Memory enhancement", "Telepathic communication", "Consciousness transfer"]
     },
-    quantum: {
-      title: 'Quantum Reality 2028',
-      icon: '⚡',
-      description: 'Reality manipulation through quantum computing',
-      features: [
-        'Quantum consciousness',
-        'Reality manipulation',
-        'Infinite possibilities',
-        'Dimensional travel'
-      ],
-      color: 'from-cyan-600 to-blue-600'
+    {
+      title: "Quantum Reality",
+      icon: "⚛️",
+      description: "Quantum-powered reality simulation with infinite possibilities",
+      features: ["Virtual worlds", "Quantum computing", "Reality manipulation", "Parallel dimensions"]
     },
-    breakthrough: {
-      title: 'Ultimate Breakthrough 2028',
-      icon: '🚀',
-      description: 'Revolutionary technological advances',
-      features: [
-        'Consciousness AI',
-        'Quantum computing',
-        'Interdimensional tech',
-        'Neural reality'
-      ],
-      color: 'from-emerald-600 to-teal-600'
+    {
+      title: "Space Technology",
+      icon: "🌌",
+      description: "Advanced space travel and colonization technologies",
+      features: ["Warp drive", "Space habitats", "Terraforming AI", "Intergalactic travel"]
+    },
+    {
+      title: "Molecular Assembly",
+      icon: "🔬",
+      description: "Nanotechnology for molecular-level matter manipulation",
+      features: ["Matter replication", "Molecular manufacturing", "Resource creation", "Object assembly"]
+    },
+    {
+      title: "Energy Revolution",
+      icon: "⚡",
+      description: "Unlimited clean energy from zero-point and fusion sources",
+      features: ["Fusion power", "Wireless energy", "Zero-point energy", "Clean power"]
+    },
+    {
+      title: "Genetic Enhancement",
+      icon: "🧬",
+      description: "Advanced biotechnology for human capability enhancement",
+      features: ["CRISPR 3.0", "Capability enhancement", "Lifespan extension", "Disease elimination"]
     }
-  };
+  ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE SHOWCASE • 2028
-          </div>
-          <h2 className="text-5xl font-bold mb-6">🚀 Interactive Technology Showcase 2028</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our revolutionary 2028 technologies through interactive demonstrations
-          </p>
-        </div>
+    <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 mb-12">
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-bold text-white mb-4">
+          Interactive Tech Showcase 2028-2030
+        </h2>
+        <p className="text-xl text-gray-300">
+          Explore the revolutionary technologies that will transform our world
+        </p>
+      </div>
 
-        {/* Interactive Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(technologies).map(([key, tech]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
-                activeTab === key
-                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                  : 'bg-white/20 text-white hover:bg-white/30'
-              }`}
-            >
-              {tech.icon} {tech.title}
-            </button>
-          ))}
-        </div>
+      {/* Tab Navigation */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {techCategories.map((category, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveTab(index)}
+            className={`px-6 py-3 rounded-full font-bold transition-all duration-300 ${
+              activeTab === index
+                ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-black'
+                : 'bg-gray-700 text-white hover:bg-gray-600'
+            }`}
+          >
+            <span className="mr-2">{category.icon}</span>
+            {category.title}
+          </button>
+        ))}
+      </div>
 
-        {/* Active Technology Display */}
-        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="text-8xl mb-6 text-center md:text-left">
-                {technologies[activeTab as keyof typeof technologies].icon}
-              </div>
-              <h3 className="text-3xl font-bold mb-4">
-                {technologies[activeTab as keyof typeof technologies].title}
-              </h3>
-              <p className="text-xl opacity-90 mb-6">
-                {technologies[activeTab as keyof typeof technologies].description}
-              </p>
-              <div className="space-y-3">
-                {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                    <span className="text-white/90">{feature}</span>
-                  </div>
-                ))}
-              </div>
+      {/* Active Tab Content */}
+      <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <div className="text-6xl mb-4">{techCategories[activeTab].icon}</div>
+            <h3 className="text-3xl font-bold text-white mb-4">
+              {techCategories[activeTab].title}
+            </h3>
+            <p className="text-xl text-gray-300 mb-6">
+              {techCategories[activeTab].description}
+            </p>
+            <div className="space-y-3">
+              {techCategories[activeTab].features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                  <span className="text-gray-300">{feature}</span>
+                </div>
+              ))}
             </div>
-            <div className="bg-gradient-to-br from-white/20 to-white/10 rounded-xl p-8 text-center">
-              <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
-              <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-lg p-6 mb-6">
-                <div className="text-4xl mb-4">🎮</div>
-                <p className="text-sm opacity-90">
-                  Experience this technology through our interactive demonstration
-                </p>
-              </div>
-              <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                Try Interactive Demo →
-              </button>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="w-64 h-64 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-full flex items-center justify-center text-8xl animate-pulse">
+              {techCategories[activeTab].icon}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Technology Stats */}
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+      {/* Technology Timeline */}
+      <div className="mt-8 bg-black/30 backdrop-blur-sm rounded-2xl p-6">
+        <h3 className="text-2xl font-bold text-white mb-6 text-center">
+          Technology Evolution Timeline
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
-            <div className="text-4xl font-bold text-purple-300 mb-2">∞</div>
-            <h3 className="text-lg font-semibold mb-2">Possibilities</h3>
-            <p className="text-purple-200 text-sm">Infinite potential for innovation</p>
+            <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-2xl font-bold text-black mx-auto mb-4">
+              2028
+            </div>
+            <h4 className="text-lg font-bold text-white mb-2">Neural Revolution</h4>
+            <p className="text-gray-300 text-sm">Brain-computer interfaces become mainstream</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-300 mb-2">100%</div>
-            <h3 className="text-lg font-semibold mb-2">Accuracy</h3>
-            <p className="text-cyan-200 text-sm">Perfect precision in all operations</p>
+            <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center text-2xl font-bold text-black mx-auto mb-4">
+              2029
+            </div>
+            <h4 className="text-lg font-bold text-white mb-2">Singularity</h4>
+            <p className="text-gray-300 text-sm">AI achieves superhuman intelligence</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-300 mb-2">24/7</div>
-            <h3 className="text-lg font-semibold mb-2">Availability</h3>
-            <p className="text-emerald-200 text-sm">Continuous operation and support</p>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <h3 className="text-2xl font-bold mb-4">Ready to Experience the Future?</h3>
-          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-            Dive deeper into these revolutionary technologies and discover how they will transform your world
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`/pages/${activeTab === 'consciousness' ? 'ConsciousnessComputingRevolution2028' : activeTab === 'quantum' ? 'QuantumReality2028' : 'UltimateTechBreakthrough2028'}`} className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore {technologies[activeTab as keyof typeof technologies].title} →
-            </a>
-            <a href="/pages/UltimateTechBreakthrough2028" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              View All Technologies →
-            </a>
+            <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-2xl font-bold text-black mx-auto mb-4">
+              2030
+            </div>
+            <h4 className="text-lg font-bold text-white mb-2">Transcendence</h4>
+            <p className="text-gray-300 text-sm">Humanity transcends physical limitations</p>
           </div>
         </div>
       </div>

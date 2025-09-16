@@ -58,6 +58,14 @@ import QuantumRealityEngine2026 from './src/pages/QuantumRealityEngine2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import MetaverseRevolution2026 from './src/pages/MetaverseRevolution2026';
+// New 2028-2030 Revolutionary Content
+import UltimateTechRevolution2028 from './src/pages/UltimateTechRevolution2028';
+import RevolutionaryAIBreakthrough2028 from './src/pages/RevolutionaryAIBreakthrough2028';
+import NextGenSpaceTech2028 from './src/pages/NextGenSpaceTech2028';
+import UltimateTechRevolution2029 from './src/pages/UltimateTechRevolution2029';
+import UltimateTechRevolution2030 from './src/pages/UltimateTechRevolution2030';
+import RevolutionaryContentBanner2028 from './src/components/RevolutionaryContentBanner2028';
+import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 
 export default function App(): JSX.Element {
   return (
@@ -70,6 +78,14 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* ULTRA-PROMINENT NEW 2028-2030 CONTENT BANNER */}
+                <RevolutionaryContentBanner2028 />
+
+                {/* INTERACTIVE TECH SHOWCASE 2028-2030 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2028 />
+                </div>
+
                 {/* ULTRA-PROMINENT NEW 2027 CONTENT BANNER */}
                 <RevolutionaryContentBanner2027 />
 
@@ -104,30 +120,30 @@ export default function App(): JSX.Element {
                   <div className="relative z-10">
                     <div className="flex items-center justify-center space-x-4 mb-6">
                       <span className="text-4xl animate-bounce">🌟</span>
-                      <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026-2032</h3>
+                      <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026-2030</h3>
                       <span className="text-4xl animate-bounce">🌟</span>
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
                       Experience the most advanced technological breakthroughs that will reshape the future of humanity
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
+                      <a href="/pages/UltimateTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🚀 Ultimate Tech Revolution 2030 →
+                      </a>
+                      <a href="/pages/UltimateTechRevolution2029" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🚀 Ultimate Tech Revolution 2029 →
+                      </a>
+                      <a href="/pages/UltimateTechRevolution2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🚀 Ultimate Tech Revolution 2028 →
+                      </a>
+                      <a href="/pages/RevolutionaryAIBreakthrough2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🧠 Revolutionary AI Breakthrough 2028 →
+                      </a>
+                      <a href="/pages/NextGenSpaceTech2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌌 Next-Gen Space Tech 2028 →
+                      </a>
                       <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🚀 Ultimate Tech Revolution 2027 →
-                      </a>
-                      <a href="/pages/RevolutionaryAIBreakthrough2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🧠 Revolutionary AI Breakthrough 2027 →
-                      </a>
-                      <a href="/pages/NextGenSpaceTech2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🌌 Next-Gen Space Tech 2027 →
-                      </a>
-                      <a href="/pages/RevolutionaryTechBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🚀 Revolutionary Tech Breakthrough →
-                      </a>
-                      <a href="/pages/UltimateAIConsciousness2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🧠 Ultimate AI Consciousness →
-                      </a>
-                      <a href="/pages/QuantumRealityEngine2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        ⚛️ Quantum Reality Engine →
                       </a>
                     </div>
                   </div>
@@ -153,6 +169,13 @@ export default function App(): JSX.Element {
               </main>
             </div>
           } />
+          
+          {/* New 2028-2030 Revolutionary Content Routes */}
+          <Route path="/pages/UltimateTechRevolution2028" element={<UltimateTechRevolution2028 />} />
+          <Route path="/pages/RevolutionaryAIBreakthrough2028" element={<RevolutionaryAIBreakthrough2028 />} />
+          <Route path="/pages/NextGenSpaceTech2028" element={<NextGenSpaceTech2028 />} />
+          <Route path="/pages/UltimateTechRevolution2029" element={<UltimateTechRevolution2029 />} />
+          <Route path="/pages/UltimateTechRevolution2030" element={<UltimateTechRevolution2030 />} />
           
           {/* New 2027 Revolutionary Content Routes */}
           <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
