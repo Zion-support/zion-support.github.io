@@ -323,6 +323,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Promo: Governed Release Engineering (NEW) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New blog</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Governed Release Engineering</h2>
+              <p className="text-gray-600 mt-2">Policy‑as‑code approvals, eval gates, and evidence‑backed scorecards.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-governed-release-engineering" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Article</Link>
+              <Link href="/blog/ai-2026-eval-gated-release-runbook" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Release Runbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* New Promo: Agentic Platform Safety Blueprint (New) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
