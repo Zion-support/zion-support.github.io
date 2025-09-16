@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "operational-evals-blueprint-2026",
+    title: "AI 2026: Operational Evals — Blueprint",
+    description:
+      "Ship faster with eval gates, rapid rollbacks, and audit‑ready evidence.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-operational-evals-blueprint",
+    emoji: "🧩",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "agent-benchmarking-best-practices-2026",
     title: "AI 2026: Agent Benchmarking Best Practices",
     description:
