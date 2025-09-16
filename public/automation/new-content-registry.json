@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "title": "Operational Maturity Models for Agentic Systems (2026)",
+      "href": "/blog/ai-2026-operational-maturity-models-for-agentic-systems.md",
+      "desc": "Evidence-first maturity model to safely scale autonomous agents.",
+      "createdAt": "2025-09-16T18:10:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Resilient Agent Architectures (2026)",
+      "href": "/blog/ai-2026-resilient-agent-architectures.md",
+      "desc": "Patterns for resilient, cost-aware, and governable agent systems.",
+      "createdAt": "2025-09-16T18:12:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Real-Time Tooling Approvals (2026)",
+      "href": "/blog/ai-2026-governed-real-time-tooling-approvals.md",
+      "desc": "Gate sensitive actions with runtime approvals without slowing teams.",
+      "createdAt": "2025-09-16T18:14:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "AI 2026: Operational Guardrails Integration",
       "href": "/blog/ai-2026-operational-guardrails-integration.md",
       "desc": "Wire policy checks, eval gates, and rollback into daily delivery.",

@@ -1,8 +1,8 @@
+import fs from 'fs';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Layout from './components/Layout';
-import fs from 'fs';
 import path from 'path';
+import Layout from './components/Layout';
 const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
 
 const Home = ({ featuredItems = [] }) => {
