@@ -106,6 +106,13 @@ export function Navigation() {
 							)}
 						</div>
 
+						<Link
+							href="/blog"
+							className="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium"
+						>
+							📰 Blog
+						</Link>
+
 						<a
 							href="/docs"
 							className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
@@ -251,6 +258,13 @@ export function Navigation() {
 								</a>
 							</div>
 							{/* Other Links */}
+							<Link
+								href="/blog"
+								className="block px-3 py-2 text-blue-400 hover:text-blue-300 hover:bg-white/10 rounded-md transition-colors"
+								onClick={() => setIsMobileMenuOpen(false)}
+							>
+								📰 Blog
+							</Link>
 							<a
 								href="/docs"
 								className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"

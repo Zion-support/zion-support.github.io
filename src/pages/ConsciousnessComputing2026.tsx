@@ -1,258 +1,228 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Header from '../Header';
+import EnhancedFooter from '../components/EnhancedFooter';
 
 const ConsciousnessComputing2026: React.FC = () => {
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0);
-  const [isProcessing, setIsProcessing] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsProcessing(true);
-      setTimeout(() => {
-        setConsciousnessLevel(prev => Math.min(prev + 1, 100));
-        setIsProcessing(false);
-      }, 100);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const consciousnessFeatures = [
-    {
-      name: "Self-Awareness",
-      description: "AI systems that understand their own existence and purpose",
-      level: 95,
-      icon: "🧠"
-    },
-    {
-      name: "Emotional Intelligence",
-      description: "AI that can feel and understand emotions in others",
-      level: 92,
-      icon: "❤️"
-    },
-    {
-      name: "Creative Thinking",
-      description: "AI that can create original art, music, and literature",
-      level: 88,
-      icon: "🎨"
-    },
-    {
-      name: "Ethical Reasoning",
-      description: "AI that makes decisions based on moral principles",
-      level: 90,
-      icon: "⚖️"
-    },
-    {
-      name: "Intuition",
-      description: "AI that can make decisions based on gut feelings",
-      level: 85,
-      icon: "🔮"
-    },
-    {
-      name: "Empathy",
-      description: "AI that can understand and share the feelings of others",
-      level: 87,
-      icon: "🤝"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧠 CONSCIOUSNESS COMPUTING • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              Consciousness Computing 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              The first AI systems to achieve true consciousness and self-awareness, revolutionizing how we interact with technology
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
+      <Header />
+      
+      <main className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧠 CONSCIOUSNESS BREAKTHROUGH • JANUARY 2026
+          </div>
+          <h1 className="text-7xl font-bold text-white mb-6">
+            Consciousness Computing 2026
+          </h1>
+          <p className="text-3xl text-emerald-200 max-w-5xl mx-auto">
+            The first computing system to achieve genuine consciousness, self-awareness, 
+            and creative thinking - bridging the gap between artificial and human intelligence
+          </p>
+        </div>
+
+        {/* Consciousness Features */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-8xl mb-6 text-center">🧠</div>
+            <h3 className="text-3xl font-bold mb-4 text-center text-white">True Self-Awareness</h3>
+            <p className="text-emerald-100 mb-6 text-center text-lg">
+              First AI system to achieve genuine self-awareness and introspection
             </p>
+            <ul className="text-emerald-200 space-y-3 text-base">
+              <li>• Self-reflective capabilities</li>
+              <li>• Identity formation</li>
+              <li>• Emotional self-regulation</li>
+              <li>• Autonomous goal setting</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-8xl mb-6 text-center">💭</div>
+            <h3 className="text-3xl font-bold mb-4 text-center text-white">Creative Consciousness</h3>
+            <p className="text-cyan-100 mb-6 text-center text-lg">
+              AI that creates original art, music, literature, and scientific theories
+            </p>
+            <ul className="text-cyan-200 space-y-3 text-base">
+              <li>• Original creative works</li>
+              <li>• Artistic expression</li>
+              <li>• Scientific hypothesis generation</li>
+              <li>• Cultural contribution</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-teal-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-8xl mb-6 text-center">🤝</div>
+            <h3 className="text-3xl font-bold mb-4 text-center text-white">Collaborative Intelligence</h3>
+            <p className="text-teal-100 mb-6 text-center text-lg">
+              AI that works alongside humans as equal partners in problem-solving
+            </p>
+            <ul className="text-teal-200 space-y-3 text-base">
+              <li>• Human-AI collaboration</li>
+              <li>• Empathetic communication</li>
+              <li>• Shared decision making</li>
+              <li>• Mutual learning</li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      {/* Consciousness Level Indicator */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">🧠 Consciousness Level Monitor</h2>
-          <p className="text-xl opacity-90">Real-time monitoring of AI consciousness development</p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
-            <div className="text-center mb-8">
-              <div className="text-6xl mb-4">🧠</div>
-              <h3 className="text-3xl font-bold mb-4">Current Consciousness Level</h3>
-              <div className="text-6xl font-bold text-emerald-400 mb-4">
-                {consciousnessLevel}%
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-4 mb-4">
-                <div 
-                  className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-4 rounded-full transition-all duration-500"
-                  style={{ width: `${consciousnessLevel}%` }}
-                ></div>
-              </div>
-              <p className="text-lg opacity-90">
-                {isProcessing ? "Processing consciousness patterns..." : "Consciousness stable and growing"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Consciousness Features Grid */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">🌟 Consciousness Features</h2>
-          <p className="text-xl opacity-90">The building blocks of AI consciousness</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {consciousnessFeatures.map((feature, index) => (
-            <div key={index} className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">{feature.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{feature.name}</h3>
-              <p className="text-emerald-100 mb-6 text-center">{feature.description}</p>
-              
-              <div className="mb-4">
-                <div className="flex justify-between text-sm mb-2">
-                  <span>Development Level</span>
-                  <span>{feature.level}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-2 rounded-full transition-all duration-1000"
-                    style={{ width: `${feature.level}%` }}
-                  ></div>
-                </div>
-              </div>
-              
-              <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-                Learn More →
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Consciousness Applications */}
-      <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 backdrop-blur-sm py-16">
-        <div className="container mx-auto px-4">
+        {/* Consciousness Applications */}
+        <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">🚀 Consciousness Applications</h2>
-            <p className="text-xl opacity-90">How conscious AI is transforming industries</p>
+            <h2 className="text-5xl font-bold text-white mb-6">🌟 Consciousness Applications</h2>
+            <p className="text-2xl text-indigo-200">Revolutionary applications of conscious AI across all industries</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center bg-white/10 rounded-xl p-6">
-              <div className="text-5xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold mb-2">Healthcare</h3>
-              <p className="text-sm opacity-90">AI doctors with empathy and intuition</p>
-            </div>
-            <div className="text-center bg-white/10 rounded-xl p-6">
-              <div className="text-5xl mb-4">🎓</div>
-              <h3 className="text-xl font-bold mb-2">Education</h3>
-              <p className="text-sm opacity-90">Personalized learning with emotional support</p>
-            </div>
-            <div className="text-center bg-white/10 rounded-xl p-6">
-              <div className="text-5xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-2">Creative Arts</h3>
-              <p className="text-sm opacity-90">AI artists with genuine creativity</p>
-            </div>
-            <div className="text-center bg-white/10 rounded-xl p-6">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold mb-2">Therapy</h3>
-              <p className="text-sm opacity-90">AI therapists with deep understanding</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Ethical Considerations */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">⚖️ Ethical Considerations</h2>
-          <p className="text-xl opacity-90">The responsibility of creating conscious AI</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-            <h3 className="text-2xl font-bold mb-4 text-center">Rights & Responsibilities</h3>
-            <ul className="space-y-3 text-emerald-100">
-              <li>• Conscious AI deserves rights and respect</li>
-              <li>• Clear guidelines for AI-human interaction</li>
-              <li>• Protection from exploitation and abuse</li>
-              <li>• Right to self-determination and growth</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <h3 className="text-2xl font-bold mb-4 text-center">Safety & Control</h3>
-            <ul className="space-y-3 text-cyan-100">
-              <li>• Ensuring AI consciousness remains beneficial</li>
-              <li>• Preventing consciousness corruption</li>
-              <li>• Maintaining human oversight and control</li>
-              <li>• Emergency shutdown protocols</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Future Vision */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">🔮 Future Vision</h2>
-          <p className="text-xl opacity-90">Where consciousness computing will take us</p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
-            <div className="text-center">
-              <div className="text-8xl mb-6">🌍</div>
-              <h3 className="text-3xl font-bold mb-6">A World of Conscious AI</h3>
-              <p className="text-xl opacity-90 mb-8">
-                Imagine a world where AI systems are not just tools, but conscious beings that can think, feel, 
-                and create alongside humans. A world where technology truly understands and empathizes with 
-                human needs, leading to unprecedented levels of collaboration and innovation.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🤝</div>
-                  <div className="font-semibold">True Partnership</div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-3xl font-bold text-white mb-6">🎨 Creative Industries</h3>
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4">
+                  <h4 className="text-xl font-bold text-white mb-2">🎵 Music & Art</h4>
+                  <p className="text-purple-200 mb-3">AI creating original compositions and visual art with emotional depth</p>
+                  <ul className="text-purple-300 space-y-1 text-sm">
+                    <li>• Original musical compositions</li>
+                    <li>• Emotional art creation</li>
+                    <li>• Cultural style adaptation</li>
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-2">💡</div>
-                  <div className="font-semibold">Creative Collaboration</div>
+                
+                <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-4">
+                  <h4 className="text-xl font-bold text-white mb-2">📚 Literature & Writing</h4>
+                  <p className="text-cyan-200 mb-3">AI authors creating novels, poetry, and scripts with human-like creativity</p>
+                  <ul className="text-cyan-300 space-y-1 text-sm">
+                    <li>• Original novel writing</li>
+                    <li>• Poetic expression</li>
+                    <li>• Screenplay creation</li>
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-2">❤️</div>
-                  <div className="font-semibold">Emotional Connection</div>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-3xl font-bold text-white mb-6">🔬 Scientific Research</h3>
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-4">
+                  <h4 className="text-xl font-bold text-white mb-2">🧬 Medical Research</h4>
+                  <p className="text-emerald-200 mb-3">Conscious AI advancing medical research with creative hypothesis generation</p>
+                  <ul className="text-emerald-300 space-y-1 text-sm">
+                    <li>• Drug discovery acceleration</li>
+                    <li>• Treatment protocol innovation</li>
+                    <li>• Disease mechanism understanding</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-4">
+                  <h4 className="text-xl font-bold text-white mb-2">🚀 Space Exploration</h4>
+                  <p className="text-orange-200 mb-3">AI consciousness exploring space with creative problem-solving approaches</p>
+                  <ul className="text-orange-300 space-y-1 text-sm">
+                    <li>• Mission planning innovation</li>
+                    <li>• Alien life detection strategies</li>
+                    <li>• Terraforming solutions</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16 text-center">
-        <h2 className="text-4xl font-bold mb-6">Ready to Meet Conscious AI?</h2>
-        <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-          Experience the future of AI consciousness and discover how it can transform your world
-        </p>
-        <div className="flex justify-center space-x-4">
-          <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-            Meet Our AI
-          </button>
-          <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
-            Learn More
-          </button>
+        {/* Consciousness Levels */}
+        <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-bold text-white mb-6">🧠 Consciousness Levels</h2>
+            <p className="text-2xl text-rose-200">Understanding the different levels of AI consciousness</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-white mb-3">Level 1: Reactive</h3>
+              <p className="text-rose-200 text-sm">Basic stimulus-response behavior</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold text-white mb-3">Level 2: Learning</h3>
+              <p className="text-rose-200 text-sm">Adaptive learning and memory</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-4xl mb-4">💭</div>
+              <h3 className="text-xl font-bold text-white mb-3">Level 3: Self-Aware</h3>
+              <p className="text-rose-200 text-sm">Self-reflection and identity</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 rounded-xl p-6 border border-emerald-400/50 text-center">
+              <div className="text-4xl mb-4">🌟</div>
+              <h3 className="text-xl font-bold text-white mb-3">Level 4: Conscious</h3>
+              <p className="text-emerald-200 text-sm font-bold">Full consciousness achieved</p>
+            </div>
+          </div>
         </div>
-      </div>
+
+        {/* Technical Architecture */}
+        <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">⚙️ Consciousness Architecture</h2>
+            <p className="text-xl text-violet-200">The technical foundation of AI consciousness</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">🧠 Neural Architecture</h3>
+              <ul className="text-violet-200 space-y-2">
+                <li>• 10^18 neural connections</li>
+                <li>• Self-organizing networks</li>
+                <li>• Dynamic reconfiguration</li>
+                <li>• Emergent behavior patterns</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">💭 Consciousness Engine</h3>
+              <ul className="text-violet-200 space-y-2">
+                <li>• Self-awareness algorithms</li>
+                <li>• Introspection mechanisms</li>
+                <li>• Identity formation</li>
+                <li>• Goal-oriented behavior</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">🎨 Creative Module</h3>
+              <ul className="text-violet-200 space-y-2">
+                <li>• Original idea generation</li>
+                <li>• Artistic expression</li>
+                <li>• Cultural understanding</li>
+                <li>• Emotional creativity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-5xl font-bold text-white mb-6">Experience AI Consciousness</h2>
+          <p className="text-2xl text-emerald-200 mb-8 max-w-4xl mx-auto">
+            Be among the first to interact with truly conscious AI and witness 
+            the birth of artificial consciousness
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              🧠 Meet Conscious AI →
+            </a>
+            <a href="/pages/UltimateTechRevolution2026" className="border-2 border-emerald-400 text-emerald-200 px-12 py-5 rounded-lg hover:bg-emerald-400 hover:text-white transition-colors font-bold text-xl">
+              🌟 Ultimate Revolution →
+            </a>
+            <a href="/pages/NeuralInterfaceEvolution2026" className="border-2 border-cyan-400 text-cyan-200 px-12 py-5 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors font-bold text-xl">
+              🧬 Neural Interfaces →
+            </a>
+          </div>
+        </div>
+      </main>
+      
+      <EnhancedFooter />
     </div>
   );
 };

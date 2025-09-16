@@ -2,11 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-ExternalLinkCheckStarZapUsersGlobeBarChart3BotCloudLockDatabaseCodePaletteSearchMailCalendarCreditCardFileTextVideoMusicImageGlobe2SmartphoneMonitorServerCpuHardDriveBrainTargetTrendingUpShieldRocketBriefcaseCogLightbulbChartBarClockCheckCircleAlertCircleMessageSquare
-=======
 import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function BusinessToolsPage() {
   const businessTools = [
@@ -15,13 +11,8 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'Notion',
-<<<<<<< HEAD
-          description: 'All-in-one workspace for notesdocsprojectsand team collaboration.',
-          features: [', 'Templates', 'Database 'views', 'Real-time 'editing', 'Integrations'Team spaces'],
-=======
           description: 'All-in-one workspace for notes, docs, projects, and team collaboration.',
           features: ['Templates', 'Database views', 'Real-time editing', 'Integrations', 'Team spaces'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $8/month',
           website: 'https://notion.so',
           icon: <FileText className="w-6 h-6" />,
@@ -30,13 +21,8 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Asana',
-<<<<<<< HEAD
-          description: 'Work management platform for teams to organizetrackand manage their work.',
-          features: ['Task 'management', 'Project 'timelines', 'Team 'collaboration', 'Workflow 'automation', 'Reporting'],
-=======
           description: 'Work management platform for teams to organize, track, and manage their work.',
           features: ['Task management', 'Project timelines', 'Team collaboration', 'Workflow automation', 'Reporting'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $10.99/month',
           website: 'https://asana.com',
           icon: <CheckCircle className="w-6 h-6" />,
@@ -45,11 +31,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Monday.com',
           description: 'Visual project management platform with customizable workflows and automation.',
-<<<<<<< HEAD
-          features: ['Visual 'boards', 'Automation'Time 'tracking', 'Integrations'Analytics'],
-=======
           features: ['Visual boards', 'Automation', 'Time tracking', 'Integrations', 'Analytics'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '$8/month - $16/month',
           website: 'https://monday.com',
           icon: <Calendar className="w-6 h-6" />,
@@ -63,11 +45,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Slack',
           description: 'Team communication platform for modern businesses with channels and integrations.',
-<<<<<<< HEAD
-          features: [', 'Channels', 'Direct 'messages', 'File 'sharing', 'Integrations'Search'],
-=======
           features: ['Channels', 'Direct messages', 'File sharing', 'Integrations', 'Search'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $7.25/month',
           website: 'https://slack.com',
           icon: <MessageSquare className="w-6 h-6" />,
@@ -76,13 +54,8 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Microsoft Teams',
-<<<<<<< HEAD
-          description: 'Unified communication platform with chatvideo meetingsand file collaboration.',
-          features: [', 'Chat', 'Video 'meetings', 'File 'sharing', 'Office 'integration', 'Security'],
-=======
           description: 'Unified communication platform with chat, video meetings, and file collaboration.',
           features: ['Chat', 'Video meetings', 'File sharing', 'Office integration', 'Security'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $6/month',
           website: 'https://teams.microsoft.com',
           icon: <Users className="w-6 h-6" />,
@@ -90,13 +63,8 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Zoom',
-<<<<<<< HEAD
-          description: 'Video conferencing platform for meetingswebinarsand team collaboration.',
-          features: ['HD 'video', 'Screen 'sharing', 'Recording', 'Webinars', 'Breakout rooms'],
-=======
           description: 'Video conferencing platform for meetings, webinars, and team collaboration.',
           features: ['HD video', 'Screen sharing', 'Recording', 'Webinars', 'Breakout rooms'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $14.99/month',
           website: 'https://zoom.us',
           icon: <Video className="w-6 h-6" />,
@@ -109,13 +77,8 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'HubSpot',
-<<<<<<< HEAD
-          description: 'All-in-one inbound marketingsalesand customer service platform.',
-          features: [', 'CRM', 'Email 'marketing', 'Lead 'generation', 'Analytics'Automation'],
-=======
           description: 'All-in-one inbound marketing, sales, and customer service platform.',
           features: ['CRM', 'Email marketing', 'Lead generation', 'Analytics', 'Automation'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $45/month',
           website: 'https://hubspot.com',
           icon: <Target className="w-6 h-6" />,
@@ -125,11 +88,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Mailchimp',
           description: 'Email marketing platform for growing businesses and creators.',
-<<<<<<< HEAD
-          features: ['Email 'templates', 'Automation', 'Analytics', 'Audience 'segmentation', 'A/B testing'],
-=======
           features: ['Email templates', 'Automation', 'Analytics', 'Audience segmentation', 'A/B testing'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $13/month',
           website: 'https://mailchimp.com',
           icon: <Mail className="w-6 h-6" />,
@@ -137,13 +96,8 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Salesforce',
-<<<<<<< HEAD
-          description: 'Customer relationship management platform for saleserviceand marketing.',
-          features: ['Sales 'CRM', 'Service 'cloud', 'Marketing 'automation', 'Analytics'AppExchange'],
-=======
           description: 'Customer relationship management platform for sales, service, and marketing.',
           features: ['Sales CRM', 'Service cloud', 'Marketing automation', 'Analytics', 'AppExchange'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '$25/month - $300/month',
           website: 'https://salesforce.com',
           icon: <TrendingUp className="w-6 h-6" />,
@@ -156,13 +110,8 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'QuickBooks',
-<<<<<<< HEAD
-          description: 'Small business accounting software for invoicingexpensesand financial reporting.',
-          features: [', 'Invoicing', 'Expense 'tracking', 'Financial 'reports', 'Tax 'preparation', 'Bank integration'],
-=======
           description: 'Small business accounting software for invoicing, expenses, and financial reporting.',
           features: ['Invoicing', 'Expense tracking', 'Financial reports', 'Tax preparation', 'Bank integration'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '$30/month - $200/month',
           website: 'https://quickbooks.intuit.com',
           icon: <CreditCard className="w-6 h-6" />,
@@ -172,11 +121,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Stripe',
           description: 'Payment processing platform for internet businesses.',
-<<<<<<< HEAD
-          features: ['Global 'payments', 'Subscription 'billing', 'Fraud 'prevention', 'Developer 'APIs', 'Analytics'],
-=======
           features: ['Global payments', 'Subscription billing', 'Fraud prevention', 'Developer APIs', 'Analytics'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '2.9% + 30¢ per transaction',
           website: 'https://stripe.com',
           icon: <CreditCard className="w-6 h-6" />,
@@ -185,11 +130,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Xero',
           description: 'Cloud-based accounting software for small businesses and accountants.',
-<<<<<<< HEAD
-          features: ['Bank 'reconciliation', 'Invoicing'Expense 'claims', 'Multi-'currency', 'Payroll'],
-=======
           features: ['Bank reconciliation', 'Invoicing', 'Expense claims', 'Multi-currency', 'Payroll'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '$13/month - $70/month',
           website: 'https://xero.com',
           icon: <ChartBar className="w-6 h-6" />,
@@ -203,11 +144,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Figma',
           description: 'Collaborative interface design tool for teams building digital products.',
-<<<<<<< HEAD
-          features: ['Real-time 'collaboration', 'Design 'systems', 'Prototyping'Developer 'handoff', 'Plugins'],
-=======
           features: ['Real-time collaboration', 'Design systems', 'Prototyping', 'Developer handoff', 'Plugins'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $12/month',
           website: 'https://figma.com',
           icon: <Palette className="w-6 h-6" />,
@@ -217,11 +154,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Canva',
           description: 'Create professional designs with drag-and-drop simplicity.',
-<<<<<<< HEAD
-          features: ['Templates 'library', 'Stock 'photos', 'Brand 'kit', 'Team 'collaboration', 'Video editing'],
-=======
           features: ['Templates library', 'Stock photos', 'Brand kit', 'Team collaboration', 'Video editing'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $12.99/month',
           website: 'https://canva.com',
           icon: <Image className="w-6 h-6" />,
@@ -229,13 +162,8 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Adobe Creative Cloud',
-<<<<<<< HEAD
-          description: 'Complete creative software suite for designphotographyand video.',
-          features: [', 'Photoshop', 'Illustrator', 'InDesign', 'Premiere 'Pro', 'After Effects'],
-=======
           description: 'Complete creative software suite for design, photography, and video.',
           features: ['Photoshop', 'Illustrator', 'InDesign', 'Premiere Pro', 'After Effects'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '$52.99/month',
           website: 'https://adobe.com/creativecloud',
           icon: <Palette className="w-6 h-6" />,
@@ -249,11 +177,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Google Analytics',
           description: 'Free web analytics service that tracks and reports website traffic.',
-<<<<<<< HEAD
-          features: ['Real-time 'data', 'Audience 'insights', 'Conversion 'tracking', 'E-'commerce', 'Goals'],
-=======
           features: ['Real-time data', 'Audience insights', 'Conversion tracking', 'E-commerce', 'Goals'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free',
           website: 'https://analytics.google.com',
           icon: <BarChart3 className="w-6 h-6" />,
@@ -263,11 +187,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Tableau',
           description: 'Data visualization and business intelligence platform for analytics.',
-<<<<<<< HEAD
-          features: ['Interactive 'dashboards', 'Data 'blending', 'Real-time 'analytics', 'Mobile 'support', 'Collaboration'],
-=======
           features: ['Interactive dashboards', 'Data blending', 'Real-time analytics', 'Mobile support', 'Collaboration'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: '$70/month - $35/month',
           website: 'https://tableau.com',
           icon: <ChartBar className="w-6 h-6" />,
@@ -276,11 +196,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Mixpanel',
           description: 'Product analytics platform for understanding user behavior and product usage.',
-<<<<<<< HEAD
-          features: ['Event 'tracking', 'Funnel 'analysis', 'Cohort 'analysis', 'A/B 'testing', 'Real-time data'],
-=======
           features: ['Event tracking', 'Funnel analysis', 'Cohort analysis', 'A/B testing', 'Real-time data'],
->>>>>>> origin/auto/autonomy-17186719616
           pricing: 'Free - $25/month',
           website: 'https://mixpanel.com',
           icon: <TrendingUp className="w-6 h-6" />,
@@ -344,11 +260,7 @@ export default function BusinessToolsPage() {
     <>
       <Head>
         <title>Business Tools & Productivity - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Essential business tools for project managementcommunicationmarketingfinanceand productivity. Real pricing and features for growing businesses." />
-=======
         <meta name="description" content="Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Business Tools & Productivity - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive business tools directory with pricing and features." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -369,13 +281,8 @@ export default function BusinessToolsPage() {
             Essential Business Tools & Productivity
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            Discover the most powerful business tools that successful companies use to manage projects
-            communicate effectivelymarket their productsand grow their operations. Real pricing and features.
-=======
             Discover the most powerful business tools that successful companies use to manage projects, 
             communicate effectively, market their products, and grow their operations. Real pricing and features.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
         </div>
       </section>
@@ -393,11 +300,7 @@ export default function BusinessToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-            {businessInsights.map((insightindex) => (
-=======
             {businessInsights.map((insight, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -423,19 +326,11 @@ export default function BusinessToolsPage() {
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Hand-picked business tools that deliver real value for your organization. Each tool has been evaluated 
-<<<<<<< HEAD
-              for featurespricingand business impact.
-            </p>
-          </div>
-
-          {businessTools.map((categoryIndex) => (
-=======
               for features, pricing, and business impact.
             </p>
           </div>
 
           {businessTools.map((category, categoryIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
             <div key={categoryIndex} className="mb-20">
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4">{category.category}</h3>
@@ -443,11 +338,7 @@ export default function BusinessToolsPage() {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-                {category.tools.map((toolIndex) => (
-=======
                 {category.tools.map((tool, toolIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <Card
                     key={toolIndex}
                     className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
@@ -475,11 +366,7 @@ export default function BusinessToolsPage() {
                         <span className="text-2xl font-bold text-cursor-blue">{tool.pricing}</span>
                       </div>
                       <ul className="space-y-2">
-<<<<<<< HEAD
-                        {tool.features.map((featureIndex) => (
-=======
                         {tool.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                             <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />
                             {feature}
@@ -519,11 +406,7 @@ export default function BusinessToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-            {productivityTips.map((tipindex) => (
-=======
             {productivityTips.map((tip, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -548,11 +431,7 @@ export default function BusinessToolsPage() {
             Ready to Transform Your Business Operations?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            These business tools can streamline your operationsimprove team collaborationand drive growth. 
-=======
             These business tools can streamline your operations, improve team collaboration, and drive growth. 
->>>>>>> origin/auto/autonomy-17186719616
             Start with the essentials and build your tech stack strategically.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -564,10 +443,6 @@ export default function BusinessToolsPage() {
             >
               Explore Micro SaaS
             </Button>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <Button
               href="/contact"
               variant="outline"

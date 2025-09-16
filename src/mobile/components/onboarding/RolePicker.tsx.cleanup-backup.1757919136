@@ -1,24 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Briefcase, Users, Check } from 'lucide-react'
-
-type UserRole = "talent" | "client" | null,
-
-interface RolePickerProps {
-  onSelect: (role: UserRole) => void
-}
-
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
-
-  const handleSelect = (role: UserRole) => {
-    setSelectedRole(role),
-    onSelect(role)
-  },
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -37,7 +17,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     setSelectedRole(role);
     onSelect(role);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-4 px-4">
@@ -87,19 +66,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
-<<<<<<< HEAD
-                <Check className='h-5 w-5 text-primary' />
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      </div>;
-    </div>;
-  );
-};
-}
-=======
->>>>>>> origin/auto/autonomy-17186719616
                 <Check className="h-5 w-5 text-primary" />
               )}
             </div>
@@ -107,9 +73,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
