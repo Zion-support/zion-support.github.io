@@ -1031,6 +1031,15 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* New Revolutionary AI 2026 Banner - FEATURED */}
+        <RevolutionaryAI2026Banner />
+
+        {/* New Content 2026 Promotion Banner - FEATURED */}
+        <NewContent2026PromotionBanner />
+
+        {/* AI Innovation Showcase 2026 - FEATURED */}
+        <AIInnovationShowcase2026 />
+
         {/* New Content 2026 Promotional Banners - FEATURED */}
         <NewContent2026UltimateShowcaseBanner />
         <NewContent2026SyntheticIntelligenceBanner />
