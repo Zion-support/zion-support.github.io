@@ -11,6 +11,15 @@ const featuredContent = [
     tags: ["Readiness", "Governance", "Evals", "2026"]
   },
   {
+    title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
+    description: "Gate each lifecycle phase with evals and audit‑ready evidence.",
+    href: "/blog/ai-2026-evidence-driven-agent-lifecycle-blueprint",
+    category: "Operations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Evals", "Lifecycle", "Evidence"]
+  },
+  {
     title: "AI 2026: Governed Agent Tool‑Use Patterns",
     description: "Risk‑tiered autonomy, eval‑gated tools, and policy‑as‑code patterns for safe, scalable tool‑use.",
     href: "/blog/ai-2026-governed-agent-tool-use-patterns",

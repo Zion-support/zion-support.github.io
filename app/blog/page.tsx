@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-enterprise-ai-readiness-checklist', title: 'Enterprise AI Readiness Checklist (2026)', tag: 'New' },
   { href: '/blog/ai-2026-production-agent-runbooks-templates', title: 'Production Agent Runbooks — Templates (2026)', tag: 'New' },
   { href: '/blog/trusted-rag-2026-grounded-answer-scorecards', title: 'Trusted RAG — Grounded Answer Scorecards (2026)', tag: 'New' },
   { href: '/blog/ai-2026-eval-gated-safety-scorecards', title: 'Eval‑Gated Safety Scorecards (2026)', tag: 'New' },
