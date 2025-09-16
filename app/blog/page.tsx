@@ -5,6 +5,7 @@ const posts = [
   { href: '/blog/ai-2025-enterprise-ai-agents-breakthrough', title: 'Enterprise AI Agents in 2025', tag: 'New' },
   { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'New' },
+  { href: '/blog/ai-2026-live-agent-evaluation-metrics', title: 'Live Agent Evaluation Metrics — Practical Guide (2026)', tag: 'New' },
 ];
 
 export default function BlogIndexPage() {
