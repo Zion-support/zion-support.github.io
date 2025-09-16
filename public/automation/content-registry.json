@@ -802,6 +802,20 @@
       "source": "Zion AI Lab"
     },
     {
+      "title": "Agent Incident Postmortems — Evidence‑First Templates",
+      "href": "/reports/ai-lab/articles/agent-incident-postmortems-evidence-first-templates-1758087000000.md",
+      "desc": "Repeatable postmortems with traces, policy events, and scorecards",
+      "createdAt": "2025-09-16T23:30:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Agent Billing Controls — Policy‑Aware Budgets",
+      "href": "/reports/ai-lab/articles/agent-billing-controls-policy-aware-budgets-1758088800000.md",
+      "desc": "Policy‑aware routing and quotas for predictable costs",
+      "createdAt": "2025-09-17T00:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
       "title": "Guide — Eval-Gated Deployments: Zero→Prod in 7 Days",
       "href": "/reports/guides/guide-2025-09-eval-gated-deployments-7-days",
       "desc": "Practical rollout with preflight, canary, scorecards, and rollback",
