@@ -550,7 +550,6 @@ const App: React.FC = () => {
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
           
-<<<<<<< HEAD
           {/* NEW: Ultimate Content Routes 2026 */}
           <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
           <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
