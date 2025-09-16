@@ -132,6 +132,8 @@ import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035
 import QuantumComputingBreakthrough2035 from './src/pages/QuantumComputingBreakthrough2035';
 import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnology2035';
 import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
+import BlogPost2035 from './src/pages/BlogPost2035';
+import QuantumNeuralRevolution2035 from './src/pages/QuantumNeuralRevolution2035';
 import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryContentCarousel2036';
 import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
 import RevolutionaryTechShowcase2036 from './src/pages/RevolutionaryTechShowcase2036';
@@ -926,6 +928,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035 />} />
           <Route path="/pages/InterdimensionalTechnology2035" element={<InterdimensionalTechnology2035 />} />
           <Route path="/pages/RevolutionaryTechBlog2035" element={<RevolutionaryTechBlog2035 />} />
+          <Route path="/pages/BlogPost2035" element={<BlogPost2035 />} />
+          <Route path="/pages/QuantumNeuralRevolution2035" element={<QuantumNeuralRevolution2035 />} />
           <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
           <Route path="/pages/ComprehensiveServices2036" element={<ComprehensiveServices2036 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
