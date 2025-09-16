@@ -9,6 +9,12 @@ const posts = [
       'Tiered permissions, runtime checks, and signed evidence for safer production agents.'
   },
   {
+    slug: 'ai-2026-zero-downtime-agent-rollouts',
+    title: 'AI 2026: Zero‑Downtime Agent Rollouts — Guide',
+    summary:
+      'Ship changes safely with canaries, shadow, eval gates, and auto‑rollback backed by signed evidence.'
+  },
+  {
     slug: 'ai-2026-agent-evidence-bundles-blueprint',
     title: 'AI 2026: Agent Evidence Bundles — Blueprint',
     summary:

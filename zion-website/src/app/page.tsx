@@ -55,8 +55,8 @@ export default function HomePage() {
             New: Real‑Time Agent FinOps Dashboard —
             <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Zero‑Downtime Agent Releases —
-            <a href="/updates/zero-downtime-agent-releases-1758081600000" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            Zero‑Downtime Agent Rollouts —
+            <a href="/blog/ai-2026-zero-downtime-agent-rollouts" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Zero‑Trust Agent Controllers —
             <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>

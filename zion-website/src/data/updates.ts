@@ -10,6 +10,14 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Fresh blog content (2025-09-16)
+    {
+        title: 'Guide: Zero‑Downtime Agent Rollouts (2026)',
+        summary: 'Ship agent changes with canaries, shadow, eval gates, and safe auto‑rollback.',
+        href: '/blog/ai-2026-zero-downtime-agent-rollouts',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     // Fresh content (2025-09-16 - newly added set)
     {
         title: 'Launch: Agent Safety Center v1.0',
