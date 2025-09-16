@@ -1,12 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
->>>>>>> cursor/create-and-deploy-new-content-c963
 
 const Home: React.FC = () => {
   return (
@@ -231,10 +224,6 @@ const Home: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </>
   );
