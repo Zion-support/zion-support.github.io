@@ -1,69 +1,83 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const EnhancedContentCarousel2025: React.FC = () => {
+const RevolutionaryTechCarousel2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const contentItems = [
+  const techShowcases = [
     {
-      id: 1,
-      title: 'Next-Gen AI Consciousness',
-      description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
-      icon: '🧠',
-      gradient: 'from-purple-600 to-pink-600',
-      link: '/pages/NextGenAIConsciousness2025',
-      features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
+      title: "Synthetic Intelligence Revolution",
+      subtitle: "Create AI with genuine consciousness and emotions",
+      description: "Build AI systems that think, feel, and create with genuine consciousness. Experience the future of artificial intelligence.",
+      image: "🧠",
+      link: "/pages/SyntheticIntelligenceRevolution2026",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-900/20 to-pink-900/20",
+      features: ["Conscious AI", "Emotional Intelligence", "Self-Awareness", "Creative Thinking"]
     },
     {
-      id: 2,
-      title: 'Quantum Reality Engine',
-      description: 'Manipulate reality itself with quantum computing technology that processes multiple dimensions simultaneously',
-      icon: '⚛️',
-      gradient: 'from-cyan-600 to-blue-600',
-      link: '/pages/QuantumRealityEngine2025',
-      features: ['Reality simulation', 'Quantum processing', 'Dimensional manipulation', 'Temporal control']
+      title: "Quantum Reality Engine",
+      subtitle: "Process multiple realities simultaneously",
+      description: "Harness the power of quantum mechanics to simulate and process multiple realities at once. Break through the boundaries of possibility.",
+      image: "⚛️",
+      link: "/pages/UltimateTechRevolution2026",
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-900/20 to-blue-900/20",
+      features: ["Reality Simulation", "Quantum Processing", "Parallel Universes", "Temporal Manipulation"]
     },
     {
-      id: 3,
-      title: 'Neural Interface Revolution',
-      description: 'Direct brain-computer interface technology that merges human consciousness with artificial intelligence',
-      icon: '🔗',
-      gradient: 'from-emerald-600 to-teal-600',
-      link: '/pages/NeuralInterfaceRevolution2025',
-      features: ['Thought control', 'Direct data transfer', 'Emotional sharing', 'Memory integration']
+      title: "Neural Interface Technology",
+      subtitle: "Direct brain-computer communication",
+      description: "Connect your mind directly to AI systems for seamless communication and enhanced cognitive abilities. The future of human-AI interaction.",
+      image: "🔗",
+      link: "/pages/UltimateTechRevolution2026",
+      gradient: "from-emerald-600 to-teal-600",
+      bgGradient: "from-emerald-900/20 to-teal-900/20",
+      features: ["Thought Control", "Direct Data Transfer", "Emotional Sharing", "Memory Integration"]
     },
     {
-      id: 4,
-      title: 'Interdimensional Gateway',
-      description: 'Access parallel dimensions and realities through breakthrough interdimensional technology',
-      icon: '🌌',
-      gradient: 'from-violet-600 to-purple-600',
-      link: '/pages/InterdimensionalGateway2025',
-      features: ['Dimensional travel', 'Reality hopping', 'Parallel universe access', 'Cosmic communication']
+      title: "Interdimensional Gateway",
+      subtitle: "Access parallel dimensions and realities",
+      description: "Navigate between different dimensions and realities. Explore infinite possibilities across the multiverse with our breakthrough technology.",
+      image: "🌌",
+      link: "/pages/UltimateTechRevolution2026",
+      gradient: "from-violet-600 to-purple-600",
+      bgGradient: "from-violet-900/20 to-purple-900/20",
+      features: ["Dimensional Travel", "Reality Hopping", "Parallel Universe Access", "Cosmic Communication"]
+    },
+    {
+      title: "Consciousness Transfer",
+      subtitle: "Achieve digital immortality",
+      description: "Transfer your consciousness into quantum systems for eternal life. Preserve your identity and memories in digital form forever.",
+      image: "💫",
+      link: "/pages/UltimateTechRevolution2026",
+      gradient: "from-orange-600 to-red-600",
+      bgGradient: "from-orange-900/20 to-red-900/20",
+      features: ["Digital Immortality", "Consciousness Backup", "Identity Preservation", "Eternal Life"]
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % techShowcases.length);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [contentItems.length]);
+  }, [techShowcases.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+    setCurrentSlide((prev) => (prev + 1) % techShowcases.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+    setCurrentSlide((prev) => (prev - 1 + techShowcases.length) % techShowcases.length);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
-  const currentItem = contentItems[currentSlide];
+  const currentShowcase = techShowcases[currentSlide];
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900 py-16">
@@ -113,24 +127,24 @@ const EnhancedContentCarousel2025: React.FC = () => {
               {/* Content */}
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 mb-4">
-                  <span className="text-6xl animate-pulse">{currentItem.icon}</span>
+                  <span className="text-6xl animate-pulse">{currentShowcase.image}</span>
                   <div>
                     <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                      {currentItem.title}
+                      {currentShowcase.title}
                     </h3>
                     <p className="text-xl text-cyan-300 font-semibold">
-                      Revolutionary Technology
+                      {currentShowcase.subtitle}
                     </p>
                   </div>
                 </div>
 
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  {currentItem.description}
+                  {currentShowcase.description}
                 </p>
 
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3">
-                  {currentItem.features.map((feature, index) => (
+                  {currentShowcase.features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2 text-gray-300">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                       <span className="text-sm">{feature}</span>
@@ -140,8 +154,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    to={currentItem.link}
-                    className={`px-8 py-4 bg-gradient-to-r ${currentItem.gradient} rounded-lg font-semibold text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 text-center`}
+                    to={currentShowcase.link}
+                    className={`px-8 py-4 bg-gradient-to-r ${currentShowcase.gradient} rounded-lg font-semibold text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 text-center`}
                   >
                     Explore Technology
                   </Link>
@@ -153,9 +167,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
               {/* Visual Element */}
               <div className="relative">
-                <div className={`w-full h-64 md:h-80 bg-gradient-to-br ${currentItem.gradient} bg-opacity-20 rounded-2xl flex items-center justify-center relative overflow-hidden`}>
+                <div className={`w-full h-64 md:h-80 bg-gradient-to-br ${currentShowcase.bgGradient} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
                   <div className="text-8xl md:text-9xl opacity-30 animate-pulse">
-                    {currentItem.icon}
+                    {currentShowcase.image}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
@@ -165,7 +179,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-3">
-            {contentItems.map((_, index) => (
+            {techShowcases.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
@@ -197,4 +211,4 @@ const EnhancedContentCarousel2025: React.FC = () => {
   );
 };
 
-export default EnhancedContentCarousel2025;
+export default RevolutionaryTechCarousel2026;

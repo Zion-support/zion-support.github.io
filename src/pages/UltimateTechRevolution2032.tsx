@@ -43,11 +43,7 @@ const UltimateTechRevolution2032: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
@@ -133,7 +129,6 @@ const UltimateTechRevolution2032: React.FC = () => {
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
               </div>
 
               <div className="flex items-start space-x-4">
@@ -267,7 +262,6 @@ const UltimateTechRevolution2032: React.FC = () => {
           </motion.div>
         </div>
       </section>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
     </div>
   );
 };
