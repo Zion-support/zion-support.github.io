@@ -535,6 +535,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
           ))}
         </motion.div>
@@ -566,6 +567,8 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         </motion.div>
       </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-e495
+=======
+>>>>>>> cursor/create-and-deploy-new-content-9df5
     </div>
   );
 };
