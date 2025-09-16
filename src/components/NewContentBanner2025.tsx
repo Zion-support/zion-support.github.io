@@ -1,128 +1,148 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const NewContentBanner2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const bannerContent = [
+    {
+      title: "🚀 Revolutionary Tech Breakthrough 2025",
+      subtitle: "Experience the most advanced technological innovations",
+      link: "/pages/RevolutionaryTechBreakthrough2025",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
+    },
+    {
+      title: "🌟 Ultimate Tech Revolution 2025",
+      subtitle: "The most comprehensive technology platform ever created",
+      link: "/pages/UltimateTechRevolution2025",
+      color: "from-indigo-600 to-purple-600",
+      bgColor: "from-indigo-900/90 to-purple-900/90"
+    },
+    {
+      title: "⚡ Interactive Technology Showcase",
+      subtitle: "Explore cutting-edge technologies through interactive demos",
+      link: "/pages/RevolutionaryTechShowcase2025",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-900/90 to-blue-900/90"
+    },
+    {
+      title: "🧠 Conscious AI Systems",
+      subtitle: "Self-aware AI with emotional intelligence and creativity",
+      link: "/pages/ConsciousAI2025",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900/90 to-teal-900/90"
+    },
+    {
+      title: "⚛️ Quantum Neural Networks",
+      subtitle: "Revolutionary quantum computing with neural integration",
+      link: "/pages/QuantumNeural2025",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-900/90 to-red-900/90"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [bannerContent.length]);
+
+  const currentBanner = bannerContent[currentSlide];
+
+  if (!isVisible) return null;
+
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-20" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }}></div>
-      
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 NEW CONTENT LAUNCH • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Content 2025
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover our latest breakthrough content featuring AI Innovation, Quantum Computing, and Neural Interfaces that are reshaping the future of technology.
-          </p>
-        </div>
-
-        {/* Content Showcase Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* AI Innovation Hub */}
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group">
-            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI Innovation Hub 2025</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Explore revolutionary AI technologies including autonomous agents, generative AI 2.0, and edge computing solutions.
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Autonomous AI Agents</li>
-              <li>• Generative AI 2.0</li>
-              <li>• Edge AI Computing</li>
-              <li>• Industry Applications</li>
-            </ul>
-            <a href="/pages/AIInnovationHub2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center group-hover:shadow-lg">
-              Explore AI Hub →
-            </a>
-          </div>
-
-          {/* Quantum Computing Solutions */}
-          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300 group">
-            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing Solutions</h3>
-            <p className="text-indigo-100 mb-6 text-center">
-              Harness quantum supremacy with exponential speedup, quantum cryptography, and machine learning acceleration.
-            </p>
-            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum Supremacy</li>
-              <li>• Quantum Cryptography</li>
-              <li>• Quantum ML</li>
-              <li>• Real-world Applications</li>
-            </ul>
-            <a href="/pages/QuantumComputingSolutions2025" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center group-hover:shadow-lg">
-              Go Quantum →
-            </a>
-          </div>
-
-          {/* Neural Interface Revolution */}
-          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300 group">
-            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface Revolution</h3>
-            <p className="text-green-100 mb-6 text-center">
-              Bridge mind and machine with non-invasive BCI, neural feedback, and cognitive enhancement technologies.
-            </p>
-            <ul className="text-green-200 space-y-2 mb-6 text-sm">
-              <li>• Non-Invasive BCI</li>
-              <li>• Neural Feedback</li>
-              <li>• Cognitive Enhancement</li>
-              <li>• Medical Applications</li>
-            </ul>
-            <a href="/pages/NeuralInterfaceRevolution2025" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center group-hover:shadow-lg">
-              Connect Neural →
-            </a>
-          </div>
-        </div>
-
-        {/* Performance Metrics */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">📊 Content Impact Metrics</h3>
-            <p className="text-xl opacity-90">Real results from our revolutionary technology content</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-lg opacity-90">New Content Pages</div>
+    <div className="relative overflow-hidden">
+      {/* Main Banner */}
+      <div className={`bg-gradient-to-r ${currentBanner.bgColor} backdrop-blur-sm transition-all duration-1000 ease-in-out`}>
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-4">
+                <div className="flex space-x-1">
+                  {bannerContent.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/30'
+                      }`}
+                    />
+                  ))}
+                </div>
+                <div className="text-white/80 text-sm font-medium">
+                  NEW CONTENT • JANUARY 2025
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-90">User Engagement</div>
+            
+            <div className="flex-1 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 animate-pulse">
+                {currentBanner.title}
+              </h2>
+              <p className="text-white/90 text-sm md:text-base">
+                {currentBanner.subtitle}
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
-              <div className="text-lg opacity-90">Content Performance</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
-              <div className="text-lg opacity-90">Content Availability</div>
+            
+            <div className="flex-1 flex justify-end space-x-3">
+              <a
+                href={currentBanner.link}
+                className={`bg-gradient-to-r ${currentBanner.color} text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}
+              >
+                Explore Now →
+              </a>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Close banner"
+              >
+                ✕
+              </button>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
-          <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
-            Join thousands of users already experiencing our revolutionary technology content. Start your journey into the future today.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="/pages/AIInnovationHub2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Exploring
-            </a>
-            <a href="/pages/QuantumComputingSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Go Quantum
-            </a>
-            <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Connect Neural
-            </a>
-          </div>
+      {/* Progress Bar */}
+      <div className="h-1 bg-black/20">
+        <div 
+          className={`h-full bg-gradient-to-r ${currentBanner.color} transition-all duration-100 ease-linear`}
+          style={{ width: '100%' }}
+        />
+      </div>
+
+      {/* Floating Action Buttons */}
+      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 flex flex-col space-y-2">
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + bannerContent.length) % bannerContent.length)}
+          className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+        >
+          ‹
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % bannerContent.length)}
+          className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+        >
+          ›
+        </button>
+      </div>
+
+      {/* Quick Access Menu */}
+      <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 space-y-1">
+          {bannerContent.map((banner, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30 hover:bg-white/50'
+              }`}
+              aria-label={`Go to ${banner.title}`}
+            />
+          ))}
         </div>
       </div>
     </div>
