@@ -40,6 +40,7 @@ import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub20
 import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
+import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
@@ -165,6 +166,16 @@ const App: React.FC = () => {
               {/* Embodied AI 2026 Promo */}
               <div className="mb-12">
                 <EmbodiedAI2026Banner />
+              </div>
+              
+              {/* Revolutionary Content Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* New Services Showcase 2026 */}
+              <div className="mb-12">
+                <NewServicesShowcase2026 />
               </div>
               
               {/* New Content Promo Banner */}
