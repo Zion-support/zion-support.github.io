@@ -60,7 +60,7 @@ const BlogIndex: NextPage = () => {
   ];
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -81,7 +81,7 @@ const posts = [
 <<<<<<< HEAD
 >>>>>>> origin/feature/blog-promos
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 
 export default function BlogIndexPage() {
   return (
@@ -143,7 +143,7 @@ export default function BlogIndexPage() {
               </div>
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
@@ -153,7 +153,7 @@ export default function BlogIndexPage() {
 <<<<<<< HEAD
 >>>>>>> origin/feature/blog-promos
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
             </div>
           ))}
         </div>
@@ -170,5 +170,5 @@ export default function BlogIndexPage() {
 =======
   )
 }
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 

@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import './styles/accessibility.css';
 
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,7 +21,7 @@
   --zion-purple: 168 85 247;
   --zion-neon: 34 221 210;
   --zion-glow: 56 189 248;
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 }
 
 .bg-futuristic {
@@ -826,7 +826,7 @@
 
 /* Large text mode */
 [style*="--text-scale: 1.2"] {
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
   font-size: 1.2em;
 }
 
@@ -1068,7 +1068,7 @@ body {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
   }
 
   .btn-futuristic:hover::before {

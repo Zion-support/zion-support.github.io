@@ -6,7 +6,7 @@ import React from 'react';
 import { getPostById } from '../../../data/blog';
 >>>>>>> origin/feat/blog-content-and-promo
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 
 type Params = { params: { id: string } };
 
@@ -26,7 +26,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   'ai-safety-governance-blueprint-2025': {
     id: 'ai-safety-governance-blueprint-2025',
     title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     excerpt:
       'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
     category: 'AI Governance',
@@ -267,7 +267,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We cover practical techniques: 8‑bit/4‑bit quantization, operator and KV cache optimizations, request batching, speculative decoding, and distillation to smaller student models.',
       'Deployment patterns include split inference, regional sharding, and device‑side pre/post‑processing with WASM or CUDA. We provide a reference SLO playbook and cost model.',
       'The result is consistent sub‑100ms responses and 30–60% cost reduction while preserving accuracy for common product tasks.'
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     ]
   },
   'edge-ai-inference-acceleration': {
@@ -434,7 +434,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   }
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
   'edge-ai-compliance-2025': {
     id: 'edge-ai-compliance-2025',
     title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
@@ -468,7 +468,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 >>>>>>> origin/feature/content-sept15-2025
 =======
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 };
 
 export function generateStaticParams() {
@@ -531,4 +531,4 @@ export default function BlogPostPage({ params }: Params) {
 =======
 }
 
->>>>>>> cursor/create-and-deploy-new-content-fc88
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
