@@ -188,7 +188,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
               </div>
             </div>
           </div>
-        
+        </AnimatePresence>
       </div>
 
       {/* Additional Features */}
