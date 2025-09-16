@@ -526,5 +526,27 @@
       "createdAt": "2025-09-16T18:48:00.000Z",
       "source": "blog"
     }
+    ,
+    {
+      "title": "Blog — Evidence-First Agent Stack (Guide)",
+      "href": "/blog/ai-2026-evidence-first-agent-stack-guide",
+      "desc": "Verifiable traces, evals, and policy events wired to delivery",
+      "createdAt": "2025-09-16T19:20:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Blog — Practical Eval Gates (Dev→Prod)",
+      "href": "/blog/ai-2026-practical-eval-gates",
+      "desc": "Preflight, canary, and post-release evaluations with rollback",
+      "createdAt": "2025-09-16T19:21:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Blog — Trusted RAG in Production",
+      "href": "/blog/trusted-rag-in-production-2026",
+      "desc": "Grounded, budget-aware RAG with online evals and scorecards",
+      "createdAt": "2025-09-16T19:22:00.000Z",
+      "source": "blog"
+    }
   ]
 }
