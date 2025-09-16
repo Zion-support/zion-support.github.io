@@ -1,57 +1,67 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateContentBanner2028: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center justify-center space-x-3 mb-4"
-        >
-          <span className="text-3xl animate-bounce">🚀</span>
-          <h3 className="text-2xl font-bold">ULTIMATE BREAKTHROUGH CONTENT 2028-2032</h3>
-          <span className="text-3xl animate-bounce">🚀</span>
-        </motion.div>
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ULTIMATE INNOVATION • JANUARY 2028
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Ultimate Tech Innovation 2028
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Discover the most advanced technological innovations that will transform industries and reshape the future
+          </p>
+        </div>
         
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl opacity-95 mb-6 max-w-4xl mx-auto"
-        >
-          Experience the future of technology with our groundbreaking new content featuring Ultimate Tech Revolution 2028, 
-          Consciousness Computing Revolution 2029, and Interdimensional Tech Revolution 2032
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 max-w-8xl mx-auto"
-        >
-          <a href="/pages/UltimateTechRevolution2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🚀 Ultimate Tech 2028 →
-          </a>
-          <a href="/pages/ConsciousnessComputingRevolution2029" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🧠 Consciousness 2029 →
-          </a>
-          <a href="/pages/InterdimensionalTechRevolution2032" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🌌 Interdimensional 2032 →
-          </a>
-          <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            ⚡ Ultimate Tech 2027 →
-          </a>
-          <a href="/pages/InterdimensionalTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🌟 Interdimensional 2030 →
-          </a>
-          <a href="/pages/OmniversalAIConsciousness2035" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🌟 Omniversal AI 2035 →
-          </a>
-        </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🤖</div>
+            <h3 className="text-xl font-bold mb-3 text-center">AI & ML</h3>
+            <p className="text-blue-100 mb-4 text-center text-sm">
+              Next-generation AI systems with consciousness-level processing
+            </p>
+            <a href="/pages/UltimateTechInnovation2028" className="block w-full bg-white text-blue-600 py-2 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center text-sm">
+              Explore AI →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">⚡</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Computing</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              Quantum systems that solve impossible problems
+            </p>
+            <a href="/pages/UltimateTechInnovation2028" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Go Quantum →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🧬</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-4 text-center text-sm">
+              Direct brain-computer interfaces for seamless interaction
+            </p>
+            <a href="/pages/UltimateTechInnovation2028" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Connect Mind →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🌐</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Metaverse & VR</h3>
+            <p className="text-orange-100 mb-4 text-center text-sm">
+              Immersive virtual worlds indistinguishable from reality
+            </p>
+            <a href="/pages/UltimateTechInnovation2028" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
+              Enter Metaverse →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
