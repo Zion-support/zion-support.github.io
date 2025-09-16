@@ -142,7 +142,6 @@
   }
 }
 
-<<<<<<< HEAD
 /* Custom CSS Variables */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -161,10 +160,7 @@ body {
   min-height: 100vh;
 }
 
-/* Custom utilities */
-=======
 /* Custom Utility Classes */
->>>>>>> cursor/create-and-deploy-new-content-079e
 .gradient-text {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
@@ -208,7 +204,6 @@ body {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 .high-contrast button,
 .high-contrast input,
 .high-contrast select,
@@ -274,10 +269,22 @@ body {
 
 /* Skip links */
 .skip-link {
-=======
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
 .loading::after {
   content: '';
->>>>>>> cursor/create-and-deploy-new-content-079e
   position: absolute;
   top: 0;
   left: -100%;
@@ -292,7 +299,6 @@ body {
   100% { left: 100%; }
 }
 
-<<<<<<< HEAD
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -309,14 +315,6 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-<<<<<<< HEAD
-=======
 /* Error States */
 .error {
   border-color: #ef4444;
@@ -340,28 +338,17 @@ body {
 }
 
 /* Base Styles */
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-12a7
-}
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-}
->>>>>>> cursor/create-and-deploy-new-content-12a7
