@@ -26,6 +26,7 @@ export default function BlogPage() {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       id: 'ai-agent-safety-playbook-2025',
       title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
@@ -83,6 +84,8 @@ export default function BlogPage() {
       featured: true
     },
     {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -106,6 +109,7 @@ export default function BlogPage() {
 >>>>>>> origin/feature/new-blog-content-and-promo
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
@@ -138,6 +142,8 @@ export default function BlogPage() {
       featured: true
     },
     {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt:
@@ -192,6 +198,7 @@ export default function BlogPage() {
       excerpt:
         'AI-driven observability, incident response, and remediation to cut MTTR and improve reliability.',
       category: 'AI Solutions',
+<<<<<<< HEAD
       author: 'Michael Rodriguez',
       date: '2025-09-05',
       readTime: '7 min read',
@@ -225,12 +232,19 @@ export default function BlogPage() {
       readTime: '9 min read',
 <<<<<<< HEAD
       image: '/blog/ai-ops-cost.jpg',
+=======
+      author: 'Dr. Kleber Santos',
+      date: '2024-01-05',
+      readTime: '10 min read',
+      image: '/blog/autonomous-ai.jpg',
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       featured: true
     }
   ];
 
   const recentPosts = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,6 +296,8 @@ export default function BlogPage() {
       image: '/blog/edge-ai-marketplaces.jpg'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'edge-ai-compliance-2025',
       title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
       excerpt: 'Deploy edge AI with privacy-by-design, verifiable audit trails, and policy controls.',
@@ -300,6 +316,7 @@ export default function BlogPage() {
       date: '2025-09-12',
       readTime: '7 min read',
       image: '/blog/ai-accessibility-2025.jpg'
+<<<<<<< HEAD
 >>>>>>> origin/feature/content-sept15-2025
 =======
       id: 'ai-governance-2025',
@@ -323,6 +340,8 @@ export default function BlogPage() {
       image: '/blog/ai-governance.jpg'
 =======
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     },
     {
       id: 'autonomous-it-operations',
@@ -335,6 +354,7 @@ export default function BlogPage() {
       image: '/blog/autonomous-it.jpg'
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       id: 'agent-safety-tooling',
@@ -364,6 +384,8 @@ export default function BlogPage() {
 >>>>>>> origin/feature/blog-content-2025
     },
     {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
       id: 'sovereign-ai-commerce-2025',
       title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
       excerpt: 'A practical guide to deploying autonomous, self-regulating AI marketplaces powered by Zion OS.',
@@ -455,6 +477,7 @@ export default function BlogPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'AI Solutions', count: 4, active: false },
 =======
     { name: 'AI Solutions', count: 3, active: false },
@@ -462,16 +485,24 @@ export default function BlogPage() {
 =======
     { name: 'AI Solutions', count: 3, active: false },
 >>>>>>> origin/feature/blog-content-2025
+=======
+    { name: 'AI Solutions', count: 3, active: false },
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: 'Accessibility', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
 =======
     { name: 'Infrastructure', count: 2, active: false },
 >>>>>>> origin/feature/blog-content-2025
+=======
+    { name: 'Accessibility', count: 1, active: false },
+    { name: 'Infrastructure', count: 1, active: false },
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
     { name: 'Content Marketing', count: 1, active: false }
   ];
 
@@ -527,6 +558,7 @@ export default function BlogPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             href="/blog/ai-ops-cost-optimization-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
@@ -552,11 +584,15 @@ export default function BlogPage() {
 >>>>>>> origin/feature/add-ai-agent-safety-post
 =======
             href="/blog/ai-safety-governance-blueprint-2025"
+=======
+            href="/blog/sovereign-ai-commerce-2025"
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises"
+            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+<<<<<<< HEAD
                 AG
 >>>>>>> origin/feature/blog-content-2025
 =======
@@ -625,6 +661,9 @@ export default function BlogPage() {
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
                 AG
+=======
+                SA
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -632,6 +671,7 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+<<<<<<< HEAD
                   AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
@@ -643,6 +683,13 @@ export default function BlogPage() {
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">A concise, engineering-first guide to deploy guardrails, audits, and human-in-the-loop controls for real-world autonomous agents.</p>
 >>>>>>> origin/feature/add-ai-agent-safety-post
+=======
+                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+                </p>
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
             </div>
