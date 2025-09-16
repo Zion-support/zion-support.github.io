@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTargetUsersTrendingUpAward
 
 const UltimatePromotionBanner2025 = () => {
@@ -46,19 +46,19 @@ const UltimatePromotionBanner2025 = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
+            <a
               href="#"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold text-lg rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               Start Your Transformation
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="#"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-200"
             >
               Watch Demo
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -131,19 +131,19 @@ const UltimatePromotionBanner2025 = () => {
               'Don', 't miss this exclusive opportunity to transform your business with cutting-edge AI technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="#"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-indigo-900 font-bold text-lg rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-200 transform hover:scale-105"
               >
                 Claim Your Discount
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-200"
               >
                 Learn More
-              </Link>
+              </a>
             </div>
           </div>
         </div>

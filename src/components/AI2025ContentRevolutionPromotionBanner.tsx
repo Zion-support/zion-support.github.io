@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025ContentRevolutionPromotionBanner = () => {
   return (
@@ -42,7 +42,7 @@ const AI2025ContentRevolutionPromotionBanner = () => {
 
         {/* Featured Content Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <Link
+          <a
             href="/blog/ai-2025-ultimate-content-revolution"
             className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 hover:bg-opacity-25 transition-all duration-300 group"
           >
@@ -63,9 +63,9 @@ const AI2025ContentRevolutionPromotionBanner = () => {
             <div className="flex items-center text-yellow-300 font-semibold">
               Read the Full Guide →
             </div>
-          </Link>
+          </a>
 
-          <Link
+          <a
             href="/case-studies/ai-2025-content-revolution-5000-roi-success"
             className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 hover:bg-opacity-25 transition-all duration-300 group"
           >
@@ -86,7 +86,7 @@ const AI2025ContentRevolutionPromotionBanner = () => {
             <div className="flex items-center text-yellow-300 font-semibold">
               View Success Story →
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Interactive Elements */}
@@ -127,18 +127,18 @@ const AI2025ContentRevolutionPromotionBanner = () => {
             Join the companies already experiencing unprecedented growth with AI-powered content strategies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Start Your Transformation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/blog/ai-2025-ultimate-content-revolution"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
             >
               Read the Guide
-            </Link>
+            </a>
           </div>
         </div>
       </div>

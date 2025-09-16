@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpBrainBarChart3TargetUsersGlobeLightbulb
 
 export default function AIInsightsComprehensive2025PromotionBanner() {
@@ -116,20 +116,20 @@ export default function AIInsightsComprehensive2025PromotionBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link 
+            <a 
               href="/ai-insights-comprehensive-2025" 
               className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl"
             >
               <TrendingUp className="mr-2 h-5 w-5" />
               Explore Comprehensive Insights
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/blog" 
               className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
             >
               <Brain className="mr-2 h-5 w-5" />
               Read Latest Analysis
-            </Link>
+            </a>
           </div>
           <p className="text-gray-400 text-sm">
             Join 75,000+ professionals accessing our strategic AI intelligence

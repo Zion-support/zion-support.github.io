@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AutonomousOperationsContentShowcase: React.FC = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -217,7 +217,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
                     </svg>
                     {item.readingTime}
                   </div>
-                  <Link
+                  <a
                     href={item.url}
                     className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors text-sm"
                   >
@@ -225,7 +225,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -242,7 +242,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
               Join the revolution 'that', 's delivering 890% ROI and $12.8B savings to enterprise leaders worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services/autonomous-operations"
                 className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
@@ -250,13 +250,13 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources/autonomous-operations-implementation-guide-2025"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 <span>Download Implementation Guide</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

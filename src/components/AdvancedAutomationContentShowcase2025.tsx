@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AdvancedAutomationContentShowcase2025 = () => {
   const automationContent = [
@@ -85,12 +85,12 @@ const AdvancedAutomationContentShowcase2025 = () => {
                 <p className="text-gray-600 mb-4">
                   {content.description}
                 </p>
-                <Link
+                <a
                   href={content.link}
                   className="text-emerald-600 font-semibold hover:text-emerald-800 transition-colors"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -103,18 +103,18 @@ const AdvancedAutomationContentShowcase2025 = () => {
               Join 500+ companies that have already transformed their operations with our automation solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/automation/consultation"
                 className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies/automation"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
               >
                 View Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

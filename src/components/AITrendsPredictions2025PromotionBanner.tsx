@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
@@ -114,14 +114,14 @@ const AITrendsPredictions2025PromotionBanner = () => {
 
             {/* Right Actions */}
             <div className="flex items-center gap-3">
-              <Link
+              <a
                 href="/ai-trends-predictions-2025"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 text-sm"
               >
                 <Eye className="w-4 h-4" />
                 View Predictions
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <button
                 onClick={handleDismiss}
                 className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2026BreakthroughBanner() {
   return (
@@ -29,12 +29,12 @@ export default function NewContent2026BreakthroughBanner() {
               <span className="text-green-400 font-semibold">2,500% ROI</span>
               <span className="text-yellow-400 font-semibold">99.7% Accuracy</span>
             </div>
-            <Link
+            <a
               href="/case-studies/ai-2025-enterprise-automation-breakthrough"
               className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-colors"
             >
               View Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* Quantum Computing Breakthrough */}
@@ -48,12 +48,12 @@ export default function NewContent2026BreakthroughBanner() {
               <span className="text-cyan-400 font-semibold">15,000% ROI</span>
               <span className="text-purple-400 font-semibold">1Bx Faster</span>
             </div>
-            <Link
+            <a
               href="/case-studies/quantum-computing-breakthrough-2025"
               className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-3 rounded-lg font-semibold transition-colors"
             >
               View Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* AI 2026 Future Predictions */}
@@ -67,12 +67,12 @@ export default function NewContent2026BreakthroughBanner() {
               <span className="text-pink-400 font-semibold">95% Accuracy</span>
               <span className="text-orange-400 font-semibold">Breakthrough Tech</span>
             </div>
-            <Link
+            <a
               href="/blog/ai-2026-future-predictions-breakthrough"
               className="block w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-colors"
             >
               Read Predictions →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -105,18 +105,18 @@ export default function NewContent2026BreakthroughBanner() {
             Join thousands of companies already transforming their operations with our proven AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
             >
               Get Started Today
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-implementation-guide-2025"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
             >
               Download Implementation Guide
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateShowcaseBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -110,18 +110,18 @@ const NewContent2025UltimateShowcaseBanner = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/content-showcase"
                   className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Explore Content
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/newsletter"
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
                 >
                   Get Updates
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -154,12 +154,12 @@ const NewContent2025UltimateShowcaseBanner = () => {
                   </div>
 
                   <div className="mt-6">
-                    <Link
+                    <a
                       href={`/content/${currentSlide.toLowerCase().replace(/\s+/g, '-')}`}
                       className="block w-full bg-white text-gray-900 text-center py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
                     >
                       Learn More
-                    </Link>
+                    </a>
                   </div>
                 </div>
 

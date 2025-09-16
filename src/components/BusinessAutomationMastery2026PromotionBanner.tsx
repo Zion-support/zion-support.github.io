@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SettingsChevronRightStarClockDollarSignTargetZap
 
 const BusinessAutomationMastery2026PromotionBanner = () => {
@@ -46,19 +46,19 @@ const BusinessAutomationMastery2026PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <a 
                 href="/business-automation-mastery-2026"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 Master Automation
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact"
                 className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 text-center"
               >
                 Get Expert Consultation
-              </Link>
+              </a>
             </div>
           </div>
 

@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
@@ -271,20 +271,20 @@ const AISuccessStoriesShowcase = () => {
               Join hundreds of companies already achieving remarkable results with our AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center"
               >
                 <Zap className="w-5 h-5 mr-2" />
                 Start Your AI Journey
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-colors duration-300 flex items-center justify-center"
               >
                 <Users className="w-5 h-5 mr-2" />
                 View All Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

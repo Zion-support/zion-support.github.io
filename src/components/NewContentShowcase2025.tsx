@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-const NewContentShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
   const contentItems = [
     {
@@ -101,16 +101,35 @@ const NewContentShowcase2025: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex space-x-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    {item.industry && (
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.industry}
+                      </span>
+                    )}
+                    {item.category && (
+                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.category}
+                      </span>
+                    )}
+                    {item.type && (
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.type}
+                      </span>
+                    )}
+                    {item.readTime && (
+                      <span className="text-gray-500 text-xs">
+                        {item.readTime}
+                      </span>
+                    )}
+                  </div>
                   <a
-                    href={contentItems[activeTab].link}
-                    className={`bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                    href={item.link}
+                    className="text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
                   >
-                    Explore Now →
+                    Explore →
                   </a>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                    Watch Demo
-                  </button>
                 </div>
               </div>
 
@@ -171,18 +190,28 @@ const NewContentShowcase2025: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-3xl font-bold mb-6">Ready to Explore the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of innovators who are already experiencing the future with our revolutionary content
-          </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Exploring
-            </button>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-              Get Updates
-            </button>
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              Join thousands of companies already seeing incredible results with our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View All Services
+              </a>
+            </div>
           </div>
         </div>
       </div>

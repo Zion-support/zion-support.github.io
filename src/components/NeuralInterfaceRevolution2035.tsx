@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 BrainZapEyeEarHandHeartTargetUsersGlobeShield
 
 const NeuralInterfaceRevolution2035 = () => {
@@ -28,9 +28,9 @@ const NeuralInterfaceRevolution2035 = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Direct Brain Interface</h3>
             <p className="text-gray-300 mb-6">Non-invasive neural interfaces that enable direct communication between human consciousness and AI systems</p>
-            <Link href="/neural-interface-brain" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold">
+            <a href="/neural-interface-brain" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold">
               Explore Interface <Zap className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
 
           <div className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 backdrop-blur-sm rounded-2xl p-8 border border-teal-500/30 hover:border-emerald-400/50 transition-all duration-300">
@@ -39,9 +39,9 @@ const NeuralInterfaceRevolution2035 = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Enhanced Perception</h3>
             <p className="text-gray-300 mb-6">Neural augmentation that extends human sensory capabilities with AI-enhanced visionhearingand cognitive processing</p>
-            <Link href="/neural-interface-perception" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold">
+            <a href="/neural-interface-perception" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold">
               Discover Enhancement <Zap className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
 
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-teal-400/50 transition-all duration-300">
@@ -50,9 +50,9 @@ const NeuralInterfaceRevolution2035 = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Thought Control</h3>
             <p className="text-gray-300 mb-6">Advanced neural control systems that translate thoughts into digital commands for seamless device interaction</p>
-            <Link href="/neural-interface-control" className="inline-flex items-center text-teal-400 hover:text-teal-300 font-semibold">
+            <a href="/neural-interface-control" className="inline-flex items-center text-teal-400 hover:text-teal-300 font-semibold">
               Learn Control <Zap className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -188,12 +188,12 @@ const NeuralInterfaceRevolution2035 = () => {
             Join the neural interface revolution and experience the future of human-AI symbiosis with the most advanced brain-computer interfaces ever created
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-300 hover:to-cyan-300 transition-all duration-300 transform hover:scale-105">
+            <a href="/contact" className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-300 hover:to-cyan-300 transition-all duration-300 transform hover:scale-105">
               Start Neural Journey
-            </Link>
-            <Link href="/neural-interface-2035" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-400 hover:text-black transition-all duration-300">
+            </a>
+            <a href="/neural-interface-2035" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-400 hover:text-black transition-all duration-300">
               Explore Interfaces
-            </Link>
+            </a>
           </div>
         </div>
       </div>

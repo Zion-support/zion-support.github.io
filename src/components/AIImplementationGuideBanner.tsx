@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AIImplementationGuideBanner: React.FC = () => {
   return (
@@ -155,31 +155,31 @@ const AIImplementationGuideBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link
+            <a
               href="/blog/ai-transformation-2025-roadmap"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Download Complete Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-readiness-assessment"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               Start Assessment Now
-            </Link>
+            </a>
           </div>
           
           {/* Additional Resources */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-sm opacity-80">
-            <Link href="/webinar" className="hover:opacity-100 transition-opacity">
+            <a href="/webinar" className="hover:opacity-100 transition-opacity">
               📺 Watch Implementation Webinar
-            </Link>
-            <Link href="/consultation" className="hover:opacity-100 transition-opacity">
+            </a>
+            <a href="/consultation" className="hover:opacity-100 transition-opacity">
               💬 Schedule Free Consultation
-            </Link>
-            <Link href="/case-studies" className="hover:opacity-100 transition-opacity">
+            </a>
+            <a href="/case-studies" className="hover:opacity-100 transition-opacity">
               📊 View Success Stories
-            </Link>
+            </a>
           </div>
         </div>
       </div>

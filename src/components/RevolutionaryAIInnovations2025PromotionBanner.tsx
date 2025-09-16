@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Sparkles
@@ -202,21 +202,21 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
               transition={{ delay: 1duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link
+              <a
                 href="#revolutionary-innovations"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 group"
               >
                 <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 Explore Innovations
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-innovations"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-purple-900 transition-all duration-300 group"
               >
                 <BookOpen className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 Learn More
-              </Link>
+              </a>
             </motion.div>
           </div>
 

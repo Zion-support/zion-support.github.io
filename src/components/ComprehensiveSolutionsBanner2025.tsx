@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function ComprehensiveSolutionsBanner2025() {
   return (
@@ -112,42 +112,42 @@ export default function ComprehensiveSolutionsBanner2025() {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2025-comprehensive-solutions" 
               className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🚀 Explore Complete Platform
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-lg"
             >
               📞 Start Transformation
-            </Link>
+            </a>
           </div>
           
           {/* Additional links */}
           <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link 
+            <a 
               href="/ai-2025-advanced-services-showcase" 
               className="text-purple-400 hover:text-purple-300 transition-colors"
             >
               🛠️ Advanced Services
-            </Link>
+            </a>
             <span className="text-gray-500">•</span>
-            <Link 
+            <a 
               href="/ai-2025-tools-utilities" 
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               🧮 AI Tools Suite
-            </Link>
+            </a>
             <span className="text-gray-500">•</span>
-            <Link 
+            <a 
               href="/tools/ai-2025-roi-calculator" 
               className="text-green-400 hover:text-green-300 transition-colors"
             >
               📊 ROI Calculator
-            </Link>
+            </a>
           </div>
         </div>
       </div>

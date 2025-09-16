@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -454,6 +454,37 @@ const EnhancedContentShowcase: React.FC = () => {
             >
               ←
             </button>
+          ))}
+        </div>
+      </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contentCategories[activeTab as keyof typeof contentCategories].items.map((itemindex) => (
+            <div
+              key={index}
+              className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
+                item.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
+              }`}
+            >
+              <div className="flex items-center mb-4">
+                <div className="text-3xl mr-3">{item.icon}</div>
+                {item.featured && (
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                    FEATURED
+                  </span>
+                )}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+              <p className="text-gray-600 mb-6">{item.description}</p>
+              <a
+                href={item.href}
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+              >
+                Explore Now →
+              </a>
+            </div>
+          ))}
             
             <div className="flex space-x-2">
               {showcaseItems.map((_, index) => (
@@ -620,6 +651,20 @@ const EnhancedContentShowcase: React.FC = () => {
             <p className="text-purple-200 text-center">
               Navigate through revolutionary technologies with intuitive controls and smooth animations
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                View All Resources
+              </a>
+            </div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">

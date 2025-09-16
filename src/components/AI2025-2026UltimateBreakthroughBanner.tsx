@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025_2026UltimateBreakthroughBanner: React.FC = () => {
   return (
@@ -63,12 +63,12 @@ const AI2025_2026UltimateBreakthroughBanner: React.FC = () => {
             <p className="text-sm opacity-90 mb-4">
               Revolutionary AI systems processing information at quantum speeds with 99.99% accuracy and 10,000x faster performance.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2025-2026-ultimate-breakthrough-revolution"
               className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Explore Technology →
-            </Link>
+            </a>
           </div>
           
           {/* Autonomous Systems */}
@@ -78,12 +78,12 @@ const AI2025_2026UltimateBreakthroughBanner: React.FC = () => {
             <p className="text-sm opacity-90 mb-4">
               Self-managing business ecosystems with 99.97% uptime85% cost reductionand 340% efficiency improvements.
             </p>
-            <Link 
+            <a 
               href="/case-studies/ai-2025-2026-revolutionary-transformation-2500-roi-success"
               className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               View Success Story →
-            </Link>
+            </a>
           </div>
           
           {/* Neural Interfaces */}
@@ -93,12 +93,12 @@ const AI2025_2026UltimateBreakthroughBanner: React.FC = () => {
             <p className="text-sm opacity-90 mb-4">
               Direct brain-computer interfaces enabling seamless human-AI collaboration with 500% capability enhancement.
             </p>
-            <Link 
+            <a 
               href="/services/neural-interface-systems"
               className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -112,18 +112,18 @@ const AI2025_2026UltimateBreakthroughBanner: React.FC = () => {
               Join Fortune 500 companies achieving breakthrough results with revolutionary AI technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/blog/ai-2025-2026-ultimate-breakthrough-revolution"
                 className="border-2 border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors"
               >
                 Read Full Article
-              </Link>
+              </a>
             </div>
           </div>
           

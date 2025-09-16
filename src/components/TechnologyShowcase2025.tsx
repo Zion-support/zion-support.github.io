@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Brain
   Cpu
@@ -153,13 +153,13 @@ const TechnologyShowcase2025 = () => {
                   ))}
                 </div>
                 
-                <Link
+                <a
                   href={`/technology/${tech.id}`}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -174,19 +174,19 @@ const TechnologyShowcase2025 = () => {
             Join thousands of companies already using our revolutionary technologies to achieve unprecedented growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/demo"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Schedule Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

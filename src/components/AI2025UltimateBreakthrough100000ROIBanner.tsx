@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateBreakthrough100000ROIBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -149,20 +149,20 @@ const AI2025UltimateBreakthrough100000ROIBanner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
+              <a
                 href={current.url}
                 className="inline-flex items-center justify-center px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
               >
                 <span className="mr-2">🚀</span>
                 Explore {current.type === 'blog' ? 'Guide' : current.type === 'case-study' ? 'Success Story' : 'Implementation Guide'}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
               >
                 <span className="mr-2">💬</span>
                 Get Expert Consultation
-              </Link>
+              </a>
             </div>
           </div>
 

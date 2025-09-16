@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBreakthroughShowcase2025 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -272,12 +272,12 @@ const UltimateBreakthroughShowcase2025 = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={content.url}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
                 >
                   Read {content.type === 'case-study' ? 'Case Study' : content.type === 'resource' ? 'Guide' : 'Article'} →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -293,18 +293,18 @@ const UltimateBreakthroughShowcase2025 = () => {
               Join Fortune 500 companies that are transforming their businesses with next-generation AI technologies
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/resources/ai-2025-2026-ultimate-breakthrough-implementation-guide"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

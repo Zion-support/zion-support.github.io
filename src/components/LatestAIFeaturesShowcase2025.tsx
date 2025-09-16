@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsersTargetClockCheckCircle
 
 export default function LatestAIFeaturesShowcase2025() {
@@ -191,7 +191,7 @@ export default function LatestAIFeaturesShowcase2025() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
@@ -200,8 +200,8 @@ export default function LatestAIFeaturesShowcase2025() {
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies"
               className="group border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105"
             >
@@ -210,7 +210,7 @@ export default function LatestAIFeaturesShowcase2025() {
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

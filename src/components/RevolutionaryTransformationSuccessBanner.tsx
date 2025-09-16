@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryTransformationSuccessBanner: React.FC = () => {
   return (
@@ -138,18 +138,18 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {
               The same revolutionary technologies are now available for your business transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies/ai-2025-2026-revolutionary-transformation-2500-roi-success"
                 className="border-2 border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors"
               >
                 Read Full Case Study
-              </Link>
+              </a>
             </div>
           </div>
           

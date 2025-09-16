@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -185,21 +185,21 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-emerald-900 font-bold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
               >
                 <span className="mr-2">🚀</span>
                 Explore Post-Human Operations
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300"
               >
                 <span className="mr-2">🤖</span>
                 Start Post-Human Journey
-              </Link>
+              </a>
             </div>
           </div>
 

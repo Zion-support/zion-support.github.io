@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateAutomationRevolutionShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -177,7 +177,7 @@ const AI2025UltimateAutomationRevolutionShowcase = () => {
 
                 {/* Call to action */}
                 <div className="space-y-3">
-                  <Link
+                  <a
                     href={item.url}
                     className="w-full inline-flex items-center justify-center px-4 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
                   >
@@ -185,15 +185,15 @@ const AI2025UltimateAutomationRevolutionShowcase = () => {
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </a>
                   
                   {item.type === 'case-study' && (
-                    <Link
+                    <a
                       href="/consultation"
                       className="w-full inline-flex items-center justify-center px-4 py-2 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
                     >
                       Get Your Custom ROI Analysis
-                    </Link>
+                    </a>
                   )}
                 </div>
               </div>
@@ -211,7 +211,7 @@ const AI2025UltimateAutomationRevolutionShowcase = () => {
               Join the Fortune 500 companies already achieving unprecedented returns with AI automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/consultation"
                 className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
               >
@@ -219,13 +219,13 @@ const AI2025UltimateAutomationRevolutionShowcase = () => {
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services/ai-automation"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore AI Automation Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

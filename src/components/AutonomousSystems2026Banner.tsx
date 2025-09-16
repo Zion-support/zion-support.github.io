@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AutonomousSystems2026Banner = () => {
   return (
@@ -146,18 +146,18 @@ const AutonomousSystems2026Banner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/autonomous-systems-2026"
               className="bg-gradient-to-r from-gray-500 to-slate-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-gray-400 hover:to-slate-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore Autonomous Systems →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/autonomous-systems-demo"
               className="border-2 border-gray-400 text-gray-400 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-400 hover:text-gray-900 transition-all duration-300"
             >
               View Demo
-            </Link>
+            </a>
           </div>
           
           <div className="mt-12 text-center">

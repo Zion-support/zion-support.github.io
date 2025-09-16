@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRightIcon, BookOpenIcon, SparklesIcon, ClockIcon, UserIcon, TagIcon } from '@heroicons/react/24/outline';
 
 const AI2026ContentShowcase = () => {
@@ -176,13 +176,13 @@ const AI2026ContentShowcase = () => {
                 </div>
 
                 {/* CTA */}
-                <Link
+                <a
                   href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ', ')}`}
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Read Article
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}

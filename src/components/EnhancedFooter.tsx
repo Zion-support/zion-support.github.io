@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -95,12 +96,12 @@ const EnhancedFooter: React.FC = () => {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                    <a
+                      href={link.href}
+                      className="text-white/70 hover:text-white transition-colors duration-200"
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
@@ -195,20 +195,20 @@ const UltimateContentRevolution2025 = () => {
               that are reshaping industries and transforming the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/ai-2025-ultimate-breakthrough"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Breakthroughs
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 View Case Studies
                 <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -363,20 +363,20 @@ const UltimateContentRevolution2025 = () => {
             Get your custom implementation plan and ROI projection today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/roi-calculator"
               className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               Calculate Your ROI
               <ChevronRight className="ml-2 h-5 w-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

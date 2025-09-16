@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const ContentNavigation2025 = () => {
   const [activeTabsetActiveTab] = useState('all');
@@ -160,12 +160,12 @@ const ContentNavigation2025 = () => {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{content.readTime} read</span>
-                  <Link
+                  <a
                     href={content.link}
                     className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -180,18 +180,18 @@ const ContentNavigation2025 = () => {
               Get personalized AI transformation guidance and implementation support
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

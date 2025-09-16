@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarTrendingUpClockAwardSparkles
 
 interface ContentItem {
@@ -176,7 +176,7 @@ export default function FeaturedContent2026Showcase({
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {displayItems.map((itemindex) => (
-            <Link
+            <a
               key={index}
               href={item.href}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200 relative"
@@ -265,7 +265,7 @@ export default function FeaturedContent2026Showcase({
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -279,18 +279,18 @@ export default function FeaturedContent2026Showcase({
               Join 500+ companies already seeing massive results with our AI solutions. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg"
               >
                 Schedule Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources/ai-transformation-playbook-2026-complete-guide"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors text-lg"
               >
                 Download Free Playbook
-              </Link>
+              </a>
             </div>
           </div>
         </div>

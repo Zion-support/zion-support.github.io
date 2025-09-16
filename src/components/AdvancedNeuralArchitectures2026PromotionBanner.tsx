@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AdvancedNeuralArchitectures2026PromotionBanner() {
   return (
@@ -73,35 +73,35 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
+          <a
             href="/advanced-neural-architectures-2026"
             className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
           >
             Explore Neural AI
-          </Link>
-          <Link
+          </a>
+          <a
             href="/contact"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
           >
             Get Started
-          </Link>
+          </a>
         </div>
 
         {/* Additional Links */}
         <div className="mt-8 text-center">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/ai-2025-2026-ultimate-breakthrough" className="text-purple-300 hover:text-white transition-colors">
+            <a href="/ai-2025-2026-ultimate-breakthrough" className="text-purple-300 hover:text-white transition-colors">
               AI Breakthrough →
-            </Link>
-            <Link href="/quantum-ai-2026-breakthrough" className="text-purple-300 hover:text-white transition-colors">
+            </a>
+            <a href="/quantum-ai-2026-breakthrough" className="text-purple-300 hover:text-white transition-colors">
               Quantum AI →
-            </Link>
-            <Link href="/case-studies" className="text-purple-300 hover:text-white transition-colors">
+            </a>
+            <a href="/case-studies" className="text-purple-300 hover:text-white transition-colors">
               Success Stories →
-            </Link>
-            <Link href="/services" className="text-purple-300 hover:text-white transition-colors">
+            </a>
+            <a href="/services" className="text-purple-300 hover:text-white transition-colors">
               Our Services →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

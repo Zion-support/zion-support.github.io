@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026ContentPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -94,12 +94,12 @@ const AI2026ContentPromotionBanner = () => {
                 <p className="text-gray-300 text-center mb-4">
                   {feature.description}
                 </p>
-                <Link
+                <a
                   href={feature.link}
                   className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300"
                 >
                   Explore →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -114,12 +114,12 @@ const AI2026ContentPromotionBanner = () => {
             <p className="text-xl text-gray-200 mb-6">
               {features[currentFeature].description}
             </p>
-            <Link
+            <a
               href={features[currentFeature].link}
               className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Discover More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -141,12 +141,12 @@ const AI2026ContentPromotionBanner = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link
+          <a
             href="/ai-2026-future-predictions-breakthrough"
             className="inline-block px-12 py-6 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-bold text-xl rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
           >
             Start Your AI 2026 Journey →
-          </Link>
+          </a>
         </div>
       </div>
     </div>

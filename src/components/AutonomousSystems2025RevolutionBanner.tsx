@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AutonomousSystems2025RevolutionBanner() {
   return (
@@ -137,18 +137,18 @@ export default function AutonomousSystems2025RevolutionBanner() {
               with Zion Tech 'Group', 's expert guidance and cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Autonomous Journey
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300"
               >
                 Explore Autonomous Solutions
-              </Link>
+              </a>
             </div>
           </div>
         </div>

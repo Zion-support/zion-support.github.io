@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
@@ -327,20 +327,20 @@ const AITrendsPredictions2025 = () => {
               Get exclusive access to our detailed AI trend reports and be the first to know about breakthrough technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/ai-trends-report"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
                 Download Full Report
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/newsletter"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all duration-300"
               >
                 Subscribe to Updates
                 <Sparkles className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

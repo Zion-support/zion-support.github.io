@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function ContentRevolutionShowcase2025() {
   const contentItems = [
@@ -72,7 +72,7 @@ export default function ContentRevolutionShowcase2025() {
                 {item.roi} ROI
               </div>
               
-              <Link 
+              <a 
                 href={item.href}
                 className="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-semibold text-sm transition-colors"
               >
@@ -80,7 +80,7 @@ export default function ContentRevolutionShowcase2025() {
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
             
             {/* Hover Effect */}
@@ -114,7 +114,7 @@ export default function ContentRevolutionShowcase2025() {
       {/* CTA Section */}
       <div className="text-center">
         <div className="inline-flex flex-col sm:flex-row gap-4">
-          <Link 
+          <a 
             href="/blog/ai-2025-ultimate-content-strategy"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
@@ -122,14 +122,14 @@ export default function ContentRevolutionShowcase2025() {
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </Link>
+          </a>
           
-          <Link 
+          <a 
             href="/resources/ai-2025-content-mastery-toolkit"
             className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-indigo-400 text-indigo-400 font-bold rounded-full hover:bg-indigo-400 hover:text-white transition-all duration-300"
           >
             Get Complete Toolkit
-          </Link>
+          </a>
         </div>
       </div>
     </div>

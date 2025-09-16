@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentDiscoveryWidget2025 = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -339,12 +339,12 @@ const UltimateContentDiscoveryWidget2025 = () => {
                       )}
                     </div>
 
-                    <Link
+                    <a
                       href={`/content/${item.id}`}
                       className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors"
                     >
                       Read More
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -379,18 +379,18 @@ const UltimateContentDiscoveryWidget2025 = () => {
               Subscribe to get the latest AI content, trends, and insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/newsletter"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Subscribe Now
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Request Content
-              </Link>
+              </a>
             </div>
           </div>
         </div>

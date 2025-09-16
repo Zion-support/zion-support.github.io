@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralSuperintelligenceBreakthroughBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -175,24 +175,24 @@ const NeuralSuperintelligenceBreakthroughBanner2025 = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-2026-neural-superintelligence-breakthrough-100000-roi"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/neural-superintelligence-100000-roi-success-story"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               View Success Stories
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources/neural-superintelligence-implementation-guide-100000-roi"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Implementation Guide
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

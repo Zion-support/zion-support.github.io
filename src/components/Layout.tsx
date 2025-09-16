@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -21,26 +21,26 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
       <header className="bg-slate-900/50 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            <a href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               Zion Tech
-            </Link>
+            </a>
             
             <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="text-white/70 hover:text-white transition-colors">
+              <a href="/about" className="text-white/70 hover:text-white transition-colors">
                 About
-              </Link>
-              <Link href="/services" className="text-white/70 hover:text-white transition-colors">
+              </a>
+              <a href="/services" className="text-white/70 hover:text-white transition-colors">
                 Services
-              </Link>
-              <Link href="/resources" className="text-white/70 hover:text-white transition-colors">
+              </a>
+              <a href="/resources" className="text-white/70 hover:text-white transition-colors">
                 Resources
-              </Link>
-              <Link href="/blog" className="text-white/70 hover:text-white transition-colors">
+              </a>
+              <a href="/blog" className="text-white/70 hover:text-white transition-colors">
                 Blog
-              </Link>
-              <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
+              </a>
+              <a href="/contact" className="text-white/70 hover:text-white transition-colors">
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
         </nav>
@@ -63,18 +63,18 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
             <div>
               <h4 className="text-white font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><Link href="/about" className="text-white/70 hover:text-white transition-colors">About</Link></li>
-                <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Services</Link></li>
-                <li><Link href="/resources" className="text-white/70 hover:text-white transition-colors">Resources</Link></li>
-                <li><Link href="/blog" className="text-white/70 hover:text-white transition-colors">Blog</Link></li>
+                <li><a href="/about" className="text-white/70 hover:text-white transition-colors">About</a></li>
+                <li><a href="/services" className="text-white/70 hover:text-white transition-colors">Services</a></li>
+                <li><a href="/resources" className="text-white/70 hover:text-white transition-colors">Resources</a></li>
+                <li><a href="/blog" className="text-white/70 hover:text-white transition-colors">Blog</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-white font-semibold mb-4">Support</h4>
               <ul className="space-y-2">
-                <li><Link href="/contact" className="text-white/70 hover:text-white transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="text-white/70 hover:text-white transition-colors">Privacy</Link></li>
+                <li><a href="/contact" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/privacy" className="text-white/70 hover:text-white transition-colors">Privacy</a></li>
                 <li><a href="https://github.com/Zion-Holdings/zion.app" className="text-white/70 hover:text-white transition-colors">GitHub</a></li>
               </ul>
             </div>
@@ -84,12 +84,12 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
               <p className="text-white/70 mb-4">
                 Stay updated with our latest innovations and automations.
               </p>
-              <Link 
+              <a 
                 href="/contact" 
                 className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
           

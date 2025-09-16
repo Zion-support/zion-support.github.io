@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025RevolutionaryContentShowcase = () => {
   const contentItems = [
@@ -105,12 +105,12 @@ const AI2025RevolutionaryContentShowcase = () => {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readTime}</span>
-                  <Link
+                  <a
                     href={`/content/${item.id}`}
                     className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -118,12 +118,12 @@ const AI2025RevolutionaryContentShowcase = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/ai-2025-content"
             className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             View All Content
-          </Link>
+          </a>
         </div>
       </div>
     </section>

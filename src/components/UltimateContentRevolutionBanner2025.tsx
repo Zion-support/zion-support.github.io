@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateContentRevolutionBanner2025() {
   return (
@@ -51,7 +51,7 @@ export default function UltimateContentRevolutionBanner2025() {
         
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Link 
+          <a 
             href="/ai-2025-2030-ultimate-predictions"
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
           >
@@ -65,9 +65,9 @@ export default function UltimateContentRevolutionBanner2025() {
             <div className="text-yellow-300 font-semibold text-sm">
               Up to 15,000% ROI →
             </div>
-          </Link>
+          </a>
           
-          <Link 
+          <a 
             href="/quantum-computing-breakthroughs-2030"
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
           >
@@ -81,9 +81,9 @@ export default function UltimateContentRevolutionBanner2025() {
             <div className="text-yellow-300 font-semibold text-sm">
               Up to 20,000% ROI →
             </div>
-          </Link>
+          </a>
           
-          <Link 
+          <a 
             href="/neural-interface-revolution-2030"
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
           >
@@ -97,29 +97,29 @@ export default function UltimateContentRevolutionBanner2025() {
             <div className="text-yellow-300 font-semibold text-sm">
               Up to 25,000% ROI →
             </div>
-          </Link>
+          </a>
         </div>
         
         {/* Call to Action Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <Link 
+          <a 
             href="/content-showcase"
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Explore All Content
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/resources/ultimate-implementation-guide-2025"
             className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/30"
           >
             Get Implementation Guide
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/webinars/ultimate-content-revolution-2025"
             className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Join Webinar Series
-          </Link>
+          </a>
         </div>
         
         {/* Additional Info */}

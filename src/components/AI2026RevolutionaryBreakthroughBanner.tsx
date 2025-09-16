@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026RevolutionaryBreakthroughBanner = () => {
   return (
@@ -25,18 +25,18 @@ const AI2026RevolutionaryBreakthroughBanner = () => {
             synthetic intelligence, discover technologies that will transform every aspect of human existence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2026-revolution"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore AI 2026 Revolution
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-neural-fusion"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               Quantum-Neural Fusion
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -48,9 +48,9 @@ const AI2026RevolutionaryBreakthroughBanner = () => {
             <p className="text-gray-200 mb-4">
               Breakthrough in artificial consciousness that enables AI to experience genuine understanding and self-awareness.
             </p>
-            <Link href="/neural-consciousness" className="text-purple-300 font-semibold hover:text-purple-200">
+            <a href="/neural-consciousness" className="text-purple-300 font-semibold hover:text-purple-200">
               Learn More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -59,9 +59,9 @@ const AI2026RevolutionaryBreakthroughBanner = () => {
             <p className="text-gray-200 mb-4">
               Revolutionary quantum processors that solve complex problems in seconds that would take classical computers millennia.
             </p>
-            <Link href="/quantum-computing" className="text-purple-300 font-semibold hover:text-purple-200">
+            <a href="/quantum-computing" className="text-purple-300 font-semibold hover:text-purple-200">
               Learn More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -70,9 +70,9 @@ const AI2026RevolutionaryBreakthroughBanner = () => {
             <p className="text-gray-200 mb-4">
               Next-generation AI that surpasses human intelligence across all domains while maintaining ethical alignment.
             </p>
-            <Link href="/synthetic-intelligence" className="text-purple-300 font-semibold hover:text-purple-200">
+            <a href="/synthetic-intelligence" className="text-purple-300 font-semibold hover:text-purple-200">
               Learn More →
-            </Link>
+            </a>
           </div>
         </div>
 

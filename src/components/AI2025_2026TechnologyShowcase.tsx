@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainCpuDatabaseNetworkShieldZapTargetTrendingUpUsersGlobeRocket
 
 const AI2025_2026TechnologyShowcase = () => {
@@ -217,19 +217,19 @@ const AI2025_2026TechnologyShowcase = () => {
             Discover how our cutting-edge technologies can revolutionize your operations and drive unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/technologies"
               className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Technologies
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Schedule Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

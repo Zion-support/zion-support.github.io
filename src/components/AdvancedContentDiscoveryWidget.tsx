@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AdvancedContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('trending');
@@ -171,7 +171,7 @@ export default function AdvancedContentDiscoveryWidget() {
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {contentCategories[activeTab as keyof typeof contentCategories]?.map((itemindex) => (
-            <Link
+            <a
               key={index}
               href={item.href}
               className={`group relative bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 ${
@@ -205,13 +205,13 @@ export default function AdvancedContentDiscoveryWidget() {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
         {/* View All Button */}
         <div className="mt-8 text-center">
-          <Link
+          <a
             href="/content-showcase"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
@@ -219,7 +219,7 @@ export default function AdvancedContentDiscoveryWidget() {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
 

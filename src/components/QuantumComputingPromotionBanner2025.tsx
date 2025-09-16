@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 AtomZapCpuArrowRightXStar
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingPromotionBanner2025: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(true);
@@ -93,7 +93,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
 
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
-              <Link href="/quantum-computing-showcase-2025">
+              <a href="/quantum-computing-showcase-2025">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -103,7 +103,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                   Explore Quantum
                   <ArrowRight className="w-4 h-4" />
                 </motion.button>
-              </Link>
+              </a>
               
               <button
                 onClick={() => setIsVisible(false)}

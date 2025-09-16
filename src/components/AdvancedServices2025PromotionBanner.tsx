@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AdvancedServices2025PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -89,12 +89,12 @@ const AdvancedServices2025PromotionBanner: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <Link 
+                <a 
                   href="/ai-2025-advanced-services-showcase"
                   className={`inline-block px-8 py-4 bg-gradient-to-r ${services[currentService].color} text-white font-bold text-lg rounded-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}
                 >
                   Explore Service →
-                </Link>
+                </a>
               </div>
               
               <div className="flex-1">
@@ -161,18 +161,18 @@ const AdvancedServices2025PromotionBanner: React.FC = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-6">
-            <Link 
+            <a 
               href="/contact" 
               className="px-10 py-5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-xl rounded-full hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Request Free Consultation
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2025-advanced-services-showcase" 
               className="px-10 py-5 border-2 border-emerald-400 text-emerald-300 font-bold text-xl rounded-full hover:bg-emerald-400 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               View All Services
-            </Link>
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-gray-400">
