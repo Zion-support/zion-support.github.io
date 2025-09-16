@@ -1,10 +1,6 @@
 import React from 'react';
 
 const RevolutionaryTechShowcase2036: React.FC = () => {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Showcase →

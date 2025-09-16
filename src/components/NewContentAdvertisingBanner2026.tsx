@@ -1,229 +1,279 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap } from 'lucide-react';
+import { ChevronRight, Star, Zap, TrendingUp, Users, Award, Sparkles } from 'lucide-react';
+
+interface NewContentItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  isNew?: boolean;
+  urgency?: string;
+  type: 'blog' | 'service' | 'case-study';
+}
 
 const NewContentAdvertisingBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const newContentHighlights = [
+  const newContentItems: NewContentItem[] = [
     {
-      id: 1,
-      title: "Revolutionary AI Healthcare Breakthroughs",
-      description: "Discover how AI is transforming healthcare with personalized medicine and real-time diagnostics",
-      category: "Healthcare AI",
-      readTime: "11 min read",
-      featured: true,
-      icon: <Zap className="w-6 h-6 text-blue-500" />,
-      gradient: "from-blue-500 to-purple-600"
+      id: 'ai-2026-release-scorecards',
+      title: 'AI 2026: Release Scorecards That Prevent Bad Deploys',
+      excerpt: 'Scorecards that gate merges and rollouts using online evals, cost, and safety.',
+      category: 'Operations',
+      isNew: true,
+      urgency: 'Must Read',
+      type: 'blog'
     },
     {
-      id: 2,
-      title: "Quantum Computing Business Revolution",
-      description: "Quantum computing is transforming how businesses solve complex problems and process massive datasets",
-      category: "Quantum Computing",
-      readTime: "9 min read",
-      featured: true,
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      gradient: "from-green-500 to-teal-600"
+      id: 'ai-2026-enterprise-ai-security-blueprint',
+      title: 'Enterprise AI Security Blueprint (2026)',
+      excerpt: 'Defense-in-depth for agentic systems: permissions, approvals, budgets, and audits.',
+      category: 'Security',
+      isNew: true,
+      urgency: 'Trending',
+      type: 'blog'
     },
     {
-      id: 3,
-      title: "Autonomous AI Systems Future",
-      description: "Self-managing AI systems revolutionizing business operations with unprecedented efficiency",
-      category: "Autonomous Systems",
-      readTime: "10 min read",
-      featured: true,
-      icon: <Users className="w-6 h-6 text-purple-500" />,
-      gradient: "from-purple-500 to-pink-600"
+      id: 'ai-powered-business-transformation-500-roi-case-studies',
+      title: 'AI-Powered Business Transformation: 500% ROI Case Studies',
+      excerpt: 'Real-world success stories of companies achieving unprecedented ROI through AI transformation, with detailed implementation strategies.',
+      category: 'Business AI',
+      isNew: true,
+      urgency: 'Hot Topic',
+      type: 'case-study'
     },
     {
-      id: 4,
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer interfaces enabling unprecedented human-computer interaction",
-      category: "Neural Interfaces",
-      readTime: "12 min read",
-      featured: true,
-      icon: <Star className="w-6 h-6 text-yellow-500" />,
-      gradient: "from-yellow-500 to-orange-600"
+      id: 'next-gen-ai-agents-beyond-chatgpt-claude',
+      title: 'Next-Gen AI Agents: Beyond ChatGPT and Claude',
+      excerpt: 'Revolutionary AI agents with multi-modal capabilities, emotional intelligence, and autonomous decision-making that surpass current models.',
+      category: 'AI Agents',
+      isNew: true,
+      urgency: 'Limited Availability',
+      type: 'blog'
+    },
+    {
+      id: 'ai-security-revolution-zero-trust-autonomous-systems',
+      title: 'AI Security Revolution: Zero-Trust Autonomous Systems',
+      excerpt: 'Revolutionary AI security frameworks that create self-defending systems capable of detecting and neutralizing threats autonomously.',
+      category: 'AI Security',
+      isNew: true,
+      urgency: 'Featured',
+      type: 'blog'
+    },
+    {
+      id: 'edge-ai-revolution-intelligence-speed-light',
+      title: 'Edge AI Revolution: Intelligence at the Speed of Light',
+      excerpt: 'Revolutionary edge AI systems that bring real-time intelligence to every device, enabling instant decision-making without cloud dependency.',
+      category: 'Edge AI',
+      isNew: true,
+      urgency: 'Hot Topic',
+      type: 'blog'
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % newContentHighlights.length);
+      setCurrentSlide((prev: number) => (prev + 1) % newContentItems.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [newContentItems.length]);
 
-  const currentHighlight = newContentHighlights[currentSlide];
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'Quantum AI':
+        return <Sparkles className="w-4 h-4" />;
+      case 'Neural Technology':
+        return <Zap className="w-4 h-4" />;
+      case 'Business AI':
+        return <TrendingUp className="w-4 h-4" />;
+      case 'Case Study':
+        return <Award className="w-4 h-4" />;
+      default:
+        return <Star className="w-4 h-4" />;
+    }
+  };
+
+  const getUrgencyColor = (urgency: string) => {
+    switch (urgency) {
+      case 'Must Read':
+        return 'bg-red-500';
+      case 'Trending':
+        return 'bg-orange-500';
+      case 'Hot Topic':
+        return 'bg-pink-500';
+      case 'Limited Availability':
+        return 'bg-purple-500';
+      case 'Featured':
+        return 'bg-blue-500';
+      default:
+        return 'bg-green-500';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'service':
+        return 'bg-green-100 text-green-800 border-green-200';
+      case 'case-study':
+        return 'bg-purple-100 text-purple-800 border-purple-200';
+      default:
+        return 'bg-gray-100 text-gray-800 border-gray-200';
+    }
+  };
 
   if (!isVisible) return null;
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
-      
-      {/* Floating particles */}
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl shadow-2xl">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-4"
-          >
-            <Star className="w-4 h-4 mr-2" />
-            NEW CONTENT ALERT
-          </motion.div>
+      {/* Content */}
+      <div className="relative z-10 p-8">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
+              <Sparkles className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Latest Breakthroughs 2026</h2>
+              <p className="text-white/80 text-sm">Revolutionary AI innovations now available</p>
+            </div>
+          </div>
           
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-white/60 hover:text-white transition-colors"
           >
-            Revolutionary AI Content
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Just Published
-            </span>
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
-            Discover the latest breakthroughs in AI, quantum computing, neural interfaces, and autonomous systems
-          </motion.p>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        {/* Featured content carousel */}
-        <div className="relative max-w-4xl mx-auto">
+        {/* Main Content Carousel */}
+        <div className="relative h-64 overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 300 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+              exit={{ opacity: 0, x: -300 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="absolute inset-0 flex items-center"
             >
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-shrink-0">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${currentHighlight.gradient} flex items-center justify-center text-white`}>
-                    {currentHighlight.icon}
-                  </div>
-                </div>
-                
-                <div className="flex-1 text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                    <span className="px-3 py-1 bg-white/20 text-white text-sm rounded-full">
-                      {currentHighlight.category}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+                {/* Content Info */}
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(newContentItems[currentSlide].type)}`}>
+                      {newContentItems[currentSlide].type.toUpperCase()}
                     </span>
-                    <div className="flex items-center text-gray-300 text-sm">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {currentHighlight.readTime}
-                    </div>
+                    {newContentItems[currentSlide].isNew && (
+                      <span className="px-2 py-1 bg-yellow-500 text-yellow-900 text-xs font-bold rounded-full">
+                        NEW
+                      </span>
+                    )}
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getUrgencyColor(newContentItems[currentSlide].urgency!)}`}>
+                      {newContentItems[currentSlide].urgency}
+                    </span>
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    {currentHighlight.title}
+
+                  <h3 className="text-2xl font-bold text-white leading-tight">
+                    {newContentItems[currentSlide].title}
                   </h3>
                   
-                  <p className="text-gray-300 text-lg mb-4">
-                    {currentHighlight.description}
+                  <p className="text-white/90 text-lg leading-relaxed">
+                    {newContentItems[currentSlide].excerpt}
                   </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
-                      Read Now
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2 text-white/80">
+                      {getCategoryIcon(newContentItems[currentSlide].category)}
+                      <span className="text-sm">{newContentItems[currentSlide].category}</span>
+                    </div>
+                    <div className="flex items-center space-x-1 text-yellow-400">
+                      <Users className="w-4 h-4" />
+                      <span className="text-sm">12.5K views</span>
+                    </div>
+                  </div>
+
+                  <div className="flex space-x-4 pt-4">
+                    <button className="px-6 py-3 bg-white text-indigo-900 font-semibold rounded-lg hover:bg-white/90 transition-colors flex items-center space-x-2">
+                      <span>Explore Now</span>
+                      <ChevronRight className="w-4 h-4" />
                     </button>
-                    <button className="px-6 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-all duration-300">
-                      Explore All Content
+                    <button className="px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                      Learn More
                     </button>
+                  </div>
+                </div>
+
+                {/* Visual Element */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl backdrop-blur-sm"></div>
+                  <div className="relative p-8 h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-24 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        {getCategoryIcon(newContentItems[currentSlide].category)}
+                      </div>
+                      <div className="text-white/60 text-sm">
+                        {newContentItems[currentSlide].type === 'blog' && 'Latest Research'}
+                        {newContentItems[currentSlide].type === 'service' && 'New Service'}
+                        {newContentItems[currentSlide].type === 'case-study' && 'Success Story'}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
-
-          {/* Navigation dots */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {newContentHighlights.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-white scale-125'
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
-              />
-            ))}
-          </div>
         </div>
 
-        {/* Stats section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
-        >
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">7+</div>
-            <div className="text-gray-300 text-sm">New Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">5</div>
-            <div className="text-gray-300 text-sm">Categories</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">50K+</div>
-            <div className="text-gray-300 text-sm">Words</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">100%</div>
-            <div className="text-gray-300 text-sm">Featured</div>
-          </div>
-        </motion.div>
+        {/* Navigation Dots */}
+        <div className="flex justify-center space-x-2 mt-6">
+          {newContentItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentSlide 
+                  ? 'bg-white scale-110' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
 
-        {/* Close button */}
-        <button
-          onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        {/* Stats */}
+        <div className="grid grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/20">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">8</div>
+            <div className="text-white/60 text-sm">New Articles</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">500%</div>
+            <div className="text-white/60 text-sm">ROI Case Studies</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">2026</div>
+            <div className="text-white/60 text-sm">Latest Breakthroughs</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">6</div>
+            <div className="text-white/60 text-sm">Featured Content</div>
+          </div>
+        </div>
       </div>
     </div>
   );

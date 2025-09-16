@@ -2,9 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 const posts = [
-  { href: '/blog/ai-2025-enterprise-ai-agents-breakthrough', title: 'Enterprise AI Agents in 2025', tag: 'New' },
+  { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-agentic-observability-overview', title: 'Agentic Observability — Executive Overview (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-agent-posture-management', title: 'Agent Posture Management — Executive Guide (2026)', tag: 'Featured' },
+  { href: '/blog/ai-2026-trusted-rag-guardrailed-retrieval', title: 'Trusted RAG — Guardrailed Retrieval (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-operational-reliability-blueprint', title: 'Operational Reliability Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-real-world-eval-gates-case-studies', title: 'Real‑World Eval Gates — Case Studies (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-eval-gated-ci-cd-blueprint', title: 'Eval‑Gated CI/CD Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-reliable-autonomy-operations', title: 'Reliable Autonomy Operations (2026)', tag: 'New' },
   { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
-  { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'New' },
+  { href: '/blog/ai-2026-production-safety-checklist', title: 'Production Safety Checklist (2026)', tag: 'Guide' },
+  { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'Trending' },
+  { href: '/blog/ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', tag: 'Guide' },
+  { href: '/blog/ai-2026-trustworthy-autonomous-agents-blueprint', title: 'Trustworthy Autonomous Agents Blueprint (2026)', tag: 'Featured' },
 ];
 
 export default function BlogIndexPage() {

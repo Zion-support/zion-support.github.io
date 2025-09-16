@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -14,13 +14,22 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
-      title: "AI 2026: Production Safety Checklist",
-      description: "SLO‑driven checklist to harden agents with eval gates, guardrails, and rollback.",
-      slug: "ai-2026-production-safety-checklist",
+      title: "AI 2026: Post‑Incident Learning Loops — Operational Excellence",
+      description: "Turn incidents into durable improvements with evidence‑led learning loops and scorecards.",
+      slug: "ai-2026-post-incident-learning-loops",
+      category: "Reliability",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/post-incident-learning-loops-2026.jpg"
+    },
+    {
+      title: "AI 2026: Real‑Time Agent Routing — Best Practices",
+      description: "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
+      slug: "ai-2026-realtime-agent-routing-best-practices",
       category: "Operations",
       date: "2025-09-16",
       featured: true,
-      image: "/images/production-safety-checklist-2026.jpg"
+      image: "/images/blog/realtime-agent-routing-2026.jpg"
     },
     {
       title: "AI 2026: Safe Rollouts in Production",

@@ -17,7 +17,10 @@ import {
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 // Data imports temporarily disabled due to module resolution conflicts
+import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
+import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -48,6 +51,42 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Autonomous Incident Response Blueprint (2026)',
+      href: '/blog/ai-2026-autonomous-incident-response-blueprint',
+      tag: 'New',
+      gradient: 'from-rose-500 to-red-500'
+    },
+    {
+      title: 'Enterprise Agent Risk Mitigation (2026)',
+      href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Reliable Autonomy Operations (2026)',
+      href: '/blog/ai-2026-reliable-autonomy-operations',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Agentic Observability — Deep Dive (2026)',
+      href: '/blog/ai-2026-agentic-observability-deep-dive',
+      tag: 'New',
+      gradient: 'from-purple-500 to-fuchsia-500'
+    },
+    {
+      title: 'Agent Platform SLO Blueprint (2026)',
+      href: '/blog/ai-2026-agent-slo-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Governed Tool Use — Case Studies (2026)',
+      href: '/blog/ai-2026-governed-tool-use-case-studies',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
       title: '2025-09 Research Brief — Agentic Business Ops',
       href: '/reports/briefs/brief-2025-09-agentic-business-ops',
       tag: 'Brief',
@@ -64,6 +103,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/reports/cases/case-2025-09-finops-ai-savings',
       tag: 'Case Study',
       gradient: 'from-cyan-500 to-violet-500'
+    },
+    {
+      title: 'Trustworthy Model Routing — Starter Kit (2026)',
+      href: '/blog/ai-2026-trustworthy-model-routing-starter',
+      tag: 'Starter Kit',
+      gradient: 'from-sky-500 to-blue-600'
     },
     {
       title: 'Enterprise Automation Strategy 2025',
@@ -88,6 +133,31 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-operationalizing-agentic-workflows',
       tag: 'Agentic',
       gradient: 'from-cyan-500 to-purple-500'
+    },
+    {
+      title: 'Operational Evals — Blueprint (2026)',
+      href: '/blog/ai-2026-operational-evals-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Agent Observability Blueprint (2026)',
+      href: '/blog/ai-2026-agent-observability-blueprint',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
+      title: 'Customer-Facing AI Agents in 2025',
+      href: '/blog/ai-customer-agents-2025',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-lime-500'
+    }
+    ,
+    {
+      title: 'Evidence‑Led Operations — Centralizing Evals, Incidents, KPIs',
+      href: '/blog/ai-2026-evidence-led-operations-blueprint',
+      tag: 'Operations',
+      gradient: 'from-amber-500 to-pink-500'
     }
   ];
 
@@ -345,20 +415,24 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Guardrails, evals, and FinOps blueprints now live.</p>
+                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
-                <a href="/blog/ai-2026-runtime-guardrails-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Runtime Guardrails Blueprint</div>
-                  <div className="text-xs opacity-90">7 min • Safety</div>
+                <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">8 min • Evals</div>
                 </a>
-                <a href="/blog/ai-2026-evaluation-cookbook" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evaluation Cookbook</div>
-                  <div className="text-xs opacity-90">8 min • Evaluations</div>
+                <a href="/blog/ai-2026-agent-observability-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Observability Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">7 min • Observability</div>
                 </a>
-                <a href="/blog/ai-2026-cost-optimization-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Cost Optimization Blueprint</div>
-                  <div className="text-xs opacity-90">6 min • FinOps</div>
+                <a href="/blog/ai-2026-trustworthy-model-routing-starter" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
+                  <div className="text-xs opacity-90">6 min • Routing</div>
+                </a>
+                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
+                  <div className="text-xs opacity-90">7 min • Operations</div>
                 </a>
               </div>
             </div>
@@ -520,6 +594,15 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
           </motion.div>
         </div>
       </section>
+
+      {/* Revolutionary Content Banner 2026 */}
+      <RevolutionaryContentBanner2026 />
+
+      {/* Innovative Services Showcase 2026 */}
+      <InnovativeServicesShowcase2026 />
+
+      {/* Advanced Automation Banner 2026 */}
+      <AdvancedAutomationBanner2026 />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">

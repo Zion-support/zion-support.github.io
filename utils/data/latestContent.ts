@@ -17,6 +17,14 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-16",
   },
   {
+    id: "ai-2026-safe-agent-actions-blueprint",
+    title: "AI 2026: Safe Agent Actions — Blueprint",
+    summary: "Risk‑tiered adapters, approvals, budgets, and policy‑as‑code for safe actions.",
+    href: "/blog/ai-2026-safe-agent-actions-blueprint",
+    tag: "Security",
+    date: "2025-09-16",
+  },
+  {
     id: "evals-and-guardrails",
     title: "Evals, Guardrails, and Safety",
     summary: "Stand up eval suites and policy guardrails for production agents.",
@@ -127,6 +135,23 @@ export const latestContent: ContentItem[] = [
     summary: "Risk‑tiered adapters, approvals, and budgets for safe agent actions.",
     href: "/blog/ai-2026-secure-tooling-permissions-blueprint",
     tag: "Security",
+    date: "2025-09-16",
+  },
+  // New content (2025-09-16)
+  {
+    id: "ai-2026-agentic-evidence-hub-overview",
+    title: "Agentic Evidence Hub — Executive Overview",
+    summary: "Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.",
+    href: "/content/ai-2026-agentic-evidence-hub-overview",
+    tag: "Overview",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-agentic-billing-controls",
+    title: "Reliable Autonomy + Agentic Billing Controls",
+    summary: "Predictable spend with budgets, approvals, and evaluation-gated execution.",
+    href: "/blog/ai-2026-agentic-billing-controls",
+    tag: "Guide",
     date: "2025-09-16",
   },
 ];

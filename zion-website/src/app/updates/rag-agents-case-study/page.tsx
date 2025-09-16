@@ -1,4 +1,3 @@
-
 export default function RagAgentsCaseStudy() {
   return (
     <div className="bg-black min-h-screen">
@@ -33,4 +32,3 @@ export default function RagAgentsCaseStudy() {
     </div>
   )
 }
-
