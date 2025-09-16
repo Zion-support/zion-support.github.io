@@ -15,14 +15,11 @@ const InteractiveTechShowcase2028: React.FC = () => {
       description: 'Experience the most advanced technological innovations that will reshape our world in 2028',
       features: [
         'Conscious AI Systems',
-        'Quantum Consciousness',
-        'Interdimensional Computing',
-        'Neural Reality Engine',
-        'Synthetic Intelligence',
-        'Cosmic AI Consciousness'
+        'Quantum Computing Revolution',
+        'Neural Interface Technology',
+        'Metaverse Integration'
       ],
-      link: '/pages/RevolutionaryTechBreakthrough2028',
-      color: 'from-purple-600 to-pink-600'
+      color: 'from-blue-500 to-purple-500'
     },
     innovation: {
       title: 'Ultimate Tech Innovation 2028',
@@ -49,8 +46,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
         'Synthetic Reality',
         'Cosmic Intelligence'
       ],
-      link: '/pages/NextGenTechRevolution2028',
-      color: 'from-emerald-600 to-teal-600'
+      color: 'from-pink-500 to-red-500'
     }
   };
 
@@ -76,7 +72,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg transition-all duration-300 font-semibold ${
                   activeTab === tab.id
                     ? 'bg-white text-purple-600 shadow-lg'
                     : 'text-purple-200 hover:text-white hover:bg-white/10'
@@ -111,9 +107,9 @@ const InteractiveTechShowcase2028: React.FC = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-8">
             <a
-              href={content[activeTab as keyof typeof content].link}
+              href={`/pages/${content[activeTab as keyof typeof content].title.replace(/\s+/g, '')}`}
               className={`inline-block bg-gradient-to-r ${content[activeTab as keyof typeof content].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
             >
               Explore {content[activeTab as keyof typeof content].title} →
