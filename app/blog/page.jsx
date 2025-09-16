@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -14,25 +14,51 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:app/blog/page.jsx
-<<<<<<< HEAD:app/blog/page.jsx
-<<<<<<< HEAD:app/blog/page.jsx
-      title: "AI 2026: Agent Risk Maturity Matrix",
-      description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
-      slug: "ai-2026-agent-risk-maturity-matrix",
-      category: "AI Governance",
-=======
-      title: "AI 2026: Enterprise AI Governance Blueprint",
-      description: "Policy-as-code, model risk tiers, and runtime monitoring to scale AI safely across the enterprise.",
-      slug: "ai-2026-enterprise-ai-governance-blueprint",
-      category: "Governance",
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+      title: "AI 2026: Post‑Incident Learning Loops — Operational Excellence",
+      description: "Turn incidents into durable improvements with evidence‑led learning loops and scorecards.",
+      slug: "ai-2026-post-incident-learning-loops",
+      category: "Reliability",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/post-incident-learning-loops-2026.jpg"
+    },
+    {
+      title: "AI 2026: Real‑Time Agent Routing — Best Practices",
+      description: "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
+      slug: "ai-2026-realtime-agent-routing-best-practices",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/realtime-agent-routing-2026.jpg"
+    },
+    {
+      title: "AI 2026: Safe Rollouts in Production",
+      description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
+      slug: "ai-2026-safe-rollouts-in-production",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/safe-rollouts-2026.jpg"
+    },
+    {
+      title: "AI 2026: Causal Evals for Autonomous Agents",
+      description: "Design causality‑aware evaluation harnesses to validate safety and alignment.",
+      slug: "ai-2026-causal-evals-for-autonomous-agents",
+      category: "Evaluation",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/causal-evals-autonomous-agents-2026.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Evidence‑Led Operations",
+      description: "Operate with auditable evaluation evidence driving safe, compliant decisions.",
+      slug: "ai-2026-autonomous-evidence-led-operations",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/evidence-led-ops-2026.jpg"
+    },
+    {
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
@@ -40,21 +66,6 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/enterprise-ai-governance-2026.jpg"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      title: "AI 2025: Multimodal AI Agents – Practical Enterprise Guide",
-      description: "A hands-on 2025 playbook to design, deploy, and govern multimodal AI agents that drive measurable outcomes.",
-      slug: "ai-2025-multimodal-agents-practical-guide",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/multimodal-agents-2025.jpg"
->>>>>>> origin/feat/new-blog-content:app/blog/page.tsx
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
     },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
@@ -75,16 +86,6 @@ const BlogPage = () => {
       image: "/images/ai-governance-blueprint-2026.jpg"
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
-      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
-      slug: "ai-2026-secure-agent-architecture",
-      category: "Security Architecture",
->>>>>>> origin/feature/add-governance-blueprint-content:app/blog/page.tsx
-      date: "2025-09-15",
-=======
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
       description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
       slug: "ai-2025-enterprise-ai-agents-breakthrough",
@@ -99,10 +100,17 @@ const BlogPage = () => {
       slug: "ai-2025-quantum-computing-breakthrough",
       category: "Quantum Computing",
       date: "2025-01-15",
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
       featured: true,
       image: "/images/quantum-computing-2025.jpg"
+    },
+    {
+      title: "AI 2026: Evaluation-Driven Release Engineering",
+      description: "Ship safer autonomy with eval-gated rollouts, canary scorecards, and automated rollback.",
+      slug: "ai-2026-evaluation-driven-release-engineering",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/evaluation-driven-release-engineering-2026.jpg"
     }
   ];
 

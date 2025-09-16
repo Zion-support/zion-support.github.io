@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
+  const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const getCurrentItems = () => {
+    switch (activeTab) {
+      case 'blog':
+        return REVOLUTIONARY_BLOG_POSTS_2027;
+      case 'case-studies':
+        return REVOLUTIONARY_CASE_STUDIES_2027;
+      case 'services':
+        return REVOLUTIONARY_SERVICES_2027;
+      default:
+        return REVOLUTIONARY_BLOG_POSTS_2027;
+    }
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
@@ -135,45 +132,10 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -319,76 +281,15 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-8 text-white`}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="text-8xl mb-6 text-center md:text-left">{item.image}</div>
-                        <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-                        <p className="text-xl opacity-90 mb-6">{item.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {item.features.map((feature, index) => (
-                            <span key={index} className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <a 
-                          href={item.link}
-                          className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                        >
-                          Explore {item.title} →
-                        </a>
-                      </div>
-                      <div className="hidden md:block">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                          <h4 className="text-xl font-bold mb-4">Key Features</h4>
-                          <ul className="space-y-2">
-                            {item.features.map((feature, index) => (
-                              <li key={index} className="flex items-center space-x-2">
-                                <span className="w-2 h-2 bg-white rounded-full"></span>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
+              {currentItems.map((item, index) => (
+                <div key={item.id} className="w-1/3 flex-shrink-0 px-4">
+                  {renderItem(item)}
+                </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
               </div>
             ))}
           </div>
@@ -479,39 +380,17 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           ))}
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {contentItems.map((item, index) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className={`bg-gradient-to-br ${item.gradient} rounded-lg p-4 text-white text-center hover:scale-105 transition-all duration-300 ${
-                index === currentSlide ? 'ring-2 ring-white' : ''
-              }`}
-            >
-              <div className="text-3xl mb-2">{item.image}</div>
-              <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
-            </a>
-          ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
+        {/* View All Button */}
+        <div className="text-center mt-8">
+          <Link
+            to="/revolutionary-content-2027"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+          >
+            View All 2027 Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>

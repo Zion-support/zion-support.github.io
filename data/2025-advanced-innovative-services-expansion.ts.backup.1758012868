@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  benefits: string[];
+  capabilities: string[];
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+};
+
+export const advancedInnovativeServices: AdvancedInnovativeService[] = [
+  // Advanced AI & Machine Learning Services
+  {
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

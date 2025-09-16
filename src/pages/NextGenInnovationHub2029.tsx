@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const NextGenInnovationHub2029: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
 
@@ -137,11 +138,14 @@ const NextGenInnovationHub2029: React.FC = () => {
       </Helmet>
       
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2029
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2029
@@ -271,6 +275,8 @@ const NextGenInnovationHub2029: React.FC = () => {
                 99.9% Success
               </span>
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
             </div>
           </div>
           
@@ -282,6 +288,7 @@ const NextGenInnovationHub2029: React.FC = () => {
             </p>
             <div className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-lg opacity-90 mb-2">Success Rate</div>
               <div className="text-sm opacity-75">Proven technology reliability</div>
@@ -290,6 +297,8 @@ const NextGenInnovationHub2029: React.FC = () => {
                 Infinite Possibilities
               </span>
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
             </div>
           </div>
           
@@ -300,6 +309,7 @@ const NextGenInnovationHub2029: React.FC = () => {
               Computing across dimensions
             </p>
             <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-lg opacity-90 mb-2">Possibilities</div>
@@ -382,11 +392,14 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-sm opacity-80">Innovation</div>
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
             </div>
           </div>
         </div>
 
         <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -396,11 +409,14 @@ const NextGenInnovationHub2029: React.FC = () => {
           <p className="text-xl mb-8 opacity-90">
             Be part of the team that's building the future of humanity
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Our Team
             </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Submit Your Innovation
@@ -408,6 +424,8 @@ const NextGenInnovationHub2029: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Explore Innovations
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
             </button>
           </div>
         </div>

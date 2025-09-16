@@ -44,6 +44,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >
@@ -249,6 +250,8 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           </div>
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
       </div>
     </divdiv>
   );
