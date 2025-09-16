@@ -70,6 +70,7 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Added in this change
 posts.unshift(
+  { slug: 'ai-2026-cost-aware-observability-blueprint', title: 'AI 2026: Cost‑Aware Observability Blueprint', excerpt: 'Unify traces, evals, and spend to keep systems fast and on budget.' },
   { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
   { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
   { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
