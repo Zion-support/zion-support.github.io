@@ -302,6 +302,21 @@ export default function HomePage() {
 
       {/* Discovery widget to surface new content */}
       <NewContent2026DiscoveryWidget />
+      {/* New blog promo: Enterprise Agent Risk Scorecards (2026) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-fuchsia-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
+            <div>
+              <p className="text-sm font-semibold text-indigo-700">New on the blog</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Enterprise Agent Risk Scorecards (2026)</h2>
+              <p className="text-gray-600 mt-2">Define risk tiers, gate releases with evals, and ship audit‑ready autonomy.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-enterprise-agent-risk-scorecards" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Promo: Governed Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
