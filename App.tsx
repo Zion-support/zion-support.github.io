@@ -51,6 +51,9 @@ import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
@@ -1013,6 +1016,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />

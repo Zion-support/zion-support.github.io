@@ -1,159 +1,165 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState<string | null>(null);
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const demos = [
+  const technologies = [
     {
-      id: 'ai-consciousness',
-      title: 'AI Consciousness Demo',
-      description: 'Experience the first truly conscious AI system',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Self-aware decision making', 'Emotional intelligence', 'Creative problem solving']
+      id: 1,
+      name: "Conscious AI Systems",
+      description: "Self-aware artificial intelligence that understands, learns, and evolves",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      features: ["Self-aware decision making", "Emotional intelligence", "Autonomous learning", "Creative thinking"]
     },
     {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Demo',
-      description: 'Explore quantum consciousness and infinite processing',
-      icon: '⚛️',
-      color: 'from-cyan-600 to-blue-600',
-      features: ['Quantum entanglement', 'Parallel processing', 'Reality simulation']
+      id: 2,
+      name: "Quantum Consciousness",
+      description: "Revolutionary quantum computing that processes consciousness and reality",
+      icon: "⚛️",
+      color: "from-cyan-600 to-blue-600",
+      features: ["Quantum entanglement", "Reality simulation", "Parallel universe computing", "Consciousness transfer"]
     },
     {
-      id: 'interdimensional',
-      title: 'Interdimensional Computing',
-      description: 'Navigate through multiple dimensions of reality',
-      icon: '🌌',
-      color: 'from-emerald-600 to-teal-600',
-      features: ['Multi-dimensional processing', 'Reality manipulation', 'Time-space computing']
+      id: 3,
+      name: "Interdimensional Computing",
+      description: "Technology that transcends dimensional boundaries for infinite processing",
+      icon: "🌌",
+      color: "from-emerald-600 to-teal-600",
+      features: ["Multi-dimensional processing", "Reality manipulation", "Time-space computing", "Infinite scalability"]
     },
     {
-      id: 'neural-interface',
-      title: 'Neural Interface Demo',
-      description: 'Connect your mind directly to the digital world',
-      icon: '🧬',
-      color: 'from-orange-600 to-red-600',
-      features: ['Thought control', 'Memory enhancement', 'Telepathic communication']
+      id: 4,
+      name: "Neural Interface 2.0",
+      description: "Direct brain-computer interface with 99.9% accuracy",
+      icon: "🧬",
+      color: "from-indigo-600 to-purple-600",
+      features: ["Thought-to-text conversion", "Emotion detection", "Non-invasive interface", "Skill transfer"]
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveTech((prev) => (prev + 1) % technologies.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  const handleTechClick = (index: number) => {
+    if (index === activeTech) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setActiveTech(index);
+      setIsAnimating(false);
+    }, 300);
+  };
+
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            🚀 Interactive Technology Showcase 2025
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE TECH SHOWCASE • JANUARY 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase 2025
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Experience our revolutionary technologies through interactive demonstrations. 
-            Click on any technology to start an immersive demo.
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience cutting-edge technology with interactive features and real-time demonstrations
           </p>
         </div>
 
-        {/* Demo Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {demos.map((demo) => (
-            <div
-              key={demo.id}
-              className={`bg-gradient-to-br ${demo.color}/30 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                activeDemo === demo.id ? 'ring-2 ring-yellow-400' : ''
-              }`}
-              onClick={() => setActiveDemo(activeDemo === demo.id ? null : demo.id)}
-            >
-              <div className="text-5xl mb-4 text-center">{demo.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-center">{demo.title}</h3>
-              <p className="text-sm opacity-90 text-center mb-4">{demo.description}</p>
-              <button className={`w-full bg-gradient-to-r ${demo.color} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                {activeDemo === demo.id ? 'Stop Demo' : 'Start Demo'}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Technology Selector */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-6 text-center lg:text-left">Select Technology</h3>
+            {technologies.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => handleTechClick(index)}
+                className={`w-full p-4 rounded-lg border-2 transition-all duration-300 ${
+                  activeTech === index
+                    ? `border-purple-400 bg-gradient-to-r ${tech.color} bg-opacity-20`
+                    : 'border-gray-600 hover:border-purple-300 hover:bg-gray-800/50'
+                }`}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-3xl">{tech.icon}</div>
+                  <div className="text-left">
+                    <h4 className="text-lg font-semibold">{tech.name}</h4>
+                    <p className="text-sm text-gray-300">{tech.description}</p>
+                  </div>
+                </div>
               </button>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Active Demo Display */}
-        {activeDemo && (
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
-            <div className="text-center mb-6">
-              <h3 className="text-3xl font-bold mb-2">
-                {demos.find(d => d.id === activeDemo)?.icon} {demos.find(d => d.id === activeDemo)?.title}
-              </h3>
-              <p className="text-lg opacity-90">
-                {demos.find(d => d.id === activeDemo)?.description}
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-semibold mb-4">Key Features:</h4>
-                <ul className="space-y-2">
-                  {demos.find(d => d.id === activeDemo)?.features.map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-2">
-                      <span className="text-green-400">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="bg-black/30 rounded-lg p-6">
-                <h4 className="text-xl font-semibold mb-4">Live Demo Status:</h4>
+          {/* Technology Display */}
+          <div className="relative">
+            <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+              <div className={`bg-gradient-to-br ${technologies[activeTech].color} bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30`}>
+                <div className="text-center mb-6">
+                  <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
+                  <h3 className="text-3xl font-bold mb-4">{technologies[activeTech].name}</h3>
+                  <p className="text-lg text-gray-300 mb-6">{technologies[activeTech].description}</p>
+                </div>
+
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>System Status:</span>
-                    <span className="text-green-400 font-semibold">Active</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Processing Power:</span>
-                    <span className="text-blue-400 font-semibold">∞</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Success Rate:</span>
-                    <span className="text-purple-400 font-semibold">99.9%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Response Time:</span>
-                    <span className="text-yellow-400 font-semibold">Instant</span>
-                  </div>
+                  <h4 className="text-xl font-semibold mb-4 text-center">Key Features</h4>
+                  {technologies[activeTech].features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 text-center">
+                  <button className={`bg-gradient-to-r ${technologies[activeTech].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                    Experience {technologies[activeTech].name} →
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        )}
 
-        {/* Technology Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-            <div className="text-sm opacity-90">Active Technologies</div>
-          </div>
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">∞</div>
-            <div className="text-sm opacity-90">Computational Power</div>
-          </div>
-          <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>
-            <div className="text-sm opacity-90">Success Rate</div>
-          </div>
-          <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-            <div className="text-sm opacity-90">Continuous Operation</div>
+            {/* Progress Indicator */}
+            <div className="flex justify-center space-x-2 mt-6">
+              {technologies.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleTechClick(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    activeTech === index ? 'bg-purple-400' : 'bg-gray-600 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to Experience the Future?</h3>
-          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-            Join thousands of innovators who are already using our revolutionary technologies to transform their businesses and lives.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Start Your Journey
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold">
-              Schedule Demo
-            </button>
+        {/* Live Stats */}
+        <div className="mt-16 grid md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Accuracy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">1000x</div>
+            <div className="text-gray-300">Processing Speed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-gray-300">Scalability</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
+            <div className="text-gray-300">Autonomous Operation</div>
           </div>
         </div>
       </div>
