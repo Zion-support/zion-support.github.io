@@ -142,7 +142,7 @@ export const latestContent: ContentItem[] = [
     id: "ai-2026-agentic-evidence-hub-overview",
     title: "Agentic Evidence Hub — Executive Overview",
     summary: "Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.",
-    href: "/content/ai-2026-agentic-evidence-hub-overview",
+    href: "/blog/ai-2026-evidence-hub-architecture",
     tag: "Overview",
     date: "2025-09-16",
   },
