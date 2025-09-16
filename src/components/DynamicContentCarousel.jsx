@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,20 +8,30 @@ const DynamicContentCarousel = () => {
     {
       id: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "AI Innovation 2025",
       description: "Latest AI breakthroughs and applications",
       image: "🤖",
       gradient: "from-blue-500 to-purple-500"
+=======
+      title: "AI Innovation Hub 2026",
+      description: "Explore cutting-edge AI technologies and breakthrough innovations",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/AIInnovationHub2026"
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     },
     {
       id: 2,
-      title: "Quantum Computing",
-      description: "Revolutionary quantum technologies",
-      image: "⚡",
-      gradient: "from-purple-500 to-pink-500"
+      title: "Quantum Computing Revolution",
+      description: "Discover the power of quantum computing and its applications",
+      image: "⚛️",
+      gradient: "from-blue-600 to-cyan-600",
+      link: "/pages/QuantumComputingRevolution2026"
     },
     {
       id: 3,
+<<<<<<< HEAD
       title: "Neural Interfaces",
       description: "Brain-computer interface solutions",
       image: "🧠",
@@ -42,6 +53,8 @@ const DynamicContentCarousel = () => {
     },
     {
       id: 3,
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       title: "Neural Interface Technology",
       description: "Experience the future of brain-computer interfaces",
       image: "🧬",
@@ -55,13 +68,17 @@ const DynamicContentCarousel = () => {
       image: "📚",
       gradient: "from-indigo-600 to-purple-600",
       link: "/pages/AITransformationGuide2026"
+<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, 3000);
     return () => clearInterval(timer);
@@ -90,6 +107,24 @@ const DynamicContentCarousel = () => {
     <div className="relative max-w-6xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl">
         <div className="relative">
+=======
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [carouselItems.length]);
+
+  return (
+    <div className="relative max-w-6xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
               <div className="flex items-center justify-between">
                 <div className="flex-1">
@@ -108,6 +143,7 @@ const DynamicContentCarousel = () => {
                     <span className="text-8xl">{carouselItems[currentSlide].image}</span>
                   </div>
                 </div>
+<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
               </div>
             </div>
@@ -134,6 +170,12 @@ const DynamicContentCarousel = () => {
 =======
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       </div>
 
       {/* Navigation Dots */}
@@ -143,6 +185,7 @@ const DynamicContentCarousel = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
+<<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +215,12 @@ const DynamicContentCarousel = () => {
           />
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+              currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       </div>
     </div>
   );

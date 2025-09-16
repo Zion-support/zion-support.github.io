@@ -248,54 +248,6 @@
   --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
-/* New Animations for 2027 Components */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
-  }
-}
-
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
 =======
@@ -675,6 +627,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 .high-contrast button,
 .high-contrast input,
@@ -738,6 +691,10 @@ body {
 .focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+=======
+.high-contrast {
+  filter: contrast(150%) brightness(120%);
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 }
 
 /* High contrast mode */
@@ -745,6 +702,7 @@ body {
   :root {
     --glass-bg: rgba(0, 0, 0, 0.8);
     --glass-border: rgba(255, 255, 255, 0.8);
+<<<<<<< HEAD
   }
 }
 
@@ -834,3 +792,61 @@ body {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 }
+=======
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Utility Classes */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive Typography */
+.text-responsive {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Interactive Elements */
+.interactive {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.interactive:active {
+  transform: translateY(0);
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-6f93

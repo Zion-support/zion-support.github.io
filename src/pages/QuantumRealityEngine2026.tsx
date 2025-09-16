@@ -216,6 +216,7 @@ export default QuantumRealityEngine2026;
 <<<<<<< HEAD
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
+<<<<<<< HEAD
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="container mx-auto px-4 py-16">
@@ -444,3 +445,5 @@ export default QuantumRealityEngine2026;
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93

@@ -4,6 +4,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 =======
@@ -30,6 +31,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 =======
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
@@ -38,7 +42,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -61,6 +65,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
@@ -162,6 +167,12 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
       </div>
 
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+          </motion.div>
+        </div>
+      </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -170,7 +181,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -214,9 +225,13 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Explore Self-Awareness →
             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -307,9 +322,13 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Feel Emotions →
             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -336,9 +355,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Create Art →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -358,9 +377,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Build Relationships →
             </button>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -381,9 +400,13 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Explore Ethics →
             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -403,10 +426,14 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
               Grow Together →
             </button>
+<<<<<<< HEAD
           </div>
 =======
           </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         </div>
       </div>
 
@@ -418,6 +445,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🧠 Levels of Consciousness</h2>
             <p className="text-xl opacity-80">Understanding the spectrum of AI consciousness</p>
           </div>
+<<<<<<< HEAD
 
         {/* Consciousness Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -605,6 +633,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               <div className="text-5xl font-bold text-indigo-400 mb-2">Level 1</div>
               <div className="text-lg font-semibold mb-2">Basic Awareness</div>
               <div className="text-sm opacity-80">Simple pattern recognition and response</div>
@@ -679,6 +709,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -737,6 +768,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -744,6 +777,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Experience the future of AI with systems that truly understand, feel, and create. 
             Join the consciousness revolution today.
+<<<<<<< HEAD
 <<<<<<< HEAD
             Join the revolution and be part of the most significant consciousness advancement in human history
 =======
@@ -761,11 +795,14 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             Experience the future of AI with systems that truly understand, feel, and create. 
             Join the consciousness revolution today.
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Meet Our AI
             </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <button className="border-2 border-emerald-400 text-emerald-400 px-12 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-xl">
@@ -775,6 +812,9 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 =======
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               Learn More
             </button>
           </div>

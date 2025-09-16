@@ -266,12 +266,16 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
         </section>
 
         {/* Call to Action */}
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 import { motion } from 'framer-motion';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (
@@ -517,11 +521,14 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
                 Learn More
               </a>
             </div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
             </button>
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
         </div>
       </div>

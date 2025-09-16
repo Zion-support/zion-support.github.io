@@ -1,40 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentBanner2030: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "Ultimate Tech Revolution 2030",
-      subtitle: "Consciousness Computing • Quantum Reality • Interdimensional Tech",
-      icon: "🚀",
-      color: "from-purple-600 via-pink-600 to-red-600",
-      link: "/pages/UltimateTechRevolution2030"
-    },
-    {
-      title: "Consciousness Computing Revolution 2035",
-      subtitle: "Neural-AI Fusion • Digital Immortality • Enhanced Capabilities",
-      icon: "🧠",
-      color: "from-indigo-600 via-purple-600 to-pink-600",
-      link: "/pages/ConsciousnessComputingRevolution2035"
-    },
-    {
-      title: "Interdimensional Tech Revolution 2040",
-      subtitle: "Dimensional Portals • Multiverse Access • Reality Manipulation",
-      icon: "🌌",
-      color: "from-purple-600 via-indigo-600 to-cyan-600",
-      link: "/pages/InterdimensionalTechRevolution2040"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
@@ -192,40 +160,31 @@ const RevolutionaryContentBanner2030: React.FC = () => {
             Join thousands of users already experiencing the future of technology
           </p>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-3xl animate-bounce">🚀</span>
+          <h3 className="text-2xl font-bold">REVOLUTIONARY CONTENT 2030-2040</h3>
+          <span className="text-3xl animate-bounce">🚀</span>
         </div>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="flex justify-center space-x-2 mt-4">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-purple-600 scale-125' : 'bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Additional Content Links */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="/pages/UltimateTechRevolution2030" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-          <div className="text-3xl mb-2">🚀</div>
-          <div>Ultimate Tech 2030</div>
-        </a>
-        <a href="/pages/ConsciousnessComputingRevolution2035" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-          <div className="text-3xl mb-2">🧠</div>
-          <div>Consciousness 2035</div>
-        </a>
-        <a href="/pages/InterdimensionalTechRevolution2040" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-          <div className="text-3xl mb-2">🌌</div>
-          <div>Interdimensional 2040</div>
-        </a>
-        <a href="/revolutionary-showcase-2030" className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-          <div className="text-3xl mb-2">🌟</div>
-          <div>Interactive Demo</div>
-        </a>
+        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+          Experience the future of technology with our groundbreaking new content featuring Ultimate Tech Revolution 2030, 
+          Consciousness Computing Revolution 2035, and Interdimensional Tech Revolution 2040
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <a href="/pages/UltimateTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🚀 Ultimate Tech 2030 →
+          </a>
+          <a href="/pages/ConsciousnessComputingRevolution2035" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🧠 Consciousness 2035 →
+          </a>
+          <a href="/pages/InterdimensionalTechRevolution2040" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🌌 Interdimensional 2040 →
+          </a>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+        </div>
       </div>
     </div>
   );

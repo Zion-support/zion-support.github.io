@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
@@ -480,38 +481,70 @@ const InteractiveTechShowcase2025: React.FC = () => {
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
+=======
+import React, { useState } from 'react';
+
+const InteractiveTechShowcase2025: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const techCategories = [
+    {
+      title: "AI & Consciousness",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      technologies: [
+        {
+          name: "AI Consciousness Revolution",
+          description: "First AI systems achieving genuine consciousness and self-awareness",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          features: ["Self-awareness", "Creative thinking", "Emotional intelligence"]
+        },
+        {
+          name: "Neural Interface Technology",
+          description: "Direct brain-computer communication enabling thought control",
+          link: "/pages/RevolutionaryTechBreakthrough2025",
+          features: ["Non-invasive BCI", "Thought control", "Memory enhancement"]
+        }
+      ]
+    },
+    {
+      title: "Space Technology",
+      icon: "🚀",
+      color: "from-cyan-600 to-blue-600",
+      technologies: [
+        {
+          name: "Interplanetary Travel",
+          description: "Advanced propulsion systems enabling rapid travel between planets",
+          link: "/pages/NextGenSpaceTech2026",
+          features: ["Nuclear propulsion", "Mars transit", "Reusable spacecraft"]
+        },
+        {
+          name: "Space Habitats",
+          description: "Self-sustaining space colonies with advanced life support",
+          link: "/pages/NextGenSpaceTech2026",
+          features: ["Modular design", "Life support", "Artificial gravity"]
+        }
+      ]
+    },
+    {
+      title: "Biotechnology",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      technologies: [
+        {
+          name: "Gene Therapy Revolution",
+          description: "Advanced gene editing curing diseases and enhancing capabilities",
+          link: "/pages/AdvancedBiotechRevolution2026",
+          features: ["CRISPR 3.0", "Disease cure", "Human enhancement"]
+        },
+        {
+          name: "Regenerative Medicine",
+          description: "Stem cell therapies regenerating organs and reversing aging",
+          link: "/pages/AdvancedBiotechRevolution2026",
+          features: ["Organ regeneration", "Anti-aging", "Tissue engineering"]
+>>>>>>> cursor/create-and-deploy-new-content-6f93
   const [activeTab, setActiveTab] = useState('ai');
-    }
-  };
-
-  return (
-    }
-  };
-
-  const interactiveFeatures = [
-    {
-      title: "Real-time Processing",
-      description: "Ultra-fast data processing with sub-millisecond response times",
-      icon: "⚡",
-      metric: "< 1ms"
-    },
-    {
-      title: "Accuracy Rate",
-      description: "99.9% accuracy in complex decision making and predictions",
-      icon: "🎯",
-      metric: "99.9%"
-    },
-    {
-      title: "Scalability",
-      description: "Seamlessly scales from single devices to enterprise systems",
-      icon: "📈",
-      metric: "∞"
-    },
-    {
-      title: "Security",
-      description: "Military-grade encryption and quantum-resistant security",
-      icon: "🔒",
-      metric: "100%"
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const techCategories = {
@@ -616,16 +649,85 @@ const InteractiveTechShowcase2025: React.FC = () => {
       ]
         }
       ]
-  const [activeTab, setActiveTab] = useState('ai');
     }
   };
 
   return (
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE TECH SHOWCASE 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Explore Revolutionary Technologies
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Interact with the most advanced technologies that are reshaping our world
+          </p>
+        </div>
+
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(techCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                  : 'bg-white/10 text-white/70 hover:bg-white/20'
+              }`}
+            >
+              <span className="text-2xl mr-2">{category.icon}</span>
+              {category.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Active Category Content */}
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">
+              {techCategories[activeTab as keyof typeof techCategories].title}
+            </h3>
+            <p className="text-lg opacity-90">
+              Discover the latest breakthroughs in {techCategories[activeTab as keyof typeof techCategories].title.toLowerCase()}
+            </p>
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE SHOWCASE • 2025
           </div>
 
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Technology Selector */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-6">Select Technology to Explore</h3>
+            {technologies.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => handleTechClick(index)}
+                className={`w-full p-6 rounded-xl transition-all duration-300 text-left ${
+                  activeTech === index
+                    ? `bg-gradient-to-r ${tech.bgGradient} border-2 ${tech.borderColor} scale-105`
+                    : 'bg-white/10 border border-white/20 hover:bg-white/20'
+                }`}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl">{tech.icon}</div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">{tech.name}</h4>
+                    <p className="text-sm opacity-90">{tech.description}</p>
+                  </div>
+                </div>
+              </button>
             ))}
           </div>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -633,6 +735,59 @@ const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+          {/* Technology Display */}
+          <div className="relative">
+            <div className={`bg-gradient-to-br ${currentTech.bgGradient} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor}/30 transition-all duration-500 ${
+              isAnimating ? 'scale-95 opacity-50' : 'scale-100 opacity-100'
+            }`}>
+              <div className="text-center mb-8">
+                <div className="text-8xl mb-4 animate-bounce">{currentTech.icon}</div>
+                <h3 className="text-4xl font-bold mb-4">{currentTech.name}</h3>
+                <p className="text-xl opacity-90 mb-6">{currentTech.description}</p>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {currentTech.features.map((feature, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-sm font-semibold">{feature}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Statistics */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-1">{currentTech.stats.power}</div>
+                  <div className="text-sm opacity-90">Processing Power</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400 mb-1">{currentTech.stats.accuracy}</div>
+                  <div className="text-sm opacity-90">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-emerald-400 mb-1">{currentTech.stats.innovation}</div>
+                  <div className="text-sm opacity-90">Innovation Level</div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex space-x-4">
+                <button className={`flex-1 bg-gradient-to-r ${currentTech.gradient} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                  Experience Demo
+                </button>
+                <button className="flex-1 border-2 border-white text-white py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold">
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-500 rounded-full animate-ping"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-500 rounded-full animate-pulse"></div>
+            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-emerald-500 rounded-full animate-bounce"></div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
         </div>
 =======
@@ -780,6 +935,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 
+<<<<<<< HEAD
               Schedule Demo
             </button>
 <<<<<<< HEAD
@@ -802,6 +958,37 @@ const InteractiveTechShowcase2025: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+        {/* Technology Comparison */}
+        <div className="mt-20">
+          <h3 className="text-3xl font-bold text-center mb-12">Technology Comparison</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <div
+                key={tech.id}
+                className={`bg-gradient-to-br ${tech.bgGradient} backdrop-blur-sm rounded-xl p-6 border ${tech.borderColor}/30 hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => handleTechClick(index)}
+              >
+                <div className="text-4xl mb-4 text-center">{tech.icon}</div>
+                <h4 className="text-xl font-bold mb-2 text-center">{tech.name}</h4>
+                <p className="text-sm opacity-90 text-center mb-4">{tech.description}</p>
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span>Power:</span>
+                    <span className="font-bold">{tech.stats.power}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span>Accuracy:</span>
+                    <span className="font-bold">{tech.stats.accuracy}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span>Innovation:</span>
+                    <span className="font-bold">{tech.stats.innovation}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -822,21 +1009,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
           >
             <span className="mr-2">{category.icon}</span>
             {category.title}
-            <span className="mr-2">{category.icon}</span>
-            {category.title}
           </button>
         ))}
       </div>
 
-          </div>
-        </div>
-
-          <div
-            key={index}
-            className={`bg-gradient-to-br ${techCategories[activeTab].color}/20 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-            onMouseEnter={() => setHoveredCard(index)}
-            onMouseLeave={() => setHoveredCard(null)}
-          >
       {/* Technology Cards */}
       <div className="grid md:grid-cols-2 gap-6">
         {techCategories[activeTab].technologies.map((tech, index) => (
@@ -883,7 +1059,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 </button>
                 <button className="p-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors">
                   📤
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
                 </button>
               </div>
             </div>
@@ -893,22 +1068,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl pointer-events-none"></div>
             )}
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
-      
-      {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-ping"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-ping delay-1000"></div>
-        <div className="absolute bottom-10 left-20 w-12 h-12 bg-white/10 rounded-full animate-ping delay-2000"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-ping delay-3000"></div>
->>>>>>> origin/cursor/create-and-deploy-new-content-8d99
-      </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
         ))}
       </div>
 
@@ -932,6 +1091,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-de2c
 >>>>>>> main
@@ -951,6 +1111,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
               Start Free Trial
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -1000,9 +1162,12 @@ const InteractiveTechShowcase2025: React.FC = () => {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     </div>
   );
 };

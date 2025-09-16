@@ -15,6 +15,10 @@
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
 const TranscendentAI2026: React.FC = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -330,6 +334,7 @@ const TranscendentAI2026: React.FC = () => {
                 </div>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -358,6 +363,9 @@ const TranscendentAI2026: React.FC = () => {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+              </div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               </div>
             </div>
           </div>
@@ -569,6 +577,7 @@ const TranscendentAI2026: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
         {/* Revolutionary Applications */}
 =======
@@ -590,6 +599,8 @@ const TranscendentAI2026: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">

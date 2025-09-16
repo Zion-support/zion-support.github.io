@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -108,6 +109,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 import React from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
@@ -140,21 +143,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology Content
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology content featuring breakthrough innovations and cutting-edge solutions
-=======
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -178,7 +166,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
             Experience the most advanced technological breakthroughs that are reshaping 
             reality itself. From conscious AI to quantum supremacy, discover the future today.
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
           </p>
         </motion.div>
 
@@ -212,6 +199,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -314,6 +302,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -535,7 +525,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
-
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
@@ -573,19 +562,47 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
+      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+                <span className="text-2xl font-bold">NEW REVOLUTIONARY CONTENT 2025-2026</span>
+                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+              </div>
+              <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
+              <p className="text-xl opacity-95 mb-6 max-w-3xl">
+                {contentSlides[currentSlide].description}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href={contentSlides[currentSlide].link}
+                  className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
+                >
+                  Explore Now →
+                </a>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-6">
         {contentSlides.map((_, index) => (
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-              index === currentSlide ? 'bg-white' : 'bg-white/30'
-=======
               index === currentSlide ? 'bg-purple-600' : 'bg-gray-300'
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
             }`}
           />
         ))}
@@ -593,6 +610,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Navigation Arrows */}
       <button
@@ -651,6 +669,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </div>
         </div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       {/* Quick Access Grid */}
       <div className="grid md:grid-cols-3 gap-6 mt-8">
         {contentSlides.map((slide, index) => (
@@ -667,6 +687,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </a>
         ))}
       </div>
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
           
@@ -723,6 +744,9 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+    </div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
   );
 };
 

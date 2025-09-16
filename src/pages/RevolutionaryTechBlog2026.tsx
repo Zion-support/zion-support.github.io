@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -14,6 +15,10 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import { motion } from 'framer-motion';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechBlog2026: React.FC = () => {
@@ -96,11 +101,17 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const categories = ['All', 'AI & Consciousness', 'Quantum Computing', 'Neural Interfaces', 'Biotechnology', 'Space Technology', 'Future of Work'];
 
   return (
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+  const categories = ['All', 'AI & Consciousness', 'Quantum Computing', 'Neural Interfaces', 'Biotechnology', 'Space Technology', 'Future of Work'];
+
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     <>
       <Helmet>
         <title>Revolutionary Tech Blog 2026 - Zion Tech Group</title>
@@ -124,10 +135,14 @@ const RevolutionaryTechBlog2026: React.FC = () => {
           <div className="relative z-10 container mx-auto px-4 py-20">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div
 =======
             <motion.div
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+            <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -147,6 +162,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
 =======
             </motion.div>
@@ -154,6 +170,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 =======
             </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+            </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
         </div>
 
@@ -170,6 +189,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             {blogPosts.filter(post => post.featured).map((post) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div
 =======
               <motion.div
@@ -177,6 +197,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 =======
               <divdiv
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+              <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                 key={post.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer"
@@ -198,6 +221,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                   <span className="text-sm text-gray-400">By {post.author}</span>
                   <span className="text-sm text-gray-400">{post.date}</span>
                 </div>
+<<<<<<< HEAD
               </div>
 =======
                 </div>
@@ -217,6 +241,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 =======
               </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+              </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             ))}
           </div>
 
@@ -232,6 +259,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             {blogPosts.map((post) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div
 =======
               <motion.div
@@ -239,6 +267,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 =======
               <divdiv
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+              <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                 key={post.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-300 cursor-pointer"
@@ -268,6 +299,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
 =======
               </motion.div>
@@ -275,6 +307,9 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 =======
               </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+              </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             ))}
           </div>
         </div>
@@ -283,10 +318,14 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div
 =======
           <motion.div
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+          <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             initial={{ opacity: 0, y: 50 }}
 =======
           <divdiv
@@ -309,6 +348,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
@@ -317,6 +357,11 @@ const RevolutionaryTechBlog2026: React.FC = () => {
           </div>
 
       {/* Technology Insights */}
+=======
+          </motion.div>
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
 const RevolutionaryTechBlog2026: React.FC = () => {
   return (
@@ -326,6 +371,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Blog2026
           </h1>
@@ -374,6 +420,8 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       {/* Technology Insights */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           <h2 className="text-4xl font-bold mb-4">🔬 Technology Insights</h2>
           <p className="text-xl opacity-90">Deep dive into the science behind our revolutionary technologies</p>
         </div>
@@ -439,6 +487,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
     </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 =======
           </motion.div>
@@ -448,6 +497,8 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
   );
 };
 

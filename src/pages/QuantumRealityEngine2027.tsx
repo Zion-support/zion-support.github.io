@@ -6,6 +6,7 @@ import React from 'react';
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         {/* Hero Section */}
         <div className="text-center mb-16">
 =======
@@ -13,6 +14,8 @@ import React from 'react';
       <div className="container mx-auto px-4 py-16">
 <<<<<<< HEAD
         {/* Hero Section */}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
 <<<<<<< HEAD
@@ -40,6 +43,7 @@ const QuantumRealityEngine2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-39c9
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -121,10 +125,14 @@ const QuantumRealityEngine2027: React.FC = () => {
               <li>• Matter-energy conversion</li>
               <li>• Time-space distortion</li>
 <<<<<<< HEAD
+=======
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine. 
             Control space, time, matter, and energy at the quantum level to reshape existence.
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
@@ -154,6 +162,8 @@ const QuantumRealityEngine2027: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         {/* Hero Section */}
         <div className="text-center mb-16">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
 <<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -227,6 +237,7 @@ const QuantumRealityEngine2027: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
@@ -274,6 +285,8 @@ const QuantumRealityEngine2027: React.FC = () => {
 
 <<<<<<< HEAD
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
 =======
@@ -303,6 +316,7 @@ const QuantumRealityEngine2027: React.FC = () => {
               <li>• Dimensional folding</li>
               <li>• Reality bridging</li>
             </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -480,6 +494,8 @@ const QuantumRealityEngine2027: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Control Space-Time →
 =======
@@ -754,6 +770,7 @@ const QuantumRealityEngine2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -791,6 +808,8 @@ const QuantumRealityEngine2027: React.FC = () => {
             </ul>
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         {/* Quantum Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Quantum Applications</h2>
@@ -895,6 +914,7 @@ const QuantumRealityEngine2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -940,6 +960,8 @@ const QuantumRealityEngine2027: React.FC = () => {
             </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="text-center">
           </p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -962,7 +984,10 @@ const QuantumRealityEngine2027: React.FC = () => {
               Get Started
         <div className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="text-center">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7

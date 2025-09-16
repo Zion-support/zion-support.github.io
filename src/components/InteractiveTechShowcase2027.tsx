@@ -67,6 +67,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -153,6 +154,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       title: "Quantum Technologies",
       icon: "⚡",
       color: "from-cyan-500 to-blue-500",
@@ -239,6 +242,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -246,6 +250,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     }
   ];
 
@@ -258,7 +264,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
       <Helmet>
         <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
@@ -275,9 +284,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
@@ -292,6 +304,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,6 +355,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {techCategories.map((category) => (
@@ -370,6 +385,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -379,6 +395,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}

@@ -156,6 +156,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
 =======
 <<<<<<< HEAD
@@ -168,6 +169,9 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       }, 5000);
       return () => clearInterval(interval);
     }
