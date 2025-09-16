@@ -151,7 +151,8 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-autonomous-incident-response-blueprint',
       tag: 'New',
       gradient: 'from-rose-500 to-red-500'
-=======
+    },
+    {
       title: 'Real-Time Evals & Inference Guardrails (2026)',
       href: '/blog/ai-2026-real-time-evals-inference-guardrails',
       tag: 'New',
@@ -162,7 +163,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-edge-agents-production-guide',
       tag: 'New',
       gradient: 'from-indigo-500 to-cyan-500'
->>>>>>> origin/feature/content-sept-2025
     },
     {
       title: 'Enterprise Agent Risk Mitigation (2026)',
