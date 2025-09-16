@@ -1,20 +1,20 @@
-import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
+import { Suspense, lazy } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
 import LoadingSpinner from './components/LoadingSpinner';
+import SEO from './components/SEO';
 
 // Import new advanced AI components
-import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from './components/IntelligentSearchEngine';
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
 import AdvancedAnalyticsEngine from './components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from './components/EnterpriseDataManagement';
+import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
+import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
 import APIManagementSystem from './components/APIManagementSystem';
+import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
+import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
+import EnterpriseDataManagement from './components/EnterpriseDataManagement';
+import IntelligentSearchEngine from './components/IntelligentSearchEngine';
+import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('./components/ROICalculator'));
@@ -23,73 +23,65 @@ const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'))
 const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
 
 // Import key promotional components
-import NewContentPromotionBanner from './components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from './components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from './components/ComprehensiveContentShowcase2026';
+import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
+import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
+import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
+import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
+import NewContent2026Showcase from './components/NewContent2026Showcase';
+import NewContentPromotionBanner from './components/NewContentPromotionBanner';
+import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
 import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
+import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
-import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
+import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
+import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
 
 // Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
+import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
 import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from './components/RevolutionaryContentBanner2025';
 
 // Import new promotional components
-import RevolutionaryAI2026ContentBanner from './components/RevolutionaryAI2026ContentBanner';
 import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
 
 // Import new 2025 quantum AI promotional components
-import QuantumAIRevolutionBanner2025 from './components/QuantumAIRevolutionBanner2025';
-import NewContent2025UltimateShowcase from './components/NewContent2025UltimateShowcase';
 
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
 
 // Import new 2025 advanced automation promotional components
-import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
+import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
 
 // Import new 2025 analytics promotional components
-import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
+import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 
 // Import new 2026 content promotional components
-import NewContent2026SyntheticIntelligenceBanner from './components/NewContent2026SyntheticIntelligenceBanner';
 import NewContent2026NeuralInterfaceBanner from './components/NewContent2026NeuralInterfaceBanner';
+import NewContent2026SyntheticIntelligenceBanner from './components/NewContent2026SyntheticIntelligenceBanner';
 import NewContent2026UltimateShowcaseBanner from './components/NewContent2026UltimateShowcaseBanner';
 
 // Import new 2026 content promotional components
-import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
-=======
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
-import Link from 'next/link';
-import Link from 'next/link';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -106,6 +98,38 @@ export default function HomePage() {
         url="/"
       />
       {/* New Promos: Sept 16, 2025 */}
+      {/* Promo: Agentic Evidence Hub — Executive Overview (new) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agentic Evidence Hub — Executive Overview</h2>
+              <p className="text-gray-600 mt-2">Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-agentic-evidence-hub-overview" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
+              <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Architecture</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Promo: Freshly published — Reliable Autonomy + Billing Controls */}
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Reliable Autonomy + Agentic Billing Controls</h2>
+              <p className="text-gray-600 mt-2">Evaluation gates, runtime guardrails, and predictable spend with budgets and approvals.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-reliable-autonomy-operations" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Reliable Autonomy</Link>
+              <Link href="/blog/ai-2026-agentic-billing-controls" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Billing Controls</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Promo: Real‑World Eval Gates Case Studies (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,17 +178,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* New Promo: Reliable Autonomy Operations (Sept 2025) */}
+      {/* New Promo: Operational Reliability Blueprint (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
             <div>
               <p className="text-sm font-semibold text-cyan-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Reliable Autonomy Operations</h2>
-              <p className="text-gray-600 mt-2">Evaluation gates, runtime guardrails, and evidence-led operations for safe scale.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Operational Reliability Blueprint</h2>
+              <p className="text-gray-600 mt-2">Evaluation gates, scorecards, rollback contracts, and an audit-ready evidence hub.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-reliable-autonomy-operations" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
+              <Link href="/blog/ai-2026-operational-reliability-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
             </div>
           </div>
         </div>
@@ -181,6 +205,72 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Link href="/blog/ai-2026-eval-gated-ci-cd-blueprint" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700">Eval‑Gated CI/CD</Link>
               <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="inline-block border border-pink-600 text-pink-700 px-5 py-3 rounded-lg font-semibold hover:bg-pink-50">Observability Deep Dive</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Governed Tool Use Case Studies (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-rose-50 to-red-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-red-100">
+            <div>
+              <p className="text-sm font-semibold text-rose-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Governed Tool Use — Case Studies</h2>
+              <p className="text-gray-600 mt-2">Approvals, risk tiers, and runtime checks that prevent real incidents.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Read Case Studies</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Continuous Eval Gates at Scale (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Continuous Eval Gates at Scale</h2>
+              <p className="text-gray-600 mt-2">Scenario suites, scorecards, and automated rollback across teams.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-continuous-eval-gates-at-scale" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Guide</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Reliable Autonomy Operations (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Reliable Autonomy Operations</h2>
+              <p className="text-gray-600 mt-2">Evidence hubs, SLOs, and deterministic rollback for safe change.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-reliable-autonomy-operations" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Quick Spotlight: Agentic Observability Deep Dive (new) */}
+      <section className="py-6 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Observability</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Observability Deep Dive</h3>
+              <p className="text-gray-600 mb-4">Traces, evals, incidents, and KPIs to ship autonomy safely.</p>
+              <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Tool Use</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Governed Tool Use — Case Studies</h3>
+              <p className="text-gray-600 mb-4">Risk tiers, sandboxes, and runtime checks for safe tool use.</p>
+              <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
             </div>
           </div>
         </div>
@@ -210,8 +300,8 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Measure what matters and standardize incident response for reliable autonomy.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2026-eval-gates-success-metrics" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Eval Metrics</Link>
-              <Link href="/blog/ai-2026-agent-runbooks-checklists" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Runbooks</Link>
+              <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Agent SLOs</Link>
+              <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Governed Tool Use</Link>
             </div>
           </div>
         </div>
@@ -312,7 +402,6 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-=======
                 <p className="text-gray-600 mt-2">Now featuring Evaluations Cookbook, Reliability Release Checklists, and Evals Maturity Model 2026.</p>
               </div>
               <div className="flex gap-3">
