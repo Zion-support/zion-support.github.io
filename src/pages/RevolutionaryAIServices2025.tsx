@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryAIServices2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('conscious-ai');
@@ -114,12 +113,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🤖 REVOLUTIONARY AI SERVICES • JANUARY 2025
             </div>
@@ -138,7 +132,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -161,13 +155,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
         </div>
 
         {/* Active Service Content */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-blue-500/30"
-        >
+        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-blue-500/30">
           <div className="text-center mb-12">
             <div className="text-8xl mb-6">{services[activeTab as keyof typeof services].icon}</div>
             <h2 className="text-4xl font-bold mb-4">{services[activeTab as keyof typeof services].title}</h2>
@@ -212,31 +200,22 @@ const RevolutionaryAIServices2025: React.FC = () => {
               Learn More
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Testimonials Section */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Discover how our revolutionary AI services are transforming businesses across industries.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
             >
               <div className="text-4xl mb-4 text-center">{testimonial.avatar}</div>
@@ -245,19 +224,14 @@ const RevolutionaryAIServices2025: React.FC = () => {
                 <div className="font-semibold text-white">{testimonial.name}</div>
                 <div className="text-blue-300 text-sm">{testimonial.role}</div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-blue-500/30"
-        >
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-blue-500/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Join thousands of forward-thinking companies already using our revolutionary AI services 
@@ -271,7 +245,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
               Contact Sales
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
