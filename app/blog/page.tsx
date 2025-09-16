@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-agent-posture-management', title: 'Agent Posture Management — Executive Guide (2026)', tag: 'Featured' },
+  { href: '/blog/ai-2026-trusted-rag-guardrailed-retrieval', title: 'Trusted RAG — Guardrailed Retrieval (2026)', tag: 'New' },
   { href: '/blog/ai-2026-operational-reliability-blueprint', title: 'Operational Reliability Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2026-real-world-eval-gates-case-studies', title: 'Real‑World Eval Gates — Case Studies (2026)', tag: 'New' },
   { href: '/blog/ai-2026-eval-gated-ci-cd-blueprint', title: 'Eval‑Gated CI/CD Blueprint (2026)', tag: 'New' },
