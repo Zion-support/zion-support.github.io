@@ -43,6 +43,10 @@ const RevolutionaryContentBanner2032: React.FC = () => {
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD:src/components/RevolutionaryContentBanner2032.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24:src/components/RevolutionaryContentBanner2032.tsx.backup.1758060817
 <<<<<<< HEAD
     <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
@@ -249,6 +253,11 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           </div>
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+<<<<<<< HEAD:src/components/RevolutionaryContentBanner2032.tsx
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24:src/components/RevolutionaryContentBanner2032.tsx.backup.1758060817
       </div>
     </divdiv>
   );
