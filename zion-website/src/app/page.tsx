@@ -79,7 +79,9 @@ const solutions = [
 export default function HomePage() {
   const latest = getLatestUpdates(6)
   return (
+=======
     <div className="bg-black">
+>>>>>>> cursor/create-and-deploy-new-content-a12c
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
