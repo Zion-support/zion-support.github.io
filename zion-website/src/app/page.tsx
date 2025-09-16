@@ -36,13 +36,13 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Continuous Agent Evidence Bundles —
+            New: Real‑Time Agent FinOps Dashboard v1.0 —
+            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Continuous Agent Evidence Bundles —
             <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read article</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Launch: Autonomous Experimentation Toolkit v1.0 —
-            <a href="/updates/autonomous-experimentation-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Also: Cost Optimizer v2.0 Deep Dive —
+            Cost Optimizer v2.0 Deep Dive —
             <a href="/updates/real-time-agent-cost-optimizer-2-0-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">architecture & KPIs</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
@@ -74,12 +74,13 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Continuous Agent Evidence Bundles —
+            Fresh: Real‑Time Agent FinOps Dashboard v1.0 —
+            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Continuous Agent Evidence Bundles —
             <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">multimodal guardrails</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/real-time-agent-cost-optimizer-2-0-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">cost optimizer deep dive</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -145,8 +146,8 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real‑Time Agent Cost Optimizer v2.0 —
-            <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Real‑Time Agent FinOps Dashboard v1.0 —
+            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Also read: <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>

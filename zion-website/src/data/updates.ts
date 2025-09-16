@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
+        summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
+        href: '/updates/real-time-agent-finops-dashboard-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
         title: 'Blog: Continuous Agent Evidence Bundles',
         summary: 'Designing continuous evidence capture for autonomous agents with policy gates and provenance.',
         href: '/blog/ai-2026-continuous-agent-evidence-bundles',
