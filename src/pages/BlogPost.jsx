@@ -14,6 +14,42 @@ const content = {
 This blueprint includes architecture diagrams, rollout checklists, and KPI templates.`,
     date: '2025-09-16',
   },
+  'exec-guide-eval-gates-ship-tomorrow': {
+    title: 'Exec Guide: Evals + Guardrails You Can Ship Tomorrow',
+    body: `Leaders’ playbook to gate changes with:
+
+- Policy‑as‑code approvals and risk tiers
+- Online evals at preflight, canary, post‑release
+- Journey scorecards with pass/fail thresholds
+- Deterministic rollback and kill‑switches
+
+Includes copy‑paste YAML snippets and a rollout checklist.`,
+    date: '2025-09-16',
+  },
+  'finserv-case-study-policy-routing-35-savings': {
+    title: 'FinServ Case Study: Policy Routing Cuts Spend by 35%',
+    body: `How a major bank preserved quality while reducing spend:
+
+- Routing bands tied to task profiles
+- Budget caps and latency SLOs
+- Online groundedness evals gating releases
+- Regression kill‑switch with instant rollback
+
+Annualized savings: $350M with quality held constant.`,
+    date: '2025-09-16',
+  },
+  'journey-scorecards-starter-kpis': {
+    title: 'Journey Scorecards Starter: KPIs You Can Adopt Today',
+    body: `Drop‑in KPI JSON schemas for:
+
+- Quality, Safety, Reliability, Cost
+- Thresholds and alert policies
+- CI gate wiring examples
+- Reference dashboards
+
+Adopt in under a day with minimal integration.`,
+    date: '2025-09-16',
+  },
   'trustworthy-model-routing': {
     title: 'Trustworthy Model Routing: Production Patterns',
     body: `We cover routing strategies across heterogeneous models:
