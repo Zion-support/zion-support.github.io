@@ -587,4 +587,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 };
 
 export default RevolutionaryTechInsights2026;
+<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e

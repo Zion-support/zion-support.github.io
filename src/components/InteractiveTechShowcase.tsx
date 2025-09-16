@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -210,6 +211,8 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
 import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
@@ -244,6 +247,7 @@ const InteractiveTechShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
     },
+<<<<<<< HEAD
     {
       id: 4,
       name: "Synthetic Intelligence",
@@ -268,6 +272,11 @@ const InteractiveTechShowcase: React.FC = () => {
   }, [technologies.length]);
 
   const currentTech = technologies[activeTech];
+=======
+      ]
+    }
+  };
+>>>>>>> cursor/create-and-deploy-new-content-079e
 
   return (
     <div className="mb-16">
@@ -330,6 +339,7 @@ const InteractiveTechShowcase: React.FC = () => {
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
 
               {/* Demo Button */}
               <div className="text-center">
@@ -467,12 +477,15 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Learning Capacity</div>
           </div>
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
       </div>
     </div>
   );
 };
 
 export default InteractiveTechShowcase;
+<<<<<<< HEAD
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -606,3 +619,5 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 export default InteractiveTechShowcase;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e

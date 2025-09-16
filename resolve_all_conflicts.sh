@@ -1,6 +1,25 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
+echo "🔧 Resolving ALL remaining merge conflicts..."
+<<<<<<< HEAD
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
 
 # Find all files with merge conflict markers
 files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
@@ -27,6 +46,20 @@ for file in $files_with_conflicts; do
     fi
 done
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+echo "🎉 All conflict resolution complete!"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+>>>>>>> cursor/create-and-deploy-new-content-079e
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
@@ -59,5 +92,20 @@ done
 
 echo "All merge conflicts resolved!"
 echo "All merge conflicts resolved!"
+<<<<<<< HEAD
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+echo "All merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-87a1
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
+=======
+=======
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e

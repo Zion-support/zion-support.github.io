@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -54,6 +55,8 @@ import React, { useState } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -71,9 +74,12 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       ],
       link: '/pages/RevolutionaryTechBreakthrough2026'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
     },
     {
       id: 1,
@@ -88,6 +94,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       link: '/pages/NextGenInnovationHub2026'
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 2,
       title: '🧠 AI Consciousness Evolution',
@@ -176,10 +183,13 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
@@ -251,6 +261,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
           </div>
           <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Content Showcase 2026</h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
@@ -271,6 +283,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                   : 'bg-white/20 backdrop-blur-sm text-cyan-200 hover:bg-white/30'
               }`}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -369,19 +382,25 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               </div>
             </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
           ))}
         </div>
 
         {/* Active Tab Content */}
         <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">{contentTabs[activeTab].title}</h3>
             <p className="text-xl text-cyan-200 max-w-3xl mx-auto">{contentTabs[activeTab].content}</p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           
@@ -624,6 +643,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -639,6 +660,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 Explore {contentTabs[activeTab].title.split(' ')[1]} →
               </a>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -664,6 +686,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           )}
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -681,6 +705,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -708,6 +733,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-7a01
 =======
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
         <div className="text-center mt-12">
           <a
             href="/pages/RevolutionaryTechBreakthrough2026"
@@ -716,6 +743,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             🌟 Experience the Revolutionary Content 2026 →
           </a>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -730,6 +758,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
       </div>
     </div>
   );
