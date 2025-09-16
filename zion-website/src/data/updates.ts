@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: AI Security Evidence Vault v1.0',
+		summary: 'Signed artifacts, lineage tracking, and audit-ready bundles for AI changes.',
+		href: '/updates/ai-security-evidence-vault-v1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Real-Time Evals Control Plane',
+		summary: 'Centralize eval gates, rollout policies, and live scorecards across services.',
+		href: '/updates/real-time-evals-control-plane',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',
