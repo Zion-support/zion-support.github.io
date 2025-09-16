@@ -76,6 +76,10 @@ import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomati
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+
+// Import new 2026 ultimate content promotional components
+import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
+import AI2026BreakthroughShowcase from './components/AI2026BreakthroughShowcase';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -738,6 +742,12 @@ export default function HomePage() {
         
         {/* New Content 2025 Ultimate Banner - FEATURED */}
         <NewContent2025UltimateBanner />
+        
+        {/* New Content 2026 Ultimate Banner - NEW FEATURED */}
+        <NewContent2026UltimateBanner />
+        
+        {/* AI 2026 Breakthrough Showcase - NEW FEATURED */}
+        <AI2026BreakthroughShowcase />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
