@@ -364,7 +364,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
         {/* Innovation Stats */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -513,8 +512,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </div>
         </div>
       </div>
-=======
->>>>>>> add127a95c94686548b7646e0b4fa8ee2f7013a8
     </div>
   );
 };

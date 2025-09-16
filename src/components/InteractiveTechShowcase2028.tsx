@@ -101,7 +101,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
       ],
       link: '/pages/NextGenTechRevolution2028',
       color: 'from-emerald-600 to-teal-600'
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
     }
   };
 
@@ -122,7 +121,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
           </h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
           </p>
         </div>
 
@@ -220,7 +218,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               {content[activeTab as keyof typeof content].description}
             </p>
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
           </div>
         </div>
 
@@ -307,7 +304,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
             </p>
             <button className="bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
               View Roadmap
->>>>>>> 4edd59c8742ecc0ae4cd7ce79083d3a2fd6d2341
             </button>
           </div>
         </div>
