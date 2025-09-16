@@ -129,4 +129,21 @@ export const latestContent: ContentItem[] = [
     tag: "Security",
     date: "2025-09-16",
   },
+  // New content (2025-09-16)
+  {
+    id: "ai-2026-agentic-evidence-hub-overview",
+    title: "Agentic Evidence Hub — Executive Overview",
+    summary: "Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.",
+    href: "/content/ai-2026-agentic-evidence-hub-overview",
+    tag: "Overview",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-agentic-billing-controls",
+    title: "Reliable Autonomy + Agentic Billing Controls",
+    summary: "Predictable spend with budgets, approvals, and evaluation-gated execution.",
+    href: "/blog/ai-2026-agentic-billing-controls",
+    tag: "Guide",
+    date: "2025-09-16",
+  },
 ];
