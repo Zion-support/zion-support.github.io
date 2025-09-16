@@ -1,4 +1,4 @@
-import React from 'react'
+//
 
 export const metadata = {
 	title: 'Real-Time Evals Control Plane — Guide',
@@ -36,9 +36,8 @@ export default function Page() {
 	)
 }
 
-import React from 'react'
-
-export default function RealTimeEvalsControlPlanePage() {
+// Named export removed to satisfy Next.js page export rules
+function RealTimeEvalsControlPlanePage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-24">
@@ -67,4 +66,6 @@ export default function RealTimeEvalsControlPlanePage() {
     </div>
   )
 }
+
+export {}
 
