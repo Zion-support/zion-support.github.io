@@ -46,6 +46,8 @@ import RevolutionaryInnovationHub2027 from './src/pages/RevolutionaryInnovationH
 import SyntheticBiologyRevolution2027 from './src/pages/SyntheticBiologyRevolution2027';
 import UltimateAIConsciousness2025 from './src/pages/UltimateAIConsciousness2025';
 import QuantumRealityEngineering2025 from './src/pages/QuantumRealityEngineering2025';
+import UltimateTechRevolution2032 from './src/pages/UltimateTechRevolution2032';
+import TranscendentAI2033 from './src/pages/TranscendentAI2033';
 
 // Import components
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
@@ -80,6 +82,10 @@ import TranscendentTechnologyShowcase2028 from './src/components/TranscendentTec
 import OmniversalTechShowcase2029 from './src/components/OmniversalTechShowcase2029';
 import InfiniteTechShowcase2030 from './src/components/InfiniteTechShowcase2030';
 import AbsoluteTechShowcase2031 from './src/components/AbsoluteTechShowcase2031';
+import UltimateTechRevolution2032Banner from './src/components/UltimateTechRevolution2032Banner';
+import TranscendentAI2033Banner from './src/components/TranscendentAI2033Banner';
+import InteractiveContentDiscovery2033 from './src/components/InteractiveContentDiscovery2033';
+import TrendingContentSection2033 from './src/components/TrendingContentSection2033';
 import NewsletterSignup from './src/components/NewsletterSignup';
 import PromotionalBanner from './src/components/PromotionalBanner';
 
@@ -397,6 +403,26 @@ export default function App(): JSX.Element {
                 <AbsoluteTechShowcase2031 />
               </div>
 
+              {/* Ultimate Tech Revolution 2032 Banner */}
+              <div className="mb-12">
+                <UltimateTechRevolution2032Banner />
+              </div>
+
+              {/* Transcendent AI 2033 Banner */}
+              <div className="mb-12">
+                <TranscendentAI2033Banner />
+              </div>
+
+              {/* Interactive Content Discovery 2033 */}
+              <div className="mb-12">
+                <InteractiveContentDiscovery2033 />
+              </div>
+
+              {/* Trending Content Section 2033 */}
+              <div className="mb-12">
+                <TrendingContentSection2033 />
+              </div>
+
               {/* Newsletter Signup */}
               <div className="mb-12">
                 <NewsletterSignup />
@@ -442,47 +468,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/UltimateAIConsciousness2025" element={<UltimateAIConsciousness2025 />} />
           <Route path="/pages/QuantumRealityEngineering2025" element={<QuantumRealityEngineering2025 />} />
+          <Route path="/pages/UltimateTechRevolution2032" element={<UltimateTechRevolution2032 />} />
+          <Route path="/pages/TranscendentAI2033" element={<TranscendentAI2033 />} />
           
-          {/* New 2033 Routes */}
-          <Route path="/pages/UltimateTechRevolution2033" element={
-            <div>
-              <UltimateTechRevolution2033 />
-              <Footer />
-            </div>
-          } />
-          <Route path="/pages/TranscendentAI2033" element={
-            <div>
-              <TranscendentAI2033 />
-              <Footer />
-            </div>
-          } />
-          <Route path="/pages/UniversalTechRevolution2033" element={
-            <div>
-              <UniversalTechRevolution2033 />
-              <Footer />
-            </div>
-          } />
-          
-          {/* New 2026 Advanced Content Routes */}
-          <Route path="/pages/AdvancedBiotechRevolution2026" element={
-            <div>
-              <AdvancedBiotechRevolution2026 />
-              <Footer />
-            </div>
-          } />
-          <Route path="/pages/AdvancedSpaceTech2026" element={
-            <div>
-              <AdvancedSpaceTech2026 />
-              <Footer />
-            </div>
-          } />
-          <Route path="/pages/AdvancedRobotics2026" element={
-            <div>
-              <AdvancedRobotics2026 />
-              <Footer />
-            </div>
-          } />
-          
+          {/* Additional Routes */}
           <Route path="/blog" element={
             <div>
               <main className="container mx-auto px-4 py-16">
