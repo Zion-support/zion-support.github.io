@@ -9,6 +9,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Agent Incident Response Playbooks (2026)',
+    summary: 'Standardized agent IR playbooks with objective signals, guardrails, and evidence bundles.',
+    href: '/updates/agent-incident-response-playbooks-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
     summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
     href: '/updates/grounded-generation-guardrails-2026',
