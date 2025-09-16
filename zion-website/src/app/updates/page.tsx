@@ -1,4 +1,4 @@
-import { updates } from '@/data/updates'
+import { siteUpdates as updates } from '@/data/updates'
 
 export default function UpdatesIndexPage() {
   return (
@@ -10,8 +10,15 @@ export default function UpdatesIndexPage() {
         </div>
         <div className="mx-auto mt-12 max-w-5xl grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {updates.map((item) => (
-            <a key={item.id} href={item.href} className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm hover:bg-white/10 transition-colors">
-              <div className="text-xs text-blue-300">{item.tag} • <time dateTime={item.date}>{new Date(item.date).toLocaleDateString()}</time></div>
+            <a key={item.href} href={item.href} className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm hover:bg-white/10 transition-colors">
+              <div className="text-xs text-blue-300">
+                {item.tag}
+                {item.date ? (
+                  <>
+                    {' '}• <time dateTime={item.date}>{new Date(item.date).toLocaleDateString()}</time>
+                  </>
+                ) : null}
+              </div>
               <h3 className="mt-2 text-lg font-semibold text-white">{item.title}</h3>
               <p className="mt-1 text-sm text-gray-300">{item.summary}</p>
             </a>
