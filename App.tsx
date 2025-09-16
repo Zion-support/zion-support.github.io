@@ -101,6 +101,13 @@ import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution
 import AdvancedSpaceTech2026 from './src/pages/AdvancedSpaceTech2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
 
+// New 2025 Content
+import AdvancedTechBreakthrough2025 from './src/pages/AdvancedTechBreakthrough2025';
+import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
+import ComprehensiveCaseStudies2025 from './src/pages/ComprehensiveCaseStudies2025';
+import EnhancedNewsletterSignup from './src/components/EnhancedNewsletterSignup';
+import InteractiveContentShowcase2025 from './src/components/InteractiveContentShowcase2025';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -141,6 +148,11 @@ export default function App(): JSX.Element {
               {/* NEW: 2026 Advanced Content Banner */}
               <div className="mb-12">
                 <NewContentBanner2026 />
+              </div>
+
+              {/* NEW: Interactive Content Showcase 2025 */}
+              <div className="mb-12">
+                <InteractiveContentShowcase2025 />
               </div>
 
               {/* NEW: Ultimate 2026 Content Banner */}
@@ -423,9 +435,9 @@ export default function App(): JSX.Element {
                 <TrendingContentSection2033 />
               </div>
 
-              {/* Newsletter Signup */}
+              {/* Enhanced Newsletter Signup */}
               <div className="mb-12">
-                <NewsletterSignup />
+                <EnhancedNewsletterSignup />
               </div>
 
               {/* Promotional Banner */}
@@ -466,6 +478,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
+          <Route path="/pages/ComprehensiveCaseStudies2025" element={<ComprehensiveCaseStudies2025 />} />
           <Route path="/pages/UltimateAIConsciousness2025" element={<UltimateAIConsciousness2025 />} />
           <Route path="/pages/QuantumRealityEngineering2025" element={<QuantumRealityEngineering2025 />} />
           <Route path="/pages/UltimateTechRevolution2032" element={<UltimateTechRevolution2032 />} />
