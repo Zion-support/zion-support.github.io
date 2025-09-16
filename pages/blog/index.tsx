@@ -46,6 +46,8 @@ const posts = [
 
 // Newly added posts (Sept 2025)
 posts.unshift(
+  { slug: 'ai-2026-safe-autonomy-in-production', title: 'AI 2026: Safe Autonomy in Production', excerpt: 'Deploy autonomous agents with guardrails, SLOs, and audit-ready evidence.' },
+  { slug: 'ai-2026-evidence-hub-in-practice', title: 'AI 2026: Evidence Hub in Practice', excerpt: 'Centralize evals, traces, policy events, and incidents to ship faster, safer.' },
   { slug: 'ai-2026-agent-safety-playbook', title: 'AI 2026: Agent Safety Playbook', excerpt: 'Actionable patterns to ship safe, governed, and trustworthy agentic systems.' },
   { slug: 'ai-2026-agent-slo-blueprint', title: 'Agent Platform SLO Blueprint (2026)', excerpt: 'A concise SLO set for safety, quality, reliability, and cost.' },
   { slug: 'ai-2026-governed-tool-use-case-studies', title: 'Governed Tool Use — Case Studies (2026)', excerpt: 'Risk‑tiered adapters, approvals, and runtime checks in practice.' }
