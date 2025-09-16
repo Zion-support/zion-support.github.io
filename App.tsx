@@ -191,6 +191,7 @@ import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
 import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
 import AIExecutiveBriefQ1_2026 from './src/pages/AIExecutiveBriefQ1_2026';
 import AgenticRAGBlueprint2026 from './src/pages/AgenticRAGBlueprint2026';
+import AutonomousAgentRiskPlaybook2026 from './src/pages/AutonomousAgentRiskPlaybook2026';
 
 export default function App(): JSX.Element {
   return (
@@ -895,6 +896,17 @@ export default function App(): JSX.Element {
                         Read Blueprint →
                       </a>
                     </div>
+                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">NEW • 2026</span>
+                        <span className="text-sm text-gray-500">September 16, 2025</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Autonomous Agent Risk Playbook 2026</h3>
+                      <p className="text-gray-600 mb-4">Governance, SLOs, and evidence-first controls for safe autonomy…</p>
+                      <a href="/pages/AutonomousAgentRiskPlaybook2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Playbook →
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1227,6 +1239,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/AIExecutiveStrategy2026" element={<AIExecutiveStrategy2026 />} />
           <Route path="/pages/AI2026EnterpriseAutomation" element={<AI2026EnterpriseAutomation />} />
+          <Route path="/pages/AutonomousAgentRiskPlaybook2026" element={<AutonomousAgentRiskPlaybook2026 />} />
           
           {/* New Revolutionary Content 2026 Routes */}
           <Route path="/blog/quantum-neural-networks-next-frontier-ai" element={<QuantumNeuralNetworks2026 />} />
