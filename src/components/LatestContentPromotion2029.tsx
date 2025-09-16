@@ -1,4 +1,3 @@
-import React from 'react';
 import { NEW_BLOG_POSTS_2029 } from '@/data/newBlogPosts2029';
 
 const LatestContentPromotion2029: React.FC = () => {

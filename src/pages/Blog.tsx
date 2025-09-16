@@ -1,4 +1,3 @@
-import React from 'react';
 import LatestContentPromotion from '@/components/LatestContentPromotion';
 import LatestContentPromotion2029 from '@/components/LatestContentPromotion2029';
 
