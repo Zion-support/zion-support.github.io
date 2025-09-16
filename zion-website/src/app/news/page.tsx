@@ -1,14 +1,3 @@
-  },
-]
-
-export default function NewsPage() {
-  return (
-    <div className="bg-black min-h-screen">
-            ))}
-          </div>
-        </div>
-      </div>
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 import Link from 'next/link'
 
 export const metadata = {
@@ -52,11 +41,6 @@ export default function NewsIndexPage() {
           ))}
         </div>
       </section>
-=======
->>>>>>> origin/feat/news-and-fixes
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
     </div>
   )
 }
