@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedHeader: React.FC = () => {
   return (

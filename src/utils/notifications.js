@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const notifications = {
   // Request notification permission
   requestPermission: async () => {
@@ -62,4 +63,9 @@ export const notifications = {
       body: message,
       icon: '/favicon.ico'
     });
+=======
+  }
+};
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default notifications;

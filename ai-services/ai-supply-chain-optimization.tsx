@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ai-supply-chain-optimization: React.FC = () => {
@@ -10,3 +11,9 @@ const ai-supply-chain-optimization: React.FC = () => {
 };
 
 export default ai-supply-chain-optimization;
+=======
+
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

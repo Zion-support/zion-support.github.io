@@ -1,5 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+import { 
+  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
+  CheckCircle, ArrowRight, Zap, Target, Microscope,
+  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
+  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const cutting-edge-services-showcase-2025: React.FC = () => {
   return (

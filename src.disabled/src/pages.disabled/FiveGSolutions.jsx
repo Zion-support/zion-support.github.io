@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const FiveGSolutions: React.FC = () => {
@@ -10,3 +11,9 @@ const FiveGSolutions: React.FC = () => {
 };
 
 export default FiveGSolutions;
+=======
+
+
+const React,{ useState } from "react";"""; '"`'"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

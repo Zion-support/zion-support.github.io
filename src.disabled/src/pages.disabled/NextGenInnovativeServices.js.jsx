@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const NextGenInnovativeServices.js: React.FC = () => {
@@ -10,3 +11,9 @@ const NextGenInnovativeServices.js: React.FC = () => {
 };
 
 export default NextGenInnovativeServices.js;
+=======
+
+
+const React,{ useState,useMemo } from "react";"""; '"`'"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

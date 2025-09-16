@@ -9,4 +9,19 @@ const AccessibilityProvider: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityProvider;
+=======
+    toggleReducedMotion
+  };
+,
+  return (,
+    <AccessibilityContext.Provider value={value}>,
+      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>,
+        {children};
+      </div>,
+    </AccessibilityContext.Provider>)
+};
+,
+export default AccessibilityProvider,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

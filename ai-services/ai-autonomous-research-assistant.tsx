@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ai-autonomous-research-assistant: React.FC = () => {
@@ -10,3 +11,9 @@ const ai-autonomous-research-assistant: React.FC = () => {
 };
 
 export default ai-autonomous-research-assistant;
+=======
+
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

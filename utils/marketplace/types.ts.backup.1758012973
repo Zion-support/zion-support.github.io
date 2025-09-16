@@ -1,0 +1,252 @@
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/merged-prs
+export interface Offer {;
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+// Marketplace types
+export interface Offer {
+>>>>>>> origin/merged-prs
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+  id: string;
+  createdAtIso: string;
+  client_id: string;
+  talent_slug: string;
+<<<<<<< HEAD
+=======
+  startDateIso: string;
+
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+
+  agreementUrl?: string;
+  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
+  changeRequestNote?: string;
+  projectId?: string;
+}
+export interface PaymentTerms {
+  type: 'hourly' | 'fixed' | 'milestone';
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;
+    amount: number;
+    dueDateIso: string;
+  }>;
+}
+export interface Project {
+
+
+export interface PaymentTerms {;
+  type: 'hourly' | 'fixed' | 'milestone';
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;
+    amount: number;
+    dueDateIso: string;
+  }>;
+}
+
+export interface Project {;
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+  id: string;
+  title: string;
+  summary: string;
+  client_id: string;
+  talent_slug: string;
+  startDateIso: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+=======
+<<<<<<< HEAD
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
+
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+  timeline: any[];
+  documents: ProjectDocument[];
+  notes: ProjectNote[];
+}
+export interface ProjectDocument {
+
+
+
+=======
+export type PaymentTermsType = "hourly" | "fixed" | "milestone";
+
+export type Milestone = {
+  id: string;
+  title: string;
+  dueDateIso?: string;
+  amountUsd?: number;
+  status?: "planned" | "in-progress" | "done";
+};
+
+export type PaymentTerms =
+  | { type: "hourly"; hourlyRateUsd: number }
+  | { type: "fixed"; fixedAmountUsd: number }
+  | { type: "milestone"; milestones: Milestone[] };
+
+export type OfferStatus =
+  | "SENT"
+  | "CONFIRMED"
+  | "CHANGES_REQUESTED"
+  | "DECLINED";
+
+export type Offer = {
+  id: string;
+  createdAtIso: string;
+  clientId: string;
+  talentSlug: string;
+  startDateIso: string;
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+  agreementUrl?: string;
+  status: OfferStatus;
+  changeRequestNote?: string;
+  projectId?: string;
+};
+
+export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
+
+export type ProjectDocument = {
+>>>>>>> origin/auto/autonomy-17186719616
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+<<<<<<< HEAD
+}
+
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+}
+<<<<<<< HEAD
+
+
+
+
+export interface ProjectNote {;
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+}
+
+=======
+};
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+>>>>>>> origin/merged-prs
+
+export type ProjectNote = {
+  id: string;
+  authorId: string;
+  authorRole: "client" | "talent";
+  content: string;
+  createdAtIso: string;
+};
+
+export type Project = {
+  id: string;
+  title: string;
+  summary: string;
+  clientId: string;
+  talentSlug: string;
+  startDateIso: string;
+  status: ProjectStatus;
+  timeline: Milestone[];
+  documents: ProjectDocument[];
+  notes: ProjectNote[];
+};
+
+export type MarketplaceDb = {
+  offers: Offer[];
+  projects: Project[];
+};
+>>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

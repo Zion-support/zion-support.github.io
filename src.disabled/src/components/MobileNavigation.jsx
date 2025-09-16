@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const MobileNavigation: React.FC = () => {
@@ -10,3 +11,9 @@ const MobileNavigation: React.FC = () => {
 };
 
 export default MobileNavigation;
+=======
+
+
+const React,{ useState,useEffect,useRef } from "react";"""; '"`'"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

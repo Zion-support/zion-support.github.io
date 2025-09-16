@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const NewsletterSection: React.FC = () => {
@@ -10,3 +11,9 @@ const NewsletterSection: React.FC = () => {
 };
 
 export default NewsletterSection;
+=======
+ return null}
+ return null}
+const React,{ useState } from "react";  return null}'"'"
+ return null}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const InvestorRelations: React.FC = () => {
@@ -10,3 +11,9 @@ const InvestorRelations: React.FC = () => {
 };
 
 export default InvestorRelations;
+=======
+
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,4 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+"use client";
+import React, { useState, useEffect, useCallback } from 'react';
+
+import { 
+  RotateCcw, Accessibility, CheckCircle, AlertCircle
+} from 'lucide-react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  highSaturation: boolean;
+  focusIndicator: boolean;
+  screenReader: boolean;
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   return (

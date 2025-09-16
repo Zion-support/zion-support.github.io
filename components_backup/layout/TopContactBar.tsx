@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+import { Phone, Mail, MapPin, Clock, Star, Award, TrendingUp, Users } from 'lucide-react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const TopContactBar: React.FC = () => {
   return (

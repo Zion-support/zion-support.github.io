@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -13,6 +14,20 @@ const NextGenInnovationHub2027: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">NextGenInnovationHub2027</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
+            </div>
+          </div>
+        </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
+          </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

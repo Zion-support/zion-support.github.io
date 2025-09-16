@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const NextGenServicesShowcase2025: React.FC = () => {
@@ -10,3 +11,9 @@ const NextGenServicesShowcase2025: React.FC = () => {
 };
 
 export default NextGenServicesShowcase2025;
+=======
+ ))))))
+ ))))))
+const React from "react";""";  ))))))'"`'"`
+ ))))))
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

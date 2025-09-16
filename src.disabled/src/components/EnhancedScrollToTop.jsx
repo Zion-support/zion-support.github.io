@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const EnhancedScrollToTop: React.FC = () => {
@@ -10,3 +11,9 @@ const EnhancedScrollToTop: React.FC = () => {
 };
 
 export default EnhancedScrollToTop;
+=======
+
+
+const React,{ useState,useEffect } from "react"; export default EnhancedScrollToTop; '"'"
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

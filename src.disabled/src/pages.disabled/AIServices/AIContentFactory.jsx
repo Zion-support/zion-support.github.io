@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AIContentFactory: React.FC = () => {
@@ -10,3 +11,9 @@ const AIContentFactory: React.FC = () => {
 };
 
 export default AIContentFactory;
+=======
+
+
+const React from "react";"""; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

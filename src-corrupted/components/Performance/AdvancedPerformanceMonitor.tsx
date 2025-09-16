@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AdvancedPerformanceMonitor: React.FC = () => {
@@ -10,3 +11,13 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 };
 
 export default AdvancedPerformanceMonitor;
+=======
+'
+   lcp: number;
+   fid: number;
+   cls: number;
+   ttfb: number;
+   fmp: number} const AdvancedPerformanceMonitor: Reac t.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState<any>(false) useEffect(() => {
+</any>
+</PerformanceMetrics>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

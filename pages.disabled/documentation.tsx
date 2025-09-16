@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const documentation: React.FC = () => {
@@ -10,3 +11,6 @@ const documentation: React.FC = () => {
 };
 
 export default documentation;
+=======
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
@@ -10,3 +11,9 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+'"`
+\'"`
+const React,{ useState,useEffect } from "react"; ""`""`"`
+'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

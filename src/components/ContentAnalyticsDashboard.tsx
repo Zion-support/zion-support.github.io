@@ -10,3 +10,4 @@ const ContentAnalyticsDashboard: React.FC = () => {
 };
 
 export default ContentAnalyticsDashboard;
+</div></div>

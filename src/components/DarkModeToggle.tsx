@@ -10,3 +10,4 @@ const DarkModeToggle: React.FC = () => {
 };
 
 export default DarkModeToggle;
+</p></p>

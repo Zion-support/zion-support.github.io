@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ai-content-marketing-suite: React.FC = () => {
@@ -10,3 +11,9 @@ const ai-content-marketing-suite: React.FC = () => {
 };
 
 export default ai-content-marketing-suite;
+=======
+
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

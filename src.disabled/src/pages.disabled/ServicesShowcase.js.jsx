@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ServicesShowcase.js: React.FC = () => {
@@ -10,3 +11,9 @@ const ServicesShowcase.js: React.FC = () => {
 };
 
 export default ServicesShowcase.js;
+=======
+
+
+const React from "react";"""; """
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

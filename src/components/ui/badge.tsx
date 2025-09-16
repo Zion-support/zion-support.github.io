@@ -9,4 +9,9 @@ const badge: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default badge;
+=======
+export { Badge, badgeVariants }
+</div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

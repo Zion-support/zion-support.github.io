@@ -1,14 +1,40 @@
+<<<<<<< HEAD
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
     try {    } catch (error) {
+=======
+    } catch (error) {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       console.warn('localStorage not available:', error);
       return null;
     }
   },
+<<<<<<< HEAD
   setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);
+=======
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
+=======
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-af01
+/**
+ * Safe storage utility for handling localStorage and sessionStorage
+ * with error handling and fallbacks
+ */
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export const safeStorage = {
   /**
    * Safely get item from localStorage
@@ -117,6 +143,11 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   clear: (): void => {
     try {
       localStorage.clear();
@@ -231,6 +262,23 @@ export const safeStorage = {
         console.warn('sessionStorage.clear failed:', error);
         return false;
       }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-af01
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+  
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);

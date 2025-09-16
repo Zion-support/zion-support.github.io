@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const NewShowcase2025= () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>NewShowcase2025 | Zion Tech Group</title>
@@ -13,6 +14,13 @@ const NewShowcase2025= () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">NewShowcase2025</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
+    <div>
+      <div>
+        <div>
+          <h1>New Showcase2025</h1>
+          <p>Content coming soon...</p>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
         </div>
       </div>
     </div>

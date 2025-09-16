@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const LazyWrapper: React.FC = () => {
@@ -10,3 +11,9 @@ const LazyWrapper: React.FC = () => {
 };
 
 export default LazyWrapper;
+=======
+
+
+const React,{ useState,useEffect,useRef } from "react";"; '"`'"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

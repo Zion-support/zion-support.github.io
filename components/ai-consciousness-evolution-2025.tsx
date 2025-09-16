@@ -1,4 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+import { 
+} from 'lucide-react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-consciousness-evolution-2025: React.FC = () => {
   return (

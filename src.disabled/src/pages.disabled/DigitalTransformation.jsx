@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const DigitalTransformation: React.FC = () => {
@@ -10,3 +11,9 @@ const DigitalTransformation: React.FC = () => {
 };
 
 export default DigitalTransformation;
+=======
+
+
+const React from "react";"""; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,4 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const 2030-revolutionary-services: React.FC = () => {
   return (

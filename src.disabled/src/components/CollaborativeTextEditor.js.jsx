@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const CollaborativeTextEditor.js: React.FC = () => {
@@ -10,3 +11,9 @@ const CollaborativeTextEditor.js: React.FC = () => {
 };
 
 export default CollaborativeTextEditor.js;
+=======
+
+
+const React,{ useState,useCallback,useEffect,useRef } from "react";"; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

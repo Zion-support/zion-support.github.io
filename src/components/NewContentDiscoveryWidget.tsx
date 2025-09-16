@@ -10,3 +10,4 @@ const NewContentDiscoveryWidget: React.FC = () => {
 };
 
 export default NewContentDiscoveryWidget;
+</p></p>

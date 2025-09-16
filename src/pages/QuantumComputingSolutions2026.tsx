@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const QuantumComputingSolutions2026: React.FC = () => {
@@ -20,3 +21,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
 };
 
 export default QuantumComputingSolutions2026;
+=======
+import QuantumComputingSolutions2026 from '../components/QuantumComputingSolutions2026';
+
+export default function QuantumComputingSolutions2026Page() {
+  return <QuantumComputingSolutions2026 />;
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

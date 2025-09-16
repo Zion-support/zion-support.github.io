@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 export const productionLogger = {
@@ -39,4 +40,10 @@ export const productionLogger = {
       }
     } catch (error) {
       // Silently fail in production
+=======
+    }
+  }
+};
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 export default productionLogger;

@@ -2,6 +2,7 @@ import React from 'react';
 
 const _document: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">_document</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
@@ -10,3 +11,18 @@ const _document: React.FC = () => {
 };
 
 export default _document;
+=======
+    <Html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+      <body>
+        <Main />
+        <NextScript />
+  )
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

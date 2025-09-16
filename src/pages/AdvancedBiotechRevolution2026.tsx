@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
   return (

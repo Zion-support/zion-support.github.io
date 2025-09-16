@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedServices2025: React.FC = () => {
   return (
@@ -9,4 +12,10 @@ const EnhancedServices2025: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedServices2025;
+=======
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

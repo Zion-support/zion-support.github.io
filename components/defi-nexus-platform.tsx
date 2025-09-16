@@ -1,4 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+
+import { 
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const defi-nexus-platform: React.FC = () => {
   return (

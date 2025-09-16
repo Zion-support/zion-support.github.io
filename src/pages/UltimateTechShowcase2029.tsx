@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const UltimateTechShowcase2029: React.FC = () => {
@@ -15,6 +16,22 @@ const UltimateTechShowcase2029: React.FC = () => {
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
+=======
+
+const UltimateTechShowcase2029: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="py-32 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-6xl font-bold text-white mb-8">
+            UltimateTechShowcase2029
+          </h1>
+          <p className="text-2xl text-gray-300 mb-12">
+            Experience the future of technology.
+          </p>
+        </div>
+      </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

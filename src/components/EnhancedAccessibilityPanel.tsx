@@ -10,3 +10,4 @@ const EnhancedAccessibilityPanel: React.FC = () => {
 };
 
 export default EnhancedAccessibilityPanel;
+</p></p>

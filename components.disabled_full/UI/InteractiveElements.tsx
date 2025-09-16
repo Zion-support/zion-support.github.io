@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveElements: React.FC = () => {
@@ -10,3 +11,7 @@ const InteractiveElements: React.FC = () => {
 };
 
 export default InteractiveElements;
+=======
+ ToggleSwitch))))))))))))))))))))))
+ ToggleSwitch))))))))))))))))))))))
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

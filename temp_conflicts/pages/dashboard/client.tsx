@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useEffect, useMemo, useState } from "react";
+import { supabase } from "../../utils/supabase/client";
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const client: React.FC = () => {
   return (

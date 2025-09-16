@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveServiceShowcase: React.FC = () => {
@@ -10,3 +11,9 @@ const InteractiveServiceShowcase: React.FC = () => {
 };
 
 export default InteractiveServiceShowcase;
+=======
+
+
+const React,{ useState } from "react"; export default InteractiveServiceShowcase; ""`"`
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

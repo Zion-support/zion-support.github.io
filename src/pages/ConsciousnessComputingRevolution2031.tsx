@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -15,6 +16,14 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
+=======
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };

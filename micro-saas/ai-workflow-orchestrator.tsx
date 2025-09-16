@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ai-workflow-orchestrator: React.FC = () => {
@@ -10,3 +11,9 @@ const ai-workflow-orchestrator: React.FC = () => {
 };
 
 export default ai-workflow-orchestrator;
+=======
+
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

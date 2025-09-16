@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const whitepapers: React.FC = () => {
@@ -10,3 +11,6 @@ const whitepapers: React.FC = () => {
 };
 
 export default whitepapers;
+=======
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
