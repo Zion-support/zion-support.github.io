@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-9c82
 
 const UltimateContentShowcase2025: React.FC = () => {
   return (
@@ -180,6 +183,7 @@ const UltimateContentShowcase2025: React.FC = () => {
             <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
+<<<<<<< HEAD
 =======
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -576,6 +580,11 @@ const UltimateContentShowcase2025: React.FC = () => {
           </button>
         </div>
       </div>
+=======
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-9c82
     </div>
   );
 };

@@ -12,6 +12,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,11 +71,35 @@ export const siteUpdates: SiteUpdate[] = [
 =======
     title: 'Launch: Autonomous Ops Control Center 2.0',
 =======
+=======
+  // Fresh content added 2025-01-16
+  {
+    title: 'Launch: AI Content Studio v3.0',
+    summary: 'Revolutionary content creation platform with advanced AI writing, video generation, and multi-modal publishing capabilities.',
+    href: '/updates/ai-content-studio-3-0',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Quantum AI Platform v2.0',
+    summary: 'Breakthrough quantum computing platform with neural network acceleration and real-time optimization for enterprise workloads.',
+    href: '/updates/quantum-ai-platform-2-0',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Business Suite 2026',
+    summary: 'Complete autonomous business operations platform with AI agents for finance, HR, operations, and customer service.',
+    href: '/updates/autonomous-business-suite-2026',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+>>>>>>> cursor/create-and-deploy-new-content-9c82
     title: 'Launch: Agentic Ops Dashboard (v1.0)',
-    summary:
-      'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
+    summary: 'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
     href: '/updates/agentic-ops-dashboard-1-0',
-    date: '2025-09-15',
+    date: '2025-01-15',
     tag: 'Launch'
   },
   {
@@ -3634,6 +3659,7 @@ export const updates: UpdateItem[] = [
   },
 ]
 
+<<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
 =======
     href: '/updates/dapp-challenge',
@@ -3714,3 +3740,8 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+export function getLatestUpdates(count: number = 6): SiteUpdate[] {
+  return siteUpdates.slice(0, count)
+}
+>>>>>>> cursor/create-and-deploy-new-content-9c82
