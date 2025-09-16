@@ -65,6 +65,9 @@ import NeuralRealityBanner from './src/components/NeuralRealityBanner';
 import UltimateTechAdvertisingBanner from './src/components/UltimateTechAdvertisingBanner';
 import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import ComprehensiveServicesShowcase2027 from './src/pages/ComprehensiveServicesShowcase2027';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
+import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -86,6 +89,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
 
+                {/* Enhanced Content Showcase */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase />
+                </div>
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -98,17 +106,17 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🤖 NEW: AI Transformation →
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Tech Breakthrough →
                     </a>
-                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      ⚡ NEW: Quantum Revolution →
+                    <a href="/pages/NextGenInnovationHub2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Innovation Hub →
                     </a>
-                    <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🧬 NEW: Neural Interface →
+                    <a href="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🎯 NEW: Ultimate Showcase →
                     </a>
-                    <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🚀 NEW: Next-Gen Tech →
+                    <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🤖 AI Transformation →
                     </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
@@ -474,8 +482,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/ComprehensiveServicesShowcase2027" element={<ComprehensiveServicesShowcase2027 />} />
+          <Route path="/enhanced-content-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
