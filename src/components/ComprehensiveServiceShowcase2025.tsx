@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -239,7 +239,7 @@ export default function ComprehensiveServiceShowcase2025() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
@@ -270,10 +270,10 @@ export default function ComprehensiveServiceShowcase2025() {
               <div className="text-sm text-gray-400">Success Rate</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Filters and Search */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -337,19 +337,19 @@ export default function ComprehensiveServiceShowcase2025() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Services Grid/List */}
-        <motion.div
+        <div
           layout
           className={viewMode === 'grid' 
             ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
             : 'space-y-4'
           }
         >
-          <AnimatePresence>
+          
             {filteredServices.map((serviceindex) => (
-              <motion.div
+              <div
                 key={service.id}
                 layout
                 initial={{ opacity: 0, y: 20 }}
@@ -468,23 +468,23 @@ export default function ComprehensiveServiceShowcase2025() {
                     </div>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          
+        </div>
       </div>
 
       {/* Service Detail Modal */}
-      <AnimatePresence>
+      
         {selectedService && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -613,10 +613,10 @@ export default function ComprehensiveServiceShowcase2025() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 }

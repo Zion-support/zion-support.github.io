@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,37 +48,31 @@ const DynamicContentCarousel = () => {
   return (
     <div className="relative max-w-6xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
-                  <h3 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h3>
-                  <p className="text-xl mb-6 max-w-2xl">{carouselItems[currentSlide].description}</p>
-                  <a
-                    href={carouselItems[currentSlide].link}
-                    className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
-                  >
-                    Explore Now →
-                  </a>
-                </div>
-                <div className="hidden md:block">
-                  <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-8xl">{carouselItems[currentSlide].image}</span>
-                  </div>
+        <div
+          key={currentSlide}
+          className="relative transition-all duration-500"
+        >
+          <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
+                <h3 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h3>
+                <p className="text-xl mb-6 max-w-2xl">{carouselItems[currentSlide].description}</p>
+                <a
+                  href={carouselItems[currentSlide].link}
+                  className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                >
+                  Explore Now →
+                </a>
+              </div>
+              <div className="hidden md:block">
+                <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-8xl">{carouselItems[currentSlide].image}</span>
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
       </div>
 
       {/* Navigation Dots */}
@@ -93,21 +86,62 @@ const DynamicContentCarousel = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+<<<<<<< HEAD
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+=======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             }`}
           />
         ))}

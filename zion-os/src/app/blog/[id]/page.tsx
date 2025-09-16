@@ -11,20 +11,40 @@ type Params = { params: { id: string } };
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
   'ai-governance-framework-2025': {
@@ -58,14 +78,20 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +101,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 >>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
@@ -82,6 +109,21 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -550,18 +592,31 @@ export default function BlogPostPage({ params }: Params) {
     </article>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 }
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 }
 
@@ -573,6 +628,7 @@ export default function BlogPostPage({ params }: Params) {
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 <<<<<<< HEAD
@@ -580,3 +636,18 @@ export default function BlogPostPage({ params }: Params) {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081

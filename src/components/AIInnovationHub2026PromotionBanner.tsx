@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   ArrowRight
@@ -92,8 +92,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -111,7 +111,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -50 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.8 }}
@@ -139,7 +139,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 {stats.map((statindex) => {
                   const Icon = stat.icon;
                   return (
-                    <motion.div
+                    <div
                       key={stat.label}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -151,34 +151,34 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         <span className="text-sm text-gray-300">{stat.label}</span>
                       </div>
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    </motion.div>
+                    </div>
                   );
                 })}
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
+                <button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-yellow-300 transition-colors"
                 >
                   Explore Innovations
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-                <motion.button
+                </button>
+                <button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-white/30 transition-colors border border-white/30"
                 >
                   <Play className="h-5 w-5 mr-2" />
                   Watch Demo
-                </motion.button>
+                </button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Content - Interactive Innovation Showcase */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: 50 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
@@ -194,7 +194,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   {categories.map((categoryindex) => {
                     const Icon = category.icon;
                     return (
-                      <motion.div
+                      <div
                         key={category.name}
                         initial={{ opacity: 0scale: 0.8 }}
                         animate={{ opacity: 1scale: 1 }}
@@ -204,7 +204,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                         <div className="text-white font-semibold">{category.name}</div>
                         <div className="text-gray-300 text-sm">{category.count} innovations</div>
-                      </motion.div>
+                      </div>
                     );
                   })}
                 </div>
@@ -213,7 +213,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               {/* Rotating Innovation Highlight */}
               <div className="relative h-40 bg-gradient-to-r from-yellow-400/20 to-pink-400/20 rounded-xl overflow-hidden">
                 <AnimatePresence mode="wait">
-                  <motion.div
+                  <div
                     key={currentInnovation}
                     initial={{ opacity: 0x: 50 }}
                     animate={{ opacity: 1x: 0 }}
@@ -237,8 +237,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         Impact: {innovations[currentInnovation].impact}
                       </p>
                     </div>
-                  </motion.div>
-                </AnimatePresence>
+                  </div>
+                
                 
                 {/* Innovation Indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -255,7 +255,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </div>
 
               {/* Floating Innovation Icons */}
-              <motion.div
+              <div
                 animate={{ 
                   y: [0-10],
                   rotate: [050]
@@ -264,9 +264,9 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
               >
                 <Brain className="h-6 w-6" />
-              </motion.div>
+              </div>
               
-              <motion.div
+              <div
                 animate={{ 
                   y: [010],
                   rotate: [0-50]
@@ -275,9 +275,9 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
               >
                 <Atom className="h-6 w-6" />
-              </motion.div>
+              </div>
 
-              <motion.div
+              <div
                 animate={{ 
                   y: [0-150],
                   x: [050]
@@ -286,8 +286,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
               >
                 <Network className="h-5 w-5" />
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -301,8 +301,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

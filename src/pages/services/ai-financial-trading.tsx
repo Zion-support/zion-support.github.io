@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   TrendingUp, 
   DollarSign, 
@@ -147,7 +147,7 @@ export default function AIFinancialTrading() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -174,7 +174,7 @@ export default function AIFinancialTrading() {
                 Watch Demo
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -192,7 +192,7 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -201,7 +201,7 @@ export default function AIFinancialTrading() {
               >
                 <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
                 <p className="text-white text-lg font-medium">{benefit}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -221,7 +221,7 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +233,7 @@ export default function AIFinancialTrading() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {tradingStrategies.map((strategy, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -266,7 +266,7 @@ export default function AIFinancialTrading() {
                   <TrendingUp className="w-5 h-5 text-yellow-400 mr-2" />
                   <span className="text-yellow-400 font-semibold">{strategy.performance}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -286,7 +286,7 @@ export default function AIFinancialTrading() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -332,7 +332,7 @@ export default function AIFinancialTrading() {
                 >
                   Get Started
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function AIFinancialTrading() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -380,9 +380,9 @@ export default function AIFinancialTrading() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -407,7 +407,7 @@ export default function AIFinancialTrading() {
                   <span className="text-green-400 font-semibold">80%</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -415,7 +415,7 @@ export default function AIFinancialTrading() {
       {/* Contact CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -443,7 +443,7 @@ export default function AIFinancialTrading() {
                 Call Now
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

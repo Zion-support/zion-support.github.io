@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   FaRocket, 
   FaBrain, 
@@ -309,7 +309,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Header */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -322,10 +322,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             Discover our cutting-edge technology solutions designed for the future. 
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -353,10 +353,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <option value="category">Sort by Category</option>
             </select>
           </div>
-        </motion.div>
+        </div>
 
         {/* Category Tabs */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -388,17 +388,17 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
-            <motion.div
+            <div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -444,13 +444,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* No Results */}
         {filteredServices.length === 0 && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-16"
@@ -458,21 +458,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Service Detail Modal */}
-      <AnimatePresence>
+      
         {selectedService && (
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
-            <motion.div
+            <div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -563,10 +563,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 };

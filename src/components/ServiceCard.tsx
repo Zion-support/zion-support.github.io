@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Brain } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -21,7 +21,7 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {
   return (
-    <motion.div
+    <div
       className={`relative group cursor-pointer ${
         isCurrent ? 'scale-105' : 'scale-100'
       } transition-transform duration-500`}
@@ -182,13 +182,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
             </div>
           )}
           
-          <motion.div
+          <div
             className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
             whileHover={{ x: 5 }}
           >
             <span className="text-sm font-medium">Learn More</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.div>
+          </div>
         </div>
 
         {/* Hover Overlay */}
@@ -200,7 +200,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
 
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-    </motion.div>
+    </div>
   );
 };
 

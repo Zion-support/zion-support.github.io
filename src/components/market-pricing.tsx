@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   TrendingUp, TrendingDown, DollarSign, Target, 
   ArrowRight, Check, Star, BarChart3, 
@@ -349,7 +349,7 @@ export default function MarketPricing() {
             </div>
           </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -359,7 +359,7 @@ export default function MarketPricing() {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               {currentMarket.description}
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -378,7 +378,7 @@ export default function MarketPricing() {
           
           <div className="space-y-8">
             {currentMarket.competitors.map((competitor, index) => (
-              <motion.div
+              <div
                 key={competitor.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -444,7 +444,7 @@ export default function MarketPricing() {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -723,7 +723,7 @@ export default function MarketPricing() {
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
-              <motion.div
+              <div
                 key={tier.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -736,11 +736,11 @@ export default function MarketPricing() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
                 <p className="text-2xl font-bold text-cyan-400">{tier.price}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -769,7 +769,7 @@ export default function MarketPricing() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -787,7 +787,7 @@ export default function MarketPricing() {
           </motion.h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -809,9 +809,9 @@ export default function MarketPricing() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
             
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -833,7 +833,7 @@ export default function MarketPricing() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -841,7 +841,7 @@ export default function MarketPricing() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -869,7 +869,7 @@ export default function MarketPricing() {
                 Get Custom Quote
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

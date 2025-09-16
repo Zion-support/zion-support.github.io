@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const UltimateContentPromotionalBanner2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,7 +63,7 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="absolute top-0 left-0 w-full h-full">
-          <motion.div
+          <div
             animate={{ 
               x: [0, 100, 0],
               y: [0, 50, 0],
@@ -71,8 +71,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full"
-          ></motion.div>
-          <motion.div
+          ></div>
+          <div
             animate={{ 
               x: [0, -80, 0],
               y: [0, 100, 0],
@@ -80,8 +80,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             }}
             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
             className="absolute top-32 right-20 w-16 h-16 bg-pink-500/20 rounded-full"
-          ></motion.div>
-          <motion.div
+          ></div>
+          <div
             animate={{ 
               x: [0, 60, 0],
               y: [0, -30, 0],
@@ -89,8 +89,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-500/20 rounded-full"
-          ></motion.div>
-          <motion.div
+          ></div>
+          <div
             animate={{ 
               x: [0, -40, 0],
               y: [0, 80, 0],
@@ -98,13 +98,13 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             }}
             transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
             className="absolute bottom-32 right-1/3 w-14 h-14 bg-emerald-500/20 rounded-full"
-          ></motion.div>
+          ></div>
         </div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
@@ -120,13 +120,13 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             Experience the most advanced technologies ever conceived - where consciousness computing, 
             quantum mechanics, and synthetic reality converge to create the impossible.
           </p>
-        </motion.div>
+        </div>
 
         {/* Main Carousel */}
         <div className="relative max-w-8xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -150,7 +150,7 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                       
                       <div className="grid grid-cols-2 gap-4 mb-8">
                         {ultimateContent[currentSlide].features.map((feature, index) => (
-                          <motion.div
+                          <div
                             key={index}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -158,7 +158,7 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                             className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center hover:scale-105 transition-all duration-300"
                           >
                             <span className="text-lg font-semibold">{feature}</span>
-                          </motion.div>
+                          </div>
                         ))}
                       </div>
                       
@@ -204,8 +204,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
 
           {/* Navigation Controls */}
@@ -262,7 +262,7 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
           <h3 className="text-4xl font-bold text-center mb-12">Quick Access to All Ultimate Content</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {ultimateContent.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -284,13 +284,13 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                 >
                   Explore Ultimate Content →
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -314,7 +314,7 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -74,6 +75,21 @@ const InteractiveTechShowcase2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
 
   const techDemos = [
+=======
+  const [activeDemo, setActiveDemo] = useState(0);
+
+  const techDemos = [
+=======
+  const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const technologies = [
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     {
       id: 1,
       title: "🧠 AI Consciousness Demo",
@@ -242,6 +258,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
   }, [techDemos.length]);
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -318,12 +338,59 @@ const InteractiveTechShowcase2026: React.FC = () => {
               }`}
               onClick={() => setActiveDemo(index)}
             >
+<<<<<<< HEAD
+=======
+=======
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/20"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce">
+            🚀 INTERACTIVE TECH SHOWCASE 2026
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {technologies.map((tech, index) => (
+            <div 
+              key={tech.id}
+              className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
+              onClick={() => setActiveTab(index)}
+            >
+              <div className="text-6xl mb-4 text-center animate-pulse">{tech.icon}</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">{tech.name}</h3>
+              <p className="text-center opacity-90 mb-6">{tech.description}</p>
+              
+              <div className="space-y-2 mb-6">
+                {tech.features.map((feature, idx) => (
+                  <div key={idx} className="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-center">
+                    <span className="text-sm font-semibold">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               <div className="text-center">
                 <div className="text-4xl mb-4">{demo.icon}</div>
                 <h3 className="text-lg font-bold mb-2">{demo.title}</h3>
                 <p className="text-sm opacity-90 mb-4">{demo.subtitle}</p>
                 <div className="text-xs opacity-75">Click to explore →</div>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </motion.div>
           ))}
         </div>
@@ -410,6 +477,14 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </div>
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
         </div>
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          ))}
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       </div>
     </div>
   );

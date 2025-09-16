@@ -6,6 +6,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
     <>
       <Helmet>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>Revolutionary Tech Showcase 2027 - Zion Tech Group</title>
         <meta name="description" content="Explore the most revolutionary technology showcase of 2027 featuring cutting-edge innovations" />
         <meta name="keywords" content="tech showcase 2027, revolutionary technology, AI showcase, quantum computing, neural interfaces" />
@@ -33,6 +34,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-lg">
                   Watch Live Demo
 =======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         <title>Revolutionary Technology Showcase 2027 | Zion Tech Group</title>
         <meta name="description" content="Experience the future of technology with our revolutionary 2027 showcase featuring AI, quantum computing, and neural interfaces." />
         <meta name="keywords" content="revolutionary technology, AI 2027, quantum computing, neural interfaces, future tech" />
@@ -63,7 +66,10 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 </button>
                 <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg transform hover:scale-105">
                   🧬 Neural Interfaces
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                 </button>
               </div>
             </div>
@@ -71,6 +77,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Technologies */}
         <div className="container mx-auto px-4 py-16">
@@ -383,6 +390,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         {/* Revolutionary Content Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -507,13 +516,17 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
                 Learn More
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               </button>
             </div>
           </div>
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -647,6 +660,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-291f
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   );
 };
 

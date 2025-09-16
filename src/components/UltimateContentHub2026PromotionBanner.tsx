@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search
   Grid
@@ -114,9 +114,9 @@ const UltimateContentHub2026PromotionBanner = () => {
   };
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -137,7 +137,7 @@ const UltimateContentHub2026PromotionBanner = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div>
-                <motion.div
+                <div
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{ opacity: 1scale: 1 }}
                   transition={{ duration: 0.5delay: 0.2 }}
@@ -146,7 +146,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <Grid className="w-4 h-4" />
                   <span>Ultimate Content Hub</span>
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                </motion.div>
+                </div>
 
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                 </motion.p>
 
                 {/* Content Types */}
-                <motion.div
+                <div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.5 }}
@@ -180,10 +180,10 @@ const UltimateContentHub2026PromotionBanner = () => {
                       <span className="text-xs opacity-70">({type.count})</span>
                     </div>
                   ))}
-                </motion.div>
+                </div>
 
                 {/* Stats */}
-                <motion.div
+                <div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.6 }}
@@ -201,10 +201,10 @@ const UltimateContentHub2026PromotionBanner = () => {
                     <Clock className="w-4 h-4" />
                     <span>Updated Daily</span>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* CTA Buttons */}
-                <motion.div
+                <div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.7 }}
@@ -217,11 +217,11 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-slate-800 transition-all duration-300">
                     Start Free Trial
                   </button>
-                </motion.div>
+                </div>
               </div>
 
               {/* Preview Section */}
-              <motion.div
+              <div
                 initial={{ opacity: 0x: 20 }}
                 animate={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6delay: 0.8 }}
@@ -239,7 +239,7 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                   {/* Content Preview */}
                   <AnimatePresence mode="wait">
-                    <motion.div
+                    <div
                       key={activePreview}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -291,8 +291,8 @@ const UltimateContentHub2026PromotionBanner = () => {
                           </button>
                         </div>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </div>
+                  
 
                   {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">
@@ -311,11 +311,11 @@ const UltimateContentHub2026PromotionBanner = () => {
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse" />
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" />
-              </motion.div>
+              </div>
             </div>
 
             {/* Bottom Features */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.9 }}
@@ -339,7 +339,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <span className="text-sm">Expert Content</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Dismiss Button */}
@@ -350,9 +350,9 @@ const UltimateContentHub2026PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

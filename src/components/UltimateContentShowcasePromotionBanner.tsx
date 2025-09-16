@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 ArrowRightStarTrendingUpUsersGlobeZapAwardClock
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -39,7 +39,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
   ];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
@@ -52,7 +52,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <motion.div
+            <div
               initial={{ opacity: 0x: -30 }}
               animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
               transition={{ delay: 0.2duration: 0.6 }}
@@ -69,10 +69,10 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 Discover the future of technology with our comprehensive suite of AIquantum computing
                 and automation solutions transforming industries worldwide.
               </p>
-            </motion.div>
+            </div>
 
             {/* Solutions List */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.4duration: 0.6 }}
@@ -84,10 +84,10 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                   <span className="text-sm">{solution}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* Features */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.5duration: 0.6 }}
@@ -99,10 +99,10 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                   <span className="text-gray-300">{feature.text}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.6duration: 0.6 }}
@@ -121,11 +121,11 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               >
                 Get Started Today
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0x: 30 }}
             animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
             transition={{ delay: 0.3duration: 0.6 }}
@@ -135,7 +135,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
               
               {/* Animated Stat */}
-              <motion.div
+              <div
                 key={currentStat}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={{ opacity: 1scale: 1 }}
@@ -147,7 +147,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
-              </motion.div>
+              </div>
 
               {/* Additional Stats */}
               <div className="space-y-4">
@@ -170,7 +170,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               </div>
 
               {/* Urgency Indicator */}
-              <motion.div
+              <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1duration: 0.5 }}
@@ -178,12 +178,12 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time offer - Act now!</span>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

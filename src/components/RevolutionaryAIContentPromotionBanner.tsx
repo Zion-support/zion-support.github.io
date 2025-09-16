@@ -1,6 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 ArrowRightSparklesZapTrendingUpStar
 
 export default function RevolutionaryAIContentPromotionBanner() {
@@ -21,7 +21,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Badge */}
-          <motion.div
+          <div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2type: "spring"stiffness: 200 }}
@@ -29,7 +29,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
           >
             <Sparkles className="w-4 h-4 mr-2" />
             <span className="text-sm font-semibold">REVOLUTIONARY AI CONTENT BREAKTHROUGH</span>
-          </motion.div>
+          </div>
 
           {/* Main heading */}
           <motion.h1
@@ -57,7 +57,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
           </motion.p>
 
           {/* Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
@@ -79,10 +79,10 @@ export default function RevolutionaryAIContentPromotionBanner() {
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">24/7</div>
               <div className="text-sm text-gray-300">Support</div>
             </div>
-          </motion.div>
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
@@ -105,10 +105,10 @@ export default function RevolutionaryAIContentPromotionBanner() {
               View Success Stories
               <Star className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </a>
-          </motion.div>
+          </div>
 
           {/* Trust indicators */}
-          <motion.div
+          <div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
@@ -122,7 +122,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
               <div className="text-lg font-semibold">Healthcare</div>
               <div className="text-lg font-semibold">Finance</div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </motion.section>

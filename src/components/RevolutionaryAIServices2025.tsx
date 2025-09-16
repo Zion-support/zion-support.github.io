@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 ArrowRightBrainZapShieldGlobeTargetTrendingUp
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -137,7 +137,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -149,12 +149,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our breakthrough services that transcend traditional boundaries and achieve unprecedented capabilities.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (
-            <motion.div
+            <div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -218,12 +218,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -248,7 +248,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

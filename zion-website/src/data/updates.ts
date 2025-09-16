@@ -11,6 +11,16 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -158,7 +168,161 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+  // Fresh content added 2025-09-15
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title: 'Deep Dive: Enterprise Agent Observability (2026)',
+=======
+    title: 'Guide: Agent Platform Operations (2026)',
+=======
+    title: 'Launch: Autonomous Ops and SRE for Agents',
+=======
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+=======
+    title: 'Report: State of AI Automation (2026 Preview)',
+=======
+    title: 'Launch: Autonomous Ops Control Center 2.0',
+=======
+    title: 'Launch: Agentic Ops Dashboard (v1.0)',
+    summary:
+      'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
+    href: '/updates/agentic-ops-dashboard-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
+    summary:
+      'How to evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.',
+    href: '/updates/multimodal-rag-benchmarking-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 50% MTTR Reduction with Evals-in-Prod',
+    summary:
+      'Incident-driven improvements using live evals, guardrails, and cost-aware routing to halve MTTR.',
+    href: '/updates/mttr-reduction-evals-in-prod',
+    date: '2025-09-14',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot (v1.0)',
+>>>>>>> origin/feat/new-updates-and-homepage-promo
+    summary:
+      'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
+    href: '/updates/autonomous-ops-control-center-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Compliance Auditor v1.0',
+    summary:
+      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.1',
+    summary:
+      'Upgraded support copilot with retrieval observability, safe tool use, and faster resolutions.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Real-Time Evals Starter Kit',
+>>>>>>> origin/feat/new-updates-and-home-ad
+    summary:
+      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
+    href: '/insights/state-of-ai-automation-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
+    summary:
+      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
+    href: '/updates/autonomous-retail-fulfillment',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
+>>>>>>> origin/feat/content-sept15-1757928952
+    summary:
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot v1.0',
+>>>>>>> origin/feat/content-policy-as-code
+    summary:
+      'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
+    href: '/updates/autonomous-ops-sre-for-agents',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Agent Safety Certification (Beta)',
+>>>>>>> origin/feature/autonomous-ops-sre-content
+    summary:
+      'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
+    href: '/updates/agent-platform-operations',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Production Guardrails Playbook',
+    summary:
+      'Operational guardrails, policy-as-code, and runtime protections for safe AI scale in production.',
+    href: '/updates/production-guardrails-playbook',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent Observability',
+    summary:
+      'Traces, evals, and safety telemetry to operate autonomous agents in production environments.',
+    href: '/updates/enterprise-agent-observability',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: AI Governance Toolkit (v2)',
+>>>>>>> origin/feature/content-updates-2025-09-15
+<<<<<<< HEAD
+=======
+=======
+  // Fresh content added 2025-09-15
+  {
+    title: 'Deep Dive: Enterprise Agent Observability (2026)',
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     summary:
       'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
     href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
@@ -183,8 +347,37 @@ export const siteUpdates: SiteUpdate[] = [
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,9 +423,18 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,16 +442,46 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
   },
   {
 >>>>>>> cursor/create-and-deploy-new-content-1912
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
@@ -262,9 +494,37 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 >>>>>>> cursor/create-and-deploy-new-content-de62
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -278,6 +538,17 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
   // Added 2025-09-15 (brand new content)
@@ -308,11 +579,25 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/enterprise-retrieval-observability-2026',
     date: '2025-09-15',
     tag: 'Report'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 <<<<<<< HEAD
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 <<<<<<< HEAD
 =======
@@ -325,6 +610,20 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+  },
+  {
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   },
   {
     title: 'Launch: AI Lab Open Benchmarks Portal',
@@ -332,6 +631,45 @@ export const siteUpdates: SiteUpdate[] = [
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+    date: '2025-09-15',
+    tag: 'Launch'
+<<<<<<< HEAD
+>>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> cursor/create-and-deploy-new-content-f995
+  },
+  {
+>>>>>>> main
+    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    summary:
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+  },
+  {
+    title: 'Launch: AI Lab Open Benchmarks Portal',
+    summary:
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
@@ -1395,6 +1733,22 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
+    href: '/updates/ai-autonomous-workflow-engine-1-0',
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+    date: '2025-09-15',
+    tag: 'Launch'
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     date: '2025-09-15',
     tag: 'Launch'
 <<<<<<< HEAD
@@ -2441,6 +2795,13 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     date: '2025-09-15',
     tag: 'Launch'
   }
@@ -2692,6 +3053,10 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/eval-ready-agent-release-automation',
     date: '2025-09-15',
     tag: 'Guide'
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   }
   ,
   // New updates added by background automation on 2025-09-15 (even later batch)
@@ -2945,6 +3310,24 @@ export const siteUpdates: SiteUpdate[] = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -3141,6 +3524,7 @@ export const getLatestUpdates = (limit = 6) => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
   }
 ]
 
@@ -3150,3 +3534,24 @@ export function getLatestUpdates(count: number = 6): SiteUpdate[] {
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+export function getLatestUpdates(count: number = 6): SiteUpdate[] {
+  return siteUpdates.slice(0, count)
+}
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081

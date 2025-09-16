@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -9,3 +16,27 @@ Disallow: /api/
 Disallow: /_headers
 Disallow: /*.backup
 Disallow: /*.log
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Allow all content pages
+Allow: /pages/
+Allow: /blog/
+Allow: /contact/
+
+# Crawl delay
+Crawl-delay: 1
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081

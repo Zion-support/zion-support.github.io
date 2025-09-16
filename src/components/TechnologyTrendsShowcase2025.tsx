@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -150,7 +150,7 @@ const TechnologyTrendsShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -158,7 +158,7 @@ const TechnologyTrendsShowcase2025 = () => {
           >
             <TrendingUp className="w-4 h-4 mr-2" />
             Technology Trends Showcase 2025
-          </motion.div>
+          </div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ const TechnologyTrendsShowcase2025 = () => {
           {trends.map((trendindex) => {
             const Icon = trend.icon;
             return (
-              <motion.button
+              <button
                 key={trend.id}
                 onClick={() => {
                   setActiveTrend(index);
@@ -201,14 +201,14 @@ const TechnologyTrendsShowcase2025 = () => {
               >
                 <Icon className="w-5 h-5 mr-2" />
                 {trend.title.split(' ')[0]}
-              </motion.button>
+              </button>
             );
           })}
         </div>
 
         {/* Main Trend Display */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTrend}
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: 1x: 0 }}
@@ -275,7 +275,7 @@ const TechnologyTrendsShowcase2025 = () => {
                   {/* Features */}
                   <div className="space-y-3">
                     {currentTrend.features.map((featureindex) => (
-                      <motion.div
+                      <div
                         key={index}
                         initial={{ opacity: 0x: -20 }}
                         animate={{ opacity: 1x: 0 }}
@@ -284,14 +284,14 @@ const TechnologyTrendsShowcase2025 = () => {
                       >
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                         <span className="text-gray-700">{feature}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Right Side - Visual */}
                 <div className="relative">
-                  <motion.div
+                  <div
                     whileHover={{ scale: 1.02 }}
                     className={`h-80 rounded-xl bg-gradient-to-br ${currentTrend.color} p-8 text-white relative overflow-hidden`}
                   >
@@ -312,12 +312,12 @@ const TechnologyTrendsShowcase2025 = () => {
                         ))}
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Auto-play Controls */}
         <div className="flex items-center justify-center gap-4 mb-12">
@@ -336,7 +336,7 @@ const TechnologyTrendsShowcase2025 = () => {
 
         {/* Future Predictions */}
         <div className="mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -348,11 +348,11 @@ const TechnologyTrendsShowcase2025 = () => {
             <p className="text-lg text-gray-600">
               Based on current trends and expert analysis
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {predictions.map((predictionindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -382,13 +382,13 @@ const TechnologyTrendsShowcase2025 = () => {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -401,24 +401,24 @@ const TechnologyTrendsShowcase2025 = () => {
             Stay ahead of the curve with our cutting-edge technology solutions and expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-white text-purple-600 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center"
             >
               <Rocket className="w-5 h-5 mr-2" />
               Explore Solutions
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               <Lightbulb className="w-5 h-5 mr-2" />
               Get Expert Consultation
-            </motion.button>
+            </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

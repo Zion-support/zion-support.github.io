@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const InteractiveContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -124,7 +124,7 @@ const InteractiveContentCarousel: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentSlide}
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -154,7 +154,7 @@ const InteractiveContentCarousel: React.FC = () => {
                       
                       <div className="grid grid-cols-2 gap-4 mb-8">
                         {currentSlideData.features.map((feature, index) => (
-                          <motion.div
+                          <div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -162,7 +162,7 @@ const InteractiveContentCarousel: React.FC = () => {
                             className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center"
                           >
                             <span className="text-sm font-semibold">{feature}</span>
-                          </motion.div>
+                          </div>
                         ))}
                       </div>
                       
@@ -183,7 +183,7 @@ const InteractiveContentCarousel: React.FC = () => {
                       {/* Stats */}
                       <div className="grid grid-cols-3 gap-4">
                         {Object.entries(currentSlideData.stats).map(([key, value], index) => (
-                          <motion.div
+                          <div
                             key={key}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -192,7 +192,7 @@ const InteractiveContentCarousel: React.FC = () => {
                           >
                             <div className="text-2xl font-bold mb-1">{value}</div>
                             <div className="text-xs opacity-80 capitalize">{key}</div>
-                          </motion.div>
+                          </div>
                         ))}
                       </div>
                       
@@ -213,8 +213,8 @@ const InteractiveContentCarousel: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
           </div>
 
           {/* Navigation Controls */}
@@ -271,7 +271,7 @@ const InteractiveContentCarousel: React.FC = () => {
           <h3 className="text-3xl font-bold text-center mb-8">All Available Content</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contentSlides.map((slide, index) => (
-              <motion.div
+              <div
                 key={slide.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -309,7 +309,7 @@ const InteractiveContentCarousel: React.FC = () => {
                   </div>
                   <p className="text-xs opacity-80">Completion: {slide.stats.completion}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

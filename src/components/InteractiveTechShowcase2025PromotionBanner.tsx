@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Play
   ArrowRight
@@ -65,7 +65,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -73,7 +73,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           >
             <Play className="w-4 h-4" />
             🎮 NEW: Interactive Technology Demo 2025
-          </motion.div>
+          </div>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -98,7 +98,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </motion.p>
 
           {/* Interactive Demo Preview */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.6 }}
@@ -149,7 +149,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
                   {demoSteps.map((step, index) => (
-                    <motion.div
+                    <div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -160,15 +160,15 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                         <span className="text-white text-xs font-bold">{index + 1}</span>
                       </div>
                       <span className="text-gray-300">{step}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Feature Icons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -177,7 +177,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -188,13 +188,13 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-white font-medium">{feature.text}</span>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 1.0 }}
@@ -210,7 +210,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
               Watch Live Stream
               <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Floating Elements */}

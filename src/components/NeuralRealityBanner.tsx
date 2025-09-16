@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const NeuralRealityBanner: React.FC = () => {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
@@ -43,7 +43,7 @@ const NeuralRealityBanner: React.FC = () => {
           <span className="bg-white/20 px-3 py-1 rounded-full">🚀 Future Technology</span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

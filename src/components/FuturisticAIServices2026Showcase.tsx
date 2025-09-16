@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -99,35 +99,35 @@ const FuturisticAIServices2026Showcase = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div
+        <div
           variants={containerVariants}
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="flex items-center justify-center mb-6">
+          <div variants={itemVariants} className="flex items-center justify-center mb-6">
             <Zap className="w-12 h-12 text-yellow-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               Futuristic AI Services 2026
             </h2>
-          </motion.div>
+          </div>
           
           <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the next generation of artificial intelligence with our revolutionary 2026 service portfolio.
             Powered by quantum computingneural interfacesand autonomous systems.
           </motion.p>
-        </motion.div>
+        </div>
 
         {/* Main Service Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <motion.div
+          <div
             variants={itemVariants}
             initial="hidden"
             animate="visible"
             className="space-y-8"
           >
             <AnimatePresence mode="wait">
-              <motion.div
+              <div
                 key={currentService}
                 initial={{ opacity: 0x: -50 }}
                 animate={{ opacity: 1x: 0 }}
@@ -151,7 +151,7 @@ const FuturisticAIServices2026Showcase = () => {
 
                 <div className="space-y-4 mb-6">
                   {services[currentService].features.map((featureindex) => (
-                    <motion.div
+                    <div
                       key={index}
                       initial={{ opacity: 0x: -20 }}
                       animate={{ opacity: 1x: 0 }}
@@ -160,7 +160,7 @@ const FuturisticAIServices2026Showcase = () => {
                     >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
                       {feature}
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
@@ -169,22 +169,22 @@ const FuturisticAIServices2026Showcase = () => {
                     <TrendingUp className="w-5 h-5 mr-2" />
                     <span className="font-bold text-xl">{services[currentService].stats}</span>
                   </div>
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-full text-white font-semibold transition-colors duration-300 flex items-center"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </motion.button>
+                  </button>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            
 
             {/* Service Navigation */}
             <div className="flex justify-center space-x-4">
               {services.map((_index) => (
-                <motion.button
+                <button
                   key={index}
                   onClick={() => setCurrentService(index)}
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
@@ -196,10 +196,10 @@ const FuturisticAIServices2026Showcase = () => {
                 />
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Stats Grid */}
-          <motion.div
+          <div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -211,7 +211,7 @@ const FuturisticAIServices2026Showcase = () => {
               { icon: <Star className="w-8 h-8" />value: "1M+"label: "Active Users" },
               { icon: <Zap className="w-8 h-8" />value: "0.1ms"label: "Latency" }
             ].map((statindex) => (
-              <motion.div
+              <div
                 key={index}
                 variants={itemVariants}
                 className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:bg-white/20 transition-colors duration-300"
@@ -219,27 +219,27 @@ const FuturisticAIServices2026Showcase = () => {
                 <div className="text-blue-400 mb-3">{stat.icon}</div>
                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           variants={itemVariants}
           initial="hidden"
           animate="visible"
           className="text-center"
         >
-          <motion.button
+          <button
             whileHover={{ scale: 1.05y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="px-12 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-300 transform hover:shadow-blue-500/25"
           >
             Experience the Future Today
             <ArrowRight className="w-5 h-5 ml-2 inline" />
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const AIConsciousnessRevolution2025: React.FC = () => {
   const [consciousnessLevel, setConsciousnessLevel] = useState(0);
@@ -73,7 +73,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -99,7 +99,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -154,7 +154,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
         {/* Consciousness Stages */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {consciousnessStages.map((stage, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -190,7 +190,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
 
           <div className="grid md:grid-cols-5 gap-6">
             {consciousnessMetrics.map((metric, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -207,7 +207,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
                     style={{ width: `${metric.value}%` }}
                   ></div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../components/NotificationSystem';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 import React from 'react';
 <<<<<<< HEAD
@@ -35,6 +39,10 @@ import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-12a7
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -43,6 +51,7 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,6 +85,11 @@ import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertising
 >>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
 >>>>>>> cursor/create-and-deploy-new-content-12a7
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -137,6 +151,7 @@ const Home: React.FC = () => {
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -148,20 +163,24 @@ const Home: React.FC = () => {
             </ul>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             <Link 
               to="/pages/AIInnovationHub2026" 
               className="text-cyan-400 hover:text-cyan-300 font-semibold"
             >
               Learn More →
             </Link>
-<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-12a7
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -173,6 +192,7 @@ const Home: React.FC = () => {
                 📚 Tech Blog 2026 →
               </a>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -339,6 +359,9 @@ const Home: React.FC = () => {
 >>>>>>> 536d7058c2ae2f295f6dd6d2d4744b4056fa9fd9
 >>>>>>> cursor/create-and-deploy-new-content-12a7
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -364,12 +387,15 @@ const Home: React.FC = () => {
               from evolving threats in the digital landscape.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Enterprise solutions</li>
               <li>• Custom development</li>
               <li>• Technology consulting</li>
             </ul>
 =======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             <Link 
               to="/pages/ComprehensiveTechInsights2026" 
               className="text-green-400 hover:text-green-300 font-semibold"
@@ -381,6 +407,9 @@ const Home: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         {/* Revolutionary Content Banner */}
         <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
 =======
@@ -406,9 +435,12 @@ const Home: React.FC = () => {
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Technology Showcase 2026
@@ -455,7 +487,10 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </div>
         </div>
       </div>

@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -19,10 +21,13 @@ const InteractiveTechShowcase: React.FC = () => {
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
       icon: "🧠",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -51,63 +56,65 @@ const InteractiveTechShowcase: React.FC = () => {
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
   return (
     <div className="max-w-7xl mx-auto">
       {/* Technology Selector */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {technologies.map((tech, index) => (
-          <motion.button
+          <button
             key={tech.id}
             onClick={() => setActiveTech(index)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
               activeTech === index
-                ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
-            <span className="text-2xl mr-2">{tech.icon}</span>
-            {tech.name}
-          </motion.button>
+            {tech.icon} {tech.name}
+          </button>
         ))}
       </div>
 
-      {/* Main Showcase Area */}
-      <div className="grid lg:grid-cols-2 gap-12">
-        {/* Technology Details */}
-        <motion.div
-          key={activeTech}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="space-y-8"
-        >
-          <div className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl text-white`}>
-            <div className="text-6xl mb-4">{technologies[activeTech].icon}</div>
-            <h3 className="text-3xl font-bold mb-4">{technologies[activeTech].name}</h3>
-            <p className="text-xl opacity-90 mb-6">{technologies[activeTech].description}</p>
-            
-            <div className="grid grid-cols-2 gap-4 mb-6">
+      {/* Active Technology Display */}
+      <div
+        key={activeTech}
+        className={`bg-gradient-to-br ${technologies[activeTech].color} rounded-2xl p-8 text-white transition-all duration-500`}
+      >
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Content */}
+          <div>
+            <div className="flex items-center space-x-3 mb-4">
+              <span className="text-6xl">{technologies[activeTech].icon}</span>
+              <div>
+                <h2 className="text-3xl font-bold">{technologies[activeTech].name}</h2>
+                <p className="text-lg opacity-90">{technologies[activeTech].description}</p>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="grid grid-cols-2 gap-3 mb-6">
               {technologies[activeTech].features.map((feature, index) => (
-                <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
-                  <div className="text-sm font-semibold">{feature}</div>
+                <div key={index} className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <span className="text-sm font-medium">{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex space-x-4">
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={technologies[activeTech].link}
-                className="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
               >
-                Explore Technology
-              </a>
-              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors">
                 {technologies[activeTech].demo}
+<<<<<<< HEAD
               </button>
             </div>
           </div>
@@ -319,24 +326,16 @@ const InteractiveTechShowcase: React.FC = () => {
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {technologies.map((tech, index) => (
+=======
+              </a>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               <button
-                key={tech.id}
-                onClick={() => {
-                  setIsAnimating(true);
-                  setTimeout(() => {
-                    setActiveTech(index);
-                    setIsAnimating(false);
-                  }, 300);
-                }}
-                className={`px-6 py-3 rounded-xl transition-all duration-300 ${
-                  activeTech === index
-                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
+                onClick={() => setIsAnimating(!isAnimating)}
+                className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold"
               >
-                <span className="text-2xl mr-3">{tech.icon}</span>
-                {tech.name}
+                {isAnimating ? '⏸️ Pause Animation' : '▶️ Start Animation'}
               </button>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -492,10 +491,21 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
               </div>
+=======
+            </div>
+          </div>
+
+          {/* Visual Element */}
+          <div className="hidden md:block">
+            <div className="text-8xl opacity-30 text-center">
+              {technologies[activeTech].icon}
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </div>
           </div>
         </div>
+      </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -524,11 +534,30 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+      {/* Technology Grid */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {technologies.map((tech, index) => (
+          <div
+            key={tech.id}
+            className={`bg-gradient-to-br ${tech.color} text-white p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
+            onClick={() => setActiveTech(index)}
+          >
+            <div className="text-4xl mb-4">{tech.icon}</div>
+            <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
+            <p className="text-sm opacity-90 mb-4">{tech.description}</p>
+            <div className="flex items-center text-sm font-medium">
+              Explore → <span className="ml-2">🚀</span>
+            </div>
+          </div>
+        ))}
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default InteractiveTechShowcase;
 <<<<<<< HEAD
 =======
@@ -677,3 +706,6 @@ export default InteractiveTechShowcase;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+export default InteractiveTechShowcase;
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081

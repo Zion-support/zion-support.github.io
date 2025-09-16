@@ -22,7 +22,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react', 'react-helmet-async'],
+          ui: ['lucide-react', 'react-helmet-async'],
           router: ['react-router-dom']
         }
       }

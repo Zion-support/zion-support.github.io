@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AIFutureTrends2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -22,11 +22,11 @@ const AIFutureTrends2025: React.FC = () => {
             Discover the revolutionary AI trends that will reshape industries, transform businesses, 
             and redefine human-machine interaction in 2025 and beyond.
           </p>
-        </motion.div>
+        </div>
 
         {/* Revolutionary AI Trends */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,9 +44,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Autonomous learning systems</li>
               <li>• Synthetic consciousness emergence</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -64,9 +64,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Smart city optimization</li>
               <li>• Privacy-preserving AI</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -84,9 +84,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Continuous self-improvement</li>
               <li>• Multi-agent collaboration</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -104,9 +104,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Brain-computer symbiosis</li>
               <li>• Cognitive augmentation</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -124,9 +124,9 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Quantum machine learning</li>
               <li>• Complex optimization solving</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
@@ -144,11 +144,11 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Personalized content AI</li>
               <li>• Multi-modal generation</li>
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Industry Impact Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
@@ -192,10 +192,10 @@ const AIFutureTrends2025: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Future Predictions */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
@@ -228,10 +228,10 @@ const AIFutureTrends2025: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
@@ -252,7 +252,7 @@ const AIFutureTrends2025: React.FC = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

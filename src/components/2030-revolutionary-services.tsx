@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
@@ -80,7 +80,7 @@ export default function Revolutionary2030ServicesPage() {
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -92,7 +92,7 @@ export default function Revolutionary2030ServicesPage() {
                 2030 Revolutionary Technology Services
               </span>
             </div>
-          </motion.div>
+          </div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ export default function Revolutionary2030ServicesPage() {
             and quantum computing to space mining and DNA computing, we're building the future today.
           </motion.p>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -133,14 +133,14 @@ export default function Revolutionary2030ServicesPage() {
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
               View Pricing
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Showcase */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -161,12 +161,12 @@ export default function Revolutionary2030ServicesPage() {
               Discover our comprehensive range of cutting-edge 2030 technology services that will 
               transform your business and propel you into the future.
             </p>
-          </motion.div>
+          </div>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             {innovative2030Services.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -239,12 +239,12 @@ export default function Revolutionary2030ServicesPage() {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Call to Action */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -268,14 +268,14 @@ export default function Revolutionary2030ServicesPage() {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -315,7 +315,7 @@ export default function Revolutionary2030ServicesPage() {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

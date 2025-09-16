@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -106,9 +106,9 @@ const AIInnovationHub2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    
       {isVisible && (
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -129,7 +129,7 @@ const AIInnovationHub2025PromotionBanner = () => {
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                 {/* Left Content */}
                 <div className="flex-1 text-center lg:text-left">
-                  <motion.div
+                  <div
                     initial={{ opacity: 0x: -50 }}
                     animate={{ opacity: 1x: 0 }}
                     transition={{ duration: 0.8delay: 0.2 }}
@@ -149,10 +149,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                       Explore 400+ AI innovationstoolsand technologies. From neural networks to quantum AI
                       find everything you need to build the future.
                     </p>
-                  </motion.div>
+                  </div>
 
                   {/* Rotating Innovation Showcase */}
-                  <motion.div
+                  <div
                     key={currentInnovation}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -176,10 +176,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Categories */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8delay: 0.4 }}
@@ -196,10 +196,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         </div>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Stats */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8delay: 0.6 }}
@@ -211,10 +211,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                         <div className="text-sm text-gray-300">{stat.label}</div>
                       </div>
                     ))}
-                  </motion.div>
+                  </div>
 
                   {/* Action Buttons */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8delay: 0.8 }}
@@ -229,11 +229,11 @@ const AIInnovationHub2025PromotionBanner = () => {
                       <Play className="w-5 h-5 mr-2" />
                       Watch Demo
                     </button>
-                  </motion.div>
+                  </div>
                 </div>
 
                 {/* Right Content - Visual */}
-                <motion.div
+                <div
                   initial={{ opacity: 0x: 50 }}
                   animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.8delay: 0.4 }}
@@ -286,23 +286,23 @@ const AIInnovationHub2025PromotionBanner = () => {
                     </div>
 
                     {/* Floating Elements */}
-                    <motion.div
+                    <div
                       animate={{ y: [0-10] }}
                       transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
                       className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                     >
                       <Award className="w-8 h-8 text-white" />
-                    </motion.div>
+                    </div>
                     
-                    <motion.div
+                    <div
                       animate={{ y: [010] }}
                       transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 }}
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center"
                     >
                       <Sparkles className="w-6 h-6 text-white" />
-                    </motion.div>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
 
@@ -317,9 +317,9 @@ const AIInnovationHub2025PromotionBanner = () => {
 
           {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600" />
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 

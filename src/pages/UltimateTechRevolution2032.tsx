@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Zap, Brain, Globe, Rocket, Shield, Cpu, Database } from 'lucide-react';
 
 const UltimateTechRevolution2032: React.FC = () => {
@@ -53,7 +53,7 @@ const UltimateTechRevolution2032: React.FC = () => {
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -66,29 +66,29 @@ const UltimateTechRevolution2032: React.FC = () => {
               The future is now, and it's beyond imagination.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
               >
                 Begin Transformation <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Explore Innovations
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Innovations Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -100,11 +100,11 @@ const UltimateTechRevolution2032: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the groundbreaking innovations that will reshape reality itself
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ const UltimateTechRevolution2032: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -138,7 +138,7 @@ const UltimateTechRevolution2032: React.FC = () => {
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -150,14 +150,14 @@ const UltimateTechRevolution2032: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join the pioneers of tomorrow's technology. Experience innovations that transcend the boundaries of reality itself.
             </p>
-            <motion.button
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-purple-600 to-blue-600 px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 mx-auto hover:shadow-lg hover:shadow-purple-500/25 transition-all"
             >
               Transform Your Reality <ArrowRight className="w-6 h-6" />
-            </motion.button>
-          </motion.div>
+            </button>
+          </div>
         </div>
       </section>
     </div>
