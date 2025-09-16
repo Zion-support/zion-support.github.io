@@ -32,31 +32,53 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
       description: "Revolutionary AI consciousness and quantum neural networks transforming enterprise operations",
       link: "/blog/ai-2026-next-generation-autonomous-systems-ultimate-breakthrough",
       gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-600/20 to-pink-600/20"
+      bgGradient: "from-purple-600/20 to-pink-600/20",
+      badge: "NEW"
     },
     {
       icon: Bot,
       title: "Quantum AI Business Transformation Guide",
       description: "The ultimate guide to implementing quantum AI for 500% ROI and market leadership",
-      link: "/blog/quantum-ai-2026-business-transformation-guide",
+      link: "/quantum-ai-business-transformation-2026",
       gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-600/20 to-cyan-600/20"
+      bgGradient: "from-blue-600/20 to-cyan-600/20",
+      badge: "HOT"
     },
     {
       icon: Zap,
       title: "Enterprise Quantum AI Success Story",
       description: "How a Fortune 500 company achieved 400% ROI with quantum consciousness AI",
-      link: "/case-studies/enterprise-quantum-ai-transformation-2026",
+      link: "/enterprise-quantum-ai-transformation-2026",
       gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-600/20 to-emerald-600/20"
+      bgGradient: "from-green-600/20 to-emerald-600/20",
+      badge: "CASE STUDY"
     },
     {
       icon: TrendingUp,
       title: "Quantum Consciousness Implementation Master Guide",
       description: "Step-by-step guide to implementing quantum consciousness AI systems",
-      link: "/resources/ai-2026-quantum-consciousness-implementation-master-guide",
+      link: "/quantum-consciousness-implementation-guide-2026",
       gradient: "from-orange-500 to-red-500",
-      bgGradient: "from-orange-600/20 to-red-600/20"
+      bgGradient: "from-orange-600/20 to-red-600/20",
+      badge: "GUIDE"
+    },
+    {
+      icon: Star,
+      title: "AI 2026 Latest Breakthroughs",
+      description: "Discover the most revolutionary AI breakthroughs that are reshaping the future of business",
+      link: "/ai-2026-latest-breakthroughs",
+      gradient: "from-indigo-500 to-purple-500",
+      bgGradient: "from-indigo-600/20 to-purple-600/20",
+      badge: "BREAKTHROUGH"
+    },
+    {
+      icon: Rocket,
+      title: "Ultimate AI Transformation Playbook",
+      description: "Complete roadmap for transforming your business with next-generation AI technologies",
+      link: "/ultimate-ai-transformation-playbook",
+      gradient: "from-pink-500 to-rose-500",
+      bgGradient: "from-pink-600/20 to-rose-600/20",
+      badge: "PLAYBOOK"
     }
   ];
 
@@ -103,10 +125,10 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
           <div className="flex items-center justify-between">
             {/* Content Section */}
             <div className="flex items-center space-x-6 flex-1">
-              {/* New Badge */}
+              {/* Dynamic Badge */}
               <div className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 px-3 py-1 rounded-full">
-                <Sparkles className="w-4 h-4 text-white mr-2" />
-                <span className="text-white text-sm font-semibold">NEW</span>
+                <Sparkles className="w-4 h-4 text-white mr-2 animate-pulse" />
+                <span className="text-white text-sm font-semibold">{newContent[currentSlide].badge}</span>
               </div>
 
               {/* Content Carousel */}
@@ -118,10 +140,10 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
                     transition={{ duration: 0.5 }}
-                    className="flex items-center space-x-4 cursor-pointer"
+                    className="flex items-center space-x-4 cursor-pointer hover:bg-white/5 p-2 rounded-lg transition-all duration-300"
                     onClick={() => handleContentClick(newContent[currentSlide].link)}
                   >
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${newContent[currentSlide].gradient} p-3 flex-shrink-0`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${newContent[currentSlide].gradient} p-3 flex-shrink-0 hover:scale-110 transition-transform duration-300`}>
                       <newContent[currentSlide].icon className="w-6 h-6 text-white" />
                     </div>
                     
@@ -165,10 +187,10 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentSlide 
-                    ? 'bg-purple-400 w-8' 
-                    : 'bg-gray-600 hover:bg-gray-500'
+                    ? 'bg-purple-400 w-8 shadow-lg shadow-purple-400/50' 
+                    : 'bg-gray-600 hover:bg-gray-500 w-2'
                 }`}
               />
             ))}
