@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 8001,
+    title: "AI 2026: Agent Posture Management — Executive Guide",
+    excerpt: "Continuously assess and harden agent systems with evidence-led posture metrics.",
+    content: "Agent Posture Management brings together safety, reliability, security, and cost signals into a single posture score that leaders can act on. This guide covers defining posture dimensions, wiring live eval gates, mapping incidents to posture deltas, and enforcing change policies when posture degrades. Includes a minimal posture scorecard and dashboard schema you can adopt today.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Posture", "Evals", "Evidence", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/agent-posture-management-2026.jpg",
+    slug: "ai-2026-agent-posture-management"
+  },
+  {
+    id: 8002,
+    title: "AI 2026: Trusted RAG — Guardrailed Retrieval That Ships",
+    excerpt: "Blueprint for grounded, monitored, and budget-aware RAG with rollbacks that work.",
+    content: "Trusted RAG aligns retrieval quality with safety and cost. We detail policy‑guarded retrieval, freshness windows, semantic drift monitors, and online groundedness evals wired to release scorecards. Learn how to block risky merges, canary safely, and roll back deterministically when signals breach.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "RAG",
+    tags: ["RAG", "Guardrails", "Groundedness", "Cost"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-guardrailed-retrieval-2026.jpg",
+    slug: "ai-2026-trusted-rag-guardrailed-retrieval"
+  },
+  {
     id: 7001,
     title: "AI 2026: Governed Tool Use Case Studies",
     excerpt: "Real incidents and fixes: approvals, risk tiers, and runtime checks that work.",

@@ -586,6 +586,38 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Promo: Agent Posture Management (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Posture Management — Executive Guide</h2>
+              <p className="text-gray-600 mt-2">Continuously assess safety, reliability, security, and cost with evidence-led posture scores.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agent-posture-management" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Guide</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Trusted RAG (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Trusted RAG — Guardrailed Retrieval That Ships</h2>
+              <p className="text-gray-600 mt-2">Groundedness evals, freshness windows, and rollback contracts wired to scorecards.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-trusted-rag-guardrailed-retrieval" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Risk Metrics + Governed Tool Use + Starter Kit (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
