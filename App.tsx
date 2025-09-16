@@ -244,6 +244,11 @@ import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnolo
 import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
 import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
 import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryContentCarousel2036';
+import NextGenAIConsciousness2025 from './src/pages/NextGenAIConsciousness2025';
+import QuantumRealityEngine2025 from './src/pages/QuantumRealityEngine2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -611,6 +616,12 @@ export default function App(): JSX.Element {
                     <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧬 ULTIMATE: Neural Interface 2025 →
                     </a>
+                    <a href="/pages/NextGenAIConsciousness2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 BREAKTHROUGH: AI Consciousness 2025 →
+                    </a>
+                    <a href="/pages/QuantumRealityEngine2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚛️ REVOLUTIONARY: Quantum Reality 2025 →
+                    </a>
                   </div>
                 </div>
 
@@ -685,6 +696,11 @@ export default function App(): JSX.Element {
                 {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Technology Content */}
                 <div className="mb-12">
                   <UltimateContentShowcase2025 />
+                </div>
+
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
+                <div className="mb-12">
+                  <RevolutionaryTechBanner2025 />
                 </div>
 
                 {/* Revolutionary Content Showcase */}
@@ -1201,6 +1217,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+          <Route path="/pages/NextGenAIConsciousness2025" element={<NextGenAIConsciousness2025 />} />
+          <Route path="/pages/QuantumRealityEngine2025" element={<QuantumRealityEngine2025 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
