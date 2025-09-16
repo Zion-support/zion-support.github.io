@@ -131,4 +131,19 @@
     "tags": ["evals", "case-study", "operations"],
     "source": "Zion AI Lab"
   }
+  ,
+  {
+    "title": "Operational Risk Scorecards for Production Agents",
+    "url": "/reports/ai-lab/articles/new-operational-risk-scorecards-1758056400000.md",
+    "createdAt": "2025-09-16T15:00:00.000Z",
+    "tags": ["governance", "reliability", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Real‑Time Guardrail Metrics for Safer Tool‑Use",
+    "url": "/reports/ai-lab/articles/real-time-guardrail-metrics-1758060000000.md",
+    "createdAt": "2025-09-16T16:00:00.000Z",
+    "tags": ["safety", "observability", "metrics"],
+    "source": "Zion AI Lab"
+  }
 ]
