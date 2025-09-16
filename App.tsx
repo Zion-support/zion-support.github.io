@@ -93,6 +93,11 @@ import RevolutionaryContentBanner2027 from './src/components/RevolutionaryConten
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
 import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanner2030';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
@@ -256,6 +261,9 @@ export default function App(): JSX.Element {
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
                 
+                {/* NEW: New Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
+                
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
                 
@@ -380,11 +388,17 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+                    <a href="/pages/AIInnovationHub2025" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🤖 NEW: AI Innovation Hub 2025 →
+                    </a>
                     <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌟 NEW: Revolutionary Tech Showcase 2025 →
                     </a>
-                    <a href="/pages/AISolutionsComprehensive2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
-                      🤖 NEW: AI Solutions Comprehensive 2025 →
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-indigo-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🧠 NEW: Ultimate Tech Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: Comprehensive Services 2025 →
                     </a>
                     <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🚀 ULTIMATE: Tech Revolution 2025 →
@@ -1082,11 +1096,13 @@ export default function App(): JSX.Element {
             </div>
           } />
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
+          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
           <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
-          <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
           <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
           <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
           <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
