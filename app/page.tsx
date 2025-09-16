@@ -76,10 +76,13 @@ import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomati
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+<<<<<<< HEAD
 
 // Import new 2026 content promotional components
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -729,10 +732,13 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* New Content 2026 Promotional Banners */}
         <NewContent2026UltimateBanner />
         <AI2026ContentShowcaseBanner />
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
