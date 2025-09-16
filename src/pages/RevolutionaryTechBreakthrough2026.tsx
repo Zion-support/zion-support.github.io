@@ -70,7 +70,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
     { label: "Dimensional Reach", value: "11D", description: "Computing across dimensions" }
   ];
 
-const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -214,9 +213,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
               🚀 Get Early Access
-
-const RevolutionaryTechBreakthrough2026: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -284,10 +280,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
               <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-lg opacity-80">Continuous Innovation</div>
             </motion.div>
-          </div>
-        </div>
-      </div>
-
           </div>
         </div>
       </div>

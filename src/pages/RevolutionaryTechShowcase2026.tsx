@@ -1,8 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const RevolutionaryTechShowcase2026: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <Helmet>
         <title>Revolutionary Tech Showcase 2026 | Zion Tech Group</title>
@@ -184,18 +180,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
-          <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Don't just read about the future - experience it. Join us for an exclusive demonstration 
-            of the most revolutionary technologies ever created.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Book Your Demo
-            </button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-colors font-semibold text-lg">
-              Download Brochure
             </button>
           </div>
         </div>

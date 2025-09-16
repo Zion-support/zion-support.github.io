@@ -2,15 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const UltimateTechRevolution2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE REVOLUTION • 2026
-
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
@@ -223,24 +214,11 @@ const UltimateTechRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Be part of the most significant technological advancement in human history. 
             Transform your future with our revolutionary solutions.
-          <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Ultimate Tech Revolution 2026
-          </h1>
-          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
-            The most advanced technological revolution in human history. Experience the convergence 
-            of quantum computing, neural interfaces, and consciousness transfer that will redefine 
-            what it means to be human.
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
-      {/* Interactive Demo Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">🚀 Experience the Ultimate Revolution</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Try our interactive demonstrations of the ultimate technology convergence
           </p>
           
           <div className="grid md:grid-cols-4 gap-6 mb-8">

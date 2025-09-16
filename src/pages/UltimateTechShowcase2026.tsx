@@ -3,7 +3,6 @@ import React from 'react';
 const UltimateTechShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -13,12 +12,6 @@ const UltimateTechShowcase2026: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE SHOWCASE • 2026
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE SHOWCASE • 2026
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎯 ULTIMATE SHOWCASE • 2026 EDITION
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE SHOWCASE • 2026
           </div>
@@ -153,11 +146,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </ul>
             <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind & Machine →
-            </a>
-            </a>
-          </div>
-        </div>
-
             </button>
             </a>
         {/* Revolutionary Stats */}
@@ -293,7 +281,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Connect Mind & Machine →
             </button>
-            </button>
           </div>
         </div>
 
@@ -309,13 +296,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold">
               Contact Us
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join the technological revolution and be part of the most advanced era in human history
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey →
             </button>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/ConsciousnessAI2026" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-4 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-xl">
@@ -323,10 +303,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
           </div>
           </div>
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
           </div>
         <div className="container mx-auto px-4 py-20">
           <div

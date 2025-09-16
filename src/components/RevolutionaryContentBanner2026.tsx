@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import React, { useState, useEffect } from 'react';
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 
@@ -62,12 +60,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [contentSlides.length]);
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
     }, 5000);
@@ -84,13 +76,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
             <h3 className="text-3xl font-bold">REVOLUTIONARY CONTENT 2026</h3>
             <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-  return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2026
           </div>
           <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
           <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
@@ -278,22 +263,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             <div className="text-3xl font-bold text-emerald-400">24/7</div>
             <div className="text-sm text-gray-300">Content Updates</div>
           </div>
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {contentSlides.map((slide, index) => (
-          <a
-            key={slide.id}
-            href={slide.link}
-            className={`bg-gradient-to-r ${slide.gradient} text-white p-6 rounded-lg hover:scale-105 transition-all duration-300 text-center ${
-              index === currentSlide ? 'ring-4 ring-white/50' : ''
-            }`}
-          >
-            <div className="text-3xl mb-2">{slide.icon}</div>
-            <h4 className="font-bold text-sm mb-2">{slide.title}</h4>
-            <p className="text-xs opacity-90">{slide.description}</p>
-          </a>
         </div>
       </div>
     </div>
