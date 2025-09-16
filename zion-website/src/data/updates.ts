@@ -10,6 +10,35 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Fresh content (2025-09-16 - newly added set)
+    {
+        title: 'Launch: Agent Safety Center v1.0',
+        summary: 'Unified hub for guardrails, eval gates, and signed evidence in one place.',
+        href: '/updates/agent-safety-center-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Agent Change Windows (2026)',
+        summary: 'Plan, gate, and verify agent changes with SLOs, evals, and rollback criteria.',
+        href: '/updates/production-agent-change-windows-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Evidence Ledger for AI Systems',
+        summary: 'Tamper‑evident ledger of artifacts, policies, eval signals, and lineage.',
+        href: '/updates/evidence-ledger-for-ai-systems-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Report: Agent Posture Trends Q3 2025',
+        summary: 'Top risks, common violations, and control effectiveness across enterprise agents.',
+        href: '/updates/agent-posture-trends-q3-2025',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
     // New blog content (2025-09-16)
     {
         title: 'Blueprint: Agent Posture Scorecards (2026)',

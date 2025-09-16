@@ -121,6 +121,18 @@ export default function HomePage() {
             Incident Simulation Toolkit v1.1 —
             <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Agent Safety Center —
+            <a href="/updates/agent-safety-center-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Production Agent Change Windows —
+            <a href="/updates/production-agent-change-windows-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence Ledger for AI Systems —
+            <a href="/updates/evidence-ledger-for-ai-systems-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Posture Trends Q3 2025 —
+            <a href="/updates/agent-posture-trends-q3-2025" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new report</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Latest from AI Lab —
