@@ -137,6 +137,12 @@ import RevolutionaryContentBanner2037 from './src/components/RevolutionaryConten
 import UltimateContentBanner2038 from './src/components/UltimateContentBanner2038';
 import InteractiveTechShowcase2037 from './src/components/InteractiveTechShowcase2037';
 import RevolutionaryContentCarousel2037 from './src/components/RevolutionaryContentCarousel2037';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import ModernServiceShowcase2025 from './src/components/ModernServiceShowcase2025';
+import AnimatedContentCarousel2025 from './src/components/AnimatedContentCarousel2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import RevolutionaryTechBreakthrough2037 from './src/pages/RevolutionaryTechBreakthrough2037';
 import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
@@ -166,6 +172,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
@@ -388,6 +397,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/ComprehensiveServices2036" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Services 2036 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Revolutionary Tech 2025 →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Innovation Hub 2025 →
                     </a>
                     <a href="/pages/RevolutionaryTechBreakthrough2037" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Revolutionary Breakthrough 2037 →
@@ -830,6 +845,21 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2035 />
                 </div>
 
+                {/* Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
+                {/* Modern Service Showcase 2025 */}
+                <div className="mb-12">
+                  <ModernServiceShowcase2025 />
+                </div>
+
+                {/* Animated Content Carousel 2025 */}
+                <div className="mb-12">
+                  <AnimatedContentCarousel2025 />
+                </div>
+
                 {/* Interactive Technology Showcase 2037 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2037 />
@@ -956,6 +986,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2035" element={<RevolutionaryTechBlog2035 />} />
           <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
           <Route path="/pages/ComprehensiveServices2036" element={<ComprehensiveServices2036 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2037" element={<RevolutionaryTechBreakthrough2037 />} />
           <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
