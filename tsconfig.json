@@ -16,38 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-<<<<<<< HEAD
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-<<<<<<< HEAD
-  "include": [
-    "src/**/*",
-    "src/types/offline-shims.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "tailwind.config.js",
-    "postcss.config.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "coverage"
-  ]
-}
-=======
-  "include": ["src", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-}
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
     "types": ["vite/client", "node"]
   },
   "include": ["**/*"],
