@@ -25,4 +25,8 @@ export default function Page() {
     </div>
   )
 }
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-e7ba

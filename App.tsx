@@ -86,6 +86,7 @@ import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevoluti
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import AIExecutiveStrategy2026 from './src/pages/AIExecutiveStrategy2026';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
@@ -1385,6 +1386,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/pages/AIExecutiveStrategy2026" element={<AIExecutiveStrategy2026 />} />
           <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
           <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
           <Route path="/pages/RevolutionaryTechShowcase2028" element={<RevolutionaryTechShowcase2028 />} />

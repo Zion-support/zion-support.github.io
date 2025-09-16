@@ -2,6 +2,76 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+	title: 'AI 2026: Production Evidence Hub — Blueprint',
+	description:
+		'Centralize evals, incidents, approvals, and KPIs to enable audit‑ready, gate‑driven operations for autonomous agents.',
+};
+
+export default function ProductionEvidenceHubBlueprintPage() {
+	return (
+		<div className="min-h-screen bg-white">
+			<header className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+				<div className="max-w-4xl mx-auto px-6 py-12">
+					<h1 className="text-3xl md:text-5xl font-bold">Production Evidence Hub — Blueprint</h1>
+					<p className="mt-3 text-emerald-100/90">
+						Unify evaluations, incidents, approvals, and KPIs to power audit‑ready, evaluation‑gated operations.
+					</p>
+				</div>
+			</header>
+			<main className="max-w-4xl mx-auto px-6 py-10">
+				<section className="prose prose-lg max-w-none">
+					<h2>Why an Evidence Hub?</h2>
+					<p>
+						As enterprises adopt autonomous agents, proving safety, quality, and compliance becomes a continuous
+						requirement. A centralized Evidence Hub brings together evaluation results, runbooks, approvals, incidents,
+						and SLOs so every release and action can be justified and audited.
+					</p>
+					<h2>Core Capabilities</h2>
+					<ul>
+						<li>Evaluation registry with scenario suites, metrics, thresholds, and baselines</li>
+						<li>Policy‑as‑code gates for progressive delivery and safe tool use</li>
+						<li>Incident timelines with linked evidence, mitigations, and postmortems</li>
+						<li>Change approvals with attached eval scorecards and rollback plans</li>
+						<li>Operational KPIs and SLOs for reliability, safety, and cost</li>
+					</ul>
+					<h2>Reference Architecture</h2>
+					<p>
+						Implement the hub as a service with an API and UI. Ingest evaluation artifacts from CI/CD and runtime,
+						store structured records, and expose signed links for auditors. Use webhooks to block or allow promotions
+						based on policy gates.
+					</p>
+					<h2>Adoption Steps</h2>
+					<ol>
+						<li>Inventory current evaluations and define minimum bars</li>
+						<li>Model evidence schemas (evals, incidents, approvals, KPIs)</li>
+						<li>Integrate CI/CD and runtime emitters</li>
+						<li>Codify gates for high‑risk changes and tool permissions</li>
+						<li>Roll out dashboards and audit workflows</li>
+					</ol>
+				</section>
+				<section className="mt-10 p-6 bg-emerald-50 border border-emerald-100 rounded-xl">
+					<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+						<div>
+							<h3 className="text-xl font-bold text-gray-900">Get the Evaluation Hub Starter</h3>
+							<p className="text-gray-600 mt-1">Schemas, policies, and runbooks to launch your hub faster.</p>
+						</div>
+						<Link
+							href="/content/ai-2026-evaluation-hub-starter"
+							className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700"
+						>
+							Download Kit
+						</Link>
+					</div>
+				</section>
+			</main>
+		</div>
+	);
+}
+
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
   title: 'AI 2026: Production Evidence Hub — Blueprint',
   description:
     'Centralize evals, traces, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.',

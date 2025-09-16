@@ -509,36 +509,34 @@ content_index:
         coverage: "> 70% initial"
         gate_pass_rate: "> 95%"
         audit_ready: true
-    - id: "ai-2026-reliable-agent-upgrades-blueprint"
+    - id: "ai-2026-eval-gated-ci-cd-blueprint"
       type: "blog"
-      title: "AI 2026: Reliable Agent Upgrades — Canary Scorecards and Rollback Contracts"
-      file_path: "/content/blog/ai-2026-reliable-agent-upgrades-blueprint.md"
-      url: "/blog/ai-2026-reliable-agent-upgrades-blueprint"
+      title: "AI 2026: Eval‑Gated CI/CD Blueprint — Shipping Fast Without Breaking Things"
+      file_path: "/content/blog/ai-2026-eval-gated-ci-cd-blueprint.md"
+      url: "/blog/ai-2026-eval-gated-ci-cd-blueprint"
       status: "published"
       created: "2025-09-16"
-      tags: ["Change Management", "Progressive Delivery", "Evaluations", "Reliability", "Governance", "2026"]
+      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "2026"]
       featured: true
       is_new: true
-      reading_time: "14 min read"
       metrics:
-        change_failure_rate: "< 3%"
-        rollback_time: "< 5 min"
         gate_pass_rate: "> 95%"
-    - id: "ai-2026-release-scorecards-starter-kit"
-      type: "resource"
-      title: "AI 2026: Release Scorecards — Starter Kit"
-      file_path: "/content/resources/ai-2026-release-scorecards-starter-kit.md"
-      url: "/resources/ai-2026-release-scorecards-starter-kit"
+        rollback_time: "< 5 min"
+        change_failure_rate: "< 3%"
+    - id: "ai-2026-agentic-observability-deep-dive"
+      type: "blog"
+      title: "AI 2026: Agentic Observability Deep Dive — Traces, Evals, and Safety Telemetry"
+      file_path: "/content/blog/ai-2026-agentic-observability-deep-dive.md"
+      url: "/blog/ai-2026-agentic-observability-deep-dive"
       status: "published"
       created: "2025-09-16"
-      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "Tooling", "2026"]
+      tags: ["Observability", "Agents", "Evals", "Safety", "2026"]
       featured: true
       is_new: true
-      reading_time: "10 min read"
       metrics:
+        latency_p95: "< 600ms"
+        citation_density: "> 0.9"
         audit_ready: true
-        coverage: "> 70% initial"
-        rollback_time: "< 5 min"
 =======
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"
