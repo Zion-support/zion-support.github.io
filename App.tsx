@@ -162,6 +162,12 @@ import RevolutionaryContentBanner2027 from './src/components/RevolutionaryConten
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
 import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanner2030';
+import UltimateTechRevolutionBanner2025 from './src/components/UltimateTechRevolutionBanner2025';
+import RevolutionaryBreakthroughBanner2026 from './src/components/RevolutionaryBreakthroughBanner2026';
+import RevolutionaryCaseStudiesBanner2026 from './src/components/RevolutionaryCaseStudiesBanner2026';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
+import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
 import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
@@ -633,11 +639,17 @@ export default function App(): JSX.Element {
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
                 
+                {/* NEW: Ultimate Tech Revolution Banner 2025 - Latest Revolutionary Content */}
+                <UltimateTechRevolutionBanner2025 />
+                
                 {/* NEW: Revolutionary Breakthrough Banner 2026 */}
                 <RevolutionaryBreakthroughBanner2026 />
                 
                 {/* NEW: Revolutionary Case Studies Banner 2026 */}
                 <RevolutionaryCaseStudiesBanner2026 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 - Latest Interactive Features */}
+                <InteractiveTechShowcase2025 />
                 
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
