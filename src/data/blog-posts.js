@@ -420,7 +420,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -1137,119 +1136,8 @@ export const blogPosts = [
     readTime: "13 min read",
     category: "Temporal AI",
     tags: ["Temporal AI", "Time Computing", "Causality", "Temporal Optimization"],
-=======
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
-=======
-    imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
-    slug: "next-gen-innovation-hub-future-born"
-  },
-  {
-    id: 44,
-    title: "Metaverse Business Revolution: The New Digital Economy",
-    excerpt: "How businesses are leveraging metaverse technologies to create immersive customer experiences and new revenue streams.",
-    content: "The metaverse represents the next frontier in digital business, offering unprecedented opportunities for customer engagement, virtual commerce, and immersive experiences. Companies are building virtual storefronts, hosting digital events, and creating persistent digital worlds that blur the line between physical and virtual reality. This transformation is creating entirely new business models and revenue streams that were impossible just years ago.",
-    author: "Dr. Alex Chen",
-    authorRole: "Metaverse Strategy Director",
-    publishDate: "2025-01-17",
-    readTime: "11 min read",
-    category: "Metaverse Technology",
-    tags: ["Metaverse", "Digital Economy", "Virtual Commerce", "Immersive Tech"],
-    featured: true,
-    imageUrl: "/images/blog/metaverse-business-revolution-2025.jpg",
-    slug: "metaverse-business-revolution-new-digital-economy"
-  },
-  {
-    id: 45,
-    title: "Autonomous AI Agents: The Future of Work",
-    excerpt: "Revolutionary AI agents that can manage entire departments, make strategic decisions, and drive business innovation autonomously.",
-    content: "Autonomous AI agents represent the pinnacle of artificial intelligence, capable of independent decision-making, strategic planning, and complex problem-solving. These agents can manage entire departments, optimize workflows, and drive innovation without human intervention. They're transforming how we work, making businesses more efficient and productive than ever before.",
-    author: "Dr. Maria Rodriguez",
-    authorRole: "AI Autonomy Research Lead",
-    publishDate: "2025-01-18",
-    readTime: "13 min read",
-    category: "AI & Machine Learning",
-    tags: ["Autonomous AI", "Workplace Innovation", "Strategic Planning", "Productivity"],
-    featured: true,
-    imageUrl: "/images/blog/autonomous-ai-agents-future-work.jpg",
-    slug: "autonomous-ai-agents-future-work"
-  },
-  {
-    id: 46,
-    title: "Blockchain 3.0: Beyond Cryptocurrency",
-    excerpt: "Next-generation blockchain technologies that are revolutionizing industries beyond finance.",
-    content: "Blockchain 3.0 represents a quantum leap in distributed ledger technology, enabling smart contracts, decentralized autonomous organizations, and trustless systems that operate without intermediaries. These technologies are transforming supply chains, healthcare, real estate, and countless other industries, creating new paradigms for trust, transparency, and efficiency.",
-    author: "Dr. James Wilson",
-    authorRole: "Blockchain Innovation Director",
-    publishDate: "2025-01-19",
-    readTime: "10 min read",
-    category: "Blockchain Technology",
-    tags: ["Blockchain 3.0", "Smart Contracts", "Decentralization", "Trust Systems"],
-    featured: false,
-    imageUrl: "/images/blog/blockchain-3-0-beyond-cryptocurrency.jpg",
-    slug: "blockchain-3-0-beyond-cryptocurrency"
-  },
-  {
-    id: 47,
-    title: "Edge Computing Revolution: Computing at the Speed of Thought",
-    excerpt: "How edge computing is bringing AI and processing power to the very edge of networks for instant, real-time responses.",
-    content: "Edge computing is revolutionizing how we process data and run applications by bringing computational power closer to where it's needed. This technology enables real-time AI processing, instant decision-making, and ultra-low latency applications that were previously impossible. From autonomous vehicles to smart cities, edge computing is powering the next generation of connected devices.",
-    author: "Dr. Elena Martinez",
-    authorRole: "Edge Computing Specialist",
-    publishDate: "2025-01-20",
-    readTime: "9 min read",
-    category: "Edge Computing",
-    tags: ["Edge Computing", "Real-time Processing", "Low Latency", "IoT"],
-    featured: true,
-    imageUrl: "/images/blog/edge-computing-revolution-2025.jpg",
-    slug: "edge-computing-revolution-computing-speed-thought"
-  },
-  {
-    id: 48,
-    title: "Digital Twin Technology: Mirror Worlds for Business",
-    excerpt: "How digital twins are creating perfect virtual replicas of physical systems for optimization and prediction.",
-    content: "Digital twin technology creates virtual replicas of physical systems, enabling real-time monitoring, simulation, and optimization. These digital mirrors allow businesses to test scenarios, predict outcomes, and optimize performance without affecting real-world operations. From manufacturing plants to entire cities, digital twins are revolutionizing how we understand and manage complex systems.",
-    author: "Dr. Robert Kim",
-    authorRole: "Digital Twin Architect",
-    publishDate: "2025-01-21",
-    readTime: "12 min read",
-    category: "Digital Twin Technology",
-    tags: ["Digital Twins", "Simulation", "Optimization", "Predictive Analytics"],
-    featured: true,
-    imageUrl: "/images/blog/digital-twin-technology-mirror-worlds.jpg",
-    slug: "digital-twin-technology-mirror-worlds-business"
-  },
-  {
-    id: 49,
-    title: "5G and Beyond: The Connectivity Revolution",
-    excerpt: "How next-generation wireless technologies are enabling the Internet of Everything and transforming connectivity.",
-    content: "5G and beyond represent a fundamental shift in wireless connectivity, enabling ultra-fast speeds, massive device connectivity, and ultra-low latency. These technologies are powering autonomous vehicles, smart cities, and the Internet of Everything, creating a truly connected world where every device can communicate and collaborate seamlessly.",
-    author: "Dr. Lisa Thompson",
-    authorRole: "Wireless Technology Expert",
-    publishDate: "2025-01-22",
-    readTime: "8 min read",
-    category: "Wireless Technology",
-    tags: ["5G", "Connectivity", "IoT", "Smart Cities"],
-    featured: false,
-    imageUrl: "/images/blog/5g-beyond-connectivity-revolution.jpg",
-    slug: "5g-beyond-connectivity-revolution"
-  },
-  {
-    id: 50,
-    title: "Augmented Reality in Business: The Future of Customer Experience",
-    excerpt: "How AR is transforming customer interactions, training, and business operations across industries.",
-    content: "Augmented Reality is revolutionizing business operations by overlaying digital information onto the physical world. From virtual try-ons in retail to AR-assisted maintenance in manufacturing, this technology is enhancing customer experiences, improving training effectiveness, and streamlining operations across every industry.",
-    author: "Dr. Michael Chen",
-    authorRole: "AR Business Solutions Lead",
-    publishDate: "2025-01-23",
-    readTime: "10 min read",
-    category: "Augmented Reality",
-    tags: ["Augmented Reality", "Customer Experience", "Training", "Business Operations"],
-    featured: true,
-    imageUrl: "/images/blog/augmented-reality-business-future.jpg",
-    slug: "augmented-reality-business-future-customer-experience"
->>>>>>> cursor/create-and-deploy-new-content-dbfb
   },
   {
     id: 51,
