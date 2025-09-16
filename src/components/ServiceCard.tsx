@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, Brain } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -21,13 +20,11 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {
   return (
-    <motion.div
+    <divdiv
       className={`relative group cursor-pointer ${
         isCurrent ? 'scale-105' : 'scale-100'
       } transition-transform duration-500`}
       onClick={() => onClick(service)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
@@ -36,9 +33,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
         }
       }}
       aria-label={`Learn more about ${service.name}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -182,13 +176,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
             </div>
           )}
           
-          <motion.div
+          <divdiv
             className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
-            whileHover={{ x: 5 }}
           >
             <span className="text-sm font-medium">Learn More</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Hover Overlay */}
@@ -200,7 +193,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
 
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-    </motion.div>
+    </divdiv>
   );
 };
 

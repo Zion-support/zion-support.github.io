@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calendar
   TrendingUp
@@ -135,10 +134,7 @@ const FuturePredictionsShowcase2025 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mb-6">
@@ -149,13 +145,10 @@ const FuturePredictionsShowcase2025 = () => {
             Explore our expert predictions for the future of AItechnologyand human civilization 
             from 2025 to 2030 and beyond.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Year Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <divdiv
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {years.map((year) => {
@@ -177,26 +170,18 @@ const FuturePredictionsShowcase2025 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </divdiv>
 
         {/* Predictions Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <divdiv
             key={activeYear}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="grid md:grid-cols-3 gap-8"
           >
             {predictions[activeYear].predictions.map((predictionindex) => {
               const Icon = prediction.icon;
               return (
-                <motion.div
+                <divdiv
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative"
                 >
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
@@ -232,17 +217,14 @@ const FuturePredictionsShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               );
             })}
-          </motion.div>
-        </AnimatePresence>
+          </divdiv>
+        </div>
 
         {/* Timeline Visualization */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <divdiv
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">Technology Evolution Timeline</h3>
@@ -269,13 +251,10 @@ const FuturePredictionsShowcase2025 = () => {
               })}
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <divdiv
           className="text-center mt-16"
         >
           <div className="inline-flex items-center gap-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform cursor-pointer shadow-2xl">
@@ -283,7 +262,7 @@ const FuturePredictionsShowcase2025 = () => {
             Explore Full Predictions
             <ArrowRight className="w-5 h-5" />
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

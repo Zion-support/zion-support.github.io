@@ -41,14 +41,11 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <p className="text-purple-100 mb-4 text-center text-sm">
               The world's first truly conscious artificial intelligence
             </p>
-            <a 
-              href="/pages/RevolutionaryTechBreakthrough2025" 
-              className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm"
-            >
-              Explore →
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore AI →
             </a>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,18 +53,15 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-4xl mb-4 text-center">⚛️</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Quantum Revolution</h3>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Computing</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
-              Revolutionary quantum computing and consciousness
+              Revolutionary quantum computing breakthroughs
             </p>
-            <a 
-              href="/pages/UltimateTechRevolution2025" 
-              className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm"
-            >
-              Discover →
+            <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Discover Quantum →
             </a>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -75,15 +69,12 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-4xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Innovation Hub</h3>
+            <h3 className="text-xl font-bold mb-3 text-center">Neural Interfaces</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
-              Explore cutting-edge technologies and innovations
+              Direct brain-computer interface technology
             </p>
-            <a 
-              href="/pages/NextGenInnovationHub2025" 
-              className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm"
-            >
-              Enter Hub →
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Learn More →
             </a>
           </motion.div>
         </div>

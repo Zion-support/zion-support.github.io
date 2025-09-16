@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen
   Play
@@ -208,10 +207,8 @@ const InteractiveAILearningHub2025 = () => {
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium mb-6">
@@ -228,13 +225,11 @@ const InteractiveAILearningHub2025 = () => {
             Learn AI from industry experts with hands-on projectsreal-world case studies
             and interactive content designed for all skill levels.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -267,13 +262,11 @@ const InteractiveAILearningHub2025 = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -293,21 +286,17 @@ const InteractiveAILearningHub2025 = () => {
               </span>
             </button>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Courses Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
+        <divdiv
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <AnimatePresence>
+          <div>
             {filteredCourses.map((course) => (
-              <motion.div
+              <divdiv
                 key={course.id}
-                variants={itemVariants}
-                layout
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Course Thumbnail */}
@@ -436,16 +425,14 @@ const InteractiveAILearningHub2025 = () => {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </divdiv>
 
         {/* Learning Paths Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="mt-20"
         >
           <div className="text-center mb-12">
@@ -517,13 +504,11 @@ const InteractiveAILearningHub2025 = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
@@ -544,7 +529,7 @@ const InteractiveAILearningHub2025 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

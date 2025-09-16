@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
 import React, { useState } from 'react';
+>>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -89,8 +93,13 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
+<<<<<<< HEAD
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
+=======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • 2032
+>>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -115,6 +124,11 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               <span className="mr-2">{tech.icon}</span>
               {tech.title}
             </button>
+<<<<<<< HEAD
+            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Schedule Demo
+            </button>
+=======
           ))}
         </div>
 
@@ -210,6 +224,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2032" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Innovation Hub →
             </a>
+>>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </div>
         </div>
       </div>

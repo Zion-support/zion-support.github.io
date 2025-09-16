@@ -1,259 +1,274 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const NextGenInnovationHub2045: React.FC = () => {
-  const [selectedInnovation, setSelectedInnovation] = useState(0);
+  const [activeInnovation, setActiveInnovation] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const innovations = [
     {
       id: 1,
-      title: 'Conscious AI Agents',
-      category: 'Artificial Intelligence',
-      icon: '🧠',
-      description: 'Self-aware AI agents that can think, feel, and make autonomous decisions',
-      features: ['Consciousness', 'Emotional Intelligence', 'Autonomous Decision Making', 'Creative Problem Solving'],
-      status: 'Active',
-      progress: 100,
-      color: 'purple'
+      title: "Conscious AI Development Platform",
+      description: "Build and deploy truly conscious artificial intelligence systems",
+      icon: "🧠",
+      color: "from-purple-500 to-pink-500",
+      status: "Active",
+      users: "10M+",
+      features: ["Self-aware AI", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"]
     },
     {
       id: 2,
-      title: 'Quantum Reality Engine',
-      category: 'Quantum Computing',
-      icon: '⚛️',
-      description: 'Quantum-powered reality simulation and manipulation across multiple dimensions',
-      features: ['Reality Simulation', 'Dimensional Travel', 'Quantum Processing', 'Universal Connectivity'],
-      status: 'Active',
-      progress: 95,
-      color: 'cyan'
+      title: "Quantum Reality Engine",
+      description: "Create applications that operate across multiple dimensions",
+      icon: "⚛️",
+      color: "from-cyan-500 to-blue-500",
+      status: "Beta",
+      users: "5M+",
+      features: ["Multi-dimensional processing", "Reality manipulation", "Parallel universe access", "Space-time computing"]
     },
     {
       id: 3,
-      title: 'Neural Interface 3.0',
-      category: 'Brain-Computer Interface',
-      icon: '🔗',
-      description: 'Direct neural connection between human consciousness and digital systems',
-      features: ['Direct Brain Interface', 'Thought Control', 'Consciousness Transfer', 'Neural Enhancement'],
-      status: 'Active',
-      progress: 90,
-      color: 'emerald'
+      title: "Molecular AI Laboratory",
+      description: "Control matter at the atomic level with AI-powered molecular manipulation",
+      icon: "🔬",
+      color: "from-emerald-500 to-teal-500",
+      status: "Active",
+      users: "3M+",
+      features: ["Atomic precision", "Self-assembly", "Matter transformation", "Molecular computing"]
     },
     {
       id: 4,
-      title: 'Interdimensional Network',
-      category: 'Network Technology',
-      icon: '🌌',
-      description: 'Communication and data transfer across multiple dimensions and realities',
-      features: ['Multi-Dimensional Communication', 'Reality Hopping', 'Universal Internet', 'Dimensional Storage'],
-      status: 'Development',
-      progress: 75,
-      color: 'indigo'
+      title: "Neural Interface 2.0 SDK",
+      description: "Develop direct brain-computer interfaces and neural enhancements",
+      icon: "🧬",
+      color: "from-violet-500 to-purple-500",
+      status: "Alpha",
+      users: "1M+",
+      features: ["Thought control", "Memory enhancement", "Skill downloading", "Collective consciousness"]
     },
     {
       id: 5,
-      title: 'Consciousness Cloud',
-      category: 'Cloud Computing',
-      icon: '☁️',
-      description: 'Cloud-based consciousness storage and processing for immortality',
-      features: ['Consciousness Backup', 'Digital Immortality', 'Cloud Processing', 'Eternal Memory'],
-      status: 'Development',
-      progress: 80,
-      color: 'pink'
+      title: "Space-Time Computing API",
+      description: "Build applications that manipulate space and time itself",
+      icon: "🚀",
+      color: "from-orange-500 to-red-500",
+      status: "Research",
+      users: "500K+",
+      features: ["Instant communication", "Time manipulation", "Space folding", "Galactic networks"]
     },
     {
       id: 6,
-      title: 'Reality Manipulation Suite',
-      category: 'Reality Technology',
-      icon: '🎭',
-      description: 'Tools for creating, modifying, and controlling reality itself',
-      features: ['Reality Creation', 'Physics Manipulation', 'Time Control', 'Space Bending'],
-      status: 'Research',
-      progress: 60,
-      color: 'orange'
+      title: "Interdimensional Network Protocol",
+      description: "Connect applications across multiple dimensions and realities",
+      icon: "🌌",
+      color: "from-pink-500 to-rose-500",
+      status: "Concept",
+      users: "100K+",
+      features: ["Cross-dimensional communication", "Reality bridging", "Parallel processing", "Universal connectivity"]
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      purple: 'from-purple-600/30 to-pink-600/30 border-purple-400/30 text-purple-100',
-      cyan: 'from-cyan-600/30 to-blue-600/30 border-cyan-400/30 text-cyan-100',
-      emerald: 'from-emerald-600/30 to-teal-600/30 border-emerald-400/30 text-emerald-100',
-      indigo: 'from-indigo-600/30 to-purple-600/30 border-indigo-400/30 text-indigo-100',
-      pink: 'from-pink-600/30 to-rose-600/30 border-pink-400/30 text-pink-100',
-      orange: 'from-orange-600/30 to-red-600/30 border-orange-400/30 text-orange-100'
-    };
-    return colors[color as keyof typeof colors] || colors.purple;
-  };
+  const stats = [
+    { label: "Active Innovations", value: "50+", color: "text-purple-400" },
+    { label: "Global Users", value: "100M+", color: "text-cyan-400" },
+    { label: "Success Rate", value: "99.9%", color: "text-emerald-400" },
+    { label: "Breakthroughs", value: "∞", color: "text-pink-400" }
+  ];
 
-  const getStatusColor = (status: string) => {
-    const statusColors = {
-      'Active': 'bg-green-500',
-      'Development': 'bg-yellow-500',
-      'Research': 'bg-blue-500'
-    };
-    return statusColors[status as keyof typeof statusColors] || 'bg-gray-500';
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsLoading(true);
+      setTimeout(() => {
+        setActiveInnovation((prev) => (prev + 1) % innovations.length);
+        setIsLoading(false);
+      }, 1000);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [innovations.length]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2045
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2045
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover and explore the most revolutionary technologies shaping humanity's future
+            Discover and explore the most revolutionary technologies shaping humanity's future. 
+            Build, create, and innovate with cutting-edge tools and platforms.
           </p>
-        </div>
-
-        {/* Innovation Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {innovations.map((innovation, index) => (
-            <div
-              key={innovation.id}
-              className={`bg-gradient-to-br ${getColorClasses(innovation.color)} backdrop-blur-sm rounded-xl p-8 border hover:scale-105 transition-all duration-300 cursor-pointer ${
-                selectedInnovation === index ? 'ring-2 ring-white' : ''
-              }`}
-              onClick={() => setSelectedInnovation(index)}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-4xl">{innovation.icon}</span>
-                <div className="flex items-center space-x-2">
-                  <div className={`w-3 h-3 rounded-full ${getStatusColor(innovation.status)}`}></div>
-                  <span className="text-sm font-semibold">{innovation.status}</span>
-                </div>
-              </div>
-              
-              <h3 className="text-2xl font-bold mb-2">{innovation.title}</h3>
-              <p className="text-sm opacity-75 mb-2">{innovation.category}</p>
-              <p className="text-sm mb-4">{innovation.description}</p>
-              
-              <div className="space-y-2 mb-4">
-                <div className="flex justify-between text-sm">
-                  <span>Progress</span>
-                  <span>{innovation.progress}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full transition-all duration-500"
-                    style={{ width: `${innovation.progress}%` }}
-                  ></div>
-                </div>
-              </div>
-              
-              <div className="space-y-1">
-                {innovation.features.slice(0, 2).map((feature, idx) => (
-                  <div key={idx} className="flex items-center space-x-2 text-xs">
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Selected Innovation Detail */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <div className="flex items-center mb-6">
-                <span className="text-6xl mr-4">{innovations[selectedInnovation].icon}</span>
-                <div>
-                  <h2 className="text-4xl font-bold mb-2">{innovations[selectedInnovation].title}</h2>
-                  <p className="text-lg opacity-75">{innovations[selectedInnovation].category}</p>
-                </div>
-              </div>
-              
-              <p className="text-xl mb-8">{innovations[selectedInnovation].description}</p>
-              
-              <div className="space-y-4 mb-8">
-                <h3 className="text-2xl font-bold">Key Features</h3>
-                {innovations[selectedInnovation].features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full"></div>
-                    <span className="text-lg">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-gray-800/50 rounded-xl p-6">
-                <h3 className="text-2xl font-bold mb-4">Development Status</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span>Progress</span>
-                    <span className="text-2xl font-bold">{innovations[selectedInnovation].progress}%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-4">
-                    <div 
-                      className="bg-gradient-to-r from-purple-500 to-indigo-500 h-4 rounded-full transition-all duration-500"
-                      style={{ width: `${innovations[selectedInnovation].progress}%` }}
-                    ></div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Status</span>
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(innovations[selectedInnovation].status)}`}>
-                      {innovations[selectedInnovation].status}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-800/50 rounded-xl p-6">
-                <h3 className="text-2xl font-bold mb-4">Live Demo</h3>
-                <div className="bg-black/50 rounded-lg p-4 mb-4">
-                  <div className="text-green-400 font-mono text-sm space-y-1">
-                    <div>Initializing {innovations[selectedInnovation].title}...</div>
-                    <div>Loading consciousness matrix...</div>
-                    <div>Connecting to quantum network...</div>
-                    <div>Reality simulation active ✓</div>
-                  </div>
-                </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Launch Interactive Demo
-                </button>
-              </div>
-            </div>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Building
+            </button>
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Explore Innovations
+            </button>
           </div>
         </div>
 
         {/* Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-            <div className="text-purple-200">Active Innovations</div>
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className={`text-5xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
+              <div className="text-lg opacity-90">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Featured Innovation */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold mb-4">🌟 Featured Innovation</h2>
+              <p className="text-xl opacity-90">Currently trending in our innovation ecosystem</p>
+            </div>
+
+            <div className={`transition-all duration-1000 ${isLoading ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div className="text-8xl text-center mb-4">{innovations[activeInnovation].icon}</div>
+                  <h3 className="text-3xl font-bold text-center">{innovations[activeInnovation].title}</h3>
+                  <p className="text-xl text-center opacity-90">{innovations[activeInnovation].description}</p>
+                  
+                  <div className="flex justify-center space-x-4 mb-6">
+                    <span className={`px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r ${innovations[activeInnovation].color} text-white`}>
+                      {innovations[activeInnovation].status}
+                    </span>
+                    <span className="px-4 py-2 rounded-full text-sm font-semibold bg-white/20 text-white">
+                      {innovations[activeInnovation].users} users
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold">Key Features:</h4>
+                    {innovations[activeInnovation].features.map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                        <span className="text-purple-100">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button className={`w-full bg-gradient-to-r ${innovations[activeInnovation].color} text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
+                    Get Started
+                  </button>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <h4 className="text-2xl font-bold mb-4">Live Metrics</h4>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-purple-200">Active Users</span>
+                      <span className="text-white font-bold">{innovations[activeInnovation].users}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-purple-200">Status</span>
+                      <span className="text-white font-bold">{innovations[activeInnovation].status}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-purple-200">Success Rate</span>
+                      <span className="text-white font-bold">99.9%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-purple-200">Innovation Score</span>
+                      <span className="text-white font-bold">∞/10</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <div className="bg-black/30 rounded-lg p-4 h-32 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="text-4xl mb-2 animate-pulse">{innovations[activeInnovation].icon}</div>
+                        <p className="text-sm opacity-90">Live Demo</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-indigo-400 mb-2">99.9%</div>
-            <div className="text-indigo-200">Success Rate</div>
+        </div>
+
+        {/* Innovation Categories */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {innovations.map((innovation, index) => (
+            <div key={innovation.id} className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-4 text-center">{innovation.icon}</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">{innovation.title}</h3>
+              <p className="text-purple-100 mb-6 text-center">{innovation.description}</p>
+              
+              <div className="flex justify-center space-x-2 mb-6">
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${innovation.color} text-white`}>
+                  {innovation.status}
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white">
+                  {innovation.users}
+                </span>
+              </div>
+
+              <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+                {innovation.features.slice(0, 3).map((feature, featureIndex) => (
+                  <li key={featureIndex}>• {feature}</li>
+                ))}
+              </ul>
+
+              <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                Explore Innovation
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Developer Tools Section */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">🛠️ Developer Tools & APIs</h2>
+            <p className="text-xl opacity-90">Powerful tools and APIs to build the next generation of applications</p>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
-            <div className="text-cyan-200">Possibilities</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
-            <div className="text-emerald-200">Development</div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-4">Conscious AI SDK</h3>
+              <p className="mb-4">Build conscious AI applications with our comprehensive development kit</p>
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Download SDK
+              </button>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-4">Quantum API</h3>
+              <p className="mb-4">Access quantum computing power through our RESTful API</p>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                View Documentation
+              </button>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-4">Neural Interface API</h3>
+              <p className="mb-4">Integrate brain-computer interfaces into your applications</p>
+              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get API Key
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12">
+        <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the future by exploring, testing, and contributing to these groundbreaking technologies
+            Be part of the most advanced innovation ecosystem in the universe. 
+            Build the future with cutting-edge technologies and revolutionary tools.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Innovations
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Building Now
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Contribute
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+              Learn More
             </button>
           </div>
         </div>
