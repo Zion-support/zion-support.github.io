@@ -186,6 +186,10 @@ import UltimateContentBanner2036 from './src/components/UltimateContentBanner203
 import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
 import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarousel2036';
 import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 
 export default function App(): JSX.Element {
   return (
@@ -213,6 +217,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Revolutionary Content Banner 2025 */}
                 <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: New Content Promotion Banner 2025 */}
+                <NewContentPromotionBanner2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
@@ -517,6 +524,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Enhanced Content Carousel 2025 */}
+                <div className="mb-12">
+                  <EnhancedContentCarousel2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
