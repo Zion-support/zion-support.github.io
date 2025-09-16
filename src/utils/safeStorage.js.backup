@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
 // Safe storage utility for browser compatibility
 export const safeStorage = {
   getItem: (key) => {
@@ -39,8 +39,8 @@ export const safeStorage = {
     } catch (error) {
       console.warn('localStorage not available:', error);
       return false;
-=======
->>>>>>> cursor/create-and-deploy-new-content-7857
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-7857
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -150,7 +150,7 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
-<<<<<<< HEAD
+// Conflict resolved
     }
   },
   
@@ -169,10 +169,10 @@ export const safeStorage = {
   
   clear: () => {
     return safeStorage.localStorage.clear();
-=======
->>>>>>> cursor/create-and-deploy-new-content-d952
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-d952
     }
->>>>>>> cursor/create-and-deploy-new-content-7857
+// Conflict resolvedcursor/create-and-deploy-new-content-7857
   }
 };
 
