@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Guide: Agent Reliability — 2026 Blueprint',
+        summary: 'Standardize SLOs, eval gates, and evidence bundles for reliable production agents.',
+        href: '/blog/ai-2026-agent-reliability-blueprint',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
         summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
         href: '/updates/real-time-agent-finops-dashboard-1-0',

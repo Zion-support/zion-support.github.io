@@ -36,8 +36,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Real‑Time Agent FinOps Dashboard v1.0 —
-            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
+            New: Agent Reliability — 2026 Blueprint —
+            <a href="/blog/ai-2026-agent-reliability-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Continuous Agent Evidence Bundles —
             <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read article</a>
@@ -74,8 +74,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Real‑Time Agent FinOps Dashboard v1.0 —
-            <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            Fresh: Agent Reliability — 2026 Blueprint —
+            <a href="/blog/ai-2026-agent-reliability-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Continuous Agent Evidence Bundles —
             <a href="/blog/ai-2026-continuous-agent-evidence-bundles" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blog</a>
