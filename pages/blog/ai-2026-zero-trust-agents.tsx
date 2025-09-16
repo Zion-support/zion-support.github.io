@@ -62,4 +62,3 @@ export default function ZeroTrustAgents2026() {
     </div>
   )
 }
-

@@ -70,4 +70,3 @@ export default function EnterpriseArchitectureModernization2026() {
     </div>
   )
 }
-
