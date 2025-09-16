@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const InteractiveTechDemo2042: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -174,11 +175,14 @@ const InteractiveTechDemo2042: React.FC = () => {
   const startDemo = () => {
     setIsRunning(true);
     setDemoData(demos[activeDemo as keyof typeof demos].data);
->>>>>>> cursor/create-and-deploy-new-content-9df5
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
   };
 
   const stopDemo = () => {
     setIsRunning(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     setProgress(0);
   };
@@ -254,12 +258,15 @@ const InteractiveTechDemo2042: React.FC = () => {
                 }`}
               >
                 {demo.icon} {demo.title}
->>>>>>> cursor/create-and-deploy-new-content-9df5
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
               </button>
             ))}
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Active Demo Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
@@ -400,11 +407,14 @@ const InteractiveTechDemo2042: React.FC = () => {
                         style={{ width: `${typeof value === 'number' ? value : 100}%` }}
                       ></div>
                     </div>
->>>>>>> cursor/create-and-deploy-new-content-9df5
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
                   </div>
                 ))}
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex space-x-4">
                 <button
@@ -471,11 +481,14 @@ const InteractiveTechDemo2042: React.FC = () => {
                   }
                 </div>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-9df5
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Navigation Controls */}
         <div className="flex justify-center space-x-4">
@@ -525,7 +538,9 @@ const InteractiveTechDemo2042: React.FC = () => {
               View Showcase
             </a>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-9df5
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e058
         </div>
       </div>
     </div>
