@@ -13,7 +13,10 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();

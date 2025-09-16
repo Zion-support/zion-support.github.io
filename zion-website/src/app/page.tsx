@@ -202,6 +202,7 @@ const solutions = [
   { name: 'Patents Filed', value: '25+' },
 ]
 
+<<<<<<< HEAD
 const solutions = [
   { name: 'AI Research Assistant', description: 'Autonomous research platform accelerating discovery.', href: '/solutions/ai-autonomous-research' },
   { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
@@ -248,6 +249,14 @@ export default function HomePage() {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
 >>>>>>> cursor/create-and-deploy-new-content-de62
+=======
+export default function HomePage() {
+  const latest = getLatestUpdates(6)
+  return (
+=======
+    <div className="bg-black">
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-0dce
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
