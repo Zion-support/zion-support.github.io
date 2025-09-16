@@ -40,7 +40,6 @@
 
                         {skill}
                       </Badge>;
-=======
                         {skill}
                       </Badge>
                     ))}

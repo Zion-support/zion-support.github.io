@@ -84,7 +84,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
-=======
 import { readOrgData, writeOrgData } from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
 
@@ -128,7 +127,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
     return res.status(200).json({ ok: true });
   }
 

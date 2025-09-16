@@ -164,6 +164,5 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
 </SEOOptimizer>;
 </PerformanceOptimizer>;
 </EnhancedLayoutProps>;
-=======
 </PerformanceOptimizer>
 </EnhancedLayoutProps>

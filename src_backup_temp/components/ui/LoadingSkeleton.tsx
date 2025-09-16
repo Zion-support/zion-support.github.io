@@ -77,7 +77,6 @@ export function TableSkeleton(..."args": an y[]): any {;
         <div className="flex space-x-4">;
           {Array.from({ "length": anycolumn s "}).map((_, index)  => (";
             <Skeleton key={index} className="h-4 flex-1"   />          ))}
-=======
         </div>;
       </div>;
       {/* Rows */}";
@@ -146,7 +145,6 @@ export function GridSkeleton(..."args": an y[]): any {;
 </Skeleton>;
 </div>;
 </motion>;
-=======
     </div>
   )}
 "`

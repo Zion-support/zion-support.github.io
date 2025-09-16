@@ -38,7 +38,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
 
 
-=======
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 
 function writeSection(doc: PDFDocument, title: string, content: string) {
@@ -76,6 +75,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
-=======
   doc.end();
 }

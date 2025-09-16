@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
+<<<<<<< HEAD
+  const [activeTab, setActiveTab] = useState('ai');
+=======
   const [activeTab, setActiveTab] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -61,10 +64,18 @@ const InteractiveTechShowcase2025: React.FC = () => {
           features: ["Organ regeneration", "Anti-aging", "Tissue engineering"]
         }
       ]
+>>>>>>> cursor/create-and-deploy-new-content-de2c
     }
-  ];
+  };
 
   return (
+<<<<<<< HEAD
+          </div>
+        </div>
+
+              Schedule Demo
+            </button>
+=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -166,6 +177,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
+>>>>>>> cursor/create-and-deploy-new-content-de2c
           </div>
         </div>
       </div>
