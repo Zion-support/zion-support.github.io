@@ -60,6 +60,27 @@ export const updates: UpdateItem[] = [
 		tag: 'Case Study',
 	},
 	{
+		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
+		summary: 'Dynamic routing with budgeted quality, latency and spend controls for production.',
+		href: '/updates/real-time-agent-cost-optimizer-2-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Evals‑in‑Prod Best Practices (2026)',
+		summary: 'Canaries, metric gates, auto‑rollbacks, and risk scoring for safe iteration.',
+		href: '/updates/evals-in-prod-best-practices-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Report: Autonomous Failure Analysis Toolkit',
+		summary: 'Trace diffs, evidence bundles, and reproducible post‑mortems for agent incidents.',
+		href: '/updates/autonomous-failure-analysis-toolkit-1-0',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
 		href: '/updates/ai-security-evidence-vault-v1',
