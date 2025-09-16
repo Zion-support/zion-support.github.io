@@ -38,6 +38,8 @@ import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -588,19 +590,20 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
-                {/* Revolutionary New Content Banner */}
-                <RevolutionaryContentBanner />
-                
-                {/* NEW: Revolutionary Content Banner 2026 */}
+                {/* Revolutionary Content Banner 2026 - Latest Technology */}
                 <RevolutionaryContentBanner2026 />
                 
-                {/* NEW: Trending Topics Widget */}
-                <div className="max-w-7xl mx-auto px-4 py-8">
-                  <TrendingTopicsWidget2026 />
-                </div>
+                {/* Revolutionary Services Showcase 2026 */}
+                <RevolutionaryServicesShowcase2026 />
                 
-<<<<<<< HEAD
+                {/* Enhanced Hero Section */}
+                <EnhancedHeroSection />
+                
+                {/* Featured Content Section */}
+                <FeaturedContentSection />
+                
+                {/* Dynamic Content Carousel */}
+                <DynamicContentCarousel />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
