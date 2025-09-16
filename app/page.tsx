@@ -358,8 +358,9 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Gate‑driven releases with canary scorecards, rollback contracts, and audit‑ready evidence.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2026-release-scorecards" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Release Scorecards</Link>
-              <Link href="/resources/ai-2026-release-scorecards-starter-kit" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Scorecards Kit</Link>
+              <Link href="/blog/ai-2026-reliable-agent-upgrades-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Reliable Upgrades</Link>
+              <Link href="/blog/ai-2026-release-scorecards" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Release Scorecards</Link>
+              <Link href="/content/ai-2026-upgrade-runbook-starter-kit" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Upgrade Runbook</Link>
             </div>
           </div>
         </div>
