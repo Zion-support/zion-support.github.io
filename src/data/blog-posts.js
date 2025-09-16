@@ -1,4 +1,7 @@
+import { newBlogPosts2026 } from './newContent2026';
+
 export const blogPosts = [
+  ...newBlogPosts2026,
   {
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
