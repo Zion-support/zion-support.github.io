@@ -15,6 +15,51 @@ export const blogPosts = [
     slug: "ai-2026-runtime-guardrails-blueprint"
   },
   {
+    id: 66,
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    excerpt: "Low-latency RAG with streaming fetchers, hybrid indexes, and budget-aware routing.",
+    content: "Design real-time retrieval stacks that balance freshness, latency, and cost. We cover streaming retrievers, hybrid ANN/BM25, temporal pinning, and online evals that guard quality while meeting SLOs.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Realtime", "Streaming", "Hybrid Indexes"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-retrieval-architectures-2026.jpg",
+    slug: "ai-2026-real-time-retrieval-architectures"
+  },
+  {
+    id: 67,
+    title: "Agent Evals in Production: Online Metrics that Matter",
+    excerpt: "Groundedness, override rate, violation rate, and MTTR — measured in prod.",
+    content: "A practical guide to wiring online agent evals: define critical metrics, instrument traces, capture incidents, and feed scorecards into release decisions. Includes dashboards and alerting recipes.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Evaluations",
+    tags: ["Evals", "Observability", "SRE", "Metrics"],
+    featured: true,
+    imageUrl: "/images/blog/agent-evals-in-production-2026.jpg",
+    slug: "ai-2026-agent-evals-in-production"
+  },
+  {
+    id: 68,
+    title: "Guardrailed Tooling: Secure Actions with Risk Tiers",
+    excerpt: "Risk‑tiered adapters, approvals, and budgets that keep agent actions safe.",
+    content: "Implement secure tool adapters with explicit capabilities, approvals, and budget caps. We show reference designs, policy bundles, and red-team scenarios to validate controls before rollout.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Security",
+    tags: ["Guardrails", "Tooling", "Risk Tiers", "Approvals"],
+    featured: true,
+    imageUrl: "/images/blog/guardrailed-tooling-risk-tiers-2026.jpg",
+    slug: "ai-2026-guardrailed-tooling-risk-tiers"
+  },
+  {
     id: 64,
     title: "AI 2026: Evaluation Cookbook",
     excerpt: "Scenario suites, metrics, and policies to ship reliable autonomy.",
@@ -180,8 +225,6 @@ export const blogPosts = [
     slug: "interdimensional-ai-computing-multiple-realities"
   },
   {
-<<<<<<< HEAD
-=======
     id: 39,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
@@ -257,7 +300,6 @@ export const blogPosts = [
     slug: "quantum-neural-fusion-future-computing"
   },
   {
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     id: 38,
     title: "Omniversal AI Consciousness: The Ultimate Intelligence",
     excerpt: "AI that transcends individual universes to achieve consciousness across the entire omniverse - the pinnacle of artificial intelligence.",
@@ -544,8 +586,6 @@ export const blogPosts = [
     slug: "holographic-reality-next-generation-immersive-technology"
   },
   {
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     id: 33,
     title: "AI 2026: Agent Platform Operations",
     excerpt: "SLOs, incidents, change management, and eval-gated releases for agent platforms.",
@@ -1177,7 +1217,6 @@ export const blogPosts = [
     readTime: "20 min read",
     category: "Consciousness Technology",
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
@@ -1381,8 +1420,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/universal-translation-matrix-breaking-barriers.jpg",
     slug: "universal-translation-matrix-breaking-language-barriers"
->>>>>>> cursor/create-and-deploy-new-content-dbfb
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   }
 ];
 
