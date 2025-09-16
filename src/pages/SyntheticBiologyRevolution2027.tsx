@@ -74,9 +74,32 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Disease eradication</li>
               <li>• Longevity enhancement</li>
             </ul>
+<<<<<<< HEAD
             <a href="#contact" className="inline-block bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Discover Medicine →
             </a>
+=======
+            <button className="w-full bg-white text-emerald-600 py-5 rounded-xl hover:bg-emerald-50 transition-colors font-bold text-xl">
+              Design Organisms →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-3xl p-10 border border-lime-400/40 hover:scale-105 transition-all duration-500">
+            <div className="text-9xl mb-8 text-center animate-pulse">🔬</div>
+            <h3 className="text-3xl font-bold mb-6 text-center text-white">Bio-Manufacturing</h3>
+            <p className="text-lime-200 mb-8 text-center text-xl">
+              Revolutionary manufacturing using living systems to produce complex materials and chemicals
+            </p>
+            <ul className="text-lime-300 space-y-4 mb-10 text-lg">
+              <li className="flex items-center"><span className="mr-3">🏗️</span>Living factories</li>
+              <li className="flex items-center"><span className="mr-3">🧪</span>Bio-synthesis</li>
+              <li className="flex items-center"><span className="mr-3">♻️</span>Sustainable production</li>
+              <li className="flex items-center"><span className="mr-3">🎯</span>Precision engineering</li>
+            </ul>
+            <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
+              Start Bio-Manufacturing →
+            </button>
+>>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
           </div>
         </div>
 

@@ -64,7 +64,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 mb-12">
       {/* Header */}
       <div className="text-center mb-12">
@@ -90,27 +89,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
                 : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
             }`}
-=======
-    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-center mb-16"
-        >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Play className="w-4 h-4" />
-            Interactive Technology Demo 2025
-          </motion.div>
-          
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
->>>>>>> cursor/create-and-deploy-new-content-c963
           >
             <span className="text-2xl">{demo.icon}</span>
             <span>{demo.title}</span>
