@@ -3,237 +3,343 @@ import { motion } from 'framer-motion';
 
 const AdvancedRobotics2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🤖 ADVANCED ROBOTICS 2026
-            </div>
-            <h1 className="text-6xl font-bold text-white mb-6">
-              Next-Generation Robotics Revolution
-            </h1>
-            <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of autonomous robotics with AI-powered systems that learn, adapt, and revolutionize industries
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🤖 ROBOTICS REVOLUTION 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
+            Advanced Robotics 2026
+          </h1>
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Revolutionary robotics solutions that are transforming industries and reshaping the future of work
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="#solutions" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore Solutions →
+            </a>
+            <a href="#contact" className="border-2 border-orange-400 text-orange-400 px-8 py-4 rounded-lg hover:bg-orange-400 hover:text-gray-900 transition-colors font-semibold text-lg">
+              Get Started
+            </a>
+          </div>
+        </motion.div>
 
-      {/* Features Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Robotics Features</h2>
-            <p className="text-xl text-gray-300">Cutting-edge capabilities that define the future of automation</p>
+        {/* Revolutionary Robotics Banner */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-gradient-to-r from-orange-600/20 via-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-orange-400/30 relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-pink-500/10 backdrop-blur-sm"></div>
+          <div className="relative z-10">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                🤖 Revolutionary Robotics Breakthroughs
+              </h2>
+              <p className="text-xl text-gray-200 max-w-4xl mx-auto">
+                Experience the future of robotics with our cutting-edge solutions that are making science fiction a reality
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
+                <div className="text-4xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold mb-3 text-orange-300">AI-Powered Robots</h3>
+                <p className="text-gray-200 text-sm">Autonomous robots with advanced machine learning capabilities</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-red-400/30">
+                <div className="text-4xl mb-4">🦾</div>
+                <h3 className="text-xl font-bold mb-3 text-red-300">Humanoid Robotics</h3>
+                <p className="text-gray-200 text-sm">Life-like humanoid robots for complex human interactions</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
+                <div className="text-4xl mb-4">🏭</div>
+                <h3 className="text-xl font-bold mb-3 text-pink-300">Industrial Automation</h3>
+                <p className="text-gray-200 text-sm">Advanced manufacturing robots for precision production</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Solutions Grid */}
+        <motion.section
+          id="solutions"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+              🤖 Advanced Robotics Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive suite of robotics solutions designed to revolutionize industries and enhance human capabilities
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Learning</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced neural networks enable robots to learn from experience and adapt to new environments autonomously
+            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🧠</div>
+              <h3 className="text-2xl font-bold text-orange-300 mb-4">AI-Powered Autonomous Robots</h3>
+              <p className="text-gray-200 mb-6">
+                Next-generation robots with advanced AI capabilities for autonomous decision-making and complex task execution.
               </p>
-              <ul className="text-purple-200 space-y-2 text-sm">
-                <li>• Deep reinforcement learning</li>
-                <li>• Transfer learning capabilities</li>
-                <li>• Real-time adaptation</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-300">
+                <li>• Machine learning integration</li>
+                <li>• Real-time decision making</li>
+                <li>• Adaptive behavior</li>
+                <li>• Self-learning capabilities</li>
               </ul>
-            </motion.div>
+              <a href="#contact" className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Learn More →
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum Processing</h3>
-              <p className="text-gray-300 mb-6">
-                Quantum-enhanced processing enables unprecedented computational power for complex decision-making
+            <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🦾</div>
+              <h3 className="text-2xl font-bold text-red-300 mb-4">Humanoid Robotics</h3>
+              <p className="text-gray-200 mb-6">
+                Life-like humanoid robots designed for human interaction, service, and complex social environments.
               </p>
-              <ul className="text-cyan-200 space-y-2 text-sm">
-                <li>• Quantum optimization algorithms</li>
-                <li>• Parallel processing capabilities</li>
-                <li>• Exponential speed improvements</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-300">
+                <li>• Human-like movement</li>
+                <li>• Facial expression recognition</li>
+                <li>• Natural language processing</li>
+                <li>• Emotional intelligence</li>
               </ul>
-            </motion.div>
+              <a href="#contact" className="inline-block bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Explore Tech →
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">🦾</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Biomimetic Design</h3>
-              <p className="text-gray-300 mb-6">
-                Nature-inspired robotic systems that mimic biological movement and behavior patterns
+            <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🏭</div>
+              <h3 className="text-2xl font-bold text-pink-300 mb-4">Industrial Automation</h3>
+              <p className="text-gray-200 mb-6">
+                Advanced manufacturing robots for precision production, quality control, and automated assembly lines.
               </p>
-              <ul className="text-emerald-200 space-y-2 text-sm">
-                <li>• Bio-inspired locomotion</li>
-                <li>• Adaptive morphology</li>
-                <li>• Self-healing materials</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-300">
+                <li>• High-precision manufacturing</li>
+                <li>• Quality inspection systems</li>
+                <li>• Collaborative robotics</li>
+                <li>• Predictive maintenance</li>
               </ul>
-            </motion.div>
+              <a href="#contact" className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                View Solutions →
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">🌐</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Swarm Intelligence</h3>
-              <p className="text-gray-300 mb-6">
-                Coordinated robotic swarms that work together to solve complex problems and achieve collective goals
+            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🏥</div>
+              <h3 className="text-2xl font-bold text-blue-300 mb-4">Medical Robotics</h3>
+              <p className="text-gray-200 mb-6">
+                Precision medical robots for surgery, rehabilitation, and patient care with enhanced accuracy and safety.
               </p>
-              <ul className="text-orange-200 space-y-2 text-sm">
-                <li>• Distributed decision making</li>
-                <li>• Emergent behavior patterns</li>
-                <li>• Scalable coordination</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-300">
+                <li>• Surgical precision</li>
+                <li>• Minimally invasive procedures</li>
+                <li>• Rehabilitation assistance</li>
+                <li>• Patient monitoring</li>
               </ul>
-            </motion.div>
+              <a href="#contact" className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Discover More →
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">🔬</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Precision Engineering</h3>
-              <p className="text-gray-300 mb-6">
-                Ultra-precise robotic systems capable of micro and nano-scale operations with unprecedented accuracy
+            <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🌱</div>
+              <h3 className="text-2xl font-bold text-green-300 mb-4">Agricultural Robotics</h3>
+              <p className="text-gray-200 mb-6">
+                Smart farming robots for precision agriculture, crop monitoring, and automated harvesting systems.
               </p>
-              <ul className="text-pink-200 space-y-2 text-sm">
-                <li>• Nanometer precision</li>
-                <li>• Micro-manipulation</li>
-                <li>• Quantum sensing</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-300">
+                <li>• Precision farming</li>
+                <li>• Crop monitoring</li>
+                <li>• Automated harvesting</li>
+                <li>• Soil analysis</li>
               </ul>
-            </motion.div>
+              <a href="#contact" className="inline-block bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Learn More →
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">🛡️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Autonomous Safety</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced safety systems with predictive analytics and fail-safe mechanisms for secure operation
+            <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🚗</div>
+              <h3 className="text-2xl font-bold text-purple-300 mb-4">Autonomous Vehicles</h3>
+              <p className="text-gray-200 mb-6">
+                Self-driving vehicles and drones with advanced navigation, obstacle avoidance, and route optimization.
               </p>
-              <ul className="text-indigo-200 space-y-2 text-sm">
-                <li>• Predictive safety algorithms</li>
-                <li>• Real-time risk assessment</li>
-                <li>• Autonomous emergency response</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-300">
+                <li>• Autonomous navigation</li>
+                <li>• Obstacle detection</li>
+                <li>• Route optimization</li>
+                <li>• Safety systems</li>
               </ul>
-            </motion.div>
+              <a href="#contact" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Explore Vehicles →
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Applications Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-900/50 to-cyan-900/50">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Industry Applications</h2>
-            <p className="text-xl text-gray-300">Transforming industries with advanced robotic solutions</p>
+        {/* Technology Features */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="bg-gradient-to-br from-orange-600/20 via-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-orange-400/30"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+              🔧 Advanced Technology Features
+            </h2>
+            <p className="text-xl text-gray-200">Cutting-edge technologies powering our robotics solutions</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🏭</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Manufacturing</h3>
-                  <p className="text-gray-300">Automated production lines with intelligent quality control and adaptive manufacturing processes</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🏥</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Healthcare</h3>
-                  <p className="text-gray-300">Surgical robots with precision control and AI-assisted diagnostics for improved patient outcomes</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🌱</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Agriculture</h3>
-                  <p className="text-gray-300">Autonomous farming robots for precision agriculture, crop monitoring, and sustainable food production</p>
-                </div>
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
+              <div className="text-3xl mb-4">🧠</div>
+              <h3 className="text-lg font-bold text-orange-300 mb-3">Neural Networks</h3>
+              <p className="text-gray-200 text-sm">Advanced AI algorithms for pattern recognition and decision making</p>
             </div>
-            
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🚀</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Space Exploration</h3>
-                  <p className="text-gray-300">Robotic systems for space missions, planetary exploration, and autonomous space station maintenance</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🏠</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Smart Homes</h3>
-                  <p className="text-gray-300">Intelligent home assistants and service robots for enhanced living experiences and automation</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🔬</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Research</h3>
-                  <p className="text-gray-300">Laboratory automation robots for scientific research, drug discovery, and experimental procedures</p>
-                </div>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-red-400/30">
+              <div className="text-3xl mb-4">👁️</div>
+              <h3 className="text-lg font-bold text-red-300 mb-3">Computer Vision</h3>
+              <p className="text-gray-200 text-sm">Advanced visual processing for object recognition and navigation</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
+              <div className="text-3xl mb-4">🤖</div>
+              <h3 className="text-lg font-bold text-pink-300 mb-3">Machine Learning</h3>
+              <p className="text-gray-200 text-sm">Self-improving algorithms that learn from experience</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="text-lg font-bold text-blue-300 mb-3">Edge Computing</h3>
+              <p className="text-gray-200 text-sm">Real-time processing capabilities for instant decision making</p>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl p-12 text-white"
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Industry?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Discover how our advanced robotics solutions can revolutionize your operations and drive unprecedented efficiency
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Schedule Consultation
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                View Case Studies
-              </button>
+        {/* Success Stories */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+              🏆 Success Stories
+            </h2>
+            <p className="text-xl text-gray-200">Real-world impact of our robotics solutions</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full font-semibold">+300%</span>
+                <span className="text-sm text-gray-300">Efficiency Gain</span>
+              </div>
+              <h3 className="text-xl font-bold text-orange-300 mb-3">Manufacturing Automation</h3>
+              <p className="text-gray-200 mb-4">
+                Implemented robotic assembly lines that increased production efficiency by 300% while reducing defects by 95%.
+              </p>
+              <div className="text-sm text-orange-400 font-semibold">Read Case Study →</div>
             </div>
-          </motion.div>
-        </div>
-      </section>
+
+            <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full font-semibold">99.9%</span>
+                <span className="text-sm text-gray-300">Accuracy Rate</span>
+              </div>
+              <h3 className="text-xl font-bold text-red-300 mb-3">Medical Surgery</h3>
+              <p className="text-gray-200 mb-4">
+                Robotic surgery systems achieved 99.9% accuracy in complex procedures, reducing recovery time by 50%.
+              </p>
+              <div className="text-sm text-red-400 font-semibold">View Results →</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="px-3 py-1 bg-pink-100 text-pink-700 text-sm rounded-full font-semibold">$2M</span>
+                <span className="text-sm text-gray-300">Cost Savings</span>
+              </div>
+              <h3 className="text-xl font-bold text-pink-300 mb-3">Agricultural Automation</h3>
+              <p className="text-gray-200 mb-4">
+                Automated farming robots saved $2M annually while increasing crop yield by 40% through precision agriculture.
+              </p>
+              <div className="text-sm text-pink-400 font-semibold">Learn More →</div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Future Vision */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+            🤖 The Future of Robotics
+          </h2>
+          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
+            We're building the robots of tomorrow that will work alongside humans, enhance our capabilities, and create new possibilities for the future.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
+              <div className="text-3xl mb-3">🏠</div>
+              <h3 className="text-lg font-bold text-orange-300 mb-2">Home Assistant</h3>
+              <p className="text-gray-200 text-sm">Intelligent robots for household tasks and elderly care</p>
+            </div>
+            <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-red-400/30">
+              <div className="text-3xl mb-3">🏥</div>
+              <h3 className="text-lg font-bold text-red-300 mb-2">Healthcare</h3>
+              <p className="text-gray-200 text-sm">Medical robots for surgery and patient care</p>
+            </div>
+            <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
+              <div className="text-3xl mb-3">🏭</div>
+              <h3 className="text-lg font-bold text-pink-300 mb-2">Industry 4.0</h3>
+              <p className="text-gray-200 text-sm">Smart factories with collaborative robots</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+              <div className="text-3xl mb-3">🚀</div>
+              <h3 className="text-lg font-bold text-purple-300 mb-2">Space Exploration</h3>
+              <p className="text-gray-200 text-sm">Robots for space missions and colonization</p>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Call to Action */}
+        <motion.section
+          id="contact"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="text-center bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 rounded-2xl p-12"
+        >
+          <h2 className="text-4xl font-bold mb-6">Ready to Embrace the Robotics Revolution?</h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+            Join us in building the future of robotics. Let's create intelligent machines that enhance human capabilities and transform industries.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <a href="/contact" className="bg-white text-orange-600 px-8 py-4 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-lg">
+              Start Your Journey
+            </a>
+            <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-orange-600 transition-colors font-semibold text-lg">
+              Learn More
+            </a>
+          </div>
+        </motion.section>
+      </div>
     </div>
   );
 };
