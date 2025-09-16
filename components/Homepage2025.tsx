@@ -51,6 +51,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Autonomous Incident Response Blueprint (2026)',
+      href: '/blog/ai-2026-autonomous-incident-response-blueprint',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Evidence‑Led Operations Blueprint (2026)',
+      href: '/blog/ai-2026-evidence-led-operations-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-pink-500'
+    },
+    {
       title: 'Agentic Observability — Deep Dive (2026)',
       href: '/blog/ai-2026-agentic-observability-deep-dive',
       tag: 'New',

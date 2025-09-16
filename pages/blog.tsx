@@ -5,6 +5,30 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react
 export default function Blog() {
   const blogPosts = [
     {
+      id: 'ai-2026-autonomous-incident-response-blueprint',
+      title: 'Autonomous Incident Response Blueprint (2026)',
+      excerpt: 'AI-first incident response: autonomous detection, triage, containment, and post-incident learning.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '8 min read',
+      category: 'Operations',
+      tags: ['Incidents', 'Automation', 'SLOs'],
+      featured: true,
+      image: '/blog/autonomous-incident-response-2026.jpg'
+    },
+    {
+      id: 'ai-2026-evidence-led-operations-blueprint',
+      title: 'Evidence‑Led Operations Blueprint (2026)',
+      excerpt: 'Unify evals, incidents, KPIs, and customer signals to drive safer, faster decisions.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Operations',
+      tags: ['Evals', 'Incidents', 'KPIs'],
+      featured: false,
+      image: '/blog/evidence-led-ops-2026.jpg'
+    },
+    {
       id: 'ai-automation-trends-2025',
       title: 'AI Automation Trends That Will Dominate 2025',
       excerpt: 'Discover the top AI automation trends that will reshape business operations and drive innovation across industries.',
