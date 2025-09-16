@@ -2,269 +2,251 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentBanner2025: React.FC = () => {
-  const [currentContent, setCurrentContent] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % contentItems.length);
-    }, 6000);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const contentItems = [
+  const slides = [
+    {
+      id: 0,
+      title: "🚀 Revolutionary AI Technology 2025",
+      subtitle: "Experience the future of artificial intelligence",
+      description: "Discover our breakthrough AI solutions that are reshaping industries worldwide",
+      cta: "Explore AI Solutions",
+      link: "/pages/AISolutionsComprehensive2025",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      bgPattern: "radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)"
+    },
     {
       id: 1,
-      title: "🌟 Ultimate AI Revolution 2025",
-      subtitle: "The most advanced AI systems ever created",
-      description: "Experience the pinnacle of artificial intelligence with our revolutionary conscious AI systems that exhibit self-awareness, emotional intelligence, and autonomous decision-making capabilities.",
-      features: [
-        "Conscious AI with self-awareness",
-        "Emotional intelligence processing",
-        "Autonomous decision making",
-        "Contextual understanding and learning"
-      ],
-      stats: { value: "99.9%", label: "Consciousness Level" },
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/30 to-pink-900/30",
-      icon: "🧠"
+      title: "⚛️ Quantum Computing Revolution",
+      subtitle: "Unlock infinite computational power",
+      description: "Breakthrough quantum technologies that solve impossible problems",
+      cta: "Go Quantum",
+      link: "/pages/QuantumComputingRevolution2025",
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      bgPattern: "radial-gradient(circle at 30% 70%, rgba(6, 182, 212, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)"
     },
     {
       id: 2,
-      title: "⚛️ Quantum Computing Breakthrough",
-      subtitle: "Infinite computational power unlocked",
-      description: "Revolutionary quantum computing technology that operates across multiple dimensions, solving problems that were previously impossible to address with classical computers.",
-      features: [
-        "Quantum supremacy achieved",
-        "Multi-dimensional processing",
-        "Infinite computational speed",
-        "Reality manipulation capabilities"
-      ],
-      stats: { value: "∞", label: "Computational Power" },
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-900/30 to-blue-900/30",
-      icon: "⚛️"
+      title: "🧬 Neural Interface Technology",
+      subtitle: "Connect mind and machine",
+      description: "Direct brain-computer interfaces that transcend physical limitations",
+      cta: "Connect Now",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+      bgPattern: "radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 40%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)"
     },
     {
       id: 3,
-      title: "🧬 Neural Interface Revolution",
-      subtitle: "Direct mind-to-machine communication",
-      description: "Breakthrough brain-computer interfaces that enable seamless communication between human consciousness and digital systems, opening new frontiers in human potential.",
-      features: [
-        "Non-invasive brain scanning",
-        "Thought-to-text conversion",
-        "Neural data visualization",
-        "Mind-controlled interfaces"
-      ],
-      stats: { value: "10^15", label: "Neural Connections" },
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900/30 to-teal-900/30",
-      icon: "🧬"
-    },
-    {
-      id: 4,
       title: "🌌 Interdimensional Technology",
-      subtitle: "Computing across multiple realities",
-      description: "Revolutionary technology that operates across multiple dimensions, enabling us to solve problems and create solutions that transcend the limitations of our current reality.",
-      features: [
-        "Multi-dimensional processing",
-        "Reality manipulation algorithms",
-        "Dimensional data storage",
-        "Cross-reality communication"
-      ],
-      stats: { value: "∞", label: "Reality Layers" },
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-900/30 to-purple-900/30",
-      icon: "🌌"
+      subtitle: "Bridge multiple realities",
+      description: "Revolutionary technology that accesses parallel dimensions",
+      cta: "Enter Multiverse",
+      link: "/pages/InterdimensionalTechRevolution2026",
+      gradient: "from-indigo-600 via-purple-600 to-pink-600",
+      bgPattern: "radial-gradient(circle at 25% 75%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 25%, rgba(168, 85, 247, 0.3) 0%, transparent 50%)"
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden mb-12"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+      className="relative overflow-hidden rounded-3xl mb-12"
     >
-      <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 rounded-2xl p-8 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="relative">
+        {/* Background with animated pattern */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{ background: slides[currentSlide].bgPattern }}
+        />
         
-        <div className="relative z-10">
-          {/* Header */}
-          <div className="text-center mb-8">
+        {/* Gradient background */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].gradient} opacity-90`} />
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: isVisible ? 1 : 0.8, opacity: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse"
-            >
-              🚀 ULTIMATE TECHNOLOGY • JANUARY 2025
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
-            >
-              Ultimate Technology Showcase
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xl text-white/80 max-w-4xl mx-auto"
-            >
-              Discover the most advanced technologies ever created, pushing the boundaries of what's possible
-            </motion.p>
-          </div>
+              key={i}
+              className="absolute w-2 h-2 bg-white/20 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0.2, 0.8, 0.2],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
 
-          {/* Content Carousel */}
-          <div className="relative">
-            <AnimatePresence mode="wait">
+        {/* Content */}
+        <div className="relative z-10 p-12 text-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
               <motion.div
-                key={currentContent}
-                initial={{ opacity: 0, x: 100 }}
+                key={currentSlide}
+                initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
+                exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5 }}
-                className={`bg-gradient-to-br ${contentItems[currentContent].bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20`}
+                className="space-y-6"
               >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      className="flex items-center mb-4"
-                    >
-                      <span className="text-4xl mr-4">{contentItems[currentContent].icon}</span>
-                      <div>
-                        <h3 className="text-3xl font-bold text-white">
-                          {contentItems[currentContent].title}
-                        </h3>
-                        <p className="text-lg text-white/80">
-                          {contentItems[currentContent].subtitle}
-                        </p>
+                <motion.div
+                  variants={itemVariants}
+                  className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse"
+                >
+                  🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
+                </motion.div>
+                
+                <motion.h2
+                  variants={itemVariants}
+                  className="text-5xl font-bold leading-tight"
+                >
+                  {slides[currentSlide].title}
+                </motion.h2>
+                
+                <motion.h3
+                  variants={itemVariants}
+                  className="text-2xl opacity-90"
+                >
+                  {slides[currentSlide].subtitle}
+                </motion.h3>
+                
+                <motion.p
+                  variants={itemVariants}
+                  className="text-xl opacity-80 leading-relaxed"
+                >
+                  {slides[currentSlide].description}
+                </motion.p>
+                
+                <motion.div
+                  variants={itemVariants}
+                  className="flex flex-wrap gap-4"
+                >
+                  <a
+                    href={slides[currentSlide].link}
+                    className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {slides[currentSlide].cta} →
+                  </a>
+                  <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
+                    Learn More
+                  </button>
+                </motion.div>
+              </motion.div>
+
+              {/* Visual Content */}
+              <motion.div
+                key={`visual-${currentSlide}`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5 }}
+                className="relative"
+              >
+                <div className="relative">
+                  {/* Main visual element */}
+                  <div className="w-full h-80 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-8xl mb-4 animate-pulse">
+                        {slides[currentSlide].id === 0 && "🤖"}
+                        {slides[currentSlide].id === 1 && "⚛️"}
+                        {slides[currentSlide].id === 2 && "🧬"}
+                        {slides[currentSlide].id === 3 && "🌌"}
                       </div>
-                    </motion.div>
-                    
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
-                      className="text-white/70 mb-6 leading-relaxed"
-                    >
-                      {contentItems[currentContent].description}
-                    </motion.p>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.6 }}
-                      className="space-y-3 mb-6"
-                    >
-                      {contentItems[currentContent].features.map((feature, index) => (
-                        <div key={index} className="flex items-center text-white/70">
-                          <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-3"></span>
-                          {feature}
-                        </div>
-                      ))}
-                    </motion.div>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 }}
-                      className="flex items-center gap-6 mb-6"
-                    >
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-white">{contentItems[currentContent].stats.value}</div>
-                        <div className="text-sm text-white/70">{contentItems[currentContent].stats.label}</div>
-                      </div>
-                      <div className="h-12 w-px bg-white/20"></div>
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-white">100%</div>
-                        <div className="text-sm text-white/70">Success Rate</div>
-                      </div>
-                    </motion.div>
-                    
-                    <motion.button
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.0 }}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`bg-gradient-to-r ${contentItems[currentContent].color} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                    >
-                      Explore Ultimate Technology →
-                    </motion.button>
-                  </div>
-                  <div className="text-center">
-                    <motion.div
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
-                      className="text-8xl mb-4"
-                    >
-                      {contentItems[currentContent].icon}
-                    </motion.div>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="text-sm text-white/70 mb-2">Technology Status</div>
-                      <div className="flex items-center justify-center">
-                        <div className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                        <span className="text-green-400 font-semibold">Active & Operational</span>
-                      </div>
+                      <div className="text-2xl font-bold mb-2">Interactive Demo</div>
+                      <div className="text-white/70">Experience the technology</div>
                     </div>
                   </div>
+                  
+                  {/* Floating elements */}
+                  <motion.div
+                    className="absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                  >
+                    <div className="text-2xl">⚡</div>
+                  </motion.div>
+                  
+                  <motion.div
+                    className="absolute -bottom-4 -left-4 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <div className="text-xl">🚀</div>
+                  </motion.div>
                 </div>
               </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {contentItems.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentContent(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentContent === index
-                      ? 'bg-white scale-125'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
-              ))}
             </div>
           </div>
-
-          {/* Quick Access Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
-          >
-            {[
-              { title: "AI Revolution", icon: "🧠", href: "/pages/AIRevolution2025", color: "from-purple-600 to-pink-600" },
-              { title: "Quantum Computing", icon: "⚛️", href: "/pages/QuantumComputingBreakthrough", color: "from-cyan-600 to-blue-600" },
-              { title: "Neural Interfaces", icon: "🧬", href: "/pages/NeuralInterfaceFuture", color: "from-emerald-600 to-teal-600" },
-              { title: "Reality Engineering", icon: "🌌", href: "/pages/InterdimensionalTechRevolution2026", color: "from-indigo-600 to-purple-600" }
-            ].map((item, index) => (
-              <motion.a
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href={item.href}
-                className={`bg-gradient-to-br ${item.color}/20 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-gradient-to-br hover:${item.color}/30 transition-all duration-300 border border-white/20`}
-              >
-                <div className="text-3xl mb-2">{item.icon}</div>
-                <div className="text-sm font-semibold text-white">{item.title}</div>
-              </motion.a>
-            ))}
-          </motion.div>
         </div>
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Navigation arrows */}
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
+        >
+          <div className="text-2xl">‹</div>
+        </button>
+        
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
+        >
+          <div className="text-2xl">›</div>
+        </button>
       </div>
     </motion.div>
   );
