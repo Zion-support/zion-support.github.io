@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-platform-slos-best-practices-2026",
+    title: "AI 2026: Agent Platform SLOs — Best Practices",
+    description:
+      "A concise SLO set for safety, quality, reliability, latency, and cost—ready to adopt.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-platform-slos-best-practices",
+    emoji: "📈",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero‑Trust Agent Architecture",
     description:
