@@ -4,6 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 =======
@@ -13,8 +18,18 @@ const UltimateContentShowcase2026: React.FC = () => {
 =======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
 
   const showcaseItems = [
     {
@@ -331,7 +346,15 @@ const UltimateContentShowcase2026: React.FC = () => {
           </div>
         </motion.div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
       description: "Experience the most revolutionary technologies ever created",
@@ -377,6 +400,10 @@ const UltimateContentShowcase2026: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-9601
+>>>>>>> cursor/create-and-deploy-new-content-01e2
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -621,8 +648,18 @@ const UltimateContentShowcase2026: React.FC = () => {
         </div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
       </div>
     </div>
   );

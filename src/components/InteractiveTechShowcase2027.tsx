@@ -39,8 +39,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       link: '/pages/NeuralInterfaceRevolution2027'
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
       id: 0,
       title: "Quantum Technologies",
       icon: "⚡",
@@ -126,7 +135,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
     }
   ];
 
@@ -179,8 +195,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
                   ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                   : 'bg-white/20 text-white hover:bg-white/30'
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 500);
     return () => clearTimeout(timer);
@@ -252,7 +277,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredCard(index)}
@@ -300,8 +332,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
                 Explore {technologies[activeTech].title.split(' ')[0]} →
               </a>
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
@@ -371,7 +412,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
             </div>
           </div>
         </div>
@@ -416,7 +464,15 @@ const InteractiveTechShowcase2027: React.FC = () => {
             </a>
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -435,8 +491,17 @@ const InteractiveTechShowcase2027: React.FC = () => {
             </button>
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
           </div>
         </div>
       </div>

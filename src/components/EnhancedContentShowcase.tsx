@@ -6,9 +6,15 @@ const EnhancedContentShowcase: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
   const showcaseItems = [
     {
       id: 1,
@@ -17,6 +23,20 @@ const EnhancedContentShowcase: React.FC = () => {
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      link: "/pages/AdvancedAITransformation2026",
+      features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
+      category: "AI & Machine Learning",
+      year: "2026"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
   const contentCategories = [
@@ -289,6 +309,21 @@ const EnhancedContentShowcase: React.FC = () => {
     { label: "Breakthroughs", value: "25+", icon: "🏆", color: "text-pink-400" },
     { label: "Global Impact", value: "10M+", icon: "🌍", color: "text-cyan-400" }
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
     },
     {
       id: 2,
@@ -369,9 +404,19 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -407,9 +452,15 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -766,6 +817,17 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f420
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
@@ -865,11 +927,29 @@ const EnhancedContentShowcase: React.FC = () => {
             </button>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-07de
+>>>>>>> cursor/create-and-deploy-new-content-f420
+>>>>>>> cursor/create-and-deploy-new-content-9601
+=======
+>>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
       </div>
     </div>
   );
