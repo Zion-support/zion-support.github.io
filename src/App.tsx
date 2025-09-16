@@ -84,6 +84,9 @@ import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
 import NewAIResearchBreakthrough2026 from './pages/NewAIResearchBreakthrough2026';
 import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import RevolutionaryCaseStudies2026 from './pages/RevolutionaryCaseStudies2026';
 
 const App: React.FC = () => {
   return (
