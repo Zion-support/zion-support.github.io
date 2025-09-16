@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -17,6 +18,8 @@ export interface Service {id: string;
 >>>>>>> origin/feat/blog-ai-governance
 =======
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/news-updates-home-teaser
 export interface Service {
   id: string;
   name: string;
@@ -182,6 +185,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
@@ -538,6 +542,12 @@ export const services: Service[] = [
     },
   },
 ]
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
+>>>>>>> origin/feat/news-updates-home-teaser
 
 export const getServicesByCategory = (category: Service['category']) => {
 <<<<<<< HEAD
@@ -551,6 +561,7 @@ export const getServiceById = (id: string) => {
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface Service {
   id: string;
@@ -591,3 +602,5 @@ export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)))
 }
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/news-updates-home-teaser

@@ -530,6 +530,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest Updates Teaser */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Latest Updates</h2>
+            <p className="text-xl text-white/70">Fresh news from our product, research, and community</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[ 
+              { title: 'Zero-trust orchestration added across all deployments', href: '/news/zero-trust-orchestration-release', date: 'Sep 14, 2025' },
+              { title: 'Multi-region failover achieves 99.995% uptime', href: '/news/multi-region-failover-uptime', date: 'Sep 10, 2025' },
+              { title: 'Zion Academy: AI Governance Blueprint Level II', href: '/news/academy-ai-governance-blueprint-l2', date: 'Sep 06, 2025' },
+            ].map(item => (
+              <a key={item.href} href={item.href} className="group block p-6 rounded-2xl glass-effect hover-lift">
+                <div className="text-sm text-white/60 mb-2">{item.date}</div>
+                <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                <div className="mt-4 text-blue-400 text-sm font-medium">Read more →</div>
+              </a>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <a href="/news" className="btn-secondary">View all updates</a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

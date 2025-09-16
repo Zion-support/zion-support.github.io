@@ -209,7 +209,10 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
+<<<<<<< HEAD
     'src/',
+=======
+>>>>>>> origin/feat/news-updates-home-teaser
     'apps/'
   ]
 };
