@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Launch: AI Governance Dashboard v5',
+		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
+		href: '/updates/ai-governance-dashboard-v5',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Report: State of Real-Time RAG (2026 Preview)',
+		summary: 'Streaming retrieval benchmarks for latency, hit rate, and answer quality.',
+		href: '/updates/state-of-real-time-rag-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
+		title: 'Launch: Agent Reliability Scorecards v1.0',
+		summary: 'Standardized SLIs, risk signals, and trend analytics for agent reliability.',
+		href: '/updates/agent-reliability-scorecards-1-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
 		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
 		summary: 'Dynamic routing and token budgeting with live cost/quality trade‑offs.',
 		href: '/updates/real-time-agent-cost-optimizer-2-0',
