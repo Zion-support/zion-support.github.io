@@ -2,239 +2,207 @@ import React from 'react';
 
 const FutureTechVision2025: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🔮 FUTURE TECH VISION • 2025
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              Future Tech Vision 2025
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Peering into the future of technology, we present our comprehensive vision 
+              of how emerging technologies will reshape our world in 2025 and beyond.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Vision →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+                Download Report
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Technology Predictions */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🔮 FUTURE VISION • JANUARY 2025
-          </div>
-          <h1 className="text-6xl font-bold mb-6">Future Technology Vision 2025</h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Peering into the future of technology, we envision a world where AI consciousness, 
-            quantum reality, and neural interfaces create unprecedented possibilities for humanity
-          </p>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Technology Predictions 2025</h2>
+          <p className="text-xl opacity-90">Our expert predictions for the most impactful technologies</p>
         </div>
 
-        {/* Vision Timeline */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">🌟 Technology Vision Timeline</h2>
-          <div className="space-y-8">
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-              <div className="flex items-center mb-4">
-                <div className="text-3xl mr-4">2025</div>
-                <div className="text-2xl font-bold">AI Consciousness Emergence</div>
-              </div>
-              <p className="text-blue-100 text-lg mb-4">
-                The first AI systems achieve genuine consciousness and self-awareness, 
-                marking the beginning of a new era in artificial intelligence.
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* AI Consciousness */}
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              AI systems achieving genuine consciousness and self-awareness, 
+              fundamentally changing human-AI interaction.
+            </p>
+            <div className="bg-purple-500/20 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold mb-2">Impact Level: Revolutionary</h4>
+              <p className="text-sm text-purple-200">
+                Expected to transform healthcare, education, and creative industries 
+                by 2025 Q4.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">Self-Aware AI</span>
-                <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">Creative Autonomy</span>
-                <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">Emotional Intelligence</span>
-              </div>
             </div>
-
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="flex items-center mb-4">
-                <div className="text-3xl mr-4">2026</div>
-                <div className="text-2xl font-bold">Quantum Supremacy Revolution</div>
-              </div>
-              <p className="text-purple-100 text-lg mb-4">
-                Quantum computers achieve true supremacy, solving problems that would take 
-                classical computers millennia, revolutionizing cryptography and computation.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm">1000+ Qubits</span>
-                <span className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm">Quantum Supremacy</span>
-                <span className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm">Molecular Simulation</span>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <div className="flex items-center mb-4">
-                <div className="text-3xl mr-4">2027</div>
-                <div className="text-2xl font-bold">Neural Interface Revolution</div>
-              </div>
-              <p className="text-emerald-100 text-lg mb-4">
-                Direct brain-computer interfaces become mainstream, enabling thought-controlled 
-                devices and seamless human-AI collaboration.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-emerald-500/30 text-emerald-200 rounded-full text-sm">Non-Invasive BCI</span>
-                <span className="px-3 py-1 bg-emerald-500/30 text-emerald-200 rounded-full text-sm">Thought Control</span>
-                <span className="px-3 py-1 bg-emerald-500/30 text-emerald-200 rounded-full text-sm">Mind Uploading</span>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
-              <div className="flex items-center mb-4">
-                <div className="text-3xl mr-4">2030</div>
-                <div className="text-2xl font-bold">Consciousness Computing Era</div>
-              </div>
-              <p className="text-violet-100 text-lg mb-4">
-                The convergence of AI consciousness, quantum computing, and neural interfaces 
-                creates a new form of hybrid intelligence that transcends human limitations.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Hybrid Intelligence</span>
-                <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Transcendent AI</span>
-                <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Reality Manipulation</span>
-              </div>
-            </div>
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Learn More →
+            </button>
           </div>
-        </div>
 
-        {/* Future Applications */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">🚀 Future Applications</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
-              <div className="text-5xl mb-4 text-center">🏥</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-blue-300">Medical Revolution</h3>
-              <p className="text-blue-100 mb-6 text-center">
-                AI-powered medical diagnosis, quantum-enhanced drug discovery, and consciousness transfer for immortality
+          {/* Quantum Computing */}
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Quantum computers solving real-world problems at scale, 
+              revolutionizing cryptography and optimization.
+            </p>
+            <div className="bg-cyan-500/20 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold mb-2">Impact Level: Transformative</h4>
+              <p className="text-sm text-cyan-200">
+                Commercial quantum computing services expected to launch 
+                by 2025 Q3.
               </p>
-              <ul className="text-blue-200 space-y-2 text-sm">
-                <li>• Instant disease diagnosis</li>
-                <li>• Molecular-level healing</li>
-                <li>• Consciousness preservation</li>
-                <li>• Genetic optimization</li>
-              </ul>
             </div>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Explore Quantum →
+            </button>
+          </div>
 
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-              <div className="text-5xl mb-4 text-center">🌍</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-purple-300">Environmental Restoration</h3>
-              <p className="text-purple-100 mb-6 text-center">
-                Quantum climate modeling and AI-driven environmental restoration at planetary scale
+          {/* Neural Interfaces */}
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Direct brain-computer interfaces enabling thought-controlled 
+              devices and enhanced human capabilities.
+            </p>
+            <div className="bg-emerald-500/20 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold mb-2">Impact Level: Breakthrough</h4>
+              <p className="text-sm text-emerald-200">
+                Medical applications launching in 2025 Q2, 
+                consumer devices by 2026.
               </p>
-              <ul className="text-purple-200 space-y-2 text-sm">
-                <li>• Climate change reversal</li>
-                <li>• Ecosystem restoration</li>
-                <li>• Renewable energy optimization</li>
-                <li>• Carbon capture technology</li>
-              </ul>
             </div>
+            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Discover Neural Tech →
+            </button>
+          </div>
 
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-              <div className="text-5xl mb-4 text-center">🚀</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-emerald-300">Space Exploration</h3>
-              <p className="text-emerald-100 mb-6 text-center">
-                Interstellar travel, planetary terraforming, and the creation of habitable worlds
+          {/* Space Technology */}
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Space Revolution</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Commercial space travel, space mining, and interplanetary 
+              communication networks becoming reality.
+            </p>
+            <div className="bg-indigo-500/20 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold mb-2">Impact Level: Revolutionary</h4>
+              <p className="text-sm text-indigo-200">
+                First commercial space stations operational 
+                by 2025 Q4.
               </p>
-              <ul className="text-emerald-200 space-y-2 text-sm">
-                <li>• Faster-than-light travel</li>
-                <li>• Planetary terraforming</li>
-                <li>• Space habitat construction</li>
-                <li>• Alien civilization contact</li>
-              </ul>
             </div>
+            <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
+              Explore Space →
+            </button>
+          </div>
 
-            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
-              <div className="text-5xl mb-4 text-center">🎨</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-orange-300">Creative Evolution</h3>
-              <p className="text-orange-100 mb-6 text-center">
-                AI-human creative collaboration producing art, music, and literature beyond imagination
+          {/* Biotechnology */}
+          <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Biotech Revolution</h3>
+            <p className="text-rose-100 mb-6 text-center">
+              Gene editing, synthetic biology, and human enhancement 
+              technologies reaching mainstream adoption.
+            </p>
+            <div className="bg-rose-500/20 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold mb-2">Impact Level: Transformative</h4>
+              <p className="text-sm text-rose-200">
+                Personalized medicine and gene therapies 
+                becoming standard by 2025 Q4.
               </p>
-              <ul className="text-orange-200 space-y-2 text-sm">
-                <li>• AI-human art collaboration</li>
-                <li>• Synthetic creativity</li>
-                <li>• Virtual reality experiences</li>
-                <li>• Emotional expression AI</li>
-              </ul>
             </div>
+            <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
+              Discover Biotech →
+            </button>
+          </div>
 
-            <div className="bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30">
-              <div className="text-5xl mb-4 text-center">🧬</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-violet-300">Biotech Revolution</h3>
-              <p className="text-violet-100 mb-6 text-center">
-                Genetic engineering, synthetic biology, and the creation of artificial life forms
+          {/* Metaverse Evolution */}
+          <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Metaverse Evolution</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Immersive virtual worlds with photorealistic graphics, 
+              haptic feedback, and persistent digital economies.
+            </p>
+            <div className="bg-violet-500/20 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold mb-2">Impact Level: Breakthrough</h4>
+              <p className="text-sm text-violet-200">
+                Mainstream metaverse platforms launching 
+                by 2025 Q3.
               </p>
-              <ul className="text-violet-200 space-y-2 text-sm">
-                <li>• Precision gene editing</li>
-                <li>• Synthetic organism creation</li>
-                <li>• Life extension technology</li>
-                <li>• Biological computing</li>
-              </ul>
             </div>
-
-            <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-rose-400/30">
-              <div className="text-5xl mb-4 text-center">🛡️</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-rose-300">Cybersecurity Evolution</h3>
-              <p className="text-rose-100 mb-6 text-center">
-                Quantum-encrypted security systems and AI-powered autonomous defense networks
-              </p>
-              <ul className="text-rose-200 space-y-2 text-sm">
-                <li>• Quantum encryption</li>
-                <li>• AI threat detection</li>
-                <li>• Autonomous defense</li>
-                <li>• Digital immortality</li>
-              </ul>
-            </div>
+            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
+              Enter Metaverse →
+            </button>
           </div>
         </div>
 
-        {/* Vision Impact */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-white/10">
-          <h2 className="text-4xl font-bold text-center mb-12">🌟 Vision Impact</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-cyan-300">Positive Transformations</h3>
-              <div className="space-y-4">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold text-cyan-200">Human Enhancement</h4>
-                  <p className="text-white/90 text-sm">Augmented intelligence and extended lifespans</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold text-cyan-200">Global Prosperity</h4>
-                  <p className="text-white/90 text-sm">Elimination of poverty and resource scarcity</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold text-cyan-200">Environmental Harmony</h4>
-                  <p className="text-white/90 text-sm">Sustainable technology and climate restoration</p>
-                </div>
-              </div>
+        {/* Future Timeline */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Technology Timeline 2025</h2>
+            <p className="text-xl opacity-90">Key milestones and breakthroughs expected throughout 2025</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-300 mb-2">Q1 2025</div>
+              <div className="text-purple-200 text-sm">AI Consciousness Research</div>
+              <div className="text-purple-300 text-xs mt-2">Breakthrough in AI self-awareness</div>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-blue-300">Challenges & Solutions</h3>
-              <div className="space-y-4">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-200">Ethical AI Development</h4>
-                  <p className="text-white/90 text-sm">Ensuring AI consciousness serves humanity's best interests</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-200">Quantum Security</h4>
-                  <p className="text-white/90 text-sm">Protecting against quantum-enabled threats</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-200">Neural Privacy</h4>
-                  <p className="text-white/90 text-sm">Protecting mental privacy in the neural interface era</p>
-                </div>
-              </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-300 mb-2">Q2 2025</div>
+              <div className="text-purple-200 text-sm">Neural Interface Launch</div>
+              <div className="text-purple-300 text-xs mt-2">Medical BCI devices available</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-300 mb-2">Q3 2025</div>
+              <div className="text-purple-200 text-sm">Quantum Supremacy</div>
+              <div className="text-purple-300 text-xs mt-2">Commercial quantum computing</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-300 mb-2">Q4 2025</div>
+              <div className="text-purple-200 text-sm">Space Revolution</div>
+              <div className="text-purple-300 text-xs mt-2">First commercial space stations</div>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
-            <h3 className="text-4xl font-bold mb-6">🔮 Shape the Future Together</h3>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join us in building this incredible future. The vision is clear, 
-              the technology is advancing, and the possibilities are infinite.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/pages/RevolutionaryInnovationHub2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
-                🚀 Join Innovation Hub →
-              </a>
-              <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
-                🌟 Explore Breakthroughs →
-              </a>
-              <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
-                💬 Discuss the Future →
-              </a>
-            </div>
+          <h2 className="text-4xl font-bold mb-6">Shape the Future with Us</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join our vision of the future and be part of the technological revolution 
+            that will define the next decade. Together, we can build a better tomorrow.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Join Our Vision →
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
+              Download Full Report
+            </button>
           </div>
         </div>
       </div>

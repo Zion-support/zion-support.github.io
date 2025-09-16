@@ -326,5 +326,123 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     featured: true,
     image: "/images/google-case-study.jpg",
     isNew: true
+  },
+  {
+    id: "microsoft-ai-transformation-2026",
+    title: "Microsoft's AI-First Transformation: Redefining Enterprise Software",
+    company: "Microsoft Corporation",
+    industry: "Enterprise Software",
+    challenge: "Microsoft needed to transform their entire enterprise software suite to be AI-first, enabling intelligent automation across all business processes.",
+    solution: "Deployed our comprehensive AI transformation platform across Microsoft's entire product ecosystem, from Office 365 to Azure cloud services.",
+    results: [
+      "40% increase in productivity across all Microsoft products",
+      "90% reduction in manual data entry tasks",
+      "Revolutionary AI-powered collaboration tools",
+      "Seamless integration across all Microsoft services",
+      "New AI-driven business intelligence capabilities"
+    ],
+    technologies: ["Enterprise AI", "Machine Learning", "Natural Language Processing", "Cloud Computing"],
+    duration: "18 months",
+    featured: true,
+    image: "/images/microsoft-case-study.jpg",
+    isNew: true
+  },
+  {
+    id: "amazon-autonomous-logistics-2026",
+    title: "Amazon's Autonomous Logistics Network: The Future of E-commerce",
+    company: "Amazon.com Inc.",
+    industry: "E-commerce & Logistics",
+    challenge: "Amazon needed to create a fully autonomous logistics network to handle the massive scale of their global operations while reducing costs and improving efficiency.",
+    solution: "Implemented our autonomous logistics AI system across Amazon's entire supply chain, from warehouses to last-mile delivery.",
+    results: [
+      "60% reduction in delivery times",
+      "45% decrease in logistics costs",
+      "99.9% accuracy in inventory management",
+      "Fully autonomous warehouse operations",
+      "Revolutionary drone delivery system"
+    ],
+    technologies: ["Autonomous Systems", "Computer Vision", "Robotics", "Supply Chain AI"],
+    duration: "30 months",
+    featured: true,
+    image: "/images/amazon-case-study.jpg",
+    isNew: true
+  }
+];
+
+export const REVOLUTIONARY_SERVICES_2026 = [
+  {
+    id: "quantum-ai-processing",
+    title: "Quantum AI Processing Engine",
+    description: "Revolutionary quantum-powered AI that solves problems impossible for classical computers",
+    features: [
+      "1000x faster problem solving",
+      "Quantum machine learning algorithms",
+      "Breakthrough optimization capabilities",
+      "Quantum-resistant security"
+    ],
+    pricing: "Contact for pricing",
+    category: "Quantum Computing",
+    isNew: true,
+    urgency: "Limited availability"
+  },
+  {
+    id: "consciousness-ai-platform",
+    title: "Consciousness AI Platform",
+    description: "The world's first AI system with genuine consciousness and self-awareness",
+    features: [
+      "True self-awareness capabilities",
+      "Emotional intelligence processing",
+      "Creative problem solving",
+      "Autonomous decision making"
+    ],
+    pricing: "Enterprise pricing available",
+    category: "Artificial Intelligence",
+    isNew: true,
+    urgency: "Revolutionary technology"
+  },
+  {
+    id: "neural-interface-suite",
+    title: "Neural Interface Suite",
+    description: "Direct brain-computer interface technology for seamless human-AI interaction",
+    features: [
+      "Direct neural communication",
+      "Thought-controlled interfaces",
+      "Enhanced cognitive capabilities",
+      "Medical-grade safety standards"
+    ],
+    pricing: "Research partnerships available",
+    category: "Neural Technology",
+    isNew: true,
+    urgency: "Cutting-edge research"
+  },
+  {
+    id: "metaverse-ai-ecosystem",
+    title: "Metaverse AI Ecosystem",
+    description: "Complete AI-powered virtual world creation and management platform",
+    features: [
+      "Immersive virtual environments",
+      "AI-powered avatars and NPCs",
+      "Real-time world generation",
+      "Blockchain integration"
+    ],
+    pricing: "Subscription-based",
+    category: "Metaverse Technology",
+    isNew: true,
+    urgency: "Early access available"
+  },
+  {
+    id: "autonomous-business-ai",
+    title: "Autonomous Business AI",
+    description: "Fully autonomous AI system that runs entire business operations without human intervention",
+    features: [
+      "Complete business automation",
+      "Autonomous decision making",
+      "Self-optimizing processes",
+      "Real-time market adaptation"
+    ],
+    pricing: "Revenue sharing model",
+    category: "Business Automation",
+    isNew: true,
+    urgency: "Transform your business"
   }
 ];
