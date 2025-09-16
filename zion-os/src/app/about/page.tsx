@@ -9,6 +9,58 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   );
 }
+=======
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Leading the AI Revolution</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Founded with a vision to democratize advanced AI technology, Zion Tech Group has been at the forefront of innovation in artificial intelligence, quantum computing, and autonomous systems.
+              </p>
+              <p className="text-lg text-gray-600">
+                Our mission is to empower businesses of all sizes with cutting-edge technology solutions that drive growth, efficiency, and competitive advantage in an increasingly digital world.
+              </p>
+            </div>
+            <div className="bg-gray-100 p-8 rounded-xl">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Innovation First</h3>
+                    <p className="text-gray-600">Pioneering breakthrough technologies</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Security Focused</h3>
+                    <p className="text-gray-600">Enterprise-grade security standards</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+=======
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+          <p className="text-lg text-gray-700">
+            We empower organizations to launch sovereign AI-powered digital economies with safety, scale, and speed.
+          </p>
+>>>>>>> origin/feat/blog-content-ads
+        </div>
+      </section>
+    </div>
+  );
+}
+<<<<<<< HEAD
+
+>>>>>>> origin/feat/blog-ai-governance
+=======
+>>>>>>> origin/feat/blog-content-ads

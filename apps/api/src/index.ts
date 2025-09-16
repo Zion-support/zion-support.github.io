@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+
+;
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+import Fastify from 'fastify',import cors from '@fastify/cors',const app = null;
+    cb: (err: Error | null, allow?: boolean) => void;
+  ) => {const allowed = (process.env.CORS_ORIGINS |'').split(',').map(s => s.trim())if (!origin || allowed.includes('*') || allowed.includes(origin)) {cb(null, true)return;
+    }
+    cb(new Error('Not allowed'), false)})const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt })return { text: completion.output_text }})const completion  = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt })return { text: completion.output_text }},methods: ['GET', 'POST', 'OPTIONS'];
+})await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' })const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'')function getUserId(req: any): string | null {return ((req.headers['x-user-id'] as string) ||;
+    (req.query as any)['user_id'] ||;
+    null;
+  )app.post('/ai/ask', async (req: any, reply: any) => {const body = (req.body as any) |{}
+  const prompt = body.prompt as string;
+  if (!prompt) return reply.code(400).send({ error: 'prompt required' })const completion = await openai.responses.create({model: 'gpt-4o-mini',input: prompt;
+  })return { text: completion.output_text }})app && app.post('/jobs/generate', async (req: any, reply: any) => {const body = (req && req.body as any) || {}const role  = (body && body.role as string) || 'Engineer';const userId = getUserId(req)const description  = await generateJobPost(openai, role, body)`INSERT INTO job_post (user_id, title, description, location, tags, status)VALUES ($1, $2, $3, $4, $5, 'draft')`;[userId, role, description, body && body.location || null, body && body.tags || null];
+    )app.post ('/jobs / generate', async (req: any, reply: any) => {const body = (req.body as any) || {}
+>>>>>>> origin/merge-pr-12271
       cb(null, true);
       return;
     }

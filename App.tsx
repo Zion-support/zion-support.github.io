@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
@@ -71,13 +72,21 @@ import UltimateContentShowcase from './src/components/UltimateContentShowcase';
 import UltimateTechShowcase2029 from './src/pages/UltimateTechShowcase2029';
 
 export default function App(): JSX.Element {
+=======
+import Home from './src/pages/Home';
+import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
+import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
+import ComprehensiveServicesShowcase2027 from './src/pages/ComprehensiveServicesShowcase2027';
+import RevolutionaryTechAdvertisingBanner from './src/components/RevolutionaryTechAdvertisingBanner';
+import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+
+const App: React.FC = () => {
+>>>>>>> cursor/create-and-deploy-new-content-376e
   return (
     <Router>
-      <div className="min-h-screen bg-white">
-        <ScrollToTop />
-        <Header />
-        
+      <div className="App">
         <Routes>
+<<<<<<< HEAD
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
@@ -796,10 +805,16 @@ export default function App(): JSX.Element {
               <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
             </main>
           } />
+=======
+          <Route path="/" element={<Home />} />
+          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/ComprehensiveServicesShowcase2027" element={<ComprehensiveServicesShowcase2027 />} />
+>>>>>>> cursor/create-and-deploy-new-content-376e
         </Routes>
-        
-        <EnhancedFooter />
       </div>
     </Router>
   );
-}
+};
+
+export default App;

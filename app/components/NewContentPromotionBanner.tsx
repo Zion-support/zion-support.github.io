@@ -7,6 +7,7 @@ const NewContentPromotionBanner: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Just published</div>
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Zero-Trust Agent Architecture</h2>
             <p className="text-lg text-gray-600 max-w-2xl">Blueprint for zero-trust agents with isolation domains, policy-as-code, and runtime guards.</p>
           </div>
@@ -22,6 +23,12 @@ const NewContentPromotionBanner: React.FC = () => {
             <p className="text-lg text-gray-600 max-w-2xl">Private-by-default agents using scoped memory, redaction, and confidential computing.</p>
           </div>
           <a href="/blog/ai-2026-privacy-preserving-agents" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Read →</a>
+=======
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: LLM Evals Maturity Model</h2>
+            <p className="text-lg text-gray-600 max-w-2xl">An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.</p>
+          </div>
+          <a href="/blog/ai-2026-llm-evals-maturity-model" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article →</a>
+>>>>>>> origin/feature/new-content-and-promotions
         </div>
       </div>
     </div>

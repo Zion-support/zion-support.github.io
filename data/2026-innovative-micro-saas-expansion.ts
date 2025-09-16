@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeMicroSaasService2026 {
+=======
+
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeMicroSaasService2026  {id: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;

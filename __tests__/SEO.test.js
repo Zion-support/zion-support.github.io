@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SEO from '../components/SEO';
 
+<<<<<<< HEAD
 describe('SEO', () => {
   test('renders without crashing', () => {
     render(<SEO />);
@@ -21,3 +22,15 @@ describe('SEO', () => {
     render(<SEO />);
   });
 });
+=======
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SEO from "./components/SEO" describe("SEO",() => {" test("renders without crashing",() => {" render(<SEO / />) expect(screen.getByTestId("seo")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SEO / />) }) test("handles user interactions",() => {" render(<SEO / />) }) test("applies correct styling",() => {" render(<SEO / />) }) })'"'"
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SEO from "./components/SEO" describe("SEO",() => {" test("renders without crashing",() => {" render(<SEO / />) expect(screen.getByTestId("seo")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SEO / />) }) test("handles user interactions",() => {" render(<SEO / />) }) test("applies correct styling",() => {" render(<SEO / />) }) })'"'"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+>>>>>>> origin/merge-pr-12271

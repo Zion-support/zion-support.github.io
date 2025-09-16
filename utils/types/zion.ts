@@ -1,4 +1,10 @@
+<<<<<<< HEAD
   logoUrl?: string;
+=======
+
+;
+export interface Branding  {export interface Branding {logoUrl?: string;
+>>>>>>> origin/merge-pr-12271
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;

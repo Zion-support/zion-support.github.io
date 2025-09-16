@@ -1,6 +1,46 @@
+<<<<<<< HEAD
 
 
 
+=======
+
+;
+  clientUserId: string;
+  talentUserId: string;
+}
+export type Project = {  id: string;export type ProjectParticipants = {export type ProjectParticipants = {clientUserId: string;
+  talentUserId: string;
+export type ProjectParticipants = {
+
+export type ProjectParticipants = {
+
+
+  clientUserId: string;
+  talentUserId: string;
+}
+export type Project = {  id: string;
+  title: string;
+  description?: string;
+  title: string;
+  description?: string;
+  title: string;
+  description?: string;
+  due_date: string;
+  amount_usd: number;
+  status: 'pending' | 'completed' | 'cancelled';
+  attachments?: MilestoneAttachment[];updatedAt: string;
+}
+export function isMilestoneStatus(value: string): value is MilestoneStatus {return ()export interface MilestoneAttachment  {value === 'Pending' ||;
+    value === 'In Progress' ||;
+    value === 'Submitted' ||;
+    value === 'Approved' ||;
+    value === 'Paid';
+  )export interface MilestoneAttachment  {ursor/fix-website-loading-errors-and-merge-6662;
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+
+  );export interface MilestoneAttachment {
+>>>>>>> origin/merge-pr-12271
 
 
   id: string;
@@ -44,6 +84,7 @@ export interface UpdateMilestoneRequest {
   dueDate?: string;
   amountUsd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
+<<<<<<< HEAD
   attachments?: MilestoneAttachment[];
 
 
@@ -57,6 +98,9 @@ export interface UpdateMilestoneRequest {
 export function isOverdue(milestone: Milestone): boolean {
   if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
     return false;
+=======
+  attachments?: MilestoneAttachment[];export function isOverdue(milestone: Milestone): boolean {if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {return false;
+>>>>>>> origin/merge-pr-12271
   }
   return new Date(milestone.dueDate) < new Date();
 }
@@ -117,7 +161,18 @@ export type Project = {
   milestones: Milestone[];
   createdAt: string;
   updatedAt: string;
+<<<<<<< HEAD
 };
+=======
+}export function isMilestoneStatus(value: string): value is MilestoneStatus {return (value === 'Pending' ||;
+    value === 'In Progress' ||;
+    value === 'Submitted' ||;
+    value === 'Approved' ||;
+    value === 'Paid';
+  )
+  attachments?: MilestoneAttachment[];
+}
+>>>>>>> origin/merge-pr-12271
 
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (

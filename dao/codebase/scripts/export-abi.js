@@ -6,6 +6,7 @@ function main() {
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
   const artifactsDir = path.join(__dirname, '../artifacts/contracts');
   const abis = [
+<<<<<<< HEAD
     ['VoteToken.sol', 'VoteToken'],
     ['ZionDAO.sol', 'ZionDAO'],
     ['QuorumEngine.sol', 'QuorumEngine'],
@@ -20,6 +21,17 @@ function main() {
       console.log('Exported ABI for', name);
     } else {
       console.warn('Missing artifact for', name);
+=======
+    ['VoteToken.solVoteToken']
+    ['ZionDAO.solZionDAO']
+    ['QuorumEngine.solQuorumEngine']
+    ['DelegateRegistry.solDelegateRegistry']
+    ['ConstitutionStorage.solConstitutionStorage']
+    ['Treasure/Disbursements.solDisbursements']
+    ['Treasure/EpochManager.solEpochManager']]
+  for (const [rel, name] of abis) {} else {
+      console.warn('Missing artifact for', name)
+>>>>>>> origin/merge-pr-12271
     }
   }
 }

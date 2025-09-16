@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+;
+export interface AdditionalRealService  {export interface AdditionalRealService  {id: string;
+>>>>>>> origin/merge-pr-12271
 export interface AdditionalRealService {
   id: string;
   name: string;

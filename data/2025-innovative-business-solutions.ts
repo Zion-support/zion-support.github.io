@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeBusinessSolution  {id: string;
+>>>>>>> origin/merge-pr-12271
   id: string;
   name: string;
   tagline: string;
