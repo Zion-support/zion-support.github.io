@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 =======
@@ -453,11 +454,62 @@ export default function SolutionsPage() {
 						<a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
 						<a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Services <span aria-hidden="true">→</span></a>
 					</div>
+=======
+import React from 'react'
+import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+
+const solutions = [
+	{
+		name: 'AI Research Assistant',
+		description: 'Autonomous research platform that accelerates scientific discovery.',
+		icon: LightBulbIcon,
+		href: '/solutions/ai-autonomous-research',
+	},
+	{
+		name: 'Quantum Neural Networks',
+		description: 'Next-generation computing for complex problem solving.',
+		icon: CpuChipIcon,
+		href: '/solutions/quantum-neural-networks',
+	},
+	{
+		name: 'Autonomous Business Operations',
+		description: 'AI-powered automation for enterprise efficiency.',
+		icon: RocketLaunchIcon,
+		href: '/solutions/autonomous-business',
+	},
+]
+
+export default function SolutionsPage() {
+	return (
+		<div className="bg-black">
+			<div className="relative isolate px-6 pt-14 lg:px-8">
+				<div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+					<div className="text-center">
+						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Solutions</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-300">Explore our flagship AI platforms designed to transform your organization.</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="mx-auto max-w-7xl px-6 lg:px-8">
+				<div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+					{solutions.map((s) => (
+						<article key={s.name} className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+							<div className="flex items-center gap-x-3 mb-4">
+								<s.icon className="h-6 w-6 text-blue-400" />
+								<h3 className="text-xl font-semibold text-white">{s.name}</h3>
+							</div>
+							<p className="text-gray-300 mb-6">{s.description}</p>
+							<a href={s.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a>
+						</article>
+					))}
+>>>>>>> origin/feat/new-content-home-20250915
 				</div>
 			</div>
 		</div>
 	)
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/updates-2025-09
 =======
@@ -625,3 +677,5 @@ export default function SolutionsPage() {
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> origin/feat/new-content-home-20250915

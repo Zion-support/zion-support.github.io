@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/new-content-home-20250915
 	title: 'Zion Tech Group - Leading AI and Technology Solutions',
 	description:
 		'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
@@ -27,11 +30,25 @@ export const metadata: Metadata = {
 	robots: 'index, follow',
 	openGraph: {
 		title: 'Zion Tech Group - Leading AI and Technology Solutions',
+<<<<<<< HEAD
 		description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
 		url: 'https://ziontechgroup.com',
 		siteName: 'Zion Tech Group',
 		images: [
 			{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Zion Tech Group' },
+=======
+		description:
+			'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+		url: 'https://ziontechgroup.com',
+		siteName: 'Zion Tech Group',
+		images: [
+			{
+				url: '/og-image.jpg',
+				width: 1200,
+				height: 630,
+				alt: 'Zion Tech Group',
+			},
+>>>>>>> origin/feat/new-content-home-20250915
 		],
 		locale: 'en_US',
 		type: 'website',
@@ -44,6 +61,7 @@ export const metadata: Metadata = {
 	},
 	viewport: 'width=device-width, initial-scale=1',
 	themeColor: '#000000',
+<<<<<<< HEAD
 =======
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description:
@@ -95,6 +113,8 @@ export const metadata: Metadata = {
 >>>>>>> origin/feature/updates-content
 =======
 >>>>>>> origin/feat/case-studies-content
+=======
+>>>>>>> origin/feat/new-content-home-20250915
 }
 
 export default function RootLayout({
@@ -103,6 +123,9 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/new-content-home-20250915
 	return (
 		<html lang="en" className="scroll-smooth">
 			<body className={`${inter.className} bg-black text-white antialiased`}>
@@ -112,6 +135,7 @@ export default function RootLayout({
 			</body>
 		</html>
 	)
+<<<<<<< HEAD
 =======
   return (
     <html lang="en" className="scroll-smooth">
@@ -131,4 +155,6 @@ export default function RootLayout({
     </html>
   )
 >>>>>>> origin/feature/updates-content
+=======
+>>>>>>> origin/feat/new-content-home-20250915
 }
