@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 5001,
+    title: "AI 2026: Release Scorecards That Prevent Bad Deploys",
+    excerpt: "Scorecards that gate merges and rollouts using online evals, cost, and safety.",
+    content: "Ship autonomy safely with release scorecards wired to objective signals. This post shows how to track groundedness, override rate, violation rate, cost budgets, and SLOs per change. Learn how to block merges on failures, canary with confidence, and roll back automatically when thresholds breach.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Release Engineering", "Scorecards", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-release-scorecards.jpg",
+    slug: "ai-2026-release-scorecards"
+  },
+  {
+    id: 5002,
+    title: "Enterprise AI Security Blueprint (2026)",
+    excerpt: "Defense-in-depth for agentic systems: permissions, approvals, budgets, and audits.",
+    content: "A practical blueprint for securing enterprise AI systems. We cover scoped tools, capability manifests, risk-tiered approvals, budget caps, red-teaming scenarios, and audit-ready telemetry. Includes reference policies and a minimal adapter that enforces least privilege.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Security",
+    tags: ["Security", "Guardrails", "Approvals", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/enterprise-ai-security-blueprint-2026.jpg",
+    slug: "ai-2026-enterprise-ai-security-blueprint"
+  },
+  {
     id: 4001,
     title: "AI 2026: Edge Agents Production Guide",
     excerpt: "Blueprint to deploy low-latency edge agents with budget-aware routing.",
