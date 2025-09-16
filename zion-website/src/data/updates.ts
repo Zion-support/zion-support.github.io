@@ -9,6 +9,13 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Playbook: Production AI Incident Response (2026)',
+    summary: 'Step-by-step response patterns, metrics, and evidence bundles for AI incidents.',
+    href: '/updates/production-ai-incident-response-playbook-2026',
+    date: '2025-09-16',
+    tag: 'Playbook'
+  },
+  {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
     summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
     href: '/updates/grounded-generation-guardrails-2026',
