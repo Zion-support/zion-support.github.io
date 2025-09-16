@@ -205,6 +205,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
