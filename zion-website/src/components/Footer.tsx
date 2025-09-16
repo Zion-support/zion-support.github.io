@@ -74,8 +74,12 @@ export default function Footer() {
     </footer>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 
 >>>>>>> origin/feature/updates-2025-09
+=======
+}
+>>>>>>> origin/feature/content-updates-and-merge-fixes

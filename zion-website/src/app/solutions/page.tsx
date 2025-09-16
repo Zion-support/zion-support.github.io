@@ -249,6 +249,7 @@ export default function SolutionsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -416,3 +417,5 @@ export default function SolutionsPage() {
 }
 =======
 >>>>>>> origin/feature/updates-2025-09
+=======
+>>>>>>> origin/feature/content-updates-and-merge-fixes

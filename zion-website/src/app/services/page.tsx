@@ -167,10 +167,10 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Services</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text.white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 text-lg leading-8 text.gray-300">
             We offer end-to-end AI services designed to accelerate your digital transformation 
             and drive measurable business outcomes.
           </p>
@@ -219,7 +219,7 @@ export default function ServicesPage() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w.none lg:grid-cols-5">
             {serviceProcess.map((step, index) => (
               <div key={step.step} className="relative">
                 {index < serviceProcess.length - 1 && (
@@ -250,7 +250,7 @@ export default function ServicesPage() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w.none lg:grid-cols-2">
             {reasonsToChoose.map((reason) => (
               <div key={reason.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
@@ -277,11 +277,11 @@ export default function ServicesPage() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/contact"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text.white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Schedule Consultation
             </a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+            <a href="/solutions" className="text-sm font-semibold leading-6 text.white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -290,6 +290,7 @@ export default function ServicesPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -455,3 +456,5 @@ export default function ServicesPage() {
 =======
 
 >>>>>>> origin/feature/updates-2025-09
+=======
+>>>>>>> origin/feature/content-updates-and-merge-fixes
