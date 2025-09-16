@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New content additions (2025-09-16)
+    {
+        title: 'Blueprint: Real‑Time Model Routing Playbook (2026)'
+        ,summary: 'Dynamic, budgeted routing across models using eval signals, SLOs, and guardrails.'
+        ,href: '/updates/real-time-model-routing-playbook-2026'
+        ,date: '2025-09-16'
+        ,tag: 'Blueprint'
+    },
+    {
+        title: 'Guide: Real‑Time Retrieval Architectures (2026)'
+        ,summary: 'Low‑latency, high‑accuracy retrieval with hybrid indexes and freshness controls.'
+        ,href: '/updates/real-time-retrieval-architectures-2026'
+        ,date: '2025-09-16'
+        ,tag: 'Guide'
+    },
     // New AI Lab content (2025-09-17)
     {
         title: 'Guide: Evidence‑Led Ops Scorecards',
