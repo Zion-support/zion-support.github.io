@@ -85,6 +85,11 @@ import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2027 from './src/pages/NextGenInnovationHub2027';
 import UltimateTechTrends2027 from './src/pages/UltimateTechTrends2027';
+import NextGenInnovationHub2028 from './src/pages/NextGenInnovationHub2028';
+import UltimateTechBreakthrough2028 from './src/pages/UltimateTechBreakthrough2028';
+import UltimateContentShowcase2028 from './src/components/UltimateContentShowcase2028';
+import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
+import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 
 export default function App(): JSX.Element {
   return (
@@ -118,6 +123,9 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2027 */}
                 <RevolutionaryContentBanner2027 />
+
+                {/* Ultimate Content Banner 2028 */}
+                <UltimateContentBanner2028 />
 
                 {/* Enhanced Content Carousel 2028 */}
                 <div className="mb-12">
@@ -198,6 +206,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateTechTrends2027" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       📈 NEW: Ultimate Tech Trends 2027 →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2028" className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Innovation Hub 2028 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2028" className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Ultimate Breakthrough 2028 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -558,6 +572,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2027 />
                 </div>
 
+                {/* Interactive Technology Showcase 2028 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2028 />
+                </div>
+
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -567,6 +586,11 @@ export default function App(): JSX.Element {
                       Explore Enhanced Showcase →
                     </a>
                   </div>
+                </div>
+
+                {/* Ultimate Content Showcase 2028 */}
+                <div className="mb-12">
+                  <UltimateContentShowcase2028 />
                 </div>
 
                 <div className="text-center">
@@ -644,6 +668,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2027" element={<NextGenInnovationHub2027 />} />
           <Route path="/pages/UltimateTechTrends2027" element={<UltimateTechTrends2027 />} />
+          <Route path="/pages/NextGenInnovationHub2028" element={<NextGenInnovationHub2028 />} />
+          <Route path="/pages/UltimateTechBreakthrough2028" element={<UltimateTechBreakthrough2028 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
