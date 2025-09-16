@@ -29,7 +29,11 @@ const BlogPage = () => {
       category: "Governance",
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
@@ -48,7 +52,11 @@ const BlogPage = () => {
       image: "/images/multimodal-agents-2025.jpg"
 >>>>>>> origin/feat/new-blog-content:app/blog/page.tsx
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
     },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
@@ -92,7 +100,11 @@ const BlogPage = () => {
       slug: "ai-2025-quantum-computing-breakthrough",
       category: "Quantum Computing",
       date: "2025-01-15",
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
       featured: true,
       image: "/images/quantum-computing-2025.jpg"
     }

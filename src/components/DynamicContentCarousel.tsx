@@ -1,9 +1,12 @@
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
+<<<<<<< HEAD
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-32c2
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg">
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>

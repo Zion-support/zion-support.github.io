@@ -22,7 +22,11 @@ import { getLatestUpdates } from '@/data/updates'
 =======
 import React from 'react'
 import { getLatestUpdates } from '../data/updates'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 import {
   LightBulbIcon,
   CpuChipIcon,
@@ -58,7 +62,11 @@ import {
 >>>>>>> origin/feat/new-updates-and-homepage-promo
 =======
   ChartBarIcon,
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
   UserGroupIcon
 =======
 import React from 'react'
@@ -82,7 +90,11 @@ import { getLatestUpdates } from '../data/updates'
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 
 const features = [
 <<<<<<< HEAD
@@ -338,7 +350,11 @@ export default function HomePage() {
     <div className="bg-black">
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
 <<<<<<< HEAD
@@ -389,7 +405,11 @@ export default function HomePage() {
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
                 href="/updates/autonomous-ops-sre-for-agents"
 =======
                 href="/blog/ai-2026-policy-as-code-production-blueprint"
@@ -580,7 +600,11 @@ export default function HomePage() {
 <<<<<<< HEAD
 >>>>>>> origin/feature/autonomous-ops-sre-content
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Launch: Autonomous Ops Playbook
@@ -602,7 +626,11 @@ export default function HomePage() {
                 Blueprint: Policy‑as‑Code
 =======
                 Guide: RAG Production Patterns
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -724,7 +752,11 @@ export default function HomePage() {
 >>>>>>> origin/feat/updates-and-home-whats-new
 =======
             {getLatestUpdates(3).map((item) => (
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
 =======
@@ -795,7 +827,11 @@ export default function HomePage() {
                 title: 'AI 2026: Autonomous Ops and SRE for Agents',
                 summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
                 href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
               },
               {
                 title: 'AI 2026: LLM Evals Maturity Model',
@@ -896,7 +932,11 @@ export default function HomePage() {
                 title: 'Enterprise AI Security Blueprint (2025)',
                 summary: 'Layered controls across model, data, runtime, and supply chain.',
                 href: '/blog/ai-2025-enterprise-ai-security-blueprint'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
               }
 =======
                 href: '/updates',
@@ -1514,4 +1554,8 @@ export default function HomePage() {
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2

@@ -60,7 +60,11 @@ const BlogIndex: NextPage = () => {
   ];
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -81,7 +85,11 @@ const posts = [
 <<<<<<< HEAD
 >>>>>>> origin/feature/blog-promos
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 
 export default function BlogIndexPage() {
   return (
@@ -143,7 +151,11 @@ export default function BlogIndexPage() {
               </div>
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
@@ -153,7 +165,11 @@ export default function BlogIndexPage() {
 <<<<<<< HEAD
 >>>>>>> origin/feature/blog-promos
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
             </div>
           ))}
         </div>
@@ -170,5 +186,9 @@ export default function BlogIndexPage() {
 =======
   )
 }
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 

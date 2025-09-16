@@ -117,7 +117,11 @@ const features: Feature[] = [
   },
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -190,7 +194,11 @@ const features: Feature[] = [
 <<<<<<< HEAD
 >>>>>>> origin/feature/add-news-and-promo
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 ];
 
 export function FeatureShowcase() {
@@ -412,7 +420,11 @@ function FeatureShowcase() {const [active_feature, setActiveFeature] = useState 
 export default FeatureShowcase;
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 	const getColorClasses = (color: string) => {
 		const colorMap = {
 			blue: "from-blue-500 to-blue-600",
@@ -557,4 +569,8 @@ export default FeatureShowcase;
 <<<<<<< HEAD
 >>>>>>> origin/feature/add-news-and-promo
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2

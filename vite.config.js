@@ -10,6 +10,9 @@ export default defineConfig({
   define: {
     global: 'globalThis',
   },
+  optimizeDeps: {
+    include: ['framer-motion']
+  },
   plugins: [
     react()
   ],

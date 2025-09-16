@@ -24,7 +24,11 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 =======
   {
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
     title: 'Guide: Agent Platform Operations (2026)',
 =======
     title: 'Launch: Autonomous Ops and SRE for Agents',
@@ -153,7 +157,11 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Deep Dive'
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
   },
   {
     title: 'Launch: AI Governance Toolkit (v2)',
@@ -198,7 +206,11 @@ export const siteUpdates: SiteUpdate[] = [
 =======
       'Policy-as-code templates, audit trails, and automated guardrails for enterprise AI programs.',
     href: '/updates/ai-governance-toolkit',
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -257,7 +269,11 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-agents-case-study',
     date: '2025-09-14',
     tag: 'Case Study'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -1283,7 +1299,11 @@ export const siteUpdates: SiteUpdate[] = [
 =======
     title: 'Guide: Enterprise AI Adoption Playbook',
     summary:
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
       'A practical playbook covering strategy, data readiness, security, and ROI measurement to scale AI across the enterprise.',
     href: '/updates/enterprise-ai-playbook',
     date: '2025-09-10',
@@ -1378,7 +1398,11 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
   }
   ,
   // New updates added by background automation on 2025-09-15 (even later batch)
@@ -1634,7 +1658,11 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -1831,4 +1859,8 @@ export const getLatestUpdates = (limit = 6) => {
 >>>>>>> origin/feat/updates-content-and-advertising
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2

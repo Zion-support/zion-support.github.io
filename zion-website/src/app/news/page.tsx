@@ -128,7 +128,11 @@ export default function NewsPage() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
 import Link from 'next/link'
 
 export const metadata = {
@@ -177,7 +181,11 @@ export default function NewsIndexPage() {
 =======
 >>>>>>> origin/feat/news-and-fixes
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-fc88
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-32c2
     </div>
   )
 }
