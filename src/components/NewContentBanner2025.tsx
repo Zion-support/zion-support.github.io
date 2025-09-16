@@ -2,84 +2,126 @@ import React from 'react';
 
 const NewContentBanner2025: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-8 mb-12 relative overflow-hidden">
-      {/* Animated background elements */}
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
+      {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
-        <div className="absolute top-8 right-8 w-3 h-3 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-white/40 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-8 right-1/3 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
-      </div>
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-6 animate-pulse border border-white/30">
-            🚀 NEW CONTENT AVAILABLE • JANUARY 2025
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 NEW CONTENT LAUNCH • JANUARY 2025
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-            Revolutionary New Content & Services
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology Content 2025
           </h2>
-          
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest breakthrough technologies, comprehensive services, and innovative solutions 
-            that are reshaping the future of business and technology.
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Discover our latest breakthrough content featuring AI Innovation, Quantum Computing, and Neural Interfaces that are reshaping the future of technology.
           </p>
-          
-          {/* Feature highlights */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold mb-2">Conscious AI Systems</h3>
-              <p className="text-sm opacity-90">Revolutionary AI that thinks and feels independently</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-3xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold mb-2">Quantum Computing</h3>
-              <p className="text-sm opacity-90">Breakthrough quantum consciousness technology</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-3xl mb-3">🌌</div>
-              <h3 className="text-lg font-bold mb-2">Interdimensional Tech</h3>
-              <p className="text-sm opacity-90">Computing across multiple dimensions</p>
-            </div>
-          </div>
-          
-          {/* Call to action buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/pages/RevolutionaryTechBreakthrough2025" 
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Explore Breakthrough Tech →
-            </a>
-            <a 
-              href="/pages/ComprehensiveServices2025" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg backdrop-blur-sm"
-            >
-              View All Services →
+        </div>
+
+        {/* Content Showcase Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* AI Innovation Hub */}
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group">
+            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Innovation Hub 2025</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Explore revolutionary AI technologies including autonomous agents, generative AI 2.0, and edge computing solutions.
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Autonomous AI Agents</li>
+              <li>• Generative AI 2.0</li>
+              <li>• Edge AI Computing</li>
+              <li>• Industry Applications</li>
+            </ul>
+            <a href="/pages/AIInnovationHub2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center group-hover:shadow-lg">
+              Explore AI Hub →
             </a>
           </div>
+
+          {/* Quantum Computing Solutions */}
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300 group">
+            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing Solutions</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Harness quantum supremacy with exponential speedup, quantum cryptography, and machine learning acceleration.
+            </p>
+            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum Supremacy</li>
+              <li>• Quantum Cryptography</li>
+              <li>• Quantum ML</li>
+              <li>• Real-world Applications</li>
+            </ul>
+            <a href="/pages/QuantumComputingSolutions2025" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center group-hover:shadow-lg">
+              Go Quantum →
+            </a>
+          </div>
+
+          {/* Neural Interface Revolution */}
+          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300 group">
+            <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface Revolution</h3>
+            <p className="text-green-100 mb-6 text-center">
+              Bridge mind and machine with non-invasive BCI, neural feedback, and cognitive enhancement technologies.
+            </p>
+            <ul className="text-green-200 space-y-2 mb-6 text-sm">
+              <li>• Non-Invasive BCI</li>
+              <li>• Neural Feedback</li>
+              <li>• Cognitive Enhancement</li>
+              <li>• Medical Applications</li>
+            </ul>
+            <a href="/pages/NeuralInterfaceRevolution2025" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center group-hover:shadow-lg">
+              Connect Neural →
+            </a>
+          </div>
+        </div>
+
+        {/* Performance Metrics */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">📊 Content Impact Metrics</h3>
+            <p className="text-xl opacity-90">Real results from our revolutionary technology content</p>
+          </div>
           
-          {/* Stats */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold">500+</div>
-              <div className="text-sm opacity-80">Projects Delivered</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-lg opacity-90">New Content Pages</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold">99.5%</div>
-              <div className="text-sm opacity-80">Success Rate</div>
+              <div className="text-4xl font-bold text-indigo-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-90">User Engagement</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold">24/7</div>
-              <div className="text-sm opacity-80">Support Available</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
+              <div className="text-lg opacity-90">Content Performance</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold">50+</div>
-              <div className="text-sm opacity-80">Countries Served</div>
+              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+              <div className="text-lg opacity-90">Content Availability</div>
             </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
+          <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
+            Join thousands of users already experiencing our revolutionary technology content. Start your journey into the future today.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="/pages/AIInnovationHub2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Exploring
+            </a>
+            <a href="/pages/QuantumComputingSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Go Quantum
+            </a>
+            <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Connect Neural
+            </a>
           </div>
         </div>
       </div>
