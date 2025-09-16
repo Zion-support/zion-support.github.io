@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -157,7 +157,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -187,10 +187,10 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               <Sparkles className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-400" />
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
@@ -209,19 +209,19 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               {category.name} ({category.count})
             </button>
           ))}
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Tools Grid */}
           <div className="lg:col-span-2">
-            <motion.div
+            <div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="grid md:grid-cols-2 gap-6"
             >
               {filteredTools.map((toolindex) => (
-                <motion.div
+                <div
                   key={tool.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -305,14 +305,14 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                       <span>Demo</span>
                     </button>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* Demo Panel */}
           <div className="lg:col-span-1">
-            <motion.div
+            <div
               initial={{ opacity: 0x: 20 }}
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
@@ -322,7 +322,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               
               <AnimatePresence mode="wait">
                 {selectedToolData ? (
-                  <motion.div
+                  <div
                     key={selectedToolData.id}
                     initial={{ opacity: 0scale: 0.95 }}
                     animate={{ opacity: 1scale: 1 }}
@@ -406,9 +406,9 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                         </button>
                       </div>
                     )}
-                  </motion.div>
+                  </div>
                 ) : (
-                  <motion.div
+                  <div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="text-center py-12"
@@ -420,15 +420,15 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                     <p className="text-gray-400">
                       Choose any AI tool from the grid to see it in action
                     </p>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </motion.div>
+              
+            </div>
           </div>
         </div>
 
         {/* Stats Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -448,7 +448,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

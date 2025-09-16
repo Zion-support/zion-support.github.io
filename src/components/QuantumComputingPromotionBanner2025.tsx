@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 AtomZapCpuArrowRightXStar
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -40,8 +40,8 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -51,7 +51,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
           <div className="flex items-center justify-between py-4">
             {/* Left side - Quantum Badge */}
             <div className="flex items-center gap-4">
-              <motion.div
+              <div
                 key={currentFeature}
                 initial={{ opacity: 0x: -20 }}
                 animate={{ opacity: 1x: 0 }}
@@ -59,10 +59,10 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 className={`px-4 py-2 rounded-full bg-gradient-to-r ${features[currentFeature].color} text-white font-bold text-sm animate-pulse`}
               >
                 QUANTUM REVOLUTION
-              </motion.div>
+              </div>
               
               {/* Rotating Icon */}
-              <motion.div
+              <div
                 key={`icon-${currentFeature}`}
                 initial={{ scale: 0rotate: -180 }}
                 animate={{ scale: 1rotate: 0 }}
@@ -70,12 +70,12 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 className={`p-2 rounded-full bg-gradient-to-r ${features[currentFeature].color}`}
               >
                 <features[currentFeature].icon className="w-6 h-6 text-white" />
-              </motion.div>
+              </div>
             </div>
 
             {/* Center - Feature Content */}
             <div className="flex-1 text-center px-8">
-              <motion.div
+              <div
                 key={`content-${currentFeature}`}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -88,13 +88,13 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 <p className="text-sm text-gray-300 max-w-md mx-auto">
                   {features[currentFeature].description}
                 </p>
-              </motion.div>
+              </div>
             </div>
 
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/quantum-computing-showcase-2025">
-                <motion.button
+                <button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`bg-gradient-to-r ${features[currentFeature].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
@@ -102,7 +102,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                   <Star className="w-4 h-4" />
                   Explore Quantum
                   <ArrowRight className="w-4 h-4" />
-                </motion.button>
+                </button>
               </a>
               
               <button
@@ -121,7 +121,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
         {/* Quantum Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(25)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full"
               style={{
@@ -141,8 +141,8 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
             />
           ))}
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

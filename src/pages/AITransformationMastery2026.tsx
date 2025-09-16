@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const AITransformationMastery2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -198,7 +198,7 @@ const AITransformationMastery2026: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -222,7 +222,7 @@ const AITransformationMastery2026: React.FC = () => {
                 Download Framework
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -255,7 +255,7 @@ const AITransformationMastery2026: React.FC = () => {
       {/* Content Sections */}
       <div className="container mx-auto px-4 py-20">
         {activeTab === 'overview' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -313,11 +313,11 @@ const AITransformationMastery2026: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'stages' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -326,7 +326,7 @@ const AITransformationMastery2026: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">4-Stage Transformation Framework</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {transformationStages.map((stage, index) => (
-                <motion.div
+                <div
                   key={stage.stage}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -367,14 +367,14 @@ const AITransformationMastery2026: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'solutions' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -398,11 +398,11 @@ const AITransformationMastery2026: React.FC = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'cases' && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -411,7 +411,7 @@ const AITransformationMastery2026: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Success Stories</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -441,17 +441,17 @@ const AITransformationMastery2026: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-blue-900 to-purple-900 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -470,7 +470,7 @@ const AITransformationMastery2026: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

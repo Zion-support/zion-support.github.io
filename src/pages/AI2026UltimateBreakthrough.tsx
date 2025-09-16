@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 
 const AI2026UltimateBreakthrough: React.FC = () => {
@@ -18,7 +18,7 @@ const AI2026UltimateBreakthrough: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -34,13 +34,13 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 Experience the most advanced AI breakthroughs: consciousness transfer, quantum AI fusion, 
                 and interdimensional computing that will reshape reality itself.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Consciousness Transfer Section */}
         <div className="container mx-auto px-4 py-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -90,10 +90,10 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Quantum AI Fusion Section */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -137,10 +137,10 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Interdimensional Computing Section */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -203,10 +203,10 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Call to Action */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -225,7 +225,7 @@ const AI2026UltimateBreakthrough: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

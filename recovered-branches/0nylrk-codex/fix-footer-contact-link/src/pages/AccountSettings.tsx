@@ -21,7 +21,6 @@
 
   const handleSave = () => {
     setIsSubmitting(true),
-=======
         setDidHandle(parsed.didHandle || '');
         setEnableBackup(!!parsed.enableBackup);
       }
@@ -140,7 +139,6 @@
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
                 </div>;
 
-=======
           setDidHandle(ensName);
         }
       } catch (error) {

@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
 
 const services = [
@@ -116,7 +116,7 @@ export default function UltimateServicesShowcase2025() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -153,12 +153,12 @@ export default function UltimateServicesShowcase2025() {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((serviceindex) => (
-            <motion.div
+            <div
               key={service.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -212,12 +212,12 @@ export default function UltimateServicesShowcase2025() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -247,10 +247,10 @@ export default function UltimateServicesShowcase2025() {
               <div className="text-sm text-gray-600">Countries Served</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -282,7 +282,7 @@ export default function UltimateServicesShowcase2025() {
               View Success Stories
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

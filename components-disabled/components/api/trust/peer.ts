@@ -9,7 +9,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
     userId,
     reviewerId,
     type,

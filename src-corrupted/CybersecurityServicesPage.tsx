@@ -12,26 +12,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { QuoteFormSection } from '@/components/QuoteFormSection';
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-=======
 import { 
   Shield, 
   Lock, 
   Eye, 
   service.category.includes('Cybersecurity') || 
   service.category.includes('Security') || 
-=======
   AlertTriangle, 
   Users, 
   Globe, 
@@ -248,7 +244,6 @@ export default function CybersecurityServicesPage() {
           </TabsContent>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
           {/* Services Tab */}
           <TabsContent value="services" className="space-y-12">
             <div className="text-center">
@@ -1050,7 +1045,6 @@ export default function CybersecurityServicesPage() {
                   Security Assessment
                 </Button>
               </Link>
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -1449,7 +1443,6 @@ export default function CybersecurityServicesPage() {
                       )}
                     </div>
                   </div>
-=======
   AlertTriangle, 
   BarChart3, 
   Star, 
@@ -1715,7 +1708,6 @@ const CybersecurityServicesPage = () => {
               <div className="text-4xl font-bold text-zion-cyan mb-2">100%</div>
               <div className="text-white font-semibold">Compliance Success</div>
               <div className="text-zion-slate-light text-sm">Regulatory compliance rate</div>
-=======
       {/* Security Services Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -2046,12 +2038,10 @@ const CybersecurityServicesPage = () => {
       </section>
 
       <TrustedBySection />
-=======
       <QuoteFormSection />
     </>
   );
 }
-=======
         </div>
       </div>
 
@@ -2389,5 +2379,4 @@ const CybersecurityServicesPage = () => {
 };
 
 export default CybersecurityServicesPage;
-=======
 }

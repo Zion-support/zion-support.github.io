@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const ComprehensiveBlog2026: React.FC = () => {
   const blogPosts = [
@@ -85,7 +85,7 @@ const ComprehensiveBlog2026: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -101,10 +101,10 @@ const ComprehensiveBlog2026: React.FC = () => {
             Stay updated with the latest insights, breakthroughs, and innovations in artificial intelligence, 
             quantum computing, neural interfaces, and cutting-edge technologies that are shaping our future.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -122,10 +122,10 @@ const ComprehensiveBlog2026: React.FC = () => {
               {category}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Featured Posts */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -134,7 +134,7 @@ const ComprehensiveBlog2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-center mb-12">Featured Articles</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {blogPosts.filter(post => post.featured).map((post, index) => (
-              <motion.div
+              <div
                 key={post.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -158,13 +158,13 @@ const ComprehensiveBlog2026: React.FC = () => {
                     Read More →
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* All Posts Grid */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -173,7 +173,7 @@ const ComprehensiveBlog2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-center mb-12">All Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <motion.div
+              <div
                 key={post.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -197,13 +197,13 @@ const ComprehensiveBlog2026: React.FC = () => {
                     Read →
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Newsletter Subscription */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -224,10 +224,10 @@ const ComprehensiveBlog2026: React.FC = () => {
               Subscribe
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -251,7 +251,7 @@ const ComprehensiveBlog2026: React.FC = () => {
               Revolutionary Blog
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

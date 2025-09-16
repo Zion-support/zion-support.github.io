@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 CpuZapAtomShieldTargetTrendingUpGlobeLock
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -57,7 +57,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
   ];
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
@@ -72,7 +72,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.2duration: 0.8 }}
@@ -88,10 +88,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the dawn of the quantum era with our revolutionary quantum computing breakthroughs that are reshaping the boundaries of computational possibility.
           </p>
-        </motion.div>
+        </div>
 
         {/* Active Feature Showcase */}
-        <motion.div
+        <div
           key={activeFeature}
           initial={{ opacity: 0scale: 0.9 }}
           animate={{ opacity: 1scale: 1 }}
@@ -111,12 +111,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quantumFeatures.map((featureindex) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
@@ -136,12 +136,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{feature.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{feature.metrics}</div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Quantum Capabilities */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.8duration: 0.8 }}
@@ -150,7 +150,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-8">Quantum Computing Capabilities</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {capabilities.map((capabilityindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
@@ -162,13 +162,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 </div>
                 <h3 className="text-white font-semibold mb-2">{capability.text}</h3>
                 <p className="text-gray-400 text-sm">{capability.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 1.2duration: 0.8 }}
@@ -192,9 +192,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join the quantum revolution - Limited access to quantum computing resources
           </p>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

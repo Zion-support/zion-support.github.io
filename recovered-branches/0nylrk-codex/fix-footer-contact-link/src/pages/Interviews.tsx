@@ -37,7 +37,6 @@
       <SEO
         title="Interviews | Zion AI Marketplace"
         description="Manage your scheduled interviews with clients and talent"
-=======
               <InterviewCard 
                 key={interview.id} 
                 interview={interview}
@@ -82,7 +81,6 @@
 
 
 }
-=======
   );
 }
 
@@ -94,6 +92,5 @@ export default function Interviews() {
 
 
 
-=======
   );
 }

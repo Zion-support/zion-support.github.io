@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Menu, X, ChevronDown, Search, 
   Brain, Cpu, Rocket, Shield, 
@@ -673,7 +673,6 @@ export default function EnhancedNavigation2025() {
                         >
                           {item.label}
                         </Link>
-=======
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}

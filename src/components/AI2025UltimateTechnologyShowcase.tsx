@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   Brain
   Cpu
@@ -140,7 +140,7 @@ const AI2025UltimateTechnologyShowcase = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
@@ -169,10 +169,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               Future-Ready Solutions
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Technology Tabs */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -197,10 +197,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Active Technology Display */}
-        <motion.div
+        <div
           key={activeTab}
           initial={{ opacity: 0x: 20 }}
           animate={{ opacity: 1x: 0 }}
@@ -251,10 +251,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Success Stories */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -274,10 +274,10 @@ const AI2025UltimateTechnologyShowcase = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -303,7 +303,7 @@ const AI2025UltimateTechnologyShowcase = () => {
               Explore All Technologies
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

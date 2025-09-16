@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const EnhancedContentSearch2025: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -196,9 +196,9 @@ const EnhancedContentSearch2025: React.FC = () => {
       </motion.form>
 
       {/* Search Results */}
-      <AnimatePresence>
+      
         {showResults && (
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -228,7 +228,7 @@ const EnhancedContentSearch2025: React.FC = () => {
             ) : (
               <div className="grid gap-4">
                 {filteredResults.map((item, index) => (
-                  <motion.div
+                  <div
                     key={item.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -264,16 +264,16 @@ const EnhancedContentSearch2025: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             )}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      
 
       {/* Quick Access */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -299,7 +299,7 @@ const EnhancedContentSearch2025: React.FC = () => {
             </a>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

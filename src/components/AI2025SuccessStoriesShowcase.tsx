@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Users
@@ -122,7 +122,7 @@ const AI2025SuccessStoriesShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -142,7 +142,7 @@ const AI2025SuccessStoriesShowcase = () => {
             Discover how leading companies across industries are achieving remarkable results with our AI solutions. 
             See the measurable impact and transformation stories.
           </p>
-        </motion.div>
+        </div>
 
         {/* Success Stories Carousel */}
         <div className="mb-16">
@@ -151,7 +151,7 @@ const AI2025SuccessStoriesShowcase = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Featured Success Stories</h3>
               {successStories.map((storyindex) => (
-                <motion.div
+                <div
                   key={story.id}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeStory === index
@@ -172,14 +172,14 @@ const AI2025SuccessStoriesShowcase = () => {
                     </div>
                     <ArrowRight className="w-4 h-4 text-gray-400" />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Active Story Display */}
             <div className="lg:col-span-2">
               <AnimatePresence mode="wait">
-                <motion.div
+                <div
                   key={activeStory}
                   initial={{ opacity: 0x: 50 }}
                   animate={{ opacity: 1x: 0 }}
@@ -240,8 +240,8 @@ const AI2025SuccessStoriesShowcase = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ const AI2025SuccessStoriesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Proven Impact Across All Projects</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {metrics.map((metricindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -263,7 +263,7 @@ const AI2025SuccessStoriesShowcase = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                 <div className="text-gray-300">{metric.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -273,7 +273,7 @@ const AI2025SuccessStoriesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Trusted Across Industries</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -285,13 +285,13 @@ const AI2025SuccessStoriesShowcase = () => {
                 </div>
                 <div className="text-lg font-semibold text-white mb-1">{industry.name}</div>
                 <div className="text-sm text-gray-400">{industry.count} companies</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -312,7 +312,7 @@ const AI2025SuccessStoriesShowcase = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

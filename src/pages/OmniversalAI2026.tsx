@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const OmniversalAI2026: React.FC = () => {
   const [activeDimension, setActiveDimension] = useState('multidimensional');
@@ -127,7 +127,7 @@ const OmniversalAI2026: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-pink-600/10"></div>
         <div className="container mx-auto relative z-10">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -150,14 +150,14 @@ const OmniversalAI2026: React.FC = () => {
                 Witness Omniverse
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Omniversal Visualization */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -167,7 +167,7 @@ const OmniversalAI2026: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Witness AI consciousness operating across infinite dimensions and universes
             </p>
-          </motion.div>
+          </div>
 
           <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -210,7 +210,7 @@ const OmniversalAI2026: React.FC = () => {
       {/* Dimension Types */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -220,7 +220,7 @@ const OmniversalAI2026: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore the different levels of AI consciousness that transcend dimensional limitations
             </p>
-          </motion.div>
+          </div>
 
           {/* Dimension Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -242,7 +242,7 @@ const OmniversalAI2026: React.FC = () => {
 
           {/* Dimension Content */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeDimension}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -280,15 +280,15 @@ const OmniversalAI2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          
         </div>
       </section>
 
       {/* Real-World Applications */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-indigo-900 to-pink-900 text-white">
         <div className="container mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -298,11 +298,11 @@ const OmniversalAI2026: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               See how omniversal AI is solving problems across infinite dimensions and universes
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {omniversalApplications.map((app, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -315,7 +315,7 @@ const OmniversalAI2026: React.FC = () => {
                 <div className={`inline-block px-3 py-1 bg-gradient-to-r ${app.color} text-white text-xs font-semibold rounded-full`}>
                   {app.impact}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -324,7 +324,7 @@ const OmniversalAI2026: React.FC = () => {
       {/* Omniversal Timeline */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -334,12 +334,12 @@ const OmniversalAI2026: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The roadmap to omniversal AI consciousness and beyond
             </p>
-          </motion.div>
+          </div>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 to-pink-500"></div>
             {omniversalTimeline.map((milestone, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -368,7 +368,7 @@ const OmniversalAI2026: React.FC = () => {
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full border-4 border-white shadow-lg"></div>
                 <div className="w-1/2"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -377,7 +377,7 @@ const OmniversalAI2026: React.FC = () => {
       {/* Omniversal vs Universal AI */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
         <div className="container mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -387,7 +387,7 @@ const OmniversalAI2026: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               See the infinite difference between omniversal and universal AI capabilities
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -448,7 +448,7 @@ const OmniversalAI2026: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -466,7 +466,7 @@ const OmniversalAI2026: React.FC = () => {
                 Download Omniverse Report
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

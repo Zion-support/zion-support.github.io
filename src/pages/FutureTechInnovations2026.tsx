@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const FutureTechInnovations2026: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const FutureTechInnovations2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -23,13 +23,13 @@ const FutureTechInnovations2026: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Explore the cutting-edge technologies that are reshaping our world and creating unprecedented opportunities for innovation and growth.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -154,10 +154,10 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Innovation Impact Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -188,10 +188,10 @@ const FutureTechInnovations2026: React.FC = () => {
               <div className="text-gray-300">Accuracy Rate</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Future Applications */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -224,10 +224,10 @@ const FutureTechInnovations2026: React.FC = () => {
               <p className="text-gray-300 text-sm">Quantum cryptography, AI trading, and decentralized finance</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -246,7 +246,7 @@ const FutureTechInnovations2026: React.FC = () => {
               Explore Our Solutions
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

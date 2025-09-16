@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 BrainZapShieldGlobeCpuDatabase
 
 interface Feature {
@@ -63,7 +63,7 @@ export default function AdvancedFeaturesShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((featureindex) => (
-            <motion.div
+            <div
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function AdvancedFeaturesShowcase() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

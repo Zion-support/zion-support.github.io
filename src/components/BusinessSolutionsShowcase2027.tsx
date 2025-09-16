@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Building2
   TrendingUp
@@ -168,7 +168,7 @@ const BusinessSolutionsShowcase2027 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -181,10 +181,10 @@ const BusinessSolutionsShowcase2027 = () => {
             Comprehensive technology solutions designed to accelerate your business growth
             enhance efficiencyand drive innovation across all industries and company sizes.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -204,11 +204,11 @@ const BusinessSolutionsShowcase2027 = () => {
               {category.title}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Solutions Display */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeCategory}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ const BusinessSolutionsShowcase2027 = () => {
                 {/* Solutions Grid */}
                 <div className="grid md:grid-cols-3 gap-8">
                   {categories[activeCategory].solutions.map((solutionindex) => (
-                    <motion.div
+                    <div
                       key={index}
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -270,16 +270,16 @@ const BusinessSolutionsShowcase2027 = () => {
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
             )}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Stats Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -291,7 +291,7 @@ const BusinessSolutionsShowcase2027 = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((statindex) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -301,14 +301,14 @@ const BusinessSolutionsShowcase2027 = () => {
                   <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Testimonials */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -319,7 +319,7 @@ const BusinessSolutionsShowcase2027 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -342,13 +342,13 @@ const BusinessSolutionsShowcase2027 = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -373,7 +373,7 @@ const BusinessSolutionsShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

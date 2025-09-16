@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const NewContentShowcase2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,7 +55,7 @@ const NewContentShowcase2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -71,12 +71,12 @@ const NewContentShowcase2025: React.FC = () => {
             Discover our latest revolutionary content featuring cutting-edge technology showcases, 
             innovation hubs, and breakthrough demonstrations
           </p>
-        </motion.div>
+        </div>
 
         {/* Interactive Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
-            <motion.div
+            <div
               key={currentIndex}
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -95,7 +95,7 @@ const NewContentShowcase2025: React.FC = () => {
                   </p>
                   <div className="space-y-4 mb-8">
                     {newContent[currentIndex].features.map((feature, index) => (
-                      <motion.div
+                      <div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -104,7 +104,7 @@ const NewContentShowcase2025: React.FC = () => {
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
                         <span className="text-gray-300">{feature}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                   <a
@@ -138,7 +138,7 @@ const NewContentShowcase2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Navigation Controls */}
@@ -188,7 +188,7 @@ const NewContentShowcase2025: React.FC = () => {
 
         {/* Content Grid */}
         <div className="mt-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -200,11 +200,11 @@ const NewContentShowcase2025: React.FC = () => {
             <p className="text-lg text-gray-300">
               Explore all our revolutionary new content
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {newContent.map((content, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ const NewContentShowcase2025: React.FC = () => {
                 >
                   Explore Content
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

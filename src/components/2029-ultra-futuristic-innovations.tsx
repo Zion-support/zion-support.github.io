@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -41,7 +41,7 @@ export default function UltraFuturistic2029InnovationsPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -51,7 +51,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                 <Rocket className="w-5 h-5 text-purple-400" />
                 <span className="text-purple-400 font-medium">2029 Technology Preview</span>
               </div>
-            </motion.div>
+            </div>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -74,7 +74,7 @@ export default function UltraFuturistic2029InnovationsPage() {
               of what's possible. From AI consciousness simulation to Mars colonization automation.
             </motion.p>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -92,14 +92,14 @@ export default function UltraFuturistic2029InnovationsPage() {
               >
                 Get Started
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Innovation Categories Overview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -111,7 +111,7 @@ export default function UltraFuturistic2029InnovationsPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our 2029 innovations span across multiple cutting-edge technology domains
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -158,7 +158,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Time'))
                 }
               ].map((category, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -183,7 +183,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                       {category.services.length} innovation{category.services.length !== 1 ? 's' : ''} available
                     </span>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function UltraFuturistic2029InnovationsPage() {
         {/* Innovation Stats */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -214,7 +214,7 @@ export default function UltraFuturistic2029InnovationsPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our 2029 innovations are already transforming industries and creating new possibilities
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
@@ -223,7 +223,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                 { label: 'Total Customers', value: all2029Services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
                 { label: 'Average Rating', value: (all2029Services.reduce((sum, s) => sum + s.rating, 0) / all2029Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
               ].map((stat, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                   </div>
                   <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function UltraFuturistic2029InnovationsPage() {
         {/* Contact CTA */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -271,7 +271,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                   Call Now
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -152,7 +152,7 @@ const NextGenTechShowcase2026: React.FC = () => {
           </div>
 
           <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -169,8 +169,8 @@ const NextGenTechShowcase2026: React.FC = () => {
                   {techCategories[activeTab as keyof typeof techCategories].description}
                 </p>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          
         </div>
 
         {/* Technology Features */}
@@ -223,7 +223,7 @@ const NextGenTechShowcase2026: React.FC = () => {
                 color: "from-rose-500 to-pink-500"
               }
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ const NextGenTechShowcase2026: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300 text-center">{feature.title}</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">{feature.description}</p>
                 <div className={`w-full h-2 bg-gradient-to-r ${feature.color} rounded-full`}></div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

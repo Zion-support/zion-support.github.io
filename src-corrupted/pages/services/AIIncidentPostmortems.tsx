@@ -19,7 +19,6 @@
   
         'Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations'
       ],;
-=======
       features[;'
         'Up to 10 incidents per month','
         'Basic AI analysis','

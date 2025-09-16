@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 /**
  * Enhanced UI Components Library
@@ -48,7 +48,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
   };
   
   return (
-    <motion.button
+    <button
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
       onClick={onClick}
       disabled={disabled || loading}
@@ -60,7 +60,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
     >
       <AnimatePresence mode="wait">
         {loading ? (
-          <motion.div
+          <div
             key="loading"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -69,7 +69,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
           >
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2" />
             Loading...
-          </motion.div>
+          </div>
         ) : (
           <motion.span
             key="content"
@@ -80,8 +80,8 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
             {children}
           </motion.span>
         )}
-      </AnimatePresence>
-    </motion.button>
+      
+    </button>
   );
 };
 
@@ -97,7 +97,7 @@ export const EnhancedCard: React.FC<CardProps> = ({
   className = ', '
 }) => {
   return (
-    <motion.div
+    <div
       className={`bg-white rounded-xl shadow-lg border border-gray-200 p-6 ${className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export const EnhancedCard: React.FC<CardProps> = ({
       whileHover={hover ? { y: -5shadow: "0 20px 25px -5px rgba(00.1)" } : {}}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
@@ -131,7 +131,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
   
   return (
-    <motion.div
+    <div
       className={`animate-spin rounded-full border-2 border-gray-300 ${colors[color as keyof typeof colors]} ${sizes[size]}`}
       style={{ borderTopColor: 'transparent' }}
       animate={{ rotate: 360 }}
@@ -166,9 +166,9 @@ export const EnhancedModal: React.FC<ModalProps> = ({
   }[isOpen]);
   
   return (
-    <AnimatePresence>
+    
       {isOpen && (
-        <motion.div
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -176,7 +176,7 @@ export const EnhancedModal: React.FC<ModalProps> = ({
           onClick={onClose}
         >
           <div className="fixed inset-0 bg-black bg-opacity-50" />
-          <motion.div
+          <div
             className="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -197,10 +197,10 @@ export const EnhancedModal: React.FC<ModalProps> = ({
             <div className="p-6">
               {children}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+    
   );
 };
 
@@ -215,7 +215,7 @@ export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
 }) => {
   return (
     <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
-      <motion.div
+      <div
         className="bg-blue-600 h-2 rounded-full"
         initial={{ width: 0 }}
         animate={{ width: `${Math.min(progress100)}%` }}
@@ -252,9 +252,9 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
       onMouseLeave={() => setIsVisible(false)}
     >
       {children}
-      <AnimatePresence>
+      
         {isVisible && (
-          <motion.div
+          <div
             className={`absolute z-10 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positions[position]}`}
             initial={{ opacity: 0scale: 0.8 }}
             animate={{ opacity: 1scale: 1 }}
@@ -268,9 +268,9 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
               position === 'left' ? 'left-full top-1/2 transform -translate-y-1/2 -translate-x-1/2' :
               'right-full top-1/2 transform -translate-y-1/2 translate-x-1/2'
             }`} />
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </div>
   );
 };

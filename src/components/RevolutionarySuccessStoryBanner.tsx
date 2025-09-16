@@ -1,10 +1,10 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 
 export default function RevolutionarySuccessStoryBanner() {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0scale: 0.95 }}
       animate={{ opacity: 1scale: 1 }}
       transition={{ duration: 0.8ease: "easeOut" }}
@@ -15,7 +15,7 @@ export default function RevolutionarySuccessStoryBanner() {
       <div className="absolute inset-0 bg-black/10"></div>
       
       {/* Floating Success Icons */}
-      <motion.div
+      <div
         animate={{ 
           y: [0-10],
           rotate: [050]
@@ -28,9 +28,9 @@ export default function RevolutionarySuccessStoryBanner() {
         className="absolute top-6 right-6 text-4xl"
       >
         🎯
-      </motion.div>
+      </div>
       
-      <motion.div
+      <div
         animate={{ 
           y: [010],
           rotate: [0-50]
@@ -44,11 +44,11 @@ export default function RevolutionarySuccessStoryBanner() {
         className="absolute bottom-6 left-6 text-4xl"
       >
         💰
-      </motion.div>
+      </div>
       
       <div className="relative z-10">
         <div className="text-center mb-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3duration: 0.6 }}
@@ -59,11 +59,11 @@ export default function RevolutionarySuccessStoryBanner() {
             <p className="text-2xl text-emerald-100 mb-6 max-w-4xl mx-auto">
               How a Fortune 500 Company Achieved $100M ROI in Just 18 Months
             </p>
-          </motion.div>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5duration: 0.6 }}
@@ -73,9 +73,9 @@ export default function RevolutionarySuccessStoryBanner() {
             <div className="text-4xl font-bold text-emerald-400 mb-2">$100M</div>
             <div className="text-white font-semibold mb-2">Total ROI</div>
             <div className="text-emerald-100 text-sm">18-month transformation period</div>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7duration: 0.6 }}
@@ -85,9 +85,9 @@ export default function RevolutionarySuccessStoryBanner() {
             <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
             <div className="text-white font-semibold mb-2">Efficiency Gain</div>
             <div className="text-emerald-100 text-sm">Production throughput improvement</div>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9duration: 0.6 }}
@@ -97,11 +97,11 @@ export default function RevolutionarySuccessStoryBanner() {
             <div className="text-4xl font-bold text-teal-400 mb-2">95%</div>
             <div className="text-white font-semibold mb-2">Quality Improvement</div>
             <div className="text-emerald-100 text-sm">Defect reduction achieved</div>
-          </motion.div>
+          </div>
         </div>
         
         <div className="text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0scale: 0.9 }}
             animate={{ opacity: 1scale: 1 }}
             transition={{ delay: 1.1duration: 0.6 }}
@@ -111,9 +111,9 @@ export default function RevolutionarySuccessStoryBanner() {
               Discover the complete transformation journeyimplementation strategiesand lessons learned 
               from this groundbreaking enterprise AI success story.
             </p>
-          </motion.div>
+          </div>
           
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3duration: 0.6 }}
@@ -131,18 +131,18 @@ export default function RevolutionarySuccessStoryBanner() {
             >
               Start Your Transformation
             </a>
-          </motion.div>
+          </div>
         </div>
         
         {/* Success Metrics Bar */}
-        <motion.div
+        <div
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{ delay: 1.5duration: 2.5 }}
           className="mt-8 bg-white/20 rounded-full h-3 overflow-hidden"
         >
           <div className="h-full bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 rounded-full"></div>
-        </motion.div>
+        </div>
         
         <div className="mt-4 text-center">
           <p className="text-emerald-100 text-sm">
@@ -150,6 +150,6 @@ export default function RevolutionarySuccessStoryBanner() {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

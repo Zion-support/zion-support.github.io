@@ -3,7 +3,6 @@ import { Skill } from '@/types/resume';
 
 export interface SkillsFormProps {
   resumeId: string;
-=======
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void;

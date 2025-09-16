@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateTechRevolutionBanner: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -35,7 +35,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
 
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,9 +44,9 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <div className="text-3xl mb-2">🧠</div>
               <h3 className="font-bold text-lg mb-2">Quantum Consciousness</h3>
               <p className="text-sm opacity-90">Revolutionary quantum processors with consciousness integration</p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -55,9 +55,9 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <div className="text-3xl mb-2">🌌</div>
               <h3 className="font-bold text-lg mb-2">Interdimensional AI</h3>
               <p className="text-sm opacity-90">AI systems operating across multiple dimensions</p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -66,7 +66,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <div className="text-3xl mb-2">✨</div>
               <h3 className="font-bold text-lg mb-2">Holographic Reality</h3>
               <p className="text-sm opacity-90">Indistinguishable virtual reality experiences</p>
-            </motion.div>
+            </div>
           </div>
 
           {/* Action Buttons */}
@@ -91,7 +91,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -113,8 +113,8 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <div className="text-3xl font-bold text-yellow-300">24/7</div>
               <div className="text-sm opacity-90">Support Available</div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );

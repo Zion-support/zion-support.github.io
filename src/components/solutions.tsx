@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
@@ -209,7 +209,7 @@ const SolutionsPage: React.FC = () => {
             </motion.p>
             
             {/* Stats Grid */}
-            <motion.div 
+            <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -224,14 +224,14 @@ const SolutionsPage: React.FC = () => {
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div 
+            <div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -244,11 +244,11 @@ const SolutionsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to address the most complex business challenges
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
-                <motion.div
+                <div
                   key={index}
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   initial={{ opacity: 0, y: 30 }}
@@ -284,7 +284,7 @@ const SolutionsPage: React.FC = () => {
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
-                </motion.div>
+                </div>
               ))}
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -308,14 +308,14 @@ const SolutionsPage: React.FC = () => {
                 Request Demo
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -328,11 +328,11 @@ const SolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-16">
             {industrySolutions.map((category, categoryIndex) => (
-              <motion.div
+              <div
                 key={category.category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -344,7 +344,7 @@ const SolutionsPage: React.FC = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.solutions.map((solution, solutionIndex) => (
-                    <motion.div
+                    <div
                       key={solution.name}
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -371,10 +371,10 @@ const SolutionsPage: React.FC = () => {
                       >
                         Learn More <ArrowRight className="ml-2 w-4 h-4" />
                       </a>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -383,7 +383,7 @@ const SolutionsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -410,7 +410,7 @@ const SolutionsPage: React.FC = () => {
                 View All Services
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

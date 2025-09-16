@@ -23,7 +23,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
 ;
 ;
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
-=======
 "},;
     "visible": "{;      "opacity": 1",;
       "y": "0",;
@@ -311,7 +310,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                   </div>";
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
                   <p className="text-sm text-purple-400 font-medium mb-2">;
-=======
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
                   <p className="text-sm text-purple-400 font-medium mb-2">
@@ -449,7 +447,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                     </a>;
                   </div>;
                 </div>;
-=======
               </motion.div>) ) }
           </motion.div>
         </div>
@@ -486,9 +483,7 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-=======
       </section>;
-=======
     </div>;) };
 export default UltimateZionServicesShowcase;'"`
 </motion>

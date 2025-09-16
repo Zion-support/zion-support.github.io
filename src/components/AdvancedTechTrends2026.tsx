@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Brain
   Zap
@@ -66,7 +66,7 @@ const AdvancedTechTrends2026 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -82,11 +82,11 @@ const AdvancedTechTrends2026 = () => {
             Discover the revolutionary technologies that will transform your business 
             and give you a competitive edge in the next decade.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trendindex) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -113,11 +113,11 @@ const AdvancedTechTrends2026 = () => {
                   <TrendingUp className="w-5 h-5 text-green-400" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -139,7 +139,7 @@ const AdvancedTechTrends2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

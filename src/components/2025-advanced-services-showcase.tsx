@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Atom, Shield, Building, Globe,
@@ -126,7 +126,7 @@ export default function AdvancedServicesShowcase() {
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -234,11 +234,11 @@ export default function AdvancedServicesShowcase() {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 
   const ServiceList = ({ service }: { service: any }) => (
-    <motion.div
+    <div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
@@ -344,7 +344,7 @@ export default function AdvancedServicesShowcase() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
@@ -377,7 +377,7 @@ export default function AdvancedServicesShowcase() {
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
-            <motion.div 
+            <div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -395,7 +395,7 @@ export default function AdvancedServicesShowcase() {
                 <CheckCircle className="w-5 h-5 text-green-300" />
                 <span>Market Validated</span>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -545,7 +545,7 @@ export default function AdvancedServicesShowcase() {
               </p>
             </div>
           ) : (
-            <AnimatePresence>
+            
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {filteredServices.map((service) => (
@@ -559,7 +559,7 @@ export default function AdvancedServicesShowcase() {
                   ))}
                 </div>
               )}
-            </AnimatePresence>
+            
           )}
         </div>
 

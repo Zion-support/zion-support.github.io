@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Brain
   ArrowRight
@@ -60,14 +60,14 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: -50 }}
               animate={isVisible ? { opacity: 1x: 0 } : {}}
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
               {/* Badge */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.2 }}
@@ -75,7 +75,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               >
                 <Brain className="w-4 h-4" />
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026
-              </motion.div>
+              </div>
 
               {/* Main Heading */}
               <motion.h2
@@ -104,7 +104,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               </motion.p>
 
               {/* Solutions Grid */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.5 }}
@@ -118,10 +118,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-white font-semibold">{solution.title}</span>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* Benefits */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.6 }}
@@ -133,10 +133,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-gray-300">{benefit.text}</span>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* CTA Buttons */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.7 }}
@@ -153,11 +153,11 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   View Case Studies
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Right Content - Stats & Visual */}
-            <motion.div
+            <div
               initial={{ opacity: 0x: 50 }}
               animate={isVisible ? { opacity: 1x: 0 } : {}}
               transition={{ duration: 0.8delay: 0.4 }}
@@ -166,7 +166,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -175,12 +175,12 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               {/* Visual Element */}
-              <motion.div
+              <div
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={isVisible ? { opacity: 1scale: 1 } : {}}
                 transition={{ duration: 0.8delay: 0.7 }}
@@ -212,8 +212,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 <div className="absolute top-1/2 -right-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
                   <Rocket className="w-2 h-2 text-white" />
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

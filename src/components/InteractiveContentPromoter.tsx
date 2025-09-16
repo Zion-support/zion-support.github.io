@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const InteractiveContentPromoter: React.FC = () => {
   const [activePromotion, setActivePromotion] = useState(0);
@@ -64,8 +64,8 @@ const InteractiveContentPromoter: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: -50, scale: 0.9 }}
@@ -130,8 +130,8 @@ const InteractiveContentPromoter: React.FC = () => {
             </div>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

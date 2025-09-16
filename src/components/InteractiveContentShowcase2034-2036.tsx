@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const InteractiveContentShowcase2034_2036: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -57,7 +57,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -69,12 +69,12 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
         <p className="text-xl text-gray-300 max-w-4xl mx-auto">
           Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself
         </p>
-      </motion.div>
+      </div>
 
       {/* Tab Navigation */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         {contentItems.map((item, index) => (
-          <motion.button
+          <button
             key={index}
             onClick={() => setActiveTab(index)}
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -87,14 +87,14 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
           >
             <span className="mr-2">{item.icon}</span>
             {item.title.split(' ')[0]} {item.title.split(' ')[1]}
-          </motion.button>
+          </button>
         ))}
       </div>
 
       {/* Content Display */}
       <div className="relative min-h-[500px]">
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTab}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -122,7 +122,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {contentItems[activeTab].features.map((feature, idx) => (
-                  <motion.div
+                  <div
                     key={idx}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                   >
                     <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>
                     <span>{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -187,12 +187,12 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
       </div>
 
       {/* Additional Features */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -213,7 +213,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
           <h4 className="text-xl font-bold text-white mb-2">Reality Manipulation</h4>
           <p className="text-gray-300 text-sm">Direct control over the fundamental forces of reality</p>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

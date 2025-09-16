@@ -86,7 +86,6 @@ import {
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
 
-=======
                         alt={review.reviewer_profile.display_name || ""}
                       />
                     ) : (
@@ -364,7 +363,6 @@ import {
         </Dialog>)}
     </>);
 
-=======
           ))}
         </TableBody>
       </Table>

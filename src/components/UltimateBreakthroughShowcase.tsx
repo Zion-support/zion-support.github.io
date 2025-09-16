@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateBreakthroughShowcase: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
 
       <div className="relative z-10">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -30,12 +30,12 @@ const UltimateBreakthroughShowcase: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Experience the most revolutionary technological breakthroughs that are reshaping reality itself
           </p>
-        </motion.div>
+        </div>
 
         {/* Breakthrough Technologies Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Consciousness Transfer */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -62,10 +62,10 @@ const UltimateBreakthroughShowcase: React.FC = () => {
                 Explore Technology →
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Quantum Teleportation */}
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -92,13 +92,13 @@ const UltimateBreakthroughShowcase: React.FC = () => {
                 Teleport Now →
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Advanced Features Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {/* Holographic Reality */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -112,10 +112,10 @@ const UltimateBreakthroughShowcase: React.FC = () => {
             <a href="/pages/RevolutionaryTech2026" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Holographic World →
             </a>
-          </motion.div>
+          </div>
 
           {/* Anti-Gravity Systems */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -129,10 +129,10 @@ const UltimateBreakthroughShowcase: React.FC = () => {
             <a href="/pages/UltimateInnovation2026" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
               Experience Anti-Gravity →
             </a>
-          </motion.div>
+          </div>
 
           {/* Mind-Machine Fusion */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -146,11 +146,11 @@ const UltimateBreakthroughShowcase: React.FC = () => {
             <a href="/pages/RevolutionaryTech2026" className="block w-full bg-white text-violet-600 py-2 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center text-sm">
               Fuse Mind & Machine →
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
@@ -201,7 +201,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
               <div className="text-xs opacity-80">Innovation Lab</div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

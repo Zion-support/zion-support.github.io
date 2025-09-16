@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
   Brain, Atom, Shield, Rocket, Target, Microscope,
@@ -174,7 +174,7 @@ export default function InnovativeServicesShowcase2025() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -194,10 +194,10 @@ export default function InnovativeServicesShowcase2025() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
             </p>
-          </motion.div>
+          </div>
 
           {/* Stats */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -227,7 +227,7 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <div className="text-gray-400">Uptime</div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -286,7 +286,7 @@ export default function InnovativeServicesShowcase2025() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -359,19 +359,19 @@ export default function InnovativeServicesShowcase2025() {
                     <Mail className="w-5 h-5" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {sortedServices.length === 0 && (
-            <motion.div
+            <div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-20"
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -379,7 +379,7 @@ export default function InnovativeServicesShowcase2025() {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -392,10 +392,10 @@ export default function InnovativeServicesShowcase2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -407,9 +407,9 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -421,9 +421,9 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -435,7 +435,7 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

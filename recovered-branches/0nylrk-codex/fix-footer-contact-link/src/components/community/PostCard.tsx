@@ -27,7 +27,6 @@
 
 
 
-=======
           </div>
           
           <div className="flex flex-wrap gap-2 mt-2">
@@ -71,7 +70,6 @@
 
 export default PostCard;
 
-=======
       </CardFooter>
     </Card>
   );

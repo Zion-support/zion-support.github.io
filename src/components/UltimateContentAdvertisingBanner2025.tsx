@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Star
   ArrowRight
@@ -90,7 +90,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={currentSlide}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,14 +100,14 @@ const UltimateContentAdvertisingBanner2025 = () => {
           >
             {/* Main Content */}
             <div className="mb-8">
-              <motion.div
+              <div
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2type: "spring"stiffness: 200 }}
                 className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
               >
                 {currentContent.icon}
-              </motion.div>
+              </div>
               
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
             </div>
 
             {/* Stats and CTA */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -163,10 +163,10 @@ const UltimateContentAdvertisingBanner2025 = () => {
                   Watch Demo
                 </button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Additional CTAs */}
-            <motion.div
+            <div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
@@ -195,9 +195,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
                 <Users className="w-4 h-4" />
                 Join Webinar
               </a>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
+            </div>
+          </div>
+        
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">

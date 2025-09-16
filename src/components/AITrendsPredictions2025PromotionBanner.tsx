@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   TrendingUp
   Calendar
@@ -53,8 +53,8 @@ const AITrendsPredictions2025PromotionBanner = () => {
   if (isDismissed || !isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
+    
+      <div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
@@ -86,7 +86,7 @@ const AITrendsPredictions2025PromotionBanner = () => {
                       >
                         {predictions[currentPrediction]}
                       </motion.p>
-                    </AnimatePresence>
+                    
                   </div>
                 </div>
               </div>
@@ -157,7 +157,7 @@ const AITrendsPredictions2025PromotionBanner = () => {
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             animate={{
               x: [0100],
               opacity: [0.30.60.3],
@@ -169,7 +169,7 @@ const AITrendsPredictions2025PromotionBanner = () => {
             }}
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-xl"
           />
-          <motion.div
+          <div
             animate={{
               x: [0-100],
               opacity: [0.20.50.2],
@@ -182,7 +182,7 @@ const AITrendsPredictions2025PromotionBanner = () => {
             }}
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
           />
-          <motion.div
+          <div
             animate={{
               y: [0-20],
               opacity: [0.10.30.1],
@@ -196,8 +196,8 @@ const AITrendsPredictions2025PromotionBanner = () => {
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-2xl"
           />
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    
   );
 };
 

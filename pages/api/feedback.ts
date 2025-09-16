@@ -7,7 +7,6 @@ import {
 } from "../../utils/feedback/store";
 
 
-=======
 
 
 import {
@@ -34,7 +33,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -120,10 +118,8 @@ if ( {) {
 }
 
 
-=======
 
 
-=======
 export default async /**
  * handler - Function description
  */
@@ -146,7 +142,6 @@ function handler() {
   return ok (res, { id: doc.id });
 }
 
-=======
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,

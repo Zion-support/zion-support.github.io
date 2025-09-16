@@ -30,7 +30,6 @@ const BLOG_POSTS: BlogPost[] = [
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
 
-=======
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 
@@ -104,7 +103,6 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   }
-=======
 
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
@@ -244,7 +242,6 @@ const CATEGORIES = [
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
-=======
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (
@@ -323,7 +320,6 @@ const CATEGORIES = [
 ;
 
 
-=======
           )}
         </div>
       </div>

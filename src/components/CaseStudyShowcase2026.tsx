@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   ArrowRight
   Star
@@ -203,7 +203,7 @@ const CaseStudyShowcase2026 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -224,10 +224,10 @@ const CaseStudyShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Industry Filter */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.1 }}
@@ -250,11 +250,11 @@ const CaseStudyShowcase2026 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Case Studies Grid */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeIndustry}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -263,7 +263,7 @@ const CaseStudyShowcase2026 = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredCaseStudies.map((caseStudyindex) => (
-              <motion.div
+              <div
                 key={caseStudy.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -378,7 +378,7 @@ const CaseStudyShowcase2026 = () => {
                 </div>
 
                 {/* Hover Overlay */}
-                <motion.div
+                <div
                   initial={{ opacity: 0 }}
                   animate={{ 
                     opacity: hoveredCase === caseStudy.id ? 1 : 0 
@@ -392,14 +392,14 @@ const CaseStudyShowcase2026 = () => {
                       View Details
                     </button>
                   </div>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
 
         {/* Call to Action */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
@@ -420,7 +420,7 @@ const CaseStudyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

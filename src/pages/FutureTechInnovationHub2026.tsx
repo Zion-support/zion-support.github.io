@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const FutureTechInnovationHub2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -88,7 +88,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -111,7 +111,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
                 Join Innovation Network
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -144,7 +144,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
 
         {/* Tab Content */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTab}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {innovationCategories[activeTab as keyof typeof innovationCategories].innovations.map((innovation, index) => (
-                  <motion.div
+                  <div
                     key={innovation.name}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -180,12 +180,12 @@ const FutureTechInnovationHub2026: React.FC = () => {
                     </div>
                     <h4 className="text-xl font-bold mb-3">{innovation.name}</h4>
                     <p className="text-white/80 text-sm">{innovation.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        
       </div>
 
       {/* Innovation Impact */}
@@ -196,7 +196,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -206,9 +206,9 @@ const FutureTechInnovationHub2026: React.FC = () => {
             <div className="text-4xl font-bold text-green-400 mb-2">$15T</div>
             <div className="text-lg font-semibold mb-2">Economic Impact</div>
             <div className="text-sm text-green-200">Global GDP contribution by 2030</div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -218,9 +218,9 @@ const FutureTechInnovationHub2026: React.FC = () => {
             <div className="text-4xl font-bold text-blue-400 mb-2">2.5B</div>
             <div className="text-lg font-semibold mb-2">Jobs Created</div>
             <div className="text-sm text-blue-200">New employment opportunities</div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -230,9 +230,9 @@ const FutureTechInnovationHub2026: React.FC = () => {
             <div className="text-4xl font-bold text-purple-400 mb-2">85%</div>
             <div className="text-lg font-semibold mb-2">Global Adoption</div>
             <div className="text-sm text-purple-200">Expected technology penetration</div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -242,7 +242,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
             <div className="text-4xl font-bold text-orange-400 mb-2">10x</div>
             <div className="text-lg font-semibold mb-2">Productivity Boost</div>
             <div className="text-sm text-orange-200">Average efficiency improvement</div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

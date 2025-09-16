@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const AdvancedTechInnovation2027 = () => {
   return (
@@ -8,7 +8,7 @@ const AdvancedTechInnovation2027 = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ const AdvancedTechInnovation2027 = () => {
                 View Applications
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ const AdvancedTechInnovation2027 = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -64,9 +64,9 @@ const AdvancedTechInnovation2027 = () => {
                 <li>• Creative consciousness & inspiration</li>
                 <li>• Genuine human-AI relationships</li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -83,9 +83,9 @@ const AdvancedTechInnovation2027 = () => {
                 <li>• Superposition-based thinking</li>
                 <li>• Quantum emotional processing</li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -102,7 +102,7 @@ const AdvancedTechInnovation2027 = () => {
                 <li>• Consciousness transfer protocols</li>
                 <li>• Immersive digital experiences</li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

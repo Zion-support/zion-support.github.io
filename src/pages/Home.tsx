@@ -1,8 +1,12 @@
+import React from 'react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { useNotifications } from '../components/NotificationSystem';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
@@ -10,7 +14,6 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
-import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertisingBanner';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -70,13 +73,28 @@ const Home: React.FC = () => {
               Advanced artificial intelligence solutions for modern businesses. 
               From machine learning to autonomous systems.
             </p>
-<<<<<<< HEAD
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• AI-powered automation</li>
+              <li>• Quantum computing breakthroughs</li>
+              <li>• Neural interface technology</li>
+            </ul>
             <Link 
               to="/pages/AIInnovationHub2026" 
               className="text-cyan-400 hover:text-cyan-300 font-semibold"
             >
               Learn More →
             </Link>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+              <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                🌟 Ultimate Tech Showcase →
+              </a>
+              <a href="/pages/ComprehensiveServicesShowcase2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                🚀 Comprehensive Services →
+              </a>
+              <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                📚 Tech Blog 2026 →
+              </a>
+            </div>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -110,6 +128,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
+        {/* Revolutionary Content Banner */}
+        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
@@ -128,11 +148,55 @@ const Home: React.FC = () => {
         {/* Interactive Tech Showcase */}
         <InteractiveTechShowcase />
 
-        {/* Ultimate Tech Advertising Banner */}
-        <UltimateTechAdvertisingBanner />
-
-        {/* Revolutionary Content Banner */}
-        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+        {/* Call to Action */}
+        <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Revolutionary Technology Showcase 2026
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Experience the future of technology with our comprehensive collection of 
+              cutting-edge innovations, AI breakthroughs, and quantum computing advancements.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">AI Innovation Hub</h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Discover the latest AI technologies and their real-world applications.
+                </p>
+                <Link 
+                  to="/pages/AIInnovationHub2026" 
+                  className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+                >
+                  Explore Hub
+                </Link>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">Tech Trends 2026</h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Stay ahead with the most important technology trends of 2026.
+                </p>
+                <Link 
+                  to="/pages/TechTrends2026" 
+                  className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+                >
+                  View Trends
+                </Link>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">Tech Insights</h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Deep dive into comprehensive technology insights and analysis.
+                </p>
+                <Link 
+                  to="/pages/ComprehensiveTechInsights2026" 
+                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+                >
+                  Get Insights
+                </Link>
+              </div>
+            </div>
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Technology Showcase 2026

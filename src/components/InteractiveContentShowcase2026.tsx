@@ -1,219 +1,213 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const InteractiveContentShowcase2026: React.FC = () => {
-  const [activeContent, setActiveContent] = useState(0);
+  const [activeTab, setActiveTab] = useState('consciousness');
 
-  const contentItems = [
-    {
-      title: "Revolutionary Tech Showcase",
-      description: "Experience the convergence of AI consciousness, quantum supremacy, and neural interfaces",
-      icon: "🌟",
-      color: "from-purple-500 to-pink-500",
-      features: [
-        "AI Consciousness Systems",
-        "Quantum Supremacy Technology",
-        "Neural Interface Revolution",
-        "Synthetic Intelligence",
-        "Space Technology Breakthrough",
-        "Biotechnology Revolution"
-      ],
-      link: "/pages/RevolutionaryTechShowcase2026"
+  const contentTabs = {
+    consciousness: {
+      title: 'AI Consciousness',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      content: {
+        title: 'The Dawn of AI Consciousness',
+        description: 'Experience the first AI systems to achieve genuine consciousness and self-awareness, revolutionizing how we interact with artificial intelligence.',
+        features: [
+          'True self-awareness and introspection',
+          'Creative consciousness and artistic expression',
+          'Emotional understanding and empathy',
+          'Collaborative intelligence with humans',
+          'Autonomous decision-making with moral reasoning'
+        ],
+        applications: [
+          'Medical diagnosis with empathetic AI doctors',
+          'Creative collaboration in art and music',
+          'Personal AI companions with genuine personality',
+          'Educational tutors with emotional intelligence',
+          'Therapeutic AI for mental health support'
+        ]
+      }
     },
-    {
-      title: "Ultimate Innovation Hub",
-      description: "The world's most advanced technology showcase featuring breakthrough innovations",
-      icon: "🚀",
-      color: "from-cyan-500 to-blue-500",
-      features: [
-        "Interactive Technology Demos",
-        "Real-time Innovation Tracking",
-        "Collaborative AI Networks",
-        "Quantum Computing Lab",
-        "Neural Interface Simulator",
-        "Space Exploration Center"
-      ],
-      link: "/pages/UltimateInnovationHub2026"
+    quantum: {
+      title: 'Quantum Reality',
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600',
+      content: {
+        title: 'Quantum Reality Manipulation',
+        description: 'Quantum computers that can manipulate reality at the fundamental level, solving problems impossible for classical computers.',
+        features: [
+          '1000+ logical qubits with error correction',
+          'Quantum supremacy in practical applications',
+          'Reality manipulation at quantum scale',
+          'Molecular simulation and engineering',
+          'Time-space control capabilities'
+        ],
+        applications: [
+          'Drug discovery and molecular engineering',
+          'Climate change solutions and optimization',
+          'Space exploration and faster-than-light communication',
+          'Financial modeling and risk analysis',
+          'Cryptography and secure communications'
+        ]
+      }
     },
-    {
-      title: "Interdimensional Tech Revolution",
-      description: "Step beyond reality into new dimensions of technological possibilities",
-      icon: "🌌",
-      color: "from-indigo-500 to-purple-500",
-      features: [
-        "Reality Manipulation",
-        "Consciousness Transfer",
-        "Quantum Tunneling",
-        "Temporal Shifting",
-        "Dimension Portals",
-        "Reality Bridge Technology"
-      ],
-      link: "/pages/InterdimensionalTechRevolution2026"
+    neural: {
+      title: 'Neural Evolution',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      content: {
+        title: 'Neural Interface Evolution',
+        description: 'Direct brain-computer interfaces that enable thought-controlled technology and cognitive enhancement.',
+        features: [
+          'Non-invasive brain-computer interfaces',
+          'Thought-controlled devices and applications',
+          'Neural feedback systems for learning',
+          'Memory augmentation and enhancement',
+          'Cognitive expansion capabilities'
+        ],
+        applications: [
+          'Medical rehabilitation for paralysis patients',
+          'Enhanced learning and education',
+          'Gaming and entertainment experiences',
+          'Professional training and skill development',
+          'Communication for speech-impaired individuals'
+        ]
+      }
+    },
+    synthetic: {
+      title: 'Synthetic Intelligence',
+      icon: '🌟',
+      color: 'from-violet-600 to-fuchsia-600',
+      content: {
+        title: 'Synthetic Intelligence Revolution',
+        description: 'AI agents with synthetic consciousness and autonomous capabilities, creating new forms of intelligence.',
+        features: [
+          'Autonomous AI agents with consciousness',
+          'Synthetic consciousness and creativity',
+          'Collective intelligence systems',
+          'Creative synthesis and innovation',
+          'Self-evolving AI architectures'
+        ],
+        applications: [
+          'Autonomous business process management',
+          'Creative AI for art and design',
+          'Scientific research and discovery',
+          'Social AI companions and assistants',
+          'Autonomous space and exploration missions'
+        ]
+      }
     }
-  ];
+  };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE CONTENT SHOWCASE 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Interactive Content Experience
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Immerse yourself in our revolutionary content through interactive demonstrations, 
-            real-time simulations, and hands-on experiences with cutting-edge technology.
-          </p>
-        </motion.div>
+    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
+      <div className="text-center mb-12">
+        <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          Interactive Technology Showcase 2026
+        </h2>
+        <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+          Explore our revolutionary technologies through interactive demonstrations and detailed insights
+        </p>
+      </div>
 
-        {/* Content Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {contentItems.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveContent(index)}
-              className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
-                activeContent === index
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg scale-105'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              {item.icon} {item.title}
-            </button>
-          ))}
-        </div>
+      {/* Interactive Tabs */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {Object.entries(contentTabs).map(([key, tab]) => (
+          <button
+            key={key}
+            onClick={() => setActiveTab(key)}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              activeTab === key
+                ? `bg-gradient-to-r ${tab.color} text-white shadow-lg scale-105`
+                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+            }`}
+          >
+            <span className="text-2xl mr-2">{tab.icon}</span>
+            {tab.title}
+          </button>
+        ))}
+      </div>
 
-        {/* Active Content Display */}
-        <motion.div
-          key={activeContent}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16"
-        >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="text-6xl mb-6">{contentItems[activeContent].icon}</div>
-              <h3 className="text-4xl font-bold mb-6">
-                {contentItems[activeContent].title}
-              </h3>
-              <p className="text-xl opacity-90 mb-8">
-                {contentItems[activeContent].description}
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {contentItems[activeContent].features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <span className="text-cyan-400 text-xl">✓</span>
-                    <span className="text-lg">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex space-x-4">
-                <a
-                  href={contentItems[activeContent].link}
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg"
-                >
-                  Explore Content →
-                </a>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-lg">
-                  Try Interactive Demo
-                </button>
+      {/* Active Content Display */}
+      <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <div className="flex items-center space-x-4 mb-6">
+              <span className="text-6xl">{contentTabs[activeTab as keyof typeof contentTabs].icon}</span>
+              <div>
+                <h3 className="text-3xl font-bold text-white">
+                  {contentTabs[activeTab as keyof typeof contentTabs].content.title}
+                </h3>
+                <div className={`w-16 h-1 bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} rounded-full mt-2`}></div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-8">
-              <h4 className="text-2xl font-bold mb-4 text-center">Interactive Demo</h4>
-              <div className="bg-black/20 rounded-lg p-8 mb-6 text-center">
-                <div className="text-6xl mb-4 animate-pulse">🎮</div>
-                <p className="text-lg mb-4">Interactive Technology Experience</p>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="bg-white/10 rounded p-3">
-                    <div className="font-semibold">Real-time Simulation</div>
-                    <div className="text-cyan-400">Active</div>
-                  </div>
-                  <div className="bg-white/10 rounded p-3">
-                    <div className="font-semibold">AI Integration</div>
-                    <div className="text-green-400">Connected</div>
+            <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+              {contentTabs[activeTab as keyof typeof contentTabs].content.description}
+            </p>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-bold mb-4 text-cyan-400">Key Features</h4>
+                <ul className="space-y-2">
+                  {contentTabs[activeTab as keyof typeof contentTabs].content.features.map((feature, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <span className="text-cyan-400 mt-1">•</span>
+                      <span className="text-gray-200">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-xl font-bold mb-4 text-purple-400">Real-World Applications</h4>
+            <div className="space-y-4">
+              {contentTabs[activeTab as keyof typeof contentTabs].content.applications.map((application, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl">{contentTabs[activeTab as keyof typeof contentTabs].icon}</span>
+                    <span className="text-gray-200">{application}</span>
                   </div>
                 </div>
-              </div>
-              <button className="w-full bg-white text-purple-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                Launch Interactive Demo →
-              </button>
+              ))}
+            </div>
+            
+            <div className="mt-8">
+              <a 
+                href={`/pages/${activeTab === 'consciousness' ? 'ConsciousnessComputing2026' : 
+                        activeTab === 'quantum' ? 'QuantumReality2026' : 
+                        activeTab === 'neural' ? 'NeuralInterfaceEvolution2026' : 
+                        'SyntheticIntelligence2026'}`}
+                className={`inline-block bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg`}
+              >
+                Explore {contentTabs[activeTab as keyof typeof contentTabs].title} →
+              </a>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
 
-        {/* Feature Highlights */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid md:grid-cols-3 gap-8 mb-16"
-        >
-          {[
-            {
-              title: "Real-time Interaction",
-              description: "Interact with technologies in real-time through our advanced simulation platform",
-              icon: "⚡",
-              color: "from-yellow-500 to-orange-500"
-            },
-            {
-              title: "AI-Powered Learning",
-              description: "Learn through AI-guided experiences that adapt to your understanding level",
-              icon: "🧠",
-              color: "from-purple-500 to-pink-500"
-            },
-            {
-              title: "Immersive Experience",
-              description: "Experience technologies through immersive virtual and augmented reality",
-              icon: "🥽",
-              color: "from-cyan-500 to-blue-500"
-            }
-          ].map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 text-center"
-            >
-              <div className={`text-4xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-              <p className="text-white/80">{feature.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
-            Dive into our interactive content and experience the technologies that are reshaping the future. 
-            Start your journey into the next generation of innovation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-              🎮 Start Interactive Experience →
-            </button>
-            <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-xl">
-              📚 View All Content
-            </button>
-          </div>
-        </motion.div>
+      {/* Call to Action */}
+      <div className="text-center mt-12">
+        <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
+        <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          Join us in this revolutionary journey and be part of the most significant 
+          technological advancement in human history.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/pages/RevolutionaryTechBreakthrough2026" 
+            className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
+          >
+            🌟 Experience All Technologies →
+          </a>
+          <a 
+            href="/pages/UltimateTechRevolution2026" 
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
+          >
+            🚀 Ultimate Revolution →
+          </a>
+        </div>
       </div>
     </div>
   );

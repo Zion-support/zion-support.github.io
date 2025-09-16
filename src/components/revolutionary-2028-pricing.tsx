@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
+
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
@@ -129,7 +129,7 @@ export default function Revolutionary2028Pricing() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -189,7 +189,7 @@ export default function Revolutionary2028Pricing() {
                 <div className="text-cyan-300">Free Trial</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -207,7 +207,7 @@ export default function Revolutionary2028Pricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-              <motion.div
+              <div
                 key={tier.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ export default function Revolutionary2028Pricing() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -281,7 +281,7 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category.category}</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <motion.div
+                  <div
                     key={service.id}
                     initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -329,7 +329,7 @@ export default function Revolutionary2028Pricing() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -350,7 +350,7 @@ export default function Revolutionary2028Pricing() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -365,9 +365,9 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -382,9 +382,9 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
               <div className="text-blue-300">Transparent Pricing</div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -399,7 +399,7 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -407,7 +407,7 @@ export default function Revolutionary2028Pricing() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -453,7 +453,7 @@ export default function Revolutionary2028Pricing() {
                 <span>Cancel Anytime</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
