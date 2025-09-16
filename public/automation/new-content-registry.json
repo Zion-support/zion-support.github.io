@@ -106,5 +106,34 @@
       "createdAt": "2025-09-16T16:40:00.000Z",
       "source": "ai-research-scout"
     }
+    ,
+    {
+      "title": "Guide — Production-Ready Agent Runbooks (2026)",
+      "href": "/reports/guides/guide-2026-agent-runbooks-prod",
+      "desc": "Operational patterns for live evals, incident response, and rollback",
+      "createdAt": "2025-09-16T16:50:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Evidence Hubs for Enterprise AI (2026)",
+      "href": "/reports/blueprints/blueprint-2026-evidence-hubs-enterprise-ai",
+      "desc": "Centralize traces, policy events, and metrics for governed autonomy",
+      "createdAt": "2025-09-16T16:55:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 99.95% Uptime with Guardrailed Agents",
+      "href": "/reports/cases/case-2026-uptime-guardrailed-agents",
+      "desc": "Service reliability gains from scorecard-driven orchestration",
+      "createdAt": "2025-09-16T17:00:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Blog — Real-Time RAG Architectures (Deep Dive)",
+      "href": "/blog/ai-2026-real-time-rag-architectures",
+      "desc": "Streaming, hybrid indexes, and eval gates for low-latency recall",
+      "createdAt": "2025-09-16T17:10:00.000Z",
+      "source": "blog"
+    }
   ]
 }

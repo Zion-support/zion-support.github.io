@@ -16,6 +16,10 @@ export default function Home({ items }: HomeProps) {
   return (
     <div>
       <main>
+        <div style={{ background: '#0ea5e9', color: '#fff', padding: '12px 16px', borderRadius: 8, marginBottom: 16 }}>
+          <strong>New:</strong> Fresh blueprints, guides, and case studies just dropped.{' '}
+          <Link href="/explore" style={{ color: '#fff', textDecoration: 'underline' }}>Check them out →</Link>
+        </div>
         <h1>Welcome to Zion Tech Group</h1>
         <p>Advanced IT Solutions & AI Services</p>
         <Link href="/services">View Our Services</Link>
@@ -23,7 +27,7 @@ export default function Home({ items }: HomeProps) {
         <section style={{ marginTop: 32 }}>
           <h2>Latest Content</h2>
           <ul>
-            {items.slice(0, 3).map((item) => (
+            {items.slice(0, 5).map((item) => (
               <li key={item.href} style={{ marginBottom: 8 }}>
                 <Link href={item.href}>{item.title}</Link>
                 {item.desc ? (
