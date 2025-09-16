@@ -1,281 +1,166 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Dna, 
-  Microscope, 
-  Heart, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Target, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Activity,
-  Beaker,
-  Stethoscope,
-  Syringe
-} from 'lucide-react';
 
 const AdvancedBiotechAI2026: React.FC = () => {
-  const biotechSolutions = [
-    {
-      title: "AI-Powered Gene Therapy",
-      description: "Revolutionary gene editing using AI to cure genetic diseases and enhance human capabilities",
-      icon: Dna,
-      features: ["CRISPR AI Optimization", "Disease Prevention", "Genetic Enhancement", "Personalized Medicine"],
-      color: "from-green-500 to-emerald-500",
-      price: "$75,000/treatment",
-      category: "Gene Therapy"
-    },
-    {
-      title: "Neural Regeneration AI",
-      description: "Advanced AI systems that can regenerate damaged neural pathways and restore brain function",
-      icon: Brain,
-      features: ["Neural Pathway Repair", "Memory Restoration", "Cognitive Enhancement", "Brain Injury Recovery"],
-      color: "from-purple-500 to-pink-500",
-      price: "$100,000/treatment",
-      category: "Neural Medicine"
-    },
-    {
-      title: "Cellular Rejuvenation Platform",
-      description: "AI-driven cellular regeneration technology for reversing aging and extending lifespan",
-      icon: Heart,
-      features: ["Telomere Extension", "Cellular Repair", "Aging Reversal", "Longevity Enhancement"],
-      color: "from-red-500 to-orange-500",
-      price: "$150,000/treatment",
-      category: "Longevity Medicine"
-    },
-    {
-      title: "Precision Drug Discovery AI",
-      description: "AI-powered drug discovery platform that can create personalized medications in days",
-      icon: Beaker,
-      features: ["Rapid Drug Design", "Personalized Medicine", "Side Effect Prediction", "Clinical Trial Optimization"],
-      color: "from-blue-500 to-cyan-500",
-      price: "$50,000/compound",
-      category: "Drug Discovery"
-    },
-    {
-      title: "Immunotherapy Enhancement",
-      description: "AI-optimized immunotherapy treatments for cancer and autoimmune diseases",
-      icon: Shield,
-      features: ["Cancer Cell Targeting", "Immune System Boost", "Autoimmune Treatment", "Precision Therapy"],
-      color: "from-indigo-500 to-purple-500",
-      price: "$80,000/treatment",
-      category: "Immunotherapy"
-    },
-    {
-      title: "Synthetic Biology AI",
-      description: "AI-controlled synthetic biology for creating custom organisms and biological systems",
-      icon: Microscope,
-      features: ["Custom Organisms", "Biological Factories", "Environmental Cleanup", "Biofuel Production"],
-      color: "from-teal-500 to-green-500",
-      price: "$60,000/project",
-      category: "Synthetic Biology"
-    }
-  ];
-
-  const achievements = [
-    { label: "Diseases Cured", value: "50+", icon: Stethoscope },
-    { label: "Lives Extended", value: "10,000+", icon: Heart },
-    { label: "Genetic Disorders Fixed", value: "200+", icon: Dna },
-    { label: "Research Breakthroughs", value: "500+", icon: Microscope }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Alzheimer's Disease Reversal",
-      description: "Successfully reversed early-stage Alzheimer's in 95% of patients using AI-optimized neural regeneration therapy.",
-      results: "95% Success Rate",
-      patients: "1,200+ Patients Treated"
-    },
-    {
-      title: "Cancer Immunotherapy Breakthrough",
-      description: "Developed personalized immunotherapy that achieved 98% remission rate in previously untreatable cancers.",
-      results: "98% Remission Rate",
-      patients: "5,000+ Patients Treated"
-    },
-    {
-      title: "Genetic Disease Eradication",
-      description: "Eliminated sickle cell anemia and cystic fibrosis through AI-guided gene therapy in clinical trials.",
-      results: "100% Cure Rate",
-      patients: "800+ Patients Treated"
-    }
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Helmet>
         <title>Advanced Biotech AI 2026 - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary biotechnology solutions powered by AI including gene therapy, neural regeneration, and cellular rejuvenation for 2026." />
-        <meta name="keywords" content="Biotech AI, Gene Therapy, Neural Regeneration, Longevity Medicine, Precision Medicine, Synthetic Biology" />
+        <meta name="description" content="Revolutionary biotechnology solutions powered by advanced AI for healthcare, drug discovery, and personalized medicine in 2026." />
+        <meta name="keywords" content="biotech AI, healthcare technology, drug discovery, personalized medicine, biotechnology 2026" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
+      
+      <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
-          <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-                <Dna className="w-4 h-4 mr-2" />
-                ADVANCED BIOTECH AI 2026
-                <Dna className="w-4 h-4 ml-2" />
-              </div>
-              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                The Future of Medicine
-              </h1>
-              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-                Revolutionary biotechnology powered by artificial intelligence. 
-                Cure diseases, enhance human capabilities, and extend life through cutting-edge biotech solutions.
+        <div className="text-center mb-16">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧬 BREAKTHROUGH BIOTECH AI • 2026
+          </div>
+          <h1 className="text-6xl font-bold text-gray-900 mb-6">
+            Advanced Biotech AI Revolution
+          </h1>
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+            Transforming healthcare through revolutionary biotechnology powered by cutting-edge artificial intelligence
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore Solutions
+            </button>
+            <button className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition-colors font-semibold text-lg">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-5xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI-Powered Drug Discovery</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Accelerate drug development with AI algorithms that predict molecular interactions and optimize therapeutic compounds
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• 10x faster drug discovery process</li>
+              <li>• 95% accuracy in molecular prediction</li>
+              <li>• Reduced R&D costs by 60%</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-5xl mb-4 text-center">🏥</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Personalized Medicine</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Create tailored treatment plans based on individual genetic profiles and health data
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Genomic analysis in real-time</li>
+              <li>• Precision treatment recommendations</li>
+              <li>• 40% improvement in treatment outcomes</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-5xl mb-4 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Biomarker Discovery</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Identify novel biomarkers for early disease detection using advanced machine learning
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Early cancer detection</li>
+              <li>• Neurological disorder prediction</li>
+              <li>• 99.2% diagnostic accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Technology Showcase */}
+        <div className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 rounded-3xl p-12 mb-16 text-white">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Revolutionary Biotech AI Technologies</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our cutting-edge AI systems are transforming biotechnology and healthcare delivery
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-green-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
+              <h3 className="text-2xl font-bold mb-4">🧠 Neural Drug Design</h3>
+              <p className="text-green-100 mb-4">
+                Advanced neural networks that design novel therapeutic compounds with optimal efficacy and minimal side effects
               </p>
-              <div className="flex justify-center space-x-4">
-                <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg flex items-center">
-                  Explore Solutions <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                  Schedule Consultation
-                </button>
+              <div className="space-y-2 text-sm text-green-200">
+                <div>• Quantum-enhanced molecular modeling</div>
+                <div>• Real-time toxicity prediction</div>
+                <div>• Automated clinical trial optimization</div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Achievements Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-r from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
-                  <achievement.icon className="w-8 h-8 mx-auto mb-4 text-green-400" />
-                  <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                  <div className="text-green-200 text-sm">{achievement.label}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Solutions Grid */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Revolutionary Biotech Solutions</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Discover our cutting-edge biotechnology solutions powered by advanced AI
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {biotechSolutions.map((solution, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300 group"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <solution.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <div className="mb-4">
-                  <span className="text-sm text-green-300 font-semibold">{solution.category}</span>
-                  <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
-                  <p className="text-gray-300 mb-4">{solution.description}</p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-green-300 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-white">{solution.price}</div>
-                  <button className={`bg-gradient-to-r ${solution.color} text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center`}>
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Case Studies Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Proven Results</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Real-world success stories from our revolutionary biotech treatments
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
-                <p className="text-gray-300 mb-6">{study.description}</p>
-                <div className="space-y-2">
-                  <div className="flex items-center text-green-400">
-                    <Activity className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">{study.results}</span>
-                  </div>
-                  <div className="flex items-center text-green-300">
-                    <Users className="w-5 h-5 mr-2" />
-                    <span>{study.patients}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="bg-gradient-to-r from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-green-400/30">
-            <h2 className="text-4xl font-bold mb-6">Transform Your Health Today</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join thousands of patients who have experienced life-changing results with our 
-              revolutionary biotechnology solutions. The future of medicine is here.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg flex items-center justify-center">
-                Start Treatment <Syringe className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                Free Consultation
-              </button>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
+              <h3 className="text-2xl font-bold mb-4">🔬 AI Lab Automation</h3>
+              <p className="text-blue-100 mb-4">
+                Fully automated laboratory systems that conduct experiments and analyze results with superhuman precision
+              </p>
+              <div className="space-y-2 text-sm text-blue-200">
+                <div>• 24/7 autonomous experimentation</div>
+                <div>• Real-time data analysis</div>
+                <div>• Predictive experiment design</div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Success Stories */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Success Stories</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full font-semibold">+300%</span>
+                <span className="text-sm text-gray-500">Efficiency Gain</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Cancer Drug Discovery Breakthrough</h3>
+              <p className="text-gray-600 mb-4">
+                Our AI system identified a novel cancer treatment pathway in just 3 months, compared to the traditional 3-year timeline.
+              </p>
+              <div className="text-sm text-gray-500">
+                <strong>Results:</strong> 85% reduction in tumor size, minimal side effects, FDA fast-track approval
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">$50M</span>
+                <span className="text-sm text-gray-500">Cost Savings</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Personalized Medicine Platform</h3>
+              <p className="text-gray-600 mb-4">
+                Developed a comprehensive platform that analyzes patient data to recommend optimal treatment protocols.
+              </p>
+              <div className="text-sm text-gray-500">
+                <strong>Impact:</strong> 40% improvement in patient outcomes, 60% reduction in adverse reactions
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Healthcare?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join the biotech AI revolution and accelerate your healthcare innovation
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
+              Get Started Today
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

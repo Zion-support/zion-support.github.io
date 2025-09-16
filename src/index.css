@@ -192,4 +192,13 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+<<<<<<< HEAD
+=======
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+>>>>>>> cursor/create-and-deploy-new-content-2a7c
 }
