@@ -78,12 +78,19 @@ import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 >>>>>>> origin/feat/content-sept15
 import Link from 'next/link';
 =======
 >>>>>>> origin/feature/new-content-and-promotions
+=======
+=======
+import Link from 'next/link';
+import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+>>>>>>> 49147c29baec (feat(content): add AI 2026 Autonomous Revenue Agents post and homepage promo; fix tsconfig and build setup conflicts)
+>>>>>>> origin/feat/new-content-ads-sept15
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -424,6 +431,13 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+        {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
+        <NewContent2025AnalyticsRevolutionBanner />
+        {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
+        <NewAutonomousRevenueAgentsPromo />
+>>>>>>> origin/feat/new-content-ads-sept15
         
         {/* New Content Promo: Risk Management & Compliance (2026) */}
         <section className="py-10 bg-white">
