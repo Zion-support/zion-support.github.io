@@ -95,6 +95,11 @@ import ConsciousnessComputingRevolution2035 from './src/pages/ConsciousnessCompu
 import InterdimensionalTechRevolution2040 from './src/pages/InterdimensionalTechRevolution2040';
 import UltimateTechShowcase2030 from './src/components/UltimateTechShowcase2030';
 import RevolutionaryContentBanner2030 from './src/components/RevolutionaryContentBanner2030';
+import UltimatePromotionalBanner from './src/components/UltimatePromotionalBanner';
+import RevolutionaryAdCarousel from './src/components/RevolutionaryAdCarousel';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import FeaturedNewContent from './src/components/FeaturedNewContent';
 
 export default function App(): JSX.Element {
   return (
@@ -123,6 +128,14 @@ export default function App(): JSX.Element {
 
                 {/* Ultimate Tech Banner 2029 */}
                 <UltimateTechBanner2029 />
+
+                {/* Ultimate Promotional Banner */}
+                <UltimatePromotionalBanner />
+
+                {/* Revolutionary Ad Carousel */}
+                <div className="mb-12">
+                  <RevolutionaryAdCarousel />
+                </div>
 
                 {/* Revolutionary Content Banner 2030 */}
                 <RevolutionaryContentBanner2030 />
@@ -261,6 +274,12 @@ export default function App(): JSX.Element {
                     <a href="/pages/InterdimensionalTechRevolution2040" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 Interdimensional 2040 →
                     </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: Innovation Hub 2025 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Tech Breakthrough →
+                    </a>
                   </div>
                 </div>
 
@@ -287,6 +306,9 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2026 />
                 </div>
+
+                {/* Featured New Content */}
+                <FeaturedNewContent />
 
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -632,6 +654,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2030" element={<UltimateTechRevolution2030 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2035" element={<ConsciousnessComputingRevolution2035 />} />
           <Route path="/pages/InterdimensionalTechRevolution2040" element={<InterdimensionalTechRevolution2040 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/revolutionary-showcase-2030" element={<UltimateTechShowcase2030 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
