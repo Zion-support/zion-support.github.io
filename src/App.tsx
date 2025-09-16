@@ -145,6 +145,11 @@ import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 import Blog from './pages/Blog';
 import BlogPost_Sep2025_AIExecGuide from './pages/BlogPost_Sep2025_AIExecGuide';
 import BlogPost_Sep2025_CaseStudy from './pages/BlogPost_Sep2025_CaseStudy';
+import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
+import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
+import RevolutionaryContentAdvertisingBanner2026 from './components/RevolutionaryContentAdvertisingBanner2026';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
 
 const App: React.FC = () => {
   return (
@@ -177,6 +182,11 @@ const App: React.FC = () => {
               {/* Revolutionary Content Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* NEW: Revolutionary Content Advertising Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryContentAdvertisingBanner2026 />
               </div>
 
               {/* New Content Promotion Banner 2026 */}
@@ -231,6 +241,11 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
+
+              {/* NEW: Featured Content Showcase 2026 */}
+              <div className="mb-12">
+                <FeaturedContentShowcase2026 />
+              </div>
 
               {/* Blog Showcase from data/blog-posts */}
               <div className="mb-12">
@@ -439,6 +454,10 @@ const App: React.FC = () => {
           {/* New Content Routes 2026 */}
           <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
           <Route path="/next-gen-tech-trends-2026" element={<NextGenTechTrends2026 />} />
+          
+          {/* NEW: Revolutionary Content Routes 2026 */}
+          <Route path="/ai-revolutionary-breakthrough-2026" element={<AIRevolutionaryBreakthrough2026 />} />
+          <Route path="/quantum-computing-revolution-2026" element={<QuantumComputingRevolution2026 />} />
         </Routes>
         
         <Footer />
