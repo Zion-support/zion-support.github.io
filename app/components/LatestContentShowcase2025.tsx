@@ -56,6 +56,17 @@ export default function LatestContentShowcase2025() {
               </Link>
             </div>
           </div>
+          <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">✅</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Safe Multi‑Agent Approvals</h3>
+            <p className="text-gray-600 mb-4">Risk‑tiered approvals, budgets, and policy‑as‑code for safe execution.</p>
+            <Link 
+              href="/blog/ai-2026-safe-multi-agent-approvals-blueprint"
+              className="text-purple-600 font-semibold hover:text-purple-800"
+            >
+              Read Blueprint →
+            </Link>
+          </div>
         </div>
       </div>
     </section>

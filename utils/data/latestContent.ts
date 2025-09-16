@@ -186,4 +186,12 @@ export const latestContent: ContentItem[] = [
     tag: "Guide",
     date: "2025-09-16",
   },
+  {
+    id: "ai-2026-safe-multi-agent-approvals-blueprint",
+    title: "AI 2026: Safe Multi‑Agent Approvals — Blueprint",
+    summary: "Risk‑tiered approvals, budgets, and policy‑as‑code for safe multi‑agent execution.",
+    href: "/blog/ai-2026-safe-multi-agent-approvals-blueprint",
+    tag: "Safety",
+    date: "2025-09-16",
+  },
 ];
