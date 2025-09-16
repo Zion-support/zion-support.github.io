@@ -1,6 +1,27 @@
 ---
 {"title":"AI 2026: Real-Time Retrieval Architectures","excerpt":"Low-latency retrieval with hybrid indexes, caches, and routing.","featuredImage":"/images/blog/real-time-retrieval-architectures-2026.jpg","publishedDate":"2025-09-16","author":{"name":"Zion Tech Group","title":"AI Systems Engineering","avatarUrl":"/images/authors/ztg.png"},"tags":["RAG","Latency","Caching","Hybrid Search"]}
 ---
+---
+{"title":"Real‑Time Retrieval Architectures (2026)","excerpt":"Blueprints for low‑latency, cost‑aware retrieval that keep agents grounded.","featuredImage":"/blog/real-time-retrieval-2026.jpg","publishedDate":"2025-09-16","author":{"name":"Platform Architecture","title":"Systems Design"},"tags":["RAG","Latency","Caching"]}
+---
+
+## Goals
+
+Keep latency p95 < 400 ms while maintaining grounding quality and budget targets.
+
+### Tactics
+
+- Tiered stores: in‑memory cache → vector DB → cold store
+- Speculative fetch with cancellation when upstream answers early
+- Query shaping: semantic filters, time windows, and policy guards
+- Result fusion: re‑rank with recency and source trust signals
+
+### Reference pipeline
+
+1. Predict retrieval need and budget from intent classifier.
+2. Issue parallel cache and vector queries; fuse results.
+3. Attach citations and evidence hashes to tool calls.
+4. Log features for online evals and cost dashboards.
 
 Real-time experiences demand sub-200ms perceived latency while maintaining quality and guardrails. This article outlines the reference patterns we recommend for production-grade retrieval.
 
