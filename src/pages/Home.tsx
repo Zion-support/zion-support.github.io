@@ -6,6 +6,8 @@ import { useNotifications } from '../context/notifications/NotificationContext';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import NewContentPromoBanner2026 from '../components/NewContentPromoBanner2026';
+import LatestServicesShowcase2026 from '../components/LatestServicesShowcase2026';
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -21,6 +23,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <NewContentPromoBanner2026 />
       <NewContentPromotionBanner2026 />
       <Helmet>
         <title>Zion Tech Group 2026 - Revolutionary AI, Quantum Computing & Cybersecurity Solutions</title>
@@ -80,6 +83,8 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <RevolutionaryContentShowcase />
         </div>
+
+        <LatestServicesShowcase2026 />
 
         <div className="container mx-auto px-4 py-16">
           <motion.div 

@@ -94,6 +94,7 @@ import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough20
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
 import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
+import NextGenAIConsciousness2026 from './src/pages/NextGenAIConsciousness2026';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
@@ -1396,6 +1397,7 @@ export default function App(): JSX.Element {
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          <Route path="/pages/NextGenAIConsciousness2026" element={<NextGenAIConsciousness2026 />} />
           
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
