@@ -16,6 +16,27 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Blueprint: Production Evidence Hub (2026)',
+    summary: 'Centralize evals, traces, policy events, and incidents for audits and incident response.',
+    href: '/blog/ai-2026-production-evidence-hub-blueprint',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Secure Tooling Permissions (2026)',
+    summary: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions in production.',
+    href: '/blog/ai-2026-secure-tooling-permissions-blueprint',
+    date: '2025-09-16',
+    tag: 'Security'
+  },
+  {
+    title: 'Guide: Operational Risk Metrics for Agents (2026)',
+    summary: 'Standardize override rates, violations, groundedness, and MTTR across teams.',
+    href: '/blog/ai-2026-operational-risk-metrics-for-agents',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
     href: '/updates/ai-risk-mitigation-guide-2026',
