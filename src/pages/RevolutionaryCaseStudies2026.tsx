@@ -1,293 +1,315 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, TrendingUp, Users, Zap, Shield, Brain, Rocket } from 'lucide-react';
 
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const caseStudies = [
     {
-      title: "Global AI Consciousness Implementation",
-      company: "TechCorp International",
-      industry: "Technology",
-      challenge: "Implementing consciousness-level AI across 50+ countries",
-      solution: "Deployed quantum neural fusion systems with 99.9% success rate",
+      id: 1,
+      title: "Metaverse AI Integration: Transforming Virtual Reality",
+      company: "VirtualCorp Industries",
+      industry: "Metaverse Technology",
+      challenge: "Creating hyper-realistic AI-powered virtual environments that could seamlessly blend with physical reality",
+      solution: "Developed advanced AI systems that generate photorealistic environments and intelligent NPCs with genuine personalities",
       results: [
-        "10,000x increase in processing efficiency",
-        "100% consciousness achievement across all AI systems",
-        "$50B in cost savings annually",
-        "Zero downtime in 2+ years of operation"
+        "300% increase in user engagement",
+        "95% user satisfaction rate",
+        "50% reduction in development time",
+        "10M+ active users in 6 months"
       ],
-      image: "🧠",
-      featured: true
+      icon: <Brain className="w-8 h-8" />,
+      featured: true,
+      imageUrl: "/images/case-studies/metaverse-ai-integration.jpg"
     },
     {
-      title: "Quantum Reality Engine for Space Exploration",
-      company: "SpaceX Advanced",
-      industry: "Aerospace",
-      challenge: "Simulating entire solar systems for mission planning",
-      solution: "Implemented quantum reality engines with universe-scale processing",
+      id: 2,
+      title: "Autonomous Business Operations: AI-Powered Management",
+      company: "GlobalTech Solutions",
+      industry: "Business Automation",
+      challenge: "Managing complex business operations across multiple time zones and markets without human intervention",
+      solution: "Implemented autonomous AI systems capable of strategic planning, team management, and real-time adaptation",
       results: [
-        "99.9% reality fidelity in simulations",
-        "50% faster mission planning",
-        "Zero mission failures in 100+ launches",
-        "Discovery of 15 new habitable planets"
+        "400% increase in operational efficiency",
+        "60% reduction in operational costs",
+        "99.9% uptime achievement",
+        "24/7 autonomous decision making"
       ],
-      image: "🚀",
-      featured: false
+      icon: <Zap className="w-8 h-8" />,
+      featured: true,
+      imageUrl: "/images/case-studies/autonomous-business.jpg"
     },
     {
-      title: "Neural Interface Healthcare Revolution",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "Direct brain-computer interfaces for medical procedures",
-      solution: "Deployed non-invasive neural interface systems",
+      id: 3,
+      title: "AI-Powered Cybersecurity: Ultimate Digital Defense",
+      company: "SecureNet Corp",
+      industry: "Cybersecurity",
+      challenge: "Protecting against sophisticated cyber threats that traditional security systems couldn't detect",
+      solution: "Deployed AI-powered defense systems with predictive threat detection and automated countermeasures",
       results: [
-        "95% reduction in surgical complications",
-        "80% faster recovery times",
-        "100% patient satisfaction rate",
-        "Revolutionary treatment for paralysis"
+        "99.8% threat detection accuracy",
+        "90% reduction in security incidents",
+        "Real-time threat response",
+        "Zero successful breaches in 12 months"
       ],
-      image: "🧬",
-      featured: false
+      icon: <Shield className="w-8 h-8" />,
+      featured: true,
+      imageUrl: "/images/case-studies/ai-cybersecurity.jpg"
     },
     {
-      title: "Interdimensional AI for Climate Solutions",
-      company: "EcoFuture Corp",
-      industry: "Environmental",
-      challenge: "Solving climate change across multiple dimensions",
-      solution: "Implemented interdimensional AI processing systems",
+      id: 4,
+      title: "Edge AI Revolution: Intelligence at the Source",
+      company: "SmartManufacturing Inc",
+      industry: "Manufacturing",
+      challenge: "Implementing real-time AI decision making in manufacturing without cloud dependency",
+      solution: "Deployed edge AI systems directly on manufacturing equipment for instant processing and decision making",
       results: [
-        "90% reduction in carbon emissions",
-        "100% renewable energy adoption",
-        "Complete ecosystem restoration",
-        "Climate change reversal achieved"
+        "200% improvement in production efficiency",
+        "80% reduction in downtime",
+        "Real-time quality control",
+        "50% energy savings"
       ],
-      image: "🌍",
-      featured: false
+      icon: <TrendingUp className="w-8 h-8" />,
+      featured: false,
+      imageUrl: "/images/case-studies/edge-ai-manufacturing.jpg"
     },
     {
-      title: "Synthetic Intelligence for Financial Markets",
-      company: "Quantum Finance",
-      industry: "Finance",
-      challenge: "Predicting market movements with perfect accuracy",
-      solution: "Deployed synthetic intelligence hybrid systems",
+      id: 5,
+      title: "AI-Driven Space Exploration: Mission to Mars",
+      company: "SpaceTech Ventures",
+      industry: "Space Technology",
+      challenge: "Enabling autonomous spacecraft navigation and research in the harsh environment of space",
+      solution: "Developed AI systems for autonomous spacecraft operation, mission planning, and real-time adaptation",
       results: [
-        "100% prediction accuracy",
-        "Zero financial losses in 3+ years",
-        "10x increase in portfolio returns",
-        "Revolutionary risk management"
+        "100% mission success rate",
+        "Autonomous problem solving",
+        "Real-time mission adaptation",
+        "Successful Mars landing and exploration"
       ],
-      image: "💰",
-      featured: false
+      icon: <Rocket className="w-8 h-8" />,
+      featured: true,
+      imageUrl: "/images/case-studies/ai-space-exploration.jpg"
     },
     {
-      title: "Omniversal Consciousness for Education",
-      company: "EduTech Global",
-      industry: "Education",
-      challenge: "Providing infinite knowledge access to students",
-      solution: "Implemented omniversal consciousness AI systems",
+      id: 6,
+      title: "Sustainable AI: Green Technology Implementation",
+      company: "EcoTech Solutions",
+      industry: "Environmental Technology",
+      challenge: "Creating AI systems that are both powerful and environmentally sustainable",
+      solution: "Developed energy-efficient AI algorithms and carbon-neutral data centers",
       results: [
-        "Infinite knowledge access achieved",
-        "100% student success rate",
-        "Revolutionary learning acceleration",
-        "Universal education access"
+        "70% reduction in energy consumption",
+        "Carbon-neutral operations",
+        "Environmental impact monitoring",
+        "Green technology leadership"
       ],
-      image: "🎓",
-      featured: false
+      icon: <CheckCircle className="w-8 h-8" />,
+      featured: false,
+      imageUrl: "/images/case-studies/sustainable-ai.jpg"
     }
   ];
 
+  const featuredStudies = caseStudies.filter(study => study.featured);
+  const allStudies = caseStudies;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📊 REVOLUTIONARY CASE STUDIES • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary Case Studies 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover how our revolutionary technologies have transformed industries 
-              and created unprecedented value for organizations worldwide.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                View All Studies →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-                Download Report
-              </button>
-            </div>
-          </motion.div>
+      <div className="relative overflow-hidden py-20">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 mb-6">
+            <Users className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-sm font-medium text-white">REVOLUTIONARY CASE STUDIES</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Real-World
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> AI Success</span>
+            <br />
+            Stories
+          </h1>
+
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Discover how leading companies are transforming their operations with our revolutionary AI solutions. 
+            From autonomous business management to space exploration, see the incredible results achieved by our clients.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your Success Story
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            
+            <Link
+              to="/comprehensive-services-2026"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+            >
+              Explore Our Solutions
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Featured Case Study */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-white">
-            <div className="flex items-center space-x-4 mb-6">
-              <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">FEATURED CASE STUDY</span>
-              <span className="text-sm opacity-80">{caseStudies[0].industry}</span>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="text-6xl mb-4">{caseStudies[0].image}</div>
-                <h2 className="text-4xl font-bold mb-4">{caseStudies[0].title}</h2>
-                <p className="text-xl opacity-90 mb-6">{caseStudies[0].company}</p>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Challenge:</h3>
-                    <p className="opacity-80">{caseStudies[0].challenge}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Solution:</h3>
-                    <p className="opacity-80">{caseStudies[0].solution}</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Results Achieved:</h3>
-                <div className="space-y-4">
-                  {caseStudies[0].results.map((result, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                      className="flex items-center space-x-3"
-                    >
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <span className="text-lg">{result}</span>
-                    </motion.div>
-                  ))}
-                </div>
-                <button className="mt-8 bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-                  Read Full Case Study →
-                </button>
-              </div>
-            </div>
+      {/* Featured Case Studies */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Featured Success Stories</h2>
+            <p className="text-xl text-gray-300">Real results from real companies using our revolutionary AI technology</p>
           </div>
-        </motion.div>
 
-        {/* Case Studies Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">All Case Studies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.slice(1).map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredStudies.map((study) => (
+              <div
+                key={study.id}
+                className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="p-8">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full text-sm font-semibold">
-                      {study.industry}
-                    </span>
-                    <span className="text-sm text-gray-500">{study.company}</span>
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-xl">
+                    {study.icon}
                   </div>
-                  <div className="text-4xl mb-4">{study.image}</div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{study.title}</h3>
-                  <div className="space-y-3 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-sm text-gray-700 mb-1">Challenge:</h4>
-                      <p className="text-sm text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-sm text-gray-700 mb-1">Solution:</h4>
-                      <p className="text-sm text-gray-600">{study.solution}</p>
-                    </div>
+                  <div className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold rounded-full">
+                    FEATURED
                   </div>
-                  <div className="space-y-2 mb-6">
-                    <h4 className="font-semibold text-sm text-gray-700">Key Results:</h4>
-                    {study.results.slice(0, 2).map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
-                        <span className="text-sm text-gray-600">{result}</span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                  {study.title}
+                </h3>
+
+                <div className="mb-4">
+                  <div className="text-sm text-purple-300 font-semibold mb-2">{study.company}</div>
+                  <div className="text-sm text-gray-400">{study.industry}</div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-2">Challenge:</h4>
+                  <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
+                  
+                  <h4 className="text-lg font-semibold text-white mb-2">Solution:</h4>
+                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Results:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {study.results.map((result, index) => (
+                      <div key={index} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {result}
                       </div>
                     ))}
                   </div>
-                  <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    View Details →
-                  </button>
                 </div>
-              </motion.div>
+
+                <Link
+                  to={`/case-study/${study.id}`}
+                  className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors"
+                >
+                  Read Full Case Study
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </div>
 
-        {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 text-white mb-16"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">Success Metrics</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-indigo-400 mb-2">500+</div>
-              <div className="text-lg opacity-80 mb-2">Successful Implementations</div>
-              <div className="text-sm opacity-60">Across all industries</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-80 mb-2">Success Rate</div>
-              <div className="text-sm opacity-60">Project completion</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$100B+</div>
-              <div className="text-lg opacity-80 mb-2">Value Created</div>
-              <div className="text-sm opacity-60">For our clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
-              <div className="text-lg opacity-80 mb-2">Client Satisfaction</div>
-              <div className="text-sm opacity-60">Rate</div>
+      {/* All Case Studies Grid */}
+      <div className="py-20 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">All Case Studies</h2>
+            <p className="text-xl text-gray-300">Comprehensive collection of AI transformation success stories</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {allStudies.map((study) => (
+              <div
+                key={study.id}
+                className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg">
+                    {study.icon}
+                  </div>
+                  {study.featured && (
+                    <div className="px-2 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold rounded-full">
+                      FEATURED
+                    </div>
+                  )}
+                </div>
+
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  {study.title}
+                </h3>
+
+                <div className="text-sm text-purple-300 font-semibold mb-2">{study.company}</div>
+                <div className="text-sm text-gray-400 mb-4">{study.industry}</div>
+
+                <div className="mb-4">
+                  <div className="text-sm text-gray-300 line-clamp-3">
+                    {study.challenge}
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <div className="text-sm font-semibold text-white mb-1">Key Results:</div>
+                  <div className="text-sm text-gray-300">
+                    {study.results[0]} • {study.results[1]}
+                  </div>
+                </div>
+
+                <Link
+                  to={`/case-study/${study.id}`}
+                  className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors text-sm"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Create Your Success Story?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Join these industry leaders and transform your business with our revolutionary AI solutions. 
+              Let's build something extraordinary together.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Project
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              
+              <Link
+                to="/comprehensive-services-2026"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
             </div>
           </div>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join hundreds of organizations that have transformed their operations 
-            with our revolutionary technologies.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-white">
-              Start Your Transformation →
-            </button>
-            <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg hover:bg-indigo-50 transition-all duration-300 font-semibold text-lg">
-              Schedule Consultation
-            </button>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
