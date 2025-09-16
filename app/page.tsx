@@ -117,6 +117,7 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-safe-rollouts-in-production" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Safe Rollouts</Link>
               <Link href="/blog/ai-2026-autonomous-evidence-led-operations" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Evidence‑Led Ops</Link>
+              <Link href="/blog/ai-2026-eval-gated-ci-cd-blueprint" className="hidden md:inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Eval‑Gated CI/CD</Link>
             </div>
           </div>
         </div>
