@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -68,31 +40,7 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-7e07
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -358,23 +306,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <div className="mb-8">
-=======
->>>>>>> cursor/create-and-deploy-new-content-7e07
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="mb-8">
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-            <div className="mb-8">
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -486,34 +417,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07
         </section>
 
@@ -631,31 +534,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-7e07
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -722,41 +601,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-7e07
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-export default RevolutionaryTechInsights2026;
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995

@@ -164,30 +164,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
-        <div className="text-center bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Be among the first to harness the power of quantum computing and gain unprecedented competitive advantages.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Quantum Journey
-            </a>
-            <a href="/pages/ComprehensiveServices2025" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-              Explore All Services
-            </a>
-          </div>
-        </div>
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 
@@ -420,17 +396,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07

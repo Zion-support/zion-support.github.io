@@ -41,10 +41,14 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import RevolutionaryTechBreakthrough2028 from './src/pages/RevolutionaryTechBreakthrough2028';
+import RevolutionaryTechBreakthrough2030 from './src/pages/RevolutionaryTechBreakthrough2030';
+import OmniversalTechRevolution2035 from './src/pages/OmniversalTechRevolution2035';
 import UltimateAIConsciousness2030 from './src/pages/UltimateAIConsciousness2030';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
+import RevolutionaryAdBanner2030 from './src/components/RevolutionaryAdBanner2030';
 import RevolutionaryContentShowcase2028 from './src/components/RevolutionaryContentShowcase2028';
+import UltimateContentShowcase2030 from './src/components/UltimateContentShowcase2030';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
@@ -116,6 +120,9 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Ad Banner */}
                 <RevolutionaryAdBanner />
 
+                {/* Revolutionary Ad Banner 2030 */}
+                <RevolutionaryAdBanner2030 />
+
                 {/* Ultimate Tech Banner 2029 */}
                 <UltimateTechBanner2029 />
 
@@ -164,7 +171,6 @@ export default function App(): JSX.Element {
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
                   <EnhancedSearch />
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-44f2
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -243,6 +249,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/InterdimensionalTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌌 Interdimensional 2035 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2030" className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 Revolutionary 2030 →
+                    </a>
+                    <a href="/pages/OmniversalTechRevolution2035" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 Omniversal 2035 →
                     </a>
                   </div>
                 </div>
@@ -518,6 +530,11 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <RevolutionaryTechShowcase2029 />
                 </div>
+
+                {/* Ultimate Content Showcase 2030 */}
+                <div className="mb-12">
+                  <UltimateContentShowcase2030 />
+                </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -602,6 +619,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2028" element={<RevolutionaryTechBreakthrough2028 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2030" element={<RevolutionaryTechBreakthrough2030 />} />
+          <Route path="/pages/OmniversalTechRevolution2035" element={<OmniversalTechRevolution2035 />} />
           <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
           <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />

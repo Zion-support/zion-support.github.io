@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-7e07
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -138,12 +130,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             </a>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07
 import React, { useState, useEffect } from 'react';
 
@@ -217,15 +203,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {/* Floating Elements */}
-      <div className="absolute top-4 right-4 text-6xl animate-bounce opacity-20">🚀</div>
-      <div className="absolute bottom-4 left-4 text-4xl animate-pulse opacity-20">⚡</div>
-      <div className="absolute top-1/2 right-8 text-3xl animate-ping opacity-30">🧠</div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-7e07
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-6">
         {contentSlides.map((_, index) => (
@@ -255,12 +232,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </a>
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-de2c
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
       </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07
     </div>
   );

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07
 import React from 'react';
 
@@ -253,25 +241,6 @@ const UltimateAIConsciousness2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-7e07
 export default UltimateAIConsciousness2026;
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
@@ -379,40 +348,9 @@ export default UltimateAIConsciousness2026;
               Learn More About Quantum AI
             </a>
 export default UltimateAIConsciousness2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-7e07
-=======
-export default UltimateAIConsciousness2026;
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-export default UltimateAIConsciousness2026;
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
-<<<<<<< HEAD
-export default UltimateAIConsciousness2026;
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
