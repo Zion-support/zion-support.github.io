@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
 import Footer from './Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AnalyticsTracker from './components/AnalyticsTracker';
+import SecurityMonitor from './components/SecurityMonitor';
+
+// Loading component for better UX
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
+  </div>
+);
+
+// Lazy load page components for better performance
+const LazyPage = (importFunc: () => Promise<{ default: React.ComponentType }>) => 
+  lazy(importFunc);
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
@@ -69,12 +85,15 @@ import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution20
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <Header />
+    <ErrorBoundary>
+      <Router>
+        <ScrollToTop />
+        <AnalyticsTracker />
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+          <Header />
         
-        <Routes>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
           <Route path="/" element={
             <div className="space-y-0">
               {/* Hero Section */}
@@ -236,11 +255,16 @@ const App: React.FC = () => {
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
-        </Routes>
+          </Routes>
+        </Suspense>
         
         <Footer />
+        <PerformanceMonitor />
+        <PerformanceOptimizer />
+        <SecurityMonitor />
       </div>
     </Router>
+    </ErrorBoundary>
   );
 };
 
