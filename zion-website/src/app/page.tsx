@@ -4,8 +4,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/research-article-promo
+=======
+import React from 'react'
+import { getLatestUpdates } from '@/data/updates'
+>>>>>>> origin/feat/updates-content-and-advertising
 import {
   ChartBarIcon,
   CpuChipIcon,
@@ -529,6 +534,7 @@ export default function HomePage() {
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
             {latest.map((item) => (
 =======
             {[
@@ -567,6 +573,15 @@ export default function HomePage() {
 >>>>>>> origin/feat/updates-and-home-whats-new
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
+=======
+            {getLatestUpdates(6).map((item) => (
+              <article key={item.id} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center gap-2 text-xs text-blue-300">
+                  <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-0.5 ring-1 ring-inset ring-blue-500/20">{item.tag}</span>
+                  <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
+                </div>
+                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+>>>>>>> origin/feat/updates-content-and-advertising
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
                     <span className="absolute inset-0" />
                     {item.title}
@@ -578,6 +593,11 @@ export default function HomePage() {
                 </a>
               </article>
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View all updates <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>
