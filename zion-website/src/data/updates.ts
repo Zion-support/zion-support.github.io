@@ -60,7 +60,6 @@ export const updates: UpdateItem[] = [
         tag: 'Blog',
     },
     {
->>>>>>> 792015d920fee648b542fa39972db1e00bbfedab
         title: 'Deep Dive: Real‑Time Agent Cost Optimizer v2.0',
         summary: 'Architecture, KPIs, and rollout lessons from cost‑aware, eval‑gated routing.',
         href: '/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive',
