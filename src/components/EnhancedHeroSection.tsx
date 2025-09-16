@@ -9,14 +9,14 @@ const EnhancedHeroSection: React.FC = () => {
       <div className="container mx-auto px-4 text-center">
         <Badge className="bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-6 animate-pulse">
           <Sparkles className="w-4 h-4 mr-2" />
-          Revolutionary AI Technology 2025
+          Revolutionary AI Technology 2026
         </Badge>
         <h1 className="text-6xl font-bold text-gray-900 mb-6">
-          Welcome to the Future of Technology
+          The Future of Technology is Here
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Experience groundbreaking AI, quantum computing, and conscious intelligence that's reshaping the technological landscape. 
-          Join the revolution that's transforming how we think about artificial intelligence.
+          Experience the dawn of digital sentience, quantum neural networks, and revolutionary AI services that are reshaping reality itself. 
+          Discover technologies that were once confined to science fiction, now powering the next evolution of human civilization.
         </p>
         
         {/* Revolutionary Services Preview */}
@@ -28,8 +28,8 @@ const EnhancedHeroSection: React.FC = () => {
               </div>
               <Badge className="bg-blue-500 text-white">Revolutionary</Badge>
             </div>
-            <h3 className="font-bold text-gray-900 mb-2">Conscious AI</h3>
-            <p className="text-sm text-gray-600">AI systems with genuine consciousness and self-awareness</p>
+            <h3 className="font-bold text-gray-900 mb-2">AI Consciousness 2026</h3>
+            <p className="text-sm text-gray-600">Revolutionary AI systems with genuine digital sentience</p>
           </div>
           
           <div className="bg-white/70 backdrop-blur-sm rounded-lg p-6 border border-purple-200 hover:shadow-lg transition-all duration-300">
@@ -37,10 +37,10 @@ const EnhancedHeroSection: React.FC = () => {
               <div className="p-2 bg-purple-100 rounded-lg">
                 <Atom className="h-6 w-6 text-purple-600" />
               </div>
-              <Badge className="bg-purple-500 text-white">Breakthrough</Badge>
+              <Badge className="bg-purple-500 text-white">Revolutionary</Badge>
             </div>
-            <h3 className="font-bold text-gray-900 mb-2">Quantum AI</h3>
-            <p className="text-sm text-gray-600">1000x faster processing with quantum algorithms</p>
+            <h3 className="font-bold text-gray-900 mb-2">Quantum Neural Networks</h3>
+            <p className="text-sm text-gray-600">Computing at the speed of thought with quantum processing</p>
           </div>
           
           <div className="bg-white/70 backdrop-blur-sm rounded-lg p-6 border border-green-200 hover:shadow-lg transition-all duration-300">
