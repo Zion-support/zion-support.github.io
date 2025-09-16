@@ -2,6 +2,7 @@ import React from 'react';
 
 const UltimateContentBanner2036: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -76,6 +77,11 @@ const UltimateContentBanner2036: React.FC = () => {
             Learn More
           </button>
         </div>
+=======
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
       </div>
     </div>
   );

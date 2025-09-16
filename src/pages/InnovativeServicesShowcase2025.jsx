@@ -3,6 +3,7 @@ import React from "react";
 const InnovativeServicesShowcase2025 = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -19,10 +20,21 @@ const InnovativeServicesShowcase2025 = () => {
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Discover our comprehensive suite of innovative services designed to transform your business.
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Innovative Services Showcase 2025
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our cutting-edge services and solutions for the future
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Services</h3>
@@ -91,6 +103,9 @@ const InnovativeServicesShowcase2025 = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e058
             </ul>
           </div>
+=======
+          {/* Service cards will go here */}
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
         </div>
         
         <div className="text-center mt-16">

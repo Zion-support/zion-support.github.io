@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const UltimateContentBanner2025: React.FC = () => {
@@ -638,6 +639,9 @@ const UltimateContentBanner2025: React.FC = () => {
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> 7fd081304317a19c246388aa7a14fa8ea79259de
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
   );
 };
 

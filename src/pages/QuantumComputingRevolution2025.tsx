@@ -7,10 +7,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -844,6 +847,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Contact Quantum Experts
 =======
@@ -882,6 +886,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
             <button className="border-2 border-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-cyan-900 transition-all duration-300">
               Request Quantum Demo
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </button>
           </div>
         </div>

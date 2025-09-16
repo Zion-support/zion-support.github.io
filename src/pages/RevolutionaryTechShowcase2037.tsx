@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 =======
 import React from 'react';
@@ -8,6 +9,8 @@ import React from 'react';
 =======
 import React, { useState } from 'react';
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('conscious-ai');
@@ -82,41 +85,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-          {/* Interactive Demo Grid */}
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 mb-16">
-              {demos.map((demo, index) => (
-                <div
-                  key={demo.id}
-                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer group ${
-                    activeDemo === index ? 'ring-2 ring-purple-400 scale-105' : ''
-                  }`}
-                  onClick={() => setActiveDemo(index)}
-                >
-                  <div className="flex items-start space-x-6">
-                    <div className={`w-20 h-20 bg-gradient-to-r ${demo.color} rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300`}>
-                      {demo.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3">{demo.title}</h3>
-                      <p className="text-lg opacity-90 mb-4">{demo.description}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-purple-300">Duration: {demo.duration}</span>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleDemoStart(demo.id);
-                          }}
-                          className={`bg-gradient-to-r ${demo.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold ${
-                            isLoading ? 'opacity-50 cursor-not-allowed' : ''
-                          }`}
-                          disabled={isLoading}
-                        >
-                          {isLoading ? 'Starting...' : 'Start Demo'}
-                        </button>
-=======
->>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
                       </div>
                     </div>
                   </div>
@@ -386,12 +354,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
               </ul>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
             </div>
-<<<<<<< HEAD
-          </div>
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
 
         {/* Interactive Demo Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -420,6 +382,7 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
                 Enter Portal
               </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -483,6 +446,8 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                 </button>
               </div>
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </div>
 <<<<<<< HEAD
 =======
@@ -557,6 +522,7 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join our beta program and be among the first to experience these revolutionary technologies
@@ -584,14 +550,12 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======

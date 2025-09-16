@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   const slides = [
     {
@@ -39,6 +40,8 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       link: "/pages/RevolutionaryTechShowcase2036"
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
     }
   ];
 
@@ -49,6 +52,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
@@ -68,12 +72,18 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e058
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
+=======
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY TECHNOLOGY • 2036-2040
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className={`bg-gradient-to-br ${slide.gradient} backdrop-blur-sm rounded-xl p-8 border ${slide.border} hover:scale-105 transition-all duration-300`}>
                     <div className="text-center">
@@ -90,12 +100,20 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                       </a>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+                        </a>
+                        <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+                          Learn More
+                        </button>
+                      </div>
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
 =======
@@ -117,6 +135,9 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+=======
+
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           >
 <<<<<<< HEAD
             ←
@@ -124,12 +145,16 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e058
           </button>
           <button
+<<<<<<< HEAD
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           >
             →
           </button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <div className="text-center mt-8">
@@ -139,6 +164,8 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
         </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
       </div>
     </div>
   );

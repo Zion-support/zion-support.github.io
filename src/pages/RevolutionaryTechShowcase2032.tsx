@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ import { Helmet } from 'react-helmet-async';
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -39,6 +42,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         <div className="text-center mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
 <<<<<<< HEAD
@@ -54,6 +58,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-e058
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2032
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -63,6 +69,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -499,6 +506,22 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+        {/* Technology Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(technologies).map(([key, tech]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                  : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              <span className="mr-2">{tech.icon}</span>
+              {tech.title}
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </button>
           </div>
         </div>

@@ -6,6 +6,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const technologies = [
     {
 <<<<<<< HEAD
@@ -187,6 +188,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white mb-12">
@@ -235,6 +238,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Experience our revolutionary technologies through interactive demonstrations and real-time data
@@ -619,6 +623,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 {activeTab === 'space' && '🚀 Warp Drive: CHARGED\n🌍 Terraforming: READY\n🛸 Exploration: ACTIVE'}
                 {activeTab === 'quantum' && '⚛️ Quantum State: SUPERPOSITION\n🧠 Consciousness: LINKED\n🌊 Wave Function: STABLE'}
                 {activeTab === 'universal' && '🌟 Multi-Dim: CONNECTED\n⚡ Energy: HARNESSED\n🔗 Reality: ENGINEERED'}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
               </div>
             </div>
             <a 
@@ -630,6 +636,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
             >
               Experience {technologies[activeTab as keyof typeof technologies].title} →
             </a>
+<<<<<<< HEAD
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -647,6 +654,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e058
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>

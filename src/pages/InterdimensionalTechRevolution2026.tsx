@@ -9,6 +9,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Interdimensional Technologies */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -31,6 +32,8 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           >
             <div className="text-6xl mb-6 text-center">🚪🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Dimension Gateway</h3>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             <p className="text-indigo-100 mb-6 text-center">
               Stable portals that allow safe travel between dimensions and parallel universes
             </p>
@@ -87,6 +90,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
           </motion.div>
 
+<<<<<<< HEAD
       {/* Dimensional Statistics */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -651,6 +655,8 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
             </button>
           </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           {/* Parallel Universe Mining */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}

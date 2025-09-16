@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2036: React.FC = () => {
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
   const [activeCategory, setActiveCategory] = useState(0);
 
   const serviceCategories = [
@@ -233,6 +239,10 @@ const ComprehensiveServices2036: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           {/* Pricing Plans */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 mb-16">
             <div className="text-center mb-12">
@@ -334,6 +344,11 @@ const ComprehensiveServices2036: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-99e3
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -74,10 +75,13 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 Watch Demo
               </button>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Quantum Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -118,12 +122,15 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 Coming Soon
               </div>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>
 
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Call to Action */}
         <div className="text-center">
@@ -145,6 +152,10 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             >
               Learn More
             </a>
+=======
+      </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>

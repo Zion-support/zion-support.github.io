@@ -138,6 +138,7 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
 
@@ -274,6 +275,8 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Contact Our Experts
             </button>
           </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
         </div>
       </div>
     </div>

@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';

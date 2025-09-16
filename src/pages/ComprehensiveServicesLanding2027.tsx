@@ -119,6 +119,12 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';

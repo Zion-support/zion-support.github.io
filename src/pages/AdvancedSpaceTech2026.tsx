@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+=======
+import { motion } from 'framer-motion';
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
 import React, { useState, useEffect } from 'react';
 
 const AdvancedSpaceTech2026: React.FC = () => {

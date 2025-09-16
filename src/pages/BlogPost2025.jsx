@@ -2,6 +2,7 @@ import React from "react";
 
 const BlogPost2025 = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -40,6 +41,8 @@ const BlogPost2025 = () => {
             <div className="text-sm text-pink-200">
               Published: January 15, 2025
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ const NextGenInnovationHub2036: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ const NextGenInnovationHub2036: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
   return (
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
 =======
   const [activeInnovation, setActiveInnovation] = useState(0);
@@ -232,6 +235,7 @@ const NextGenInnovationHub2036: React.FC = () => {
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2036
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2036
           </h1>
@@ -270,6 +274,8 @@ const NextGenInnovationHub2036: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </div>
             
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -308,6 +314,7 @@ const NextGenInnovationHub2036: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -620,6 +627,8 @@ const NextGenInnovationHub2036: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors font-semibold text-lg">
               Join Research
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
             </button>
           </div>
         </div>
