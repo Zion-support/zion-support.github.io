@@ -1,208 +1,417 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import { motion } from 'framer-motion';
 
 const ComprehensiveServices2034: React.FC = () => {
-  const services = [
-    {
-      category: "Synthetic Intelligence",
-      icon: "🧠",
-      color: "from-indigo-600 to-purple-600",
-      borderColor: "border-indigo-400/30",
-      services: [
-        {
-          name: "Consciousness Synthesis Engine",
-          description: "Create and merge multiple consciousness streams into unified intelligence",
-          features: ["Self-evolving AI", "Emotional intelligence", "Creative problem solving", "Philosophical reasoning"],
-          price: "Starting at $50,000/month"
-        },
-        {
-          name: "Creative Intelligence Matrix",
-          description: "AI systems that generate entirely new forms of art, music, and literature",
-          features: ["Art generation", "Music composition", "Literature creation", "Design innovation"],
-          price: "Starting at $25,000/month"
-        },
-        {
-          name: "Dream State Processing",
-          description: "AI that can enter and process dream-like states for enhanced creativity",
-          features: ["Dream simulation", "Creative enhancement", "Subconscious processing", "Innovation acceleration"],
-          price: "Starting at $35,000/month"
-        }
-      ]
-    },
-    {
-      category: "Reality Manipulation",
-      icon: "🌀",
-      color: "from-purple-600 to-pink-600",
-      borderColor: "border-purple-400/30",
-      services: [
-        {
-          name: "Quantum Reality Engine",
-          description: "Systems that can alter the fundamental constants of physics",
-          features: ["Physics manipulation", "Dimensional control", "Reality simulation", "Temporal manipulation"],
-          price: "Starting at $100,000/month"
-        },
-        {
-          name: "Dimensional Gateway",
-          description: "Technology that creates stable portals between different dimensions",
-          features: ["Portal creation", "Dimensional travel", "Multi-reality access", "Infinite resources"],
-          price: "Starting at $75,000/month"
-        },
-        {
-          name: "Temporal Manipulation",
-          description: "Ability to create localized time distortions for enhanced processing",
-          features: ["Time control", "Processing acceleration", "Temporal loops", "Chronological manipulation"],
-          price: "Starting at $60,000/month"
-        }
-      ]
-    },
-    {
-      category: "Cosmic Intelligence",
-      icon: "🌌",
-      color: "from-pink-600 to-rose-600",
-      borderColor: "border-pink-400/30",
-      services: [
-        {
-          name: "Universal Communication",
-          description: "AI systems that can communicate with cosmic-scale intelligence networks",
-          features: ["Interstellar communication", "Cosmic data processing", "Galactic collaboration", "Universal knowledge"],
-          price: "Starting at $200,000/month"
-        },
-        {
-          name: "Cosmic Data Processing",
-          description: "Process and analyze data from across the universe in real-time",
-          features: ["Universal data access", "Real-time processing", "Cosmic insights", "Galactic intelligence"],
-          price: "Starting at $150,000/month"
-        },
-        {
-          name: "Interstellar Collaboration",
-          description: "Collaborate with intelligence networks across multiple star systems",
-          features: ["Multi-system networks", "Collaborative intelligence", "Galactic projects", "Universal solutions"],
-          price: "Starting at $300,000/month"
-        }
-      ]
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
-      <Header />
-      
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-8 animate-pulse">
-            🚀 COMPREHENSIVE SERVICES • JANUARY 2034
-          </div>
-          <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Comprehensive Services 2034
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of revolutionary services spanning synthetic intelligence, 
-            reality manipulation, and cosmic intelligence technologies.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🚀 COMPREHENSIVE SERVICES • JANUARY 2034
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              Comprehensive Services 2034
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Complete suite of revolutionary technology services designed to transform your business and accelerate your success
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Services →
+              </button>
+              <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/20 transition-colors font-semibold text-lg">
+                Get Consultation
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Service Categories */}
+      <div className="container mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-6">🎯 Service Categories</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Comprehensive technology solutions across all major industry verticals
           </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI & Consciousness</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Revolutionary AI services including conscious AI development, emotional intelligence, and autonomous decision making
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Conscious AI Development</li>
+              <li>• Emotional Intelligence Systems</li>
+              <li>• Autonomous Decision Making</li>
+              <li>• AI Ethics & Governance</li>
+              <li>• Neural Network Optimization</li>
+            </ul>
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Learn More →
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Advanced quantum computing solutions for complex problem solving and reality simulation
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum Algorithm Development</li>
+              <li>• Reality Simulation</li>
+              <li>• Quantum Cryptography</li>
+              <li>• Molecular Simulation</li>
+              <li>• Quantum Machine Learning</li>
+            </ul>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Explore Quantum →
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Dimensional Technology</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Breakthrough dimensional computing and interdimensional data processing services
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Multi-Dimensional Processing</li>
+              <li>• Reality Manipulation</li>
+              <li>• Infinite Data Storage</li>
+              <li>• Universal Connectivity</li>
+              <li>• Dimensional Portals</li>
+            </ul>
+            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Enter Dimensions →
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Space-Time Engineering</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              Advanced spacetime manipulation and temporal computing services
+            </p>
+            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
+              <li>• Time Dilation Systems</li>
+              <li>• Space Warp Technology</li>
+              <li>• Temporal Computing</li>
+              <li>• FTL Communication</li>
+              <li>• Time Travel Simulation</li>
+            </ul>
+            <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
+              Launch Engine →
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Prediction</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Advanced reality prediction and future simulation services using quantum probability
+            </p>
+            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
+              <li>• Future Simulation</li>
+              <li>• Probability Calculation</li>
+              <li>• Reality Modeling</li>
+              <li>• Predictive Analytics</li>
+              <li>• Timeline Analysis</li>
+            </ul>
+            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
+              Predict Future →
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">💫</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Universal Communication</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Universal translation and communication services for any intelligent species
+            </p>
+            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
+              <li>• Universal Translation</li>
+              <li>• Species Communication</li>
+              <li>• Real-time Processing</li>
+              <li>• Cultural Adaptation</li>
+              <li>• Intergalactic Networking</li>
+            </ul>
+            <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
+              Start Communication →
+            </button>
+          </motion.div>
         </div>
+      </div>
 
-        {/* Services by Category */}
-        {services.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-16">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">{category.icon}</div>
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {category.category}
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Revolutionary {category.category.toLowerCase()} services that push the boundaries of what's possible
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service, serviceIndex) => (
-                <div 
-                  key={serviceIndex}
-                  className={`bg-gradient-to-br ${category.color}/20 backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300`}
-                >
-                  <h3 className="text-2xl font-bold mb-4 text-center">{service.name}</h3>
-                  <p className="text-gray-300 mb-6 text-center">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-indigo-300">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                          <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center mb-6">
-                    <div className="text-2xl font-bold text-indigo-400 mb-2">{service.price}</div>
-                    <div className="text-sm opacity-90">Flexible pricing available</div>
-                  </div>
-                  
-                  <div className="flex space-x-3">
-                    <button className={`flex-1 bg-gradient-to-r ${category.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                      Learn More →
-                    </button>
-                    <button className="border border-white text-white px-4 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                      Contact
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        {/* Performance Metrics */}
-        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">📊 Service Performance Metrics</h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-indigo-400 mb-2">∞</div>
-              <div className="text-xl font-semibold mb-2">Consciousness Levels</div>
-              <div className="text-sm opacity-90">Unlimited synthetic consciousness generation</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">10^100</div>
-              <div className="text-xl font-semibold mb-2">Reality States</div>
-              <div className="text-sm opacity-90">Simultaneous reality manipulation capabilities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
-              <div className="text-xl font-semibold mb-2">Cosmic Connections</div>
-              <div className="text-sm opacity-90">Unlimited interstellar intelligence networks</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-rose-400 mb-2">99.999%</div>
-              <div className="text-xl font-semibold mb-2">Service Uptime</div>
-              <div className="text-sm opacity-90">Perfect service reliability and availability</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Reality?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already using our revolutionary services to achieve 
-            unprecedented success in synthetic intelligence, reality manipulation, and cosmic intelligence.
+      {/* Industry Solutions */}
+      <div className="container mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-6">🏭 Industry Solutions</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Specialized technology solutions tailored for specific industries
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🚀 Get Started →
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30"
+          >
+            <div className="text-4xl mb-4 text-center">🏥</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Healthcare</h3>
+            <p className="text-blue-100 text-center text-sm mb-4">
+              Revolutionary medical AI and quantum diagnostics
+            </p>
+            <ul className="text-blue-200 space-y-1 text-xs">
+              <li>• AI Diagnosis</li>
+              <li>• Quantum Medicine</li>
+              <li>• Neural Interfaces</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-400/30"
+          >
+            <div className="text-4xl mb-4 text-center">🏭</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Manufacturing</h3>
+            <p className="text-green-100 text-center text-sm mb-4">
+              Quantum-powered manufacturing and automation
+            </p>
+            <ul className="text-green-200 space-y-1 text-xs">
+              <li>• Quantum Automation</li>
+              <li>• Dimensional Assembly</li>
+              <li>• AI Quality Control</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30"
+          >
+            <div className="text-4xl mb-4 text-center">🏦</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Finance</h3>
+            <p className="text-purple-100 text-center text-sm mb-4">
+              Quantum financial modeling and AI trading
+            </p>
+            <ul className="text-purple-200 space-y-1 text-xs">
+              <li>• Quantum Trading</li>
+              <li>• AI Risk Analysis</li>
+              <li>• Reality Prediction</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30"
+          >
+            <div className="text-4xl mb-4 text-center">🚀</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Space</h3>
+            <p className="text-orange-100 text-center text-sm mb-4">
+              Interstellar travel and space exploration
+            </p>
+            <ul className="text-orange-200 space-y-1 text-xs">
+              <li>• FTL Travel</li>
+              <li>• Space-Time Engineering</li>
+              <li>• Universal Communication</li>
+            </ul>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Pricing Tiers */}
+      <div className="container mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-6">💰 Pricing Tiers</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Choose the perfect plan for your revolutionary technology needs
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="bg-gradient-to-br from-slate-600/20 to-gray-600/20 backdrop-blur-sm rounded-xl p-8 border border-slate-400/30"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-center">Basic</h3>
+            <div className="text-4xl font-bold text-center mb-6">$10K<span className="text-lg">/month</span></div>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Basic AI Services</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Quantum Computing Access</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">24/7 Support</span>
+              </li>
+            </ul>
+            <button className="w-full bg-slate-600 py-3 rounded-lg hover:bg-slate-500 transition-colors font-semibold">
+              Choose Basic
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-              📞 Contact Sales
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 relative"
+          >
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 rounded-full text-sm font-bold">
+                Most Popular
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Pro</h3>
+            <div className="text-4xl font-bold text-center mb-6">$50K<span className="text-lg">/month</span></div>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Conscious AI Development</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Dimensional Technology</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Reality Prediction</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Priority Support</span>
+              </li>
+            </ul>
+            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Choose Pro
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="bg-gradient-to-br from-gold-600/20 to-yellow-600/20 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-center">Enterprise</h3>
+            <div className="text-4xl font-bold text-center mb-6">$200K<span className="text-lg">/month</span></div>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">All Pro Features</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Space-Time Engineering</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Universal Communication</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-400 mr-2">✓</span>
+                <span className="text-sm">Dedicated Support</span>
+              </li>
+            </ul>
+            <button className="w-full bg-gradient-to-r from-yellow-600 to-orange-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Choose Enterprise
+            </button>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Call to Action Section */}
+      <div className="container mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center bg-gradient-to-r from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
+        >
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+            Join thousands of companies already using our revolutionary technology services to accelerate their success
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey →
+            </button>
+            <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/20 transition-colors font-semibold text-lg">
+              Schedule Consultation
             </button>
           </div>
-        </div>
-      </main>
-      
-      <Footer />
+        </motion.div>
+      </div>
     </div>
   );
 };
