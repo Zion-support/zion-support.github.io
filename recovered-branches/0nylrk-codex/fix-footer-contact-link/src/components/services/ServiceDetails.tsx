@@ -56,7 +56,6 @@
               {getRegionalInstructions(country)}
             </p>
           </div>
-=======
                 <div 
                   key={idx} 
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"

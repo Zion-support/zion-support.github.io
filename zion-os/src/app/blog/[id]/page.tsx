@@ -1,12 +1,9 @@
 import Link from 'next/link';
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
 import { getPostById } from '../../../data/blog';
 >>>>>>> origin/feat/blog-content-and-promo
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 
 type Params = { params: { id: string } };
 
@@ -16,17 +13,14 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36f9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
-=======
-  'ai-safety-governance-blueprint-2025': {
-    id: 'ai-safety-governance-blueprint-2025',
-    title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
->>>>>>> cursor/create-and-deploy-new-content-b9ff
     excerpt:
       'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
     category: 'AI Governance',
@@ -53,6 +47,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,12 +57,12 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
 >>>>>>> 1f7620a0edd89cd971bd6e6ace7dea7c2db60693
     excerpt:
-<<<<<<< HEAD
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
 =======
   'ai-agent-safety-playbook-2025': {
@@ -256,18 +252,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'This blueprint outlines five pillars: policy and risk taxonomy, gated release process, red‑team and evals, guardrails and runtime policy, and post‑deployment monitoring with feedback loops.',
       'We include templates for policy definitions, decision matrices for model selection, and reference architectures for integrating safety services into your MLOps/LLMOps pipelines.',
       'Organizations adopting this approach report faster approvals, fewer incidents, and clearer accountability across legal, security, and product teams.'
-=======
-      'Design patterns to deliver sub‑100ms inference at the edge using quantization, distillation, batching, and caching.',
-    category: 'Infrastructure',
-    author: 'Michael Rodriguez',
-    date: '2025-09-13',
-    readTime: '8 min read',
-    content: [
-      'As AI moves closer to users and devices, inference latency and cost become the dominant constraints. Edge strategies must optimize the full stack: model, runtime, and network.',
-      'We cover practical techniques: 8‑bit/4‑bit quantization, operator and KV cache optimizations, request batching, speculative decoding, and distillation to smaller student models.',
-      'Deployment patterns include split inference, regional sharding, and device‑side pre/post‑processing with WASM or CUDA. We provide a reference SLO playbook and cost model.',
-      'The result is consistent sub‑100ms responses and 30–60% cost reduction while preserving accuracy for common product tasks.'
->>>>>>> cursor/create-and-deploy-new-content-b9ff
     ]
   },
   'edge-ai-inference-acceleration': {
@@ -324,6 +308,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ]
   },
+  'ai-supply-chain-orchestration-2025': {
+    id: 'ai-supply-chain-orchestration-2025',
+    title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
+    excerpt:
+      'A pragmatic roadmap to deploy AI-driven planning, routing, and fulfillment with guardrails and measurable ROI.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Supply chains are data-rich but execution-poor. AI orchestration closes the loop by converting signals into actions across planning, procurement, routing, and fulfillment.',
+      'Start with demand forecasting and inventory positioning. Add dynamic routing with real-time constraints, then automate exception handling with human-in-the-loop approvals for high-risk actions.',
+      'Reference stack: event streaming, optimization engines, policy guardrails, and audit logs. Outcomes include lower stockouts, reduced logistics cost, and faster cycle times.'
+    ]
+  },
+  'responsible-agent-governance': {
+    id: 'responsible-agent-governance',
+    title: 'Responsible Agent Governance: Policies, Controls, and Audit for AI Agents',
+    excerpt:
+      'Design a governance layer for AI agents with identity, permissions, policy evaluation, and verifiable audit.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '6 min read',
+    content: [
+      'As organizations adopt AI agents, governance must move from guidelines to enforceable controls. The core is identity, permissions, and policy evaluation with contextual risk.',
+      'Implement capabilities-based access, graded trust, and continuous monitoring. Maintain tamper-evident audit trails and require approvals for sensitive actions.',
+      'This framework reduces operational risk and builds stakeholder trust without slowing innovation.'
+    ]
+  },
   'quantum-risk-modeling-2025': {
     id: 'quantum-risk-modeling-2025',
     title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
@@ -369,7 +383,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   'ai-safety-red-teaming-2025': {
@@ -433,8 +446,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     ]
   }
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
   'edge-ai-compliance-2025': {
     id: 'edge-ai-compliance-2025',
     title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
@@ -465,10 +476,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Teams adopting these patterns report higher engagement, reduced abandonment, and improved trust across diverse users.'
     ]
   },
-<<<<<<< HEAD
 >>>>>>> origin/feature/content-sept15-2025
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 };
 
 export function generateStaticParams() {
@@ -518,6 +526,9 @@ export default function BlogPostPage({ params }: Params) {
     </article>
   );
 <<<<<<< HEAD
+}
+
+=======
 <<<<<<< HEAD
 }
 
@@ -528,7 +539,4 @@ export default function BlogPostPage({ params }: Params) {
 }
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
-=======
-}
-
->>>>>>> cursor/create-and-deploy-new-content-b9ff
+>>>>>>> cursor/create-and-deploy-new-content-36f9

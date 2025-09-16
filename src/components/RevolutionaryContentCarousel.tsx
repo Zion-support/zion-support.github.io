@@ -99,7 +99,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
       impact: "Revolutionary"
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -129,7 +133,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
     },
     {
       id: 4,
@@ -166,7 +174,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
@@ -178,7 +190,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
@@ -189,7 +205,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -214,7 +234,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
@@ -226,7 +250,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
@@ -239,7 +267,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
       status: "Live Now",
       impact: "Transformative"
     }
@@ -804,6 +836,52 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </motion.button>
         ))}
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      {/* Dots Navigation */}
+      <div className="flex justify-center space-x-3 mt-8">
+        {revolutionaryContent.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Content Preview Grid */}
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {revolutionaryContent.map((content, index) => (
+          <motion.button
+            key={content.id}
+            onClick={() => goToSlide(index)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`p-4 rounded-xl text-left transition-all duration-300 ${
+              index === currentSlide
+                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
+                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+            }`}
+          >
+            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
+              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
+            }`}>
+              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
+            </div>
+            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
+            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
+          </motion.button>
+        ))}
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-502e
     </div>
   );
 };

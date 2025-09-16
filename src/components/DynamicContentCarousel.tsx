@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
@@ -6,13 +7,30 @@ import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+>>>>>>> main
 <<<<<<< HEAD
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg">
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>
@@ -30,9 +48,15 @@ const DynamicContentCarousel: React.FC = () => {
           <p>Brain-computer interface solutions</p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
       </div>
     </div>
   );
@@ -41,6 +65,17 @@ const DynamicContentCarousel: React.FC = () => {
 export default DynamicContentCarousel;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main

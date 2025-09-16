@@ -26,7 +26,7 @@ interface SearchFilters {
   relevance: 'all' | 'high' | 'medium' | 'low';
 }
 
-const EnhancedSearch: React.FC = () => {
+const EnhancedSearch = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);

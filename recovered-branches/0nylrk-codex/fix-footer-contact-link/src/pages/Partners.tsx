@@ -249,7 +249,6 @@
 
 
 
-=======
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -270,7 +269,6 @@
 
 
 
-=======
     );
   }
 

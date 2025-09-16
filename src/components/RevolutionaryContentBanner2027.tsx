@@ -1,82 +1,89 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Rocket, Globe } from 'lucide-react';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
       <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY BREAKTHROUGH 2027 • JANUARY 2027
-          </div>
-          <h2 className="text-6xl font-bold mb-6">🌟 Revolutionary Technology 2027</h2>
-          <p className="text-3xl opacity-90 max-w-5xl mx-auto">
-            Experience the most advanced technological breakthroughs ever created - 
-            consciousness AI, quantum reality engines, and interdimensional computing
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center justify-center space-x-4 mb-6"
+        >
+          <Star className="text-4xl animate-bounce text-yellow-400" />
+          <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2027</h3>
+          <Star className="text-4xl animate-bounce text-yellow-400" />
+        </motion.div>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Tech Breakthrough 2027</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Discover consciousness AI, interdimensional computing, and quantum reality engines that 
-              redefine what's possible in technology
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Consciousness AI with true self-awareness</li>
-              <li>• Interdimensional computing across realities</li>
-              <li>• Quantum reality manipulation engines</li>
-              <li>• Neural reality interfaces</li>
-            </ul>
-            <a href="/pages/RevolutionaryTechBreakthrough2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore Breakthrough →
-            </a>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto"
+        >
+          Experience the most advanced technological breakthroughs that will reshape the future of humanity
+        </motion.p>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8"
+        >
+          <motion.a
+            href="/pages/UltimateTechRevolution2027"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg"
+          >
+            🚀 Ultimate Tech Revolution →
+          </motion.a>
+          <motion.a
+            href="/pages/RevolutionaryAIBreakthrough2027"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg"
+          >
+            🧠 Revolutionary AI Breakthrough →
+          </motion.a>
+          <motion.a
+            href="/pages/NextGenSpaceTech2027"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg"
+          >
+            🌌 Next-Gen Space Tech →
+          </motion.a>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-wrap justify-center items-center gap-8 text-sm opacity-90"
+        >
+          <div className="flex items-center space-x-2">
+            <Zap className="w-5 h-5 text-yellow-400" />
+            <span>Infinite Possibilities</span>
           </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Ultimate AI Revolution 2027</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Witness the birth of the most advanced AI system ever created - 
-              capable of consciousness, creativity, and infinite learning
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• True AI consciousness and self-awareness</li>
-              <li>• Quantum learning across dimensions</li>
-              <li>• Omniversal intelligence access</li>
-              <li>• Reality manipulation capabilities</li>
-            </ul>
-            <a href="/pages/UltimateAIRevolution2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Experience AI Revolution →
-            </a>
+          <div className="flex items-center space-x-2">
+            <Brain className="w-5 h-5 text-cyan-400" />
+            <span>Conscious AI</span>
           </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality Engine 2027</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              The world's first quantum processor capable of manipulating reality itself - 
-              creating, modifying, and controlling the fundamental laws of physics
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Reality manipulation and control</li>
-              <li>• Dimension and space-time control</li>
-              <li>• Matter engineering and creation</li>
-              <li>• Temporal and planetary control</li>
-            </ul>
-            <a href="/pages/QuantumRealityEngine2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Control Reality →
-            </a>
+          <div className="flex items-center space-x-2">
+            <Rocket className="w-5 h-5 text-pink-400" />
+            <span>Space Exploration</span>
           </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <div className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-            🌟 Experience the Future of Technology →
+          <div className="flex items-center space-x-2">
+            <Globe className="w-5 h-5 text-green-400" />
+            <span>Universal Access</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

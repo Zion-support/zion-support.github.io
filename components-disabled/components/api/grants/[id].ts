@@ -104,10 +104,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
 }
-=======
 
 
-=======
   }
 }
 

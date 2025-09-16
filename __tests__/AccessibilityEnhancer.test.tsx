@@ -21,7 +21,3 @@ describe('AccessibilityEnhancer', () => {
     render(<AccessibilityEnhancer />);
   });
 });
-<<<<<<< HEAD
-=======
-});
->>>>>>> origin/merge-pr-12271

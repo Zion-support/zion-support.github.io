@@ -111,7 +111,6 @@ function MessageTalentModal() {
         image_url: talent.profile_picture_url |""
       }
       setIsSubmitting(true),
-=======
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -182,7 +181,6 @@ export function MessageTalentModal({
 
 
 
-=======
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

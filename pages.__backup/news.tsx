@@ -198,7 +198,6 @@ const NewsPage: React.FC = () => {
       day: 'numeric' 
     });
   };
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -223,7 +222,6 @@ export default function News() {
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
       tags: ['AI'Quantum Computing'Innovation'],
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -275,7 +273,6 @@ export default function News() {
   ];
 
   const featuredNews = [
-=======
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -314,9 +311,7 @@ export default function News() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-=======
 import React{ useState } from 'react';
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -680,7 +675,6 @@ export default function NewsPage() {
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
                 Subscribe to our newsletter for the latest newsinsightsand breakthroughs in AI consciousness and quantum computing.
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -850,7 +844,6 @@ export default function NewsPage() {
               <p className="text-xl text-gray-300 mb-8">
                 For press inquiriesmedia interviewsor additional information
                 please contact our communications team.
-=======
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -865,7 +858,6 @@ export default function NewsPage() {
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
                   Press Kit
-=======
                 </a>
               </div>
             </motion.div>
@@ -907,11 +899,9 @@ export default function NewsPage() {
         </div>
       </section>
     </div>
-=======
     </UltraAdvancedFuturisticBackground>
   );
 }
-=======
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -935,7 +925,6 @@ export default function NewsPage() {
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
               </a>
-=======
             initial={{ opacity: 0y: 30 }}
             whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1168,14 +1157,12 @@ export default function NewsPage() {
     </Layout>
   );
 }
-=======
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-4">News & Press</h1>
         <p className="text-gray-300">Press releases and announcements will appear here.</p>
       </div>
-=======
 
       <EnhancedFooter />
     </div>

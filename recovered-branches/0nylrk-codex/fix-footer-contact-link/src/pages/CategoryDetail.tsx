@@ -68,7 +68,6 @@
               {category.description}
             </p>
           </div>
-=======
   };
 
   return (
