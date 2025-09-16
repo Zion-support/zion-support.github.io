@@ -1,7 +1,7 @@
-import { newBlogPosts2026 } from './newContent2026';
+import { newContent2026 } from './newContent2026';
 
 export const blogPosts = [
-  ...newBlogPosts2026,
+  ...newContent2026,
   {
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
@@ -46,7 +46,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/ai-2027-breakthrough-innovations.jpg",
     slug: "2027-ai-breakthrough-innovations-future-is-here"
->>>>>>> cursor/create-and-deploy-new-content-b459
   },
   {
     id: 10001,
@@ -2755,8 +2754,8 @@ export const getBlogTags = () => {
   }));
 };
 
-// New content added for enhanced engagement
-export const newContent2026 = [
+// Additional content for enhanced engagement
+export const additionalContent2026 = [
   {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
