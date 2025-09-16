@@ -191,6 +191,8 @@ import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
 import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
 import AIExecutiveBriefQ1_2026 from './src/pages/AIExecutiveBriefQ1_2026';
 import AgenticRAGBlueprint2026 from './src/pages/AgenticRAGBlueprint2026';
+import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalBanner2026';
+import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -696,6 +698,11 @@ export default function App(): JSX.Element {
                   <RevolutionaryContentShowcase />
                 </div>
 
+                {/* NEW: Revolutionary Content Showcase 2025 */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2025 />
+                </div>
+
                 {/* Revolutionary Content Showcase 2026 */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2026 />
@@ -1195,6 +1202,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryServices2026" element={<RevolutionaryServices2026 />} />
           <Route path="/revolutionary-content-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2027" element={<RevolutionaryTechShowcase2027 />} />
