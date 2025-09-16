@@ -244,6 +244,12 @@ import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnolo
 import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
 import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
 import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryContentCarousel2036';
+import NextGenTechRevolution2025 from './src/pages/NextGenTechRevolution2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import UltimateTechBanner2025 from './src/components/UltimateTechBanner2025';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import NextGenTechBanner2025 from './src/components/NextGenTechBanner2025';
 
 export default function App(): JSX.Element {
   return (
@@ -276,6 +282,15 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
+                
+                {/* NEW: Ultimate Tech Banner 2025 - Latest Breakthrough */}
+                <UltimateTechBanner2025 />
+                
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Showcase */}
+                <RevolutionaryTechBanner2025 />
+                
+                {/* NEW: Next-Gen Tech Banner 2025 - Latest Revolution */}
+                <NextGenTechBanner2025 />
                 
                 {/* NEW: Revolutionary Breakthrough Banner 2026 */}
                 <RevolutionaryBreakthroughBanner2026 />
@@ -610,6 +625,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧬 ULTIMATE: Neural Interface 2025 →
+                    </a>
+                    <a href="/pages/NextGenTechRevolution2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 NEW: Next-Gen Tech Revolution 2025 →
+                    </a>
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 NEW: Ultimate Tech Breakthrough 2025 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ NEW: Revolutionary Tech Showcase 2025 →
                     </a>
                   </div>
                 </div>
@@ -1199,6 +1223,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
           <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
           <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
+          <Route path="/pages/NextGenTechRevolution2025" element={<NextGenTechRevolution2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
