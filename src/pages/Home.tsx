@@ -8,6 +8,8 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+import UltimateTechRevolutionBanner from '../components/UltimateTechRevolutionBanner';
+import RevolutionaryServicesBanner from '../components/RevolutionaryServicesBanner';
 
 const Home: React.FC = () => {
   return (
@@ -57,31 +59,14 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* NEW: Ultimate Tech Showcase Banner */}
-        <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-          <div className="relative z-10">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <span className="text-3xl animate-pulse">🚀</span>
-              <h3 className="text-3xl font-bold">ULTIMATE TECH SHOWCASE 2026</h3>
-              <span className="text-3xl animate-pulse">🚀</span>
-            </div>
-            <p className="text-xl opacity-95 mb-6 max-w-5xl mx-auto">
-              Discover the most comprehensive collection of cutting-edge technologies including
-              Biotech AI, Space Technology, and Advanced Quantum Systems
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🌟 Ultimate Tech Showcase →
-              </a>
-              <a href="/pages/ComprehensiveServicesShowcase2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🚀 Comprehensive Services →
-              </a>
-              <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                📚 Tech Blog 2026 →
-              </a>
-            </div>
-          </div>
+        {/* NEW: Ultimate Tech Revolution Banner */}
+        <div className="container mx-auto px-4">
+          <UltimateTechRevolutionBanner />
+        </div>
+
+        {/* NEW: Revolutionary Services Banner */}
+        <div className="container mx-auto px-4">
+          <RevolutionaryServicesBanner />
         </div>
 
         {/* NEW: Ultimate Breakthrough Banner */}
