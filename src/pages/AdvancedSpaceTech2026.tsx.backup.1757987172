@@ -305,6 +305,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
           <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-colors font-semibold text-lg">
             Join Mission
           </button>
+>>>>>>> origin/cursor/create-and-deploy-new-content-8427
         </div>
       </div>
     </div>
