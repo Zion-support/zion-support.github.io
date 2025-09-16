@@ -20,7 +20,6 @@ import OpenAI from 'openai';
       temperature: 0.2,
     });
 
->>>>>>> origin/auto/autonomy-17186719616
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);

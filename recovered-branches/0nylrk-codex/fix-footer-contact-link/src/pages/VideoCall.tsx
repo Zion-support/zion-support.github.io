@@ -20,7 +20,6 @@
       setIsJoining(false);
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`
->>>>>>> origin/auto/autonomy-17186719616
       });
     }, 1500);
   };

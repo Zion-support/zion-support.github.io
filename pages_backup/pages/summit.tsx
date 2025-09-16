@@ -110,7 +110,6 @@ export default function SummitPage() {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   });
@@ -487,15 +486,11 @@ function SummitPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -529,7 +524,6 @@ function SummitPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -657,7 +651,6 @@ function SummitPage() {
 
           <div>
             <label className="block text-sm mb-1">Name</label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <input
               required
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
@@ -902,7 +895,6 @@ function SummitPage() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

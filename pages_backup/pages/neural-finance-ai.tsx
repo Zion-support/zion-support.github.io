@@ -589,9 +589,7 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -623,13 +621,9 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -658,12 +652,8 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   <span>94% Market Prediction Accuracy</span>
@@ -1137,13 +1127,10 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1160,7 +1147,6 @@ const NeuralFinanceAI: React.FC = () => {
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
                     plan.popular
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
                       : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
@@ -1332,7 +1318,6 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1352,12 +1337,8 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               <Link
@@ -1392,13 +1373,9 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

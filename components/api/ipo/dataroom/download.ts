@@ -11,12 +11,10 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
   const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stream';
   res.setHeader('Content-Type', contentType);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -24,4 +22,3 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
->>>>>>> origin/auto/autonomy-17186719616

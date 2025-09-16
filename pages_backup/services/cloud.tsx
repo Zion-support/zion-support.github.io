@@ -1,5 +1,3 @@
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -78,8 +76,6 @@ const cloudServices = [
 ];
 
 export default function CloudServicesPage() {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -105,8 +101,6 @@ export default function CloudServicesPage() {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -200,8 +194,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

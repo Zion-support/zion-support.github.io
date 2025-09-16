@@ -649,7 +649,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   }
 ];
@@ -667,4 +666,3 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     reviews: 52
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

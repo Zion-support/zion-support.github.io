@@ -201,7 +201,6 @@ export default function TalentPage() {
                 <Link
                   href="#positions"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
                 >
                   <Briefcase className="w-5 h-5 mr-2" />
                   View Open Positions

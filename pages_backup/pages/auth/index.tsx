@@ -13,7 +13,6 @@ import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const steps = ["Account", "Profile", "Preferences", "Preview"];
 
 
@@ -36,7 +35,6 @@ const steps = ['AccountProfilePreferencesPreview'],
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -96,7 +94,6 @@ const Onboarding: NextPage = () => {
       </Head>
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       </div>
 
 
@@ -219,15 +216,11 @@ export default Onboarding;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 

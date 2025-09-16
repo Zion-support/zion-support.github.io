@@ -20,9 +20,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 
 import { Check, Pencil } from 'lucide-react'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -64,8 +61,6 @@ export function GeneratedDescriptionDisplay(): any ({;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

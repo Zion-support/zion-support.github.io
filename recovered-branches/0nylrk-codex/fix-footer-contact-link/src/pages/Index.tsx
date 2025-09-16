@@ -30,15 +30,11 @@
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             ))}
           </div>
         </div>

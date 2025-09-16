@@ -5,7 +5,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method === 'GET') {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const { status, topic, tag, author, limit, offset } = req.query;
@@ -60,7 +59,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       seo: {
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
->>>>>>> origin/auto/autonomy-17186719616
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -79,4 +77,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).end();
 }
->>>>>>> origin/auto/autonomy-17186719616

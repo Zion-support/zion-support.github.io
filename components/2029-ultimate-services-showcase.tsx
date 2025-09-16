@@ -111,7 +111,6 @@ export default function UltimateServicesShowcase2029() {
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Get Started Today
               </Link>
@@ -123,13 +122,10 @@ export default function UltimateServicesShowcase2029() {
               </Link>
             </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -137,7 +133,6 @@ export default function UltimateServicesShowcase2029() {
 
 =======
             {/* Stats */}
->>>>>>> origin/auto/autonomy-17186719616
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -177,7 +172,6 @@ export default function UltimateServicesShowcase2029() {
 
 =======
       {/* Filters Section */}
->>>>>>> origin/auto/autonomy-17186719616
       <section className="py-16 bg-gray-900/50 border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
@@ -203,7 +197,6 @@ export default function UltimateServicesShowcase2029() {
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
                   }`}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             {/* Price Filter */}
@@ -215,7 +208,6 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Price Filter */}
 
 
@@ -228,9 +220,7 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Services Grid */}
@@ -271,7 +261,6 @@ export default function UltimateServicesShowcase2029() {
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> origin/auto/autonomy-17186719616
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -292,7 +281,6 @@ export default function UltimateServicesShowcase2029() {
                         <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 =======
                           <span>{feature}</span>
@@ -302,15 +290,12 @@ export default function UltimateServicesShowcase2029() {
                         <li className="text-xs text-gray-500">
                           +{service.features.length - 3} more features
                         </li>
->>>>>>> origin/auto/autonomy-17186719616
                       )}
                     </ul>
                   </div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                   {/* Features Preview */}
 
@@ -321,9 +306,7 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -338,7 +321,6 @@ export default function UltimateServicesShowcase2029() {
                   <div className="mb-6 space-y-2">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size:</span>
->>>>>>> origin/auto/autonomy-17186719616
                       <span className="text-emerald-400 font-medium">{service.marketSize}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
@@ -352,13 +334,11 @@ export default function UltimateServicesShowcase2029() {
                   </div>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -409,7 +389,6 @@ export default function UltimateServicesShowcase2029() {
 
 =======
                   {/* Hover Effect */}
->>>>>>> origin/auto/autonomy-17186719616
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </motion.div>
@@ -418,11 +397,8 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -444,7 +420,6 @@ export default function UltimateServicesShowcase2029() {
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all');
->>>>>>> origin/auto/autonomy-17186719616
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
@@ -453,16 +428,13 @@ export default function UltimateServicesShowcase2029() {
             </div>
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
           )}
         </div>
       </section>
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
@@ -474,14 +446,11 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -514,7 +483,6 @@ Join the future of technology with our revolutionary services.
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             
->>>>>>> origin/auto/autonomy-17186719616
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
@@ -540,7 +508,6 @@ Join the future of technology with our revolutionary services.
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -549,4 +516,3 @@ Join the future of technology with our revolutionary services.
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

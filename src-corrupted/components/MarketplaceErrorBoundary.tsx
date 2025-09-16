@@ -5,7 +5,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 import { RefreshCcw, AlertCircle } from 'lucide-react'

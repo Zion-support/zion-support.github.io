@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -61,7 +58,6 @@ const projectData = {
   client: {
     name: "TechCorp Inc.",
     avatar: ""
->>>>>>> origin/auto/autonomy-17186719616
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -102,10 +98,8 @@ export function MobileProjects() {
         showBack
       />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -122,4 +116,3 @@ export function MobileProjects() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

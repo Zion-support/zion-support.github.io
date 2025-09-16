@@ -45,7 +45,4 @@ export default ReviewSummary;      <div>
     </div>
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewSummary.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

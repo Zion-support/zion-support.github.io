@@ -169,15 +169,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg">
-              Download Brochure
-            </button>
-=======
->>>>>>> cursor/create-and-deploy-new-content-36c0
->>>>>>> cursor/create-and-deploy-new-content-56ca
           </div>
         </div>
       </div>

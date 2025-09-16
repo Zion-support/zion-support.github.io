@@ -1,5 +1,4 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -7,14 +6,12 @@ import {HelpCategory} from "./types";
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { HelpCategory } from "./types";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface HelpCategoryListProps {
   categories: HelpCategory[];

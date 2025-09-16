@@ -29,7 +29,6 @@ const NotFound = () => {
     );
   }, [location.pathname]);
 
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
@@ -45,7 +44,6 @@ const NotFound = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default NotFound;
@@ -55,4 +53,3 @@ export default NotFound;
 };
 
 export default NotFound;
->>>>>>> origin/auto/autonomy-17186719616

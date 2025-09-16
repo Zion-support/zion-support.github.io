@@ -315,7 +315,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -451,7 +450,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>

@@ -1,8 +1,6 @@
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -22,4 +20,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
 }
->>>>>>> origin/auto/autonomy-17186719616

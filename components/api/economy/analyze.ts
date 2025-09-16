@@ -7,7 +7,6 @@ export type AnalyzeResponse = {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -183,4 +182,3 @@ export default async function handler(
     return res.status(500).json({ error: 'Failed to generate analysis' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

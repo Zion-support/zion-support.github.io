@@ -26,7 +26,6 @@ import {
   MapPin;} from 'lucide-react';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Brain,
   Atom,
@@ -300,10 +299,8 @@ import {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <a
               href='#services'
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'>;
@@ -339,7 +336,6 @@ import {
             className="text-3xl md:text-4xl font-bold text-white mb-8"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -562,7 +558,6 @@ import {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className='text-center'>
               <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
@@ -621,7 +616,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
             </div>
             <div className='text-center'>
@@ -873,8 +867,6 @@ import {
                         </div>
                       </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </div>
                         <div className='flex items-center text-sm text-green-400'>
                           <Star className='w-4 h-4 mr-2' />
@@ -1027,7 +1019,6 @@ import {
                         href={`/services/${service && service.slug}`}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <div className="text-sm text-gray-400">
                           {_(service as any).pricing?.professional ? 
@@ -1040,7 +1031,6 @@ import {
 
                       <a
                         href={`/services/${service && service.slug}`}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200">;
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />;
@@ -1067,7 +1057,6 @@ import {
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1283,7 +1272,6 @@ import {
             viewport={{ once: true }}
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
@@ -1308,7 +1296,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <div className='text-center'>
               <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
@@ -1505,7 +1492,6 @@ import {
               Contact Our Team
             </a>
             <a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               href='https://ziontechgroup.com'
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"

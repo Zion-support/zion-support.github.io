@@ -11,4 +11,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   console.log('[NFT Claim] address:', address, 'signature:', signature.slice(0, 18) + '…');
   return res.status(200).json({ ok: true });
 }
->>>>>>> origin/auto/autonomy-17186719616
