@@ -9,23 +9,23 @@ const NewContentPromotionBanner2026: React.FC = () => {
 
   const newContent = [
     {
-      title: "AI Trends 2026 Insights",
-      description: "Discover the revolutionary AI technologies shaping the future",
-      link: "/pages/AITrends2026Insights",
+      title: "Exec Field Guide: Safe Agent Rollouts",
+      description: "Ship agent features with eval gates and deterministic rollback",
+      link: "/blog/ai-2026-exec-safe-agent-rollouts",
       icon: <TrendingUp className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Revolutionary Case Studies 2026",
-      description: "Explore groundbreaking success stories across industries",
-      link: "/pages/RevolutionaryCaseStudies2026",
+      title: "Trusted RAG: Evidence Hubs",
+      description: "Freshness windows, drift monitors, and trace‑linked citations",
+      link: "/blog/trusted-rag-2026-evidence-hubs",
       icon: <Star className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Ultimate Tech Showcase 2026",
-      description: "Experience the pinnacle of revolutionary technologies",
-      link: "/pages/UltimateTechShowcase2026",
+      title: "Budget‑Aware Model Routing",
+      description: "Balance quality, latency, and spend with policy‑guarded routes",
+      link: "/blog/agent-platform-2026-budget-aware-model-routing",
       icon: <Sparkles className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     }
