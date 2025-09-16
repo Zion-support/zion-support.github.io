@@ -2160,6 +2160,58 @@ export const blogPosts = [
   }
 ];
 
+// Latest additions (2025-09-16)
+const latest2025 = [
+  {
+    id: 10021,
+    title: "AI 2026: Scorecard-Driven Delivery — Starter Kit",
+    excerpt: "Copy-paste scorecards, CI gates, and dashboards to ship safely today.",
+    content:
+      "A practical starter kit for scorecard-driven delivery. Includes JSON schemas for KPIs, groundedness, latency SLOs, and incident readiness; CI wiring examples; and Grafana panels to make release decisions objective and auditable.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Scorecards", "CI Gates", "Dashboards"],
+    featured: true,
+    imageUrl: "/images/blog/scorecard-driven-delivery-starter-2026.jpg",
+    slug: "ai-2026-scorecard-driven-delivery-starter"
+  },
+  {
+    id: 10022,
+    title: "Trusted RAG: Freshness Windows + Drift Monitors — How-To",
+    excerpt: "Implement freshness windows and semantic drift checks with minimal code.",
+    content:
+      "Step-by-step guide to add freshness windows, citation coverage, and semantic drift monitors to your RAG stack. Includes policy examples and thresholds so you can gate merges and canaries with evidence, not vibes.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["Freshness", "Semantic Drift", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-freshness-drift-2026.jpg",
+    slug: "trusted-rag-freshness-drift-how-to"
+  },
+  {
+    id: 10023,
+    title: "FinOps: Budget-Aware Routing — 30% Savings in Weeks",
+    excerpt: "Policy-guarded routing bands to balance quality, latency, and spend.",
+    content:
+      "Learn how to introduce budget-aware model routing with guardrails. We provide a minimal routing policy, budget bands, and rollback ladders that preserve quality while reducing cost. Copy the configs and ship in days.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/budget-aware-routing-2026.jpg",
+    slug: "finops-budget-aware-routing-30-percent-savings"
+  }
+];
+
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug);
 };
@@ -2915,7 +2967,7 @@ export const extraContent2029 = [
 ];
 
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029];
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
