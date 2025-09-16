@@ -104,6 +104,22 @@ export default function HomePage() {
         url="/"
       />
       {/* New Promos: Sept 16, 2025 */}
+      {/* Promo: Agentic Evidence Hub — Executive Overview (new) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agentic Evidence Hub — Executive Overview</h2>
+              <p className="text-gray-600 mt-2">Centralize evals, releases, incidents, and guardrails for audit-ready autonomy.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-agentic-evidence-hub-overview" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
+              <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Architecture</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Promo: Freshly published — Reliable Autonomy + Billing Controls */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
