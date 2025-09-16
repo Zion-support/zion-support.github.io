@@ -89,6 +89,13 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       tag: 'Agentic',
       gradient: 'from-cyan-500 to-purple-500'
     }
+    ,
+    {
+      title: 'Evidence‑Led Operations — Centralizing Evals, Incidents, KPIs',
+      href: '/blog/ai-2026-evidence-led-operations-blueprint',
+      tag: 'Operations',
+      gradient: 'from-amber-500 to-pink-500'
+    }
   ];
 
   const navigationSections = [
@@ -347,7 +354,7 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
                 <p className="opacity-90">Guardrails, evals, and FinOps blueprints now live.</p>
               </div>
-              <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
+              <div className="grid sm:grid-cols-3 md:grid-cols-4 gap-4 w-full md:w-auto">
                 <a href="/blog/ai-2026-runtime-guardrails-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Runtime Guardrails Blueprint</div>
                   <div className="text-xs opacity-90">7 min • Safety</div>
@@ -359,6 +366,10 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
                 <a href="/blog/ai-2026-cost-optimization-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Cost Optimization Blueprint</div>
                   <div className="text-xs opacity-90">6 min • FinOps</div>
+                </a>
+                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
+                  <div className="text-xs opacity-90">7 min • Operations</div>
                 </a>
               </div>
             </div>
