@@ -21,6 +21,7 @@
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -30,6 +31,8 @@
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-40b9
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
@@ -49,6 +52,7 @@
     "**/*.spec.tsx",
     "coverage"
   ]
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -72,3 +76,6 @@
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-40b9
