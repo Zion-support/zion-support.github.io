@@ -160,6 +160,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Promo: Agentic Observability — Executive Overview (new) */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-pink-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-pink-100">
+            <div>
+              <p className="text-sm font-semibold text-pink-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agentic Observability — Executive Overview</h2>
+              <p className="text-gray-600 mt-2">Traces, evals, incidents, and KPIs to operate agent platforms.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agentic-observability-overview" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700">Read Overview</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* New Promo: Agentic Observability — Executive Overview (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-pink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,6 +239,22 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Link href="/blog/ai-2026-agentic-billing-controls" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Billing Controls</Link>
               <Link href="/blog/ai-2026-evidence-hub-architecture" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Evidence Hub</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Agentic Billing Controls — Deep Dive (NEW) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-green-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-green-100">
+            <div>
+              <p className="text-sm font-semibold text-green-700">New blog</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agentic Billing Controls — Deep Dive</h2>
+              <p className="text-gray-600 mt-2">Budgets, approvals, and cost scorecards for predictable agent spend.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-agentic-billing-controls-deep-dive" className="inline-block bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700">Read Deep Dive</Link>
+              <Link href="/blog/ai-2025-agent-cost-optimization-blueprint" className="inline-block border border-green-600 text-green-700 px-5 py-3 rounded-lg font-semibold hover:bg-green-50">Cost Blueprint</Link>
             </div>
           </div>
         </div>
@@ -858,6 +890,22 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-safe-change-management-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safe Change</Link>
               <Link href="/blog/ai-2026-evaluation-cookbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Cookbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Eval‑Gated Release Runbook (NEW) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New blog</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Eval‑Gated Release Runbook</h2>
+              <p className="text-gray-600 mt-2">Step‑by‑step SOP for safe, evidence‑led agent releases.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-eval-gated-release-runbook" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Runbook</Link>
+              <Link href="/blog/ai-2026-release-scorecards" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Scorecards</Link>
             </div>
           </div>
         </div>

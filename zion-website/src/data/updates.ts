@@ -10,6 +10,41 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    {
+        title: 'Launch: Agent Risk Dashboard v1.0',
+        summary: 'Unified risk scoring for agents with policy checks and incident drill‑downs.',
+        href: '/updates/agent-risk-dashboard-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Prompt Risk Scoring (2026 Preview)',
+        summary: 'Measure and mitigate prompt risks with eval gates and red‑team playbooks.',
+        href: '/updates/production-prompt-risk-scoring-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+	{
+		title: 'Launch: Autonomous Knowledge Ops Suite v1.1',
+		summary: 'Deeper integrations, evidence bundling, and safer tool-use across workflows.',
+		href: '/updates/autonomous-knowledge-ops-suite-1-1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Announcement: ZionGPT 2.1 Real‑Time Reasoning',
+		summary: 'Faster step planning, improved tool arbitration, and lower latency streaming.',
+		href: '/updates/ziongpt-2-1-real-time-reasoning',
+		date: '2025-09-16',
+		tag: 'Announcement',
+	},
+	{
+		title: 'Report: State of Agent Observability (2026 Preview)',
+		summary: 'Traces, metrics, and eval overlays that speed up incident resolution.',
+		href: '/updates/state-of-agent-observability-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
 	{
 		title: 'Guide: E2E AI Change Evidence Playbook (2026 Preview)',
 		summary: 'Practical patterns for evidence bundles, lineage, and policy-as-code at scale.',
@@ -28,6 +63,13 @@ export const updates: UpdateItem[] = [
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
 		href: '/updates/ai-security-evidence-vault-v1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Launch: AI Governance Dashboard v5',
+		summary: 'Cross-env policy posture, eval gates, exceptions, and signed audit evidence.',
+		href: '/updates/ai-governance-dashboard-v5',
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
@@ -72,13 +114,6 @@ export const updates: UpdateItem[] = [
 		href: '/updates/agent-reliability-report-2026',
 		date: '2025-09-16',
 		tag: 'Report',
-	},
-	{
-		title: 'Launch: Real‑Time Agent Observability Console v1.1',
-		summary: 'Live traces, tool metrics, and eval overlays for production agents.',
-		href: '/updates/agent-observability-console-1-1',
-		date: '2025-09-16',
-		tag: 'Launch',
 	},
 	{
 		title: 'Launch: Autonomous Support Copilot v1.2',
