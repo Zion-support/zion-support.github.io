@@ -10,6 +10,21 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Added new blog posts (2025-09-16)
+    {
+        title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
+        summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
+        href: '/blog/ai-2026-runtime-policy-enforcement-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Guide: Production Agent Incident Playbooks (2026)',
+        summary: 'Standardized runbooks for containment, rollback, and RCA with signed evidence.',
+        href: '/blog/ai-2026-production-agent-incident-playbooks',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     // New content (2025-09-16)
     {
         title: 'Launch: Real‑Time Agent Posture Monitor v1.0',
