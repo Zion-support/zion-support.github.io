@@ -3,6 +3,18 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-operational-evals-blueprint',
+    title: 'AI 2026: Operational Evals Blueprint',
+    summary:
+      'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-risk-and-guardrails-operating-model',
+    title: 'AI 2026: Risk & Guardrails Operating Model',
+    summary:
+      'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
+  },
+  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
