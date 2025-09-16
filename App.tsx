@@ -71,6 +71,7 @@ import UltimateContentShowcase from './src/components/UltimateContentShowcase';
 import UltimateTechShowcase2029 from './src/pages/UltimateTechShowcase2029';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
+import NextGenSpaceTech2030 from './src/pages/NextGenSpaceTech2030';
 
 export default function App(): JSX.Element {
   return (
@@ -88,6 +89,11 @@ export default function App(): JSX.Element {
 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
+
+                {/* NEW: Ultimate Content Showcase */}
+                <div className="mb-12">
+                  <UltimateContentShowcase />
+                </div>
 
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -185,7 +191,10 @@ export default function App(): JSX.Element {
                     <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🧠 AI Revolutionary Breakthrough 2026
                     </a>
-                    <a href="/pages/QuantumReality2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                    <a href="/pages/NextGenSpaceTech2030" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 Next-Gen Space Tech 2030
+                    </a>
+                    <a href="/pages/QuantumReality2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       ⚛️ Quantum Reality 2026
                     </a>
                     <a href="/pages/NeuralInterfaceEvolution2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
@@ -773,6 +782,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechShowcase2029" element={<UltimateTechShowcase2029 />} />
           <Route path="/pages/ConsciousnessComputing2026" element={<ConsciousnessComputing2026 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2026" element={<RevolutionaryTechBreakthrough2026 />} />
+          <Route path="/pages/NextGenSpaceTech2030" element={<NextGenSpaceTech2030 />} />
           <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
           <Route path="/pages/AIContentGenerator" element={<AIContentGenerator />} />
           <Route path="/pages/AIMatcher" element={<AIMatcher />} />
