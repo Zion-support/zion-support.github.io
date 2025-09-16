@@ -42,6 +42,8 @@ import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcas
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
@@ -234,6 +236,16 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Interactive Tech Showcase 2025 - Latest Interactive Features */}
                 <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Revolutionary Tech Showcase 2025 - Latest Technology Demo */}
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2025 />
+                </div>
+
+                {/* NEW: AI Solutions Comprehensive 2025 - Complete AI Suite */}
+                <div className="mb-12">
+                  <AISolutionsComprehensive2025 />
+                </div>
                 
                 {/* NEW: Ultimate Content Promotion Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentPromotionBanner2025 />
@@ -1264,6 +1276,8 @@ export default function App(): JSX.Element {
           } />
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
