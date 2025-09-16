@@ -3,6 +3,24 @@ import ContentCard from './ContentCard';
 
 const featuredContent = [
   {
+    title: "AI 2026: Policy‑as‑Code Blueprint",
+    description: "Encode approvals, risk tiers, and evaluation gates as versioned policy.",
+    href: "/blog/ai-2026-policy-as-code-blueprint",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Policy-as-Code", "Governance", "Evals"]
+  },
+  {
+    title: "AI 2026: Agentic Observability — Deep Dive",
+    description: "Traces, evals, incidents, and KPIs to run agent platforms reliably.",
+    href: "/blog/ai-2026-agentic-observability-deep-dive",
+    category: "Observability",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Observability", "Evals", "Incidents"]
+  },
+  {
     title: "AI 2025: The Enterprise Automation Revolution",
     description: "Discover how AI is transforming enterprise operations in 2025 with intelligent automation, predictive analytics, and autonomous decision-making systems.",
     href: "/blog/ai-2025-enterprise-automation-revolution",

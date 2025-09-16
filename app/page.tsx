@@ -154,7 +154,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Encode approvals, risk tiers, and evaluation gates as versioned policy.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Article</Link>
+              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700"><span className="mr-2 inline-flex items-center rounded-full bg-white/20 px-2 py-0.5 text-xs font-semibold">New</span>Read Article</Link>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Traces, evals, incidents, and KPIs to operate agent platforms.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-agentic-observability-overview" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700">Read Overview</Link>
+              <Link href="/blog/ai-2026-agentic-observability-overview" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700"><span className="mr-2 inline-flex items-center rounded-full bg-white/20 px-2 py-0.5 text-xs font-semibold">New</span>Read Overview</Link>
             </div>
           </div>
         </div>
