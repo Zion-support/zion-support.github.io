@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
@@ -276,10 +272,6 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-<<<<<<< HEAD
-  ];
-
->>>>>>> origin/feat/news-content
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -335,11 +327,6 @@ export default function HomePage() {
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
@@ -365,10 +352,6 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
               </Link>
 =======
@@ -419,10 +402,6 @@ export default function HomePage() {
         </div>
       </section>
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
@@ -451,9 +430,6 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f175
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 =======
@@ -504,9 +480,6 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
-<<<<<<< HEAD
-
->>>>>>> origin/feat/news-content
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
@@ -756,9 +729,6 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> origin/feat/news-content
@@ -787,8 +757,6 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
->>>>>>> origin/feat/news-content
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -953,8 +921,6 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-<<<<<<< HEAD
->>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>

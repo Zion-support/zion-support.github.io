@@ -9,71 +9,10 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
-<<<<<<< HEAD
-    title: 'Guide: AI Risk Mitigation in Production (2026)',
-    summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
-    href: '/updates/ai-risk-mitigation-guide-2026',
-=======
-    title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
-    summary:
-      'How to evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.',
-    href: '/updates/multimodal-rag-benchmarking-2026',
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     date: '2025-09-16',
     tag: 'Guide'
   },
   {
-<<<<<<< HEAD
-    title: 'Launch: Real-Time Agent Cost Optimizer v1.0',
-    summary: 'Automated routing and dynamic budgets to reduce agent inference costs by 27%.',
-    href: '/updates/real-time-agent-cost-optimizer-1-0',
-    date: '2025-09-16',
-    tag: 'Release'
-  },
-	// Fresh content added 2025-09-16 (new)
-	{
-		title: 'Playbook: Production RAG Latency Budgets (2026)',
-		summary: 'Define SLOs, budgets, and guardrails for low‑latency, high‑quality retrieval pipelines.',
-		href: '/updates/production-rag-latency-budgets-2026',
-		date: '2025-09-16',
-		tag: 'Playbook'
-	},
-	{
-		title: 'Case Study: 40% Cost Reduction with Agent Routing',
-		summary: 'How dynamic model routing and caching cut costs while improving response quality.',
-		href: '/updates/rag-agents-case-study',
-		date: '2025-09-16',
-		tag: 'Case Study'
-	},
-
-  // Existing highlights
-=======
-    title: 'Track: Web3 Fundamentals (Learning Path)',
-    summary:
-      'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security with hands-on labs.',
-    href: '/updates/web3-fundamentals-track',
-    date: '2025-09-16',
-    tag: 'Course'
-  },
-  {
-    title: 'Launch: Real-Time Agent Metrics Widgets (v1.0)',
-    summary:
-      'Drop-in UI components for latency, cost, and policy signals to observe agent behavior live.',
-    href: '/updates/real-time-agent-metrics-widgets-1-0',
-    date: '2025-09-16',
-    tag: 'Launch'
-  },
-  {
-    title: 'Case Study: Cost-Aware Routing with Live Evals',
-    summary:
-      'Reducing spend while maintaining quality by routing with real-time eval signals in production.',
-    href: '/updates/cost-aware-routing-live-evals',
-    date: '2025-09-16',
-    tag: 'Case Study'
-  },
-
-  // Existing featured items
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   {
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
     summary:
@@ -105,36 +44,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
-]
-
-export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
-  const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
-  return [...siteUpdates]
-    .sort((a, b) => safeDate(b.date) - safeDate(a.date))
-    .slice(0, limit)
-}
-
-=======
-<<<<<<< HEAD
-  {
-    title: 'Launch: AI Autonomous Workflow Engine v1.0',
-    summary:
-      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
-    href: '/updates/ai-autonomous-workflow-engine-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: Compliance Auditor v1.0',
-    summary:
-      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
-    href: '/updates/compliance-auditor-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-=======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
