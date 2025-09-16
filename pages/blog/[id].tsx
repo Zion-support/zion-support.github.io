@@ -16,6 +16,9 @@ const registry: Record<string, React.ComponentType> = {
   'evals-and-guardrails': require('../../blog/evals-and-guardrails').default,
   'future-of-work': require('../../blog/future-of-work').default,
   'performance-optimization': require('../../blog/performance-optimization').default,
+  'ai-2026-real-time-rag-architectures': require('../../blog/ai-2026-real-time-rag-architectures').default,
+  'ai-2026-guardrailed-tooling-risk-tiers': require('../../blog/ai-2026-guardrailed-tooling-risk-tiers').default,
+  'ai-2026-production-evidence-hub-blueprint': require('../../blog/ai-2026-production-evidence-hub-blueprint').default,
 }
 
 export default function BlogPostRouter() {

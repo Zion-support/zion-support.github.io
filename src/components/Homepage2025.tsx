@@ -75,30 +75,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const latestInsights = [
-    {
-      title: 'AI 2026: Real-Time Retrieval Architectures',
-      href: '/blog/ai-2026-real-time-retrieval-architectures',
-      tag: 'RAG',
-      gradient: 'from-purple-500 to-blue-500'
-    },
-    {
-      title: 'Agent Evals in Production: Online Metrics',
-      href: '/blog/ai-2026-agent-evals-in-production',
-      tag: 'Evals',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    {
-      title: 'Guardrailed Tooling: Secure Actions with Risk Tiers',
-      href: '/blog/ai-2026-guardrailed-tooling-risk-tiers',
-      tag: 'Security',
-      gradient: 'from-fuchsia-500 to-indigo-500'
-    },
-    {
-      title: 'AI 2026: Production Evidence Hub — Blueprint',
-      href: '/blog/ai-2026-production-evidence-hub-blueprint',
-      tag: 'Blueprint',
-      gradient: 'from-cyan-500 to-blue-600'
-    }
+    { title: 'Real-Time RAG Architectures (2026)', href: '/blog/ai-2026-real-time-rag-architectures', tag: 'RAG', gradient: 'from-purple-500 to-blue-500' },
+    { title: 'Guardrailed Tooling: Risk Tiers (2026)', href: '/blog/ai-2026-guardrailed-tooling-risk-tiers', tag: 'Security', gradient: 'from-fuchsia-500 to-indigo-500' },
+    { title: 'Production Evidence Hub — Blueprint (2026)', href: '/blog/ai-2026-production-evidence-hub-blueprint', tag: 'Blueprint', gradient: 'from-cyan-500 to-blue-600' },
+    { title: 'Foundation Model Quality Engineering (2026)', href: '/blog/ai-2026-foundation-model-quality-engineering', tag: 'Quality', gradient: 'from-emerald-500 to-cyan-500' }
   ];
 
   const navigationSections = [
