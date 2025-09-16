@@ -118,6 +118,9 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import TrendingTopicsWidget2026 from './src/components/TrendingTopicsWidget2026';
+import EnhancedContentCarousel2026 from './src/components/EnhancedContentCarousel2026';
 <<<<<<< HEAD
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
@@ -598,6 +601,11 @@ export default function App(): JSX.Element {
                 {/* NEW: Trending Topics Widget */}
                 <div className="max-w-7xl mx-auto px-4 py-8">
                   <TrendingTopicsWidget2026 />
+                </div>
+                
+                {/* NEW: Enhanced Content Carousel 2026 */}
+                <div className="max-w-7xl mx-auto px-4 py-8">
+                  <EnhancedContentCarousel2026 />
                 </div>
                 
 <<<<<<< HEAD

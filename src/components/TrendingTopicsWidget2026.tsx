@@ -1,305 +1,233 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Fire, Clock, ArrowRight, Star, Eye, MessageCircle, Share2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { TrendingUp, Fire, Star, Zap, ArrowRight, Clock, Users } from 'lucide-react';
 
 interface TrendingTopic {
   id: string;
   title: string;
   category: string;
-  engagement: number;
+  trend: 'rising' | 'hot' | 'viral' | 'stable';
   growth: number;
   posts: number;
   lastUpdated: string;
   tags: string[];
-  featured: boolean;
 }
 
-interface TrendingTopicsWidget2026Props {
-  topics?: TrendingTopic[];
-  maxTopics?: number;
-  showEngagement?: boolean;
-  showGrowth?: boolean;
-  autoUpdate?: boolean;
-  updateInterval?: number;
-}
-
-const TrendingTopicsWidget2026: React.FC<TrendingTopicsWidget2026Props> = ({
-  topics = [],
-  maxTopics = 8,
-  showEngagement = true,
-  showGrowth = true,
-  autoUpdate = true,
-  updateInterval = 30000
-}) => {
-  const [currentTopics, setCurrentTopics] = useState<TrendingTopic[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Default trending topics
-  const defaultTopics: TrendingTopic[] = [
-    {
-      id: '1',
-      title: 'Quantum Computing Breakthrough',
-      category: 'Quantum Computing',
-      engagement: 95,
-      growth: 45,
-      posts: 127,
-      lastUpdated: '2 hours ago',
-      tags: ['Quantum', 'Computing', 'Innovation'],
-      featured: true
-    },
-    {
-      id: '2',
-      title: 'Neural Interface Technology',
-      category: 'Emerging Technology',
-      engagement: 88,
-      growth: 32,
-      posts: 89,
-      lastUpdated: '4 hours ago',
-      tags: ['Neural', 'BCI', 'Interface'],
-      featured: true
-    },
-    {
-      id: '3',
-      title: 'Synthetic Intelligence Evolution',
-      category: 'Artificial Intelligence',
-      engagement: 92,
-      growth: 28,
-      posts: 156,
-      lastUpdated: '1 hour ago',
-      tags: ['Synthetic', 'AI', 'Intelligence'],
-      featured: true
-    },
-    {
-      id: '4',
-      title: 'Autonomous Business Operations',
-      category: 'Business Automation',
-      engagement: 76,
-      growth: 41,
-      posts: 73,
-      lastUpdated: '3 hours ago',
-      tags: ['Autonomous', 'Business', 'Automation'],
-      featured: false
-    },
-    {
-      id: '5',
-      title: 'AI-Powered Cybersecurity',
-      category: 'Cybersecurity',
-      engagement: 84,
-      growth: 23,
-      posts: 98,
-      lastUpdated: '5 hours ago',
-      tags: ['AI', 'Security', 'Cybersecurity'],
-      featured: false
-    },
-    {
-      id: '6',
-      title: 'Green Technology Revolution',
-      category: 'Sustainability',
-      engagement: 79,
-      growth: 36,
-      posts: 64,
-      lastUpdated: '6 hours ago',
-      tags: ['Green', 'Technology', 'Sustainability'],
-      featured: false
-    },
-    {
-      id: '7',
-      title: 'Holographic Reality Displays',
-      category: 'Immersive Technology',
-      engagement: 71,
-      growth: 29,
-      posts: 45,
-      lastUpdated: '8 hours ago',
-      tags: ['Holographic', 'Reality', 'Displays'],
-      featured: false
-    },
-    {
-      id: '8',
-      title: 'Advanced AI Consciousness',
-      category: 'Artificial Intelligence',
-      engagement: 87,
-      growth: 34,
-      posts: 112,
-      lastUpdated: '1 hour ago',
-      tags: ['AI', 'Consciousness', 'Advanced'],
-      featured: true
-    }
-  ];
+const TrendingTopicsWidget2026: React.FC = () => {
+  const [trendingTopics, setTrendingTopics] = useState<TrendingTopic[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
-    const initialTopics = topics.length > 0 ? topics : defaultTopics;
-    setCurrentTopics(initialTopics.slice(0, maxTopics));
+    // Simulate fetching trending topics
+    const topics: TrendingTopic[] = [
+      {
+        id: 'ai-consciousness',
+        title: 'AI Consciousness & Self-Awareness',
+        category: 'AI Research',
+        trend: 'viral',
+        growth: 340,
+        posts: 156,
+        lastUpdated: '2 hours ago',
+        tags: ['AI', 'Consciousness', 'Self-Awareness', 'Machine Learning']
+      },
+      {
+        id: 'quantum-computing',
+        title: 'Quantum Computing Applications',
+        category: 'Quantum Computing',
+        trend: 'hot',
+        growth: 280,
+        posts: 89,
+        lastUpdated: '4 hours ago',
+        tags: ['Quantum', 'Computing', 'Applications', 'Breakthrough']
+      },
+      {
+        id: 'neural-interfaces',
+        title: 'Brain-Computer Interfaces',
+        category: 'Emerging Technology',
+        trend: 'rising',
+        growth: 195,
+        posts: 67,
+        lastUpdated: '6 hours ago',
+        tags: ['BCI', 'Neural', 'Interface', 'Human-Computer']
+      },
+      {
+        id: 'synthetic-data',
+        title: 'Synthetic Data Generation',
+        category: 'Data Science',
+        trend: 'hot',
+        growth: 245,
+        posts: 78,
+        lastUpdated: '3 hours ago',
+        tags: ['Synthetic Data', 'Privacy', 'AI Training', 'Generation']
+      },
+      {
+        id: 'edge-ai',
+        title: 'Edge AI & IoT Intelligence',
+        category: 'Edge Computing',
+        trend: 'rising',
+        growth: 180,
+        posts: 92,
+        lastUpdated: '5 hours ago',
+        tags: ['Edge AI', 'IoT', 'Real-time', 'Intelligence']
+      },
+      {
+        id: 'ai-teams',
+        title: 'Autonomous AI Teams',
+        category: 'Future of Work',
+        trend: 'viral',
+        growth: 320,
+        posts: 134,
+        lastUpdated: '1 hour ago',
+        tags: ['AI Teams', 'Autonomous', 'Work', 'Collaboration']
+      },
+      {
+        id: 'drug-discovery',
+        title: 'AI-Powered Drug Discovery',
+        category: 'Healthcare AI',
+        trend: 'hot',
+        growth: 220,
+        posts: 45,
+        lastUpdated: '7 hours ago',
+        tags: ['Drug Discovery', 'Healthcare', 'AI', 'Medicine']
+      },
+      {
+        id: 'synthetic-intelligence',
+        title: 'Synthetic Intelligence Evolution',
+        category: 'AI Research',
+        trend: 'rising',
+        growth: 165,
+        posts: 38,
+        lastUpdated: '8 hours ago',
+        tags: ['Synthetic Intelligence', 'Evolution', 'AI', 'Future']
+      }
+    ];
 
-    if (autoUpdate) {
-      const interval = setInterval(() => {
-        updateTopics();
-      }, updateInterval);
-      return () => clearInterval(interval);
+    setTrendingTopics(topics);
+  }, []);
+
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'viral': return <Zap className="w-4 h-4" />;
+      case 'hot': return <Fire className="w-4 h-4" />;
+      case 'rising': return <TrendingUp className="w-4 h-4" />;
+      case 'stable': return <Star className="w-4 h-4" />;
+      default: return <TrendingUp className="w-4 h-4" />;
     }
-  }, [topics, maxTopics, autoUpdate, updateInterval]);
-
-  const updateTopics = async () => {
-    setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      const updatedTopics = currentTopics.map(topic => ({
-        ...topic,
-        engagement: Math.max(0, Math.min(100, topic.engagement + (Math.random() - 0.5) * 10)),
-        growth: Math.max(0, Math.min(100, topic.growth + (Math.random() - 0.5) * 5)),
-        posts: topic.posts + Math.floor(Math.random() * 3),
-        lastUpdated: 'Just now'
-      }));
-      setCurrentTopics(updatedTopics);
-      setIsLoading(false);
-    }, 1000);
   };
 
-  const getGrowthColor = (growth: number) => {
-    if (growth >= 40) return 'text-green-500';
-    if (growth >= 20) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  const getEngagementColor = (engagement: number) => {
-    if (engagement >= 90) return 'text-red-500';
-    if (engagement >= 70) return 'text-orange-500';
-    return 'text-blue-500';
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'quantum computing':
-        return '⚛️';
-      case 'artificial intelligence':
-        return '🤖';
-      case 'emerging technology':
-        return '🚀';
-      case 'business automation':
-        return '⚙️';
-      case 'cybersecurity':
-        return '🔒';
-      case 'sustainability':
-        return '🌱';
-      case 'immersive technology':
-        return '🥽';
-      default:
-        return '💡';
+  const getTrendColor = (trend: string) => {
+    switch (trend) {
+      case 'viral': return 'from-purple-500 to-pink-500';
+      case 'hot': return 'from-red-500 to-orange-500';
+      case 'rising': return 'from-green-500 to-emerald-500';
+      case 'stable': return 'from-blue-500 to-cyan-500';
+      default: return 'from-gray-500 to-gray-600';
     }
   };
+
+  const categories = ['all', 'AI Research', 'Quantum Computing', 'Emerging Technology', 'Data Science', 'Edge Computing', 'Future of Work', 'Healthcare AI'];
+
+  const filteredTopics = selectedCategory === 'all' 
+    ? trendingTopics 
+    : trendingTopics.filter(topic => topic.category === selectedCategory);
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-white/20 rounded-lg">
-              <TrendingUp className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Trending Topics</h3>
-              <p className="text-blue-100 text-sm">What's hot in tech right now</p>
-            </div>
+    <div className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl border border-gray-700/50 p-6 shadow-2xl">
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+            <TrendingUp className="w-6 h-6 text-white" />
           </div>
-          {isLoading && (
-            <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>
-          )}
+          <div>
+            <h3 className="text-xl font-bold text-white">Trending Topics</h3>
+            <p className="text-gray-400 text-sm">What's hot in tech right now</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2 text-gray-400 text-sm">
+          <Clock className="w-4 h-4" />
+          <span>Live</span>
         </div>
       </div>
 
-      {/* Topics List */}
-      <div className="divide-y divide-gray-100">
-        {currentTopics.map((topic, index) => (
-          <div
-            key={topic.id}
-            className={`p-4 hover:bg-gray-50 transition-colors duration-200 ${
-              topic.featured ? 'bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-400' : ''
+      {/* Category Filter */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              selectedCategory === category
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
             }`}
           >
-            <div className="flex items-start justify-between">
-              <div className="flex-1 min-w-0">
-                {/* Topic Header */}
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className="text-lg">{getCategoryIcon(topic.category)}</span>
-                  <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-                    {topic.category}
-                  </span>
-                  {topic.featured && (
-                    <div className="flex items-center space-x-1 px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">
-                      <Star className="w-3 h-3" />
-                      <span>Featured</span>
-                    </div>
-                  )}
-                </div>
+            {category === 'all' ? 'All Topics' : category}
+          </button>
+        ))}
+      </div>
 
-                {/* Topic Title */}
-                <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+      {/* Trending Topics List */}
+      <div className="space-y-4">
+        {filteredTopics.slice(0, 6).map((topic, index) => (
+          <motion.div
+            key={topic.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+            className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-4 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`inline-flex items-center gap-1 px-2 py-1 rounded-full bg-gradient-to-r ${getTrendColor(topic.trend)} text-white text-xs font-medium`}>
+                    {getTrendIcon(topic.trend)}
+                    {topic.trend.toUpperCase()}
+                  </div>
+                  <span className="text-gray-400 text-sm">{topic.category}</span>
+                </div>
+                
+                <h4 className="text-white font-semibold mb-2 group-hover:text-purple-300 transition-colors duration-300">
                   {topic.title}
                 </h4>
-
-                {/* Tags */}
+                
                 <div className="flex flex-wrap gap-1 mb-3">
-                  {topic.tags.slice(0, 3).map((tag, tagIndex) => (
+                  {topic.tags.slice(0, 3).map((tag) => (
                     <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                      key={tag}
+                      className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
                     >
                       #{tag}
                     </span>
                   ))}
                 </div>
-
-                {/* Stats */}
-                <div className="flex items-center space-x-4 text-sm text-gray-600">
-                  {showEngagement && (
-                    <div className="flex items-center space-x-1">
-                      <Fire className={`w-4 h-4 ${getEngagementColor(topic.engagement)}`} />
-                      <span className={getEngagementColor(topic.engagement)}>
-                        {topic.engagement}%
-                      </span>
-                    </div>
-                  )}
-                  {showGrowth && (
-                    <div className="flex items-center space-x-1">
-                      <TrendingUp className={`w-4 h-4 ${getGrowthColor(topic.growth)}`} />
-                      <span className={getGrowthColor(topic.growth)}>
-                        +{topic.growth}%
-                      </span>
-                    </div>
-                  )}
-                  <div className="flex items-center space-x-1">
-                    <MessageCircle className="w-4 h-4" />
-                    <span>{topic.posts}</span>
+                
+                <div className="flex items-center gap-4 text-sm text-gray-400">
+                  <div className="flex items-center gap-1">
+                    <TrendingUp className="w-3 h-3" />
+                    <span>+{topic.growth}%</span>
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{topic.lastUpdated}</span>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-3 h-3" />
+                    <span>{topic.posts} posts</span>
                   </div>
+                  <span>{topic.lastUpdated}</span>
                 </div>
               </div>
-
-              {/* Action Button */}
-              <div className="ml-4 flex-shrink-0">
-                <button className="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors duration-200">
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+              
+              <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <ArrowRight className="w-5 h-5 text-purple-400" />
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      {/* Footer */}
-      <div className="bg-gray-50 px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Clock className="w-4 h-4" />
-            <span>Updated {new Date().toLocaleTimeString()}</span>
-          </div>
-          <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200">
-            <span>View All Topics</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
+      {/* View All Button */}
+      <div className="mt-6 text-center">
+        <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 font-semibold rounded-lg hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-300 border border-purple-500/30">
+          View All Trending Topics
+          <ArrowRight className="w-4 h-4" />
+        </button>
       </div>
     </div>
   );
