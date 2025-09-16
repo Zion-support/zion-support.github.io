@@ -1,96 +1,70 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const carouselItems = [
     {
-      title: "AI-Powered Business Solutions",
-      description: "Transform your business with cutting-edge AI technology that automates processes and drives growth.",
+      id: 1,
+      title: "AI Innovation 2025",
+      description: "Latest AI breakthroughs and applications",
       image: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Automated Workflows", "Predictive Analytics", "Smart Decision Making", "Cost Reduction"]
+      gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Quantum Computing Revolution",
-      description: "Experience the power of quantum computing that solves complex problems in seconds.",
+      id: 2,
+      title: "Quantum Computing",
+      description: "Revolutionary quantum technologies",
       image: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation", "Optimization"]
+      gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Neural Interface Technology",
-      description: "Connect your mind directly to digital systems with revolutionary brain-computer interfaces.",
+      id: 3,
+      title: "Neural Interfaces",
+      description: "Brain-computer interface solutions",
       image: "🧠",
-      gradient: "from-emerald-600 to-teal-600",
-      features: ["Thought Control", "Neural Feedback", "Mind-Machine Fusion", "Enhanced Cognition"]
-    },
-    {
-      title: "Interdimensional Networks",
-      description: "Access unlimited data and processing power through interdimensional computing networks.",
-      image: "🌌",
-      gradient: "from-indigo-600 to-purple-600",
-      features: ["Infinite Bandwidth", "Cross-Dimensional Access", "Universal Computing", "Reality Hopping"]
+      gradient: "from-pink-500 to-red-500"
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [carouselItems.length]);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      <div className="relative h-96 overflow-hidden rounded-2xl">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            className={`absolute inset-0 bg-gradient-to-br ${carouselItems[currentSlide].gradient} text-white p-8 flex items-center`}
-          >
-            <div className="grid md:grid-cols-2 gap-8 w-full">
-              <div className="space-y-6">
-                <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
-                <h2 className="text-4xl font-bold">{carouselItems[currentSlide].title}</h2>
-                <p className="text-xl opacity-90">{carouselItems[currentSlide].description}</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {carouselItems[currentSlide].features.map((feature, index) => (
-                    <div key={index} className="bg-white/20 rounded-lg p-2 text-sm text-center">
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Learn More →
-                </button>
-              </div>
-              <div className="hidden md:flex items-center justify-center">
-                <div className="text-8xl opacity-20">
-                  {carouselItems[currentSlide].image}
-                </div>
+    <div className="bg-white rounded-2xl p-8 shadow-lg">
+      <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>
+      <div className="relative overflow-hidden rounded-lg">
+        <div 
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {carouselItems.map((item) => (
+            <div key={item.id} className="w-full flex-shrink-0">
+              <div className={`bg-gradient-to-r ${item.gradient} text-white p-8 rounded-lg text-center`}>
+                <div className="text-6xl mb-4">{item.image}</div>
+                <h4 className="text-2xl font-semibold mb-2">{item.title}</h4>
+                <p className="text-lg opacity-90">{item.description}</p>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      
-      {/* Navigation Dots */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {carouselItems.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-          />
-        ))}
+          ))}
+        </div>
+        
+        {/* Navigation dots */}
+        <div className="flex justify-center space-x-2 mt-6">
+          {carouselItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-gray-800' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
