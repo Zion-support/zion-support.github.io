@@ -147,6 +147,9 @@ import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase
 import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
+import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
+import AIConsciousnessEvolution2030 from './src/pages/AIConsciousnessEvolution2030';
+import QuantumNeuralFusion2035 from './src/pages/QuantumNeuralFusion2035';
 import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
 import RevolutionaryTechShowcase2028 from './src/pages/RevolutionaryTechShowcase2028';
 import AIBusinessRevolution2028 from './src/pages/AIBusinessRevolution2028';
@@ -1516,6 +1519,9 @@ export default function App(): JSX.Element {
           } />
           <Route path="/improvements" element={<ComprehensiveImprovements2025 />} />
           <Route path="/ultimate-content-showcase-2026" element={<UltimateContentShowcase2026 />} />
+          <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/pages/AIConsciousnessEvolution2030" element={<AIConsciousnessEvolution2030 />} />
+          <Route path="/pages/QuantumNeuralFusion2035" element={<QuantumNeuralFusion2035 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
