@@ -2,12 +2,26 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
-  description: 'Stay updated with the latest insights, news, and thought leadership from Zion Tech Group in AI, quantum computing, and technology innovation.',
+  description:
+    'Stay updated with the latest insights, news, and thought leadership from Zion Tech Group in AI, quantum computing, and technology innovation.',
+};
+
+type PostListItem = {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  date: string;
+  readTime: string;
+  image?: string;
+  featured?: boolean;
 };
 
 export default function BlogPage() {
-  const featuredPosts = [
+  const featuredPosts: PostListItem[] = [
     {
+<<<<<<< HEAD
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -28,6 +42,18 @@ export default function BlogPage() {
       readTime: '8 min read',
       image: '/blog/ai-consciousness.jpg',
       featured: true
+=======
+      id: 'agentic-safety-patterns-2025',
+      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+      excerpt:
+        'Practical patterns like budget caps, sensitive-action handshakes, and reputation‑gated autonomy.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-safety.jpg',
+      featured: true,
+>>>>>>> origin/feature/new-blog-content-and-promo
     },
     {
 <<<<<<< HEAD
@@ -53,55 +79,90 @@ export default function BlogPage() {
     {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
-      excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
+      excerpt:
+        'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
       category: 'Quantum Computing',
       author: 'Dr. Sarah Chen',
       date: '2025-09-10',
       readTime: '10 min read',
       image: '/blog/quantum-risk.jpg',
-      featured: true
+      featured: true,
     },
     {
       id: 'sovereign-ai-commerce-2025',
       title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
-      excerpt: 'We unveil our blueprint for self-orchestrating, sovereign AI marketplaces with built‑in governance, identity, and commerce rails.',
+      excerpt:
+        'Blueprint for self-orchestrating AI marketplaces with governance, identity, and commerce rails.',
       category: 'AI Solutions',
       author: 'Dr. Kleber Santos',
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/sovereign-ai-commerce.jpg',
-      featured: true
+      featured: true,
+    },
+  ];
+
+  const recentPosts: PostListItem[] = [
+    {
+      id: 'genai-productivity-benchmarks-2025',
+      title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
+      excerpt:
+        'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
+      category: 'Research & Development',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-13',
+      readTime: '8 min read',
+      image: '/blog/genai-productivity-benchmarks.jpg',
     },
     {
-      id: 'quantum-computing-finance',
-      title: 'Quantum Computing Revolutionizing Financial Trading: A Deep Dive',
-      excerpt: 'Discover how our quantum algorithms are transforming financial markets and creating new opportunities for investors and institutions.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-10',
-      readTime: '12 min read',
-      image: '/blog/quantum-finance.jpg',
-      featured: true
+      id: 'edge-ai-agents-2025',
+      title: 'Edge AI Agents: Real-Time Intelligence Across Devices and Locations',
+      excerpt:
+        'Deploy low-latency, bandwidth‑efficient agents at the edge for on‑site decisioning and resilience.',
+      category: 'IoT & Edge',
+      author: 'Michael Rodriguez',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-agents.jpg',
     },
     {
-      id: 'ai-autonomous-systems-future',
-      title: 'The Future of Autonomous AI Systems in Business Operations',
-      excerpt: 'Explore how autonomous AI systems are reshaping business operations and what organizations need to know to stay competitive.',
+      id: 'autonomous-it-operations',
+      title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
+      excerpt:
+        'AI-driven observability, incident response, and remediation to cut MTTR and improve reliability.',
       category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2024-01-05',
-      readTime: '10 min read',
-      image: '/blog/autonomous-ai.jpg',
-      featured: true
+      author: 'Michael Rodriguez',
+      date: '2025-09-05',
+      readTime: '7 min read',
+      image: '/blog/autonomous-it.jpg',
     },
     {
+      id: 'secure-agent-marketplaces',
+      title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
+      excerpt:
+        'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-02',
+      readTime: '8 min read',
+      image: '/blog/secure-agent-marketplaces.jpg',
+    },
+    {
+<<<<<<< HEAD
       id: 'ai-ops-cost-optimization-2025',
       title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
       excerpt: 'Deploy AI-driven observability and predictive autoscaling to cut spend while improving reliability.',
+=======
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+      excerpt:
+        'How autonomous agents coordinate forecasting, procurement, and fulfillment with measurable SLAs.',
+>>>>>>> origin/feature/new-blog-content-and-promo
       category: 'AI Solutions',
       author: 'Michael Rodriguez',
       date: '2025-09-15',
       readTime: '9 min read',
+<<<<<<< HEAD
       image: '/blog/ai-ops-cost.jpg',
       featured: true
     }
@@ -249,11 +310,16 @@ export default function BlogPage() {
       readTime: '6 min read',
       image: '/blog/ai-marketing.jpg'
     }
+=======
+      image: '/blog/agentic-supply-chains.jpg',
+    },
+>>>>>>> origin/feature/new-blog-content-and-promo
   ];
 
   const categories = [
     { name: 'All Posts', count: 12, active: true },
     { name: 'Research & Development', count: 3, active: false },
+<<<<<<< HEAD
     { name: 'AI Solutions', count: 4, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
@@ -267,6 +333,25 @@ export default function BlogPage() {
     'AI Consciousness', 'Quantum Computing', 'Machine Learning', 'Cybersecurity',
     'Data Science', 'Autonomous Systems', 'Business Intelligence', 'Cloud Computing',
     'AI Ethics', 'Research', 'Innovation', 'Technology Trends'
+=======
+    { name: 'AI Solutions', count: 5, active: false },
+    { name: 'AI Safety', count: 1, active: false },
+    { name: 'Quantum Computing', count: 2, active: false },
+    { name: 'Cybersecurity', count: 1, active: false },
+    { name: 'IoT & Edge', count: 1, active: false },
+  ];
+
+  const tags = [
+    'AI Consciousness',
+    'Quantum Computing',
+    'Machine Learning',
+    'Cybersecurity',
+    'Data Science',
+    'Autonomous Systems',
+    'Supply Chain',
+    'Innovation',
+    'Technology Trends',
+>>>>>>> origin/feature/new-blog-content-and-promo
   ];
 
   return (
@@ -276,8 +361,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Blog & News</h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Stay updated with the latest insights, breakthroughs, and thought leadership 
-            from our team of AI and technology experts.
+            Stay updated with the latest insights, breakthroughs, and thought leadership from our team.
           </p>
         </div>
       </section>
@@ -338,13 +422,13 @@ export default function BlogPage() {
               Deep insights and breakthrough research from our leading experts
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
+            {featuredPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
                   <span className="text-white text-4xl font-bold">
-                    {post.title.split(' ').slice(0, 2).map(word => word[0]).join('')}
+                    {post.title.split(' ').slice(0, 2).map((word) => word[0]).join('')}
                   </span>
                 </div>
                 <div className="p-6">
@@ -354,15 +438,13 @@ export default function BlogPage() {
                     </span>
                     <span className="text-gray-500 text-sm">{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                         <span className="text-gray-600 text-sm font-medium">
-                          {post.author.split(' ').map(n => n[0]).join('')}
+                          {post.author.split(' ').map((n) => n[0]).join('')}
                         </span>
                       </div>
                       <div>
@@ -370,10 +452,7 @@ export default function BlogPage() {
                         <p className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
                       </div>
                     </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
+                    <Link href={`/blog/${post.id}`} className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                       Read More →
                     </Link>
                   </div>
@@ -388,7 +467,6 @@ export default function BlogPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Categories */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Categories</h3>
               <div className="space-y-3">
@@ -402,21 +480,18 @@ export default function BlogPage() {
                     }`}
                   >
                     <span className="font-medium">{category.name}</span>
-                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
+                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">{category.count}</span>
                   </button>
                 ))}
               </div>
             </div>
-            
-            {/* Tags */}
+
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Popular Tags</h3>
               <div className="flex flex-wrap gap-2">
-                {tags.map((tag, index) => (
+                {tags.map((tag) => (
                   <button
-                    key={index}
+                    key={tag}
                     className="bg-white text-gray-700 px-3 py-2 rounded-lg border border-gray-200 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors duration-200"
                   >
                     {tag}
@@ -437,39 +512,32 @@ export default function BlogPage() {
               Stay current with the latest developments in AI, quantum computing, and technology
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recentPosts.map((post, index) => (
+            {recentPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-40 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
                   <span className="text-white text-3xl font-bold">
-                    {post.title.split(' ').slice(0, 2).map(word => word[0]).join('')}
+                    {post.title.split(' ').slice(0, 2).map((word) => word[0]).join('')}
                   </span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                      {post.category}
-                    </span>
+                    <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">{post.category}</span>
                     <span className="text-gray-500 text-sm">{post.readTime}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-3 text-sm">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
                         <span className="text-gray-600 text-xs font-medium">
-                          {post.author.split(' ').map(n => n[0]).join('')}
+                          {post.author.split(' ').map((n) => n[0]).join('')}
                         </span>
                       </div>
                       <span className="text-xs text-gray-500">{post.author}</span>
                     </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
+                    <Link href={`/blog/${post.id}`} className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                       Read More →
                     </Link>
                   </div>
@@ -479,103 +547,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get the latest insights, research updates, and industry news delivered directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            />
-            <button className="bg-white text-blue-900 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-blue-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </section>
-
-      {/* Author Spotlight */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Authors</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert insights from our team of researchers, engineers, and thought leaders
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                KS
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. Kleber Santos</h3>
-              <p className="text-blue-600 text-sm mb-2">CEO & Founder</p>
-              <p className="text-gray-600 text-sm">AI Research & Business Strategy</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                SC
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. Sarah Chen</h3>
-              <p className="text-blue-600 text-sm mb-2">CTO</p>
-              <p className="text-gray-600 text-sm">Quantum Computing & Architecture</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                EW
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. Emily Watson</h3>
-              <p className="text-blue-600 text-sm mb-2">Chief Research Officer</p>
-              <p className="text-gray-600 text-sm">AI Consciousness & Ethics</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                DK
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. David Kim</h3>
-              <p className="text-blue-600 text-sm mb-2">Senior AI Researcher</p>
-              <p className="text-gray-600 text-sm">Machine Learning & Neural Networks</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Learn More?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Explore our services, research, and solutions to see how we can help transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Explore Services
-            </Link>
-            <Link
-              href="/research-development"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              View Research
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
+

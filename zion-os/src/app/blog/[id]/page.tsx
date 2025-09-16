@@ -14,6 +14,9 @@ interface BlogPostMeta {
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/new-blog-content-and-promo
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -127,12 +130,13 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     category: 'AI Governance',
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
-    readTime: '8 min read',
+    readTime: '9 min read',
     content: [
       'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
       'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
     ]
   },
+<<<<<<< HEAD
   'edge-ai-marketplaces': {
     id: 'edge-ai-marketplaces',
     title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -151,6 +155,11 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Practical Guardrails for Autonomous Systems',
+=======
+  'edge-ai-agents-2025': {
+    id: 'edge-ai-agents-2025',
+    title: 'Edge AI Agents: Real-Time Intelligence Across Devices and Locations',
+>>>>>>> origin/feature/new-blog-content-and-promo
     excerpt:
       'A step-by-step framework to design, implement, and audit governance for autonomous AI in production.',
     category: 'AI Governance',
@@ -158,12 +167,19 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     date: '2025-09-15',
     readTime: '11 min read',
     content: [
+<<<<<<< HEAD
       'As organizations adopt autonomous AI, governance must evolve from policy documents to executable guardrails. This blueprint provides a practical approach to building verifiable, adaptive governance that scales.',
       'We cover policy definition (goals, constraints, metrics), enforcement via policy engines, safe action gates with human-in-the-loop, and continuous assurance through telemetry and audits.',
       'Implementation patterns include risk-tiered action pipelines, signed policies with provenance, and sandboxed evaluation environments. We map responsibilities across product, security, compliance, and operations.',
       'The result is a governance system that enables faster iteration while reducing risk, with transparent accountability across stakeholders.'
     ],
 >>>>>>> origin/feature/new-content-2025
+=======
+      'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
+      'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
+      'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
+    ]
+>>>>>>> origin/feature/new-blog-content-and-promo
   },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
@@ -179,7 +195,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'In this guide, we outline a phased approach: start with identity and governance, introduce autonomous listing and matching, then activate treasury and incentive policies. Each phase is measurable and reversible, ensuring safe rollout.',
       'Key building blocks include: DID-backed identity, reputation scoring, policy engines, event-driven orchestration, and human-in-the-loop controls for sensitive actions.',
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
-    ],
+    ]
   },
   'ai-supply-chain-orchestration-2025': {
     id: 'ai-supply-chain-orchestration-2025',
@@ -316,7 +332,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is safer experimentation and faster iteration with transparent guardrails.'
 >>>>>>> origin/feature/new-content-promotion
     ]
-  },
+  }
 };
 
 export function generateStaticParams() {
