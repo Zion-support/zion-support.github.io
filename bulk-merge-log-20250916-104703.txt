@@ -4449,3 +4449,20 @@ content/index.yaml
 [2025-09-16 10:52:45] 🔧 Resolving conflicts in content/index.yaml for branch bulk-merge-backup-20250916-083622...
 [2025-09-16 10:52:45] 📋 YAML: prefer main version
 [2025-09-16 10:52:45] ✅ Resolved conflicts in content/index.yaml
+[2025-09-16 10:52:45] ✅ Successfully resolved conflicts and merged bulk-merge-backup-20250916-083622
+[2025-09-16 10:52:45] ✅ Branch bulk-merge-backup-20250916-083622 processed successfully
+[2025-09-16 10:52:45] 📊 Batch progress: 37 successful, 0 failed
+[2025-09-16 10:52:45] 📊 Overall progress: 37 successful, 0 failed, 1023 conflicts resolved
+[2025-09-16 10:52:45] 📋 Processing branch 38: bulk-merge-backup-20250916-085344
+[2025-09-16 10:52:46] 🔄 Attempting to merge bulk-merge-backup-20250916-085344...
+[2025-09-16 10:52:47] ✅ Successfully merged bulk-merge-backup-20250916-085344
+[2025-09-16 10:52:48] ✅ Branch bulk-merge-backup-20250916-085344 processed successfully
+[2025-09-16 10:52:48] 📊 Batch progress: 38 successful, 0 failed
+[2025-09-16 10:52:48] 📊 Overall progress: 38 successful, 0 failed, 1023 conflicts resolved
+[2025-09-16 10:52:48] 📋 Processing branch 39: bulk-merge-backup-20250916-095128
+[2025-09-16 10:52:48] 🔄 Attempting to merge bulk-merge-backup-20250916-095128...
+[2025-09-16 10:52:51] ⚠️  Merge conflicts detected in bulk-merge-backup-20250916-095128, resolving...
+[2025-09-16 10:52:51] 📋 Conflicted files: zion-website/src/data/updates.ts
+[2025-09-16 10:52:51] 🔧 Resolving conflicts in zion-website/src/data/updates.ts for branch bulk-merge-backup-20250916-095128...
+[2025-09-16 10:52:51] 🧩 Generic file: prefer main version
+[2025-09-16 10:52:52] ✅ Resolved conflicts in zion-website/src/data/updates.ts
