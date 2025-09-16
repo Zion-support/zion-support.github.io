@@ -217,6 +217,22 @@ import {
                 ))}
               </div>
             </div>
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-white font-semibold">Consciousness Level</span>
+                <span className="text-purple-300 font-mono">{demoData.consciousnessLevel.toFixed(1)}%</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-3">
+                <motion.div
+                  className="bg-gradient-to-r from-purple-400 to-pink-400 h-3 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${demoData.consciousnessLevel}%` }}
+                  transition={{ duration: 0.5 }}
+                />
+              </div>
+            </div>
+          </div>
+        );
 
         {/* Technology Stats */}
         <div className="mt-16 bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-8">

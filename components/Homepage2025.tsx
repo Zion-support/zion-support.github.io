@@ -125,6 +125,13 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       tag: 'New',
       gradient: 'from-emerald-500 to-lime-500'
     }
+    ,
+    {
+      title: 'Evidence‑Led Operations — Centralizing Evals, Incidents, KPIs',
+      href: '/blog/ai-2026-evidence-led-operations-blueprint',
+      tag: 'Operations',
+      gradient: 'from-amber-500 to-pink-500'
+    }
   ];
 
   const navigationSections = [
@@ -395,6 +402,10 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
                 <a href="/blog/ai-2026-trustworthy-model-routing-starter" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
                   <div className="text-xs opacity-90">6 min • Routing</div>
+                </a>
+                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
+                  <div className="text-xs opacity-90">7 min • Operations</div>
                 </a>
               </div>
             </div>

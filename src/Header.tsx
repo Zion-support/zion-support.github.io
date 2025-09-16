@@ -44,6 +44,9 @@ const Header: React.FC = () => {
             <a href="/pages/RevolutionaryCaseStudies2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Case Studies
             </a>
+            <a href="/revolutionary-content-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
+              Revolutionary 2026
+            </a>
             <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
               Content Showcase
             </a>
