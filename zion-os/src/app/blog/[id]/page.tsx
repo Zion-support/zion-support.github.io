@@ -12,6 +12,7 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+<<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -116,6 +117,34 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
       'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
       'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
+=======
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+    excerpt:
+      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
+      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
+    ]
+  },
+  'edge-ai-marketplaces': {
+    id: 'edge-ai-marketplaces',
+    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+    excerpt:
+      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
+      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
+>>>>>>> origin/feature/new-content-2025-09-15
     ]
   },
   'sovereign-ai-commerce-2025': {

@@ -223,8 +223,13 @@ export default function HomePage() {
               </Link>
 =======
               </a>
+<<<<<<< HEAD
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
+=======
+              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Blueprint 2025
+>>>>>>> origin/feature/new-content-2025-09-15
               </a>
 >>>>>>> origin/feature/new-content-promotion
             </div>
