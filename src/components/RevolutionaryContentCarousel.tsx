@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
 import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 import { 
   ArrowRight, 
   ArrowLeft, 
@@ -89,8 +92,41 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Universal Mind Network",
         "Infinite Intelligence"
       ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+      impact: "Revolutionary"
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+<<<<<<< HEAD
+      link: "/pages/NextGenTechShowcase2026",
+      status: "Live Now",
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+      link: "/pages/NextGenTechShowcase2026",
+      status: "Live Now",
+      impact: "Revolutionary"
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -117,6 +153,20 @@ const RevolutionaryContentCarousel: React.FC = () => {
       stats: { views: "3.9M", likes: "267K", shares: "54K" },
       color: "from-cyan-600 to-blue-600"
       impact: "Revolutionary"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
     },
     {
       id: 4,
@@ -141,14 +191,73 @@ const RevolutionaryContentCarousel: React.FC = () => {
       title: "Quantum-Neural Fusion 2026",
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+      subtitle: "Quantum Computing Meets Neural Interfaces",
+      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      subtitle: "Quantum Computing Meets Neural Interfaces",
+      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
       features: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -159,16 +268,77 @@ const RevolutionaryContentCarousel: React.FC = () => {
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+      title: "Synthetic Intelligence 2026",
+      subtitle: "AI with Genuine Consciousness",
+      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: "Synthetic Intelligence 2026",
+      subtitle: "AI with Genuine Consciousness",
+      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
       features: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
       status: "Live Now",
       impact: "Transformative"
     }
@@ -223,6 +393,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-3xl">
+<<<<<<< HEAD
+          <divdiv
+            key={currentSlide}
+=======
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -230,6 +404,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
             className={`relative bg-gradient-to-br ${currentContent.bgColor} text-white overflow-hidden`}
           >
             {/* Animated Background */}
@@ -237,19 +412,29 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 left-0 w-full h-full">
                 {[...Array(100)].map((_, i) => (
+<<<<<<< HEAD
+                  <divdiv
+=======
                   <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                     key={i}
                     className="absolute w-1 h-1 bg-white rounded-full opacity-30"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+<<<<<<< HEAD
+=======
                     animate={{
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                       y: [0, -200, 0],
                       opacity: [0.3, 1, 0.3],
                       scale: [1, 2, 1],
                     }}
+<<<<<<< HEAD
+=======
                     transition={{
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                       duration: 4 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 3,
@@ -263,10 +448,14 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Content */}
                 <div>
+<<<<<<< HEAD
+                  <divdiv
+=======
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                     className="mb-6"
                   >
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4">
@@ -282,6 +471,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <p className="text-lg text-white/80 mb-8 leading-relaxed">
                       {currentContent.description}
                     </p>
+<<<<<<< HEAD
+                  </divdiv>
+
+                  {/* Features */}
+                  <divdiv
+=======
                   </motion.div>
 
                   {/* Features */}
@@ -289,19 +484,34 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                     className="mb-8"
                   >
                     <ul className="space-y-3">
                       {currentContent.features.map((feature, index) => (
+<<<<<<< HEAD
+                        <divli
+                          key={index}
+=======
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                           className="flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="text-white/90">{feature}</span>
+<<<<<<< HEAD
+                        </divli>
+                      ))}
+                    </ul>
+                  </divdiv>
+
+                  {/* CTA Buttons */}
+                  <divdiv
+=======
                         </motion.li>
                       ))}
                     </ul>
@@ -312,6 +522,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <a
@@ -325,15 +536,23 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <button className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                       <span>Learn More</span>
                     </button>
+<<<<<<< HEAD
+                  </divdiv>
+=======
                   </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                 </div>
 
                 {/* Visual */}
                 <div className="relative">
+<<<<<<< HEAD
+                  <divdiv
+=======
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                     className="relative"
                   >
                     <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}>
@@ -344,12 +563,21 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                     <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse delay-1000"></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white/40 rounded-full animate-pulse delay-500"></div>
+<<<<<<< HEAD
+                  </divdiv>
+                </div>
+              </div>
+            </div>
+          </divdiv>
+        </div>
+=======
                   </motion.div>
                 </div>
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
         {/* Navigation Arrows */}
         <button
@@ -362,6 +590,15 @@ const RevolutionaryContentCarousel: React.FC = () => {
           onClick={nextSlide}
           className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 z-20"
         >
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          →
+=======
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           <ArrowRight className="w-6 h-6 text-white" />
         </button>
 
@@ -387,20 +624,30 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(100)].map((_, i) => (
+<<<<<<< HEAD
+            <divdiv
+=======
             <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
+<<<<<<< HEAD
+=======
               animate={{
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                 y: [0, -300, 0],
                 opacity: [0.3, 1, 0.3],
                 scale: [1, 3, 1],
                 rotate: [0, 360, 0],
               }}
+<<<<<<< HEAD
+=======
               transition={{
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                 duration: 4 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 2,
@@ -415,6 +662,14 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
+<<<<<<< HEAD
+            <divdiv
+              key={currentSlide}
+              className="text-white"
+            >
+              <div className="mb-6">
+                <divdiv
+=======
             <motion.div
               key={currentSlide}
               initial={{ opacity: 0, x: -50 }}
@@ -428,11 +683,16 @@ const RevolutionaryContentCarousel: React.FC = () => {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.2 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                   className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span className="text-sm font-semibold">{currentContent.status}</span>
+<<<<<<< HEAD
+                </divdiv>
+=======
                 </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               </div>
 
               <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
@@ -451,30 +711,58 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 <h4 className="text-lg font-semibold mb-4">Key Features:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {currentContent.features.map((feature, index) => (
+<<<<<<< HEAD
+                    <divdiv
+                      key={index}
+=======
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                       className="flex items-center space-x-2 text-sm"
                     >
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-gray-200">{feature}</span>
+<<<<<<< HEAD
+                    </divdiv>
+=======
                     </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                   ))}
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
+<<<<<<< HEAD
+                <diva
+                  href={currentContent.link}
+=======
                 <motion.a
                   href={currentContent.link}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                   className={`inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}
                 >
                   <Play className="w-5 h-5" />
                   <span>Explore Content</span>
                   <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
+                </diva>
+                <divbutton
+                  className="px-8 py-4 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
+                >
+                  Learn More
+                </divbutton>
+              </div>
+            </divdiv>
+
+            {/* Right Content - Visual */}
+            <divdiv
+              key={`visual-${currentSlide}`}
+=======
                 </motion.a>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -493,10 +781,18 @@ const RevolutionaryContentCarousel: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
               className="relative"
             >
               <div className="relative">
                 {/* Main Icon */}
+<<<<<<< HEAD
+                <divdiv
+                  className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}
+                >
+                  <currentContent.icon className="w-16 h-16 text-white" />
+                </divdiv>
+=======
                 <motion.div
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
@@ -505,15 +801,21 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 >
                   <currentContent.icon className="w-16 h-16 text-white" />
                 </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
                 {/* Floating Elements */}
                 <div className="absolute inset-0">
                   {stats.map((stat, index) => (
+<<<<<<< HEAD
+                    <divdiv
+                      key={index}
+=======
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
                       className="absolute bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                       style={{
                         top: `${20 + (index * 15)}%`,
@@ -524,11 +826,19 @@ const RevolutionaryContentCarousel: React.FC = () => {
                       <stat.icon className="w-6 h-6 text-white mb-2" />
                       <div className="text-2xl font-bold text-white">{stat.number}</div>
                       <div className="text-xs text-gray-300">{stat.label}</div>
+<<<<<<< HEAD
+                    </divdiv>
+                  ))}
+                </div>
+              </div>
+            </divdiv>
+=======
                     </motion.div>
                   ))}
                 </div>
               </div>
             </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
         </div>
       </div>
@@ -559,6 +869,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
           className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
         >
           <ArrowRight className="w-5 h-5 text-white" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
         </button>
       </div>
 
@@ -574,6 +891,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
         </button>
 
       {/* Main content */}
+<<<<<<< HEAD
+        <divdiv
+          key={currentSlide}
+=======
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -581,6 +902,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -300 }}
           transition={{ duration: 0.5 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           className="absolute inset-0 flex items-center"
         >
           <div className="container mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
@@ -663,8 +985,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
             </div>
           </div>
+<<<<<<< HEAD
+        </divdiv>
+      </div>
+=======
         </motion.div>
       </AnimatePresence>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
 
       {/* Navigation arrows */}
       <button
@@ -702,13 +1029,121 @@ const RevolutionaryContentCarousel: React.FC = () => {
 
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+<<<<<<< HEAD
+        <divdiv
+          className="h-full bg-gradient-to-r from-purple-500 to-indigo-500"
+=======
         <motion.div
           className="h-full bg-gradient-to-r from-purple-500 to-indigo-500"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
           transition={{ duration: 5, ease: "linear" }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
           key={currentSlide}
         />
+      {/* Content Preview Grid */}
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {revolutionaryContent.map((content, index) => (
+<<<<<<< HEAD
+          <divbutton
+            key={content.id}
+            onClick={() => goToSlide(index)}
+=======
+          <motion.button
+            key={content.id}
+            onClick={() => goToSlide(index)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+            className={`p-4 rounded-xl text-left transition-all duration-300 ${
+              index === currentSlide
+                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
+                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+            }`}
+          >
+            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
+              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
+            }`}>
+              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
+            </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </a>
+=======
+            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
+            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
+          </motion.button>
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
+            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
+          </motion.button>
+        ))}
+      </div>
+
+      {/* Dots Navigation */}
+      <div className="flex justify-center space-x-3 mt-8">
+        {revolutionaryContent.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Content Preview Grid */}
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {revolutionaryContent.map((content, index) => (
+          <motion.button
+            key={content.id}
+            onClick={() => goToSlide(index)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`p-4 rounded-xl text-left transition-all duration-300 ${
+              index === currentSlide
+                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
+                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+            }`}
+          >
+            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
+              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
+            }`}>
+              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
+            </div>
+            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
+            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
+          </motion.button>
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+        ))}
+      </div>
+=======
+            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
+            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
+          </divbutton>
+        ))}
+      </div>
+
+      {/* Dots Navigation */}
+      <div className="flex justify-center space-x-3 mt-8">
+        {revolutionaryContent.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
@@ -733,6 +1168,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </motion.button>
         ))}
       </div>
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
     </div>
   );
 };
