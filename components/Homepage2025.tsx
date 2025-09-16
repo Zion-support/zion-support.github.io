@@ -51,6 +51,30 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Agentic Observability — Deep Dive (2026)',
+      href: '/blog/ai-2026-agentic-observability-deep-dive',
+      tag: 'New',
+      gradient: 'from-violet-500 to-fuchsia-500'
+    },
+    {
+      title: 'Enterprise Agent Risk Mitigation (2026)',
+      href: '/blog/ai-2026-enterprise-agent-risk-mitigation',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Trustworthy Model Routing — Starter Kit (2026)',
+      href: '/blog/ai-2026-trustworthy-model-routing-starter',
+      tag: 'Starter Kit',
+      gradient: 'from-sky-500 to-blue-600'
+    },
+    {
+      title: 'Enterprise Automation Strategy 2025',
+      href: '/blog/ai-2025-enterprise-automation-strategy',
+      tag: 'Strategy',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
       title: 'Autonomous Incident Response Blueprint (2026)',
       href: '/blog/ai-2026-autonomous-incident-response-blueprint',
       tag: 'New',
@@ -103,12 +127,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/reports/cases/case-2025-09-finops-ai-savings',
       tag: 'Case Study',
       gradient: 'from-cyan-500 to-violet-500'
-    },
-    {
-      title: 'Trustworthy Model Routing — Starter Kit (2026)',
-      href: '/blog/ai-2026-trustworthy-model-routing-starter',
-      tag: 'Starter Kit',
-      gradient: 'from-sky-500 to-blue-600'
     },
     {
       title: 'Enterprise Automation Strategy 2025',

@@ -28,6 +28,12 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-cost-aware-model-routing': require('../../blog/ai-2026-cost-aware-model-routing').default,
   'ai-2026-agentic-benchmarking-field-guide': require('../../blog/ai-2026-agentic-benchmarking-field-guide').default,
   'ai-2026-operationalizing-ai-safety-controls': require('../../blog/ai-2026-operationalizing-ai-safety-controls').default,
+  // Newly added content
+  'ai-2026-enterprise-agent-risk-mitigation': require('../../blog/ai-2026-enterprise-agent-risk-mitigation').default,
+  'ai-2026-agentic-observability-deep-dive': require('../../blog/ai-2026-agentic-observability-deep-dive').default,
+  'ai-2026-trustworthy-model-routing-starter': require('../../blog/ai-2026-trustworthy-model-routing-starter').default,
+  'ai-2025-enterprise-automation-strategy': require('../../blog/ai-2025-enterprise-automation-strategy').default,
+  'ai-2026-evidence-led-operations-blueprint': require('../../blog/ai-2026-evidence-led-operations-blueprint').default,
 }
 
 export default function BlogPostRouter() {
