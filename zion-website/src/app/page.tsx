@@ -303,6 +303,18 @@ const solutions = [
 >>>>>>> cursor/create-and-deploy-new-content-502e
 ]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function HomePage() {
+  const latest = getLatestUpdates(6)
+  return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
 const whatsNew = [
   { title: 'ContentForge AI v2', description: 'Major upgrade with SEO briefs, brand voice trainer, and new templates.', href: '/services', badge: 'New' },
   { title: 'SecureShield Audit Playbooks', description: 'Actionable remediation guides added to all cybersecurity audits.', href: '/services', badge: 'Update' },
@@ -315,6 +327,11 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
 <<<<<<< HEAD
     <div className="bg-black min-h-screen">
 <<<<<<< HEAD
@@ -330,14 +347,46 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f175
 >>>>>>> cursor/create-and-deploy-new-content-de62
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function HomePage() {
+  const latest = getLatestUpdates(6)
+  return (
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
 =======
     <div className="bg-black">
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+=======
+    <div className="bg-black">
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">

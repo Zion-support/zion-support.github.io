@@ -10,6 +10,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'ai-revolution',
       title: 'Next-Gen AI Revolution 2027',
@@ -42,6 +45,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 =======
@@ -53,6 +57,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
       id: 0,
       title: "Quantum Technologies",
       icon: "⚡",
@@ -496,6 +503,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 =======
@@ -508,6 +516,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
           </div>
         </div>
       </div>
