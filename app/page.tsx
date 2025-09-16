@@ -401,6 +401,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Autonomous Operations Content Banner - FEATURED */}
+      <NewAutonomousOperations2025Banner />
       {/* New Promo: Agent Readiness Scorecards (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -843,6 +846,9 @@ export default function HomePage() {
         
         {/* Advanced Automation Content Showcase 2025 - NEW FEATURED */}
         <AdvancedAutomationContentShowcase2025 />
+        
+        {/* Autonomous Operations Content Showcase 2025 - NEW FEATURED */}
+        <AutonomousOperationsContentShowcase2025 />
         
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
