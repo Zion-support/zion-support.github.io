@@ -5,6 +5,10 @@ const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
   const showcaseItems = [
     {
       id: 1,
@@ -14,6 +18,8 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
+<<<<<<< HEAD
+=======
   const contentCategories = [
     {
       id: 0,
@@ -56,6 +62,7 @@ const EnhancedContentShowcase: React.FC = () => {
           impact: "Creates new forms of digital consciousness"
         }
       ]
+>>>>>>> cursor/create-and-deploy-new-content-e4b3
     },
     {
       id: 1,
@@ -103,6 +110,7 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 2,
       name: "Neural Interfaces",
       icon: "🧬",
+<<<<<<< HEAD
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
@@ -167,6 +175,7 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+=======
       color: "from-emerald-600 to-teal-600",
       description: "Brain-computer interfaces and neural technologies",
       content: [
@@ -255,6 +264,8 @@ const EnhancedContentShowcase: React.FC = () => {
     { label: "Breakthroughs", value: "25+", icon: "🏆", color: "text-pink-400" },
     { label: "Global Impact", value: "10M+", icon: "🌍", color: "text-cyan-400" }
   ];
+>>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
     },
     {
       id: 2,
@@ -334,6 +345,7 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+>>>>>>> origin/feature/revolutionary-2026-content
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -347,6 +359,7 @@ const EnhancedContentShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
+<<<<<<< HEAD
             {/* Category Header */}
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">{contentCategories[activeCategory].name}</h2>
@@ -355,6 +368,8 @@ const EnhancedContentShowcase: React.FC = () => {
               </p>
             </div>
 
+<<<<<<< HEAD
+=======
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 ENHANCED CONTENT SHOWCASE • 2026
             </div>
@@ -368,6 +383,7 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
       </div>
 
+>>>>>>> origin/feature/revolutionary-2026-content
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -723,6 +739,8 @@ const EnhancedContentShowcase: React.FC = () => {
             </a>
           </motion.div>
         ))}
+<<<<<<< HEAD
+=======
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
@@ -822,6 +840,9 @@ const EnhancedContentShowcase: React.FC = () => {
             </button>
           </div>
         </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-e4b3
+=======
+>>>>>>> origin/feature/revolutionary-2026-content
       </div>
     </div>
   );
