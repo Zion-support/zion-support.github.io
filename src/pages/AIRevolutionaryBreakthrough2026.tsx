@@ -253,13 +253,6 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
-      </main>
-      
-      <Footer />
->>>>>>> cursor/create-and-deploy-new-content-3887
     </div>
   );
 };

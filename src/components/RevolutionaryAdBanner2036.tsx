@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
@@ -110,9 +98,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               />
             ))}
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-370d
 import React from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
@@ -182,12 +167,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2a8
->>>>>>> cursor/create-and-deploy-new-content-370d
-=======
         </div>
 
         {/* Quick Access Grid */}
@@ -203,12 +182,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <p className="text-sm opacity-90">{ad.subtitle}</p>
             </a>
           ))}
-<<<<<<< HEAD
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
         </div>
       </div>
     </div>

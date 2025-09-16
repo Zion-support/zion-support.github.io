@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import { motion } from 'framer-motion';
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const RevolutionaryTechBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -73,25 +61,10 @@ const RevolutionaryTechBanner2026: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-<<<<<<< HEAD
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
-      
-      {/* Content */}
-      <div className="relative z-10 bg-gradient-to-r from-purple-900/90 via-pink-900/90 to-red-900/90 backdrop-blur-sm rounded-2xl p-8 mb-8 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div
-=======
-        <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-=======
         <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
           className="text-center"
         >
           {/* Animated Icons */}
@@ -133,18 +106,10 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </divp>
 
           {/* Feature Highlights */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div
-=======
-          <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-=======
           <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -162,27 +127,13 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>
               <p className="text-sm opacity-80">Direct brain-computer communication</p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>
-
-          {/* Call to Action Buttons */}
-          <div
-=======
-          </motion.div>
-
-          {/* Call to Action Buttons */}
-          <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-=======
           </divdiv>
 
           {/* Call to Action Buttons */}
           <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
             className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
           >
             <diva
@@ -202,60 +153,26 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               className="bg-gradient-to-r from-emerald-400 to-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
             >
               🧬 Experience Neural Tech →
-<<<<<<< HEAD
-            </motion.a>
-<<<<<<< HEAD
-          </div>
-
-          {/* Animated Progress Bar */}
-          <div
-=======
-          </motion.div>
-
-          {/* Animated Progress Bar */}
-          <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-=======
             </diva>
           </divdiv>
 
           {/* Animated Progress Bar */}
           <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
             className="mt-8"
           >
             <div className="text-sm opacity-80 mb-2">Revolutionary Technology Progress</div>
             <div className="w-full bg-white/20 rounded-full h-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div
-=======
-              <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
               <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
               />
             </div>
             <div className="text-xs opacity-60 mt-2">100% Complete - Ready for Launch</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
-          </motion.div>
-        </motion.div>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
           </divdiv>
         </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
-=======
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -358,7 +275,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </div>
         </motion.div>
       </AnimatePresence>
->>>>>>> cursor/create-and-deploy-new-content-39c9
     </div>
   );
 };

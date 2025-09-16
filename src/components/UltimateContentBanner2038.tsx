@@ -3,23 +3,6 @@ import { motion } from 'framer-motion';
 
 const UltimateContentBanner2038: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
-=======
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="bg-gradient-to-r from-purple-600 via-indigo-600 to-emerald-600 rounded-2xl p-8 mb-8 text-white relative overflow-hidden"
-    >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse"></div>
-      
-      <div className="relative z-10">
->>>>>>> cursor/create-and-deploy-new-content-99e3
         <div className="text-center">
           <motion.div
             initial={{ scale: 0.8 }}
@@ -92,44 +75,6 @@ const UltimateContentBanner2038: React.FC = () => {
               href="/pages/RevolutionaryTechBreakthrough2038"
               className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group"
             >
-<<<<<<< HEAD
-              Transcendent Showcase 2040 →
-            </a>
-          </div>
-=======
-              <div className="text-4xl mb-3">⚡</div>
-              <h3 className="text-xl font-bold mb-2">Revolutionary Tech</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Consciousness transfer, quantum neural networks, and reality synthesis engine
-              </p>
-              <div className="text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                Experience Breakthrough →
-              </div>
-            </motion.a>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-8"
-          >
-            <div className="inline-flex items-center space-x-4 text-sm opacity-90">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span>Live Now</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                <span>Interactive Demos</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                <span>Revolutionary Technology</span>
-              </div>
-            </div>
-          </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
         </div>
       </div>
     </motion.div>
