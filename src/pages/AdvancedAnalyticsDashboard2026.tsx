@@ -3,12 +3,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  BarChart3
-  TrendingUp
-  Users
-  DollarSign
-  Eye
-  MousePointer
+  BarChart3,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Eye,
+  MousePointer,
   Clock,
   Target,
   Zap,
@@ -132,7 +132,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
     };
 
     loadData();
-  }[selectedTimeframe]);
+  }, [selectedTimeframe]);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
@@ -148,10 +148,10 @@ const AdvancedAnalyticsDashboard2026 = () => {
   };
 
   const timeframes = [
-    { value: '24'h', 'label: '24 Hours' },
-    { value: '7'd', 'label: '7 Days' },
-    { value: '30'd', 'label: '30 Days' },
-    { value: '90'd', 'label: '90 Days' }
+    { value: '24h', label: '24 Hours' },
+    { value: '7d', label: '7 Days' },
+    { value: '30d', label: '30 Days' },
+    { value: '90d', label: '90 Days' }
   ];
 
   if (isLoading) {

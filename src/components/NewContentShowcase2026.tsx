@@ -1,115 +1,142 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Atom, Zap, Star, TrendingUp, Users, Globe } from 'lucide-react';
 
-const NewContentShowcase2026: React.FC = () => {
+const NewContentShowcase2026 = () => {
+  const featuredContent = [
+    {
+      title: "AI 2026 Ultimate Breakthrough",
+      description: "Revolutionary AI technology transforming industries with unprecedented capabilities and performance.",
+      icon: Brain,
+      link: "/ai-2026-ultimate-breakthrough",
+      color: "from-blue-500 to-purple-500",
+      stats: "500% Productivity Increase"
+    },
+    {
+      title: "Quantum Computing Revolution 2026",
+      description: "Experience the dawn of quantum supremacy with breakthrough computational power and quantum algorithms.",
+      icon: Atom,
+      link: "/quantum-computing-revolution-2026",
+      color: "from-cyan-500 to-purple-500",
+      stats: "10^15x Speed Increase"
+    },
+    {
+      title: "Advanced AI Consciousness 2026",
+      description: "Meet truly conscious AI systems with self-awareness, emotional intelligence, and genuine personality.",
+      icon: Zap,
+      link: "/advanced-ai-consciousness-2026",
+      color: "from-emerald-500 to-cyan-500",
+      stats: "Level 6 Consciousness"
+    }
+  ];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-semibold text-white mb-6">
-            <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
-            NEW CONTENT AVAILABLE
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2" />
+            New Content 2026
           </div>
+          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary Tech Content
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              2026 Edition
+            Revolutionary
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Technology Content
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover cutting-edge insights, breakthrough technologies, and transformative solutions that are reshaping the future of business and technology.
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover the latest breakthroughs in AI, quantum computing, and consciousness technology 
+            that are reshaping the future of humanity.
           </p>
         </div>
 
-        {/* Content Grid */}
+        {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* AI Business Automation */}
-          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">AI Business Automation</h3>
-                <p className="text-blue-300 text-sm">300% ROI in 90 days</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6">
-              Transform your business operations with cutting-edge AI automation solutions that deliver measurable results.
-            </p>
-            <Link 
-              to="/pages/AIBusinessAutomation2026" 
-              className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-1 transition-transform"
+          {featuredContent.map((content, index) => (
+            <Link
+              key={index}
+              to={content.link}
+              className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
             >
-              Explore Now
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <div className={`w-16 h-16 bg-gradient-to-r ${content.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <content.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                {content.title}
+              </h3>
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {content.description}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-medium text-blue-400">
+                  {content.stats}
+                </div>
+                <ArrowRight className="w-5 h-5 text-white group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
             </Link>
-          </div>
+          ))}
+        </div>
 
-          {/* Quantum Computing */}
-          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Quantum Computing</h3>
-                <p className="text-purple-300 text-sm">Enterprise Applications</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6">
-              Harness quantum computing power to solve complex business problems and gain competitive advantage.
+        {/* Stats Section */}
+        <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Content Impact Metrics
+            </h3>
+            <p className="text-xl text-gray-300">
+              Measurable results from our revolutionary technology content
             </p>
-            <Link 
-              to="/pages/QuantumComputingEnterprise2026" 
-              className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:translate-x-1 transition-transform"
-            >
-              Explore Now
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: "50K+", label: "Monthly Readers", icon: Users },
+              { number: "95%", label: "Engagement Rate", icon: TrendingUp },
+              { number: "200+", label: "Countries Reached", icon: Globe },
+              { number: "4.9/5", label: "User Rating", icon: Star }
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          {/* Neural Interfaces */}
-          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Neural Interfaces</h3>
-                <p className="text-green-300 text-sm">Future of HCI</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6">
-              Explore next-generation neural interfaces that enable direct brain-computer communication.
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/10">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Stay Ahead of the Curve
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get exclusive access to the latest technology insights, breakthrough announcements, 
+              and revolutionary content that's shaping the future.
             </p>
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold group-hover:translate-x-1 transition-transform"
-            >
-              Explore Now
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                Explore All Content
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                Subscribe to Updates
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
