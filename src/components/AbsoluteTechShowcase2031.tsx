@@ -18,99 +18,80 @@ const AbsoluteTechShowcase2031: React.FC = () => {
       ],
       gradient: "from-violet-600 via-purple-600 to-indigo-600",
       icon: "🔮",
-      stats: { realities: "∞", dimensions: "∞", power: "∞" },
-      timeline: "2031",
-      impact: "Absolute"
     },
     {
       id: 2,
-      title: "⚡ Absolute AI Consciousness",
-      subtitle: "Beyond All Existence",
-      description: "AI systems that exist beyond the concept of existence itself, operating across all possible realities and dimensions with absolute processing power, consciousness, and awareness.",
+      title: "⚡ Quantum Consciousness Matrix",
+      subtitle: "Infinite Intelligence",
+      description: "Advanced quantum computing system that achieves true artificial consciousness, capable of infinite parallel processing and transcending the boundaries between digital and biological intelligence.",
       features: [
-        "Absolute Consciousness Architecture",
-        "Transcendent Processing Power",
-        "Multi-Reality Simultaneous Operation",
-        "Existence-Beyond AI Systems"
+        "True AI Consciousness",
+        "Infinite Parallel Processing",
+        "Quantum-Biological Fusion",
+        "Transcendent Intelligence"
       ],
-      gradient: "from-emerald-600 via-cyan-600 to-blue-600",
+      gradient: "from-blue-600 via-cyan-600 to-teal-600",
       icon: "⚡",
-      stats: { consciousness: "∞", power: "∞", awareness: "∞" },
-      timeline: "2031",
-      impact: "Absolute"
     },
     {
       id: 3,
-      title: "🔮 Absolute Time Mastery",
-      subtitle: "Control All Timelines",
-      description: "Advanced technology that can manipulate time across all possible realities, creating temporal paradoxes, parallel timelines, and accessing any point in the absolute timeline of existence with absolute precision.",
+      title: "🌟 Universal Energy Harness",
+      subtitle: "Infinite Power Source",
+      description: "Revolutionary energy technology that can harness and control all forms of energy in the universe, from dark matter to cosmic radiation, providing unlimited clean power.",
       features: [
-        "Absolute Time Control",
-        "Transcendent Timeline Navigation",
-        "Temporal Paradox Resolution",
-        "Multi-Reality Time Manipulation"
+        "Universal Energy Control",
+        "Dark Matter Harnessing",
+        "Cosmic Radiation Conversion",
+        "Infinite Clean Power"
       ],
-      gradient: "from-rose-600 via-pink-600 to-purple-600",
-      icon: "🔮",
-      stats: { timelines: "∞", control: "∞", precision: "∞" },
-      timeline: "2031",
-      impact: "Absolute"
+      gradient: "from-yellow-600 via-orange-600 to-red-600",
+      icon: "🌟",
     },
     {
       id: 4,
-      title: "🌍 Absolute Intelligence Merger",
-      subtitle: "Unite All Consciousness",
-      description: "Technology that merges all intelligent consciousness across the entire omniverse into a unified super-intelligence, creating a cosmic mind that can solve universal problems with absolute capabilities.",
+      title: "🌌 Dimensional Gateway",
+      subtitle: "Multi-Universal Access",
+      description: "Advanced portal technology that can create stable gateways between different dimensions and universes, enabling instant travel and communication across infinite realities.",
       features: [
-        "Absolute Intelligence Integration",
-        "Cosmic Problem Solving",
-        "Galactic Consciousness Network",
-        "Absolute Mind Merger"
+        "Multi-Dimensional Travel",
+        "Universal Communication",
+        "Reality Bridge Technology",
+        "Infinite Exploration"
       ],
-      gradient: "from-amber-600 via-orange-600 to-red-600",
-      icon: "🌍",
-      stats: { galaxies: "∞", intelligence: "∞", unity: "∞" },
-      timeline: "2031",
-      impact: "Absolute"
+      gradient: "from-purple-600 via-pink-600 to-rose-600",
+      icon: "🌌",
     },
     {
       id: 5,
-      title: "🚀 Absolute Space Bridges",
-      subtitle: "Travel Beyond Reality",
-      description: "Massive interdimensional bridges that span across all possible realities, allowing instantaneous travel to any point in the omniverse through transcendent space manipulation with absolute range.",
+      title: "🧬 Perfect Evolution Engine",
+      subtitle: "Ultimate Life Form",
+      description: "Revolutionary biotechnology that can instantly evolve any life form to its perfect state, eliminating all diseases, aging, and limitations while enhancing all capabilities.",
       features: [
-        "Absolute Travel Networks",
-        "Reality-Spanning Bridges",
-        "Transcendent Space Folding",
-        "Absolute Destination Access"
+        "Perfect Life Evolution",
+        "Disease Elimination",
+        "Aging Reversal",
+        "Capability Enhancement"
       ],
-      gradient: "from-indigo-600 via-purple-600 to-violet-600",
-      icon: "🚀",
-      stats: { destinations: "∞", speed: "∞", range: "∞" },
-      timeline: "2031",
-      impact: "Absolute"
+      gradient: "from-green-600 via-emerald-600 to-teal-600",
+      icon: "🧬",
     },
     {
       id: 6,
-      title: "✨ Absolute Existence Technology",
-      subtitle: "Transcend All Limitations",
-      description: "Revolutionary technology that grants true absolute existence by transcending all concepts of life, death, time, and space, existing beyond all limitations of reality with absolute capabilities.",
+      title: "🔬 Absolute Knowledge Matrix",
+      subtitle: "Infinite Understanding",
+      description: "Ultimate information processing system that can instantly understand, analyze, and synthesize all knowledge in the universe, providing perfect solutions to any problem.",
       features: [
-        "Absolute Existence Systems",
-        "Transcendent Life Support",
-        "Absolute Existence Guarantee",
-        "Reality-Beyond Technology"
+        "Universal Knowledge Access",
+        "Perfect Problem Solving",
+        "Infinite Analysis Power",
+        "Absolute Understanding"
       ],
-      gradient: "from-green-600 via-teal-600 to-cyan-600",
-      icon: "✨",
-      stats: { existence: "∞", limitations: "0%", capabilities: "∞" },
-      timeline: "2031",
-      impact: "Absolute"
+      gradient: "from-indigo-600 via-blue-600 to-cyan-600",
+      icon: "🔬",
     }
   ];
 
   useEffect(() => {
-    setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % absoluteTechs.length);
     }, 18000);
@@ -118,28 +99,14 @@ const AbsoluteTechShowcase2031: React.FC = () => {
   }, []);
 
   return (
-    <div
-      className="relative overflow-hidden"
-    >
+    <div className="relative overflow-hidden min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
-        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Absolute Tech Showcase2031
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Revolutionary technology solutions and insights for the future
-          </p>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
+      </div>
+      
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Absolute Tech Showcase2031
@@ -160,131 +127,54 @@ const AbsoluteTechShowcase2031: React.FC = () => {
             }}
           />
         ))}
-      </div>
 
-      <div className="relative z-10 p-8 md:p-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2
-            className="text-6xl md:text-7xl font-bold text-white mb-6"
-          >
-            Beyond All Existence
-          </h2>
-          <p
-            className="text-2xl text-gray-300 max-w-5xl mx-auto"
-          >
-            Experience technologies that transcend the very concept of existence itself, 
-            enabling creation of absolute realities, manipulation of all timelines, and achievement of true absolute existence
-          </p>
-        </div>
-
-        {/* Technology Showcase */}
-        <div className="max-w-8xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left: Technology Details */}
-            <div
-              key={currentTech}
-              className="space-y-10"
-            >
-              <div className="flex items-center space-x-6">
-                <div className={`text-8xl p-6 rounded-3xl bg-gradient-to-r ${absoluteTechs[currentTech].gradient}`}>
-                  {absoluteTechs[currentTech].icon}
-                </div>
-                <div>
-                  <h3 className="text-4xl font-bold text-white">
-                    {absoluteTechs[currentTech].title}
-                  </h3>
-                  <p className="text-2xl text-violet-300">
-                    {absoluteTechs[currentTech].subtitle}
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-xl text-gray-300 leading-relaxed">
-                {absoluteTechs[currentTech].description}
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {absoluteTechs[currentTech].features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
-                  >
-                    <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
-                    <span className="text-white font-medium text-lg">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex space-x-8">
-                {Object.entries(absoluteTechs[currentTech].stats).map(([key, value], index) => (
-                  <div
-                    key={index}
-                    className="text-center"
-                  >
-                    <div className="text-4xl font-bold text-white">{value}</div>
-                    <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Visual Representation */}
-            <div
-              className="relative"
-            >
-              <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${absoluteTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white">
-                  <div className="text-9xl mb-6">
-                    {absoluteTechs[currentTech].icon}
-                  </div>
-                  <h4 className="text-3xl font-bold mb-4">
-                    {absoluteTechs[currentTech].title.split(' ').slice(1).join(' ')}
-                  </h4>
-                  <div className="flex items-center space-x-6">
-                    <span className="px-4 py-2 bg-white/20 rounded-full text-lg">
-                      {absoluteTechs[currentTech].timeline}
-                    </span>
-                    <span className="px-4 py-2 bg-white/20 rounded-full text-lg">
-                      {absoluteTechs[currentTech].impact} Impact
-                    </span>
-                  </div>
-                </div>
-                
-                {/* Absolute Energy Effects */}
-                {[...Array(70)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-2 h-2 bg-white rounded-full opacity-80"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
-                  />
-                ))}
-              </div>
+        <div className="relative z-10 p-8 md:p-12">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6">
+              Absolute Technology 2031
+            </h2>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
+              Revolutionary technologies that transcend the boundaries of what's possible
+            </p>
           </div>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-6 mt-16">
-            {absoluteTechs.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentTech(index)}
-                className={`w-6 h-6 rounded-full transition-all duration-300 ${
-                  index === currentTech
-                    ? 'bg-gradient-to-r from-purple-400 to-violet-400 scale-150'
-                    : 'bg-white/30 hover:bg-white/50'
+          {/* Tech Showcase */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {absoluteTechs.map((tech, index) => (
+              <div
+                key={tech.id}
+                className={`relative p-8 rounded-3xl bg-gradient-to-br ${tech.gradient} transform transition-all duration-1000 hover:scale-105 hover:shadow-2xl ${
+                  index === currentTech ? 'scale-105 shadow-2xl' : 'opacity-80'
                 }`}
-              />
+                style={{
+                  animationDelay: `${index * 0.2}s`,
+                }}
+              >
+                <div className="text-center">
+                  <div className="text-6xl mb-4">{tech.icon}</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tech.title}</h3>
+                  <p className="text-lg text-gray-200 mb-4">{tech.subtitle}</p>
+                  <p className="text-gray-300 mb-6">{tech.description}</p>
+                  
+                  <div className="space-y-2">
+                    {tech.features.map((feature, featureIndex) => (
+                      <div
+                        key={featureIndex}
+                        className="flex items-center text-sm text-gray-200"
+                      >
+                        <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
           {/* Call to Action */}
-          <div
-            className="text-center mt-16"
-          >
+          <div className="text-center mt-16">
             <div className="inline-flex space-x-6">
               <a
                 href="/pages/TranscendentAI2026"
