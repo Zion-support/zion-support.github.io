@@ -6,6 +6,8 @@ import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import ComprehensiveServicesShowcase2027 from './src/pages/ComprehensiveServicesShowcase2027';
 import RevolutionaryTechAdvertisingBanner from './src/components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import UltimateBreakthroughBanner from './src/components/UltimateBreakthroughBanner';
+import NeuralRealityBanner from './src/components/NeuralRealityBanner';
 
 const App: React.FC = () => {
   return (
