@@ -204,6 +204,9 @@ import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import NewContentPromotionBanner2025 from './src/components/NewContentPromotionBanner2025';
+import DynamicContentCarousel2025 from './src/components/DynamicContentCarousel2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -221,6 +224,9 @@ export default function App(): JSX.Element {
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
         <Header />
+        
+        {/* NEW: Content Promotion Banner */}
+        <NewContentPromotionBanner2025 />
         
         <Routes>
           <Route path="/" element={
@@ -574,6 +580,16 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Dynamic Content Carousel 2025 */}
+                <div className="mb-12">
+                  <DynamicContentCarousel2025 />
+                </div>
+
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
