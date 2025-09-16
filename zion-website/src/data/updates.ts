@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Production Evidence Bundles (2026)',
+    summary: 'Standardized artifacts for audits: inputs, outputs, policies, evals, and traces.',
+    href: '/updates/production-evidence-bundles-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Field Guide: Canary + Shadow Testing for Agents (2026)',
+    summary: 'Incremental rollout patterns with objective gates to de-risk production launches.',
+    href: '/updates/canary-and-shadow-testing-for-agents-2026',
+    date: '2025-09-16',
+    tag: 'Field Guide'
+  },
+  {
     title: 'Blueprint: Grounded Generation Guardrails (2026)',
     summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
     href: '/updates/grounded-generation-guardrails-2026',
