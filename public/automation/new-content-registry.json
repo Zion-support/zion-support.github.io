@@ -8,11 +8,32 @@
       "source": "blog"
     },
     {
+      "title": "AI 2026: Incident Triage Playbook — Eval Gates in Practice",
+      "href": "/blog/ai-2026-incident-triage-eval-gates-playbook",
+      "desc": "Field-tested runbooks tying eval scorecards to incident response and rollback.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
       "title": "Safe Agent Actions — Blueprint (2026)",
       "href": "/blog/ai-2026-safe-agent-actions-blueprint",
       "desc": "Risk tiers, scoped creds, approvals, and runtime checks for tool use.",
       "createdAt": "2025-09-16T23:59:59.998Z",
       "source": "blog"
+    },
+    {
+      "title": "Guide — Agent SLO Starter Kit (2026)",
+      "href": "/reports/guides/guide-2026-agent-slo-starter-kit",
+      "desc": "Minimal SLIs/SLOs for safety, reliability, and cost — ready to adopt.",
+      "createdAt": "2025-09-16T23:58:59.999Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — Governed Model Routing Cuts Spend by 31% (2026)",
+      "href": "/reports/cases/case-2026-governed-model-routing-31",
+      "desc": "Adaptive policy routing lowered cost while improving latency and quality.",
+      "createdAt": "2025-09-16T23:57:59.999Z",
+      "source": "cloud-deep-research-factory"
     },
     {
       "title": "Agentic Evidence Graphs (2026)",
