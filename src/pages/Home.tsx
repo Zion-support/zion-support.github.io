@@ -8,6 +8,9 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
+import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
+import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
 
 const Home: React.FC = () => {
   return (
@@ -55,6 +58,21 @@ const Home: React.FC = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+
+        {/* NEW: Ultimate Tech Showcase 2027 Banner */}
+        <div className="container mx-auto px-4">
+          <UltimateTechShowcase2027Banner />
+        </div>
+
+        {/* NEW: Comprehensive Services 2028 Banner */}
+        <div className="container mx-auto px-4">
+          <ComprehensiveServices2028Banner />
+        </div>
+
+        {/* NEW: Revolutionary Tech Blog 2027 Banner */}
+        <div className="container mx-auto px-4">
+          <RevolutionaryTechBlog2027Banner />
         </div>
 
         {/* NEW: Ultimate Tech Showcase Banner */}
