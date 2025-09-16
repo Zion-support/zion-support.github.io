@@ -4,7 +4,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 =======
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -47,6 +50,7 @@ const RevolutionaryAdBanner2026: React.FC = () => {
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD
     <div className="relative mb-8">
       {/* Main Banner */}
       <div className={`bg-gradient-to-r ${adContent[currentAd].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden animate-pulse`}>
@@ -56,6 +60,75 @@ const RevolutionaryAdBanner2026: React.FC = () => {
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
             <h3 className="text-3xl font-bold">{adContent[currentAd].title}</h3>
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
+=======
+    <div className="relative overflow-hidden mb-8">
+        <divdiv
+          key={currentAd}
+          className={`bg-gradient-to-r ${currentAdData.color} rounded-2xl p-8 text-white relative overflow-hidden`}
+        >
+          {/* Background Pattern */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent backdrop-blur-sm"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <divdiv
+                  className="flex items-center space-x-3 mb-4"
+                >
+                  <span className="text-4xl animate-bounce">{currentAdData.icon}</span>
+                  <div className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold animate-pulse">
+                    🌟 BREAKTHROUGH 2026
+                  </div>
+                </divdiv>
+                
+                <divh2
+                  className="text-4xl font-bold mb-4"
+                >
+                  {currentAdData.title}
+                </divh2>
+                
+                <divp
+                  className="text-xl opacity-95 mb-6 max-w-2xl"
+                >
+                  {currentAdData.subtitle}
+                </divp>
+
+                <divdiv
+                  className="flex flex-wrap gap-2 mb-6"
+                >
+                  {currentAdData.features.map((feature, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </divdiv>
+
+                <divdiv
+                  className="flex flex-wrap gap-4"
+                >
+                  <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg hover:scale-105">
+                    {currentAdData.cta} →
+                  </button>
+                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-bold text-lg hover:scale-105">
+                    Learn More
+                  </button>
+                </divdiv>
+              </div>
+
+              <div className="hidden lg:block ml-8">
+                <divdiv
+                  className="text-8xl animate-pulse"
+                >
+                  {currentAdData.icon}
+                </divdiv>
+              </div>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
           <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
             {adContent[currentAd].subtitle}
@@ -74,7 +147,11 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               ✕ Dismiss
             </button>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
 
       {/* Secondary Promotional Banners */}

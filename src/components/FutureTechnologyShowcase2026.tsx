@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket
   Brain
@@ -197,10 +196,7 @@ const FutureTechnologyShowcase2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -221,13 +217,10 @@ const FutureTechnologyShowcase2026 = () => {
             Explore cutting-edge technologies that will define the future of humanity
             from quantum computing to neural interfaces and space technology.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <divdiv
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => (
@@ -239,13 +232,10 @@ const FutureTechnologyShowcase2026 = () => {
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </divdiv>
 
         {/* Category Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <divdiv
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -268,13 +258,8 @@ const FutureTechnologyShowcase2026 = () => {
           </div>
 
           {/* Category Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <divdiv
               key={activeCategory}
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -20 }}
-              transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
               <div className="mb-8">
@@ -288,11 +273,8 @@ const FutureTechnologyShowcase2026 = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {categories[activeCategory].technologies.map((techindex) => (
-                  <motion.div
+                  <divdiv
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5delay: index * 0.1 }}
                     className="group"
                   >
                     <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 h-full border border-white/10 group-hover:border-indigo-400/50 transition-all duration-300">
@@ -332,18 +314,15 @@ const FutureTechnologyShowcase2026 = () => {
                         Learn More
                       </button>
                     </div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </divdiv>
+          </div>
+        </divdiv>
 
         {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <divdiv
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -351,11 +330,8 @@ const FutureTechnologyShowcase2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5delay: 0.7 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-1 mb-4">
@@ -369,16 +345,13 @@ const FutureTechnologyShowcase2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-indigo-400 text-sm">{testimonial.company}</div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <divdiv
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -403,7 +376,7 @@ const FutureTechnologyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

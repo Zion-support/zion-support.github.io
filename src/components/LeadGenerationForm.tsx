@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 interface LeadGenerationFormProps {
   title?: string;
@@ -68,9 +67,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <divdiv
         className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center text-white"
       >
         <div className="text-6xl mb-4">🎉</div>
@@ -83,7 +80,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
             📧 Check your email for confirmation and next steps
           </p>
         </div>
-      </motion.div>
+      </divdiv>
     );
   }
 
@@ -96,10 +93,8 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
   const textColor = variant === 'modal' ? 'text-gray-900' : 'text-white';
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
+    <divdiv
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
       className={containerClasses}
     >
       <div className="text-center mb-8">
@@ -241,7 +236,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
           🔒 Your information is secure and will never be shared
         </p>
       </form>
-    </motion.div>
+    </divdiv>
   );
 };
 

@@ -5,18 +5,31 @@ const RevolutionaryTechBlog2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             📰 REVOLUTIONARY INSIGHTS • JANUARY 2025
+=======
+        <divdiv
+          className="text-center mb-16"
+        >
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-lg font-bold mb-6 animate-pulse">
+            📚 REVOLUTIONARY TECH BLOG 2025
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
           <h1 className="text-6xl font-bold mb-6">Revolutionary Tech Blog 2025</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Stay ahead of the curve with the latest insights, breakthroughs, and innovations in cutting-edge technology
           </p>
+<<<<<<< HEAD
         </div>
+=======
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
         {/* Featured Articles */}
         <div className="mb-16">
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-8 text-center">Featured Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 hover:scale-105 transition-all duration-300">
@@ -57,11 +70,59 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                 <button className="text-emerald-400 hover:text-emerald-300 font-semibold">Read More →</button>
               </div>
             </article>
+=======
+          <divh2
+            className="text-4xl font-bold text-gray-900 mb-8 text-center"
+          >
+            🌟 Featured Articles
+          </divh2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.filter(post => post.featured).map((post, index) => (
+              <divarticle
+                key={post.id}
+                className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
+              >
+                <div className={`h-48 bg-gradient-to-br ${post.color} flex items-center justify-center text-8xl`}>
+                  {post.image}
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center space-x-2 mb-4">
+                    <span className={`px-3 py-1 bg-gradient-to-r ${post.color} text-white text-sm font-semibold rounded-full`}>
+                      {post.category}
+                    </span>
+                    <span className="text-gray-500 text-sm">{post.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                        {post.author.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">{post.author}</p>
+                        <p className="text-xs text-gray-500">{post.date}</p>
+                      </div>
+                    </div>
+                    <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                      Read More →
+                    </button>
+                  </div>
+                </div>
+              </divarticle>
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
         </div>
 
         {/* Latest Articles */}
         <div className="mb-16">
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
           <div className="space-y-8">
             <article className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -69,6 +130,29 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                 <div className="md:w-1/3">
                   <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
                     <span className="text-4xl">🤖</span>
+=======
+          <divh2
+            className="text-4xl font-bold text-gray-900 mb-8 text-center"
+          >
+            📖 All Articles
+          </divh2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <divarticle
+                key={post.id}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
+              >
+                <div className={`h-32 bg-gradient-to-br ${post.color} flex items-center justify-center text-6xl`}>
+                  {post.image}
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <span className={`px-2 py-1 bg-gradient-to-r ${post.color} text-white text-xs font-semibold rounded-full`}>
+                      {post.category}
+                    </span>
+                    <span className="text-gray-500 text-xs">{post.readTime}</span>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                   </div>
                 </div>
                 <div className="md:w-2/3">
@@ -83,6 +167,7 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                     <button className="text-blue-400 hover:text-blue-300 font-semibold">Read Full Article →</button>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </article>
 
@@ -163,10 +248,15 @@ const RevolutionaryTechBlog2025: React.FC = () => {
               <p className="text-sm text-gray-300 mb-4">Emerging technologies and trends</p>
               <button className="text-orange-400 hover:text-orange-300 font-semibold">Explore Future →</button>
             </div>
+=======
+              </divarticle>
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
         </div>
 
         {/* Newsletter Signup */}
+<<<<<<< HEAD
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Latest Tech Insights</h2>
@@ -211,6 +301,53 @@ const RevolutionaryTechBlog2025: React.FC = () => {
             </div>
           </div>
         </div>
+=======
+        <divdiv
+          className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">🚀 Stay Updated with Revolutionary Tech</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+            Get exclusive access to our latest insights, breakthrough discoveries, and revolutionary 
+            technology trends delivered directly to your inbox.
+          </p>
+          <div className="max-w-md mx-auto flex gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
+              Subscribe
+            </button>
+          </div>
+          <p className="text-sm opacity-75 mt-4">
+            Join 10,000+ tech leaders and innovators
+          </p>
+        </divdiv>
+
+        {/* Categories */}
+        <divdiv
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">📂 Browse by Category</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {['AI Revolution', 'Quantum Computing', 'Neural Technology', 'Autonomous AI', 'Edge Computing', 'Generative AI', 'Blockchain', 'Cybersecurity'].map((category, index) => (
+              <divdiv
+                key={category}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+              >
+                <div className="text-4xl mb-3 text-center">🧠</div>
+                <h3 className="text-lg font-bold text-gray-900 text-center group-hover:text-blue-600 transition-colors">
+                  {category}
+                </h3>
+                <p className="text-gray-600 text-sm text-center mt-2">
+                  {Math.floor(Math.random() * 20) + 5} articles
+                </p>
+              </divdiv>
+            ))}
+          </div>
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
     </div>
   );

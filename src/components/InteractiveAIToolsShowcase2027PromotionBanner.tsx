@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -107,10 +106,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+    <divdiv
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
@@ -120,15 +116,13 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
-          <motion.div
+          <divdiv
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40"
-            animate={{
               x: [0Math.random() * 500],
               y: [0Math.random() * 300],
               scale: [010],
             }}
-            transition={{
               duration: Math.random() * 10 + 8,
               repeat: Infinity,
               delay: Math.random() * 4,
@@ -146,21 +140,15 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0scale: 0.8 }}
-              animate={{ opacity: 1scale: 1 }}
-              transition={{ duration: 0.5 }}
+            <divdiv
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
             >
               <Sparkles className="w-4 h-4" />
               INTERACTIVE AI TOOLS SHOWCASE 2027
-            </motion.div>
+            </divdiv>
 
             {/* Main Heading */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.1 }}
+            <divdiv
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Revolutionary
@@ -176,13 +164,10 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 that are transforming industries in 2027. Try demosexplore features
                 and find the perfect solution for your business.
               </p>
-            </motion.div>
+            </divdiv>
 
             {/* Rotating Featured Tool */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.2 }}
+            <divdiv
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -228,13 +213,10 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                   />
                 ))}
               </div>
-            </motion.div>
+            </divdiv>
 
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.3 }}
+            <divdiv
               className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
               {stats.map((statindex) => {
@@ -251,13 +233,10 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                   </div>
                 );
               })}
-            </motion.div>
+            </divdiv>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.4 }}
+            <divdiv
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
@@ -269,16 +248,13 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 <Download className="w-5 h-5" />
                 View All Tools
               </button>
-            </motion.div>
+            </divdiv>
           </div>
 
           {/* Right Content - Interactive Demo */}
           <div className="relative">
             {/* Main Demo Area */}
-            <motion.div
-              initial={{ opacity: 0scale: 0.8 }}
-              animate={{ opacity: 1scale: 1 }}
-              transition={{ duration: 0.8delay: 0.2 }}
+            <divdiv
               className="relative bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 overflow-hidden"
             >
               {/* Background Pattern */}
@@ -352,41 +328,33 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                <divbutton
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                 >
                   <Play className="w-8 h-8 text-white ml-1" />
-                </motion.button>
+                </divbutton>
               </div>
-            </motion.div>
+            </divdiv>
 
             {/* Floating Elements */}
-            <motion.div
-              animate={{ y: [0-10] }}
-              transition={{ duration: 3repeat: Infinity }}
+            <divdiv
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center shadow-2xl"
             >
               <Award className="w-8 h-8 text-white" />
-            </motion.div>
+            </divdiv>
             
-            <motion.div
-              animate={{ y: [010] }}
-              transition={{ duration: 4repeat: Infinitydelay: 1 }}
+            <divdiv
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-xl flex items-center justify-center shadow-2xl"
             >
               <TrendingUp className="w-6 h-6 text-white" />
-            </motion.div>
+            </divdiv>
             
-            <motion.div
-              animate={{ y: [0-50] }}
-              transition={{ duration: 2.5repeat: Infinitydelay: 0.5 }}
+            <divdiv
               className="absolute top-1/2 -left-6 w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center shadow-2xl"
             >
               <Lightbulb className="w-5 h-5 text-white" />
-            </motion.div>
+            </divdiv>
           </div>
         </div>
 
@@ -398,7 +366,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
           <X className="w-5 h-5" />
         </button>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

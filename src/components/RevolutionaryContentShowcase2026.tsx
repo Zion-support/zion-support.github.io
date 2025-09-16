@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 =======
 import React, { useState } from 'react';
 <<<<<<< HEAD
@@ -193,10 +196,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -374,6 +375,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
           </p>
+<<<<<<< HEAD
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -386,6 +388,16 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
                   : 'bg-white/20 backdrop-blur-sm text-cyan-200 hover:bg-white/30'
               }`}
+=======
+        </divdiv>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {contentItems.map((item, index) => (
+            <divdiv
+              key={index}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="group"
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             >
               <div className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 h-full`}>
                 <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
@@ -406,6 +418,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
+<<<<<<< HEAD
                 
                 <h3 className="text-2xl font-bold mb-4 text-center">
                   {item.title}
@@ -419,6 +432,27 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 
         {/* Active Tab Content */}
         <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
+=======
+
+                <div className="text-center">
+                  <a
+                    href={item.link}
+                    className={`inline-block bg-gradient-to-r ${item.gradient} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                  >
+                    Explore Now →
+                  </a>
+                </div>
+              </div>
+            </divdiv>
+          ))}
+        </div>
+
+        {/* Additional Content Highlights */}
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
+        >
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Exclusive Content Access</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -571,7 +605,12 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               View All Content
             </button>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </divdiv>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           )}
           
           <div className="grid md:grid-cols-2 gap-8">

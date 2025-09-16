@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const UltimateContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
@@ -404,10 +408,8 @@ const UltimateContentShowcase2026: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -420,21 +422,20 @@ const UltimateContentShowcase2026: React.FC = () => {
             Experience the most advanced technologies that will reshape our world forever
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
 =======
         </motion.div>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
         <div className="relative max-w-6xl mx-auto">
           {/* Main Showcase Carousel */}
           <div className="relative overflow-hidden rounded-3xl">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <divdiv
                 key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
                 className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30"
               >
                 <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -448,16 +449,13 @@ const UltimateContentShowcase2026: React.FC = () => {
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {showcaseItems[currentSlide].features.map((feature, index) => (
-                        <motion.div
+                        <divdiv
                           key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: index * 0.1 }}
                           className="flex items-center space-x-2"
                         >
                           <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></span>
                           <span className="text-purple-200">{feature}</span>
-                        </motion.div>
+                        </divdiv>
                       ))}
                     </div>
                     <a
@@ -483,8 +481,8 @@ const UltimateContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </divdiv>
+            </div>
 
             {/* Navigation Arrows */}
             <button
@@ -551,24 +549,19 @@ const UltimateContentShowcase2026: React.FC = () => {
 
         {/* Quick Access Grid */}
         <div className="mt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold mb-4">Quick Access to All Technologies</h3>
             <p className="text-lg opacity-80">Explore all our revolutionary technologies at once</p>
-          </motion.div>
+          </divdiv>
 
           <div className="grid md:grid-cols-3 gap-8">
             {showcaseItems.map((item, index) => (
-              <motion.div
+              <divdiv
                 key={item.id}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ scale: 1.05, y: -10 }}
                 className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300`}
               >
                 <div className="text-6xl mb-4 text-center">{item.icon}</div>
@@ -580,7 +573,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                 >
                   Explore Now →
                 </a>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
 import React from 'react';

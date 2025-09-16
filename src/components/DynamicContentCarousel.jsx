@@ -89,15 +89,7 @@ const DynamicContentCarousel = () => {
   return (
     <div className="relative max-w-6xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
+        <div className="relative">
             <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
               <div className="flex items-center justify-between">
                 <div className="flex-1">
@@ -120,6 +112,7 @@ const DynamicContentCarousel = () => {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           ))}
         </div>
         
@@ -138,6 +131,9 @@ const DynamicContentCarousel = () => {
 =======
           </motion.div>
         </AnimatePresence>
+=======
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
 
       {/* Navigation Dots */}
@@ -148,6 +144,7 @@ const DynamicContentCarousel = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -169,6 +166,8 @@ const DynamicContentCarousel = () => {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             }`}
           />
         ))}

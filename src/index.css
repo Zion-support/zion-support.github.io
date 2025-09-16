@@ -8,6 +8,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -121,6 +122,8 @@
 
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -331,6 +334,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .animate-float-delayed {
   animation: float-delayed 3s ease-in-out infinite 1s;
 }
@@ -369,6 +373,8 @@ body {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 /* Custom utilities */
 .gradient-text {
   background: var(--primary-gradient);
@@ -382,6 +388,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
+<<<<<<< HEAD
 /* Accessibility enhancements */
 .sr-only {
   position: absolute;
@@ -514,6 +521,8 @@ body {
   top: 6px;
 }
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -807,15 +816,21 @@ body {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 }

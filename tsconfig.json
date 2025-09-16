@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": ["vite/client", "node"]
   },
   "include": [
     "src/**/*",
@@ -40,6 +41,7 @@
   ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -47,3 +49,6 @@
 =======
 }
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-79ca

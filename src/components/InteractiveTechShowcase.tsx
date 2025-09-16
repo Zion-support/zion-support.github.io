@@ -1,7 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
+=======
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const technologies = [
+    {
+      id: 1,
+      name: "Revolutionary AI Consciousness",
+      description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
+      icon: "🧠",
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -38,11 +52,9 @@ import React, { useState } from 'react';
       {/* Technology Selector */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {technologies.map((tech, index) => (
-          <motion.button
+          <divbutton
             key={tech.id}
             onClick={() => setActiveTech(index)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTech === index
                 ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
@@ -51,18 +63,15 @@ import React, { useState } from 'react';
           >
             <span className="text-2xl mr-2">{tech.icon}</span>
             {tech.name}
-          </motion.button>
+          </divbutton>
         ))}
       </div>
 
       {/* Main Showcase Area */}
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Technology Details */}
-        <motion.div
+        <divdiv
           key={activeTech}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
           className="space-y-8"
         >
           <div className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl text-white`}>
@@ -119,14 +128,13 @@ import React, { useState } from 'react';
               </div>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
-            <motion.div
+            <divdiv
               key={tech.id}
-              whileHover={{ scale: 1.05, y: -5 }}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
@@ -139,9 +147,7 @@ import React, { useState } from 'react';
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
               
               {hoveredCard === index && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                <divdiv
                   className="space-y-2"
                 >
                   {tech.features.slice(0, 2).map((feature, featureIndex) => (
@@ -150,9 +156,9 @@ import React, { useState } from 'react';
                       {feature}
                     </div>
                   ))}
-                </motion.div>
+                </divdiv>
               )}
-            </motion.div>
+            </divdiv>
           ))}
         </div>
       </div>
@@ -205,6 +211,7 @@ import React, { useState } from 'react';
                 ))}
               </tbody>
             </table>
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 
@@ -521,6 +528,8 @@ const InteractiveTechShowcase: React.FC = () => {
               >
                 {technologies[activeTech].demo}
 import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -670,38 +679,50 @@ const InteractiveTechShowcase: React.FC = () => {
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+              {/* Demo Button */}
+              <div className="text-center">
+                <diva
+                  href={currentTech.link}
+                  className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentTech.color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
+                >
+                  <span className="mr-2">{currentTech.demo}</span>
+                  <span>→</span>
+                </diva>
+              </div>
+            </div>
+          </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           {/* Technology Visual */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="relative h-full min-h-[400px]">
               <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
               <div className="relative z-10 flex items-center justify-center h-full">
-                <motion.div
+                <divdiv
                   key={activeTech}
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-9xl"
                 >
                   {currentTech.icon}
-                </motion.div>
+                </divdiv>
               </div>
               
               {/* Floating Elements */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 {[...Array(20)].map((_, i) => (
-                  <motion.div
+                  <divdiv
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                    animate={{
                       y: [0, -100, 0],
                       opacity: [0.3, 1, 0.3],
                       scale: [1, 2, 1],
                     }}
-                    transition={{
                       duration: 3 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 2,
@@ -1060,13 +1081,8 @@ export default InteractiveTechShowcase;
 
           {/* Technology Display */}
           <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
+              <divdiv
                 key={activeTech}
-                initial={{ opacity: 0, x: 50, rotateY: 90 }}
-                animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                exit={{ opacity: 0, x: -50, rotateY: -90 }}
-                transition={{ duration: 0.5 }}
                 className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl shadow-2xl`}
               >
                 <div className="text-center mb-8">
@@ -1078,15 +1094,12 @@ export default InteractiveTechShowcase;
                 {/* Features Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
-                    <motion.div
+                    <divdiv
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
                       className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
                     >
                       <span className="text-sm font-semibold">{feature}</span>
-                    </motion.div>
+                    </divdiv>
                   ))}
                 </div>
 
@@ -1105,15 +1118,14 @@ export default InteractiveTechShowcase;
                     <div className="text-xs opacity-90">Speed</div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </divdiv>
+            </div>
           </div>
         {/* Interactive Demo Section */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
+            <divdiv
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">🎮</div>
@@ -1122,8 +1134,9 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Launch VR Demo
               </button>
-            </motion.div>
+            </divdiv>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1134,6 +1147,9 @@ export default InteractiveTechShowcase;
 >>>>>>> cursor/create-and-deploy-new-content-39c9
             <motion.div
               whileHover={{ scale: 1.05 }}
+=======
+            <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">🧪</div>
@@ -1142,10 +1158,9 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Simulation
               </button>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
+            <divdiv
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">📊</div>
@@ -1154,7 +1169,7 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Analytics
               </button>
-            </motion.div>
+            </divdiv>
 export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
 =======

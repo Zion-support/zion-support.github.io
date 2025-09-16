@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 import { motion } from 'framer-motion';
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const NextGenInnovationHub2025: React.FC = () => {
   const [currentInnovation, setCurrentInnovation] = useState(0);
@@ -73,10 +77,14 @@ const NextGenInnovationHub2025: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+          <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -96,16 +104,34 @@ const NextGenInnovationHub2025: React.FC = () => {
                 Join Research
               </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
 
       {/* Innovation Carousel */}
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🔬 Revolutionary Innovations</h2>
           <p className="text-xl opacity-90">Discover the technologies that will reshape our future</p>
           <div className="flex justify-center mt-4">
+=======
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Innovation Categories
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our cutting-edge innovation categories and discover the technologies shaping tomorrow
+          </p>
+        </divdiv>
+
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(innovations).map(([key, innovation]) => (
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
               className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
@@ -119,6 +145,7 @@ const NextGenInnovationHub2025: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="relative max-w-6xl mx-auto">
           <motion.div
             key={currentInnovation}
@@ -170,12 +197,43 @@ const NextGenInnovationHub2025: React.FC = () => {
                   ))}
                 </ul>
 
+=======
+        {/* Active Tab Content */}
+        <divdiv
+          key={activeTab}
+          className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20"
+        >
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-6xl mb-6">{innovations[activeTab as keyof typeof innovations].icon}</div>
+              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {innovations[activeTab as keyof typeof innovations].title}
+              </h3>
+              <p className="text-xl text-gray-300 mb-8">
+                {innovations[activeTab as keyof typeof innovations].description}
+              </p>
+              <div className="space-y-4">
+                {innovations[activeTab as keyof typeof innovations].features.map((feature, index) => (
+                  <divdiv
+                    key={index}
+                    className="flex items-center space-x-3"
+                  >
+                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                    <span className="text-gray-300">{feature}</span>
+                  </divdiv>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                 <div className="text-center">
                   <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                     Learn More
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                 <h4 className="text-2xl font-bold mb-6 text-center">Live Development Feed</h4>
@@ -218,12 +276,68 @@ const NextGenInnovationHub2025: React.FC = () => {
                 }`}
               />
             ))}
+=======
+            </div>
+          </div>
+        </divdiv>
+      </div>
+
+      {/* Innovation Stats */}
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 py-20">
+        <div className="container mx-auto px-4">
+          <divdiv
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Innovation Impact
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how our innovations are transforming industries and creating new possibilities
+            </p>
+          </divdiv>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <divdiv
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            >
+              <div className="text-5xl font-bold text-blue-400 mb-2">150+</div>
+              <div className="text-xl text-gray-300 mb-2">Active Projects</div>
+              <div className="text-sm text-gray-400">In development</div>
+            </divdiv>
+            <divdiv
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            >
+              <div className="text-5xl font-bold text-purple-400 mb-2">50K+</div>
+              <div className="text-xl text-gray-300 mb-2">Innovators</div>
+              <div className="text-sm text-gray-400">Global community</div>
+            </divdiv>
+            <divdiv
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            >
+              <div className="text-5xl font-bold text-green-400 mb-2">$500M+</div>
+              <div className="text-xl text-gray-300 mb-2">Investment</div>
+              <div className="text-sm text-gray-400">In R&D</div>
+            </divdiv>
+            <divdiv
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            >
+              <div className="text-5xl font-bold text-pink-400 mb-2">95%</div>
+              <div className="text-xl text-gray-300 mb-2">Success Rate</div>
+              <div className="text-sm text-gray-400">Project completion</div>
+            </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
         </div>
       </div>
 
       {/* Innovation Grid */}
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🌟 All Innovations</h2>
           <p className="text-xl opacity-90">Explore our complete portfolio of revolutionary technologies</p>
@@ -236,6 +350,26 @@ const NextGenInnovationHub2025: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               className={`bg-gradient-to-br ${innovation.color}/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 cursor-pointer`}
               onClick={() => setCurrentInnovation(index)}
+=======
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Featured Innovations
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our most groundbreaking innovations that are reshaping the future
+          </p>
+        </divdiv>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Object.entries(innovations).map(([key, innovation], index) => (
+            <divdiv
+              key={key}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             >
               <div className="text-6xl mb-4 text-center">{innovation.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{innovation.title}</h3>
@@ -255,17 +389,31 @@ const NextGenInnovationHub2025: React.FC = () => {
               <button className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-colors font-semibold">
                 View Details
               </button>
-            </motion.div>
+            </divdiv>
           ))}
         </div>
       </div>
 
       {/* Call to Action */}
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20 text-center">
         <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Be part of the team that's creating the future of technology and human advancement
+=======
+      <div className="container mx-auto px-4 py-20">
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center bg-gradient-to-r from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/30"
+        >
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Join the Innovation Revolution
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Be part of the most advanced innovation hub in the world. Collaborate with leading 
+            researchers, entrepreneurs, and visionaries to create the future.
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -275,7 +423,11 @@ const NextGenInnovationHub2025: React.FC = () => {
               Partner With Us
             </button>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
 =======
 

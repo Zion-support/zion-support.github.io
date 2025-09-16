@@ -95,10 +95,124 @@ const InteractiveContentShowcase: React.FC = () => {
   const currentContent = contentSlides[currentSlide];
 
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden">
       {/* Main Showcase */}
       <div className={`bg-gradient-to-br ${currentContent.bgColor} text-white py-20 transition-all duration-500 ${isAnimating ? 'opacity-50' : 'opacity-100'}`}>
         <div className="container mx-auto px-4">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <divdiv
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎯 INTERACTIVE SHOWCASE • JANUARY 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Interactive Content Showcase
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Explore our revolutionary content through interactive experiences. 
+            Discover, engage, and immerse yourself in the future of technology.
+          </p>
+        </divdiv>
+
+        {/* Stats */}
+        <divdiv
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50">
+              <div className="text-3xl mb-2">{stat.icon}</div>
+              <div className="text-2xl font-bold text-purple-400 mb-1">{stat.value}</div>
+              <div className="text-gray-300 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </divdiv>
+
+        {/* Tab Navigation */}
+        <divdiv
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {contentCategories.map((category, index) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === index
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+              }`}
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+            </button>
+          ))}
+        </divdiv>
+
+        {/* Content Grid */}
+          <divdiv
+            key={activeTab}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          >
+            {contentCategories[activeTab].content.map((item, index) => (
+              <divdiv
+                key={index}
+                onHoverStart={() => setHoveredItem(index)}
+                onHoverEnd={() => setHoveredItem(null)}
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 cursor-pointer relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-indigo-600/10 opacity-0 transition-opacity duration-300 hover:opacity-100"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{item.image}</div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      item.status === 'Breakthrough' ? 'bg-gradient-to-r from-green-600 to-emerald-600' :
+                      item.status === 'Revolutionary' ? 'bg-gradient-to-r from-purple-600 to-pink-600' :
+                      item.status === 'Advanced' ? 'bg-gradient-to-r from-blue-600 to-cyan-600' :
+                      item.status === 'Experimental' ? 'bg-gradient-to-r from-orange-600 to-red-600' :
+                      'bg-gradient-to-r from-gray-600 to-gray-700'
+                    }`}>
+                      {item.status}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                  <p className="text-gray-300 mb-4">{item.description}</p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center space-x-4">
+                      <span className="flex items-center">
+                        <span className="mr-1">👁️</span>
+                        {item.views}
+                      </span>
+                      <span className="flex items-center">
+                        <span className="mr-1">❤️</span>
+                        {item.likes}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <divbutton
+                    className={`w-full bg-gradient-to-r ${contentCategories[activeTab].color} py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+                  >
+                    Explore Content →
+                  </divbutton>
+                </div>
+              </divdiv>
+            ))}
+          </divdiv>
+        </div>
+
+        {/* Interactive Features */}
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 INTERACTIVE SHOWCASE • {new Date().getFullYear()}
@@ -121,6 +235,7 @@ const InteractiveContentShowcase: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -183,6 +298,28 @@ const InteractiveContentShowcase: React.FC = () => {
             ))}
           </div>
         </div>
+=======
+        </divdiv>
+
+        {/* Call to Action */}
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join millions of users exploring the most revolutionary content in technology history
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Exploring
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+              Create Account
+            </button>
+          </div>
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
     </div>
   );

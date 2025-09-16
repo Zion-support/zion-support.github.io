@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 ArrowRightStarTrendingUpUsersGlobeZapAwardClock
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
@@ -39,10 +38,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-      transition={{ duration: 0.6 }}
+    <divdiv
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
     >
       {/* Animated Background */}
@@ -52,10 +48,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
-              transition={{ delay: 0.2duration: 0.6 }}
+            <divdiv
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -69,13 +62,10 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 Discover the future of technology with our comprehensive suite of AIquantum computing
                 and automation solutions transforming industries worldwide.
               </p>
-            </motion.div>
+            </divdiv>
 
             {/* Solutions List */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.4duration: 0.6 }}
+            <divdiv
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {solutions.map((solutionindex) => (
@@ -84,13 +74,10 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                   <span className="text-sm">{solution}</span>
                 </div>
               ))}
-            </motion.div>
+            </divdiv>
 
             {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.5duration: 0.6 }}
+            <divdiv
               className="flex flex-wrap gap-4 mb-6"
             >
               {features.map((featureindex) => (
@@ -99,13 +86,10 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                   <span className="text-gray-300">{feature.text}</span>
                 </div>
               ))}
-            </motion.div>
+            </divdiv>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.6duration: 0.6 }}
+            <divdiv
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -121,25 +105,19 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               >
                 Get Started Today
               </a>
-            </motion.div>
+            </divdiv>
           </div>
 
           {/* Right Stats */}
-          <motion.div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.3duration: 0.6 }}
+          <divdiv
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
               
               {/* Animated Stat */}
-              <motion.div
+              <divdiv
                 key={currentStat}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.5 }}
                 className="text-center mb-6"
               >
                 <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${stats[currentStat].color} mb-4`}>
@@ -147,7 +125,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
-              </motion.div>
+              </divdiv>
 
               {/* Additional Stats */}
               <div className="space-y-4">
@@ -170,20 +148,17 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               </div>
 
               {/* Urgency Indicator */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1duration: 0.5 }}
+              <divdiv
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time offer - Act now!</span>
-              </motion.div>
+              </divdiv>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

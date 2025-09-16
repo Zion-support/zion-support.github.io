@@ -1,3 +1,137 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Zap, 
+  Users, 
+  Globe, 
+  Cpu,
+  Lock,
+  Heart,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Code,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  ShoppingCart,
+  Headphones,
+  Mail,
+  Search,
+  HelpCircle,
+  ShieldCheck,
+  Globe2,
+  Leaf,
+  Sparkles,
+  Target,
+  DollarSign,
+  Clock,
+  Award,
+  Phone,
+  Mail as MailIcon,
+  MapPin,
+  Infinity,
+  Atom,
+  Satellite,
+  Car,
+  Bot,
+  Eye,
+  CpuIcon,
+  ZapIcon,
+  ShieldIcon,
+  GlobeIcon,
+  CodeIcon,
+  DatabaseIcon,
+  NetworkIcon,
+  SmartphoneIcon,
+  BarChartIcon,
+  MessageSquareIcon,
+  FileTextIcon,
+  ShoppingCartIcon,
+  HeadphonesIcon,
+  MailIcon as MailIcon2,
+  SearchIcon,
+  HelpCircleIcon,
+  ShieldCheckIcon,
+  Globe2Icon,
+  LeafIcon as LeafIcon2,
+  SparklesIcon,
+  TargetIcon,
+  DollarSignIcon,
+  ClockIcon,
+  AwardIcon,
+  PhoneIcon,
+  MapPinIcon,
+  InfinityIcon,
+  ChevronDown,
+  ChevronUp,
+  Play,
+  ExternalLink,
+  BookOpen,
+  Lightbulb,
+  Target as TargetIconDup,
+  Users as UsersIcon,
+  Settings,
+  BarChart,
+  PieChart,
+  LineChart,
+  TrendingDown,
+  Calculator,
+  Calendar,
+  Clock as ClockIconMain,
+  Award as AwardIcon,
+  Star as StarIcon,
+  Heart as HeartIcon,
+<<<<<<< HEAD
+  Zap as ZapIconDup,
+  Shield as ShieldIconDup,
+  Cloud as CloudIconDup,
+  Brain as BrainIconDup,
+  Rocket as RocketIconDup,
+  Leaf as LeafIconDup
+=======
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Cloud as CloudIcon,
+  Brain as BrainIcon,
+  Rocket as RocketIcon,
+  Leaf as LeafIcon,
+  Globe as GlobeIcon,
+  Code as CodeIcon,
+  Database as DatabaseIcon,
+  Network as NetworkIcon,
+  Smartphone as SmartphoneIcon,
+  BarChart3 as BarChart3Icon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Headphones as HeadphonesIcon,
+  Mail as MailIcon3,
+  Search as SearchIcon,
+  HelpCircle as HelpCircleIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Globe2 as Globe2Icon,
+  Leaf as LeafIcon2,
+  Sparkles as SparklesIcon,
+  Target as TargetIcon2,
+  DollarSign as DollarSignIcon,
+  Clock as ClockIcon2,
+  Award as AwardIcon2,
+  Phone as PhoneIcon2,
+  MapPin as MapPinIcon2,
+  Infinity as InfinityIcon2
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -102,10 +236,7 @@ export default function ComprehensiveServicesLanding2027() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divh1 
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -113,23 +244,17 @@ export default function ComprehensiveServicesLanding2027() {
             </span>
             <br />
             <span className="text-white">Landing 2027</span>
-          </motion.h1>
+          </divh1>
           
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <divp 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology services designed to 
             transform your business and drive innovation across every industry.
-          </motion.p>
+          </divp>
 
           {/* Search Bar */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          <divdiv 
             className="max-w-2xl mx-auto mb-8"
           >
             <div className="relative">
@@ -142,13 +267,10 @@ export default function ComprehensiveServicesLanding2027() {
                 className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
               />
             </div>
-          </motion.div>
+          </divdiv>
 
           {/* Quick Stats */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <divdiv 
             className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -171,17 +293,15 @@ export default function ComprehensiveServicesLanding2027() {
               <div className="text-2xl font-bold text-white">24/7</div>
               <div className="text-purple-400 text-sm">Support</div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Category Navigation */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
@@ -192,16 +312,14 @@ export default function ComprehensiveServicesLanding2027() {
               Navigate through our comprehensive service categories to find the perfect 
               solution for your business needs.
             </p>
-          </motion.div>
+          </divdiv>
 
           {/* Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              <motion.button
+              <divbutton
                 key={category.id}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 onClick={() => setActiveCategory(category.id)}
                 className={`p-6 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${
@@ -213,7 +331,7 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
-              </motion.button>
+              </divbutton>
             ))}
           </div>
         </div>
@@ -222,10 +340,8 @@ export default function ComprehensiveServicesLanding2027() {
       {/* Services Showcase */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
@@ -238,16 +354,14 @@ export default function ComprehensiveServicesLanding2027() {
                 : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               }
             </p>
-          </motion.div>
+          </divdiv>
 
           {/* Services Grid */}
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <divdiv
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden"
               >
@@ -326,13 +440,9 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
 
                 {/* Expanded Details */}
-                <AnimatePresence>
+                <div>
                   {expandedService === service.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                    <divdiv
                       className="border-t border-white/20 bg-white/5"
                     >
                       <div className="p-6">
@@ -391,23 +501,21 @@ export default function ComprehensiveServicesLanding2027() {
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </divdiv>
                   )}
-                </AnimatePresence>
-              </motion.div>
+                </div>
+              </divdiv>
             ))}
 
             {/* No Results Message */}
             {filteredServices.length === 0 && (
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <divdiv 
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
-              </motion.div>
+              </divdiv>
             )}
           </div>
         </div>
@@ -416,10 +524,8 @@ export default function ComprehensiveServicesLanding2027() {
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20"
           >
@@ -471,7 +577,7 @@ export default function ComprehensiveServicesLanding2027() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
     </div>

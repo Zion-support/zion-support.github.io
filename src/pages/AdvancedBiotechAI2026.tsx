@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
   Dna, 
@@ -119,10 +118,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divdiv
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -145,7 +141,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                   Schedule Consultation
                 </button>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
 
@@ -153,11 +149,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="bg-gradient-to-r from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
@@ -165,7 +159,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
                   <div className="text-green-200 text-sm">{achievement.label}</div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -181,11 +175,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {biotechSolutions.map((solution, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -216,7 +208,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -232,11 +224,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <motion.div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
@@ -251,7 +241,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                     <span>{study.patients}</span>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>

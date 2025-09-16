@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const InteractiveContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -123,13 +126,13 @@ const InteractiveContentCarousel: React.FC = () => {
         {/* Main Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
+<<<<<<< HEAD
             <AnimatePresence mode="wait">
               <div
+=======
+              <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                 key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.8 }}
                 className="relative"
               >
                 <div className={`bg-gradient-to-br ${currentSlideData.gradient} p-12 rounded-3xl`}>
@@ -154,15 +157,20 @@ const InteractiveContentCarousel: React.FC = () => {
                       
                       <div className="grid grid-cols-2 gap-4 mb-8">
                         {currentSlideData.features.map((feature, index) => (
+<<<<<<< HEAD
                           <div
+=======
+                          <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
                             className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center"
                           >
                             <span className="text-sm font-semibold">{feature}</span>
+<<<<<<< HEAD
                           </div>
+=======
+                          </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                         ))}
                       </div>
                       
@@ -183,16 +191,21 @@ const InteractiveContentCarousel: React.FC = () => {
                       {/* Stats */}
                       <div className="grid grid-cols-3 gap-4">
                         {Object.entries(currentSlideData.stats).map(([key, value], index) => (
+<<<<<<< HEAD
                           <div
+=======
+                          <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                             key={key}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.1 }}
                             className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
                           >
                             <div className="text-2xl font-bold mb-1">{value}</div>
                             <div className="text-xs opacity-80 capitalize">{key}</div>
+<<<<<<< HEAD
                           </div>
+=======
+                          </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                         ))}
                       </div>
                       
@@ -213,8 +226,13 @@ const InteractiveContentCarousel: React.FC = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             
+=======
+              </divdiv>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
 
           {/* Navigation Controls */}
@@ -271,12 +289,13 @@ const InteractiveContentCarousel: React.FC = () => {
           <h3 className="text-3xl font-bold text-center mb-8">All Available Content</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contentSlides.map((slide, index) => (
+<<<<<<< HEAD
               <div
+=======
+              <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
                 key={slide.id}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
                 onHoverStart={() => setHoveredSlide(index)}
                 onHoverEnd={() => setHoveredSlide(null)}
                 className={`bg-gradient-to-br ${slide.gradient} p-6 rounded-xl cursor-pointer transition-all duration-300 ${
@@ -309,7 +328,11 @@ const InteractiveContentCarousel: React.FC = () => {
                   </div>
                   <p className="text-xs opacity-80">Completion: {slide.stats.completion}</p>
                 </div>
+<<<<<<< HEAD
               </div>
+=======
+              </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             ))}
           </div>
         </div>
