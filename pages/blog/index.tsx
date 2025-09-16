@@ -66,6 +66,8 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Added in this change
 posts.unshift(
+  { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
+  { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
   { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
   { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
 )
