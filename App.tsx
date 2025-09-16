@@ -91,8 +91,15 @@ import NewContentBanner2028 from './src/components/NewContentBanner2028';
 import UltimateTechRevolution2029 from './src/pages/UltimateTechRevolution2029';
 import QuantumNeuralRevolution2030 from './src/pages/QuantumNeuralRevolution2030';
 import TranscendentAI2031 from './src/pages/TranscendentAI2031';
+import NextGenAIBreakthrough2032 from './src/pages/NextGenAIBreakthrough2032';
+import QuantumReality2033 from './src/pages/QuantumReality2033';
+import TranscendentTech2034 from './src/pages/TranscendentTech2034';
 import UltimateContentBanner2029 from './src/components/UltimateContentBanner2029';
 import RevolutionaryContentCarousel2029 from './src/components/RevolutionaryContentCarousel2029';
+import UltimateContentBanner2032 from './src/components/UltimateContentBanner2032';
+import RevolutionaryContentBanner2033 from './src/components/RevolutionaryContentBanner2033';
+import TranscendentContentBanner2034 from './src/components/TranscendentContentBanner2034';
+import UltimateContentCarousel2032 from './src/components/UltimateContentCarousel2032';
 
 export default function App(): JSX.Element {
   return (
@@ -141,6 +148,20 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Ultimate Content Banner 2029 */}
                 <UltimateContentBanner2029 />
+
+                {/* NEW: Ultimate Content Banner 2032 */}
+                <UltimateContentBanner2032 />
+
+                {/* NEW: Revolutionary Content Banner 2033 */}
+                <RevolutionaryContentBanner2033 />
+
+                {/* NEW: Transcendent Content Banner 2034 */}
+                <TranscendentContentBanner2034 />
+
+                {/* NEW: Ultimate Content Carousel 2032 */}
+                <div className="mb-12">
+                  <UltimateContentCarousel2032 />
+                </div>
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -228,6 +249,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/TranscendentAI2031" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Transcendent AI 2031 →
+                    </a>
+                    <a href="/pages/NextGenAIBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Next-Gen AI 2032 →
+                    </a>
+                    <a href="/pages/QuantumReality2033" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Reality 2033 →
+                    </a>
+                    <a href="/pages/TranscendentTech2034" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Transcendent Tech 2034 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -678,6 +708,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2029" element={<UltimateTechRevolution2029 />} />
           <Route path="/pages/QuantumNeuralRevolution2030" element={<QuantumNeuralRevolution2030 />} />
           <Route path="/pages/TranscendentAI2031" element={<TranscendentAI2031 />} />
+          <Route path="/pages/NextGenAIBreakthrough2032" element={<NextGenAIBreakthrough2032 />} />
+          <Route path="/pages/QuantumReality2033" element={<QuantumReality2033 />} />
+          <Route path="/pages/TranscendentTech2034" element={<TranscendentTech2034 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
