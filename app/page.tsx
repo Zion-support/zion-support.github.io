@@ -147,6 +147,11 @@ export default function HomePage() {
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-responsible-autonomy-release-engineering" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Responsible Autonomy — Release Engineering</h3>
+              <p className="text-gray-600">Evaluation gates, policy‑as‑code, and runtime guardrails wired into CI/CD.</p>
+            </Link>
             <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
               <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Runtime Guardrails Blueprint</h3>
