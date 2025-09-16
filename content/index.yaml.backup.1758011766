@@ -632,6 +632,22 @@ content_index:
         rollback_time: "< 5 min"
         change_failure_rate: "< 3%"
 
+<<<<<<< HEAD
+    - id: "ai-2026-agentic-billing-controls"
+      type: "blog"
+      title: "AI 2026: Agentic Billing Controls — Budgets, Approvals, and Guardrails"
+      file_path: "/content/blog/ai-2026-agentic-billing-controls.md"
+      url: "/blog/ai-2026-agentic-billing-controls"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["AI", "Cost", "Governance", "Budgets", "Approvals", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        budget_breaches: "-60%"
+        approval_lead_time: "-50%"
+        cost_slo_coverage: "100% gated"
+=======
     - id: "ai-2026-reliable-autonomy-operations"
       type: "blog"
       title: "AI 2026: Reliable Autonomy Operations — Gates, SLOs, and Runbooks"
@@ -646,6 +662,7 @@ content_index:
         gate_pass_rate: "> 95%"
         rollback_time: "< 5 min"
         change_failure_rate: "< 3%"
+>>>>>>> origin/cursor/create-and-deploy-new-content-915f
 
     - id: "ai-2026-autonomous-evidence-led-operations"
       type: "blog"
