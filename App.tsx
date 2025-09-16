@@ -196,6 +196,10 @@ import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBanner2026';
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
+import RevolutionaryTechShowcase2026 from './src/components/RevolutionaryTechShowcase2026';
+import RevolutionaryTechPromoBanner2026 from './src/components/RevolutionaryTechPromoBanner2026';
+import FuturisticAIShowcase2026 from './src/components/FuturisticAIShowcase2026';
+import FuturisticAIPromoBanner2026 from './src/components/FuturisticAIPromoBanner2026';
 
 export default function App(): JSX.Element {
   return (
@@ -226,6 +230,8 @@ export default function App(): JSX.Element {
         <EnhancedAccessibility2025 />
         <MobileOptimizer2025 />
         <Header />
+        <RevolutionaryTechPromoBanner2026 />
+        <FuturisticAIPromoBanner2026 />
         <UltimatePromotionalBanner2026 />
         
         <Routes>
@@ -234,6 +240,16 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Revolutionary Tech Showcase 2026 - Latest breakthrough technologies */}
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2026 />
+                </div>
+                
+                {/* NEW: Futuristic AI Showcase 2026 - Advanced AI demonstrations */}
+                <div className="mb-12">
+                  <FuturisticAIShowcase2026 />
+                </div>
                 
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
@@ -1259,6 +1275,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
+          <Route path="/revolutionary-tech-showcase-2026" element={<RevolutionaryTechShowcase2026 />} />
+          <Route path="/futuristic-ai-showcase-2026" element={<FuturisticAIShowcase2026 />} />
           <Route path="/revolutionary-content-showcase-2027" element={<RevolutionaryContentShowcase2027 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
