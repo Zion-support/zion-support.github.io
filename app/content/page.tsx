@@ -15,6 +15,19 @@ export default function ContentIndexPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Added Sept 2025: New content promotions */}
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-reliable-agent-rollouts" className="hover:underline">
+              AI 2026: Reliable Agent Rollouts
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Progressive delivery with eval gates and automated rollback for safe autonomy.
+          </p>
+          <Link href="/content/ai-2026-reliable-agent-rollouts" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Routing</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-governed-model-routing" className="hover:underline">
