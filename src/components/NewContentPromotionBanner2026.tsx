@@ -1,122 +1,170 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { X, ArrowRight, Sparkles, TrendingUp, Star } from 'lucide-react';
+import { Star, TrendingUp, Users, Clock, ArrowRight, X, Sparkles, Zap } from 'lucide-react';
 
 const NewContentPromotionBanner2026: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentStat, setCurrentStat] = useState(0);
 
-  const newContent = [
-    {
-      title: "Exec Field Guide: Safe Agent Rollouts",
-      description: "Ship agent features with eval gates and deterministic rollback",
-      link: "/blog/ai-2026-exec-safe-agent-rollouts",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Trusted RAG: Evidence Hubs",
-      description: "Freshness windows, drift monitors, and trace‑linked citations",
-      link: "/blog/trusted-rag-2026-evidence-hubs",
-      icon: <Star className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Budget‑Aware Model Routing",
-      description: "Balance quality, latency, and spend with policy‑guarded routes",
-      link: "/blog/agent-platform-2026-budget-aware-model-routing",
-      icon: <Sparkles className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    }
+  const stats = [
+    { icon: Users, value: "50K+", label: "Active Readers" },
+    { icon: Star, value: "4.9/5", label: "User Rating" },
+    { icon: TrendingUp, value: "300%", label: "Growth Rate" },
+    { icon: Clock, value: "24/7", label: "Updated Content" }
+  ];
+
+  const highlights = [
+    "Revolutionary AI Breakthroughs",
+    "Quantum Computing Advances",
+    "Neural Interface Technology",
+    "Conscious AI Systems",
+    "Future Tech Predictions",
+    "Enterprise Solutions"
   ];
 
   useEffect(() => {
-    // Show banner after 2 seconds
-    const timer = setTimeout(() => setIsVisible(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Rotate content every 4 seconds
     const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % newContent.length);
-    }, 4000);
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }, 2500);
     return () => clearInterval(interval);
-  }, [newContent.length]);
+  }, [stats.length]);
 
-  const current = newContent[currentContent];
+  if (!isVisible) return null;
 
   return (
     <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.5 }}
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white shadow-2xl"
-        >
-          <div className="max-w-7xl mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <div className="animate-pulse">🚀</div>
-                  <span className="font-bold text-lg">NEW CONTENT 2026</span>
-                </div>
-                
-                <div className="hidden md:flex items-center space-x-4">
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${current.color} flex items-center justify-center text-white`}>
-                    {current.icon}
-                  </div>
-                  <div>
-                    <div className="font-semibold">{current.title}</div>
-                    <div className="text-sm opacity-90">{current.description}</div>
-                  </div>
-                </div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl border-b-4 border-yellow-400"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-3">
+            {/* Left Content */}
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 180, 360]
+                  }}
+                  transition={{ 
+                    duration: 3, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                >
+                  <Sparkles className="w-5 h-5 text-yellow-400" />
+                </motion.div>
+                <span className="font-bold text-base">🌟 NEW CONTENT 2026</span>
               </div>
-
-              <div className="flex items-center space-x-4">
-                <Link
-                  to={current.link}
-                  className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition-colors font-medium flex items-center space-x-2"
-                >
-                  <span>Explore Now</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="hover:bg-white/20 p-2 rounded-full transition-colors"
-                  aria-label="Close banner"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+              
+              {/* Rotating Highlights */}
+              <div className="hidden md:flex items-center space-x-2">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentStat}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1"
+                  >
+                    <stats[currentStat].icon className="w-3 h-3" />
+                    <span>{stats[currentStat].value} {stats[currentStat].label}</span>
+                  </motion.span>
+                </AnimatePresence>
               </div>
             </div>
 
-            {/* Mobile view */}
-            <div className="md:hidden mt-4">
-              <div className="flex items-center space-x-3">
-                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${current.color} flex items-center justify-center text-white`}>
-                  {current.icon}
+            {/* Center Content */}
+            <div className="flex items-center space-x-4">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-center"
+              >
+                <div className="flex items-center space-x-2 text-sm">
+                  <Zap className="w-4 h-4 text-yellow-400" />
+                  <span className="font-semibold">60+ Revolutionary Articles</span>
+                  <span className="text-yellow-300">•</span>
+                  <span>Quantum AI • Neural Tech • Future Predictions</span>
                 </div>
-                <div className="flex-1">
-                  <div className="font-semibold text-sm">{current.title}</div>
-                  <div className="text-xs opacity-90">{current.description}</div>
-                </div>
-                <Link
-                  to={current.link}
-                  className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium text-sm flex items-center space-x-1"
-                >
-                  <span>View</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+              </motion.div>
+            </div>
+
+            {/* Right CTA */}
+            <div className="flex items-center space-x-3">
+              <motion.a
+                href="/ultimate-content-showcase-2026"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-5 py-2 rounded-full font-bold text-sm hover:shadow-lg transition-all duration-300 flex items-center space-x-2"
+              >
+                <span>Explore Now</span>
+                <ArrowRight className="w-4 h-4" />
+              </motion.a>
+              
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsVisible(false)}
+                className="text-white/80 hover:text-white transition-colors p-1"
+              >
+                <X className="w-4 h-4" />
+              </motion.button>
+            </div>
+          </div>
+
+          {/* Mobile Stats */}
+          <div className="md:hidden mt-2 pt-2 border-t border-white/20">
+            <div className="flex items-center justify-center space-x-4 text-xs">
+              <div className="flex items-center space-x-1">
+                <Users className="w-3 h-3" />
+                <span>50K+ Readers</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Star className="w-3 h-3" />
+                <span>4.9/5 Rating</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <TrendingUp className="w-3 h-3" />
+                <span>300% Growth</span>
               </div>
             </div>
           </div>
-        </motion.div>
-      )}
+        </div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            animate={{
+              x: [0, 100, 0],
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-0 left-0 w-32 h-32 bg-yellow-400 rounded-full blur-xl"
+          />
+          <motion.div
+            animate={{
+              x: [0, -100, 0],
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+            className="absolute top-0 right-0 w-24 h-24 bg-pink-400 rounded-full blur-xl"
+          />
+        </div>
+      </motion.div>
     </AnimatePresence>
   );
 };

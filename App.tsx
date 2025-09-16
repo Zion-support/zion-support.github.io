@@ -104,6 +104,9 @@ import FeaturedContentShowcase2025 from './src/components/FeaturedContentShowcas
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
 import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
 import RevolutionaryContentPromotionBanner2026 from './src/components/RevolutionaryContentPromotionBanner2026';
+import UltimateContentShowcase2026PromotionBanner from './src/components/UltimateContentShowcase2026PromotionBanner';
+import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
+import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
 import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
 import RevolutionaryContentAdvertising2027 from './src/components/RevolutionaryContentAdvertising2027';
 import NewContentPromotionalBanner2027 from './src/components/NewContentPromotionalBanner2027';
@@ -234,6 +237,16 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Ultimate Content Showcase 2026 Promotion Banner */}
+                <div className="mb-8">
+                  <UltimateContentShowcase2026PromotionBanner />
+                </div>
+                
+                {/* NEW: Content Promotion Banner 2026 */}
+                <div className="mb-8">
+                  <NewContentPromotionBanner2026 />
+                </div>
                 
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
@@ -1254,6 +1267,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2026" element={<RevolutionaryTechBreakthrough2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
