@@ -3,6 +3,7 @@ import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  { slug: 'ai-2026-operational-evals-blueprint', title: 'Operational Evals — Blueprint (2026)', excerpt: 'Eval gates, safe rollbacks, and audit‑ready evidence.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
