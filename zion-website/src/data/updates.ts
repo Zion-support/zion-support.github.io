@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Report: State of Agent Reliability (2026 Preview)',
+		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
+		href: '/updates/agent-reliability-report-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
+		title: 'Launch: Real‑Time Agent Observability Console v1.1',
+		summary: 'Live traces, tool metrics, and eval overlays for production agents.',
+		href: '/updates/agent-observability-console-1-1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
 		title: 'Launch: Autonomous Support Copilot v1.2',
 		summary: 'Faster resolutions with evidence bundles, safer tool-use, and proactive guardrails.',
 		href: '/updates/autonomous-support-copilot-1-2',
@@ -87,4 +101,8 @@ export const getLatestUpdates = (limit = 6): UpdateItem[] => {
 		.sort((a, b) => (a.date < b.date ? 1 : -1))
 		.slice(0, limit)
 }
+
+// Compatibility exports for pages expecting these names
+export type SiteUpdate = UpdateItem
+export const siteUpdates: SiteUpdate[] = updates
 
