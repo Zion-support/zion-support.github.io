@@ -46,6 +46,7 @@ const posts = [
 
 // Newly added posts (Sept 2025)
 posts.unshift(
+  { slug: 'ai-2026-governed-agent-operations-checklist', title: 'Governed Agent Operations Checklist (2026)', excerpt: 'A pragmatic, audit-ready checklist for safe, observable agent ops.' },
   { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
   { slug: 'ai-2026-agent-safety-evidence-integration', title: 'Agent Safety Evidence Integration (2026)', excerpt: 'Unify evals, incidents, and policy events for audits.' },
   { slug: 'ai-2026-cost-aware-real-time-routing', title: 'Cost‑Aware Real‑Time Routing (2026)', excerpt: 'Balance latency, quality, and spend with policy‑driven routing.' },

@@ -19,6 +19,17 @@ const ContentHub: React.FC = () => {
 
   const featuredContent = [
     {
+      id: 17,
+      title: 'Governed Agent Operations Checklist',
+      excerpt: 'A pragmatic, audit‑ready checklist for safe, observable agent operations.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      featured: true,
+      image: '/api/placeholder/400/250',
+    },
+    {
       id: 16,
       title: 'Safe Autonomy in Production',
       excerpt: 'Deploy agents with guardrails, SLOs, and audit‑ready evidence.',
@@ -98,6 +109,16 @@ const ContentHub: React.FC = () => {
   ];
 
   const recentContent = [
+    {
+      id: 18,
+      title: 'Governed Agent Operations Checklist',
+      excerpt: 'A pragmatic, audit‑ready checklist for safe, observable agent operations.',
+      category: 'blog',
+      author: 'Platform Team',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      image: '/api/placeholder/300/200',
+    },
     {
       id: 17,
       title: 'Safe Autonomy in Production',
