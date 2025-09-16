@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "operational-evals-blueprint-2026",
+    title: "AI 2026: Operational Evals — Blueprint",
+    description:
+      "Eval gates, canary scorecards, and automated rollback with an audit‑ready evidence hub.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-operational-evals-blueprint",
+    emoji: "🧩",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "agent-benchmarking-best-practices-2026",
+    title: "AI 2026: Agent Benchmarking Best Practices",
+    description:
+      "From toy tasks to production: suites, policy gates, and observability for reliable agents.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-benchmarking-best-practices",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "safe-rollouts-2026",
     title: "AI 2026: Safe Rollouts in Production",
     description:

@@ -169,6 +169,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Runtime Guardrails + Eval Cookbook + Cost Blueprint */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Guardrails, Evals, and FinOps</h2>
+              <p className="text-gray-600 mt-2">Production guardrails, evaluation recipes, and predictable AI cost controls.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Guardrails</Link>
+              <Link href="/blog/ai-2026-evaluation-cookbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Cookbook</Link>
+              <Link href="/blog/ai-2026-cost-optimization-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Cost Blueprint</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -432,7 +449,7 @@ export default function HomePage() {
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Incident Response</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Incident Response Playbook</h3>
@@ -444,6 +461,12 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agents‑On‑Call Automation</h3>
               <p className="text-gray-600 mb-4">Design agents that respond safely with eval gates and observability.</p>
               <Link href="/blog/ai-2026-agents-oncall-automation" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Evaluations</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Continuous Eval Gates at Scale</h3>
+              <p className="text-gray-600 mb-4">Ship faster with policy‑gated scenario suites and automated rollbacks.</p>
+              <Link href="/blog/ai-2026-continuous-eval-gates-at-scale" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
             </div>
           </div>
         </div>
