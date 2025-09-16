@@ -5,11 +5,11 @@ const originalFetch = window.fetch;
 
 window.fetch = async function(...args) {
   try {
-    const response = await originalFetch.apply(this, args);
+    const response = await originalFetch(...args);
     
     // Add any global response handling here
     if (!response.ok) {
-      console.warn(`API request failed: ${response.status} ${response.statusText}`);
+      console.warn(`API request failed with status: ${response.status}`);
     }
     
     return response;
@@ -19,5 +19,5 @@ window.fetch = async function(...args) {
   }
 };
 
-export default {};
->>>>>>> cursor/create-and-deploy-new-content-c963
+export default window.fetch;
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5

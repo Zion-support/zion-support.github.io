@@ -2,10 +2,8 @@
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
 import type { NextApiRequest } from 'next';
 
 export function extractClientIp(req: NextApiRequest): string | null {
@@ -15,4 +13,3 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
 }
->>>>>>> origin/auto/autonomy-17186719616

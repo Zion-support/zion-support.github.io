@@ -1,125 +1,14 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain
-  Zap
-  Code
-  BarChart3
-  Image
-  Shield
-  Globe,
-  ArrowRight
-  Star
-  Users,
-  CheckCircle,
-  X,
-  Play,
-  Rocket,
-  TrendingUp,
-  Award,
-  Sparkles
-} from 'lucide-react';
-
-const AIToolsUltimateShowcase2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate tools
-    const interval = setInterval(() => {
-      setCurrentTool(prev => (prev + 1) % tools.length);
-    }2500);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const tools = [
-    {
-      icon: Brain,
-      name: 'AI Code Generator',
-      category: 'Development',
-      rating: 4.9,
-      users: '200K+',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Zap,
-      name: 'Smart Task Manager',
-      category: 'Productivity',
-      rating: 4.8,
-      users: '150K+',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: BarChart3,
-      name: 'Predictive Analytics',
-      category: 'Analytics',
-      rating: 4.9,
-      users: '90K+',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Image,
-      name: 'AI Image Creator',
-      category: 'Multimedia',
-      rating: 4.9,
-      users: '500K+',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      icon: Shield,
-      name: 'Threat Detector',
-      category: 'Security',
-      rating: 4.8,
-      users: '100K+',
-      color: 'from-red-500 to-rose-500'
-    },
-    {
-      icon: Globe,
-      name: 'Translation Hub',
-      category: 'Communication',
-      rating: 4.9,
-      users: '300K+',
-      color: 'from-indigo-500 to-blue-500'
-    }
-  ];
-
-  const categories = [
-    { name: ''Productivity', 'count: '12 'tools', 'icon: Zap },
-    { name: ''Development', 'count: '15 'tools', 'icon: Code },
-    { name: ''Analytics', 'count: '8 'tools', 'icon: BarChart3 },
-    { name: ''Multimedia', 'count: '10 'tools', 'icon: Image },
-    { name: ''Security', 'count: '6 'tools', 'icon: Shield },
-    { name: ''Communication', 'count: '9 'tools', 'icon: Globe }
-  ];
-
-  const features = [
-    '50+ AI Tools Available',
-    '1M+ Active Users',
-    '99.9% Uptime Guarantee',
-    'Free Trial Available'
-  ];
-
-  if (isDismissed) return null;
-
+const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/30"
         >
           {/* Background Effects */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
           
           {/* Animated Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-indigo-600/20 animate-pulse"></div>
@@ -157,13 +46,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                 {/* Tool Rotation */}
                 <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-                  <AnimatePresence mode="wait">
-                    <motion.div
+                    <div
                       key={currentTool}
-                      initial={{ opacity: 0x: 20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      exit={{ opacity: 0x: -20 }}
-                      transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${tools[currentTool].color}`}>
@@ -175,8 +59,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                           {tools[currentTool].category} • {tools[currentTool].rating}★ • {tools[currentTool].users}
                         </div>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Features */}
@@ -208,10 +92,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
               <div className="flex-shrink-0">
                 <div className="relative">
                   {/* Main Card */}
-                  <motion.div
-                    initial={{ scale: 0.8opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.6delay: 0.3 }}
+                  <div
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -267,15 +148,13 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                         />
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Floating Elements */}
-                  <motion.div
-                    animate={{ 
+                  <div
                       y: [0-10],
                       rotate: [050]
                     }}
-                    transition={{ 
                       duration: 3,
                       repeat: Infinity,
                       ease: "easeInOut"
@@ -283,14 +162,12 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     NEW!
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    animate={{ 
+                  <div
                       y: [010],
                       x: [050]
                     }}
-                    transition={{ 
                       duration: 4,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -299,14 +176,12 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-400 to-emerald-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     1M+ Users
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    animate={{ 
+                  <div
                       scale: [1.1],
                       opacity: [0.710.7]
                     }}
-                    transition={{ 
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -315,7 +190,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     className="absolute top-1/2 -left-4 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Free Trial
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -331,9 +206,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
           {/* Bottom Gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

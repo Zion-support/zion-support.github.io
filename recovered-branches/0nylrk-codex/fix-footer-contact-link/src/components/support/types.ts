@@ -6,17 +6,14 @@ export interface HelpArticle {
   content: string;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
   lastUpdated: string;
   tags: string[];
 }
 
 export interface HelpCategory {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   description: string;
@@ -33,8 +30,5 @@ export interface SupportTicket {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616

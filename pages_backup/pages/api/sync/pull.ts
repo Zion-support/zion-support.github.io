@@ -40,7 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const scoped = filterEventsByScope(state.events, state.config.scope),
   const events = scoped.filter((e) => (e.timestamp || 0) > since),
   return res.status(200).json({
@@ -110,7 +109,6 @@ export default function handler(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

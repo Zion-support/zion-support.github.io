@@ -1,136 +1,221 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      return localStorage.getItem(key);
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+<<<<<<< HEAD
+=======
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
+=======
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+=======
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 /**
- * Safe storage utilities for handling localStorage and sessionStorage
+ * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
  */
 
-export interface StorageOptions {
-  useSessionStorage?: boolean;
-  defaultValue?: any;
-}
-
-class SafeStorage {
-  private storage: Storage;
-
-  constructor(useSessionStorage = false) {
-    this.storage = useSessionStorage ? sessionStorage : localStorage;
-  }
-
+export const safeStorage = {
   /**
-   * Safely get an item from storage
+   * Safely get item from localStorage
    */
-  getItem(key: string, defaultValue: any = null): any {
+  getItem: (key: string): string | null => {
     try {
-      const item = this.storage.getItem(key);
-      if (item === null) {
-        return defaultValue;
-      }
-      return JSON.parse(item);
+      if (typeof window === 'undefined') return null;
+      return localStorage.getItem(key);
     } catch (error) {
-      console.warn(`Failed to get item ${key} from storage:`, error);
-      return defaultValue;
+      console.warn('Failed to get item from localStorage:', error);
+      return null;
     }
-  }
+  },
 
   /**
-   * Safely set an item in storage
+   * Safely set item in localStorage
    */
-  setItem(key: string, value: any): boolean {
+  setItem: (key: string, value: string): boolean => {
     try {
-      this.storage.setItem(key, JSON.stringify(value));
+      if (typeof window === 'undefined') return false;
+      localStorage.setItem(key, value);
       return true;
     } catch (error) {
-      console.warn(`Failed to set item ${key} in storage:`, error);
+      console.warn('Failed to set item in localStorage:', error);
       return false;
     }
-  }
+  },
 
   /**
-   * Safely remove an item from storage
+   * Safely remove item from localStorage
    */
-  removeItem(key: string): boolean {
+  removeItem: (key: string): boolean => {
     try {
-      this.storage.removeItem(key);
+      if (typeof window === 'undefined') return false;
+      localStorage.removeItem(key);
       return true;
     } catch (error) {
-      console.warn(`Failed to remove item ${key} from storage:`, error);
+      console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
-  }
+  },
 
   /**
-   * Safely clear all items from storage
+   * Safely get item from sessionStorage
    */
-  clear(): boolean {
+  getSessionItem: (key: string): string | null => {
     try {
-      this.storage.clear();
+      if (typeof window === 'undefined') return null;
+      return sessionStorage.getItem(key);
+    } catch (error) {
+      console.warn('Failed to get item from sessionStorage:', error);
+      return null;
+    }
+  },
+
+  /**
+   * Safely set item in sessionStorage
+   */
+  setSessionItem: (key: string, value: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.setItem(key, value);
       return true;
     } catch (error) {
-      console.warn('Failed to clear storage:', error);
+      console.warn('Failed to set item in sessionStorage:', error);
       return false;
     }
-  }
+  },
 
   /**
-   * Check if storage is available
+   * Safely remove item from sessionStorage
    */
-  isAvailable(): boolean {
+  removeSessionItem: (key: string): boolean => {
     try {
-      const testKey = '__storage_test__';
-      this.storage.setItem(testKey, 'test');
-      this.storage.removeItem(testKey);
+      if (typeof window === 'undefined') return false;
+      sessionStorage.removeItem(key);
       return true;
     } catch (error) {
+      console.warn('Failed to remove item from sessionStorage:', error);
       return false;
     }
-  }
+  },
 
   /**
-   * Get storage size in bytes (approximate)
+   * Clear all localStorage
    */
-  getSize(): number {
+  clear: (): boolean => {
     try {
-      let size = 0;
-      for (let key in this.storage) {
-        if (this.storage.hasOwnProperty(key)) {
-          size += this.storage[key].length + key.length;
-        }
-      }
-      return size;
+      if (typeof window === 'undefined') return false;
+      localStorage.clear();
+      return true;
     } catch (error) {
-      console.warn('Failed to calculate storage size:', error);
-      return 0;
+      console.warn('Failed to clear localStorage:', error);
+      return false;
+    }
+  },
+
+  /**
+   * Clear all sessionStorage
+   */
+  clearSession: (): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.clear();
+      return true;
+    } catch (error) {
+      console.warn('Failed to clear sessionStorage:', error);
+      return false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     }
   }
-}
-
-// Create default instances
-export const localStorage = new SafeStorage(false);
-export const sessionStorage = new SafeStorage(true);
-
-// Convenience functions
-export const safeGetItem = (key: string, defaultValue: any = null, useSessionStorage = false): any => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.getItem(key, defaultValue);
 };
 
-export const safeSetItem = (key: string, value: any, useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.setItem(key, value);
-};
-
-export const safeRemoveItem = (key: string, useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.removeItem(key);
-};
-
-export const safeClear = (useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.clear();
-};
-
-export const isStorageAvailable = (useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.isAvailable();
-};
-
-export default SafeStorage;
+export default safeStorage;
+=======
+    try {
+    } catch (error) {
+      console.warn('localStorage not available:', error);

@@ -1,146 +1,145 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentBanner: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  
-  const banners = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const slides = [
     {
-      id: 1,
       title: "🌟 ULTIMATE TECH SHOWCASE 2026",
-      subtitle: "Experience the most advanced technologies revolutionizing our world",
-      description: "From AI consciousness to quantum supremacy, discover what's possible in 2026",
-      gradient: "from-yellow-400 via-pink-500 to-purple-600",
-      bgGradient: "from-yellow-400/20 via-pink-500/20 to-purple-600/20",
+      subtitle: "Experience the most advanced technologies that will reshape our world",
+      description: "From artificial consciousness to quantum supremacy, discover the future today",
+      cta: "Explore Ultimate Showcase",
       link: "/pages/UltimateTechShowcase2026",
-      icon: "🚀",
-      features: ["AI Consciousness", "Quantum Supremacy", "Neural Interfaces", "Space Tech", "Biotech Revolution"]
+      color: "from-purple-600 via-pink-600 to-cyan-600",
+      bgColor: "from-purple-600/50 to-cyan-600/50",
+      icon: "🚀"
     },
     {
-      id: 2,
-      title: "🧠 ADVANCED AI CONSCIOUSNESS 2026",
-      subtitle: "Witness the birth of true artificial consciousness",
-      description: "AI systems with self-awareness, emotional intelligence, and creative thinking",
-      gradient: "from-cyan-400 via-purple-500 to-pink-600",
-      bgGradient: "from-cyan-400/20 via-purple-500/20 to-pink-600/20",
-      link: "/pages/AdvancedAIConsciousness2026",
-      icon: "🧠",
-      features: ["Self-Awareness", "Emotional Intelligence", "Creative Thinking", "Ethical Reasoning", "Continuous Learning"]
+      title: "🔮 FUTURE TECH TRENDS 2026",
+      subtitle: "Discover the revolutionary technologies that will shape our future",
+      description: "From consciousness computing to space colonization, explore what's coming next",
+      cta: "Explore Future Trends",
+      link: "/pages/FutureTechTrends2026",
+      color: "from-cyan-600 via-blue-600 to-indigo-600",
+      bgColor: "from-cyan-600/50 to-indigo-600/50",
+      icon: "🌌"
     },
     {
-      id: 3,
-      title: "⚛️ QUANTUM SUPREMACY 2026",
-      subtitle: "Quantum computers achieving impossible computational feats",
-      description: "Solving problems in seconds that would take classical computers millennia",
-      gradient: "from-cyan-400 via-blue-500 to-purple-600",
-      bgGradient: "from-cyan-400/20 via-blue-500/20 to-purple-600/20",
-      link: "/pages/QuantumSupremacy2026",
-      icon: "⚛️",
-      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation", "Optimization", "Quantum AI"]
+      title: "🧠 CONSCIOUSNESS COMPUTING",
+      subtitle: "The next frontier where AI achieves true consciousness and self-awareness",
+      description: "Revolutionary AI systems with consciousness, creativity, and emotional intelligence",
+      cta: "Learn About AI Consciousness",
+      link: "/pages/AIConsciousnessEvolution2026",
+      color: "from-emerald-600 via-teal-600 to-cyan-600",
+      bgColor: "from-emerald-600/50 to-cyan-600/50",
+      icon: "🧠"
+    },
+    {
+      title: "⚡ QUANTUM SUPREMACY",
+      subtitle: "Exponential computing power that solves impossible problems",
+      description: "Experience quantum computing with 1000+ qubits and quantum supremacy",
+      cta: "Go Quantum",
+      link: "/pages/QuantumComputingRevolution2026",
+      color: "from-violet-600 via-purple-600 to-pink-600",
+      bgColor: "from-violet-600/50 to-pink-600/50",
+      icon: "⚡"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [banners.length]);
+  }, [slides.length]);
+
+  if (!isVisible) return null;
 
   return (
-    <div className="relative overflow-hidden mb-12">
-      {/* Main Banner */}
-      <div className={`bg-gradient-to-br ${banners[currentBanner].bgGradient} backdrop-blur-sm rounded-2xl p-12 text-white relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              ✨ EXCLUSIVE NEW CONTENT • JANUARY 2026
-            </div>
-            <h2 className={`text-5xl font-bold mb-4 bg-gradient-to-r ${banners[currentBanner].gradient} bg-clip-text text-transparent`}>
-              {banners[currentBanner].title}
-            </h2>
-            <p className="text-2xl opacity-90 mb-4">{banners[currentBanner].subtitle}</p>
-            <p className="text-xl opacity-80 max-w-4xl mx-auto mb-8">{banners[currentBanner].description}</p>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8 max-w-4xl mx-auto">
-            {banners[currentBanner].features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
-                <div className="text-2xl mb-2">{banners[currentBanner].icon}</div>
-                <div className="text-sm font-semibold">{feature}</div>
-              </div>
+    <div className="relative overflow-hidden mb-8">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, x: 300 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -300 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className={`bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl p-8 text-white relative overflow-hidden`}
+        >
+          {/* Animated Background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-full">
+            {[...Array(30)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white rounded-full opacity-40 animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                }}
+              />
             ))}
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex justify-center space-x-6">
-            <a 
-              href={banners[currentBanner].link}
-              className={`bg-gradient-to-r ${banners[currentBanner].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-            >
-              Explore {banners[currentBanner].title.split(' ')[0]} →
-            </a>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
-          </div>
-        </div>
-
-        {/* Banner Navigation */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentBanner(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentBanner ? 'bg-white' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="mt-8 grid md:grid-cols-3 gap-6">
-        {banners.map((banner) => (
-          <div key={banner.id} className={`bg-gradient-to-br ${banner.bgGradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300`}>
-            <div className="text-center">
-              <div className="text-4xl mb-4">{banner.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{banner.title}</h3>
-              <p className="text-white/90 mb-4 text-sm">{banner.subtitle}</p>
-              <a 
-                href={banner.link}
-                className={`inline-block bg-gradient-to-r ${banner.gradient} text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}
-              >
-                Explore Now →
-              </a>
+          <div className="relative z-10">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="text-4xl animate-bounce">{slides[currentSlide].icon}</span>
+                  <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold animate-pulse">
+                    ✨ BRAND NEW • JANUARY 2026
+                  </div>
+                </div>
+                <h2 className="text-4xl font-bold mb-2">{slides[currentSlide].title}</h2>
+                <p className="text-xl opacity-95 mb-2">{slides[currentSlide].subtitle}</p>
+                <p className="text-lg opacity-90 mb-6 max-w-3xl">{slides[currentSlide].description}</p>
+                <div className="flex space-x-4">
+                  <a
+                    href={slides[currentSlide].link}
+                    className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg hover:scale-105"
+                  >
+                    {slides[currentSlide].cta} →
+                  </a>
+                  <button className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                    Watch Demo
+                  </button>
+                </div>
+              </div>
+              
+              <div className="hidden lg:block ml-8">
+                <div className="text-8xl opacity-20 animate-pulse">
+                  {slides[currentSlide].icon}
+                </div>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Additional Content Showcase */}
-      <div className="mt-12 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
-        <div className="text-center mb-8">
-          <h3 className="text-3xl font-bold mb-4">🚀 More Revolutionary Content</h3>
-          <p className="text-xl opacity-90">Discover our complete collection of cutting-edge technology content</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <a href="/pages/NextGenAIRevolution2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-            🧠 Next-Gen AI Revolution
-          </a>
-          <a href="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-            ⚡ Quantum Computing Revolution
-          </a>
-          <a href="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-            🧬 Neural Interface Revolution
-          </a>
-          <a href="/pages/RevolutionaryTechBlog2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-            📚 Revolutionary Tech Blog
-          </a>
-        </div>
+          {/* Close Button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Slide Indicators */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              currentSlide === index ? 'bg-purple-600' : 'bg-gray-400'
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

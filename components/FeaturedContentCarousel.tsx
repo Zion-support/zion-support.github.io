@@ -1,104 +1,13 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-const featuredContent = [
-  {
-    id: 1,
-    title: 'AI 2026 Breakthrough Showcase',
-    description: 'Experience revolutionary AI 2026 breakthrough technologies delivering unprecedented performance and transformation.',
-    href: '/ai-2026-breakthrough-showcase',
-    image: '🚀',
-    gradient: 'from-slate-900 via-purple-900 to-slate-900',
-    badge: 'REVOLUTIONARY BREAKTHROUGH',
-    badgeColor: 'from-purple-500 to-pink-500',
-    features: ['15,000% ROI'10,000x Faster'99.7% Accuracy']
-  },
-  {
-    id: 2,
-    title: 'Quantum Computing Solutions 2026',
-    description: 'Discover breakthrough quantum computing solutions delivering unprecedented computational power and quantum supremacy.',
-    href: '/quantum-computing-solutions-2026',
-    image: '⚛️',
-    gradient: 'from-indigo-900 via-purple-900 to-indigo-900',
-    badge: 'QUANTUM BREAKTHROUGH',
-    badgeColor: 'from-cyan-500 to-blue-500',
-    features: ['Unhackable Security'99.9% 'Accuracy', 'Exponential Speedup']
-  },
-  {
-    id: 3,
-    title: 'Advanced Automation Solutions 2026',
-    description: 'Transform your business with revolutionary automation solutions delivering intelligent process automation.',
-    href: '/advanced-automation-solutions-2026',
-    image: '🤖',
-    gradient: 'from-emerald-900 via-teal-900 to-emerald-900',
-    badge: 'AUTOMATION REVOLUTION',
-    badgeColor: 'from-emerald-500 to-teal-500',
-    features: ['10,000% ROI'95% Reduction'8,500% ROI']
-  },
-  {
-    id: 4,
-    title: 'Neural Interface Revolution 2026',
-    description: 'Experience the future of human-AI collaboration with revolutionary neural interface technology.',
-    href: '/neural-interface-revolution-2026',
-    image: '🧠',
-    gradient: 'from-violet-900 via-purple-900 to-violet-900',
-    badge: 'NEURAL BREAKTHROUGH',
-    badgeColor: 'from-violet-500 to-purple-500',
-    features: ['99.7% Accuracy'1000x Enhancement'∞ Creativity']
-  },
-  {
-    id: 5,
-    title: 'AI 2027 Future Predictions',
-    description: 'Explore revolutionary AI predictions and breakthrough technologies that will reshape the world in 2027.',
-    href: '/ai-2027-future-predictions',
-    image: '🔮',
-    gradient: 'from-rose-900 via-pink-900 to-rose-900',
-    badge: 'FUTURE PREDICTIONS',
-    badgeColor: 'from-rose-500 to-pink-500',
-    features: ['99.9% AGI'1Mx 'Faster', 'True Consciousness']
-  }
-];
-
-export default function FeaturedContentCarousel() {
-  const [currentIndexsetCurrentIndex] = useState(0);
-  const [isAutoPlayingsetIsAutoPlaying] = useState(true);
-
-  // Auto-advance carousel
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
-      );
-    }5000);
-
-    return () => clearInterval(interval);
-  }[isAutoPlaying]);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-    setIsAutoPlaying(false);
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
-    );
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex => 
-      prevIndex === 0 ? featuredContent.length - 1 : prevIndex - 1
-    ));
-    setIsAutoPlaying(false);
-  };
-
-  const currentContent = featuredContent[currentIndex];
-
+const FeaturedContentCarousel: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FeaturedContentCarousel</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <section className="relative py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -115,7 +24,7 @@ export default function FeaturedContentCarousel() {
           {/* Main Content Card */}
           <div className={`bg-gradient-to-r ${currentContent.gradient} rounded-3xl p-8 md:p-12 text-white overflow-hidden relative`}>
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
             
             <div className="relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -242,5 +151,8 @@ export default function FeaturedContentCarousel() {
         </div>
       </div>
     </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
-}
+};
+
+export default FeaturedContentCarousel;

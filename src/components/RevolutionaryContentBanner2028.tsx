@@ -1,80 +1,223 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Globe, 
+  Zap, 
+  ArrowRight, 
+  Star,
+  Infinity,
+  Sparkles,
+  TrendingUp,
+  Clock
+} from 'lucide-react';
 
 const RevolutionaryContentBanner2028: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const contentItems = [
+    {
+      id: 'consciousness-transfer-2028',
+      title: 'Consciousness Transfer 2028',
+      subtitle: 'Digital Immortality Technology',
+      description: 'Revolutionary technology that allows human consciousness to be transferred to AI systems, creating digital immortality and unprecedented human-AI collaboration.',
+      icon: Brain,
+      gradient: 'from-purple-500 to-blue-500',
+      bgGradient: 'from-purple-500/10 to-blue-500/10',
+      link: '/consciousness-transfer-2028',
+      urgency: 'Revolutionary Breakthrough',
+      stats: '$25.8B Revenue'
+    },
+    {
+      id: 'interdimensional-computing-2028',
+      title: 'Interdimensional Computing',
+      subtitle: 'Access Infinite Realities',
+      description: 'Breakthrough technology that accesses parallel universes and alternate realities to solve problems impossible in our single dimension.',
+      icon: Globe,
+      gradient: 'from-cyan-500 to-purple-500',
+      bgGradient: 'from-cyan-500/10 to-purple-500/10',
+      link: '/interdimensional-computing-2028',
+      urgency: 'Infinite Possibilities',
+      stats: '1000x Acceleration'
+    },
+    {
+      id: 'neural-reality-engine-2028',
+      title: 'Neural Reality Engine',
+      subtitle: 'Conscious Virtual Worlds',
+      description: 'Advanced virtual reality platform that creates fully conscious virtual worlds with AI entities that develop their own societies and cultures.',
+      icon: Zap,
+      gradient: 'from-green-500 to-cyan-500',
+      bgGradient: 'from-green-500/10 to-cyan-500/10',
+      link: '/neural-reality-engine-2028',
+      urgency: 'Conscious Virtual Worlds',
+      stats: '∞ Entertainment'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [contentItems.length]);
+
+  const currentContent = contentItems[currentSlide];
+  const IconComponent = currentContent.icon;
+
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-bounce">
-            🌟 REVOLUTIONARY 2028 CONTENT • OMNIVERSAL LAUNCH
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 animate-pulse"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-sm font-medium mb-6 animate-bounce">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Revolutionary Technology 2028 - Limited Time Access
           </div>
-          <h2 className="text-7xl font-bold mb-4">🚀 Revolutionary Technology 2028</h2>
-          <p className="text-4xl opacity-95 max-w-7xl mx-auto">
-            Experience the most revolutionary technological content ever created. 
-            From omniversal AI to consciousness transfer - discover reality manipulation today.
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            The Future is Here
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Revolutionary Breakthrough Technologies
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the most advanced technologies ever created: consciousness transfer, 
+            interdimensional computing, and conscious virtual worlds.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-8xl mx-auto">
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-3">Revolutionary Tech 2028</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Discover breakthrough innovations that transcend reality itself
-            </p>
-            <a href="/pages/RevolutionaryTech2028" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Explore Revolution →
-            </a>
+
+        {/* Main Content Carousel */}
+        <div className="relative">
+          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12 overflow-hidden">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              {/* Content Info */}
+              <div className="flex-1 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${currentContent.gradient} rounded-xl flex items-center justify-center mr-4`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-cyan-400 font-semibold mb-1">
+                      {currentContent.urgency}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                      {currentContent.title}
+                    </h3>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-gray-300 mb-6 max-w-2xl">
+                  {currentContent.description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link 
+                    to={currentContent.link}
+                    className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentContent.gradient} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
+                  >
+                    Experience Now
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                  <Link 
+                    to="/services"
+                    className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                  >
+                    View All Services
+                  </Link>
+                </div>
+              </div>
+
+              {/* Visual Element */}
+              <div className="flex-shrink-0">
+                <div className={`w-64 h-64 bg-gradient-to-br ${currentContent.bgGradient} backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center relative overflow-hidden`}>
+                  <div className="text-center">
+                    <IconComponent className="w-24 h-24 text-white/80 mx-auto mb-4" />
+                    <div className="text-white font-bold text-lg mb-2">
+                      {currentContent.stats}
+                    </div>
+                    <div className="text-white/60 text-sm">
+                      Revolutionary Impact
+                    </div>
+                  </div>
+                  
+                  {/* Animated Elements */}
+                  <div className="absolute top-4 right-4">
+                    <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
+                  </div>
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-ping delay-500"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-3">Omniversal AI</h3>
-            <p className="text-sm opacity-90 mb-4">
-              AI systems operating across infinite universes simultaneously
-            </p>
-            <a href="/pages/OmniversalAI2028" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Discover AI →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-3">Consciousness Transfer</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Seamlessly transfer consciousness between biological and digital forms
-            </p>
-            <a href="/pages/ConsciousnessTransfer2028" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Experience Transfer →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-3">Quantum Reality Engine</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Manipulate the fundamental fabric of reality through quantum mechanics
-            </p>
-            <a href="/pages/QuantumRealityEngine2028" className="inline-block bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Explore Reality →
-            </a>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-8 space-x-3">
+            {contentItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-400 w-8' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
-        
-        <div className="text-center mt-8">
-          <div className="inline-flex items-center space-x-4">
-            <a href="/pages/RevolutionaryTech2028" className="bg-white text-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              🌌 Revolutionary Tech
-            </a>
-            <a href="/pages/OmniversalAI2028" className="bg-white text-cyan-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              🌌 Omniversal AI
-            </a>
-            <a href="/pages/ConsciousnessTransfer2028" className="bg-white text-emerald-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              🧠 Consciousness Transfer
-            </a>
+
+        {/* Features Grid */}
+        <div className="mt-16 grid md:grid-cols-3 gap-6">
+          {contentItems.map((item, index) => {
+            const ItemIcon = item.icon;
+            return (
+              <div 
+                key={item.id}
+                className={`bg-gradient-to-br ${item.bgGradient} backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/30 transition-all duration-300 cursor-pointer`}
+                onClick={() => setCurrentSlide(index)}
+              >
+                <div className="flex items-center mb-4">
+                  <div className={`w-10 h-10 bg-gradient-to-r ${item.gradient} rounded-lg flex items-center justify-center mr-3`}>
+                    <ItemIcon className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold text-sm">
+                      {item.subtitle}
+                    </div>
+                    <div className="text-cyan-400 text-xs">
+                      {item.urgency}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  {item.description.substring(0, 100)}...
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Urgency Banner */}
+        <div className="mt-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-xl p-6 text-center">
+          <div className="flex items-center justify-center mb-3">
+            <Clock className="w-5 h-5 text-red-400 mr-2" />
+            <span className="text-red-400 font-semibold">Limited Time Access</span>
           </div>
+          <h4 className="text-white font-bold text-lg mb-2">
+            Early Access to Revolutionary Technologies
+          </h4>
+          <p className="text-gray-300 text-sm">
+            Be among the first to experience consciousness transfer, interdimensional computing, 
+            and conscious virtual worlds. Limited spots available.
+          </p>
         </div>
       </div>
     </div>

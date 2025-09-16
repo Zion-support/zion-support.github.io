@@ -20,10 +20,7 @@ export default function ReviewsModeration() {
       <ReviewsModerationContent />
     </ProtectedRoute>
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

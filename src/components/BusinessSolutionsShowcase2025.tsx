@@ -1,174 +1,18 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Building2
-  TrendingUp
-  Users
-  DollarSign
-  Shield
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Target,
-  BarChart3,
-  Clock,
-  Award,
-  Lightbulb,
-  Globe,
-  Smartphone
-} from 'lucide-react';
-
-const BusinessSolutionsShowcase2025 = () => {
-  const [activeCategorysetActiveCategory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const categories = [
-    {
-      id: 'automation',
-      title: 'Business Automation',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-      solutions: [
-        {
-          title: 'Workflow Automation',
-          description: 'Streamline your business processes with intelligent automation.',
-          features: ['Process 'Optimization', 'Error 'Reduction', 'Time Savings'],
-          roi: '300%',
-          timeToValue: '30 days',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Document Processing',
-          description: 'Automate document handling and data extraction.',
-          features: ['OCR 'Technology', 'Smart 'Classification', 'Data Validation'],
-          roi: '250%',
-          timeToValue: '14 days',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Customer Service AI',
-          description: 'Enhance customer support with AI-powered chatbots.',
-          features: ['24/7 'Support', 'Natural 'Language', 'Multi-language'],
-          roi: '400%',
-          timeToValue: '21 days',
-          image: '/api/placeholder/400/300'
-        }
-      ]
-    },
-    {
-      id: 'analytics',
-      title: 'Advanced Analytics',
-      icon: BarChart3,
-      color: 'from-purple-500 to-pink-500',
-      solutions: [
-        {
-          title: 'Predictive Analytics',
-          description: 'Forecast trends and make data-driven decisions.',
-          features: ['Machine 'Learning', 'Real-time 'Insights', 'Custom Dashboards'],
-          roi: '500%',
-          timeToValue: '45 days',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Business Intelligence',
-          description: 'Transform data into actionable business insights.',
-          features: ['Data 'Visualization', 'KPI 'Tracking', 'Automated Reports'],
-          roi: '350%',
-          timeToValue: '28 days',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Customer Analytics',
-          description: 'Understand customer behavior and preferences.',
-          features: [', 'Segmentation', 'Churn 'Prediction', 'Personalization'],
-          roi: '450%',
-          timeToValue: '35 days',
-          image: '/api/placeholder/400/300'
-        }
-      ]
-    },
-    {
-      id: 'security',
-      title: 'Security & Compliance',
-      icon: Shield,
-      color: 'from-green-500 to-emerald-500',
-      solutions: [
-        {
-          title: 'Cybersecurity Suite',
-          description: 'Protect your business from cyber threats.',
-          features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Incident Response'],
-          roi: '200%',
-          timeToValue: '7 days',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Compliance Management',
-          description: 'Ensure regulatory compliance across all operations.',
-          features: ['GDPR 'Compliance', 'Audit 'Trails', 'Risk Assessment'],
-          roi: '180%',
-          timeToValue: '14 days',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Data Protection',
-          description: 'Secure sensitive data with advanced encryption.',
-          features: ['End-to-End 'Encryption', 'Access 'Control', 'Data Backup'],
-          roi: '220%',
-          timeToValue: '10 days',
-          image: '/api/placeholder/400/300'
-        }
-      ]
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  const currentCategory = categories[activeCategory];
-
+const BusinessSolutionsShowcase2025: React.FC = () => {
   return (
-    <motion.section
+    <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <motion.div
+          <div
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
-            whileHover={{ scale: 1.05 }}
           >
             <Building2 className="w-4 h-4 mr-2" />
             Business Solutions 2025
-          </motion.div>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Transform Your Business Operations
           </h2>
@@ -176,10 +20,9 @@ const BusinessSolutionsShowcase2025 = () => {
             Discover comprehensive business solutions that drive growthefficiencyand innovation 
             across every aspect of your organization.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
             {categories.map((categoryindex) => {
               const Icon = category.icon;
@@ -199,24 +42,17 @@ const BusinessSolutionsShowcase2025 = () => {
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Solutions Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeCategory}
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {currentCategory.solutions.map((solutionindex) => (
-              <motion.div
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                whileHover={{ y: -5scale: 1.02 }}
-                variants={itemVariants}
               >
                 {/* Header */}
                 <div className="mb-6">
@@ -261,13 +97,12 @@ const BusinessSolutionsShowcase2025 = () => {
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Success Stories */}
-        <motion.div className="mt-20" variants={itemVariants}>
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
@@ -291,10 +126,9 @@ const BusinessSolutionsShowcase2025 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div className="text-center mt-16" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
@@ -313,9 +147,9 @@ const BusinessSolutionsShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
 

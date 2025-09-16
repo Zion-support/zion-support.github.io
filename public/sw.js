@@ -1,34 +1,63 @@
-
-// Files to cache immediately
-const STATIC_FILES = [
+// Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
   '/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json',
+  '/favicon.ico'
+];
+
+// Install event
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
+  );
 });
 
-// Activate event - clean up old caches
+// Fetch event
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+// Activate event
 self.addEventListener('activate', (event) => {
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
-    return;
-  }
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-  
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
+// Background sync
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
   }
 });
 
-// Error handling
-self.addEventListener('error', (event) => {
+async function doBackgroundSync() {
+  // Handle background sync tasks
+  console.log('Background sync triggered');
+}

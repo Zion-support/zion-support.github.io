@@ -1,155 +1,11 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BookOpen
-  Video
-  FileText
-  Headphones
-  Download
-  ExternalLink,
-  Play,
-  Clock,
-  Users,
-  Star,
-  ChevronRight,
-  Search,
-  Filter,
-  Grid,
-  List
-} from 'lucide-react';
-
-const UltimateContentHub2026 = () => {
-  const [activeCategorysetActiveCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [searchQuerysetSearchQuery] = useState('');
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: 156 },
-    { id: ''ai', 'name: 'AI & 'Automation', 'count: 45 },
-    { id: ''tech', 'name: ''Technology', 'count: 38 },
-    { id: ''business', 'name: 'Business 'Strategy', 'count: 32 },
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 28 },
-    { id: ''tutorials', 'name: ''Tutorials', 'count: 13 }
-  ];
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "Neural Interface Revolution: Complete Implementation Guide",
-      description: "Learn how to implement direct brain-computer interfaces in your organization",
-      type: "guide",
-      category: "ai",
-      duration: "45 min read",
-      difficulty: "Advanced",
-      rating: 4.9,
-      downloads: 1250,
-      thumbnail: "/api/placeholder/400/250",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Quantum AI Fusion: Breaking Down the Technology",
-      description: "Understanding quantum computing meets artificial intelligence",
-      type: "video",
-      category: "tech",
-      duration: "32 min",
-      difficulty: "Expert",
-      rating: 4.8,
-      downloads: 890,
-      thumbnail: "/api/placeholder/400/250",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Case Study: 300% ROI with Autonomous Security Systems",
-      description: "How TechCorp achieved unprecedented security efficiency",
-      type: "case-study",
-      category: "case-studies",
-      duration: "15 min read",
-      difficulty: "Intermediate",
-      rating: 4.7,
-      downloads: 2100,
-      thumbnail: "/api/placeholder/400/250",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Edge Intelligence: Real-time Processing at Scale",
-      description: "Master edge computing for instant decision-making",
-      type: "tutorial",
-      category: "tech",
-      duration: "28 min",
-      difficulty: "Advanced",
-      rating: 4.6,
-      downloads: 1560,
-      thumbnail: "/api/placeholder/400/250",
-      featured: true
-    },
-    {
-      id: 5,
-      title: "Synthetic Data Generation: Privacy-Preserving AI Training",
-      description: "Generate training data without compromising privacy",
-      type: "guide",
-      category: "ai",
-      duration: "38 min read",
-      difficulty: "Expert",
-      rating: 4.9,
-      downloads: 980,
-      thumbnail: "/api/placeholder/400/250",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Business Transformation: From Legacy to AI-Powered",
-      description: "Complete roadmap for enterprise AI transformation",
-      type: "guide",
-      category: "business",
-      duration: "52 min read",
-      difficulty: "Intermediate",
-      rating: 4.8,
-      downloads: 3200,
-      thumbnail: "/api/placeholder/400/250",
-      featured: true
-    }
-  ];
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'video': return Video;
-      case 'guide': return BookOpen;
-      case 'case-study': return FileText;
-      case 'tutorial': return Headphones;
-      default: return FileText;
-    }
-  };
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
-      case 'Advanced': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const filteredContent = contentItems.filter(item => {
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
+const UltimateContentHub2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -162,13 +18,11 @@ const UltimateContentHub2026 = () => {
             Access our comprehensive library of cutting-edge contentguidesand resources 
             to stay ahead in the AI revolution.
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
@@ -223,30 +77,24 @@ const UltimateContentHub2026 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
+        <div
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className={`grid gap-8 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}
         >
-          <AnimatePresence>
+          <div>
             {filteredContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               
               return (
-                <motion.div
+                <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3delay: index * 0.1 }}
                   className={`group bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 ${
                     viewMode === 'list' ? 'flex' : ''
                   } ${item.featured ? 'ring-2 ring-blue-500' : ''}`}
@@ -311,23 +159,21 @@ const UltimateContentHub2026 = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Load More */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-12"
         >
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all">
             Load More Content
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

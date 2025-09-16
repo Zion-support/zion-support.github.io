@@ -1,37 +1,77 @@
-// Fetch with retry utility for robust API calls
-
-export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
-  const defaultOptions = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    ...options,
-  };
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+// Fetch with retry utility
+export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   let lastError;
   
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  for (let i = 0; i < maxRetries; i++) {
     try {
-      const response = await fetch(url, defaultOptions);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const response = await fetch(url, options);
+      if (response.ok) {
+        return response;
       }
-      
-      return response;
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     } catch (error) {
       lastError = error;
-      console.warn(`Fetch attempt ${attempt} failed:`, error.message);
-      
-      if (attempt === maxRetries) {
-        throw lastError;
+      if (i < maxRetries - 1) {
+        // Wait before retrying (exponential backoff)
+        await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
       }
-      
-      // Wait before retrying with exponential backoff
-      await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt - 1)));
     }
   }
+  
+  throw lastError;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+// Fetch with retry utility for robust API calls
+
+=======
+// Fetch with retry utility
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
+export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await fetch(url, options);
+      if (response.ok) {
+        return response;
+      }
+      
+      // If not the last attempt, wait and retry
+      if (attempt < maxRetries) {
+        await new Promise(resolve => setTimeout(resolve, delay * attempt));
+        continue;
+      }
+      
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    } catch (error) {
+      // If this is the last attempt, throw the error
+      if (attempt === maxRetries) {
+        throw error;
+      }
+      
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, delay * attempt));
+    }
+  }
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 };
 
 export default fetchWithRetry;
+=======

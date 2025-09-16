@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-=======
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
->>>>>>> origin/auto/autonomy-17186719616
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -21,14 +16,6 @@ import { slugify } from '@/lib/slugify';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-<<<<<<< HEAD
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-=======
 import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
@@ -37,18 +24,12 @@ import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   const { user } = useAuth();
   const isLoggedIn = !!user;
   const isMobile = useIsMobile();
   const { t } = useTranslation();
-<<<<<<< HEAD
-  const router = useLocation();
-  const [query, setQuery] = React.useState('');
-=======
   const router = useRouter();
   const [query, setQuery] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
   const suggestions = generateSearchSuggestions();
 
   let unreadCount = 0;
@@ -59,18 +40,6 @@ export function PrimaryNav() {
     // context not available
   }
 
-<<<<<<< HEAD
-  const cartCount = useSelector((s: RootState) =>
-    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
-  );
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim()) {
-      console.log('PrimaryNav search submit:', query);
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-=======
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = query.trim();
@@ -80,34 +49,17 @@ export function PrimaryNav() {
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
   return (
     <>
       <header
-<<<<<<< HEAD
-        className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
-=======
         className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
->>>>>>> origin/auto/autonomy-17186719616
         role="navigation"
         aria-label="Primary"
         data-testid="header"
       >
-<<<<<<< HEAD
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
-          <Logo />
-
-          {/* Navigation - hidden on mobile, shown on desktop */}
-          <div className="hidden md:block order-1 flex-shrink-0">
-            <ResponsiveNavigation />
-          </div>
-
-          {/* Actions container with responsive layout */}
-          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-=======
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
           
@@ -118,18 +70,13 @@ export function PrimaryNav() {
           
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
->>>>>>> origin/auto/autonomy-17186719616
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-<<<<<<< HEAD
-                  console.log('PrimaryNav search suggestion selected:', sugg);
-=======
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg });
->>>>>>> origin/auto/autonomy-17186719616
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -141,19 +88,11 @@ export function PrimaryNav() {
                     // Blog posts navigate to blog detail page
                     router.push(`/blog/${sugg.slug}`);
                   } else {
-<<<<<<< HEAD
-                    // Default: search results page with slug
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-                  }
-                  setQuery('');
-
-=======
                     // Default: search results page with query parameter
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
                   }
                   setQuery('');
                   
->>>>>>> origin/auto/autonomy-17186719616
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
@@ -166,33 +105,6 @@ export function PrimaryNav() {
                 searchSuggestions={suggestions}
               />
             </form>
-<<<<<<< HEAD
-
-            {/* Compact actions group */}
-            <div className="flex items-center gap-1">
-              <PointsBadge />
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Link
-                    href="/cart"
-                    className="relative p-1"
-                    aria-label={t('nav.cart', 'Cart')}
-                  >
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
-                    {cartCount > 0 && (
-                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
-                        {cartCount}
-                      </span>
-                    )}
-                  </Link>
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  <MiniCartPreview />
-                </HoverCardContent>
-              </HoverCard>
-            </div>
-
-=======
             
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
@@ -200,17 +112,12 @@ export function PrimaryNav() {
               <CartDrawer />
             </div>
             
->>>>>>> origin/auto/autonomy-17186719616
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-<<<<<<< HEAD
-
-=======
             
->>>>>>> origin/auto/autonomy-17186719616
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
@@ -219,13 +126,10 @@ export function PrimaryNav() {
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
-<<<<<<< HEAD
-=======
                     onClick={(e) => {
                       e.preventDefault();
                       setLoginOpen(true);
                     }}
->>>>>>> origin/auto/autonomy-17186719616
                   >
                     {t('auth.login')}
                   </Link>
@@ -237,15 +141,6 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-<<<<<<< HEAD
-            {isLoggedIn && <UserMenu />}
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"
-=======
               {isLoggedIn && <UserMenu />}
             </div>
           </div>
@@ -273,7 +168,6 @@ export function PrimaryNav() {
           {/* Mobile menu button */}
           <button
             className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
->>>>>>> origin/auto/autonomy-17186719616
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
@@ -287,11 +181,7 @@ export function PrimaryNav() {
         </div>
       </header>
       {mobileMenuOpen && (
-<<<<<<< HEAD
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
-=======
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
->>>>>>> origin/auto/autonomy-17186719616
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -301,19 +191,13 @@ export function PrimaryNav() {
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
-<<<<<<< HEAD
-=======
               openLoginModal={(returnToPath) => setLoginOpen(true)}
->>>>>>> origin/auto/autonomy-17186719616
             />
           </div>
         </div>
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-<<<<<<< HEAD
-=======
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
->>>>>>> origin/auto/autonomy-17186719616
     </>
   );
 }

@@ -1,47 +1,65 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+// Notifications utility
+export const notifications = {
+  show: (message, type = 'info') => {
+    // Simple notification implementation
+    if (typeof window !== 'undefined' && window.alert) {
+      window.alert(message);
+    }
+  },
+  
+  success: (message) => {
+    notifications.show(message, 'success');
+  },
+  
+  error: (message) => {
+    notifications.show(message, 'error');
+  },
+  
+  warning: (message) => {
+    notifications.show(message, 'warning');
+  },
+  
+  info: (message) => {
+    notifications.show(message, 'info');
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 // Notifications utility for handling browser notifications
 
+=======
+// Notification utilities
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 export const notifications = {
-  // Request notification permission
-  requestPermission: async () => {
-    if ('Notification' in window) {
-      const permission = await Notification.requestPermission();
-      return permission === 'granted';
+  show: (message, type = 'info') => {
+    // Simple notification implementation
+    if (typeof window !== 'undefined' && window.alert) {
+      window.alert(`${type.toUpperCase()}: ${message}`);
     }
-    return false;
   },
   
-  // Check if notifications are supported
-  isSupported: () => {
-    return 'Notification' in window;
+  success: (message) => {
+    notifications.show(message, 'success');
   },
   
-  // Check if permission is granted
-  hasPermission: () => {
-    if ('Notification' in window) {
-      return Notification.permission === 'granted';
-    }
-    return false;
+  error: (message) => {
+    notifications.show(message, 'error');
   },
   
-  // Show a notification
-  show: (title, options = {}) => {
-    if (notifications.hasPermission()) {
-      const notification = new Notification(title, {
-        icon: '/favicon.ico',
-        badge: '/favicon.ico',
-        ...options
-      });
-      
-      // Auto-close after 5 seconds
-      setTimeout(() => {
-        notification.close();
-      }, 5000);
-      
-      return notification;
-    }
-    return null;
+  warning: (message) => {
+    notifications.show(message, 'warning');
   },
   
+<<<<<<< HEAD
   // Show success notification
   success: (message, title = 'Success') => {
     return notifications.show(title, {
@@ -58,21 +76,27 @@ export const notifications = {
     });
   },
   
-  // Show warning notification
-  warning: (message, title = 'Warning') => {
-    return notifications.show(title, {
-      body: message,
-      icon: '/favicon.ico'
-    });
-  },
-  
   // Show info notification
   info: (message, title = 'Info') => {
     return notifications.show(title, {
       body: message,
       icon: '/favicon.ico'
     });
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+  info: (message) => {
+    notifications.show(message, 'info');
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   }
 };
 
 export default notifications;
+=======

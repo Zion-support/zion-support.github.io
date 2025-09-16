@@ -1,5 +1,14 @@
 import React from 'react';
-import {motion} from 'framer-motion';
+
+<<<<<<< HEAD
+const EnhancedErrorBoundary: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedErrorBoundary</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+=======
 ;
 export default function Page("props": "any) {;
     componentDidCatch(error", errorInfo) {;
@@ -169,22 +178,7 @@ export default function Page(props: any) {
     return fallback || defaultFallback;
   }
   return children;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 };
-;
-export {EnhancedErrorBoundary};
-export default EnhancedErrorBoundary;'"`;
-}}}}}}}}}}}}}'"`'"`;
-export {Page};
-;
-</motion>;
-</div>;
-</div>;
-</motion>;
-</div>
-</motion>
-</div>
-</div>
-</motion>
-</div>
-import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
-});'; ;';';''
+
+export default EnhancedErrorBoundary;

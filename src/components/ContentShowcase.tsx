@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useMemo, useState } from 'react';
 import { 
   BookOpen, 
   FileText, 
@@ -35,64 +34,17 @@ const ContentShowcase: React.FC = () => {
     { id: 'whitepapers', name: 'White Papers', icon: FileText }
   ];
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Future of AI in Business: Autonomous Operations by 2025",
-      excerpt: "Explore how AI autonomous business managers are revolutionizing operations, reducing costs by 40%, and enabling 24/7 decision-making capabilities.",
-      author: "Dr. Sarah Chen",
-      authorRole: "Chief AI Officer",
-      date: "2025-01-15",
-      readTime: "8 min read",
-      views: "12.5k",
-      likes: 342,
-      tags: ["AI", "Business Automation", "Future Tech"],
-      category: "AI & Machine Learning",
-      featured: true,
-      image: "/api/placeholder/400/250"
-    },
-    {
-      id: 2,
-      title: "Quantum Computing: Breaking the Security Barrier",
-      excerpt: "Discover how quantum encryption is creating unbreakable security protocols and what it means for your business data protection.",
-      author: "Michael Rodriguez",
-      authorRole: "Quantum Security Expert",
-      date: "2025-01-12",
-      readTime: "12 min read",
-      views: "8.9k",
-      likes: 267,
-      tags: ["Quantum Computing", "Security", "Encryption"],
-      category: "Cybersecurity",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Building Resilient Multi-Cloud Architectures",
-      excerpt: "Learn the best practices for creating fault-tolerant, cost-optimized multi-cloud environments that scale with your business needs.",
-      author: "Jennifer Liu",
-      authorRole: "Cloud Architecture Lead",
-      date: "2025-01-10",
-      readTime: "10 min read",
-      views: "15.2k",
-      likes: 423,
-      tags: ["Cloud Computing", "Architecture", "DevOps"],
-      category: "Cloud Solutions"
-    },
-    {
-      id: 4,
-      title: "DeFi Revolution: Decentralizing Financial Services",
-      excerpt: "Understand how decentralized finance platforms are transforming traditional banking and creating new opportunities for businesses.",
-      author: "Alex Thompson",
-      authorRole: "Blockchain Strategist",
-      date: "2025-01-08",
-      readTime: "14 min read",
-      views: "6.7k",
-      likes: 198,
-      tags: ["DeFi", "Blockchain", "Finance"],
-      category: "Blockchain & Web3",
-      new: true
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { blogPosts } = require('../data/blog-posts.js');
+  const latestFour = useMemo(() => {
+    try {
+      return [...blogPosts]
+        .sort((a, b) => (b.publishDate || '').localeCompare(a.publishDate || ''))
+        .slice(0, 4);
+    } catch {
+      return blogPosts.slice(0, 4);
     }
-  ];
+  }, [blogPosts]);
 
   const caseStudies = [
     {
@@ -200,11 +152,8 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.map((post, index) => (
-              <motion.article
+              <divarticle
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
                 {post.featured && (
@@ -284,16 +233,15 @@ const ContentShowcase: React.FC = () => {
                       </div>
                     </div>
                     
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
+                    <divbutton
                       className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
                     >
                       <span>Read More</span>
                       <ArrowRight className="w-4 h-4" />
-                    </motion.button>
+                    </divbutton>
                   </div>
                 </div>
-              </motion.article>
+              </divarticle>
             ))}
           </div>
         );
@@ -302,11 +250,8 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
-              <motion.div
+              <div
                 key={study.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
               >
                 {study.featured && (
@@ -360,15 +305,14 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
+                  <divbutton
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
                   >
                     <span>View Full Study</span>
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </divbutton>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         );
@@ -377,11 +321,8 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webinars.map((webinar, index) => (
-              <motion.div
+              <div
                 key={webinar.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 {webinar.featured && (
@@ -425,15 +366,14 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
+                  <divbutton
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Register Now</span>
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </divbutton>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         );
@@ -442,11 +382,8 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
-              <motion.div
+              <div
                 key={paper.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 {paper.featured && (
@@ -487,15 +424,14 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
+                  <divbutton
                     className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Download PDF</span>
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </divbutton>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         );
@@ -509,10 +445,7 @@ const ContentShowcase: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
@@ -528,13 +461,10 @@ const ContentShowcase: React.FC = () => {
             Stay ahead with our latest insights, case studies, and expert resources. 
             Discover how cutting-edge technology is transforming businesses worldwide.
           </p>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {tabs.map((tab) => {
@@ -542,11 +472,9 @@ const ContentShowcase: React.FC = () => {
             const isActive = activeTab === tab.id;
             
             return (
-              <motion.button
+              <divbutton
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className={`
                   flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300
                   ${isActive 
@@ -557,30 +485,21 @@ const ContentShowcase: React.FC = () => {
               >
                 <Icon className="w-5 h-5" />
                 <span>{tab.name}</span>
-              </motion.button>
+              </divbutton>
             );
           })}
-        </motion.div>
+        </div>
 
-<<<<<<< HEAD
         {/* Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
           >
             {renderContent()}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Newsletter Signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="mt-20"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center">
@@ -596,23 +515,18 @@ const ContentShowcase: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <divbutton
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Subscribe
-              </motion.button>
+              </divbutton>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 
 export { ContentShowcase };
-=======
-
->>>>>>> cursor/create-and-deploy-new-content-c963
 export default ContentShowcase;

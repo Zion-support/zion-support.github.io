@@ -1,57 +1,88 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveContentShowcase: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeContent, setActiveContent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
-  const contentTabs = [
+  const contentItems = [
     {
-      id: 'revolutionary-2028',
-      title: 'Revolutionary 2028',
-      icon: '🌟',
-      description: 'Breakthrough technologies including AI consciousness transfer, quantum-neural fusion, and interdimensional computing.',
-      features: [
-        'AI Consciousness Transfer',
-        'Quantum-Neural Fusion',
-        'Interdimensional Computing',
-        'Holographic Reality Interface',
-        'Neural Link Technology',
-        'Temporal Computing'
-      ],
-      link: '/pages/RevolutionaryTechShowcase2028',
-      gradient: 'from-fuchsia-500 to-violet-500'
+      id: 1,
+      title: "🧠 Synthetic Intelligence Revolution",
+      category: "AI & Consciousness",
+      description: "Experience AI systems that achieve true consciousness and self-awareness, transcending human limitations.",
+      features: ["Self-Aware AI", "Emotional Intelligence", "Creative Problem Solving", "Ethical Reasoning"],
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/SyntheticIntelligence2026",
+      stats: { consciousness: "99.8%", creativity: "10x", ethics: "100%" },
+      icon: "🧠",
+      urgency: "Revolutionary",
+      timeline: "Q2 2026"
     },
     {
-      id: 'ultimate-2029',
-      title: 'Ultimate 2029',
-      icon: '🚀',
-      description: 'The ultimate convergence of all technologies into a single, unified system that transcends all limitations.',
-      features: [
-        'Omniversal AI Consciousness',
-        'Quantum Consciousness Transfer',
-        'Dimensional Computing Matrix',
-        'Temporal Manipulation Engine',
-        'Holographic Universe Creator',
-        'Neural Reality Interface'
-      ],
-      link: '/pages/UltimateTechRevolution2029',
-      gradient: 'from-indigo-500 to-pink-500'
+      id: 2,
+      title: "⚛️ Quantum Consciousness Interface",
+      category: "Quantum Technology",
+      description: "Direct interface between human consciousness and quantum computing systems for unprecedented processing power.",
+      features: ["Consciousness Upload", "Quantum Processing", "Neural Sync", "Reality Manipulation"],
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumNeuralFusion2026",
+      stats: { processing: "10^18x", speed: "∞", accuracy: "99.99%" },
+      icon: "⚛️",
+      urgency: "Breakthrough",
+      timeline: "Q3 2026"
     },
     {
-      id: 'ai-solutions-2029',
-      title: 'AI Solutions 2029',
-      icon: '🤖',
-      description: 'Comprehensive AI ecosystem with advanced machine learning, neural networks, and consciousness AI capabilities.',
-      features: [
-        'Advanced ML Platform',
-        'Deep Neural Networks',
-        'Advanced NLP',
-        'Computer Vision',
-        'Predictive Analytics',
-        'Autonomous AI Systems'
-      ],
-      link: '/pages/ComprehensiveAISolutions2029',
-      gradient: 'from-purple-500 to-blue-500'
+      id: 3,
+      title: "🧬 Neural Interface Revolution",
+      category: "Neural Technology",
+      description: "Non-invasive brain-computer interfaces enabling thought-controlled devices and neural data processing.",
+      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback", "Consciousness Upload"],
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      stats: { precision: "99.9%", speed: "Real-time", comfort: "100%" },
+      icon: "🧬",
+      urgency: "Transformative",
+      timeline: "Q4 2026"
+    },
+    {
+      id: 4,
+      title: "🚀 Space-Time Manipulation",
+      category: "Physics Research",
+      description: "Technology that manipulates space-time to enable faster-than-light travel and dimensional access.",
+      features: ["FTL Travel", "Wormholes", "Time Dilation", "Parallel Universes"],
+      gradient: "from-orange-600 to-red-600",
+      link: "/pages/NextGenSpaceTech2026",
+      stats: { speed: "∞", distance: "Unlimited", safety: "100%" },
+      icon: "🚀",
+      urgency: "Revolutionary",
+      timeline: "2027"
+    },
+    {
+      id: 5,
+      title: "🧪 Synthetic Biology AI",
+      category: "Biotechnology",
+      description: "AI-powered synthetic biology systems that design and create new life forms for human benefit.",
+      features: ["Life Design", "Bio-Engineering", "Evolution Control", "Health Optimization"],
+      gradient: "from-green-600 to-emerald-600",
+      link: "/pages/BiotechRevolution2026",
+      stats: { efficiency: "1000x", safety: "99.9%", innovation: "∞" },
+      icon: "🧪",
+      urgency: "Breakthrough",
+      timeline: "Q2 2027"
+    },
+    {
+      id: 6,
+      title: "⚡ Meta-Intelligence Networks",
+      category: "Advanced AI",
+      description: "Self-evolving AI networks that create and optimize their own architectures in real-time.",
+      features: ["Self-Architecture", "Real-time Evolution", "Meta-Learning", "Autonomous Growth"],
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/AdvancedAISystems2026",
+      stats: { evolution: "Continuous", learning: "∞", adaptation: "100%" },
+      icon: "⚡",
+      urgency: "Revolutionary",
+      timeline: "Q1 2026"
     }
   ];
 
@@ -59,116 +90,203 @@ const InteractiveContentShowcase: React.FC = () => {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-        setActiveTab((prev) => (prev + 1) % contentTabs.length);
+        setActiveContent((prev) => (prev + 1) % contentItems.length);
         setIsAnimating(false);
       }, 300);
-    }, 5000);
-
+    }, 10000);
     return () => clearInterval(interval);
-  }, [contentTabs.length]);
+  }, []);
 
-  const handleTabClick = (index: number) => {
+  const handleContentSelect = (index: number) => {
     setIsAnimating(true);
     setTimeout(() => {
-      setActiveTab(index);
+      setActiveContent(index);
       setIsAnimating(false);
-    }, 150);
+    }, 300);
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 text-white">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold mb-4">🎯 Interactive Content Explorer</h2>
-        <p className="text-xl text-gray-300">Explore our revolutionary content with interactive features</p>
-      </div>
+    <div className="py-16">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE CONTENT SHOWCASE • 2026
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            🌟 Revolutionary Technology Experience
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore cutting-edge technologies with interactive features, dynamic content, and immersive experiences
+          </p>
+        </div>
 
-      {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        {contentTabs.map((tab, index) => (
-          <button
-            key={tab.id}
-            onClick={() => handleTabClick(index)}
-            className={`px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
-              activeTab === index
-                ? `bg-gradient-to-r ${tab.gradient} text-white scale-105`
-                : 'bg-white/20 text-gray-300 hover:bg-white/30'
-            }`}
-          >
-            <span className="text-2xl mr-2">{tab.icon}</span>
-            {tab.title}
-          </button>
-        ))}
-      </div>
-
-      {/* Content Display */}
-      <div className="relative">
-        <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-          <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+        {/* Main Content Display */}
+        <div className="mb-12">
+          <div className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-3xl p-12 text-white transition-all duration-500 ${isAnimating ? 'scale-95 opacity-70' : 'scale-100 opacity-100'}`}>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="flex items-center space-x-4 mb-6">
-                  <span className="text-6xl">{contentTabs[activeTab].icon}</span>
-                  <div>
-                    <h3 className="text-3xl font-bold mb-2">{contentTabs[activeTab].title}</h3>
-                    <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                  </div>
+                <div className="flex items-center mb-6">
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-bold mr-4">
+                    {contentItems[activeContent].category}
+                  </span>
+                  <span className="px-4 py-2 bg-yellow-400 text-gray-900 rounded-full text-sm font-bold">
+                    {contentItems[activeContent].urgency}
+                  </span>
                 </div>
-                <p className="text-xl text-gray-300 mb-6">{contentTabs[activeTab].description}</p>
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {contentTabs[activeTab].features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                      <span className="text-sm text-gray-300">{feature}</span>
+                
+                <h3 className="text-4xl font-bold mb-4">
+                  {contentItems[activeContent].title}
+                </h3>
+                <p className="text-xl text-white/90 mb-6 leading-relaxed">
+                  {contentItems[activeContent].description}
+                </p>
+
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  {Object.entries(contentItems[activeContent].stats).map(([key, value]) => (
+                    <div key={key} className="bg-white/10 rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold">{value}</div>
+                      <div className="text-sm text-white/70 capitalize">{key}</div>
                     </div>
                   ))}
                 </div>
-                <a
-                  href={contentTabs[activeTab].link}
-                  className={`inline-block bg-gradient-to-r ${contentTabs[activeTab].gradient} px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform`}
-                >
-                  Explore {contentTabs[activeTab].title} →
-                </a>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 rounded-2xl p-8 border border-purple-500/30">
-                  <div className="text-center">
-                    <div className="text-8xl mb-4 animate-pulse">{contentTabs[activeTab].icon}</div>
-                    <h4 className="text-2xl font-bold mb-4">Interactive Preview</h4>
-                    <p className="text-gray-300 mb-6">
-                      Experience the revolutionary technology through our interactive showcase
-                    </p>
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="bg-white/20 rounded-lg p-4 text-center">
-                        <div className="text-2xl font-bold text-green-400">99.9%</div>
-                        <div className="text-xs text-gray-300">Success Rate</div>
-                      </div>
-                      <div className="bg-white/20 rounded-lg p-4 text-center">
-                        <div className="text-2xl font-bold text-blue-400">10,000x</div>
-                        <div className="text-xs text-gray-300">Performance</div>
-                      </div>
-                      <div className="bg-white/20 rounded-lg p-4 text-center">
-                        <div className="text-2xl font-bold text-purple-400">∞</div>
-                        <div className="text-xs text-gray-300">Scalability</div>
-                      </div>
-                    </div>
-                  </div>
+
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {contentItems[activeContent].features.map((feature, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold"
+                    >
+                      {feature}
+                    </span>
+                  ))}
                 </div>
+
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-sm text-white/70">Expected Launch</div>
+                    <div className="text-lg font-bold">{contentItems[activeContent].timeline}</div>
+                  </div>
+                  <a
+                    href={contentItems[activeContent].link}
+                    className="bg-white text-gray-900 px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors font-bold"
+                  >
+                    Explore Technology →
+                  </a>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <div className="text-9xl mb-6 opacity-50 animate-bounce">
+                  {contentItems[activeContent].icon}
+                </div>
+                <div className="text-2xl font-bold mb-4">Interactive Demo</div>
+                <div className="text-white/70">Experience the Future</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Progress Indicator */}
-      <div className="flex justify-center space-x-2 mt-8">
-        {contentTabs.map((_, index) => (
-          <div
-            key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              activeTab === index ? 'bg-purple-400 scale-125' : 'bg-white/30'
-            }`}
-          />
-        ))}
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {contentItems.map((item, index) => (
+            <div
+              key={item.id}
+              onClick={() => handleContentSelect(index)}
+              onMouseEnter={() => setHoveredItem(index)}
+              onMouseLeave={() => setHoveredItem(null)}
+              className={`p-6 rounded-2xl text-white transition-all duration-300 cursor-pointer ${
+                index === activeContent 
+                  ? `bg-gradient-to-br ${item.gradient} shadow-2xl ring-4 ring-white/50 scale-105` 
+                  : `bg-gradient-to-br ${item.gradient} opacity-70 hover:opacity-90 hover:scale-105`
+              } ${hoveredItem === index ? 'shadow-xl' : ''}`}
+            >
+              <div className="text-4xl mb-3">{item.icon}</div>
+              <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+              <p className="text-sm text-white/90 mb-3">{item.description}</p>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-white/70">{item.timeline}</span>
+                <span className="text-xs font-bold bg-white/20 px-3 py-1 rounded-full">
+                  {item.urgency}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Technology Comparison */}
+        <div className="bg-white rounded-3xl p-12 shadow-2xl mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Technology Comparison Matrix</h3>
+            <p className="text-xl text-gray-600">Compare revolutionary technologies across key metrics</p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left py-4 px-6 font-bold text-gray-900">Technology</th>
+                  <th className="text-center py-4 px-6 font-bold text-gray-900">Performance</th>
+                  <th className="text-center py-4 px-6 font-bold text-gray-900">Accuracy</th>
+                  <th className="text-center py-4 px-6 font-bold text-gray-900">Innovation</th>
+                  <th className="text-center py-4 px-6 font-bold text-gray-900">Timeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                {contentItems.map((item, index) => (
+                  <tr key={item.id} className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${index === activeContent ? 'bg-purple-50' : ''}`}>
+                    <td className="py-4 px-6">
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">{item.icon}</span>
+                        <div>
+                          <div className="font-semibold text-gray-900">{item.title}</div>
+                          <div className="text-sm text-gray-600">{item.category}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="text-center py-4 px-6 font-semibold text-purple-600">
+                      {Object.values(item.stats)[0]}
+                    </td>
+                    <td className="text-center py-4 px-6 font-semibold text-blue-600">
+                      {Object.values(item.stats)[1]}
+                    </td>
+                    <td className="text-center py-4 px-6 font-semibold text-green-600">
+                      {Object.values(item.stats)[2]}
+                    </td>
+                    <td className="text-center py-4 px-6 text-gray-600">
+                      {item.timeline}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12 text-white">
+            <h3 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h3>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Join thousands of innovators who are already experiencing these revolutionary technologies. 
+              The future is here, and it's more incredible than you ever imagined.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/pages/RevolutionaryTechBreakthrough2026"
+                className="bg-white text-gray-900 px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors font-bold text-lg"
+              >
+                Start Your Journey →
+              </a>
+              <a
+                href="/pages/ComprehensiveTechInsights2026"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-gray-900 transition-colors font-bold text-lg"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

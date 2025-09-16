@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from '../App.tsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+=======
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from '../App.tsx';
+import App from './App';
 import './index.css';
 
 const rootElement = document.getElementById('root');
@@ -19,7 +31,7 @@ function renderApp() {
     }
 }
 
-function displayFatalError(message: string) {
+function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
@@ -33,10 +45,11 @@ try {
     renderApp();
 } catch (error) {
     console.error('Global error caught in main.tsx:', error);
-    displayFatalError((error as Error).message);
+    displayFatalError(error.message);
 }
 
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5

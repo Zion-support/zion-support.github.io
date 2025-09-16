@@ -5,7 +5,6 @@
         <div className="text-center">
 
 
-=======
           <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>
           <p className="text-zion-slate-light mb-6">
             Choose a country from the options above to see service details and pricing
@@ -15,4 +14,3 @@
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

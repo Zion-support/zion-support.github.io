@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const GlobalErrorBoundary: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">GlobalErrorBoundary</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default GlobalErrorBoundary;
+=======
 import {
   AlertTriangle,
   RefreshCw,
@@ -82,7 +96,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       userFeedback: ''
       showDetails: false
     } }    ,}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       showDetails: false
     }
@@ -326,7 +339,7 @@ if ( {) {
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {;
   AlertTriangle,;
   RefreshCw,;
@@ -930,14 +943,12 @@ if ( {) {
       buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',;
     };
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1025,7 +1036,6 @@ if ( {) {
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
@@ -1150,7 +1160,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                   )}
@@ -1269,7 +1278,6 @@ if ( {) {
                       className="border-t pt-4"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     >
                       <div className="space-y-4">
@@ -1288,7 +1296,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         {process.env.NODE_ENV === 'development' &&
@@ -1526,7 +1533,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -1548,7 +1554,6 @@ if ( {) {
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
                             Copy Details
                           </Button>
@@ -1568,7 +1573,6 @@ if ( {) {
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                             Copy Details
                           </Button>
@@ -1666,3 +1670,4 @@ export default GlobalErrorBoundary;
 
 export const useErrorBoundary = () => {
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

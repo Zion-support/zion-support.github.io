@@ -1,12 +1,12 @@
+import React from 'react';
 
-            href={message.attachment_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
-          >
-            <PaperclipIcon className="h-3 w-3 mr-1" />
-        <div className="text-xs opacity-70 text-right mt-1">
-          {format(new Date(message.created_at), 'h:mm a')}
-        </div>
-      </div>
+const MessageBubble: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MessageBubble</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
+  );
+};
+
+export default MessageBubble;

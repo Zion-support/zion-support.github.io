@@ -1,43 +1,11 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Award
-  ArrowRight
-  TrendingUp
-  Users
-  Star,
-  X,
-  Play,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const RevolutionarySuccessStories2026Banner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+const RevolutionarySuccessStories2026Banner: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ 
+    <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
-      transition={{ 
         duration: 0.8
         ease: "easeOut",
         type: "spring",
@@ -158,7 +126,7 @@ const RevolutionarySuccessStories2026Banner = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500">
         <div className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 animate-pulse"></div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

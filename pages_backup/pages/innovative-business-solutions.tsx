@@ -1,15 +1,17 @@
-
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -20,143 +22,35 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import Layout from '../components/layout/Layout';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
-
-
-
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
-  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-
-  website: 'https://ziontechgroup.com'
-}
-const heroStats = [
-
-  { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
-  { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
-  { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
-  { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
-];
-
-const serviceCategories = [
-  {
-    title: 'Business Intelligence & Analytics',
-    description: 'AI-powered business intelligence and data analytics solutions',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
-    icon: ChartIcon,
-    color: 'from-blue-500 to-cyan-600',
-    features: ['Data AnalysisPredictive AnalyticsReal-time Insights']
-  };
-  {
-    title: 'Marketing Automation',
-    description: 'Intelligent marketing automation with AI-driven optimization',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
-    icon: Megaphone,
-    color: 'from-purple-500 to-pink-600',
-    features: ['Campaign OptimizationContent PersonalizationROI Tracking']
-  };
-  {
-    title: 'Sales Intelligence',
-    description: 'AI-powered sales automation and intelligence solutions',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Sales Intelligence'),
-    icon: TrendingUp,
-    color: 'from-green-500 to-emerald-600',
-    features: ['Lead ScoringSales ForecastingPipeline Optimization']
-  };
-  {
-    title: 'Customer Service',
-    description: 'Intelligent customer service with AI automation',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Customer Service'),
-    icon: HeadphonesIcon,
-    color: 'from-orange-500 to-red-600',
-    features: ['AI ChatbotsTicket AutomationSentiment Analysis']
-  };
-  {
-    title: 'HR Management',
-    description: 'AI-powered HR automation and management solutions',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'HR Management'),
-    icon: TeamIcon,
-    color: 'from-teal-500 to-cyan-600',
-
-    features: [
-      'Recruitment Automation',
-      'Performance Analytics',
-      'Employee Engagement',
-    ],
-  },];
-
-
-const heroFeatures = [
-  {
-    title: 'AI-Powered Intelligence',
-    description: 'Advanced AI algorithms that provide intelligent insights and automation for business operations.',
-    icon: Brain,
-
-    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
-  }
-
-
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',;
+const innovative-business-solutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>innovative-business-solutions | Zion Tech Group</title>
+        <meta name="description" content="innovative-business-solutions - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">innovative-business-solutions</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
+<<<<<<< HEAD
+export default innovative-business-solutions;
+=======
 ];
 
 const testimonials = [
 import Head from 'next / head';
 import Link from 'next / link';
-import {motion} from 'framer-motion';
+
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 import { innovativeBusinessSolutions2025 } from '../data / 2025 - innovative - business - solutions';
@@ -281,7 +175,7 @@ export default function InnovativeBusinessSolutions() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
@@ -562,12 +456,8 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           >
@@ -609,8 +499,6 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -654,9 +542,7 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -667,8 +553,6 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -846,12 +730,8 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               >
@@ -907,12 +787,8 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     >
@@ -971,12 +847,8 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                           </div>
@@ -1118,8 +990,6 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1202,8 +1072,6 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1245,12 +1113,8 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               >
@@ -1320,16 +1184,12 @@ export default function InnovativeBusinessSolutions() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+
+
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

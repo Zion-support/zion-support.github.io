@@ -6,4 +6,3 @@ const STATIC_ASSETS = [
   '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';;
 // Assets: to cache on demand;
 const CACHE_PATTERNS = [
-  /\.(?:png|jpg|jpeg|svg|gif|webp)$/

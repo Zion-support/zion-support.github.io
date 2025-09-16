@@ -25,7 +25,6 @@ export default async function handler(
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -42,7 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -50,7 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
-=======
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -70,7 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-=======
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
       text: body.text || '',
@@ -80,10 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(comment)
   }
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -131,4 +124,3 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -11,13 +11,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
+
 import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -71,4 +68,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

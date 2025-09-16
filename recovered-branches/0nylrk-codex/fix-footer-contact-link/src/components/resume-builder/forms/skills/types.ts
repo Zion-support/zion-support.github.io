@@ -3,8 +3,6 @@ import { Skill } from '@/types/resume';
 
 export interface SkillsFormProps {
   resumeId: string;
-=======
->>>>>>> origin/auto/autonomy-17186719616
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void;

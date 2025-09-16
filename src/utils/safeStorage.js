@@ -1,46 +1,113 @@
+<<<<<<< HEAD
+    }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+// Safe storage utility for browser compatibility
+export const safeStorage = {
+  getItem: (key) => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+  
+  setItem: (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return false;
+    }
+  },
+  
+  removeItem: (key) => {
+    try {
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return false;
+    }
+  },
+  
+  clear: () => {
+    try {
+      localStorage.clear();
+      return true;
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return false;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
+=======
+// Safe storage utilities for browser compatibility
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 export const safeStorage = {
-  // Safe localStorage operations
-  localStorage: {
-    getItem: (key) => {
-      try {
-        return localStorage.getItem(key);
-      } catch (error) {
-        console.warn('localStorage.getItem failed:', error);
-        return null;
-      }
-    },
-    
-    setItem: (key, value) => {
-      try {
+  getItem: (key) => {
+    try {
+      return typeof localStorage !== 'undefined' ? localStorage.getItem(key) : null;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return null;
+    }
+  },
+  
+  setItem: (key, value) => {
+    try {
+      if (typeof localStorage !== 'undefined') {
         localStorage.setItem(key, value);
         return true;
-      } catch (error) {
-        console.warn('localStorage.setItem failed:', error);
-        return false;
       }
-    },
-    
-    removeItem: (key) => {
-      try {
+      return false;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return false;
+    }
+  },
+  
+  removeItem: (key) => {
+    try {
+      if (typeof localStorage !== 'undefined') {
         localStorage.removeItem(key);
         return true;
-      } catch (error) {
-        console.warn('localStorage.removeItem failed:', error);
-        return false;
       }
-    },
-    
-    clear: () => {
-      try {
+      return false;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return false;
+    }
+  },
+  
+  clear: () => {
+    try {
+      if (typeof localStorage !== 'undefined') {
         localStorage.clear();
         return true;
-      } catch (error) {
-        console.warn('localStorage.clear failed:', error);
-        return false;
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+      return false;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return false;
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
+=======
     }
   },
   
@@ -107,25 +174,15 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     }
-  },
-  
-  // Convenience methods for direct access
-  getItem: (key) => {
-    return safeStorage.localStorage.getItem(key);
-  },
-  
-  setItem: (key, value) => {
-    return safeStorage.localStorage.setItem(key, value);
-  },
-  
-  removeItem: (key) => {
-    return safeStorage.localStorage.removeItem(key);
-  },
-  
-  clear: () => {
-    return safeStorage.localStorage.clear();
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   }
 };
 
 export default safeStorage;
+=======

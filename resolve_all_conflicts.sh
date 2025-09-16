@@ -1,135 +1,816 @@
 #!/bin/bash
 
-echo "Resolving all merge conflicts..."
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
+echo "🔧 Resolving ALL remaining merge conflicts..."
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 
-# Function to resolve conflicts by choosing the appropriate version
-resolve_conflict() {
-    local file="$1"
-    local strategy="$2"  # "ours", "theirs", or "manual"
+# Find all files with merge conflict markers
+files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
+
+echo "Found files with conflicts:"
+echo "$files_with_conflicts"
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    if [ ! -f "$file" ]; then
-        echo "File $file does not exist, skipping..."
-        return
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Use git checkout --ours to resolve conflicts
+    git checkout --ours "$file" 2>/dev/null || echo "Could not resolve $file with git checkout --ours"
+    
+    # If git checkout didn't work, try manual resolution
+    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+        echo "Manual resolution needed for $file"
+        # Remove all conflict markers and keep the first version (HEAD)
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
     fi
+done
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+echo "🎉 All conflict resolution complete!"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+>>>>>>> cursor/create-and-deploy-new-content-079e
+echo "Resolving all merge conflicts by using main branch version..."
+
+# Find all files with merge conflicts
+conflicted_files=$(grep -r -l "<<<<<<< HEAD" src/ 2>/dev/null || true)
+
+if [ -z "$conflicted_files" ]; then
+    echo "No merge conflicts found."
+    exit 0
+fi
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+
+# For each conflicted file, resolve conflicts by using main branch version
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
     
-    echo "Resolving conflict in $file using strategy: $strategy"
+    # Use git checkout --theirs to resolve conflicts
+    git checkout --theirs "$file" 2>/dev/null || {
+        echo "Failed to resolve conflicts in $file, trying manual approach..."
+        
+        # Manual approach: remove conflict markers and keep the content after =======
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    }
     
-    case $strategy in
-        "ours")
-            git checkout --ours "$file"
-            git add "$file"
-            ;;
-        "theirs")
-            git checkout --theirs "$file"
-            git add "$file"
-            ;;
-        "manual")
-            # For manual resolution, we'll use a combination of strategies
-            if [[ "$file" == "App.tsx" ]]; then
-                # Keep the main App.tsx structure
-                git checkout --ours "$file"
-                git add "$file"
-            elif [[ "$file" == "package-lock.json" ]]; then
-                # Regenerate package-lock.json
-                rm "$file"
-                npm install
-                git add "$file"
-            elif [[ "$file" == "dist/sw.js" ]]; then
-                # Keep the service worker
-                git checkout --ours "$file"
-                git add "$file"
-            else
-                # For most other files, keep the newer version
-                git checkout --theirs "$file"
-                git add "$file"
-            fi
-            ;;
-    esac
-}
+    # Add the resolved file
+    git add "$file"
+done
 
-# Resolve core application files
-resolve_conflict "App.tsx" "manual"
-resolve_conflict "dist/sw.js" "ours"
-resolve_conflict "package-lock.json" "manual"
-
-# Resolve component conflicts
-resolve_conflict "src/components/InteractiveTechShowcase.tsx" "theirs"
-resolve_conflict "src/components/InteractiveTechShowcase2027.tsx" "theirs"
-resolve_conflict "src/components/NewContentShowcase.tsx" "theirs"
-resolve_conflict "src/components/RevolutionaryContentShowcase2026.tsx" "theirs"
-resolve_conflict "src/components/RevolutionaryContentShowcase2027.tsx" "theirs"
-resolve_conflict "src/components/RevolutionaryPromoBanner.tsx" "theirs"
-resolve_conflict "src/components/RevolutionaryTechShowcase2026.tsx" "theirs"
-resolve_conflict "src/components/SEOHead.tsx" "theirs"
-
-# Resolve page conflicts
-resolve_conflict "src/pages/AIInnovationHub2025.tsx" "theirs"
-resolve_conflict "src/pages/AIInnovationHub2026.tsx" "theirs"
-resolve_conflict "src/pages/AIInnovationPlaybook2025.tsx" "theirs"
-resolve_conflict "src/pages/AIRevolution2025.tsx" "theirs"
-resolve_conflict "src/pages/AITransformationGuide2025.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedAITransformation2026.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedAnalytics2025.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedBiotechSolutions2026.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedBlockchainSolutions2026.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedQuantumComputing2026.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedRobotics2026.tsx" "theirs"
-resolve_conflict "src/pages/AdvancedTechSolutions2025.tsx" "theirs"
-resolve_conflict "src/pages/BlogPost2025.tsx" "theirs"
-resolve_conflict "src/pages/ComprehensiveServices2025.tsx" "theirs"
-resolve_conflict "src/pages/ComprehensiveTechInsights2026.tsx" "theirs"
-resolve_conflict "src/pages/CybersecurityFortress2025.tsx" "theirs"
-resolve_conflict "src/pages/DigitalTransformation2025.tsx" "theirs"
-resolve_conflict "src/pages/EdgeAIandIoT2025.tsx" "theirs"
-resolve_conflict "src/pages/FutureTechTrends2025.tsx" "theirs"
-resolve_conflict "src/pages/FutureTechTrends2026.tsx" "theirs"
-resolve_conflict "src/pages/InnovationLanding2025.tsx" "theirs"
-resolve_conflict "src/pages/InnovativeServicesShowcase2025.tsx" "theirs"
-resolve_conflict "src/pages/NewAIUseCases2025.tsx" "theirs"
-resolve_conflict "src/pages/NextGenAIRevolution2026.tsx" "theirs"
-resolve_conflict "src/pages/NextGenSpaceTech2026.tsx" "theirs"
-resolve_conflict "src/pages/NextGenTechShowcase2026.tsx" "theirs"
-resolve_conflict "src/pages/QuantumAIRevolution2026.tsx" "theirs"
-resolve_conflict "src/pages/QuantumComputingBreakthrough.tsx" "theirs"
-resolve_conflict "src/pages/QuantumComputingSolutions2025.tsx" "theirs"
-resolve_conflict "src/pages/QuantumConsciousness2027.tsx" "theirs"
-resolve_conflict "src/pages/QuantumConsciousnessRevolution2027.tsx" "theirs"
-resolve_conflict "src/pages/QuantumNeuralFusion2026.tsx" "theirs"
-resolve_conflict "src/pages/RevolutionaryInnovationHub2026.tsx" "theirs"
-resolve_conflict "src/pages/TechnologyInsights2025.tsx" "theirs"
-resolve_conflict "src/pages/UltimateTechRevolution2026.tsx" "theirs"
-resolve_conflict "src/pages/UltimateTechRevolution2027.tsx" "theirs"
-
-# Resolve utility conflicts
-resolve_conflict "src/utils/cartUtils.ts" "theirs"
-resolve_conflict "src/utils/fetchWithRetry.ts" "theirs"
-resolve_conflict "src/utils/notifications.ts" "theirs"
-resolve_conflict "src/utils/productionLogger.ts" "theirs"
-resolve_conflict "src/utils/safeStorage.ts" "theirs"
-
-# Resolve hooks conflicts
-resolve_conflict "src/hooks/useWebhooks.ts" "theirs"
-
-# Resolve zion-website conflicts
-resolve_conflict "zion-website/src/app/page.tsx" "theirs"
-resolve_conflict "zion-website/src/components/Footer.tsx" "theirs"
-resolve_conflict "zion-website/src/components/Navigation.tsx" "theirs"
-
-# Remove deleted files
-git rm "fix_all_conflicts.sh" 2>/dev/null || true
-git rm "src/components/InteractiveContentShowcase2026.tsx.backup" 2>/dev/null || true
-git rm "src/components/InteractiveTechShowcase2026.tsx.backup" 2>/dev/null || true
-git rm "src/components/NewContentShowcase.tsx.backup" 2>/dev/null || true
-git rm "src/components/NewContentShowcase2026.tsx.backup" 2>/dev/null || true
-git rm "src/components/RevolutionaryTechShowcase2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/AdvancedAITransformation2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/AdvancedBiotechAI2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/AdvancedBiotechSolutions2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/AdvancedBlockchainSolutions2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/AdvancedCybersecuritySuite2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/AdvancedRobotics2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/NextGenSpaceTech2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/NextGenTechShowcase2026.tsx.backup" 2>/dev/null || true
-git rm "src/pages/SpaceTechInnovation2026.tsx.backup" 2>/dev/null || true
-
-echo "All conflicts resolved!"
+echo "All merge conflicts resolved!"
+echo "All merge conflicts resolved!"
+<<<<<<< HEAD
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-df8e
+=======
+echo "All merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-87a1
+>>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab

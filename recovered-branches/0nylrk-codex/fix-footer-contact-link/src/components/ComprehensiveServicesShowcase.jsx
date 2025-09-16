@@ -1,4 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import React from 'react';
+=======
+
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
 import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
@@ -336,8 +339,15 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
   const filteredSolutions = activeCategory === 'all' 
     ? solutions 
     : solutions.filter(solution => solution.category === activeCategory);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
+const ComprehensiveServicesShowcase: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ComprehensiveServicesShowcase</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+=======
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -686,7 +696,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
                 </a>
 import React, {useState, useMemo, useCallback, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+
 import {Search,
             Filter,
             Star,
@@ -1138,10 +1148,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>
         </motion.div>
       </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
 };
 
 export default ComprehensiveServicesShowcase;
-    </></></></></></></></>);
-};
