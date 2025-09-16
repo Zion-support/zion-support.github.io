@@ -16,6 +16,13 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary: 'Design patterns and reference topologies for low-latency, high-recall real-time retrieval.',
+    href: '/blog/ai-2026-real-time-retrieval-architectures',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
     href: '/updates/ai-risk-mitigation-guide-2026',
@@ -35,6 +42,13 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-reliability-scorecards-1-0',
     date: '2025-09-16',
     tag: 'Release'
+  },
+  {
+    title: 'Field Guide: Trustworthy Model Routing (2026)',
+    summary: 'Objective routing with evals, risk signals, and cost-latency tradeoffs backed by evidence.',
+    href: '/blog/ai-2026-trustworthy-model-routing',
+    date: '2025-09-16',
+    tag: 'Field Guide'
   },
 
   // Existing content
