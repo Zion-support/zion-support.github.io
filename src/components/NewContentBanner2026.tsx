@@ -28,27 +28,35 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
   const newContent = [
     {
       icon: Brain,
-      title: "Next-Gen Tech Innovation 2026",
-      description: "Revolutionary AI consciousness and quantum neural networks",
-      link: "/nextgen-tech-innovation-2026",
+      title: "Next-Generation Autonomous Systems 2026",
+      description: "Revolutionary AI consciousness and quantum neural networks transforming enterprise operations",
+      link: "/blog/ai-2026-next-generation-autonomous-systems-ultimate-breakthrough",
       gradient: "from-purple-500 to-pink-500",
       bgGradient: "from-purple-600/20 to-pink-600/20"
     },
     {
       icon: Bot,
-      title: "Autonomous Business Revolution 2026",
-      description: "Transform your business with fully autonomous AI systems",
-      link: "/autonomous-business-revolution-2026",
+      title: "Quantum AI Business Transformation Guide",
+      description: "The ultimate guide to implementing quantum AI for 500% ROI and market leadership",
+      link: "/blog/quantum-ai-2026-business-transformation-guide",
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-600/20 to-cyan-600/20"
     },
     {
       icon: Zap,
-      title: "Quantum Computing Breakthrough",
-      description: "Experience the power of quantum computing in real-world applications",
-      link: "/quantum-computing-breakthrough",
+      title: "Enterprise Quantum AI Success Story",
+      description: "How a Fortune 500 company achieved 400% ROI with quantum consciousness AI",
+      link: "/case-studies/enterprise-quantum-ai-transformation-2026",
       gradient: "from-green-500 to-emerald-500",
       bgGradient: "from-green-600/20 to-emerald-600/20"
+    },
+    {
+      icon: TrendingUp,
+      title: "Quantum Consciousness Implementation Master Guide",
+      description: "Step-by-step guide to implementing quantum consciousness AI systems",
+      link: "/resources/ai-2026-quantum-consciousness-implementation-master-guide",
+      gradient: "from-orange-500 to-red-500",
+      bgGradient: "from-orange-600/20 to-red-600/20"
     }
   ];
 
