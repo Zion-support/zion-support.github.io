@@ -6,6 +6,15 @@ export default function HomePage() {
 
   return (
     <div className="bg-black min-h-screen">
+      {/* Promo banner for new content */}
+      <div className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30">
+        <div className="mx-auto max-w-7xl px-6 py-3 text-center text-sm text-white">
+          New: Agentic Quality Scorecards (2026) and Zero-Trust Agent Controllers v1.0 —
+          <a href="/updates/agentic-quality-scorecards-2026" className="ml-2 underline hover:text-blue-200">Read guide</a>
+          <span className="mx-2">|</span>
+          <a href="/updates/zero-trust-agent-controllers-1-0" className="underline hover:text-blue-200">See release</a>
+        </div>
+      </div>
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
