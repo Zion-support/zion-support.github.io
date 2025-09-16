@@ -11,19 +11,11 @@ interface ButtonProps {
 }
 
 export default function Button({ 
-<<<<<<< HEAD
-  children
-  variant = 'primary'
-  size = 'md'
-  className = ', '
-  onClick
-=======
   children, 
   variant = 'primary', 
   size = 'md', 
   className = '', 
   onClick, 
->>>>>>> origin/auto/autonomy-17186719616
   type = 'button',
   disabled = false 
 }: ButtonProps) {

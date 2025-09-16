@@ -1,9 +1,5 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-BotGlobe2MonitorSmartphone
-=======
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function FeaturesPage() {
   return (

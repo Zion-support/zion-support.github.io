@@ -4,11 +4,18 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </div>
+            <p className="text-gray-400 mb-4 max-w-md">
+              Leading the future of technology with AI, blockchain, and innovative solutions that transform industries.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -34,11 +41,81 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
+            <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
+              Solutions
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="/pages/AdvancedAISystems2026" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Advanced AI Systems
+                </a>
+              </li>
+              <li>
+                <a href="/pages/SpaceTechAI2025" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Space Technology
+                </a>
+              </li>
+              <li>
+                <a href="/pages/BiotechAIRevolution2025" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Biotech Revolution
+                </a>
+              </li>
+              <li>
+                <a href="/pages/QuantumComputingRevolution2026" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Quantum Computing
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
+            <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
+              Company
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="/careers" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-sm text-gray-400">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
+                Terms of Service
+              </a>
+              <a href="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
