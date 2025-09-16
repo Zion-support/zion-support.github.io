@@ -34,7 +34,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Evidence‑Led Governance Blueprint —
+            New: Agent Risk Dashboard v1.0 —
+            <a href="/updates/agent-risk-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence‑Led Governance Blueprint —
             <a href="/blog/ai-2026-evidence-led-governance-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Case Study: 70% Content Velocity —
@@ -72,8 +75,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Evidence‑Led Governance Blueprint —
-            <a href="/blog/ai-2026-evidence-led-governance-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: Agent Risk Dashboard v1.0 —
+            <a href="/updates/agent-risk-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence‑Led Governance Blueprint —
+            <a href="/blog/ai-2026-evidence-led-governance-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Case Study: 70% Content Velocity —
             <a href="/updates/ai-content-factory-velocity-70" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
