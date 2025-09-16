@@ -126,6 +126,10 @@ import TranscendentTechRevolution2035 from './src/pages/TranscendentTechRevoluti
 import UltimateTechBreakthrough2035 from './src/pages/UltimateTechBreakthrough2035';
 import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
 import RevolutionaryContentCarousel2035 from './src/components/RevolutionaryContentCarousel2035';
+import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
+import QuantumComputingBreakthrough2035 from './src/pages/QuantumComputingBreakthrough2035';
+import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnology2035';
+import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
 
 export default function App(): JSX.Element {
   return (
@@ -336,6 +340,18 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/UltimateTechBreakthrough2035" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🌟 NEW: Ultimate Breakthrough 2035 →
+                    </a>
+                    <a href="/pages/UltimateAIConsciousness2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: AI Consciousness 2035 →
+                    </a>
+                    <a href="/pages/QuantumComputingBreakthrough2035" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Breakthrough 2035 →
+                    </a>
+                    <a href="/pages/InterdimensionalTechnology2035" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌌 NEW: Interdimensional Tech 2035 →
+                    </a>
+                    <a href="/pages/RevolutionaryTechBlog2035" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      📝 NEW: Tech Blog 2035 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -881,6 +897,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
           <Route path="/pages/TranscendentTechRevolution2035" element={<TranscendentTechRevolution2035 />} />
           <Route path="/pages/UltimateTechBreakthrough2035" element={<UltimateTechBreakthrough2035 />} />
+          <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
+          <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035 />} />
+          <Route path="/pages/InterdimensionalTechnology2035" element={<InterdimensionalTechnology2035 />} />
+          <Route path="/pages/RevolutionaryTechBlog2035" element={<RevolutionaryTechBlog2035 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
