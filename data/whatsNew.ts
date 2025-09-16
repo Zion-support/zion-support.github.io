@@ -13,6 +13,7 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
 =======
@@ -34,10 +35,20 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     ctaLabel: "Read Blueprint",
     href: "/content/ai-2026-evaluation-harness-blueprint",
     emoji: "🧪",
+=======
+    id: "agent-runbooks-blueprint-2026",
+    title: "AI 2026: Agent Runbooks Blueprint",
+    description:
+      "Eval‑gated, auditable runbooks with safety envelopes and deterministic rollback.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-agent-runbooks-blueprint",
+    emoji: "🛠️",
+>>>>>>> origin/feat/new-content-runbooks-platform-ops
     highlight: true,
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
     id: "autonomous-evals-blueprint-2026",
     title: "AI 2026: Autonomous Evals Blueprint",
 >>>>>>> origin/feat/new-content-2025-09-15
@@ -78,11 +89,20 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
       "Pre‑wired SLOs, evals, incident, and cost views with example queries and JSON dashboards.",
     ctaLabel: "Get Starter Kit",
     href: "/resources/ai-2026-agent-platform-health-dashboard-starter",
+=======
+    id: "agent-platform-operations-2026-blog",
+    title: "AI 2026: Agent Platform Operations",
+    description:
+      "SLOs, incidents, change management, and eval‑gated releases for agent platforms.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-platform-operations",
+>>>>>>> origin/feat/new-content-runbooks-platform-ops
     emoji: "📊",
     highlight: true,
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
     id: "agent-slos-implementation-guide-2026",
     title: "AI 2026: Implementing Agent SLOs — Practical Guide",
     description:
@@ -367,6 +387,8 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> origin/feat/new-content-runbooks-platform-ops
     id: "agent-fleet-management-handbook-2026",
     title: "AI 2026: Agent Fleet Management Handbook",
     description:

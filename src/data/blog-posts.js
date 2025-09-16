@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 32,
+    title: "AI 2026: Agent Runbooks Blueprint",
+    excerpt: "Design eval-gated, auditable runbooks with safety envelopes and rollbacks.",
+    content: "A practical blueprint for agentic runbooks that balance speed and safety: eval-gated steps, policy-as-code decisions, deterministic rollback, and structured evidence. Learn patterns for idempotency, timeouts, and observability-first design.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Operations",
+    tags: ["Runbooks", "Policy-as-Code", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/agent-runbooks-blueprint-2026.jpg",
+    slug: "ai-2026-agent-runbooks-blueprint"
+  },
+  {
+    id: 33,
+    title: "AI 2026: Agent Platform Operations",
+    excerpt: "SLOs, incidents, change management, and eval-gated releases for agent platforms.",
+    content: "Operate agent platforms with business-aligned SLOs, agents-on-call, and change management that gates releases with evaluation harnesses. Integrate traces, guardrail signals, and rollback automation for resilience.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Agents", "SLOs", "Change Management"],
+    featured: true,
+    imageUrl: "/images/blog/agent-platform-operations-2026.jpg",
+    slug: "ai-2026-agent-platform-operations"
+  },
+  {
     id: 1,
     title: "The Future of IT Asset Management: AI-Powered Solutions",
     excerpt: "Discover how artificial intelligence is revolutionizing the way organizations track, manage, and optimize their IT assets.",
