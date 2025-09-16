@@ -741,6 +741,36 @@ content_index:
         suites: "30+ scenario suites"
         gates: "Policy gates in CI/CD"
         reporting: "Automated regression reports"
+
+    - id: "ai-2026-safe-change-management-blueprint"
+      type: "blog"
+      title: "AI 2026: Safe Change Management — Eval‑Gated Releases, Rollbacks, and Approvals"
+      file_path: "/content/blog/ai-2026-safe-change-management-blueprint.md"
+      url: "/blog/ai-2026-safe-change-management-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Change Management", "Evaluations", "Progressive Delivery", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollback_time: "< 5 min"
+        gate_pass_rate: "> 95%"
+        change_failure_rate: "< 3%"
+
+    - id: "ai-2026-evaluation-cookbook"
+      type: "blog"
+      title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
+      file_path: "/content/blog/ai-2026-evaluation-cookbook.md"
+      url: "/blog/ai-2026-evaluation-cookbook"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Reliability", "Observability", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        coverage: "> 70% initial"
+        reliability: "> 95% gate pass"
+        audit_ready: true
 >>>>>>> origin/feat/new-content-2026-evals
 
   promotion_components:

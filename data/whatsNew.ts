@@ -88,3 +88,14 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-16",
   },
   {
+    id: "evaluation-cookbook-2026",
+    title: "AI 2026: Evaluation Cookbook",
+    description:
+      "Scenario suites, metrics, and policy gates you can adopt today to harden agents.",
+    ctaLabel: "Read Cookbook",
+    href: "/blog/ai-2026-evaluation-cookbook",
+    emoji: "📘",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
