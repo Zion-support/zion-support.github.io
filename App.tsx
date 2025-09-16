@@ -157,6 +157,12 @@ import InteractiveTechDemo2033 from './src/components/InteractiveTechDemo2033';
 import EnhancedContentCarousel2033 from './src/components/EnhancedContentCarousel2033';
 import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechBanner2038 from './src/components/UltimateTechBanner2038';
+import UltimateTechBanner2025 from './src/components/UltimateTechBanner2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import NextGenTechRevolution2025 from './src/pages/NextGenTechRevolution2025';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -181,6 +187,15 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: Ultimate Tech Banner 2025 */}
+                <UltimateTechBanner2025 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
                 
                 {/* Revolutionary Ad Banner 2030 */}
                 <RevolutionaryAdBanner2030 />
@@ -250,14 +265,14 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    <a href="/pages/UltimateTechRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
-                      🚀 ULTIMATE: Tech Revolution 2025 →
+                    <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🌟 ULTIMATE: Tech Breakthrough 2025 →
                     </a>
-                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
-                      ⚡ BREAKTHROUGH: Revolutionary Tech →
+                    <a href="/pages/NextGenTechRevolution2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      ⚡ REVOLUTION: Next-Gen Tech 2025 →
                     </a>
-                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
-                      🧠 INNOVATION: Next-Gen Hub →
+                    <a href="/pages/RevolutionaryTechShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+                      🚀 SHOWCASE: Revolutionary Tech 2025 →
                     </a>
                     <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🤖 NEW: AI Transformation →
@@ -926,6 +941,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2033" element={<UltimateTechBreakthrough2033 />} />
           <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
           <Route path="/pages/RevolutionaryTechShowcase2033" element={<RevolutionaryTechShowcase2033 />} />
+          <Route path="/pages/NextGenTechRevolution2025" element={<NextGenTechRevolution2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
