@@ -45,6 +45,8 @@ import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcas
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
 import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
@@ -283,6 +285,24 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Revolutionary AI Services Promotional Banner */}
+                <div className="mb-8 p-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white">
+                  <h2 className="text-2xl font-bold mb-4">🚀 Revolutionary AI Services 2025</h2>
+                  <p className="text-lg mb-4">Discover cutting-edge AI solutions that transform businesses</p>
+                  <a href="/pages/RevolutionaryAIServices2025" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Explore AI Services →
+                  </a>
+                </div>
+                
+                {/* NEW: Revolutionary Case Studies Promotional Banner */}
+                <div className="mb-8 p-6 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg text-white">
+                  <h2 className="text-2xl font-bold mb-4">📊 Revolutionary Case Studies 2025</h2>
+                  <p className="text-lg mb-4">Real success stories from our AI implementations</p>
+                  <a href="/pages/RevolutionaryCaseStudies2025" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    View Case Studies →
+                  </a>
+                </div>
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
@@ -1217,6 +1237,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/pages/RevolutionaryAIServices2025" element={<RevolutionaryAIServices2025 />} />
           <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
           <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
           <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
