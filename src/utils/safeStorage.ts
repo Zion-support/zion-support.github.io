@@ -11,6 +11,12 @@
       console.warn('localStorage not available:', error);
     }
   },
+<<<<<<< HEAD
+=======
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-af01
 /**
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
@@ -124,6 +130,7 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
+<<<<<<< HEAD
   
   clear: (): void => {
     try {
@@ -239,6 +246,9 @@ export const safeStorage = {
         console.warn('sessionStorage.clear failed:', error);
         return false;
       }
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-af01
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
