@@ -7,6 +7,9 @@ import EnhancedNavigation from './src/components/EnhancedNavigation';
 import EnhancedFooter from './src/components/EnhancedFooter';
 import EnhancedSearch from './src/components/EnhancedSearch';
 import AnalyticsDashboard from './src/components/AnalyticsDashboard';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import UserFeedbackSystem from './src/components/UserFeedbackSystem';
+import NotificationSystem from './src/components/NotificationSystem';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
@@ -237,6 +240,16 @@ export default function App(): JSX.Element {
                 {/* Analytics Dashboard */}
                 <div className="mb-12">
                   <AnalyticsDashboard />
+                </div>
+
+                {/* Performance Monitor */}
+                <div className="mb-12">
+                  <PerformanceMonitor />
+                </div>
+
+                {/* User Feedback System */}
+                <div className="mb-12">
+                  <UserFeedbackSystem />
                 </div>
                 {/* Featured New Services */}
                 <section className="mb-12">
