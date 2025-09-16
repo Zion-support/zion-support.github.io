@@ -40,6 +40,8 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
+import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -666,6 +668,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Content Banner 2026 - Latest Technology */}
                 <RevolutionaryContentBanner2026 />
+                
+                {/* NEW: Content Promotion Banner 2026 */}
+                <NewContentPromotionBanner2026 />
                 
                 {/* Revolutionary Services Showcase 2026 */}
                 <RevolutionaryServicesShowcase2026 />
@@ -2828,6 +2833,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2027" element={<RevolutionaryTechShowcase2027 />} />
           <Route path="/pages/UltimateTechTrends2026" element={<UltimateTechTrends2026 />} />
           <Route path="/pages/RevolutionaryCaseStudies2026" element={<RevolutionaryCaseStudies2026 />} />
+          <Route path="/case-studies-2026" element={<RevolutionaryCaseStudies2026 />} />
           <Route path="/pages/UltimateTechBlog2026" element={<UltimateTechBlog2026 />} />
           <Route path="/pages/RevolutionaryTech2027" element={<RevolutionaryTech2027 />} />
           <Route path="/pages/UltimateInnovation2027" element={<UltimateInnovation2027 />} />
