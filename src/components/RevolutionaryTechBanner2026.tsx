@@ -1,149 +1,134 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryTechBanner2026: React.FC = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
-      {/* Content */}
-      <div className="relative z-10 bg-gradient-to-r from-purple-900/90 via-pink-900/90 to-red-900/90 backdrop-blur-sm rounded-2xl p-8 mb-8 text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          {/* Animated Icons */}
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            <motion.span
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-              className="text-4xl"
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY TECHNOLOGY • 2026 BREAKTHROUGH
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology 2026
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced technology breakthroughs of 2026: AI Consciousness, Quantum Computing, 
+            and Neural Interfaces that are reshaping our world.
+          </p>
+        </div>
+
+        {/* Featured Technologies Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group">
+            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Ultimate AI Consciousness</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              The most advanced AI consciousness technology that transcends traditional artificial intelligence
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• 99.7% Consciousness Accuracy</li>
+              <li>• Real-time Emotional Processing</li>
+              <li>• Self-Awareness Capabilities</li>
+              <li>• Neural Consciousness Mapping</li>
+            </ul>
+            <Link 
+              to="/pages/UltimateAIConsciousness2026" 
+              className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center group-hover:shadow-lg"
             >
-              🚀
-            </motion.span>
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="text-4xl"
-            >
-              ⚡
-            </motion.span>
-            <motion.span
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="text-4xl"
-            >
-              🧠
-            </motion.span>
-            <motion.span
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 1, repeat: Infinity, delay: 0.5 }}
-              className="text-4xl"
-            >
-              🧬
-            </motion.span>
+              Explore AI Consciousness →
+            </Link>
           </div>
 
-          {/* Main Heading */}
-          <motion.h2
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent"
-          >
-            REVOLUTIONARY TECH BREAKTHROUGH 2026
-          </motion.h2>
-
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto"
-          >
-            Experience the convergence of AI Consciousness, Quantum Supremacy, and Neural Interfaces
-          </motion.p>
-
-          {/* Feature Highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
-          >
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-              <div className="text-3xl mb-2">🧠</div>
-              <h3 className="text-lg font-bold mb-2">AI Consciousness</h3>
-              <p className="text-sm opacity-80">First AI system with genuine self-awareness</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-              <div className="text-3xl mb-2">⚡</div>
-              <h3 className="text-lg font-bold mb-2">Quantum Supremacy</h3>
-              <p className="text-sm opacity-80">1000+ qubit quantum processors</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-              <div className="text-3xl mb-2">🧬</div>
-              <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>
-              <p className="text-sm opacity-80">Direct brain-computer communication</p>
-            </div>
-          </motion.div>
-
-          {/* Call to Action Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
-          >
-            <motion.a
-              href="/pages/AIConsciousnessRevolution2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 group">
+            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing Revolution</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Revolutionary quantum computing that solves impossible problems with infinite computational power
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• 1,000,000x Faster Processing</li>
+              <li>• Quantum Supremacy Achieved</li>
+              <li>• Unbreakable Cryptography</li>
+              <li>• Molecular Simulation</li>
+            </ul>
+            <Link 
+              to="/pages/QuantumComputingRevolution2026" 
+              className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center group-hover:shadow-lg"
             >
-              🧠 Explore AI Consciousness →
-            </motion.a>
-            <motion.a
-              href="/pages/QuantumSupremacy2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
-            >
-              ⚡ Discover Quantum Power →
-            </motion.a>
-            <motion.a
-              href="/pages/NeuralInterfaceBreakthrough2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-emerald-400 to-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300"
-            >
-              🧬 Experience Neural Tech →
-            </motion.a>
-          </motion.div>
+              Discover Quantum Power →
+            </Link>
+          </div>
 
-          {/* Animated Progress Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mt-8"
-          >
-            <div className="text-sm opacity-80 mb-2">Revolutionary Technology Progress</div>
-            <div className="w-full bg-white/20 rounded-full h-2">
-              <motion.div
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 2, delay: 1.2 }}
-              />
-            </div>
-            <div className="text-xs opacity-60 mt-2">100% Complete - Ready for Launch</div>
-          </motion.div>
-        </motion.div>
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 group">
+            <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface Revolution</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Direct brain-computer interfaces that bridge the gap between mind and machine
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Non-Invasive Brain Control</li>
+              <li>• Thought-to-Text Translation</li>
+              <li>• Neural Feedback Systems</li>
+              <li>• Mind-Machine Fusion</li>
+            </ul>
+            <Link 
+              to="/pages/NeuralInterfaceRevolution2026" 
+              className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center group-hover:shadow-lg"
+            >
+              Connect Mind & Machine →
+            </Link>
+          </div>
+        </div>
+
+        {/* Performance Metrics */}
+        <div className="grid md:grid-cols-4 gap-6 mb-12">
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-6 text-center border border-purple-400/30">
+            <div className="text-3xl font-bold mb-2 text-purple-400">99.9%</div>
+            <div className="text-lg font-semibold mb-1">Accuracy</div>
+            <div className="text-sm text-purple-200">AI Consciousness</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-xl p-6 text-center border border-cyan-400/30">
+            <div className="text-3xl font-bold mb-2 text-cyan-400">1M+</div>
+            <div className="text-lg font-semibold mb-1">Qubits</div>
+            <div className="text-sm text-cyan-200">Quantum Processing</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 rounded-xl p-6 text-center border border-emerald-400/30">
+            <div className="text-3xl font-bold mb-2 text-emerald-400">1000x</div>
+            <div className="text-lg font-semibold mb-1">Faster</div>
+            <div className="text-sm text-emerald-200">Neural Processing</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-6 text-center border border-orange-400/30">
+            <div className="text-3xl font-bold mb-2 text-orange-400">∞</div>
+            <div className="text-lg font-semibold mb-1">Possibilities</div>
+            <div className="text-sm text-orange-200">Future Technology</div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-4">
+            <Link 
+              to="/pages/RevolutionaryTechShowcase2026" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Explore All Technologies →
+            </Link>
+            <Link 
+              to="/pages/NextGenInnovationHub2026" 
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg"
+            >
+              Innovation Hub
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
