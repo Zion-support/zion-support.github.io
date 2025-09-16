@@ -7,16 +7,16 @@ const EnhancedHeroSection: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
       <div className="container mx-auto px-4 text-center">
-        <Badge className="bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-6 animate-pulse">
+        <Badge className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white mb-6 animate-pulse">
           <Sparkles className="w-4 h-4 mr-2" />
-          Revolutionary AI Technology 2026
+          NEW: Revolutionary Content Just Released
         </Badge>
         <h1 className="text-6xl font-bold text-gray-900 mb-6">
           The Future of Technology is Here
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Experience the dawn of digital sentience, quantum neural networks, and revolutionary AI services that are reshaping reality itself. 
-          Discover technologies that were once confined to science fiction, now powering the next evolution of human civilization.
+          <strong className="text-cyan-600">NEW:</strong> Explore our latest AI Innovation Hub, Advanced Tech Solutions, and Quantum Computing Guide.
         </p>
         
         {/* Revolutionary Services Preview */}
@@ -55,13 +55,30 @@ const EnhancedHeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-4">
-          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-            Explore Revolutionary Services
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white"
+            onClick={() => window.location.href = '/ai-innovation-hub-2026'}
+          >
+            Explore AI Innovation Hub
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-            Schedule Demo
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white"
+            onClick={() => window.location.href = '/advanced-tech-solutions-2026'}
+          >
+            View Tech Solutions
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
+            onClick={() => window.location.href = '/quantum-computing-guide-2026'}
+          >
+            Quantum Guide
           </Button>
         </div>
       </div>

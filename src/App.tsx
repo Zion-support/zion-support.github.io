@@ -15,6 +15,7 @@ import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
 import FeaturedContentShowcase from './components/FeaturedContentShowcase';
 import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
 import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
 import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
@@ -52,6 +53,9 @@ import TrendingContentSection from './components/TrendingContentSection';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
+import AIInnovationHub2026 from './pages/AIInnovationHub2026';
+import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
+import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -144,6 +148,11 @@ const App: React.FC = () => {
               {/* New Content Promotion Banner 2026 */}
               <div className="mb-12">
                 <NewContentPromotionBanner2026 />
+              </div>
+
+              {/* Featured Content Showcase 2026 */}
+              <div className="mb-12">
+                <FeaturedContentShowcase2026 />
               </div>
 
               {/* Featured Content Carousel 2026 */}
@@ -420,6 +429,11 @@ const App: React.FC = () => {
           {/* NEW: Revolutionary Content Routes 2026 */}
           <Route path="/ai-revolutionary-breakthrough-2026" element={<AIRevolutionaryBreakthrough2026 />} />
           <Route path="/quantum-computing-revolution-2026" element={<QuantumComputingRevolution2026 />} />
+          
+          {/* New Featured Content Routes 2026 */}
+          <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
+          <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
+          <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
         </Routes>
         
         <Footer />
