@@ -1,7 +1,4 @@
-import React from 'react';
-
-const NewContentBanner2025: React.FC = () => {
-  return (
+=======
     <div className="bg-gradient-to-r from-green-900 via-teal-900 to-cyan-900 text-white py-12 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -65,11 +62,3 @@ const NewContentBanner2025: React.FC = () => {
             <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Quantum Computing</span>
             <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Neural Interfaces</span>
             <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Interdimensional Tech</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default NewContentBanner2025;

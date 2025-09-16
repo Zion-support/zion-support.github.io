@@ -1,31 +1,22 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-type StaleReport = { generatedAt: string | null; staleCount: number; items: { file: string; lastModified: string }[] };
-
-export default function StaleAutomation() {
-  const [report, setReport] = useState<StaleReport>({ generatedAt: null, staleCount: 0, items: [] });
-
-  useEffect(() => {
-    fetch('/api/reports/stale').then(r => r.json()).then(setReport).catch(() => setReport({ generatedAt: null, staleCount: 0, items: [] }));
-  }, []);
-
+const stale: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold">Stale Content Detector</h1>
-        <p className="text-gray-600 mt-2">Flags content older than 30 days. Use it to refresh the site.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>stale | Zion Tech Group</title>
+        <meta name="description" content="stale - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">stale</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-4 text-sm">
-        <div className="border rounded p-4"><div className="text-gray-500">Generated</div><div className="font-semibold">{report.generatedAt ? new Date(report.generatedAt).toLocaleString() : '—'}</div></div>
-        <div className="border rounded p-4"><div className="text-gray-500">Stale items</div><div className="font-semibold">{report.staleCount}</div></div>
-        <div className="border rounded p-4"><div className="text-gray-500">Total listed</div><div className="font-semibold">{report.items.length}</div></div>
-      </div>
-      <ul className="space-y-2 text-sm">
-        {report.items.map((it, idx) => (
-          <li key={idx} className="border rounded p-3 flex items-center justify-between"><span className="truncate">{it.file}</span><span className="text-gray-600">{new Date(it.lastModified).toLocaleDateString()}</span></li>
-        ))}
-        {report.items.length === 0 && <div className="text-gray-500">No stale content.</div>}
-      </ul>
     </div>
   );
-}
+};
+
+export default stale;

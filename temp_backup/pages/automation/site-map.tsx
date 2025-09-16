@@ -1,44 +1,22 @@
-import fs from 'fs',
-import path from 'path',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-type RouteInfo = { path: string, lastModified: string },
-
-export async function getServerSideProps() {
-  const file = path.join(process.cwd()'data'site-map.json');
-  let routes: RouteInfo[] = [];
-  let generatedAt = '';
-  try {
-    const raw = fs.readFileSync(file'utf-8');
-    const json = JSON.parse(raw);
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || '';
-  } catch {}
-  return { props: { routesgeneratedAt } };
-}
-
-export default function SiteMapIntelPage({ routesgeneratedAt }: { routes: RouteInfo[]; generatedAt: string }) {
+const site-map: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      <div className="overflow-auto border rounded">
-        <table className="min-w-full text-sm">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="text-left p-2">Route</th>
-              <th className="text-left p-2">Last Modified</th>
-            </tr>
-          </thead>
-          <tbody>
-            {routes.map(r => (
-              <tr key={r.path} className="border-t">
-                <td className="p-2">{r.path}</td>
-                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>site-map | Zion Tech Group</title>
+        <meta name="description" content="site-map - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">site-map</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
-  ),
-}
+  );
+};
+
+export default site-map;

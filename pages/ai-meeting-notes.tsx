@@ -1,20 +1,22 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIMeetingNotesPage() {
-	return (
-		<>
-			<SEO title="AI Meeting Notes" description="Automatic meeting transcription, summaries, and action items." canonical="/ai-meeting-notes" />
-			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
-				<div className="container mx-auto px-4 max-w-3xl">
-					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">AI Meeting Notes</h1>
-					<p className="mt-4 text-gray-300">Transcribe calls, summarize discussions, and capture action items automatically.</p>
-					<div className="mt-8 flex gap-3">
-						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>
-						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
-					</div>
-				</div>
-			</section>
-		</>
-	),
-}
+const ai-meeting-notes: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-meeting-notes | Zion Tech Group</title>
+        <meta name="description" content="ai-meeting-notes - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-meeting-notes</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-meeting-notes;

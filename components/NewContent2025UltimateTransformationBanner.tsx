@@ -1,9 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-ArrowRightStarZapTrendingUpUsersShield
 
-export default function NewContent2025UltimateTransformationBanner() {
+const NewContent2025UltimateTransformationBanner: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NewContent2025UltimateTransformationBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+=======
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
@@ -123,6 +126,9 @@ export default function NewContent2025UltimateTransformationBanner() {
           </div>
         </div>
       </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
-}
+};
+
+export default NewContent2025UltimateTransformationBanner;

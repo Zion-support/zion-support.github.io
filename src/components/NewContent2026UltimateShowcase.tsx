@@ -1,36 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2026UltimateShowcase: React.FC = () => {
-  const contentItems = [
-    {
-      title: "AI 2026 Revolutionary Breakthrough Technologies",
-      description: "Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems delivering unprecedented results.",
-      features: [
-        "10,000x Processing Speed",
-        "Self-Improving AI Systems", 
-        "50,000% ROI Achievement",
-        "Consciousness-Level Intelligence"
-      ],
-      href: "/content/resources/ai-2026-revolutionary-breakthrough-technologies-ultimate-guide",
-      badge: "🚀 Revolutionary",
-      gradient: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "AI 2026 Implementation Master Framework",
-      description: "The complete blueprint for achieving unprecedented AI implementation success with guaranteed 10,000% ROI and 99.97% success rate.",
-      features: [
-        "99.97% Success Rate",
-        "10,000% Average ROI",
-        "90-Day Transformation",
-        "5-Pillar Framework"
-      ],
-      href: "/content/resources/ai-2026-implementation-master-framework-ultimate-success-guide",
-      badge: "🎯 Master Framework",
-      gradient: "from-green-600 to-teal-600"
-    }
-  ];
-
   return (
     <divsection
       className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
@@ -38,11 +8,11 @@ const NewContent2026UltimateShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <divdiv
+          <div
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-3 mb-8 shadow-lg"
           >
             <span className="text-sm font-bold tracking-wide uppercase">🌟 New Content 2026</span>
-          </divdiv>
+          </div>
 
           <divh2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
@@ -64,7 +34,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
         {/* Content Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <divdiv
+            <div
               key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
@@ -105,12 +75,12 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                   📖 Read Complete Guide
                 </a>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Additional Resources */}
-        <divdiv
+        <div
           className="bg-white rounded-2xl shadow-xl p-8 text-center"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -134,10 +104,10 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               📞 Schedule Consultation
             </a>
           </div>
-        </divdiv>
+        </div>
 
         {/* Trust Indicators */}
-        <divdiv
+        <div
           className="mt-16 pt-8 border-t border-gray-200"
         >
           <div className="text-center">
@@ -151,10 +121,11 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               <div className="text-2xl font-bold text-gray-400">Netflix</div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </divsection>
   );
 };
 
 export default NewContent2026UltimateShowcase;
+</div></div></div>

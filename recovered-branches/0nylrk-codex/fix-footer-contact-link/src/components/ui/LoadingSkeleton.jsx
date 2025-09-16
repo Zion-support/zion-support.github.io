@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const LoadingSkeleton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LoadingSkeleton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default LoadingSkeleton;
+=======
 
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
@@ -50,3 +64,4 @@ export function HeroSkeleton({ className }) {
       </div>
     </div>);
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

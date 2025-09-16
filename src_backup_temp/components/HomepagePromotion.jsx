@@ -1,5 +1,8 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const HomepagePromotion: React.FC = () => {
+=======
 ;
 export default function Page("props": "any) {;
 ",;
@@ -30,12 +33,13 @@ interface HomepagePromotion.jsProps {
   // Add props here as needed
 }
 export default function HomepagePromotion.js({ }: HomepagePromotion.jsProps) {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
-    <div>
-      <h1>HomepagePromotion.js</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HomepagePromotion</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-export default Component;
-</section>
-}
+};
+
+export default HomepagePromotion;

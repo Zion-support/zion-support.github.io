@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const TransdimensionalAI2026: React.FC = () => {
   return (
@@ -235,33 +236,8 @@ const TransdimensionalAI2026: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Step Into the Multiverse
-          </h2>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Join the pioneers who are already exploring the infinite possibilities of 
-            transdimensional AI. The multiverse awaits your discovery.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Enter the Multiverse
-            </button>
-            <button className="border-2 border-indigo-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-indigo-400/20 transition-all duration-300">
-              Experience Demo
-            </button>
-            <button className="border-2 border-purple-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-purple-400/20 transition-all duration-300">
-              Download Research
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="bg-black/50 backdrop-blur-sm py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">
-            © 2026 Zion Tech Group. Exploring the infinite possibilities of transdimensional AI.
-          </p>
+          <h1 className="text-4xl font-bold mb-6">TransdimensionalAI2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>

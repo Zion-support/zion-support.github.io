@@ -1,27 +1,22 @@
-import fs from 'fs';
-import path from 'path';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export async function getServerSideProps() {
-  const dir = path.join(process.cwd(), 'data', 'reports', 'moderation');
-  const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f=>f.endsWith('.json')).sort().reverse() : [];
-  const items = files.slice(0,50).map(f=> ({ name: f, content: fs.readFileSync(path.join(dir,f),'utf8').slice(0,1500) }));
-  return { props: { items } };
-}
-
-export default function ModerationReports({ items }: any) {
+const moderation: React.FC = () => {
   return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold mb-4">AI Moderation Reports</h1>
-      <ul className="space-y-4">
-        {items.map((it: any) => (
-          <li key={it.name} className="p-4 rounded border border-gray-200 dark:border-gray-800">
-            <div className="font-mono text-sm text-gray-500">{it.name}</div>
-            <pre className="mt-2 whitespace-pre-wrap text-sm">{it.content}</pre>
-          </li>
-        ))}
-        {!items.length && <li className="text-gray-500">No reports yet.</li>}
-      </ul>
-    </EnhancedLayout>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>moderation | Zion Tech Group</title>
+        <meta name="description" content="moderation - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">moderation</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default moderation;

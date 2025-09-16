@@ -1,74 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Building2
-  TrendingUp
-  Users
-  Shield
-  ArrowRight
-  CheckCircle,
-  Star,
-  Award,
-  Zap,
-  Target,
-  BarChart3,
-  Globe,
-  Rocket,
-  Brain,
-  Sparkles
-} from 'lucide-react';
-
-const BusinessSolutionsShowcase2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % 4);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const stats = [
-    { number: "500+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-500 to-emerald-500" },
-    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-500 to-orange-500" },
-    { number: "300%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-500 to-cyan-500" },
-    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-500 to-pink-500" }
-  ];
-
-  const solutions = [
-    {
-      title: "Enterprise Solutions",
-      description: "Comprehensive enterprise-grade solutions",
-      icon: Building2,
-      color: "from-blue-600 to-indigo-600"
-    },
-    {
-      title: "Startup Solutions"
-      description: "Rapid deployment for growing startups",
-      icon: Rocket,
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "SMB Solutions",
-      description: "Affordable yet powerful for SMBs",
-      icon: Users,
-      color: "from-purple-600 to-pink-600"
-    }
-  ];
-
-  const features = [
-    "AI-Powered Business Intelligence",
-    "Advanced Security Solutions",
-    "Cloud Infrastructure Management",
-    "Rapid MVP Development",
-    "Growth Analytics Platform",
-    "Digital Transformation"
-  ];
-
+const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -80,16 +12,16 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30"
             >
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-blue-300 font-medium">Business Solutions 2027</span>
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh1
@@ -107,7 +39,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
             </divp>
 
             {/* Features Grid */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-3"
             >
               {features.map((featureindex) => (
@@ -116,10 +48,10 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                   <span className="text-gray-300 text-sm">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:transform hover:scale-105">
@@ -131,17 +63,17 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 <Award className="w-5 h-5" />
                 View Case Studies
               </button>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
 
           {/* Right Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Solutions Cards */}
             <div className="space-y-4">
               {solutions.map((solutionindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                 >
@@ -154,7 +86,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                       <p className="text-gray-300 text-sm">{solution.description}</p>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
@@ -163,7 +95,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               <h3 className="text-xl font-bold text-white mb-6 text-center">Proven Results</h3>
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className={`text-center p-4 rounded-2xl bg-gradient-to-r ${stat.color} ${
                       currentStat === index ? 'ring-2 ring-white/30' : ''
@@ -172,13 +104,13 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                     <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Trust Indicators */}
-            <divdiv
+            <div
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -189,8 +121,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 Trusted by Fortune 500 companiestartupsand SMBs worldwide. 
                 Recognized for excellence in technology innovation and client success.
               </p>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -198,3 +130,4 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
 };
 
 export default BusinessSolutionsShowcase2027PromotionBanner;
+</div></div>

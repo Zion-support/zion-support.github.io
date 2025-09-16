@@ -1,193 +1,127 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Target, Users, TrendingUp, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-const AIInnovationHub2026: React.FC = () => {
-  const innovations = [
+const AIInnovationHub2026 = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const innovationCategories = [
     {
-      title: "Neural Architecture Optimization",
-      description: "AI systems that redesign themselves for maximum efficiency",
-      icon: Brain,
-      features: ["Self-optimizing neural networks", "Dynamic architecture adaptation", "Performance-driven evolution"]
+      id: 0,
+      title: "AI Consciousness",
+      description: "Revolutionary AI that achieves true consciousness and self-awareness",
+      icon: "🧠",
+      color: "from-purple-500 to-pink-500",
+      features: ["Self-Awareness", "Emotional Intelligence", "Creative Problem Solving", "Autonomous Learning"]
     },
     {
-      title: "Quantum AI Processing",
-      description: "Leveraging quantum computing for exponential AI capabilities",
-      icon: Zap,
-      features: ["Quantum neural networks", "Exponential speed improvements", "Breakthrough problem solving"]
+      id: 1,
+      title: "Quantum Computing",
+      description: "Breakthrough quantum computing with exponential processing power",
+      icon: "⚛️",
+      color: "from-blue-500 to-cyan-500",
+      features: ["Quantum Supremacy", "Quantum Algorithms", "Quantum Networks", "Quantum AI"]
     },
     {
-      title: "Conscious AI Systems",
-      description: "AI with genuine understanding and reasoning capabilities",
-      icon: Target,
-      features: ["True consciousness simulation", "Ethical decision making", "Human-AI collaboration"]
+      id: 2,
+      title: "Neural Interfaces",
+      description: "Direct brain-computer interface technology",
+      icon: "🔗",
+      color: "from-green-500 to-teal-500",
+      features: ["Brain-Computer Interface", "Neural Networks", "Cognitive Enhancement", "Mind Uploading"]
     },
     {
-      title: "Autonomous Business Intelligence",
-      description: "AI that runs entire business operations independently",
-      icon: Users,
-      features: ["End-to-end automation", "Strategic planning", "Real-time optimization"]
+      id: 3,
+      title: "Synthetic Reality",
+      description: "Create and manipulate reality through advanced technology",
+      icon: "🌌",
+      color: "from-indigo-500 to-purple-500",
+      features: ["Reality Manipulation", "Virtual Worlds", "Consciousness Transfer", "Synthetic Biology"]
     }
   ];
 
-  const stats = [
-    { label: "AI Performance Increase", value: "10,000x", icon: TrendingUp },
-    { label: "Processing Speed", value: "Quantum Fast", icon: Zap },
-    { label: "Accuracy Rate", value: "99.97%", icon: CheckCircle },
-    { label: "Energy Efficiency", value: "95% Better", icon: Brain }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
-          >
-            AI Innovation Hub
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              2026
-            </span>
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-          >
-            The most advanced AI research and development center, pushing the boundaries of artificial intelligence into uncharted territories
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
-              Explore Innovations
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors duration-300">
-              Join Research Program
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Innovations Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary AI Innovations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the cutting-edge AI technologies that are reshaping the future of human-machine collaboration
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
+      <Helmet>
+        <title>AI Innovation Hub 2026 | Zion Tech Group</title>
+        <meta name="description" content="Explore revolutionary AI innovations that will define the future of humanity" />
+      </Helmet>
+      
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🚀 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+              AI Innovation Hub 2026
+            </h1>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              Discover the most groundbreaking AI innovations that will revolutionize every aspect of human existence
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {innovations.map((innovation, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {innovationCategories.map((category, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+                key={category.id}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
+                className={`cursor-pointer transform transition-all duration-300 hover:scale-105 ${
+                  activeTab === category.id ? 'ring-2 ring-indigo-400' : ''
+                }`}
+                onClick={() => setActiveTab(category.id)}
               >
-                <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-r from-cyan-500 to-purple-600 p-3 rounded-2xl mr-4">
-                    <innovation.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{innovation.title}</h3>
-                    <p className="text-gray-300">{innovation.description}</p>
+                <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl h-full`}>
+                  <div className="text-6xl mb-4">{category.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
+                  <p className="text-white text-opacity-90 mb-6">{category.description}</p>
+                  
+                  <div className="space-y-2">
+                    {category.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm">
+                        <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                        {feature}
+                      </div>
+                    ))}
                   </div>
                 </div>
-                
-                <ul className="space-y-3">
-                  {innovation.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
+          <motion.div
+            key={activeTab}
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-gradient-to-r from-indigo-500 to-pink-500 p-8 rounded-2xl text-center"
           >
-            Ready to Shape the Future?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl text-gray-300 mb-8"
-          >
-            Join our AI Innovation Hub and be part of the next generation of artificial intelligence breakthroughs
-          </motion.p>
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300"
-          >
-            Start Your AI Journey
-          </motion.button>
+            <h3 className="text-3xl font-bold mb-4">Ready to Explore {innovationCategories[activeTab].title}?</h3>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of innovators already working on these revolutionary technologies
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-indigo-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl"
+              >
+                Start Your Journey
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-bold text-xl"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

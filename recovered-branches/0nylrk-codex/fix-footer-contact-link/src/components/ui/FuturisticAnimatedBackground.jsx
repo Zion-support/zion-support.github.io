@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useEffect, useRef } from 'react';
 
 export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
@@ -215,35 +218,15 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         {variant === 'neon' && (<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5"/>)}
         {variant === 'matrix' && (<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent"/>)}
       </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate={{
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-        }} transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear"
-        }}/>
-        <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2]
-        }} transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-        }}/>
-        <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate={{
-            rotate: [0, 180, 360],
-            scale: [1, 1.1, 1]
-        }} transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear"
-        }}/>
-      </div>
-    </div>);
+const FuturisticAnimatedBackground: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticAnimatedBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
+
 export default FuturisticAnimatedBackground;

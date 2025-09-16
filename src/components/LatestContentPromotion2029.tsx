@@ -45,4 +45,3 @@ const LatestContentPromotion2029: React.FC = () => {
 };
 
 export default LatestContentPromotion2029;
-

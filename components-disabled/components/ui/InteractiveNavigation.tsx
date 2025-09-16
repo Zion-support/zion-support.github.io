@@ -1,12 +1,12 @@
+import React from 'react';
+
+const InteractiveNavigation: React.FC = () => {
   return (
-    <div>
-      <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
-      <button className="md:hidden px-3 py-2 border rounded" onClick={() => setOpen(!open)}>Menu</button>
-      {open && (
-        <div className="md:hidden mt-2 space-y-2">
-          <a href="/talent" className="block">Browse Talent</a>
-          <a href="/jobs" className="block">Browse Jobs</a>
-        </div>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InteractiveNavigation</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+};
+
+export default InteractiveNavigation;

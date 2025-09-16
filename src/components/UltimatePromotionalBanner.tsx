@@ -208,9 +208,11 @@ const UltimatePromotionalBanner: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </divsection>
   );
 }
+
+</p>

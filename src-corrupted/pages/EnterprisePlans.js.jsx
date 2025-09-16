@@ -1,22 +1,22 @@
-import React from "react";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
-import {SEO} from "@/components/SEO";
-export default function EnterprisePlans
-export {EnterprisePlans}() {return (<>
-      <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools." />
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const EnterprisePlans.js: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>EnterprisePlans.js | Zion Tech Group</title>
+        <meta name="description" content="EnterprisePlans.js - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main className="min-h-screen bg-background">
-        <EnterpriseHero  />
-        <EnterprisePricingTable  />
-        <EnterpriseFeatures  />
-        <EnterpriseTestimonials  />
-        <EnterpriseTrustBadges  />
-        <EnterpriseCTA  />
-      </main>
-      
-    </>)}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">EnterprisePlans.js</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default EnterprisePlans.js;

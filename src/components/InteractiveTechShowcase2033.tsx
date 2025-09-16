@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const InteractiveTechShowcase2033: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState<string | null>(null);

@@ -51,3 +51,5 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
+
+</div></div>

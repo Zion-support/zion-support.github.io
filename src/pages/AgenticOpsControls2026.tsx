@@ -30,4 +30,3 @@ const AgenticOpsControls2026: React.FC = () => {
 };
 
 export default AgenticOpsControls2026;
-

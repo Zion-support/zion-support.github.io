@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import CaseStudyPage from './src/CaseStudyPage';
+import Footer from './src/Footer';
+import Header from './src/Header';
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
@@ -41,7 +49,34 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
+<<<<<<< HEAD
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
+import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
+import AdvancedAnalyticsTracker2025 from './src/components/AdvancedAnalyticsTracker2025';
+import EnhancedAccessibility2025 from './src/components/EnhancedAccessibility2025';
+=======
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+<<<<<<< HEAD
+=======
+import MobileOptimizer from './src/components/MobileOptimizer';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+import MobileOptimizer2025 from './src/components/MobileOptimizer2025';
+import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
+import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
+import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
+import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
+import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
+import NotificationSystem from './src/components/NotificationSystem';
+import PerformanceDashboard from './src/components/PerformanceDashboard';
+import PerformanceEnhancer from './src/components/PerformanceEnhancer';
+import PerformanceOptimizer from './src/components/PerformanceOptimizer';
+import QuantumBusinessAutomation2025 from './src/components/QuantumBusinessAutomation2025';
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
@@ -86,6 +121,10 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
 import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
@@ -117,12 +156,21 @@ import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcas
 import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
 import ConsciousnessComputingRevolution2030 from './src/pages/ConsciousnessComputingRevolution2030';
 import InterdimensionalTechRevolution2035 from './src/pages/InterdimensionalTechRevolution2035';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import RevolutionaryTechShowcase2029 from './src/components/RevolutionaryTechShowcase2029';
 import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
 import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanner2030';
 import InteractiveTechDemo2030 from './src/components/InteractiveTechDemo2030';
 import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase2030';
 import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
 import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
@@ -145,14 +193,16 @@ import EnhancedContentCarousel2027 from './src/components/EnhancedContentCarouse
 import RevolutionaryTechTrends2027 from './src/pages/RevolutionaryTechTrends2027';
 import NextGenAIBreakthrough2027 from './src/pages/NextGenAIBreakthrough2027';
 import RevolutionaryTechBreakthrough2028 from './src/pages/RevolutionaryTechBreakthrough2028';
+<<<<<<< HEAD
 import UltimateTechInnovation2028 from './src/pages/UltimateTechInnovation2028';
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import NextGenTechRevolution2028 from './src/pages/NextGenTechRevolution2028';
 import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
 import UltimateContentBanner2029 from './src/components/UltimateContentBanner2029';
 import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
 import RevolutionaryTechShowcase2029 from './src/pages/RevolutionaryTechShowcase2029';
 import NextGenInnovationHub2029 from './src/pages/NextGenInnovationHub2029';
-import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
 import UltimateContentBanner2031 from './src/components/UltimateContentBanner2031';
 import RevolutionaryAdBanner2031 from './src/components/RevolutionaryAdBanner2031';
 import UltimateTechBreakthrough2031 from './src/pages/UltimateTechBreakthrough2031';
@@ -169,7 +219,6 @@ import UltimateTechBreakthrough2033 from './src/pages/UltimateTechBreakthrough20
 import RevolutionaryTechShowcase2033 from './src/pages/RevolutionaryTechShowcase2033';
 import InteractiveTechDemo2033 from './src/components/InteractiveTechDemo2033';
 import EnhancedContentCarousel2033 from './src/components/EnhancedContentCarousel2033';
-import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
 import UltimateTechRevolution2039 from './src/pages/UltimateTechRevolution2039';
 import RevolutionaryTechBreakthrough2040 from './src/pages/RevolutionaryTechBreakthrough2040';
 import NextGenInnovationHub2041 from './src/pages/NextGenInnovationHub2041';
@@ -196,6 +245,52 @@ import UltimateContentBanner2035 from './src/components/UltimateContentBanner203
 import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
 import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
 import InteractiveTechShowcase2035 from './src/components/InteractiveTechShowcase2035';
+<<<<<<< HEAD
+=======
+=======
+import AIConsciousnessRevolution2027 from './src/pages/AIConsciousnessRevolution2027';
+import UltimateInnovation2027 from './src/pages/UltimateInnovation2027';
+import UltimateTechBlog2026 from './src/pages/UltimateTechBlog2026';
+import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
+import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
+import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
+// import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
+import EnhancedContentCarousel2032 from './src/components/EnhancedContentCarousel2032';
+import EnhancedContentCarousel2033 from './src/components/EnhancedContentCarousel2033';
+import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarousel2036';
+import EnhancedContentCarousel2039 from './src/components/EnhancedContentCarousel2039';
+import EnhancedContentShowcase2030 from './src/components/EnhancedContentShowcase2030';
+import InteractiveTechDemo2033 from './src/components/InteractiveTechDemo2033';
+import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
+import InteractiveTechDemo2039 from './src/components/InteractiveTechDemo2039';
+import InteractiveTechShowcase2035 from './src/components/InteractiveTechShowcase2035';
+import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
+import NewContentBanner2028 from './src/components/NewContentBanner2028';
+import NewContentPromotion2037 from './src/components/NewContentPromotion2037';
+import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
+import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
+import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
+import RevolutionaryContentCarousel2037 from './src/components/RevolutionaryContentCarousel2037';
+import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
+import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
+import UltimateContentBanner2029 from './src/components/UltimateContentBanner2029';
+import UltimateContentBanner2037 from './src/components/UltimateContentBanner2037';
+import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
+import AIExecutiveBriefQ1_2026 from './src/pages/AIExecutiveBriefQ1_2026';
+import AgenticRAGBlueprint2026 from './src/pages/AgenticRAGBlueprint2026';
+import UltimatePromotionalBanner2026 from './src/components/UltimatePromotionalBanner2026';
+import RevolutionaryContentShowcase2025 from './src/components/RevolutionaryContentShowcase2025';
+import AdvancedTechShowcase2025 from './src/pages/AdvancedTechShowcase2025';
+import AdvancedTechBanner2025 from './src/components/AdvancedTechBanner2025';
+import NewContentShowcase2026 from './src/pages/NewContentShowcase2026';
+import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import UltimateContentPromotionBanner2026 from './src/components/UltimateContentPromotionBanner2026';
+import AutonomousAgentRiskPlaybook2026 from './src/pages/AutonomousAgentRiskPlaybook2026';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 import ComprehensiveServices2035 from './src/pages/ComprehensiveServices2035';
 import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
 import RevolutionaryTechShowcase2036 from './src/pages/RevolutionaryTechShowcase2036';
@@ -376,6 +471,14 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Content Banner 2027 */}
                 <RevolutionaryContentBanner2027 />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                <NewContentPromotionalBanner2027 />
+                <RevolutionaryContentAdvertising2027 />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 
                 {/* NEW: Revolutionary Content Banner 2028 */}
                 <NewContentBanner2028 />
@@ -1059,10 +1162,6 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2027 />
                 </div>
 
-                {/* Interactive Technology Showcase 2028 */}
-                <div className="mb-12">
-                  <InteractiveTechShowcase2028 />
-                </div>
 
                 {/* NEW: Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
@@ -1198,15 +1297,17 @@ export default function App(): JSX.Element {
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2028" element={<RevolutionaryTechBreakthrough2028 />} />
+<<<<<<< HEAD
+=======
           <Route path="/pages/UltimateTechInnovation2028" element={<UltimateTechInnovation2028 />} />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
           <Route path="/pages/NextGenTechRevolution2028" element={<NextGenTechRevolution2028 />} />
           <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
           <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />
           <Route path="/pages/RevolutionaryTechShowcase2029" element={<RevolutionaryTechShowcase2029 />} />
           <Route path="/pages/NextGenInnovationHub2029" element={<NextGenInnovationHub2029 />} />
-          <Route path="/pages/RevolutionaryCaseStudies2029" element={<RevolutionaryCaseStudies2029 />} />
-          <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
+                    <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
           <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
           <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
           <Route path="/pages/RevolutionaryTechShowcase2030" element={<RevolutionaryTechShowcase2030 />} />
@@ -1217,9 +1318,15 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2032" element={<RevolutionaryTechShowcase2032 />} />
           <Route path="/pages/UltimateAIConsciousness2032" element={<UltimateAIConsciousness2032 />} />
           <Route path="/pages/RevolutionaryCaseStudies2032" element={<RevolutionaryCaseStudies2032 />} />
+<<<<<<< HEAD
           <Route path="/pages/UltimateTechBreakthrough2033" element={<UltimateTechBreakthrough2033 />} />
           <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
           <Route path="/pages/UltimateTechRevolution2039" element={<UltimateTechRevolution2039 />} />
+=======
+<<<<<<< HEAD
+          <Route path="/pages/UltimateTechBreakthrough2033" element={<UltimateTechBreakthrough2033 />} />
+                    <Route path="/pages/UltimateTechRevolution2039" element={<UltimateTechRevolution2039 />} />
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           <Route path="/pages/RevolutionaryTechBreakthrough2040" element={<RevolutionaryTechBreakthrough2040 />} />
           <Route path="/pages/NextGenInnovationHub2041" element={<NextGenInnovationHub2041 />} />
           <Route path="/pages/RevolutionaryTechShowcase2033" element={<RevolutionaryTechShowcase2033 />} />
@@ -1238,6 +1345,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
           <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
+<<<<<<< HEAD
+=======
           <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035 />} />
           <Route path="/pages/InterdimensionalTechnology2035" element={<InterdimensionalTechnology2035 />} />
@@ -1249,6 +1358,38 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
           <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
           <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
+=======
+          <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
+          <Route path="/pages/TranscendentTechRevolution2033" element={<TranscendentTechRevolution2033 />} />
+          <Route path="/pages/UltimateTechEvolution2034" element={<UltimateTechEvolution2034 />} />
+          <Route path="/pages/RevolutionaryServices2033" element={<RevolutionaryServices2033 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2035" element={<RevolutionaryTechShowcase2035 />} />
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
+          <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
+          <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035 />} />
+          <Route path="/pages/InterdimensionalTechnology2035" element={<InterdimensionalTechnology2035 />} />
+          <Route path="/pages/RevolutionaryTechBlog2035" element={<RevolutionaryTechBlog2035 />} />
+          <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
+<<<<<<< HEAD
+          <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
+          <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
+          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
+          <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
+=======
+          <Route path="/pages/UltimateTechBreakthrough2037" element={<UltimateTechBreakthrough2037 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2037" element={<RevolutionaryTechShowcase2037 />} />
+          <Route path="/pages/UltimateTechBreakthrough2040" element={<UltimateTechBreakthrough2040 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2040" element={<RevolutionaryTechShowcase2040 />} />
+          <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
+          <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
+          <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
+
+          <Route path="/pages/TranscendentTechRevolution2027" element={<TranscendentTechRevolution2027 />} />
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
@@ -1281,3 +1422,20 @@ export default function App(): JSX.Element {
     </ErrorBoundary>
   );
 }
+=======
+import Home from './src/pages/Home';
+import About from './src/pages/About';
+import Services from './src/pages/Services';
+import Blog from './src/pages/Blog';
+import Contact from './src/pages/Contact';
+import './src/index.css';
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+>>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a

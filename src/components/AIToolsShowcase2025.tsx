@@ -106,40 +106,31 @@ export default function AIToolsShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [hoveredToolsetHoveredTool] = useState<string | null>(null);
   const [isVisiblesetIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }[]);
-
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
     : aiTools.filter(tool => tool.category === selectedCategory);
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             New AI Tools 2025
-          </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Revolutionary AI Tools
             <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Transforming Industries
-            </span>
-          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
             From development to analyticsecurity to content creation.
-          </p>
-        </divdiv>
-
         {/* Category Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -153,17 +144,14 @@ export default function AIToolsShowcase2025() {
               }`}
             >
               {category}
-            </button>
           ))}
-        </divdiv>
-
         {/* Tools Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div>
             {filteredTools.map((toolindex) => (
-              <divdiv
+              <div
                 key={tool.id}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
                 onMouseEnter={() => setHoveredTool(tool.id)}
@@ -174,38 +162,26 @@ export default function AIToolsShowcase2025() {
                   {tool.isNew && (
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                       NEW
-                    </span>
                   )}
                   {tool.isPopular && (
                     <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                       POPULAR
-                    </span>
                   )}
-                </div>
-
                 {/* Icon */}
                 <div className="text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {tool.icon}
-                </div>
-
                 {/* Content */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                   {tool.name}
-                </h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {tool.description}
-                </p>
-
                 {/* Features */}
                 <div className="space-y-2 mb-6">
                   {tool.features.map((featureidx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       {feature}
-                    </div>
                   ))}
-                </div>
-
                 {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex">
@@ -219,53 +195,36 @@ export default function AIToolsShowcase2025() {
                         }`}
                       />
                     ))}
-                  </div>
                   <span className="text-sm text-gray-400">{tool.rating}</span>
-                </div>
-
                 {/* Pricing */}
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-white">{tool.pricing}</span>
                   <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2 group">
                     Try Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
-                </div>
-
                 {/* Hover Effect */}
-                <divdiv
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     opacity: hoveredTool === tool.id ? 1 : 0
                   }}
                 />
-              </divdiv>
             ))}
-          </div>
-        </divdiv>
-
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Workflow?
-            </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join thousands of professionals who are already using our AI tools to boost productivity
               enhance creativityand drive innovation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
                 Start Free Trial
-              </button>
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                 View All Tools
-              </button>
-            </div>
-          </div>
-        </divdiv>
-      </div>
-    </div>
   );
-}
+};
+
+export default AIToolsShowcase2025;

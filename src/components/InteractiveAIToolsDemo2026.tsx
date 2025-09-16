@@ -1,139 +1,11 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Code
-  Database,
-  Cpu,
-  Network,
-  BarChart3,
-  Zap,
-  Brain,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  TrendingUp
-} from 'lucide-react';
-
-const InteractiveAIToolsDemo2026 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeDemosetActiveDemo] = useState(0);
-  const [isRunningsetIsRunning] = useState(false);
-  const [progressetProgress] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)200);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isRunning) {
-      interval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 100) {
-            setIsRunning(false);
-            return 0;
-          }
-          return prev + 2;
-        });
-      }100);
-    }
-    return () => clearInterval(interval);
-  }[isRunning]);
-
-  const demos = [
-    {
-      id: 'ai-code-review',
-      title: 'AI Code Review Assistant',
-      icon: Code,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Automated code analysis and optimization suggestions',
-      features: ['Security 'Scanning', 'Performance 'Optimization', 'Best 'Practices', 'Bug Detection'],
-      metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
-    },
-    {
-      id: 'data-analytics',
-      title: 'Intelligent Data Analytics',
-      icon: BarChart3,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Real-time data processing and predictive insights',
-      features: ['Real-time 'Processing', 'Predictive 'Analytics', 'Data 'Visualization', 'Trend Analysis'],
-      metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
-    },
-    {
-      id: 'infrastructure-monitoring',
-      title: 'Infrastructure Monitoring',
-      icon: Network,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Comprehensive system health and performance monitoring',
-      features: ['Health 'Monitoring', 'Performance 'Tracking', 'Alert 'System', 'Auto-scaling'],
-      metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
-    },
-    {
-      id: 'security-scanning',
-      title: 'AI Security Scanner',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      description: 'Advanced threat detection and vulnerability assessment',
-      features: ['Threat 'Detection', 'Vulnerability 'Scanning', 'Risk 'Assessment', 'Compliance Check'],
-      metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Alex Thompson',
-      role: 'Lead Developer',
-      company: 'TechFlow Inc.',
-      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
-      role: 'Data Scientist',
-      company: 'DataCorp',
-      content: 'Our data processing speed increased by 500% with their analytics platform.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      role: 'DevOps Engineer',
-      company: 'CloudScale',
-      content: 'Infrastructure monitoring has never been this comprehensive and reliable.',
-      rating: 5
-    }
-  ];
-
-  const handleStartDemo = () => {
-    setIsRunning(true);
-    setProgress(0);
-  };
-
-  const handleStopDemo = () => {
-    setIsRunning(false);
-    setProgress(0);
-  };
-
-  const handleResetDemo = () => {
-    setIsRunning(false);
-    setProgress(0);
-  };
-
-  if (!isVisible) return null;
-
+const InteractiveAIToolsDemo2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -143,10 +15,10 @@ const InteractiveAIToolsDemo2026 = () => {
             Experience the power of our cutting-edge AI tools through interactive demonstrations. 
             See how our solutions can transform your workflow in real-time.
           </p>
-        </divdiv>
+        </div>
 
         {/* Demo Selector */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {demos.map((demoindex) => (
@@ -166,10 +38,10 @@ const InteractiveAIToolsDemo2026 = () => {
               <p className="text-sm text-blue-200">{demo.description}</p>
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Interactive Demo Area */}
-        <divdiv
+        <div
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
         >
           <div className="flex items-center justify-between mb-6">
@@ -213,7 +85,7 @@ const InteractiveAIToolsDemo2026 = () => {
               <span className="text-sm text-blue-200">{progress}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
-              <divdiv
+              <div
                 className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
                 style={{ width: `${progress}%` }}
               />
@@ -254,10 +126,10 @@ const InteractiveAIToolsDemo2026 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
@@ -279,10 +151,10 @@ const InteractiveAIToolsDemo2026 = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
@@ -304,7 +176,7 @@ const InteractiveAIToolsDemo2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

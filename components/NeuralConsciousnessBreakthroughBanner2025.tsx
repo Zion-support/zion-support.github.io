@@ -1,8 +1,13 @@
 import React from 'react';
-import Link from 'next/link';
 
 const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NeuralConsciousnessBreakthroughBanner2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -134,6 +139,7 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
         </div>
       </div>
     </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

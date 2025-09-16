@@ -1,80 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  ArrowRight
-  Star
-  Zap
-  Sparkles,
-  TrendingUp,
-  Users,
-  Globe,
-  X,
-  Play,
-  Download,
-  ExternalLink
-} from 'lucide-react';
-
-const NewContent2025UltimateShowcasePromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentSlidesetCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-advance slides
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }4000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const slides = [
-    {
-      title: "Revolutionary AI Solutions",
-      subtitle: "Transform your business with cutting-edge AI",
-      description: "Discover our latest AI technologies that are reshaping industries",
-      icon: Sparkles,
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/20 to-pink-900/20"
-    },
-    {
-      title: "Quantum Computing Breakthrough",
-      subtitle: "Next-generation quantum solutions",
-      description: "Experience the power of quantum computing for complex problems",
-      icon: Zap,
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900/20 to-cyan-900/20"
-    },
-    {
-      title: "Neural Interface Technology",
-      subtitle: "Brain-computer interface revolution",
-      description: "Connect directly with technology through neural interfaces",
-      icon: TrendingUp,
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-900/20 to-emerald-900/20"
-    }
-  ];
-
-  const features = [
-    "500+ Projects Completed",
-    "99% Client Satisfaction",
-    "50+ Countries Served",
-    "$50M+ Cost Savings"
-  ];
-
-  const currentSlideData = slides[currentSlide];
-
-  if (isDismissed) return null;
-
+const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden"
         >
           {/* Background with gradient */}
@@ -88,7 +18,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(8)].map((_i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full"
                 style={{
@@ -111,7 +41,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left side - Content */}
               <div className="flex-1 pr-8">
-                <divdiv
+                <div
                   key={currentSlide}
                   className="flex items-start space-x-4"
                 >
@@ -174,37 +104,37 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                       </a>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Right side - Visual elements */}
               <div className="hidden lg:block flex-shrink-0">
                 <div className="relative w-64 h-64">
                   {/* Rotating elements */}
-                  <divdiv
+                  <div
                     className="absolute inset-0 rounded-full border-2 border-white/20"
                   />
                   
-                  <divdiv
+                  <div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
                   />
                   
-                  <divdiv
+                  <div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
                   />
 
                   {/* Center content */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <divdiv
+                    <div
                       className={`w-20 h-20 rounded-full bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center shadow-2xl`}
                     >
                       <currentSlideData.icon className="w-10 h-10 text-white" />
-                    </divdiv>
+                    </div>
                   </div>
 
                   {/* Floating dots */}
                   {[...Array(6)].map((_i) => (
-                    <divdiv
+                    <div
                       key={i}
                       className="absolute w-3 h-3 bg-white/60 rounded-full"
                       style={{
@@ -247,10 +177,11 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default NewContent2025UltimateShowcasePromotionBanner;
+</div></div></div></div></div></div></div>

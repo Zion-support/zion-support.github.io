@@ -1,5 +1,17 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const CTASection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CTASection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default CTASection;
+=======
 export default function Page("props": "any) {;
 ;
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">;
@@ -159,3 +171,4 @@ export default function Page("props": "any) {;
 
 const React from "react"; ""`"`
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

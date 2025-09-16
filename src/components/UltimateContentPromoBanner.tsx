@@ -1,47 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const UltimateContentPromoBanner: React.FC = () => {
-  const [currentPromo, setCurrentPromo] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const promotionalContent = [
-    {
-      title: "🚀 Next-Gen Innovation Hub 2026",
-      subtitle: "Experience the convergence of cutting-edge technologies",
-      description: "From quantum-enhanced AI to neural reality engines, discover innovations that will transform industries",
-      link: "/pages/NextGenInnovationHub2026",
-      gradient: "from-purple-600 via-pink-600 to-cyan-600",
-      badge: "BREAKTHROUGH",
-      features: ["Quantum-Enhanced AI", "Neural Reality Engine", "Synthetic Intelligence"]
-    },
-    {
-      title: "🌟 Ultimate Tech Showcase 2026",
-      subtitle: "The most advanced technologies revolutionizing industries",
-      description: "Interactive demonstrations of quantum computing, neural interfaces, and reality engineering",
-      link: "/pages/UltimateTechShowcase2026",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      badge: "ULTIMATE",
-      features: ["Interactive Demos", "Real-World Applications", "Technology Statistics"]
-    },
-    {
-      title: "⚡ Revolutionary Tech Breakthrough 2025",
-      subtitle: "Witness the most groundbreaking technological breakthroughs",
-      description: "From quantum neural fusion to consciousness transfer, experience the future today",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      badge: "REVOLUTIONARY",
-      features: ["Quantum Neural Fusion", "Consciousness Transfer", "Reality Fabrication"]
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentPromo((prev) => (prev + 1) % promotionalContent.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl mb-12">
       {/* Animated Background */}

@@ -1,54 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    budget: '',
-    timeline: '',
-    try {
-      const res = await fetch('/api/requests/create', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          budget: normalizedBudget,
-
-  if (result) {
-    return (
-      <div className="max-w-xl mx-auto py-12">
-        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
-        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
-        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-      </div>
-  }
-
+const request-to-hire: React.FC = () => {
   return (
-    <div className="max-w-xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>
-      <form className="space-y-4" onSubmit={onSubmit}>
-        <div>
-          <label className="block text-sm font-medium mb-1">Your Name</label>
-          <input className="w-full border rounded px-3 py-2" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>request-to-hire | Zion Tech Group</title>
+        <meta name="description" content="request-to-hire - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">request-to-hire</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Email</label>
-          <input type="email" className="w-full border rounded px-3 py-2" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Budget (USD)</label>
-          <input className="w-full border rounded px-3 py-2" placeholder="$5,000" value={form.budget} onChange={(e) => setForm({ ...form, budget: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Timeline</label>
-          <input className="w-full border rounded px-3 py-2" placeholder="2-3 months" value={form.timeline} onChange={(e) => setForm({ ...form, timeline: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Project Description</label>
-          <textarea className="w-full border rounded px-3 py-2" rows={5} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
-        </div>
-        {error && <div className="text-sm text-red-600">{error}</div>}
-        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
-          {submitting ? 'Submitting…' : 'Submit Request'}
-        </button>
-      </form>
+      </div>
     </div>
-}
+  );
+};
+
+export default request-to-hire;

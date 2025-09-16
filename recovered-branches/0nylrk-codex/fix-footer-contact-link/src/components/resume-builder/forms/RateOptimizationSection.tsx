@@ -1,62 +1,12 @@
+import React from 'react';
 
-  FormDescription,
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-  skills: string[];
-  yearsExperience: number;
-  location?: string;
-  rateType: "hourly" | "fixed";
-}
-
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  control,
-  setValue,
-  skills,
-  yearsExperience,
-  location,
-  rateType
-}) => {
-  const handleSuggestionApplied = (rate: number) => {
-  };
-
+const RateOptimizationSection: React.FC = () => {
   return (
-    <div className="space-y-4">
-      <FormField
-        control={control}
-        name="hourlyRate"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>
-            <FormControl>
-              <Input
-                type="number"
-                min="1"
-                step="0.01"
-                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
-                {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Set a competitive rate based on your skills and experience
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <Card>
-        <CardContent className="pt-4">
-          <TalentRateRecommender
-            skills={skills}
-            yearsExperience={yearsExperience}
-            location={location}
-            onSuggestionApplied={handleSuggestionApplied}
-            rateType={rateType}
-          />
-        </CardContent>
-      </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RateOptimizationSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
+
+export default RateOptimizationSection;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const QuantumRealityManipulation2028: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const QuantumRealityManipulation2028: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -33,13 +34,13 @@ const QuantumRealityManipulation2028: React.FC = () => {
                 🚀 Dimensional Travel
               </span>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Core Technologies */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -49,7 +50,7 @@ const QuantumRealityManipulation2028: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Harness the power of quantum mechanics to manipulate matter, energy, space, and time at the most fundamental level
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
@@ -90,7 +91,7 @@ const QuantumRealityManipulation2028: React.FC = () => {
               features: ["Universe creation", "Physical law modification", "Constant manipulation", "Cosmic engineering"]
             }
           ].map((tech, index) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-cyan-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300"
@@ -106,7 +107,7 @@ const QuantumRealityManipulation2028: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
@@ -114,17 +115,17 @@ const QuantumRealityManipulation2028: React.FC = () => {
       {/* Quantum Applications */}
       <div className="bg-gradient-to-r from-cyan-800/30 to-purple-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary Applications
             </h2>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-8"
             >
@@ -165,9 +166,9 @@ const QuantumRealityManipulation2028: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-8"
             >
@@ -208,21 +209,21 @@ const QuantumRealityManipulation2028: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Quantum Metrics */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Quantum Performance Metrics
           </h2>
-        </divdiv>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
@@ -231,7 +232,7 @@ const QuantumRealityManipulation2028: React.FC = () => {
             { label: "Space Manipulation", value: "Universe Scale", icon: "🌌", color: "from-purple-400 to-pink-400" },
             { label: "Time Control", value: "±∞ Temporal", icon: "⏰", color: "from-pink-400 to-red-400" }
           ].map((metric, index) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-cyan-800/50 to-purple-800/50 rounded-2xl p-8 text-center border border-cyan-500/30"
@@ -241,14 +242,14 @@ const QuantumRealityManipulation2028: React.FC = () => {
               <div className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}>
                 {metric.value}
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-cyan-800/50 to-purple-800/50 rounded-3xl p-12"
         >
@@ -266,7 +267,7 @@ const QuantumRealityManipulation2028: React.FC = () => {
               Explore Possibilities
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

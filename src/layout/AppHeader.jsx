@@ -66,6 +66,7 @@ export function AppHeader() {
     // Here you would typically update the theme context
   };
 
+const AppHeader= () => {
   return (
     <>
       <header 
@@ -254,4 +255,6 @@ export function AppHeader() {
       <div className="h-16 lg:h-20"></div>
     </>
   );
-}
+};
+
+export default AppHeader;

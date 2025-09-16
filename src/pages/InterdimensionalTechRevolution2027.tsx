@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const InterdimensionalTechRevolution2027: React.FC = () => {
   return (

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const interactive-timeline.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">interactive-timeline.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default interactive-timeline.js;
+=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 
 import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react';
@@ -599,3 +613,4 @@ export function InteractiveTimeline("props": "any) {;
 </motion>
 </div>
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,119 +1,6 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Users
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight,
-  Star,
-  Award,
-  Target,
-  Zap,
-  BarChart3,
-  Globe,
-  Shield,
-  Lightbulb
-} from 'lucide-react';
-
-const AI2025SuccessStoriesShowcase = () => {
-  const [activeStorysetActiveStory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveStory((prev) => (prev + 1) % successStories.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const successStories = [
-    {
-      id: 1,
-      company: "TechCorp Solutions",
-      industry: "Manufacturing",
-      challenge: "Manual quality control processes causing 15% defect rate",
-      solution: "AI-powered computer vision for real-time quality inspection",
-      results: {
-        efficiency: "+200%",
-        cost: "-60%",
-        quality: "99.2%",
-        time: "-75%"
-      },
-      icon: Target,
-      color: "from-blue-500 to-cyan-500",
-      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%."
-    },
-    {
-      id: 2,
-      company: "FinanceFlow Inc",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection missing 8% of fraudulent transactions",
-      solution: "Machine learning algorithms for real-time fraud detection",
-      results: {
-        efficiency: "+150%",
-        cost: "-45%",
-        quality: "99.8%",
-        time: "-80%"
-      },
-      icon: Shield,
-      color: "from-green-500 to-emerald-500",
-      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses."
-    },
-    {
-      id: 3,
-      company: "HealthTech Partners",
-      industry: "Healthcare",
-      challenge: "Manual patient data analysis taking 40 hours per week",
-      solution: "AI-powered medical image analysis and patient data processing",
-      results: {
-        efficiency: "+300%",
-        cost: "-70%",
-        quality: "98.5%",
-        time: "-85%"
-      },
-      icon: Lightbulb,
-      color: "from-purple-500 to-pink-500",
-      testimonial: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery."
-    },
-    {
-      id: 4,
-      company: "RetailMax",
-      industry: "E-commerce",
-      challenge: "Poor customer service response times and low satisfaction",
-      solution: "AI chatbot and recommendation engine for personalized shopping",
-      results: {
-        efficiency: "+180%",
-        cost: "-50%",
-        quality: "95%",
-        time: "-90%"
-      },
-      icon: Users,
-      color: "from-orange-500 to-red-500",
-      testimonial: "Customer satisfaction increased by 95% and our support costs dropped by 50%. Amazing results!"
-    }
-  ];
-
-  const metrics = [
-    { icon: TrendingUplabel: "Average ROI"value: "340%" },
-    { icon: Clocklabel: "Time Saved"value: "75%" },
-    { icon: DollarSignlabel: "Cost Reduction"value: "55%" },
-    { icon: CheckCirclelabel: "Success Rate"value: "98%" }
-  ];
-
-  const industries = [
-    { name: "Manufacturing"count: "150+"icon: Target },
-    { name: "Healthcare"count: "120+"icon: Lightbulb },
-    { name: "Finance"count: "200+"icon: Shield },
-    { name: "Retail"count: "180+"icon: Users },
-    { name: "Education"count: "90+"icon: Award },
-    { name: "Logistics"count: "110+"icon: Globe }
-  ];
-
+const AI2025SuccessStoriesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
@@ -121,7 +8,7 @@ const AI2025SuccessStoriesShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
@@ -138,7 +25,7 @@ const AI2025SuccessStoriesShowcase = () => {
             Discover how leading companies across industries are achieving remarkable results with our AI solutions. 
             See the measurable impact and transformation stories.
           </p>
-        </divdiv>
+        </div>
 
         {/* Success Stories Carousel */}
         <div className="mb-16">
@@ -147,7 +34,7 @@ const AI2025SuccessStoriesShowcase = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Featured Success Stories</h3>
               {successStories.map((storyindex) => (
-                <divdiv
+                <div
                   key={story.id}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeStory === index
@@ -166,13 +53,13 @@ const AI2025SuccessStoriesShowcase = () => {
                     </div>
                     <ArrowRight className="w-4 h-4 text-gray-400" />
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Active Story Display */}
             <div className="lg:col-span-2">
-                <divdiv
+                <div
                   key={activeStory}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20"
                 >
@@ -229,7 +116,7 @@ const AI2025SuccessStoriesShowcase = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -240,7 +127,7 @@ const AI2025SuccessStoriesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Proven Impact Across All Projects</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {metrics.map((metricindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
@@ -249,7 +136,7 @@ const AI2025SuccessStoriesShowcase = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                 <div className="text-gray-300">{metric.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -259,7 +146,7 @@ const AI2025SuccessStoriesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Trusted Across Industries</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
               >
@@ -268,13 +155,13 @@ const AI2025SuccessStoriesShowcase = () => {
                 </div>
                 <div className="text-lg font-semibold text-white mb-1">{industry.name}</div>
                 <div className="text-sm text-gray-400">{industry.count} companies</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20">
@@ -292,7 +179,7 @@ const AI2025SuccessStoriesShowcase = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

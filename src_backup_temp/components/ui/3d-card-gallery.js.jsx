@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const 3d-card-gallery.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">3d-card-gallery.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default 3d-card-gallery.js;
+=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 
 import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react';
@@ -522,3 +536,4 @@ function Card3D("props": "any) {;
 </Card3D>
 </div>
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

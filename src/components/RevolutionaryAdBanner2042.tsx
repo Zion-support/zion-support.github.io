@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2042: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -17,11 +18,16 @@ const RevolutionaryAdBanner2042: React.FC = () => {
       subtitle: "Interactive showcase of cutting-edge technologies",
       icon: "⚡",
 =======
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
   const [currentAd, setCurrentAd] = useState(0);
   
   const ads = [
     {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
       color: "from-cyan-600 to-blue-600",
       icon: "⚛️"
     },
@@ -58,15 +64,20 @@ const RevolutionaryAdBanner2042: React.FC = () => {
                 onClick={() => setCurrentAd(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
 <<<<<<< HEAD
+<<<<<<< HEAD
                   currentSlide === index ? 'bg-white' : 'bg-white/30'
 =======
                   index === currentAd ? 'bg-purple-400' : 'bg-gray-400'
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+                  index === currentAd ? 'bg-purple-400' : 'bg-gray-400'
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
                 }`}
               />
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Quick Links */}
@@ -100,6 +111,8 @@ const RevolutionaryAdBanner2042: React.FC = () => {
         </div>
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
       </div>
     </div>
   );
