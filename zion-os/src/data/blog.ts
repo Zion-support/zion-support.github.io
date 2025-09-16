@@ -25,6 +25,30 @@ export const blogPosts: BlogPost[] = [
     content: 'In 2025, AI governance requires a practical dual-layer approach...'
   },
   {
+    id: 'ai-2026-agent-failure-modes',
+    title: 'AI 2026: Agent Failure Modes — Taxonomy and Mitigations',
+    excerpt: 'A practical taxonomy of agent failure modes with detection signals, guardrails, and remediation playbooks.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-16',
+    readTime: '9 min read',
+    image: '/blog/agent-failure-modes.jpg',
+    featured: true,
+    content: 'This article catalogs common autonomous agent failure modes (tool misuse, looping, objective drift, unsafe actions), the signals that reveal them, and actionable mitigations with evals and policy-as-code.'
+  },
+  {
+    id: 'ai-2026-data-lineage-in-rag',
+    title: 'AI 2026: Data Lineage in RAG — Provenance, Policies, and Evals',
+    excerpt: 'End-to-end lineage patterns to track sources, transformations, and policy gates in retrieval-augmented generation systems.',
+    category: 'Machine Learning',
+    author: 'Michael Rodriguez',
+    date: '2025-09-16',
+    readTime: '8 min read',
+    image: '/blog/data-lineage-rag.jpg',
+    featured: true,
+    content: 'We outline practical lineage graphs for RAG pipelines, tying provenance to evals, guardrails, and audit-ready evidence across the lifecycle.'
+  },
+  {
     id: 'quantum-risk-modeling-2025',
     title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
     excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
