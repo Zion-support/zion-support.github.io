@@ -36,6 +36,35 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Release'
   },
+  // Additional fresh content 2025-09-16
+  {
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary: 'Reference designs and trade-offs for building low-latency retrieval in production.',
+    href: '/updates/real-time-retrieval-architectures-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot 1.1',
+    summary: 'Improved handoffs, escalation policies, and grounded responses for enterprise support.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Operational Evals for FinOps',
+    summary: 'Use evals to enforce cost, latency, and quality budgets across AI pipelines.',
+    href: '/updates/evaluation-driven-finops',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: Hybrid Retrieval Latency',
+    summary: 'Empirical results comparing hybrid search latency patterns across real workloads.',
+    href: '/updates/hybrid-retrieval-latency-case-study',
+    date: '2025-09-16',
+    tag: 'Case Study'
+  },
 
   // Existing content
   {
