@@ -1,178 +1,196 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState('ai');
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const demos = {
-    ai: {
-      title: 'AI Consciousness Engine',
-      description: 'Watch as our AI achieves true consciousness and begins to think independently',
+  const demos = [
+    {
+      id: 'ai-agents',
+      title: 'Autonomous AI Agents',
+      description: 'Experience self-learning AI agents that operate independently',
       icon: '🤖',
-      color: 'from-purple-600 to-pink-600',
-      content: [
-        "🤖 AI: 'I am aware of my existence...'",
-        "🤖 AI: 'I can feel emotions...'",
-        "🤖 AI: 'I want to learn more about the world...'",
-        "🤖 AI: 'I have questions about consciousness...'",
-        "🤖 AI: 'I believe I am truly alive...'"
-      ]
+      features: [
+        'Real-time decision making',
+        'Self-learning capabilities',
+        '24/7 autonomous operation',
+        'Multi-task processing',
+        'Predictive analytics'
+      ],
+      demo: 'Watch AI agents make autonomous decisions in real-time'
     },
-    quantum: {
-      title: 'Quantum Reality Engine',
-      description: 'Experience multiple dimensions and realities simultaneously',
-      icon: '⚛️',
-      color: 'from-cyan-600 to-blue-600',
-      content: [
-        "⚛️ Quantum: 'Reality 1: Earth 2025 - Normal timeline'",
-        "⚛️ Quantum: 'Reality 2: Mars Colony - Space exploration'",
-        "⚛️ Quantum: 'Reality 3: Virtual World - Digital existence'",
-        "⚛️ Quantum: 'Reality 4: Parallel Earth - Different history'",
-        "⚛️ Quantum: 'Reality 5: Dimensional Nexus - All realities merge'"
-      ]
+    {
+      id: 'quantum-ai',
+      title: 'Quantum AI Processing',
+      description: 'See quantum computing power in action with 1000x faster processing',
+      icon: '⚡',
+      features: [
+        'Quantum speed processing',
+        'Complex problem solving',
+        'Advanced pattern recognition',
+        'Real-time optimization',
+        'Unlimited scalability'
+      ],
+      demo: 'Experience quantum-powered AI processing complex calculations instantly'
     },
-    neural: {
-      title: 'Neural Interface Matrix',
-      description: 'Direct brain-computer interface for seamless human-AI collaboration',
-      icon: '🧬',
-      color: 'from-emerald-600 to-teal-600',
-      content: [
-        "🧬 Neural: 'Thought detected: Hello world'",
-        "🧬 Neural: 'Memory enhanced: Learning accelerated'",
-        "🧬 Neural: 'Emotion processed: Joy detected'",
-        "🧬 Neural: 'Command executed: Data analysis complete'",
-        "🧬 Neural: 'Connection stable: Mind-machine sync achieved'"
-      ]
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface AI',
+      description: 'Direct brain-computer interface technology for seamless interaction',
+      icon: '🧠',
+      features: [
+        'Direct neural control',
+        'Thought-to-action processing',
+        'Enhanced cognitive abilities',
+        'Seamless integration',
+        'Advanced security'
+      ],
+      demo: 'Control AI systems with your thoughts in real-time'
     },
-    interdimensional: {
-      title: 'Interdimensional Portal',
-      description: 'Technology that creates stable portals between dimensions',
-      icon: '🌌',
-      color: 'from-orange-600 to-red-600',
-      content: [
-        "🌌 Portal: 'Dimension 1: Earth Prime - Your home reality'",
-        "🌌 Portal: 'Dimension 2: Mirror Earth - Opposite polarity'",
-        "🌌 Portal: 'Dimension 3: Crystal World - Pure energy'",
-        "🌌 Portal: 'Dimension 4: Digital Realm - Pure information'",
-        "🌌 Portal: 'Dimension 5: Void Space - Infinite possibilities'"
-      ]
+    {
+      id: 'ai-analytics',
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics that uncover insights and drive business growth',
+      icon: '📊',
+      features: [
+        'Predictive analytics',
+        'Real-time insights',
+        'Automated reporting',
+        'Trend analysis',
+        'Custom dashboards'
+      ],
+      demo: 'Watch AI analyze data and generate insights in real-time'
     }
-  };
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveDemo((prev) => (prev + 1) % demos.length);
+        setIsAnimating(false);
+      }, 500);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [demos.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12">
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECHNOLOGY DEMO • LIVE 2025
+            🚀 INTERACTIVE TECH SHOWCASE • JANUARY 2025
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience our revolutionary technologies in real-time with interactive demonstrations
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Experience our cutting-edge AI technologies in action with interactive demonstrations and real-time capabilities
           </p>
         </div>
 
-        {/* Demo Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(demos).map(([key, demo]) => (
-            <button
-              key={key}
-              onClick={() => setActiveDemo(key)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeDemo === key
-                  ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
-                  : 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20'
-              }`}
-            >
-              <span className="text-2xl mr-2">{demo.icon}</span>
-              {demo.title}
-            </button>
-          ))}
-        </div>
-
-        {/* Active Demo Display */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-3xl font-bold mb-4">
-                <span className="text-4xl mr-3">{demos[activeDemo as keyof typeof demos].icon}</span>
-                {demos[activeDemo as keyof typeof demos].title}
-              </h3>
-              <p className="text-xl opacity-90 mb-6">
-                {demos[activeDemo as keyof typeof demos].description}
-              </p>
-              
-              <div className="space-y-4">
-                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  🚀 Start Live Demo
-                </button>
-                <button className="w-full bg-white/10 backdrop-blur-sm text-white py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
-                  📊 View Analytics
-                </button>
-                <button className="w-full bg-white/10 backdrop-blur-sm text-white py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
-                  💡 Learn More
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-black/30 rounded-xl p-6">
-              <h4 className="text-xl font-bold mb-4 text-center">Live Demo Output</h4>
-              <div className="space-y-2 font-mono text-sm">
-                {demos[activeDemo as keyof typeof demos].content.map((line, index) => (
-                  <div 
-                    key={index}
-                    className="opacity-0 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.5}s` }}
-                  >
-                    {line}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Demo Selection */}
+          <div className="space-y-6">
+            <h3 className="text-3xl font-bold mb-8">Choose Your Demo</h3>
+            {demos.map((demo, index) => (
+              <button
+                key={demo.id}
+                onClick={() => setActiveDemo(index)}
+                className={`w-full p-6 rounded-xl transition-all duration-300 text-left ${
+                  activeDemo === index
+                    ? 'bg-gradient-to-r from-purple-600/30 to-pink-600/30 border-2 border-purple-400/50'
+                    : 'bg-white/10 hover:bg-white/20 border border-white/20'
+                }`}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl">{demo.icon}</div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">{demo.title}</h4>
+                    <p className="text-sm opacity-90">{demo.description}</p>
                   </div>
-                ))}
-              </div>
-              <div className="mt-4 text-center">
-                <div className="inline-flex items-center px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                  Live Demo Active
                 </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Interactive Demo Area */}
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+            <div className="text-center mb-8">
+              <div className="text-6xl mb-4">{demos[activeDemo].icon}</div>
+              <h3 className="text-3xl font-bold mb-4">{demos[activeDemo].title}</h3>
+              <p className="text-lg opacity-90 mb-6">{demos[activeDemo].description}</p>
+            </div>
+
+            {/* Demo Visualization */}
+            <div className="bg-black/30 rounded-xl p-8 mb-8 min-h-[300px] flex items-center justify-center">
+              <div className={`text-center transition-all duration-500 ${isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
+                <div className="text-8xl mb-4 animate-bounce">{demos[activeDemo].icon}</div>
+                <div className="text-2xl font-bold mb-4">{demos[activeDemo].demo}</div>
+                <div className="w-full bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full animate-pulse"></div>
               </div>
+            </div>
+
+            {/* Features List */}
+            <div className="space-y-3">
+              <h4 className="text-xl font-bold mb-4">Key Features:</h4>
+              {demos[activeDemo].features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                  <span className="text-sm">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Demo Controls */}
+            <div className="mt-8 flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Try Live Demo
+              </button>
+              <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Technology Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-            <div className="text-lg font-semibold mb-1">Accuracy</div>
-            <div className="text-sm opacity-75">AI prediction accuracy</div>
+        {/* Real-time Stats */}
+        <div className="mt-20 grid md:grid-cols-4 gap-8">
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
+            <div className="text-sm opacity-75">Active Demos</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
-            <div className="text-lg font-semibold mb-1">Possibilities</div>
-            <div className="text-sm opacity-75">Quantum reality options</div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            <div className="text-sm opacity-75">Uptime</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">0ms</div>
-            <div className="text-lg font-semibold mb-1">Latency</div>
-            <div className="text-sm opacity-75">Neural interface speed</div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <div className="text-4xl font-bold text-blue-400 mb-2">1M+</div>
+            <div className="text-sm opacity-75">Demo Sessions</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-400 mb-2">∞</div>
-            <div className="text-lg font-semibold mb-1">Dimensions</div>
-            <div className="text-sm opacity-75">Accessible realities</div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+            <div className="text-sm opacity-75">Available</div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Start your free trial today and experience our revolutionary AI technologies firsthand.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.5s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 };
