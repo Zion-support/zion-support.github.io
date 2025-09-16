@@ -37,11 +37,14 @@ export default function HomePage() {
             New: Agentic Finetuning Blueprint (2026) —
             <a href="/updates/agentic-finetuning-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            State of Agent Reliability (2026 Preview) —
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            Real‑Time Agent Cost Optimizer v2.0 —
+            <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            Evals‑in‑Prod Best Practices —
+            <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Failure Analysis Toolkit v1.0 —
+            <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -75,9 +78,9 @@ export default function HomePage() {
             Fresh: Agentic Finetuning Blueprint (2026) —
             <a href="/updates/agentic-finetuning-blueprint-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see patterns</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability report</a>
+            <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">failure analysis toolkit</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">guardrails release</a>
+            <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">cost optimizer 2.0</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -92,22 +95,22 @@ export default function HomePage() {
           <p className="mt-4 text-lg leading-8 text-gray-300">Don’t miss our newest blueprints and releases.</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 lg:mt-14 lg:max-w-none lg:grid-cols-3">
-          <a href="/updates/incident-simulation-toolkit-1-2" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+          <a href="/updates/real-time-agent-cost-optimizer-2-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
             <div className="text-xs text-blue-300">Launch</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Autonomous Incident Simulator v1.2</h3>
-            <p className="mt-2 text-sm text-gray-300">Run realistic drills with eval gates and automated rollbacks.</p>
+            <h3 className="mt-2 text-lg font-semibold text-white">Real‑Time Agent Cost Optimizer v2.0</h3>
+            <p className="mt-2 text-sm text-gray-300">Dynamic routing and token budgets with quality‑aware controls.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Discover →</span>
           </a>
-          <a href="/updates/production-ready-agent-guardrails-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
-            <div className="text-xs text-blue-300">Release</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Production-Ready Agent Guardrails v1.0</h3>
-            <p className="mt-2 text-sm text-gray-300">Executable policies, scoped tools, and eval gates for safe ops.</p>
+          <a href="/updates/evals-in-prod-best-practices-2026" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Guide</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Evals‑in‑Prod Best Practices</h3>
+            <p className="mt-2 text-sm text-gray-300">Canaries, auto‑rollbacks, and metric gates for safe iteration.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Read more →</span>
           </a>
-          <a href="/blog/ai-2026-enterprise-agent-observability-deep-dive" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
-            <div className="text-xs text-blue-300">Deep Dive</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Enterprise Agent Observability</h3>
-            <p className="mt-2 text-sm text-gray-300">Traces, metrics, and alerting patterns for production agents.</p>
+          <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Report</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Autonomous Failure Analysis Toolkit</h3>
+            <p className="mt-2 text-sm text-gray-300">Trace diffs and evidence bundles for post‑mortems.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Learn →</span>
           </a>
         </div>
@@ -143,12 +146,12 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: Real‑Time Agent Cost Optimizer v2.0 —
+            <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Agent Reliability 2026</a>
+            Also read: <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/production-ready-agent-guardrails-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Agent Guardrails v1.0</a>
+            <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Failure Analysis Toolkit</a>
           </p>
         </div>
       </div>

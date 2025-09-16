@@ -18,6 +18,27 @@ export const updates: UpdateItem[] = [
 		tag: 'Guide',
 	},
 	{
+		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
+		summary: 'Dynamic routing and token budgeting with live cost/quality trade‑offs.',
+		href: '/updates/real-time-agent-cost-optimizer-2-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Evals‑in‑Prod Best Practices (2026 Preview)',
+		summary: 'Blueprint for safe iteration using canaries, auto‑rollbacks, and quality gates.',
+		href: '/updates/evals-in-prod-best-practices-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Report: Autonomous Failure Analysis Toolkit v1.0',
+		summary: 'Root‑cause analysis for agent incidents with trace diffs and evidence bundles.',
+		href: '/updates/autonomous-failure-analysis-toolkit-1-0',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',
 		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
 		href: '/updates/agent-reliability-report-2026',
