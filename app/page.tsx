@@ -422,6 +422,11 @@ export default function HomePage() {
       <WhatsNew highlightOnly limit={8} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW FEATURED: AI 2026 Breakthrough Banners */}
+        <AI2026UltimateBreakthroughBanner />
+        <QuantumAI2026RevolutionBanner />
+        <NeuralInterface2026Banner />
+        
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
