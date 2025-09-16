@@ -269,6 +269,8 @@ import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
 import RevolutionaryAIServices2025 from './src/pages/RevolutionaryAIServices2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import NewContentBanner from './src/components/NewContentBanner';
+import FeaturedContentShowcase from './src/components/FeaturedContentShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -307,6 +309,12 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <NewContentAdvertisingBanner2026 />
                 </div>
+                
+                {/* New Content Banner */}
+                <NewContentBanner />
+                
+                {/* Featured Content Showcase */}
+                <FeaturedContentShowcase />
                 
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
