@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-import React from 'react';
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-0cca
 import { motion } from 'framer-motion';
-=======
 import { useNotifications } from '../components/NotificationSystem';
-=======
 import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-79ca
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -27,14 +12,6 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
-<<<<<<< HEAD
-=======
-import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
-import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
-import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
->>>>>>> cursor/create-and-deploy-new-content-0cca
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -94,27 +71,6 @@ const Home: React.FC = () => {
               Advanced artificial intelligence solutions for modern businesses. 
               From machine learning to autonomous systems.
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• AI-powered automation</li>
-              <li>• Quantum computing breakthroughs</li>
-              <li>• Neural interface technology</li>
-            </ul>
-            <Link 
-              to="/pages/AIInnovationHub2026" 
-              className="text-cyan-400 hover:text-cyan-300 font-semibold"
-            >
-              Learn More →
-            </Link>
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
->>>>>>> cursor/create-and-deploy-new-content-0cca
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -126,11 +82,6 @@ const Home: React.FC = () => {
                 📚 Tech Blog 2026 →
               </a>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-0cca
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -155,22 +106,6 @@ const Home: React.FC = () => {
               Comprehensive cybersecurity solutions to protect your business 
               from evolving threats in the digital landscape.
             </p>
-<<<<<<< HEAD
-            <Link 
-              to="/pages/ComprehensiveTechInsights2026" 
-              className="text-green-400 hover:text-green-300 font-semibold"
-            >
-              Get Insights →
-            </Link>
-          </div>
-        </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Revolutionary Content Banner */}
-        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
@@ -192,10 +127,6 @@ const Home: React.FC = () => {
         {/* Call to Action */}
         <divsection className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
