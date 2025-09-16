@@ -11,25 +11,18 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
-		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
-		summary: 'Dynamic routing and token budgeting with live cost/quality trade‑offs.',
-		href: '/updates/real-time-agent-cost-optimizer-2-0',
+		title: 'Launch: AI Security Evidence Vault v1.0',
+		summary: 'Signed artifacts, lineage tracking, and audit-ready bundles for AI changes.',
+		href: '/updates/ai-security-evidence-vault-v1',
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
 	{
-		title: 'Guide: Evals‑in‑Prod Best Practices (2026 Preview)',
-		summary: 'Blueprint for safe iteration using canaries, auto‑rollbacks, and quality gates.',
-		href: '/updates/evals-in-prod-best-practices-2026',
+		title: 'Guide: Real-Time Evals Control Plane',
+		summary: 'Centralize eval gates, rollout policies, and live scorecards across services.',
+		href: '/updates/real-time-evals-control-plane',
 		date: '2025-09-16',
 		tag: 'Guide',
-	},
-	{
-		title: 'Report: Autonomous Failure Analysis Toolkit v1.0',
-		summary: 'Root‑cause analysis for agent incidents with trace diffs and evidence bundles.',
-		href: '/updates/autonomous-failure-analysis-toolkit-1-0',
-		date: '2025-09-16',
-		tag: 'Report',
 	},
 	{
 		title: 'Report: State of Agent Reliability (2026 Preview)',

@@ -35,14 +35,11 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Real‑Time Agent Cost Optimizer v2.0 —
-            <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            New: AI Security Evidence Vault v1.0 —
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Evals‑in‑Prod Best Practices —
-            <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
-            <span className="mx-2 text-blue-300/60">|</span>
-            Failure Analysis Toolkit v1.0 —
-            <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            Guide: Real-Time Evals Control Plane —
+            <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">build the plane</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -73,10 +70,10 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Evals‑in‑Prod Best Practices (2026 Preview) —
-            <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: AI Security Evidence Vault v1.0 —
+            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">failure analysis toolkit</a>
+            <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">evals control plane</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">cost optimizer 2.0</a>
             <span className="mx-2 text-blue-300/60">|</span>
