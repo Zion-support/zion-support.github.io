@@ -8,6 +8,9 @@ import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+import AdvancedContentPromotionBanner2027 from '../components/AdvancedContentPromotionBanner2027';
+import RevolutionaryTechShowcaseBanner2027 from '../components/RevolutionaryTechShowcaseBanner2027';
+import InteractiveContentDiscovery2027 from '../components/InteractiveContentDiscovery2027';
 
 const Home: React.FC = () => {
   return (
@@ -231,6 +234,15 @@ const Home: React.FC = () => {
 
         {/* Interactive Tech Showcase */}
         <InteractiveTechShowcase />
+
+        {/* NEW: Advanced Content Promotion Banner 2027 */}
+        <AdvancedContentPromotionBanner2027 />
+
+        {/* NEW: Revolutionary Tech Showcase Banner 2027 */}
+        <RevolutionaryTechShowcaseBanner2027 />
+
+        {/* NEW: Interactive Content Discovery 2027 */}
+        <InteractiveContentDiscovery2027 />
 
         {/* Call to Action */}
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
