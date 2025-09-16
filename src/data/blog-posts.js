@@ -2321,11 +2321,11 @@ export const getBlogPostsByCategory = (category) => {
 };
 
 export const getFeaturedBlogPosts = () => {
-  return blogPosts.filter(post => post.featured);
+  return BLOG_POSTS.filter(post => post.featured);
 };
 
 export const getRecentBlogPosts = (limit = 3) => {
-  return blogPosts
+  return [...BLOG_POSTS]
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit);
 };
@@ -3074,12 +3074,4 @@ export const BLOG_POSTS_ALL = allBlogPosts;
 export const BLOG_POSTS = allBlogPosts;
 
 // Helpers for UI components
-export function getFeaturedBlogPosts() {
-  return BLOG_POSTS.filter(p => p.featured === true);
-}
-
-export function getRecentBlogPosts(limit = 5) {
-  return [...BLOG_POSTS]
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
-    .slice(0, limit);
-}
+// (kept earlier helper versions; remove duplicates below)
