@@ -189,6 +189,8 @@ import UltimateTechBreakthrough2040 from './src/pages/UltimateTechBreakthrough20
 import RevolutionaryTechShowcase2040 from './src/pages/RevolutionaryTechShowcase2040';
 import UltimateTechBanner2040 from './src/components/UltimateTechBanner2040';
 import RevolutionaryContentBanner2040 from './src/components/RevolutionaryContentBanner2040';
+import AIExecutiveBriefQ1_2026 from './src/pages/AIExecutiveBriefQ1_2026';
+import AgenticRAGBlueprint2026 from './src/pages/AgenticRAGBlueprint2026';
 
 export default function App(): JSX.Element {
   return (
@@ -871,6 +873,28 @@ export default function App(): JSX.Element {
                         Read Full Update →
                       </a>
                     </div>
+                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">NEW</span>
+                        <span className="text-sm text-gray-500">September 16, 2025</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">AI Executive Brief • Q1 2026</h3>
+                      <p className="text-gray-600 mb-4">What leaders need to know now about agentic systems and ROI...</p>
+                      <a href="/pages/AIExecutiveBriefQ1_2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Brief →
+                      </a>
+                    </div>
+                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-violet-100 text-violet-700 text-xs rounded-full">FEATURED</span>
+                        <span className="text-sm text-gray-500">September 16, 2025</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Agentic RAG Blueprint • 2026</h3>
+                      <p className="text-gray-600 mb-4">A practical architecture for reliable retrieval-augmented agents...</p>
+                      <a href="/pages/AgenticRAGBlueprint2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Blueprint →
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1119,6 +1143,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
           <Route path="/pages/BlogPost2025Q4" element={<BlogPost2025Q4 />} />
           <Route path="/pages/NewContentSeptember2025" element={<NewContentSeptember2025 />} />
+          <Route path="/pages/AIExecutiveBriefQ1_2026" element={<AIExecutiveBriefQ1_2026 />} />
+          <Route path="/pages/AgenticRAGBlueprint2026" element={<AgenticRAGBlueprint2026 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
