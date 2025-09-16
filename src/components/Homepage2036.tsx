@@ -47,8 +47,8 @@ export default function Homepage2036() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -58,8 +58,8 @@ export default function Homepage2036() {
       opacity: 1,
       transition: {
         duration: 0.5
-      }
-    }
+
+
   };
 
   return (
@@ -71,16 +71,16 @@ export default function Homepage2036() {
           {/* Animated Background Elements */}
           <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                  y: [0, -100, 0],
-                  opacity: [0.3, 1, 0.3],
-                  scale: [1, 1.5, 1],
+
+
+
                 }}
                   duration: 4 + Math.random() * 3,
                   repeat: Infinity,
@@ -91,14 +91,14 @@ export default function Homepage2036() {
           </div>
 
           <div className="relative z-10 text-center max-w-6xl mx-auto">
-            <divdiv
+            <div
               className="mb-6"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-sm text-cyan-400 mb-6">
                 <Sparkles className="w-4 h-4" />
                 Pioneering the Future of Technology
               </div>
-            </divdiv>
+            </div>
 
             <divh1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
@@ -113,7 +113,7 @@ export default function Homepage2036() {
               AI platforms, and quantum solutions. Transform your business with next-generation innovation.
             </divp>
             
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
               <a
@@ -130,10 +130,10 @@ export default function Homepage2036() {
                 Get Started
                 <ChevronRight className="w-5 h-5" />
               </a>
-            </divdiv>
+            </div>
 
             {/* Stats */}
-            <divdiv 
+            <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => (
@@ -145,14 +145,14 @@ export default function Homepage2036() {
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Contact Information */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -183,14 +183,14 @@ export default function Homepage2036() {
                 <p className="text-gray-300 text-sm leading-relaxed">{contactInfo.address}</p>
                 <p className="text-gray-500 text-sm mt-2">Global operations</p>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Categories Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -202,15 +202,15 @@ export default function Homepage2036() {
                 Explore our comprehensive range of cutting-edge technology solutions 
                 across multiple domains and industries.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {categories.map((category, index) => (
-                <divdiv
+                <div
                   key={category.name}
                   className="group cursor-pointer"
                   onClick={() => setActiveCategory(category.name.toLowerCase().replace(/\s+/g, '-'))}
@@ -228,16 +228,16 @@ export default function Homepage2036() {
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Featured Services */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -249,15 +249,15 @@ export default function Homepage2036() {
                 Discover our most innovative and cutting-edge services that are 
                 transforming industries and driving the future of technology.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {featuredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="h-full"
                 >
@@ -284,13 +284,13 @@ export default function Homepage2036() {
                       service.category.includes('Space') ? 'space' :
                       service.category.includes('Cyber') ? 'cyber' :
                       'default'
-                    }
-                  />
-                </divdiv>
-              ))}
-            </divdiv>
 
-            <divdiv 
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div 
               className="text-center mt-12"
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -302,14 +302,14 @@ export default function Homepage2036() {
                 View All Services
                 <ArrowRight className="w-5 h-5" />
               </a>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Why Choose Us */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -321,9 +321,9 @@ export default function Homepage2036() {
                 We combine cutting-edge technology with proven expertise to deliver 
                 solutions that drive real business transformation.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
@@ -334,39 +334,39 @@ export default function Homepage2036() {
                   title: 'AI-First Approach',
                   description: 'Leverage the latest artificial intelligence and machine learning technologies to solve complex business challenges.',
                   color: 'from-green-500 to-emerald-600'
-                },
+
                 {
                   icon: <Atom className="w-8 h-8" />,
                   title: 'Quantum Innovation',
                   description: 'Stay ahead with quantum computing solutions that provide exponential performance improvements.',
                   color: 'from-cyan-500 to-blue-600'
-                },
+
                 {
                   icon: <Rocket className="w-8 h-8" />,
                   title: 'Space Technology',
                   description: 'Access cutting-edge space technology solutions for advanced applications and research.',
                   color: 'from-purple-500 to-pink-600'
-                },
+
                 {
                   icon: <Shield className="w-8 h-8" />,
                   title: 'Enterprise Security',
                   description: 'Bank-grade security and compliance for mission-critical business applications.',
                   color: 'from-blue-500 to-indigo-600'
-                },
+
                 {
                   icon: <Zap className="w-8 h-8" />,
                   title: 'Performance Optimized',
                   description: 'Lightning-fast performance with edge computing and advanced optimization techniques.',
                   color: 'from-yellow-500 to-orange-600'
-                },
+
                 {
                   icon: <Globe className="w-8 h-8" />,
                   title: 'Global Reach',
                   description: 'Worldwide deployment and support with local expertise in key markets.',
                   color: 'from-red-500 to-pink-600'
-                }
+
               ].map((feature, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl hover:border-cyan-400 transition-all duration-300 group"
                 >
@@ -375,16 +375,16 @@ export default function Homepage2036() {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Call to Action */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -411,10 +411,9 @@ export default function Homepage2036() {
                   Call Us Now
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </main>
     </Layout>
   );
-}

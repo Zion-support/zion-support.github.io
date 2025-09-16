@@ -32,7 +32,7 @@ export default function AdvancedHero({
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <divdiv
+        <div
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {title}
@@ -58,7 +58,7 @@ export default function AdvancedHero({
               Learn More
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

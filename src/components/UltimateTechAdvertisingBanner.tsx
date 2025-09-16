@@ -14,7 +14,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
       link: "/pages/NeuralRealityEngine2026",
       gradient: "from-purple-600 via-pink-600 to-red-600",
       bgPattern: "🧠⚡🔮"
-    },
+
     {
       title: "⚛️ Quantum Consciousness Computing",
       subtitle: "The Next Evolution of AI",
@@ -23,7 +23,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
       link: "/pages/QuantumConsciousness2026",
       gradient: "from-blue-600 via-cyan-600 to-teal-600",
       bgPattern: "⚛️🌀💫"
-    },
+
     {
       title: "🌌 Interdimensional Technology",
       subtitle: "Beyond Our Reality",
@@ -32,7 +32,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
       link: "/pages/InterdimensionalTech2026",
       gradient: "from-indigo-600 via-purple-600 to-pink-600",
       bgPattern: "🌌🔮✨"
-    },
+
     {
       title: "🚀 Space Tech 2030",
       subtitle: "Colonizing the Stars",
@@ -41,7 +41,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
       link: "/pages/SpaceTech2030",
       gradient: "from-orange-600 via-red-600 to-pink-600",
       bgPattern: "🚀🌌⭐"
-    },
+
     {
       title: "🌱 Green Tech Revolution",
       subtitle: "Saving Our Planet",
@@ -50,7 +50,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
       link: "/pages/GreenTechRevolution2026",
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       bgPattern: "🌱🌍💚"
-    },
+
     {
       title: "👁️ Holographic Reality",
       subtitle: "The Future of Interaction",
@@ -59,7 +59,7 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
       link: "/pages/HolographicReality2026",
       gradient: "from-teal-600 via-blue-600 to-indigo-600",
       bgPattern: "👁️🌈✨"
-    }
+
   ];
 
   useEffect(() => {
@@ -154,8 +154,8 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
                     <motion.div 
                       className="absolute -top-4 -right-4 w-16 h-16 bg-white/30 rounded-full flex items-center justify-center text-2xl"
                       animate={{ 
-                        y: [0, -10, 0],
-                        rotate: [0, 5, 0]
+
+
                       }}
                       transition={{ 
                         duration: 2,
@@ -169,8 +169,8 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
                     <motion.div 
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-white/30 rounded-full flex items-center justify-center text-xl"
                       animate={{ 
-                        y: [0, 10, 0],
-                        rotate: [0, -5, 0]
+
+
                       }}
                       transition={{ 
                         duration: 2.5,

@@ -163,8 +163,8 @@ const AI2027UltimateBreakthroughBanner = () => {
                 {/* Animated Brain Icon */}
                 <motion.div
                   animate={{ 
-                    rotate: [0, 5, -5, 0],
-                    scale: [1, 1.05, 1]
+
+
                   }}
                   transition={{ 
                     duration: 4,

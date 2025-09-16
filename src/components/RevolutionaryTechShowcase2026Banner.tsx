@@ -75,7 +75,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv 
+        <div 
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -94,12 +94,12 @@ const RevolutionaryTechShowcase2026Banner = () => {
             Experience groundbreaking technologies that are reshaping our world and 
             defining the next decade of human progress.
           </p>
-        </divdiv>
+        </div>
 
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Slide Content */}
-            <divdiv
+            <div
               key={currentSlide}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
@@ -129,12 +129,12 @@ const RevolutionaryTechShowcase2026Banner = () => {
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                   {currentSlideData.features.map((featureindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
                     >
                       <div className="text-white font-semibold">{feature}</div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
 
@@ -171,7 +171,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-xl"></div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Slide Indicators */}
@@ -191,7 +191,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
         </div>
 
         {/* Bottom Stats */}
-        <divdiv 
+        <div 
           className="mt-20"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -201,7 +201,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
               { icon: Codelabel: "Technologies"value: "500+" },
               { icon: Starlabel: "Success Rate"value: "99.9%" }
             ].map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -210,10 +210,10 @@ const RevolutionaryTechShowcase2026Banner = () => {
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

@@ -348,7 +348,7 @@ export default function MarketPricing() {
             </div>
           </div>
           
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center"
@@ -356,7 +356,7 @@ export default function MarketPricing() {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               {currentMarket.description}
             </p>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -373,7 +373,7 @@ export default function MarketPricing() {
           
           <div className="space-y-8">
             {currentMarket.competitors.map((competitor, index) => (
-              <divdiv
+              <div
                 key={competitor.name}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -437,7 +437,7 @@ export default function MarketPricing() {
                     </div>
                   )}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
@@ -714,7 +714,7 @@ export default function MarketPricing() {
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
-              <divdiv
+              <div
                 key={tier.label}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -725,11 +725,11 @@ export default function MarketPricing() {
                 </div>
                 <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
                 <p className="text-2xl font-bold text-cyan-400">{tier.price}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
           
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center"
@@ -756,7 +756,7 @@ export default function MarketPricing() {
                 </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -772,7 +772,7 @@ export default function MarketPricing() {
           </divh2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
@@ -792,9 +792,9 @@ export default function MarketPricing() {
                   </li>
                 ))}
               </ul>
-            </divdiv>
+            </div>
             
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
@@ -814,7 +814,7 @@ export default function MarketPricing() {
                   </li>
                 ))}
               </ul>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>
@@ -822,7 +822,7 @@ export default function MarketPricing() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -848,7 +848,7 @@ export default function MarketPricing() {
                 Get Custom Quote
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>

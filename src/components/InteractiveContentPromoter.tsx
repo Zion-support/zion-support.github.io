@@ -64,7 +64,7 @@ const InteractiveContentPromoter: React.FC = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="fixed bottom-6 right-6 z-50 max-w-sm"
       >
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
@@ -125,7 +125,7 @@ const InteractiveContentPromoter: React.FC = () => {
             </div>
           </div>
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

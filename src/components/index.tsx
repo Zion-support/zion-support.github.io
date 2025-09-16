@@ -134,7 +134,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -143,9 +143,9 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Leading-edge technology solutions and autonomous innovation platform
             </p>
-          </divdiv>
+          </div>
 
-          <divdiv
+          <div
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -167,18 +167,18 @@ export default function HomePage() {
                 Schedule Consultation
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <divdiv
+          <div
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />
-          <divdiv
+          <div
             className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60"
           />
-          <divdiv
+          <div
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60"
           />
         </div>
@@ -187,7 +187,7 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -198,11 +198,11 @@ export default function HomePage() {
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Discover our cutting-edge services that are transforming industries and driving the future of technology
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <divdiv
+              <div
                 key={service.title}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -220,7 +220,7 @@ export default function HomePage() {
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -231,7 +231,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <divdiv
+              <div
                 key={stat.label}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -242,7 +242,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function HomePage() {
       {/* Latest Updates Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -270,7 +270,7 @@ export default function HomePage() {
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Stay updated with our latest innovations and autonomous system developments
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
@@ -304,7 +304,7 @@ export default function HomePage() {
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -315,7 +315,7 @@ export default function HomePage() {
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Let's discuss your project and explore how our cutting-edge technology solutions can transform your business
             </p>
-          </divdiv>
+          </div>
 
           <EnhancedContactForm />
         </div>

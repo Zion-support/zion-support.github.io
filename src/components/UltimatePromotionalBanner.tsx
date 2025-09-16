@@ -12,7 +12,7 @@ const UltimatePromotionalBanner: React.FC = () => {
       link: '/pages/RevolutionaryTech2031',
       gradient: 'from-purple-600 to-pink-600',
       textColor: 'text-white'
-    },
+
     {
       id: 'ultimate-breakthrough',
       title: '⚡ ULTIMATE BREAKTHROUGH 2031',
@@ -21,7 +21,7 @@ const UltimatePromotionalBanner: React.FC = () => {
       link: '/pages/UltimateTechBreakthrough2031',
       gradient: 'from-cyan-600 to-blue-600',
       textColor: 'text-white'
-    },
+
     {
       id: 'consciousness-revolution',
       title: '🧠 CONSCIOUSNESS REVOLUTION 2031',
@@ -30,7 +30,7 @@ const UltimatePromotionalBanner: React.FC = () => {
       link: '/pages/ConsciousnessComputingRevolution2031',
       gradient: 'from-emerald-600 to-teal-600',
       textColor: 'text-white'
-    },
+
     {
       id: 'interdimensional-tech',
       title: '🌌 INTERDIMENSIONAL TECH 2030',
@@ -39,7 +39,7 @@ const UltimatePromotionalBanner: React.FC = () => {
       link: '/pages/InterdimensionalTechRevolution2030',
       gradient: 'from-violet-600 to-purple-600',
       textColor: 'text-white'
-    },
+
     {
       id: 'quantum-revolution',
       title: '⚡ QUANTUM REVOLUTION 2026',
@@ -48,7 +48,7 @@ const UltimatePromotionalBanner: React.FC = () => {
       link: '/pages/QuantumComputingRevolution2026',
       gradient: 'from-orange-600 to-red-600',
       textColor: 'text-white'
-    }
+
   ];
 
   useEffect(() => {
@@ -177,9 +177,9 @@ const UltimatePromotionalBanner: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <motion.div
           animate={{ 
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            rotate: [0, 180, 360]
+
+
+
           }}
           transition={{ 
             duration: 10,
@@ -193,9 +193,9 @@ const UltimatePromotionalBanner: React.FC = () => {
         
         <motion.div
           animate={{ 
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-            rotate: [0, -180, -360]
+
+
+
           }}
           transition={{ 
             duration: 12,
@@ -208,9 +208,8 @@ const UltimatePromotionalBanner: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </divsection>
   );
-}

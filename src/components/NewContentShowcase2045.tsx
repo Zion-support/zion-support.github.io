@@ -20,28 +20,28 @@ const NewContentShowcase2045: React.FC = () => {
       link: "/pages/RevolutionaryTechShowcase2025",
       gradient: "from-purple-600 to-pink-600",
       icon: "🧠"
-    },
+
     {
       title: "🌟 Ultimate Tech Breakthrough 2045",
       description: "The most advanced technology solutions reshaping our future",
       link: "/pages/UltimateTechBreakthrough2045",
       gradient: "from-orange-600 to-red-600",
       icon: "⚡"
-    },
+
     {
       title: "🌌 Interdimensional Technology",
       description: "Breakthrough solutions transcending space-time limitations",
       link: "/pages/RevolutionaryTechShowcase2025",
       gradient: "from-cyan-600 to-blue-600",
       icon: "🌌"
-    },
+
     {
       title: "🧬 Neural Consciousness Hub",
       description: "Direct brain-computer interfaces for superhuman abilities",
       link: "/pages/UltimateTechBreakthrough2045",
       gradient: "from-emerald-600 to-teal-600",
       icon: "🧬"
-    }
+
   ];
 
   return (
@@ -63,8 +63,8 @@ const NewContentShowcase2045: React.FC = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
+
+
             }}
             transition={{
               duration: Math.random() * 2 + 1,

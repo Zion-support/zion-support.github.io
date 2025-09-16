@@ -56,8 +56,8 @@ const InterdimensionalTechBanner: React.FC = () => {
               <div className="flex items-center gap-4">
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.3, 1]
+
+
                   }}
                   transition={{ 
                     rotate: { duration: 12, repeat: Infinity, ease: "linear" },
@@ -93,8 +93,8 @@ const InterdimensionalTechBanner: React.FC = () => {
 
                 <motion.div
                   animate={{ 
-                    opacity: [0.6, 1, 0.6],
-                    scale: [1, 1.1, 1]
+
+
                   }}
                   transition={{ duration: 2.5, repeat: Infinity }}
                   className="hidden md:flex items-center gap-2 text-cyan-400"
@@ -144,8 +144,8 @@ const InterdimensionalTechBanner: React.FC = () => {
                 
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.2, 1]
+
+
                   }}
                   transition={{ 
                     rotate: { duration: 4, repeat: Infinity, ease: "linear" },
@@ -166,11 +166,11 @@ const InterdimensionalTechBanner: React.FC = () => {
               <motion.div
                 key={i}
                 animate={{
-                  x: [0, Math.random() * 300 - 150],
-                  y: [0, Math.random() * 100 - 50],
-                  opacity: [0, 0.7, 0],
-                  scale: [0, 1.5, 0],
-                  rotate: [0, 360]
+
+
+
+
+
                 }}
                 transition={{
                   duration: Math.random() * 10 + 8,

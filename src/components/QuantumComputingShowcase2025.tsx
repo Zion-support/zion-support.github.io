@@ -27,7 +27,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
       icon: Atom,
       gradient: "from-blue-600 to-cyan-600",
       color: "text-blue-400"
-    },
+
     {
       id: 1,
       title: "Quantum Cryptography",
@@ -47,7 +47,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
       icon: Shield,
       gradient: "from-green-600 to-emerald-600",
       color: "text-green-400"
-    },
+
     {
       id: 2,
       title: "Quantum Machine Learning",
@@ -67,7 +67,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
       icon: Cpu,
       gradient: "from-purple-600 to-pink-600",
       color: "text-purple-400"
-    },
+
     {
       id: 3,
       title: "Quantum Optimization",
@@ -87,7 +87,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
       icon: Target,
       gradient: "from-orange-600 to-red-600",
       color: "text-orange-400"
-    }
+
   ];
 
   const useCases = [
@@ -96,32 +96,32 @@ const QuantumComputingShowcase2025: React.FC = () => {
       description: "Quantum algorithms for risk assessmentportfolio optimizationand high-frequency trading",
       icon: TrendingUp,
       impact: "300% faster risk calculations"
-    },
+
     {
       title: "Drug Discovery",
       description: "Quantum molecular simulation for pharmaceutical research and development",
       icon: Atom,
       impact: "10x faster drug development"
-    },
+
     {
       title: "Climate Modeling",
       description: "Complex climate system simulations with quantum-enhanced precision",
       icon: Zap,
       impact: "1000x more accurate predictions"
-    },
+
     {
       title: "Supply Chain",
       description: "Quantum optimization for global logistics and resource allocation",
       icon: Target,
       impact: "50% cost reduction"
-    }
+
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-sm mb-6">
@@ -135,7 +135,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of computing with our revolutionary quantum solutions that transcend classical limitations and unlock infinite possibilities.
           </p>
-        </divdiv>
+        </div>
 
         {/* Interactive Tabs */}
         <div className="mb-16">
@@ -160,7 +160,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-            <divdiv
+            <div
               key={activeTab}
               className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10"
             >
@@ -213,7 +213,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
 
                 {/* Visual */}
                 <div className="relative">
-                  <divdiv
+                  <div
                     className={`p-16 rounded-3xl bg-gradient-to-br ${quantumSolutions[activeTab].gradient} shadow-2xl text-center`}
                   >
                     <quantumSolutions[activeTab].icon className="w-32 h-32 text-white mx-auto mb-6" />
@@ -221,7 +221,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                     {/* Quantum Animation */}
                     <div className="relative">
                       {[...Array(8)].map((_i) => (
-                        <divdiv
+                        <div
                           key={i}
                           className="absolute w-4 h-4 bg-white/30 rounded-full"
                           style={{
@@ -229,8 +229,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
                             top: '50%',
                             transformOrigin: '0 0',
                           }}
-                            rotate: [0360],
-                            scale: [1.51],
+
+
                           }}
                             duration: 3,
                             repeat: Infinity,
@@ -239,20 +239,20 @@ const QuantumComputingShowcase2025: React.FC = () => {
                         />
                       ))}
                     </div>
-                  </divdiv>
+                  </div>
                   
                   {/* Floating Particles */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {[...Array(15)].map((_i) => (
-                      <divdiv
+                      <div
                         key={i}
                         className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
                         style={{
                           left: `${Math.random() * 100}%`,
                           top: `${Math.random() * 100}%`,
                         }}
-                          y: [0-30],
-                          opacity: [010],
+
+
                         }}
                           duration: 2,
                           repeat: Infinity,
@@ -263,12 +263,12 @@ const QuantumComputingShowcase2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Use Cases Section */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -277,7 +277,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCaseindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 text-center group hover:transform hover:scale-105"
               >
@@ -285,13 +285,13 @@ const QuantumComputingShowcase2025: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{useCase.description}</p>
                 <div className="text-cyan-400 font-semibold text-sm">{useCase.impact}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-lg rounded-3xl p-16 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -318,7 +318,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
               </divbutton>
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

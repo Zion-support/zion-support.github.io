@@ -293,7 +293,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
             {sortedContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
-                <divdiv
+                <div
                   key={item.id}
                   className={`relative group cursor-pointer ${
                     item.featured ? 'lg:col-span-2' : ''
@@ -409,7 +409,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>

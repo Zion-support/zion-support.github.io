@@ -48,7 +48,7 @@ const RevolutionaryTechBanner2034: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Main Banner */}
-        <divdiv
+        <div
           key={currentSlide}
           className="text-center mb-12"
         >
@@ -92,7 +92,7 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               Learn More
             </button>
           </div>
-        </divdiv>
+        </div>
 
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-2 mb-8">
@@ -108,12 +108,12 @@ const RevolutionaryTechBanner2034: React.FC = () => {
         </div>
 
         {/* Quick Access Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid md:grid-cols-3 gap-6"
         >
           {bannerContent.map((content, index) => (
-            <divdiv
+            <div
               key={index}
               className={`bg-gradient-to-r ${content.color} rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 cursor-pointer`}
               onClick={() => setCurrentSlide(index)}
@@ -122,12 +122,12 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">{content.title}</h3>
               <p className="text-sm opacity-90 mb-4">{content.subtitle}</p>
               <div className="text-xs opacity-75">Click to explore</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Bottom Stats */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-12 text-center"
         >
@@ -149,7 +149,7 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               <div className="text-sm text-gray-300">Revolutionary</div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-6">
@@ -59,11 +59,11 @@ const FeaturedContent2025Showcase: React.FC = () => {
             Discover the latest insights, strategies, and success stories from industry leaders. 
             Expert guidance to accelerate your AI transformation journey.
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
-            <divdiv
+            <div
               key={index}
               className={`relative group ${
                 content.featured ? 'lg:col-span-2' : ''
@@ -127,12 +127,12 @@ const FeaturedContent2025Showcase: React.FC = () => {
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Bottom Stats Section */}
-        <divdiv
+        <div
           className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -153,10 +153,10 @@ const FeaturedContent2025Showcase: React.FC = () => {
               <div className="text-gray-600 text-sm">Content Updates</div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Newsletter Signup */}
-        <divdiv
+        <div
           className="mt-12 text-center"
         >
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-gray-100">
@@ -182,7 +182,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
               No spam. Unsubscribe anytime. Privacy policy applies.
             </p>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

@@ -105,7 +105,7 @@ export default function InnovativeServicesShowcase() {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -138,14 +138,14 @@ export default function InnovativeServicesShowcase() {
                   <div className="text-gray-400">{contactInfo.address}</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Featured Innovative Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -158,11 +158,11 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our most revolutionary services that are pushing the boundaries of what's possible
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -206,7 +206,7 @@ export default function InnovativeServicesShowcase() {
                       </a>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function InnovativeServicesShowcase() {
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -228,11 +228,11 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the latest technologies that are emerging and transforming industries
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -254,11 +254,11 @@ export default function InnovativeServicesShowcase() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
             </div>
 
-            <divdiv
+            <div
               className="text-center mt-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -270,14 +270,14 @@ export default function InnovativeServicesShowcase() {
                 <span>View All Emerging Tech</span>
                 <ArrowRight className="w-6 h-6" />
               </diva>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -290,11 +290,11 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of artificial intelligence with our most advanced services
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -316,11 +316,11 @@ export default function InnovativeServicesShowcase() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
             </div>
 
-            <divdiv
+            <div
               className="text-center mt-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -332,14 +332,14 @@ export default function InnovativeServicesShowcase() {
                 <span>Discover All AI Services</span>
                 <ArrowRight className="w-6 h-6" />
               </diva>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -382,7 +382,7 @@ export default function InnovativeServicesShowcase() {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

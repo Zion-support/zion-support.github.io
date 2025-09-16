@@ -34,7 +34,7 @@ const UltimateContentShowcase2034: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -48,10 +48,10 @@ const UltimateContentShowcase2034: React.FC = () => {
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
             Experience the most revolutionary technology content ever created - featuring technologies that transcend reality itself
           </p>
-        </divdiv>
+        </div>
 
         {/* Tab Navigation */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center mb-12"
         >
@@ -70,10 +70,10 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Content Display */}
-        <divdiv
+        <div
           key={activeTab}
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
@@ -139,13 +139,13 @@ const UltimateContentShowcase2034: React.FC = () => {
 
                 <div className="space-y-4">
                   {contentPages[activeTab].features.map((feature, index) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center space-x-3"
                     >
                       <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                       <span className="font-semibold">{feature}</span>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
 
@@ -157,10 +157,10 @@ const UltimateContentShowcase2034: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -180,7 +180,7 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

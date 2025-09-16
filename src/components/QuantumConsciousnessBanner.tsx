@@ -54,8 +54,8 @@ const QuantumConsciousnessBanner: React.FC = () => {
               <div className="flex items-center gap-4">
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.1, 1]
+
+
                   }}
                   transition={{ 
                     rotate: { duration: 8, repeat: Infinity, ease: "linear" },
@@ -91,8 +91,8 @@ const QuantumConsciousnessBanner: React.FC = () => {
 
                 <motion.div
                   animate={{ 
-                    opacity: [0.5, 1, 0.5],
-                    scale: [1, 1.05, 1]
+
+
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="hidden md:flex items-center gap-2 text-cyan-400"
@@ -142,8 +142,8 @@ const QuantumConsciousnessBanner: React.FC = () => {
                 
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.1, 1]
+
+
                   }}
                   transition={{ 
                     rotate: { duration: 3, repeat: Infinity, ease: "linear" },
@@ -164,10 +164,10 @@ const QuantumConsciousnessBanner: React.FC = () => {
               <motion.div
                 key={i}
                 animate={{
-                  x: [0, Math.random() * 200 - 100],
-                  y: [0, Math.random() * 100 - 50],
-                  opacity: [0, 0.6, 0],
-                  scale: [0, 1, 0]
+
+
+
+
                 }}
                 transition={{
                   duration: Math.random() * 8 + 6,

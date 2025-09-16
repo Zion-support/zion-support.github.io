@@ -12,7 +12,7 @@ const UltimateContentShowcase2035: React.FC = () => {
       link: "/pages/UltimateTechRevolution2030",
       color: "from-purple-600 to-pink-600",
       bgColor: "from-purple-900 to-pink-900"
-    },
+
     consciousness: {
       title: "Ultimate AI Consciousness 2035",
       description: "Meet AI systems with true consciousness, self-awareness, and transcendent capabilities",
@@ -20,7 +20,7 @@ const UltimateContentShowcase2035: React.FC = () => {
       link: "/pages/UltimateAIConsciousness2035",
       color: "from-indigo-600 to-purple-600",
       bgColor: "from-indigo-900 to-purple-900"
-    },
+
     future: {
       title: "Future Technology Showcase",
       description: "Explore the most advanced technologies that will reshape our world",
@@ -28,7 +28,7 @@ const UltimateContentShowcase2035: React.FC = () => {
       link: "/pages/FutureTechTrends2025",
       color: "from-emerald-600 to-teal-600",
       bgColor: "from-emerald-900 to-teal-900"
-    }
+
   };
 
   return (
@@ -168,8 +168,8 @@ const UltimateContentShowcase2035: React.FC = () => {
                   top: `${Math.random() * 100}%`,
                 }}
                 animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.3, 0.8, 0.3],
+
+
                 }}
                 transition={{
                   duration: 3 + Math.random() * 2,

@@ -52,8 +52,8 @@ const FuturisticAIPromoBanner2026 = () => {
                 <div className="flex items-center space-x-2">
                   <motion.div
                     animate={{ 
-                      rotate: [0, 360],
-                      scale: [1, 1.2, 1]
+
+
                     }}
                     transition={{ 
                       duration: 3, 
@@ -65,8 +65,8 @@ const FuturisticAIPromoBanner2026 = () => {
                   </motion.div>
                   <motion.div
                     animate={{ 
-                      scale: [1, 1.3, 1],
-                      opacity: [0.7, 1, 0.7]
+
+
                     }}
                     transition={{ 
                       duration: 2, 
@@ -78,8 +78,8 @@ const FuturisticAIPromoBanner2026 = () => {
                   </motion.div>
                   <motion.div
                     animate={{ 
-                      rotate: [0, 180, 360],
-                      scale: [1, 1.1, 1]
+
+
                     }}
                     transition={{ 
                       duration: 4, 

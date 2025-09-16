@@ -13,7 +13,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AIInnovationHub2026"
-    },
+
     {
       id: 2,
       name: 'Neural Reality Engine 2030',
@@ -23,7 +23,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Virtual Reality", "Consciousness Transfer", "Immersive Worlds", "Neural Interfaces"],
       demo: "Enter Virtual World",
       link: "/pages/NeuralRealityEngine2030"
-    },
+
     {
       id: 3,
       name: "Analytics Dashboard 2026",
@@ -33,11 +33,11 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"
-    }
+
   ];
 
       ]
-    }
+
   };
 
   return (
@@ -63,7 +63,7 @@ const InteractiveTechShowcase: React.FC = () => {
       {/* Main Showcase Area */}
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Technology Details */}
-        <divdiv
+        <div
           key={activeTech}
           className="space-y-8"
         >
@@ -121,12 +121,12 @@ const InteractiveTechShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
-            <divdiv
+            <div
               key={tech.id}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
@@ -140,7 +140,7 @@ const InteractiveTechShowcase: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
               
               {hoveredCard === index && (
-                <divdiv
+                <div
                   className="space-y-2"
                 >
                   {tech.features.slice(0, 2).map((feature, featureIndex) => (
@@ -149,9 +149,9 @@ const InteractiveTechShowcase: React.FC = () => {
                       {feature}
                     </div>
                   ))}
-                </divdiv>
+                </div>
               )}
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
@@ -212,7 +212,7 @@ const InteractiveTechShowcase: React.FC = () => {
   const technologies = [
     {
       id: 1,
-    }
+
   ];
 
   useEffect(() => {
@@ -247,7 +247,7 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Qubits", value: "1000+", icon: "🔢" },
         { label: "Stability", value: "99.99%", icon: "🛡️" }
       ]
-    },
+
     neural: {
       title: "Neural Interfaces",
       subtitle: "Direct Brain-Computer Communication",
@@ -267,7 +267,7 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Latency", value: "<1ms", icon: "⏱️" },
         { label: "Accuracy", value: "99.8%", icon: "🎯" }
       ]
-    },
+
     biotech: {
       title: "Biotech AI",
       subtitle: "Personalized Medicine Revolution",
@@ -287,7 +287,7 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Diagnosis Speed", value: "10x faster", icon: "⚡" },
         { label: "Cost Reduction", value: "80%", icon: "💰" }
       ]
-    }
+
   };
 
       color: "from-purple-600 to-pink-600",
@@ -301,7 +301,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"
-    }
+
   ];
 
 
@@ -318,7 +318,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Self-awareness", "Emotional intelligence", "Ethical reasoning", "Autonomous learning"],
       gradient: "from-purple-600 to-pink-600",
       stats: { accuracy: 98, speed: 0.001, efficiency: 95 }
-    },
+
     {
       id: 2,
       name: "Quantum Reality",
@@ -327,7 +327,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Quantum simulation", "Reality manipulation", "Neural interface", "Dimensional exploration"],
       gradient: "from-indigo-600 to-purple-600",
       stats: { accuracy: 99.7, speed: 0.0001, efficiency: 98 }
-    },
+
     {
       id: 3,
       name: "Neural Interface",
@@ -336,7 +336,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Thought control", "Neural enhancement", "Mind communication", "Cognitive augmentation"],
       gradient: "from-emerald-600 to-teal-600",
       stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
-    },
+
     {
       id: 4,
       name: "Synthetic Intelligence",
@@ -371,8 +371,8 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Accuracy Rate", value: "99.9%", icon: "🎯" },
         { label: "Learning Speed", value: "1000x", icon: "📈" }
       ]
-    },
-    }
+
+
   ];
 
   useEffect(() => {
@@ -409,7 +409,7 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Qubits", value: "1000+", icon: "🔢" },
         { label: "Stability", value: "99.99%", icon: "🛡️" }
       ]
-    },
+
     neural: {
       title: "Neural Interfaces",
       subtitle: "Direct Brain-Computer Communication",
@@ -429,7 +429,7 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Latency", value: "<1ms", icon: "⏱️" },
         { label: "Accuracy", value: "99.8%", icon: "🎯" }
       ]
-    },
+
     biotech: {
       title: "Biotech AI",
       subtitle: "Personalized Medicine Revolution",
@@ -449,7 +449,7 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Diagnosis Speed", value: "10x faster", icon: "⚡" },
         { label: "Cost Reduction", value: "80%", icon: "💰" }
       ]
-    }
+
   };
 
       color: "from-purple-600 to-pink-600",
@@ -463,7 +463,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"
-    }
+
   ];
 
   const currentTech = technologies[activeTech];
@@ -521,27 +521,27 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="relative h-full min-h-[400px]">
               <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
               <div className="relative z-10 flex items-center justify-center h-full">
-                <divdiv
+                <div
                   key={activeTech}
                   className="text-9xl"
                 >
                   {currentTech.icon}
-                </divdiv>
+                </div>
               </div>
               
               {/* Floating Elements */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 {[...Array(20)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      y: [0, -100, 0],
-                      opacity: [0.3, 1, 0.3],
-                      scale: [1, 2, 1],
+
+
+
                     }}
                       duration: 3 + Math.random() * 2,
                       repeat: Infinity,
@@ -638,9 +638,9 @@ const InteractiveTechShowcase: React.FC = () => {
                       top: `${Math.random() * 100}%`,
                     }}
                     animate={{
-                      y: [0, -100, 0],
-                      opacity: [0.3, 1, 0.3],
-                      scale: [1, 2, 1],
+
+
+
                     }}
                     transition={{
                       duration: 3 + Math.random() * 2,
@@ -787,7 +787,7 @@ const InteractiveTechShowcase: React.FC = () => {
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-            <divdiv
+            <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">🧪</div>
@@ -796,9 +796,9 @@ const InteractiveTechShowcase: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Simulation
               </button>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
             >
               <div className="text-4xl mb-4">📊</div>
@@ -807,7 +807,7 @@ const InteractiveTechShowcase: React.FC = () => {
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Analytics
               </button>
-            </divdiv>
+            </div>
 export default InteractiveTechShowcase;
 
               {/* Demo Button */}

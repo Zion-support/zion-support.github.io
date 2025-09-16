@@ -55,7 +55,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/RevolutionaryTechInsights2026",
       status: "Revolutionary",
       impact: "Transcendent"
-    },
+
     {
       id: 2,
       title: "Future Tech Breakthrough 2026",
@@ -73,7 +73,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       status: "Breakthrough",
       impact: "Revolutionary"
-    },
+
     {
       id: 3,
       title: "Next-Gen Tech Showcase 2026",
@@ -104,7 +104,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       features: ["Thought control", "Memory enhancement", "Virtual reality integration", "Consciousness backup"],
       stats: { views: "4.8M", likes: "298K", shares: "76K" },
       color: "from-emerald-600 to-teal-600"
-    },
+
     {
       id: 3,
       title: "Interdimensional Computing",
@@ -118,7 +118,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       stats: { views: "3.9M", likes: "267K", shares: "54K" },
       color: "from-cyan-600 to-blue-600"
       impact: "Revolutionary"
-    },
+
     {
       id: 4,
       title: "Advanced AI Transformation 2026",
@@ -136,7 +136,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/AdvancedAITransformation2026",
       status: "Transcendent",
       impact: "Omnipotent"
-    },
+
     {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
@@ -154,7 +154,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
       impact: "Groundbreaking"
-    },
+
     {
       id: 6,
       title: "Synthetic Intelligence 2026",
@@ -172,7 +172,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       link: "/pages/SyntheticIntelligence2026",
       status: "Live Now",
       impact: "Transformative"
-    }
+
   ];
 
   const stats = [
@@ -194,7 +194,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       features: ["Consciousness backup", "Digital immortality", "Identity preservation", "Seamless transfer"],
       stats: { views: "6.1M", likes: "445K", shares: "98K" },
       color: "from-orange-600 to-red-600"
-    }
+
   ];
 
   useEffect(() => {
@@ -203,7 +203,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
         setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
       }, 5000);
       return () => clearInterval(interval);
-    }
+
   }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
@@ -237,9 +237,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      y: [0, -200, 0],
-                      opacity: [0.3, 1, 0.3],
-                      scale: [1, 2, 1],
+
+
+
                     }}
                       duration: 4 + Math.random() * 2,
                       repeat: Infinity,
@@ -347,10 +347,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0, -300, 0],
-                opacity: [0.3, 1, 0.3],
-                scale: [1, 3, 1],
-                rotate: [0, 360, 0],
+
+
+
+
               }}
                 duration: 4 + Math.random() * 3,
                 repeat: Infinity,

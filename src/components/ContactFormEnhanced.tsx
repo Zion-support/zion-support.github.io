@@ -38,7 +38,7 @@ const ContactFormEnhanced: React.FC = () => {
   };
 
   return (
-    <divdiv
+    <div
       className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg"
     >
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
@@ -128,24 +128,24 @@ const ContactFormEnhanced: React.FC = () => {
         </divbutton>
 
         {submitStatus === 'success' && (
-          <divdiv
+          <div
             className="flex items-center text-green-600 bg-green-50 p-3 rounded-md"
           >
             <CheckCircle className="w-5 h-5 mr-2" />
             Message sent successfully!
-          </divdiv>
+          </div>
         )}
 
         {submitStatus === 'error' && (
-          <divdiv
+          <div
             className="flex items-center text-red-600 bg-red-50 p-3 rounded-md"
           >
             <AlertCircle className="w-5 h-5 mr-2" />
             Failed to send message. Please try again.
-          </divdiv>
+          </div>
         )}
       </form>
-    </divdiv>
+    </div>
   );
 };
 

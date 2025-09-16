@@ -113,7 +113,7 @@ const AI2025TrendsInnovationShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
@@ -130,7 +130,7 @@ const AI2025TrendsInnovationShowcase = () => {
             Discover the revolutionary AI trends and innovations that will transform your business in 2025 and beyond. 
             Stay ahead of the curve with cutting-edge technology solutions.
           </p>
-        </divdiv>
+        </div>
 
         {/* Interactive Trends Carousel */}
         <div className="mb-16">
@@ -139,7 +139,7 @@ const AI2025TrendsInnovationShowcase = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Key AI Trends 2025</h3>
               {trends.map((trendindex) => (
-                <divdiv
+                <div
                   key={trend.id}
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeTrend === index
@@ -158,13 +158,13 @@ const AI2025TrendsInnovationShowcase = () => {
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-400" />
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Active Trend Display */}
             <div className="relative">
-                <divdiv
+                <div
                   key={activeTrend}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20"
                 >
@@ -190,7 +190,7 @@ const AI2025TrendsInnovationShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ const AI2025TrendsInnovationShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Innovations</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {innovations.map((innovationindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 group"
               >
@@ -221,7 +221,7 @@ const AI2025TrendsInnovationShowcase = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {innovation.description}
                 </p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -231,7 +231,7 @@ const AI2025TrendsInnovationShowcase = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Results</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {benefits.map((benefitindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -240,13 +240,13 @@ const AI2025TrendsInnovationShowcase = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
                 <div className="text-gray-300">{benefit.text}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -258,7 +258,7 @@ const AI2025TrendsInnovationShowcase = () => {
               Download Report
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

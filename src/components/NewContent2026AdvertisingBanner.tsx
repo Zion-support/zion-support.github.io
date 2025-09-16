@@ -16,7 +16,7 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
       featured: true,
       gradient: "from-purple-600 via-pink-600 to-blue-600",
       icon: Sparkles
-    },
+
     {
       id: 5002,
       title: "Quantum Reality Manipulation: Programming the Fabric of Existence",
@@ -26,7 +26,7 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
       featured: true,
       gradient: "from-blue-600 via-cyan-600 to-teal-600",
       icon: Zap
-    },
+
     {
       id: 5003,
       title: "Interdimensional Business Networks: Expanding Across Multiple Realities",
@@ -36,7 +36,7 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
       featured: true,
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       icon: Star
-    }
+
   ];
 
   useEffect(() => {
@@ -69,9 +69,9 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30"
                   animate={{
-                    x: [0, 100, 0],
-                    y: [0, -100, 0],
-                    scale: [1, 1.5, 1],
+
+
+
                   }}
                   transition={{
                     duration: 8 + i * 0.5,

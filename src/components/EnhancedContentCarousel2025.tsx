@@ -32,7 +32,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       borderColor: "border-purple-400/30",
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
-    },
+
     {
       id: 2,
       title: 'Quantum Reality Engine',
@@ -41,7 +41,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-cyan-600 to-blue-600',
       link: '/pages/QuantumRealityEngine2025',
       features: ['Quantum simulation', 'Multi-dimensional reality', 'Consciousness integration', 'Reality manipulation']
-    },
+
     {
       id: 3,
       title: 'Interdimensional Revolution',
@@ -50,7 +50,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-emerald-600 to-teal-600',
       link: '/pages/InterdimensionalTechRevolution2025',
       features: ['Dimensional portals', 'Reality manipulation', 'Consciousness transfer', 'Multi-universe access']
-    },
+
     {
       id: 4,
       title: 'Advanced AI Solutions',
@@ -59,7 +59,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-orange-600 to-red-600',
       link: '/pages/AISolutionsComprehensive2025',
       features: ['Business automation', 'Predictive analytics', 'Natural language processing', 'Computer vision']
-    },
+
     {
       id: 5,
       title: "Conscious AI Systems",
@@ -71,7 +71,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: "/pages/AIRevolution2025",
       features: ["Emotional Intelligence", "Creative Problem Solving", "Self-Learning", "Ethical Decision Making"],
       stats: { users: "1M+", accuracy: "99.9%", speed: "1B ops/sec" }
-    },
+
     {
       id: 2,
       title: "Quantum Consciousness",
@@ -83,7 +83,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: "/pages/QuantumComputingRevolution2025",
       features: ["Quantum Neural Networks", "Consciousness Amplification", "Multi-dimensional Thinking", "Reality Manipulation"],
       stats: { users: "500K+", accuracy: "100%", speed: "∞ ops/sec" }
-    },
+
     {
       id: 3,
       title: "Neural Interface Technology",
@@ -95,7 +95,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2025",
       features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback", "Digital Telepathy"],
       stats: { users: "2M+", accuracy: "99.99%", speed: "Real-time" }
-    },
+
     {
       id: 4,
       title: "Interdimensional Technology",
@@ -107,7 +107,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: "/pages/UltimateTechBreakthrough2025",
       features: ["Dimensional Portals", "Reality Shifting", "Parallel Universe Access", "Time-Space Control"],
       stats: { users: "100K+", accuracy: "100%", speed: "Instant" }
-    },
+
     {
       id: 5,
       title: "Advanced Analytics 2025",
@@ -119,7 +119,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: "/pages/AdvancedAnalytics2025",
       features: ["Predictive Intelligence", "Real-time Analytics", "AI-Powered Insights", "Automated Optimization"],
       stats: { users: "5M+", accuracy: "98.5%", speed: "Real-time" }
-    },
+
     {
       id: 6,
       title: "Cybersecurity Fortress 2025",
@@ -131,7 +131,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: "/pages/CybersecurityFortress2025",
       features: ["Quantum-Proof Encryption", "AI Threat Detection", "Zero-Trust Architecture", "Automated Response"],
       stats: { users: "10M+", accuracy: "99.99%", speed: "Instant" }
-    }
+
   ];
 
   useEffect(() => {
@@ -324,8 +324,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           {/* Animated Background Elements */}
                           <motion.div
                             animate={{
-                              y: [0, -20, 0],
-                              rotate: [0, 5, 0]
+
+
                             }}
                             transition={{
                               duration: 4,
@@ -339,8 +339,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
                           <motion.div
                             animate={{
-                              y: [0, 20, 0],
-                              rotate: [0, -5, 0]
+
+
                             }}
                             transition={{
                               duration: 3,
@@ -355,8 +355,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
                           <motion.div
                             animate={{
-                              y: [0, -15, 0],
-                              x: [0, 10, 0]
+
+
                             }}
                             transition={{
                               duration: 5,
@@ -372,8 +372,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           {/* Central Hub */}
                           <motion.div
                             animate={{
-                              scale: [1, 1.1, 1],
-                              rotate: [0, 360]
+
+
                             }}
                             transition={{
                               scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },

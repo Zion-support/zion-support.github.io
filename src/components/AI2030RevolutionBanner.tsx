@@ -148,8 +148,8 @@ const AI2030RevolutionBanner: React.FC = () => {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
               animate={{ 
-                x: [0, 100, 0],
-                opacity: [0.1, 0.3, 0.1]
+
+
               }}
               transition={{ 
                 duration: 4, 
@@ -160,8 +160,8 @@ const AI2030RevolutionBanner: React.FC = () => {
             />
             <motion.div
               animate={{ 
-                x: [0, -100, 0],
-                opacity: [0.1, 0.3, 0.1]
+
+
               }}
               transition={{ 
                 duration: 5, 

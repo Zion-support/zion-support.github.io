@@ -37,7 +37,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Background Pattern */}
@@ -51,11 +51,11 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left mb-4 lg:mb-0">
               <div className="flex items-center justify-center lg:justify-start mb-3">
-                <divdiv
+                <div
                   className="mr-3"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                </divdiv>
+                </div>
                 <span className="text-sm font-semibold text-yellow-400 uppercase tracking-wide">
                   🚀 New 2025-2026 Innovation Showcase
                 </span>
@@ -66,7 +66,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
               </h2>
               
               <div className="flex items-center justify-center lg:justify-start mb-4">
-                <divdiv
+                <div
                   key={currentFeature}
                   className="flex items-center"
                 >
@@ -74,7 +74,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
                   <span className="text-lg font-semibold">
                     {features[currentFeature].text}
                   </span>
-                </divdiv>
+                </div>
               </div>
               
               <p className="text-gray-200 text-sm lg:text-base max-w-2xl">
@@ -113,11 +113,11 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
 
         {/* Animated Progress Bar */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20">
-          <divdiv
+          <div
             className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
           />
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

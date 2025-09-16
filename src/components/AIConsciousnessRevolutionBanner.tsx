@@ -159,8 +159,8 @@ const AIConsciousnessRevolutionBanner = () => {
                 {/* Animated Brain Icon */}
                 <motion.div
                   animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0]
+
+
                   }}
                   transition={{ 
                     duration: 4,
@@ -175,8 +175,8 @@ const AIConsciousnessRevolutionBanner = () => {
                 {/* Consciousness Waves */}
                 <motion.div
                   animate={{ 
-                    opacity: [0.3, 0.8, 0.3],
-                    scale: [0.8, 1.2, 0.8]
+
+
                   }}
                   transition={{ 
                     duration: 3,
@@ -187,8 +187,8 @@ const AIConsciousnessRevolutionBanner = () => {
                 />
                 <motion.div
                   animate={{ 
-                    opacity: [0.2, 0.6, 0.2],
-                    scale: [0.6, 1.4, 0.6]
+
+
                   }}
                   transition={{ 
                     duration: 4,
@@ -202,8 +202,8 @@ const AIConsciousnessRevolutionBanner = () => {
                 {/* Floating Consciousness Elements */}
                 <motion.div
                   animate={{ 
-                    y: [0, -10, 0],
-                    opacity: [0.5, 1, 0.5]
+
+
                   }}
                   transition={{ 
                     duration: 2,
@@ -214,8 +214,8 @@ const AIConsciousnessRevolutionBanner = () => {
                 />
                 <motion.div
                   animate={{ 
-                    y: [0, 10, 0],
-                    opacity: [0.5, 1, 0.5]
+
+
                   }}
                   transition={{ 
                     duration: 2.5,
@@ -227,8 +227,8 @@ const AIConsciousnessRevolutionBanner = () => {
                 />
                 <motion.div
                   animate={{ 
-                    y: [0, -5, 0],
-                    opacity: [0.5, 1, 0.5]
+
+
                   }}
                   transition={{ 
                     duration: 3,

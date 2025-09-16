@@ -78,7 +78,7 @@ export default function InteractiveEngagementWidget() {
   if (!isVisible) return null;
 
   return (
-    <divdiv
+    <div
       className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-w-sm z-40"
     >
       <div className="flex justify-between items-center mb-3">
@@ -113,7 +113,7 @@ export default function InteractiveEngagementWidget() {
 
       {/* Rotating testimonials */}
       <div className="border-t pt-3">
-          <divdiv
+          <div
             key={currentTestimonial}
           >
             <div className="text-xs text-gray-600 mb-2">
@@ -134,7 +134,7 @@ export default function InteractiveEngagementWidget() {
                 ))}
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -144,6 +144,6 @@ export default function InteractiveEngagementWidget() {
           Join {engagementData.visitors.toLocaleString()}+ Successful Clients
         </button>
       </div>
-    </divdiv>
+    </div>
   );
 }

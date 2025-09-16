@@ -60,7 +60,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Animated Background */}
@@ -72,16 +72,16 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(8)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-30],
-                opacity: [0.30.80.3],
-                scale: [1.51],
+
+
+
               }}
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
@@ -95,14 +95,14 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
           <div className="flex items-center justify-between">
             {/* Left Content */}
             <div className="flex-1">
-              <divdiv
+              <div
                 className="flex items-center space-x-3 mb-4"
               >
                 <Play className="w-6 h-6 text-yellow-300" />
                 <span className="text-sm font-medium bg-yellow-300 text-gray-900 px-3 py-1 rounded-full">
                   INTERACTIVE DEMO
                 </span>
-              </divdiv>
+              </div>
 
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
@@ -118,7 +118,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
               </divp>
 
               {/* Rotating Tool Display */}
-              <divdiv
+              <div
                 key={currentTool}
                 className="flex items-center space-x-3 mb-6"
               >
@@ -129,10 +129,10 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                   <div className="font-semibold text-lg">{tools[currentTool].name}</div>
                   <div className="text-sm text-blue-300">Live Demo Available</div>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Features */}
-              <divdiv
+              <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
               >
                 {features.map((featureindex) => (
@@ -141,10 +141,10 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                     <span className="text-sm text-blue-200">{feature}</span>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* Stats */}
-              <divdiv
+              <div
                 className="flex space-x-6 mb-6"
               >
                 {stats.map((statindex) => (
@@ -153,10 +153,10 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                     <div className="text-sm text-blue-300">{stat.value}</div>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* CTA Buttons */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
@@ -168,29 +168,29 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                   <Brain className="w-5 h-5 mr-2" />
                   Learn More
                 </button>
-              </divdiv>
+              </div>
             </div>
 
             {/* Right Content - Animated Icons */}
-            <divdiv
+            <div
               className="hidden lg:flex items-center space-x-4"
             >
-              <divdiv
+              <div
                 className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <Code className="w-10 h-10 text-blue-400" />
-              </divdiv>
-              <divdiv
+              </div>
+              <div
                 className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <BarChart3 className="w-8 h-8 text-green-400" />
-              </divdiv>
-              <divdiv
+              </div>
+              <div
                 className="w-18 h-18 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <Network className="w-9 h-9 text-purple-400" />
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -203,10 +203,10 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
         </button>
 
         {/* Pulse Effect */}
-        <divdiv
+        <div
           className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20"
         />
-      </divdiv>
+      </div>
     </div>
   );
 };

@@ -30,7 +30,6 @@ interface ContentItem {
   tags?: string[];
   ctaText?: string;
   ctaUrl?: string;
-}
 
 const DynamicContentCarousel2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,7 +52,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       tags: ['Transcendent AI', 'Superintelligence', 'Beyond Human'],
       ctaText: 'Read Article',
       ctaUrl: '/blog/transcendent-ai-beyond-human-intelligence'
-    },
+
     {
       id: 'reality-manipulation-service',
       type: 'service',
@@ -67,7 +66,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       tags: ['Reality Manipulation', 'Physics Breakthrough', 'Ultimate Computing'],
       ctaText: 'Learn More',
       ctaUrl: '/services/reality-manipulation-technology'
-    },
+
     {
       id: 'infinite-networks-case-study',
       type: 'case-study',
@@ -83,7 +82,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       tags: ['Infinite Networks', 'Cosmic AI', 'Implementation'],
       ctaText: 'View Case Study',
       ctaUrl: '/case-studies/infinite-networks-implementation'
-    },
+
     {
       id: 'temporal-ai-announcement',
       type: 'announcement',
@@ -97,7 +96,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       tags: ['Temporal AI', 'Product Launch', 'Enterprise'],
       ctaText: 'Get Early Access',
       ctaUrl: '/products/temporal-ai-computing'
-    },
+
     {
       id: 'dimensional-computing-blog',
       type: 'blog',
@@ -113,7 +112,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       tags: ['Dimensional Computing', 'Advanced Processing', 'Multi-Dimensional'],
       ctaText: 'Read Article',
       ctaUrl: '/blog/dimensional-computing-next-frontier'
-    },
+
     {
       id: 'quantum-neural-service',
       type: 'service',
@@ -127,7 +126,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       tags: ['Quantum Computing', 'Neural Interfaces', 'Human-AI Fusion'],
       ctaText: 'Explore Service',
       ctaUrl: '/services/quantum-neural-fusion-interface'
-    }
+
   ];
 
   const getTypeIcon = (type: string) => {
@@ -137,7 +136,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       case 'case-study': return TrendingUp;
       case 'announcement': return Rocket;
       default: return Star;
-    }
+
   };
 
   const getTypeColor = (type: string) => {
@@ -147,7 +146,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       case 'case-study': return 'from-green-600 to-emerald-600';
       case 'announcement': return 'from-orange-600 to-red-600';
       default: return 'from-gray-600 to-gray-700';
-    }
+
   };
 
   const getTypeText = (type: string) => {
@@ -157,7 +156,7 @@ const DynamicContentCarousel2026: React.FC = () => {
       case 'case-study': return 'Case Study';
       case 'announcement': return 'Announcement';
       default: return 'Content';
-    }
+
   };
 
   useEffect(() => {
@@ -166,7 +165,7 @@ const DynamicContentCarousel2026: React.FC = () => {
         setCurrentIndex((prev) => (prev + 1) % contentItems.length);
       }, 4000);
       return () => clearInterval(interval);
-    }
+
   }, [isAutoPlaying, contentItems.length]);
 
   const nextSlide = () => {
@@ -192,9 +191,9 @@ const DynamicContentCarousel2026: React.FC = () => {
             key={i}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full"
             animate={{
-              x: [0, Math.random() * 1000],
-              y: [0, Math.random() * 1000],
-              opacity: [0, 1, 0],
+
+
+
             }}
             transition={{
               duration: Math.random() * 4 + 3,

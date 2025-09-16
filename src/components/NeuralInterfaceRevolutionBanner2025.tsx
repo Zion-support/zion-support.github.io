@@ -18,7 +18,6 @@ interface NeuralInterfaceContent {
   };
   description: string;
   featured: boolean;
-}
 
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   const [currentIndexsetCurrentIndex] = useState(0);
@@ -36,10 +35,10 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
         savings: '$180M',
         timeframe: '24 months',
         accuracy: '99.7%'
-      },
+
       description: 'Transform your business with brain-computer integration technology',
       featured: true
-    },
+
     {
       id: 'neural-interface-case-study',
       title: 'Neural Interface Fortune 500 Success: $4.8B Company Achieves 1,500% ROI',
@@ -50,10 +49,10 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
         savings: '$180M',
         timeframe: '24 months',
         accuracy: '99.7%'
-      },
+
       description: 'Real-world success story of neural interface implementation',
       featured: true
-    },
+
     {
       id: 'neural-interface-guide',
       title: 'Neural Interface Implementation Master Guide 2025: From Strategy to 1,500% ROI',
@@ -64,10 +63,10 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
         savings: '$180M',
         timeframe: '24 months',
         accuracy: '99.7%'
-      },
+
       description: 'Complete implementation framework for neural interface technology',
       featured: true
-    }
+
   ];
 
   useEffect(() => {
@@ -75,7 +74,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
     if (savedState === 'true') {
       setIsDismissed(true);
       setIsVisible(false);
-    }
+
   }[]);
 
   useEffect(() => {
@@ -102,7 +101,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
 
   if (isDismissed) {
     return (
-      <divdiv
+      <div
         className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white p-4 text-center"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-center space-x-4">
@@ -115,16 +114,15 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             Show Banner
           </button>
         </div>
-      </divdiv>
+      </div>
     );
-  }
 
   const currentContent = neuralInterfaceContent[currentIndex];
 
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden"
         >
           {/* Animated Background */}
@@ -132,30 +130,30 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
             
             {/* Floating Neural Network Animation */}
-            <divdiv
+            <div
               className="absolute top-10 left-10 w-20 h-20 border border-purple-400/30 rounded-full"
-                scale: [1.21],
-                opacity: [0.30.60.3],
+
+
               }}
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             />
-            <divdiv
+            <div
               className="absolute top-20 right-20 w-16 h-16 border border-blue-400/30 rounded-full"
-                scale: [1.21.2],
-                opacity: [0.60.30.6],
+
+
               }}
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             />
-            <divdiv
+            <div
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-400/30 rounded-full"
-                scale: [1.31],
-                opacity: [0.40.70.4],
+
+
               }}
                 duration: 6,
                 repeat: Infinity,
@@ -205,7 +203,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                       </span>
                     </div>
                     
-                      <divdiv
+                      <div
                         key={currentIndex}
                       >
                         <h3 className="text-xl font-bold text-white mb-3 leading-tight">
@@ -240,7 +238,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                           <span>Explore {currentContent.type}</span>
                           <ArrowRight className="h-4 w-4" />
                         </a>
-                      </divdiv>
+                      </div>
                     </div>
 
                     {/* Progress Indicators */}
@@ -354,7 +352,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );

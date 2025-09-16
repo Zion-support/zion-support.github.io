@@ -48,7 +48,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
       downloads: "2.3M",
       price: "Free",
       features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"]
-    },
+
     {
       name: "Quantum Automation Suite",
       description: "Revolutionary automation powered by quantum computing",
@@ -58,7 +58,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
       downloads: "1.8M",
       price: "$299/month",
       features: ["Quantum Processing"Real-time Automation"Scalable Architecture"]
-    },
+
     {
       name: "Predictive Analytics Engine",
       description: "AI-powered analytics with 99.7% prediction accuracy",
@@ -68,7 +68,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
       downloads: "3.1M",
       price: "$199/month",
       features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"]
-    },
+
     {
       name: "Code Generation AI",
       description: "Advanced AI for generating and optimizing code",
@@ -78,7 +78,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
       downloads: "4.2M",
       price: "Free",
       features: ["Multi-language Support"Code Review"Optimization"]
-    }
+
   ];
 
   const stats = [
@@ -106,7 +106,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
@@ -116,12 +116,12 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40"
-              x: [0Math.random() * 500],
-              y: [0Math.random() * 300],
-              scale: [010],
+
+
+
             }}
               duration: Math.random() * 10 + 8,
               repeat: Infinity,
@@ -140,15 +140,15 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
             >
               <Sparkles className="w-4 h-4" />
               INTERACTIVE AI TOOLS SHOWCASE 2027
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
-            <divdiv
+            <div
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Revolutionary
@@ -164,10 +164,10 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 that are transforming industries in 2027. Try demosexplore features
                 and find the perfect solution for your business.
               </p>
-            </divdiv>
+            </div>
 
             {/* Rotating Featured Tool */}
-            <divdiv
+            <div
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -213,10 +213,10 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Stats */}
-            <divdiv
+            <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
               {stats.map((statindex) => {
@@ -233,10 +233,10 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                   </div>
                 );
               })}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
@@ -248,13 +248,13 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 <Download className="w-5 h-5" />
                 View All Tools
               </button>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Interactive Demo */}
           <div className="relative">
             {/* Main Demo Area */}
-            <divdiv
+            <div
               className="relative bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 overflow-hidden"
             >
               {/* Background Pattern */}
@@ -335,26 +335,26 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                   <Play className="w-8 h-8 text-white ml-1" />
                 </divbutton>
               </div>
-            </divdiv>
+            </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center shadow-2xl"
             >
               <Award className="w-8 h-8 text-white" />
-            </divdiv>
+            </div>
             
-            <divdiv
+            <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-xl flex items-center justify-center shadow-2xl"
             >
               <TrendingUp className="w-6 h-6 text-white" />
-            </divdiv>
+            </div>
             
-            <divdiv
+            <div
               className="absolute top-1/2 -left-6 w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center shadow-2xl"
             >
               <Lightbulb className="w-5 h-5 text-white" />
-            </divdiv>
+            </div>
           </div>
         </div>
 
@@ -366,7 +366,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
           <X className="w-5 h-5" />
         </button>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

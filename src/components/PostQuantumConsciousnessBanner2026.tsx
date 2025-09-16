@@ -14,7 +14,7 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       icon: "🧠",
       link: "/content/resources/ai-2026-post-quantum-consciousness-implementation-guide"
-    },
+
     {
       title: "Fortune 100 Success",
       subtitle: "$2.5B Additional Revenue",
@@ -23,7 +23,7 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
       gradient: "from-blue-600 to-purple-600",
       icon: "🏆",
       link: "/content/case-studies/fortune-100-post-quantum-consciousness-transformation-2000-roi-success"
-    },
+
     {
       title: "Business Revolution",
       subtitle: "Ultimate Breakthrough Guide",
@@ -32,7 +32,7 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
       gradient: "from-green-600 to-blue-600",
       icon: "🚀",
       link: "/content/blog/ai-2026-post-quantum-consciousness-revolution-ultimate-business-breakthrough"
-    }
+
   ];
 
   useEffect(() => {
@@ -67,8 +67,8 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                     top: `${Math.random() * 100}%`,
                   }}
                   animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.2, 0.8, 0.2],
+
+
                   }}
                   transition={{
                     duration: 3,

@@ -48,7 +48,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
   ];
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"
     >
       {/* Animated Background */}
@@ -58,7 +58,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <divdiv
+            <div
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -72,10 +72,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Revolutionary breakthroughs in AIquantum computingand automation are reshaping the future of technology. 
                 Be among the first to experience the transformation.
               </p>
-            </divdiv>
+            </div>
 
             {/* Animated Announcement */}
-            <divdiv
+            <div
               key={currentAnnouncement}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 mb-6"
             >
@@ -95,10 +95,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -114,11 +114,11 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               >
                 Get Early Access
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <divdiv
+          <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
@@ -127,7 +127,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-1 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
@@ -136,22 +136,22 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                     </div>
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               {/* Urgency Indicator */}
-              <divdiv
+              <div
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time - Act now!</span>
-              </divdiv>
+              </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

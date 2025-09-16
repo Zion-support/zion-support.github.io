@@ -36,7 +36,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -56,11 +56,11 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-                <divdiv
+                <div
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <TrendingUp className="w-3 h-3" />
-                </divdiv>
+                </div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
                   NEW: Technology Trends Showcase 2025
                 </span>
@@ -72,7 +72,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
               
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <span className="text-lg opacity-90">Trending:</span>
-                <divdiv
+                <div
                   key={currentTrend}
                   className="flex items-center gap-2"
                 >
@@ -80,7 +80,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
                   <span className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full">
                     {trends[currentTrend].name} ({trends[currentTrend].adoption})
                   </span>
-                </divdiv>
+                </div>
               </div>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
@@ -104,7 +104,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
               {trends.map((trendindex) => {
                 const Icon = trend.icon;
                 return (
-                  <divdiv
+                  <div
                     key={index}
                       scale: currentTrend === index ? 1.1 : 1,
                       opacity: currentTrend === index ? 1 : 0.7
@@ -114,7 +114,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
                     <Icon className="w-8 h-8 mx-auto mb-2" />
                     <div className="text-xs font-medium">{trend.name}</div>
                     <div className="text-lg font-bold">{trend.adoption}</div>
-                  </divdiv>
+                  </div>
                 );
               })}
             </div>
@@ -149,12 +149,12 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
 
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
-          <divdiv
+          <div
             className="h-full bg-white"
           />
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

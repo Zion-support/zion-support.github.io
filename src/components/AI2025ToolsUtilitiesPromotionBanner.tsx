@@ -75,7 +75,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Badge */}
@@ -133,10 +133,10 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
                 Watch Demo
               </divbutton>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Featured Tools */}
-          <divdiv
+          <div
             className="space-y-6"
           >
             {/* Featured Tool Card */}
@@ -146,7 +146,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
                 <p className="text-gray-300">Most popular this week</p>
               </div>
 
-              <divdiv
+              <div
                 key={currentTool}
                 className="text-center"
               >
@@ -176,7 +176,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
                     <ExternalLink className="w-4 h-4 text-indigo-300" />
                   </button>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Tool Indicators */}
               <div className="flex justify-center space-x-2 mt-6">
@@ -194,7 +194,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((statindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center"
                 >
@@ -203,14 +203,14 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
                   </div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-xl p-6 border border-indigo-500/20">
@@ -224,7 +224,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
               <span>✓ Regular Updates</span>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

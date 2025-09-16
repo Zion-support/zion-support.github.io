@@ -15,7 +15,7 @@ const InteractiveTechCarousel2026: React.FC = () => {
       link: "/pages/ConsciousAISystems2026",
       gradient: "from-purple-600 to-pink-600",
       bgPattern: "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)"
-    },
+
     {
       id: 2,
       title: "⚡ Quantum Reality",
@@ -25,7 +25,7 @@ const InteractiveTechCarousel2026: React.FC = () => {
       link: "/pages/QuantumReality2026",
       gradient: "from-blue-600 to-purple-600",
       bgPattern: "radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(147, 51, 234, 0.3) 0%, transparent 50%)"
-    },
+
     {
       id: 3,
       title: "🌟 Next-Gen Revolution",
@@ -35,7 +35,7 @@ const InteractiveTechCarousel2026: React.FC = () => {
       link: "/pages/NextGenTechRevolution2026",
       gradient: "from-emerald-600 to-teal-600",
       bgPattern: "radial-gradient(circle at 40% 30%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 70%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)"
-    },
+
     {
       id: 4,
       title: "🧬 Neural Interfaces",
@@ -45,7 +45,7 @@ const InteractiveTechCarousel2026: React.FC = () => {
       link: "/pages/NeuralInterfaceFuture",
       gradient: "from-orange-600 to-red-600",
       bgPattern: "radial-gradient(circle at 25% 60%, rgba(251, 146, 60, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 40%, rgba(239, 68, 68, 0.3) 0%, transparent 50%)"
-    },
+
     {
       id: 5,
       title: "🌌 Interdimensional Computing",
@@ -55,7 +55,7 @@ const InteractiveTechCarousel2026: React.FC = () => {
       link: "/pages/RevolutionaryTechBreakthrough2026",
       gradient: "from-violet-600 to-purple-600",
       bgPattern: "radial-gradient(circle at 35% 45%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 65% 55%, rgba(147, 51, 234, 0.3) 0%, transparent 50%)"
-    },
+
     {
       id: 6,
       title: "♾️ Digital Immortality",
@@ -65,7 +65,7 @@ const InteractiveTechCarousel2026: React.FC = () => {
       link: "/pages/UltimateTechBreakthrough2026",
       gradient: "from-pink-600 to-rose-600",
       bgPattern: "radial-gradient(circle at 45% 35%, rgba(236, 72, 153, 0.3) 0%, transparent 50%), radial-gradient(circle at 55% 65%, rgba(244, 63, 94, 0.3) 0%, transparent 50%)"
-    }
+
   ];
 
   useEffect(() => {
@@ -195,8 +195,8 @@ const InteractiveTechCarousel2026: React.FC = () => {
                   {/* Floating Elements */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 5, 0]
+
+
                     }}
                     transition={{ 
                       duration: 3,
@@ -207,8 +207,8 @@ const InteractiveTechCarousel2026: React.FC = () => {
                   />
                   <motion.div
                     animate={{ 
-                      y: [0, 10, 0],
-                      rotate: [0, -5, 0]
+
+
                     }}
                     transition={{ 
                       duration: 4,

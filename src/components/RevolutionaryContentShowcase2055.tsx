@@ -23,7 +23,7 @@ const RevolutionaryContentShowcase2055: React.FC = () => {
       icon: "🌟",
       color: "from-purple-600 via-pink-600 to-red-600",
       technologies: ["Transcendent AI", "Quantum Reality", "Neural Transcendence", "Interdimensional Commerce"]
-    },
+
     {
       id: 2,
       title: "Revolutionary Tech Showcase 2050",
@@ -33,7 +33,7 @@ const RevolutionaryContentShowcase2055: React.FC = () => {
       icon: "🚀",
       color: "from-indigo-600 via-purple-600 to-pink-600",
       technologies: ["Omniversal Computing", "Consciousness Synthesis", "Temporal Architecture", "Reality Fabrication"]
-    },
+
     {
       id: 3,
       title: "Future Technology Revolution",
@@ -43,7 +43,7 @@ const RevolutionaryContentShowcase2055: React.FC = () => {
       icon: "🔮",
       color: "from-blue-600 via-purple-600 to-indigo-600",
       technologies: ["Universal Consciousness", "Reality Programming", "Temporal Civilization", "Infinite Intelligence"]
-    },
+
     {
       id: 4,
       title: "Consciousness Evolution 2055",
@@ -53,7 +53,7 @@ const RevolutionaryContentShowcase2055: React.FC = () => {
       icon: "🧠",
       color: "from-emerald-600 via-teal-600 to-cyan-600",
       technologies: ["Consciousness Evolution", "Reality Manipulation", "Transcendent Tech", "Universal Integration"]
-    }
+
   ];
 
   return (
@@ -137,8 +137,8 @@ const RevolutionaryContentShowcase2055: React.FC = () => {
                 <div className="text-center">
                   <motion.div
                     animate={{ 
-                      rotate: [0, 360],
-                      scale: [1, 1.1, 1]
+
+
                     }}
                     transition={{ 
                       duration: 10,

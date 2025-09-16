@@ -26,7 +26,7 @@ const UltimateContentBanner2025: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechShowcase2025",
       stats: "99.9% Performance"
-    },
+
     {
       id: 2,
       title: "AI Solutions Comprehensive",
@@ -35,7 +35,7 @@ const UltimateContentBanner2025: React.FC = () => {
       color: "from-blue-600 to-indigo-600",
       link: "/pages/AISolutionsComprehensive2025",
       stats: "500% ROI"
-    },
+
     {
       id: 3,
       title: "Ultimate Tech Revolution",
@@ -44,7 +44,7 @@ const UltimateContentBanner2025: React.FC = () => {
       color: "from-emerald-600 to-teal-600",
       link: "/pages/UltimateTechRevolution2025",
       stats: "∞ Potential"
-    },
+
     {
       id: 4,
       title: "Next-Gen Innovation Hub",
@@ -53,7 +53,7 @@ const UltimateContentBanner2025: React.FC = () => {
       color: "from-orange-600 to-red-600",
       link: "/pages/NextGenInnovationHub2025",
       stats: "50+ Innovations"
-    }
+
   ];
 
   const containerVariants = {
@@ -64,8 +64,8 @@ const UltimateContentBanner2025: React.FC = () => {
       transition: {
         duration: 0.8,
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -75,7 +75,7 @@ const UltimateContentBanner2025: React.FC = () => {
       y: 0,
       scale: 1,
       transition: { duration: 0.6 }
-    }
+
   };
 
   return (
@@ -102,8 +102,8 @@ const UltimateContentBanner2025: React.FC = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
+
+
             }}
             transition={{
               duration: 3 + Math.random() * 2,

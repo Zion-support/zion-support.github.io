@@ -113,7 +113,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
@@ -145,10 +145,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </divdiv>
+        </div>
 
         {/* AI Stats */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
           {stats.map((statindex) => (
@@ -160,10 +160,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <div className="text-blue-100 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* AI Capabilities */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {aiCapabilities.map((capabilityindex) => (
@@ -180,10 +180,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <p className="text-blue-100 text-sm">{capability.description}</p>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Features Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {features.map((featureindex) => (
@@ -199,10 +199,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </p>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Content Types Showcase */}
-        <divdiv
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -221,10 +221,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* AI Demo Section */}
-        <divdiv
+        <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -294,10 +294,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -321,7 +321,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

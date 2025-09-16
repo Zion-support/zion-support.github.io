@@ -63,10 +63,10 @@ const RevolutionaryAIInnovations2025 = () => {
         accuracy: "99.99%",
         efficiency: "95%",
         applications: "500+"
-      },
+
       color: "from-purple-500 to-pink-500",
       bgColor: "from-purple-50 to-pink-50"
-    },
+
     {
       id: 2,
       title: "Autonomous Decision Intelligence",
@@ -86,10 +86,10 @@ const RevolutionaryAIInnovations2025 = () => {
         speed: "1000x",
         learning: "Continuous",
         decisions: "1M+/day"
-      },
+
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50"
-    },
+
     {
       id: 3,
       title: "Predictive Business Analytics",
@@ -109,10 +109,10 @@ const RevolutionaryAIInnovations2025 = () => {
         accuracy: "94%",
         markets: "Global",
         insights: "Real-time"
-      },
+
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-50 to-emerald-50"
-    },
+
     {
       id: 4,
       title: "Neural Interface Revolution",
@@ -132,10 +132,10 @@ const RevolutionaryAIInnovations2025 = () => {
         accuracy: "98%",
         safety: "100%",
         users: "10,000+"
-      },
+
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-50 to-red-50"
-    },
+
     {
       id: 5,
       title: "Quantum Security Protocols",
@@ -155,10 +155,10 @@ const RevolutionaryAIInnovations2025 = () => {
         keys: "Quantum",
         breaches: "0",
         compliance: "100%"
-      },
+
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-50 to-purple-50"
-    },
+
     {
       id: 6,
       title: "Space Technology Integration",
@@ -178,10 +178,10 @@ const RevolutionaryAIInnovations2025 = () => {
         range: "Interplanetary",
         autonomy: "100%",
         missions: "50+"
-      },
+
       color: "from-teal-500 to-blue-500",
       bgColor: "from-teal-50 to-blue-50"
-    }
+
   ];
 
   const currentInnovation = innovations[activeInnovation];
@@ -192,10 +192,10 @@ const RevolutionaryAIInnovations2025 = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <divdiv
-            x: [0100],
-            y: [0-100],
-            rotate: [0360]
+        <div
+
+
+
           }}
             duration: 30
             repeat: Infinity
@@ -203,10 +203,10 @@ const RevolutionaryAIInnovations2025 = () => {
           }}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-10 blur-3xl"
         />
-        <divdiv
-            x: [0-100],
-            y: [0100],
-            rotate: [360360]
+        <div
+
+
+
           }}
             duration: 25
             repeat: Infinity
@@ -219,12 +219,12 @@ const RevolutionaryAIInnovations2025 = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <divdiv
+          <div
             className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-8"
           >
             <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
             Revolutionary AI Innovations 2025
-          </divdiv>
+          </div>
           
           <divh2
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
@@ -242,7 +242,7 @@ const RevolutionaryAIInnovations2025 = () => {
         {/* Main Innovation Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Side - Innovation Details */}
-          <divdiv
+          <div
             key={activeInnovation}
             className="space-y-8"
           >
@@ -306,19 +306,19 @@ const RevolutionaryAIInnovations2025 = () => {
                 Get Started
               </a>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Side - Visual Representation */}
-          <divdiv
+          <div
             key={`visual-${activeInnovation}`}
             className="relative"
           >
             <div className={`bg-gradient-to-br ${currentInnovation.bgColor} rounded-3xl p-8 h-96 flex items-center justify-center relative overflow-hidden`}>
               {/* Animated Background */}
               <div className="absolute inset-0 opacity-20">
-                <divdiv
-                    scale: [1.21],
-                    rotate: [0180360]
+                <div
+
+
                   }}
                     duration: 8
                     repeat: Infinity
@@ -326,9 +326,9 @@ const RevolutionaryAIInnovations2025 = () => {
                   }}
                   className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute top-1/4 left-1/4`}
                 />
-                <divdiv
-                    scale: [1.21.2],
-                    rotate: [360180]
+                <div
+
+
                   }}
                     duration: 6
                     repeat: Infinity
@@ -340,9 +340,9 @@ const RevolutionaryAIInnovations2025 = () => {
               </div>
 
               {/* Main Icon */}
-              <divdiv
-                  scale: [1.1],
-                  rotate: [05-50]
+              <div
+
+
                 }}
                   duration: 4
                   repeat: Infinity
@@ -351,22 +351,22 @@ const RevolutionaryAIInnovations2025 = () => {
                 className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full flex items-center justify-center relative z-10`}
               >
                 <currentInnovation.icon className="w-16 h-16 text-white" />
-              </divdiv>
+              </div>
 
               {/* Stats Display */}
               <div className="absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-4">
                 {Object.entries(currentInnovation.stats).slice(04).map(([keyvalue]index) => (
-                  <divdiv
+                  <div
                     key={key}
                     className="bg-white bg-opacity-90 rounded-lg p-3 text-center"
                   >
                     <div className="text-2xl font-bold text-gray-900">{value}</div>
                     <div className="text-xs text-gray-600 capitalize">{key}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Innovation Navigation */}
@@ -388,7 +388,7 @@ const RevolutionaryAIInnovations2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-white to-gray-100 rounded-3xl p-12 text-gray-900">
@@ -416,7 +416,7 @@ const RevolutionaryAIInnovations2025 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </divsection>
   );

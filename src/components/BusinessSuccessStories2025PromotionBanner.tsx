@@ -92,16 +92,16 @@ const BusinessSuccessStories2025PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="text-white"
           >
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               REAL SUCCESS STORIES
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh2
@@ -122,7 +122,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
             </divp>
 
             {/* Stats */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-4 mb-8"
             >
               {stats.map((statindex) => (
@@ -131,10 +131,10 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                   <div className="text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* Industries */}
-            <divdiv
+            <div
               className="mb-8"
             >
               <h4 className="text-lg font-semibold text-white mb-4">Industries We Serve:</h4>
@@ -147,10 +147,10 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -168,11 +168,11 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                 <BookOpen className="w-5 h-5 mr-2" />
                 Read Case Studies
               </a>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
 
           {/* Right Content - Testimonial Carousel */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Testimonial Card */}
@@ -188,7 +188,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               </div>
 
               {/* Testimonial Content */}
-              <divdiv
+              <div
                 key={currentTestimonial}
                 className="mb-6"
               >
@@ -218,7 +218,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2 mb-4">
@@ -240,17 +240,17 @@ const BusinessSuccessStories2025PromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
-            </divdiv>
-            <divdiv
+            </div>
+            <div
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
       </div>
     </div>

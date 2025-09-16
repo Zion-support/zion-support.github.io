@@ -73,12 +73,12 @@ const UltimateContentShowcase2027PromotionBanner = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <divdiv
+            <div
               className="absolute inset-0 opacity-30"
                 background: [
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
@@ -119,7 +119,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
 
                 {/* Rotating Features */}
                 <div className="flex items-center gap-4 mb-4">
-                    <divdiv
+                    <div
                       key={currentFeature}
                       className="flex items-center gap-2"
                     >
@@ -134,7 +134,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
                           {features[currentFeature].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
 
@@ -176,7 +176,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </divdiv>
+        </div>
       )}
     </div>
   );

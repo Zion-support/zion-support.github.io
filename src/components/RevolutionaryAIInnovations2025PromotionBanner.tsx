@@ -54,7 +54,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
   const currentInnovationData = innovations[currentInnovation];
 
   return (
-    <divdiv
+    <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
@@ -62,10 +62,10 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <divdiv
-            x: [0100],
-            y: [0-50],
-            rotate: [0180360]
+        <div
+
+
+
           }}
             duration: 20
             repeat: Infinity
@@ -73,10 +73,10 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
           }}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-3xl"
         />
-        <divdiv
-            x: [0-100],
-            y: [050],
-            rotate: [360180]
+        <div
+
+
+
           }}
             duration: 25
             repeat: Infinity
@@ -89,12 +89,12 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
       {/* Floating Innovation Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {innovations.map((innovationindex) => (
-          <divdiv
+          <div
             key={index}
-              x: [0Math.random() * 100 - 50],
-              y: [0Math.random() * 100 - 50],
-              rotate: [0360],
-              opacity: [0.10.30.1]
+
+
+
+
             }}
               duration: 15 + index * 2
               repeat: Infinity
@@ -108,7 +108,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             }}
           >
             <innovation.icon className="w-8 h-8 text-white opacity-50" />
-          </divdiv>
+          </div>
         ))}
       </div>
 
@@ -116,12 +116,12 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <divdiv
+            <div
               className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-6"
             >
               <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
               Revolutionary AI Innovations 2025
-            </divdiv>
+            </div>
 
             <divh2
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
@@ -136,7 +136,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </divp>
 
             {/* Current Innovation Highlight */}
-            <divdiv
+            <div
               key={currentInnovation}
               className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white border-opacity-20"
             >
@@ -156,7 +156,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
               <p className="text-gray-300">
                 Revolutionary breakthrough transforming how we approach complex problems and decision-making
               </p>
-            </divdiv>
+            </div>
 
             {/* Innovation Dots */}
             <div className="flex justify-center lg:justify-start space-x-2 mb-8">
@@ -174,7 +174,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </div>
 
             {/* Action Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
@@ -192,21 +192,21 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 <BookOpen className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 Learn More
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Visual Showcase */}
-          <divdiv
+          <div
             className="flex-shrink-0 lg:ml-8"
           >
             <div className="relative">
               {/* Main Visual Container */}
               <div className="w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 flex flex-col items-center justify-center relative overflow-hidden">
                 {/* Animated Background Elements */}
-                <divdiv
-                    scale: [1.21],
-                    rotate: [0180360],
-                    opacity: [0.30.60.3]
+                <div
+
+
+
                   }}
                     duration: 8
                     repeat: Infinity
@@ -215,9 +215,9 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   className="absolute inset-4 bg-white bg-opacity-20 rounded-2xl"
                 />
                 
-                <divdiv
-                    scale: [1.1],
-                    rotate: [05-50]
+                <div
+
+
                   }}
                     duration: 4
                     repeat: Infinity
@@ -226,10 +226,10 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   className="w-32 h-32 bg-white bg-opacity-30 rounded-full flex items-center justify-center relative z-10"
                 >
                   <currentInnovationData.icon className="w-16 h-16 text-white" />
-                </divdiv>
+                </div>
 
                 {/* Innovation Stats */}
-                <divdiv
+                <div
                   key={currentInnovation}
                   className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-90 rounded-xl p-4"
                 >
@@ -241,16 +241,16 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                       {currentInnovationData.title}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Floating Innovation Icons */}
               {innovations.slice(04).map((innovationindex) => (
-                <divdiv
+                <div
                   key={index}
-                    y: [0-20],
-                    rotate: [010],
-                    opacity: [0.710.7]
+
+
+
                   }}
                     duration: 3 + index * 0.5
                     repeat: Infinity
@@ -267,10 +267,10 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   }}
                 >
                   <innovation.icon className="w-6 h-6 text-white" />
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -282,7 +282,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
       >
         <X className="w-6 h-6" />
       </button>
-    </divdiv>
+    </div>
   );
 };
 

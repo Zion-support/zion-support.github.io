@@ -136,7 +136,7 @@ const NewContentNavigation = () => {
   ];
 
   return (
-    <divdiv
+    <div
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -163,7 +163,7 @@ const NewContentNavigation = () => {
         {/* Featured Content */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {featuredContent.map((itemindex) => (
-            <divdiv
+            <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
@@ -193,7 +193,7 @@ const NewContentNavigation = () => {
                 Explore Now
                 <ArrowRight className="w-4 h-4 ml-1" />
               </a>
-            </divdiv>
+            </div>
           ))}
         </div>
 
@@ -211,11 +211,11 @@ const NewContentNavigation = () => {
         {/* Categories Grid */}
         <div>
           {isExpanded && (
-            <divdiv
+            <div
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {contentCategories.map((categoryindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                 >
@@ -245,14 +245,14 @@ const NewContentNavigation = () => {
                     Explore {category.title}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           )}
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">
@@ -282,9 +282,9 @@ const NewContentNavigation = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

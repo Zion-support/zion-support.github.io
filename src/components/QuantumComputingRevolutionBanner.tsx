@@ -159,8 +159,8 @@ const QuantumComputingRevolutionBanner = () => {
                 {/* Animated Atom Icon */}
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.1, 1]
+
+
                   }}
                   transition={{ 
                     duration: 8,
@@ -191,8 +191,8 @@ const QuantumComputingRevolutionBanner = () => {
                 {/* Quantum Field Lines */}
                 <motion.div
                   animate={{ 
-                    opacity: [0.3, 0.8, 0.3],
-                    scale: [0.8, 1.2, 0.8]
+
+
                   }}
                   transition={{ 
                     duration: 3,
@@ -203,8 +203,8 @@ const QuantumComputingRevolutionBanner = () => {
                 />
                 <motion.div
                   animate={{ 
-                    opacity: [0.2, 0.6, 0.2],
-                    scale: [0.6, 1.4, 0.6]
+
+
                   }}
                   transition={{ 
                     duration: 4,

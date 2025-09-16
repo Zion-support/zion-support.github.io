@@ -121,7 +121,7 @@ const AI2025SuccessStoriesShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
@@ -138,7 +138,7 @@ const AI2025SuccessStoriesShowcase = () => {
             Discover how leading companies across industries are achieving remarkable results with our AI solutions. 
             See the measurable impact and transformation stories.
           </p>
-        </divdiv>
+        </div>
 
         {/* Success Stories Carousel */}
         <div className="mb-16">
@@ -147,7 +147,7 @@ const AI2025SuccessStoriesShowcase = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Featured Success Stories</h3>
               {successStories.map((storyindex) => (
-                <divdiv
+                <div
                   key={story.id}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeStory === index
@@ -166,13 +166,13 @@ const AI2025SuccessStoriesShowcase = () => {
                     </div>
                     <ArrowRight className="w-4 h-4 text-gray-400" />
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Active Story Display */}
             <div className="lg:col-span-2">
-                <divdiv
+                <div
                   key={activeStory}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20"
                 >
@@ -229,7 +229,7 @@ const AI2025SuccessStoriesShowcase = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ const AI2025SuccessStoriesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Proven Impact Across All Projects</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {metrics.map((metricindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
@@ -249,7 +249,7 @@ const AI2025SuccessStoriesShowcase = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                 <div className="text-gray-300">{metric.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -259,7 +259,7 @@ const AI2025SuccessStoriesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Trusted Across Industries</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
               >
@@ -268,13 +268,13 @@ const AI2025SuccessStoriesShowcase = () => {
                 </div>
                 <div className="text-lg font-semibold text-white mb-1">{industry.name}</div>
                 <div className="text-sm text-gray-400">{industry.count} companies</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20">
@@ -292,7 +292,7 @@ const AI2025SuccessStoriesShowcase = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

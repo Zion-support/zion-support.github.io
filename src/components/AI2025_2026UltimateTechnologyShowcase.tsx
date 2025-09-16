@@ -40,21 +40,21 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           title: 'Neural Consciousness AI',
           description: 'Advanced AI systems with self-awareness and emotional intelligence',
           benefits: ['300% faster decision making'95% accuracy in 'predictions', 'Real-time adaptation']
-        },
+
         {
           icon: Cpu,
           title: 'Quantum-Neural Fusion',
           description: 'Revolutionary computing that combines quantum and neural processing',
           benefits: ['10x processing 'speed', 'Unlimited 'scalability', 'Zero latency responses']
-        },
+
         {
           icon: Database,
           title: 'Autonomous Data Intelligence',
           description: 'Self-managing data systems that optimize and secure themselves',
           benefits: ['99.9% 'uptime', 'Auto-'optimization', 'Predictive maintenance']
-        }
+
       ]
-    },
+
     'ai-2026': {
       title: 'AI 2026 Future Vision',
       subtitle: 'Prepare for the Next Decade of AI Innovation',
@@ -64,21 +64,21 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           title: 'Global AI Ecosystem',
           description: 'Worldwide AI network connecting businesses and individuals',
           benefits: ['Global 'connectivity', 'Cross-platform 'integration', 'Universal AI access']
-        },
+
         {
           icon: Rocket,
           title: 'Space-Age AI Computing',
           description: 'AI systems designed for space exploration and interplanetary communication',
           benefits: ['Space-grade 'reliability', 'Interplanetary 'communication', 'Zero-gravity optimization']
-        },
+
         {
           icon: Star,
           title: 'Conscious AI Beings',
           description: 'AI entities with full consciousness and creative capabilities',
           benefits: ['Creative problem 'solving', 'Emotional 'intelligence', 'Autonomous innovation']
-        }
+
       ]
-    }
+
   };
 
   const currentTech = technologies[activeTab as keyof typeof technologies];
@@ -91,15 +91,15 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0">
           {[...Array(50)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                opacity: [010],
-                scale: [010],
+
+
               }}
                 duration: 3,
                 repeat: Infinity,
@@ -112,7 +112,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -142,10 +142,10 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               Explore Solutions
             </divbutton>
           </div>
-        </divdiv>
+        </div>
 
         {/* Tab Navigation */}
-        <divdiv
+        <div
           className="flex justify-center mb-12"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-full p-2 border border-white/20">
@@ -170,10 +170,10 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               AI 2026
             </button>
           </div>
-        </divdiv>
+        </div>
 
         {/* Technology Features */}
-          <divdiv
+          <div
             key={activeTab}
             className="mb-16"
           >
@@ -188,7 +188,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {currentTech.features.map((featureindex) => (
-                <divdiv
+                <div
                   key={feature.title}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group"
                 >
@@ -211,14 +211,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
         >
           <div className="text-center mb-12">
@@ -233,7 +233,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               { number: '300%'label: 'ROI Increase' },
               { number: '24/7'label: 'AI Support' }
             ].map((statindex) => (
-              <divdiv
+              <div
                 key={stat.label}
                 className="text-center"
               >
@@ -241,13 +241,13 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -273,7 +273,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

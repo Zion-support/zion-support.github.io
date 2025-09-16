@@ -208,7 +208,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
@@ -227,10 +227,10 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             AI-powered content discovery that learns your preferences and recommends the most relevant 
             articlestutorialsand insights tailored to your interests.
           </p>
-        </divdiv>
+        </div>
 
         {/* Search and Filters */}
-        <divdiv
+        <div
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20"
         >
           <div className="flex flex-col lg:flex-row gap-4">
@@ -298,10 +298,10 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Content Grid */}
-        <divdiv
+        <div
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -310,7 +310,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
         >
           <div>
             {filteredContent.map((itemindex) => (
-              <divdiv
+              <div
                 key={item.id}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   viewMode === 'list' ? 'flex' : ''
@@ -408,14 +408,14 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
-          <divdiv
+          <div
             className="text-center py-12"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -432,11 +432,11 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             >
               Clear Filters
             </button>
-          </divdiv>
+          </div>
         )}
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -464,7 +464,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

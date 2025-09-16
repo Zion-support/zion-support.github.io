@@ -36,7 +36,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                 
                 {/* Active indicator */}
                 {isActive && (
-                  <divdiv
+                  <div
                     className="absolute inset-0 rounded-xl border-2 border-white/30"
                   />
                 )}
@@ -47,13 +47,13 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
       </div>
       
       {/* Theme indicator */}
-      <divdiv
+      <div
         className="mt-3 text-center"
       >
         <span className="text-xs text-gray-400 font-medium">
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
-      </divdiv>
+      </div>
     </div>
   );
 };

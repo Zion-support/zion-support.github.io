@@ -510,7 +510,7 @@ MIT License - see LICENSE file for details.`,
           
           <div className="space-y-3 mb-6">
             {contentTypes.map((type) => (
-              <divdiv
+              <div
                 key={type.id}
                 onClick={() => setSelectedType(type.id)}
                 className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
@@ -540,7 +540,7 @@ MIT License - see LICENSE file for details.`,
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
@@ -575,7 +575,7 @@ MIT License - see LICENSE file for details.`,
                 <span>{Math.round(generationProgress)}%</span>
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <divdiv
+                <div
                   className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
                 />
               </div>
@@ -602,7 +602,7 @@ MIT License - see LICENSE file for details.`,
           ) : (
             <div className="space-y-4">
               {generatedContent.map((content) => (
-                <divdiv
+                <div
                   key={content.id}
                   className="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
                 >
@@ -663,7 +663,7 @@ MIT License - see LICENSE file for details.`,
                       </div>
                     </div>
                   )}
-                </divdiv>
+                </div>
               ))}
             </div>
           )}

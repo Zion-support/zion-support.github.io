@@ -311,7 +311,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div>
           {sortedContent.map((itemindex) => (
-            <divdiv
+            <div
               key={item.id}
               className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group"
             >
@@ -410,14 +410,14 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
                   </button>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
 
       {/* No Results */}
       {sortedContent.length === 0 && (
-        <divdiv
+        <div
           className="text-center py-12"
         >
           <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
@@ -425,7 +425,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           </div>
           <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
           <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-        </divdiv>
+        </div>
       )}
     </div>
   );

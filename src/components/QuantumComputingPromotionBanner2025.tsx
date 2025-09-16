@@ -13,19 +13,19 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
       description: "Quantum-neural fusion achieves unprecedented computational speed",
       icon: Zap,
       color: "from-blue-500 to-cyan-500"
-    },
+
     {
       title: "Unbreakable Security",
       description: "Quantum cryptography provides theoretically perfect encryption",
       icon: Atom,
       color: "from-green-500 to-emerald-500"
-    },
+
     {
       title: "Infinite Possibilities",
       description: "Quantum computing opens new frontiers in AI and optimization",
       icon: Cpu,
       color: "from-purple-500 to-pink-500"
-    }
+
   ];
 
   useEffect(() => {
@@ -40,32 +40,32 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border-b border-cyan-500/20 shadow-2xl"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             {/* Left side - Quantum Badge */}
             <div className="flex items-center gap-4">
-              <divdiv
+              <div
                 key={currentFeature}
                 className={`px-4 py-2 rounded-full bg-gradient-to-r ${features[currentFeature].color} text-white font-bold text-sm animate-pulse`}
               >
                 QUANTUM REVOLUTION
-              </divdiv>
+              </div>
               
               {/* Rotating Icon */}
-              <divdiv
+              <div
                 key={`icon-${currentFeature}`}
                 className={`p-2 rounded-full bg-gradient-to-r ${features[currentFeature].color}`}
               >
                 <features[currentFeature].icon className="w-6 h-6 text-white" />
-              </divdiv>
+              </div>
             </div>
 
             {/* Center - Feature Content */}
             <div className="flex-1 text-center px-8">
-              <divdiv
+              <div
                 key={`content-${currentFeature}`}
                 className="space-y-1"
               >
@@ -75,7 +75,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 <p className="text-sm text-gray-300 max-w-md mx-auto">
                   {features[currentFeature].description}
                 </p>
-              </divdiv>
+              </div>
             </div>
 
             {/* Right side - CTA and Close */}
@@ -106,16 +106,16 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
         {/* Quantum Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(25)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-20],
-                opacity: [010],
-                scale: [0.51.50.5],
+
+
+
               }}
                 duration: 3,
                 repeat: Infinity,
@@ -124,7 +124,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
             />
           ))}
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

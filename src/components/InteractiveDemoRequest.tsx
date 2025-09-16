@@ -93,11 +93,11 @@ export default function InteractiveDemoRequest() {
       {/* Modal */}
       <div>
         {isOpen && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
-            <divdiv
+            <div
               className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
@@ -139,7 +139,7 @@ export default function InteractiveDemoRequest() {
               {/* Content */}
               <div className="p-6 overflow-y-auto max-h-[60vh]">
                 {isSubmitted ? (
-                  <divdiv
+                  <div
                     className="text-center py-12"
                   >
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -155,12 +155,12 @@ export default function InteractiveDemoRequest() {
                     >
                       Close
                     </button>
-                  </divdiv>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit}>
                       {/* Step 1: Personal Information */}
                       {currentStep === 1 && (
-                        <divdiv
+                        <div
                           key="step1"
                           className="space-y-6"
                         >
@@ -214,12 +214,12 @@ export default function InteractiveDemoRequest() {
                               />
                             </div>
                           </div>
-                        </divdiv>
+                        </div>
                       )}
 
                       {/* Step 2: Business Details */}
                       {currentStep === 2 && (
-                        <divdiv
+                        <div
                           key="step2"
                           className="space-y-6"
                         >
@@ -287,12 +287,12 @@ export default function InteractiveDemoRequest() {
                               ))}
                             </div>
                           </div>
-                        </divdiv>
+                        </div>
                       )}
 
                       {/* Step 3: Schedule */}
                       {currentStep === 3 && (
-                        <divdiv
+                        <div
                           key="step3"
                           className="space-y-6"
                         >
@@ -336,7 +336,7 @@ export default function InteractiveDemoRequest() {
                               placeholder="Tell us about your specific needs or questions..."
                             />
                           </div>
-                        </divdiv>
+                        </div>
                       )}
                     </div>
                   </form>
@@ -376,8 +376,8 @@ export default function InteractiveDemoRequest() {
                   )}
                 </div>
               )}
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </>

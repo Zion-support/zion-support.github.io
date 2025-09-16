@@ -223,7 +223,7 @@ const AIInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -251,13 +251,13 @@ const AIInnovationHub2026: React.FC = () => {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Featured Innovations */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <div
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
@@ -268,7 +268,7 @@ const AIInnovationHub2026: React.FC = () => {
             {featuredInnovations.map((innovationindex) => {
               const CategoryIcon = getCategoryIcon(innovation.category);
               return (
-                <divdiv
+                <div
                   key={innovation.id}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedInnovation(innovation)}
@@ -312,14 +312,14 @@ const AIInnovationHub2026: React.FC = () => {
                       <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8">Browse by Category</h2>
@@ -345,16 +345,16 @@ const AIInnovationHub2026: React.FC = () => {
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Innovation Grid */}
-        <divdiv
+        <div
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredInnovations.map((innovationindex) => {
               const CategoryIcon = getCategoryIcon(innovation.category);
               return (
-                <divdiv
+                <div
                   key={innovation.id}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedInnovation(innovation)}
@@ -395,21 +395,21 @@ const AIInnovationHub2026: React.FC = () => {
                       <ChevronRight className="h-4 w-4 group-hover:text-blue-400 transition-colors" />
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
       </div>
 
       {/* Innovation Detail Modal */}
       <div>
         {selectedInnovation && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedInnovation(null)}
           >
-            <divdiv
+            <div
               className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -478,8 +478,8 @@ const AIInnovationHub2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </div>

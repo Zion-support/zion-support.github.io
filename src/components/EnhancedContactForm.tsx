@@ -105,7 +105,7 @@ const EnhancedContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <divdiv
+      <div
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">

@@ -169,7 +169,7 @@ export default function CuttingEdgePricing2025() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-            <divdiv
+            <div
               className="text-center"
             >
               <divh1 
@@ -189,7 +189,7 @@ export default function CuttingEdgePricing2025() {
               </divp>
 
               {/* Hero Stats */}
-              <divdiv 
+              <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
               >
                 {stats.map((stat, index) => (
@@ -203,15 +203,15 @@ export default function CuttingEdgePricing2025() {
                     <div className="text-sm text-white/70">{stat.label}</div>
                   </div>
                 ))}
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -226,11 +226,11 @@ export default function CuttingEdgePricing2025() {
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology 
                 and world-class support to ensure your success.
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingTiers.map((tier, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -282,7 +282,7 @@ export default function CuttingEdgePricing2025() {
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -291,7 +291,7 @@ export default function CuttingEdgePricing2025() {
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -306,7 +306,7 @@ export default function CuttingEdgePricing2025() {
                 Explore our comprehensive range of cutting-edge services across multiple technology domains. 
                 Each category offers specialized solutions for different business needs.
               </p>
-            </divdiv>
+            </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -336,13 +336,13 @@ export default function CuttingEdgePricing2025() {
             </div>
 
             {/* Services Grid */}
-            <divdiv
+            <div
               whileInView="visible"
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
@@ -413,16 +413,16 @@ export default function CuttingEdgePricing2025() {
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -479,7 +479,7 @@ export default function CuttingEdgePricing2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </Layout>

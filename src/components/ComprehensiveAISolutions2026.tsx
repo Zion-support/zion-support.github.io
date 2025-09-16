@@ -177,7 +177,7 @@ const ComprehensiveAISolutions2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -198,10 +198,10 @@ const ComprehensiveAISolutions2026 = () => {
             Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
-        </divdiv>
+        </div>
 
         {/* Solutions Navigation */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -224,7 +224,7 @@ const ComprehensiveAISolutions2026 = () => {
           </div>
 
           {/* Solution Details */}
-            <divdiv
+            <div
               key={activeSolution}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
@@ -300,12 +300,12 @@ const ComprehensiveAISolutions2026 = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Industries Section */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -313,7 +313,7 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center group"
               >
@@ -322,13 +322,13 @@ const ComprehensiveAISolutions2026 = () => {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{industry.count}</div>
                 <div className="text-gray-400 text-sm">{industry.name}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -336,7 +336,7 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
@@ -351,13 +351,13 @@ const ComprehensiveAISolutions2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-blue-400 text-sm">{testimonial.company}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
@@ -382,7 +382,7 @@ const ComprehensiveAISolutions2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

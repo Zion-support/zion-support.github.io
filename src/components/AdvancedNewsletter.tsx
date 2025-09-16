@@ -24,7 +24,7 @@ export default function AdvancedNewsletter() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
         >
           <div className="flex items-center justify-center mb-6">
@@ -67,7 +67,7 @@ export default function AdvancedNewsletter() {
               </div>
             </form>
           ) : (
-            <divdiv
+            <div
               className="bg-green-500/20 border border-green-500/50 rounded-lg p-6 max-w-md mx-auto"
             >
               <CheckCircle className="h-12 w-12 text-green-400 mx-auto mb-4" />
@@ -77,7 +77,7 @@ export default function AdvancedNewsletter() {
               <p className="text-white/80">
                 Thank you for subscribing. 'You', 'll receive our latest updates soon.
               </p>
-            </divdiv>
+            </div>
           )}
 
           <div className="mt-8 text-white/60 text-sm">
@@ -85,7 +85,7 @@ export default function AdvancedNewsletter() {
               By subscribingyou agree to our privacy policy. Unsubscribe at any time.
             </p>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
