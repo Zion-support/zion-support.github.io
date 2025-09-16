@@ -1,4 +1,4 @@
-
+import {motion} from 'framer-motion';
 export function GradientHeading(props: any) {
     const sizeClasses = {
         sm: 'text-sm',

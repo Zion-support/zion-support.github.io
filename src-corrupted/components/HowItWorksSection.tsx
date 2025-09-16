@@ -138,7 +138,7 @@ const get_steps = (t: any, ) =>: any [;
 ];
 import React, { useState } from 'react';
 export /**;
-
+import { motion, AnimatePresence  } from 'framer-motion';
 export default /**
  * Page - Function description
  */
@@ -323,7 +323,7 @@ const getSteps = (t: any,) => [;
 ];
 import React, { useState, useMemo } from 'react';
 export /**;
-
+import { motion, AnimatePresence  } from 'framer-motion';
 const Component = React && React.memo(function Page() {;
   {;
 ";

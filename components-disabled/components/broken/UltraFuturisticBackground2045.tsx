@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2045Props {
   children: React.ReactNode;

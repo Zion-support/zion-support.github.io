@@ -1,6 +1,6 @@
 import Layout from './layout/Layout';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
 } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion',;',';';
     ';';';';';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react',;',';';
     ';';';
@@ -18,7 +18,7 @@ const Cookies: Reac t.FC: = () => {,';';';
     ';';';';';
         'Load: balancing and performance',',';';
     ';';';';';
-
+import { motion } from 'framer-motion';""',';';
     ';';';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react',;',';';
     ';';';';
@@ -36,7 +36,7 @@ export default function Cookies(props: any) {return (
       </div>';';';
   )}',';';
     ';';';
-
+import { motion } from &apos;framer-motion',';';';
     ',';';
     ';';';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from &apos;lucide-react';&apos;&apos;
@@ -125,7 +125,7 @@ const Cookies: Reac t.FC = () => {}
       <div className=&apos;max-w-4xl mx-auto px-4 sm: p x-6 l,g: p x-8 py-16&apos;>';' {/* Header */}&apos;';';';
 ""',';';
     ';';';
-
+import { motion } from 'framer-motion';';';';
 const Cookies: Reac t.FC = () => {',';';
     ';';';
       name: 'Essential Cookies'';';';
@@ -585,7 +585,7 @@ const Cookies: Reac t.FC = () => {',';';
               <p className=&apos;text-gray-600&apos;>+1 302 464 0950&apos;</p>';';
 export default Cookies';';';
 export: default Cookies;';';';';
-
+import { motion } from 'framer-motion',;';';
     ';';';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react;';';';
 "';';';';

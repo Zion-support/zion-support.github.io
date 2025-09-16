@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
 
 interface ServiceWorkerRegistrationProps {

@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import { motion } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -215,7 +215,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div variants={itemVariants} className="text-center mb-16">
+        <motion.div variants={itemVariants} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Cpu className="w-4 h-4 text-blue-400" />
             <span>Comprehensive AI Services</span>
@@ -233,10 +233,10 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             Choose from our comprehensive suite of AI services designed to accelerate growth
             improve efficiencyand drive innovation across every aspect of your business.
           </p>
-        </div>
+        </motion.div>
 
         {/* Service Navigation */}
-        <div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-12">
+        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-12">
           {services.map((serviceindex) => (
             <button
               key={service.id}
@@ -251,10 +251,10 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               <span className="ml-2">{service.title}</span>
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Active Service Details */}
-        <div
+        <motion.div
           key={activeService}
           initial={{ opacity: 0x: 50 }}
           animate={{ opacity: 1x: 0 }}
@@ -372,12 +372,12 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* All Services Grid */}
-        <div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((serviceindex) => (
-            <div
+            <motion.div
               key={service.id}
               variants={itemVariants}
               whileHover={{ scale: 1.02y: -5 }}
@@ -416,12 +416,12 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div variants={itemVariants} className="text-center mt-16">
+        <motion.div variants={itemVariants} className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -446,7 +446,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

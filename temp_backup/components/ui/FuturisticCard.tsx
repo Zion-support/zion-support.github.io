@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface FuturisticCardProps {
   children: React.ReactNode;

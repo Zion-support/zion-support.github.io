@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, ArrowRight, Globe, Brain, Shield, Rocket, Atom } from 'lucide-react';
 import Link from 'next/link';
 import AccessibilityEnhancer from './AccessibilityEnhancer';

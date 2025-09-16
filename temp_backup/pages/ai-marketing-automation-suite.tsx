@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Megaphone, Target, Users, BarChart3, Zap, Shield, 
   Mail, Calendar, CheckCircle, Star, Globe, Lock, 

@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import { motion } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -40,7 +40,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
   const currentFeatureData = features[currentFeature];
 
   return (
-    <div
+    <motion.div
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : -50 }}
       transition={{ duration: 0.8 }}
@@ -57,7 +57,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1">
-            <div
+            <motion.div
               initial={{ opacity: 0x: -20 }}
               animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -20 }}
               transition={{ duration: 0.8delay: 0.2 }}
@@ -82,10 +82,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
               <p className="text-xl text-gray-300 mb-6 max-w-2xl">
                 Discover revolutionary AI technologies that will transform industries and reshape the future of human-computer interaction.
               </p>
-            </div>
+            </motion.div>
 
             {/* Rotating Feature Display */}
-            <div
+            <motion.div
               key={currentFeature}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,10 +101,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                   <div className="text-gray-400 text-sm">Cutting-edge innovation for 2025</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Stats */}
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.4 }}
@@ -122,10 +122,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 <Rocket className="w-5 h-5 text-blue-400" />
                 <span className="text-white font-semibold">Future Ready</span>
               </div>
-            </div>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.6 }}
@@ -145,11 +145,11 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 View All Content
                 <Sparkles className="w-5 h-5" />
               </a>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Visual */}
-          <div
+          <motion.div
             initial={{ opacity: 0x: 20 }}
             animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8delay: 0.3 }}
@@ -171,7 +171,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 const y = Math.sin(angle) * radius;
                 
                 return (
-                  <div
+                  <motion.div
                     key={index}
                     className="absolute"
                     style={{
@@ -190,7 +190,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                     <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center shadow-lg`}>
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
 
@@ -225,10 +225,10 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 </defs>
               </svg>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

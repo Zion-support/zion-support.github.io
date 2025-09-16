@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
   return (

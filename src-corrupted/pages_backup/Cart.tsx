@@ -32,7 +32,7 @@ import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',
 // import { safeStorage  } from '@/utils/safeStorage';
 import { getStripe  } from '@/utils/getStripe';
 import { useTranslation  } from 'react-i18next';
-
+import { motion  } from 'framer-motion';
 import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react'
 import { useWishlist  } from '@/hooks/useWishlist';
 import { toast  } from '@/hooks/use-toast';
@@ -80,7 +80,7 @@ import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',;
 // import { safeStorage } from '@/utils/safeStorage',;
 import { getStripe } from '@/utils/getStripe',;
 import { useTranslation } from 'react-i18next',;
-
+import { motion } from 'framer-motion',;
 import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
 import { toast } from '@/hooks/use-toast',;

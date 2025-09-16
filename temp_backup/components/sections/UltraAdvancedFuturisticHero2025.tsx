@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, Rocket, Shield, Atom, Cpu, Cloud, Target,
   ArrowRight, Play, Star, Zap, Users, Award, Globe,

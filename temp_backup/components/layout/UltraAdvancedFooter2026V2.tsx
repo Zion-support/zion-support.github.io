@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom, Bot, Heart, Shield, Rocket, Star, TrendingUp, Users, CheckCircle, Code, Database, Cloud, Lock, Eye, Target, BarChart3, Lightbulb, TestTube, Leaf, Car, Microscope, BrainCircuit, ArrowRight, ExternalLink, Github, Twitter, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
 
 export default function UltraAdvancedFooter2026V2() {

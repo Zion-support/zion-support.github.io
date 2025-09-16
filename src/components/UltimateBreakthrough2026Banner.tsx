@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateBreakthrough2026Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,14 +53,14 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-6 animate-pulse"
           >
             🌟 ULTIMATE BREAKTHROUGH CONTENT 2026 • EXCLUSIVE LAUNCH
-          </div>
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
         {/* Content Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
-            <div
+            <motion.div
               key={currentSlide}
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -127,8 +127,8 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          
+            </motion.div>
+          </AnimatePresence>
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
@@ -147,7 +147,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
         </div>
 
         {/* Quick Access Links */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -162,10 +162,10 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
               {content.title.split(' ')[1]} →
             </a>
           ))}
-        </div>
+        </motion.div>
 
         {/* Statistics */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
@@ -187,7 +187,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
             <div className="text-4xl font-bold text-pink-400 mb-2">99.9%</div>
             <div className="text-sm text-pink-200">Success Rate</div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

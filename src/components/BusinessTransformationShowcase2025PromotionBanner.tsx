@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   ArrowRight
@@ -30,9 +30,9 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <AnimatePresence>
       {isVisible && (
-        <div
+        <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
@@ -43,7 +43,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4">
-                <div
+                <motion.div
                   className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-full"
                   animate={{ 
                     scale: [1.051],
@@ -57,7 +57,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 >
                   <TrendingUp className="w-5 h-5 text-white" />
                   <span className="text-white font-bold text-sm">TRANSFORM</span>
-                </div>
+                </motion.div>
                 
                 <div className="hidden md:flex items-center gap-2 text-white">
                   <Users className="w-5 h-5 text-blue-300" />
@@ -96,7 +96,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
 
               {/* Right Actions */}
               <div className="flex items-center gap-3">
-                <button
+                <motion.button
                   className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -104,16 +104,16 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                   <Star className="w-4 h-4" />
                   Transform Now
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </motion.button>
                 
-                <button
+                <motion.button
                   onClick={handleDismiss}
                   className="text-white/70 hover:text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <X className="w-5 h-5" />
-                </button>
+                </motion.button>
               </div>
             </div>
 
@@ -135,7 +135,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
 
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div
+            <motion.div
               className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500/20 rounded-full"
               animate={{
                 y: [020],
@@ -147,7 +147,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 ease: "easeInOut"
               }}
             />
-            <div
+            <motion.div
               className="absolute -top-2 -right-8 w-6 h-6 bg-purple-500/20 rounded-full"
               animate={{
                 y: [0-150],
@@ -160,7 +160,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 delay: 0.7
               }}
             />
-            <div
+            <motion.div
               className="absolute top-1/2 -right-4 w-4 h-4 bg-green-400/30 rounded-full"
               animate={{
                 x: [0-10],
@@ -174,9 +174,9 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
               }}
             />
           </div>
-        </div>
+        </motion.div>
       )}
-    
+    </AnimatePresence>
   );
 };
 

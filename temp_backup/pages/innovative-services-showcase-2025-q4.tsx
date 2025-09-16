@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Check, Zap, Shield, Rocket, Brain, Atom, Target, 
   Star, TrendingUp, Users, Award, Globe, Phone, Mail, MapPin,

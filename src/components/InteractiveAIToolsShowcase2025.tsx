@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -153,7 +153,7 @@ const InteractiveAIToolsShowcase2025 = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -165,17 +165,17 @@ const InteractiveAIToolsShowcase2025 = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Experience the power of artificial intelligence with our comprehensive suite of interactive tools designed to transform your business operations.
           </p>
-        </div>
+        </motion.div>
 
         {/* AI Tools Grid */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
           {Object.entries(aiTools).map(([keytool]) => (
-            <button
+            <motion.button
               key={key}
               onClick={() => setActiveTool(key)}
               onMouseEnter={() => setHoveredTool(key)}
@@ -196,23 +196,23 @@ const InteractiveAIToolsShowcase2025 = () => {
               </div>
               
               {/* Hover Effect */}
-              
+              <AnimatePresence>
                 {hoveredTool === key && activeTool !== key && (
-                  <div
+                  <motion.div
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={{ opacity: 1scale: 1 }}
                     exit={{ opacity: 0scale: 0.8 }}
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-2xl"
                   />
                 )}
-              
-            </button>
+              </AnimatePresence>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Active Tool Details */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeTool}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -280,11 +280,11 @@ const InteractiveAIToolsShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Use Cases */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
@@ -295,7 +295,7 @@ const InteractiveAIToolsShowcase2025 = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCaseindex) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -315,13 +315,13 @@ const InteractiveAIToolsShowcase2025 = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Testimonials */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
@@ -332,7 +332,7 @@ const InteractiveAIToolsShowcase2025 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -354,13 +354,13 @@ const InteractiveAIToolsShowcase2025 = () => {
                   ))}
                 </div>
                 <p className="text-slate-600 italic">"{testimonial.content}"</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 1.2 }}
@@ -380,7 +380,7 @@ const InteractiveAIToolsShowcase2025 = () => {
               Get Started
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

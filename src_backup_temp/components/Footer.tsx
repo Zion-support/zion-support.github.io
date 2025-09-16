@@ -271,7 +271,7 @@ export function Footer() {;
       </div>;
     </footer>;
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Phone, 
   Mail, 

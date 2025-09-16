@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
 const NotFound = () => {
     const popularPages = [

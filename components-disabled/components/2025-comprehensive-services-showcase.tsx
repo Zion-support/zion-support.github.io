@@ -1,7 +1,7 @@
 
 ;
 import React, { useState } from 'react',import SEO from '../components/SEO';
-
+import { motion  } from 'framer-motion';
 import { Brain, Building, Target, Cpu, Shield;
   Check, Phone, Mail, MapPin;
   TrendingUp, Zap, Globe;

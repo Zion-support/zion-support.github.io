@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 
 export const AccessibilityPanel = (props: any) => {
     const [settings, setSettings] = useState({

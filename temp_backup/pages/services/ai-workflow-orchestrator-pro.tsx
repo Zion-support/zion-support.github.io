@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Check, Star, Users, Zap, Shield, TrendingUp,
   ArrowRight, Play, Clock, Award, Globe, Cpu, Brain

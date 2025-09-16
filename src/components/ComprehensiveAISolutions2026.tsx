@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -178,7 +178,7 @@ const ComprehensiveAISolutions2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -202,10 +202,10 @@ const ComprehensiveAISolutions2026 = () => {
             Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
-        </div>
+        </motion.div>
 
         {/* Solutions Navigation */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
@@ -232,7 +232,7 @@ const ComprehensiveAISolutions2026 = () => {
 
           {/* Solution Details */}
           <AnimatePresence mode="wait">
-            <div
+            <motion.div
               key={activeSolution}
               initial={{ opacity: 0x: 20 }}
               animate={{ opacity: 1x: 0 }}
@@ -312,12 +312,12 @@ const ComprehensiveAISolutions2026 = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
 
         {/* Industries Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
@@ -328,7 +328,7 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0scale: 0.8 }}
                 animate={isVisible ? { opacity: 1scale: 1 } : {}}
@@ -340,13 +340,13 @@ const ComprehensiveAISolutions2026 = () => {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{industry.count}</div>
                 <div className="text-gray-400 text-sm">{industry.name}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Testimonials */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
@@ -357,7 +357,7 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -375,13 +375,13 @@ const ComprehensiveAISolutions2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-blue-400 text-sm">{testimonial.company}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
@@ -409,7 +409,7 @@ const ComprehensiveAISolutions2026 = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
