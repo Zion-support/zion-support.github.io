@@ -1,7 +1,15 @@
-import React from 'react';
 import ContentCard from './ContentCard';
 
 const featuredContent = [
+  {
+    title: "AI 2026: Governed Agent Tool‑Use Patterns",
+    description: "Risk‑tiered autonomy, eval‑gated tools, and policy‑as‑code patterns for safe, scalable tool‑use.",
+    href: "/blog/ai-2026-governed-agent-tool-use-patterns",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Agents", "Tool‑Use", "Policy‑as‑Code"]
+  },
   {
     title: "AI 2026: Policy‑as‑Code Blueprint",
     description: "Encode approvals, risk tiers, and evaluation gates as versioned policy.",
