@@ -16,10 +16,10 @@ const NextGenTechRevolution2025: React.FC = () => {
             Experience the most revolutionary technological advances that will reshape our world in 2025
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Innovations
             </button>
-            <button className="border-2 border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Watch Demo
             </button>
           </div>
@@ -37,26 +37,26 @@ const NextGenTechRevolution2025: React.FC = () => {
               <li>• Self-learning algorithms</li>
               <li>• Emotional recognition</li>
               <li>• Creative problem solving</li>
-              <li>• Ethical decision making</li>
+              <li>• Autonomous decision making</li>
             </ul>
-            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Learn More →
             </button>
           </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Breakthrough quantum computing that processes information at the speed of thought
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum entanglement</li>
-              <li>• Instantaneous processing</li>
-              <li>• Parallel universes</li>
-              <li>• Reality simulation</li>
+              <li>• Quantum entanglement processing</li>
+              <li>• Instantaneous data transfer</li>
+              <li>• Parallel universe computing</li>
+              <li>• Consciousness simulation</li>
             </ul>
-            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Explore Quantum →
             </button>
           </div>
@@ -70,70 +70,83 @@ const NextGenTechRevolution2025: React.FC = () => {
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Multi-dimensional processing</li>
               <li>• Reality manipulation</li>
-              <li>• Time-space bridging</li>
-              <li>• Infinite possibilities</li>
+              <li>• Time-space optimization</li>
+              <li>• Infinite scalability</li>
             </ul>
-            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Enter Dimensions →
+            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Enter New Dimensions →
             </button>
           </div>
         </div>
 
-        {/* Technology Showcase */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Showcase</h2>
-            <p className="text-xl opacity-90">Experience the future of technology with our interactive demonstrations</p>
+        {/* Interactive Demo Section */}
+        <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">Interactive Technology Demo</h2>
+            <p className="text-xl opacity-90">Experience our revolutionary technologies in real-time</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">AI-Powered Reality Engine</h3>
-                <p className="text-white/80 mb-4">
-                  Our proprietary AI system can generate and manipulate reality in real-time, creating immersive experiences that blur the line between digital and physical worlds.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm">Active and Processing</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">AI Consciousness Simulator</h3>
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full mb-4">
+                  <div className="bg-white h-2 rounded-full w-3/4 animate-pulse"></div>
                 </div>
+                <p className="text-sm opacity-80">Simulating conscious thought patterns...</p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-300">Quantum Neural Networks</h3>
-                <p className="text-white/80 mb-4">
-                  Revolutionary quantum computing combined with neural networks that can process infinite amounts of data simultaneously across multiple dimensions.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm">Quantum State Active</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">Quantum Processing Status</h3>
+                <div className="flex space-x-2 mb-4">
+                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                 </div>
+                <p className="text-sm opacity-80">Processing 10^15 operations per second</p>
               </div>
             </div>
             
             <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-emerald-300">Consciousness Transfer Protocol</h3>
-                <p className="text-white/80 mb-4">
-                  Breakthrough technology that allows for the transfer of consciousness between digital and biological systems, enabling true digital immortality.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm">Consciousness Matrix Online</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">Dimensional Interface</h3>
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  {Array.from({length: 9}).map((_, i) => (
+                    <div key={i} className="aspect-square bg-gradient-to-br from-emerald-400 to-teal-400 rounded opacity-60 hover:opacity-100 transition-opacity cursor-pointer"></div>
+                  ))}
                 </div>
+                <p className="text-sm opacity-80">Tap to explore different dimensions</p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-pink-300">Reality Fabrication Engine</h3>
-                <p className="text-white/80 mb-4">
-                  Advanced system that can create, modify, and destroy reality itself, giving users god-like powers over their digital environment.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm">Reality Matrix Stable</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">Reality Manipulation</h3>
+                <div className="relative">
+                  <div className="w-full h-20 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-lg opacity-50"></div>
+                  <div className="absolute inset-0 bg-white/20 rounded-lg animate-pulse"></div>
                 </div>
+                <p className="text-sm opacity-80 mt-2">Reality matrix is stable and operational</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Success Metrics */}
+        <div className="grid md:grid-cols-4 gap-6 mb-16">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-lg opacity-80">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">10^15</div>
+            <div className="text-lg opacity-80">Operations/Second</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-lg opacity-80">Scalability</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+            <div className="text-lg opacity-80">Availability</div>
           </div>
         </div>
 
@@ -141,14 +154,13 @@ const NextGenTechRevolution2025: React.FC = () => {
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of pioneers who are already experiencing the next generation of technology. 
-            Don't get left behind in the technological revolution.
+            Join thousands of forward-thinking organizations already using our revolutionary technology
           </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
-            <button className="border-2 border-purple-400 px-10 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
           </div>
