@@ -40,13 +40,41 @@ const FeaturedContentShowcase: React.FC = () => {
       featured: true,
       icon: "📈"
     }
+    ,
+    {
+      title: "Agentic Product Playbooks",
+      description: "Practical blueprints for shipping agentic workflows into production across key use-cases.",
+      link: "/pages/AgenticProductPlaybooks",
+      category: "Agentic Systems",
+      readingTime: "10 min read",
+      featured: true,
+      icon: "📘"
+    },
+    {
+      title: "Evals, Guardrails, and Safety",
+      description: "Build trustworthy AI systems using evaluations, safety baselines, and policy-aligned guardrails.",
+      link: "/pages/EvalsAndGuardrails",
+      category: "AI Safety",
+      readingTime: "12 min read",
+      featured: true,
+      icon: "🛡️"
+    },
+    {
+      title: "Cloud Cost Optimization 2025",
+      description: "Modern FinOps patterns to improve resilience and cost-efficiency without sacrificing performance.",
+      link: "/pages/CloudCostOptimization2025",
+      category: "Cloud & FinOps",
+      readingTime: "9 min read",
+      featured: false,
+      icon: "💸"
+    }
   ];
 
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
-          🌟 NEW CONTENT • JANUARY 2025
+          🌟 NEW CONTENT • SEPTEMBER 2025
         </div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Content & Success Stories</h2>
         <p className="text-lg text-gray-600">Discover our latest insights on breakthrough technologies and real-world transformation results</p>

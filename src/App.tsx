@@ -77,6 +77,9 @@ import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromot
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
+import AgenticProductPlaybooks from './pages/AgenticProductPlaybooks';
+import EvalsAndGuardrails from './pages/EvalsAndGuardrails';
+import CloudCostOptimization2025 from './pages/CloudCostOptimization2025';
 
 const App: React.FC = () => {
   return (
@@ -278,6 +281,9 @@ const App: React.FC = () => {
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
+          <Route path="/pages/AgenticProductPlaybooks" element={<AgenticProductPlaybooks />} />
+          <Route path="/pages/EvalsAndGuardrails" element={<EvalsAndGuardrails />} />
+          <Route path="/pages/CloudCostOptimization2025" element={<CloudCostOptimization2025 />} />
         </Routes>
         
         <Footer />
