@@ -51,6 +51,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Trusted GenAI Patterns for Regulated Enterprises (2026)',
+      href: '/blog/ai-2026-trusted-genai-patterns-regulated-enterprises',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Real-Time Retrieval Architectures (2026)',
+      href: '/blog/ai-2026-real-time-retrieval-architectures',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
       title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
       href: '/reports/guides/guide-2025-09-agent-slo-blueprints',
       tag: 'New',

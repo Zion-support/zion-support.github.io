@@ -64,6 +64,12 @@ posts.unshift(
   { slug: 'ai-2026-governed-tool-approvals', title: 'Governed Tool Approvals (2026)', excerpt: 'Risk‑tiered adapters, budgets, and JIT approvals for safe actions.' }
 )
 
+// New articles (Sept 16, 2025) — Additional
+posts.unshift(
+  { slug: 'ai-2026-real-time-retrieval-architectures', title: 'AI 2026: Real-Time Retrieval Architectures', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' },
+  { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
+)
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
