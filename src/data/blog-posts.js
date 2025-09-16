@@ -1893,6 +1893,21 @@ export const getBlogTags = () => {
 // New content added for enhanced engagement
 export const newContent2026 = [
   {
+    id: 9301,
+    title: "AI 2026: Policy‑as‑Code Starter Kit — Ship Safer, Faster",
+    excerpt: "Copy‑paste policies, approvals, and risk tiers to gate agent behavior and releases.",
+    content: "This practical starter kit helps teams encode approvals, risk tiers, and guardrails as versioned policy. It includes copy‑paste templates, a minimal policy adapter, and examples for eval‑gated rollouts. Learn how to thread policies through CI/CD and runtime checks so changes are blocked automatically when evidence is weak, and fast‑tracked when scorecards are green.",
+    author: "Riley Kim",
+    authorRole: "Platform Governance Lead",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Policy‑as‑Code", "Risk Tiers", "Approvals", "Guardrails"],
+    featured: true,
+    imageUrl: "/images/blog/policy-as-code-starter-kit-2026.jpg",
+    slug: "ai-2026-policy-as-code-starter-kit"
+  },
+  {
     id: 8001,
     title: "2025 Q3: Practical Eval-Gated Rollouts",
     excerpt: "How teams shipped 42 features safely using scorecards, canaries, and auto-rollback.",
