@@ -478,16 +478,21 @@ export default function HomePage() {
       </div>
       {/* Featured new blog posts */}
       <div className="mx-auto mt-8 max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <a href="/blog/ai-2026-enterprise-agent-observability-deep-dive" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <a href="/blog/ai-2026-enterprise-rag-observability" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
             <div className="text-sm text-blue-300">New</div>
-            <div className="mt-1 text-lg font-semibold">AI 2026: Enterprise Agent Observability — Deep Dive</div>
-            <div className="mt-1 text-gray-300 text-sm">Tracing, metrics, alerts, and audit‑ready signals for reliable agent systems.</div>
+            <div className="mt-1 text-lg font-semibold">AI 2026: Enterprise RAG Observability</div>
+            <div className="mt-1 text-gray-300 text-sm">Traces, evals, and budgets for trustworthy RAG in production.</div>
           </a>
-          <a href="/blog/ai-2026-autonomous-ops-sre-for-agents" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
-            <div className="text-sm text-blue-300">New</div>
-            <div className="mt-1 text-lg font-semibold">AI 2026: Autonomous Ops and SRE for Agents</div>
-            <div className="mt-1 text-gray-300 text-sm">SLOs, guardrails, budgets, and incident runbooks for production agents.</div>
+          <a href="/blog/ai-2026-agent-cost-optimization" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
+            <div className="text-sm text-emerald-300">New</div>
+            <div className="mt-1 text-lg font-semibold">AI 2026: Agent Cost Optimization</div>
+            <div className="mt-1 text-gray-300 text-sm">Routing, batching, caching, and eval‑driven choices to cut spend.</div>
+          </a>
+          <a href="/blog/ai-2026-sovereign-ai-commerce" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
+            <div className="text-sm text-amber-300">New</div>
+            <div className="mt-1 text-lg font-semibold">Sovereign AI Commerce (2026)</div>
+            <div className="mt-1 text-gray-300 text-sm">Blueprint for safe, compliant autonomous marketplaces.</div>
           </a>
         </div>
       </div>

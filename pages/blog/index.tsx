@@ -11,7 +11,10 @@ const posts = [
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
   { slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Practical blueprints for shipping agentic workflows into production.' },
-  { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' }
+  { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
+  { slug: 'ai-2026-enterprise-rag-observability', title: 'AI 2026: Enterprise RAG Observability', excerpt: 'Design a measurable, auditable RAG system with traces, evals, and budgets.' },
+  { slug: 'ai-2026-agent-cost-optimization', title: 'AI 2026: Agent Cost Optimization', excerpt: 'Cut agent costs 20–40% with routing, batching, caching, and eval‑driven choices.' },
+  { slug: 'ai-2026-sovereign-ai-commerce', title: 'Sovereign AI Commerce (2026): Autonomous Marketplaces', excerpt: 'Reference architecture, safety gates, and rollout checklist for AI commerce.' }
 ]
 
 export default function BlogIndexPage() {
