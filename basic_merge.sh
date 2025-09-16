@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Simple git operations
+# Basic merge script
 cd /workspace
 
-echo "Starting simple git operations..."
+echo "Starting basic merge..."
 
 # Check status
-git status --short
+git status
 
 # Switch to main
 git checkout main
