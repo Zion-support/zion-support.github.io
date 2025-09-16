@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedBiotechRevolution2026: React.FC = () => {
@@ -189,6 +192,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
               Explore Applications
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 
@@ -419,6 +423,8 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
               Research Partnership
 >>>>>>> cursor/create-and-deploy-new-content-011f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-de2c
             </button>
           </div>
         </div>
