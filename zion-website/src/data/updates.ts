@@ -11,6 +11,20 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Launch: Autonomous Experimentation Toolkit v1.0',
+        summary: 'Safe A/Bs and shadow tests with eval gates, policy checks, and audit evidence.',
+        href: '/updates/autonomous-experimentation-toolkit-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Guardrails for Multimodal Agents (2026)',
+        summary: 'Design patterns to gate image/audio/text tools with continuous evals and risk tiers.',
+        href: '/updates/production-guardrails-multimodal-agents-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
         title: 'Launch: Agent Risk Dashboard v1.0',
         summary: 'Unified risk scoring for agents with policy checks and incident drill‑downs.',
         href: '/updates/agent-risk-dashboard-1-0',
