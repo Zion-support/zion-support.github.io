@@ -1,0 +1,107 @@
+
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+    userType: '', // Default empty string since userDetails doesn't have this property
+    profileComplete: false, // Default value since userDetails doesn't have this property
+    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
+    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
+    role: '' // Default empty string since userDetails doesn't have this property
+
+  // Handle loading error gracefully
+  useEffect(() => {
+    if (error) {
+      toast({
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+
+
+  }
+  if (error |!profile) {
+    return <ProfileErrorState error={error} />
+        title: "Error loading profile",
+        description: "There was a problem loading this talent profile. Please try again.",
+        variant: "destructive",
+      });
+    }
+  }, [error]);
+
+  if (isLoading) {
+    return <ProfileLoadingState />;
+  }
+
+  if (error || !profile) {
+    return <ProfileErrorState error={error} />;
+  }
+
+  const handleRequestHire = () => {
+    if (!isAuthenticated) {
+      toast({
+
+  const handleMessageTalent = () => {
+    if (!isAuthenticated) {
+      toast({
+      navigate('/login', { state: { from: `/talent/${id}` } });
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
+      />
+      <BackToDirectoryButton />
+            size="sm"
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            onClick={handleRequestHire}
+          >
+            <Handshake className="mr-2 h-4 w-4" />
+            Hire Now
+          </Button>
+            size="sm"
+            variant="outline"
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            onClick={handleMessageTalent}
+          >
+            <MessageSquare className="mr-2 h-4 w-4" />
+            Message
+          </Button>
+        </div>
+      </StickyAction>
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+
+
+      {/* Request to Hire Modal */}
+      <HireRequestModal
+      
+      {/* Request to Hire Modal */}
+      <HireRequestModal 
+        talent={profile}
+        isOpen={isHireModalOpen}
+        onClose={() => setIsHireModalOpen(false)}
+        userDetails={userProfile}
+      />
+      {/* Message Talent Modal */}
+      <MessageTalentModal
+        talent={profile}
+        isOpen={isMessageModalOpen}
+        onClose={() => setIsMessageModalOpen(false)}

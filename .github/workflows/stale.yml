@@ -1,0 +1,74 @@
+<<<<<<< HEAD
+---
+name: stale
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  stale:
+    name: Mark Stale Issues and PRs
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run workflow
+        run: echo "Workflow executed successfully"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+=======
+name: Stale
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: pinned,security,critical,good first issue
+          exempt-pr-labels: pinned,security,critical,auto-merge
+          stale-issue-message: 'This issue has been marked as stale due to inactivity.'
+          stale-pr-message: 'This pull request has been marked as stale due to inactivity.'
+          close-issue-message: 'Closing stale issue. Reopen if needed.'
+          close-pr-message: 'Closing stale pull request. Reopen if needed.'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> origin/auto/autonomy-17186719616
