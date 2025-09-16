@@ -53,13 +53,17 @@ import TrendingContentSection from './components/TrendingContentSection';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
+import UltimateTechShowcaseBanner2027 from './components/UltimateTechShowcaseBanner2027';
+import NewContentPromotionBanner2027 from './components/NewContentPromotionBanner2027';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
+import AIRevolutionaryBreakthrough2027 from './pages/AIRevolutionaryBreakthrough2027';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
+import AdvancedAIConsciousness2027 from './pages/AdvancedAIConsciousness2027';
 import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
 import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
 import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
@@ -91,6 +95,7 @@ import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution20
 import QuantumConsciousnessRevolution2025 from './pages/QuantumConsciousnessRevolution2025';
 import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
 import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
+import QuantumNeuralFusion2027 from './pages/QuantumNeuralFusion2027';
 import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
 import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
@@ -342,6 +347,16 @@ const App: React.FC = () => {
                 <RevolutionaryContentBanner2027 />
               </div>
 
+              {/* NEW: Ultimate Tech Showcase Banner 2027 */}
+              <div className="mb-12">
+                <UltimateTechShowcaseBanner2027 />
+              </div>
+
+              {/* NEW: New Content Promotion Banner 2027 */}
+              <div className="mb-12">
+                <NewContentPromotionBanner2027 />
+              </div>
+
               {/* NEW: Futuristic Tech Promotion Banner 2035 */}
               <div className="mb-12">
                 <FuturisticTechPromotionBanner2035 />
@@ -415,6 +430,9 @@ const App: React.FC = () => {
           <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
           <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
           <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
+          <Route path="/pages/AIRevolutionaryBreakthrough2027" element={<AIRevolutionaryBreakthrough2027 />} />
+          <Route path="/pages/QuantumNeuralFusion2027" element={<QuantumNeuralFusion2027 />} />
+          <Route path="/pages/AdvancedAIConsciousness2027" element={<AdvancedAIConsciousness2027 />} />
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
