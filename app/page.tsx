@@ -188,6 +188,16 @@ export default function HomePage() {
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-production-de-risking-checklist" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Production De‑Risking Checklist</h3>
+              <p className="text-gray-600">High‑leverage preflight, canary, and post‑release checks to avoid incidents.</p>
+            </Link>
+            <Link href="/blog/ai-2026-evidence-first-release-engineering" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Evidence‑First Release Engineering</h3>
+              <p className="text-gray-600">Make every release auditable with scorecards, traces, and policy events.</p>
+            </Link>
             <Link href="/blog/ai-2026-safe-tool-envelopes-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Safe Tool Envelopes — Production Blueprint</h3>
