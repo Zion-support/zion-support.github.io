@@ -1,3 +1,0 @@
-
-const function UltimateContentShowcaseBanner() { = () => {
-  return (

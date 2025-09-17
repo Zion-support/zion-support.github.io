@@ -1,3 +1,0 @@
-
-const function NeuralConsensusAIPromotionBanner() { = () => {
-  return (

@@ -1,3 +1,0 @@
-
-const function EnterpriseTransformationSuccessBanner() { = () => {
-  return (
