@@ -1,5 +1,5 @@
-# Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
+# Netlify build configuration for Vite React app
+# Updated to build the correct Vite project (2025-01-17)
 [build]
   # Build Vite React app in root directory
   command = "npm ci --ignore-scripts --no-audit && npm run build"
@@ -22,6 +22,7 @@
 [build.processing]
   skip_processing = true
 
+# No plugins needed for Vite static site
 # Fix MIME type issues
 [[headers]]
   for = "/js/*"
@@ -198,7 +199,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: This is a Vite static site build with SPA routing
+# Note: This is a Vite static site build with SPA routing handled by _redirects
 
 # Security Headers
 [[headers]]
