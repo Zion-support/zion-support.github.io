@@ -403,16 +403,8 @@ const App: React.FC = () => {
               <div className="mb-12">
                 <PromotionalBanner />
               </div>
-            } />
-          </Routes>
-        </main>
-        
-        <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 mt-16">
-          <div className="container mx-auto px-4 py-8">
-            <div className="text-center text-gray-300">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             </div>
-          } />
+            } />
           
           {/* Routes for all pages */}
           <Route path="/blog" element={<Blog />} />
