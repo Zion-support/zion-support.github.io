@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 =======
@@ -8,6 +9,22 @@ import React from 'react';
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+const posts = [
+  {
+    slug: 'ai-2026-operational-evals-blueprint',
+    title: 'AI 2026: Operational Evals Blueprint',
+    summary:
+      'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-risk-and-guardrails-operating-model',
+    title: 'AI 2026: Risk & Guardrails Operating Model',
+    summary:
+      'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
+  },
+  {
+>>>>>>> origin/feat/new-blog-content-and-promo
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
