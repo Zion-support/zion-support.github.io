@@ -10,12 +10,25 @@ export default [
     ignores: [
       'dist', 
       'node_modules', 
+    ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
@@ -24,4 +37,6 @@ export default [
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'warn',
+    },
+  },
 ]
