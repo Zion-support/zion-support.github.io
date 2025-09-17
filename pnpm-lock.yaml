@@ -201,8 +201,8 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3(vite@4.5.14(@types/node@20.19.15)(terser@5.44.0))(workbox-build@7.3.0(@types/babel__core@7.20.5))(workbox-window@7.3.0)
       zod:
-        specifier: ^3.22.4
-        version: 3.25.76
+        specifier: ^4.1.8
+        version: 4.1.8
     devDependencies:
       '@types/jest':
         specifier: ^29.5.3
@@ -5292,8 +5292,8 @@ packages:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
     engines: {node: '>=12.20'}
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.1.8:
+    resolution: {integrity: sha512-5R1P+WwQqmmMIEACyzSvo4JXHY5WiAFHRMg+zBZKgKS+Q1viRa0C1hmUKtHltoIFKtIdki3pRxkmpP74jnNYHQ==}
 
 snapshots:
 
@@ -11192,4 +11192,4 @@ snapshots:
 
   yocto-queue@1.2.1: {}
 
-  zod@3.25.76: {}
+  zod@4.1.8: {}
