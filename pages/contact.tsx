@@ -1,20 +1,22 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const Contact: NextPage = () => {
+const contact: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Contact - Zion Tech Solutions</title>
-        <meta name="description" content="Contact page" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>contact | Zion Tech Group</title>
+        <meta name="description" content="contact - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main>
-        <h1>Contact</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">contact</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Contact;
+export default contact;
