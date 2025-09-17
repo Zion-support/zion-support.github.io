@@ -1,87 +1,31 @@
 #!/bin/bash
 
-# Script to automatically resolve merge conflicts by taking the newer version
-# and cleaning up merge conflict markers
+# Script to resolve all merge conflicts by choosing HEAD version
+echo "Resolving merge conflicts..."
 
-echo "Starting merge conflict resolution..."
+# Find all files with merge conflicts
+files_with_conflicts=$(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.toml" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Resolving conflicts in: $file"
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    if [ -f "$file" ]; then
-        # Remove merge conflict markers and take the newer version (HEAD)
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        
-        # Clean up any remaining conflict markers
-        sed -i '/^<<<<<<< /d' "$file"
-        sed -i '/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        
-        echo "Resolved: $file"
-    fi
-}
-
-# Function to merge a branch with automatic conflict resolution
-merge_branch() {
-    local branch="$1"
-    echo "Attempting to merge branch: $branch"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
-    if git merge "$branch" --no-ff -m "Merge $branch with auto-resolved conflicts"; then
-        echo "Successfully merged: $branch"
-        return 0
-    else
-        echo "Merge conflicts detected in: $branch"
-        
-        # Get list of conflicted files
-        conflicted_files=$(git diff --name-only --diff-filter=U)
-        
-        # Resolve conflicts in each file
-        for file in $conflicted_files; do
-            resolve_conflicts "$file"
-        done
-        
-        # Add resolved files and commit
-        git add .
-        git commit -m "Resolve merge conflicts for $branch"
-        
-        echo "Resolved conflicts and merged: $branch"
-        return 0
-    fi
-}
-
-# List of branches to merge (in order of priority)
-branches=(
-    "origin/performance-optimizations"
-    "origin/feat/clean-updates-content"
-    "origin/feature/ai-ops-post-and-homepage-promo"
-    "origin/cursor/create-and-deploy-new-content-21c3"
-    "origin/feat/new-content-sept-2025"
-)
-
-echo "Starting systematic merge of branches..."
-
-for branch in "${branches[@]}"; do
-    echo "Processing branch: $branch"
-    if git show-ref --verify --quiet "refs/remotes/$branch"; then
-        merge_branch "$branch"
-    else
-        echo "Branch $branch not found, skipping..."
-    fi
-    echo "---"
+    # Process the file to resolve conflicts by choosing HEAD version
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print; next }
+    in_other { next }
+    !in_head && !in_other { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+    
+    echo "Resolved conflicts in: $file"
 done
 
-echo "Merge process completed!"
-echo "Checking build status..."
-
-# Test the build
-if npm run build; then
-    echo "✅ Build successful after merges!"
-else
-    echo "❌ Build failed after merges. Checking for issues..."
-    npm run build 2>&1 | head -20
-fi
-
-echo "All done!"
+echo "Merge conflicts resolved!"

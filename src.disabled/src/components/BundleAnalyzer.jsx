@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const BundleAnalyzer: React.FC = () => {
@@ -11,9 +10,3 @@ const BundleAnalyzer: React.FC = () => {
 };
 
 export default BundleAnalyzer;
-=======
- '"`
- \'"`
-const React,{ useState,useEffect,useCallback } from "react";  ""`'"`'"`
- '"`
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

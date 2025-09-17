@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ModernServicesShowcase: React.FC = () => {
@@ -11,18 +10,3 @@ const ModernServicesShowcase: React.FC = () => {
 };
 
 export default ModernServicesShowcase;
-=======
-
-
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</string>;
-</any>;
-</any>;
-import { useState } from 'react';,
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

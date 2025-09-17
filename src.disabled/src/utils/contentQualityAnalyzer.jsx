@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const contentQualityAnalyzer: React.FC = () => {
@@ -11,9 +10,3 @@ const contentQualityAnalyzer: React.FC = () => {
 };
 
 export default contentQualityAnalyzer;
-=======
-
-
-const React,{ useState,useEffect } from "react"; export default ContentQualityAnalyzer; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

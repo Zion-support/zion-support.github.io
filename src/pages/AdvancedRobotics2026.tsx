@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 const AdvancedRobotics2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -25,12 +28,14 @@ const AdvancedRobotics2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
       {/* Key Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Revolutionary Robotics Technology</h2>
           <p className="text-xl text-gray-600">Intelligent machines that think, learn, and adapt</p>
         </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -50,6 +55,7 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Continuous learning</li>
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,6 +74,7 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Environmental awareness</li>
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,6 +93,7 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Real-time communication</li>
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -104,6 +112,7 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Predictive maintenance</li>
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,6 +131,7 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Patient care</li>
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -140,15 +150,105 @@ const AdvancedRobotics2026: React.FC = () => {
               <li>• Delivery services</li>
             </ul>
           </motion.div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-800 to-gray-700 text-white">
+      {/* Header */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-slate-400 to-gray-400 bg-clip-text text-transparent">
+            Advanced Robotics 2026
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Revolutionary robotics solutions and automation for the future
+          </p>
+        </div>
+        
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-bold mb-4 text-slate-400">AI-Powered Automation</h3>
+            <p className="text-gray-300 mb-4">
+              Intelligent robots that can learn, adapt, and perform complex tasks autonomously.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Machine learning integration</li>
+              <li>• Computer vision systems</li>
+              <li>• Natural language processing</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-bold mb-4 text-gray-400">Industrial Applications</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced robotics solutions for manufacturing, logistics, and service industries.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Manufacturing automation</li>
+              <li>• Warehouse management</li>
+              <li>• Quality control systems</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-bold mb-4 text-slate-300">Human-Robot Collaboration</h3>
+            <p className="text-gray-300 mb-4">
+              Safe and efficient collaboration between humans and robots in shared workspaces.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Safety protocols</li>
+              <li>• Intuitive interfaces</li>
+              <li>• Real-time monitoring</li>
+            </ul>
+          </div>
+>>>>>>> origin/merged-prs
         </div>
       </div>
+
+<<<<<<< HEAD
       {/* Applications Section */}
       <div className="bg-gradient-to-r from-slate-600 to-gray-600 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">🌐 Industry Applications</h2>
             <p className="text-xl text-slate-100">Transforming industries through intelligent automation</p>
+=======
+        {/* Applications Section */}
+        <div className="bg-gradient-to-r from-slate-600 to-gray-600 py-20 rounded-2xl">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">🌐 Industry Applications</h2>
+              <p className="text-xl text-slate-100">Transforming industries through intelligent automation</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🏭</div>
+                <h3 className="text-lg font-bold text-orange-600 mb-2">Manufacturing</h3>
+                <p className="text-sm text-gray-600">Automated production lines</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-4xl mb-4">📦</div>
+                <h3 className="text-lg font-bold text-blue-600 mb-2">Logistics</h3>
+                <p className="text-sm text-gray-600">Warehouse automation</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-4xl mb-4">🏥</div>
+                <h3 className="text-lg font-bold text-green-600 mb-2">Healthcare</h3>
+                <p className="text-sm text-gray-600">Medical assistance robots</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-4xl mb-4">🏠</div>
+                <h3 className="text-lg font-bold text-purple-600 mb-2">Service</h3>
+                <p className="text-sm text-gray-600">Customer service automation</p>
+              </div>
+            </div>
+>>>>>>> origin/merged-prs
           </div>
+
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center text-white">
               <div className="text-6xl mb-4">🏭</div>
@@ -170,15 +270,33 @@ const AdvancedRobotics2026: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">Home & Office</h3>
               <p className="text-slate-100">Personal assistance and automation</p>
             </div>
+=======
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to Automate Your Future?</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Discover how our advanced robotics solutions can transform your operations and unlock new possibilities for growth and innovation
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="/contact" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Get Started →
+            </a>
+            <a href="/pages/AdvancedTechSolutions2026" className="border border-slate-600 text-slate-600 px-8 py-3 rounded-lg hover:bg-slate-50 transition-colors">
+              View All Solutions
+            </a>
+>>>>>>> origin/merged-prs
           </div>
         </div>
       </div>
+
+<<<<<<< HEAD
       {/* Technology Stack */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">⚙️ Advanced Technology Stack</h2>
           <p className="text-xl text-gray-600">Cutting-edge technologies powering next-generation robotics</p>
         </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
             <div className="text-3xl mb-3">🧠</div>
@@ -202,6 +320,7 @@ const AdvancedRobotics2026: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to Automate Your Future?</h2>
@@ -216,6 +335,7 @@ const AdvancedRobotics2026: React.FC = () => {
             View All Solutions
           </a>
         </div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -243,6 +363,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </a>
           </div>
         </motion.div>
+
         {/* Revolutionary Robotics Banner */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -279,6 +400,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
+
         {/* Solutions Grid */}
         <motion.section
           id="solutions"
@@ -295,6 +417,7 @@ const AdvancedRobotics2026: React.FC = () => {
               Discover our comprehensive suite of robotics solutions designed to revolutionize industries and enhance human capabilities
             </p>
           </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🧠</div>
@@ -312,6 +435,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 Learn More →
               </a>
             </div>
+
             <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🦾</div>
               <h3 className="text-2xl font-bold text-red-300 mb-4">Humanoid Robotics</h3>
@@ -328,6 +452,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 Explore Tech →
               </a>
             </div>
+
             <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🏭</div>
               <h3 className="text-2xl font-bold text-pink-300 mb-4">Industrial Automation</h3>
@@ -344,6 +469,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 View Solutions →
               </a>
             </div>
+
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🏥</div>
               <h3 className="text-2xl font-bold text-blue-300 mb-4">Medical Robotics</h3>
@@ -360,6 +486,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 Discover More →
               </a>
             </div>
+
             <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🌱</div>
               <h3 className="text-2xl font-bold text-green-300 mb-4">Agricultural Robotics</h3>
@@ -376,6 +503,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 Learn More →
               </a>
             </div>
+
             <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🚗</div>
               <h3 className="text-2xl font-bold text-purple-300 mb-4">Autonomous Vehicles</h3>
@@ -394,6 +522,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </div>
           </div>
         </motion.section>
+
         {/* Technology Features */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
@@ -407,6 +536,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-200">Cutting-edge technologies powering our robotics solutions</p>
           </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-3xl mb-4">🧠</div>
@@ -430,6 +560,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </div>
           </div>
         </motion.section>
+
         {/* Success Stories */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
@@ -443,6 +574,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-200">Real-world impact of our robotics solutions</p>
           </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
               <div className="flex items-center space-x-2 mb-4">
@@ -455,6 +587,7 @@ const AdvancedRobotics2026: React.FC = () => {
               </p>
               <div className="text-sm text-orange-400 font-semibold">Read Case Study →</div>
             </div>
+
             <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full font-semibold">99.9%</span>
@@ -466,6 +599,7 @@ const AdvancedRobotics2026: React.FC = () => {
               </p>
               <div className="text-sm text-red-400 font-semibold">View Results →</div>
             </div>
+
             <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-pink-100 text-pink-700 text-sm rounded-full font-semibold">$2M</span>
@@ -479,6 +613,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </div>
           </div>
         </motion.section>
+
         {/* Future Vision */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
@@ -515,6 +650,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </div>
           </div>
         </motion.section>
+
         {/* Call to Action */}
         <motion.section
           id="contact"
@@ -536,10 +672,12 @@ const AdvancedRobotics2026: React.FC = () => {
             </a>
           </div>
         </motion.section>
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
       </div>
     </div>
   );
-
 };
 
+=======
+>>>>>>> origin/merged-prs
 export default AdvancedRobotics2026;

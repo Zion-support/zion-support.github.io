@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const loading-spinner: React.FC = () => {
@@ -11,6 +10,3 @@ const loading-spinner: React.FC = () => {
 };
 
 export default loading-spinner;
-=======
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

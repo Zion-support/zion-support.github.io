@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AICodeGenerationEnterprise: React.FC = () => {
@@ -11,9 +10,3 @@ const AICodeGenerationEnterprise: React.FC = () => {
 };
 
 export default AICodeGenerationEnterprise;
-=======
-
-
-const React from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

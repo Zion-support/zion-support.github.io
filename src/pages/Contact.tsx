@@ -1,6 +1,7 @@
 import React from 'react';
 const Contact: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -67,6 +68,12 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
+=======
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+        <p className="text-gray-300">Get in touch with us!</p>
+>>>>>>> origin/merged-prs
       </div>
     </div>
   );

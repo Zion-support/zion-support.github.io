@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIAutonomousSecurity: React.FC = () => {
@@ -11,9 +10,3 @@ const AIAutonomousSecurity: React.FC = () => {
 };
 
 export default AIAutonomousSecurity;
-=======
-
-
-const React from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

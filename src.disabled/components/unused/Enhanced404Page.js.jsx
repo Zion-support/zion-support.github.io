@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const Enhanced404Page.js: React.FC = () => {
@@ -11,9 +10,3 @@ const Enhanced404Page.js: React.FC = () => {
 };
 
 export default Enhanced404Page.js;
-=======
-''
-\''
-const React from";react" """""
-''
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

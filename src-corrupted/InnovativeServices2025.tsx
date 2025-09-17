@@ -1,35 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Network, 
-  Code, 
-  BarChart3, 
-  Target, 
-  Lightbulb, 
-  Rocket, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Cpu, 
-  Sparkles,
-  ShieldCheck,
-  Globe2,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InnovativeServices2025: React.FC = () => {
   return (

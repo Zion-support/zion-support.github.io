@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const HeroSection: React.FC = () => {
@@ -11,9 +10,3 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
-=======
-
-
-const React,{ useRef } from "react"; """
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

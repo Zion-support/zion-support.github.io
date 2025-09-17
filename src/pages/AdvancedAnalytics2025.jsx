@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+
 const AdvancedAnalytics2025 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -10,7 +11,6 @@ const AdvancedAnalytics2025 = () => {
       </div>
     </div>
   );
-
 };
 
 export default AdvancedAnalytics2025;

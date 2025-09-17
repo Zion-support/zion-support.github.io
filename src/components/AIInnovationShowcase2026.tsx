@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const AIInnovationShowcase2026: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
@@ -26,6 +28,7 @@ const AIInnovationShowcase2026: React.FC = () => {
           }}
         />
       </div>
+
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -40,12 +43,22 @@ const AIInnovationShowcase2026: React.FC = () => {
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               {' '}Innovations
             </span>
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+>>>>>>> origin/merged-prs
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the cutting-edge AI technologies that are reshaping industries and 
-            creating unprecedented opportunities for innovation and growth.
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
           </p>
+<<<<<<< HEAD
         </div>
+
         {/* Innovation Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
@@ -67,9 +80,9 @@ const AIInnovationShowcase2026: React.FC = () => {
                 <p className="text-sm opacity-90">{innovation.description}</p>
               </divbutton>
             );
-};
           })}
         </div>
+
         {/* Detailed Innovation Display */}
           <div
             key={activeInnovation}
@@ -97,6 +110,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                   {currentInnovation.description}
                 </p>
               </div>
+
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
@@ -108,6 +122,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Impact Metrics */}
               <div
                 className="grid grid-cols-3 gap-6 mb-8"
@@ -123,6 +138,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Applications */}
               <div
                 className="mb-8"
@@ -139,6 +155,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                   ))}
                 </div>
               </div>
+
               {/* CTA Buttons */}
               <div
                 className="flex flex-wrap gap-4"
@@ -153,6 +170,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                 </button>
               </div>
             </div>
+
             {/* Visual Representation */}
             <div
               className="relative"
@@ -166,6 +184,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                   <p className="text-lg opacity-90 mb-6">
                     {currentInnovation.description}
                   </p>
+                  
                   {/* Interactive Elements */}
                   <div className="grid grid-cols-2 gap-4">
                     {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
@@ -179,6 +198,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
+              
               {/* Floating Elements */}
               <div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
@@ -192,6 +212,7 @@ const AIInnovationShowcase2026: React.FC = () => {
               >
                 <Star className="w-4 h-4 text-yellow-800" />
               </div>
+              
               <div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
                   scale: [1.21],
@@ -205,6 +226,7 @@ const AIInnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Success Stories */}
         <div
           className="mb-20"
@@ -245,6 +267,7 @@ const AIInnovationShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Final CTA */}
         <div
           className="text-center"
@@ -268,11 +291,45 @@ const AIInnovationShowcase2026: React.FC = () => {
               </button>
             </div>
           </div>
+=======
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> origin/merged-prs
         </div>
       </div>
     </div>
   );
+};
 
-
+<<<<<<< HEAD
 export default AIInnovationShowcase2026;
 </div></div></div>
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

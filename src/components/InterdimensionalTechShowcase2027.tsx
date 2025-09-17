@@ -17,6 +17,19 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
+<<<<<<< HEAD
+=======
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.2, 0.6, 0.2],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+>>>>>>> origin/merged-prs
           />
         ))}
       </div>
@@ -118,6 +131,20 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+<<<<<<< HEAD
+=======
+                    animate={{
+                      scale: [0, 1, 0],
+                      opacity: [0, 0.8, 0],
+                      x: [0, Math.random() * 100 - 50, 0],
+                      y: [0, Math.random() * 100 - 50, 0],
+                    }}
+                    transition={{
+                      duration: 2 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 3,
+                    }}
+>>>>>>> origin/merged-prs
                   />
                 ))}
               </div>

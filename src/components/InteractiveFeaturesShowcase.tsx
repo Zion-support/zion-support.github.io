@@ -1,32 +1,23 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const InteractiveFeaturesShowcase: React.FC = () => {
+=======
+const COMPONENT: React.FC = () => {
+>>>>>>> origin/merged-prs
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white py-20 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{
-            left: mousePosition.x - 200,
-            top: mousePosition.y - 200,
-            transition: 'all 0.1s ease-out'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10" />
-      </div>
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE FEATURES • 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Experience Technology Like Never Before
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Interact with cutting-edge technologies through immersive demos, real-time simulations, 
-            and hands-on experiences that bring the future to life.
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
           </p>
         </div>
+
+<<<<<<< HEAD
         {/* Main Feature Showcase */}
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="relative overflow-hidden rounded-2xl">
@@ -41,6 +32,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse" />
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-2xl animate-bounce" />
                 </div>
+
                 <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
                   <div>
                     <div className="flex items-center space-x-3 mb-4">
@@ -50,8 +42,10 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         <span className="text-sm font-semibold">{currentFeature.demo.status}</span>
                       </div>
                     </div>
+                    
                     <h3 className="text-4xl font-bold mb-6">{currentFeature.title}</h3>
                     <p className="text-xl opacity-90 mb-8">{currentFeature.description}</p>
+                    
                     <div className="grid grid-cols-1 gap-4 mb-8">
                       {currentFeature.demo.metrics.map((metric, index) => (
                         <div
@@ -63,6 +57,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                         </div>
                       ))}
                     </div>
+                    
                     <div className="flex gap-4">
                       <divbutton
                         className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
@@ -76,9 +71,11 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                       </divbutton>
                     </div>
                   </div>
+                  
                   <div className="relative">
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                       <h4 className="text-2xl font-bold mb-6 text-center">Live Demo</h4>
+                      
                       {/* Interactive Demo Area */}
                       <div className="relative h-64 bg-gradient-to-br from-white/20 to-white/10 rounded-lg overflow-hidden">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -86,11 +83,13 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                             {currentFeature.icon}
                           </div>
                         </div>
+                        
                         {/* Animated Elements */}
                         <div className="absolute top-4 left-4 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
                         <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
                         <div className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
                         <div className="absolute bottom-4 right-4 w-3 h-3 bg-pink-400 rounded-full animate-ping"></div>
+                        
                         {/* Data Visualization */}
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="grid grid-cols-3 gap-2">
@@ -110,6 +109,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                           </div>
                         </div>
                       </div>
+                      
                       <div className="mt-6 text-center">
                         <div className="text-sm opacity-80 mb-2">Interactive Status</div>
                         <div className="flex items-center justify-center space-x-2">
@@ -122,25 +122,27 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                 </div>
               </div>
             </div>
+=======
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
           </div>
-          {/* Navigation Controls */}
-          <button
-            onClick={() => setActiveFeature((prev) => (prev - 1 + features.length) % features.length)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={() => setActiveFeature((prev) => (prev + 1) % features.length)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+>>>>>>> origin/merged-prs
+          </div>
         </div>
+
+<<<<<<< HEAD
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
@@ -159,8 +161,10 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                   <span className="text-xs font-semibold">{feature.demo.status}</span>
                 </div>
               </div>
+              
               <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
               <p className="text-sm opacity-90 mb-4">{feature.description}</p>
+              
               <div className="space-y-2 mb-4">
                 {feature.demo.metrics.slice(0, 2).map((metric, i) => (
                   <div key={i} className="text-xs bg-white/20 rounded px-2 py-1 text-center">
@@ -168,6 +172,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
               <divbutton
                 className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
               >
@@ -176,6 +181,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
+
         {/* Feature Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
           {features.map((_, index) => (
@@ -187,13 +193,26 @@ const InteractiveFeaturesShowcase: React.FC = () => {
               }`}
             />
           ))}
+=======
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> origin/merged-prs
         </div>
       </div>
     </div>
   );
-
 };
 
+<<<<<<< HEAD
 export default InteractiveFeaturesShowcase;
 </div></div></div></div></div></div></div>
 </p></p>
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const NewsletterSignup2026: React.FC = () => {
   return (
     <div
@@ -7,6 +9,7 @@ const NewsletterSignup2026: React.FC = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-blue-900/20" />
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30" />
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
@@ -28,6 +31,7 @@ const NewsletterSignup2026: React.FC = () => {
           />
         ))}
       </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Close Button */}
         <button
@@ -36,6 +40,7 @@ const NewsletterSignup2026: React.FC = () => {
         >
           <X className="w-5 h-5" />
         </button>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
@@ -45,16 +50,19 @@ const NewsletterSignup2026: React.FC = () => {
               <Bell className="w-4 h-4 mr-2" />
               NEWSLETTER 2026
             </div>
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Ahead of the
               <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Revolution
               </span>
             </h2>
+            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join 50,000+ innovatorsresearchersand technology leaders who get exclusive access 
               to the latest AI breakthroughsautomation insightsand future predictions.
             </p>
+
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {benefits.map((benefitindex) => {
@@ -73,9 +81,9 @@ const NewsletterSignup2026: React.FC = () => {
                     </div>
                   </div>
                 );
-};
               })}
             </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((statindex) => (
@@ -89,6 +97,7 @@ const NewsletterSignup2026: React.FC = () => {
               ))}
             </div>
           </div>
+
           {/* Right Content - Newsletter Form */}
           <div
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
@@ -108,6 +117,7 @@ const NewsletterSignup2026: React.FC = () => {
                       Enter your email to join our exclusive community
                     </p>
                   </div>
+
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -123,6 +133,7 @@ const NewsletterSignup2026: React.FC = () => {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       />
                     </div>
+
                     {error && (
                       <div
                         className="text-red-400 text-sm"
@@ -130,6 +141,7 @@ const NewsletterSignup2026: React.FC = () => {
                         {error}
                       </div>
                     )}
+
                     <button
                       type="submit"
                       disabled={isLoading}
@@ -148,6 +160,7 @@ const NewsletterSignup2026: React.FC = () => {
                         </>
                       )}
                     </button>
+
                     <div className="flex items-center text-sm text-gray-400">
                       <Shield className="w-4 h-4 mr-2" />
                       <span>We respect your privacy. Unsubscribe at any time.</span>
@@ -162,13 +175,16 @@ const NewsletterSignup2026: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
+                  
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Welcome to the Future! 🚀
                   </h3>
+                  
                   <p className="text-gray-300 mb-6">
                     'You', 're now part of our exclusive community. Check your email for a confirmation 
                     and get ready for amazing content delivered to your inbox.
                   </p>
+
                   <div className="bg-white/10 rounded-lg p-4 mb-6">
                     <h4 className="text-white font-medium mb-2">'What', 's Next?</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
@@ -178,6 +194,7 @@ const NewsletterSignup2026: React.FC = () => {
                       <li>• Invitation to our private Discord</li>
                     </ul>
                   </div>
+
                   <button
                     onClick={() => setIsSubscribed(false)}
                     className="text-purple-400 hover:text-purple-300 text-sm font-medium"
@@ -189,6 +206,7 @@ const NewsletterSignup2026: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Bottom CTA */}
         <div
           className="text-center mt-12"
@@ -216,11 +234,56 @@ const NewsletterSignup2026: React.FC = () => {
               </div>
             </div>
           </div>
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> origin/merged-prs
         </div>
       </div>
     </div>
   );
+};
 
-
+<<<<<<< HEAD
 export default NewsletterSignup2026;
 </div></div></div>
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

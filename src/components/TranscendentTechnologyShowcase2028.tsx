@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const TranscendentTechnologyShowcase2028: React.FC = () => {
   return (
     <div
@@ -8,6 +10,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+        
         {/* Transcendent Particles */}
         {[...Array(30)].map((_, i) => (
           <div
@@ -20,6 +23,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
           />
         ))}
       </div>
+
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -40,6 +44,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
             enabling creation of universes, manipulation of all timelines, and achievement of true immortality
           </divp>
         </div>
+
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -61,9 +66,11 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                   </p>
                 </div>
               </div>
+
               <p className="text-xl text-gray-300 leading-relaxed">
                 {transcendentTechs[currentTech].description}
               </p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {transcendentTechs[currentTech].features.map((feature, index) => (
                   <div
@@ -75,6 +82,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               <div className="flex space-x-8">
                 {Object.entries(transcendentTechs[currentTech].stats).map(([key, value], index) => (
                   <div
@@ -87,6 +95,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                 ))}
               </div>
             </div>
+
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -109,6 +118,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                     </span>
                   </div>
                 </div>
+                
                 {/* Transcendent Energy Effects */}
                 {[...Array(40)].map((_, i) => (
                   <div
@@ -122,21 +132,40 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                 ))}
               </div>
             </div>
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+>>>>>>> origin/merged-prs
           </div>
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-6 mt-16">
-            {transcendentTechs.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentTech(index)}
-                className={`w-6 h-6 rounded-full transition-all duration-300 ${
-                  index === currentTech
-                    ? 'bg-gradient-to-r from-purple-400 to-violet-400 scale-150'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
           </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+<<<<<<< HEAD
           {/* Call to Action */}
           <div
             className="text-center mt-16"
@@ -156,11 +185,20 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
               </a>
             </div>
           </div>
+=======
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> origin/merged-prs
         </div>
       </div>
     </div>
   );
-
 };
 
-export default TranscendentTechnologyShowcase2028;
+export default COMPONENT;

@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -6,6 +8,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -16,17 +19,20 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <Sparkles className="w-4 h-4" />
                 <span>New Interactive Demo</span>
               </div>
+              
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Experience AI Tools
                 <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Live in Action
                 </span>
               </h2>
+              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Testexploreand discover 24+ cutting-edge AI tools with live demonstrations. 
                 See how AI can transform your workflow in real-time.
               </p>
             </div>
+
             {/* Features List */}
             <div
               className="space-y-4"
@@ -43,6 +49,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -52,10 +59,12 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <span>Start Interactive Demo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
+              
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 View All Tools
               </button>
             </div>
+
             {/* Stats */}
             <div
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
@@ -73,7 +82,40 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <div className="text-sm text-gray-400">Uptime</div>
               </div>
             </div>
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+>>>>>>> origin/merged-prs
           </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+<<<<<<< HEAD
           {/* Right Content - Interactive Demo Preview */}
           <div
             className="relative"
@@ -87,6 +129,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   <span className="text-sm text-gray-400">Live</span>
                 </div>
               </div>
+
               {/* Tool Showcase */}
               <div className="space-y-4">
                 {tools.map((toolindex) => (
@@ -123,6 +166,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Progress Bar */}
               <div className="mt-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
@@ -136,6 +180,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Floating Elements */}
             <div
                 y: [0-10],
@@ -149,6 +194,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-8 h-8 text-white" />
             </div>
+
             <div
                 y: [010],
                 rotate: [0-50]
@@ -165,11 +211,23 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
+=======
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+        </div>
+      </div>
+>>>>>>> origin/merged-prs
     </div>
   );
-
 };
 
-export default AIToolsInteractiveDemo2025PromotionBanner;
+export default COMPONENT;

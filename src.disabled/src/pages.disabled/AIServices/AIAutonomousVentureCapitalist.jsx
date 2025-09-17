@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIAutonomousVentureCapitalist: React.FC = () => {
@@ -11,9 +10,3 @@ const AIAutonomousVentureCapitalist: React.FC = () => {
 };
 
 export default AIAutonomousVentureCapitalist;
-=======
-
-
-const React from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

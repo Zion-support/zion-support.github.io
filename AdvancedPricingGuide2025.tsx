@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AdvancedPricingGuide2025: React.FC = () => {
@@ -11,9 +10,3 @@ const AdvancedPricingGuide2025: React.FC = () => {
 };
 
 export default AdvancedPricingGuide2025;
-=======
-
-
-
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIAutonomousBusinessManager.js: React.FC = () => {
@@ -11,9 +10,3 @@ const AIAutonomousBusinessManager.js: React.FC = () => {
 };
 
 export default AIAutonomousBusinessManager.js;
-=======
-
-
-const React from "react";"""; '"`'"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

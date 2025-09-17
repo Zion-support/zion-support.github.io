@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -10,6 +12,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,92,246,0.2),transparent_50%)]"></div>
         </div>
+
         {/* Floating Success Icons */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(6)].map((_i) => (
@@ -31,6 +34,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
             />
           ))}
         </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             {/* Left Content */}
@@ -43,17 +47,20 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   SUCCESS STORIES
                 </span>
               </div>
+
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🏆 Revolutionary Case Studies 2026
               </divh2>
+
               <divp
                 className="text-lg text-purple-200 mb-6 max-w-2xl"
               >
                 Real success stories from companies that achieved incredible results with our AI and automation solutions. 
                 See how they transformed their operations and achieved massive ROI.
               </divp>
+
               {/* Rotating Case Study Display */}
               <div
                 key={currentStat}
@@ -68,6 +75,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   <div className="text-2xl font-bold text-yellow-300">{caseStudies[currentStat].roi} ROI</div>
                 </div>
               </div>
+
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
@@ -79,6 +87,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Stats */}
               <div
                 className="flex space-x-6 mb-6"
@@ -90,6 +99,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -105,6 +115,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                 </button>
               </div>
             </div>
+
             {/* Right Content - Animated Success Icons */}
             <div
               className="hidden lg:flex items-center space-x-4"
@@ -127,6 +138,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Dismiss Button */}
         <button
           onClick={() => setIsDismissed(true)}
@@ -134,15 +146,61 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
         >
           <X className="w-5 h-5" />
         </button>
+
         {/* Pulse Effect */}
         <div
           className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-pink-400/20"
         />
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+        </div>
+>>>>>>> origin/merged-prs
       </div>
     </div>
   );
-
 };
 
+<<<<<<< HEAD
 export default RevolutionaryCaseStudiesShowcase2026PromotionBanner;
 </div></div></div></div>
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

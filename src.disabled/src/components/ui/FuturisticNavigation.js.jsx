@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const FuturisticNavigation.js: React.FC = () => {
@@ -11,9 +10,3 @@ const FuturisticNavigation.js: React.FC = () => {
 };
 
 export default FuturisticNavigation.js;
-=======
-
-
-const React,{ useState,useEffect } from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

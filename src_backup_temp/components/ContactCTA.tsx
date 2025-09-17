@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ContactCTA: React.FC = () => {
@@ -11,21 +10,3 @@ const ContactCTA: React.FC = () => {
 };
 
 export default ContactCTA;
-=======
-
-
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</string>;
-</any>;
-import { useState } from 'react';,
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

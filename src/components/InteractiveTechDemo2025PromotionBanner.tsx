@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -11,6 +13,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]" />
           </div>
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-between">
               {/* Left Content */}
@@ -24,23 +27,28 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                     <Play className="w-4 h-4 text-blue-400 mr-2" />
                     <span className="text-sm font-medium text-white">Interactive Demo Available</span>
                   </div>
+
                   {/* Title */}
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {demos[currentDemo].title}
                   </h2>
+
                   {/* Subtitle */}
                   <p className="text-lg text-indigo-200 font-medium">
                     {demos[currentDemo].subtitle}
                   </p>
+
                   {/* Description */}
                   <p className="text-gray-300 text-base max-w-2xl">
                     {demos[currentDemo].description}
                   </p>
+
                   {/* Metrics */}
                   <div className="flex items-center text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4 mr-2" />
                     <span>{demos[currentDemo].metrics}</span>
                   </div>
+
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">
                     {features.slice(0, 3).map((feature, index) => {
@@ -51,9 +59,9 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                           {feature.text}
                         </div>
                       );
-};
                     })}
                   </div>
+
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 mt-6">
                     <button 
@@ -71,6 +79,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
                 <div
@@ -88,6 +97,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                         <p className="text-gray-300 text-sm">Interactive Experience</p>
                       </div>
                     </div>
+                    
                     {/* Demo Visualization */}
                     <div className="relative h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden border border-white/10 mb-4">
                       {/* Animated Elements */}
@@ -109,6 +119,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             ))}
                           </div>
                         )}
+                        
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
@@ -130,6 +141,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             ))}
                           </div>
                         )}
+                        
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
@@ -151,6 +163,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             ))}
                           </div>
                         )}
+                        
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
@@ -170,6 +183,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                         )}
                       </div>
                     </div>
+
                     {/* Demo Controls */}
                     <div className="flex items-center justify-center space-x-2">
                       <button 
@@ -186,12 +200,14 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                       </button>
                     </div>
                   </div>
+
                   {/* Floating Elements */}
                   <div
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
                   </div>
+
                   <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
@@ -200,6 +216,7 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Demo Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {demos.map((_, index) => (
@@ -214,19 +231,60 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                 />
               ))}
             </div>
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
           </div>
-          {/* Dismiss Button */}
-          <button
-            onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
-          >
-            <X className="w-5 h-5" />
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+>>>>>>> origin/merged-prs
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
           </button>
         </div>
+<<<<<<< HEAD
       )}
+=======
+      </div>
+>>>>>>> origin/merged-prs
     </div>
   );
+};
 
-
+<<<<<<< HEAD
 export default InteractiveTechDemo2025PromotionBanner;
 </div></div></div></div></div></div>
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

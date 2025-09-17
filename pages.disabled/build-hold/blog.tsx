@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const blog: React.FC = () => {
@@ -11,7 +10,3 @@ const blog: React.FC = () => {
 };
 
 export default blog;
-=======
-"React\": from; \"react\"; \"framer-motion\"{ SEO: } from; \"../components/SEO\"; \"../components/ui/Button\"{ \"Card\": \''} from; \"../components/ui/Card\"; \"../components/ui/Badge\";
-"_React": from; "react"; "framer-motion"{ SEO: } from; "../components/SEO"; "../components/ui/Button"{ "Card": ''} from; "../components/ui/Card"; "../components/ui/Badge";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const SecurityComplianceDashboard.js: React.FC = () => {
@@ -11,9 +10,3 @@ const SecurityComplianceDashboard.js: React.FC = () => {
 };
 
 export default SecurityComplianceDashboard.js;
-=======
- )
- )
-const React,{ useState,useCallback } from "react";";  )""`"`
- )
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

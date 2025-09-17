@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const RetailSolutions: React.FC = () => {
@@ -11,9 +10,3 @@ const RetailSolutions: React.FC = () => {
 };
 
 export default RetailSolutions;
-=======
-
-
-const React,{ useState } from "react";"""; '"`'"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

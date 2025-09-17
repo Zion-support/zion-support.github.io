@@ -1,22 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  BookOpen, 
-  Clock, 
-  Users, 
-  ArrowRight, 
-  Play, 
-  Code, 
-  Database, 
-  Cloud, 
-  Shield 
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const tutorials: React.FC = () => {
   return (

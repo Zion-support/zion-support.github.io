@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const EnhancedAccessibility: React.FC = () => {
@@ -11,9 +10,3 @@ const EnhancedAccessibility: React.FC = () => {
 };
 
 export default EnhancedAccessibility;
-=======
-
-
-const React,{ useState,useEffect } from "react"; '"`'"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

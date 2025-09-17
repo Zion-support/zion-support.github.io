@@ -1,30 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-"use client";
-'use client';
-
-import React{ useState } from 'react';
-
-MailSendCheckCircle
-
-export default function AdvancedNewsletter() {
-  const [emailsetEmail] = useState('');
-  const [isSubscribedsetIsSubscribed] = useState(false);
-  const [isLoadingsetIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve1000));
-    
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail(', ');
-  };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedNewsletter: React.FC = () => {
   return (

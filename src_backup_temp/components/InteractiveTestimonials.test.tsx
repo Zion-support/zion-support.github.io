@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function InteractiveTestimonials.test() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveTestimonials.test - Zion Tech Group" description="Professional InteractiveTestimonials.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveTestimonials.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveTestimonials.test services to help your business grow. </p> </div>'; </div>';'; );';';'}";
 import React from 'react',;',';';
     ';';';';
@@ -16,21 +15,8 @@ import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'
     </div>';';
   );';';';
 }"';';';';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -54,19 +40,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function InteractiveTestimonials() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveTestimonials && InteractiveTestimonials.test - Zion Tech Group" description="Professional InteractiveTestimonials && InteractiveTestimonials.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveTestimonials && InteractiveTestimonials.test</h1> <pclassName="text-gray-300 text-lg"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }"
 import React from 'react',','' '''' import {SEO } from '@/components/SEO' export default function InteractiveTestimonials() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveTestimonials && InteractiveTestimonials.test - Zion Tech Group" description="Professional InteractiveTestimonials && InteractiveTestimonials.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveTestimonials && InteractiveTestimonials.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveTestimonials && InteractiveTestimonials.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"
->>>>>>> origin/merged-prs

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveHero: React.FC = () => {
@@ -11,9 +10,3 @@ const InteractiveHero: React.FC = () => {
 };
 
 export default InteractiveHero;
-=======
- const floatingVariants = {}}}}}}
- const floatingVariants = {}}}}}}
-const React,{ useState,useEffect } from "react"; export const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [ const floatingVariants = {}}}}}}'"'"
- const floatingVariants = {}}}}}}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

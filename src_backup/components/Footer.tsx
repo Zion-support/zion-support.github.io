@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { 
-  Mail, Phone, MapPin, 
-  Linkedin, Twitter, Github, 
-  Youtube, Facebook, Instagram,
-  ArrowUpRight
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Footer: React.FC = () => {
   return (

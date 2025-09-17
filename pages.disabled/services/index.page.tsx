@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const index.page: React.FC = () => {
@@ -11,7 +10,3 @@ const index.page: React.FC = () => {
 };
 
 export default index.page;
-=======
- )} origin/main
- )} origin/main
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

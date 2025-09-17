@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
 import _React from 'react'; export function Button({ children,variant = 'default',size = 'md',asChild = false,className = ',onClick,type = 'button',disabled = false }) { const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors "focus": outline-none focus: ring-2 focus:ring-offset-2'; const variantClasses = { default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan,"outline": 'border border-zion-cyan text-zion-cyan hover: bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan,"ghost": 'text-zion-slate hover: bg-zion-slate-light focus:ring-zion-cyan,"link": 'text-zion-cyan hover:underline focus:ring-zion-cyan' }; const sizeClasses = { "sm": 'px-3 py-1.5 text-sm',"md": 'px-4 py-2 text-sm',"lg": 'px-6 py-3 text-base',"icon": 'w-10 h-10 p-0' }; const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`; if(asChild) { return <span className={classes}>{children}</span>} return(<button type={type} className={classes} onClick={onClick} disabled={disabled}> {children} </button> )}
 import React from \'react\'; export function Button({ children,variant = \'default\',size = \'md\',asChild = false,className = \'',onClick,type = \'button\',disabled = false }) { const baseClasses = \'inline-flex items-center justify-center font-medium rounded-md transition-colors \"focus\": outline-none focus:ring-2 focus:ring-offset-2\'; const variantClasses = { default: \'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan\',\"outline\": \'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan\',\"ghost\": \'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-cyan\',\"link\": \'text-zion-cyan hover:underline focus:ring-zion-cyan\' }; const sizeClasses = { \"sm\": \'px-3 py-1.5 text-sm\',\"md\": \'px-4 py-2 text-sm\',\"lg\": \'px-6 py-3 text-base\',\"icon\": \'w-10 h-10 p-0\' }; const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`; if(asChild) { return <span className={classes}>{children}</span>} return(<button type={type} className={classes} onClick={onClick} disabled={disabled}> {children} </button> )}
 const React from "react"; export function Button({ children,variant = "default",size = "md",asChild = false,className = "",onClick,type = "button",disabled = false }) { const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2"; const variantClasses = { default: "bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan",outline: "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan",ghost: "text-zion-slate hover:bg-zion-slate-light focus:ring-zion-cyan",link: "text-zion-cyan hover:underline focus:ring-zion-cyan" }; const sizeClasses = { sm: "px-3 py-1.5 text-sm",md: "px-4 py-2 text-sm",lg: "px-6 py-3 text-base",icon: "w-10 h-10 p-0" }; const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`; if(asChild) { return <span className={classes}>{children}</span>} return(<button type={type} className={classes} onClick={onClick} disabled={disabled}> {children} </button> )}'"`'"`
 import _React from 'react'; export function Button({ children,variant = 'default',size = 'md',asChild = false,className = ',onClick,type = 'button',disabled = false }) { const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors "focus": outline-none focus: ring-2 focus:ring-offset-2'; const variantClasses = { default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan,"outline": 'border border-zion-cyan text-zion-cyan hover: bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan,"ghost": 'text-zion-slate hover: bg-zion-slate-light focus:ring-zion-cyan,"link": 'text-zion-cyan hover:underline focus:ring-zion-cyan' }; const sizeClasses = { "sm": 'px-3 py-1.5 text-sm',"md": 'px-4 py-2 text-sm',"lg": 'px-6 py-3 text-base',"icon": 'w-10 h-10 p-0' }; const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`; if(asChild) { return <span className={classes}>{children}</span>} return(<button type={type} className={classes} onClick={onClick} disabled={disabled}> {children} </button> )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs

@@ -1,9 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, Users, TrendingUp, Star, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 interface FeaturedContentShowcase2026Props {
   className?: string;
+}
+
 const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = ({ className = '' }) => {
   const featuredContent = [
     {
@@ -59,6 +63,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       featured: false
     }
   ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -68,6 +73,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       }
     }
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -79,7 +85,12 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       }
     }
   };
+=======
+>>>>>>> origin/merged-prs
+
+const COMPONENT: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -103,6 +114,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
             that are shaping the future of enterprise automation and artificial intelligence.
           </p>
         </motion.div>
+
         {/* Content Grid */}
         <motion.div
           variants={containerVariants}
@@ -127,6 +139,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                     </span>
                   </div>
                 )}
+
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-90`} />
@@ -135,6 +148,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                   </div>
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
+
                 {/* Content */}
                 <div className="p-6">
                   {/* Category & Stats */}
@@ -153,14 +167,17 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                       </div>
                     </div>
                   </div>
+
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-200">
                     {content.title}
                   </h3>
+
                   {/* Excerpt */}
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {content.excerpt}
                   </p>
+
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {content.tags.map((tag, tagIndex) => (
@@ -172,6 +189,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                       </span>
                     ))}
                   </div>
+
                   {/* Meta & CTA */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
@@ -179,6 +197,7 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                       <span className="mr-4">{content.readTime}</span>
                       <span>{content.publishedDate}</span>
                     </div>
+
                     <Link
                       to={`/blog/${content.id}`}
                       className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200"
@@ -188,12 +207,14 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                     </Link>
                   </div>
                 </div>
+
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/5 group-hover:to-indigo-500/10 transition-all duration-300" />
               </div>
             </motion.div>
           ))}
         </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -226,10 +247,49 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
             </div>
           </div>
         </motion.div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+        </div>
+>>>>>>> origin/merged-prs
       </div>
     </div>
   );
-
 };
 
-export default FeaturedContentShowcase2026;
+export default COMPONENT;

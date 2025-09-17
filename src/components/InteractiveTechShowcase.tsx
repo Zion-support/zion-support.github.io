@@ -1,8 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   const technologies = [
     {
       id: 0,
@@ -12,6 +34,7 @@ const InteractiveTechShowcase: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
+<<<<<<< HEAD
       link: "/pages/AdvancedAITransformation2026"
     },
     {
@@ -53,6 +76,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Space Exploration", "Satellite Technology", "Aerospace Solutions", "Extraterrestrial Applications"],
       demo: "Launch Space Demo",
       link: "/pages/SpaceTechInnovation2026"
+=======
       link: "/pages/AIInnovationHub2026"
     },
     {
@@ -84,9 +108,12 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"
+>>>>>>> origin/cursor/create-and-deploy-new-content-42b7
     }
   ];
+
   return (
+<<<<<<< HEAD
     <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -107,6 +134,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </p>
           </motion.div>
         </div>
+
         {/* Main Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Cards */}
@@ -140,6 +168,7 @@ const InteractiveTechShowcase: React.FC = () => {
                     />
                   )}
                 </div>
+                
                 {hoveredCard === tech.id && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
@@ -159,6 +188,7 @@ const InteractiveTechShowcase: React.FC = () => {
               </motion.div>
             ))}
           </div>
+
           {/* Active Technology Display */}
           <div className="relative">
             <motion.div
@@ -172,10 +202,12 @@ const InteractiveTechShowcase: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+              
               <div className="relative z-10">
                 <div className="text-6xl mb-6">{technologies[activeTech].icon}</div>
                 <h3 className="text-3xl font-bold mb-4">{technologies[activeTech].name}</h3>
                 <p className="text-lg opacity-90 mb-6">{technologies[activeTech].description}</p>
+                
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
@@ -184,6 +216,7 @@ const InteractiveTechShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
+                
                 <div className="flex space-x-4">
                   <a
                     href={technologies[activeTech].link}
@@ -199,6 +232,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </motion.div>
           </div>
         </div>
+
         {/* Technology Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-8">
           <motion.div
@@ -237,6 +271,7 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-4xl font-bold text-orange-400 mb-2">2026</div>
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
+=======
     <div className="max-w-7xl mx-auto">
       {/* Technology Selector */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -257,6 +292,7 @@ const InteractiveTechShowcase: React.FC = () => {
           </motion.button>
         ))}
       </div>
+
       {/* Main Showcase Area */}
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Technology Details */}
@@ -271,6 +307,7 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-6xl mb-4">{technologies[activeTech].icon}</div>
             <h3 className="text-3xl font-bold mb-4">{technologies[activeTech].name}</h3>
             <p className="text-xl opacity-90 mb-6">{technologies[activeTech].description}</p>
+            
             <div className="grid grid-cols-2 gap-4 mb-6">
               {technologies[activeTech].features.map((feature, index) => (
                 <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -278,6 +315,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 </div>
               ))}
             </div>
+
             <div className="flex space-x-4">
               <a
                 href={technologies[activeTech].link}
@@ -290,6 +328,7 @@ const InteractiveTechShowcase: React.FC = () => {
               </button>
             </div>
           </div>
+
           {/* Interactive Demo Area */}
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
             <h4 className="text-2xl font-bold text-gray-800 mb-4">Interactive Demo</h4>
@@ -308,6 +347,7 @@ const InteractiveTechShowcase: React.FC = () => {
                   </span>
                 </div>
               </div>
+              
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <div className="text-sm text-gray-600 mb-2">System Status</div>
                 <div className="flex items-center space-x-2">
@@ -318,6 +358,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
         </motion.div>
+
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
@@ -334,6 +375,7 @@ const InteractiveTechShowcase: React.FC = () => {
               <div className="text-4xl mb-3">{tech.icon}</div>
               <h4 className="text-lg font-bold text-gray-800 mb-2">{tech.name}</h4>
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
+              
               {hoveredCard === index && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -352,6 +394,7 @@ const InteractiveTechShowcase: React.FC = () => {
           ))}
         </div>
       </div>
+
       {/* Technology Comparison */}
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
@@ -400,11 +443,22 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+
   const technologies = [
     {
       id: 1,
@@ -463,6 +517,7 @@ const InteractiveTechShowcase: React.FC = () => {
       stats: { performance: "Edge-optimized", accuracy: "98.5%", speed: "<1ms" }
     }
   ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -473,6 +528,7 @@ const InteractiveTechShowcase: React.FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, [technologies.length]);
+
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -482,6 +538,7 @@ const InteractiveTechShowcase: React.FC = () => {
       }, 300);
     }
   };
+
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -493,6 +550,7 @@ const InteractiveTechShowcase: React.FC = () => {
             Explore our cutting-edge technologies with interactive demonstrations and real-time insights
           </p>
         </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Selector */}
           <div className="space-y-4">
@@ -518,7 +576,41 @@ const InteractiveTechShowcase: React.FC = () => {
                 </div>
               </motion.button>
             ))}
+=======
+import React from 'react';
+
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
           </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+>>>>>>> origin/merged-prs
+          </div>
+
+<<<<<<< HEAD
           {/* Technology Display */}
           <div className="relative">
             <AnimatePresence mode="wait">
@@ -535,6 +627,7 @@ const InteractiveTechShowcase: React.FC = () => {
                   <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].name}</h3>
                   <p className="text-xl opacity-90">{technologies[activeTech].description}</p>
                 </div>
+
                 {/* Features Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
@@ -549,6 +642,7 @@ const InteractiveTechShowcase: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
+
                 {/* Performance Stats */}
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -568,6 +662,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </AnimatePresence>
           </div>
         </div>
+
         {/* Interactive Demo Section */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
@@ -583,6 +678,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 Launch VR Demo
               </button>
             </motion.div>
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
@@ -594,6 +690,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 Start Simulation
               </button>
             </motion.div>
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
@@ -605,13 +702,38 @@ const InteractiveTechShowcase: React.FC = () => {
                 View Analytics
               </button>
             </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
           </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> origin/merged-prs
         </div>
       </div>
     </div>
   );
-
 };
 
+<<<<<<< HEAD
 export default InteractiveTechShowcase;
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

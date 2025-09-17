@@ -1,12 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Link from 'next/link';
-
-import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
-import Layout from '../../components/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const enterprise: React.FC = () => {
   return (

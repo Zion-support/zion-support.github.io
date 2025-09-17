@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const pricing-guide: React.FC = () => {
@@ -11,6 +10,3 @@ const pricing-guide: React.FC = () => {
 };
 
 export default pricing-guide;
-=======
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

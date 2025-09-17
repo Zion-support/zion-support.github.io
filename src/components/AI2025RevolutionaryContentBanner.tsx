@@ -1,4 +1,6 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const AI2025RevolutionaryContentBanner: React.FC = () => {
   return (
     <div>
@@ -8,8 +10,10 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
         >
           {/* Background effects */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-50" />
+          
           {/* Animated gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-pink-600/10 animate-pulse" />
+
           {/* Floating particles */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(12)].map((_i) => (
@@ -31,6 +35,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
               />
             ))}
           </div>
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left side - Content */}
@@ -42,6 +47,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                     <Sparkles className="w-4 h-4 mr-2" />
                     AI 2025 REVOLUTIONARY CONTENT
                   </div>
+
                   {/* Main heading */}
                   <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
                     Transform Your Business with
@@ -50,11 +56,13 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                       Revolutionary AI
                     </span>
                   </h1>
+
                   {/* Subheading */}
                   <p className="text-xl text-gray-300 mb-8 max-w-2xl">
                     Discover cutting-edge AI technologies that are reshaping industries 
                     and unlocking unprecedented opportunities for growth and innovation.
                   </p>
+
                   {/* Current feature highlight */}
                   <div
                     key={currentFeature}
@@ -75,6 +83,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                       </span>
                     </div>
                   </div>
+
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a
@@ -84,6 +93,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                       Explore AI Solutions
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
+                    
                     <a
                       href="/contact"
                       className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
@@ -94,6 +104,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               {/* Right side - Visual elements */}
               <div className="flex-shrink-0">
                 <div className="relative w-80 h-80">
@@ -101,12 +112,15 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                   <div
                     className="absolute inset-0 rounded-full border-2 border-purple-500/30"
                   />
+                  
                   <div
                     className="absolute inset-8 rounded-full border-2 border-blue-500/30"
                   />
+                  
                   <div
                     className="absolute inset-16 rounded-full border-2 border-pink-500/30"
                   />
+
                   {/* Center icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div
@@ -118,6 +132,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                       <currentFeatureData.icon className="w-12 h-12 text-white" />
                     </div>
                   </div>
+
                   {/* Feature indicators */}
                   {features.map((featureindex) => (
                     <div
@@ -137,6 +152,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                       }}
                     />
                   ))}
+
                   {/* Floating elements */}
                   {[...Array(8)].map((_i) => (
                     <div
@@ -159,6 +175,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Feature indicators */}
             <div className="flex justify-center mt-8 space-x-2">
               {features.map((_index) => (
@@ -173,6 +190,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                 />
               ))}
             </div>
+
             {/* Close button */}
             <button
               onClick={() => setIsDismissed(true)}
@@ -183,10 +201,56 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
           </div>
         </div>
       )}
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+        </div>
+      </div>
+>>>>>>> origin/merged-prs
     </div>
   );
-
 };
 
+<<<<<<< HEAD
 export default AI2025RevolutionaryContentBanner;
 </div></div></div></div></div></div></div></div>
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

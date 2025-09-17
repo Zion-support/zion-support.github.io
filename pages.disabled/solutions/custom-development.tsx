@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const custom-development: React.FC = () => {
@@ -11,6 +10,3 @@ const custom-development: React.FC = () => {
 };
 
 export default custom-development;
-=======
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

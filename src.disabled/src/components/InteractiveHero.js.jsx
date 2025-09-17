@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveHero.js: React.FC = () => {
@@ -11,9 +10,3 @@ const InteractiveHero.js: React.FC = () => {
 };
 
 export default InteractiveHero.js;
-=======
-
-
-const React,{ useState,useEffect } from "react"; '"'"
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

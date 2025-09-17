@@ -1,20 +1,71 @@
 import React from 'react';
+
+<<<<<<< HEAD
 const Homepage2036: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Homepage2036</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
+=======
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+        </div>
+      </div>
+>>>>>>> origin/merged-prs
     </div>
   );
 };
+
+<<<<<<< HEAD
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
   ...real2036SpecializedServices.slice(0, 3)
+];
+
 const stats = [
   { label: 'Services Available', value: '500+', icon: <Rocket className="w-6 h-6" /> },
   { label: 'Market Coverage', value: '$200B+', icon: <TrendingUp className="w-6 h-6" /> },
   { label: 'Client Satisfaction', value: '98%', icon: <Star className="w-6 h-6" /> },
   { label: 'Global Reach', value: '50+', icon: <Globe className="w-6 h-6" /> }
+];
+
 const categories = [
   { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, count: 150, color: 'from-green-500 to-emerald-600' },
   { name: 'Quantum Technology', icon: <Atom className="w-6 h-6" />, count: 80, color: 'from-cyan-500 to-blue-600' },
@@ -22,7 +73,7 @@ const categories = [
   { name: 'IT Infrastructure', icon: <Cpu className="w-6 h-6" />, count: 120, color: 'from-orange-500 to-red-600' },
   { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, count: 90, color: 'from-blue-500 to-indigo-600' },
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6" />, count: 70, color: 'from-yellow-500 to-orange-600' }
-
+];
 
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -324,3 +375,7 @@ export default function Homepage2036() {
                   <Phone className="w-5 h-5" />
                   Call Us Now
   );
+}
+=======
+export default COMPONENT;
+>>>>>>> origin/merged-prs

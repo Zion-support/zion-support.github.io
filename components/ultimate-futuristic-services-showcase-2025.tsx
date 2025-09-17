@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ultimate-futuristic-services-showcase-2025: React.FC = () => {
   return (
