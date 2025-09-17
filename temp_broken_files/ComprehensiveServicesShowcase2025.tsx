@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2025.tsx
-import React from 'react';
-const ComprehensiveServicesShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -200,7 +196,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
   const currentService = services[activeService];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase2025.tsx
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,10 +214,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             Discover our full range of cutting-edge technology solutions designed to 
             transform your business and drive unprecedented growth.
           </divp>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase2025.tsx
           {/* Stats */}
           <div
             whileInView={{ opacity: 1, y: 0 }}
@@ -269,10 +261,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase2025.tsx
         {/* Featured Service */}
           <div
             key={activeService}
@@ -370,10 +359,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase2025.tsx
         {/* All Services Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -429,10 +415,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase2025.tsx
         {/* Bottom CTA */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

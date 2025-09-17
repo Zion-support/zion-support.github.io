@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-import React from 'react';
-const BusinessTransformationRevolution2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -129,7 +125,6 @@ const BusinessTransformationRevolution2025 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -148,25 +143,16 @@ const BusinessTransformationRevolution2025 = () => {
               Business Revolution 2025
             </h2>
           </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-            Revolutionary business transformation solutions that deliver unprecedented results. 
-            Join thousands of companies already experiencing exponential growth.
-          </divp>
-=======
           
             Revolutionary business transformation solutions that deliver unprecedented results. 
             Join thousands of companies already experiencing exponential growth.
           </divp>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
             <Clock className="w-5 h-5 mr-2" />
             Limited Time: 50% Off Implementation
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
         {/* Stats Section */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -189,10 +175,7 @@ const BusinessTransformationRevolution2025 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
         {/* Tabs Section */}
         <div className="mb-16">
           {/* Tab Navigation */}
@@ -201,11 +184,7 @@ const BusinessTransformationRevolution2025 = () => {
           >
             <div className="flex bg-white/10 backdrop-blur-lg rounded-full p-2">
               {tabs.map((tabindex) => (
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center ${
@@ -216,18 +195,11 @@ const BusinessTransformationRevolution2025 = () => {
                 >
                   {tab.icon}
                   <span className="ml-2">{tab.title}</span>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-                </divbutton>
-              ))}
-            </div>
-          </div>
-=======
                 </button>
               ))}
             </div>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
           {/* Tab Content */}
           <div
             key={activeTab}
@@ -270,21 +242,13 @@ const BusinessTransformationRevolution2025 = () => {
                     90-day money-back guarantee
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-                <divbutton
-=======
 
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
                   className="w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center"
                 >
                   Start Your Transformation
                   <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-                </divbutton>
-=======
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-white/5 rounded-lg text-center">
@@ -313,19 +277,11 @@ const BusinessTransformationRevolution2025 = () => {
               'Don', 't get left behind. Transform your business with our proven methodologies 
               and join thousands of successful companies already experiencing exponential growth.
             </p>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
-            <divbutton
-              className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300"
-            >
-              Get Started Now - 50% Off
-            </divbutton>
-=======
             <button
               className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300"
             >
               Get Started Now - 50% Off
             </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
           </div>
         </div>
       </div>

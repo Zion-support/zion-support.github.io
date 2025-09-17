@@ -1,9 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveContentPromoter.tsx
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentPromoter.tsx
 const InteractiveContentPromoter: React.FC = () => {
   return (
     <div>

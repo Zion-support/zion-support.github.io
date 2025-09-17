@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/EnhancedCaseStudiesShowcase.tsx
-=======
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedCaseStudiesShowcase.tsx
 const EnhancedCaseStudiesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -32,10 +29,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedCaseStudiesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedCaseStudiesShowcase.tsx
         <div
           whileInView="visible"
           viewport={{ once: true }}
@@ -102,10 +96,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedCaseStudiesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedCaseStudiesShowcase.tsx
         <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

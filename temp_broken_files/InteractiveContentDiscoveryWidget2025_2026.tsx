@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscoveryWidget2025_2026.tsx
-import React from 'react';
-const InteractiveContentDiscoveryWidget2025_2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -197,7 +193,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
     return category ? category.icon : Grid;
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscoveryWidget2025_2026.tsx
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -211,10 +206,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations
         </p>
       </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscoveryWidget2025_2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscoveryWidget2025_2026.tsx
       {/* Search and Filters */}
       <div
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
@@ -280,10 +272,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscoveryWidget2025_2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscoveryWidget2025_2026.tsx
       {/* Content Grid */}
       <div
         className={`grid gap-6 ${
@@ -439,10 +428,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
           })}
         </div>
       </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscoveryWidget2025_2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscoveryWidget2025_2026.tsx
       {/* Content Detail Modal */}
       <div>
         {selectedContent && (

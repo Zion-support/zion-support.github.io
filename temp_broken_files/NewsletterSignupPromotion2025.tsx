@@ -116,10 +116,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewsletterSignupPromotion2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignupPromotion2025.tsx
           {/* Right Column - Signup Form */}
           <div
             className="bg-white rounded-2xl p-8 shadow-2xl"

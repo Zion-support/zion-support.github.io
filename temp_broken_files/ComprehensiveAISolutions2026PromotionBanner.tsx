@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-import React from 'react';
-const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -51,7 +47,6 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
     { value: '99.9%'label: 'Uptime' }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
@@ -73,10 +68,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 <Brain className="w-4 h-4" />
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026
               </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
               {/* Main Heading */}
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
@@ -88,10 +80,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 <br />
                 for Modern Business
               </divh2>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
               {/* Description */}
               <divp
                 className="text-xl text-gray-300 leading-relaxed"
@@ -99,10 +88,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 Transform your business with our comprehensive suite of AI solutions
                 from enterprise platforms to quantum computing integration.
               </divp>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
               {/* Solutions Grid */}
               <div
                 className="grid grid-cols-2 gap-4"
@@ -116,10 +102,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
               {/* Benefits */}
               <div
                 className="space-y-3"
@@ -131,10 +114,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -151,10 +131,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAISolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAISolutions2026PromotionBanner.tsx
             {/* Right Content - Stats & Visual */}
             <div
               className="space-y-8"

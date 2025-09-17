@@ -1,18 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-import React from 'react';
-import React from 'react';
-import React from 'react';
-import React from 'react';cursor/fix-netlify-build-and-merge-to-main-a068
-=======
 import React, { useState } from 'react';
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/ComprehensiveServicesLanding2027.tsx
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -104,9 +91,6 @@ import {
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/ComprehensiveServicesLanding2027.tsx
-=======
   Zap as ZapIcon,
   Shield as ShieldIcon,
   Cloud as CloudIcon,
@@ -137,7 +121,6 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/ComprehensiveServicesLanding2027.tsx
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -240,24 +223,17 @@ export default function ComprehensiveServicesLanding2027() {
               Comprehensive Services
             <br />
             <span className="text-white">Landing 2027</span>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
           </divh1>
           
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
           <divp 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology services designed to 
             transform your business and drive innovation across every industry.
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-          {/* Search Bar */}
-=======
           </divp>
 
           {/* Search Bar */}
           <div 
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             className="max-w-2xl mx-auto mb-8"
           >
             <div className="relative">
@@ -269,14 +245,11 @@ export default function ComprehensiveServicesLanding2027() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
               />
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
             </div>
           </div>
 
           {/* Quick Stats */}
           <div 
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -295,11 +268,6 @@ export default function ComprehensiveServicesLanding2027() {
               <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">24/7</div>
               <div className="text-purple-400 text-sm">Support</div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-      {/* Category Navigation */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-=======
             </div>
           </div>
         </div>
@@ -309,7 +277,6 @@ export default function ComprehensiveServicesLanding2027() {
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <div 
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -319,11 +286,6 @@ export default function ComprehensiveServicesLanding2027() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Navigate through our comprehensive service categories to find the perfect 
               solution for your business needs.
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-          {/* Category Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
-=======
             </p>
           </div>
 
@@ -331,7 +293,6 @@ export default function ComprehensiveServicesLanding2027() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => (
               <button
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
                 key={category.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -345,18 +306,12 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             ))}
       {/* Services Showcase */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
           <div 
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -368,11 +323,6 @@ export default function ComprehensiveServicesLanding2027() {
                 ? 'Explore our complete portfolio of innovative services and solutions.'
                 : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               }
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-          {/* Services Grid */}
-          <div className="space-y-6">
-            {filteredServices.map((service, index) => (
-=======
             </p>
           </div>
 
@@ -380,7 +330,6 @@ export default function ComprehensiveServicesLanding2027() {
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
               <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
                 key={service.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -441,12 +390,9 @@ export default function ComprehensiveServicesLanding2027() {
                         Get Quote
                         <ArrowRight className="w-4 h-4 ml-2" />
                 {/* Expanded Details */}
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
                 <div>
                   {expandedService === service.id && (
                     <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
                       className="border-t border-white/20 bg-white/5"
                     >
                       <div className="p-6">
@@ -488,8 +434,6 @@ export default function ComprehensiveServicesLanding2027() {
                                 • {service.roi} ROI guarantee<br />
                                 • {service.setupTime} rapid deployment<br />
                                 • 24/7 expert support
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
                               </div>
                             </div>
                           </div>
@@ -499,31 +443,21 @@ export default function ComprehensiveServicesLanding2027() {
                   )}
                 </div>
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             ))}
             {/* No Results Message */}
             {filteredServices.length === 0 && (
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
               <div 
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             )}
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-=======
           <div 
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20"
@@ -563,13 +497,6 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-green-400 text-sm">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
-  );
-
-};
-
-
-=======
 import React from 'react';
 
 const ComprehensiveServicesLanding2027: React.FC = () => {
@@ -584,12 +511,10 @@ const ComprehensiveServicesLanding2027: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesLanding2027.tsx
         </div>
       </div>
     </div>
   );
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/ComprehensiveServicesLanding2027.tsx
 export default ComprehensiveServicesLanding2027;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-import React from 'react';
-const FuturisticAIServices2026Showcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -92,7 +88,6 @@ const FuturisticAIServices2026Showcase = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -110,18 +105,12 @@ const FuturisticAIServices2026Showcase = () => {
               Futuristic AI Services 2026
             </h2>
           </div>
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
             Experience the next generation of artificial intelligence with our revolutionary 2026 service portfolio.
             Powered by quantum computingneural interfacesand autonomous systems.
           </divp>
         </div>
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
         {/* Main Service Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div
@@ -160,25 +149,11 @@ const FuturisticAIServices2026Showcase = () => {
                     <TrendingUp className="w-5 h-5 mr-2" />
                     <span className="font-bold text-xl">{services[currentService].stats}</span>
                   </div>
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-                  <divbutton
-=======
                   <button
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
                     className="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-full text-white font-semibold transition-colors duration-300 flex items-center"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-                  </divbutton>
-                </div>
-              </div>
-            </div>
-            {/* Service Navigation */}
-            <div className="flex justify-center space-x-4">
-              {services.map((_index) => (
-                <divbutton
-=======
                   </button>
                 </div>
               </div>
@@ -188,7 +163,6 @@ const FuturisticAIServices2026Showcase = () => {
             <div className="flex justify-center space-x-4">
               {services.map((_index) => (
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
                   key={index}
                   onClick={() => setCurrentService(index)}
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
@@ -200,10 +174,7 @@ const FuturisticAIServices2026Showcase = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
           {/* Stats Grid */}
           <div
             className="grid grid-cols-2 gap-6"
@@ -229,20 +200,12 @@ const FuturisticAIServices2026Showcase = () => {
         <div
           className="text-center"
         >
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-          <divbutton
-=======
           <button
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
             className="px-12 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-300 transform hover:shadow-blue-500/25"
           >
             Experience the Future Today
             <ArrowRight className="w-5 h-5 ml-2 inline" />
-<<<<<<< HEAD:temp_broken_files/FuturisticAIServices2026Showcase.tsx
-          </divbutton>
-=======
           </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturisticAIServices2026Showcase.tsx
         </div>
       </div>
     </section>

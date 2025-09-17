@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
-import React from 'react';
-const AI2025UltimateContentShowcaseRevolutionaryBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -82,7 +78,6 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -111,10 +106,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 neural architectures and quantum-enhanced processing.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
             {/* Interactive Feature Showcase */}
               <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -181,10 +173,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
             {/* Success Metrics */}
               <div className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">50000%</div>
@@ -203,10 +192,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
                 <div className="text-gray-300">Efficiency Gain</div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx
             {/* Call to Action */}
               <div className="space-y-6">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

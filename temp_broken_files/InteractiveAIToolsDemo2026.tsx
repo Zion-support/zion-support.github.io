@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-import React from 'react';
-const InteractiveAIToolsDemo2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -133,7 +129,6 @@ const InteractiveAIToolsDemo2026 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,10 +144,7 @@ const InteractiveAIToolsDemo2026 = () => {
             See how our solutions can transform your workflow in real-time.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* Demo Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -175,10 +167,7 @@ const InteractiveAIToolsDemo2026 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* Interactive Demo Area */}
         <div
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
@@ -263,10 +252,7 @@ const InteractiveAIToolsDemo2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* Testimonials */}
         <div
           className="mb-12"
@@ -291,10 +277,7 @@ const InteractiveAIToolsDemo2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* CTA Section */}
         <div
           className="text-center"

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/solutions.tsx
-const solutions: React.FC = () => {
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
@@ -181,7 +178,6 @@ const SolutionsPage: React.FC = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/solutions.tsx
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -202,10 +198,7 @@ const SolutionsPage: React.FC = () => {
             >
               Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results.
             </divp>
-<<<<<<< HEAD:temp_broken_files/solutions.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/solutions.tsx
             {/* Stats Grid */}
             <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
@@ -237,10 +230,7 @@ const SolutionsPage: React.FC = () => {
                 Comprehensive technology solutions designed to address the most complex business challenges
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/solutions.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/solutions.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
                 <div
@@ -315,10 +305,7 @@ const SolutionsPage: React.FC = () => {
               From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/solutions.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/solutions.tsx
           <div className="space-y-16">
             {industrySolutions.map((category, categoryIndex) => (
               <div

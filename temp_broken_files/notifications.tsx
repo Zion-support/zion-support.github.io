@@ -1,15 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/notifications.tsx
-import React from 'react';
-import dynamic from 'next/dynamic';
-const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
-  ssr: false,
-};
-
-
-
-export default function NotificationsPage() {
-  return <NotificationCenter />;
-=======
 import React from "react";
 
 const function NotificationsPage() { = () => {
@@ -26,4 +14,3 @@ const function NotificationsPage() { = () => {
 };
 
 export default function NotificationsPage() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/notifications.tsx

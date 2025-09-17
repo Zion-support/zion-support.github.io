@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025SuccessStoriesPromotionBanner.tsx
-import React from 'react';
-const AI2025SuccessStoriesPromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -58,7 +54,6 @@ const AI2025SuccessStoriesPromotionBanner = () => {
     { icon: Targetvalue: "55%"label: "Cost Reduction" }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025SuccessStoriesPromotionBanner.tsx
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -110,37 +105,22 @@ const AI2025SuccessStoriesPromotionBanner = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-<<<<<<< HEAD:temp_broken_files/AI2025SuccessStoriesPromotionBanner.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025SuccessStoriesPromotionBanner.tsx
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD:temp_broken_files/AI2025SuccessStoriesPromotionBanner.tsx
-              </divbutton>
-              <divbutton
-=======
               </button>
               
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025SuccessStoriesPromotionBanner.tsx
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Target className="w-5 h-5 mr-2" />
                 Start Your Story
-<<<<<<< HEAD:temp_broken_files/AI2025SuccessStoriesPromotionBanner.tsx
-              </divbutton>
-            </div>
-          </div>
-=======
               </button>
             </div>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025SuccessStoriesPromotionBanner.tsx
           {/* Right Content - Testimonial & Stats */}
           <div
             className="space-y-8"

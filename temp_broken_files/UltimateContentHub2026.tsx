@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026.tsx
-import React from 'react';
-const UltimateContentHub2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -146,7 +142,6 @@ const UltimateContentHub2026 = () => {
     return matchesCategory && matchesSearch;
   });
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,10 +160,7 @@ const UltimateContentHub2026 = () => {
             to stay ahead in the AI revolution.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026.tsx
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -225,10 +217,7 @@ const UltimateContentHub2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026.tsx
         {/* Content Grid */}
         <div
           whileInView={{ opacity: 1 }}
@@ -307,10 +296,7 @@ const UltimateContentHub2026 = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026.tsx
         {/* Load More */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-import React from 'react';
-const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -92,7 +88,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
   const currentStoryData = featuredStories[currentStory];
   const Icon = currentStoryData.icon;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -120,10 +115,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
               <span>Business Success Stories Showcase 2026</span>
               <Fire className="w-4 h-4 text-orange-400" />
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             {/* Title */}
             <divh2
               whileInView={{ opacity: 1, y: 0 }}
@@ -137,10 +129,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 Real Businesses
               </span>
             </divh2>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             {/* Subtitle */}
             <divp
               whileInView={{ opacity: 1, y: 0 }}
@@ -148,10 +137,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
             >
               Discover how leading companies achieved unprecedented success with our AI solutions
             </divp>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             {/* Current Story Highlight */}
             <div
               key={currentStory}
@@ -177,10 +163,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             {/* Stats */}
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,10 +182,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 );
               })}
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -218,10 +198,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 Start Your Journey
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             {/* Trust Indicators */}
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -241,10 +218,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
           {/* Visual */}
           <div
             whileInView={{ opacity: 1x: 0 }}
@@ -326,19 +300,13 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
             >
               <TrendingUp className="w-8 h-8 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <Award className="w-6 h-6 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026PromotionBanner.tsx
             <div
               className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg"
             >

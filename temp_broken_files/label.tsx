@@ -1,22 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/label.tsx
-import React from 'react';
-export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-  htmlFor?: string;
-}
-export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
-  ({ className = "text-sm font-medium text-gray-700", children, ...props }, ref) => {
-    return (
-      <label ref={ref} className={className} {...props}>
-        {children}
-      </label>
-    );
-  }
-);
-Label.displayName = "Label";
-
-
-
-=======
 import React from "react";
 
 const Label = () => {
@@ -32,5 +13,4 @@ const Label = () => {
   );
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ui/label.tsx
 export default Label;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateAIToolsShowcase2025.tsx
-import React from 'react';
-const UltimateAIToolsShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -158,7 +154,6 @@ const UltimateAIToolsShowcase2025 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateAIToolsShowcase2025.tsx
   return (
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,10 +177,7 @@ const UltimateAIToolsShowcase2025 = () => {
             createand innovate in 2025.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateAIToolsShowcase2025.tsx
         {/* Search and Filter */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -225,10 +217,7 @@ const UltimateAIToolsShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateAIToolsShowcase2025.tsx
         {/* Tools Grid */}
         <div
           whileInView="visible"
@@ -317,10 +306,7 @@ const UltimateAIToolsShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateAIToolsShowcase2025.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

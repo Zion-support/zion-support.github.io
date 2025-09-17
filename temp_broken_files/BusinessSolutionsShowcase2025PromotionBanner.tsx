@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025PromotionBanner.tsx
-import React from 'react';
-const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -110,7 +106,6 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -146,10 +141,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025PromotionBanner.tsx
               {/* Center Metrics Rotator */}
               <div 
                 className="hidden md:flex items-center space-x-6"
@@ -183,10 +175,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                   <div className="text-xs opacity-80">Support</div>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025PromotionBanner.tsx
               {/* Right Actions */}
               <div 
                 className="flex items-center space-x-3"

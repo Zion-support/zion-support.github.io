@@ -1,12 +1,8 @@
-<<<<<<< HEAD:temp_broken_files/AI2025BreakthroughAnnouncementBanner.tsx
-import React from 'react';
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 BrainZapRocketStarArrowRightX
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025BreakthroughAnnouncementBanner.tsx
 const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
   return (
     <div>
@@ -23,10 +19,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
               >
                 {breakthroughs[currentBreakthrough].urgency}
               </div>
-<<<<<<< HEAD:temp_broken_files/AI2025BreakthroughAnnouncementBanner.tsx
-=======
               
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025BreakthroughAnnouncementBanner.tsx
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentBreakthrough}`}
@@ -52,21 +45,13 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/ai-2025-breakthrough-announcement">
-<<<<<<< HEAD:temp_broken_files/AI2025BreakthroughAnnouncementBanner.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025BreakthroughAnnouncementBanner.tsx
                   className={`bg-gradient-to-r ${breakthroughs[currentBreakthrough].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
                 >
                   <Star className="w-4 h-4" />
                   Learn More
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/AI2025BreakthroughAnnouncementBanner.tsx
-                </divbutton>
-=======
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025BreakthroughAnnouncementBanner.tsx
               </a>
               <button
                 onClick={() => setIsVisible(false)}

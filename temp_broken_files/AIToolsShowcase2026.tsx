@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2026.tsx
-import React from 'react';
-const AIToolsShowcase2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -167,7 +163,6 @@ const AIToolsShowcase2026 = () => {
     ? aiTools 
     : aiTools.filter(tool => tool.category === activeCategory);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2026.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -212,10 +207,7 @@ const AIToolsShowcase2026 = () => {
             Discover our comprehensive suite of AI-powered tools designed to automateoptimizeand transform your business operations.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2026.tsx
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -241,10 +233,7 @@ const AIToolsShowcase2026 = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2026.tsx
         {/* Tools Grid */}
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -330,10 +319,7 @@ const AIToolsShowcase2026 = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2026.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

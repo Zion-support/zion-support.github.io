@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025PromotionBanner.tsx
-import React from 'react';
-const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -32,7 +28,6 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -56,10 +51,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                   <TrendingUp className="w-5 h-5 text-white" />
                   <span className="text-white font-bold text-sm">TRANSFORM</span>
                 </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025PromotionBanner.tsx
-=======
                 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025PromotionBanner.tsx
                 <div className="hidden md:flex items-center gap-2 text-white">
                   <Users className="w-5 h-5 text-blue-300" />
                   <DollarSign className="w-5 h-5 text-green-300" />
@@ -93,33 +85,20 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
               </div>
               {/* Right Actions */}
               <div className="flex items-center gap-3">
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025PromotionBanner.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025PromotionBanner.tsx
                   className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
                 >
                   <Star className="w-4 h-4" />
                   Transform Now
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025PromotionBanner.tsx
-                </divbutton>
-                <divbutton
-=======
                 </button>
                 
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025PromotionBanner.tsx
                   onClick={handleDismiss}
                   className="text-white/70 hover:text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025PromotionBanner.tsx
-                </divbutton>
-=======
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025PromotionBanner.tsx
               </div>
             </div>
             {/* Mobile Layout */}

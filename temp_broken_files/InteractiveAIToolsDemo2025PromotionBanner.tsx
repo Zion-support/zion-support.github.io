@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -24,7 +21,6 @@ import {
   TrendingUp
 } from 'lucide-react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
 const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -47,10 +43,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               <Zap className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-yellow-400 font-semibold">Interactive AI Demo</span>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
             {/* Main Headline */}
             <div
             >
@@ -65,10 +58,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 No signup required - just click and create!
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
             {/* Rotating Tool Showcase */}
             <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -94,10 +84,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
             {/* Benefits Grid */}
             <div
               className="grid grid-cols-2 gap-4"
@@ -109,10 +96,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -210,10 +194,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 rounded-2xl pointer-events-none" />
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
@@ -227,10 +208,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-6 h-6 text-black" />
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025PromotionBanner.tsx
             <div
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
                 y: [010],

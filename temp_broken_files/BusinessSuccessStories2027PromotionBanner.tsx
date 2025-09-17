@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2027PromotionBanner.tsx
-import React from 'react';
-const BusinessSuccessStories2027PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -85,7 +81,6 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2027PromotionBanner.tsx
   return (
     <div>
       {isVisible && (

@@ -1,11 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscoveryWidget.tsx
-import React from 'react';
-const InteractiveContentDiscoveryWidget: React.FC = () => {
-  return (
-    <>
-      {/* Floating Action Button */}
-      <divbutton
-=======
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -189,17 +181,12 @@ const InteractiveContentDiscoveryWidget = () => {
     <>
       {/* Floating Action Button */}
       <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscoveryWidget.tsx
         onClick={() => setIsOpen(true)}
         className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
       >
         <Search className="w-6 h-6" />
-<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscoveryWidget.tsx
-      </divbutton>
-=======
       </button>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscoveryWidget.tsx
       {/* Modal Overlay */}
       <div>
         {isOpen && (

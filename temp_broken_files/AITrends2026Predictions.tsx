@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AITrends2026Predictions.tsx
-import React from 'react';
-const AITrends2026Predictions: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -252,7 +248,6 @@ const AITrends2026Predictions = () => {
 
   const categoryTabs = Object.keys(categories);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026Predictions.tsx
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -298,10 +293,7 @@ const AITrends2026Predictions = () => {
             technological breakthroughs expected in 2026.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrends2026Predictions.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026Predictions.tsx
         {/* Statistics */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -331,10 +323,7 @@ const AITrends2026Predictions = () => {
             <div className="text-gray-300">Investment</div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrends2026Predictions.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026Predictions.tsx
         {/* Category Tabs */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -358,10 +347,7 @@ const AITrends2026Predictions = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrends2026Predictions.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026Predictions.tsx
         {/* Predictions Grid */}
         <div
           key={activeCategory}
@@ -428,10 +414,7 @@ const AITrends2026Predictions = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrends2026Predictions.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026Predictions.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

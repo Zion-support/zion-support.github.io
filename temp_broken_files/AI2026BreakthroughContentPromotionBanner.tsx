@@ -1,73 +1,10 @@
-<<<<<<< HEAD:temp_broken_files/AI2026BreakthroughContentPromotionBanner.tsx
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-};
-
-
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2026BreakthroughContentPromotionBanner.tsx
 
 const function AI2026BreakthroughContentPromotionBanner() { = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-<<<<<<< HEAD:temp_broken_files/AI2026BreakthroughContentPromotionBanner.tsx
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-semibold text-white animate-pulse">
-              🚀 NEW BREAKTHROUGH CONTENT
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            AI 2026{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              Breakthrough Content
-          <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto">
-            Discover the most revolutionary AI content of 2026. From quantum neural fusion 
-            to consciousness AI breakthroughs - explore the future of artificial intelligence.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="/ai-2026-breakthrough-content-showcase"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              🚀 Explore Breakthrough Content
-            <a
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-              className="bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300"
-            >
-              ⚛️ Quantum Neural Fusion
-          {/* Feature Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">⚛️</div>
-              <h3 className="text-xl font-bold mb-2">Quantum Neural Fusion</h3>
-              <p className="text-purple-100 text-sm">
-                15,000% ROI breakthrough combining quantum computing with neural networks
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-xl font-bold mb-2">Neural Interface Revolution</h3>
-              <p className="text-purple-100 text-sm">
-                95% patient recovery rates with direct brain-computer interfaces
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🏭</div>
-              <h3 className="text-xl font-bold mb-2">Autonomous Manufacturing</h3>
-              <p className="text-purple-100 text-sm">
-                8,500% ROI with fully autonomous production systems
-          {/* Stats */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">15,000%</div>
-              <div className="text-purple-200 text-sm">Max ROI Achieved</div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">99.7%</div>
-              <div className="text-purple-200 text-sm">Accuracy Rate</div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">500+</div>
-              <div className="text-purple-200 text-sm">Success Stories</div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">24/7</div>
-              <div className="text-purple-200 text-sm">AI Support</div>
-  );
-=======
           <h1 className="text-5xl font-bold mb-6">function AI2026BreakthroughContentPromotionBanner() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
@@ -77,4 +14,3 @@ const function AI2026BreakthroughContentPromotionBanner() { = () => {
 };
 
 export default function AI2026BreakthroughContentPromotionBanner() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2026BreakthroughContentPromotionBanner.tsx

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationShowcase.tsx
-import React from 'react';
-const AI2025TrendsInnovationShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -110,7 +106,6 @@ const AI2025TrendsInnovationShowcase = () => {
     { icon: Globetext: "Global Reach"value: "200+" }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
@@ -133,10 +128,7 @@ const AI2025TrendsInnovationShowcase = () => {
             Stay ahead of the curve with cutting-edge technology solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationShowcase.tsx
         {/* Interactive Trends Carousel */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const page: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -255,13 +247,8 @@ const AI2025UltimateBreakthroughPage = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/feature/enhanced-content-showcase-2025
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default page;
-=======
 export default AI2025UltimateBreakthroughPage;
->>>>>>> origin/feature/enhanced-content-showcase-2025

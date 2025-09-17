@@ -73,13 +73,9 @@ const AppHeader= () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-<<<<<<< HEAD:temp_broken_files/AppHeader.jsx
-              <div className="relative">
-=======
               <div 
                 className="relative"
               >
->>>>>>> origin/merge-new-content-1757989975:src/layout/AppHeader.jsx
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
@@ -200,17 +196,6 @@ const AppHeader= () => {
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle mobile menu"
               >
-<<<<<<< HEAD:temp_broken_files/AppHeader.jsx
-                {mobileMenuOpen ? (
-                  <div key="close">
-                    <X className="w-6 h-6" />
-                  </div>
-                ) : (
-                  <div key="menu">
-                    <Menu className="w-6 h-6" />
-                  </div>
-                )}
-=======
                   {mobileMenuOpen ? (
                     <div
                       key="close"
@@ -225,34 +210,10 @@ const AppHeader= () => {
                     </div>
                   )}
                 </div>
->>>>>>> origin/merge-new-content-1757989975:src/layout/AppHeader.jsx
               </button>
             </div>
           </div>
           {/* Mobile Navigation */}
-<<<<<<< HEAD:temp_broken_files/AppHeader.jsx
-          {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-white/10">
-              <nav className="py-4 space-y-2" role="navigation" aria-label="Mobile menu">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                      item.current
-                        ? 'bg-zion-cyan/20 text-zion-cyan'
-                        : 'text-white hover:bg-white/10'
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span>{item.name}</span>
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          )}
-=======
           <div>
             {mobileMenuOpen && (
               <div 
@@ -323,7 +284,6 @@ const AppHeader= () => {
               </div>
             )}
           </div>
->>>>>>> origin/merge-new-content-1757989975:src/layout/AppHeader.jsx
         </div>
       </header>
       {/* Spacer to prevent content from hiding behind fixed header */}

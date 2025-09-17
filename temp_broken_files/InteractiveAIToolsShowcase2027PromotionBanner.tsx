@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-import React from 'react';
-const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -109,7 +105,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
   return (
     <div
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
@@ -149,10 +144,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
               <Sparkles className="w-4 h-4" />
               INTERACTIVE AI TOOLS SHOWCASE 2027
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Main Heading */}
             <div
             >
@@ -170,10 +162,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 and find the perfect solution for your business.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Rotating Featured Tool */}
             <div
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
@@ -220,10 +209,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6"
@@ -243,10 +229,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 );
               })}
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -334,44 +317,28 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
               </div>
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                 >
                   <Play className="w-8 h-8 text-white ml-1" />
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-                </divbutton>
-              </div>
-            </div>
-=======
                 </button>
               </div>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center shadow-2xl"
             >
               <Award className="w-8 h-8 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-xl flex items-center justify-center shadow-2xl"
             >
               <TrendingUp className="w-6 h-6 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             <div
               className="absolute top-1/2 -left-6 w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center shadow-2xl"
             >

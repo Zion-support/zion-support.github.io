@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-import React from 'react';
-const AI2025_2026UltimateTechnologyShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -87,7 +83,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
   const currentTech = technologies[activeTab as keyof typeof technologies];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -132,36 +127,21 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-            <divbutton
-=======
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-2xl transition-all duration-300"
             >
               <Play className="w-5 h-5" />
               Watch Demo
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-            </divbutton>
-            <divbutton
-=======
             </button>
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
               className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <ArrowRight className="w-5 h-5" />
               Explore Solutions
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-            </divbutton>
-          </div>
-        </div>
-=======
             </button>
           </div>
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
         {/* Tab Navigation */}
         <div
           className="flex justify-center mb-12"
@@ -189,10 +169,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
         {/* Technology Features */}
           <div
             key={activeTab}
@@ -234,10 +211,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
         {/* Stats Section */}
         <div
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
@@ -265,10 +239,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
         {/* Call to Action */}
         <div
           className="text-center"
@@ -281,31 +252,18 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               Join thousands of forward-thinking companies already using our AI solutions to revolutionize their operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
               >
                 <Rocket className="w-6 h-6" />
                 Start Your AI Journey
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-              </divbutton>
-              <divbutton
-=======
               </button>
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
                 className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
                 <Users className="w-6 h-6" />
                 Schedule Demo
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateTechnologyShowcase.tsx
-              </divbutton>
-=======
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateTechnologyShowcase.tsx
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -85,7 +83,6 @@ export default function Page() {
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
->>>>>>> origin/feat/realtime-rag-content
 
 const page: React.FC = () => {
   return (

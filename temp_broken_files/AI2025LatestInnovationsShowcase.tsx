@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025LatestInnovationsShowcase.tsx
-import React from 'react';
-const AI2025LatestInnovationsShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -73,7 +69,6 @@ const AI2025LatestInnovationsShowcase = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025LatestInnovationsShowcase.tsx
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -97,10 +92,7 @@ const AI2025LatestInnovationsShowcase = () => {
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025LatestInnovationsShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025LatestInnovationsShowcase.tsx
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
@@ -165,10 +157,7 @@ const AI2025LatestInnovationsShowcase = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025LatestInnovationsShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025LatestInnovationsShowcase.tsx
         {/* CTA Section */}
         <div
           className="text-center"

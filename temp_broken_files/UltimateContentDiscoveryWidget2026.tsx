@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentDiscoveryWidget2026.tsx
-import React from 'react';
-const UltimateContentDiscoveryWidget2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -201,7 +197,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     setBookmarks(newBookmarks);
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentDiscoveryWidget2026.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -216,10 +211,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentDiscoveryWidget2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentDiscoveryWidget2026.tsx
         {/* Search and Filters */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
@@ -440,10 +432,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentDiscoveryWidget2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentDiscoveryWidget2026.tsx
         {/* No Results */}
         {sortedContent.length === 0 && (
           <div

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/FeaturedBlogPost2026.tsx
-import React from 'react';
-const FeaturedBlogPost2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -158,7 +154,6 @@ const FeaturedBlogPost2026 = () => {
     });
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedBlogPost2026.tsx
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,10 +175,7 @@ const FeaturedBlogPost2026 = () => {
             Stay ahead of the curve with our expert analysisbreakthrough researchand cutting-edge insights into the world of AIquantum computingand emerging technologies.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/FeaturedBlogPost2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedBlogPost2026.tsx
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Featured Post */}
           <div className="lg:col-span-2">
@@ -313,10 +305,7 @@ const FeaturedBlogPost2026 = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/FeaturedBlogPost2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedBlogPost2026.tsx
             {/* Popular Posts */}
             <div
               className="bg-white rounded-2xl shadow-lg p-6"
@@ -344,10 +333,7 @@ const FeaturedBlogPost2026 = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/FeaturedBlogPost2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedBlogPost2026.tsx
             {/* Newsletter Signup */}
             <div
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white"

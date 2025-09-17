@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryFeatures2025.tsx
-const RevolutionaryFeatures2025: React.FC = () => {
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryFeatures2025 = () => {
@@ -50,7 +47,6 @@ const RevolutionaryFeatures2025 = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryFeatures2025.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4">
@@ -64,10 +60,7 @@ const RevolutionaryFeatures2025 = () => {
             Experience the future of technology with our groundbreaking features that are reshaping industries worldwide.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryFeatures2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryFeatures2025.tsx
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((featureindex) => (
             <div
@@ -83,10 +76,7 @@ const RevolutionaryFeatures2025 = () => {
                 >
                   {feature.icon}
                 </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryFeatures2025.tsx
-=======
                 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryFeatures2025.tsx
                 <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
@@ -97,10 +87,7 @@ const RevolutionaryFeatures2025 = () => {
                   <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} text-white rounded-full text-sm font-bold`}>
                     {feature.stats}
                   </span>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryFeatures2025.tsx
-=======
                   
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryFeatures2025.tsx
                   <div
                     className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
                   >
@@ -111,10 +98,7 @@ const RevolutionaryFeatures2025 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryFeatures2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryFeatures2025.tsx
         <div
           className="text-center mt-16"
         >

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2027.tsx
-import React from 'react';
-const BusinessSuccessStories2027: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -160,7 +156,6 @@ const BusinessSuccessStories2027 = () => {
     return <CheckCircle className="w-4 h-4 text-green-400" />;
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2027.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -200,10 +195,7 @@ const BusinessSuccessStories2027 = () => {
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2027.tsx
         {/* Story Navigation */}
         <div
           className="flex justify-center mb-8"
@@ -242,10 +234,7 @@ const BusinessSuccessStories2027 = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2027.tsx
         {/* Story Content */}
           <div
             key={currentStory}
@@ -353,10 +342,7 @@ const BusinessSuccessStories2027 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2027.tsx
         {/* Call to Action */}
         <div
           className="text-center"
