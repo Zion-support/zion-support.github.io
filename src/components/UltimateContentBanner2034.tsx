@@ -69,6 +69,7 @@ const UltimateContentBanner2034: React.FC = () => {
       {/* Animated Border */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
     </motion.div>
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -208,6 +209,8 @@ const UltimateContentBanner2034: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+>>>>>>> origin/new-content-merge-1758000738
   );
 };
 

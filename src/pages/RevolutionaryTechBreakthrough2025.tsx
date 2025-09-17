@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const RevolutionaryTechBreakthrough2025: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -100,6 +101,62 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </div>
           </div>
         </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
+        </div>
+      </motion.div>
+
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Global Impact Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16"
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">Revolutionary Impact on Humanity</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Consciousness Expansion",
+                description: "Expanding human consciousness beyond current limitations",
+                icon: "🧠",
+                impact: "Unlimited"
+              },
+              {
+                title: "Reality Manipulation",
+                description: "Creating and modifying reality at will",
+                icon: "🌌",
+                impact: "Infinite"
+              },
+              {
+                title: "Digital Immortality",
+                description: "Achieving eternal existence in digital form",
+                icon: "♾️",
+                impact: "Eternal"
+              }
+            ].map((impact, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
+              >
+                <div className="text-6xl mb-4">{impact.icon}</div>
+                <h4 className="text-2xl font-bold mb-3">{impact.title}</h4>
+                <p className="text-lg opacity-90 mb-4">{impact.description}</p>
+                <div className="text-3xl font-bold text-purple-200">{impact.impact}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+>>>>>>> origin/new-content-merge-1758000738
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -123,6 +180,12 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Explore Services
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+        </motion.div>
+      </div>
+
+>>>>>>> origin/new-content-merge-1758000738
         </div>
       </div>
     </div>

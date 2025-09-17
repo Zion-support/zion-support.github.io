@@ -6,6 +6,7 @@ import React from 'react';
 const UltimateContentBanner2036: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -52,6 +53,8 @@ const UltimateContentBanner2036: React.FC = () => {
               Enter Innovation Hub →
 =======
 >>>>>>> origin/new-content-2036-integration
+=======
+>>>>>>> origin/new-content-merge-1758000738
     <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -66,6 +69,10 @@ const UltimateContentBanner2036: React.FC = () => {
             that transcends the impossible.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/new-content-merge-1758000738
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>

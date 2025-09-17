@@ -10,7 +10,6 @@ const InteractiveTechShowcase2027 = () => {
           <p className="text-lg opacity-90">Revolutionary technology solutions</p>
 =======
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -19,9 +18,16 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
   const technologies = [
     {
+<<<<<<< HEAD
       id: 'holographic-tech',
       title: 'Holographic Technology',
       description: "Three-dimensional interfaces that revolutionize human-computer interaction",
+=======
+      id: 0,
+      title: "Conscious AI Systems",
+      icon: "🧠",
+      description: "AI that thinks, feels, and creates with human-level consciousness",
+>>>>>>> origin/new-content-merge-1758000738
       features: [
         "3D Visualization",
         "Gesture Control",
@@ -80,6 +86,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
       <Helmet>
         <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
@@ -96,12 +103,57 @@ const InteractiveTechShowcase2027: React.FC = () => {
           </p>
         </div>
 
+=======
+    <div className="bg-gradient-to-br from-gray-900 to-black text-white py-16 rounded-2xl">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎮 INTERACTIVE SHOWCASE 2027
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase 2027
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Explore our revolutionary technologies through interactive demonstrations and immersive experiences
+          </p>
+        </div>
+
+        {/* Tab Navigation */}
+        <div className="flex justify-center space-x-4 mb-12">
+          {techCategories.map((category, index) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === index
+                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
+            >
+              <span className="text-2xl mr-2">{category.icon}</span>
+              {category.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Technology Cards */}
+>>>>>>> origin/new-content-merge-1758000738
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {technologies.map((tech, index) => (
             <div
+<<<<<<< HEAD
               key={tech.id}
               className={`bg-gradient-to-br ${tech.gradient} backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer animate-fadeIn`}
               onClick={() => handleTechClick(index)}
+=======
+              key={index}
+              className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
+                isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+>>>>>>> origin/new-content-merge-1758000738
             >
               <div className="text-6xl mb-4">{tech.icon || '🔮'}</div>
               <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>

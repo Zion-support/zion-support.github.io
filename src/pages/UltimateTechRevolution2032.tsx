@@ -4,9 +4,14 @@ import Footer from '../Footer';
 
 const UltimateTechRevolution2032: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <Header />
       <main className="container mx-auto px-4 py-16">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> origin/new-content-merge-1758000738
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">

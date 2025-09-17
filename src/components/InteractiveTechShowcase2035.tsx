@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeTech, setActiveTech] = useState(0);
       name: "Interdimensional Computing",
       icon: "🌌",
@@ -77,6 +78,11 @@
       color: "from-pink-600 to-rose-600"
     }
   ];
+=======
+import React, { useState, useEffect } from 'react';
+
+const InteractiveTechShowcase2035: React.FC = () => {
+>>>>>>> origin/new-content-merge-1758000738
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [activeDemo, setActiveDemo] = useState(0);
@@ -122,13 +128,17 @@
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • 2035
+<<<<<<< HEAD
           </div>
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • 2035
+=======
+>>>>>>> origin/new-content-merge-1758000738
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Interactive Technology Showcase 2035
           </h2>
+<<<<<<< HEAD
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences
           </p>
@@ -140,15 +150,77 @@
             {technologies.map((tech, index) => (
               <button
                 key={tech.id}
+=======
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the most advanced technologies with immersive interactive features
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Demo Selection */}
+          <div className="space-y-4">
+>>>>>>> origin/new-content-merge-1758000738
             {demos.map((demo, index) => (
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(index)}
+<<<<<<< HEAD
+=======
+                className={`w-full p-6 rounded-xl border-2 transition-all duration-300 text-left ${
+                  activeDemo === index
+                    ? `bg-gradient-to-r ${demo.color} border-white shadow-lg scale-105`
+                    : 'bg-gray-800/50 border-gray-600 hover:border-gray-400 hover:scale-102'
+                }`}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl">{demo.icon}</div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
+                    <p className="text-sm opacity-90">{demo.description}</p>
+>>>>>>> origin/new-content-merge-1758000738
                   </div>
                 </div>
               </button>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+          {/* Interactive Demo Display */}
+          <div className="relative">
+            <div className={`bg-gradient-to-br ${demos[activeDemo].color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transition-all duration-500 ${isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
+              <div className="text-center mb-8">
+                <div className="text-8xl mb-4 animate-pulse">{demos[activeDemo].icon}</div>
+                <h3 className="text-3xl font-bold mb-4">{demos[activeDemo].title}</h3>
+                <p className="text-lg opacity-90">{demos[activeDemo].description}</p>
+              </div>
+
+              {/* Interactive Visualization */}
+              <div className="bg-black/30 rounded-xl p-6 mb-6">
+                <div className="grid grid-cols-2 gap-4">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="w-full h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg animate-pulse"
+                      style={{ animationDelay: `${i * 0.1}s` }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Features List */}
+              <div className="space-y-3">
+                {demos[activeDemo].features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+                    <span className="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button className="w-full mt-6 bg-white text-gray-900 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Try Interactive Demo →
+>>>>>>> origin/new-content-merge-1758000738
               </button>
             </div>
           </div>
@@ -196,10 +268,13 @@
           </div>
         </div>
         {/* Call to Action */}
+<<<<<<< HEAD
             </button>
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
               📚 Learn More
             </button>
+=======
+>>>>>>> origin/new-content-merge-1758000738
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
           <p className="text-xl opacity-90 mb-8">Join us in exploring the most advanced technologies ever created</p>
