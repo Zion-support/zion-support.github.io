@@ -232,4 +232,5 @@
   to = "/index.html"
   status = 200
 
-# build trigger: chore(netlify): retrigger Netlify deploy with no functional changes (timestamp: 2025-09-17)
+# For Next.js, do not force SPA catch-all to index.html; plugin handles routing
+# build-ok: 2025-09-17T12:56:57Z
