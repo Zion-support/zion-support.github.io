@@ -1,17 +1,19 @@
 #!/bin/bash
 
-# Test script for Netlify build fix (Vite + npm)
+# Test script for Netlify build fix (Next.js + npm)
 set -euo pipefail
 
-echo "🧪 Testing Netlify build with npm..."
+echo "🧪 Testing Netlify build (zion-website) with npm..."
 
 # Clean up any existing artifacts
-echo "🧹 Cleaning up existing artifacts..."
+echo "🧹 Cleaning up existing artifacts in repo and zion-website..."
 rm -rf node_modules dist .npm _cache .pnpm-store .yarn .yarn-cache .next out
 find . -name 'node_modules' -type d -prune -exec rm -rf {} + 2>/dev/null || true
+rm -rf zion-website/node_modules zion-website/.next zion-website/out zion-website/.npm
 
 # Install dependencies using npm to mirror netlify.toml
-echo "📦 Installing dependencies with npm ci..."
+echo "📦 Installing dependencies in zion-website with npm ci..."
+pushd zion-website >/dev/null
 npm ci --ignore-scripts --no-audit
 
 # Optional: clean nested jsdom node_modules if present (rare)
@@ -24,7 +26,8 @@ else
 fi
 
 # Run the same build command as Netlify
-echo "🏗️  Running npm run build:netlify..."
-npm run build:netlify
+echo "🏗️  Running npm run build (Next.js)..."
+npm run build
+popd >/dev/null
 
 echo "✅ Test completed!"

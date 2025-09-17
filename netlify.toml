@@ -1,3 +1,4 @@
+[# Netlify build configuration for Next.js app in zion-website]
 [build]
   base = "zion-website"
   command = "npm ci && npm run build"
@@ -5,31 +6,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NETLIFY_USE_YARN = "false"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[functions]
-  node_bundler = "esbuild"
-  included_files = ["public/**/*"]
-
-[build.processing]
-  skip_processing = true
-[build]
-  # Netlify installs dependencies automatically; run only the build step
-  command = "npm run build:netlify"
-  publish = "dist"
-  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
-  base = "."
-# ci: retrigger Netlify deploy (no functional change) 2025-09-17T14:12:40Z
-
-[build.environment]
-  NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 # Fix MIME type issues
@@ -110,9 +88,15 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Removed Next.js plugin since this is a Vite project
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-# Redirects for SEO/legacy URLs (no-op reformat trigger)
+[functions]
+  directory = "../netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["public/**/*"]
+
+# Redirects for SEO/legacy URLs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -193,10 +177,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Handle client-side routing for SPA (no-op)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# build trigger: chore(netlify): retrigger Netlify deploy (no-op change v7)
+# For Next.js, do not force SPA catch-all to index.html; plugin handles routing
