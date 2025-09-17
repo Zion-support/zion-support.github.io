@@ -8,7 +8,8 @@ const resources = {
     translation: {
       welcome: 'Welcome',
     }
-  };
+  }
+};
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
