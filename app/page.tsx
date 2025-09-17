@@ -79,19 +79,18 @@ import NewContent2026SyntheticIntelligenceBanner from './components/NewContent20
 import NewContent2026UltimateShowcaseBanner from './components/NewContent2026UltimateShowcaseBanner';
 
 // Import new 2026 content promotional components
+import AI2026BreakthroughShowcase from './components/AI2026BreakthroughShowcase';
 import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
-<<<<<<< HEAD
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
-=======
+import WhatsNew from './components/WhatsNew';
 
 // Import new 2026 breakthrough promotional banners
 import NewContent2026UltimateBreakthroughBanner from './components/NewContent2026UltimateBreakthroughBanner';
 import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionBanner';
 import NeuralInterfaceRevolutionBanner2026 from './components/NeuralInterfaceRevolutionBanner2026';
-
->>>>>>> cursor/create-and-deploy-new-content-7334
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -841,7 +840,6 @@ export default function HomePage() {
               </div>
               <div className="shrink-0">
                 <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
-                <Link href="/blog/ai-2025-multimodal-agents-practical-guide" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
                   Read Article
                 </Link>
               </div>
@@ -951,7 +949,6 @@ export default function HomePage() {
           </div>
         </section>
 
-=======
         {/* New Content Promo: Multimodal Agents Blueprint 2026 */}
         <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1009,8 +1006,6 @@ export default function HomePage() {
         <NewContent2026UltimateBanner />
         <AI2026ContentShowcaseBanner />
 
-=======
-=======
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 
