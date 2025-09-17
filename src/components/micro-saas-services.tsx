@@ -20,6 +20,10 @@ import {
   Calendar,
   Target
 } from 'lucide-react';
+};
+
+
+
 export default function MicroSaasServicesPage() {
   const microSaasServices = [
     {
@@ -442,5 +446,7 @@ export default function MicroSaasServicesPage() {
               View Pricing
     </>
   );
-};
+
+
+
 export default micro-saas-services;

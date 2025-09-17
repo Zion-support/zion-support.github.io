@@ -18,4 +18,5 @@ const BiotechAIRevolution2025: React.FC = () => {
 
 };
 
+
 export default BiotechAIRevolution2025;

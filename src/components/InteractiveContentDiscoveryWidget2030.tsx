@@ -71,8 +71,11 @@ const contentItems: ContentItem[] = [
     icon: '🔬',
     featured: false,
     tags: ['artificial 'consciousness', 'synthetic 'minds', 'AI creativity']
-  }
-];
+  };
+};
+
+
+
 export default function InteractiveContentDiscoveryWidget2030() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
   const [searchTermsetSearchTerm] = useState<string>(', ');
@@ -213,5 +216,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
               >
                 Our Services
   );
-};
+
+
+
 export default InteractiveContentDiscoveryWidget2030;

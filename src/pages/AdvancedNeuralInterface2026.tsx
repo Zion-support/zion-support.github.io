@@ -18,4 +18,5 @@ const AdvancedNeuralInterface2026: React.FC = () => {
 
 };
 
+
 export default AdvancedNeuralInterface2026;

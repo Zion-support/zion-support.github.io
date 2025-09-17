@@ -1,5 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+};
+
+
+
 export default function AI2025ROICalculator() {
   const [currentRevenuesetCurrentRevenue] = useState(1000000);
   const [implementationCostsetImplementationCost] = useState(100000);
@@ -160,5 +164,7 @@ export default function AI2025ROICalculator() {
               >
                 Learn About AI 2025 Breakthrough
   );
-};
+
+
+
 export default AI2025ROICalculator;

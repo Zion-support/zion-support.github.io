@@ -225,4 +225,5 @@ const TechnologyTrends2026: React.FC = () => {
 
 };
 
+
 export default TechnologyTrends2026;

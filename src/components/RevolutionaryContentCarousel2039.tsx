@@ -128,44 +128,6 @@
     </div>
   );
 };
-        {/* Dots Indicator */}
-        <div className="flex justify-center space-x-2 mt-8">
-          {contentSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
-        {/* Quick Access Links */}
-        <div className="mt-8 text-center">
-          <div className="inline-flex items-center space-x-4">
-            <a 
-              href="/pages/UltimateTechBreakthrough2039" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              🌟 Ultimate Breakthrough
-            </a>
-            <a 
-              href="/pages/RevolutionaryTechShowcase2039" 
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              ⚡ Tech Showcase
-            </a>
-            <a 
-              href="/pages/NextGenInnovationHub2039" 
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              🧠 Innovation Hub
-            </a>
-            <a 
-              href="/pages/TranscendentTechRevolution2039" 
-              className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              🌟 Transcendent Revolution
-            </a>
-          </div>
-        </div>
+
+
+export default RevolutionaryContentCarousel2039;

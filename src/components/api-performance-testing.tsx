@@ -1,4 +1,8 @@
 import React from 'react';
+};
+
+
+
 export default function ApiPerformanceTestingPage() {
 	const features = [
 		'k6/Gatling-compatible test runner',

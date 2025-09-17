@@ -9,4 +9,5 @@ const AnalyticsManager: React.FC = () => {
 
 };
 
+
 export default AnalyticsManager;

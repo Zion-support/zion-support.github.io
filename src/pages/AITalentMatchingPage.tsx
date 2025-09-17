@@ -4,6 +4,7 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 };
 
 
+
 export default function AITalentMatchingPage() {
     {
       title: "Streamlined Hiring Workflow",

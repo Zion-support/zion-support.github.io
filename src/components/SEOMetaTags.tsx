@@ -68,4 +68,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
     </Helmet>
   );
 };
+
+
 export default SEOMetaTags;

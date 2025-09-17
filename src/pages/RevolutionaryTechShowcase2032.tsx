@@ -420,6 +420,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryTechShowcase2032;
 import React, { useState, useEffect } from 'react';
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">

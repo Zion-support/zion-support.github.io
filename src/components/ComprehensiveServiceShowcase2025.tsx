@@ -190,6 +190,9 @@ const complexityLevels = {
   complex: { label: ''Complex', 'color: 'text-orange-400' },
   expert: { label: ''Expert', 'color: 'text-red-400' }
 };
+
+
+
 export default function ComprehensiveServiceShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [selectedServicesetSelectedService] = useState<Service | null>(null);
@@ -472,5 +475,7 @@ export default function ComprehensiveServiceShowcase2025() {
                       Contact Sales
         )}
   );
-};
+
+
+
 export default ComprehensiveServiceShowcase2025;

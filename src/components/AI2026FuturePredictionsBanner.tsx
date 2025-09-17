@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2026FuturePredictionsBanner() {
   return (
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">

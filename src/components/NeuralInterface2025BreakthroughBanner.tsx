@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NeuralInterface2025BreakthroughBanner() {
   return (
     <section className="bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 py-16 px-4">

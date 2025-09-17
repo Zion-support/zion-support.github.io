@@ -9,4 +9,5 @@ const SyntheticIntelligenceBanner2030: React.FC = () => {
 
 };
 
+
 export default SyntheticIntelligenceBanner2030;

@@ -65,4 +65,5 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
 
 };
 
+
 export default ParallaxSection;

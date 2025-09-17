@@ -56,4 +56,6 @@ export default function FavoritesPage() {
       )}
   );
 };
+
+
 export default favorites;

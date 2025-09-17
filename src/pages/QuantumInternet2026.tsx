@@ -18,4 +18,5 @@ const QuantumInternet2026: React.FC = () => {
 
 };
 
+
 export default QuantumInternet2026;

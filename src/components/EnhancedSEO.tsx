@@ -9,4 +9,5 @@ const EnhancedSEO: React.FC = () => {
 
 };
 
+
 export default EnhancedSEO;

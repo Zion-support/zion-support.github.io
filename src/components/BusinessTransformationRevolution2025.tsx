@@ -157,5 +157,7 @@ const BusinessTransformationRevolution2025: React.FC = () => {
     </section>
   );
 };
+
+
 export default BusinessTransformationRevolution2025;
 </div></div></div></div>

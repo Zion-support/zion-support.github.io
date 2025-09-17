@@ -156,7 +156,9 @@ const search_data: SearchResult[] = [;
       setResults(filtered);
     } else {;
       setResults([]);
-;
+
+
+
 export default /**
  * SearchModal - Function description
  */
@@ -384,5 +386,7 @@ if (return null) {
       </div>;
     </div>;
   );
-};
+
+
+
 export default SearchModal;

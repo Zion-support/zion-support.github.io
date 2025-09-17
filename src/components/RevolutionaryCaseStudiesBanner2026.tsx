@@ -49,4 +49,6 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
     </motion.div>
   );
 };
+
+
 export default RevolutionaryCaseStudiesBanner2026;

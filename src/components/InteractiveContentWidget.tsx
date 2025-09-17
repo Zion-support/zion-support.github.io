@@ -95,4 +95,6 @@ const InteractiveContentWidget: React.FC = () => {
     </section>
   );
 };
+
+
 export default InteractiveContentWidget;

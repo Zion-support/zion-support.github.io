@@ -4,6 +4,7 @@ CalculatorArrowRightZapDollarSignClockTarget
 };
 
 
+
 export default function AutomationSolutionsPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">

@@ -14,6 +14,8 @@
     </div>
   );
 };
+
+
 export default RevolutionaryContentShowcase2030;
   return (
     <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 rounded-3xl p-16 mb-16 text-white relative overflow-hidden">

@@ -9,4 +9,5 @@ const AITrends2025PromotionalBanner: React.FC = () => {
 
 };
 
+
 export default AITrends2025PromotionalBanner;

@@ -58,4 +58,6 @@ const RevolutionaryTechBanner2043: React.FC = () => {
     </motion.div>
   );
 };
+
+
 export default RevolutionaryTechBanner2043;

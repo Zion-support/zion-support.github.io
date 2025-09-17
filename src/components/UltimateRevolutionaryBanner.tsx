@@ -4,4 +4,5 @@ import React from 'react';
   );
 };
 
-export default COMPONENT;
+
+export default UltimateRevolutionaryBanner;

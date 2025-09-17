@@ -3,6 +3,10 @@
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarQuoteUsersAwardTrendingUpCheckCircleGlobeBuildingZap
+};
+
+
+
 export default function SocialProofTestimonials2025() {
   const [currentTestimonialsetCurrentTestimonial] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
@@ -178,5 +182,7 @@ export default function SocialProofTestimonials2025() {
             >
               View All Case Studies
   );
-};
+
+
+
 export default SocialProofTestimonials2025;

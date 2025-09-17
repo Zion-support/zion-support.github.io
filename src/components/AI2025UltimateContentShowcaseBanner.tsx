@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025UltimateContentShowcaseBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">

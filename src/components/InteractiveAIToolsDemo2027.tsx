@@ -297,5 +297,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       </div>
     </section>
   );
-};
+
+
+
 export default InteractiveAIToolsDemo2027;

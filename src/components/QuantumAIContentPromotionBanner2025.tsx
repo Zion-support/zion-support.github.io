@@ -1,3 +1,4 @@
+import React from "react";
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 const QuantumAIContentPromotionBanner2025: React.FC = () => {
@@ -171,5 +172,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
   );
 
 };
+
 
 export default QuantumAIContentPromotionBanner2025;

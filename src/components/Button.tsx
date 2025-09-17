@@ -7,7 +7,10 @@ interface ButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-}
+};
+
+
+
 export default function Button({ 
   children, 
   variant = 'primary', 
@@ -39,5 +42,7 @@ export default function Button({
     >
       {children}
   );
-};
+
+
+
 export default Button;

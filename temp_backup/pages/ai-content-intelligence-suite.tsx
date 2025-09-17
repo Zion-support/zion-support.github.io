@@ -19,4 +19,5 @@ const ai-content-intelligence-suite: React.FC = () => {
   );
 };
 
-export default ai-content-intelligence-suite;
+
+export default OmniversalAIConsciousness2035;

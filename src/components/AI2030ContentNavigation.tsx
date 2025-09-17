@@ -17,6 +17,10 @@ import {
   TrendingUp,
   Users
 } from 'lucide-react';
+};
+
+
+
 export default function AI2030ContentNavigation() {
   const [isExpandedsetIsExpanded] = useState(false);
   const contentSections = [
@@ -206,5 +210,7 @@ export default function AI2030ContentNavigation() {
               </>
             )}
   );
-};
+
+
+
 export default AI2030ContentNavigation;

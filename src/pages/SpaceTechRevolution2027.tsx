@@ -18,4 +18,5 @@ const SpaceTechRevolution2027: React.FC = () => {
 
 };
 
+
 export default SpaceTechRevolution2027;

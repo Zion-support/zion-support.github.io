@@ -45,4 +45,5 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-export default COMPONENT;
+
+export default NextGenAIContentPromotionBanner2026;

@@ -18,4 +18,5 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceBreakthrough2026;

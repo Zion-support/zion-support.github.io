@@ -18,4 +18,5 @@ const RevolutionaryInnovationHub2027: React.FC = () => {
 
 };
 
+
 export default RevolutionaryInnovationHub2027;

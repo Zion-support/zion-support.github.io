@@ -18,6 +18,10 @@ import {
   Check,
   ExternalLink
 } from 'lucide-react';
+};
+
+
+
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
@@ -362,5 +366,7 @@ export default function SaaSMarketplacePage() {
               View Our Services
     </>
   );
-};
+
+
+
 export default saas-marketplace;

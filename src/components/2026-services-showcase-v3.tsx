@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
+
 export default function ServicesShowcase2026V3() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

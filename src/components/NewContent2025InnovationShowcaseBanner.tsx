@@ -4,6 +4,7 @@ ArrowRightStarBrainZapAtomBot
 };
 
 
+
 export default function NewContent2025InnovationShowcaseBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 py-16 px-4 sm:px-6 lg:px-8">

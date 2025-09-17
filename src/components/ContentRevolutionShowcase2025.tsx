@@ -1,5 +1,9 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function ContentRevolutionShowcase2025() {
   const contentItems = [
     {
@@ -95,5 +99,7 @@ export default function ContentRevolutionShowcase2025() {
           >
             Get Complete Toolkit
   );
-};
+
+
+
 export default ContentRevolutionShowcase2025;

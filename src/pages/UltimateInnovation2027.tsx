@@ -18,4 +18,5 @@ const UltimateInnovation2027: React.FC = () => {
 
 };
 
+
 export default UltimateInnovation2027;

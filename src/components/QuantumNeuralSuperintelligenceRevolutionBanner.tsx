@@ -4,6 +4,7 @@ import { ArrowRight, Brain, Zap, Target, TrendingUp, Star } from 'lucide-react';
 };
 
 
+
 export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
   return (
     <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">

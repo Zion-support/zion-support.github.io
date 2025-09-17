@@ -5,6 +5,10 @@ import {
   Globe, Zap, Shield, Crown, Brain, Atom
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
   const markets = [
@@ -659,5 +663,7 @@ export default function MarketPricing() {
               >
                 Get Custom Quote
   );
-};
+
+
+
 export default MarketPricing;

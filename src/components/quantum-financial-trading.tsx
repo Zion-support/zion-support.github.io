@@ -3,6 +3,10 @@ import Head from 'next/head';
 PhoneMailMapPinCheckArrowRightTrendingUpStar
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+};
+
+
+
 export default function QuantumFinancialTradingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'));
   if (!service) return null;

@@ -16,6 +16,7 @@ import Link from 'next/link';
 };
 
 
+
 export default function Contact() {
   const { showToast: toast } = useToast();
 import React, { useState } from 'react';
@@ -284,6 +285,7 @@ const Contact: React.FC = () => {
                   <p className="text-gray-300">{feature.description}</p>
             ))}
   );
+
 
 
 export default Contact;

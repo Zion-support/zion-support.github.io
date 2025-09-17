@@ -18,4 +18,5 @@ const MetaverseRevolution2026: React.FC = () => {
 
 };
 
+
 export default MetaverseRevolution2026;

@@ -9,5 +9,6 @@ const InnovationShowcase2025: React.FC = () => {
 
 };
 
+
 export default InnovationShowcase2025;
 </p></p>

@@ -455,40 +455,8 @@ export default function ComprehensiveServicesLanding2027() {
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
   );
-}
-// Helper component for DNA icon
-function Dna({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-  );
-}
-  Zap as ZapIconDup,
-  Shield as ShieldIconDup,
-  Cloud as CloudIconDup,
-  Brain as BrainIconDup,
-  Rocket as RocketIconDup,
-  Leaf as LeafIconDup
-          <divdiv 
-          </divdiv>
-          {/* Quick Stats */}
-          <divdiv 
-          </divdiv>
-          <divdiv 
-          </divdiv>
-              <divbutton
-              </divbutton>
-          <divdiv 
-          </divdiv>
-              <divdiv
-                <div>
-                  {expandedService === service.id && (
-                    <divdiv
-                    </divdiv>
-                  )}
-                </div>
-              </divdiv>
-              <divdiv 
-              </divdiv>
-          <divdiv 
-          </divdiv>
+
+};
+
+
+export default ComprehensiveServicesLanding2027;

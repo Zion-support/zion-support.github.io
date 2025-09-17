@@ -4,6 +4,7 @@ ArrowRightBrainCpuZapTrendingUpGlobe
 };
 
 
+
 export default function AI2026FuturePredictionsRevolutionaryBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border border-cyan-500/30 rounded-2xl mb-8">

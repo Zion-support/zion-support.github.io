@@ -18,6 +18,10 @@ import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
+};
+
+
+
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');

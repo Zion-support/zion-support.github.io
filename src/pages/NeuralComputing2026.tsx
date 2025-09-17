@@ -18,4 +18,5 @@ const NeuralComputing2026: React.FC = () => {
 
 };
 
+
 export default NeuralComputing2026;

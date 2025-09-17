@@ -218,5 +218,7 @@ const LeadGenerationForm: React.FC = () => {
       </form>
     </div>
   );
-};
+
+
+
 export default LeadGenerationForm;

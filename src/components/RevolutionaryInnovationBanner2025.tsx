@@ -45,3 +45,6 @@ const COMPONENT: React.FC = () => {
   );
 };
 
+
+export default RevolutionaryInnovationBanner2025;
+</div></div>

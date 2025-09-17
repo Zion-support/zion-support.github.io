@@ -18,4 +18,5 @@ const NextGenTechRevolution2028: React.FC = () => {
 
 };
 
+
 export default NextGenTechRevolution2028;

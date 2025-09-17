@@ -158,19 +158,10 @@ import React, { useState } from 'react';
           </div>
         </div>
       </div>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-4xl mb-4">🌌</div>
-            <h4 className="font-bold mb-2">Dimension Explorer</h4>
-            <p className="text-sm opacity-90 mb-4">Explore parallel universes</p>
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">
-              Explore →
-            </button>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-4xl mb-4">⚡</div>
-            <h4 className="font-bold mb-2">Reality Simulator</h4>
-            <p className="text-sm opacity-90 mb-4">Manipulate reality parameters</p>
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2 rounded-lg text-sm font-semibold">
-              Simulate →
-            </button>
+    </div>
+  );
+
+};
+
+
+export default InteractiveTechShowcase2037;

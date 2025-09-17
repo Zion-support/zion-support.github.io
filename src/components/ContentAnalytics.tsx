@@ -10,7 +10,10 @@ interface ContentMetrics {
 interface ContentAnalyticsProps {
   pageId: string;
   pageTitle: string;
-}
+};
+
+
+
 export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsProps) {
   const [metricsetMetrics] = useState<ContentMetrics>({
     pageViews: 0,
@@ -119,5 +122,7 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
       )}
     </>
   );
-};
+
+
+
 export default ContentAnalytics;

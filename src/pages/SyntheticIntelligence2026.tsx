@@ -15,4 +15,6 @@ const SyntheticIntelligence2026: React.FC = () => {
     </div>
   );
 };
+
+
 export default SyntheticIntelligence2026;

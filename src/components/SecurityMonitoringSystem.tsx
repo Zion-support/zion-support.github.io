@@ -9,4 +9,5 @@ const SecurityMonitoringSystem: React.FC = () => {
 
 };
 
+
 export default SecurityMonitoringSystem;

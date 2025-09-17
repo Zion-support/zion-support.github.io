@@ -5,6 +5,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 };
 
 
+
 export default function DeveloperPage() {
   return (
     <>

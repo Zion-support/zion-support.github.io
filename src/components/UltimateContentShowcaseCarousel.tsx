@@ -45,3 +45,6 @@ const COMPONENT: React.FC = () => {
   );
 };
 
+
+export default UltimateContentShowcaseCarousel;
+</div></div>

@@ -34,4 +34,6 @@ const TechTrendsBlog2027: React.FC = () => {
     </div>
   );
 };
+
+
 export default TechTrendsBlog2027;

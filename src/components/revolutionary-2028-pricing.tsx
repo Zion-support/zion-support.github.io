@@ -85,8 +85,10 @@ const servicePricing = [
   {
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
-  }
-];
+  };
+
+
+
 export default function Revolutionary2028Pricing() {
   return (
     <>

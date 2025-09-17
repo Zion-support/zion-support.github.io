@@ -25,6 +25,10 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+};
+
+
+
 export default function DynamicServicePage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };

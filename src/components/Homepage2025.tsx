@@ -514,4 +514,6 @@ const Homepage2025: React.FC = () => {
     </UltraFuturisticBackground2026>
   );
 };
+
+
 export default Homepage2025;

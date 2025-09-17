@@ -212,3 +212,9 @@ export default RevolutionaryTechBanner2025;
           </div>
         </div>
       </div>
+  );
+
+};
+
+
+export default RevolutionaryTechBanner2025;

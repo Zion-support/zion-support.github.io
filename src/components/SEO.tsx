@@ -91,5 +91,7 @@ const SEO: React.FC<SEOProps> = ({
   }, [title, description, keywords, image, url, type]);
   return null; // This component doesn't render anything
 };
+
+
 export default SEO;
 export { SEO };

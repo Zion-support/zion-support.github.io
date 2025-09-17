@@ -18,4 +18,5 @@ const InteractiveTechDemo2025: React.FC = () => {
 
 };
 
+
 export default InteractiveTechDemo2025;

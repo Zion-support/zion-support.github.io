@@ -9,4 +9,5 @@ const AdvancedTechBanner2031: React.FC = () => {
 
 };
 
+
 export default AdvancedTechBanner2031;

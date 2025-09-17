@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2026NeuralInterfacesPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-blue-600 to-teal-700 py-16">

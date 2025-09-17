@@ -18,4 +18,5 @@ const MetaIntelligence2026: React.FC = () => {
 
 };
 
+
 export default MetaIntelligence2026;

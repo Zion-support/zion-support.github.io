@@ -100,6 +100,10 @@ const services = [
   }
 ];
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
+};
+
+
+
 export default function UltimateServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = React.useState("All");
   const filteredServices = selectedCategory === "All" 
@@ -227,5 +231,7 @@ export default function UltimateServicesShowcase2025() {
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
   );
-};
+
+
+
 export default UltimateServicesShowcase2025;

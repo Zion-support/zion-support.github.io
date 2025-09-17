@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025SyntheticIntelligencePromotionBanner() {
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">

@@ -15,7 +15,10 @@ interface ShowcaseItem {
     accuracy: string;
     speed: string;
   };
-}
+};
+
+
+
 export default function AnimatedContentShowcase() {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -238,5 +241,7 @@ export default function AnimatedContentShowcase() {
                     Explore →
             ))}
   );
-};
+
+
+
 export default AnimatedContentShowcase;

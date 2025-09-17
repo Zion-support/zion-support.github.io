@@ -30,4 +30,5 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-export default COMPONENT;
+
+export default AIConsciousnessRevolutionBanner;

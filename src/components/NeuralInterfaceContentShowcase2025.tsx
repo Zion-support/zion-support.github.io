@@ -9,5 +9,6 @@ const NeuralInterfaceContentShowcase2025: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceContentShowcase2025;
 </p></p></p>

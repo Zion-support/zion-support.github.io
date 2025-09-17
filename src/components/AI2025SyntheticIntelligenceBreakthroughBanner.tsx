@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025SyntheticIntelligenceBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 py-16">

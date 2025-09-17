@@ -3,6 +3,10 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function ContentRecommendationEngine() {
   const [recommendationsetRecommendations] = useState([]);
   const [isLoadingsetIsLoading] = useState(true);
@@ -217,5 +221,7 @@ export default function ContentRecommendationEngine() {
         >
           Refresh Recommendations
   );
-};
+
+
+
 export default ContentRecommendationEngine;

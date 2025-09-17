@@ -18,4 +18,6 @@ const NeuralInterfaceEvolution2026: React.FC = () => {
     </div>
   );
 };
+
+
 export default NeuralInterfaceEvolution2026;

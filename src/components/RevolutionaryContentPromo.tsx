@@ -110,4 +110,6 @@ const RevolutionaryContentPromo: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryContentPromo;

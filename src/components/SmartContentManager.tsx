@@ -9,4 +9,5 @@ const SmartContentManager: React.FC = () => {
 
 };
 
+
 export default SmartContentManager;

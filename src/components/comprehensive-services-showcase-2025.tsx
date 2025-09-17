@@ -70,7 +70,10 @@ const sortOptions = [
   { label: 'Newest', value: 'newest' },
   { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
-];
+};
+
+
+
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');

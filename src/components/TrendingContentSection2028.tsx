@@ -9,4 +9,5 @@ const TrendingContentSection2028: React.FC = () => {
 
 };
 
+
 export default TrendingContentSection2028;

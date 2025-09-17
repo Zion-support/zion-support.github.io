@@ -18,4 +18,5 @@ const InterdimensionalTech2027: React.FC = () => {
 
 };
 
+
 export default InterdimensionalTech2027;

@@ -2,6 +2,10 @@ import React, { useMemo, useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+};
+
+
+
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
@@ -38,5 +42,7 @@ export default function WhitepaperBuilderPage() {
             <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s.contentMd}</article>
         ))}
   );
-};
+
+
+
 export default whitepaper-builder;

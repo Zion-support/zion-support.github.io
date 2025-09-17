@@ -6,6 +6,7 @@ interface SocialShareButtonsProps {
 };
 
 
+
 export default function SocialShareButtons({ urltitledescription }: SocialShareButtonsProps) {
   const shareUrl = typeof window !== 'undefined' ? window.location.origin + url : '';
   const shareLinks = {

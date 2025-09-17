@@ -237,93 +237,11 @@
             Experience the future with interactive demonstrations of the most revolutionary technologies ever created
           </p>
         </div>
-        {/* Technology Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Technology Cards */}
-          <div className="space-y-6">
-            {technologies.map((tech, index) => (
-              <div
-                key={tech.id}
-                className={`bg-gradient-to-r ${tech.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer transition-all duration-500 ${
-                  hoveredCard === index ? 'scale-105 shadow-2xl' : 'hover:scale-102'
-                }`}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => setActiveTech(index)}
-              >
-                <div className="flex items-center space-x-6">
-                  <div className="text-6xl">{tech.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>
-                    <p className="text-lg opacity-90 leading-relaxed">{tech.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {tech.features.slice(0, 3).map((feature, featureIndex) => (
-                        <span
-                          key={featureIndex}
-                          className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="text-4xl opacity-50">→</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* Active Technology Display */}
-          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-            <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-              {/* Technology Header */}
-              <div className="text-center mb-8">
-                <div className="text-8xl mb-6 animate-bounce">{technologies[activeTech].icon}</div>
-                <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
-                <p className="text-xl opacity-90 leading-relaxed">{technologies[activeTech].description}</p>
-              </div>
-              {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {technologies[activeTech].features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`}
-                  >
-                    <div className="text-2xl mb-2">✨</div>
-                    <h4 className="font-bold text-sm">{feature}</h4>
-                  </div>
-                ))}
-              </div>
-              {/* Metrics */}
-              <div className="bg-white/10 rounded-2xl p-6 mb-8">
-                <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(technologies[activeTech].metrics).map(([key, value], index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-2xl font-bold text-yellow-400">{value}</div>
-                      <div className="text-sm opacity-80">{key}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Interactive Controls */}
-              <div className="space-y-4">
-                <a
-                  href={technologies[activeTech].demoUrl}
-                  className={`block w-full bg-gradient-to-r ${technologies[activeTech].color} text-white py-4 rounded-xl font-bold text-center hover:shadow-lg transition-all duration-300 hover:scale-105`}
-                >
-                  🎮 Try Interactive Demo
-                </a>
-                <div className="grid grid-cols-2 gap-4">
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    📊 View Analytics
-                  </button>
-                  <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    🔬 Deep Dive
-                  </button>
-                </div>
-            <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              View All Services →
-            </a>
-            <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              Contact Us →
-            </a>
+      </div>
+    </div>
+  );
+
+};
+
+
+export default InteractiveTechShowcase2034;

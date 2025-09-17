@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NewContent2025ShowcaseBanner() {
   return (
     <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 py-20 px-4">

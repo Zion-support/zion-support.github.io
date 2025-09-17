@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NeuralConsensusAIPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-8 px-4 relative overflow-hidden">

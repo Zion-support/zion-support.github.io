@@ -3,6 +3,8 @@
     </div>
   );
 };
+
+
 export default RevolutionaryContentBanner2034;
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>

@@ -3,6 +3,10 @@ import Head from 'next/head';
 PhoneMailMapPinCheckArrowRightTruckStar
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+};
+
+
+
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'));
   if (!service) return null;

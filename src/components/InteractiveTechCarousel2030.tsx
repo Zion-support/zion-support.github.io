@@ -9,4 +9,5 @@ const InteractiveTechCarousel2030: React.FC = () => {
 
 };
 
+
 export default InteractiveTechCarousel2030;

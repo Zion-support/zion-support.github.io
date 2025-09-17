@@ -242,4 +242,5 @@ const FutureTechTrendsBanner2025: React.FC = () => {
 
 };
 
+
 export default FutureTechTrendsBanner2025;

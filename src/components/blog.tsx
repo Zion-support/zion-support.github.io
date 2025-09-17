@@ -4,6 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 };
 
 
+
 export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">

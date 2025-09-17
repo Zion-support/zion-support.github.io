@@ -49,8 +49,10 @@ const serviceCategories = [
     icon: Car,
     color: 'from-red-600 to-pink-600',
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
-  }
-];
+  };
+
+
+
 export default function ServicesShowcase2028() {
   return (
     <>

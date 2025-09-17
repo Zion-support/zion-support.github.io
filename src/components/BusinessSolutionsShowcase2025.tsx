@@ -142,5 +142,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
       </div>
     </divsection>
   );
-};
+
+
+
 export default BusinessSolutionsShowcase2025;

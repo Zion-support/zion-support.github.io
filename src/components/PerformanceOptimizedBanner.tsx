@@ -9,4 +9,5 @@ const PerformanceOptimizedBanner: React.FC = () => {
 
 };
 
+
 export default PerformanceOptimizedBanner;

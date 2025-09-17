@@ -193,4 +193,6 @@ const AdvancedAIRevolution2027: React.FC = () => {
     </div>
   );
 };
+
+
 export default AdvancedAIRevolution2027;

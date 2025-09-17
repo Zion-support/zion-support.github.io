@@ -617,6 +617,15 @@ export default InteractiveTechShowcase;
                 View Analytics
               </button>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-e4b3
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+};
+
+
 export default InteractiveTechShowcase;
 >>>>>>> origin/feature/revolutionary-2026-content

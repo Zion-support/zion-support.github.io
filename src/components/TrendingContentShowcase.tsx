@@ -9,4 +9,5 @@ const TrendingContentShowcase: React.FC = () => {
 
 };
 
+
 export default TrendingContentShowcase;

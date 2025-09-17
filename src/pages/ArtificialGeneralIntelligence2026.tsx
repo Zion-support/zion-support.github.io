@@ -18,4 +18,5 @@ const ArtificialGeneralIntelligence2026: React.FC = () => {
 
 };
 
+
 export default ArtificialGeneralIntelligence2026;

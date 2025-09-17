@@ -3,6 +3,10 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+};
+
+
+
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -372,5 +376,7 @@ export default function CodeQualityCheckerPage() {
               Schedule Demo
     </>
   );
-};
+
+
+
 export default code-quality-checker;

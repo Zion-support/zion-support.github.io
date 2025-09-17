@@ -110,4 +110,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryTechBanner2034;

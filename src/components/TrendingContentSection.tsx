@@ -9,4 +9,5 @@ const TrendingContentSection: React.FC = () => {
 
 };
 
+
 export default TrendingContentSection;

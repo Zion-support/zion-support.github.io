@@ -1,17 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-  ArrowRight,
-  BarChart3,
-  Brain,
-  Cpu as CpuIcon,
-  Globe,
-  Rocket as RocketIcon,
-  Shield,
-  Star,
-  TrendingUp,
-  X
-} from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import React from "react";
+import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const NewContent2026PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -201,4 +189,6 @@ const NewContent2026PromotionBanner = () => {
     </AnimatePresence>
   );
 };
+
+
 export default NewContent2026PromotionBanner;

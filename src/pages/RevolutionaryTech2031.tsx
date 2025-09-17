@@ -18,4 +18,5 @@ const RevolutionaryTech2031: React.FC = () => {
 
 };
 
+
 export default RevolutionaryTech2031;

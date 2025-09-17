@@ -192,4 +192,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
     </div>
   );
 };
+
+
 export default QuantumConsciousnessRevolution2028;

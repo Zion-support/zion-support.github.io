@@ -71,6 +71,10 @@ const news: React.FC = () => {
       readTime: "3 min read",
       image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"]
+};
+
+
+
 export default function News() {
   const featuredNews = [
     {
@@ -84,6 +88,9 @@ export default function News() {
       image: '/api/placeholder/600/400',
       tags: ['AI', 'Quantum Computing', 'Innovation'],
 import Head from 'next/head';
+
+
+
 export default function NewsPage() {
   const newsArticles = [
     {
@@ -257,6 +264,9 @@ import {
   BookOpen, Globe, Video
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+
+
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -9,4 +9,5 @@ const NewContent2025AnalyticsRevolutionBanner: React.FC = () => {
 
 };
 
+
 export default NewContent2025AnalyticsRevolutionBanner;

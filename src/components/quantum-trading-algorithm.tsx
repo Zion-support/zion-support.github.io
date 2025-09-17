@@ -38,8 +38,10 @@ const pricingPlans = [
     period: 'month',
     features: ['Quantum algorithms', 'White-label solution', 'API access', 'Dedicated support', 'Custom integrations'],
     popular: false
-  }
-];
+  };
+
+
+
 export default function QuantumTradingAlgorithm() {
   return (
     <Layout>

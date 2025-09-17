@@ -38,4 +38,5 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
 
 };
 
+
 export default TypingAnimation;

@@ -13,4 +13,5 @@ const AI2026LatestTrends = () => {
 
 };
 
+
 export default AI2026LatestTrends;

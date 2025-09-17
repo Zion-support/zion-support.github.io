@@ -2,6 +2,10 @@
 'use client';
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function RevolutionaryPromoSection() {
   const [hoveredCardsetHoveredCard] = useState<number | null>(null);
   const promoItems = [
@@ -133,5 +137,7 @@ export default function RevolutionaryPromoSection() {
               >
                 🔥 Watch Webinar
   );
-};
+
+
+
 export default RevolutionaryPromoSection;

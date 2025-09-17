@@ -18,4 +18,5 @@ const InnovationShowcase2025: React.FC = () => {
 
 };
 
+
 export default InnovationShowcase2025;

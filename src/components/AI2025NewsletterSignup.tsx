@@ -2,6 +2,10 @@
 'use client';
 import React{ useState } from 'react';
 MailSendCheckCircleStarTrendingUpUsersZapArrowRight
+};
+
+
+
 export default function AI2025NewsletterSignup() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -157,5 +161,7 @@ export default function AI2025NewsletterSignup() {
             ))}
             <span className="text-gray-400 text-sm ml-2">4.9/5 rating</span>
   );
-};
+
+
+
 export default AI2025NewsletterSignup;

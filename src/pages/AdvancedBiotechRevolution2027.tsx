@@ -18,4 +18,5 @@ const AdvancedBiotechRevolution2027: React.FC = () => {
 
 };
 
+
 export default AdvancedBiotechRevolution2027;

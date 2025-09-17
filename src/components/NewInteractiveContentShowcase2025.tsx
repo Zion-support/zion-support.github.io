@@ -9,4 +9,5 @@ const NewInteractiveContentShowcase2025: React.FC = () => {
 
 };
 
+
 export default NewInteractiveContentShowcase2025;

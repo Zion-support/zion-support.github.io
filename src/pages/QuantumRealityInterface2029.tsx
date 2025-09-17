@@ -18,4 +18,5 @@ const QuantumRealityInterface2029: React.FC = () => {
 
 };
 
+
 export default QuantumRealityInterface2029;

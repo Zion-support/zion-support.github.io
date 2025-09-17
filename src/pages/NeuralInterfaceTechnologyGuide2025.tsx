@@ -330,4 +330,5 @@ const NeuralInterfaceTechnologyGuide2025: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceTechnologyGuide2025;

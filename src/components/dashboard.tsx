@@ -46,4 +46,8 @@ export default function Dashboard() {
             <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>
             <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>
   );
-}
+
+};
+
+
+export default dashboard;

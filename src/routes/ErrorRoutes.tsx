@@ -8,4 +8,5 @@ const ErrorRoutes: React.FC = () => {
   );
 };
 
+
 export default ErrorRoutes;

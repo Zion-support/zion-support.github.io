@@ -45,3 +45,6 @@ const COMPONENT: React.FC = () => {
   );
 };
 
+
+export default FutureTechTrends2025;
+</div></div></div></div></div>

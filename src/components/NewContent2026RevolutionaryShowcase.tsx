@@ -9,4 +9,5 @@ const NewContent2026RevolutionaryShowcase: React.FC = () => {
 
 };
 
+
 export default NewContent2026RevolutionaryShowcase;

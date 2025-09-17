@@ -18,4 +18,5 @@ const AITrends2025BlogPost: React.FC = () => {
 
 };
 
+
 export default AITrends2025BlogPost;

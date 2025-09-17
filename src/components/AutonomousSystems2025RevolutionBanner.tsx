@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AutonomousSystems2025RevolutionBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">

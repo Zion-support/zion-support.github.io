@@ -36,7 +36,10 @@ interface DivineCrossDomainOptimizerProps {
   showMetrics?: boolean;
   maxOptimizations?: number;
   className?: string;
-}
+};
+
+
+
 export default function DivineCrossDomainOptimizer({ 
   showMetrics = true, 
   maxOptimizations = 5,
@@ -564,5 +567,7 @@ export default function DivineCrossDomainOptimizer({
         >
           View Full Divine Cross-Domain Analytics →
   );
-};
+
+
+
 export default DivineCrossDomainOptimizer;

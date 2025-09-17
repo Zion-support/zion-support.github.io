@@ -8,4 +8,5 @@ const AuthProvider: React.FC = () => {
   );
 };
 
+
 export default AuthProvider;

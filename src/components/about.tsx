@@ -4,6 +4,10 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
+};
+
+
+
 export default function AboutPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -71,6 +75,9 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
+
+
 export default function AboutPage() {
   const values = [
     {

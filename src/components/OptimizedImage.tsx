@@ -9,4 +9,5 @@ const OptimizedImage: React.FC = () => {
 
 };
 
+
 export default OptimizedImage;

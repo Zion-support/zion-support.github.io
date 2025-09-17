@@ -16,4 +16,5 @@ const SecurityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children })
   return <>{children}</>;
 };
 
+
 export default SecurityEnhancer;

@@ -45,3 +45,7 @@ const COMPONENT: React.FC = () => {
   );
 };
 
+
+
+export default RevolutionaryContentCarousel2026;
+</div></div>

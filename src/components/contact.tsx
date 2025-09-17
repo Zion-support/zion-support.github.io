@@ -15,6 +15,7 @@ import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovati
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

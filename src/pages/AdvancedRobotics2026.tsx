@@ -18,6 +18,5 @@ const AdvancedRobotics2026: React.FC = () => {
   );
 };
 
-=======
->>>>>>> origin/merged-prs
+
 export default AdvancedRobotics2026;

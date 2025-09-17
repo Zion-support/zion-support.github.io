@@ -38,8 +38,10 @@ const pricingPlans = [
     period: 'month',
     features: ['Custom DeFi solutions', 'White-label platform', 'API access', 'Priority support', 'Custom integrations'],
     popular: false
-  }
-];
+  };
+
+
+
 export default function DeFiNexusPlatform() {
   return (
     <Layout>

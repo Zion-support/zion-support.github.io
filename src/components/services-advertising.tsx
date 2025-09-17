@@ -7,6 +7,8 @@ const services-advertising: React.FC = () => {
     </div>
   );
 };
+
+
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

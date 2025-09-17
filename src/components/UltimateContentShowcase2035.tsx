@@ -4,4 +4,5 @@ import React from 'react';
   );
 };
 
-export default COMPONENT;
+
+export default UltimateContentShowcase2035;

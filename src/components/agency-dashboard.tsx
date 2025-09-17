@@ -115,3 +115,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendor = listVendors()[0] || null; // tie to auth later
   return { props: { vendor } };
 };
+
+
+export default agency-dashboard;

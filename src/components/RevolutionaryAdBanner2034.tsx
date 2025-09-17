@@ -16,6 +16,8 @@ const RevolutionaryAdBanner2034: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-white rounded-full -translate-x-8 -translate-y-8 animate-pulse delay-2000"></div>
   );
 };
+
+
 export default RevolutionaryAdBanner2034;
       </div>
       <div className="relative z-10">

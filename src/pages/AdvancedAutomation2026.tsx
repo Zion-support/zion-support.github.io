@@ -3,6 +3,7 @@ import Link from 'next/link';
 };
 
 
+
 export default function AdvancedAutomation2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">

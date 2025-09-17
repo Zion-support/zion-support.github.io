@@ -18,4 +18,5 @@ const BrainComputerInterface2026: React.FC = () => {
 
 };
 
+
 export default BrainComputerInterface2026;

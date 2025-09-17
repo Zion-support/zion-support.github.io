@@ -79,4 +79,6 @@ const LatestContentPromotion: React.FC = () => {
     </div>
   );
 };
+
+
 export default LatestContentPromotion;

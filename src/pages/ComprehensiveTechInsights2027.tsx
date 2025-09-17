@@ -218,4 +218,6 @@ const ComprehensiveTechInsights2027: React.FC = () => {
     </div>
   );
 };
+
+
 export default ComprehensiveTechInsights2027;

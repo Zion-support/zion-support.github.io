@@ -35,7 +35,10 @@ interface DivineTechnologyPlatformProps {
   showMetrics?: boolean;
   maxTechnologies?: number;
   className?: string;
-}
+};
+
+
+
 export default function DivineTechnologyPlatform({ 
   showMetrics = true, 
   maxTechnologies = 5,
@@ -529,5 +532,7 @@ export default function DivineTechnologyPlatform({
         >
           View Full Divine Technology Analytics →
   );
-};
+
+
+
 export default DivineTechnologyPlatform;

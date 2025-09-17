@@ -13,4 +13,5 @@ const BenefitsSection = () => {
 
 };
 
+
 export default BenefitsSection;

@@ -9,4 +9,5 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 
 };
 
+
 export default AdvancedAccessibilityEnhancer;

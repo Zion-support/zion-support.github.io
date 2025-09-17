@@ -18,4 +18,5 @@ const UltimateTechBreakthrough2045: React.FC = () => {
 
 };
 
+
 export default UltimateTechBreakthrough2045;

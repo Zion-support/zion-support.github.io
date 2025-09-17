@@ -303,4 +303,6 @@ const BlockchainInnovation2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default BlockchainInnovation2025;

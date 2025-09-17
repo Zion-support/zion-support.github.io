@@ -9,4 +9,5 @@ const AI2026QuantumRevolutionBanner: React.FC = () => {
 
 };
 
+
 export default AI2026QuantumRevolutionBanner;

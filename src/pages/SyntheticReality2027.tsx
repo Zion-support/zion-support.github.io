@@ -344,4 +344,6 @@ const SyntheticReality2027: React.FC = () => {
     </div>
   );
 };
+
+
 export default SyntheticReality2027;

@@ -4,6 +4,10 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
+};
+
+
+
 export default function AuditLogVaultPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

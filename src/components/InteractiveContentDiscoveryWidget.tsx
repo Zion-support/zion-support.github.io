@@ -233,5 +233,7 @@ const InteractiveContentDiscoveryWidget: React.FC = () => {
       </div>
     </>
   );
-};
+
+
+
 export default InteractiveContentDiscoveryWidget;

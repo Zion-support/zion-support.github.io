@@ -78,4 +78,6 @@ const RevolutionaryFeatures2025: React.FC = () => {
     </section>
   );
 };
+
+
 export default RevolutionaryFeatures2025;

@@ -175,6 +175,8 @@ const EnhancedHome: React.FC = () => {
       </section>
     </div>
   );
-};
+
+
+
 export default EnhancedHome;
 </div></div>

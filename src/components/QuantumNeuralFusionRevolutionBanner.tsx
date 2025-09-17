@@ -9,4 +9,5 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {
 
 };
 
+
 export default QuantumNeuralFusionRevolutionBanner;

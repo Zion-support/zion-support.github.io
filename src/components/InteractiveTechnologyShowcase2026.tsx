@@ -9,4 +9,5 @@ const InteractiveTechnologyShowcase2026: React.FC = () => {
 
 };
 
+
 export default InteractiveTechnologyShowcase2026;

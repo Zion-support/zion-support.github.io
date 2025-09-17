@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function QuantumComputingBreakthrough2027() {
   const [activeBreakthroughsetActiveBreakthrough] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -182,5 +186,7 @@ export default function QuantumComputingBreakthrough2027() {
             >
               View Future Predictions
   );
-};
+
+
+
 export default QuantumComputingBreakthrough2027;

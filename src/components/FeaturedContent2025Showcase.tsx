@@ -133,4 +133,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
     </section>
   );
 };
+
+
 export default FeaturedContent2025Showcase;

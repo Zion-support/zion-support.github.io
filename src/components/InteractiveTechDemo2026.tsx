@@ -258,6 +258,7 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
+
   const renderDemoContent = () => {
     switch (activeDemo) {
       case 'quantum':
@@ -372,5 +373,7 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default InteractiveTechDemo2026;

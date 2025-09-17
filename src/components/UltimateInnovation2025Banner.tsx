@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function UltimateInnovation2025Banner() {
   return (
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">

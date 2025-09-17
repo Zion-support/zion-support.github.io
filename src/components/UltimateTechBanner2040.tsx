@@ -90,4 +90,6 @@ const UltimateTechBanner2040: React.FC = () => {
     </motion.div>
   );
 };
+
+
 export default UltimateTechBanner2040;

@@ -173,4 +173,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
     </section>
   );
 };
+
+
 export default InteractiveAIToolsDemo2026;

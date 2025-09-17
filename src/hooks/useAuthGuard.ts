@@ -26,4 +26,6 @@ export const useRequireAuth = (options: UseRequireAuthOptions = {}) => {
     isAuthenticated,
     hasRequiredRole: requireRole ? user?.role === requireRole : true,
   };
+};
+
 export default useRequireAuth;

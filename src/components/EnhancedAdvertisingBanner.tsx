@@ -9,4 +9,5 @@ const EnhancedAdvertisingBanner: React.FC = () => {
 
 };
 
+
 export default EnhancedAdvertisingBanner;

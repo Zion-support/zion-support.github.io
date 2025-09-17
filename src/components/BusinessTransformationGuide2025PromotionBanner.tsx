@@ -9,5 +9,6 @@ const BusinessTransformationGuide2025PromotionBanner: React.FC = () => {
 
 };
 
+
 export default BusinessTransformationGuide2025PromotionBanner;
 </p></p>

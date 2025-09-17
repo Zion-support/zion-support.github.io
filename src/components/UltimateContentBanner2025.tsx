@@ -348,4 +348,6 @@ const UltimateContentBanner2025: React.FC = () => {
     </motion.div>
   );
 };
+
+
 export default UltimateContentBanner2025;

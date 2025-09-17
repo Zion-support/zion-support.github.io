@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NewContent2025_2026ComprehensiveShowcase() {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">

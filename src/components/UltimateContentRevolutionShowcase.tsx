@@ -7,4 +7,6 @@ const UltimateContentRevolutionShowcase: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateContentRevolutionShowcase;

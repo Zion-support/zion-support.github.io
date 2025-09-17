@@ -1,6 +1,10 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapShieldBrainRocketStarCheckCircle
+};
+
+
+
 export default function NewFeaturesShowcase2025() {
   const features = [
     {
@@ -130,5 +134,7 @@ export default function NewFeaturesShowcase2025() {
               >
                 View Pricing
   );
-};
+
+
+
 export default NewFeaturesShowcase2025;

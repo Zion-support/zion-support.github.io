@@ -200,3 +200,14 @@ const RevolutionaryTechBreakthrough2038 = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
               Learn More
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
+};
+
+
+export default RevolutionaryTechBreakthrough2038;

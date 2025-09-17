@@ -126,14 +126,10 @@ export function PrimaryNav() {
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>
         </div>
-      </header>
-      {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} aria-hidden="true"/>
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>
-          </div>
-        </div>)}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>);
-}
-</div>
+      </div>
+    </div>
+  );
+};
+
+
+export default PrimaryNav;

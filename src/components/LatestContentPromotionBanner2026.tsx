@@ -5,3 +5,5 @@ import React from 'react';
   );
 };
 
+
+export default LatestContentPromotionBanner2026;

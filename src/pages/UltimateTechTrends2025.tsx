@@ -18,4 +18,5 @@ const UltimateTechTrends2025: React.FC = () => {
 
 };
 
+
 export default UltimateTechTrends2025;

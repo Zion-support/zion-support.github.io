@@ -1,5 +1,9 @@
 "use client";
 import React{ useState } from 'react';
+};
+
+
+
 export default function AdvancedNewsletterSignup() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -85,5 +89,7 @@ export default function AdvancedNewsletterSignup() {
             <div className="text-white font-bold text-lg">Enterprises</div>
             <div className="text-white font-bold text-lg">Governments</div>
   );
-};
+
+
+
 export default AdvancedNewsletterSignup;

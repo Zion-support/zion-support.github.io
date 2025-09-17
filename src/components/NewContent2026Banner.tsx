@@ -3,6 +3,7 @@ import Link from 'next/link';
 };
 
 
+
 export default function NewContent2026Banner() {
   return (
     <section className="py-12 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">

@@ -8,4 +8,5 @@ const DashboardRoutes: React.FC = () => {
   );
 };
 
+
 export default DashboardRoutes;

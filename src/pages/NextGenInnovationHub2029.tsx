@@ -255,3 +255,14 @@
             Join our innovation hub and be part of creating the most revolutionary technologies in human history
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Submit Your Innovation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+};
+
+
+export default NextGenInnovationHub2029;

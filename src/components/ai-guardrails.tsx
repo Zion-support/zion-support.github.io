@@ -1,4 +1,8 @@
 import React from 'react';
+};
+
+
+
 export default function AIGuardrailsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',

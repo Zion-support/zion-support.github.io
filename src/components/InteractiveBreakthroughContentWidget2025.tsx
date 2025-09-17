@@ -71,8 +71,11 @@ const breakthroughContent: BreakthroughContent[] = [
     icon: '🧠',
     href: '/neural-interface-revolution-2026',
     featured: false
-  }
-];
+  };
+};
+
+
+
 export default function InteractiveBreakthroughContentWidget2025() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
   const [searchTermsetSearchTerm] = useState<string>(', ');
@@ -183,5 +186,7 @@ export default function InteractiveBreakthroughContentWidget2025() {
               >
                 View Case Studies
   );
-};
+
+
+
 export default InteractiveBreakthroughContentWidget2025;

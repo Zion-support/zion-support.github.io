@@ -66,4 +66,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
     </motion.div>
   );
 };
+
+
 export default EnhancedPromotionalBanner;

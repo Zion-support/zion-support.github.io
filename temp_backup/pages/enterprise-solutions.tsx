@@ -19,4 +19,5 @@ const enterprise-solutions: React.FC = () => {
   );
 };
 
-export default enterprise-solutions;
+
+export default QuantumComputing2026;

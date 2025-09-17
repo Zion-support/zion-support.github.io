@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025GlobalTransformationBreakthroughBanner() {
   return (
     <div className="bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white py-12 relative overflow-hidden">

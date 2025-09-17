@@ -240,6 +240,8 @@ class NotificationManager {
     });
   };
 export const notificationManager = new NotificationManager();
+};
+
 export default notificationManager;
 >>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       requireInteraction: true
@@ -267,6 +269,7 @@ export default notificationManager;
       tag: 'warning'
     });
   };
+
 export default notifications;
       requireInteraction: true,
     });
@@ -288,6 +291,7 @@ export default notifications;
     });
   };
 export const notificationManager = new NotificationManager();
+
 export default notificationManager;
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa

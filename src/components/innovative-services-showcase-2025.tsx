@@ -97,8 +97,10 @@ const serviceCategories = [
     services: [...realMicroSaasServices2025],
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
-  }
-];
+  };
+
+
+
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');

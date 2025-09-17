@@ -288,4 +288,5 @@ const BiotechRevolution2026: React.FC = () => {
 
 };
 
+
 export default BiotechRevolution2026;

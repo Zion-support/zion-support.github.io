@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
   return (
     <section className="relative bg-gradient-to-r from-green-600 via-blue-600 to-purple-700 text-white py-12 overflow-hidden">

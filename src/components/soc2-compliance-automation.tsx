@@ -1,4 +1,8 @@
 import React from 'react';
+};
+
+
+
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>

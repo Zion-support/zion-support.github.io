@@ -18,4 +18,5 @@ const TranscendentTech2034: React.FC = () => {
 
 };
 
+
 export default TranscendentTech2034;

@@ -9,4 +9,5 @@ const StructuredData: React.FC = () => {
 
 };
 
+
 export default StructuredData;

@@ -305,6 +305,8 @@ const AdvancedTechInnovation2027: React.FC = () => {
     </div>
   );
 };
+
+
 export default AdvancedTechInnovation2027;
 import { Helmet } from 'react-helmet-async';
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">

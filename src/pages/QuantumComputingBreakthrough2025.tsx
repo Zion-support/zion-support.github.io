@@ -279,18 +279,11 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
-          <h2 className="text-4xl font-bold mb-6">Ready to Harness Quantum Power?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and discover how quantum computing can solve your most complex problems
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Quantum Journey
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
-              Schedule Demo
-            </button>
+      </section>
+    </div>
+  );
+
+};
+
+
+export default QuantumComputingBreakthrough2025;

@@ -3,6 +3,7 @@ ArrowRightStarZapBrainAtom
 };
 
 
+
 export default function ContentShowcasePromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900 py-16 px-4 sm:px-6 lg:px-8">

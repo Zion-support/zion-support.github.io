@@ -25,6 +25,8 @@
     </div>
   );
 };
+
+
 export default RevolutionaryContentBanner2030;
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}

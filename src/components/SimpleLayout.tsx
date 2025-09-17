@@ -7,6 +7,7 @@ interface SimpleLayoutProps {
 };
 
 
+
 export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
   return (
     <>

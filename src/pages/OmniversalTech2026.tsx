@@ -18,4 +18,5 @@ const OmniversalTech2026: React.FC = () => {
 
 };
 
+
 export default OmniversalTech2026;

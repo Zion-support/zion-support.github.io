@@ -47,4 +47,6 @@ export default function Assistant() {
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
   );
 };
+
+
 export default assistant;

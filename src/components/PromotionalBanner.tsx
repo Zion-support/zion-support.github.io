@@ -66,4 +66,8 @@ const PromotionalBanner: React.FC = () => {
     </div>
   );
 };
+export { PromotionalBanner };
+
+
+
 export default PromotionalBanner;

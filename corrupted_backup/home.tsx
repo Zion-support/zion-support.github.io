@@ -9,4 +9,5 @@ const home: React.FC = () => {
   );
 };
 
-export default home;
+
+export default Footer;

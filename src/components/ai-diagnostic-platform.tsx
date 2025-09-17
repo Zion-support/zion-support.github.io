@@ -38,8 +38,10 @@ const pricingPlans = [
     period: 'month',
     features: ['Custom AI models', 'White-label solution', 'Dedicated support', 'Custom integrations', 'Training included'],
     popular: false
-  }
-];
+  };
+
+
+
 export default function AIDiagnosticPlatform() {
   return (
     <Layout>

@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function RevolutionaryHeroSection() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">

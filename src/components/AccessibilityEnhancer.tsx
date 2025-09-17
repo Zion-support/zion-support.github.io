@@ -17,4 +17,5 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>;
 };
 
+
 export default AccessibilityEnhancer;

@@ -172,4 +172,10 @@ export default AdvancedTechShowcase2027;
           </div>
         </div>
       </div>
-    </>
+    </div>
+  );
+
+};
+
+
+export default AdvancedTechShowcase2027;

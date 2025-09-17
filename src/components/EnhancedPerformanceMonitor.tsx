@@ -9,4 +9,5 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
 };
 
+
 export default EnhancedPerformanceMonitor;

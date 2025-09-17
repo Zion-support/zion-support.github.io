@@ -20,8 +20,11 @@ const testimonials = [
     role: "CEOInnovateLabs",
     content: "Early access to new features has given us a competitive edge. Amazing value!",
     rating: 5
-  }
-];
+  };
+};
+
+
+
 export default function NewsletterSignupForm() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -134,5 +137,7 @@ export default function NewsletterSignupForm() {
                   <Star className="w-4 h-4" />
                   <span>4.9/5 rating</span>
   );
-};
+
+
+
 export default NewsletterSignupForm;

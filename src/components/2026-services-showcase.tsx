@@ -5,6 +5,10 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+};
+
+
+
 export default function ServicesShowcase2026() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -237,5 +241,7 @@ export default function ServicesShowcase2026() {
                 >
                   View Pricing
   );
-};
+
+
+
 export default 2026-services-showcase;

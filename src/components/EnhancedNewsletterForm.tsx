@@ -13,4 +13,5 @@ const EnhancedNewsletterForm = () => {
 
 };
 
+
 export default EnhancedNewsletterForm;

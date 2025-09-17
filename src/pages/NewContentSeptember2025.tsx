@@ -2,6 +2,7 @@ import React from 'react';
 };
 
 
+
 export default function NewContentSeptember2025(): JSX.Element {
 	return (
 		<main className="container mx-auto px-4 py-16">

@@ -1,7 +1,14 @@
 import React from 'react';
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
+};
+
+
+
 export default function CookieConsent() {
+
+
+
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -78,7 +85,9 @@ export default function CookieConsent() {;
                 <p className="text-sm text-gray-600">;
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
-;
+
+
+
 export default /**
  * CookieConsent - Function description
  */
@@ -280,5 +289,7 @@ if ( {) {
       </div>;
     </div>;
   );
-};
+
+
+
 export default CookieConsent;

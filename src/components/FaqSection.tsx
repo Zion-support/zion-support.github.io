@@ -13,4 +13,5 @@ const FaqSection = () => {
 
 };
 
+
 export default FaqSection;

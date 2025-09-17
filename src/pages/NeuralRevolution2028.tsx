@@ -18,4 +18,5 @@ const NeuralRevolution2028: React.FC = () => {
 
 };
 
+
 export default NeuralRevolution2028;

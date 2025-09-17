@@ -133,3 +133,11 @@
         <div className="absolute bottom-6 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-ping animation-delay-1000"></div>
         <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-ping animation-delay-2000"></div>
         <div className="absolute top-1/4 left-1/2 w-1 h-1 bg-emerald-400 rounded-full animate-ping animation-delay-3000"></div>
+      </div>
+    </div>
+  );
+
+};
+
+
+export default UltimateContentBanner2037;

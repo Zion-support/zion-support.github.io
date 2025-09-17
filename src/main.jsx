@@ -18,6 +18,16 @@ const queryClient = new QueryClient({
 
 const rootElement = document.getElementById('root');
 
+function displayFatalError(message) {
+    if (rootElement) {
+        rootElement.innerHTML = `
+            <div style="padding:20px;text-align:center;font-family:sans-serif;">
+                <h1>Application Error</h1>
+                <p>${message}</p>
+            </div>`;
+    }
+}
+
 function renderApp() {
     const app = (
         <React.StrictMode>
@@ -35,16 +45,6 @@ function renderApp() {
         hydrateRoot(rootElement, app);
     } else if (rootElement) {
         createRoot(rootElement).render(app);
-    }
-}
-
-function displayFatalError(message) {
-    if (rootElement) {
-        rootElement.innerHTML = `
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">
-                <h1>Application Error</h1>
-                <p>${message}</p>
-            </div>`;
     }
 }
 

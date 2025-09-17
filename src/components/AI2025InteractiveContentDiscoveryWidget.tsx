@@ -1,6 +1,10 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function AI2025InteractiveContentDiscoveryWidget() {
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [selectedROIsetSelectedROI] = useState('all');
@@ -203,5 +207,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
               >
                 Browse All Content
   );
-};
+
+
+
 export default AI2025InteractiveContentDiscoveryWidget;

@@ -79,8 +79,10 @@ const testimonials = [
     content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
     rating: 5,
     avatar: '👩‍🔬'
-  }
-];
+  };
+
+
+
 export default function AIConsciousnessEvolution2025() {
   return (
     <Layout>

@@ -9,4 +9,5 @@ const GenerativeAIRevolutionBanner2025: React.FC = () => {
 
 };
 
+
 export default GenerativeAIRevolutionBanner2025;

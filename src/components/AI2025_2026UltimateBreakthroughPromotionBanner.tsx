@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025_2026UltimateBreakthroughPromotionBanner() {
   return (
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">

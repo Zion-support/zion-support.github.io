@@ -18,4 +18,5 @@ const UltimateTechRevolution2050: React.FC = () => {
 
 };
 
+
 export default UltimateTechRevolution2050;

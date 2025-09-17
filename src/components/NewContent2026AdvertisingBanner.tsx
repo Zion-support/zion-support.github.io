@@ -35,4 +35,6 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-export default COMPONENT;
+
+
+export default NewContent2026AdvertisingBanner;

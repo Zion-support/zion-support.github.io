@@ -4,6 +4,7 @@ ArrowRightBrainZapShieldGlobeTrendingUpStarUsers
 };
 
 
+
 export default function RevolutionaryContentDiscovery2025Banner() {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">

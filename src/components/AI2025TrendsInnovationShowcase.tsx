@@ -145,4 +145,6 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
     </section>
   );
 };
+
+
 export default AI2025TrendsInnovationShowcase;

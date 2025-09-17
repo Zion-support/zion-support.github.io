@@ -79,6 +79,9 @@ const getServiceFeatures = (service: any) => {
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
+
+
+
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -421,5 +424,7 @@ export default function AdvancedServicesShowcase() {
                 <Phone className="w-5 h-5" />
                 Call Now
   );
-};
+
+
+
 export default 2025-advanced-services-showcase;

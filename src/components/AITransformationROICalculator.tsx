@@ -8,7 +8,10 @@ interface ROICalculation {
   expectedRevenueGrowth: number;
   implementationCost: number;
   timeframe: number;
-}
+};
+
+
+
 export default function AITransformationROICalculator() {
   const [inputs, setInputs] = useState<ROICalculation>({
     currentRevenue: 10000000,
@@ -189,5 +192,7 @@ export default function AITransformationROICalculator() {
               >
                 View Success Stories
   );
-};
+
+
+
 export default AITransformationROICalculator;

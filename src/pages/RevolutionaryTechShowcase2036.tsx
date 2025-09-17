@@ -266,21 +266,10 @@
           </div>
         </div>
       </div>
-      {/* Interactive Demo Selector */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
-            {demos.map((demo) => (
-              <button
-                key={demo.id}
-                onClick={() => setActiveDemo(demo.id)}
-                className={`px-6 py-3 rounded-lg transition-all duration-300 font-semibold ${
-                  activeDemo === demo.id
-                    ? 'bg-white text-gray-900'
-                    : 'text-white hover:bg-white/20'
-                }`}
-              >
-                {demo.title}
-              </button>
-            ))}
-          </div>
+    </div>
+  );
+
+};
+
+
+export default RevolutionaryTechShowcase2036;

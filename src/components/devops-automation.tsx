@@ -3,6 +3,10 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+};
+
+
+
 export default function DevOpsAutomationPage() {
   const features = [
     {

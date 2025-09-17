@@ -18,4 +18,5 @@ const QuantumNeuralInterface2026: React.FC = () => {
 
 };
 
+
 export default QuantumNeuralInterface2026;

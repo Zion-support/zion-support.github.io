@@ -7,4 +7,6 @@ const ContentRoutes= () => {
     </div>
   );
 };
+
+
 export default ContentRoutes;

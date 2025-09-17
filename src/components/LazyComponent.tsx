@@ -3,8 +3,11 @@ import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {
   component: () => Promise<{ default: ComponentType<any> }>;
   fallback?: React.ReactNode;
-  [key: string]: any;
-}
+  className?: string;
+};
+
+
+
 export default function LazyComponent({ 
   component
   fallback = <LoadingSpinner size="md" text="Loading..." />,

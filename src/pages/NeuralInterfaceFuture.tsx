@@ -248,4 +248,5 @@ const NeuralInterfaceFuture: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceFuture;

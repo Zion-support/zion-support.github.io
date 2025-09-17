@@ -204,5 +204,7 @@ const solutions: React.FC = () => {
     </Layout>
   );
 };
+
+
 export default Solutions;
 </div></div>

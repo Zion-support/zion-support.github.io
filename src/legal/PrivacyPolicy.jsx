@@ -9,6 +9,7 @@ Your privacy is important to us. This policy explains how Zion Tech Group collec
 const draft = true;
 };
 
+
 export default function PrivacyPolicy() {
     return (<>
       <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://app.ziontechgroup.com/privacy" noindex={draft}/>

@@ -126,4 +126,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
     </section>
   );
 };
+
+
 export default BusinessIntelligenceRevolutionBanner2025;

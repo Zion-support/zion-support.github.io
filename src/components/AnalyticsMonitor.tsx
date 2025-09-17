@@ -155,7 +155,10 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   timestamp: number;
-}
+};
+
+
+
 export default function AnalyticsMonitor() {
   useEffect(() => {
     // Initialize analytics tracking
@@ -356,7 +359,9 @@ export const AnalyticsDashboard: React.FC = () => {
             ))}
       )}
   );
-};
+
+
+
 export default AnalyticsMonitor;
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100

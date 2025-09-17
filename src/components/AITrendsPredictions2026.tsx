@@ -231,6 +231,8 @@ const AITrendsPredictions2026: React.FC = () => {
     </div>
   );
 };
+
+
 export default AITrendsPredictions2026;
 </div></div>
 </p></p></p>

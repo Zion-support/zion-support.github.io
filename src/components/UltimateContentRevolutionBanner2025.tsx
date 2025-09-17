@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function UltimateContentRevolutionBanner2025() {
   return (
     <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16 px-4 overflow-hidden">

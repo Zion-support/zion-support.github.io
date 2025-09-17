@@ -4,5 +4,6 @@ const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { s
 };
 
 
+
 export default function TeamPage() {
   return <OrgChartPage />;

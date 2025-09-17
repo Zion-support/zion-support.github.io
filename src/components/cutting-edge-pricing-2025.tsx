@@ -107,7 +107,9 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-];
+
+
+
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [

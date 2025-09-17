@@ -9,4 +9,5 @@ const NewContent2025FutureTrendsBanner: React.FC = () => {
 
 };
 
+
 export default NewContent2025FutureTrendsBanner;

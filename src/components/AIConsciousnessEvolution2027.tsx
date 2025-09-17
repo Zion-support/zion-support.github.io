@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
+
 export default function AIConsciousnessEvolution2027() {
   const [currentStagesetCurrentStage] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -157,5 +161,7 @@ export default function AIConsciousnessEvolution2027() {
             >
               Start Your Journey
   );
-};
+
+
+
 export default AIConsciousnessEvolution2027;

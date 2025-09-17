@@ -9,5 +9,5 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentCarousel2027;
->>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526
+
+export default RevolutionaryContentBanner2025;

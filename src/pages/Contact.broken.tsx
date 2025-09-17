@@ -1,4 +1,5 @@
 
+
 export default function Contact() {
   const { showToast: toast } = useToast();
 import React, { useState } from 'react';
@@ -304,3 +305,6 @@ const Contact: React.FC = () => {
   );
 };
 
+
+
+export default Contact;

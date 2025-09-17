@@ -153,5 +153,7 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default FutureTechPredictions2025PromotionBanner;
 </div></div></div>

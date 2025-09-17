@@ -127,4 +127,8 @@ export default function DocsPage() {
               <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
               <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
   );
-}
+
+};
+
+
+export default docs;

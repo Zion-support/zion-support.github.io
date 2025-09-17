@@ -19,4 +19,5 @@ const financial-solutions: React.FC = () => {
   );
 };
 
-export default financial-solutions;
+
+export default NeuralInterface2026;

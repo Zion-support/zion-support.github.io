@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AdvancedNeuralArchitectures2026PromotionBanner() {
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">

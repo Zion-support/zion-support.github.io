@@ -133,50 +133,10 @@ const AdvancedSpaceTech2026: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* Mission Timeline */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Mission Timeline</h2>
-          <p className="text-xl opacity-80">Our roadmap to the stars</p>
-        </div>
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-cyan-500"></div>
-          <div className="space-y-12">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center"
-              <div className="w-8 h-8 bg-blue-500 rounded-full border-4 border-white flex-shrink-0"></div>
-              <div className="w-1/2 pl-8"></div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center"
-            >
-              <div className="w-1/2 pr-8"></div>
-              <div className="w-8 h-8 bg-cyan-500 rounded-full border-4 border-white flex-shrink-0"></div>
-              <div className="w-1/2 pl-8">
-                <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-lg p-6">
-                  <h3 className="text-2xl font-bold mb-2">Q4 2026</h3>
-                  <p className="text-cyan-100">Lunar Base Construction</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center"
-            >
-              <div className="w-1/2 pr-8 text-right">
-                <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-lg p-6">
-                  <h3 className="text-2xl font-bold mb-2">Q2 2027</h3>
-                  <p className="text-purple-100">First Human Mars Mission</p>
-                </div>
-              </div>
-              <div className="w-8 h-8 bg-purple-500 rounded-full border-4 border-white flex-shrink-0"></div>
-              <div className="w-1/2 pl-8"></div>
-            </motion.div>
+    </div>
+  );
+
+};
+
+
+export default AdvancedSpaceTech2026;

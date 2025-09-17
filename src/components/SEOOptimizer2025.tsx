@@ -259,4 +259,5 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
 
 };
 
+
 export default SEOOptimizer2025;
