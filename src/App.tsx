@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import Navigation from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -9,6 +10,13 @@ import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
 import SEOHead from "./components/SEOHead";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
+=======
+import { FuturisticNavigation } from './components/FuturisticNavigation';
+import { FuturisticFooter } from './components/FuturisticFooter';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { ChatAssistant } from './components/ChatAssistant';
+import { AuthProvider } from './hooks/useAuth';
+>>>>>>> origin/website-improvements-2025
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -84,6 +92,7 @@ function App() {
   }, [prefetchResource, cacheResource, measurePerformance]);
 
   return (
+<<<<<<< HEAD
     <EnhancedErrorBoundary
       onError={(error, errorInfo) => {
         console.error('App Error:', error, errorInfo);
@@ -138,6 +147,67 @@ function App() {
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
+=======
+    <AuthProvider>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+          {/* Futuristic Animated Background */}
+          <FuturisticAnimatedBackground />
+          
+          {/* Navigation */}
+          <FuturisticNavigation />
+          
+          <main className="flex-1 relative z-10">
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <Routes>
+                {/* Main Routes */}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/enhanced-services" element={<EnhancedServices />} />
+                
+                {/* AI Services Routes */}
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/ai-services/:service" element={<AIServicesPage />} />
+                
+                {/* Micro SAAS Routes */}
+                <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
+                <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
+                
+                {/* IT Services Routes */}
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/it-services/:service" element={<ITServicesPage />} />
+                
+                {/* Emerging Tech Routes */}
+                <Route path="/emerging-tech" element={<GreenIT />} />
+                <Route path="/emerging-tech/:service" element={<GreenIT />} />
+                
+                {/* Marketplace Routes */}
+                <Route path="/marketplace" element={<GreenIT />} />
+                <Route path="/marketplace/:service" element={<GreenIT />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          {/* Footer */}
+          <FuturisticFooter />
+          
+          {/* Chat Assistant */}
+          <ChatAssistant />
+        </div>
+      </Router>
+    </AuthProvider>
+>>>>>>> origin/website-improvements-2025
   );
 }
 
