@@ -12,4 +12,8 @@ export const WhitelabelProvider = ({ children }) => {
     </WhitelabelContext.Provider>
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
 export const useWhitelabel = () => useContext(WhitelabelContext);

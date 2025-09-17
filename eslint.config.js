@@ -12,6 +12,7 @@ export default [
     ignores: [
       'dist', 
       'node_modules',
+<<<<<<< HEAD
       'zion-os.disabled/**',
       'zion-os/**',
       'zion.app/**',
@@ -31,6 +32,24 @@ export default [
       'automation-logs/**',
       'automation-reports/**',
     ],
+=======
+      'zion-os.disabled',
+      'zion-os',
+      'zion-website',
+      'zion.app',
+      'zion_academy',
+      '**/.next/**',
+      '**/build/**',
+      '**/coverage/**',
+      '**/cypress/**',
+      '**/public/**',
+      '**/static/**',
+      '**/*.min.js',
+      '**/*.bundle.js'
+    ]
+  },
+  {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -39,6 +58,7 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
+<<<<<<< HEAD
           jsx: true,
         },
         project: false,
@@ -51,6 +71,19 @@ export default [
     },
     rules: {
       ...typescript.configs.recommended.rules,
+=======
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
@@ -59,6 +92,7 @@ export default [
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'warn',
+<<<<<<< HEAD
       'prefer-const': 'error',
       'no-var': 'error',
     },
@@ -211,3 +245,8 @@ export default [
     ],
   },
 ];
+=======
+    }
+  }
+]
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7

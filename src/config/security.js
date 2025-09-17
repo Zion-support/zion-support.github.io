@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 export const securityConfig = {
+=======
+const securityConfig = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
   csp: {
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:"],
       scriptSrc: ["'self'"],
       connectSrc: ["'self'"],
