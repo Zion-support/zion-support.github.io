@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-<<<<<<< HEAD
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 import React, { useState, useEffect } from 'react';
-=======
   const [activeTab, setActiveTab] = useState('ai');
 >>>>>>> origin/aggressive-merge-backup-20250916-071434
 
@@ -13,7 +11,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-<<<<<<< HEAD
   const technologies = [
     {
       id: 1,
@@ -224,7 +221,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 </button>
               </div>
             </div>
-=======
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-12 text-white">
       <div className="text-center mb-8">

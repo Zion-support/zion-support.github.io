@@ -1,21 +1,10 @@
-'use client';
-
 import React from 'react';
 
-const AI2026UltimateShowcaseBanner = () => {
+const AI2026UltimateShowcaseBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          AI 2026: Ultimate Showcase
-        </h2>
-        <p className="text-xl opacity-90 mb-6">
-          The complete showcase of AI 2026 innovations and breakthroughs
-        </p>
-        <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2">
-          <span className="text-sm font-medium">Coming Soon</span>
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AI2026UltimateShowcaseBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

@@ -104,7 +104,7 @@ python3 essential_improvements.py
 4. **Configuration Files**: Merge both versions when possible
 
 ### Conflict Resolution Process
-1. Identify conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
+1. Identify conflict markers (`<<<<<<<`, ``, `>>>>>>>`)
 2. Analyze file type and context
 3. Choose appropriate resolution strategy
 4. Remove conflict markers

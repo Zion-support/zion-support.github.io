@@ -66,7 +66,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
   const technologies = [
     {
       id: 1,
-=======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -134,8 +133,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-<<<<<<< HEAD
-=======
         setActiveTech((prev) => (prev + 1) % technologies.length);
         setIsAnimating(false);
       }, 300);
@@ -260,4 +257,3 @@ const InteractiveTechShowcase2025: React.FC = () => {
   );
 };
 
-export default InteractiveTechShowcase2025;

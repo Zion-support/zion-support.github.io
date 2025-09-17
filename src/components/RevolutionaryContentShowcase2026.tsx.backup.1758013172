@@ -14,8 +14,6 @@ import {
   Rocket,
   Shield
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import React, { useState } from 'react';
 >>>>>>> origin/backup-main-20250916-071805
@@ -50,8 +48,6 @@ const RevolutionaryContentShowcase2026 = () => {
       type: "service"
     },
     {
-<<<<<<< HEAD
-=======
       title: "Quantum Computing Revolution 2026",
       description: "Breakthrough quantum computing with exponential processing power",
       icon: "⚛️",
@@ -112,8 +108,6 @@ const RevolutionaryContentShowcase2026 = () => {
       featured: true,
       tags: ["Climate Tech", "Global Warming", "Environment"],
       type: "blog"
-<<<<<<< HEAD
-=======
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer interfaces enabling thought-controlled technology",
       icon: "🧬",
@@ -390,8 +384,6 @@ const RevolutionaryContentShowcase2026 = () => {
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
             <motion.div
@@ -501,8 +493,6 @@ const RevolutionaryContentShowcase2026 = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -529,8 +519,6 @@ const RevolutionaryContentShowcase2026 = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
                   : 'bg-white/20 backdrop-blur-sm text-cyan-200 hover:bg-white/30'
               }`}
-<<<<<<< HEAD
-=======
         </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -748,8 +736,6 @@ const RevolutionaryContentShowcase2026 = () => {
                 Explore {contentTabs[activeTab].title.split(' ')[1]} →
               </a>
             </div>
-<<<<<<< HEAD
-=======
           )}
 >>>>>>> origin/backup-main-20250916-071805
 

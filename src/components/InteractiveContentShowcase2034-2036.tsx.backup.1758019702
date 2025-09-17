@@ -189,8 +189,6 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
             </div>
           </div>
         </AnimatePresence>
-<<<<<<< HEAD
-=======
           </divdiv>
         </div>
 >>>>>>> origin/backup-main-20250916-071805

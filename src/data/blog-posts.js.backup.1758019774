@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 9201,
     title: "AI 2026: Evidence-First Agent Stack — Practical Guide",
     excerpt: "Design agents with verifiable traces, evals, and policy events wired to delivery.",
@@ -185,7 +184,6 @@ export const blogPosts = [
     title: "AI 2026: Continuous Eval Gates at Scale",
     excerpt: "From pilot to platform: scenario suites, scorecards, and automated rollback.",
     content: "A practical playbook for scaling evaluation gates across teams and services. Covers scenario authoring, data contracts, scorecard thresholds, and policy-as-code integration to block risky changes and enable fast, safe rollouts.",
-=======
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
@@ -502,7 +500,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -758,7 +755,6 @@ export const blogPosts = [
     slug: "holographic-reality-next-generation-immersive-technology"
   },
   {
-=======
 >>>>>>> origin/backup-main-20250916-090016
     id: 33,
     title: "AI 2026: Agent Platform Operations",
@@ -981,7 +977,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
   },
@@ -1313,7 +1308,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/augmented-reality-business-future.jpg",
     slug: "augmented-reality-business-future-customer-experience"
-=======
 >>>>>>> origin/backup-main-20250916-090016
   },
   {
@@ -1374,7 +1368,6 @@ export const blogPosts = [
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -1587,7 +1580,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-intelligence-speed-light.jpg",
     slug: "edge-ai-revolution-intelligence-speed-light"
-=======
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
@@ -1640,7 +1632,6 @@ export const getBlogTags = () => {
   }));
 };
 
-<<<<<<< HEAD
 // New content added for enhanced engagement
 export const newContent2026 = [
   {
@@ -1983,6 +1974,5 @@ export const allBlogPosts = [...blogPosts, ...newContent2026];
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
-=======
 export const BLOG_POSTS = blogPosts;
 >>>>>>> origin/backup-main-20250916-090016

@@ -1,93 +1,12 @@
+import React from 'react';
 
-
-// Default context used when React type definitions are missing
-const defaultContext: MessagingContextType = {
-  messages: [],
-  conversations: [],
-  unreadCount: 0,
-  activeConversation: null,
-  activeMessages: [],
-  isLoading: false,
-  sendMessage: async () => {},
-  createConversation: async () => {},
-  markAsRead: async () => {},
-  setActiveConversation: () => {},
-  fetchConversations: async () => {},
-  loadMessages: async () => {}
+const MessagingContext: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MessagingContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
-// "createContext" may be untyped if React type definitions are missing.
-// value instead of passing a generic type parameter directly.
-const MessagingContext = createContext(
-  defaultContext as MessagingContextType
-);
-
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing
-  const context = useContext(MessagingContext) as MessagingContextType;
-  if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider');
-  }
-  return context;
-}
-
-// Provider component
-export function MessagingProvider({ children }: { children: ReactNode }) {
-  const { user } = useAuth();
-  
-  const {
-    messages,
-    activeMessages,
-    setActiveMessages,
-    conversations,
-    setConversations,
-    unreadCount,
-    setUnreadCount,
-    activeConversation,
-    setActiveConversation,
-    isLoading,
-    sendMessage,
-    createConversation,
-    markAsRead,
-    fetchConversations,
-    loadMessages
-  } = useMessagingOperations(user);
-
-  // Setup real-time subscription
-
-  // Calculate unread count from conversations
-  useEffect(() => {
-    if (conversations.length > 0) {
-
-  // Fetch conversations when user changes
-  useEffect(() => {
-    if (user) {
-      fetchConversations();
-    } else {
-      setConversations([]);
-      setUnreadCount(0);
-    }
-
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
-    messages,
-    activeMessages,
-    conversations,
-    unreadCount,
-    activeConversation,
-    isLoading,
-    sendMessage,
-    createConversation,
-    markAsRead,
-    setActiveConversation,
-    fetchConversations,
-    loadMessages
-  };
-
-  return (
-    <MessagingContext.Provider value={contextValue}>
-      {children}
-    </MessagingContext.Provider>
-  );
-}
+export default MessagingContext;

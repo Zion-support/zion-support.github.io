@@ -1,176 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    filteredTalents,
-    isLoading,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    isAuthenticated,
-    savedTalents,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
+const TalentDirectory: React.FC = () => {
   return (
-    <AppLayout>
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col space-y-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
-            <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
-            </p>
-          </div>
-              <FilterSidebar
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                selectedSkills={selectedSkills}
-                toggleSkill={toggleSkill}
-                selectedAvailability={selectedAvailability}
-                toggleAvailability={toggleAvailability}
-                selectedRegions={selectedRegions}
-                toggleRegion={toggleRegion}
-                priceRange={priceRange}
-                setPriceRange={setPriceRange}
-                experienceRange={experienceRange}
-                setExperienceRange={setExperienceRange}
-                expandedSections={expandedSections}
-                toggleSection={toggleSection}
-                sortOption={sortOption}
-                setSortOption={setSortOption}
-                clearFilters={clearFilters}
-              />
-            </div>
-              <Button
-                onClick={() => setIsMobileFilterOpen(true)}
-                variant="outline"
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
-              >
-                Filter & Sort
-              </Button>
-            </div>
-
-
-
-
-
-
-            {/* Results */}
-            <TalentResults;
-              filtered_talents={filtered_talents}
-              is_loading={is_loading}
-              view_profile={view_profile}
-              handleRequestHire={handleRequestHire}
-              saved_talents={saved_talents}
-              handleToggleSave={handleToggleSave}
-              isAuthenticated={isAuthenticated}
-
-              activeFiltersProps={{
-                selectedSkills;
-                toggleSkill;
-                selectedAvailability;
-                toggleAvailability;
-                selectedRegions;
-                toggleRegion;
-                priceRange;
-                setPriceRange;
-              activeFiltersProps={{;
-                selectedSkills,;
-                toggleSkill,;
-                selectedAvailability,;
-                toggleAvailability,;
-                selectedRegions,;
-                toggleRegion,;
-                priceRange,;
-                setPriceRange,;
-
-
-
-
-
-
-
-
-
-                experienceRange;
-                setExperienceRange;
-
-                selectedSkills
-                toggleSkill
-                selectedAvailability
-                toggleAvailability
-                selectedRegions
-                toggleRegion
-                priceRange
-                setPriceRange
-                experienceRange
-                setExperienceRange
-                clearFilters}}
-            />;
-
-
-            {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (;
-              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
-                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;
-                  <div className="flex justify-between items-center mb-4">;
-                    <h3 className="font-bold text-white">Filter & Sort</h3>;
-            
-            {/* Results */}
-            <TalentResults
-              filteredTalents={filteredTalents}
-              isLoading={isLoading}
-              viewProfile={viewProfile}
-              handleRequestHire={handleRequestHire}
-              savedTalents={savedTalents}
-              handleToggleSave={handleToggleSave}
-              isAuthenticated={isAuthenticated}
-              activeFiltersProps={{
-                selectedSkills,
-                toggleSkill,
-                selectedAvailability,
-                toggleAvailability,
-                selectedRegions,
-                toggleRegion,
-                priceRange,
-                setPriceRange,
-                experienceRange,
-                setExperienceRange,
-                clearFilters,
-              }}
-            />
-            
-            {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-bold text-white">Filter & Sort</h3>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setIsMobileFilterOpen(false)}
-                    isMobileFilterOpen={isMobileFilterOpen}
-                  />
-                </div>
-              </div>
-            )}
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>TalentDirectory | Zion Tech Group</title>
+        <meta name="description" content="TalentDirectory - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">TalentDirectory</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </AppLayout>
+    </div>
+  );
+};
+
+export default TalentDirectory;

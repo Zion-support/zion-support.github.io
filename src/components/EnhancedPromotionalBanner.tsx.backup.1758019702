@@ -66,8 +66,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
               ✕
             </button>
           </motion.div>
-<<<<<<< HEAD
-=======
 
 const EnhancedPromotionalBanner: React.FC = () => {
   return (

@@ -1,2 +1,0 @@
-:pages/pricing-guide.tsx; \"React\": from; \"react\"; \"framer-motion\"{ SEO: } from; \"../components/SEO\"; \"../components/ui/Button\"{ \"Card\": \''} from; \"../components/ui/Card\"; \"../components/ui/Badge\";
-:pages/pricing-guide.tsx; "_React": from; "react"; "framer-motion"{ SEO: } from; "../components/SEO"; "../components/ui/Button"{ "Card": ''} from; "../components/ui/Card"; "../components/ui/Badge";

@@ -1,11 +1,9 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
     content: "Trusted GenAI Ops brings evaluation-first delivery, policy-as-code controls, and runtime guardrails together. This guide includes a minimal reference stack: dataset/versioning, scenario suites, promotion gates, human-in-the-loop, and evidence publishing.",
-=======
     id: 9001,
     title: "AI 2026: Incident-Ready Agents — Playbooks That Ship",
     excerpt: "Practical runbooks, rollback contracts, and evidence hubs for safe autonomy.",
@@ -692,11 +690,9 @@ export const blogPosts = [
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -958,9 +954,7 @@ export const getBlogTags = () => {
   }));
 };
 
-<<<<<<< HEAD
 export const BLOG_POSTS = blogPosts;
-=======
 // New content added for enhanced engagement
 export const newContent2026 = [
   {
