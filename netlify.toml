@@ -4,7 +4,12 @@
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
+<<<<<<< HEAD
   # ci: no-op edit to retrigger Netlify deployment (2025-09-17)
+=======
+  # no-op change to retrigger Netlify build from main
+  # ci: retrigger deploy (no functional change)
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-39c7
 
 [build.environment]
   NODE_VERSION = "20"
@@ -181,4 +186,4 @@
   to = "/index.html"
   status = 200
 
-# build trigger: chore(netlify): retrigger Netlify deploy with no functional changes (timestamp: 2025-09-17)
+# build trigger: chore(netlify): retrigger Netlify deploy (no-op change)
