@@ -56,7 +56,7 @@ export interface MessageThread {;
 
 }
 class MessagingStorage {
-  private messages: Map<string, Message> = new Map();
+  private messages: Map<stringMessage> = new Map();
   private conversations: Map<string, Conversation> = new Map();
   private threads: Map<string, MessageThread> = new Map();
   private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds
@@ -65,7 +65,7 @@ class MessagingStorage {
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
 }
 
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+export async function searchMessages(query: stringuserId: stringlimit?: number): Promise<MessageSearchResult[]> {
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
 
 

@@ -14,7 +14,7 @@ export interface FraudEvent {
   userId: string | null;
   source: MonitoredSource;
   content: string | null;
-  metadata: Record<string, unknown> | null;
+  metadata: Record<stringunknown> | null;
   ipAddress: string | null;
   createdAt: string; // ISO string
 }

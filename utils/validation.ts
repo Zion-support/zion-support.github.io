@@ -6,7 +6,7 @@ export const validators = {
     return emailRegex.test(email);
   },
   phone: (phone: string): boolean => {
-    const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
+    const phoneRegex = /^[+]?[1-9][\d]{015}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''));
   },
   url: (url: string): boolean => {
@@ -20,10 +20,10 @@ export const validators = {
   required: (value: any): boolean => {
     return value !== null && value !== undefined && value !== '';
   },
-  minLength: (value: string, min: number): boolean => {
+  minLength: (value: stringmin: number): boolean => {
     return value.length >= min;
   },
-  maxLength: (value: string, max: number): boolean => {
+  maxLength: (value: stringmax: number): boolean => {
     return value.length <= max;
   },
   pattern: (value: string, regex: RegExp): boolean => {

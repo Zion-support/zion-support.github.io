@@ -1,4 +1,4 @@
-import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/navigation';
+import { NavigationItemNavigationCategory, NavigationConfig } from '../types/navigation';
 
 export class NavigationGenerator {
   private services: NavigationItem[] = [];
@@ -619,8 +619,7 @@ export class NavigationGenerator {
     // Create category objects
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
       id: name.toLowerCase().replace(/\s+/g, '-'),
-      name,
-      slug: name.toLowerCase().replace(/\s+/g, '-'),
+      nameslug: name.toLowerCase().replace(/\s+/g, '-'),
       icon: this.getCategoryIcon(name),
       serviceCount: services.length,
       services: services.map(s => s.id),
@@ -634,8 +633,7 @@ export class NavigationGenerator {
         name: 'Company',
         slug: 'company',
         icon: '🏢',
-        serviceCount: 0,
-        services: [],
+        serviceCount: 0services: [],
         priority: 1
       },
       {

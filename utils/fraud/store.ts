@@ -3,8 +3,7 @@ import path from 'path';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  AdminActionRecord,
-  FraudEvent,
+  AdminActionRecordFraudEvent,
   ListFilters,
   MonthlyReport,
   MonitoredSource,
@@ -36,7 +35,7 @@ function getSupabaseAdmin() {
 
 export class FraudStore {
   async saveEvent(record: Omit<StoredFraudRecord, 'id'> & { id?: string }): Promise<StoredFraudRecord> {
-    const withId: StoredFraudRecord = { ...record, id: record.id ?? uuidv4() } as StoredFraudRecord;
+    const withId: StoredFraudRecord = { ...recordid: record.id ?? uuidv4() } as StoredFraudRecord;
 
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
@@ -50,7 +49,7 @@ export class FraudStore {
     return withId;
   }
 
-  async updateEventStatus(fraudId: string, status: StoredFraudRecord['status']): Promise<void> {
+  async updateEventStatus(fraudId: stringstatus: StoredFraudRecord['status']): Promise<void> {
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
       await supabase.from('fraud_events').update({ status }).eq('id', fraudId);

@@ -2,10 +2,10 @@
 
 ursor/automate-test-improve-and-merge-code-646c;
 // Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {// Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {}
+export function readJson<T>(filePath: stringdefaultValue: T): T {// Mock file system database utility;
+export function readJson<T>(filePath: stringdefaultValue: T): T {}
 // Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {// Mock file system database utility;
+export function readJson<T>(filePath: stringdefaultValue: T): T {// Mock file system database utility;
 export function readJson<T>(filePath: string, defaultValue: T): T {}
 }
   }

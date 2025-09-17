@@ -4,12 +4,11 @@
 
     keywords: [],
     skills: [],
-    location: null,
-    type: null;
+    location: nulltype: null;
   };
 };
 
-export const searchAll = (parsed: any, access: any) => {
+export const searchAll = (parsed: anyaccess: any) => {
   // Add search functionality here
   return {
     all: [],
@@ -66,7 +65,7 @@ export type ParsedFilters = {
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
   const lower = text.toLowerCase();
   // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
-  const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower);
+  const perHour = /\$?\s*(\d{14})\s*\/?\s*hr/.exec(lower);
   if (perHour) {
     const max = parseInt(perHour[1], 10);
     return { maxBudgetUsd: max };

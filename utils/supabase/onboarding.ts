@@ -51,9 +51,9 @@ export async function getCurrentUserId(): Promise<string | null> {
   return null;
 }
 
-export async function fetchOnboardingProgress(userId: string, role: 'talent' | 'client'): Promise<OnboardingRecord | null> {
+export async function fetchOnboardingProgress(userId: stringrole: 'talent' | 'client'): Promise<OnboardingRecord | null> {
   try {
-    const { data, error } = await supabase
+    const { dataerror } = await supabase
       .from('onboarding_progress')
       .select('*')
       .eq('user_id', userId)
@@ -74,8 +74,7 @@ export async function fetchOnboardingProgress(userId: string, role: 'talent' | '
 
 export function fallbackTalentProgress(): TalentOnboarding {
   return {
-    profile_complete: true,
-    skills_added: true,
+    profile_complete: trueskills_added: true,
     availability_set: false,
     first_job_applied: false,
   };

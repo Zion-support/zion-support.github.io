@@ -37,7 +37,7 @@ export interface Conversation {
 
 }
 class MarketplaceStore {
-  private projects: Map<string, Project> = new Map();
+  private projects: Map<stringProject> = new Map();
   private offers: Map<string, Offer> = new Map();
   private applications: Map<string, Application> = new Map();
   private messages: Map<string, Message> = new Map();
@@ -46,7 +46,7 @@ class MarketplaceStore {
 }
 
 export function generate_id (prefix: string = 'item'): string {
-  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+  return `${prefix}_${Date.now()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
 
 
