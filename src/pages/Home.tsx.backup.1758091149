@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -13,9 +16,20 @@ import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
 import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
 import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-609c
 
 const Home: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Home</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+=======
     <>
       <Helmet>
         <title>Zion Tech Group - Revolutionary Technology Solutions</title>
@@ -300,6 +314,7 @@ const Home: React.FC = () => {
         </React.Suspense>
       </div>
     </>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-609c
   );
 };
 

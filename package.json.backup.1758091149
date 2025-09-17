@@ -15,6 +15,9 @@
     "type-check": "npx tsc --noEmit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
+<<<<<<< HEAD
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
+=======
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
@@ -248,6 +251,7 @@
     "front:continuous": "node automation/continuous-front-runner.cjs",
     "front:continuous:fast": "node -e \"const cp=require('child_process'); const run=()=>cp.exec('node automation/continuous-front-runner.cjs',()=>{}); run(); setInterval(run, 1000*60*5);\"",
     "ads:fast": "node automation/fast-advertising-orchestrator.cjs"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-609c
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",

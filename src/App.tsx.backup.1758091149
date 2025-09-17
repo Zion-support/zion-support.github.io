@@ -1,5 +1,94 @@
+<<<<<<< HEAD
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Footer from './Footer';
+import Header from './Header';
+import ScrollToTop from './ScrollToTop';
+import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
+import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryTechBanner2026 from './components/RevolutionaryTechBanner2026';
+import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
+import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
+import UltimateTechShowcaseBanner2026 from './components/UltimateTechShowcaseBanner2026';
+import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
+import ContentPromotionBanner from './components/ContentPromotionBanner';
+import ContentSpotlight from './components/ContentSpotlight';
+import DynamicContentCarousel from './components/DynamicContentCarousel';
+import EmbodiedAI2026Banner from './components/EmbodiedAI2026Banner';
+import EnhancedHeroSection from './components/EnhancedHeroSection';
+import FeaturedContentSection from './components/FeaturedContentSection';
+import FeaturedContentShowcase from './components/FeaturedContentShowcase';
+import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
+import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
+import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
+import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
+import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase2027';
+import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
+import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
+import LatestInsightsPromo from './components/LatestInsightsPromo';
+import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
+import NewContentAdBanner from './components/NewContentAdBanner';
+import NewContentPromoBanner from './components/NewContentPromoBanner';
+import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
+import NewRevolutionaryServicesShowcase from './components/NewRevolutionaryServicesShowcase';
+import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
+import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
+import NewsletterSignup from './components/NewsletterSignup';
+import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029';
+import PromotionalBanner from './components/PromotionalBanner';
+import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
+import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreakthrough2035';
+import QuantumNeuralRevolutionBanner from './components/QuantumNeuralRevolutionBanner';
+import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
+import RevolutionaryContentAdvertisingBanner2026 from './components/RevolutionaryContentAdvertisingBanner2026';
+import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
+import RevolutionaryContentPromoBanner2025 from './components/RevolutionaryContentPromoBanner2025';
+import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
+import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
+import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
+import NewContent2026PromotionBanner from './components/NewContent2026PromotionBanner';
+import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
+import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
+import TrendingContentSection from './components/TrendingContentSection';
+import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026Page from './pages/UltimateContentShowcase2026';
+import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
+import UltimateTechShowcaseBanner2025 from './components/UltimateTechShowcaseBanner2025';
+import UltimateContentShowcase2026Banner from './components/UltimateContentShowcase2026Banner';
+import RevolutionaryContentPromotionBanner2026 from './components/RevolutionaryContentPromotionBanner2026';
+import NewContentBreakthroughBanner2026 from './components/NewContentBreakthroughBanner2026';
+import NextGenAIContentPromotionBanner2026 from './components/NextGenAIContentPromotionBanner2026';
+import AITrendsPromotionBanner2026 from './components/AITrendsPromotionBanner2026';
+import NewContentShowcase2027 from './components/NewContentShowcase2027';
+import RevolutionaryServicesBanner2027 from './components/RevolutionaryServicesBanner2027';
+import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
+import RevolutionaryTechBanner2027 from './components/RevolutionaryTechBanner2027';
+import AIInnovationHub2026 from './pages/AIInnovationHub2026';
+import AI2027UltimateBreakthrough from './pages/AI2027UltimateBreakthrough';
+import QuantumAIRevolution2027 from './pages/QuantumAIRevolution2027';
+import AI2027BreakthroughInnovations from './pages/AI2027BreakthroughInnovations';
+import QuantumComputingRevolution2027 from './pages/QuantumComputingRevolution2027';
+import NeuralInterfaceBreakthrough2027 from './pages/NeuralInterfaceBreakthrough2027';
+import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
+import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
+import AI2026UltimateInnovationHub from './pages/AI2026UltimateInnovationHub';
+import QuantumAIRevolution2026 from './pages/QuantumAIRevolution2026';
+import NextGenAIContentHub2026 from './pages/NextGenAIContentHub2026';
+import AITrendsInsights2026 from './pages/AITrendsInsights2026';
+import AIBusinessAutomation2026 from './pages/AIBusinessAutomation2026';
+import QuantumComputingEnterprise2026 from './pages/QuantumComputingEnterprise2026';
+import AdvancedAIServices2026 from './pages/AdvancedAIServices2026';
+import BlogPost_Jan2026_AIEthicsFramework from './pages/BlogPost_Jan2026_AIEthicsFramework';
+import BlogPost_Jan2026_QuantumComputingBreakthrough from './pages/BlogPost_Jan2026_QuantumComputingBreakthrough';
+import BlogPost_Jan2026_EdgeAIRevolution from './pages/BlogPost_Jan2026_EdgeAIRevolution';
+=======
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-609c
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -59,12 +148,18 @@ import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBan
 const App: React.FC = () => {
   return (
     <Router>
+<<<<<<< HEAD
+      <ScrollToTop />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <Header />
+=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
           <div className="container mx-auto px-4 py-6">
             <h1 className="text-3xl font-bold text-white">Zion Tech Group</h1>
           </div>
         </header>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-609c
         
         <Routes>
           <Route path="/" element={
@@ -403,6 +498,8 @@ const App: React.FC = () => {
               <div className="mb-12">
                 <PromotionalBanner />
               </div>
+<<<<<<< HEAD
+=======
             } />
           </Routes>
         </main>
@@ -411,6 +508,7 @@ const App: React.FC = () => {
           <div className="container mx-auto px-4 py-8">
             <div className="text-center text-gray-300">
               <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-609c
             </div>
           } />
           
