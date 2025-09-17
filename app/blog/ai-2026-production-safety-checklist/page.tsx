@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -84,6 +85,8 @@ export default function ProductionSafetyChecklistPage() {
 	);
 }
 
+=======
+>>>>>>> origin/feat/add-production-safety-checklist-and-promo
 import Link from 'next/link';
 
 export const metadata = {
