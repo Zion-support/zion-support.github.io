@@ -2355,6 +2355,14 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-reliable-autonomy-operations",
+    "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
+    "h1": "AI 2026: Reliable Autonomy Operations"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5114
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
     "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
@@ -2365,6 +2373,14 @@
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
+    "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5114
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
