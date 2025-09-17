@@ -1,12 +1,12 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-import compression from 'vite-plugin-compression'
-import { visualizer } from 'rollup-plugin-visualizer'
+// import { compression } from 'vite-plugin-compression'
+// import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
   
   return {
@@ -75,89 +75,55 @@ export default defineConfig(({ command, mode }) => {
           ],
         },
       }),
-      compression({
-        algorithm: 'brotliCompress',
-        ext: '.br',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
-      compression({
-        algorithm: 'gzip',
-        ext: '.gz',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
-      ...(isProduction ? [
-        visualizer({
-          filename: 'dist/stats.html',
-          open: false,
-          gzipSize: true,
-          brotliSize: true,
-        }),
-      ] : []),
+      // Compression plugins disabled for Netlify build
+      // compression({
+      //   algorithm: 'brotliCompress',
+      //   ext: '.br',
+      //   threshold: 10240,
+      //   deleteOriginFile: false,
+      // }),
+      // compression({
+      //   algorithm: 'gzip',
+      //   ext: '.gz',
+      //   threshold: 10240,
+      //   deleteOriginFile: false,
+      // }),
+      // Visualizer disabled for Netlify build
+      // ...(isProduction ? [
+      //   visualizer({
+      //     filename: 'dist/stats.html',
+      //     open: false,
+      //     gzipSize: true,
+      //     brotliSize: true,
+      //   }),
+      // ] : []),
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
-        '@components': path.resolve(__dirname, './src/components'),
-        '@pages': path.resolve(__dirname, './src/pages'),
-        '@utils': path.resolve(__dirname, './src/utils'),
-        '@hooks': path.resolve(__dirname, './src/hooks'),
-        '@types': path.resolve(__dirname, './src/types'),
-        '@styles': path.resolve(__dirname, './src/styles'),
-        '@assets': path.resolve(__dirname, './src/assets'),
+        '@': path.resolve(import.meta.dirname, './src'),
+        '@components': path.resolve(import.meta.dirname, './src/components'),
+        '@pages': path.resolve(import.meta.dirname, './src/pages'),
+        '@utils': path.resolve(import.meta.dirname, './src/utils'),
+        '@hooks': path.resolve(import.meta.dirname, './src/hooks'),
+        '@types': path.resolve(import.meta.dirname, './src/types'),
+        '@styles': path.resolve(import.meta.dirname, './src/styles'),
+        '@assets': path.resolve(import.meta.dirname, './src/assets'),
       },
       dedupe: ['date-fns', 'react', 'react-dom'],
     },
     build: {
       target: 'es2020',
-      minify: 'terser',
+      minify: 'esbuild',
       sourcemap: false,
       outDir: 'dist',
-      cssCodeSplit: true,
-      modulePreload: {
-        polyfill: true,
-      },
+      cssCodeSplit: false,
       assetsInlineLimit: 4096,
-      terserOptions: {
-        compress: {
-          drop_console: isProduction,
-          drop_debugger: isProduction,
-          pure_funcs: isProduction ? ['console.log', 'console.info'] : [],
-        },
-        mangle: {
-          safari10: true,
-        },
-      },
       rollupOptions: {
-        input: {
-          main: './index.html'
-        },
+        input: './index.html',
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
             'router-vendor': ['react-router-dom'],
-            'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-            'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-            'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
-            'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
-            'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-          },
-          chunkFileNames: (chunkInfo) => {
-            const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
-            return `js/${facadeModuleId}-[hash].js`;
-          },
-          entryFileNames: 'js/[name]-[hash].js',
-          assetFileNames: (assetInfo) => {
-            const info = assetInfo.name.split('.');
-            const ext = info[info.length - 1];
-            if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-              return `images/[name]-[hash][extname]`;
-            }
-            if (/css/i.test(ext)) {
-              return `css/[name]-[hash][extname]`;
-            }
-            return `assets/[name]-[hash][extname]`;
           },
         },
         onwarn(warning, warn) {
@@ -166,7 +132,6 @@ export default defineConfig(({ command, mode }) => {
           warn(warning);
         },
       },
-      brotliSize: true,
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {

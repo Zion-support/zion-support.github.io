@@ -12,18 +12,12 @@ import SEOOptimizer from './src/components/SEOOptimizer';
 import MobileOptimizer from './src/components/MobileOptimizer';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import LoadingSpinner from './src/components/LoadingSpinner';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 import AnalyticsTracker from './src/components/AnalyticsTracker';
 import SecurityEnhancer from './src/components/SecurityEnhancer';
 import TestingSuite from './src/components/TestingSuite';
 import MonitoringDashboard from './src/components/MonitoringDashboard';
 import DocumentationGenerator from './src/components/DocumentationGenerator';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
-<<<<<<< HEAD
-=======
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 
 // Import our new components
@@ -33,9 +27,6 @@ import RevolutionaryAIServices2026 from './src/pages/RevolutionaryAIServices2026
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 
 // Import existing pages
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
@@ -56,8 +47,6 @@ import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
@@ -68,7 +57,6 @@ export default function App(): JSX.Element {
       <Router>
         <div className="min-h-screen bg-white">
           <ScrollToTop />
-=======
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import Home from './src/pages/Home';
 import About from './src/pages/About';
@@ -132,12 +120,10 @@ const App: React.FC = () => {
           <Footer />
           
           {/* Performance Optimizers */}
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           <PerformanceOptimizer />
           <AccessibilityEnhancer />
           <SEOOptimizer />
           <MobileOptimizer />
-<<<<<<< HEAD
           <AnalyticsTracker />
           <SecurityEnhancer />
           <TestingSuite enableTesting={process.env.NODE_ENV === 'development'} />
@@ -146,7 +132,6 @@ const App: React.FC = () => {
           <PerformanceDashboard />
           <Header />
           
-=======
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
@@ -171,7 +156,6 @@ export default function App(): JSX.Element {
           <PerformanceDashboard />
           <Header />
           
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
           <Routes>
             <Route path="/" element={
               <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -197,7 +181,6 @@ export default function App(): JSX.Element {
               </div>
             } />
             
-<<<<<<< HEAD
             <Route path="/innovation-landing-2025" element={<InnovationLanding2025 />} />
             <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
             <Route path="/blog-post-2025" element={<BlogPost2025 />} />
@@ -216,7 +199,6 @@ export default function App(): JSX.Element {
             <Route path="/cybersecurity-fortress-2025" element={<CybersecurityFortress2025 />} />
             <Route path="/ai-revolution-2025" element={<AIRevolution2025 />} />
             <Route path="/quantum-computing-breakthrough" element={<QuantumComputingBreakthrough />} />
-=======
             <Route path="/innovation-2025" element={<InnovationLanding2025 />} />
             <Route path="/services-2025" element={<InnovativeServicesShowcase2025 />} />
             <Route path="/blog-2025" element={<BlogPost2025 />} />
@@ -235,30 +217,18 @@ export default function App(): JSX.Element {
             <Route path="/cybersecurity-2025" element={<CybersecurityFortress2025 />} />
             <Route path="/ai-revolution-2025" element={<AIRevolution2025 />} />
             <Route path="/quantum-breakthrough" element={<QuantumComputingBreakthrough />} />
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
             <Route path="/neural-interface-future" element={<NeuralInterfaceFuture />} />
             <Route path="/case-study/:id" element={<CaseStudyPage />} />
           </Routes>
           
           <Footer />
-<<<<<<< HEAD
-=======
           <PerformanceDashboard />
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
         </div>
       </Router>
     </ErrorBoundary>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
 
 export default App;
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 }
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f

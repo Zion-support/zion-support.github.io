@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-=======
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 // Minimal shim to ensure build stability after conflict noise
@@ -15,7 +13,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [fontSize, setFontSize] = useState(16);
   const [reducedMotion, setReducedMotion] = useState(false);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -181,7 +178,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
-=======
 export function AccessibilityEnhancer() {
   // No-op hidden component
   return <div aria-hidden="true" style={{ display: 'none' }} />;

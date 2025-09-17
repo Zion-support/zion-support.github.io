@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Fetch utility with retry logic and error handling
  */
@@ -170,7 +169,6 @@ export const fetchWithRetryDelete = <T = any>(url: string, options?: Omit<FetchO
   fetchWithRetry.delete<T>(url, options);
 
 export default fetchWithRetry;
-=======
 export async function fetchWithRetry(url: string, options: RequestInit = {}, retries = 2, backoffMs = 300): Promise<any> {
   let lastError: unknown;
   for (let attempt = 0; attempt <= retries; attempt++) {

@@ -1,114 +1,12 @@
+import React from 'react';
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Loader2 } from "lucide-react";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-import { ContractTemplate } from "@/types/contracts";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-
-const formSchema = z.object({
-
-type FormValues = z.infer<typeof formSchema>;
-
-interface TemplateSaveFormProps {
-  onCancel: () => void;
-  onComplete: () => void;
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;
-}
-
-export function TemplateSaveForm({
-  onCancel,
-  onComplete,
-  editTemplate,
-  currentValues
-}: TemplateSaveFormProps) {
-  
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: editTemplate?.title || "",
-  
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
-      return;
-    }
-    
-    setSaving(true);
-    
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id,
-          title: values.title,
-          templateData: editTemplate.template_data,
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title,
-          templateData: currentValues,
-      }
-      
-      onComplete();
-    } finally {
-      setSaving(false);
-    }
-  };
-  
+const TemplateSaveForm: React.FC = () => {
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="title"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Template Name</FormLabel>
-              <FormControl>
-                <Input {...field} placeholder="Enter template name" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <FormField
-          control={form.control}
-          name="isDefault"
-          render={({ field }) => (
-            <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
-              <FormControl>
-                <Switch
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <div className="flex gap-2 justify-end">
-          <Button type="button" variant="outline" onClick={onCancel}>
-            Cancel
-          </Button>
-          <Button type="submit" disabled={saving}>
-            {saving ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Saving...
-              </>
-            ) : (
-              `${editTemplate ? "Update" : "Save"} Template`
-            )}
-          </Button>
-        </div>
-      </form>
-    </Form>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TemplateSaveForm</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default TemplateSaveForm;

@@ -1,1 +1,12 @@
-interface SkeletonProps { className?: string; variant?: 'text' | 'title' | 'paragraph' | 'avatar' | 'card' | 'button'; lines?: number; height?: string; width?: string; ';'} export function LoadingSkeleton(_) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse'; const variants = { text: 'h-4 w-full,title: 'h-8 w-3/4,paragraph: 'h-4 w-full,avatar: 'h-12 w-12 rounded-full,card: 'h-32 w-full rounded-lg,button: 'h-10 w-24 rounded-lg' };; const variantClasses = variants[variant]; const customHeight = height ? `h-[${height}]` : ' const customWidth = width ? `w-[${width}]` : ' if(variant === 'paragraph' && lines > 1) { return (<div className={`space-y-2 ${className}`}> {Array.from({ length: line s }).map((_,index) => ( <motion.div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: inde x * 0.1 }} /> ))}; </div> )} return (<motion.div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /> )}
+import React from 'react';
+
+const loading-skeleton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">loading-skeleton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default loading-skeleton;
