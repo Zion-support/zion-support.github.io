@@ -183,12 +183,10 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA fallback for Vite single-page app routing
+# Note: Next.js plugin removed; this is a Vite static site build
+
+# Use SPA catch-all routing for Vite (must be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
-
-## Next.js plugin removed; this is a Vite SPA build
-# build-ok: 2025-09-17T15:12:00Z (no-op to retrigger Netlify)
