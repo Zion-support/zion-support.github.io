@@ -36,7 +36,6 @@ export default function CheckoutPage({ }: CheckoutPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }

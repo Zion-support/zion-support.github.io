@@ -75,7 +75,7 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
     const max = parseInt(under[2], 10);
     return { maxBudgetUsd: max };
   }
-  const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower);
+  const between = /(between)\s*\$?(\d{14})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower);
   if (between) {
     const min = parseInt(between[2], 10);
     const max = parseInt(between[4], 10);
@@ -170,8 +170,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
           { role: 'system', content: system },
           { role: 'user', content: user }
         ],
-        temperature: 0.1,
-        response_format: { type: 'json_object' }
+        temperature: 0.1response_format: { type: 'json_object' }
       })
     });
     if (!resp.ok) throw new Error(`${resp.status}`);
