@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateTechBanner2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-violet-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
@@ -14,7 +13,6 @@ const UltimateTechBanner2036: React.FC = () => {
             Experience the ultimate evolution of technology where consciousness, quantum computing, and interdimensional mastery converge
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🌟</div>
@@ -31,7 +29,6 @@ const UltimateTechBanner2036: React.FC = () => {
               Explore Transcendence →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">⚛️</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Mastery</h3>
@@ -47,7 +44,6 @@ const UltimateTechBanner2036: React.FC = () => {
               Master Quantum →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🌌</div>
             <h3 className="text-xl font-bold mb-3 text-center">Universal Consciousness</h3>
@@ -68,5 +64,6 @@ const UltimateTechBanner2036: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateTechBanner2036;

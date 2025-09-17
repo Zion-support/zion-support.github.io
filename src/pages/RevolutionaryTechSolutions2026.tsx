@@ -17,15 +17,12 @@ import {
   Target,
   Lightbulb
 } from 'lucide-react';
-
 const RevolutionaryTechSolutions2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai-consciousness');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const revolutionarySolutions = {
     'ai-consciousness': {
       title: 'AI Consciousness Solutions',
@@ -184,14 +181,11 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
       }
     }
   };
-
   const tabs = Object.keys(revolutionarySolutions).map(key => ({
     key,
     ...revolutionarySolutions[key as keyof typeof revolutionarySolutions]
   }));
-
   const currentSolution = revolutionarySolutions[activeTab as keyof typeof revolutionarySolutions];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
@@ -206,7 +200,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-pink-900/20" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-blue-500/10 to-transparent" />
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -217,20 +210,17 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
             <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-blue-300 font-medium">Revolutionary Solutions 2026</span>
           </motion.div>
-
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future of{' '}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Technology
             </span>
           </h1>
-
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             Experience the most revolutionary technology solutions that are reshaping reality itself. 
             From AI consciousness to space colonization, discover the cutting-edge innovations that will 
             define the next decade of human progress.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
               Explore Solutions
@@ -242,7 +232,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Solutions Tabs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
@@ -259,7 +248,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
             your business and accelerate innovation.
           </p>
         </motion.div>
-
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {tabs.map((tab) => {
@@ -280,7 +268,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
             );
           })}
         </div>
-
         {/* Tab Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -307,7 +294,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -323,7 +309,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -339,7 +324,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -350,7 +334,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual and Stats */}
               <div className="space-y-8">
                 {/* Stats Card */}
@@ -365,7 +348,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                     {currentSolution.stats.description}
                   </div>
                 </div>
-
                 {/* Visual Element */}
                 <div className={`w-full h-64 bg-gradient-to-br ${currentSolution.gradient} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/20" />
@@ -375,7 +357,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                       Revolutionary Technology
                     </div>
                   </div>
-                  
                   {/* Animated Elements */}
                   <div className="absolute top-4 right-4 w-3 h-3 bg-white/40 rounded-full animate-pulse" />
                   <div className="absolute bottom-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-ping" />
@@ -386,7 +367,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-
       {/* Success Stories */}
       <div className="bg-gradient-to-r from-gray-800/30 to-gray-900/30 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -403,7 +383,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
               See how leading organizations are transforming their operations with our revolutionary technology solutions.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -446,7 +425,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                       <p className="text-blue-400 text-sm">{story.industry}</p>
                     </div>
                   </div>
-                  
                   <h4 className="text-white font-medium mb-2">{story.solution}</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">{story.result}</p>
                 </motion.div>
@@ -455,7 +433,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -486,6 +463,8 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default RevolutionaryTechSolutions2026;
+</div></div></div></div></div></div></div></div>

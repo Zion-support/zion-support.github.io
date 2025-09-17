@@ -1,3 +1,12 @@
-; export function MainNavigation(props: any) {return () <nav className="hidden md:flex space-x-8> <Link to="/" className="text-gray-700" hover:text-zion-purple px-3 py-2 text-sm font-medium transition-colors > Home </Link> <Link" to="/services className="text-gray-700" hover:text-zion-purple px-3 py-2 text-sm font-medium transition-colors" > Services </Link> <Link" to=/solutions className="text-gray-700 hover:text-zion-purple px-3 py-2 text-sm font-medium transition-colors" > Solutions </Link> <Link to=/about" className="text-gray-700 hover:text-zion-purple px-3 py-2 text-sm font-medium transition-colors > About </Link> <Link to="/contact" className="text-gray-700" hover:text-zion-purple px-3 py-2 text-sm font-medium transition-colors > Contact </Link> </nav> );} ";");
-export default ComponentName;"
-}
+import React from 'react';
+
+const MainNavigation: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MainNavigation</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default MainNavigation;

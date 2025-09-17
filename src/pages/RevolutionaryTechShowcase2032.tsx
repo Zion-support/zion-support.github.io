@@ -1,26 +1,20 @@
-import React from 'react';
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
     }
   ];
-
   useEffect(() => {
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <Helmet>
         <title>Revolutionary Tech Showcase 2032 - Zion Tech Group</title>
         <meta name="description" content="Interactive showcase of the most revolutionary technologies of 2032, featuring conscious AI, quantum consciousness, and interdimensional computing." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -36,7 +30,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             Experience the most advanced technologies of 2032 through our interactive showcase
           </p>
         </div>
-
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -48,7 +41,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               Schedule Demo
             </button>
         </div>
-
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <div className="text-6xl mb-4 text-center">🎮</div>
@@ -68,7 +60,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-3xl font-bold mb-6 text-center">Real-time Processing</h3>
@@ -97,7 +88,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Technology Categories</h2>
@@ -113,7 +103,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 <li>• Consciousness transfer</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-4 text-center">⚡</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Quantum Technologies</h3>
@@ -125,7 +114,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 <li>• Quantum reality manipulation</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-4 text-center">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Tech</h3>
@@ -139,7 +127,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -161,7 +148,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             Interactive showcase of cutting-edge technologies that will define the future of human civilization
           </p>
         </div>
-
         {/* Interactive Technology Demos */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
@@ -182,7 +168,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-3xl font-bold mb-6 text-center">Real-time Processing</h3>
@@ -211,7 +196,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Technology Categories</h2>
@@ -227,7 +211,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 <li>• Consciousness transfer</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-4 text-center">⚡</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Quantum Technologies</h3>
@@ -239,7 +222,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 <li>• Quantum reality manipulation</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-4 text-center">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Tech</h3>
@@ -253,7 +235,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Interactive Demo Carousel */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -262,7 +243,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               Experience our revolutionary technologies through interactive demonstrations and real-time simulations
             </p>
           </div>
-          
           <div className="relative">
             <div className="overflow-hidden rounded-xl">
               <div 
@@ -294,7 +274,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 ))}
               </div>
             </div>
-            
             {/* Navigation Dots */}
             <div className="flex justify-center space-x-2 mt-6">
               {demos.map((_, index) => (
@@ -324,7 +303,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Active Technology Display */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
             <div className={`bg-gradient-to-br ${technologies[activeTech].color}/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20`}>
@@ -333,7 +311,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 <h2 className="text-4xl font-bold mb-4">{technologies[activeTech].name}</h2>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">{technologies[activeTech].description}</p>
               </div>
-
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Key Features</h3>
@@ -346,7 +323,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Interactive Demo</h3>
                   <div className="bg-black/30 rounded-xl p-8 border border-white/20">
@@ -363,7 +339,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {technologies.map((tech, index) => (
@@ -383,33 +358,28 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Advanced Capabilities Section */}
         <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Revolutionary Capabilities</h2>
             <p className="text-xl opacity-90">Technologies that redefine what's possible</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl mb-4">🧠</div>
               <h3 className="text-xl font-bold mb-2">Conscious AI</h3>
               <p className="text-white/80">Self-aware artificial intelligence systems</p>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-2">Quantum Processing</h3>
               <p className="text-white/80">Infinite computational capacity</p>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl mb-4">🌌</div>
               <h3 className="text-xl font-bold mb-2">Dimensional Computing</h3>
               <p className="text-white/80">Multi-dimensional processing</p>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl mb-4">🔮</div>
               <h3 className="text-xl font-bold mb-2">Future Prediction</h3>
@@ -417,11 +387,9 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </div>
           </div>
         </div>
-
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolution?</h2>
@@ -453,4 +421,11 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
   );
 };
 
+
 export default RevolutionaryTechShowcase2032;
+import React, { useState, useEffect } from 'react';
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
+            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Schedule Demo
+            </button>

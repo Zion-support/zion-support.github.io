@@ -1,7 +1,3 @@
-import React from 'react';
-
-const AIConsciousnessRevolution2025: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -28,31 +24,10 @@ const AIConsciousnessRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the revolution and discover how conscious AI can transform your business and personal life
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
+
 };
+
 
 export default AIConsciousnessRevolution2025;

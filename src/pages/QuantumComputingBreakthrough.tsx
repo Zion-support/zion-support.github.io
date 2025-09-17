@@ -18,7 +18,6 @@ import {
   Star,
   Sparkles
 } from 'lucide-react';
-
 const QuantumComputingBreakthrough: React.FC = () => {
   const breakthroughs = [
     {
@@ -64,7 +63,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
       color: "from-teal-500 to-blue-500"
     }
   ];
-
   const applications = [
     {
       title: "Drug Discovery",
@@ -97,14 +95,12 @@ const QuantumComputingBreakthrough: React.FC = () => {
       impact: "Superintelligent AI"
     }
   ];
-
   const stats = [
     { icon: Zap, value: "1M+", label: "Qubits Processed" },
     { icon: Target, value: "99.9%", label: "Accuracy Rate" },
     { icon: TrendingUp, value: "1000x", label: "Performance Gain" },
     { icon: Globe, value: "Global", label: "Quantum Network" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900">
       {/* Hero Section */}
@@ -122,19 +118,16 @@ const QuantumComputingBreakthrough: React.FC = () => {
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-400 font-medium">Quantum Breakthrough</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Quantum Computing
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 {" "}Breakthrough
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience the future of computing with revolutionary quantum technologies that will 
               transform every aspect of human civilization.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -152,7 +145,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
                 Watch Demo
               </motion.button>
             </div>
-
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -172,7 +164,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Breakthroughs Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,7 +180,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
               Discover the revolutionary quantum technologies that are reshaping the future of computing and human civilization.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {breakthroughs.map((breakthrough, index) => (
               <motion.div
@@ -203,15 +193,12 @@ const QuantumComputingBreakthrough: React.FC = () => {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${breakthrough.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <breakthrough.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {breakthrough.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-6">
                     {breakthrough.description}
                   </p>
-                  
                   <ul className="space-y-2">
                     {breakthrough.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-400">
@@ -226,7 +213,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="py-20 bg-gradient-to-r from-purple-600/10 to-blue-600/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,7 +229,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
               See how quantum computing is transforming industries and solving humanity's greatest challenges.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((application, index) => (
               <motion.div
@@ -256,11 +241,9 @@ const QuantumComputingBreakthrough: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {application.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-4">
                   {application.description}
                 </p>
-                
                 <div className="text-cyan-400 font-semibold">
                   {application.impact}
                 </div>
@@ -269,7 +252,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -307,5 +289,6 @@ const QuantumComputingBreakthrough: React.FC = () => {
     </div>
   );
 };
+
 
 export default QuantumComputingBreakthrough;

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, ExternalLink, Star } from 'lucide-react';
-
 const DynamicContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentItems = [
     {
       id: 1,
@@ -58,27 +56,20 @@ const DynamicContentCarousel2025: React.FC = () => {
       gradient: "from-purple-500 to-pink-600"
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % contentItems.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, contentItems.length]);
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const currentItem = contentItems[currentIndex];
-
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
@@ -100,7 +91,6 @@ const DynamicContentCarousel2025: React.FC = () => {
             Explore our latest breakthroughs and cutting-edge solutions that are shaping the future of technology.
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
@@ -128,15 +118,12 @@ const DynamicContentCarousel2025: React.FC = () => {
                         {currentItem.views} views
                       </div>
                     </div>
-
                     <h3 className="text-4xl font-bold text-white mb-6">
                       {currentItem.title}
                     </h3>
-
                     <p className="text-xl text-gray-300 leading-relaxed mb-8">
                       {currentItem.description}
                     </p>
-
                     <div className="flex flex-col sm:flex-row gap-4">
                       <motion.button
                         whileHover={{ scale: 1.05 }}
@@ -156,7 +143,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                       </motion.button>
                     </div>
                   </div>
-
                   {/* Image */}
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl">
@@ -178,7 +164,6 @@ const DynamicContentCarousel2025: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <div className="flex gap-3">
@@ -194,7 +179,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                 />
               ))}
             </div>
-
             <div className="flex gap-4">
               <button
                 onClick={prevSlide}
@@ -225,5 +209,6 @@ const DynamicContentCarousel2025: React.FC = () => {
     </section>
   );
 };
+
 
 export default DynamicContentCarousel2025;

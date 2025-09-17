@@ -1,14 +1,11 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const AI2025QuantumBreakthroughPromotionBanner = () => {
+const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -25,7 +22,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
             Learn about practical applications and implementation strategies that are reshaping industries.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">⚡</div>
@@ -35,7 +31,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
             </p>
             <div className="text-2xl font-bold text-yellow-400">1000x</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🧠</div>
             <h3 className="text-xl font-bold mb-3">Quantum Machine Learning</h3>
@@ -44,7 +39,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
             </p>
             <div className="text-2xl font-bold text-green-400">∞</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Real-Time Decision Making</h3>
@@ -54,7 +48,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
             <div className="text-2xl font-bold text-blue-400">Real-Time</div>
           </div>
         </div>
-
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-6">Transform Your Business Today</h3>
@@ -78,7 +71,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
             </div>
           </div>
         </div>
-
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -94,7 +86,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
               Get Free Consultation
             </a>
           </div>
-          
           <div className="text-sm text-gray-300">
             <p>🚀 Join thousands of businesses already transforming with quantum-AI technology</p>
           </div>
@@ -103,5 +94,6 @@ const AI2025QuantumBreakthroughPromotionBanner = () => {
     </section>
   );
 };
+
 
 export default AI2025QuantumBreakthroughPromotionBanner;

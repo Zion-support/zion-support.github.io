@@ -15,7 +15,6 @@ import {
   Globe,
   Lock
 } from 'lucide-react';
-
 interface ContentItem {
   id: number;
   title: string;
@@ -30,10 +29,8 @@ interface ContentItem {
   icon: React.ReactNode;
   gradient: string;
 }
-
 const ComprehensiveContentShowcase2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-
   const contentItems: ContentItem[] = [
     {
       id: 37,
@@ -120,13 +117,10 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       gradient: "from-yellow-500 to-orange-500"
     }
   ];
-
   const categories = ['All', ...Array.from(new Set(contentItems.map(item => item.category)))];
-
   const filteredContent = selectedCategory === 'All' 
     ? contentItems 
     : contentItems.filter(item => item.category === selectedCategory);
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,7 +134,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             <BookOpen className="w-5 h-5" />
             <span className="font-medium">Latest Content</span>
           </motion.div>
-          
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Revolutionary Tech Content 2026
           </h2>
@@ -149,7 +142,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             that are transforming industries and shaping the future.
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
@@ -166,7 +158,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item, index) => (
@@ -188,11 +179,9 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                     <div className="text-xs opacity-75">{item.publishDate}</div>
                   </div>
                 </div>
-                
                 <h3 className="text-xl font-bold mb-2 line-clamp-2">
                   {item.title}
                 </h3>
-                
                 <div className="flex items-center space-x-4 text-sm">
                   <div className="flex items-center space-x-1">
                     <Clock className="w-4 h-4" />
@@ -204,13 +193,11 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Content */}
               <div className="p-6">
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {item.excerpt}
                 </p>
-
                 {/* Stats */}
                 <div className="bg-gray-50 rounded-lg p-3 mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-700">
@@ -218,7 +205,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                     <span className="font-medium">{item.stats}</span>
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag) => (
@@ -230,7 +216,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* CTA Button */}
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -244,7 +229,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -273,6 +257,7 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default ComprehensiveContentShowcase2026;

@@ -1,88 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Brain
-  Cpu
-  Database
-  Cloud
-  Shield
-  Zap
-  Target
-  TrendingUp,
-  Users,
-  Globe,
-  Rocket,
-  Star,
-  ChevronRight,
-  Play,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-
-const AI2025_2026UltimateTechnologyShowcase = () => {
-  const [activeTabsetActiveTab] = useState('ai-2025');
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const technologies = {
-    'ai-2025': {
-      title: 'AI 2025 Revolutionary Breakthroughs',
-      subtitle: 'Transform Your Business with Next-Generation AI Solutions',
-      features: [
-        {
-          icon: Brain,
-          title: 'Neural Consciousness AI',
-          description: 'Advanced AI systems with self-awareness and emotional intelligence',
-          benefits: ['300% faster decision making'95% accuracy in 'predictions', 'Real-time adaptation']
-        },
-        {
-          icon: Cpu,
-          title: 'Quantum-Neural Fusion',
-          description: 'Revolutionary computing that combines quantum and neural processing',
-          benefits: ['10x processing 'speed', 'Unlimited 'scalability', 'Zero latency responses']
-        },
-        {
-          icon: Database,
-          title: 'Autonomous Data Intelligence',
-          description: 'Self-managing data systems that optimize and secure themselves',
-          benefits: ['99.9% 'uptime', 'Auto-'optimization', 'Predictive maintenance']
-        }
-      ]
-    },
-    'ai-2026': {
-      title: 'AI 2026 Future Vision',
-      subtitle: 'Prepare for the Next Decade of AI Innovation',
-      features: [
-        {
-          icon: Globe,
-          title: 'Global AI Ecosystem',
-          description: 'Worldwide AI network connecting businesses and individuals',
-          benefits: ['Global 'connectivity', 'Cross-platform 'integration', 'Universal AI access']
-        },
-        {
-          icon: Rocket,
-          title: 'Space-Age AI Computing',
-          description: 'AI systems designed for space exploration and interplanetary communication',
-          benefits: ['Space-grade 'reliability', 'Interplanetary 'communication', 'Zero-gravity optimization']
-        },
-        {
-          icon: Star,
-          title: 'Conscious AI Beings',
-          description: 'AI entities with full consciousness and creative capabilities',
-          benefits: ['Creative problem 'solving', 'Emotional 'intelligence', 'Autonomous innovation']
-        }
-      ]
-    }
-  };
-
-  const currentTech = technologies[activeTab as keyof typeof technologies];
-
+import React from 'react';
+const AI2025_2026UltimateTechnologyShowcase: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -91,7 +8,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0">
           {[...Array(50)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full"
               style={{
@@ -109,10 +26,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -126,7 +42,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             Experience the future of artificial intelligence with our revolutionary 2025-2026 technology suite. 
             Transform your business with cutting-edge AI solutions that were once science fiction.
           </p>
-          
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <divbutton
@@ -142,10 +57,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               Explore Solutions
             </divbutton>
           </div>
-        </divdiv>
-
+        </div>
         {/* Tab Navigation */}
-        <divdiv
+        <div
           className="flex justify-center mb-12"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-full p-2 border border-white/20">
@@ -170,10 +84,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               AI 2026
             </button>
           </div>
-        </divdiv>
-
+        </div>
         {/* Technology Features */}
-          <divdiv
+          <div
             key={activeTab}
             className="mb-16"
           >
@@ -185,10 +98,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                 {currentTech.subtitle}
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {currentTech.features.map((featureindex) => (
-                <divdiv
+                <div
                   key={feature.title}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group"
                 >
@@ -198,11 +110,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                   </div>
-                  
                   <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                     {feature.description}
                   </p>
-
                   <div className="space-y-3">
                     {feature.benefits.map((benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center">
@@ -211,21 +121,19 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                       </div>
                     ))}
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
-
         {/* Stats Section */}
-        <divdiv
+        <div
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Proven Results</h3>
             <p className="text-gray-300 text-lg">Real-world impact from our AI solutions</p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: '500+'label: 'Enterprise Clients' },
@@ -233,7 +141,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               { number: '300%'label: 'ROI Increase' },
               { number: '24/7'label: 'AI Support' }
             ].map((statindex) => (
-              <divdiv
+              <div
                 key={stat.label}
                 className="text-center"
               >
@@ -241,13 +149,12 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
-
+        </div>
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -257,7 +164,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of forward-thinking companies already using our AI solutions to revolutionize their operations.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
@@ -273,10 +179,12 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
+
 export default AI2025_2026UltimateTechnologyShowcase;
+</div></div></div></div></div></div>

@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
 const AdvancedTechInnovationHub2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0 }
   };
-
   const staggerChildren = {
     hidden: { opacity: 0 },
     visible: {
@@ -18,7 +15,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
       }
     }
   };
-
   const innovationCategories = {
     ai: {
       title: "Advanced AI Systems",
@@ -121,7 +117,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
       ]
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -136,7 +131,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
-        
         <div className="container mx-auto relative z-10">
           <motion.div 
             className="text-center max-w-5xl mx-auto"
@@ -169,7 +163,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Innovation Tabs */}
       <motion.section 
         className="py-16 px-4"
@@ -190,7 +183,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
               Discover the latest breakthroughs across all major technology sectors
             </p>
           </motion.div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(innovationCategories).map(([key, category]) => (
@@ -208,7 +200,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -247,7 +238,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Research Statistics */}
       <motion.section 
         className="py-20 px-4 bg-gradient-to-r from-blue-800/30 to-purple-800/30"
@@ -268,7 +258,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
               Our innovations are transforming industries and creating new possibilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: "500+", label: "Active Research Projects", description: "Cutting-edge research across all technology sectors" },
@@ -291,7 +280,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
           </div>
         </div>
       </motion.section>
-
       {/* Call to Action */}
       <motion.section 
         className="py-20 px-4"
@@ -325,5 +313,6 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
     </div>
   );
 };
+
 
 export default AdvancedTechInnovationHub2027;

@@ -6,7 +6,6 @@ import {
   Network, Cloud, Lock, Code, Globe, Star,
   TrendingUp, BarChart3, Zap, Target, CheckCircle
 } from 'lucide-react';
-
 interface NavLink {
   href: string;
   label: string;
@@ -14,12 +13,10 @@ interface NavLink {
   description?: string;
   badge?: string;
 }
-
 interface NavSection {
   title: string;
   links: NavLink[];
 }
-
 export default function Sidebar() {
   const navigationSections: NavSection[] = useMemo(
     () => [
@@ -80,130 +77,7 @@ export default function Sidebar() {
     []
   );
 
-  const utilityLinks: NavLink[] = useMemo(
-    () => [
-      { href: '/site-health', label: 'Site Health', icon: CheckCircle, description: 'Website health monitoring' },
-      { href: '/sitemap', label: 'Sitemap', icon: Globe, description: 'Site structure overview' },
-      { href: '/search', label: 'Search', icon: BarChart3, description: 'Search functionality' }
-    ],
-    []
-  );
+};
 
-  return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-80 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
-      {/* Header */}
-      <div className="mb-6 px-2">
-        <div className="flex items-center space-x-3 mb-4">
-          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-            <Rocket className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <div className="text-lg font-bold tracking-wide">
-              <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Zion</span>
-              <span className="ml-2 text-white/60">Navigation</span>
-            </div>
-            <div className="text-xs text-gray-500">Tech Group</div>
-          </div>
-        </div>
-      </div>
 
-      {/* Navigation Sections */}
-      <div className="space-y-8">
-        {navigationSections.map((section, sectionIndex) => (
-          <div key={sectionIndex}>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
-              {section.title}
-            </h3>
-            <div className="space-y-1">
-              {section.links.map((link, linkIndex) => (
-                <a
-                  key={linkIndex}
-                  href={link.href}
-                  className="group flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-200"
-                >
-                  {link.icon && (
-                    <link.icon className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" />
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center space-x-2">
-                      <span className="truncate">{link.label}</span>
-                      {link.badge && (
-                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                          link.badge === 'New' 
-                            ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
-                            : 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
-                        }`}>
-                          {link.badge}
-                        </span>
-                      )}
-                    </div>
-                    {link.description && (
-                      <p className="text-xs text-gray-500 truncate">{link.description}</p>
-                    )}
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        {/* Utility Links */}
-        <div>
-          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
-            Utilities
-          </h3>
-          <div className="space-y-1">
-            {utilityLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="group flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-200"
-              >
-                {link.icon && (
-                  <link.icon className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" />
-                )}
-                <div className="flex-1 min-w-0">
-                  <span className="truncate">{link.label}</span>
-                  {link.description && (
-                    <p className="text-xs text-gray-500 truncate">{link.description}</p>
-                  )}
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="pt-6 border-t border-slate-700/50">
-          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
-            Contact
-          </h3>
-          <div className="space-y-2 px-2">
-            <div className="text-xs text-gray-500">
-              <div className="flex items-center space-x-2 mb-1">
-                <Users className="w-3 h-3" />
-                <span>Zion Tech Group</span>
-              </div>
-              <div className="text-gray-600">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </div>
-            </div>
-            <div className="text-xs text-gray-500">
-              <div className="flex items-center space-x-2 mb-1">
-                <Zap className="w-3 h-3" />
-                <span>Get Started</span>
-              </div>
-              <a 
-                href="/contact" 
-                className="text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                Contact Us →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
-  );
-}
+export default Sidebar;

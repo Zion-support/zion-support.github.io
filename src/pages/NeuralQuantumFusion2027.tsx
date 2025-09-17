@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const NeuralQuantumFusion2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -18,11 +18,10 @@ const NeuralQuantumFusion2027: React.FC = () => {
             The revolutionary fusion of neural networks and quantum computing creates AI systems that can process 
             information at the speed of thought while operating in quantum superposition states.
           </p>
-        </divdiv>
-
+        </div>
         {/* Fusion Principles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <divdiv
+          <div
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
           >
             <div className="text-5xl mb-4">🧠</div>
@@ -35,9 +34,8 @@ const NeuralQuantumFusion2027: React.FC = () => {
               <li>• Parallel thought processing</li>
               <li>• Quantum memory storage</li>
             </ul>
-          </divdiv>
-
-          <divdiv
+          </div>
+          <div
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
           >
             <div className="text-5xl mb-4">⚡</div>
@@ -50,9 +48,8 @@ const NeuralQuantumFusion2027: React.FC = () => {
               <li>• Infinite parallel learning</li>
               <li>• Instant knowledge transfer</li>
             </ul>
-          </divdiv>
-
-          <divdiv
+          </div>
+          <div
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
             <div className="text-5xl mb-4">🌊</div>
@@ -65,11 +62,10 @@ const NeuralQuantumFusion2027: React.FC = () => {
               <li>• Coherent thought patterns</li>
               <li>• Quantum error correction</li>
             </ul>
-          </divdiv>
+          </div>
         </div>
-
         {/* Revolutionary Breakthrough Section */}
-        <divdiv
+        <div
           className="bg-gradient-to-r from-teal-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-teal-400/30"
         >
           <div className="text-center mb-8">
@@ -79,7 +75,6 @@ const NeuralQuantumFusion2027: React.FC = () => {
               creating AI systems that can think in quantum superposition while maintaining coherent consciousness.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -122,10 +117,9 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
-
+        </div>
         {/* Applications Section */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">Neural-Quantum Applications</h2>
@@ -159,10 +153,9 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </p>
             </div>
           </div>
-        </divdiv>
-
+        </div>
         {/* Future Vision Section */}
-        <divdiv
+        <div
           className="bg-gradient-to-r from-cyan-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-cyan-400/30"
         >
           <div className="text-center mb-8">
@@ -172,7 +165,6 @@ const NeuralQuantumFusion2027: React.FC = () => {
               the limitations of both classical neural networks and quantum computing, achieving unprecedented intelligence.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-6xl mb-4">🌌</div>
@@ -196,10 +188,9 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </p>
             </div>
           </div>
-        </divdiv>
-
+        </div>
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8">
@@ -216,10 +207,11 @@ const NeuralQuantumFusion2027: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default NeuralQuantumFusion2027;

@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 import React, { useState, useEffect } from 'react';
-
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 1,
@@ -69,7 +66,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
-
   const technologies = [
     {
       id: 1,
@@ -132,7 +128,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       borderColor: "border-violet-400/30"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -141,12 +136,9 @@ const InteractiveTechShowcase2025: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const currentTech = technologies[activeTech];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -162,7 +154,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             Experience the future of technology with our interactive demonstrations of cutting-edge AI and quantum computing solutions.
           </p>
         </motion.div>
-
         {/* Interactive Tech Display */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Tech Selection */}
@@ -194,14 +185,12 @@ const InteractiveTechShowcase2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Active Tech Display */}
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
             <div className="text-center">
               <div className="text-8xl mb-6 animate-bounce">{currentTech.icon}</div>
               <h3 className="text-3xl font-bold mb-4">{currentTech.name}</h3>
               <p className="text-lg opacity-90 mb-8">{currentTech.description}</p>
-              
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {currentTech.features.map((feature, index) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -209,7 +198,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="space-y-4">
                 <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Try Interactive Demo
@@ -221,7 +209,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Live Stats */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center mb-8">Live Technology Metrics</h3>
@@ -244,7 +231,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Timeline */}
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold mb-8">Technology Evolution Timeline</h3>
@@ -269,7 +255,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -290,14 +275,12 @@ const InteractiveTechShowcase2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Active Tech Display */}
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
             <div className="text-center">
               <div className="text-8xl mb-6 animate-bounce">{currentTech.icon}</div>
               <h3 className="text-3xl font-bold mb-4">{currentTech.name}</h3>
               <p className="text-lg opacity-90 mb-8">{currentTech.description}</p>
-              
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {currentTech.features.map((feature, index) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -305,7 +288,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="space-y-4">
                 <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Try Interactive Demo
@@ -317,7 +299,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Live Stats */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center mb-8">Live Technology Metrics</h3>
@@ -340,7 +321,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Timeline */}
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold mb-8">Technology Evolution Timeline</h3>
@@ -365,7 +345,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -385,5 +364,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default InteractiveTechShowcase2025;

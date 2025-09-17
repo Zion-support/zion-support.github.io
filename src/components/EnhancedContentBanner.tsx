@@ -1,84 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const EnhancedContentBanner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const featuredContent = [
-    {
-      id: 1,
-      title: "Next-Gen Tech Trends 2026",
-      description: "Discover revolutionary technologies that will reshape our world",
-      icon: "🚀",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      link: "/pages/NextGenTechTrends2026",
-      badge: "NEW",
-      badgeColor: "bg-gradient-to-r from-yellow-400 to-orange-500"
-    },
-    {
-      id: 2,
-      title: "AI Transformation Mastery",
-      description: "Master the art of AI transformation with our comprehensive framework",
-      icon: "🧠",
-      gradient: "from-blue-600 via-purple-600 to-indigo-600",
-      link: "/pages/AITransformationMastery2026",
-      badge: "HOT",
-      badgeColor: "bg-gradient-to-r from-red-500 to-pink-500"
-    },
-    {
-      id: 3,
-      title: "Quantum-Neural Fusion",
-      description: "Revolutionary fusion of quantum computing and neural networks",
-      icon: "⚛️",
-      gradient: "from-cyan-600 via-blue-600 to-purple-600",
-      link: "/pages/QuantumNeuralFusion2026",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-gradient-to-r from-green-400 to-blue-500"
-    },
-    {
-      id: 4,
-      title: "Synthetic Intelligence",
-      description: "The next evolution of AI with autonomous synthetic beings",
-      icon: "🤖",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      link: "/pages/SyntheticIntelligence2026",
-      badge: "FUTURE",
-      badgeColor: "bg-gradient-to-r from-purple-400 to-pink-500"
-    },
-    {
-      id: 5,
-      title: "Consciousness Interface",
-      description: "Direct neural interfaces for seamless human-AI communication",
-      icon: "🧬",
-      gradient: "from-rose-600 via-pink-600 to-purple-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-gradient-to-r from-indigo-400 to-purple-500"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  if (!isVisible) return null;
-
   return (
     <div className="relative overflow-hidden">
       {/* Main Banner */}
@@ -98,15 +19,13 @@ const EnhancedContentBanner: React.FC = () => {
               ×
             </button>
           </div>
-          
           <p className="text-xl opacity-95 mb-8 max-w-4xl">
             Experience the future of technology with our groundbreaking new content. 
             From AI transformation to quantum computing, explore innovations that will reshape tomorrow.
           </p>
-
           {/* Carousel */}
           <div className="relative">
-              <divdiv
+              <div
                 key={currentSlide}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30"
               >
@@ -128,9 +47,8 @@ const EnhancedContentBanner: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
-
             {/* Navigation Controls */}
             <button
               onClick={prevSlide}
@@ -145,7 +63,6 @@ const EnhancedContentBanner: React.FC = () => {
               →
             </button>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-6">
             {featuredContent.map((_, index) => (
@@ -160,7 +77,6 @@ const EnhancedContentBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quick Access Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         {featuredContent.map((content, index) => (
@@ -181,7 +97,6 @@ const EnhancedContentBanner: React.FC = () => {
           </diva>
         ))}
       </div>
-
       {/* Interactive Stats */}
       <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 text-white mb-8">
         <div className="text-center mb-6">
@@ -207,7 +122,6 @@ const EnhancedContentBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
         <h3 className="text-3xl font-bold mb-4">Stay Ahead of the Curve</h3>
@@ -227,5 +141,6 @@ const EnhancedContentBanner: React.FC = () => {
     </div>
   );
 };
+
 
 export default EnhancedContentBanner;

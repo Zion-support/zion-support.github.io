@@ -1,22 +1,15 @@
-import React from 'react';
-
-const UltimateContentBanner2025: React.FC = () => {
-  return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
 import { motion } from 'framer-motion';
-
 const UltimateContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const features = [
     {
       id: 1,
@@ -55,7 +48,6 @@ const UltimateContentBanner2025: React.FC = () => {
       stats: "50+ Innovations"
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -67,7 +59,6 @@ const UltimateContentBanner2025: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
@@ -77,7 +68,6 @@ const UltimateContentBanner2025: React.FC = () => {
       transition: { duration: 0.6 }
     }
   };
-
   return (
     <motion.div
       className="relative mb-12 overflow-hidden"
@@ -90,7 +80,6 @@ const UltimateContentBanner2025: React.FC = () => {
       {/* Background with animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
-      
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -113,7 +102,6 @@ const UltimateContentBanner2025: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
@@ -128,7 +116,6 @@ const UltimateContentBanner2025: React.FC = () => {
             Experience the most revolutionary technological breakthroughs that will reshape our world in 2025
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🧠</div>
@@ -140,7 +127,6 @@ const UltimateContentBanner2025: React.FC = () => {
               Explore AI Revolution →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Breakthrough</h3>
@@ -151,7 +137,6 @@ const UltimateContentBanner2025: React.FC = () => {
               Discover Breakthrough →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center">Innovation Hub</h3>
@@ -168,7 +153,6 @@ const UltimateContentBanner2025: React.FC = () => {
             Discover our latest groundbreaking content featuring the most advanced technologies of 2025
           </p>
         </motion.div>
-
         {/* Carousel */}
         <motion.div
           className="relative"
@@ -205,7 +189,6 @@ const UltimateContentBanner2025: React.FC = () => {
               ))}
             </motion.div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -219,7 +202,6 @@ const UltimateContentBanner2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Quick Access Grid */}
         <motion.div
           className="mt-12 grid md:grid-cols-3 gap-6"
@@ -241,7 +223,6 @@ const UltimateContentBanner2025: React.FC = () => {
             </motion.a>
           ))}
         </motion.div>
-
         {/* Additional Promotional Content */}
         <motion.div
           className="mt-12 text-center"
@@ -275,7 +256,6 @@ const UltimateContentBanner2025: React.FC = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      
       {/* Content */}
       <div className="relative z-10 p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
@@ -294,7 +274,6 @@ const UltimateContentBanner2025: React.FC = () => {
               Discover our most revolutionary content featuring breakthrough technologies that are reshaping the future
             </p>
           </motion.div>
-
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
@@ -327,7 +306,6 @@ const UltimateContentBanner2025: React.FC = () => {
                       Explore →
                     </a>
                   </div>
-                  
                   {/* Hover Effect */}
                   <AnimatePresence>
                     {hoveredCard === feature.id && (
@@ -343,7 +321,6 @@ const UltimateContentBanner2025: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
@@ -371,5 +348,6 @@ const UltimateContentBanner2025: React.FC = () => {
     </motion.div>
   );
 };
+
 
 export default UltimateContentBanner2025;

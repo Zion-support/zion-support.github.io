@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const NextGenInnovationHub2033: React.FC = () => {
   return (
     <>
@@ -9,7 +8,6 @@ const NextGenInnovationHub2033: React.FC = () => {
         <meta name="description" content="Discover the next-generation innovation hub of 2033 with cutting-edge technologies and revolutionary solutions." />
         <meta name="keywords" content="innovation hub, next-gen technology, cutting-edge solutions, 2033, technology innovation" />
       </Helmet>
-      
       <main className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -32,7 +30,6 @@ const NextGenInnovationHub2033: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Innovation Categories */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
@@ -53,7 +50,6 @@ const NextGenInnovationHub2033: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">⚡</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Computing</h3>
@@ -72,7 +68,6 @@ const NextGenInnovationHub2033: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Interdimensional Tech</h3>
@@ -92,7 +87,6 @@ const NextGenInnovationHub2033: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Research Labs */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-center mb-12 text-white">Research Laboratories</h2>
@@ -112,7 +106,6 @@ const NextGenInnovationHub2033: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30">
                 <h3 className="text-2xl font-bold mb-4 text-white">Quantum Innovation Lab</h3>
                 <p className="text-teal-200 mb-6">
@@ -130,7 +123,6 @@ const NextGenInnovationHub2033: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Innovation Statistics */}
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 text-center">
@@ -138,26 +130,22 @@ const NextGenInnovationHub2033: React.FC = () => {
               <div className="text-xl text-emerald-200 mb-4">Active Innovations</div>
               <div className="text-emerald-300 text-sm">Cutting-edge technologies in development</div>
             </div>
-            
             <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 text-center">
               <div className="text-5xl font-bold text-white mb-2">99.9%</div>
               <div className="text-xl text-teal-200 mb-4">Success Rate</div>
               <div className="text-teal-300 text-sm">Revolutionary breakthrough achievements</div>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 text-center">
               <div className="text-5xl font-bold text-white mb-2">∞</div>
               <div className="text-xl text-cyan-200 mb-4">Possibilities</div>
               <div className="text-cyan-300 text-sm">Infinite potential for innovation</div>
             </div>
-            
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 text-center">
               <div className="text-5xl font-bold text-white mb-2">2033</div>
               <div className="text-xl text-blue-200 mb-4">Innovation Year</div>
               <div className="text-blue-300 text-sm">The year of breakthrough innovations</div>
             </div>
           </div>
-
           {/* Call to Action */}
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -180,5 +168,6 @@ const NextGenInnovationHub2033: React.FC = () => {
     </>
   );
 };
+
 
 export default NextGenInnovationHub2033;

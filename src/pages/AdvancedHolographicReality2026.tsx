@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const AdvancedHolographicReality2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -34,14 +32,12 @@ const AdvancedHolographicReality2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Holographic Features</h2>
           <p className="text-xl opacity-80">Experience technology that was once considered science fiction</p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, y: 50 }}
@@ -60,7 +56,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
               <li>• Haptic feedback integration</li>
             </ul>
           </div>
-          
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +73,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
               <li>• Contextual overlays</li>
             </ul>
           </div>
-          
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,33 +92,28 @@ const AdvancedHolographicReality2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Applications</h2>
           <p className="text-xl opacity-80">Transform industries with holographic technology</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-4xl mb-4">🏥</div>
             <h3 className="text-xl font-semibold mb-2">Medical Visualization</h3>
             <p className="text-sm opacity-80">3D holographic models for surgical planning and medical education</p>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-semibold mb-2">Education</h3>
             <p className="text-sm opacity-80">Immersive learning experiences with interactive 3D content</p>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-4xl mb-4">🏢</div>
             <h3 className="text-xl font-semibold mb-2">Architecture</h3>
             <p className="text-sm opacity-80">Walk through building designs before construction begins</p>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-4xl mb-4">🎮</div>
             <h3 className="text-xl font-semibold mb-2">Entertainment</h3>
@@ -132,7 +121,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technology Specifications */}
       <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">
@@ -140,7 +128,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Technical Specifications</h2>
             <p className="text-xl opacity-80">Cutting-edge technology powering the future</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Display Technology</h3>
@@ -163,7 +150,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
             <div>
               <h3 className="text-2xl font-semibold mb-4">Neural Interface</h3>
               <ul className="space-y-3">
@@ -188,24 +174,16 @@ const AdvancedHolographicReality2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-80 mb-8">Join the holographic revolution and transform your business</p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
-              Download Brochure
-            </button>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">AdvancedHolographicReality2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default AdvancedHolographicReality2026;

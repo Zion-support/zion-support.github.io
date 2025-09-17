@@ -3,6 +3,9 @@ import Head from 'next/head';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
+};
+
+
 
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
@@ -77,7 +80,7 @@ export default function Revolutionary2030ServicesPage() {
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <divdiv
+          <div
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
@@ -86,7 +89,7 @@ export default function Revolutionary2030ServicesPage() {
                 2030 Revolutionary Technology Services
               </span>
             </div>
-          </divdiv>
+          </div>
 
           <divh1
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
@@ -107,7 +110,7 @@ export default function Revolutionary2030ServicesPage() {
             and quantum computing to space mining and DNA computing, we're building the future today.
           </divp>
 
-          <divdiv
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
@@ -118,14 +121,14 @@ export default function Revolutionary2030ServicesPage() {
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
               View Pricing
             </button>
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Services Showcase */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-20"
@@ -144,12 +147,12 @@ export default function Revolutionary2030ServicesPage() {
               Discover our comprehensive range of cutting-edge 2030 technology services that will 
               transform your business and propel you into the future.
             </p>
-          </divdiv>
+          </div>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             {innovative2030Services.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -219,12 +222,12 @@ export default function Revolutionary2030ServicesPage() {
                     </button>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center"
@@ -246,14 +249,14 @@ export default function Revolutionary2030ServicesPage() {
                 </button>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -291,7 +294,7 @@ export default function Revolutionary2030ServicesPage() {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 

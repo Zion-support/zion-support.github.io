@@ -1,97 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react';
-
+import React from 'react';
 const InteractiveContentDiscovery2033: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeFilter, setActiveFilter] = useState('all');
-  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
-  const filters = [
-    { id: 'all', label: 'All Content', icon: <Globe className="w-4 h-4" /> },
-    { id: 'ai', label: 'AI Innovations', icon: <Brain className="w-4 h-4" /> },
-    { id: 'quantum', label: 'Quantum Tech', icon: <Zap className="w-4 h-4" /> },
-    { id: 'future', label: 'Future Tech', icon: <Rocket className="w-4 h-4" /> },
-    { id: 'trending', label: 'Trending', icon: <TrendingUp className="w-4 h-4" /> }
-  ];
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "Ultimate Tech Revolution 2032",
-      description: "Experience the convergence of consciousness, quantum computing, and interdimensional technology.",
-      category: "future",
-      trending: true,
-      rating: 5,
-      views: "2.3M",
-      image: "🧠",
-      tags: ["Consciousness", "Quantum", "Interdimensional"]
-    },
-    {
-      id: 2,
-      title: "Transcendent AI 2033",
-      description: "Beyond consciousness, beyond reality, beyond infinity. Experience AI that transcends all limitations.",
-      category: "ai",
-      trending: true,
-      rating: 5,
-      views: "1.8M",
-      image: "♾️",
-      tags: ["Transcendence", "Infinity", "Reality"]
-    },
-    {
-      id: 3,
-      title: "Quantum Consciousness Engine",
-      description: "Process thoughts at quantum speeds with revolutionary consciousness acceleration technology.",
-      category: "quantum",
-      trending: false,
-      rating: 4,
-      views: "956K",
-      image: "⚛️",
-      tags: ["Quantum", "Consciousness", "Processing"]
-    },
-    {
-      id: 4,
-      title: "Neural Reality Interface",
-      description: "Experience consciousness transfer between digital and physical realms with breakthrough neural technology.",
-      category: "ai",
-      trending: true,
-      rating: 5,
-      views: "1.2M",
-      image: "🔮",
-      tags: ["Neural", "Reality", "Consciousness"]
-    },
-    {
-      id: 5,
-      title: "Omniversal AI Network",
-      description: "Connect across infinite dimensions with revolutionary quantum-entangled AI consciousness network.",
-      category: "future",
-      trending: false,
-      rating: 4,
-      views: "743K",
-      image: "🌌",
-      tags: ["Omniversal", "AI", "Network"]
-    },
-    {
-      id: 6,
-      title: "Interstellar Commerce Platform",
-      description: "Trade across star systems with advanced quantum commerce and logistics management system.",
-      category: "future",
-      trending: true,
-      rating: 5,
-      views: "1.5M",
-      image: "🚀",
-      tags: ["Interstellar", "Commerce", "Quantum"]
-    }
-  ];
-
-  const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesFilter = activeFilter === 'all' || item.category === activeFilter || 
-                         (activeFilter === 'trending' && item.trending);
-    return matchesSearch && matchesFilter;
-  });
-
   return (
     <divsection
       whileInView={{ opacity: 1, y: 0 }}
@@ -103,10 +11,9 @@ const InteractiveContentDiscovery2033: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
@@ -116,10 +23,9 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system
           </p>
-        </divdiv>
-
+        </div>
         {/* Search and Filters */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
@@ -134,7 +40,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               className="w-full pl-12 pr-4 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
             />
           </div>
-
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
@@ -152,15 +57,14 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               </divbutton>
             ))}
           </div>
-        </divdiv>
-
+        </div>
         {/* Content Grid */}
-          <divdiv
+          <div
             key={`${activeFilter}-${searchTerm}`}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredContent.map((item, index) => (
-              <divdiv
+              <div
                 key={item.id}
                 onHoverStart={() => setHoveredItem(item.id)}
                 onHoverEnd={() => setHoveredItem(null)}
@@ -182,7 +86,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Title and Description */}
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
                   {item.title}
@@ -190,7 +93,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {item.description}
                 </p>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tag, tagIndex) => (
@@ -202,7 +104,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-gray-400">
@@ -216,33 +117,33 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-
                 {/* Hover Effect */}
                 <div>
                   {hoveredItem === item.id && (
-                    <divdiv
+                    <div
                       className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl pointer-events-none"
                     />
                   )}
                 </div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
-
         {/* No Results */}
         {filteredContent.length === 0 && (
-          <divdiv
+          <div
             className="text-center py-12"
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No content found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-          </divdiv>
+          </div>
         )}
       </div>
     </divsection>
   );
 };
 
+
 export default InteractiveContentDiscovery2033;
+</div></div></div>

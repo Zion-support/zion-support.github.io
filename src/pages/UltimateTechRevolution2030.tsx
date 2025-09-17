@@ -5,20 +5,16 @@ import React from 'react';
           </h1>
           </div>
         </div>
-
         {/* Revolutionary Features */}
               </div>
             </div>
           </div>
-
               </div>
             </div>
           </div>
-
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           </div>
@@ -45,5 +41,6 @@ import React from 'react';
     </>
   );
 };
+
 
 export default UltimateTechRevolution2030;

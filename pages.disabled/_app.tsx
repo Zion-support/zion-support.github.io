@@ -1,2 +1,12 @@
-import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import PerformanceMonitor from \'../src/components/PerformanceMonitor\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> <PerformanceMonitor /> <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
-import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import PerformanceMonitor from '../src/components/PerformanceMonitor'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> <PerformanceMonitor /> <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+import React from 'react';
+
+const _app: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">_app</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default _app;

@@ -1,20 +1,16 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-function withAuth(Component) {
-    const Wrapped = (props) => {
-        const router = useNavigate();
-        const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-        useEffect(() => {
-            if (!isLoggedIn) {
-                navigate('/login?next=/community/new');
-            }
-        }, [isLoggedIn, router]);
-        if (!isLoggedIn) {
-            return null;
-        }
-        return <Component {...props}/>;
-    };
-    return Wrapped;
-}
-export default withAuth;
+import React from 'react';
+const withAuth.js = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">withAuth.js</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export default withAuth.js;

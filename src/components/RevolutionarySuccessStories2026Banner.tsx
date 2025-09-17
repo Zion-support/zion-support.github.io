@@ -1,36 +1,7 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Award
-  ArrowRight
-  TrendingUp
-  Users
-  Star,
-  X,
-  Play,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const RevolutionarySuccessStories2026Banner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+import React from 'react';
+const RevolutionarySuccessStories2026Banner: React.FC = () => {
   return (
-    <divdiv
+    <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
@@ -51,7 +22,6 @@ const RevolutionarySuccessStories2026Banner = () => {
           <div className="absolute bottom-8 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-500"></div>
         </div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex items-center justify-between">
           {/* Left Content */}
@@ -65,7 +35,6 @@ const RevolutionarySuccessStories2026Banner = () => {
                   <Star className="w-2.5 h-2.5 text-yellow-800" />
                 </div>
               </div>
-              
               <div>
                 <h2 className="text-xl font-bold text-white">
                   🏆 Revolutionary Success Stories 2026
@@ -75,7 +44,6 @@ const RevolutionarySuccessStories2026Banner = () => {
                 </p>
               </div>
             </div>
-
             {/* Feature Icons */}
             <div className="hidden md:flex items-center space-x-4 ml-8">
               <div className="flex items-center space-x-1 text-blue-200">
@@ -96,7 +64,6 @@ const RevolutionarySuccessStories2026Banner = () => {
               </div>
             </div>
           </div>
-
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
             {/* Stats */}
@@ -114,7 +81,6 @@ const RevolutionarySuccessStories2026Banner = () => {
                 <div className="text-green-200">Hours Saved</div>
               </div>
             </div>
-
             {/* Action Buttons */}
             <div className="flex items-center space-x-3">
               <button className="group flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40">
@@ -122,7 +88,6 @@ const RevolutionarySuccessStories2026Banner = () => {
                 <span>View Stories</span>
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
-              
               <button 
                 onClick={handleDismiss}
                 className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
@@ -132,7 +97,6 @@ const RevolutionarySuccessStories2026Banner = () => {
             </div>
           </div>
         </div>
-
         {/* Mobile Stats */}
         <div className="md:hidden mt-4 flex justify-center space-x-6 text-sm">
           <div className="text-center">
@@ -149,13 +113,13 @@ const RevolutionarySuccessStories2026Banner = () => {
           </div>
         </div>
       </div>
-
       {/* Pulse Effect */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500">
         <div className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 animate-pulse"></div>
       </div>
-    </divdiv>
+    </div>
   );
 };
+
 
 export default RevolutionarySuccessStories2026Banner;

@@ -1,94 +1,21 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  ArrowRight
-  Star
-  Zap
-  Sparkles,
-  TrendingUp,
-  Users,
-  Globe,
-  X,
-  Play,
-  Download,
-  ExternalLink
-} from 'lucide-react';
-
-const NewContent2025UltimateShowcasePromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentSlidesetCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-advance slides
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }4000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const slides = [
-    {
-      title: "Revolutionary AI Solutions",
-      subtitle: "Transform your business with cutting-edge AI",
-      description: "Discover our latest AI technologies that are reshaping industries",
-      icon: Sparkles,
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/20 to-pink-900/20"
-    },
-    {
-      title: "Quantum Computing Breakthrough",
-      subtitle: "Next-generation quantum solutions",
-      description: "Experience the power of quantum computing for complex problems",
-      icon: Zap,
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900/20 to-cyan-900/20"
-    },
-    {
-      title: "Neural Interface Technology",
-      subtitle: "Brain-computer interface revolution",
-      description: "Connect directly with technology through neural interfaces",
-      icon: TrendingUp,
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-900/20 to-emerald-900/20"
-    }
-  ];
-
-  const features = [
-    "500+ Projects Completed",
-    "99% Client Satisfaction",
-    "50+ Countries Served",
-    "$50M+ Cost Savings"
-  ];
-
-  const currentSlideData = slides[currentSlide];
-
-  if (isDismissed) return null;
-
+import React from 'react';
+const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden"
         >
           {/* Background with gradient */}
           <div className={`absolute inset-0 bg-gradient-to-r ${currentSlideData.bgColor} transition-all duration-1000`} />
-          
           {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse" />
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] animate-pulse" />
           </div>
-
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(8)].map((_i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full"
                 style={{
@@ -106,12 +33,11 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
               />
             ))}
           </div>
-
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-between">
               {/* Left side - Content */}
               <div className="flex-1 pr-8">
-                <divdiv
+                <div
                   key={currentSlide}
                   className="flex items-start space-x-4"
                 >
@@ -119,7 +45,6 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
-
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-2">
@@ -130,19 +55,15 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                         ULTIMATE SHOWCASE
                       </span>
                     </div>
-                    
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </h2>
-                    
                     <p className="text-lg text-white/90 mb-2">
                       {currentSlideData.subtitle}
                     </p>
-                    
                     <p className="text-white/80 text-sm mb-4">
                       {currentSlideData.description}
                     </p>
-
                     {/* Features */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {features.map((featureindex) => (
@@ -154,7 +75,6 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
@@ -164,7 +84,6 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                         Explore Showcase
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
-                      
                       <a
                         href="/demo"
                         className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
@@ -174,37 +93,32 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                       </a>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
-
               {/* Right side - Visual elements */}
               <div className="hidden lg:block flex-shrink-0">
                 <div className="relative w-64 h-64">
                   {/* Rotating elements */}
-                  <divdiv
+                  <div
                     className="absolute inset-0 rounded-full border-2 border-white/20"
                   />
-                  
-                  <divdiv
+                  <div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
                   />
-                  
-                  <divdiv
+                  <div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
                   />
-
                   {/* Center content */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <divdiv
+                    <div
                       className={`w-20 h-20 rounded-full bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center shadow-2xl`}
                     >
                       <currentSlideData.icon className="w-10 h-10 text-white" />
-                    </divdiv>
+                    </div>
                   </div>
-
                   {/* Floating dots */}
                   {[...Array(6)].map((_i) => (
-                    <divdiv
+                    <div
                       key={i}
                       className="absolute w-3 h-3 bg-white/60 rounded-full"
                       style={{
@@ -222,7 +136,6 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                   ))}
                 </div>
               </div>
-
               {/* Close button */}
               <button
                 onClick={() => setIsDismissed(true)}
@@ -231,7 +144,6 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {slides.map((_index) => (
@@ -247,10 +159,12 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
+
 export default NewContent2025UltimateShowcasePromotionBanner;
+</div></div></div></div></div></div></div>

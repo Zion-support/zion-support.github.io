@@ -1,8 +1,6 @@
 'use client';
-
 import React from 'react';
 import Head from 'next/head';
-
 interface AdvancedSEOProps {
   title: string;
   description: string;
@@ -15,7 +13,9 @@ interface AdvancedSEOProps {
   author?: string;
   section?: string;
   tags?: string[];
-}
+};
+
+
 
 export default function AdvancedSEO({
   title,
@@ -63,7 +63,6 @@ export default function AdvancedSEO({
       }
     })
   };
-
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -73,7 +72,6 @@ export default function AdvancedSEO({
       <meta name="author" content={author} />
       <meta name="robots" content="indexfollow" />
       <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
@@ -82,7 +80,6 @@ export default function AdvancedSEO({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -90,16 +87,13 @@ export default function AdvancedSEO({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -107,15 +101,11 @@ export default function AdvancedSEO({
           __html: JSON.stringify(structuredData)
         }}
       />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    </Head>
   );
-}

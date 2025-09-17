@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Globe, Brain, Rocket } from 'lucide-react';
-
 interface RevolutionaryContentShowcaseProps {
   className?: string;
 }
-
 export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcaseProps> = ({ className = '' }) => {
   const revolutionaryFeatures = [
     {
@@ -37,7 +35,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const latestBlogPosts = [
     {
       title: "Revolutionary AI Consciousness Breakthrough",
@@ -61,7 +58,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
       featured: true
     }
   ];
-
   return (
     <div className={`py-20 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +76,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
             Experience consciousness computing, quantum-neural fusion, and interdimensional business operations.
           </p>
         </motion.div>
-
         {/* Revolutionary Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {revolutionaryFeatures.map((feature, index) => (
@@ -103,7 +98,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
             </motion.div>
           ))}
         </div>
-
         {/* Latest Revolutionary Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -119,7 +113,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
               Discover the breakthrough technologies shaping tomorrow
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {latestBlogPosts.map((post, index) => (
               <motion.div
@@ -151,7 +144,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
               </motion.div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -162,7 +154,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
             </motion.button>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -197,5 +188,6 @@ export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcase
     </div>
   );
 };
+
 
 export default RevolutionaryContentShowcase;

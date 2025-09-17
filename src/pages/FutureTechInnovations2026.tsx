@@ -1,7 +1,3 @@
-import React from 'react';
-
-const FutureTechInnovations2026: React.FC = () => {
-  return (
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Photorealistic VR Environments</li>
@@ -15,7 +11,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           {/* Quantum Internet */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -35,7 +30,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           {/* Synthetic Biology */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -55,7 +49,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           {/* Space Technology */}
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
@@ -75,7 +68,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           {/* Neuromorphic Computing */}
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -95,7 +87,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           {/* Advanced Robotics */}
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -121,7 +112,6 @@ const FutureTechInnovations2026: React.FC = () => {
               How these innovations will transform industries and society
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl mb-4">📈</div>
@@ -131,7 +121,6 @@ const FutureTechInnovations2026: React.FC = () => {
                 <span className="text-green-400 font-bold text-lg">+300% Productivity</span>
               </div>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl mb-4">🌍</div>
               <h3 className="text-2xl font-bold mb-4">Environmental Impact</h3>
@@ -140,7 +129,6 @@ const FutureTechInnovations2026: React.FC = () => {
                 <span className="text-emerald-400 font-bold text-lg">-80% Emissions</span>
               </div>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl mb-4">👥</div>
               <h3 className="text-2xl font-bold mb-4">Human Enhancement</h3>
@@ -149,7 +137,6 @@ const FutureTechInnovations2026: React.FC = () => {
                 <span className="text-blue-400 font-bold text-lg">+50 Years Life</span>
               </div>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl mb-4">🔬</div>
               <h3 className="text-2xl font-bold mb-4">Scientific Discovery</h3>
@@ -160,7 +147,6 @@ const FutureTechInnovations2026: React.FC = () => {
             </div>
           </div>
             </div>
-            
             <div className="flex items-center space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-lg">
               <div className="text-4xl">Q2</div>
               <div className="flex-1">
@@ -169,7 +155,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </div>
               <div className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold">June 2026</div>
             </div>
-            
             <div className="flex items-center space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-lg">
               <div className="text-4xl">Q3</div>
               <div className="flex-1">
@@ -178,7 +163,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </div>
               <div className="bg-cyan-500 text-white px-4 py-2 rounded-lg font-semibold">September 2026</div>
             </div>
-            
             <div className="flex items-center space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-lg">
               <div className="text-4xl">Q4</div>
               <div className="flex-1">
@@ -201,5 +185,6 @@ const FutureTechInnovations2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default FutureTechInnovations2026;

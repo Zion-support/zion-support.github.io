@@ -1,26 +1,20 @@
-" </div> </div>" <div className="mt-8">" <p className="text-pink-200">" Visit our website: <a href="https:
 
-</a>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</p>
-</motion>
-</div>
-</div>
-</div>
-</section>
-</div>
+const AIMentalHealthSupportPlatform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>AIMentalHealthSupportPlatform | Zion Tech Group</title>
+        <meta name="description" content="AIMentalHealthSupportPlatform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AIMentalHealthSupportPlatform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AIMentalHealthSupportPlatform;

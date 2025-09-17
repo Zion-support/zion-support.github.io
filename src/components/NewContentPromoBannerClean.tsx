@@ -1,9 +1,7 @@
 import React from 'react';
 import { getRecentBlogPosts } from '../data/blog-posts';
-
 const NewContentPromoBannerClean: React.FC = () => {
   const recent = getRecentBlogPosts(3);
-
   return (
     <div className="mb-12 rounded-2xl p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -23,7 +21,8 @@ const NewContentPromoBannerClean: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
-export default NewContentPromoBannerClean;
 
+export default NewContentPromoBannerClean;

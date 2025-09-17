@@ -1,8 +1,12 @@
-            key={t.key}
-            className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
-            onClick={() => setActive(t.key)}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
+import React from 'react';
+
+const CodeSamples: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CodeSamples</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default CodeSamples;

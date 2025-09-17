@@ -1,53 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const LatestInnovationShowcase: React.FC = () => {
-  const [currentInnovation, setCurrentInnovation] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const innovations = [
-    {
-      title: "AI Innovation Hub 2026",
-      description: "Revolutionary AI systems with synthetic consciousness and autonomous capabilities",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/AIInnovationHub2026",
-      features: ["Synthetic Consciousness", "Autonomous AI Agents", "Quantum AI Integration", "Collective Intelligence"]
-    },
-    {
-      title: "Quantum Computing Revolution",
-      description: "Breakthrough quantum processors solving impossible problems with exponential speed",
-      icon: "⚛️",
-      color: "from-indigo-600 to-purple-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      features: ["1000+ Qubit Processors", "Quantum Supremacy", "Real-world Applications", "Quantum Internet"]
-    },
-    {
-      title: "Space Technology Innovation",
-      description: "Pioneering space exploration with Mars colonization and asteroid mining",
-      icon: "🚀",
-      color: "from-slate-600 to-blue-600",
-      link: "/pages/SpaceTechInnovation2026",
-      features: ["Mars Colonization", "Lunar Base Alpha", "Asteroid Mining", "Deep Space Exploration"]
-    },
-    {
-      title: "Future Tech Trends 2026",
-      description: "Comprehensive analysis of emerging technologies reshaping our world",
-      icon: "🔮",
-      color: "from-blue-600 to-purple-600",
-      link: "/pages/FutureTechTrends2026",
-      features: ["AI Revolution", "Neural Interfaces", "Biotech Breakthroughs", "Clean Energy"]
-    }
-  ];
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, innovations.length]);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10 backdrop-blur-sm"></div>
@@ -61,10 +13,9 @@ const LatestInnovationShowcase: React.FC = () => {
             Experience the cutting-edge innovations that are defining the future of technology
           </p>
         </div>
-
         {/* Innovation Carousel */}
         <div className="relative">
-            <divdiv
+            <div
               key={currentInnovation}
               className="grid md:grid-cols-2 gap-8 items-center"
             >
@@ -96,9 +47,8 @@ const LatestInnovationShowcase: React.FC = () => {
                   Try Demo →
                 </button>
               </div>
-            </divdiv>
+            </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
             {innovations.map((_, index) => (
@@ -114,7 +64,6 @@ const LatestInnovationShowcase: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Play/Pause Button */}
           <div className="flex justify-center mt-4">
             <button
@@ -125,7 +74,6 @@ const LatestInnovationShowcase: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {innovations.map((innovation, index) => (
@@ -143,5 +91,6 @@ const LatestInnovationShowcase: React.FC = () => {
     </div>
   );
 };
+
 
 export default LatestInnovationShowcase;

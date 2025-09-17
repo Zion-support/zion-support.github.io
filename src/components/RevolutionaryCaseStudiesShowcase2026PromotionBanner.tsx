@@ -1,90 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Award
-  ArrowRight
-  Star
-  TrendingUp,
-  X,
-  CheckCircle,
-  DollarSign,
-  Users,
-  Clock,
-  Target,
-  BarChart3,
-  Zap,
-  Shield,
-  Globe
-} from 'lucide-react';
-
-const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat(prev => (prev + 1) % 4);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-
-  const caseStudies = [
-    { 
-      title: 'FinTech Revolution'
-      roi: '500%'
-      icon: DollarSign
-      color: 'text-green-400',
-      company: 'PayFlow Solutions'
-    },
-    { 
-      title: 'Healthcare AI'
-      roi: '400%'
-      icon: Shield
-      color: 'text-blue-400',
-      company: 'MediTech Innovations'
-    },
-    { 
-      title: 'E-commerce Automation'
-      roi: '600%'
-      icon: Globe
-      color: 'text-purple-400',
-      company: 'ShopGlobal'
-    },
-    { 
-      title: 'Smart Manufacturing'
-      roi: '350%'
-      icon: Zap
-      color: 'text-orange-400',
-      company: 'AutoParts Pro'
-    }
-  ];
-
-  const features = [
-    'Real Success Stories',
-    'Proven ROI Results',
-    'Industry Expertise',
-    'Client Testimonials'
-  ];
-
-  const stats = [
-    { label: '200+'value: 'Projects' },
-    { label: '450%'value: 'Avg ROI' },
-    { label: '96%'value: 'Satisfaction' }
-  ];
-
-  if (!isVisible || isDismissed) return null;
-
+import React from 'react';
+const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
       >
         {/* Animated Background */}
@@ -92,11 +10,10 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,92,246,0.2),transparent_50%)]"></div>
         </div>
-
         {/* Floating Success Icons */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(6)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-2 h-2 bg-white rounded-full opacity-40"
               style={{
@@ -114,35 +31,31 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
             />
           ))}
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             {/* Left Content */}
             <div className="flex-1">
-              <divdiv
+              <div
                 className="flex items-center space-x-3 mb-4"
               >
                 <Award className="w-6 h-6 text-yellow-300" />
                 <span className="text-sm font-medium bg-yellow-300 text-purple-900 px-3 py-1 rounded-full">
                   SUCCESS STORIES
                 </span>
-              </divdiv>
-
+              </div>
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🏆 Revolutionary Case Studies 2026
               </divh2>
-
               <divp
                 className="text-lg text-purple-200 mb-6 max-w-2xl"
               >
                 Real success stories from companies that achieved incredible results with our AI and automation solutions. 
                 See how they transformed their operations and achieved massive ROI.
               </divp>
-
               {/* Rotating Case Study Display */}
-              <divdiv
+              <div
                 key={currentStat}
                 className="flex items-center space-x-4 mb-6 p-4 bg-white bg-opacity-10 rounded-lg"
               >
@@ -154,10 +67,9 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                   <div className="text-sm text-purple-200">{caseStudies[currentStat].company}</div>
                   <div className="text-2xl font-bold text-yellow-300">{caseStudies[currentStat].roi} ROI</div>
                 </div>
-              </divdiv>
-
+              </div>
               {/* Features */}
-              <divdiv
+              <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
               >
                 {features.map((featureindex) => (
@@ -166,10 +78,9 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                     <span className="text-sm text-purple-200">{feature}</span>
                   </div>
                 ))}
-              </divdiv>
-
+              </div>
               {/* Stats */}
-              <divdiv
+              <div
                 className="flex space-x-6 mb-6"
               >
                 {stats.map((statindex) => (
@@ -178,10 +89,9 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                     <div className="text-sm text-purple-300">{stat.value}</div>
                   </div>
                 ))}
-              </divdiv>
-
+              </div>
               {/* CTA Buttons */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
@@ -193,32 +103,30 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                   <Target className="w-5 h-5 mr-2" />
                   Start Your Success Story
                 </button>
-              </divdiv>
+              </div>
             </div>
-
             {/* Right Content - Animated Success Icons */}
-            <divdiv
+            <div
               className="hidden lg:flex items-center space-x-4"
             >
-              <divdiv
+              <div
                 className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <DollarSign className="w-10 h-10 text-green-400" />
-              </divdiv>
-              <divdiv
+              </div>
+              <div
                 className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <TrendingUp className="w-8 h-8 text-yellow-400" />
-              </divdiv>
-              <divdiv
+              </div>
+              <div
                 className="w-18 h-18 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <Award className="w-9 h-9 text-pink-400" />
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
-
         {/* Dismiss Button */}
         <button
           onClick={() => setIsDismissed(true)}
@@ -226,14 +134,15 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
         >
           <X className="w-5 h-5" />
         </button>
-
         {/* Pulse Effect */}
-        <divdiv
+        <div
           className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-pink-400/20"
         />
-      </divdiv>
+      </div>
     </div>
   );
 };
 
+
 export default RevolutionaryCaseStudiesShowcase2026PromotionBanner;
+</div></div></div></div>

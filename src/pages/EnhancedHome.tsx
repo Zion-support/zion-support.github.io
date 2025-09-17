@@ -1,72 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ContentShowcase } from '../components/ContentShowcase';
-import { ServicesHighlight } from '../components/ServicesHighlight';
-
+import { Helmet } from 'react-helmet-async';
 const EnhancedHome: React.FC = () => {
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: Award },
-    { number: '98%', label: 'Client Satisfaction', icon: Star },
-    { number: '50+', label: 'Expert Team Members', icon: Users },
-    { number: '24/7', label: 'Support Available', icon: TrendingUp }
-  ];
-
-  const features = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights.',
-      icon: '🤖',
-      link: '/services/ai-solutions'
-    },
-    {
-      title: 'Cybersecurity Excellence',
-      description: 'Protect your business with enterprise-grade security solutions and threat intelligence.',
-      icon: '🛡️',
-      link: '/services/cybersecurity'
-    },
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scale your operations with robust cloud solutions and seamless migration services.',
-      icon: '☁️',
-      link: '/services/cloud-services'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and BI solutions.',
-      icon: '📊',
-      link: '/services/data-analytics'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'InnovateLabs',
-      role: 'CEO',
-      content: 'Outstanding cybersecurity implementation. We feel completely secure with their advanced protection systems.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'DataFlow Inc',
-      role: 'VP of Operations',
-      content: 'Their data analytics platform gave us insights we never knew existed. Game-changing technology.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <SEO 
@@ -74,10 +8,8 @@ const EnhancedHome: React.FC = () => {
         description="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and data analytics solutions. Expert technology consulting and implementation."
         keywords="AI solutions, cybersecurity, cloud computing, data analytics, technology consulting"
       />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <divh1
@@ -88,15 +20,13 @@ const EnhancedHome: React.FC = () => {
                 Cutting-Edge Technology
               </span>
             </divh1>
-            
             <divp
               className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
             >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics. 
               Empowering businesses to thrive in the digital age.
             </divp>
-            
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
               <Link
@@ -110,10 +40,9 @@ const EnhancedHome: React.FC = () => {
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
-            </divdiv>
-            
+            </div>
             {/* Stats */}
-            <divdiv
+            <div
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => {
@@ -128,11 +57,10 @@ const EnhancedHome: React.FC = () => {
                   </div>
                 );
               })}
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,10 +73,9 @@ const EnhancedHome: React.FC = () => {
               technology solutions that drive innovation and growth.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center group"
@@ -169,12 +96,11 @@ const EnhancedHome: React.FC = () => {
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -186,10 +112,9 @@ const EnhancedHome: React.FC = () => {
               Don't just take our word for it - hear from the businesses we've transformed.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-lg shadow-md p-6"
@@ -213,18 +138,15 @@ const EnhancedHome: React.FC = () => {
                     <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Services Highlight */}
       <ServicesHighlight />
-
       {/* Content Showcase */}
       <ContentShowcase />
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -253,6 +175,8 @@ const EnhancedHome: React.FC = () => {
       </section>
     </div>
   );
-};
+
+
 
 export default EnhancedHome;
+</div></div>

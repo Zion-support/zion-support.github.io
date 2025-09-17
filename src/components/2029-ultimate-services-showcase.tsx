@@ -13,6 +13,9 @@ import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
+};
+
+
 
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -129,7 +132,7 @@ export default function UltimateServicesShowcase2029() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             className="max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
@@ -193,7 +196,7 @@ export default function UltimateServicesShowcase2029() {
                 <div className="text-gray-400">Support Available</div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -257,11 +260,11 @@ export default function UltimateServicesShowcase2029() {
       {/* Services Grid */}
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
             {filteredServices.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 className="group relative"
               >
@@ -350,9 +353,9 @@ export default function UltimateServicesShowcase2029() {
                   {/* Hover Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
 
           {/* No Results */}
           {filteredServices.length === 0 && (
@@ -380,7 +383,7 @@ export default function UltimateServicesShowcase2029() {
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -410,7 +413,7 @@ export default function UltimateServicesShowcase2029() {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 

@@ -1,8 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
-const UltimateContentBanner2038: React.FC = () => {
-  return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -15,7 +10,6 @@ const UltimateContentBanner2038: React.FC = () => {
           >
             🌟 BREAKTHROUGH 2038 • NEW CONTENT AVAILABLE
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,7 +18,6 @@ const UltimateContentBanner2038: React.FC = () => {
           >
             🚀 Ultimate Tech Breakthrough 2038
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -33,7 +26,6 @@ const UltimateContentBanner2038: React.FC = () => {
           >
             Experience the most revolutionary technological advances that will reshape reality in 2038
           </motion.p>
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +47,6 @@ const UltimateContentBanner2038: React.FC = () => {
                 Explore Now →
               </div>
             </motion.a>
-            
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -71,7 +62,6 @@ const UltimateContentBanner2038: React.FC = () => {
                 Enter Cosmic Realm →
               </div>
             </motion.a>
-            
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -87,4 +77,11 @@ const UltimateContentBanner2038: React.FC = () => {
   );
 };
 
+
 export default UltimateContentBanner2038;
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10 container mx-auto px-4">
+              Transcendent Showcase 2040 →
+            </a>
+          </div>

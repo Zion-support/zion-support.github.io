@@ -1,113 +1,9 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Zap
-  Brain
-  Cpu
-  Database,
-  Cloud,
-  Smartphone,
-  Laptop,
-  Server,
-  Network,
-  Shield,
-  Target,
-  TrendingUp,
-  Users,
-  Globe,
-  Code,
-  Atom,
-  Rocket,
-  Star,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ArrowRight,
-  Download,
-  Share2,
-  Heart,
-  MessageCircle,
-  BookOpen,
-  Lightbulb,
-  X,
-  Eye,
-  MousePointer,
-  Monitor
-} from 'lucide-react';
-
-const InteractiveTechDemo2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [isPlayingsetIsPlaying] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-advance demos
-    const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % 4);
-    }3000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const demos = [
-    {
-      title: "AI Consciousness Evolution",
-      subtitle: "Experience Synthetic Intelligence",
-      description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"
-    },
-    {
-      title: "Quantum Neural Fusion",
-      subtitle: "Witness Quantum Computing Power",
-      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.",
-      icon: Atom,
-      color: "from-indigo-500 to-purple-500",
-      metrics: "1000x Speed • 99.8% Qubit Coherence"
-    },
-    {
-      title: "Brain-Computer Interface",
-      subtitle: "Direct Neural Communication",
-      description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.",
-      icon: Cpu,
-      color: "from-green-500 to-teal-500",
-      metrics: "99.9% Accuracy • 12ms Response Time"
-    },
-    {
-      title: "Edge AI Processing",
-      subtitle: "Real-Time Distributed Intelligence",
-      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.",
-      icon: Network,
-      color: "from-blue-500 to-cyan-500",
-      metrics: "95% Latency Reduction • 10K+ Nodes"
-    }
-  ];
-
-  const features = [
-    { icon: Playtext: "Interactive Demos" },
-    { icon: Braintext: "AI Technologies" },
-    { icon: Atomtext: "Quantum Computing" },
-    { icon: Cputext: "Neural Interfaces" },
-    { icon: Networktext: "Edge Processing" },
-    { icon: Rocketext: "Future Tech" }
-  ];
-
-  if (isDismissed) return null;
-
+import React from 'react';
+const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -115,12 +11,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]" />
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex-1 pr-8">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="space-y-4"
                 >
@@ -129,28 +24,23 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                     <Play className="w-4 h-4 text-blue-400 mr-2" />
                     <span className="text-sm font-medium text-white">Interactive Demo Available</span>
                   </div>
-
                   {/* Title */}
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {demos[currentDemo].title}
                   </h2>
-
                   {/* Subtitle */}
                   <p className="text-lg text-indigo-200 font-medium">
                     {demos[currentDemo].subtitle}
                   </p>
-
                   {/* Description */}
                   <p className="text-gray-300 text-base max-w-2xl">
                     {demos[currentDemo].description}
                   </p>
-
                   {/* Metrics */}
                   <div className="flex items-center text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4 mr-2" />
                     <span>{demos[currentDemo].metrics}</span>
                   </div>
-
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">
                     {features.slice(0, 3).map((feature, index) => {
@@ -163,7 +53,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       );
                     })}
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 mt-6">
                     <button 
@@ -179,12 +68,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       Download SDK
                     </button>
                   </div>
-                </divdiv>
+                </div>
               </div>
-
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="relative w-80 h-48"
                 >
@@ -199,7 +87,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         <p className="text-gray-300 text-sm">Interactive Experience</p>
                       </div>
                     </div>
-                    
                     {/* Demo Visualization */}
                     <div className="relative h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden border border-white/10 mb-4">
                       {/* Animated Elements */}
@@ -207,7 +94,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
                             {[...Array(8)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scale: isPlaying ? [1.21] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
@@ -221,11 +108,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   rotate: isPlaying ? 360 : 0,
                                   scale: isPlaying ? [1.1] : 1
@@ -243,11 +129,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scaleY: isPlaying ? [121] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
@@ -265,11 +150,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scale: isPlaying ? [1.31] : 1,
                                   opacity: isPlaying ? [0.610.6] : 0.8
@@ -285,7 +169,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         )}
                       </div>
                     </div>
-
                     {/* Demo Controls */}
                     <div className="flex items-center justify-center space-x-2">
                       <button 
@@ -302,23 +185,20 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Floating Elements */}
-                  <divdiv
+                  <div
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
-                  </divdiv>
-
-                  <divdiv
+                  </div>
+                  <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
-                  </divdiv>
-                </divdiv>
+                  </div>
+                </div>
               </div>
             </div>
-
             {/* Demo Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {demos.map((_, index) => (
@@ -334,7 +214,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               ))}
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -342,10 +221,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </divdiv>
+        </div>
       )}
     </div>
   );
-};
+
+
 
 export default InteractiveTechDemo2025PromotionBanner;
+</div></div></div></div></div></div>

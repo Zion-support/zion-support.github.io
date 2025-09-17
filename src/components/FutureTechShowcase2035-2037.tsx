@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 const FutureTechShowcase2035_2037: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
-  
   const technologies = [
     {
       id: 0,
@@ -36,14 +34,12 @@ const FutureTechShowcase2035_2037: React.FC = () => {
       features: ["Reality Gateway", "Dimensional Manipulation", "Infinite Computing", "Universal Energy"]
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % technologies.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-12">
       {/* Header */}
@@ -58,7 +54,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
           Experience the most advanced technologies ever created, pushing the boundaries of what's possible
         </p>
       </div>
-
       {/* Interactive Showcase */}
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         {/* Technology Navigation */}
@@ -83,7 +78,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Active Technology Display */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
           <div className="text-center mb-6">
@@ -92,7 +86,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
             <p className="text-cyan-400 font-semibold mb-4">{technologies[activeTech].subtitle}</p>
             <p className="text-gray-300">{technologies[activeTech].description}</p>
           </div>
-
           {/* Features Grid */}
           <div className="grid grid-cols-2 gap-4 mb-6">
             {technologies[activeTech].features.map((feature, index) => (
@@ -101,7 +94,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Action Button */}
           <div className="text-center">
             <Link
@@ -113,7 +105,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technology Timeline */}
       <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 mb-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Development Timeline</h3>
@@ -141,7 +132,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="grid md:grid-cols-4 gap-6">
         <div className="text-center">
@@ -161,7 +151,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
           <div className="text-sm text-gray-300">Consciousness Expansion</div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center mt-8">
         <p className="text-gray-300 mb-6">
@@ -181,6 +170,8 @@ const FutureTechShowcase2035_2037: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default FutureTechShowcase2035_2037;

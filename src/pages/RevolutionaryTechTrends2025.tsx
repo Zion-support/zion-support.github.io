@@ -1,104 +1,13 @@
 import React from 'react';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Code, 
-  Database, 
-  Smartphone, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Target
-} from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async';
 const RevolutionaryTechTrends2025: React.FC = () => {
-  const trends = [
-    {
-      icon: Brain,
-      title: "Consciousness AI",
-      description: "AI systems that demonstrate self-awareness and emotional intelligence",
-      impact: "Transform customer service and personalization",
-      timeline: "2025-2027",
-      color: "from-purple-500 to-indigo-600"
-    },
-    {
-      icon: Zap,
-      title: "Quantum Internet",
-      description: "Ultra-secure communication networks powered by quantum entanglement",
-      impact: "Revolutionize cybersecurity and data transmission",
-      timeline: "2025-2028",
-      color: "from-cyan-500 to-blue-600"
-    },
-    {
-      icon: Shield,
-      title: "Autonomous Security",
-      description: "Self-healing security systems that adapt and evolve in real-time",
-      impact: "Eliminate 99.9% of cyber threats automatically",
-      timeline: "2025-2026",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      icon: Cloud,
-      title: "Edge Computing 3.0",
-      description: "Distributed intelligence that processes data at the speed of thought",
-      impact: "Enable real-time AI decision making",
-      timeline: "2025-2027",
-      color: "from-orange-500 to-red-600"
-    },
-    {
-      icon: Code,
-      title: "No-Code AI Development",
-      description: "Create sophisticated AI applications without programming knowledge",
-      impact: "Democratize AI development across industries",
-      timeline: "2025-2026",
-      color: "from-pink-500 to-rose-600"
-    },
-    {
-      icon: Database,
-      title: "Synthetic Data Generation",
-      description: "AI-generated datasets that preserve privacy while enabling innovation",
-      impact: "Accelerate research without compromising privacy",
-      timeline: "2025-2027",
-      color: "from-teal-500 to-cyan-600"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "300% Productivity Increase",
-      description: "Automated workflows and AI assistance boost team efficiency"
-    },
-    {
-      icon: Users,
-      title: "Global Team Collaboration",
-      description: "Seamless communication across time zones and languages"
-    },
-    {
-      icon: Award,
-      title: "Industry Recognition",
-      description: "Stay ahead with cutting-edge technology implementations"
-    },
-    {
-      icon: Target,
-      title: "Precision Results",
-      description: "Data-driven decisions with 99.9% accuracy rates"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
-          <divdiv
+          <div
             className="text-center max-w-6xl mx-auto"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
@@ -129,14 +38,13 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                 Get Started
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
-
       {/* Revolutionary Trends Section */}
       <section id="trends" className="py-24">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -146,13 +54,12 @@ const RevolutionaryTechTrends2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               These groundbreaking trends are not just predictions—they're already transforming industries and creating new possibilities for businesses worldwide.
             </p>
-          </divdiv>
-
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => {
               const IconComponent = trend.icon;
               return (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:scale-105"
@@ -177,17 +84,16 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   <a href="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                </divdiv>
+                </div>
               );
             })}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -197,13 +103,12 @@ const RevolutionaryTechTrends2025: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Early adoption of these revolutionary trends positions your organization at the forefront of innovation, driving measurable business outcomes.
             </p>
-          </divdiv>
-
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center"
@@ -213,17 +118,16 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
-                </divdiv>
+                </div>
               );
             })}
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-5xl font-bold mb-6">
@@ -240,11 +144,12 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                 Explore Services
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>
   );
-};
+
+
 
 export default RevolutionaryTechTrends2025;

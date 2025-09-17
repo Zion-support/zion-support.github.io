@@ -1,43 +1,22 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-type TalentItem = { talentSlug: string; talentName: string; averageRating: number; totalReviews: number };
-
-type Props = { items: TalentItem[] };
-
-const TopTalentsPage: NextPage<Props> = ({ items }) => {
+const top-talents: React.FC = () => {
   return (
-    <main className="space-y-6">
-      <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>
-      <div className="grid gap-3">
-        {items.map((t) => (
-          <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>
-            <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">
-              <div>
-                <div className="font-medium">{t.talentName}</div>
-                <div className="text-sm text-gray-600">{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
-              </div>
-              <span className="pill">Auto</span>
-            </div>
-          </Link>
-        ))}
-        {!items.length && <div className="enhanced-card">No data yet.</div>}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>top-talents | Zion Tech Group</title>
+        <meta name="description" content="top-talents - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">top-talents</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'public', 'automations', 'top-talents.json');
-  let items: TalentItem[] = [];
-  try {
-    const raw = fs.readFileSync(p, 'utf8');
-    const data = JSON.parse(raw);
-    items = data.items || [];
-  } catch {}
-  return { props: { items } };
-};
-
-export default TopTalentsPage;
+export default top-talents;

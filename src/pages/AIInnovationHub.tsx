@@ -30,6 +30,9 @@ import {
   BookOpen
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+};
+
+
 
 export default function AIInnovationHub() {
   const aiCapabilities = [
@@ -76,7 +79,6 @@ export default function AIInnovationHub() {
       applications: ["IoT Devices", "Mobile Apps", "Industrial Systems", "Smart Cities"]
     }
   ];
-
   const innovationAreas = [
     {
       title: "Quantum Machine Learning",
@@ -111,7 +113,6 @@ export default function AIInnovationHub() {
       timeline: "Now"
     }
   ];
-
   const caseStudies = [
     {
       title: "Financial Services AI Transformation",
@@ -138,7 +139,6 @@ export default function AIInnovationHub() {
       technologies: ["Computer Vision", "Edge AI", "IoT Integration"]
     }
   ];
-
   const resources = [
     {
       title: "AI Implementation Guide",
@@ -173,7 +173,6 @@ export default function AIInnovationHub() {
       href: "/tools/ai-roi-calculator"
     }
   ];
-
   return (
     <>
       <SEO 
@@ -181,33 +180,24 @@ export default function AIInnovationHub() {
         description="Explore cutting-edge AI capabilities, research areas, and innovation opportunities. Discover how AI can transform your business."
         keywords={["AI innovation", "machine learning", "artificial intelligence", "AI research", "AI capabilities"]}
       />
-      
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30px_30px,rgba(255,255,255,0.03)_2px,transparent_2px)] bg-[length:60px_60px]"></div>
-          
           <div className="relative max-w-7xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Sparkles className="w-4 h-4" />
                 AI Innovation Hub
-              </div>
-              
               <h1 className="text-6xl md:text-7xl font-bold text-white mb-8">
                 The Future of
                 <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Artificial Intelligence
-                </span>
-              </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12">
                 Explore our comprehensive suite of AI innovations, from healthcare diagnostics to quantum cybersecurity. 
                 Discover how artificial intelligence is revolutionizing every industry.
-              </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/services"
@@ -216,23 +206,16 @@ export default function AIInnovationHub() {
                   <Brain className="w-5 h-5 mr-2" />
                   Explore AI Solutions
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
                 <Link
                   to="/demo"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-lg font-semibold rounded-xl transition-all duration-300"
                 >
                   <Rocket className="w-5 h-5 mr-2" />
                   Request Demo
-                </Link>
-              </div>
-            </divdiv>
-          </div>
-        </section>
-
         {/* Metrics Strip */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="relative"
             >
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
@@ -240,51 +223,33 @@ export default function AIInnovationHub() {
                   <div className="flex items-center space-x-4">
                     <div className="p-3 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl">
                       <Brain className="w-8 h-8 text-white" />
-                    </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">AI Capabilities</h3>
                       <p className="text-gray-400">6 Core Technologies</p>
-                    </div>
-                  </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-slate-700/50 rounded-lg p-4">
                       <div className="text-2xl font-bold text-zion-cyan">500+</div>
                       <div className="text-sm text-gray-400">Models Deployed</div>
-                    </div>
                     <div className="bg-slate-700/50 rounded-lg p-4">
                       <div className="text-2xl font-bold text-zion-cyan">99.9%</div>
                       <div className="text-sm text-gray-400">Accuracy Rate</div>
-                    </div>
                     <div className="bg-slate-700/50 rounded-lg p-4">
                       <div className="text-2xl font-bold text-zion-cyan">24/7</div>
                       <div className="text-sm text-gray-400">AI Support</div>
-                    </div>
                     <div className="bg-slate-700/50 rounded-lg p-4">
                       <div className="text-2xl font-bold text-zion-cyan">50+</div>
                       <div className="text-sm text-gray-400">Industries</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </divdiv>
-          </div>
-        </section>
-
         {/* AI Capabilities Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Core AI Capabilities
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI technologies powering the next generation of business solutions
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index) => (
-                <divdiv
+                <div
                   key={capability.title}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -293,11 +258,8 @@ export default function AIInnovationHub() {
                   <div className="flex items-center mb-6">
                     <div className="p-3 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl mr-4">
                       <capability.icon className="w-8 h-8 text-white" />
-                    </div>
                     <h3 className="text-xl font-bold text-white">{capability.title}</h3>
-                  </div>
                   <p className="text-gray-300 mb-6">{capability.description}</p>
-                  
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -306,42 +268,26 @@ export default function AIInnovationHub() {
                           <li key={feature} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                             {feature}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
                     <div>
                       <h4 className="text-sm font-semibold text-zion-cyan mb-2">Applications:</h4>
                       <div className="flex flex-wrap gap-1">
                         {capability.applications.map((app) => (
                           <span key={app} className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded">
                             {app}
-                          </span>
                         ))}
-                      </div>
-                    </div>
-                  </div>
-                </divdiv>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Innovation Areas Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Emerging Innovation Areas
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Cutting-edge research and development pushing the boundaries of AI technology
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {innovationAreas.map((area, index) => (
-                <divdiv
+                <div
                   key={area.title}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -351,7 +297,6 @@ export default function AIInnovationHub() {
                     <div className="flex items-center space-x-4">
                       <div className="p-3 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl">
                         <area.icon className="w-8 h-8 text-white" />
-                      </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{area.title}</h3>
                         <span className={`inline-block px-3 py-1 text-xs font-bold rounded-full ${
@@ -361,42 +306,26 @@ export default function AIInnovationHub() {
                           'bg-purple-500/20 text-purple-400'
                         }`}>
                           {area.status}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
                   <p className="text-gray-300 mb-6">{area.description}</p>
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-sm text-gray-400">Potential Impact:</span>
                       <span className="ml-2 text-sm font-semibold text-zion-cyan">{area.potential}</span>
-                    </div>
                     <div>
                       <span className="text-sm text-gray-400">Timeline:</span>
                       <span className="ml-2 text-sm font-semibold text-white">{area.timeline}</span>
-                    </div>
-                  </div>
-                </divdiv>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Case Studies Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 AI Success Stories
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Real-world implementations showcasing the transformative power of AI
-              </p>
-            </div>
-
             <div className="space-y-12">
               {caseStudies.map((study, index) => (
-                <divdiv
+                <div
                   key={study.title}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -410,11 +339,9 @@ export default function AIInnovationHub() {
                         <div>
                           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Challenge:</h4>
                           <p className="text-gray-300">{study.challenge}</p>
-                        </div>
                         <div>
                           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Solution:</h4>
                           <p className="text-gray-300">{study.solution}</p>
-                        </div>
                         <div>
                           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Results:</h4>
                           <ul className="space-y-1">
@@ -422,44 +349,26 @@ export default function AIInnovationHub() {
                               <li key={result} className="flex items-center text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                                 {result}
-                              </li>
                             ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
                     <div>
                       <h4 className="text-sm font-semibold text-zion-cyan mb-4">Technologies Used:</h4>
                       <div className="space-y-2">
                         {study.technologies.map((tech) => (
                           <span key={tech} className="block px-3 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg text-sm">
                             {tech}
-                          </span>
                         ))}
-                      </div>
-                    </div>
-                  </div>
-                </divdiv>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Resources Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 AI Resources & Tools
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive resources to help you understand and implement AI solutions
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
-                <divdiv
+                <div
                   key={resource.title}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -468,9 +377,7 @@ export default function AIInnovationHub() {
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg mr-3">
                       <resource.icon className="w-6 h-6 text-white" />
-                    </div>
                     <span className="text-xs text-zion-cyan bg-zion-blue px-2 py-1 rounded">{resource.type}</span>
-                  </div>
                   <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
                   <div className="flex items-center justify-between">
@@ -480,27 +387,18 @@ export default function AIInnovationHub() {
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200"
                     >
                       <Download className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </divdiv>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Harness AI Innovation?
-              </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Partner with us to explore the full potential of artificial intelligence for your business.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -508,19 +406,15 @@ export default function AIInnovationHub() {
                 >
                   Start AI Consultation
                   <Brain className="w-5 h-5 ml-2" />
-                </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
                 >
                   Explore AI Services
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
-            </divdiv>
-          </div>
-        </section>
-      </div>
     </>
   );
-}
+
+
+
+export default AIInnovationHub;

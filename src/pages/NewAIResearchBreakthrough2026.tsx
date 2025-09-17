@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewAIResearchBreakthrough2026: React.FC = () => {
 	return (
 		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -29,5 +28,6 @@ const NewAIResearchBreakthrough2026: React.FC = () => {
 	);
 };
 
-export default NewAIResearchBreakthrough2026;
 
+
+export default NewAIResearchBreakthrough2026;

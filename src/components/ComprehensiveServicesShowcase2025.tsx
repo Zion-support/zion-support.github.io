@@ -1,201 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Brain
-  Cpu
-  Database
-  Shield
-  Zap
-  Globe,
-  ArrowRight,
-  Play,
-  Download,
-  Star,
-  Users,
-  TrendingUp,
-  Award,
-  ChevronRight,
-  ExternalLink,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Target,
-  BarChart3,
-  Lightbulb,
-  Rocket,
-  Settings
-} from 'lucide-react';
-
-const ComprehensiveServicesShowcase2025 = () => {
-  const [activeServicesetActiveService] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  const services = [
-    {
-      id: 1,
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200',
-      features: [
-        'Real-time Data Processing',
-        'Predictive Analytics',
-        'Custom Dashboard Creation',
-        'Automated Reporting',
-        'Machine Learning Models'
-      ],
-      benefits: [
-        '300% faster decision making',
-        '95% accuracy in predictions',
-        '50% reduction in manual analysis',
-        'ROI within 3 months'
-      ],
-      pricing: 'Starting at $299/month',
-      href: '/ai-business-intelligence',
-      stats: { users: '15,000+'rating: 4.9projects: '2,500+' }
-    },
-    {
-      id: 2,
-      title: 'Enterprise Automation Suite',
-      description: 'Streamline operations with intelligent automation that adapts to your business needs.',
-      icon: <Zap className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-50',
-      borderColor: 'border-blue-200',
-      features: [
-        'Workflow Automation',
-        'Process Optimization',
-        'API Integration',
-        'Custom Triggers',
-        'Performance Monitoring'
-      ],
-      benefits: [
-        '60% cost reduction',
-        '80% time savings',
-        '99.9% uptime guarantee',
-        '24/7 monitoring'
-      ],
-      pricing: 'Starting at $199/month',
-      href: '/enterprise-automation',
-      stats: { users: '25,000+'rating: 4.8projects: '5,000+' }
-    },
-    {
-      id: 3,
-      title: 'Quantum Computing Solutions',
-      description: 'Harness the power of quantum computing for complex problem-solving and optimization.',
-      icon: <Cpu className="w-8 h-8" />,
-      color: 'from-indigo-500 to-purple-500',
-      bgColor: 'bg-indigo-50',
-      borderColor: 'border-indigo-200',
-      features: [
-        'Quantum Algorithm Development',
-        'Secure Quantum Communication',
-        'Optimization Problems',
-        'Cryptographic Solutions',
-        'Research & Development'
-      ],
-      benefits: [
-        '1000x faster processing',
-        'Unbreakable encryption',
-        'Future-proof technology',
-        'Competitive advantage'
-      ],
-      pricing: 'Starting at $999/month',
-      href: '/quantum-computing-solutions',
-      stats: { users: '2,000+'rating: 4.9projects: '500+' }
-    },
-    {
-      id: 4,
-      title: 'Cybersecurity & Compliance',
-      description: 'Protect your business with comprehensive security solutions and compliance management.',
-      icon: <Shield className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-50',
-      borderColor: 'border-green-200',
-      features: [
-        'Zero-Trust Architecture',
-        'Threat Detection & Response',
-        'Compliance Management',
-        'Security Auditing',
-        'Incident Response'
-      ],
-      benefits: [
-        '99.9% threat detection rate',
-        'Zero security breaches',
-        'Full compliance coverage',
-        '24/7 security monitoring'
-      ],
-      pricing: 'Starting at $149/month',
-      href: '/cybersecurity-solutions',
-      stats: { users: '30,000+'rating: 4.9projects: '8,000+' }
-    },
-    {
-      id: 5,
-      title: 'Cloud Infrastructure & DevOps',
-      description: 'Scalablesecureand efficient cloud solutions with automated deployment pipelines.',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50',
-      borderColor: 'border-orange-200',
-      features: [
-        'Multi-Cloud Architecture',
-        'Container Orchestration',
-        'CI/CD Pipelines',
-        'Infrastructure as Code',
-        'Monitoring & Logging'
-      ],
-      benefits: [
-        '99.99% uptime',
-        'Auto-scaling capabilities',
-        '50% faster deployments',
-        'Reduced infrastructure costs'
-      ],
-      pricing: 'Starting at $399/month',
-      href: '/cloud-infrastructure',
-      stats: { users: '20,000+'rating: 4.8projects: '3,000+' }
-    },
-    {
-      id: 6,
-      title: 'Data Management & Analytics',
-      description: 'Comprehensive data solutions from collection to visualization and insights.',
-      icon: <Database className="w-8 h-8" />,
-      color: 'from-teal-500 to-blue-500',
-      bgColor: 'bg-teal-50',
-      borderColor: 'border-teal-200',
-      features: [
-        'Data Warehousing',
-        'ETL/ELT Processes',
-        'Real-time Analytics',
-        'Data Visualization',
-        'Data Governance'
-      ],
-      benefits: [
-        'Unified data platform',
-        'Real-time insights',
-        'Data quality assurance',
-        'Regulatory compliance'
-      ],
-      pricing: 'Starting at $249/month',
-      href: '/data-management',
-      stats: { users: '18,000+'rating: 4.7projects: '2,200+' }
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveService((prev) => (prev + 1) % services.length);
-    }6000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const currentService = services[activeService];
-
+import React from 'react';
+const ComprehensiveServicesShowcase2025: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,9 +18,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             Discover our full range of cutting-edge technology solutions designed to 
             transform your business and drive unprecedented growth.
           </divp>
-          
           {/* Stats */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
@@ -236,11 +39,10 @@ const ComprehensiveServicesShowcase2025 = () => {
               <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
               <div className="text-gray-600">Customer Rating</div>
             </div>
-          </divdiv>
+          </div>
         </div>
-
         {/* Service Navigation */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -261,10 +63,9 @@ const ComprehensiveServicesShowcase2025 = () => {
               }`} />
             </button>
           ))}
-        </divdiv>
-
+        </div>
         {/* Featured Service */}
-          <divdiv
+          <div
             key={activeService}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
           >
@@ -289,11 +90,9 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 <p className="text-lg text-gray-600 mb-8">
                   {currentService.description}
                 </p>
-
                 {/* Features */}
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features</h4>
@@ -306,7 +105,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Proven Benefits</h4>
@@ -319,7 +117,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -335,7 +132,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </button>
                 </div>
               </div>
-
               {/* Right Side - Visual */}
               <div className={`bg-gradient-to-br ${currentService.color} p-8 lg:p-12 flex items-center justify-center`}>
                 <div className="text-center text-white">
@@ -363,16 +159,15 @@ const ComprehensiveServicesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
-
         {/* All Services Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((serviceindex) => (
-            <divdiv
+            <div
               key={service.id}
               whileInView={{ opacity: 1, y: 0 }}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -390,7 +185,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-white/90 text-sm">{service.description}</p>
               </div>
-              
               <div className="p-6">
                 <div className="space-y-3 mb-6">
                   {service.features.slice(03).map((featureidx) => (
@@ -400,7 +194,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-sm text-gray-500">
                     <div className="flex items-center gap-1">
@@ -412,7 +205,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <div className="font-semibold text-gray-900">{service.pricing}</div>
                   </div>
                 </div>
-                
                 <a
                   href={service.href}
                   className={`group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
@@ -421,12 +213,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
-
+        </div>
         {/* Bottom CTA */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center"
         >
@@ -454,10 +245,11 @@ const ComprehensiveServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default ComprehensiveServicesShowcase2025;

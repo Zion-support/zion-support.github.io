@@ -1,15 +1,12 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const AI2025UltimateTransformation50000ROIBanner = () => {
+const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
@@ -17,7 +14,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
             <span className="mr-2">🚀</span>
             NEW: 50,000% ROI SUCCESS STORY
           </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
             <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
@@ -32,7 +28,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
               50,000% ROI
             </span>
           </h1>
-
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
             Fortune 100 Manufacturing Giant Achieves 
@@ -40,7 +35,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
             <span className="text-green-400 font-bold"> $15.6 Billion Revenue Increase</span> 
             in Just 18 Months
           </p>
-
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -60,7 +54,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
               <div className="text-sm md:text-base font-semibold">Months</div>
             </div>
           </div>
-
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-6 text-center">
@@ -79,7 +72,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
               <p className="text-sm opacity-90">Individual employee productivity increase</p>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -95,7 +87,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
               Start Your Transformation
             </a>
           </div>
-
           {/* Trust Indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm opacity-80">
             <div className="flex items-center">
@@ -113,7 +104,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute top-20 right-20 w-16 h-16 bg-green-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
@@ -122,5 +112,6 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
     </section>
   );
 };
+
 
 export default AI2025UltimateTransformation50000ROIBanner;

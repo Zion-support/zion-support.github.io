@@ -1,130 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Target
-  TrendingUp
-  Users
-  Briefcase
-  Lightbulb,
-  ArrowRight,
-  CheckCircle2,
-  Sparkles,
-  BarChart3,
-  Clock
-} from 'lucide-react';
-
-const BusinessTransformationRevolution2025 = () => {
-  const [activeTabsetActiveTab] = useState(0);
-  const [countersetCounters] = useState({
-    businesses: 0,
-    revenue: 0,
-    efficiency: 0,
-    satisfaction: 0
-  });
-
-  const tabs = [
-    {
-      id: 0,
-      title: "Digital Revolution",
-      icon: <Sparkles className="w-6 h-6" />,
-      content: {
-        title: "Complete Digital Transformation",
-        description: "Transform your entire business ecosystem with cutting-edge AI and automation technologies.",
-        benefits: [
-          "500% increase in operational efficiency",
-          "Real-time data-driven decision making",
-          "Automated workflow optimization",
-          "Predictive analytics and forecasting"
-        ],
-        image: "🚀"
-      }
-    },
-    {
-      id: 1,
-      title: "AI Integration",
-      icon: <Target className="w-6 h-6" />,
-      content: {
-        title: "Intelligent AI Integration",
-        description: "Seamlessly integrate AI across all business operations for unprecedented growth and efficiency.",
-        benefits: [
-          "Custom AI models for your industry",
-          "24/7 automated customer support",
-          "Intelligent resource allocation",
-          "Advanced pattern recognition"
-        ],
-        image: "🧠"
-      }
-    },
-    {
-      id: 2,
-      title: "Growth Strategy",
-      icon: <TrendingUp className="w-6 h-6" />,
-      content: {
-        title: "Exponential Growth Strategy",
-        description: "Unlock explosive business growth with our proven transformation methodologies.",
-        benefits: [
-          "Market expansion strategies",
-          "Revenue optimization systems",
-          "Competitive advantage frameworks",
-          "Scalable business models"
-        ],
-        image: "📈"
-      }
-    }
-  ];
-
-  useEffect(() => {
-    // Animate counters
-    const animateCounters = () => {
-      const targets = {
-        businesses: 50000,
-        revenue: 2500,
-        efficiency: 400,
-        satisfaction: 98
-      };
-
-      Object.keys(targets).forEach(key => {
-        let start = 0;
-        const target = targets[key as keyof typeof targets];
-        const increment = target / 100;
-        const timer = setInterval(() => {
-          start += increment;
-          if (start >= target) {
-            start = target;
-            clearInterval(timer);
-          }
-          setCounters(prev => ({ ...prev[key]: Math.floor(start) }));
-        }20);
-      });
-    };
-
-    const timer = setTimeout(animateCounters500);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
+import React from 'react';
+const BusinessTransformationRevolution2025: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -133,29 +8,25 @@ const BusinessTransformationRevolution2025 = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
             <Briefcase className="w-12 h-12 text-yellow-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               Business Revolution 2025
             </h2>
-          </divdiv>
-          
+          </div>
             Revolutionary business transformation solutions that deliver unprecedented results. 
             Join thousands of companies already experiencing exponential growth.
           </divp>
-
             <Clock className="w-5 h-5 mr-2" />
             Limited Time: 50% Off Implementation
-          </divdiv>
-        </divdiv>
-
+          </div>
+        </div>
         {/* Stats Section */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {[
@@ -164,7 +35,7 @@ const BusinessTransformationRevolution2025 = () => {
             { icon: <BarChart3 className="w-8 h-8" />value: counters.efficiencylabel: "Efficiency Improvement"suffix: "%" },
             { icon: <Target className="w-8 h-8" />value: counters.satisfactionlabel: "Client Satisfaction"suffix: "%" }
           ].map((statindex) => (
-            <divdiv
+            <div
               key={index}
               className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
             >
@@ -173,14 +44,13 @@ const BusinessTransformationRevolution2025 = () => {
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
-
+        </div>
         {/* Tabs Section */}
         <div className="mb-16">
           {/* Tab Navigation */}
-          <divdiv
+          <div
             className="flex justify-center mb-8"
           >
             <div className="flex bg-white/10 backdrop-blur-lg rounded-full p-2">
@@ -199,10 +69,9 @@ const BusinessTransformationRevolution2025 = () => {
                 </divbutton>
               ))}
             </div>
-          </divdiv>
-
+          </div>
           {/* Tab Content */}
-          <divdiv
+          <div
             key={activeTab}
             className="grid lg:grid-cols-2 gap-12 items-center"
           >
@@ -214,20 +83,18 @@ const BusinessTransformationRevolution2025 = () => {
               <p className="text-xl text-gray-300 mb-8">
                 {tabs[activeTab].content.description}
               </p>
-              
               <div className="space-y-4">
                 {tabs[activeTab].content.benefits.map((benefitindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center text-white"
                   >
                     <CheckCircle2 className="w-6 h-6 mr-4 text-green-400" />
                     <span className="text-lg">{benefit}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="p-8 bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h4>
@@ -245,7 +112,6 @@ const BusinessTransformationRevolution2025 = () => {
                     90-day money-back guarantee
                   </div>
                 </div>
-
                 <divbutton
                   className="w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center"
                 >
@@ -253,7 +119,6 @@ const BusinessTransformationRevolution2025 = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </divbutton>
               </div>
-
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-white/5 rounded-lg text-center">
                   <Lightbulb className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
@@ -267,11 +132,10 @@ const BusinessTransformationRevolution2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
-
         {/* Final CTA */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="inline-block p-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
@@ -288,10 +152,12 @@ const BusinessTransformationRevolution2025 = () => {
               Get Started Now - 50% Off
             </divbutton>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
+
 export default BusinessTransformationRevolution2025;
+</div></div></div></div>

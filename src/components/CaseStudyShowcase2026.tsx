@@ -1,229 +1,28 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  ArrowRight
-  Star
-  TrendingUp
-  Users
-  Zap
-  Shield
-  Globe,
-  Brain,
-  Database,
-  Cloud,
-  Lock,
-  Award,
-  ChevronRight,
-  Play,
-  Download,
-  ExternalLink,
-  BarChart3,
-  Settings,
-  Code,
-  Layers,
-  Network,
-  Bot,
-  Eye,
-  MessageSquare,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Search,
-  Filter,
-  Calendar,
-  Clock,
-  MapPin,
-  Phone,
-  Mail,
-  Share2,
-  Heart,
-  Bookmark,
-  Flag,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  X,
-  Plus,
-  Edit,
-  Trash2,
-  Copy,
-  Save,
-  Upload,
-  RefreshCw,
-  RotateCcw,
-  ChevronLeft,
-  ChevronDown,
-  ChevronUp,
-  Menu,
-  XCircle,
-  CheckCircle2,
-  AlertTriangle
-} from 'lucide-react';
-
-const CaseStudyShowcase2026 = () => {
-  const [activeIndustrysetActiveIndustry] = useState('technology');
-  const [hoveredCasetHoveredCase] = useState<number | null>(null);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const industries = {
-    'technology': {
-      title: 'Technology',
-      description: 'AI solutions for tech companies',
-      icon: Database,
-      color: 'from-blue-600 to-purple-600'
-    },
-    'healthcare': {
-      title: 'Healthcare',
-      description: 'AI-powered medical solutions',
-      icon: Shield,
-      color: 'from-green-600 to-teal-600'
-    },
-    'finance': {
-      title: 'Finance',
-      description: 'Financial AI and automation',
-      icon: BarChart3,
-      color: 'from-orange-600 to-red-600'
-    },
-    'manufacturing': {
-      title: 'Manufacturing',
-      description: 'Industrial AI and automation',
-      icon: Settings,
-      color: 'from-purple-600 to-pink-600'
-    },
-    'retail': {
-      title: 'Retail',
-      description: 'E-commerce and retail AI',
-      icon: Globe,
-      color: 'from-cyan-600 to-blue-600'
-    },
-    'education': {
-      title: 'Education',
-      description: 'AI in educational technology',
-      icon: Bookmark,
-      color: 'from-indigo-600 to-purple-600'
-    }
-  };
-
-  const caseStudies = [
-    {
-      id: 1,
-      title: 'AI-Powered Customer Service Transformation',
-      company: 'TechCorp Solutions',
-      industry: 'technology',
-      image: '/api/placeholder/600/400',
-      challenge: 'High customer service costs and long response times',
-      solution: 'Implemented AI-powered chatbot and automated ticket routing system',
-      results: {
-        costReduction: '60%',
-        responseTime: '85%',
-        customerSatisfaction: '40%',
-        efficiency: '70%'
-      },
-      description: 'TechCorp Solutions transformed their customer service operations using our AI-powered chatbot systemresulting in significant cost savings and improved customer satisfaction.',
-      duration: '6 months',
-      teamSize: '12 people',
-      technologies: ['Natural Language 'Processing', 'Machine 'Learning', 'API 'Integration', 'Cloud Computing'],
-      testimonial: {
-        quote: "The AI solution completely transformed our customer service operations. 'We', 've seen incredible improvements in efficiency and customer satisfaction.",
-        author: "Sarah Johnson",
-        role: "VP of Customer Experience",
-        company: "TechCorp Solutions"
-      },
-      featured: true,
-      trending: true
-    },
-    {
-      id: 2,
-      title: 'Predictive Analytics for Healthcare Outcomes',
-      company: 'MedTech Innovations',
-      industry: 'healthcare',
-      image: '/api/placeholder/600/400',
-      challenge: 'Need for early disease detection and treatment optimization',
-      solution: 'Developed ML models for predictive healthcare analytics and patient monitoring',
-      results: {
-        earlyDetection: '75%',
-        treatmentAccuracy: '90%',
-        costSavings: '45%',
-        patientOutcomes: '60%'
-      },
-      description: 'MedTech Innovations leveraged our predictive analytics platform to improve patient outcomes and reduce healthcare costs through early disease detection.',
-      duration: '8 months',
-      teamSize: '15 people',
-      technologies: ['Machine 'Learning', 'Data 'Analytics', 'IoT 'Integration', 'Cloud Infrastructure'],
-      testimonial: {
-        quote: "The predictive analytics system has revolutionized our approach to patient care. 'We', 're saving lives and reducing costs simultaneously.",
-        author: "Dr. Michael Chen",
-        role: "Chief Medical Officer",
-        company: "MedTech Innovations"
-      },
-      featured: true,
-      trending: false
-    },
-    {
-      id: 3,
-      title: 'Automated Trading System Implementation',
-      company: 'FinanceFlow Capital',
-      industry: 'finance',
-      image: '/api/placeholder/600/400',
-      challenge: 'Manual trading processes limiting scalability and profitability',
-      solution: 'Built AI-powered automated trading system with real-time market analysis',
-      results: {
-        tradingVolume: '300%',
-        profitMargin: '45%',
-        riskReduction: '50%',
-        processingSpeed: '95%'
-      },
-      description: 'FinanceFlow Capital implemented our AI trading system to automate their investment strategies and maximize returns while minimizing risk.',
-      duration: '10 months',
-      teamSize: '20 people',
-      technologies: ['Machine 'Learning', 'Real-time 'Analytics', 'Blockchain'High-frequency Trading'],
-      testimonial: {
-        quote: "The automated trading system has been a game-changer for our business. 'We', 've seen unprecedented growth in both volume and profitability.",
-        author: "Robert Martinez",
-        role: "Head of Trading",
-        company: "FinanceFlow Capital"
-      },
-      featured: false,
-      trending: true
-    }
-  ];
-
-  const filteredCaseStudies = caseStudies.filter(caseStudy => caseStudy.industry === activeIndustry);
-
+import React from 'react';
+const CaseStudyShowcase2026: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
             <Award className="w-4 h-4 mr-2" />
             Success Stories 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Real Results from
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Real Companies
             </span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
-        </divdiv>
-
+        </div>
         {/* Industry Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(industries).map(([keyindustry]) => {
@@ -243,15 +42,14 @@ const CaseStudyShowcase2026 = () => {
               </button>
             );
           })}
-        </divdiv>
-
+        </div>
         {/* Case Studies Grid */}
-          <divdiv
+          <div
             key={activeIndustry}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredCaseStudies.map((caseStudyindex) => (
-              <divdiv
+              <div
                 key={caseStudy.id}
                 onHoverStart={() => setHoveredCase(caseStudy.id)}
                 onHoverEnd={() => setHoveredCase(null)}
@@ -265,7 +63,6 @@ const CaseStudyShowcase2026 = () => {
                     </span>
                   </div>
                 )}
-
                 {/* Trending Badge */}
                 {caseStudy.trending && (
                   <div className="absolute top-4 right-4 z-10">
@@ -275,7 +72,6 @@ const CaseStudyShowcase2026 = () => {
                     </span>
                   </div>
                 )}
-
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -285,19 +81,16 @@ const CaseStudyShowcase2026 = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   {/* Company */}
                   <div className="text-sm text-blue-600 font-medium mb-2">
                     {caseStudy.company}
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {caseStudy.title}
                   </h3>
-
                   {/* Challenge */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-1">Challenge:</h4>
@@ -305,7 +98,6 @@ const CaseStudyShowcase2026 = () => {
                       {caseStudy.challenge}
                     </p>
                   </div>
-
                   {/* Solution */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-1">Solution:</h4>
@@ -313,7 +105,6 @@ const CaseStudyShowcase2026 = () => {
                       {caseStudy.solution}
                     </p>
                   </div>
-
                   {/* Results */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
@@ -328,7 +119,6 @@ const CaseStudyShowcase2026 = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Technologies */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
@@ -347,23 +137,20 @@ const CaseStudyShowcase2026 = () => {
                       )}
                     </div>
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <span>{caseStudy.duration}</span>
                     <span>•</span>
                     <span>{caseStudy.teamSize}</span>
                   </div>
-
                   {/* CTA Button */}
                   <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     View Case Study
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-
                 {/* Hover Overlay */}
-                <divdiv
+                <div
                     opacity: hoveredCase === caseStudy.id ? 1 : 0 
                   }}
                   className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center"
@@ -375,14 +162,13 @@ const CaseStudyShowcase2026 = () => {
                       View Details
                     </button>
                   </div>
-                </divdiv>
-              </divdiv>
+                </div>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
-
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -400,10 +186,11 @@ const CaseStudyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
-};
+
+
 
 export default CaseStudyShowcase2026;

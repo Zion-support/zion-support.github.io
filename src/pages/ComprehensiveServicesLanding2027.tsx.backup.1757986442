@@ -64,7 +64,6 @@ import {
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
-<<<<<<< HEAD
   Zap as ZapIcon,
   Shield as ShieldIcon,
   Cloud as CloudIcon,
@@ -95,7 +94,6 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
-=======
   Zap as ZapIconDup,
   Shield as ShieldIconDup
 >>>>>>> origin/feat/new-content-2026-evals
@@ -586,4 +584,3 @@ function Dna({ className }: { className?: string }) {
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
     </svg>
   );
-}

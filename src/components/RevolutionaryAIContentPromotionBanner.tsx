@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapTrendingUpStar
 
+
 export default function RevolutionaryAIContentPromotionBanner() {
   return (
     <divsection
@@ -17,12 +18,12 @@ export default function RevolutionaryAIContentPromotionBanner() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Badge */}
-          <divdiv
+          <div
             className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 rounded-full px-6 py-2 mb-6 shadow-lg"
           >
             <Sparkles className="w-4 h-4 mr-2" />
             <span className="text-sm font-semibold">REVOLUTIONARY AI CONTENT BREAKTHROUGH</span>
-          </divdiv>
+          </div>
 
           {/* Main heading */}
           <divh1
@@ -44,7 +45,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
           </divp>
 
           {/* Stats */}
-          <divdiv
+          <div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
           >
             <div className="text-center">
@@ -63,10 +64,10 @@ export default function RevolutionaryAIContentPromotionBanner() {
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">24/7</div>
               <div className="text-sm text-gray-300">Support</div>
             </div>
-          </divdiv>
+          </div>
 
           {/* CTA Buttons */}
-          <divdiv
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -86,10 +87,10 @@ export default function RevolutionaryAIContentPromotionBanner() {
               View Success Stories
               <Star className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </a>
-          </divdiv>
+          </div>
 
           {/* Trust indicators */}
-          <divdiv
+          <div
             className="mt-12 pt-8 border-t border-white/20"
           >
             <p className="text-gray-300 text-sm mb-4">Trusted by industry leaders</p>
@@ -100,7 +101,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
               <div className="text-lg font-semibold">Healthcare</div>
               <div className="text-lg font-semibold">Finance</div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </divsection>

@@ -1,79 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-
 const InteractiveTechDemo2027: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
-
-  const demos = [
-    {
-      id: 0,
-      title: "AI Consciousness Simulation",
-      description: "Experience how AI consciousness works in real-time",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      features: [
-        "Real-time neural network visualization",
-        "Consciousness state monitoring",
-        "Emotional response simulation",
-        "Decision-making process display"
-      ]
-    },
-    {
-      id: 1,
-      title: "Quantum Computing Demo",
-      description: "See quantum algorithms solving complex problems",
-      icon: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      features: [
-        "Quantum circuit visualization",
-        "Superposition state display",
-        "Entanglement demonstration",
-        "Quantum speed comparison"
-      ]
-    },
-    {
-      id: 2,
-      title: "Neural Interface Experience",
-      description: "Control devices with your thoughts",
-      icon: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      features: [
-        "Brain signal visualization",
-        "Thought-to-action mapping",
-        "Neural pathway tracking",
-        "Interface responsiveness test"
-      ]
-    }
-  ];
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 100) {
-            setIsPlaying(false);
-            return 0;
-          }
-          return prev + 2;
-        });
-      }, 100);
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying]);
-
-  const startDemo = () => {
-    setIsPlaying(true);
-    setProgress(0);
-  };
-
-  const stopDemo = () => {
-    setIsPlaying(false);
-    setProgress(0);
-  };
-
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto">
@@ -96,7 +22,6 @@ const InteractiveTechDemo2027: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Demo Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {demos.map((demo, index) => (
@@ -116,7 +41,6 @@ const InteractiveTechDemo2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Demo Content */}
         <AnimatePresence mode="wait">
           <div
@@ -137,7 +61,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                 <p className="text-xl opacity-90 mb-8">
                   {demos[activeDemo].description}
                 </p>
-                
                 <div className="space-y-4 mb-8">
                   {demos[activeDemo].features.map((feature, index) => (
                     <div
@@ -152,7 +75,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={startDemo}
@@ -177,7 +99,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Demo Visualization */}
               <div className="relative">
                 <div
@@ -190,7 +111,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                   <div className="relative z-10">
                     <div className="text-8xl mb-4">{demos[activeDemo].icon}</div>
                     <h4 className="text-2xl font-bold mb-4">Live Demo</h4>
-                    
                     {/* Progress Bar */}
                     <div className="mb-6">
                       <div className="bg-white/20 rounded-full h-4 mb-2">
@@ -204,7 +124,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                         {isPlaying ? `Demo Progress: ${progress}%` : 'Click Start Demo to begin'}
                       </p>
                     </div>
-
                     {/* Demo Stats */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-white/20 rounded-lg p-4">
@@ -227,8 +146,6 @@ const InteractiveTechDemo2027: React.FC = () => {
               </div>
             </div>
           </div>
-        
-
         {/* Call to Action */}
         <div
           initial={{ opacity: 0, y: 30 }}
@@ -263,5 +180,6 @@ const InteractiveTechDemo2027: React.FC = () => {
     </div>
   );
 };
+
 
 export default InteractiveTechDemo2027;

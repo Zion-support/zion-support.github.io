@@ -12,7 +12,6 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { useState } from 'react';
-
 interface Service {
   id: string;
   title: string;
@@ -32,11 +31,9 @@ interface Service {
   successRate: string;
   implementationTime: string;
 }
-
 const RevolutionaryServices2026: React.FC = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const revolutionaryServices: Service[] = [
     {
       id: "quantum-ai-consulting",
@@ -261,9 +258,7 @@ const RevolutionaryServices2026: React.FC = () => {
       implementationTime: "6-12 months"
     }
   ];
-
   const categories = ['All', 'Quantum AI', 'Neural Technology', 'Business Automation', 'AI Consciousness', 'Metaverse Technology', 'Synthetic Intelligence'];
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum AI':
@@ -282,17 +277,14 @@ const RevolutionaryServices2026: React.FC = () => {
         return <Star className="w-6 h-6" />;
     }
   };
-
   const openModal = (service: Service) => {
     setSelectedService(service);
     setIsModalOpen(true);
   };
-
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedService(null);
   };
-
   const formatPrice = (price: number) => {
     if (price >= 1000000) {
       return `$${(price / 1000000).toFixed(1)}M`;
@@ -301,7 +293,6 @@ const RevolutionaryServices2026: React.FC = () => {
     }
     return `$${price}`;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
       {/* Hero Section */}
@@ -350,7 +341,6 @@ const RevolutionaryServices2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -371,7 +361,6 @@ const RevolutionaryServices2026: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
                     {getCategoryIcon(service.category)}
@@ -383,12 +372,10 @@ const RevolutionaryServices2026: React.FC = () => {
                     <p className="text-sm text-purple-600 font-medium">{service.category}</p>
                   </div>
                 </div>
-
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {service.description}
                 </p>
               </div>
-
               {/* Features */}
               <div className="px-6 pb-4">
                 <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
@@ -406,7 +393,6 @@ const RevolutionaryServices2026: React.FC = () => {
                   )}
                 </div>
               </div>
-
               {/* Stats */}
               <div className="px-6 pb-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -420,7 +406,6 @@ const RevolutionaryServices2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Pricing */}
               <div className="px-6 pb-4">
                 <div className="flex items-center justify-between">
@@ -434,7 +419,6 @@ const RevolutionaryServices2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="p-6 pt-4 border-t border-gray-100">
                 <div className="flex space-x-3">
@@ -454,7 +438,6 @@ const RevolutionaryServices2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Service Modal */}
       <AnimatePresence>
         {isModalOpen && selectedService && (
@@ -493,12 +476,10 @@ const RevolutionaryServices2026: React.FC = () => {
                     </svg>
                   </button>
                 </div>
-
                 {/* Description */}
                 <div className="mb-8">
                   <p className="text-lg text-gray-700 leading-relaxed">{selectedService.description}</p>
                 </div>
-
                 {/* Features */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Complete Feature Set</h3>
@@ -511,7 +492,6 @@ const RevolutionaryServices2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Key Benefits</h3>
@@ -526,7 +506,6 @@ const RevolutionaryServices2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Testimonials */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Client Testimonials</h3>
@@ -541,7 +520,6 @@ const RevolutionaryServices2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Pricing */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Pricing Plans</h3>
@@ -563,7 +541,6 @@ const RevolutionaryServices2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
@@ -579,7 +556,6 @@ const RevolutionaryServices2026: React.FC = () => {
                     <div className="text-sm text-gray-500">Support Available</div>
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex space-x-4 pt-6 border-t">
                   <button className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center space-x-2">
@@ -598,5 +574,6 @@ const RevolutionaryServices2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryServices2026;

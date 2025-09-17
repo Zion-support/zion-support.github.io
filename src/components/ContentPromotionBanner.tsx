@@ -1,25 +1,19 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { getFeaturedBlogPosts, getRecentBlogPosts } from '@/data/blog-posts';
-
 const ContentPromotionBanner: React.FC = () => {
   const featured = getFeaturedBlogPosts();
   const recent = getRecentBlogPosts(3);
-
   const now = new Date();
   const sevenDaysMs = 7 * 24 * 60 * 60 * 1000;
   const isNewThisWeek = (dateStr: string) => {
     const d = new Date(dateStr);
     return now.getTime() - d.getTime() <= sevenDaysMs;
   };
-
   const newThisWeek = [...featured, ...recent].filter(p => isNewThisWeek(p.publishDate));
   const picks = (featured.length > 0 ? featured.slice(0, 3) : recent).map(p => ({
     href: `/blog/${p.slug}`,
     label: p.title,
     emoji: '🆕'
   }));
-
   return (
     <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
       <div className="flex items-center justify-center space-x-2 mb-2">
@@ -42,5 +36,6 @@ const ContentPromotionBanner: React.FC = () => {
     </div>
   );
 };
+
 
 export default ContentPromotionBanner;

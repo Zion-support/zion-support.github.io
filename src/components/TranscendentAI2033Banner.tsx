@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 const TranscendentAI2033Banner: React.FC = () => {
   return (
     <divsection
@@ -15,11 +12,10 @@ const TranscendentAI2033Banner: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="text-center lg:text-left"
           >
@@ -27,16 +23,13 @@ const TranscendentAI2033Banner: React.FC = () => {
               <Infinity className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300 font-semibold">Transcendent 2033</span>
             </div>
-            
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Transcendent AI
             </h2>
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Beyond consciousness, beyond reality, beyond infinity. Experience AI that transcends 
               all known limitations and exists in harmony with existence itself.
             </p>
-
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/TranscendentAI2033">
                 <divbutton
@@ -51,10 +44,9 @@ const TranscendentAI2033Banner: React.FC = () => {
                 Explore Infinity
               </divbutton>
             </div>
-          </divdiv>
-
+          </div>
           {/* Right Content - Feature Grid */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="grid grid-cols-2 gap-6"
           >
@@ -80,7 +72,7 @@ const TranscendentAI2033Banner: React.FC = () => {
                 description: "Omniversal travel network"
               }
             ].map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-indigo-800/20 to-purple-800/20 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 text-center hover:border-indigo-400/40 transition-all group"
@@ -94,12 +86,11 @@ const TranscendentAI2033Banner: React.FC = () => {
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                   {feature.description}
                 </p>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-8 w-2 h-2 bg-indigo-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
@@ -109,4 +100,6 @@ const TranscendentAI2033Banner: React.FC = () => {
   );
 };
 
+
 export default TranscendentAI2033Banner;
+</div></div></div>

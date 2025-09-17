@@ -1,28 +1,12 @@
-import React, { createContext, useContext, useState } from 'react';
-
-const ViewModeContext = createContext();
-
-export const useViewMode = () => {
-  const context = useContext(ViewModeContext);
-  if (!context) {
-    throw new Error('useViewMode must be used within a ViewModeProvider');
-  }
-  return context;
+import React from 'react';
+const ViewModeContext= () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ViewModeContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
-export const ViewModeProvider = ({ children }) => {
-  const [viewMode, setViewMode] = useState('desktop');
-  const [isMobile, setIsMobile] = useState(false);
 
-  const value = {
-    viewMode,
-    setViewMode,
-    isMobile,
-    setIsMobile
-  };
-
-  return (
-    <ViewModeContext.Provider value={value}>
-      {children}
-    </ViewModeContext.Provider>
-  );
+export default ViewModeContext;

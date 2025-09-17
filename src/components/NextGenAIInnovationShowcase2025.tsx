@@ -1,119 +1,18 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Cpu
-  Network
-  Shield
-  Target
-  TrendingUp
-  Users,
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  Lightbulb,
-  Rocket,
-  Globe,
-  Lock
-} from 'lucide-react';
-
-const NextGenAIInnovationShowcase2025 = () => {
-  const [activeFeaturesetActiveFeature] = useState(0);
-  const [isPlayingsetIsPlaying] = useState(false);
-
-  const innovations = [
-    {
-      id: 'quantum-ai',
-      title: 'Quantum-AI Fusion Technology',
-      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power',
-      icon: Brain,
-      features: ['1000x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'],
-      impact: 'Transform entire industries',
-      color: 'from-purple-600 to-blue-600'
-    },
-    {
-      id: 'neural-interfaces',
-      title: 'Neural Interface Revolution',
-      description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',
-      icon: Network,
-      features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'],
-      impact: 'Redefine human potential',
-      color: 'from-blue-600 to-cyan-600'
-    },
-    {
-      id: 'autonomous-systems',
-      title: 'Autonomous Business Systems',
-      description: 'Self-managing AI systems that operate independently while maintaining peak performance',
-      icon: Cpu,
-      features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'],
-      impact: 'Revolutionize business operations',
-      color: 'from-green-600 to-emerald-600'
-    },
-    {
-      id: 'consciousness-ai',
-      title: 'Conscious AI Framework',
-      description: 'Advanced AI systems with genuine understanding and emotional intelligence',
-      icon: Lightbulb,
-      features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'],
-      impact: 'Create truly intelligent systems',
-      color: 'from-orange-600 to-red-600'
-    }
-  ];
-
-  const stats = [
-    { number: '500%'label: 'Performance 'Increase', 'icon: TrendingUp },
-    { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target },
-    { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket },
-    { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'CTOTechCorp',
-      quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.',
-      rating: 5
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'CEOInnovateLabs',
-      quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.',
-      rating: 5
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'AI Research Director',
-      quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.',
-      rating: 5
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % innovations.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
+import React from 'react';
+const NextGenAIInnovationShowcase2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 opacity-20"></div>
-        
         <div className="relative z-10 container mx-auto px-6 py-20">
-          <divdiv
+          <div
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               Next-Generation AI Innovation
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               The Future of AI
               <br />
@@ -121,12 +20,10 @@ const NextGenAIInnovationShowcase2025 = () => {
                 Starts Here
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Experience groundbreaking AI technologies that will reshape industries
               enhance human capabilitiesand unlock unlimited potential for the next decade.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 onClick={() => setIsPlaying(!isPlaying)}
@@ -135,7 +32,6 @@ const NextGenAIInnovationShowcase2025 = () => {
                 <Play className="w-5 h-5" />
                 {isPlaying ? 'Pause Demo' : 'Watch Demo'}
               </divbutton>
-              
               <divbutton
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
@@ -143,16 +39,15 @@ const NextGenAIInnovationShowcase2025 = () => {
                 <ArrowRight className="w-5 h-5" />
               </divbutton>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center"
@@ -162,16 +57,15 @@ const NextGenAIInnovationShowcase2025 = () => {
                 </div>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </div>
-
       {/* Innovation Showcase */}
       <div className="py-20">
         <div className="container mx-auto px-6">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -181,13 +75,12 @@ const NextGenAIInnovationShowcase2025 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
-          </divdiv>
-
+          </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Innovation Cards */}
             <div className="space-y-6">
               {innovations.map((innovationindex) => (
-                <divdiv
+                <div
                   key={innovation.id}
                   whileInView={{ opacity: 1x: 0 }}
                   className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
@@ -216,13 +109,12 @@ const NextGenAIInnovationShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
-
             {/* Interactive Demo Area */}
             <div className="relative">
-                <divdiv
+                <div
                   key={activeFeature}
                   className={`bg-gradient-to-br ${innovations[activeFeature].color} p-8 rounded-3xl h-96 flex flex-col justify-center items-center text-center relative overflow-hidden`}
                 >
@@ -231,48 +123,44 @@ const NextGenAIInnovationShowcase2025 = () => {
                     {React.createElement(innovations[activeFeature].icon{ className: "w-20 h-20 mx-auto mb-6 text-white" })}
                     <h3 className="text-2xl font-bold mb-4">{innovations[activeFeature].title}</h3>
                     <p className="text-lg opacity-90 mb-6">{innovations[activeFeature].description}</p>
-                    
                     {isPlaying && (
-                      <divdiv
+                      <div
                         className="space-y-3"
                       >
                         {innovations[activeFeature].features.map((featureidx) => (
-                          <divdiv
+                          <div
                             key={idx}
                             className="flex items-center gap-3 text-left"
                           >
                             <CheckCircle className="w-5 h-5 text-green-400" />
                             <span>{feature}</span>
-                          </divdiv>
+                          </div>
                         ))}
-                      </divdiv>
+                      </div>
                     )}
                   </div>
-                  
                   {/* Animated Background Elements */}
                   <div className="absolute top-4 right-4 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/20 rounded-full animate-pulse delay-1000"></div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Testimonials */}
       <div className="py-20 bg-black/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
             <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
-          </divdiv>
-
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
@@ -287,16 +175,15 @@ const NextGenAIInnovationShowcase2025 = () => {
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
@@ -306,7 +193,6 @@ const NextGenAIInnovationShowcase2025 = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of forward-thinking organizations already leveraging next-generation AI technologies
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
@@ -314,7 +200,6 @@ const NextGenAIInnovationShowcase2025 = () => {
                 <Rocket className="w-5 h-5" />
                 Start Your Transformation
               </divbutton>
-              
               <divbutton
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
@@ -322,7 +207,6 @@ const NextGenAIInnovationShowcase2025 = () => {
                 Schedule Consultation
               </divbutton>
             </div>
-
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
@@ -337,11 +221,13 @@ const NextGenAIInnovationShowcase2025 = () => {
                 24/7 Support
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
+
 export default NextGenAIInnovationShowcase2025;
+</div></div></div>

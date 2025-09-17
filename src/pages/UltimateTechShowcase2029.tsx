@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateTechShowcase2029: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -16,5 +15,6 @@ const UltimateTechShowcase2029: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateTechShowcase2029;

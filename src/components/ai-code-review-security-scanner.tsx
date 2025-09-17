@@ -1,12 +1,5 @@
 import React from 'react';
-import SEO from '../components/SEO';
-import { 
-  Brain, Shield, Code, CheckCircle, Zap, 
-  ArrowRight, Star, TrendingUp, Users, 
-  Lock, Eye, BarChart3, Globe, Award
-} from 'lucide-react';
-
-const AICodeReviewSecurityScanner = () => {
+const ai-code-review-security-scanner: React.FC = () => {
   return (
     <>
       <SEO 
@@ -16,30 +9,26 @@ const AICodeReviewSecurityScanner = () => {
         ogImage="https://ziontechgroup.com/og-ai-code-review.jpg"
         canonical="https://ziontechgroup.com/ai-code-review-security-scanner"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-            <divdiv
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Development Security
               </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI-Powered Code Review & 
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Security Scanner</span>
               </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, 
                 suggests improvements, and ensures code quality across multiple programming languages.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
@@ -47,14 +36,12 @@ const AICodeReviewSecurityScanner = () => {
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </divbutton>
-                
                 <divbutton
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
                 </divbutton>
               </div>
-              
               <div className="flex flex-wrap justify-center gap-8 text-gray-400">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
@@ -69,14 +56,13 @@ const AICodeReviewSecurityScanner = () => {
                   SOC2 & ISO27001 compliant
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -87,8 +73,7 @@ const AICodeReviewSecurityScanner = () => {
                 Our AI-powered platform provides end-to-end code analysis, security scanning, and quality assurance 
                 to protect your applications and improve development efficiency.
               </p>
-            </divdiv>
-            
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -122,7 +107,7 @@ const AICodeReviewSecurityScanner = () => {
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
               ].map((feature, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
@@ -132,16 +117,15 @@ const AICodeReviewSecurityScanner = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -152,8 +136,7 @@ const AICodeReviewSecurityScanner = () => {
                 Choose the plan that fits your development team size and security requirements. 
                 All plans include our core AI-powered security scanning capabilities.
               </p>
-            </divdiv>
-            
+            </div>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -207,7 +190,7 @@ const AICodeReviewSecurityScanner = () => {
                   popular: false
                 }
               ].map((plan, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
@@ -223,7 +206,6 @@ const AICodeReviewSecurityScanner = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-4">
@@ -232,7 +214,6 @@ const AICodeReviewSecurityScanner = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -241,7 +222,6 @@ const AICodeReviewSecurityScanner = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <divbutton
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular
@@ -251,16 +231,15 @@ const AICodeReviewSecurityScanner = () => {
                   >
                     Get Started
                   </divbutton>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -271,8 +250,7 @@ const AICodeReviewSecurityScanner = () => {
                 Our platform delivers measurable results that improve your security posture, 
                 development efficiency, and code quality while reducing costs and risks.
               </p>
-            </divdiv>
-            
+            </div>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
@@ -292,7 +270,7 @@ const AICodeReviewSecurityScanner = () => {
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
                 ].map((benefit, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     whileInView={{ opacity: 1, x: 0 }}
                     className="flex items-start"
@@ -304,10 +282,9 @@ const AICodeReviewSecurityScanner = () => {
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-              
               <div className="space-y-8">
                 {[
                   {
@@ -326,7 +303,7 @@ const AICodeReviewSecurityScanner = () => {
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
                 ].map((benefit, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     whileInView={{ opacity: 1, x: 0 }}
                     className="flex items-start"
@@ -338,17 +315,16 @@ const AICodeReviewSecurityScanner = () => {
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center mb-16"
             >
@@ -359,8 +335,7 @@ const AICodeReviewSecurityScanner = () => {
                 Our AI-powered code security platform is used by development teams across various industries 
                 to protect their applications and improve code quality.
               </p>
-            </divdiv>
-            
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams",
@@ -372,7 +347,7 @@ const AICodeReviewSecurityScanner = () => {
                 "Educational Institutions",
                 "Startups & Enterprises"
               ].map((useCase, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
@@ -381,16 +356,15 @@ const AICodeReviewSecurityScanner = () => {
                     <Users className="w-6 h-6" />
                   </div>
                   <h3 className="text-white font-semibold">{useCase}</h3>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -400,7 +374,6 @@ const AICodeReviewSecurityScanner = () => {
                 Join thousands of development teams who trust our AI-powered platform to protect their applications 
                 and improve code quality. Start your free trial today.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -408,25 +381,22 @@ const AICodeReviewSecurityScanner = () => {
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </divbutton>
-                
                 <divbutton
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Contact Sales
                 </divbutton>
               </div>
-              
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
             >
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -439,7 +409,6 @@ const AICodeReviewSecurityScanner = () => {
                   <p>Mobile: +1 302 464 0950</p>
                   <p>Email: kleber@ziontechgroup.com</p>
                 </div>
-                
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Globe className="w-6 h-6" />
@@ -447,7 +416,6 @@ const AICodeReviewSecurityScanner = () => {
                   <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
                   <p>https://ziontechgroup.com</p>
                 </div>
-                
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Award className="w-6 h-6" />
@@ -457,7 +425,7 @@ const AICodeReviewSecurityScanner = () => {
                   <p>Middletown DE 19709</p>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>
@@ -465,4 +433,6 @@ const AICodeReviewSecurityScanner = () => {
   );
 };
 
+
 export default AICodeReviewSecurityScanner;
+</div></div></div></div></div></div>

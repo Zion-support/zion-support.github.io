@@ -1,14 +1,11 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const QuantumMLRevolutionBanner2025 = () => {
+const QuantumMLRevolutionBanner2025: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-      
       {/* Quantum Circuit Animation */}
       <div className="absolute top-10 right-10 w-32 h-32 opacity-20">
         <div className="w-full h-full border-2 border-cyan-400 rounded-full animate-spin">
@@ -18,7 +15,6 @@ const QuantumMLRevolutionBanner2025 = () => {
           <div className="w-3 h-3 bg-indigo-400 rounded-full absolute right-0 top-1/2 transform -translate-y-1/2"></div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           {/* Badge */}
@@ -26,7 +22,6 @@ const QuantumMLRevolutionBanner2025 = () => {
             <span className="mr-2">⚡</span>
             QUANTUM ML REVOLUTION 2025-2026
           </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -37,13 +32,11 @@ const QuantumMLRevolutionBanner2025 = () => {
               Breakthrough
             </span>
           </h1>
-
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
             Unlock <span className="text-cyan-400 font-semibold">5000% ROI</span> with quantum-enhanced AI that processes data 
             <span className="text-purple-400 font-semibold"> 10,000x faster</span> than classical computers
           </p>
-
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -62,7 +55,6 @@ const QuantumMLRevolutionBanner2025 = () => {
               <p className="text-sm text-gray-300">Fortune 500 companies achieving 5000% ROI with quantum ML implementation</p>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -78,7 +70,6 @@ const QuantumMLRevolutionBanner2025 = () => {
               View Success Stories
             </a>
           </div>
-
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-300">
             <div className="flex items-center">
@@ -100,7 +91,6 @@ const QuantumMLRevolutionBanner2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
@@ -109,5 +99,6 @@ const QuantumMLRevolutionBanner2025 = () => {
     </section>
   );
 };
+
 
 export default QuantumMLRevolutionBanner2025;

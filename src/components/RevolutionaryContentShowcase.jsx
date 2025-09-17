@@ -1,35 +1,5 @@
-import React, { useState } from 'react';
-
-const RevolutionaryContentShowcase = () => {
-  const [activeContent, setActiveContent] = useState(0);
-
-  const contentItems = [
-    {
-      title: "Synthetic Intelligence 2026",
-      description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
-      icon: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/SyntheticIntelligence2026",
-      features: ["Autonomous AI Agents", "Synthetic Consciousness", "Creative AI", "Collective Intelligence"]
-    },
-    {
-      title: "Quantum-Neural Fusion 2026",
-      description: "Revolutionary fusion of quantum computing and neural networks for unprecedented processing power",
-      icon: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumNeuralFusion2026",
-      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"]
-    },
-    {
-      title: "Next-Gen Tech Showcase 2026",
-      description: "Discover the most advanced technologies of 2026 featuring revolutionary innovations",
-      icon: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/NextGenTechShowcase2026",
-      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"]
-    }
-  ];
-
+import React from 'react';
+const RevolutionaryContentShowcase= () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -45,7 +15,6 @@ const RevolutionaryContentShowcase = () => {
             that are reshaping the future of human-machine interaction.
           </p>
         </div>
-
         {/* Content Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
@@ -65,9 +34,8 @@ const RevolutionaryContentShowcase = () => {
             ))}
           </div>
         </div>
-
         {/* Active Content Display */}
-        <divdiv
+        <div
           key={activeContent}
           className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
         >
@@ -76,7 +44,6 @@ const RevolutionaryContentShowcase = () => {
               <div className="text-8xl mb-6">{contentItems[activeContent].icon}</div>
               <h3 className="text-4xl font-bold mb-6">{contentItems[activeContent].title}</h3>
               <p className="text-xl opacity-90 mb-8">{contentItems[activeContent].description}</p>
-              
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {contentItems[activeContent].features.map((feature, index) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -84,7 +51,6 @@ const RevolutionaryContentShowcase = () => {
                   </div>
                 ))}
               </div>
-              
               <a
                 href={contentItems[activeContent].link}
                 className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
@@ -92,7 +58,6 @@ const RevolutionaryContentShowcase = () => {
                 Explore {contentItems[activeContent].title} →
               </a>
             </div>
-            
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                 <h4 className="text-2xl font-bold mb-4">Key Highlights</h4>
@@ -117,10 +82,12 @@ const RevolutionaryContentShowcase = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
+
 };
+
 
 export default RevolutionaryContentShowcase;

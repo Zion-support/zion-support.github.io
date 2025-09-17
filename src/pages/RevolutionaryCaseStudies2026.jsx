@@ -16,11 +16,9 @@ import {
   Globe,
   Cpu
 } from 'lucide-react';
-
 const RevolutionaryCaseStudies2026 = () => {
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const caseStudies = [
     {
       id: 1,
@@ -167,13 +165,10 @@ const RevolutionaryCaseStudies2026 = () => {
       }
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const currentCaseStudy = caseStudies[activeCaseStudy];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Background Elements */}
@@ -199,7 +194,6 @@ const RevolutionaryCaseStudies2026 = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
@@ -223,7 +217,6 @@ const RevolutionaryCaseStudies2026 = () => {
             delivering unprecedented results and ROI.
           </p>
         </motion.div>
-
         {/* Case Studies Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {caseStudies.map((caseStudy, index) => (
@@ -241,13 +234,11 @@ const RevolutionaryCaseStudies2026 = () => {
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${caseStudy.gradient} flex items-center justify-center mb-6`}>
                 <caseStudy.icon className="w-8 h-8 text-white" />
               </div>
-              
               <div className="mb-4">
                 <span className="text-sm font-medium text-purple-300">{caseStudy.industry}</span>
                 <h3 className="text-xl font-bold text-white mt-1">{caseStudy.title}</h3>
                 <p className="text-gray-300 text-sm mt-2">{caseStudy.client}</p>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-400">{caseStudy.results.efficiency || caseStudy.results.processingSpeed || caseStudy.results.patientRecovery || caseStudy.results.threatDetection || caseStudy.results.trafficFlow || caseStudy.results.researchSpeed}</div>
@@ -258,7 +249,6 @@ const RevolutionaryCaseStudies2026 = () => {
                   <div className="text-xs text-gray-400">ROI</div>
                 </div>
               </div>
-
               <div className="flex items-center justify-between text-sm text-gray-400">
                 <div className="flex items-center space-x-1">
                   <Calendar className="w-4 h-4" />
@@ -272,7 +262,6 @@ const RevolutionaryCaseStudies2026 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Detailed Case Study View */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -296,19 +285,16 @@ const RevolutionaryCaseStudies2026 = () => {
                     <p className="text-lg text-purple-200">{currentCaseStudy.client}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300">{currentCaseStudy.challenge}</p>
                   </div>
-                  
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300">{currentCaseStudy.solution}</p>
                   </div>
                 </div>
-
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
@@ -322,7 +308,6 @@ const RevolutionaryCaseStudies2026 = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="bg-white/10 rounded-xl p-4">
                   <h4 className="text-lg font-semibold text-white mb-2">Client Testimonial</h4>
                   <p className="text-gray-300 italic mb-2">"{currentCaseStudy.testimonial.text}"</p>
@@ -332,11 +317,9 @@ const RevolutionaryCaseStudies2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Results and Metrics */}
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white">Results & Impact</h4>
-                
                 <div className="grid grid-cols-2 gap-4">
                   {Object.entries(currentCaseStudy.results).map(([key, value], index) => (
                     <motion.div
@@ -353,12 +336,10 @@ const RevolutionaryCaseStudies2026 = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h5 className="text-lg font-semibold text-white mb-2">Project Duration</h5>
                   <p className="text-gray-300">{currentCaseStudy.duration}</p>
                 </div>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -371,7 +352,6 @@ const RevolutionaryCaseStudies2026 = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -397,6 +377,8 @@ const RevolutionaryCaseStudies2026 = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default RevolutionaryCaseStudies2026;

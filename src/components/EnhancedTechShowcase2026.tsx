@@ -1,87 +1,5 @@
 import React, { useState } from 'react';
-
-
 const EnhancedTechShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('breakthrough');
-
-  const techCategories = {
-    breakthrough: {
-      title: 'Revolutionary Breakthroughs',
-      icon: '🚀',
-      color: 'from-purple-600 to-pink-600',
-      content: [
-        {
-          title: 'AI Consciousness Revolution',
-          description: 'Breakthrough in artificial consciousness enabling self-aware AI systems',
-          features: ['Self-awareness', 'Emotional intelligence', 'Creative problem solving'],
-          link: '/pages/RevolutionaryTechBreakthrough2026'
-        },
-        {
-          title: 'Quantum Neural Fusion',
-          description: 'Revolutionary fusion of quantum computing and neural networks',
-          features: ['Exponential processing', 'Quantum algorithms', 'Real-time learning'],
-          link: '/pages/RevolutionaryTechBreakthrough2026'
-        },
-        {
-          title: 'Neural Reality Engine',
-          description: 'Advanced neural interface creating immersive virtual realities',
-          features: ['Direct neural interfaces', 'Mind control', 'Shared consciousness'],
-          link: '/pages/RevolutionaryTechBreakthrough2026'
-        }
-      ]
-    },
-    innovation: {
-      title: 'Innovation Hub',
-      icon: '🔬',
-      color: 'from-indigo-600 to-purple-600',
-      content: [
-        {
-          title: 'AI Research Lab',
-          description: 'Advanced AI research and development facility',
-          features: ['50+ Researchers', 'Deep learning', 'Neural networks'],
-          link: '/pages/AdvancedTechInnovationHub2026'
-        },
-        {
-          title: 'Quantum Lab',
-          description: 'Quantum computing research and development',
-          features: ['25+ Researchers', 'Quantum algorithms', 'Cryptography'],
-          link: '/pages/AdvancedTechInnovationHub2026'
-        },
-        {
-          title: 'Neural Interface Lab',
-          description: 'Brain-computer interface research',
-          features: ['30+ Researchers', 'BCI technology', 'Cognitive enhancement'],
-          link: '/pages/AdvancedTechInnovationHub2026'
-        }
-      ]
-    },
-    space: {
-      title: 'Space Technology',
-      icon: '🚀',
-      color: 'from-blue-600 to-cyan-600',
-      content: [
-        {
-          title: 'Advanced Propulsion',
-          description: 'Revolutionary propulsion systems for interplanetary travel',
-          features: ['Fusion engines', 'Antimatter propulsion', 'Warp drive concepts'],
-          link: '/pages/NextGenSpaceTech2030'
-        },
-        {
-          title: 'Space Habitats',
-          description: 'Self-sustaining space habitats for long-term missions',
-          features: ['Rotating stations', 'Lunar bases', 'Mars colonies'],
-          link: '/pages/NextGenSpaceTech2030'
-        },
-        {
-          title: 'Asteroid Mining',
-          description: 'Advanced mining technologies for celestial resources',
-          features: ['Automated robots', 'Resource extraction', 'Processing facilities'],
-          link: '/pages/NextGenSpaceTech2030'
-        }
-      ]
-    }
-  };
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -98,7 +16,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             Explore our revolutionary technologies through an interactive showcase featuring the most advanced innovations
           </p>
         </div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
@@ -118,7 +35,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Display */}
         <AnimatePresence mode="wait">
           <div
@@ -156,8 +72,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
               </div>
             ))}
           </div>
-        
-
         {/* Statistics Section */}
         <div
           initial={{ opacity: 0, y: 50 }}
@@ -169,7 +83,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             <h3 className="text-3xl font-bold mb-4">📊 Innovation Impact</h3>
             <p className="text-xl opacity-80">Our technologies are making a real difference</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -209,7 +122,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           initial={{ opacity: 0, y: 50 }}
@@ -234,5 +146,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default EnhancedTechShowcase2026;

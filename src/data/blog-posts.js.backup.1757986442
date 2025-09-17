@@ -150,8 +150,6 @@ export const blogPosts = [
     imageUrl: "/images/blog/autonomous-finance-os.jpg",
     slug: "ai-2026-autonomous-finance-operating-system"
   }
-<<<<<<< HEAD
-=======
   ,
   {
     id: 10,
@@ -398,4 +396,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

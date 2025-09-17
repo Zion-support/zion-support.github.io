@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const InteractiveTechShowcase2033: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState<string | null>(null);
-
   const demos = [
     {
       id: 'neural-interface',
@@ -37,7 +35,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
       features: ['Future Prediction', 'Past Reconstruction', 'Time Loops', '99.9% Accuracy']
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated background elements */}
@@ -45,7 +42,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
       <div className="absolute top-32 right-20 w-16 h-16 bg-pink-500/30 rounded-full animate-bounce"></div>
       <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-500/30 rounded-full animate-ping"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -56,7 +52,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
             Control digital environments with your mind, explore quantum realms, and interact with holographic displays.
           </p>
         </div>
-
         {/* Demo Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {demos.map((demo) => (
@@ -71,7 +66,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
                 <div className="text-4xl mb-4">{demo.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
                 <p className="text-sm opacity-90 mb-4">{demo.description}</p>
-                
                 {activeDemo === demo.id && (
                   <div className="space-y-2">
                     <h4 className="font-semibold text-sm">Key Features:</h4>
@@ -89,7 +83,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Active Demo Display */}
         {activeDemo && (
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-12 border border-white/20">
@@ -100,7 +93,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
               <p className="text-lg text-gray-300 mb-6">
                 {demos.find(d => d.id === activeDemo)?.description}
               </p>
-              
               <div className="bg-black/30 rounded-xl p-6 mb-6">
                 <div className="text-6xl mb-4">
                   {demos.find(d => d.id === activeDemo)?.icon}
@@ -108,7 +100,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
                 <div className="text-2xl font-bold text-green-400 mb-2">DEMO ACTIVE</div>
                 <div className="text-sm text-gray-300">Processing neural signals...</div>
               </div>
-
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-2xl font-bold text-green-400 mb-1">99.9%</div>
@@ -130,7 +121,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -151,5 +141,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
     </div>
   );
 };
+
 
 export default InteractiveTechShowcase2033;

@@ -10,13 +10,11 @@ import {
   TrendingUp,
   Star
 } from 'lucide-react';
-
 interface NewContentBanner2026Props {
   onClose?: () => void;
   autoHide?: boolean;
   hideDelay?: number;
 }
-
 const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({ 
   onClose, 
   autoHide = true, 
@@ -24,7 +22,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const newContent = [
     {
       icon: Brain,
@@ -59,7 +56,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
       bgGradient: "from-orange-600/20 to-red-600/20"
     }
   ];
-
   useEffect(() => {
     if (autoHide) {
       const timer = setTimeout(() => {
@@ -68,28 +64,23 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
       return () => clearTimeout(timer);
     }
   }, [autoHide, hideDelay]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % newContent.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [newContent.length]);
-
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => {
       onClose?.();
     }, 300);
   };
-
   const handleContentClick = (link: string) => {
     // Navigate to the content
     window.location.href = link;
   };
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -108,7 +99,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
                 <Sparkles className="w-4 h-4 text-white mr-2" />
                 <span className="text-white text-sm font-semibold">NEW</span>
               </div>
-
               {/* Content Carousel */}
               <div className="flex-1 relative overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -124,7 +114,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${newContent[currentSlide].gradient} p-3 flex-shrink-0`}>
                       <newContent[currentSlide].icon className="w-6 h-6 text-white" />
                     </div>
-                    
                     <div className="flex-1">
                       <h3 className="text-white font-semibold text-lg">
                         {newContent[currentSlide].title}
@@ -133,13 +122,11 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
                         {newContent[currentSlide].description}
                       </p>
                     </div>
-                    
                     <ArrowRight className="w-5 h-5 text-purple-400" />
                   </motion.div>
                 </AnimatePresence>
               </div>
             </div>
-
             {/* Action Buttons */}
             <div className="flex items-center space-x-4">
               <button
@@ -149,7 +136,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
                 <span>Explore Now</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              
               <button
                 onClick={handleClose}
                 className="text-gray-400 hover:text-white transition-colors duration-200 p-2"
@@ -158,7 +144,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
               </button>
             </div>
           </div>
-
           {/* Progress Indicators */}
           <div className="flex justify-center mt-4 space-x-2">
             {newContent.map((_, index) => (
@@ -174,7 +159,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
             ))}
           </div>
         </div>
-
         {/* Animated Background */}
         <div className="absolute inset-0 -z-10">
           <div className={`absolute inset-0 bg-gradient-to-r ${newContent[currentSlide].bgGradient} opacity-50`} />
@@ -185,4 +169,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
   );
 };
 
+
 export default NewContentBanner2026;
+</div></div>
