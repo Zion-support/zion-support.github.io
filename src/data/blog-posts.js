@@ -2632,7 +2632,8 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-  {
+
+export const additionalBlogPost = {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
     excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
@@ -2646,8 +2647,9 @@ export const getBlogTags = () => {
     featured: true,
     imageUrl: "/images/blog/exec-guide-eval-gates-2026.jpg",
     slug: "exec-guide-eval-gates-ship-tomorrow"
-  },
-  {
+  };
+
+export const additionalBlogPost2 = {
     id: 9511,
     title: "Playbook: Safe Agent Rollouts in 7 Days",
     excerpt: "A day‑by‑day plan with eval gates, scorecards, and rollback drills.",
@@ -2661,8 +2663,9 @@ export const getBlogTags = () => {
     featured: true,
     imageUrl: "/images/blog/safe-agent-rollouts-7-days.jpg",
     slug: "playbook-safe-agent-rollouts-7-days"
-  },
-  {
+  };
+
+export const additionalBlogPost3 = {
     id: 9512,
     title: "Blueprint: Cost‑Aware Model Routing That Holds Quality",
     excerpt: "Reduce spend 30%+ with confidence‑tier routing and online evals.",
@@ -2676,8 +2679,9 @@ export const getBlogTags = () => {
     featured: true,
     imageUrl: "/images/blog/cost-aware-routing-blueprint.jpg",
     slug: "blueprint-cost-aware-model-routing"
-  },
-  {
+  };
+
+export const additionalBlogPost4 = {
     id: 9502,
     title: "FinServ Case Study: 35% Savings With Policy Routing",
     excerpt: "Spend bands, confidence ladders, and online evals—quality held, cost down 35%.",
@@ -3560,6 +3564,5 @@ export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
 
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)
