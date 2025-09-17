@@ -13,6 +13,12 @@ const blogPosts = [
     summary: 'Real‑world wins from eval‑ and cost‑aware model routing under latency budgets.'
   },
   {
+    slug: 'ai-2026-reliable-autonomy-ops-blueprint',
+    title: 'AI 2026: Reliable Autonomy Ops — Blueprint',
+    summary:
+      'Run autonomous agents reliably in production with SLOs, eval gates, guardrails, and incident-ready workflows.'
+  },
+  {
     slug: 'ai-2026-operational-evals-blueprint',
     title: 'AI 2026: Operational Evals Blueprint',
     summary:
