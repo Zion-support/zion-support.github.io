@@ -1,8 +1,12 @@
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  # Safe to include; it runs post-build if available. Netlify will skip if not installed.
+
 # Netlify build configuration for Vite static app
 # Build: install and build
 # Clean unified Netlify config
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   base = "."
   command_timeout = "30m"
@@ -227,11 +231,11 @@
   NODE_VERSION = "20"
 
 [context.deploy-preview]
-  command = "npm run build:netlify"
+  command = "npm run build"
   [context.deploy-preview.environment]
     NODE_VERSION = "20"
 
 [context.branch-deploy]
-  command = "npm run build:netlify"
+  command = "npm run build"
   [context.branch-deploy.environment]
     NODE_VERSION = "20"
