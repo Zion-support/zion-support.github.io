@@ -57,6 +57,11 @@ import RevolutionaryContentShowcase from './src/components/RevolutionaryContentS
 import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
 import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import FutureTechInnovationHub2026 from './src/pages/FutureTechInnovationHub2026';
+import AI2026RevolutionaryBreakthrough from './src/pages/AI2026RevolutionaryBreakthrough';
+import AI2026UltimateBreakthrough from './src/pages/AI2026UltimateBreakthrough';
+import AIAutonomousResearchAssistant from './src/pages/AIAutonomousResearchAssistant';
+import AIBusinessAutomation2026 from './src/pages/AIBusinessAutomation2026';
+import AIConsciousnessEvolution2026 from './src/pages/AIConsciousnessEvolution2026';
 
 export default function App(): JSX.Element {
   return (
@@ -103,6 +108,12 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         📚 Tech Blog →
+                      </a>
+                      <a href="/pages/AI2026RevolutionaryBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🤖 AI Breakthrough →
+                      </a>
+                      <a href="/pages/AIAutonomousResearchAssistant" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🔬 AI Research →
                       </a>
                     </div>
                   </div>
@@ -734,6 +745,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBreakthrough2026" element={<RevolutionaryTechBreakthrough2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/FutureTechInnovationHub2026" element={<FutureTechInnovationHub2026 />} />
+          <Route path="/pages/AI2026RevolutionaryBreakthrough" element={<AI2026RevolutionaryBreakthrough />} />
+          <Route path="/pages/AI2026UltimateBreakthrough" element={<AI2026UltimateBreakthrough />} />
+          <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
+          <Route path="/pages/AIBusinessAutomation2026" element={<AIBusinessAutomation2026 />} />
+          <Route path="/pages/AIConsciousnessEvolution2026" element={<AIConsciousnessEvolution2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
