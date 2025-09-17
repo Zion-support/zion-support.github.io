@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
   const showcases = [
-  const [activeDemo, setActiveDemo] = useState(0);
-
-  const techDemos = [
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const technologies = [
     {
       id: 1,
       title: "🧠 AI Consciousness Demo",
@@ -114,15 +102,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeShowcase}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1 }}
-                transition={{ duration: 0.8 }}
-                className={`absolute inset-0 bg-gradient-to-br ${showcases[activeShowcase].gradient} p-12 rounded-2xl`}
-              >
+            <div
+              key={activeShowcase}
+              className={`absolute inset-0 bg-gradient-to-br ${showcases[activeShowcase].gradient} p-12 rounded-2xl transition-opacity duration-800 ${
+                activeShowcase === activeShowcase ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
                 <div className="flex items-center justify-between h-full">
                   <div className="flex-1">
                     <div className="flex items-center space-x-6 mb-8">
@@ -158,41 +143,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
                           🚀 Try Interactive Demo →
                         </a>
                       </div>
-    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE DEMO • JANUARY 2026
-          </div>
-          <h2 className="text-4xl font-bold mb-4">🌟 Interactive Technology Showcase 2026</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technologies through interactive demonstrations
-          </p>
-        </div>
-
-        {/* Main Demo Area */}
-        <div className="mb-12">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeDemo}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-            >
-              <div className="grid lg:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <span className="text-4xl">{techDemos[activeDemo].icon}</span>
-                    <div>
-                      <h3 className="text-2xl font-bold">{techDemos[activeDemo].title}</h3>
-                      <p className="text-lg opacity-80">{techDemos[activeDemo].subtitle}</p>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
 
             {/* Navigation Controls */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
@@ -206,107 +160,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 />
               ))}
             </div>
-        {/* Demo Navigation */}
-        <div className="flex justify-center space-x-2 mb-8">
-          {techDemos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveDemo(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeDemo ? 'bg-white scale-125' : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Tech Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {techDemos.map((demo, index) => (
-            <motion.div
-              key={demo.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-gradient-to-br ${demo.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 ${
-                index === activeDemo ? 'ring-4 ring-white/50' : ''
-              }`}
-              onClick={() => setActiveDemo(index)}
-            >
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/20"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce">
-            🚀 INTERACTIVE TECH SHOWCASE 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Technology Showcase
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
-            <div 
-              key={tech.id}
-              className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(index)}
-            >
-              <div className="text-6xl mb-4 text-center animate-pulse">{tech.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{tech.name}</h3>
-              <p className="text-center opacity-90 mb-6">{tech.description}</p>
-              
-              <div className="space-y-2 mb-6">
-                {tech.features.map((feature, idx) => (
-                  <div key={idx} className="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-center">
-                    <span className="text-sm font-semibold">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl mb-4">{demo.icon}</div>
-                <h3 className="text-lg font-bold mb-2">{demo.title}</h3>
-                <p className="text-sm opacity-90 mb-4">{demo.subtitle}</p>
-                <div className="text-xs opacity-75">Click to explore →</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold mb-4">🌟 Ready to Experience the Future?</h3>
-            <p className="text-xl mb-6 opacity-90 max-w-3xl mx-auto">
-              Join thousands of innovators experiencing these revolutionary technologies
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
-                🚀 Get Full Access
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
-                📞 Contact Us
-              </button>
-            </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {showcaseItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
-            ))}
           </div>
         </div>
       </div>
@@ -314,11 +167,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
       {/* Interactive Tech Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {showcases.map((showcase, index) => (
-          <motion.div
+          <div
             key={showcase.id}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
             className={`bg-gradient-to-br ${showcase.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 group`}
             onClick={() => setActiveShowcase(index)}
           >
@@ -336,7 +186,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
               <span className="text-xs opacity-75">Click to explore →</span>
               <span className="text-2xl opacity-50 group-hover:translate-x-1 transition-transform">→</span>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -380,9 +230,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <a href="/contact" className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
             📞 Schedule Private Demo
           </a>
-        </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
