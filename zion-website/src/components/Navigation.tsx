@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 "use client"
-
-=======
-'use client'
 
 import React, { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -16,22 +12,13 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ]
 
->>>>>>> cursor/create-and-deploy-new-content-d07c
 export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-<<<<<<< HEAD
           <a href="/" className="-m-1.5 p-1.5 text-white font-semibold">Zion</a>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-8">
-          <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Solutions</a>
-          <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Updates</a>
-          <a href="/blog" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Blog</a>
-          <a href="/research" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">Research</a>
-=======
-          <a href="/" className="text-white font-semibold">Zion</a>
         </div>
         <div className="flex lg:hidden">
           <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" onClick={() => setMobileMenuOpen(true)}>
@@ -39,20 +26,17 @@ export default function Navigation() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-6">
+        <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">
               {item.name}
             </a>
           ))}
->>>>>>> cursor/create-and-deploy-new-content-d07c
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/contact" className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200">Get Started</a>
         </div>
       </nav>
-<<<<<<< HEAD
-=======
 
       {mobileMenuOpen && (
         <div className="lg:hidden">
@@ -84,7 +68,6 @@ export default function Navigation() {
           </div>
         </div>
       )}
->>>>>>> cursor/create-and-deploy-new-content-d07c
     </header>
   )
 }
