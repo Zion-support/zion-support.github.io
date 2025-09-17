@@ -92,7 +92,6 @@ export default function Contact() {
             <h1 className="text-4xl font-bold text-white mb-4">Thank You!</h1>
             <p className="text-xl text-zion-slate-light mb-8">
               Your message has been sent successfully. We'll get back to you within 24 hours.
->>>>>>> origin/seo-improvements-clean
             </p>
             <div className="space-y-4">
               <div>
@@ -112,51 +111,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4};
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
-      </div>
-    </>
->>>>>>> origin/seo-improvements-clean
-  );
-  };
-export default Contact;
+    );
+  }
