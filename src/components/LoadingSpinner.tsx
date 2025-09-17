@@ -1,11 +1,2 @@
 import React from 'react';
-
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-8">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-    </div>
-  );
-};
-
-export default LoadingSpinner;
+export default function LoadingSpinner(): JSX.Element { return <div className="animate-spin h-6 w-6 border-2 border-gray-300 border-t-transparent rounded-full" />; }
