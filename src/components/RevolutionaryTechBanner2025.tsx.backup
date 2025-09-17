@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/RevolutionaryTechBanner2025.tsx.backup
         </div>
 
         {/* Call to Action */}
@@ -168,74 +169,24 @@ const RevolutionaryTechBanner2025: React.FC = () => {
       }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
+=======
+import React from "react";
+
+const RevolutionaryTechBanner2025 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryTechBanner2025.tsx
         <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY TECHNOLOGY • JANUARY 2025
-          </div>
-          
-          {/* Main Heading */}
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Tech Breakthrough 2025
-          </h2>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology innovations that are reshaping our world. 
-            From AI consciousness to quantum reality engines and neural interfaces.
-          </p>
-          
-          {/* Feature Highlights */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-              <div className="text-4xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold mb-2">AI Consciousness</h3>
-              <p className="text-sm text-purple-100">Truly conscious AI that thinks and feels</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-              <div className="text-4xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold mb-2">Quantum Reality</h3>
-              <p className="text-sm text-cyan-100">Manipulate reality with quantum mechanics</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-              <div className="text-4xl mb-3">🧬</div>
-              <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>
-              <p className="text-sm text-emerald-100">Direct mind-to-machine communication</p>
-            </div>
-          </div>
-          
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a 
-              href="/pages/NextGenAIConsciousness2025" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg inline-flex items-center justify-center"
-            >
-              🧠 Explore AI Consciousness →
-            </a>
-            <a 
-              href="/pages/QuantumRealityEngine2025" 
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg inline-flex items-center justify-center"
-            >
-              ⚛️ Enter Quantum Reality →
-            </a>
-            <a 
-              href="/pages/NeuralInterfaceRevolution2025" 
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg inline-flex items-center justify-center"
-            >
-              🧬 Connect Neural Interface →
-            </a>
-          </div>
-          
-          {/* Additional Info */}
-          <div className="mt-8 text-sm text-gray-300">
-            <p>✨ Free access to all revolutionary technologies • 🚀 No setup required • 💫 Experience the future today</p>
-          </div>
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryTechBanner2025</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
   );
 };
 
+<<<<<<< HEAD:src/components/RevolutionaryTechBanner2025.tsx.backup
+=======
+export default RevolutionaryTechBanner2025;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryTechBanner2025.tsx

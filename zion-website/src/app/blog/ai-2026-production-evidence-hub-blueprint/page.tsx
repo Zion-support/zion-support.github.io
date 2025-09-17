@@ -49,3 +49,5 @@ export default function Page() {
 		</main>
 	)
 }
+
+export default Page
