@@ -677,10 +677,9 @@ const SpaceTechInnovation2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
+      </div>
     </div>
   );
-
 };
-
 
 export default SpaceTechInnovation2026;
