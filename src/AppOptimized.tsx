@@ -55,7 +55,7 @@ const AppOptimized: React.FC = () => {
                         </Routes>
                       </Suspense>
                     </div>
-                    {process.env.NODE_ENV === 'development' && <PerformanceMonitor />}
+                    {import.meta.env.DEV && <PerformanceMonitor />}
                   </Router>
                 </MobileOptimizer>
               </AccessibilityEnhancer>
