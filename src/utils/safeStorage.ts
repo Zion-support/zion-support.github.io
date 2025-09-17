@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Safe storage utilities for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
