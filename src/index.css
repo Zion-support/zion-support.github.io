@@ -1197,8 +1197,8 @@ body {
 }
 
 @media (min-width: 1536px) {
-  .2xl\:block { display: block; }
-  .2xl\:hidden { display: none; }
-  .2xl\:flex { display: flex; }
-  .2xl\:grid { display: grid; }
+  .\32xl\:block { display: block; }
+  .\32xl\:hidden { display: none; }
+  .\32xl\:flex { display: flex; }
+  .\32xl\:grid { display: grid; }
 }
