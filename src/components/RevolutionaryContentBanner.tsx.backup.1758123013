@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
+=======
 
   const banners = [
     {
@@ -19,6 +21,7 @@ const RevolutionaryContentBanner: React.FC = () => {
       textColor: "text-white"
     }
   ];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9334
 
   const featuredContent = [
     {
@@ -29,6 +32,13 @@ const RevolutionaryContentBanner: React.FC = () => {
       textColor: "text-white"
     },
     {
+<<<<<<< HEAD
+      title: "🧪 Next-Gen Innovation Hub 2026",
+      description: "Welcome to the world's most advanced innovation hub where the future is being created",
+      link: "/pages/NextGenInnovationHub2026",
+      gradient: "from-green-600 to-teal-600",
+      textColor: "text-white"
+=======
       title: "Next-Gen Innovation Hub 2026",
       description: "Welcome to the world's most advanced innovation hub where the future is being created",
       link: "/pages/NextGenInnovationHub2026",
@@ -43,15 +53,23 @@ const RevolutionaryContentBanner: React.FC = () => {
       gradient: "from-blue-600 to-indigo-600",
       icon: "🤖",
       badge: "TRENDING"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9334
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
+<<<<<<< HEAD
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [featuredContent.length]);
+=======
       setCurrentSlide((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [banners.length]);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9334
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
@@ -69,6 +87,38 @@ const RevolutionaryContentBanner: React.FC = () => {
               Experience the future of technology with our cutting-edge innovations
             </p>
           </div>
+<<<<<<< HEAD
+
+          <div
+            key={currentSlide}
+            className="max-w-4xl mx-auto"
+          >
+              <div className={`bg-gradient-to-r ${featuredContent[currentSlide].gradient} rounded-xl p-8`}>
+                <h3 className="text-3xl font-bold mb-4">{featuredContent[currentSlide].title}</h3>
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{featuredContent[currentSlide].description}</p>
+                <a 
+                  href={featuredContent[currentSlide].link}
+                  className={`inline-block bg-white ${featuredContent[currentSlide].textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                >
+                  Explore Now
+                </a>
+              </div>
+            </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {featuredContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+=======
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Content Banner
           </h2>
@@ -137,6 +187,7 @@ const RevolutionaryContentBanner: React.FC = () => {
             />
           ))}
         </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9334
       </div>
     </div>
   );
