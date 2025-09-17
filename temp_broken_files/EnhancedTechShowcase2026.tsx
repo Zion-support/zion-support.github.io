@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
 const EnhancedTechShowcase2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-          initial={{ opacity: 0, y: 50 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -22,10 +14,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             Explore our revolutionary technologies through an interactive showcase featuring the most advanced innovations
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
@@ -46,10 +34,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
           </div>
         </div>
         {/* Content Display */}
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-        <AnimatePresence mode="wait">
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
           <div
             key={activeTab}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -78,16 +62,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-        {/* Statistics Section */}
-        <div
-          initial={{ opacity: 0, y: 50 }}
-=======
-        </div>
-
-        {/* Statistics Section */}
-        <div
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
         >
@@ -97,10 +71,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-              initial={{ opacity: 0, scale: 0.9 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
               whileInView={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
@@ -108,10 +78,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
               <div className="text-lg opacity-80">Active Projects</div>
             </div>
             <div
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-              initial={{ opacity: 0, scale: 0.9 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
               whileInView={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
@@ -119,10 +85,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
               <div className="text-lg opacity-80">Researchers</div>
             </div>
             <div
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-              initial={{ opacity: 0, scale: 0.9 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
               whileInView={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
@@ -130,10 +92,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
               <div className="text-lg opacity-80">Patents Filed</div>
             </div>
             <div
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-              initial={{ opacity: 0, scale: 0.9 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
               whileInView={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
@@ -142,15 +100,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedTechShowcase2026.tsx
-        {/* Call to Action */}
-        <div
-          initial={{ opacity: 0, y: 50 }}
-=======
-
-        {/* Call to Action */}
-        <div
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedTechShowcase2026.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >

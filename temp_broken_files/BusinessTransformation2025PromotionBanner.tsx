@@ -1,54 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025PromotionBanner.tsx
-import React from 'react';
-const BusinessTransformation2025PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Building2
-  DollarSign
-  Star,
-  ChevronRight,
-  X,
-  Users,
-  Award,
-  Clock,
-  Sparkles,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const BusinessTransformation2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentMetricsetCurrentMetric] = useState(0);
-
-  const metrics = [
-    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increase', 'color: 'text-green-400' },
-    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reduction', 'color: 'text-blue-400' },
-    { icon: BarChart3value: '280%'label: 'Efficiency 'Gain', 'color: 'text-yellow-400' },
-    { icon: Starvalue: '98%'label: 'Customer 'Satisfaction', 'color: 'text-purple-400' }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Rotate through metrics
-    const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }2500);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const currentMetricData = metrics[currentMetric];
-
-  if (isDismissed || !isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025PromotionBanner.tsx
   return (
     <div>
       <div
@@ -115,49 +64,21 @@ const BusinessTransformation2025PromotionBanner = () => {
             </div>
             {/* Right side - CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025PromotionBanner.tsx
-              <divbutton
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025PromotionBanner.tsx
                 className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
               >
                 <Building2 className="w-5 h-5 mr-2" />
                 View Success Stories
                 <ChevronRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025PromotionBanner.tsx
-              </divbutton>
-              <divbutton
-=======
-              </button>
-              
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025PromotionBanner.tsx
                 className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <TrendingUp className="w-5 h-5 mr-2" />
                 Calculate ROI
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025PromotionBanner.tsx
-              </divbutton>
-=======
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025PromotionBanner.tsx
             </div>
             {/* Close button */}
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025PromotionBanner.tsx
-            <divbutton
-=======
-            <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025PromotionBanner.tsx
               onClick={() => setIsDismissed(true)}
               className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
             >
               <X className="w-6 h-6" />
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025PromotionBanner.tsx
-            </divbutton>
-=======
-            </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025PromotionBanner.tsx
           </div>
           {/* Metric indicators */}
           <div className="flex justify-center lg:justify-start mt-4 space-x-2">

@@ -1,45 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025PromotionBanner.tsx
-import React from 'react';
-const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Globe
-  ArrowRight,
-  X,
-  CheckCircle,
-  Star,
-  Lightbulb,
-  Rocket
-} from 'lucide-react';
-
-const TechnologyTrendsShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentTrendsetCurrentTrend] = useState(0);
-
-  const trends = [
-    { name: "AI-Powered Automation"icon: Brainadoption: "85%" },
-    { name: "Edge Computing"icon: Zapadoption: "70%" },
-    { name: "Quantum Security"icon: Globeadoption: "60%" },
-    { name: "Sustainable Tech"icon: TrendingUpadoption: "90%" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTrend((prev) => (prev + 1) % trends.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025PromotionBanner.tsx
   return (
     <div
       className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
@@ -120,49 +78,21 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
             </div>
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025PromotionBanner.tsx
-              <divbutton
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025PromotionBanner.tsx
                 className="flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
               >
                 <Lightbulb className="w-4 h-4" />
                 Explore Trends
                 <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025PromotionBanner.tsx
-              </divbutton>
-              <divbutton
-=======
-              </button>
-              
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025PromotionBanner.tsx
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 <Rocket className="w-4 h-4" />
                 Future Ready
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025PromotionBanner.tsx
-              </divbutton>
-=======
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025PromotionBanner.tsx
             </div>
             {/* Close Button */}
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025PromotionBanner.tsx
-            <divbutton
-=======
-            <button
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025PromotionBanner.tsx
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
             >
               <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025PromotionBanner.tsx
-            </divbutton>
-=======
-            </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025PromotionBanner.tsx
           </div>
         </div>
         {/* Progress Bar */}

@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-import { Helmet } from 'react-helmet-async';
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
 const AIFutureTrends2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
@@ -23,10 +18,6 @@ const AIFutureTrends2025: React.FC = () => {
             and redefine human-machine interaction in 2025 and beyond.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
         {/* Revolutionary AI Trends */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
@@ -45,10 +36,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Synthetic consciousness emergence</li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200"
           >
@@ -65,10 +52,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Privacy-preserving AI</li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200"
           >
@@ -85,10 +68,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Multi-agent collaboration</li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200"
           >
@@ -105,10 +84,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Cognitive augmentation</li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200"
           >
@@ -125,10 +100,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Complex optimization solving</li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200"
           >
@@ -188,10 +159,6 @@ const AIFutureTrends2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
         {/* Future Predictions */}
         <div
           className="text-center"
@@ -224,10 +191,6 @@ const AIFutureTrends2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIFutureTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIFutureTrends2025.tsx
         {/* CTA Section */}
         <div
           className="text-center mt-16"

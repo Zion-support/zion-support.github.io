@@ -1,162 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-const ai-emotional-intelligence-platform-2029: React.FC = () => {
-=======
-import Head from 'next/head';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Brain, Heart, Eye, MessageCircle, Users, Shield, 
-  Zap, TrendingUp, CheckCircle, ArrowRight, Star,
-  Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3,
-  Smartphone, Database, Cloud, Server, ShieldCheck
-} from 'lucide-react';
-
-const AIEmotionalIntelligencePlatform2029 = () => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'Real-time Emotion Detection',
-      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
-      color: 'from-violet-500 to-purple-600'
-    },
-    {
-      icon: Heart,
-      title: 'Emotional Response Generation',
-      description: 'Intelligent system that generates contextually appropriate emotional responses',
-      color: 'from-pink-500 to-rose-600'
-    },
-    {
-      icon: Eye,
-      title: 'Multi-modal Emotion Analysis',
-      description: 'Combines visual, auditory, and textual data for comprehensive emotion understanding',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Emotional Intelligence Training',
-      description: 'AI-powered training modules to improve emotional intelligence skills',
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Sentiment Optimization',
-      description: 'Optimizes communication and content based on emotional context',
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      icon: Shield,
-      title: 'Emotional Health Monitoring',
-      description: 'Tracks emotional patterns and provides insights for mental health support',
-      color: 'from-indigo-500 to-purple-600'
-    }
-  ];
-
-  const benefits = [
-    'Improve customer satisfaction by 85%',
-    'Reduce customer churn by 60%',
-    'Enhance team collaboration and communication',
-    'Optimize marketing campaigns with emotional insights',
-    'Improve mental health support and monitoring',
-    'Create empathetic AI interactions and experiences'
-  ];
-
-  const useCases = [
-    {
-      title: 'Customer Service Automation',
-      description: 'AI agents that understand customer emotions and respond appropriately',
-      icon: Users,
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      title: 'Mental Health Applications',
-      description: 'Emotional support and monitoring for mental health care',
-      icon: Heart,
-      color: 'from-pink-500 to-rose-600'
-    },
-    {
-      title: 'Educational Platforms',
-      description: 'Personalized learning experiences based on emotional state',
-      icon: Brain,
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      title: 'Marketing Optimization',
-      description: 'Campaign optimization based on emotional response analysis',
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      title: 'HR and Recruitment',
-      description: 'Emotional intelligence assessment and team building',
-      icon: Users,
-      color: 'from-purple-500 to-indigo-600'
-    },
-    {
-      title: 'Healthcare Diagnostics',
-      description: 'Emotional state monitoring for healthcare professionals',
-      icon: Shield,
-      color: 'from-teal-500 to-cyan-600'
-    }
-  ];
-
-  const pricing = {
-    basic: {
-      name: 'Starter',
-      price: '$1,999',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
-      features: [
-        'Up to 1,000 emotional interactions/month',
-        'Basic emotion detection (5 emotions)',
-        'Email support',
-        'Standard API access',
-        'Basic analytics dashboard'
-      ],
-      popular: false
-    },
-    professional: {
-      name: 'Professional',
-      price: '$3,999',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 emotional interactions/month',
-        'Advanced emotion detection (15+ emotions)',
-        'Priority support',
-        'Full API access with webhooks',
-        'Advanced analytics and reporting',
-        'Custom emotion models',
-        'Multi-language support'
-      ],
-      popular: true
-    },
-    enterprise: {
-      name: 'Enterprise',
-      price: '$7,999',
-      period: '/month',
-      description: 'For large organizations with custom needs',
-      features: [
-        'Unlimited emotional interactions',
-        'Custom emotion detection models',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'Advanced security features',
-        'White-label options',
-        'On-premise deployment',
-        'Custom training and consulting'
-      ],
-      popular: false
-    }
-  };
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
   return (
     <>
       <Head>
@@ -196,10 +38,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <Brain className="w-4 h-4 mr-2" />
               🚀 2029 Revolutionary AI Technology
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* Main Heading */}
             <divh1
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
@@ -210,20 +48,12 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <br />
               <span className="text-white">Platform</span>
             </divh1>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* Subheading */}
             <divp
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.
             </divp>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
@@ -248,10 +78,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 </span>
               </a>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* Key Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -291,10 +117,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Our AI Emotional Intelligence Platform combines cutting-edge technology with human understanding to create truly empathetic AI systems.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -330,10 +152,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div
@@ -364,10 +182,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               From customer service to healthcare, our platform transforms industries with emotional intelligence.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
@@ -403,10 +217,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Flexible pricing options designed to scale with your business needs.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
               <div
@@ -472,10 +282,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Contact us today to learn how our AI Emotional Intelligence Platform can revolutionize your customer experience and business outcomes.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -486,10 +292,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -499,10 +301,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -513,10 +311,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <p className="text-gray-300">{contactInfo.address}</p>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

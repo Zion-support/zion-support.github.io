@@ -1,10 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:temp_broken_files/QuantumRealityEngine2028.tsx
-import { motion, AnimatePresence } from 'framer-motion';
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/pages/QuantumRealityEngine2028.tsx
 const QuantumRealityEngine2028: React.FC = () => {
   const [activeDimension, setActiveDimension] = useState('overview');
   const [quantumState, setQuantumState] = useState('superposition');

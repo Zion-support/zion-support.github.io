@@ -1,153 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-import React from 'react';
-const InteractiveAIToolsShowcase2025: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Shield
-  Globe
-  Users
-  TrendingUp,
-  Play,
-  Code,
-  Database,
-  Cpu,
-  Network,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  Image,
-  Video,
-  Music,
-  Search,
-  Filter,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  ExternalLink
-} from 'lucide-react';
-
-const InteractiveAIToolsShowcase2025 = () => {
-  const [activeToolsetActiveTool] = useState('ai-assistant');
-  const [isVisiblesetIsVisible] = useState(false);
-  const [hoveredToolsetHoveredTool] = useState<string | null>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)200);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const aiTools = {
-    'ai-assistant': {
-      name: 'AI Assistant',
-      icon: Brain,
-      description: 'Intelligent conversational AI that understands context and provides human-like responses',
-      features: ['Natural Language 'Processing', 'Context 'Awareness', 'Multi-language 'Support', 'Real-time Learning'],
-      stats: { users: '10M+'accuracy: '98.5%'languages: '50+' },
-      color: 'from-blue-500 to-cyan-500'
-    },
-    'data-analyzer': {
-      name: 'Data Analyzer',
-      icon: BarChart3,
-      description: 'Advanced analytics tool that processes complex datasets and generates actionable insights',
-      features: ['Predictive 'Analytics', 'Real-time 'Processing', 'Visual 'Dashboards', 'Custom Reports'],
-      stats: { datasets: '1B+'insights: '99.2%'speed: '10x faster' },
-      color: 'from-green-500 to-emerald-500'
-    },
-    'content-generator': {
-      name: 'Content Generator',
-      icon: FileText,
-      description: 'AI-powered content creation tool that generates high-quality textimagesand multimedia',
-      features: ['Multi-format 'Support', 'Brand 'Consistency', 'SEO 'Optimization', 'Plagiarism Detection'],
-      stats: { content: '100M+'quality: '95%'formats: '20+' },
-      color: 'from-purple-500 to-pink-500'
-    },
-    'automation-engine': {
-      name: 'Automation Engine',
-      icon: Zap,
-      description: 'Smart automation platform that streamlines workflows and reduces manual tasks',
-      features: ['Workflow 'Automation', 'Task 'Scheduling', 'Error 'Handling', 'Performance Monitoring'],
-      stats: { tasks: '50M+'efficiency: '85%'errors: '0.1%' },
-      color: 'from-orange-500 to-red-500'
-    },
-    'security-guard': {
-      name: 'Security Guard',
-      icon: Shield,
-      description: 'AI-powered security system that protects against threats and ensures data privacy',
-      features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Encryption'Compliance'],
-      stats: { threats: '99.9%'uptime: '99.99%'compliance: '100%' },
-      color: 'from-red-500 to-rose-500'
-    },
-    'search-engine': {
-      name: 'Smart Search',
-      icon: Search,
-      description: 'Intelligent search engine that understands intent and delivers precise results',
-      features: ['Semantic 'Search', 'Voice 'Search', 'Image 'Search', 'Personalization'],
-      stats: { queries: '1B+'accuracy: '96%'speed: '0.1s' },
-      color: 'from-indigo-500 to-blue-500'
-    }
-  };
-
-  const useCases = [
-    {
-      title: 'E-commerce Optimization',
-      description: 'Increase sales by 40% with AI-powered product recommendations and personalized shopping experiences',
-      icon: TrendingUp,
-      results: ['40% increase in sales'60% higher engagement'25% more conversions']
-    },
-    {
-      title: 'Customer Support',
-      description: 'Reduce response time by 80% with intelligent chatbots and automated ticket routing',
-      icon: MessageSquare,
-      results: ['80% faster responses'90% satisfaction rate'50% cost reduction']
-    },
-    {
-      title: 'Content Marketing',
-      description: 'Scale content production by 300% while maintaining quality and brand consistency',
-      icon: FileText,
-      results: ['300% more content'95% quality score'70% time savings']
-    },
-    {
-      title: 'Data Insights',
-      description: 'Uncover hidden patterns and trends in your data with advanced AI analytics',
-      icon: BarChart3,
-      results: ['90% faster insights'85% accuracy'200% more discoveries']
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Alex Thompson',
-      role: 'Head of AITechStart',
-      content: 'The AI tools from Zion Tech Group revolutionized our entire workflow. We saw immediate improvements in efficiency and accuracy.',
-      avatar: 'AT',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
-      role: 'CTODataFlow Inc',
-      content: 'Their automation engine saved us thousands of hours. The ROI was evident within the first week of implementation.',
-      avatar: 'MG',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      role: 'VP EngineeringCloudScale',
-      content: 'The security guard AI has been flawless. We\'ve had zero security incidents since implementing their solution.',
-      avatar: 'DK',
-      rating: 5
-    }
-  ];
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-20 overflow-hidden">
       {/* Background Elements */}
@@ -166,20 +16,11 @@ const InteractiveAIToolsShowcase2025 = () => {
             Experience the power of artificial intelligence with our comprehensive suite of interactive tools designed to transform your business operations.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* AI Tools Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
           {Object.entries(aiTools).map(([keytool]) => (
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-            <divbutton
-=======
-            <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
               key={key}
               onClick={() => setActiveTool(key)}
               onMouseEnter={() => setHoveredTool(key)}
@@ -204,16 +45,6 @@ const InteractiveAIToolsShowcase2025 = () => {
                   />
                 )}
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-            </divbutton>
-          ))}
-        </div>
-=======
-            </button>
-          ))}
-        </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* Active Tool Details */}
           <div
             key={activeTool}
@@ -278,10 +109,6 @@ const InteractiveAIToolsShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* Use Cases */}
         <div
           className="mb-16"
@@ -312,10 +139,6 @@ const InteractiveAIToolsShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* Testimonials */}
         <div
           className="mb-16"
@@ -348,10 +171,6 @@ const InteractiveAIToolsShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-white"

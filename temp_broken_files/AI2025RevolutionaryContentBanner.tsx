@@ -1,14 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryContentBanner.tsx
-import React from 'react';
-const AI2025RevolutionaryContentBanner: React.FC = () => {
-=======
-"use client";
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryContentBanner.tsx
-
-=======
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025RevolutionaryContentBanner.tsx
 import { 
   ArrowRight,
   Star,
@@ -161,10 +150,6 @@ const RevolutionaryContentBanner2028 = () => {
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryContentBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025RevolutionaryContentBanner.tsx
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a
@@ -191,17 +176,6 @@ const RevolutionaryContentBanner2028 = () => {
                   <div
                     className="absolute inset-0 rounded-full border-2 border-purple-500/30"
                   />
-<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryContentBanner.tsx
-                  <div
-                    className="absolute inset-8 rounded-full border-2 border-blue-500/30"
-                  />
-=======
-                  
-                  <div
-                    className="absolute inset-8 rounded-full border-2 border-blue-500/30"
-                  />
-                  
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025RevolutionaryContentBanner.tsx
                   <div
                     className="absolute inset-16 rounded-full border-2 border-pink-500/30"
                   />

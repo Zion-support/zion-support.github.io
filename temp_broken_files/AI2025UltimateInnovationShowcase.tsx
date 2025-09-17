@@ -1,14 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateInnovationShowcase.tsx
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateInnovationShowcase.tsx
 const AI2025UltimateInnovationShowcase: React.FC = () => {
   return (
     <div
@@ -32,10 +21,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateInnovationShowcase.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateInnovationShowcase.tsx
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
@@ -75,10 +60,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateInnovationShowcase.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateInnovationShowcase.tsx
         {/* Call to Action */}
         <div
           className="text-center"

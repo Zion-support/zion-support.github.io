@@ -1,12 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveTechInsights2026.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const ComprehensiveTechInsights2026: React.FC = () => {
-=======
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-4067
 
 const QuantumComputingRevolution2026: React.FC = () => {
 >>>>>>> origin/feat/realtime-rag-content:src/pages/QuantumComputingRevolution2026.tsx

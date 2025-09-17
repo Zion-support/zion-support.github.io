@@ -1,115 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-import React from 'react';
-const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Rocket
-  Star
-  Play
-  Download
-  Users,
-  Clock,
-  ArrowRight,
-  ChevronRight,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Sparkles,
-  Target,
-  Award,
-  TrendingUp,
-  Globe,
-  Shield,
-  Cpu,
-  Database,
-  Cloud,
-  X,
-  CheckCircle,
-  Lightbulb,
-  Code,
-  BarChart3
-} from 'lucide-react';
-
-const InteractiveAIToolsShowcase2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentToolsetCurrentTool] = useState(0);
-  const [isPlayingsetIsPlaying] = useState(false);
-
-  const featuredTools = [
-    {
-      name: "Neural Consciousness AI",
-      description: "Advanced AI with near-human consciousness capabilities",
-      icon: Brain,
-      color: "from-purple-600 to-pink-600",
-      rating: 4.9,
-      downloads: "2.3M",
-      price: "Free",
-      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"]
-    },
-    {
-      name: "Quantum Automation Suite",
-      description: "Revolutionary automation powered by quantum computing",
-      icon: Zap,
-      color: "from-blue-600 to-cyan-600",
-      rating: 4.8,
-      downloads: "1.8M",
-      price: "$299/month",
-      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"]
-    },
-    {
-      name: "Predictive Analytics Engine",
-      description: "AI-powered analytics with 99.7% prediction accuracy",
-      icon: BarChart3,
-      color: "from-green-600 to-emerald-600",
-      rating: 4.7,
-      downloads: "3.1M",
-      price: "$199/month",
-      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"]
-    },
-    {
-      name: "Code Generation AI",
-      description: "Advanced AI for generating and optimizing code",
-      icon: Code,
-      color: "from-orange-600 to-red-600",
-      rating: 4.9,
-      downloads: "4.2M",
-      price: "Free",
-      features: ["Multi-language Support"Code Review"Optimization"]
-    }
-  ];
-
-  const stats = [
-    { label: "AI Tools"value: "500+"icon: Brain },
-    { label: "Active Users"value: "2.3M+"icon: Users },
-    { label: "Countries"value: "150+"icon: Globe },
-    { label: "Success Rate"value: "99.7%"icon: Target }
-  ];
-
-  const categories = [
-    { name: "AI Assistants"icon: Braincount: 45 },
-    { name: "Automation"icon: Zapcount: 32 },
-    { name: "Analytics"icon: BarChart3count: 28 },
-    { name: "Development"icon: Codecount: 67 },
-    { name: "Security"icon: Shieldcount: 23 }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTool(prev => (prev + 1) % featuredTools.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
   return (
     <div
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
@@ -149,10 +37,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
               <Sparkles className="w-4 h-4" />
               INTERACTIVE AI TOOLS SHOWCASE 2027
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Main Heading */}
             <div
             >
@@ -170,10 +54,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 and find the perfect solution for your business.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Rotating Featured Tool */}
             <div
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
@@ -220,10 +100,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6"
@@ -243,10 +119,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
                 );
               })}
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -334,44 +206,21 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
               </div>
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-                <divbutton
-=======
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                 >
                   <Play className="w-8 h-8 text-white ml-1" />
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-                </divbutton>
-              </div>
-            </div>
-=======
-                </button>
-              </div>
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center shadow-2xl"
             >
               <Award className="w-8 h-8 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
-            
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-xl flex items-center justify-center shadow-2xl"
             >
               <TrendingUp className="w-6 h-6 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027PromotionBanner.tsx
-=======
-            
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027PromotionBanner.tsx
             <div
               className="absolute top-1/2 -left-6 w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center shadow-2xl"
             >

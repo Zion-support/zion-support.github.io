@@ -1,10 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:temp_broken_files/QuantumSupremacy2026.tsx
-import { motion } from 'framer-motion';
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/pages/QuantumSupremacy2026.tsx
 const QuantumSupremacy2026: React.FC = () => {
   const [quantumStatus, setQuantumStatus] = useState('idle');
   const startQuantumDemo = () => {

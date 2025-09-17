@@ -1,43 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-import React from 'react';
-const innovative-services-showcase-2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">innovative-services-showcase-2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { 
-  Search, Filter, Star, CheckCircle, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Phone, Mail, MapPin, TrendingUp, Users, Award,
-  Zap, Globe, Cpu, Database, Lock, Cloud,
-  Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react';
-
-// Import all the new 2025 innovative service data
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
-
-// Import existing services for comprehensive coverage
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
 };
 const serviceCategories = [
   {
@@ -189,12 +149,6 @@ export default function InnovativeServicesShowcase2025() {
               <span className="text-white">Showcase</span>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </p>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
           {/* Stats */}
           <div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
@@ -215,14 +169,6 @@ export default function InnovativeServicesShowcase2025() {
               <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
                 99.9%
               <div className="text-gray-400">Uptime</div>
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
       {/* Search and Filter Section */}
       <section className="py-16 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -317,12 +263,6 @@ export default function InnovativeServicesShowcase2025() {
                     className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                   >
                     <Mail className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-                  </a>
-                </div>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
             ))}
           {sortedServices.length === 0 && (
             <div
@@ -330,10 +270,6 @@ export default function InnovativeServicesShowcase2025() {
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
           )}
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -347,12 +283,6 @@ export default function InnovativeServicesShowcase2025() {
               Ready to Transform Your Business?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </p>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -363,11 +293,6 @@ export default function InnovativeServicesShowcase2025() {
                 <Phone className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -377,11 +302,6 @@ export default function InnovativeServicesShowcase2025() {
                 <Mail className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -391,14 +311,6 @@ export default function InnovativeServicesShowcase2025() {
                 <MapPin className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-<<<<<<< HEAD:temp_broken_files/innovative-services-showcase-2025.tsx
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
->>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase-2025.tsx
   );
 }
 =======

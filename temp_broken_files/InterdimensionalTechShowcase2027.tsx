@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InterdimensionalTechShowcase2027.tsx
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InterdimensionalTechShowcase2027.tsx
 const InterdimensionalTechShowcase2027: React.FC = () => {
   return (
     <div
@@ -22,17 +16,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
-<<<<<<< HEAD:temp_broken_files/InterdimensionalTechShowcase2027.tsx
-=======
-              scale: [1, 1.5, 1],
-              opacity: [0.2, 0.6, 0.2],
-              rotate: [0, 360],
-            }}
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
->>>>>>> origin/merge-new-content-1757989975:src/components/InterdimensionalTechShowcase2027.tsx
           />
         ))}
       </div>
@@ -103,10 +86,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/InterdimensionalTechShowcase2027.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InterdimensionalTechShowcase2027.tsx
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -138,18 +117,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-<<<<<<< HEAD:temp_broken_files/InterdimensionalTechShowcase2027.tsx
-=======
-                      scale: [0, 1, 0],
-                      opacity: [0, 0.8, 0],
-                      x: [0, Math.random() * 100 - 50, 0],
-                      y: [0, Math.random() * 100 - 50, 0],
-                    }}
-                      duration: 2 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 3,
-                    }}
->>>>>>> origin/merge-new-content-1757989975:src/components/InterdimensionalTechShowcase2027.tsx
                   />
                 ))}
               </div>

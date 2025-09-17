@@ -1,68 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-import React from 'react';
-const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Code
-  BarChart3
-  Network
-  Shield,
-  ArrowRight
-  Star
-  Zap,
-  X,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Award,
-  Brain
-} from 'lucide-react';
-
-const InteractiveAIToolsDemo2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)800);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTool(prev => (prev + 1) % 4);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const tools = [
-    { icon: Codename: 'AI Code 'Review', 'color: 'text-blue-400' },
-    { icon: BarChart3name: 'Data 'Analytics', 'color: 'text-green-400' },
-    { icon: Networkname: ''Infrastructure', 'color: 'text-purple-400' },
-    { icon: Shieldname: 'Security 'Scan', 'color: 'text-red-400' }
-  ];
-
-  const features = [
-    'Interactive Live Demos',
-    'Real-time Performance Metrics',
-    'Hands-on Experience',
-    'Instant Results'
-  ];
-
-  const stats = [
-    { label: '95%'value: 'Efficiency' },
-    { label: '98%'value: 'Accuracy' },
-    { label: '3'x', 'value: 'Faster' }
-  ];
-
-  if (!isVisible || isDismissed) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
   return (
     <div>
       <div
@@ -106,29 +41,17 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                   INTERACTIVE DEMO
                 </span>
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🎮 Interactive AI Tools Demo 2026
               </divh2>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
               <divp
                 className="text-lg text-blue-200 mb-6 max-w-2xl"
               >
                 Experience the power of our cutting-edge AI tools through hands-on interactive demonstrations. 
                 See real-time performance metrics and instant results.
               </divp>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
               {/* Rotating Tool Display */}
               <div
                 key={currentTool}
@@ -142,10 +65,6 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                   <div className="text-sm text-blue-300">Live Demo Available</div>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
@@ -157,10 +76,6 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
               {/* Stats */}
               <div
                 className="flex space-x-6 mb-6"
@@ -172,10 +87,6 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026PromotionBanner.tsx
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"

@@ -1,31 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-const 2028-services-showcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">2028-services-showcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
-import Head from 'next/head';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
-  Building, Factory, Camera, Video, Music, Gamepad2
-} from 'lucide-react';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
 };
 const serviceCategories = [
   {
@@ -135,15 +107,6 @@ export default function ServicesShowcase2028() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
       {/* Services Categories */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,13 +143,6 @@ export default function ServicesShowcase2028() {
                     >
                       <span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-                    </a>
-                  </div>
-                </div>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
             ))}
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
@@ -232,14 +188,6 @@ export default function ServicesShowcase2028() {
                       <div className="text-right">
                         <div className="text-sm text-purple-300">Setup Time</div>
                         <div className="text-white font-medium">{service.setupTime}</div>
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
             ))}
       {/* Market Analysis */}
       <section className="py-20 bg-black/50">
@@ -262,11 +210,6 @@ export default function ServicesShowcase2028() {
                 with some sectors growing at 300-800% annually.
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -279,11 +222,6 @@ export default function ServicesShowcase2028() {
                 $500 billion with rapid expansion expected.
               <div className="text-3xl font-bold text-blue-400">$500B+</div>
               <div className="text-blue-300">Total Addressable Market</div>
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -296,14 +234,6 @@ export default function ServicesShowcase2028() {
                 and AI algorithms that competitors cannot replicate.
               <div className="text-3xl font-bold text-pink-400">90%</div>
               <div className="text-pink-300">Market Share in Niche</div>
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -340,15 +270,6 @@ export default function ServicesShowcase2028() {
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>Money-Back Guarantee</span>
-<<<<<<< HEAD:temp_broken_files/2028-services-showcase.tsx
-=======
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/2028-services-showcase.tsx
       <UltraFuturisticFooter2028 />
     </>
   );

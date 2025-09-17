@@ -1,76 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-import React from 'react';
-const AIRevolution2025PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  ArrowRight
-  Star
-  Play
-  X,
-  Sparkles,
-  Rocket,
-  TrendingUp,
-  Clock,
-  Users
-} from 'lucide-react';
-
-const AIRevolution2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentSlidesetCurrentSlide] = useState(0);
-
-  const announcements = [
-    {
-      title: "🚀 AI Revolution 2025 is Here",
-      subtitle: "Quantum-AI Fusion & Neural Interfaces",
-      action: "Explore Now",
-      color: "from-purple-600 to-blue-600",
-      icon: Brain,
-      badge: "BREAKTHROUGH"
-    },
-    {
-      title: "🧠 Neural Interface Revolution",
-      subtitle: "Direct Brain-Computer Integration",
-      action: "Discover",
-      color: "from-blue-600 to-cyan-600",
-      icon: Zap,
-      badge: "INNOVATION"
-    },
-    {
-      title: "🤖 Autonomous AI Systems",
-      subtitle: "Self-Managing Business Operations",
-      action: "Learn More",
-      color: "from-green-600 to-emerald-600",
-      icon: Rocket,
-      badge: "FUTURE"
-    },
-    {
-      title: "✨ Conscious AI Framework",
-      subtitle: "Genuine Understanding & Intelligence",
-      action: "Experience",
-      color: "from-orange-600 to-red-600",
-      icon: Sparkles,
-      badge: "REVOLUTION"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % announcements.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
-  const currentAnnouncement = announcements[currentSlide];
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900 text-white shadow-2xl"
@@ -91,10 +18,6 @@ const AIRevolution2025PromotionBanner = () => {
         >
           <Brain className="w-6 h-6 text-purple-400" />
         </div>
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-=======
-        
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
         <div
             y: [0150],
             rotate: [0-50]
@@ -108,10 +31,6 @@ const AIRevolution2025PromotionBanner = () => {
         >
           <Zap className="w-5 h-5 text-blue-400" />
         </div>
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
         <div
             y: [0-10],
             x: [010]
@@ -137,10 +56,6 @@ const AIRevolution2025PromotionBanner = () => {
                 <currentAnnouncement.icon className="w-7 h-7 text-white" />
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-=======
-            
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
             <div className="flex-1 min-w-0">
                 <div
                   key={currentSlide}
@@ -159,22 +74,11 @@ const AIRevolution2025PromotionBanner = () => {
             </div>
           </div>
           {/* Center Action Button */}
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-          <divbutton
-=======
-          <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
             className={`hidden md:flex items-center gap-3 px-8 py-4 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-xl rounded-full font-semibold transition-all duration-300 text-lg`}
           >
             <Play className="w-5 h-5" />
             {currentAnnouncement.action}
             <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-          </divbutton>
-=======
-          </button>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
           {/* Right Stats */}
           <div className="hidden lg:flex items-center gap-8 text-sm">
             <div className="text-center">
@@ -195,43 +99,20 @@ const AIRevolution2025PromotionBanner = () => {
             </div>
           </div>
           {/* Close Button */}
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-          <divbutton
-=======
-          <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
             onClick={() => setIsVisible(false)}
             className="flex-shrink-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-200"
           >
             <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-          </divbutton>
-=======
-          </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
         </div>
         {/* Mobile Action Button */}
         <div
           className="md:hidden mt-4"
         >
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-          <divbutton
-=======
-          <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
             className={`w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-xl rounded-full font-semibold transition-all duration-300 text-lg`}
           >
             <Play className="w-5 h-5" />
             {currentAnnouncement.action}
             <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/AIRevolution2025PromotionBanner.tsx
-          </divbutton>
-        </div>
-=======
-          </button>
-        </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIRevolution2025PromotionBanner.tsx
         {/* Progress Indicator */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
           <div

@@ -2,22 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const UltimateTechBreakthrough2035: React.FC = () => {
   return (
-<<<<<<< HEAD:temp_broken_files/UltimateTechBreakthrough2035.tsx
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-=======
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-40">
-        <div className="w-full h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
->>>>>>> origin/new-content-merge-1757995743:src/components/UltimateContentBanner2035.tsx
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 ULTIMATE BREAKTHROUGH • JANUARY 2035
           </div>

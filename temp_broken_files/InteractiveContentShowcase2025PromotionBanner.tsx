@@ -1,43 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025PromotionBanner.tsx
-import React from 'react';
-const InteractiveContentShowcase2025PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  ArrowRight
-  Star
-  Zap
-  Brain
-  TrendingUp,
-  X,
-  CheckCircle
-} from 'lucide-react';
-
-const InteractiveContentShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  const features = [
-    "Interactive AI Demos",
-    "Real-time Analytics",
-    "Smart Automation",
-    "Live Performance Metrics"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2025PromotionBanner.tsx
   return (
     <div
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden"
@@ -96,49 +56,21 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
             </div>
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025PromotionBanner.tsx
-              <divbutton
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2025PromotionBanner.tsx
                 className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
               >
                 <Play className="w-4 h-4" />
                 Watch Demo
                 <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025PromotionBanner.tsx
-              </divbutton>
-              <divbutton
-=======
-              </button>
-              
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2025PromotionBanner.tsx
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 <Brain className="w-4 h-4" />
                 Explore Features
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025PromotionBanner.tsx
-              </divbutton>
-=======
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2025PromotionBanner.tsx
             </div>
             {/* Close Button */}
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025PromotionBanner.tsx
-            <divbutton
-=======
-            <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2025PromotionBanner.tsx
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
             >
               <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025PromotionBanner.tsx
-            </divbutton>
-=======
-            </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2025PromotionBanner.tsx
           </div>
         </div>
         {/* Progress Bar */}

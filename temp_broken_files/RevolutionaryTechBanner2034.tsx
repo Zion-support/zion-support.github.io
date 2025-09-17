@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechBanner2034.tsx
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechBanner2034.tsx
 const RevolutionaryTechBanner2034: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white">
@@ -57,10 +51,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechBanner2034.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechBanner2034.tsx
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-2 mb-8">
           {bannerContent.map((_, index) => (
@@ -91,10 +81,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechBanner2034.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechBanner2034.tsx
         {/* Bottom Stats */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

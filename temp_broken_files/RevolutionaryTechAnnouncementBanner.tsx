@@ -1,14 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechAnnouncementBanner.tsx
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-BellZapTrendingUpUsersAwardGlobeArrowRightClock
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechAnnouncementBanner.tsx
 const RevolutionaryTechAnnouncementBanner: React.FC = () => {
   return (
     <div
@@ -35,10 +24,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Be among the first to experience the transformation.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechAnnouncementBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechAnnouncementBanner.tsx
             {/* Animated Announcement */}
             <div
               key={currentAnnouncement}
@@ -61,10 +46,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechAnnouncementBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechAnnouncementBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"

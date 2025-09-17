@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/LeadGenerationForm.tsx
-import React, { useState } from 'react';
-<<<<<<< HEAD:temp_broken_files/LeadGenerationForm.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/LeadGenerationForm.tsx
 interface LeadGenerationFormProps {
   title?: string;
   subtitle?: string;
@@ -221,14 +215,6 @@ const LeadGenerationForm: React.FC = () => {
           🔒 Your information is secure and will never be shared
         </p>
       </form>
-<<<<<<< HEAD:temp_broken_files/LeadGenerationForm.tsx
-=======
-import React from "react";
-=======
-    </div>
-  );
-};
->>>>>>> origin/merge-new-content-1757989975:src/components/LeadGenerationForm.tsx
 
 const LeadGenerationForm = () => {
   return (
@@ -243,9 +229,4 @@ const LeadGenerationForm = () => {
     </div>
   );
 
-<<<<<<< HEAD:temp_broken_files/LeadGenerationForm.tsx
-
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/LeadGenerationForm.tsx
 export default LeadGenerationForm;

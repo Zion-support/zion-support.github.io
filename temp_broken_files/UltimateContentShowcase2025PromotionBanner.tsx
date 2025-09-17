@@ -1,72 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2025PromotionBanner.tsx
-import React from 'react';
-const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  TrendingUp
-  ArrowRight,
-  Play,
-  X,
-  ChevronRight,
-  Clock
-} from 'lucide-react';
-
-const UltimateContentShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'Neural Interface Revolution',
-      description: '500% efficiency boost',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Quantum AI Fusion',
-      description: '1000x faster processing',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Enterprise Automation',
-      description: '90% cost reduction',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Star,
-      title: 'Future Predictions',
-      description: '95% accuracy rate',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  if (isDismissed || !isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2025PromotionBanner.tsx
   return (
     <div>
       <div
@@ -101,10 +32,6 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                   </p>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2025PromotionBanner.tsx
               {/* Rotating Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-purple-500/30"></div>
@@ -140,44 +67,18 @@ const UltimateContentShowcase2025PromotionBanner = () => {
               </div>
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2025PromotionBanner.tsx
-                <divbutton
-=======
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2025PromotionBanner.tsx
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-all duration-300"
                 >
                   <Play className="w-4 h-4" />
                   <span className="text-sm font-medium">Preview</span>
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2025PromotionBanner.tsx
-                </divbutton>
-                <divbutton
-=======
-                </button>
-
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2025PromotionBanner.tsx
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-purple-500/25"
                 >
                   <span>Explore Now</span>
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2025PromotionBanner.tsx
-                </divbutton>
-                <divbutton
-=======
-                </button>
-
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2025PromotionBanner.tsx
                   onClick={() => setIsDismissed(true)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
                 >
                   <X className="w-5 h-5 text-gray-400 hover:text-white" />
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2025PromotionBanner.tsx
-                </divbutton>
-=======
-                </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2025PromotionBanner.tsx
               </div>
             </div>
           </div>

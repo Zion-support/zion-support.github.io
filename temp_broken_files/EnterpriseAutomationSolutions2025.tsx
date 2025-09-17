@@ -1,75 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Building2
-  Zap
-  BarChart3
-  Users
-  Clock
-  Shield
-  TrendingUp
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Star,
-  Target,
-  DollarSign,
-  Globe,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Monitor,
-  Server,
-  Workflow,
-  Brain,
-  Bot,
-  FileText,
-  MessageSquare,
-  Calendar,
-  Mail,
-  CreditCard,
-  PieChart,
-  Activity,
-  AlertTriangle,
-  RefreshCw,
-  Download,
-  Upload,
-  Eye,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  Maximize,
-  Minimize
-} from 'lucide-react';
-
-interface AutomationSolution {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  features: string[];
-  benefits: string[];
-  pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-  };
-  roi: string;
-  implementation: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-}
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
 const EnterpriseAutomationSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -89,10 +17,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             Streamline processesreduce costsand accelerate growth.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -111,10 +35,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Solutions Grid */}
           <div className="lg:col-span-2">
@@ -219,10 +139,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-=======
-              
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
                 {selectedSolutionData ? (
                   <div
                     key={selectedSolutionData.id}

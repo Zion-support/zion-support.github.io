@@ -1,56 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
-import React from 'react';
-const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Award
-  TrendingUp
-  Users
-  DollarSign,
-  ArrowRight,
-  Star,
-  X,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  const stats = [
-    { value: '500+'label: ''Projects', 'icon: CheckCircle },
-    { value: '99.2%'label: ''Satisfaction', 'icon: Star },
-    { value: '340%'label: 'Average 'ROI', 'icon: TrendingUp },
-    { value: '15+'label: 'Years 'Experience', 'icon: Award }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setCurrentStat(prev => (prev + 1) % stats.length);
-      }1500);
-      return () => clearInterval(interval);
-    }
-  }[isVisiblestats.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
   return (
     <div
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden"
@@ -77,28 +24,16 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
             <divh2
               className="text-xl md:text-3xl font-bold mb-2"
             >
               🏆 Revolutionary Case Studies 2027
             </divh2>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
             <divp
               className="text-base md:text-lg text-gray-800 mb-4 max-w-2xl"
             >
               Discover how leading companies achieved extraordinary results with our AI solutions. Real projectsreal resultsreal transformation.
             </divp>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
             <div
               className="flex flex-wrap items-center gap-3"
             >
@@ -160,10 +95,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
             />
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
         {/* Floating Elements */}
         <div
             y: [0-60],
@@ -177,10 +108,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
         >
           <TrendingUp className="w-3 h-3 text-gray-900" />
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx
         <div
             y: [060],
             rotate: [0-20]

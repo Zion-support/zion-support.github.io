@@ -1,22 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
-const ThemeToggle: React.FC = () => {
-=======
-import { Sun, Moon, Monitor } from 'lucide-react';
-
-interface ThemeToggleProps {
-  currentTheme: 'dark' | 'light';
-  onThemeChange: (theme: 'dark' | 'light') => void;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
-  const themes = [
-    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
-    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
-  ] as const;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
   return (
     <div className="fixed top-32 right-6 z-50">
       <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
@@ -25,11 +6,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
             const Icon = theme.icon;
             const isActive = currentTheme === theme.id;
             return (
-<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
-              <divbutton
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
                 key={theme.id}
                 onClick={() => onThemeChange(theme.id)}
                 className={`relative p-3 rounded-xl transition-all duration-300 ${
@@ -47,11 +23,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                     className="absolute inset-0 rounded-xl border-2 border-white/30"
                   />
                 )}
-<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
-              </divbutton>
-=======
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
             );
           })}
         </div>
@@ -64,30 +35,8 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
       </div>
-<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
-=======
-import React from "react";
-
-const ThemeToggle = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">ThemeToggle</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-        </div>
-      </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ThemeToggle.tsx
 =======
 >>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
     </div>
   );
 
-<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
-
-
-export default ThemeToggle;
-</div></div>
-=======
-export default ThemeToggle;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ThemeToggle.tsx

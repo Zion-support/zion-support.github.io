@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-nocheck
-import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import React from 'react';
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
 import FeatureCard from './components/FeatureCard';
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -258,9 +247,6 @@ export default function HomePage() {
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
   ],
-<<<<<<< HEAD
-=======
->>>>>>> origin/merge-pr-12271
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   ];
 
@@ -283,13 +269,6 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
-<<<<<<< HEAD
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -319,11 +298,6 @@ import Link from 'next/link';
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
@@ -331,34 +305,16 @@ import Link from 'next/link';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
               </a>
-<<<<<<< HEAD
-              <a href="/blog/ai-safety-governance-2025" className="btn-secondary hover-lift">
-                📰 New: AI Safety & Governance 2025
-=======
-              <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
-                📰 New: AI Governance Framework 2025
-              </a>
-              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
-                ✅ New: Agent Safety Red Teaming 2025
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
               </a>
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               </Link>
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/new-blog-content-and-promo
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
@@ -369,9 +325,6 @@ import Link from 'next/link';
               <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
                 ✅ New: AI Safety & Governance 2025
               </a>
-<<<<<<< HEAD
-=======
->>>>>>> origin/feature/blog-content-2025
 >>>>>>> origin/feat/news-content
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -380,11 +333,6 @@ import Link from 'next/link';
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -410,11 +358,6 @@ import Link from 'next/link';
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -422,9 +365,6 @@ import Link from 'next/link';
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
       {/* Latest Blog Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       {/* Latest Blog Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -441,9 +381,6 @@ import Link from 'next/link';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
->>>>>>> origin/feat/news-content
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 
 >>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
@@ -628,9 +565,6 @@ import Link from 'next/link';
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
@@ -645,30 +579,6 @@ import Link from 'next/link';
                 📊 Explore Examples
               </a>
               </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </a>
-              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Operating Systems
-              <a href="/blog/edge-ai-marketplaces" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Edge AI Marketplaces
-              </a>
-              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Blueprint 2025
-<<<<<<< HEAD
-              <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Blueprint 2025
-              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Edge AI Compliance 2025
-              <a href="/blog/ai-agent-safety-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Agent Safety Playbook 2025
-              <a href="/blog/ai-governance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance 2025
-              <a href="/blog/ai-safety-audit-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Safety Audit 2025
-              </a>
-=======
->>>>>>> origin/feature/new-content-2025-09-15
               <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
 >>>>>>> origin/feature/new-content-2025
@@ -695,14 +605,6 @@ import Link from 'next/link';
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-              <a href="/blog/ai-safety-governance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Safety & Governance 2025
-              </a>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/feat/news-content
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/feat/news-content
@@ -715,9 +617,6 @@ import Link from 'next/link';
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
-=======
->>>>>>> origin/feat/news-content
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -744,43 +643,6 @@ import Link from 'next/link';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-      {/* Latest from the Blog */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest from the Blog</h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">Fresh insights from our team across AI, data, and quantum.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { id: 'edge-ai-on-device-inference', title: 'Edge AI: On-Device Inference for Privacy and Speed' },
-              { id: 'autonomous-agents-in-enterprise', title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls' },
-              { id: 'post-quantum-cryptography-roadmap', title: 'Post-Quantum Cryptography: A Practical Migration Roadmap' },
-              { id: 'llm-evals-in-production', title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics' }
-            ].map((post) => (
-              <a key={post.id} href={`/blog/${post.id}`} className="glass-effect rounded-xl p-6 hover-lift block">
-                <div className="h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">{post.title.split(' ').slice(0, 2).map((w) => w[0]).join('')}</span>
-                </div>
-                <h3 className="text-lg font-semibold">{post.title}</h3>
-                <span className="text-sm text-white/70">Read more →</span>
-              </a>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <a href="/blog" className="btn-secondary hover-lift">View all articles</a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
@@ -881,12 +743,6 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -1055,10 +911,6 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
@@ -1067,9 +919,6 @@ export default function HomePage() {
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
-<<<<<<< HEAD
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -1137,10 +986,6 @@ export default function HomePage() {
   )
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
@@ -1167,9 +1012,6 @@ export default function HomePage() {
       </section>;
     </div>;
   )}}
-<<<<<<< HEAD
-=======
->>>>>>> origin/merge-pr-12271
 >>>>>>> origin/feat/news-content
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -1186,7 +1028,5 @@ export default function HomePage() {
                 features={feature.features}
                 gradient={feature.gradient}
               />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

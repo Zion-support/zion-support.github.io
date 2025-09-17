@@ -1,135 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-import React from 'react';
-const InteractiveAIDemo2025: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Bot
-  MessageCircle
-  Send
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star,
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Lightbulb,
-  Target,
-  TrendingUp
-} from 'lucide-react';
-
-const InteractiveAIDemo2025 = () => {
-  const [messagesetMessages] = useState([
-    {
-      id: 1,
-      type: 'ai',
-      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
-      timestamp: new Date(),
-      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
-    }
-  ]);
-  const [inputValuesetInputValue] = useState('');
-  const [isTypingsetIsTyping] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const aiResponses = [
-    {
-      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
-      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
-      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
-      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
-      icon: Target,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
-      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const handleSendMessage = async () => {
-    if (!inputValue.trim() || isTyping) return;
-
-    const userMessage = {
-      id: messages.length + 1,
-      type: 'user',
-      content: inputValue,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prevuserMessage]);
-    setInputValue(', ');
-    setIsTyping(true);
-
-    // Simulate AI response delay
-    setTimeout(() => {
-      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
-      const aiMessage = {
-        id: messages.length + 2,
-        type: 'ai',
-        content: randomResponse.content,
-        timestamp: new Date(),
-        features: randomResponse.features,
-        icon: randomResponse.icon,
-        color: randomResponse.color
-      };
-      setMessages(prev => [...prevaiMessage]);
-      setIsTyping(false);
-    }1500);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -137,10 +5,6 @@ const InteractiveAIDemo2025 = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
       </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
       <div
         className="relative z-10 container mx-auto px-4 py-16"
       >
@@ -151,10 +15,6 @@ const InteractiveAIDemo2025 = () => {
             <Bot className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
           </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-=======
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Chat with the
             <br />
@@ -167,10 +27,6 @@ const InteractiveAIDemo2025 = () => {
             quantum computingbusiness automationand future predictions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
         {/* Chat Interface */}
         <div
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
@@ -224,10 +80,6 @@ const InteractiveAIDemo2025 = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
             {/* Typing Indicator */}
             {isTyping && (
               <div
@@ -254,11 +106,6 @@ const InteractiveAIDemo2025 = () => {
                   disabled={isTyping}
                 />
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-              <divbutton
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim() || isTyping}
                 className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2"
@@ -269,18 +116,6 @@ const InteractiveAIDemo2025 = () => {
                   <Send className="w-4 h-4" />
                 )}
                 Send
-<<<<<<< HEAD:temp_broken_files/InteractiveAIDemo2025.tsx
-              </divbutton>
-            </div>
-          </div>
-        </div>
-=======
-              </button>
-            </div>
-          </div>
-        </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIDemo2025.tsx
         {/* Features Showcase */}
         <div
           className="mt-16 grid md:grid-cols-4 gap-6"

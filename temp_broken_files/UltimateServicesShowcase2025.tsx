@@ -1,152 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
-const services = [
-  {
-    id: 1,
-    title: "AI-Powered Business Automation",
-    description: "Transform your operations with intelligent automation that learns and adapts to your business needs.",
-    price: "From $299/month",
-    features: [
-      "40-60% operational cost reduction",
-      "300% productivity increase",
-      "ROI within 3 months",
-      "24/7 intelligent monitoring"
-    ],
-    icon: Brain,
-    color: "from-blue-500 to-purple-600",
-    popular: true,
-    category: "AI & Automation"
-  },
-  {
-    id: 2,
-    title: "Enterprise AI Content Generation",
-    description: "Create high-qualitySEO-optimized content at scale with our advanced AI writing platform.",
-    price: "From $199/month",
-    features: [
-      "80% content creation time savings",
-      "200% SEO ranking improvement",
-      "Consistent brand messaging",
-      "Multi-language support"
-    ],
-    icon: Zap,
-    color: "from-green-500 to-teal-600",
-    popular: false,
-    category: "Content & Marketing"
-  },
-  {
-    id: 3,
-    title: "Advanced Cybersecurity Solutions",
-    description: "Protect your business with next-generation AI-powered security that evolves with threats.",
-    price: "From $399/month",
-    features: [
-      "90% faster threat detection",
-      "70% reduction in false positives",
-      "24/7 automated protection",
-      "Zero-trust architecture"
-    ],
-    icon: Shield,
-    color: "from-red-500 to-pink-600",
-    popular: false,
-    category: "Security"
-  },
-  {
-    id: 4,
-    title: "Cloud Infrastructure Optimization",
-    description: "Maximize your cloud investment with intelligent resource management and cost optimization.",
-    price: "From $599/month",
-    features: [
-      "40% cloud cost reduction",
-      "10x faster deployment",
-      "Auto-scaling capabilities",
-      "Disaster recovery automation"
-    ],
-    icon: Cloud,
-    color: "from-indigo-500 to-blue-600",
-    popular: true,
-    category: "Cloud & DevOps"
-  },
-  {
-    id: 5,
-    title: "Customer Behavior Analytics",
-    description: "Understand and predict customer behavior with advanced AI analytics and insights.",
-    price: "From $449/month",
-    features: [
-      "35% customer retention increase",
-      "200% customer lifetime value boost",
-      "50% churn reduction",
-      "Real-time behavior insights"
-    ],
-    icon: TrendingUp,
-    color: "from-orange-500 to-red-600",
-    popular: false,
-    category: "Analytics"
-  },
-  {
-    id: 6,
-    title: "Global Digital Transformation",
-    description: "Comprehensive digital transformation services for businesses worldwide.",
-    price: "From $1,500/project",
-    features: [
-      "Improved operational efficiency",
-      "Enhanced customer experience",
-      "Competitive advantage",
-      "Global implementation support"
-    ],
-    icon: Globe,
-    color: "from-purple-500 to-indigo-600",
-    popular: false,
-    category: "Consulting"
-  }
-];
-const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
-};
-
-
-
-export default function UltimateServicesShowcase2025() {
-  const [selectedCategorysetSelectedCategory] = React.useState("All");
-  const filteredServices = selectedCategory === "All" 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-  return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 rounded-full px-6 py-2 mb-6">
-            <Star className="w-4 h-4 mr-2 text-white" />
-            <span className="text-sm font-semibold text-white">ULTIMATE SERVICES SHOWCASE 2025</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary Technology Solutions
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Transform your business with our cutting-edge AIcloudand automation solutions. 
-            Join thousands of companies already achieving extraordinary results.
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-100 shadow-sm'
-                }`}
-              >
-                {category}
-            ))}
-<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
-=======
-          </div>
-        </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((serviceindex) => (
@@ -190,12 +41,6 @@ export default function UltimateServicesShowcase2025() {
                 >
                   Get Started Now
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
-=======
-                </a>
-              </div>
-            </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
           ))}
         {/* Stats Section */}
         <div
@@ -219,13 +64,6 @@ export default function UltimateServicesShowcase2025() {
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">50+</div>
               <div className="text-sm text-gray-600">Countries Served</div>
-<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
-=======
-            </div>
-          </div>
-        </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -250,14 +88,6 @@ export default function UltimateServicesShowcase2025() {
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
-<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
-=======
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
   );
 
 

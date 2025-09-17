@@ -1,66 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-import React from 'react';
-const NextGenAIInnovationPromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  ArrowRight
-  Star
-  Play
-  X,
-  Sparkles,
-  Rocket,
-  TrendingUp
-} from 'lucide-react';
-
-const NextGenAIInnovationPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentSlidesetCurrentSlide] = useState(0);
-
-  const announcements = [
-    {
-      title: "🚀 Quantum-AI Fusion Breakthrough",
-      subtitle: "1000x Processing Power Increase",
-      action: "Explore Now",
-      color: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "🧠 Neural Interface Revolution",
-      subtitle: "Direct Brain-Computer Integration",
-      action: "Learn More",
-      color: "from-blue-600 to-cyan-600"
-    },
-    {
-      title: "🤖 Autonomous AI Systems",
-      subtitle: "Self-Managing Business Operations",
-      action: "Discover",
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "✨ Conscious AI Framework",
-      subtitle: "Genuine Understanding & Intelligence",
-      action: "Experience",
-      color: "from-orange-600 to-red-600"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % announcements.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
-  const currentAnnouncement = announcements[currentSlide];
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white"
@@ -81,10 +18,6 @@ const NextGenAIInnovationPromotionBanner = () => {
         >
           <Brain className="w-6 h-6 text-blue-400" />
         </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-=======
-        
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
         <div
             y: [0150],
             rotate: [0-50]
@@ -110,10 +43,6 @@ const NextGenAIInnovationPromotionBanner = () => {
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-=======
-            
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
             <div className="flex-1 min-w-0">
                 <div
                   key={currentSlide}
@@ -130,22 +59,11 @@ const NextGenAIInnovationPromotionBanner = () => {
             </div>
           </div>
           {/* Center Action Button */}
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-          <divbutton
-=======
-          <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
             className={`hidden md:flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-lg rounded-full font-semibold transition-all duration-300`}
           >
             <Play className="w-4 h-4" />
             {currentAnnouncement.action}
             <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-          </divbutton>
-=======
-          </button>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
           {/* Right Stats */}
           <div className="hidden lg:flex items-center gap-6 text-sm">
             <div className="text-center">
@@ -162,43 +80,20 @@ const NextGenAIInnovationPromotionBanner = () => {
             </div>
           </div>
           {/* Close Button */}
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-          <divbutton
-=======
-          <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
             onClick={() => setIsVisible(false)}
             className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-200"
           >
             <X className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-          </divbutton>
-=======
-          </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
         </div>
         {/* Mobile Action Button */}
         <div
           className="md:hidden mt-4"
         >
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-          <divbutton
-=======
-          <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
             className={`w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-lg rounded-full font-semibold transition-all duration-300`}
           >
             <Play className="w-4 h-4" />
             {currentAnnouncement.action}
             <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationPromotionBanner.tsx
-          </divbutton>
-        </div>
-=======
-          </button>
-        </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationPromotionBanner.tsx
         {/* Progress Indicator */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
           <div

@@ -1,26 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechTrends2025.tsx
-import { Helmet } from 'react-helmet-async';
-=======
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Code, 
-  Database, 
-  Smartphone, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Target
-} from 'lucide-react';
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryTechTrends2025.tsx
 const RevolutionaryTechTrends2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -76,10 +54,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
               These groundbreaking trends are not just predictions—they're already transforming industries and creating new possibilities for businesses worldwide.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryTechTrends2025.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => {
               const IconComponent = trend.icon;
@@ -129,10 +103,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
               Early adoption of these revolutionary trends positions your organization at the forefront of innovation, driving measurable business outcomes.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechTrends2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryTechTrends2025.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;

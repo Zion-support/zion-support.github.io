@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase.tsx
-import { motion } from 'framer-motion';
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/components/UltimateContentShowcase.tsx
 const UltimateContentShowcase: React.FC = () => {
   const contentItems = [
     {

@@ -1,7 +1,8 @@
 {
   "name": "project",
   "private": true,
-<<<<<<< HEAD
+  "version": "0.0.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -15,6 +16,19 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:netlify": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "type-check": "npx tsc --noEmit",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
@@ -37,14 +51,6 @@
     "netlify:trigger": "node scripts/trigger-netlify-automations.cjs",
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
-    "prebuild": "npm run netlify:manifest",
-    "export": "NODE_OPTIONS=--openssl-legacy-provider next build && cp -f _redirects out/_redirects || true",
-    "start": "next start",
-    "postbuild": "",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint -- --fix || true && node fix_typescript_syntax_errors.cjs || true && node fix_all_typescript_errors.cjs || true && node final_fix.cjs || true",
     "build:heal": "npm run build || (npm run fix:all && npm run build)",
@@ -257,55 +263,6 @@
     "ads:fast": "node automation/fast-advertising-orchestrator.cjs"
   },
   "dependencies": {
-    "@google-analytics/data": "^5.2.0",
-    "@google/generative-ai": "^0.24.1",
-    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
-    "@modelcontextprotocol/sdk": "^1.17.1",
-    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
-    "@modelcontextprotocol/server-memory": "^2025.8.4",
-    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.39.0",
-    "@types/react-datepicker": "^6.2.0",
-    "autoprefixer": "^10.4.21",
-    "axios": "^1.11.0",
-    "chalk": "^5.5.0",
-    "cheerio": "^1.1.2",
-    "child_process": "^1.0.2",
-    "chokidar": "^4.0.3",
-    "cron-parser": "^5.3.0",
-    "events": "^3.3.0",
-    "framer-motion": "^6.5.1",
-    "fs": "^0.0.1-security",
-    "fs-extra": "^11.3.1",
-    "glob": "^11.0.3",
-    "https": "^1.0.0",
-    "import-fresh": "^3.3.1",
-    "lucide-react": "^0.536.0",
-    "next": "^15.4.6",
-    "node-cron": "^4.2.1",
-    "openai": "^5.11.0",
-    "path": "^0.12.7",
-    "postcss": "^8.4.32",
-=======
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:netlify": "vite build",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
-    "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --ci --coverage --watchAll=false",
-    "type-check": "npx tsc --noEmit",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --browser chrome",
-    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
-  },
-  "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
     "@babel/plugin-transform-react-jsx": "^7.27.1",
     "@hello-pangea/dnd": "^18.0.1",
@@ -353,47 +310,9 @@
     "lucide-react": "^0.544.0",
     "next-themes": "^0.4.6",
     "postcss": "^8.4.24",
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
     "react": "^18.3.1",
     "react-day-picker": "^9.9.0",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
-    "uuid": "^11.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.28.3",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.32.0",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "12.1.5",
-    "@types/node": "^24.2.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "17.0.34",
-    "@types/react-dom": "17.0.11",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.0.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
-    "postcss": "^8.4.32",
-    "sharp": "^0.33.4",
-    "tailwindcss": "^3.4.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
-=======
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.50.1",
     "react-i18next": "^14.0.1",
@@ -428,6 +347,5 @@
     "rollup-plugin-visualizer": "^6.0.3",
     "ts-jest": "^29.4.2",
     "vitest": "^3.2.4"
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
   }
 }

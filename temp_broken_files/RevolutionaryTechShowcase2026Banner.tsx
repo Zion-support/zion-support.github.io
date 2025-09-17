@@ -1,75 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2026Banner.tsx
-import React from 'react';
-const RevolutionaryTechShowcase2026Banner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  ArrowRight
-  Play,
-  Globe,
-  Shield,
-  Target,
-  Lightbulb,
-  TrendingUp,
-  Users,
-  Code
-} from 'lucide-react';
-
-const RevolutionaryTechShowcase2026Banner = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const slides = [
-    {
-      title: "Neural Interface Revolution",
-      subtitle: "Direct Brain-Computer Integration",
-      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.",
-      icon: Brain,
-      color: "from-purple-600 to-blue-600",
-      stats: "2.3M+ Users",
-      features: ["Thought Control"Real-time Processing"Zero Latency"]
-    },
-    {
-      title: "Quantum AI Fusion",
-      subtitle: "Exponential Processing Power",
-      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.",
-      icon: Zap,
-      color: "from-green-600 to-teal-600",
-      stats: "10,000x Faster",
-      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"]
-    },
-    {
-      title: "Synthetic Intelligence",
-      subtitle: "Consciousness-Level AI",
-      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.",
-      icon: Rocket,
-      color: "from-orange-600 to-red-600",
-      stats: "99.9% Accuracy",
-      features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"]
-    }
-  ];
-
-  const currentSlideData = slides[currentSlide];
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2026Banner.tsx
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
@@ -97,10 +25,6 @@ const RevolutionaryTechShowcase2026Banner = () => {
             defining the next decade of human progress.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2026Banner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2026Banner.tsx
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Slide Content */}
@@ -171,10 +95,6 @@ const RevolutionaryTechShowcase2026Banner = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2026Banner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2026Banner.tsx
           {/* Slide Indicators */}
           <div className="flex justify-center gap-3 mt-12">
             {slides.map((_index) => (

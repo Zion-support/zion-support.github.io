@@ -1,139 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-import React from 'react';
-const InteractiveAIToolsDemo2026: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Code
-  Database,
-  Cpu,
-  Network,
-  BarChart3,
-  Zap,
-  Brain,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  TrendingUp
-} from 'lucide-react';
-
-const InteractiveAIToolsDemo2026 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeDemosetActiveDemo] = useState(0);
-  const [isRunningsetIsRunning] = useState(false);
-  const [progressetProgress] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)200);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isRunning) {
-      interval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 100) {
-            setIsRunning(false);
-            return 0;
-          }
-          return prev + 2;
-        });
-      }100);
-    }
-    return () => clearInterval(interval);
-  }[isRunning]);
-
-  const demos = [
-    {
-      id: 'ai-code-review',
-      title: 'AI Code Review Assistant',
-      icon: Code,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Automated code analysis and optimization suggestions',
-      features: ['Security 'Scanning', 'Performance 'Optimization', 'Best 'Practices', 'Bug Detection'],
-      metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
-    },
-    {
-      id: 'data-analytics',
-      title: 'Intelligent Data Analytics',
-      icon: BarChart3,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Real-time data processing and predictive insights',
-      features: ['Real-time 'Processing', 'Predictive 'Analytics', 'Data 'Visualization', 'Trend Analysis'],
-      metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
-    },
-    {
-      id: 'infrastructure-monitoring',
-      title: 'Infrastructure Monitoring',
-      icon: Network,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Comprehensive system health and performance monitoring',
-      features: ['Health 'Monitoring', 'Performance 'Tracking', 'Alert 'System', 'Auto-scaling'],
-      metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
-    },
-    {
-      id: 'security-scanning',
-      title: 'AI Security Scanner',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      description: 'Advanced threat detection and vulnerability assessment',
-      features: ['Threat 'Detection', 'Vulnerability 'Scanning', 'Risk 'Assessment', 'Compliance Check'],
-      metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Alex Thompson',
-      role: 'Lead Developer',
-      company: 'TechFlow Inc.',
-      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
-      role: 'Data Scientist',
-      company: 'DataCorp',
-      content: 'Our data processing speed increased by 500% with their analytics platform.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      role: 'DevOps Engineer',
-      company: 'CloudScale',
-      content: 'Infrastructure monitoring has never been this comprehensive and reliable.',
-      rating: 5
-    }
-  ];
-
-  const handleStartDemo = () => {
-    setIsRunning(true);
-    setProgress(0);
-  };
-
-  const handleStopDemo = () => {
-    setIsRunning(false);
-    setProgress(0);
-  };
-
-  const handleResetDemo = () => {
-    setIsRunning(false);
-    setProgress(0);
-  };
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,10 +13,6 @@ const InteractiveAIToolsDemo2026 = () => {
             See how our solutions can transform your workflow in real-time.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* Demo Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -175,10 +35,6 @@ const InteractiveAIToolsDemo2026 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* Interactive Demo Area */}
         <div
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
@@ -263,10 +119,6 @@ const InteractiveAIToolsDemo2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* Testimonials */}
         <div
           className="mb-12"
@@ -291,10 +143,6 @@ const InteractiveAIToolsDemo2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2026.tsx
         {/* CTA Section */}
         <div
           className="text-center"

@@ -1,45 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationPromotionBanner.tsx
-import React from 'react';
-const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  ArrowRight
-  Brain
-  Zap
-  Cpu
-  Star,
-  TrendingUp,
-  Award,
-  Rocket,
-  X
-} from 'lucide-react';
-
-const AI2025_2026UltimateInnovationPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  const features = [
-    { icon: Braintext: 'Quantum-AI Fusion 'Technology', 'color: 'text-purple-400' },
-    { icon: Zaptext: '10,000x Processing 'Speed', 'color: 'text-yellow-400' },
-    { icon: Cputext: 'Neural Consensus 'Revolution', 'color: 'text-blue-400' },
-    { icon: Startext: 'Synthetic 'Consciousness', 'color: 'text-green-400' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationPromotionBanner.tsx
   return (
     <div>
       <div
@@ -85,49 +43,21 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
             </div>
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationPromotionBanner.tsx
-              <divbutton
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationPromotionBanner.tsx
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full font-bold text-sm hover:shadow-lg transition-all duration-300 flex items-center group"
               >
                 <Rocket className="w-4 h-4 mr-2" />
                 Explore Now
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationPromotionBanner.tsx
-              </divbutton>
-              <divbutton
-=======
-              </button>
-              
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationPromotionBanner.tsx
                 className="border-2 border-white/30 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-white/10 transition-all duration-300 flex items-center"
               >
                 <Award className="w-4 h-4 mr-2" />
                 Learn More
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationPromotionBanner.tsx
-              </divbutton>
-=======
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationPromotionBanner.tsx
             </div>
             {/* Close Button */}
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationPromotionBanner.tsx
-            <divbutton
-=======
-            <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationPromotionBanner.tsx
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationPromotionBanner.tsx
-            </divbutton>
-=======
-            </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationPromotionBanner.tsx
           </div>
         </div>
         {/* Animated Progress Bar */}

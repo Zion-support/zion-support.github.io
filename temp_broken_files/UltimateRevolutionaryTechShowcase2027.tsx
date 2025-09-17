@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateRevolutionaryTechShowcase2027.tsx
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateRevolutionaryTechShowcase2027.tsx
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
   return (
     <div
@@ -82,10 +76,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateRevolutionaryTechShowcase2027.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateRevolutionaryTechShowcase2027.tsx
             {/* Right: Visual Representation */}
             <div
               className="relative"

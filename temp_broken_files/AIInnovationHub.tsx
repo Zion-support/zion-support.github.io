@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
 import { SEO } from '@/components/SEO';
 import { 
   ArrowRight, 
@@ -216,15 +212,6 @@ export default function AIInnovationHub() {
                 >
                   <Rocket className="w-5 h-5 mr-2" />
                   Request Demo
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
         {/* Metrics Strip */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -252,17 +239,6 @@ export default function AIInnovationHub() {
                     <div className="bg-slate-700/50 rounded-lg p-4">
                       <div className="text-2xl font-bold text-zion-cyan">50+</div>
                       <div className="text-sm text-gray-400">Industries</div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
         {/* AI Capabilities Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -300,13 +276,6 @@ export default function AIInnovationHub() {
                           <span key={app} className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded">
                             {app}
                         ))}
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                      </div>
-                    </div>
-                  </div>
-                </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
               ))}
         {/* Innovation Areas Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -345,12 +314,6 @@ export default function AIInnovationHub() {
                     <div>
                       <span className="text-sm text-gray-400">Timeline:</span>
                       <span className="ml-2 text-sm font-semibold text-white">{area.timeline}</span>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                    </div>
-                  </div>
-                </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
               ))}
         {/* Case Studies Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -394,13 +357,6 @@ export default function AIInnovationHub() {
                           <span key={tech} className="block px-3 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg text-sm">
                             {tech}
                         ))}
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                      </div>
-                    </div>
-                  </div>
-                </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
               ))}
         {/* Resources Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -431,12 +387,6 @@ export default function AIInnovationHub() {
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200"
                     >
                       <Download className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                    </Link>
-                  </div>
-                </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
               ))}
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
@@ -462,15 +412,6 @@ export default function AIInnovationHub() {
                 >
                   Explore AI Services
                   <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub.tsx
-=======
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIInnovationHub.tsx
     </>
   );
 

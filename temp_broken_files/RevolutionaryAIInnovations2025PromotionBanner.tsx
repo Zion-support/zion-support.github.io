@@ -1,63 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-import React from 'react';
-const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Sparkles
-  ArrowRight
-  Star
-  Zap
-  Brain
-  TrendingUp,
-  X,
-  Play,
-  BookOpen,
-  Rocket,
-  Shield,
-  Users,
-  Target
-} from 'lucide-react';
-
-const RevolutionaryAIInnovations2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentInnovationsetCurrentInnovation] = useState(0);
-
-  const innovations = [
-    { icon: Braintitle: "Quantum-Neural Fusion"impact: "10,000x Faster" },
-    { icon: Targetitle: "Autonomous Intelligence"impact: "99.9% Accuracy" },
-    { icon: TrendingUptitle: "Predictive Analytics"impact: "6 Month Forecast" },
-    { icon: Userstitle: "Neural Interfaces"impact: "Direct Interface" },
-    { icon: Shieldtitle: "Quantum Security"impact: "Unbreakable" },
-    { icon: Rocketitle: "Space Technology"impact: "Space-Ready" }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1500);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
-  const currentInnovationData = innovations[currentInnovation];
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
   return (
     <div
         opacity: isVisible ? 1 : 0
@@ -125,28 +65,16 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
               <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
               Revolutionary AI Innovations 2025
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
             <divh2
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
             >
               The Future is Here
             </divh2>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
             <divp
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl"
             >
               Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology
             </divp>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
             {/* Current Innovation Highlight */}
             <div
               key={currentInnovation}
@@ -169,10 +97,6 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 Revolutionary breakthrough transforming how we approach complex problems and decision-making
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
             {/* Innovation Dots */}
             <div className="flex justify-center lg:justify-start space-x-2 mb-8">
               {innovations.map((_index) => (
@@ -227,10 +151,6 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                   }}
                   className="absolute inset-4 bg-white bg-opacity-20 rounded-2xl"
                 />
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-=======
-                
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
                 <div
                     scale: [1.1],
                     rotate: [05-50]
@@ -243,10 +163,6 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 >
                   <currentInnovationData.icon className="w-16 h-16 text-white" />
                 </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025PromotionBanner.tsx
                 {/* Innovation Stats */}
                 <div
                   key={currentInnovation}

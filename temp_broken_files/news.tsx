@@ -1,119 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/news.tsx
-import React from 'react';
-const news: React.FC = () => {
-  return (
-    <UltraFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
-          <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
-        </Head>
-      id: 1,
-      title: "Zion Tech Group Launches Revolutionary Quantum AI Platform",
-      excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",
-      category: "Product Launch",
-      author: "Zion Tech Group Team",
-      date: "2025-01-15",
-      readTime: "5 min read",
-      image: "/images/news/quantum-ai-launch.jpg",
-      tags: ["Quantum Computing", "AI", "Product Launch"]
-    },
-    {
-      id: 2,
-      title: "New Partnership with Global Healthcare Consortium",
-      excerpt: "We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",
-      category: "Partnership",
-      author: "Business Development",
-      date: "2025-01-12",
-      readTime: "4 min read",
-      image: "/images/news/healthcare-partnership.jpg",
-      tags: ["Healthcare", "Partnership", "AI"]
-    },
-    {
-      id: 3,
-      title: "Breakthrough in Autonomous Cybersecurity Systems",
-      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",
-      category: "Research",
-      author: "Research Team",
-      date: "2025-01-10",
-      readTime: "6 min read",
-      image: "/images/news/cybersecurity-breakthrough.jpg",
-      tags: ["Cybersecurity", "Research", "Autonomous Systems"]
-    },
-    {
-      id: 4,
-      title: "Space Technology Division Expands Operations",
-      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",
-      category: "Company News",
-      author: "Space Technology Team",
-      date: "2025-01-08",
-      readTime: "3 min read",
-      image: "/images/news/space-expansion.jpg",
-      tags: ["Space Technology", "Expansion", "Satellites"]
-    },
-    {
-      id: 5,
-      title: "AI Ethics and Governance Framework Released",
-      excerpt: "We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",
-      category: "Policy",
-      author: "AI Ethics Team",
-      date: "2025-01-05",
-      readTime: "7 min read",
-      image: "/images/news/ai-ethics-framework.jpg",
-      tags: ["AI Ethics", "Governance", "Policy"]
-    },
-    {
-      id: 6,
-      title: "Financial Services Innovation Award Winner",
-      excerpt: "Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",
-      category: "Awards",
-      author: "Marketing Team",
-      date: "2025-01-03",
-      readTime: "3 min read",
-      image: "/images/news/financial-award.jpg",
-      tags: ["Awards", "Financial Services", "Quantum Computing"]
-};
-
-
-
-export default function News() {
-  const featuredNews = [
-    {
-      id: 1,
-      title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
-      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',
-      category: 'Company News',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      image: '/api/placeholder/600/400',
-      tags: ['AI', 'Quantum Computing', 'Innovation'],
-import Head from 'next/head';
-
-
-
-export default function NewsPage() {
-  const newsArticles = [
-    {
-      id: 1,
-      title: "Zion Tech Group Launches New AI-Powered Automation Platform",
-      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",
-      date: "2025-01-19",
-      category: "Company News",
-      author: "Zion Tech Group",
-      readTime: "3 min read",
-      image: "🚀",
-      featured: true
-    },
-    {
-      id: 2,
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-            </div>
-          </div>
-        </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
         {/* Featured Article */}
         {featuredArticle && (
           <section className="py-20">
@@ -125,12 +9,6 @@ export default function NewsPage() {
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Featured Story
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                </h2>
-              </div>
-              
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
               <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -169,15 +47,6 @@ export default function NewsPage() {
                   <div className="relative h-64 lg:h-auto">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 flex items-center justify-center">
                       <Newspaper className="w-24 h-24 text-purple-400" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
         )}
         {/* Category Filter */}
         <section className="py-12 bg-black/50">
@@ -204,18 +73,6 @@ export default function NewsPage() {
                 Latest News
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our latest developments and breakthroughs
-<<<<<<< HEAD:temp_broken_files/news.tsx
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsArticles.filter(article => !article.featured).map((article, index) => (
-                <divarticle
-=======
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsArticles.filter(article => !article.featured).map((article, index) => (
-                <article
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                   key={article.id}
                   whileInView={{ opacity: 1, y: 0 }}
         {/* CTA Section */}
@@ -276,12 +133,6 @@ export default function NewsPage() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Stay updated with the latest developments, breakthroughs, and innovations 
                 from Zion Tech Group and the technology industry.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-              </p>
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
         {/* Category Filter */}
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -465,20 +316,11 @@ export default function News() {
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
           >
             Latest News & Insights
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-          </divh1>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           <divp 
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
           >
             Stay updated with the latest developments in AI consciousness, quantum computing, 
             and emerging technologies from Zion Tech Group.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-          </divp>
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           {/* Search and Filter */}
           <div
             className="max-w-4xl mx-auto"
@@ -505,14 +347,6 @@ export default function News() {
                 >
                   {category.name} ({category.count})
               ))}
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
       {/* Featured News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -546,18 +380,10 @@ export default function News() {
             className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-6"
           >
             Latest News & Insights
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-          </divh1>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           <divp 
             className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
           >
             Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-          </divp>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           <div 
             className="flex flex-wrap justify-center gap-4"
           >
@@ -566,14 +392,6 @@ export default function News() {
               <ArrowRight className="w-5 h-5" />
             <a href="#insights" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
               Industry Insights
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-            </a>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
       {/* Category Filter */}
       <section className="py-8 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -601,18 +419,6 @@ export default function News() {
               Featured News
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most important announcements and breakthrough developments.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-          <div className="grid lg:grid-cols-3 gap-8">
-            {featuredNews.map((article, index) => (
-              <divarticle 
-=======
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
-            {featuredNews.map((article, index) => (
-              <article 
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                 key={article.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -644,12 +450,6 @@ export default function News() {
                   <a href={`/news/${article.id}`} className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-300">
                     <span>Read More</span>
                     <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                  </a>
-                </div>
-              </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             ))}
       {/* Recent News */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
@@ -663,18 +463,6 @@ export default function News() {
               Recent News
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Stay current with our latest developments and industry updates.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-          <div className="grid lg:grid-cols-2 gap-8">
-            {recentNews.map((article, index) => (
-              <divarticle 
-=======
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            {recentNews.map((article, index) => (
-              <article 
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                 key={article.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -703,11 +491,6 @@ export default function News() {
                 <a href={`/news/${article.id}`} className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-300">
                   <span>Read More</span>
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                </a>
-              </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             ))}
       {/* Industry Insights */}
       <section id="insights" className="py-20">
@@ -721,12 +504,6 @@ export default function News() {
               Industry Insights
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Deep analysis and thought leadership on emerging technologies and industry trends.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-            </p>
-          </div>
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           <div className="grid lg:grid-cols-3 gap-8">
             {industryInsights.map((insight, index) => (
               <div 
@@ -751,11 +528,6 @@ export default function News() {
                 <a href="#" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-300">
                   <span>Read Insight</span>
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                </a>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             ))}
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
@@ -776,15 +548,6 @@ export default function News() {
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300">
                 Subscribe
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
 }
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
@@ -805,13 +568,6 @@ export default function News() {
                           <Clock className="w-4 h-4" />
                           {article.readTime}
                       <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                    </div>
-                  </div>
-                </div>
-              </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             ))}
       {/* Latest News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -822,17 +578,6 @@ export default function News() {
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Latest News
-<<<<<<< HEAD:temp_broken_files/news.tsx
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredNews.slice(2, 8).map((article, index) => (
-              <divarticle
-=======
-          </divh2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredNews.slice(2, 8).map((article, index) => (
-              <article
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                 key={article.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -856,14 +601,6 @@ export default function News() {
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         {article.readTime}
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             ))}
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -874,11 +611,6 @@ export default function News() {
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Upcoming Events
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-          </divh2>
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           <div className="grid md:grid-cols-2 gap-8">
             {upcomingEvents.map((event, index) => (
               <div
@@ -913,13 +645,6 @@ export default function News() {
                     >
                       Register Now
                       <ExternalLink className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                    </a>
-                  </div>
-                </div>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             ))}
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -943,14 +668,6 @@ export default function News() {
                 Subscribe
             <p className="text-sm text-gray-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-            </p>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
           <div className="max-w-7xl mx-auto">
             <div
               className="text-center mb-16"
@@ -958,18 +675,6 @@ export default function News() {
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our most recent developments and announcements
-<<<<<<< HEAD:temp_broken_files/news.tsx
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsArticles.filter(article => !article.featured).map((article, index) => (
-                <divarticle
-=======
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsArticles.filter(article => !article.featured).map((article, index) => (
-                <article
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                   key={article.title}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -988,11 +693,6 @@ export default function News() {
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
                     Read More
                     <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                  </button>
-                </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
               ))}
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -1014,19 +714,6 @@ export default function News() {
                 />
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                   Subscribe
-<<<<<<< HEAD:temp_broken_files/news.tsx
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pressReleases.map((release, index) => (
-                <divarticle
-=======
-                </button>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pressReleases.map((release, index) => (
-                <article
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                   key={release.title}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -1043,11 +730,6 @@ export default function News() {
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-gray-400" />
                     <span className="text-gray-400 text-sm">{release.date}</span>
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                  </div>
-                </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
               ))}
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1061,12 +743,6 @@ export default function News() {
                 News Categories
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore news by category to find updates in your areas of interest.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-              </p>
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
                 <div
@@ -1081,10 +757,6 @@ export default function News() {
                   <h3 className="text-sm font-semibold text-white mb-1">
                     {category.name}
                   <p className="text-gray-400 text-xs">{category.count} articles</p>
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
               ))}
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -1098,18 +770,6 @@ export default function News() {
                 Recent News
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Stay updated with our latest announcements and developments.
-<<<<<<< HEAD:temp_broken_files/news.tsx
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {recentNews.map((news, index) => (
-                <divarticle
-=======
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {recentNews.map((news, index) => (
-                <article
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
                   key={news.title}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -1130,12 +790,6 @@ export default function News() {
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-400 text-sm">{news.date}</span>
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                    </div>
-                  </div>
-                </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
               ))}
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1161,16 +815,6 @@ export default function News() {
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
                   Press Kit
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1195,15 +839,6 @@ export default function News() {
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
                 Contact Our Team
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
   );
 }
       {/* Call to Action */}
@@ -1223,15 +858,6 @@ export default function News() {
                 <ArrowRight className="w-5 h-5" />
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
-<<<<<<< HEAD:temp_broken_files/news.tsx
-=======
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/news.tsx
   );
 }
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",

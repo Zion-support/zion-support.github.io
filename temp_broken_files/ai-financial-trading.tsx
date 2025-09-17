@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
 import { 
   TrendingUp, 
   DollarSign, 
@@ -167,15 +163,6 @@ export default function AIFinancialTrading() {
                 className="inline-flex items-center px-8 py-4 border-2 border-yellow-500 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500 hover:text-white transition-all duration-300"
               >
                 Watch Demo
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
       {/* Key Benefits */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -193,10 +180,6 @@ export default function AIFinancialTrading() {
               >
                 <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
                 <p className="text-white text-lg font-medium">{benefit}</p>
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
             ))}
       {/* Features */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -217,10 +200,6 @@ export default function AIFinancialTrading() {
                   {feature.icon}
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
             ))}
       {/* Trading Strategies */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -242,11 +221,6 @@ export default function AIFinancialTrading() {
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 text-yellow-400 mr-2" />
                   <span className="text-yellow-400 font-semibold">{strategy.performance}</span>
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-                </div>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
             ))}
       {/* Pricing */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -292,11 +266,6 @@ export default function AIFinancialTrading() {
                   }`}
                 >
                   Get Started
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-                </a>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
             ))}
       {/* Market Information */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -328,14 +297,6 @@ export default function AIFinancialTrading() {
                   <div>
                     <p className="text-white font-semibold">Target Market</p>
                     <p className="text-gray-300">Individual traders, hedge funds, investment firms</p>
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-                  </div>
-                </div>
-              </div>
-            </div>
-            
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
@@ -354,16 +315,6 @@ export default function AIFinancialTrading() {
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">Automation Level</span>
                   <span className="text-green-400 font-semibold">80%</span>
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
       {/* Contact CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -388,15 +339,6 @@ export default function AIFinancialTrading() {
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
-<<<<<<< HEAD:temp_broken_files/ai-financial-trading.tsx
-=======
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/services/ai-financial-trading.tsx
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">

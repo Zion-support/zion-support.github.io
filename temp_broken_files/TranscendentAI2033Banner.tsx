@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/TranscendentAI2033Banner.tsx
-=======
-import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/TranscendentAI2033Banner.tsx
 const TranscendentAI2033Banner: React.FC = () => {
   return (
     <divsection
@@ -38,36 +32,6 @@ const TranscendentAI2033Banner: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/TranscendentAI2033">
-<<<<<<< HEAD:temp_broken_files/TranscendentAI2033Banner.tsx
-                <divbutton
-                  className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-indigo-500/25 transition-all"
-                >
-                  Begin Transcendence <ArrowRight className="w-5 h-5" />
-                </divbutton>
-              </Link>
-              <divbutton
-                className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
-              >
-                Explore Infinity
-              </divbutton>
-            </div>
-          </div>
-=======
-                <button
-                  className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-indigo-500/25 transition-all"
-                >
-                  Begin Transcendence <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <button
-                className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
-              >
-                Explore Infinity
-              </button>
-            </div>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/TranscendentAI2033Banner.tsx
           {/* Right Content - Feature Grid */}
           <div
             whileInView={{ opacity: 1, x: 0 }}

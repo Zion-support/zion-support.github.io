@@ -1,115 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-import React from 'react';
-const AISuccessStoriesShowcase: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React{ useState } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  TrendingUp
-  Users
-  DollarSign
-  Clock
-  ArrowRight,
-  Star,
-  Quote,
-  Building,
-  Zap,
-  Shield,
-  Globe,
-  Brain
-} from 'lucide-react';
-
-const AISuccessStoriesShowcase = () => {
-  const [activeStorysetActiveStory] = useState(0);
-
-  const successStories = [
-    {
-      id: 'techcorp-ai-transformation',
-      company: 'TechCorp Global',
-      industry: 'Technology',
-      challenge: 'Manual data processing causing 40% operational delays',
-      solution: 'Implemented AI-powered data processing and automation systems',
-      results: {
-        efficiency: '95%',
-        costReduction: '60%',
-        timeSaved: '2000 hours/month',
-        revenue: '+$2.5M'
-      },
-      testimonial: 'AI transformed our entire operation. We went from manual processes to fully automated systems in just 6 months.',
-      author: 'Sarah Johnson',
-      position: 'CEOTechCorp Global',
-      icon: Building,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'financeai-automation',
-      company: 'FinanceAI Solutions',
-      industry: 'Financial Services',
-      challenge: 'Fraud detection accuracy below 85% causing significant losses',
-      solution: 'Deployed advanced AI fraud detection and prevention systems',
-      results: {
-        efficiency: '99.7%',
-        costReduction: '45%',
-        timeSaved: '1500 hours/month',
-        revenue: '+$5.2M'
-      },
-      testimonial: 'Our fraud detection accuracy improved to 99.7%. We prevented millions in potential losses.',
-      author: 'Michael Chen',
-      position: 'CTOFinanceAI Solutions',
-      icon: Shield,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'retailai-personalization',
-      company: 'RetailAI Network',
-      industry: 'E-commerce',
-      challenge: 'Low customer engagement and conversion rates',
-      solution: 'Implemented AI-powered personalization and recommendation engines',
-      results: {
-        efficiency: '88%',
-        costReduction: '35%',
-        timeSaved: '3000 hours/month',
-        revenue: '+$8.7M'
-      },
-      testimonial: 'AI personalization increased our conversion rates by 300%. Customer satisfaction is at an all-time high.',
-      author: 'Emily Rodriguez',
-      position: 'VP MarketingRetailAI Network',
-      icon: Globe,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'healthai-diagnostics',
-      company: 'HealthAI Medical',
-      industry: 'Healthcare',
-      challenge: 'Diagnostic accuracy and speed limitations',
-      solution: 'Deployed AI-powered diagnostic and treatment recommendation systems',
-      results: {
-        efficiency: '92%',
-        costReduction: '50%',
-        timeSaved: '4000 hours/month',
-        revenue: '+$12.1M'
-      },
-      testimonial: 'AI diagnostics reduced diagnosis time by 80% while improving accuracy. We can help more patients faster.',
-      author: 'Dr. James Wilson',
-      position: 'Chief Medical OfficerHealthAI Medical',
-      icon: Brain,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const metrics = [
-    { label: 'Average Efficiency 'Gain', 'value: '93.5%'icon: TrendingUp },
-    { label: 'Average Cost 'Reduction', 'value: '47.5%'icon: DollarSign },
-    { label: 'Hours Saved 'Monthly', 'value: '2,625'icon: Clock },
-    { label: 'Average Revenue 'Increase', 'value: '+$7.1'M', 'icon: Star }
-  ];
-
-  const currentStory = successStories[activeStory];
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,10 +10,6 @@ const AISuccessStoriesShowcase = () => {
             <Star className="w-4 h-4 mr-2" />
             AI Success Stories
           </div>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
@@ -133,10 +17,6 @@ const AISuccessStoriesShowcase = () => {
             Real Results from
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> AI Implementation</span>
           </divh2>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
           <divp
             whileInView={{ opacity: 1, y: 0 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -162,10 +42,6 @@ const AISuccessStoriesShowcase = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {successStories.map((storyindex) => {
@@ -249,10 +125,6 @@ const AISuccessStoriesShowcase = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

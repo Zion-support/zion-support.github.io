@@ -1,27 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-const defi-nexus-platform: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">defi-nexus-platform</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
-import Head from 'next/head';
-import { 
-  TrendingUp, Brain, Shield, Zap, Target, 
-  BarChart3, Cpu, Globe, Users, Award,
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
 };
 const features = [
   'Multi-chain DeFi aggregation',
@@ -90,12 +66,6 @@ export default function DeFiNexusPlatform() {
               <span className="text-white">Platform</span>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive decentralized finance platform providing yield farming, liquidity provision, and cross-chain DeFi services.
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </p>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -112,14 +82,6 @@ export default function DeFiNexusPlatform() {
             >
               <Phone className="w-5 h-5 mr-2" />
               Contact Sales
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </a>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,12 +94,6 @@ export default function DeFiNexusPlatform() {
               Revolutionary DeFi Technology
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of decentralized finance with multi-chain support, automated yield optimization, and comprehensive DeFi analytics.
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </p>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -149,10 +105,6 @@ export default function DeFiNexusPlatform() {
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
             ))}
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
@@ -166,12 +118,6 @@ export default function DeFiNexusPlatform() {
               Choose Your Plan
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed for DeFi users of all levels, from beginners to institutional investors.
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </p>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -202,11 +148,6 @@ export default function DeFiNexusPlatform() {
                   ))}
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                   Get Started
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-                </button>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
             ))}
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -220,12 +161,6 @@ export default function DeFiNexusPlatform() {
               Ready to Transform DeFi?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </p>
-          </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -236,11 +171,6 @@ export default function DeFiNexusPlatform() {
                 <Phone className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -250,11 +180,6 @@ export default function DeFiNexusPlatform() {
                 <Mail className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -264,14 +189,6 @@ export default function DeFiNexusPlatform() {
                 <MapPin className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-<<<<<<< HEAD:temp_broken_files/defi-nexus-platform.tsx
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
->>>>>>> origin/merge-new-content-1757989975:src/components/defi-nexus-platform.tsx
   );
 }
 =======

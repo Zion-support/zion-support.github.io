@@ -1,12 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/QuantumComputingPromotionBanner2025.tsx
-import React from 'react';
-=======
-"use client";
-import React, { useState, useEffect } from 'react';
-AtomZapCpuArrowRightXStar
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingPromotionBanner2025.tsx
 const QuantumComputingPromotionBanner2025: React.FC = () => {
   return (
     <div>
@@ -23,10 +14,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
               >
                 QUANTUM REVOLUTION
               </div>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingPromotionBanner2025.tsx
-=======
-              
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingPromotionBanner2025.tsx
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentFeature}`}
@@ -52,21 +39,11 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/quantum-computing-showcase-2025">
-<<<<<<< HEAD:temp_broken_files/QuantumComputingPromotionBanner2025.tsx
-                <divbutton
-=======
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingPromotionBanner2025.tsx
                   className={`bg-gradient-to-r ${features[currentFeature].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
                 >
                   <Star className="w-4 h-4" />
                   Explore Quantum
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/QuantumComputingPromotionBanner2025.tsx
-                </divbutton>
-=======
-                </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingPromotionBanner2025.tsx
               </a>
               <button
                 onClick={() => setIsVisible(false)}

@@ -1,31 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/QuantumReality2025.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState } from 'react';
-import { 
-  Atom, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Award,
-  Lightbulb,
-  Sparkles,
-  Infinity,
-  Brain,
-  Eye,
-  Layers
-} from 'lucide-react';
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumReality2025.tsx
 const QuantumReality2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-blue-900">
@@ -99,10 +71,6 @@ const QuantumReality2025: React.FC = () => {
               every aspect of human existence and opening infinite possibilities.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/QuantumReality2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumReality2025.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {quantumTechnologies.map((tech, index) => (
               <div
@@ -151,10 +119,6 @@ const QuantumReality2025: React.FC = () => {
               so revolutionary and powerful.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/QuantumReality2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumReality2025.tsx
           <div className="grid md:grid-cols-2 gap-8">
             {quantumPrinciples.map((principle, index) => (
               <div
@@ -185,10 +149,6 @@ const QuantumReality2025: React.FC = () => {
               and solving previously impossible problems.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/QuantumReality2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumReality2025.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quantumApplications.map((app, index) => (
               <div

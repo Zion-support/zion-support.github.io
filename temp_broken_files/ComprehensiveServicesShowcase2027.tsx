@@ -104,10 +104,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Get Started →
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2027.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesShowcase2027.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
@@ -180,10 +176,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Get Started
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2027.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesShowcase2027.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 relative"
@@ -221,10 +213,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Get Started
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase2027.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesShowcase2027.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"

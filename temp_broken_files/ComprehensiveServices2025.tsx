@@ -1,30 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServices2025.tsx
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React from 'react';
-<<<<<<< HEAD
-
-const ComprehensiveServices2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <section className="py-32 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-white mb-8">
-            ComprehensiveServices2025
-          </h1>
-          <p className="text-2xl text-gray-300 mb-12">
-            Discover the latest innovations and technologies.
-          </p>
-        </div>
-      </section>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
->>>>>>> origin/feat/realtime-rag-content:src/pages/ComprehensiveServices2025.tsx
 const ComprehensiveServices2025: React.FC = () => {
   const services = [
     {
@@ -261,9 +234,6 @@ const ComprehensiveServices2025: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServices2025.tsx
-=======
->>>>>>> cursor/create-and-deploy-new-content-4067
 >>>>>>> origin/feat/realtime-rag-content:src/pages/ComprehensiveServices2025.tsx
     </div>
   );

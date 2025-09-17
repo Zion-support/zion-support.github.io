@@ -1,25 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-import { 
-  ArrowRight, 
-  Star, 
-  Sparkles, 
-  Rocket, 
-  Brain, 
-  Atom, 
-  Zap,
-  Globe,
-  Shield,
-  Target,
-  Users,
-  CheckCircle,
-  TrendingUp,
-  Award,
-  Clock
-} from 'lucide-react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
 const EnhancedContentAdvertising: React.FC = () => {
   const featuredContent = [
     {
@@ -90,10 +69,6 @@ const EnhancedContentAdvertising: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-          whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -109,19 +84,11 @@ const EnhancedContentAdvertising: React.FC = () => {
             and breakthrough innovations that will define the next decade of human progress.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div
               key={index}
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-              whileInView={{ opacity: 1, scale: 1 }}
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
               className="text-center"
             >
               <div className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
@@ -137,10 +104,6 @@ const EnhancedContentAdvertising: React.FC = () => {
           {featuredContent.map((content, index) => (
             <div
               key={index}
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-              whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-4">
@@ -176,27 +139,15 @@ const EnhancedContentAdvertising: React.FC = () => {
         {/* Testimonials Section */}
         <div className="mb-20">
           <div
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-            whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold mb-4">What Our Partners Say</h3>
             <p className="text-xl opacity-90">Real testimonials from industry leaders and innovators</p>
           </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-                whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
                 className="bg-gradient-to-br from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
               >
                 <div className="flex items-center mb-4">
@@ -215,10 +166,6 @@ const EnhancedContentAdvertising: React.FC = () => {
         </div>
         {/* Call to Action */}
         <div
-<<<<<<< HEAD:temp_broken_files/EnhancedContentAdvertising.tsx
-=======
-          whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentAdvertising.tsx
           className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30"
         >
           <h3 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h3>

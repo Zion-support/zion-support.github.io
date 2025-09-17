@@ -1,213 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { 
-  Search, Filter, Grid3X3, List, 
-  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
-  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
-  Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-} from 'lucide-react';
-// Import service data
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  category: string;
-  rating: number;
-  reviews: number;
-  customers: number;
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  badge?: string;
-  icon?: React.ReactNode;
-}
-const allServices: Service[] = [
-  ...innovativeRealMicroSaasServices2025.map(service => ({
-    ...service,
-    category: 'Micro SAAS',
-    icon: <Rocket className="w-6 h-6" />
-  })),
-  ...innovativeAIServicesEnhanced2025.map(service => ({
-    ...service,
-    category: 'AI & Consciousness',
-    icon: <Brain className="w-6 h-6" />
-  })),
-  ...innovativeITServicesEnhanced2025.map(service => ({
-    ...service,
-    category: 'Enterprise IT',
-    icon: <Shield className="w-6 h-6" />
-  })),
-  ...emergingTechServicesEnhanced2025.map(service => ({
-    ...service,
-    category: 'Quantum & Emerging Tech',
-    icon: <Atom className="w-6 h-6" />
-  }))
-];
-const categories = [
-  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
-  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
-  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
-  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
-  { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
-];
-const priceRanges = [
-  { label: 'All Prices', value: 'all' },
-  { label: 'Under $50/month', value: 'under-50' },
-  { label: '$50 - $200/month', value: '50-200' },
-  { label: '$200 - $500/month', value: '200-500' },
-  { label: 'Over $500/month', value: 'over-500' }
-];
-const sortOptions = [
-  { label: 'Most Popular', value: 'popular' },
-  { label: 'Highest Rated', value: 'rating' },
-  { label: 'Newest', value: 'newest' },
-  { label: 'Price: Low to High', value: 'price-low' },
-  { label: 'Price: High to Low', value: 'price-high' }
-};
-
-
-
-export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices);
-  useEffect(() => {
-    let filtered = allServices;
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-    // Filter by category
-    if (selectedCategory !== 'All Services') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-    // Filter by price range
-    if (selectedPriceRange !== 'all') {
-      filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-        switch (selectedPriceRange) {
-          case 'under-50': return price < 50;
-          case '50-200': return price >= 50 && price <= 200;
-          case '200-500': return price > 200 && price <= 500;
-          case 'over-500': return price > 500;
-          default: return true;
-        }
-      });
-    }
-    // Sort services
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'popular':
-          return b.customers - a.customers;
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-        default:
-          return 0;
-      }
-    });
-    setFilteredServices(filtered);
-  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Micro SAAS': return 'from-blue-500 to-cyan-500';
-      case 'AI & Consciousness': return 'from-purple-500 to-pink-500';
-      case 'Enterprise IT': return 'from-green-500 to-emerald-500';
-      case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500';
-    }
-  };
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
-      case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
-      case 'Enterprise IT': return <Shield className="w-5 h-5" />;
-      case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />;
-      default: return <Globe className="w-5 h-5" />;
-    }
-  };
-  return (
-    <Layout>
-      <Head>
-        <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
-        <meta name="description" content="Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs." />
-        <meta name="keywords" content="micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group" />
-      {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.2, 0.8, 0.2],
-              }}
-                duration: 10 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.5,
-              }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Comprehensive
-              <br />
-              <span className="text-white">Services Showcase</span>
-            <p className="text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
-              Discover our complete portfolio of {allServices.length}+ innovative micro SAAS, AI, IT, and emerging technology services
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {[
-                { label: 'Total Services', value: allServices.length, icon: <Globe className="w-8 h-8" /> },
-                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className="w-8 h-8" /> },
-                { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },
-                { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
-              ].map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className="text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">
-                    {stat.icon}
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-cyan-300">{stat.label}</div>
-<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
-=======
-                </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
               ))}
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
@@ -220,15 +10,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
-<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
-=======
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
       {/* Filters and Controls */}
       <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -355,11 +136,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 {/* CTA Button */}
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                   Learn More
-<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
-=======
-                </button>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
             ))}
         ) : (
           <div className="space-y-6">
@@ -421,14 +197,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         Learn More
                       <div className="text-xs text-gray-500">
                         Launched: {new Date(service.launchDate).toLocaleDateString()}
-<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
-=======
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
             ))}
         )}
         {/* No Results */}
@@ -472,22 +240,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
               >
                 View Pricing Plans
-<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
-=======
-import React from "react";
-
-const function ComprehensiveServicesShowcase2025() { = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2025() {</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
-              </a>
-            </div>
-          </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
         </div>
       </div>
     </div>

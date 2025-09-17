@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnhancedContentSearch2025.tsx
-import React from 'react';
-=======
-import React, { useState, useMemo } from 'react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentSearch2025.tsx
 const EnhancedContentSearch2025: React.FC = () => {
   return (
     <div className="w-full max-w-4xl mx-auto">
@@ -54,10 +48,6 @@ const EnhancedContentSearch2025: React.FC = () => {
           </div>
         </div>
       </divform>
-<<<<<<< HEAD:temp_broken_files/EnhancedContentSearch2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentSearch2025.tsx
       {/* Search Results */}
       <div>
         {showResults && (
@@ -126,10 +116,6 @@ const EnhancedContentSearch2025: React.FC = () => {
           </div>
         )}
       </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedContentSearch2025.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentSearch2025.tsx
       {/* Quick Access */}
       <div
         className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6"

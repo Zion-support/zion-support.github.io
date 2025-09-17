@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2035.tsx
-import { Helmet } from 'react-helmet-async';
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2035.tsx
 const QuantumRealityManipulation2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
@@ -55,10 +50,6 @@ const QuantumRealityManipulation2035: React.FC = () => {
             Harness the fundamental forces of the universe to reshape reality according to your vision
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2035.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2035.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -132,10 +123,6 @@ const QuantumRealityManipulation2035: React.FC = () => {
               Program reality itself using our intuitive quantum programming language
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2035.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2035.tsx
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -157,10 +144,6 @@ const QuantumRealityManipulation2035: React.FC = () => {
                 <div className="text-white">{`}`});</div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2035.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2035.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-6"
@@ -220,10 +203,6 @@ const QuantumRealityManipulation2035: React.FC = () => {
             Transform every aspect of existence with reality manipulation technology
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2035.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2035.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {

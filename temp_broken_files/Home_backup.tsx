@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-import { Helmet } from 'react-helmet-async';
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
   useEffect(() => {
@@ -47,36 +42,6 @@ const Home: React.FC = () => {
                   Contact Us
                 </button>
               </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-            </div>
-          </div>
-        </div>
-
-        {/* NEW: Ultimate Tech Showcase Banner */}
-        <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-          <div className="relative z-10">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <span className="text-3xl animate-pulse">🚀</span>
-              <h3 className="text-3xl font-bold">ULTIMATE TECH SHOWCASE 2026</h3>
-              <span className="text-3xl animate-pulse">🚀</span>
-            </div>
-            <p className="text-xl opacity-95 mb-6 max-w-5xl mx-auto">
-              Discover the most comprehensive collection of cutting-edge technologies including
-              Biotech AI, Space Technology, and Advanced Quantum Systems
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🌟 Ultimate Tech Showcase →
-              </a>
-              <a href="/pages/AdvancedBiotechAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🧬 Advanced Biotech AI →
-              </a>
-              <a href="/pages/NextGenSpaceTech2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
-                🛸 Next-Gen Space Tech →
-              </a>
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             </div>
           </div>
         </div>
@@ -106,10 +71,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
@@ -125,10 +86,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
@@ -144,10 +101,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -163,10 +116,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
@@ -182,10 +131,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
@@ -200,39 +145,6 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
-            </div>
-          </div>
-        </div>
-
-        {/* Content Showcases */}
-        <div className="container mx-auto px-4 py-20">
-          <EnhancedContentShowcase />
-        </div>
-
-        <div className="container mx-auto px-4 py-20">
-          <RevolutionaryContentShowcase />
-        </div>
-
-        {/* Enhanced Content Advertising */}
-        <EnhancedContentAdvertising />
-
-        {/* Call to Action */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join the revolution and discover how our cutting-edge technologies can transform your business and unlock unprecedented possibilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Start Your Journey →
-              </button>
-              <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                Schedule Consultation
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             </div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">

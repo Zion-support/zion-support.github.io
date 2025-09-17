@@ -1,18 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-};
-
-
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
 
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -207,20 +192,11 @@ export default function ComprehensivePricingPage() {
                   Comprehensive
                 <br />
                 <span className="text-white">Pricing & Plans</span>
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-              </divh1>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
               <divp 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
               >
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-              </divp>
-              
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
               {/* Market Stats */}
               <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -231,11 +207,6 @@ export default function ComprehensivePricingPage() {
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
                 ))}
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-              </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
               {/* CTA Buttons */}
               <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -254,15 +225,6 @@ export default function ComprehensivePricingPage() {
                 >
                   Browse All Services
                   <Search className="ml-2 w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
         {/* Contact Information Banner */}
         <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">
           <div className="container mx-auto px-4">
@@ -292,12 +254,6 @@ export default function ComprehensivePricingPage() {
                 <span className="text-white">for Every Business</span>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-              </p>
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
             <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               whileInView="visible"
@@ -339,19 +295,6 @@ export default function ComprehensivePricingPage() {
                        >
                         Get Started
                         <ArrowRight className="ml-2 w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-              ))}
-=======
-                      </Button>
-                    </div>
-                  </UltraFuturisticCard>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
@@ -409,15 +352,6 @@ export default function ComprehensivePricingPage() {
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <List className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
             {/* Services Display */}
             <div 
               className={viewMode === 'grid' 
@@ -510,15 +444,6 @@ export default function ComprehensivePricingPage() {
                                Get Pricing
                                <DollarSign className="ml-2 w-4 h-4" />
                     )}
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-              ))}
-=======
-                  </UltraFuturisticCard>
-                </div>
-              ))}
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
             {filteredServices.length === 0 && (
               <div 
                 className="text-center py-16"
@@ -535,11 +460,6 @@ export default function ComprehensivePricingPage() {
                    }}
                  >
                    Clear Filters
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-                 </Button>
-              </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
             )}
         {/* Contact Section */}
         <section className="py-20">
@@ -581,16 +501,6 @@ export default function ComprehensivePricingPage() {
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
-<<<<<<< HEAD:temp_broken_files/comprehensive-pricing.tsx
-=======
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </UltraFuturisticBackground>
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-pricing.tsx
   );
 
 

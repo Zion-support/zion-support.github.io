@@ -1,39 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  ArrowRight
-  Star
-  Users
-  TrendingUp
-  Zap,
-  Cpu,
-  Target,
-  Globe,
-  ChevronRight,
-  Play,
-  BookOpen,
-  Code,
-  Lightbulb,
-  Award,
-  X,
-  Sparkles,
-  Rocket,
-  Shield,
-  Database,
-  Network,
-  Microscope,
-  Atom,
-  Layers,
-  Search
-} from 'lucide-react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
 const AIInnovationHub2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -88,36 +52,14 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </div>
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-                <divbutton
-=======
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
                   className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-yellow-300 transition-colors"
                 >
                   Explore Innovations
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-                </divbutton>
-                <divbutton
-=======
-                </button>
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
                   className="bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-white/30 transition-colors border border-white/30"
                 >
                   <Play className="h-5 w-5 mr-2" />
                   Watch Demo
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-                </divbutton>
-              </div>
-            </div>
-=======
-                </button>
-              </div>
-            </div>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
             {/* Right Content - Interactive Innovation Showcase */}
             <div
               className="relative"
@@ -167,10 +109,6 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-=======
-                
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
                 {/* Innovation Indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {innovations.map((_index) => (
@@ -193,10 +131,6 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               >
                 <Brain className="h-6 w-6" />
               </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-=======
-              
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
               <div
                   y: [010],
                   rotate: [0-50]
@@ -205,10 +139,6 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               >
                 <Atom className="h-6 w-6" />
               </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2026PromotionBanner.tsx
               <div
                   y: [0-150],
                   x: [050]

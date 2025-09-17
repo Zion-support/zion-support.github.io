@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/NewContent2025AutomationRevolutionBanner.tsx
-=======
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025AutomationRevolutionBanner.tsx
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
     <divsection
@@ -20,19 +15,11 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
           >
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewContent2025AutomationRevolutionBanner.tsx
-=======
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025AutomationRevolutionBanner.tsx
           <divh2
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
             AI 2025 Automation Revolution
           </divh2>
-<<<<<<< HEAD:temp_broken_files/NewContent2025AutomationRevolutionBanner.tsx
-=======
-          
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025AutomationRevolutionBanner.tsx
           <divp
             className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
@@ -71,10 +58,6 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               <span className="ml-2">→</span>
             </a>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewContent2025AutomationRevolutionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025AutomationRevolutionBanner.tsx
           {/* Case Study Card */}
           <div
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
@@ -132,10 +115,6 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
             <div className="text-gray-300 text-sm">Success Rate</div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/NewContent2025AutomationRevolutionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025AutomationRevolutionBanner.tsx
         {/* Call to Action */}
         <div
           className="text-center"

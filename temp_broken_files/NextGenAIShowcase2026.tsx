@@ -1,143 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-import React from 'react';
-const NextGenAIShowcase2026: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Cpu
-  Zap
-  Eye
-  Mic
-  MessageSquare,
-  Sparkles,
-  ArrowRight,
-  Play,
-  Pause,
-  Volume2,
-  Camera,
-  Globe,
-  Shield,
-  Rocket
-} from 'lucide-react';
-
-const NextGenAIShowcase2026 = () => {
-  const [activeDemosetActiveDemo] = useState(0);
-  const [isPlayingsetIsPlaying] = useState(true);
-  const [aiThinkingsetAiThinking] = useState(false);
-
-  const demos = [
-    {
-      id: 0,
-      title: "Neural Language Processing",
-      description: "Advanced AI that understands contextemotionand intent",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-blue-600 to-cyan-600",
-      features: [
-        "Real-time language translation",
-        "Emotion detection and response",
-        "Context-aware conversations",
-        "Multi-modal communication"
-      ],
-      demo: "🧠💬",
-      stats: { accuracy: "99.7%"languages: "247"speed: "0.1ms" }
-    },
-    {
-      id: 1,
-      title: "Computer Vision AI",
-      description: "Revolutionary visual intelligence with human-level perception",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-purple-600 to-pink-600",
-      features: [
-        "Object recognition & tracking",
-        "Facial emotion analysis",
-        "Scene understanding",
-        "Augmented reality integration"
-      ],
-      demo: "👁️📷",
-      stats: { accuracy: "99.9%"objects: "10M+"fps: "240" }
-    },
-    {
-      id: 2,
-      title: "Quantum Processing Core",
-      description: "Quantum-enhanced AI for exponential performance gains",
-      icon: <Cpu className="w-8 h-8" />,
-      color: "from-green-600 to-emerald-600",
-      features: [
-        "Quantum algorithm optimization",
-        "Parallel universe computation",
-        "Instantaneous pattern recognition",
-        "Unlimited scalability"
-      ],
-      demo: "⚛️💎",
-      stats: { speed: "1000x"qubits: "1024"efficiency: "99.99%" }
-    },
-    {
-      id: 3,
-      title: "Voice Intelligence",
-      description: "Natural voice interaction with emotional understanding",
-      icon: <Mic className="w-8 h-8" />,
-      color: "from-orange-600 to-red-600",
-      features: [
-        "Natural speech synthesis",
-        "Voice cloning technology",
-        "Accent adaptation",
-        "Emotional tone matching"
-      ],
-      demo: "🎤🔊",
-      stats: { clarity: "98.8%"voices: "500K"latency: "50ms" }
-    }
-  ];
-
-  const aiCapabilities = [
-    { icon: <Brain className="w-6 h-6" />title: "Deep Learning"desc: "Neural networks with billions of parameters" },
-    { icon: <Zap className="w-6 h-6" />title: "Real-time Processing"desc: "Lightning-fast AI responses" },
-    { icon: <Shield className="w-6 h-6" />title: "Secure & Private"desc: "Enterprise-grade security" },
-    { icon: <Globe className="w-6 h-6" />title: "Global Scale"desc: "Worldwide deployment ready" }
-  ];
-
-  useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setActiveDemo((prev) => (prev + 1) % demos.length);
-      }4000);
-      return () => clearInterval(interval);
-    }
-  }[isPlayingdemos.length]);
-
-  useEffect(() => {
-    // Simulate AI thinking animation
-    const thinkingInterval = setInterval(() => {
-      setAiThinking(prev => !prev);
-    }2000);
-    return () => clearInterval(thinkingInterval);
-  }[]);
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -163,17 +23,6 @@ const NextGenAIShowcase2026 = () => {
               Next-Gen AI Showcase 2026
             </h2>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
-            Witness revolutionary capabilities that will transform how we interact with technology.
-          </divp>
-=======
-          
-            Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
-            Witness revolutionary capabilities that will transform how we interact with technology.
-          </divp>
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-lg"
@@ -187,10 +36,6 @@ const NextGenAIShowcase2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
         {/* Main Demo Area */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Demo Showcase */}
@@ -257,18 +102,6 @@ const NextGenAIShowcase2026 = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            {/* Demo Navigation */}
-            <div className="flex justify-center mt-6 space-x-4">
-              {demos.map((demoindex) => (
-                <divbutton
-=======
-
-            {/* Demo Navigation */}
-            <div className="flex justify-center mt-6 space-x-4">
-              {demos.map((demoindex) => (
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   key={index}
                   onClick={() => {
                     setActiveDemo(index);
@@ -281,11 +114,6 @@ const NextGenAIShowcase2026 = () => {
                   }`}
                 >
                   {demo.icon}
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-=======
-                </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
               ))}
             </div>
           </div>
@@ -319,42 +147,18 @@ const NextGenAIShowcase2026 = () => {
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-xl font-bold text-white mb-4">Interactive Controls</h4>
               <div className="space-y-3">
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                <divbutton
-=======
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   className="w-full p-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <Volume2 className="w-4 h-4 mr-2" />
                   Voice Demo
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-                <divbutton
-=======
-                </button>
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   className="w-full p-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <Camera className="w-4 h-4 mr-2" />
                   Vision Demo
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-                <divbutton
-=======
-                </button>
-                <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   className="w-full p-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Chat Demo
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-=======
-                </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
               </div>
             </div>
           </div>
@@ -371,20 +175,10 @@ const NextGenAIShowcase2026 = () => {
               Join thousands of businesses already leveraging next-generation AI technology. 
               Get early access to our revolutionary AI platform.
             </p>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            <divbutton
-=======
-            <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
               className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300 flex items-center mx-auto"
             >
               Get Early Access
               <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            </divbutton>
-=======
-            </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
           </div>
         </div>
       </div>

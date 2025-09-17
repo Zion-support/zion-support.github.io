@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnhancedSearch.tsx
-=======
-import React, { useState } from 'react';
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/components/EnhancedSearch.tsx
 const EnhancedSearch: React.FC = () => {
   return (
     <div className="relative max-w-2xl mx-auto">

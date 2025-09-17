@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
 const InteractiveContentShowcase2034_2036: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const contentItems = [
@@ -59,10 +55,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">
       <div
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-        initial={{ opacity: 0, y: 20 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
         whileInView={{ opacity: 1, y: 0 }}
         className="text-center mb-12"
       >
@@ -73,10 +65,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
           Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself
         </p>
       </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
       {/* Tab Navigation */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         {contentItems.map((item, index) => (
@@ -96,10 +84,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
       </div>
       {/* Content Display */}
       <div className="relative min-h-[500px]">
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-        <AnimatePresence mode="wait">
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
           <div
             key={activeTab}
             className="grid md:grid-cols-2 gap-12 items-center"
@@ -131,12 +115,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-              <motion.a
-=======
-
-              <a
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
                 href={contentItems[activeTab].link}
                 className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
               >
@@ -183,18 +161,9 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-        </AnimatePresence>
-=======
-        </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
       </div>
       {/* Additional Features */}
       <div
-<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
-        initial={{ opacity: 0, y: 20 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
         whileInView={{ opacity: 1, y: 0 }}
         className="mt-12 grid md:grid-cols-3 gap-6"
       >

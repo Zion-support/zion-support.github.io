@@ -1,11 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NewContentPromotionalBanner.tsx
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentPromotionalBanner.tsx
 const NewContentPromotionalBanner: React.FC = () => {
   return (
     <div>
@@ -51,10 +43,6 @@ const NewContentPromotionalBanner: React.FC = () => {
                   </Link>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/NewContentPromotionalBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentPromotionalBanner.tsx
               {/* Navigation Arrow */}
               <button
                 onClick={handleNext}

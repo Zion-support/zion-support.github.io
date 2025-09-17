@@ -1,96 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type ContentItem = {
-  id: string;
-  title: string;
-  summary: string;
-  href: string;
-  tag: string;
-  date: string;
-};
-
-export const latestContent: ContentItem[] = [
-  {
-    id: "ai-2026-autonomous-change-approvals-blueprint",
-    title: "AI 2026: Autonomous Change Approvals — Blueprint",
-    summary: "Policy‑as‑code approvals with eval gates and signed evidence bundles.",
-    href: "/blog/ai-2026-autonomous-change-approvals-blueprint",
-    tag: "Blueprint",
-    date: "2025-09-16",
-  },
-  {
-    id: "ai-2026-real-time-agent-benchmark-suite-1-0",
-    title: "AI 2026: Real‑Time Agent Benchmark Suite v1.0 — Launch",
-    summary: "Scenario benchmarks for quality, safety, latency, and cost with CI/CD gates.",
-    href: "/blog/ai-2026-real-time-agent-benchmark-suite-1-0",
-    tag: "Launch",
-    date: "2025-09-16",
-  },
-  {
-    id: "agentic-product-playbooks",
-    title: "Agentic Product Playbooks",
-    summary: "Blueprints to ship agentic workflows with eval gates and observability.",
-    href: "/blog/agentic-product-playbooks",
-    tag: "Playbook",
-    date: "2025-09-16",
-  },
-  {
-    id: "ai-2026-safe-agent-actions-blueprint",
-    title: "AI 2026: Safe Agent Actions — Blueprint",
-    summary: "Risk‑tiered adapters, approvals, budgets, and policy‑as‑code for safe actions.",
-    href: "/blog/ai-2026-safe-agent-actions-blueprint",
-    tag: "Security",
-    date: "2025-09-16",
-  },
-  {
-    id: "evals-and-guardrails",
-    title: "Evals, Guardrails, and Safety",
-    summary: "Stand up eval suites and policy guardrails for production agents.",
-    href: "/blog/evals-and-guardrails",
-    tag: "Safety",
-    date: "2025-09-16",
-  },
-  {
-    id: "ai-2026-trusted-genai-patterns-regulated-enterprises",
-    title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
-    summary: "Compliant, observable, and cost-aware GenAI architectures that scale safely.",
-    href: "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
-    tag: "Governance",
-    date: "2025-09-15",
-  },
-  {
-    id: "agentic-crm-autonomous-revenue-workflows-2026",
-    title: "Agentic CRM: Autonomous Revenue Workflows (2026)",
-    summary: "Lead routing, outreach, and pipeline hygiene with evaluation-gated agents.",
-    href: "/blog/agentic-crm-autonomous-revenue-workflows-2026",
-    tag: "Revenue",
-    date: "2025-09-15",
-  },
-  {
-    id: "real-time-agent-observability-2026",
-    title: "Real-Time Agent Observability (2026)",
-    summary: "Traces, metrics, and evals for production agent workflows.",
-    href: "/blog/real-time-agent-observability-2026",
-    tag: "Observability",
-    date: "2025-09-15",
-  },
-  {
-    id: "hyperautomation-blueprint-2026",
-    title: "Hyperautomation Blueprint 2026",
-    summary: "Platform patterns, policy-as-code, and ROI tracking to scale automation.",
-    href: "/content/hyperautomation-blueprint-2026",
-    tag: "Blueprint",
-    date: "2025-09-15",
-  },
-  {
-    id: "production-safety-checklist-2026",
-    title: "AI 2026: Production Safety Checklist",
-    summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
-    href: "/blog/ai-2026-production-safety-checklist",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
     tag: "Guide",
@@ -120,11 +27,6 @@ export const latestContent = [
     date: "2025-09-15",
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     id: "ai-agents-roi-playbook-2026",
@@ -132,98 +34,6 @@ export const latestContent = [
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
     href: "/content/ai-agents-roi-playbook-2026",
     tag: "Playbook",
-<<<<<<< HEAD
-    date: "2025-09-15",
-  },
-  {
-    id: "enterprise-rag-observability-2026",
-    title: "AI 2026: Enterprise RAG Observability",
-    summary: "Traces, evals, latency SLOs, and safety telemetry for production RAG.",
-    href: "/blog/ai-2026-enterprise-rag-observability",
-    tag: "Observability",
-    date: "2025-09-15",
-  },
-  {
-    id: "realtime-evals-at-scale-2026",
-    title: "AI 2026: Real-Time Evals at Scale",
-    summary: "From offline suites to live gates powering progressive delivery.",
-    href: "/blog/ai-2026-realtime-evals-at-scale",
-    tag: "Evals",
-    date: "2025-09-15",
-  },
-  {
-    id: "secure-agent-routing-2026",
-    title: "AI 2026: Secure Agent Routing Strategies",
-    summary: "Isolation domains, permissions, and policy-as-code for safe tool use.",
-    href: "/blog/ai-2026-secure-agent-routing-strategies",
-    tag: "Security",
-    date: "2025-09-15",
-  },
-  {
-    id: "eval-ready-pipelines-2026",
-    title: "AI 2026: Eval-Ready AI Pipelines in Production",
-    summary: "Policy bundles, scenario suites, and CI/CD gates for reliability.",
-    href: "/blog/ai-2026-eval-ready-ai-pipelines-in-production",
-    tag: "Pipelines",
-    date: "2025-09-15",
-  },
-  {
-    id: "real-time-retrieval-architectures-2026",
-    title: "AI 2026: Real-Time Retrieval Architectures",
-    summary: "Sub-200ms retrieval via hybrid search, caching, and streaming patterns.",
-    href: "/blog/ai-2026-real-time-retrieval-architectures",
-    tag: "RAG",
-    date: "2025-09-15",
-  },
-  {
-    id: "agent-risk-metrics-2026",
-    title: "AI 2026: Enterprise Agent Risk Metrics",
-    summary: "Measuring safety, quality, reliability, and ROI for agent platforms.",
-    href: "/blog/ai-2026-enterprise-agent-risk-metrics",
-    tag: "Risk",
-    date: "2025-09-15",
-  },
-  {
-    id: "agents-oncall-automation-2026",
-    title: "AI 2026: Agents‑On‑Call Automation",
-    summary: "Eval‑gated incident response with automated rollback and observability.",
-    href: "/blog/ai-2026-agents-oncall-automation",
-    tag: "Operations",
-    date: "2025-09-15",
-  },
-  {
-    id: "governed-tool-use-case-studies-2026",
-    title: "AI 2026: Governed Tool Use — Case Studies",
-    summary: "Real‑world incidents, mitigations, and measurable risk reduction.",
-    href: "/blog/ai-2026-governed-tool-use-case-studies",
-    tag: "Case Study",
-    date: "2025-09-15",
-  },
-  {
-    id: "agent-platform-slos-2026",
-    title: "AI 2026: Agent Platform SLOs That Matter",
-    summary: "Define and track SLOs that correlate to business value and safety.",
-    href: "/content/ai-2026-agent-platform-slos",
-    tag: "SLOs",
-    date: "2025-09-15",
-  },
-  {
-    id: "llm-evals-maturity-model-2026",
-    title: "AI 2026: LLM Evals Maturity Model",
-    summary: "A staged path to reliable, eval‑driven delivery for AI systems.",
-    href: "/content/ai-2026-llm-evals-maturity-model",
-    tag: "Framework",
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-enterprise-blueprint-2026",
-    title: "AI 2026: Autonomous Enterprise Blueprint",
-    summary: "Operating model, controls, and metrics to scale autonomous operations.",
-    href: "/content/ai-2026-autonomous-enterprise-blueprint",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
@@ -231,10 +41,6 @@ export const latestContent = [
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======

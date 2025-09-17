@@ -1,48 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026PromotionBanner.tsx
-import React from 'react';
-const AITrendsPredictions2026PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Brain
-  Zap
-  Globe
-  Shield,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Calendar,
-  Target,
-  X
-} from 'lucide-react';
-
-const AITrendsPredictions2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
-  const predictions = [
-    { icon: Brainlabel: 'Quantum 'AI', 'confidence: '95%' },
-    { icon: Zaplabel: 'Neural 'Interfaces', 'confidence: '88%' },
-    { icon: Shieldlabel: 'Autonomous 'Systems', 'confidence: '92%' },
-    { icon: Globelabel: 'AI 'Consciousness', 'confidence: '75%' }
-  ];
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -89,28 +44,16 @@ const AITrendsPredictions2026PromotionBanner = () => {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026PromotionBanner.tsx
                 <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   🔮 AI Trends & Predictions 2026
                 </divh2>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026PromotionBanner.tsx
                 <divp
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Discover groundbreaking AI trends: Quantum AINeural InterfacesAutonomous Systemsand AI Consciousness
                 </divp>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026PromotionBanner.tsx
                 {/* Prediction Icons */}
                 <div
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
@@ -138,23 +81,10 @@ const AITrendsPredictions2026PromotionBanner = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026PromotionBanner.tsx
-              {/* Dismiss Button */}
-              <divbutton
-=======
-
-              {/* Dismiss Button */}
-              <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026PromotionBanner.tsx
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026PromotionBanner.tsx
-              </divbutton>
-=======
-              </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026PromotionBanner.tsx
             </div>
           </div>
           {/* Progress Bar */}

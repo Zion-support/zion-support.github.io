@@ -1,57 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027PromotionBanner.tsx
-import React from 'react';
-const InteractiveAIToolsDemo2027PromotionBanner: React.FC = () => {
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Zap
-  Brain
-  Code
-  BarChart3
-  Image,
-  ArrowRight,
-  Star,
-  X,
-  Sparkles
-} from 'lucide-react';
-
-const InteractiveAIToolsDemo2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
-
-  const tools = [
-    { icon: Codename: 'Code 'Generator', 'color: 'from-blue-500 to-cyan-500' },
-    { icon: BarChart3name: 'Data 'Analyzer', 'color: 'from-green-500 to-emerald-500' },
-    { icon: Imagename: 'Image 'Generator', 'color: 'from-purple-500 to-pink-500' },
-    { icon: Brainame: 'AI 'Assistant', 'color: 'from-orange-500 to-red-500' }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1500);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setCurrentTool(prev => (prev + 1) % tools.length);
-      }2000);
-      return () => clearInterval(interval);
-    }
-  }[isVisibletools.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027PromotionBanner.tsx
   return (
     <div
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden"
@@ -78,28 +24,16 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027PromotionBanner.tsx
             <divh2
               className="text-xl md:text-3xl font-bold mb-2"
             >
               🎮 Try AI Tools Live - Interactive Demo 2027
             </divh2>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027PromotionBanner.tsx
             <divp
               className="text-base md:text-lg text-white/90 mb-4 max-w-2xl"
             >
               Experience the power of AI tools with live demonstrations. Generate codeanalyze datacreate imagesand more in real-time.
             </divp>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027PromotionBanner.tsx
             <div
               className="flex flex-wrap items-center gap-3"
             >
@@ -158,10 +92,6 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
             />
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027PromotionBanner.tsx
         {/* Floating Elements */}
         <div
             y: [0-80],
@@ -175,10 +105,6 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
         >
           <Sparkles className="w-3 h-3 text-white" />
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027PromotionBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027PromotionBanner.tsx
         <div
             y: [080],
             rotate: [0-30]

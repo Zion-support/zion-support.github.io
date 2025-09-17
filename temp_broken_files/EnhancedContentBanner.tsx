@@ -1,9 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnhancedContentBanner.tsx
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentBanner.tsx
 const EnhancedContentBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
@@ -54,10 +48,6 @@ const EnhancedContentBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedContentBanner.tsx
-=======
-
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentBanner.tsx
             {/* Navigation Controls */}
             <button
               onClick={prevSlide}
@@ -89,11 +79,6 @@ const EnhancedContentBanner: React.FC = () => {
       {/* Quick Access Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         {featuredContent.map((content, index) => (
-<<<<<<< HEAD:temp_broken_files/EnhancedContentBanner.tsx
-          <diva
-=======
-          <a
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentBanner.tsx
             key={content.id}
             href={content.link}
             className={`bg-gradient-to-r ${content.gradient} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center relative overflow-hidden group`}
@@ -107,11 +92,6 @@ const EnhancedContentBanner: React.FC = () => {
                 {content.badge}
               </span>
             </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedContentBanner.tsx
-          </diva>
-=======
-          </a>
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedContentBanner.tsx
         ))}
       </div>
       {/* Interactive Stats */}
