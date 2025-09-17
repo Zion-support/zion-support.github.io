@@ -43,10 +43,8 @@ const RevolutionaryContentBanner2032: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
       </div>
     </divdiv>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -155,4 +153,3 @@ const RevolutionaryContentBanner2032: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentBanner2032;

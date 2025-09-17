@@ -4,7 +4,6 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   // Keyboard navigation enhancement
   const enhanceKeyboardNavigation = useCallback(() => {
@@ -152,7 +151,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
-=======
 interface FocusTrapConfig {
 	containerRef: React.RefObject<HTMLElement>;
 	onEscape?: () => void;

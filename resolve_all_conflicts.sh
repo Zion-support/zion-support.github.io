@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
@@ -432,32 +433,20 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 >>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
-
-echo "Found files with conflicts:"
-echo "$files_with_conflicts"
-
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
-    
-    # Create a backup
-    cp "$file" "$file.backup.$(date +%s)"
-    
-    # Use git checkout --ours to resolve conflicts
-    git checkout --ours "$file" 2>/dev/null || echo "Could not resolve $file with git checkout --ours"
-    
-    # If git checkout didn't work, try manual resolution
-    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
-        echo "Manual resolution needed for $file"
-        # Remove all conflict markers and keep the first version (HEAD)
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
+# Accept our version for all conflicted files
+git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}' | while read file; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflict in: $file"
+        git checkout --ours "$file"
+        git add "$file"
     fi
 done
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -934,3 +923,19 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 >>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+# For files that were deleted by us but modified by them, keep them deleted
+git status --porcelain | grep "^DU" | awk '{print $2}' | while read file; do
+    echo "Keeping deleted: $file"
+    git rm "$file"
+done
+
+# For files that were added by them but not by us, remove them
+git status --porcelain | grep "^AU" | awk '{print $2}' | while read file; do
+    echo "Removing added file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by accepting our clean version"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad

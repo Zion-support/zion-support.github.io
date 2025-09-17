@@ -3,7 +3,6 @@ import React from 'react';
 const RevolutionaryTechBreakthrough2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-<<<<<<< HEAD
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -155,7 +154,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               <button className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Predict Future
               </button>
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -289,7 +287,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
         </div>
 
         {/* Impact Statistics */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">📊 Revolutionary Impact</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -320,7 +317,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             <div className="text-5xl font-bold text-cyan-300 mb-2">∞</div>
             <div className="text-lg font-semibold mb-2">Dimensional Reach</div>
             <div className="text-sm text-cyan-200">Multi-dimensional processing</div>
-=======
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
@@ -342,7 +338,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready for the Breakthrough?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -354,7 +349,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Book Consultation
-=======
         <div className="text-center bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready for the Breakthrough?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -375,4 +369,3 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
   );
 };
 
-export default RevolutionaryTechBreakthrough2025;

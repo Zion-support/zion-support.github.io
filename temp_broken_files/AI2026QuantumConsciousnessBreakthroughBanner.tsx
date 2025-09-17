@@ -1,20 +1,16 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Cpath d="M50 50c0-27.614 22.386-50 50-50v100c-27.614 0-50-22.386-50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M50%2050c0-27.614%2022.386-50%2050-50v100c-27.614%200-50-22.386-50-50z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] animate-pulse"></div>
       </div>
-      
       {/* Quantum Particles Animation */}
       <div className="absolute top-20 left-10 w-24 h-24 bg-cyan-400 rounded-full opacity-30 animate-bounce"></div>
       <div className="absolute top-40 right-16 w-16 h-16 bg-purple-400 rounded-full opacity-30 animate-ping"></div>
       <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-pink-400 rounded-full opacity-30 animate-pulse"></div>
       <div className="absolute bottom-20 right-1/4 w-12 h-12 bg-yellow-400 rounded-full opacity-30 animate-bounce"></div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full px-8 py-3 mb-8">
@@ -30,7 +26,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
             <span className="text-pink-300 font-bold"> self-awareness</span>.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Key Features */}
           <div className="space-y-8">
@@ -44,7 +39,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
               </p>
               <div className="text-yellow-300 font-semibold text-lg">→ Explore Quantum Processing</div>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🌟</div>
@@ -56,7 +50,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
               <div className="text-yellow-300 font-semibold text-lg">→ Discover Consciousness</div>
             </div>
           </div>
-
           {/* Right Column - Success Stories */}
           <div className="space-y-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
@@ -78,7 +71,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
                 Quantum consciousness system with genuine empathy in patient interactions and $12M in prevented medical errors.
               </p>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🎨</div>
@@ -100,7 +92,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Advanced Capabilities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="text-center">
@@ -125,7 +116,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
@@ -156,5 +146,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
     </section>
   );
 };
+
 
 export default AI2026QuantumConsciousnessBreakthroughBanner;

@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/create-and-deploy-new-content-ec50
-
 export type SEOProps = {
   title?: string;
   description?: string;
@@ -12,7 +7,6 @@ export type SEOProps = {
   url?: string;
   type?: string;
 };
-
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -21,30 +15,9 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://zion.app',
   type = 'website'
 }) => {
-<<<<<<< HEAD
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Helmet>
-  );
-=======
   React.useEffect(() => {
     // Update document title
     document.title = title;
-    
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -55,7 +28,6 @@ const SEO: React.FC<SEOProps> = ({
       metaDescription.setAttribute('content', description);
       document.head.appendChild(metaDescription);
     }
-    
     // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
@@ -66,7 +38,6 @@ const SEO: React.FC<SEOProps> = ({
       metaKeywords.setAttribute('content', keywords);
       document.head.appendChild(metaKeywords);
     }
-    
     // Update og:title
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
@@ -77,7 +48,6 @@ const SEO: React.FC<SEOProps> = ({
       ogTitle.setAttribute('content', title);
       document.head.appendChild(ogTitle);
     }
-    
     // Update og:description
     let ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
@@ -88,7 +58,6 @@ const SEO: React.FC<SEOProps> = ({
       ogDescription.setAttribute('content', description);
       document.head.appendChild(ogDescription);
     }
-    
     // Update og:image
     let ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage) {
@@ -99,7 +68,6 @@ const SEO: React.FC<SEOProps> = ({
       ogImage.setAttribute('content', image);
       document.head.appendChild(ogImage);
     }
-    
     // Update og:url
     let ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) {
@@ -110,7 +78,6 @@ const SEO: React.FC<SEOProps> = ({
       ogUrl.setAttribute('content', url);
       document.head.appendChild(ogUrl);
     }
-    
     // Update og:type
     let ogType = document.querySelector('meta[property="og:type"]');
     if (ogType) {
@@ -122,10 +89,9 @@ const SEO: React.FC<SEOProps> = ({
       document.head.appendChild(ogType);
     }
   }, [title, description, keywords, image, url, type]);
-
   return null; // This component doesn't render anything
->>>>>>> cursor/create-and-deploy-new-content-ec50
 };
+
 
 export default SEO;
 export { SEO };

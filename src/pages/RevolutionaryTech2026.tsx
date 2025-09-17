@@ -1,8 +1,6 @@
 import React from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
-
-
 const RevolutionaryTech2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -24,7 +22,6 @@ const RevolutionaryTech2026: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
         </div>
       </div>
-
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-6 py-20">
           whileInView={{ opacity: 1 }}
@@ -140,7 +137,6 @@ const RevolutionaryTech2026: React.FC = () => {
             </button>
         </div>
       </div>
-
       {/* Impact Section */}
       <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border-t border-b border-cyan-400/30">
         <div className="container mx-auto px-6 py-20">
@@ -174,7 +170,6 @@ const RevolutionaryTech2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-6 py-20 text-center">
           whileInView={{ opacity: 1, y: 0 }}
@@ -199,13 +194,18 @@ const RevolutionaryTech2026: React.FC = () => {
             </a>
             </divbutton>
           </div>
-        </divdiv>
+        </div>
           </div>
         </motion.div>
       </div>
     </div>
   );
 };
+
+
+export default RevolutionaryTech2026;
+
+
 
 export default RevolutionaryTech2026;
 export default RevolutionaryTech2026;

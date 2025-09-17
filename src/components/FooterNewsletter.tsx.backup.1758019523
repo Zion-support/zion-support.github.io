@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> origin/merged-prs
@@ -94,8 +92,6 @@ export function FooterNewsletter(): React.ReactElement {
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
-<<<<<<< HEAD
-=======
 
         onChange={e => setHoneypot(e && e.target.value)}
 
@@ -118,8 +114,6 @@ export function FooterNewsletter(): React.ReactElement {
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
         tabIndex={-1}
-<<<<<<< HEAD
-=======
         autoComplete='off'
         style={{ display: 'none' }}
       />
@@ -154,7 +148,6 @@ export function FooterNewsletter(): React.ReactElement {
         type="submit"
         aria-label="Subscribe to newsletter"
         disabled={isSubmitting}
-<<<<<<< HEAD
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
       >
         {isSubmitting ? (
@@ -169,7 +162,6 @@ export function FooterNewsletter(): React.ReactElement {
     </form>
   );
 } 
-=======
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
       >;
         {isSubmitting ? (;

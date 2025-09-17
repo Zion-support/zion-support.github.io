@@ -1,213 +1,10 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  BookOpen
-  Play
-  Clock
-  Users
-  Star
-  CheckCircle
-  ArrowRight,
-  Download,
-  Share2,
-  Bookmark,
-  Award,
-  Brain,
-  Code,
-  BarChart3,
-  Zap,
-  Globe,
-  Smartphone,
-  Database,
-  Shield,
-  Target,
-  TrendingUp,
-  Filter,
-  Search
-} from 'lucide-react';
-
-const InteractiveAILearningHub2025 = () => {
-  const [activeCategorysetActiveCategory] = useState('all');
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedLevelsetSelectedLevel] = useState('all');
-  const [bookmarkedCoursesetBookmarkedCourses] = useState(new Set());
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Topics', 'icon: Braincount: 48 },
-    { id: ''fundamentals', 'name: 'AI 'Fundamentals', 'icon: BookOpencount: 12 },
-    { id: 'machine-'learning', 'name: 'Machine 'Learning', 'icon: Codecount: 10 },
-    { id: 'data-'science', 'name: 'Data 'Science', 'icon: BarChart3count: 8 },
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 6 },
-    { id: ''applications', 'name: 'AI 'Applications', 'icon: Globecount: 12 }
-  ];
-
-  const levels = [
-    { id: ''all', 'name: 'All 'Levels', 'color: 'gray' },
-    { id: ''beginner', 'name: ''Beginner', 'color: 'green' },
-    { id: ''intermediate', 'name: ''Intermediate', 'color: 'blue' },
-    { id: ''advanced', 'name: ''Advanced', 'color: 'purple' }
-  ];
-
-  const courses = [
-    {
-      id: 1,
-      title: 'AI Fundamentals: From Zero to Hero',
-      category: 'fundamentals',
-      level: 'beginner',
-      description: 'Master the core concepts of artificial intelligencemachine learningand neural networks.',
-      duration: '8 hours',
-      students: '12.5K',
-      rating: 4.8,
-      price: 'Free',
-      instructor: 'Dr. Sarah Chen',
-      instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
-      modules: 12,
-      certificate: true,
-      featured: true,
-      tags: ['AI 'Basics', 'Neural 'Networks', 'Machine Learning']
-    },
-    {
-      id: 2,
-      title: 'Advanced Machine Learning with Python',
-      category: 'machine-learning',
-      level: 'intermediate',
-      description: 'Deep dive into advanced ML algorithmsmodel optimizationand real-world applications.',
-      duration: '15 hours',
-      students: '8.2K',
-      rating: 4.9,
-      price: '$99',
-      instructor: 'Prof. Michael Rodriguez',
-      instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
-      modules: 20,
-      certificate: true,
-      featured: true,
-      tags: [', 'Python', 'Scikit-'learn', 'TensorFlow']
-    },
-    {
-      id: 3,
-      title: 'Data Science for AI Applications',
-      category: 'data-science',
-      level: 'intermediate',
-      description: 'Learn data preprocessingfeature engineeringand visualization for AI projects.',
-      duration: '12 hours',
-      students: '6.8K',
-      rating: 4.7,
-      price: '$79',
-      instructor: 'Dr. Jennifer Park',
-      instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
-      modules: 16,
-      certificate: true,
-      featured: false,
-      tags: ['Data 'Analysis', 'Pandas'Visualization']
-    },
-    {
-      id: 4,
-      title: 'AI Automation: Building Smart Workflows',
-      category: 'automation',
-      level: 'advanced',
-      description: 'Create intelligent automation systems using AI and workflow optimization techniques.',
-      duration: '10 hours',
-      students: '4.5K',
-      rating: 4.9,
-      price: '$149',
-      instructor: 'Alex Thompson',
-      instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
-      modules: 14,
-      certificate: true,
-      featured: true,
-      tags: ['Workflow 'Automation', 'RPA'AI Integration']
-    },
-    {
-      id: 5,
-      title: 'AI in Healthcare: Real-World Applications',
-      category: 'applications',
-      level: 'intermediate',
-      description: 'Explore how AI is transforming healthcare with case studies and practical examples.',
-      duration: '6 hours',
-      students: '3.2K',
-      rating: 4.6,
-      price: '$59',
-      instructor: 'Dr. Lisa Wang',
-      instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
-      modules: 8,
-      certificate: true,
-      featured: false,
-      tags: ['Healthcare 'AI', 'Medical 'Imaging', 'Diagnostics']
-    },
-    {
-      id: 6,
-      title: 'Building AI-Powered Mobile Apps',
-      category: 'applications',
-      level: 'advanced',
-      description: 'Integrate AI capabilities into mobile applications using modern frameworks.',
-      duration: '14 hours',
-      students: '5.1K',
-      rating: 4.8,
-      price: '$129',
-      instructor: 'Mark Johnson',
-      instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
-      modules: 18,
-      certificate: true,
-      featured: true,
-      tags: ['Mobile 'AI', 'React 'Native', 'TensorFlow Lite']
-    }
-  ];
-
-  const filteredCourses = courses.filter(course => {
-    const matchesCategory = activeCategory === 'all' || course.category === activeCategory;
-    const matchesLevel = selectedLevel === 'all' || course.level === selectedLevel;
-    const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         course.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         course.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesLevel && matchesSearch;
-  });
-
-  const toggleBookmark = (courseId) => {
-    setBookmarkedCourses(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(courseId)) {
-        newSet.delete(courseId);
-      } else {
-        newSet.add(courseId);
-      }
-      return newSet;
-    });
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
+import React from 'react';
+const InteractiveAILearningHub2025: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -225,10 +22,9 @@ const InteractiveAILearningHub2025 = () => {
             Learn AI from industry experts with hands-on projectsreal-world case studies
             and interactive content designed for all skill levels.
           </p>
-        </divdiv>
-
+        </div>
         {/* Search and Filters */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
@@ -244,7 +40,6 @@ const InteractiveAILearningHub2025 = () => {
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-
             {/* Level Filter */}
             <div className="flex gap-2">
               {levels.map((level) => (
@@ -262,10 +57,9 @@ const InteractiveAILearningHub2025 = () => {
               ))}
             </div>
           </div>
-        </divdiv>
-
+        </div>
         {/* Category Filter */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -286,16 +80,15 @@ const InteractiveAILearningHub2025 = () => {
               </span>
             </button>
           ))}
-        </divdiv>
-
+        </div>
         {/* Courses Grid */}
-        <divdiv
+        <div
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div>
             {filteredCourses.map((course) => (
-              <divdiv
+              <div
                 key={course.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
@@ -337,7 +130,6 @@ const InteractiveAILearningHub2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Course Content */}
                 <div className="p-6">
                   {/* Level Badge */}
@@ -350,15 +142,12 @@ const InteractiveAILearningHub2025 = () => {
                       {course.level.charAt(0).toUpperCase() + course.level.slice(1)}
                     </span>
                   </div>
-
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                     {course.title}
                   </h3>
-
                   <p className="text-gray-600 mb-4 line-clamp-2">
                     {course.description}
                   </p>
-
                   {/* Instructor */}
                   <div className="flex items-center mb-4">
                     <img
@@ -375,7 +164,6 @@ const InteractiveAILearningHub2025 = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {course.tags.slice(02).map((tagindex) => (
@@ -387,7 +175,6 @@ const InteractiveAILearningHub2025 = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
@@ -400,7 +187,6 @@ const InteractiveAILearningHub2025 = () => {
                       {course.modules} modules
                     </div>
                   </div>
-
                   {/* Price and Actions */}
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-gray-900">
@@ -416,7 +202,6 @@ const InteractiveAILearningHub2025 = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Certificate Badge */}
                   {course.certificate && (
                     <div className="mt-3 flex items-center text-sm text-green-600">
@@ -425,13 +210,12 @@ const InteractiveAILearningHub2025 = () => {
                     </div>
                   )}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
-
+        </div>
         {/* Learning Paths Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-20"
         >
@@ -443,7 +227,6 @@ const InteractiveAILearningHub2025 = () => {
               Follow curated learning paths designed by industry experts
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -504,10 +287,9 @@ const InteractiveAILearningHub2025 = () => {
               </div>
             ))}
           </div>
-        </divdiv>
-
+        </div>
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-20"
         >
@@ -529,10 +311,11 @@ const InteractiveAILearningHub2025 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default InteractiveAILearningHub2025;

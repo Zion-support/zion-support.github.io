@@ -6,16 +6,12 @@ const UltimateContentBanner2025: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> origin/backup-main-20250916-071805
 import { motion } from 'framer-motion';
 
 const UltimateContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentBanner2025: React.FC = () => {
@@ -171,8 +167,6 @@ const UltimateContentBanner2025: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Innovation Hub →
             </a>
-<<<<<<< HEAD
-=======
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -376,8 +370,6 @@ const UltimateContentBanner2025: React.FC = () => {
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -555,8 +547,6 @@ const UltimateContentBanner2025: React.FC = () => {
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-=======
     </motion.div>
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>

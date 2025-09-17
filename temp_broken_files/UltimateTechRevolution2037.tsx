@@ -2,7 +2,6 @@ import React from 'react';
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -29,5 +28,6 @@ import React from 'react';
     </div>
   );
 };
+
 
 export default UltimateTechRevolution2037;

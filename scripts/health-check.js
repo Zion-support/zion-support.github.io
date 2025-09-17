@@ -1,1 +1,249 @@
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+#!/usr/bin/env node
+
+/**
+ * Health Check Script for Zion App
+ * Performs comprehensive health checks on the application
+ */
+
+import { readFileSync, existsSync, statSync } from 'fs';
+import { execSync } from 'child_process';
+import path from 'path';
+
+const colors = {
+  green: '\x1b[32m',
+  red: '\x1b[31m',
+  yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  cyan: '\x1b[36m',
+  reset: '\x1b[0m',
+  bold: '\x1b[1m'
+};
+
+class HealthChecker {
+  constructor() {
+    this.checks = [];
+    this.results = {
+      passed: 0,
+      failed: 0,
+      warnings: 0
+    };
+  }
+
+  log(message, color = 'reset') {
+    console.log(`${colors[color]}${message}${colors.reset}`);
+  }
+
+  addCheck(name, checkFn) {
+    this.checks.push({ name, checkFn });
+  }
+
+  async runChecks() {
+    this.log('🏥 Starting health checks...', 'cyan');
+    
+    for (const check of this.checks) {
+      try {
+        const result = await check.checkFn();
+        if (result.status === 'pass') {
+          this.log(`✅ ${check.name}`, 'green');
+          this.results.passed++;
+        } else if (result.status === 'warning') {
+          this.log(`⚠️  ${check.name}: ${result.message}`, 'yellow');
+          this.results.warnings++;
+        } else {
+          this.log(`❌ ${check.name}: ${result.message}`, 'red');
+          this.results.failed++;
+        }
+      } catch (error) {
+        this.log(`❌ ${check.name}: ${error.message}`, 'red');
+        this.results.failed++;
+      }
+    }
+
+    this.generateReport();
+  }
+
+  generateReport() {
+    const total = this.results.passed + this.results.failed + this.results.warnings;
+    
+    this.log('\n📊 Health Check Summary:', 'bold');
+    this.log(`   Total Checks: ${total}`, 'blue');
+    this.log(`   ✅ Passed: ${this.results.passed}`, 'green');
+    this.log(`   ⚠️  Warnings: ${this.results.warnings}`, 'yellow');
+    this.log(`   ❌ Failed: ${this.results.failed}`, 'red');
+
+    const healthScore = Math.round((this.results.passed / total) * 100);
+    
+    if (healthScore >= 90) {
+      this.log(`\n🎉 Health Score: ${healthScore}% - Excellent!`, 'green');
+    } else if (healthScore >= 70) {
+      this.log(`\n👍 Health Score: ${healthScore}% - Good!`, 'blue');
+    } else if (healthScore >= 50) {
+      this.log(`\n⚠️  Health Score: ${healthScore}% - Needs attention`, 'yellow');
+    } else {
+      this.log(`\n🚨 Health Score: ${healthScore}% - Critical issues found`, 'red');
+    }
+  }
+
+  // Health check functions
+  checkPackageJson() {
+    if (!existsSync('package.json')) {
+      return { status: 'fail', message: 'package.json not found' };
+    }
+
+    try {
+      const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+      
+      if (!pkg.name || !pkg.version) {
+        return { status: 'warning', message: 'Missing name or version in package.json' };
+      }
+
+      return { status: 'pass' };
+    } catch (error) {
+      return { status: 'fail', message: 'Invalid package.json format' };
+    }
+  }
+
+  checkBuildFiles() {
+    const requiredFiles = ['dist/index.html', 'dist/assets'];
+    const missingFiles = [];
+
+    for (const file of requiredFiles) {
+      if (!existsSync(file)) {
+        missingFiles.push(file);
+      }
+    }
+
+    if (missingFiles.length > 0) {
+      return { status: 'fail', message: `Missing build files: ${missingFiles.join(', ')}` };
+    }
+
+    return { status: 'pass' };
+  }
+
+  checkDependencies() {
+    try {
+      const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+      const deps = Object.keys(pkg.dependencies || {});
+      const devDeps = Object.keys(pkg.devDependencies || {});
+
+      if (deps.length === 0) {
+        return { status: 'warning', message: 'No production dependencies found' };
+      }
+
+      if (devDeps.length === 0) {
+        return { status: 'warning', message: 'No development dependencies found' };
+      }
+
+      return { status: 'pass' };
+    } catch (error) {
+      return { status: 'fail', message: 'Could not check dependencies' };
+    }
+  }
+
+  checkNodeModules() {
+    if (!existsSync('node_modules')) {
+      return { status: 'fail', message: 'node_modules directory not found. Run npm install' };
+    }
+
+    try {
+      const stats = statSync('node_modules');
+      if (!stats.isDirectory()) {
+        return { status: 'fail', message: 'node_modules is not a directory' };
+      }
+
+      return { status: 'pass' };
+    } catch (error) {
+      return { status: 'fail', message: 'Could not access node_modules' };
+    }
+  }
+
+  checkViteConfig() {
+    if (!existsSync('vite.config.ts') && !existsSync('vite.config.js')) {
+      return { status: 'warning', message: 'No Vite configuration file found' };
+    }
+
+    return { status: 'pass' };
+  }
+
+  checkTypeScriptConfig() {
+    if (!existsSync('tsconfig.json')) {
+      return { status: 'warning', message: 'No TypeScript configuration found' };
+    }
+
+    try {
+      const config = JSON.parse(readFileSync('tsconfig.json', 'utf8'));
+      if (!config.compilerOptions) {
+        return { status: 'warning', message: 'TypeScript config missing compilerOptions' };
+      }
+
+      return { status: 'pass' };
+    } catch (error) {
+      return { status: 'fail', message: 'Invalid TypeScript configuration' };
+    }
+  }
+
+  checkNetlifyConfig() {
+    if (!existsSync('netlify.toml') && !existsSync('_redirects')) {
+      return { status: 'warning', message: 'No Netlify configuration found' };
+    }
+
+    return { status: 'pass' };
+  }
+
+  checkEnvironmentFiles() {
+    const envFiles = ['.env', '.env.local', '.env.production'];
+    const foundEnvFiles = envFiles.filter(file => existsSync(file));
+
+    if (foundEnvFiles.length === 0) {
+      return { status: 'warning', message: 'No environment files found' };
+    }
+
+    return { status: 'pass' };
+  }
+
+  checkGitConfig() {
+    if (!existsSync('.git')) {
+      return { status: 'warning', message: 'Not a Git repository' };
+    }
+
+    return { status: 'pass' };
+  }
+
+  checkBuildScripts() {
+    try {
+      const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+      const scripts = pkg.scripts || {};
+
+      const requiredScripts = ['build', 'dev'];
+      const missingScripts = requiredScripts.filter(script => !scripts[script]);
+
+      if (missingScripts.length > 0) {
+        return { status: 'warning', message: `Missing scripts: ${missingScripts.join(', ')}` };
+      }
+
+      return { status: 'pass' };
+    } catch (error) {
+      return { status: 'fail', message: 'Could not check build scripts' };
+    }
+  }
+
+  async run() {
+    // Add all health checks
+    this.addCheck('Package.json exists and valid', () => this.checkPackageJson());
+    this.addCheck('Build files present', () => this.checkBuildFiles());
+    this.addCheck('Dependencies configured', () => this.checkDependencies());
+    this.addCheck('Node modules installed', () => this.checkNodeModules());
+    this.addCheck('Vite configuration', () => this.checkViteConfig());
+    this.addCheck('TypeScript configuration', () => this.checkTypeScriptConfig());
+    this.addCheck('Netlify configuration', () => this.checkNetlifyConfig());
+    this.addCheck('Environment files', () => this.checkEnvironmentFiles());
+    this.addCheck('Git repository', () => this.checkGitConfig());
+    this.addCheck('Build scripts', () => this.checkBuildScripts());
+
+    await this.runChecks();
+  }
+}
+
+// Run the health checker
+const checker = new HealthChecker();
+checker.run().catch(console.error);

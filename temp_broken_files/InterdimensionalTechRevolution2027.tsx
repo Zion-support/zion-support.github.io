@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const InterdimensionalTechRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
@@ -25,7 +25,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Interdimensional Technologies */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
@@ -41,7 +40,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
               <li>• Cross-dimensional communication</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Dimensional Computing</h3>
@@ -55,7 +53,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
               <li>• Transcendent processing</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Dimensional Networks</h3>
@@ -69,7 +66,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
               <li>• Transcendent intelligence</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
@@ -83,7 +79,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
               <li>• Reality synthesis</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-green-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Omniversal Communication</h3>
@@ -97,7 +92,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
               <li>• Instant dimensional transfer</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Dimensional Transportation</h3>
@@ -112,7 +106,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Scientific Breakthrough */}
         <div className="bg-gradient-to-r from-violet-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -150,7 +143,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Impact Statistics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-violet-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -176,7 +168,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -206,7 +197,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Break Through Reality?</h2>
@@ -227,5 +217,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
     </div>
   );
 };
+
 
 export default InterdimensionalTechRevolution2027;

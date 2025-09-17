@@ -1,14 +1,11 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const AI2025AutonomousOperationsPromotionBanner = () => {
+const AI2025AutonomousOperationsPromotionBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-green-900 via-teal-900 to-blue-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Cpath d="M30 0l30 30-30 30L0 30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M30%200l30%2030-30%2030L0%2030z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -25,7 +22,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
             Self-managing systems that make independent decisions and continuously optimize performance.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🔄</div>
@@ -35,7 +31,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
             </p>
             <div className="text-2xl font-bold text-cyan-400">∞ Learning</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Independent Decisions</h3>
@@ -44,7 +39,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
             </p>
             <div className="text-2xl font-bold text-green-400">Auto</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">⚡</div>
             <h3 className="text-xl font-bold mb-3">End-to-End Control</h3>
@@ -53,7 +47,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
             </p>
             <div className="text-2xl font-bold text-blue-400">100%</div>
           </div>
-          
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">📊</div>
             <h3 className="text-xl font-bold mb-3">Performance Monitoring</h3>
@@ -63,7 +56,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
             <div className="text-2xl font-bold text-purple-400">24/7</div>
           </div>
         </div>
-
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-6">Autonomous Operations Benefits</h3>
@@ -86,7 +78,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
             </div>
           </div>
         </div>
-
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -102,7 +93,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
               Start Your Transformation
             </a>
           </div>
-          
           <div className="text-sm text-gray-300">
             <p>🚀 Join the autonomous business revolution - the future of enterprise management is here</p>
           </div>
@@ -111,5 +101,6 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
     </section>
   );
 };
+
 
 export default AI2025AutonomousOperationsPromotionBanner;

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const UltimateContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
   return (
@@ -695,103 +696,19 @@ const UltimateContentShowcase2026 = () => {
             </button>
           </div>
         </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
           </div>
+          <a href="/pages/AIConsciousnessRevolution2026" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+            Explore Consciousness →
+          </a>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="mt-20">
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-3xl font-bold mb-4">Quick Access to All Technologies</h3>
-            <p className="text-lg opacity-80">Explore all our revolutionary technologies at once</p>
-          </divdiv>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {showcaseItems.map((item, index) => (
-              <divdiv
-                key={item.id}
-                whileInView={{ opacity: 1, y: 0 }}
-                className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300`}
-              >
-                {item.featured && (
-                  <div className="absolute top-4 right-4">
-                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  </div>
-                )}
-
-                <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.gradient} flex items-center justify-center text-white mb-6`}>
-                  {item.icon}
-                </div>
-
-                <div className="mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${item.gradient} text-white`}>
-                    {item.category}
-                  </span>
-                  <span className="ml-2 text-xs text-gray-400 uppercase tracking-wide">
-                    {item.type}
-                  </span>
-                </div>
-
-                <h3 className="text-2xl font-bold mb-4 text-white">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {item.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {item.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-white/10 rounded-full text-xs text-gray-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => window.location.href = item.link}
-                  className={`w-full bg-gradient-to-r ${item.gradient} px-6 py-3 rounded-full font-semibold text-white hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
-                >
-                  Explore Now →
-                </a>
-              </divdiv>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-center mt-16"
-        >
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Explore the Future?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Dive deeper into our revolutionary content and discover the technologies 
-            that are reshaping the world.
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-6 rounded-full text-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
-          >
-            <span>View All Content</span>
-            <ArrowRight className="w-6 h-6" />
-          </motion.button>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default UltimateContentShowcase2026;

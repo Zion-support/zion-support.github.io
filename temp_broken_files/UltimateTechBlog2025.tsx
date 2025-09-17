@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const UltimateTechBlog2025: React.FC = () => {
   const blogPosts = [
     {
@@ -70,7 +69,6 @@ const UltimateTechBlog2025: React.FC = () => {
       color: "from-pink-600 to-rose-600"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -94,7 +92,6 @@ const UltimateTechBlog2025: React.FC = () => {
               Expert analysis, breakthrough discoveries, and cutting-edge innovations.
             </p>
           </motion.div>
-
           {/* Featured Post */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -129,7 +126,6 @@ const UltimateTechBlog2025: React.FC = () => {
               Read Full Article →
             </a>
           </motion.div>
-
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.map((post, index) => (
@@ -148,17 +144,13 @@ const UltimateTechBlog2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold mb-3 line-clamp-2">{post.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm line-clamp-3">{post.excerpt}</p>
-
                 <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                   <span>{post.author}</span>
                   <span>{post.readTime}</span>
                 </div>
-
                 <div className="text-xs text-gray-500 mb-4">{post.date}</div>
-
                 <a 
                   href="#" 
                   className="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm"
@@ -249,17 +241,13 @@ const UltimateTechBlog2025: React.FC = () => {
       featured: false
     }
   ];
-
   const categories = ["All", "AI Consciousness", "Quantum Computing", "Neural Interfaces", "Interdimensional Tech", "Reality Engine", "Predictive AI", "Industry Impact", "AI Ethics"];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
-        <title>Ultimate Tech Blog 2025 | Zion Tech Group</title>
-        <meta name="description" content="Read the latest insights and breakthroughs in revolutionary technology. Explore our comprehensive tech blog covering AI consciousness, quantum computing, and more." />
-        <meta name="keywords" content="tech blog, AI consciousness, quantum computing, neural interfaces, technology insights, revolutionary tech" />
+        <title>UltimateTechBlog2025 | Zion Tech Group</title>
+        <meta name="description" content="UltimateTechBlog2025 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -278,11 +266,13 @@ const UltimateTechBlog2025: React.FC = () => {
               </p>
             </div>
           </div>
-
         </div>
       </div>
-    </>
+    </div>
   );
+
 };
 
+
 export default UltimateTechBlog2025;
+</div></div></div></div>

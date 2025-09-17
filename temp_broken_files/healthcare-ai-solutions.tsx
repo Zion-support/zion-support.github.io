@@ -1,5 +1,8 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+};
+
+
 
 export default function HealthcareAISolutions() {
 	return (
@@ -23,4 +26,3 @@ export default function HealthcareAISolutions() {
 			canonical="https://ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	);
-}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const RevolutionaryTechBreakthrough2033: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -28,14 +28,12 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Breakthrough Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Breakthrough Features</h2>
           <p className="text-xl text-gray-300">Experience technology that defies the laws of physics</p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">🧠</div>
@@ -48,7 +46,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
               <li>• Cognitive enhancement</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Computing Breakthrough</h3>
@@ -60,7 +57,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
               <li>• Cryptography breakthrough</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-green-600 to-teal-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">🌟</div>
             <h3 className="text-2xl font-bold mb-4">Holographic Technology</h3>
@@ -72,7 +68,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
               <li>• Spatial computing</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600 to-red-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold mb-4">Time Manipulation</h3>
@@ -84,7 +79,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
               <li>• Time loop technology</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-indigo-600 to-purple-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">🌀</div>
             <h3 className="text-2xl font-bold mb-4">Dimensional Portals</h3>
@@ -96,7 +90,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
               <li>• Parallel universe access</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-violet-600 to-purple-600 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">👤</div>
             <h3 className="text-2xl font-bold mb-4">Consciousness Upload</h3>
@@ -109,14 +102,12 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Breakthrough Showcase */}
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-16 border border-white/20">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">The Ultimate Breakthrough</h3>
             <p className="text-xl text-gray-300">Experience the most revolutionary technology ever created</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <div className="text-6xl mb-6">⚡</div>
@@ -154,7 +145,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-indigo-600/20 to-pink-600/20 rounded-2xl p-12">
           <h3 className="text-4xl font-bold mb-6">Join the Revolutionary Breakthrough</h3>
@@ -175,5 +165,6 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryTechBreakthrough2033;

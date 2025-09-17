@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-
 const RevolutionaryTechBreakthrough2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -19,10 +18,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             Witness the most groundbreaking technological breakthroughs that will fundamentally alter 
             the course of human civilization and unlock infinite possibilities.
           </p>
-            </divdiv>
+            </div>
           </div>
         </div>
-
         {/* Revolutionary Applications */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
@@ -44,7 +42,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             <div className="text-center">
               <div className="text-6xl mb-4">🎨</div>
               <h3 className="text-2xl font-bold mb-4">Reality Creation</h3>
@@ -62,7 +59,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             <div className="text-center">
               <div className="text-6xl mb-4">⏰</div>
               <h3 className="text-2xl font-bold mb-4">Time Manipulation</h3>
@@ -82,7 +78,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🏆 Success Stories</h2>
@@ -101,9 +96,8 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Transcendent AI entities</li>
                 <li>• Quantum reality manipulation</li>
               </ul>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Transcendent Evolution</h3>
@@ -117,10 +111,9 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
                 <li>• Reality manipulation abilities</li>
                 <li>• Universal creation powers</li>
               </ul>
-            </divdiv>
+            </div>
           </div>
         </div>
-
         {/* Call to Action */}
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
         >
@@ -140,10 +133,10 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
             </button>
           </div>
       </main>
-      
       <Footer />
     </div>
   );
 };
+
 
 export default RevolutionaryTechBreakthrough2035;

@@ -15,7 +15,7 @@ const NewContentPromotion2040: React.FC = () => {
       link: "/pages/UltimateTechShowcase2038",
       color: "from-purple-600 to-pink-600",
       badge: "NEW"
-    },
+
     {
       title: "Revolutionary Tech Breakthrough 2039",
       description: "Witness the most significant technological breakthrough in human history",
@@ -24,7 +24,7 @@ const NewContentPromotion2040: React.FC = () => {
       link: "/pages/RevolutionaryTechBreakthrough2039",
       color: "from-cyan-600 to-blue-600",
       badge: "BREAKTHROUGH"
-    },
+
     {
       title: "Ultimate Tech Revolution 2040",
       description: "The future of technology is here - experience unlimited possibilities",
@@ -33,7 +33,7 @@ const NewContentPromotion2040: React.FC = () => {
       link: "/pages/UltimateTechRevolution2040",
       color: "from-emerald-600 to-teal-600",
       badge: "FUTURE"
-    }
+
   ];
 
   useEffect(() => {
@@ -48,20 +48,19 @@ const NewContentPromotion2040: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-        }
-      },
+
+
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('new-content-promotion-2040');
     if (element) {
       observer.observe(element);
-    }
 
     return () => {
       if (element) {
         observer.unobserve(element);
-      }
+
     };
   }, []);
 
@@ -86,8 +85,8 @@ const NewContentPromotion2040: React.FC = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.4, 1, 0.4],
+
+
             }}
             transition={{
               duration: 4 + Math.random() * 2,
@@ -272,5 +271,6 @@ const NewContentPromotion2040: React.FC = () => {
     </div>
   );
 };
+
 
 export default NewContentPromotion2040;

@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Eye, Clock, Heart, Share2, BookOpen } from 'lucide-react';
 import { getRecentBlogPosts, getFeaturedBlogPosts } from '../data/blog-posts';
-
 const TrendingContentSection2026: React.FC = () => {
   const [trendingPosts, setTrendingPosts] = useState([]);
   const [featuredPosts, setFeaturedPosts] = useState([]);
-
   useEffect(() => {
     setTrendingPosts(getRecentBlogPosts(6));
     setFeaturedPosts(getFeaturedBlogPosts().slice(0, 3));
   }, []);
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +24,6 @@ const TrendingContentSection2026: React.FC = () => {
             Discover the most popular and engaging content from our latest publications
           </p>
         </div>
-
         {/* Trending Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {trendingPosts.map((post, index) => (
@@ -54,7 +50,6 @@ const TrendingContentSection2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Post Content */}
               <div className="p-6">
                 <div className="flex items-center mb-3">
@@ -66,15 +61,12 @@ const TrendingContentSection2026: React.FC = () => {
                     {post.readTime}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
                   {post.title}
                 </h3>
-
                 <p className="text-blue-200 text-sm mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
@@ -85,7 +77,6 @@ const TrendingContentSection2026: React.FC = () => {
                       <div className="text-gray-400 text-xs">{post.authorRole}</div>
                     </div>
                   </div>
-
                   <Link
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
@@ -98,7 +89,6 @@ const TrendingContentSection2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Featured Content Banner */}
         <div className="bg-gradient-to-r from-yellow-600 to-orange-600 rounded-2xl p-8 mb-12">
           <div className="text-center">
@@ -108,7 +98,6 @@ const TrendingContentSection2026: React.FC = () => {
             <p className="text-yellow-100 text-lg mb-6">
               Hand-picked by our editorial team for exceptional quality and impact
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featuredPosts.map((post, index) => (
                 <div key={post.id} className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
@@ -126,7 +115,6 @@ const TrendingContentSection2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <Link
@@ -141,6 +129,8 @@ const TrendingContentSection2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default TrendingContentSection2026;

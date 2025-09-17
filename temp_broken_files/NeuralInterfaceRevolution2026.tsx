@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 const NeuralInterfaceRevolution2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [isLoading, setIsLoading] = useState(true);
@@ -9,10 +8,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
     accuracy: 0,
     latency: 0
   });
-
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
-    
     // Simulate neural data updates
     const interval = setInterval(() => {
       setNeuralData({
@@ -21,13 +18,11 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
         latency: Math.floor(Math.random() * 10) + 2
       });
     }, 1500);
-
     return () => {
       clearTimeout(timer);
       clearInterval(interval);
     };
   }, []);
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 flex items-center justify-center">
@@ -35,7 +30,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       </div>
     );
   }
-
   const neuralTechnologies = [
     {
       id: 'non-invasive-bci',
@@ -74,7 +68,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       accuracy: '90%'
     }
   ];
-
   const applications = [
     {
       category: 'Medical',
@@ -105,7 +98,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       status: 'Research Phase'
     }
   ];
-
   const caseStudies = [
     {
       patient: 'Sarah M.',
@@ -129,7 +121,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       timeline: '12 months'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
@@ -158,7 +149,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Live Neural Data */}
       <div className="container mx-auto px-4 py-8">
         <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 mb-12">
@@ -178,7 +168,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div className="flex flex-wrap justify-center space-x-2 mb-8">
           {['overview', 'technologies', 'applications', 'case-studies', 'contact'].map((tab) => (
@@ -195,7 +184,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Overview Tab */}
         {activeTab === 'overview' && (
           <div className="space-y-12">
@@ -207,7 +195,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 unprecedented possibilities for human enhancement and medical treatment.
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
                 <div className="text-5xl mb-4">🧠</div>
@@ -232,7 +219,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Technologies Tab */}
         {activeTab === 'technologies' && (
           <div className="space-y-8">
@@ -243,7 +229,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 non-invasive to invasive solutions
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {neuralTechnologies.map((tech) => (
                 <div key={tech.id} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
@@ -295,7 +280,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Applications Tab */}
         {activeTab === 'applications' && (
           <div className="space-y-8">
@@ -305,7 +289,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 Discover how neural interface technology is transforming industries and improving lives
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {applications.map((app, index) => (
                 <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
@@ -340,7 +323,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Case Studies Tab */}
         {activeTab === 'case-studies' && (
           <div className="space-y-8">
@@ -350,7 +332,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 Real patient outcomes demonstrating the transformative power of neural interface technology
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
@@ -379,7 +360,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Contact Tab */}
         {activeTab === 'contact' && (
           <div className="space-y-8">
@@ -390,7 +370,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 Let's discuss how it can transform your life or business.
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -409,7 +388,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">Request Consultation</h3>
                 <form className="space-y-4">
@@ -442,7 +420,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Footer CTA */}
       <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm border-t border-white/20">
         <div className="container mx-auto px-4 py-12">
@@ -471,5 +448,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default NeuralInterfaceRevolution2026;

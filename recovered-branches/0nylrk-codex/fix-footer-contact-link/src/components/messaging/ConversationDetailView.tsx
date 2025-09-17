@@ -1,107 +1,12 @@
+import React from 'react';
 
-    loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-
-
-  
-
-  const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description),
-
+const ConversationDetailView: React.FC = () => {
   return (
-    <div className="flex-1 flex flex-col h-full">;
-  
-  useEffect(() => {
-    if (activeConversation) {
-      loadMessages(activeConversation.id);
-    }
-  }, [activeConversation?.id, loadMessages]);
-  
-  useEffect(() => {
-    scrollToBottom();
-  }, [activeMessages]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!messageText.trim() || !activeConversation) return;
-    
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('');
-  };
-  
-  if (!activeConversation) {
-    return (
-      <div className="flex-1 flex flex-col items-center justify-center p-8">
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
-        <p className="text-zion-slate text-center max-w-md">
-          Select a conversation from the list to view and send messages.
-        </p>
-      </div>
-    );
-  }
-  
-  // Group messages by date
-  const groupedMessages: { date: string; messages: any[] }[] = [];
-  
-  activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
-    
-    if (existingGroup) {
-      existingGroup.messages.push(message);
-    } else {
-      groupedMessages.push({
-        date: messageDate,
-        messages: [message]
-      });
-    }
-  });
-  
-  const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description);
-
-  return (
-    <div className="flex-1 flex flex-col h-full">
-      {/* Header */}
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
-        <div className="flex items-center gap-3">
-          <Avatar className="h-10 w-10 border border-zion-purple/20">
-            />
-            <AvatarFallback className="bg-zion-blue-dark text-white">
-              {activeConversation.other_user.name.charAt(0).toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="font-medium text-white">
-              {activeConversation.other_user.name}
-            </div>
-            <div className="text-xs text-zion-slate">
-               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-            </div>
-          </div>
-        </div>
-      </div>
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            Send
-          </Button>
-        </form>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-
-
-
-}
-;
-
   );
-}
+};
+
+export default ConversationDetailView;

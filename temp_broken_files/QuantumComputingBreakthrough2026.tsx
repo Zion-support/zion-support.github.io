@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Atom, Cpu, Zap, Infinity, Brain, Network } from 'lucide-react';
-
 const QuantumComputingBreakthrough2026 = () => {
   const quantumFeatures = [
     {
@@ -41,14 +40,12 @@ const QuantumComputingBreakthrough2026 = () => {
       color: "from-red-500 to-pink-500"
     }
   ];
-
   const quantumStats = [
     { number: "10^18", label: "Speed Increase", description: "Exponential speedup over classical computers" },
     { number: "1000+", label: "Qubits", description: "Revolutionary quantum processor capacity" },
     { number: "99.9%", label: "Accuracy", description: "Quantum error correction and stability" },
     { number: "0°C", label: "Operating Temp", description: "Room temperature quantum operation" }
   ];
-
   const applications = [
     {
       title: "Drug Discovery Revolution",
@@ -71,7 +68,6 @@ const QuantumComputingBreakthrough2026 = () => {
       impact: "Enable interstellar travel"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
@@ -115,7 +111,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Stats */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +138,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Features */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +158,6 @@ const QuantumComputingBreakthrough2026 = () => {
               that will transform every industry and solve humanity's greatest challenges.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {quantumFeatures.map((feature, index) => (
               <motion.div
@@ -186,7 +179,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Applications */}
       <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,7 +199,6 @@ const QuantumComputingBreakthrough2026 = () => {
               that are currently impossible for classical computers.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {applications.map((app, index) => (
               <motion.div
@@ -227,7 +218,6 @@ const QuantumComputingBreakthrough2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,5 +251,6 @@ const QuantumComputingBreakthrough2026 = () => {
     </div>
   );
 };
+
 
 export default QuantumComputingBreakthrough2026;

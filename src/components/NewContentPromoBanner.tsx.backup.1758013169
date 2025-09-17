@@ -70,8 +70,6 @@ const NewContentPromoBanner: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, X, Star, Clock, Users, TrendingUp } from 'lucide-react';

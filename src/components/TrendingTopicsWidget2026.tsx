@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Fire, Star, Clock, ArrowUpRight, Eye, MessageCircle } from 'lucide-react';
-
 const TrendingTopicsWidget2026 = () => {
   const [activeTopic, setActiveTopic] = useState(0);
-
   const trendingTopics = [
     {
       id: 1,
@@ -85,14 +83,12 @@ const TrendingTopicsWidget2026 = () => {
       featured: false
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTopic((prev) => (prev + 1) % trendingTopics.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [trendingTopics.length]);
-
   const getTrendIcon = (trend) => {
     if (trend.includes("Hot")) return <Fire className="w-4 h-4 text-red-400" />;
     if (trend.includes("Rising")) return <TrendingUp className="w-4 h-4 text-blue-400" />;
@@ -101,7 +97,6 @@ const TrendingTopicsWidget2026 = () => {
     if (trend.includes("Trending")) return <Clock className="w-4 h-4 text-purple-400" />;
     return <TrendingUp className="w-4 h-4 text-gray-400" />;
   };
-
   return (
     <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 border border-slate-700/50">
       {/* Header */}
@@ -120,7 +115,6 @@ const TrendingTopicsWidget2026 = () => {
           <div className="text-xs text-gray-500">Just now</div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="space-y-4">
         {trendingTopics.map((topic, index) => (
@@ -152,13 +146,11 @@ const TrendingTopicsWidget2026 = () => {
                 </div>
               </div>
             )}
-
             <div className="flex items-start gap-4">
               {/* Icon */}
               <div className={`p-3 rounded-lg bg-gradient-to-r ${topic.color} text-2xl`}>
                 {topic.icon}
               </div>
-
               {/* Content */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-2">
@@ -170,11 +162,9 @@ const TrendingTopicsWidget2026 = () => {
                     <span className="text-gray-400">{topic.trend}</span>
                   </div>
                 </div>
-
                 <p className="text-gray-300 text-sm mb-3 line-clamp-2">
                   {topic.description}
                 </p>
-
                 {/* Stats */}
                 <div className="flex items-center gap-4 text-xs text-gray-400">
                   <div className="flex items-center gap-1">
@@ -191,7 +181,6 @@ const TrendingTopicsWidget2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Category Badge */}
               <div className="flex-shrink-0">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${topic.color} text-white`}>
@@ -202,7 +191,6 @@ const TrendingTopicsWidget2026 = () => {
           </motion.div>
         ))}
       </div>
-
       {/* Footer */}
       <div className="mt-6 pt-4 border-t border-slate-700/50">
         <div className="flex items-center justify-between">
@@ -222,5 +210,6 @@ const TrendingTopicsWidget2026 = () => {
     </div>
   );
 };
+
 
 export default TrendingTopicsWidget2026;

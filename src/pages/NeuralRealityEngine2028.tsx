@@ -14,7 +14,6 @@ import {
   Sparkles,
   Infinity
 } from 'lucide-react';
-
 const NeuralRealityEngine2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -55,7 +54,6 @@ const NeuralRealityEngine2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +65,6 @@ const NeuralRealityEngine2028: React.FC = () => {
               Experience the future of virtual reality with fully conscious AI entities and dynamic virtual worlds
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-green-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
@@ -78,7 +75,6 @@ const NeuralRealityEngine2028: React.FC = () => {
                 AI entities with genuine consciousness, self-awareness, emotions, and autonomous development capabilities
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
                 <Globe className="w-6 h-6 text-white" />
@@ -88,7 +84,6 @@ const NeuralRealityEngine2028: React.FC = () => {
                 Real-time virtual world creation and modification based on AI consciousness and user interaction
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-white" />
@@ -98,7 +93,6 @@ const NeuralRealityEngine2028: React.FC = () => {
                 AI entities creating their own societies, cultures, art, music, and literature in virtual worlds
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-yellow-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="w-6 h-6 text-white" />
@@ -108,7 +102,6 @@ const NeuralRealityEngine2028: React.FC = () => {
                 Direct brain-computer interfaces for seamless consciousness transfer between human and virtual realms
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-red-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Sparkles className="w-6 h-6 text-white" />
@@ -118,7 +111,6 @@ const NeuralRealityEngine2028: React.FC = () => {
                 AI entities developing unexpected behaviors, relationships, and creative expressions through interaction
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-indigo-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <Infinity className="w-6 h-6 text-white" />
@@ -131,7 +123,6 @@ const NeuralRealityEngine2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -161,6 +152,8 @@ const NeuralRealityEngine2028: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default NeuralRealityEngine2028;

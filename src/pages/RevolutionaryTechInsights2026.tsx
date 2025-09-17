@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -40,7 +39,6 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
-
 const RevolutionaryTechInsights2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
@@ -75,23 +73,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
             </div>
-            
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Tech Insights 2026
             </h1>
-            
             <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
               Discover the revolutionary technology insights that are reshaping our understanding 
               of consciousness, reality, and intelligence in ways never before imagined.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
               >
                 <Play className="w-5 h-5" />
                 <span>Explore Insights</span>
             </div>
-
             {/* Breakthrough Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
               {breakthroughStats.map((stat, index) => (
@@ -102,7 +96,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
         </section>
-
         {/* Insights Section */}
         <section id="insights" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
@@ -149,7 +142,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
@@ -202,7 +194,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
@@ -210,7 +201,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +215,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -259,7 +248,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
@@ -276,7 +264,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
           </div>
         </section>
-
         {/* Footer */}
         <footer className="relative z-10 border-t border-white/20 py-12">
           <div className="container mx-auto px-4">
@@ -298,14 +285,12 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </footer>
       </div>
-
       {/* Featured Insights */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Featured Tech Insights</h2>
           <p className="text-xl text-gray-300">The most groundbreaking discoveries and innovations of 2026</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Insight 1 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
@@ -322,7 +307,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Learn More →
             </Link>
           </div>
-
           {/* Insight 2 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-purple-400 text-4xl mb-4">⚛️</div>
@@ -338,7 +322,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Explore Quantum AI →
             </Link>
           </div>
-
           {/* Insight 3 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-green-400 text-4xl mb-4">🌐</div>
@@ -354,7 +337,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Enter the Metaverse →
             </Link>
           </div>
-
           {/* Insight 4 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-yellow-400 text-4xl mb-4">🔬</div>
@@ -370,7 +352,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Discover Biotech →
             </Link>
           </div>
-
           {/* Insight 5 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-red-400 text-4xl mb-4">🛡️</div>
@@ -386,7 +367,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Secure Your Future →
             </Link>
           </div>
-
           {/* Insight 6 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-pink-400 text-4xl mb-4">🚀</div>
@@ -404,7 +384,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl p-12 text-center">
@@ -434,5 +413,34 @@ const RevolutionaryTechInsights2026: React.FC = () => {
     </div>
   );
 };
+
+
+export default RevolutionaryTechInsights2026;
+
+
+
+export default RevolutionaryTechInsights2026;
+
+
+
+export default RevolutionaryTechInsights2026;
+
+
+
+export default RevolutionaryTechInsights2026;
+
+
+
+export default RevolutionaryTechInsights2026;
+
+
+
+export default RevolutionaryTechInsights2026;
+
+
+
+export default RevolutionaryTechInsights2026;
+
+
 
 export default RevolutionaryTechInsights2026;

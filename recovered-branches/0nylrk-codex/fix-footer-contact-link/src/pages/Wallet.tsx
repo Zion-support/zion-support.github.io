@@ -1,28 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      <Tabs defaultValue="earnings">
-        <TabsList className="grid w-full grid-cols-2 mb-4">
-          <TabsTrigger value="earnings">Earnings</TabsTrigger>
-          <TabsTrigger value="spending">Spending</TabsTrigger>
-        </TabsList>
-        <TabsContent value="earnings">
-          {transactions.filter(t => t.transaction_type === 'earn').length === 0 ? (
-            <p className="text-muted-foreground">No earnings yet</p>
-          ) : (
-            <ul className="space-y-2">
-              {transactions.filter(t => t.transaction_type === 'earn').map(t => (
-                <li key={t.id} className="flex justify-between border-b py-2">
-          )}
-        </TabsContent>
-        <TabsContent value="spending">
-          {transactions.filter(t => t.transaction_type === 'burn').length === 0 ? (
-            <p className="text-muted-foreground">No spending yet</p>
-          ) : (
-            <ul className="space-y-2">
-              {transactions.filter(t => t.transaction_type === 'burn').map(t => (
-                <li key={t.id} className="flex justify-between border-b py-2">
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-2">On-chain Export (Beta)</h2>
-        <p className="text-sm text-muted-foreground mb-4">Export your ZION$ to an external crypto wallet.</p>
-        <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>
+const Wallet: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Wallet | Zion Tech Group</title>
+        <meta name="description" content="Wallet - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Wallet</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
+  );
+};
+
+export default Wallet;

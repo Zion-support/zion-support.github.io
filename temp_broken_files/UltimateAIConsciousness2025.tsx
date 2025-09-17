@@ -1,4 +1,3 @@
-import React from 'react';
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -9,13 +8,11 @@ import React from 'react';
             </div>
           </div>
         </div>
-
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
+
 };
+
 
 export default UltimateAIConsciousness2025;

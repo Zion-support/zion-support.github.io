@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const carouselItems = [
     {
       id: 1,
@@ -38,15 +36,12 @@ const DynamicContentCarousel = () => {
       link: "/pages/AITransformationGuide2026"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [carouselItems.length]);
-
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -58,7 +53,6 @@ const DynamicContentCarousel = () => {
             Explore our latest technology content and insights
           </p>
         </div>
-
         <div className="relative overflow-hidden rounded-2xl shadow-2xl">
           <AnimatePresence mode="wait">
             <motion.div
@@ -127,7 +121,6 @@ const DynamicContentCarousel = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
         {/* Navigation Dots */}
         <div className="flex justify-center mt-6 space-x-2">
           {carouselItems.map((_, index) => (
@@ -144,6 +137,8 @@ const DynamicContentCarousel = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default DynamicContentCarousel;

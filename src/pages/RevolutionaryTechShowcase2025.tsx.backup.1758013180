@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> origin/backup-main-20250916-071805
 import { motion, AnimatePresence } from 'framer-motion';
@@ -300,8 +298,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
     </>
       </div>
     </>
-<<<<<<< HEAD
-=======
     </div>
 import React from 'react';
 

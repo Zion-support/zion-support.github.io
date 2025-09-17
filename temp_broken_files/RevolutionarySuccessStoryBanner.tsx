@@ -1,9 +1,10 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
+
 export default function RevolutionarySuccessStoryBanner() {
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 rounded-3xl p-8 mb-12 border border-emerald-400/30"
     >
       {/* Animated Background */}
@@ -11,9 +12,9 @@ export default function RevolutionarySuccessStoryBanner() {
       <div className="absolute inset-0 bg-black/10"></div>
       
       {/* Floating Success Icons */}
-      <divdiv
-          y: [0-10],
-          rotate: [050]
+      <div
+
+
         }}
           duration: 3,
           repeat: Infinity,
@@ -22,11 +23,11 @@ export default function RevolutionarySuccessStoryBanner() {
         className="absolute top-6 right-6 text-4xl"
       >
         🎯
-      </divdiv>
+      </div>
       
-      <divdiv
-          y: [010],
-          rotate: [0-50]
+      <div
+
+
         }}
           duration: 4,
           repeat: Infinity,
@@ -36,11 +37,11 @@ export default function RevolutionarySuccessStoryBanner() {
         className="absolute bottom-6 left-6 text-4xl"
       >
         💰
-      </divdiv>
+      </div>
       
       <div className="relative z-10">
         <div className="text-center mb-8">
-          <divdiv
+          <div
           >
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
               🏆 Revolutionary Success Story
@@ -48,49 +49,49 @@ export default function RevolutionarySuccessStoryBanner() {
             <p className="text-2xl text-emerald-100 mb-6 max-w-4xl mx-auto">
               How a Fortune 500 Company Achieved $100M ROI in Just 18 Months
             </p>
-          </divdiv>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <divdiv
+          <div
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
             <div className="text-6xl mb-4">💰</div>
             <div className="text-4xl font-bold text-emerald-400 mb-2">$100M</div>
             <div className="text-white font-semibold mb-2">Total ROI</div>
             <div className="text-emerald-100 text-sm">18-month transformation period</div>
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
             <div className="text-6xl mb-4">⚡</div>
             <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
             <div className="text-white font-semibold mb-2">Efficiency Gain</div>
             <div className="text-emerald-100 text-sm">Production throughput improvement</div>
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
             <div className="text-6xl mb-4">🎯</div>
             <div className="text-4xl font-bold text-teal-400 mb-2">95%</div>
             <div className="text-white font-semibold mb-2">Quality Improvement</div>
             <div className="text-emerald-100 text-sm">Defect reduction achieved</div>
-          </divdiv>
+          </div>
         </div>
         
         <div className="text-center">
-          <divdiv
+          <div
             className="mb-6"
           >
             <p className="text-xl text-emerald-100 mb-6 max-w-3xl mx-auto">
               Discover the complete transformation journeyimplementation strategiesand lessons learned 
               from this groundbreaking enterprise AI success story.
             </p>
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="flex flex-wrap justify-center gap-4"
           >
             <a 
@@ -105,15 +106,15 @@ export default function RevolutionarySuccessStoryBanner() {
             >
               Start Your Transformation
             </a>
-          </divdiv>
+          </div>
         </div>
         
         {/* Success Metrics Bar */}
-        <divdiv
+        <div
           className="mt-8 bg-white/20 rounded-full h-3 overflow-hidden"
         >
           <div className="h-full bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 rounded-full"></div>
-        </divdiv>
+        </div>
         
         <div className="mt-4 text-center">
           <p className="text-emerald-100 text-sm">
@@ -121,6 +122,5 @@ export default function RevolutionarySuccessStoryBanner() {
           </p>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
-}

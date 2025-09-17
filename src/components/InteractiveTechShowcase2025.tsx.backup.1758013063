@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 import React, { useState, useEffect } from 'react';
@@ -76,8 +74,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
   const technologies = [
     {
       id: 1,
-<<<<<<< HEAD
-=======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -138,7 +134,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       ],
       demo: 'Watch AI analyze data and generate insights in real-time'
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-=======
       name: "Quantum AI Processing",
       description: "Revolutionary quantum computing meets artificial intelligence for unprecedented processing power",
       icon: "⚡",
@@ -204,8 +199,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-<<<<<<< HEAD
-=======
         setActiveTech((prev) => (prev + 1) % technologies.length);
         setIsAnimating(false);
       }, 300);
@@ -265,8 +258,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Active Tech Display */}
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
             <div className="text-center">
@@ -413,10 +404,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
 
         {/* Technology Timeline */}
         <div className="text-center mb-16">

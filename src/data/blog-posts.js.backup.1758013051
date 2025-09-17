@@ -90,14 +90,12 @@ export const blogPosts = [
     slug: "ai-2026-safe-tool-use-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 1005,
     title: "AI 2026: Eval‑Gated Autonomy",
     excerpt: "Ship safer autonomy with lifecycle gates and a central evaluation system.",
     content: "Adopt evaluation-first workflows: dataset versioning, scenario suites, metric thresholds, and promotion gates across dev→staging→prod. Shows CI/CD wiring.",
     author: "Alexandra Patel",
     authorRole: "Chief Governance Architect",
-=======
     id: 66,
     title: "AI 2026: Real-Time Retrieval Architectures",
     excerpt: "Low-latency RAG with streaming fetchers, hybrid indexes, and budget-aware routing.",
@@ -339,8 +337,6 @@ export const blogPosts = [
     slug: "interdimensional-ai-computing-multiple-realities"
   },
   {
-<<<<<<< HEAD
-=======
     id: 39,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
@@ -447,9 +443,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -987,10 +980,7 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
-<<<<<<< HEAD
   },
   {
     id: 51,
@@ -1096,8 +1086,6 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/edge-ai-iot-fusion-2026.jpg",
     slug: "edge-ai-iot-perfect-fusion-smart-everything"
-=======
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -1239,4 +1227,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

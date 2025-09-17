@@ -14,8 +14,6 @@ import {
   Users,
   Award,
   TrendingUp
-<<<<<<< HEAD
-=======
   Rocket, 
   Star, 
   Infinity, 
@@ -70,8 +68,6 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
       successRate: Math.round(avgRating * 20) // Convert 5-star rating to percentage
     });
   }, []);
-<<<<<<< HEAD
-=======
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -519,10 +515,8 @@ const RevolutionaryServicesShowcase2026 = () => {
                 Schedule Demo
               </motion.button>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
-=======
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-20">

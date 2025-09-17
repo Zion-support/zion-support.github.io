@@ -19,10 +19,8 @@ import {
   Download,
   ExternalLink
 } from 'lucide-react';
-
 const AIInnovationShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
-
   const innovations = [
     {
       id: 'consciousness-ai',
@@ -52,20 +50,17 @@ const AIInnovationShowcase2026: React.FC = () => {
       impact: '92%'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center text-white">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black text-sm font-bold mb-6 animate-bounce">
               <Sparkles className="w-4 h-4 mr-2" />
               REVOLUTIONARY AI INNOVATIONS 2026
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               The Future of
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
@@ -73,12 +68,10 @@ const AIInnovationShowcase2026: React.FC = () => {
               </span>
               is Here
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover groundbreaking AI innovations that are reshaping industries, 
               creating new possibilities, and defining the future of technology.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -87,7 +80,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                 Get Expert Consultation
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              
               <button className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-lg text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <Play className="w-5 h-5" />
                 Watch Demo
@@ -96,7 +88,6 @@ const AIInnovationShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovations Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -107,7 +98,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             Explore cutting-edge AI technologies that are transforming industries and creating new possibilities.
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {innovations.map((innovation, index) => (
             <motion.div
@@ -120,16 +110,13 @@ const AIInnovationShowcase2026: React.FC = () => {
               <div className={`h-48 bg-gradient-to-br ${innovation.gradient} flex items-center justify-center`}>
                 <div className="text-6xl">{innovation.icon}</div>
               </div>
-              
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {innovation.title}
                 </h3>
-                
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {innovation.description}
                 </p>
-                
                 <div className="space-y-3 mb-6">
                   {innovation.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
@@ -138,13 +125,11 @@ const AIInnovationShowcase2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-600">{innovation.impact}</div>
                     <div className="text-sm text-gray-500">Success Rate</div>
                   </div>
-                  
                   <Link
                     to={`/innovation/${innovation.id}`}
                     className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
@@ -157,7 +142,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">
@@ -167,7 +151,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             Join thousands of companies already leveraging our revolutionary AI innovations 
             to achieve unprecedented growth and success.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -176,7 +159,6 @@ const AIInnovationShowcase2026: React.FC = () => {
               Start Your AI Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            
             <button className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
               <Download className="w-5 h-5 mr-2" />
               Download Whitepaper
@@ -187,5 +169,6 @@ const AIInnovationShowcase2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default AIInnovationShowcase2026;

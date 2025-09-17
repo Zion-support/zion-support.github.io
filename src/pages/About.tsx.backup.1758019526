@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { 
@@ -13,9 +12,7 @@ import {
   TrendingUp,
   Heart
 } from 'lucide-react';
-=======
 
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ContactSection } from "@/components/ContactSection";
@@ -293,7 +290,6 @@ export default function About() {
         </section>
       </div>
     </>
-=======
 import React from 'react';
 import Card from '../components/Card';
 

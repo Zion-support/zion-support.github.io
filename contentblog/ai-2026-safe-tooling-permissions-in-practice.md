@@ -1,4 +1,26 @@
 ---
+{"title":"Safe Tooling Permissions in Practice (2026)","excerpt":"Risk‑tiered adapters, scoped credentials, and approvals to keep agents safe.","featuredImage":"/blog/safe-tooling-permissions-2026.jpg","publishedDate":"2025-09-16","author":{"name":"Security Engineering","title":"Trust & Safety"},"tags":["Security","Governance","Permissions"]}
+---
+
+## Principles
+
+Default‑deny tools, minimize blast radius, and continuously verify with policy checks.
+
+### Controls
+
+- Adapters enforce argument schemas and rate limits
+- Short‑lived credentials with per‑tool scopes
+- Just‑in‑time approvals for high‑risk operations
+- Runtime policy evaluation and structured logging
+
+### Rollout guide
+
+1. Classify tools by risk and define scopes.
+2. Wrap tools with adapters and audit hooks.
+3. Introduce approvals; simulate first, enforce later.
+4. Track violations and iterate thresholds from incidents.
+
+---
 {"title":"AI 2026: Safe Tooling Permissions — In Practice","excerpt":"How to implement policy‑as‑code approvals, scoped tokens, and eval‑gated tool access.","author":{"name":"ZionTech Research","title":"AI Reliability & Governance"},"featuredImage":"/images/blog/secure-tooling-hero.jpg","publishedDate":"2025-09-16","tags":["Security","Policy-as-Code","Approvals","Governance"],"readingTime":"8 min"}
 ---
 

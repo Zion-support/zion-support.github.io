@@ -16,6 +16,7 @@ node automation/auto-health-monitor/index.mjs
 It runs continuously and writes to both stdout and the log file.
 
 
+<<<<<<< HEAD
 # Intelligent Automation System
 
 A comprehensive, autonomous automation system that provides intelligent task scheduling, self-healing capabilities, anomaly detection, and real-time monitoring for development workflows.
@@ -465,3 +466,5 @@ For issues and questions:
 ---
 
 **Built with ❤️ for autonomous development workflows**
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad

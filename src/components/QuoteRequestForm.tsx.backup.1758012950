@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -185,7 +184,6 @@ export const QuoteRequestForm: React.FC = () => {
     </form>
   );
 };
-=======
 
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';

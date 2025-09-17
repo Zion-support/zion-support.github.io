@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AutonomousAISystems2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-900 to-blue-900">
@@ -9,7 +8,6 @@ const AutonomousAISystems2026: React.FC = () => {
         <meta name="description" content="How AI systems are evolving to manage entire organizations autonomously, from operations to strategic decision-making." />
         <meta name="keywords" content="autonomous AI, self-managing systems, business automation, AI management, future of work" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -32,7 +30,6 @@ const AutonomousAISystems2026: React.FC = () => {
             <span>10 min read</span>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
@@ -42,7 +39,6 @@ const AutonomousAISystems2026: React.FC = () => {
               Today's most advanced AI platforms are demonstrating unprecedented capabilities in self-management, 
               decision-making, and organizational optimization.
             </p>
-            
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-6 rounded-xl">
                 <h3 className="text-xl font-semibold text-white mb-3">Task Automation</h3>
@@ -57,7 +53,6 @@ const AutonomousAISystems2026: React.FC = () => {
                 <p className="text-gray-200 text-sm">Independent strategic planning and resource allocation</p>
               </div>
             </div>
-
             <h3 className="text-2xl font-bold text-white mb-4">Core Components</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -78,7 +73,6 @@ const AutonomousAISystems2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-r from-green-600 to-teal-600 p-8 rounded-2xl text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Proven Results</h3>
             <div className="grid md:grid-cols-4 gap-4 text-center">
@@ -100,7 +94,6 @@ const AutonomousAISystems2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Transform Your Organization</h3>
             <p className="text-gray-300 mb-6">
@@ -115,6 +108,8 @@ const AutonomousAISystems2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default AutonomousAISystems2026;

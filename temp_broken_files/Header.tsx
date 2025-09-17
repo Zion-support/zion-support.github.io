@@ -1,7 +1,6 @@
 import React from 'react';
 import NotificationSystem from './components/NotificationSystem';
 import NewContentNavigation2026 from './components/NewContentNavigation2026';
-
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -10,15 +9,14 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-4 text-sm">
             <span className="animate-pulse">🚀</span>
-            <span className="font-semibold">NEW: Ultimate Content Showcase 2026 - 60+ Revolutionary Articles</span>
-            <a href="/ultimate-content-showcase-2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
+            <span className="font-semibold">NEW: Revolutionary Content 2026 - Autonomous AI, Quantum ML, Conscious AI & More!</span>
+            <a href="/pages/NewContentShowcase2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
               Explore Now →
             </a>
             <span className="animate-pulse">🚀</span>
           </div>
         </div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -29,7 +27,6 @@ const Header: React.FC = () => {
               </span>
             </a>
           </div>
-
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
@@ -47,6 +44,9 @@ const Header: React.FC = () => {
             <a href="/revolutionary-content-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
               Revolutionary 2026
             </a>
+            <a href="/pages/NewContentShowcase2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-green-50 to-teal-50 rounded-lg">
+              New Content 2026
+            </a>
             <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
               Content Showcase
             </a>
@@ -59,7 +59,6 @@ const Header: React.FC = () => {
             {/* New Content Navigation */}
             <NewContentNavigation2026 />
           </nav>
-
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             <NotificationSystem />
@@ -72,5 +71,6 @@ const Header: React.FC = () => {
     </header>
   );
 };
+
 
 export default Header;

@@ -18,7 +18,6 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
-
 const AutonomousBusinessRevolution2026: React.FC = () => {
   const features = [
     {
@@ -58,7 +57,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
       metrics: "3x productivity boost"
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -79,7 +77,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
       rating: 5
     }
   ];
-
   const benefits = [
     "Reduced operational costs by up to 60%",
     "Improved decision-making speed by 10x",
@@ -88,7 +85,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
     "Increased market responsiveness by 400%",
     "Optimized resource allocation automatically"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       {/* Hero Section */}
@@ -105,19 +101,16 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
               <Star className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-400 font-medium">Revolutionary Technology</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Autonomous Business
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {" "}Revolution 2026
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with fully autonomous AI systems that think, decide, and act 
               independently while maintaining human oversight and ethical standards.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -135,7 +128,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
                 Watch Case Study
               </motion.button>
             </div>
-
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-6 rounded-2xl border border-blue-500/20">
@@ -158,7 +150,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +167,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
               while maintaining human oversight and ethical standards.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -190,15 +180,12 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 p-4 mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-4">
                     {feature.description}
                   </p>
-                  
                   <div className="text-blue-400 font-semibold">
                     {feature.metrics}
                   </div>
@@ -208,7 +195,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,7 +212,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
               of autonomous operations.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -243,7 +228,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +244,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
               Hear from industry leaders who have transformed their businesses with our autonomous systems.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -275,11 +258,9 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
                 <p className="text-gray-300 mb-6 italic">
                   "{testimonial.content}"
                 </p>
-                
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
                   <div className="text-blue-400">{testimonial.role}</div>
@@ -289,7 +270,6 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -326,6 +306,8 @@ const AutonomousBusinessRevolution2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default AutonomousBusinessRevolution2026;

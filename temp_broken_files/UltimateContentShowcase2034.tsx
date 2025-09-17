@@ -1,40 +1,10 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const UltimateContentShowcase2034: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const contentPages = [
-    {
-      title: "Ultimate Tech Revolution 2034",
-      description: "The convergence of all technologies into a unified omniversal system",
-      icon: "🌌",
-      link: "/pages/UltimateTechRevolution2034",
-      features: ["Omniversal Computing", "Reality Manipulation", "Transcendent AI"],
-      color: "from-cyan-500 to-pink-500"
-    },
-    {
-      title: "Neural Reality Engine 2035",
-      description: "Control reality itself through pure thought and neural networks",
-      icon: "🧬",
-      link: "/pages/NeuralRealityEngine2035",
-      features: ["Thought-to-Reality", "Universe Creation", "Consciousness Control"],
-      color: "from-emerald-500 to-cyan-500"
-    },
-    {
-      title: "Omniversal Consciousness 2036",
-      description: "The ultimate evolution of consciousness across infinite realities",
-      icon: "🌟",
-      link: "/pages/OmniversalConsciousness2036",
-      features: ["Universal Unity", "Infinite Intelligence", "Transcendent Awareness"],
-      color: "from-violet-500 to-fuchsia-500"
-    }
-  ];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -48,10 +18,9 @@ const UltimateContentShowcase2034: React.FC = () => {
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
             Experience the most revolutionary technology content ever created - featuring technologies that transcend reality itself
           </p>
-        </divdiv>
-
+        </div>
         {/* Tab Navigation */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center mb-12"
         >
@@ -70,10 +39,9 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             ))}
           </div>
-        </divdiv>
-
+        </div>
         {/* Content Display */}
-        <divdiv
+        <div
           key={activeTab}
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
@@ -96,11 +64,9 @@ const UltimateContentShowcase2034: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <p className="text-xl text-gray-300 leading-relaxed">
               {contentPages[activeTab].description}
             </p>
-
             <div className="space-y-4">
               <h4 className="text-2xl font-bold">Key Features:</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -112,7 +78,6 @@ const UltimateContentShowcase2034: React.FC = () => {
                 ))}
               </div>
             </div>
-
             <div className="flex space-x-4">
               <a
                 href={contentPages[activeTab].link}
@@ -125,7 +90,6 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Right Side - Interactive Preview */}
           <div className="relative">
             <div className={`bg-gradient-to-br ${contentPages[activeTab].color} rounded-3xl p-8 relative overflow-hidden`}>
@@ -136,19 +100,17 @@ const UltimateContentShowcase2034: React.FC = () => {
                   <h4 className="text-3xl font-bold mb-4">Interactive Preview</h4>
                   <p className="text-lg opacity-90">Experience the technology in action</p>
                 </div>
-
                 <div className="space-y-4">
                   {contentPages[activeTab].features.map((feature, index) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center space-x-3"
                     >
                       <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                       <span className="font-semibold">{feature}</span>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
-
                 <div className="mt-8 text-center">
                   <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
                     <span className="text-sm font-semibold">Status: Active</span>
@@ -157,10 +119,9 @@ const UltimateContentShowcase2034: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
-
+        </div>
         {/* Bottom CTA */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -180,10 +141,11 @@ const UltimateContentShowcase2034: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default UltimateContentShowcase2034;

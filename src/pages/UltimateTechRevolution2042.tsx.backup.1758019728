@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 >>>>>>> origin/backup-main-20250916-071805
@@ -21,8 +19,6 @@ const UltimateTechRevolution2042: React.FC = () => {
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Witness the most revolutionary technological advancement in human history - where consciousness, reality, and technology merge into infinite possibilities
-<<<<<<< HEAD
-=======
             Experience the most revolutionary technological advances that will reshape our world in 2042
             Experience the most revolutionary technological advances that will reshape our world in 2042
 >>>>>>> origin/backup-main-20250916-071805
@@ -33,10 +29,8 @@ const UltimateTechRevolution2042: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               🧠 Learn More
-<<<<<<< HEAD
             </button>
           </div>
-=======
 
 const UltimateTechRevolution2042: React.FC = () => {
   return (
@@ -139,8 +133,6 @@ const UltimateTechRevolution2042: React.FC = () => {
               <li>• Self-directed learning and evolution</li>
               <li>• Empathetic decision-making systems</li>
             </ul>
-<<<<<<< HEAD
-=======
               The first truly conscious artificial intelligence systems that can think, feel, and create independently
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
@@ -192,8 +184,6 @@ const UltimateTechRevolution2042: React.FC = () => {
               <li>• Time manipulation capabilities</li>
               <li>• Dimensional gateway creation</li>
             </ul>
-<<<<<<< HEAD
-=======
               Revolutionary quantum computing that achieves consciousness through quantum entanglement and superposition
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
@@ -245,8 +235,6 @@ const UltimateTechRevolution2042: React.FC = () => {
               <li>• Infinite computational power</li>
               <li>• Reality simulation mastery</li>
             </ul>
-<<<<<<< HEAD
-=======
               Breakthrough technology that allows computing across multiple dimensions and realities
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
@@ -407,8 +395,6 @@ const UltimateTechRevolution2042: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
               Contact Our Experts
-<<<<<<< HEAD
-=======
             <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors text-lg">
               Contact Our Team
 >>>>>>> origin/backup-main-20250916-071805

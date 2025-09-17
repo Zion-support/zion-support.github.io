@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-
   const contentCategories = [
     { id: 'all', label: 'All Content', icon: '🌟' },
     { id: 'ai', label: 'AI Revolution', icon: '🧠' },
@@ -11,7 +9,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     { id: 'neural', label: 'Neural Interface', icon: '🧬' },
     { id: 'autonomous', label: 'Autonomous Systems', icon: '🤖' }
   ];
-
   const revolutionaryContent = [
     {
       id: 1,
@@ -155,6 +152,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       statusColor: 'bg-indigo-500'
     }
   ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   useEffect(() => {
@@ -189,10 +187,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
   const filteredContent = activeCategory === 'all' 
     ? revolutionaryContent 
     : revolutionaryContent.filter(content => content.category === activeCategory);
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
@@ -209,7 +208,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             Discover our groundbreaking content covering the most advanced technologies that are reshaping the future
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {contentCategories.map((category) => (
@@ -381,7 +379,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           ))}
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredContent.map((content) => (
@@ -403,7 +400,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
@@ -412,7 +408,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {content.description}
                 </p>
-
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
@@ -427,7 +422,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Action Button */}
                 <Link
                   to={content.link}
@@ -439,7 +433,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
@@ -465,5 +458,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryContentShowcase2025;

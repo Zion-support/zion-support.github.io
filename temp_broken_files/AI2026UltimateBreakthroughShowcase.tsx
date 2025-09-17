@@ -1,5 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
+
 
 export default function AI2026UltimateBreakthroughShowcase() {
   const breakthroughs = [
@@ -76,26 +79,18 @@ export default function AI2026UltimateBreakthroughShowcase() {
       accuracy: "∞"
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full border border-purple-200 mb-6">
             <span className="text-purple-700 text-sm font-semibold">🚀 AI 2026 BREAKTHROUGH SHOWCASE</span>
-          </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Revolutionary AI Breakthroughs
-          </h2>
-          
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
             Discover the most advanced AI technologies ever created. These breakthroughs represent 
             the pinnacle of artificial intelligence achievementdelivering unprecedented results 
             and transforming reality itself.
-          </p>
-        </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {breakthroughs.map((breakthrough) => (
             <div 
@@ -103,66 +98,44 @@ export default function AI2026UltimateBreakthroughShowcase() {
               className={`bg-gradient-to-br ${breakthrough.bgColor} rounded-2xl p-8 border-l-4 ${breakthrough.borderColor} hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}
             >
               <div className="text-5xl mb-4">{breakthrough.icon}</div>
-              
               <h3 className="text-2xl font-bold mb-4 text-gray-800">
                 {breakthrough.title}
-              </h3>
-              
               <p className="text-gray-600 mb-6 leading-relaxed">
                 {breakthrough.description}
-              </p>
-              
               <div className="flex justify-between items-center mb-6">
                 <div className="flex flex-col">
                   <span className="text-sm text-gray-500">ROI</span>
                   <span className={`text-2xl font-bold bg-gradient-to-r ${breakthrough.color} bg-clip-text text-transparent`}>
                     {breakthrough.roi}
-                  </span>
-                </div>
                 <div className="flex flex-col">
                   <span className="text-sm text-gray-500">Accuracy</span>
                   <span className={`text-2xl font-bold bg-gradient-to-r ${breakthrough.color} bg-clip-text text-transparent`}>
                     {breakthrough.accuracy}
-                  </span>
-                </div>
-              </div>
-              
               <a 
                 href={breakthrough.href}
                 className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${breakthrough.color} text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
               >
                 Explore Breakthrough →
-              </a>
-            </div>
           ))}
-        </div>
-        
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-100 to-blue-100 rounded-2xl p-8 border border-purple-200">
             <h3 className="text-3xl font-bold mb-4 text-gray-800">
               Ready to Experience the Future?
-            </h3>
             <p className="text-lg text-gray-600 mb-8">
               Join thousands of enterprises already transforming their operations with AI 2026 breakthrough technology.
-            </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/case-studies/ai-2026-enterprise-transformation-15000-roi"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 📊 View Success Stories
-              </a>
               <a 
                 href="/resources/ai-2026-ultimate-implementation-guide"
                 className="px-8 py-4 bg-white text-purple-600 font-bold rounded-full hover:bg-purple-50 transition-all duration-300 border-2 border-purple-600"
               >
                 📚 Implementation Guide
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
-}
+
+
+
+export default AI2026UltimateBreakthroughShowcase;

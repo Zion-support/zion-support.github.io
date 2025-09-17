@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const UltimateContentBanner2027: React.FC = () => {
   const [currentBanner, setCurrentBanner] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -11,7 +9,6 @@ const UltimateContentBanner2027: React.FC = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   const banners = [
     {
       title: "🌟 Revolutionary Tech Trends 2027",
@@ -41,13 +38,11 @@ const UltimateContentBanner2027: React.FC = () => {
       badge: "REVOLUTIONARY"
     }
   ];
-
   return (
     <div className="relative overflow-hidden mb-16">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      
       {/* Floating Elements */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/20 rounded-full animate-pulse"></div>
@@ -55,7 +50,6 @@ const UltimateContentBanner2027: React.FC = () => {
         <div className="absolute bottom-20 left-20 w-28 h-28 bg-pink-500/20 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-10 right-10 w-20 h-20 bg-emerald-500/20 rounded-full animate-pulse delay-3000"></div>
       </div>
-
       <div className="relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mx-4">
@@ -64,7 +58,6 @@ const UltimateContentBanner2027: React.FC = () => {
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
                 🌟 ULTIMATE CONTENT • JANUARY 2027
               </div>
-
               {/* Main Content */}
               <div className="flex items-center justify-center mb-6">
                 <span className="text-6xl mr-4 animate-bounce">{banners[currentBanner].icon}</span>
@@ -77,12 +70,10 @@ const UltimateContentBanner2027: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               {/* Description */}
               <p className="text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto">
                 {banners[currentBanner].description}
               </p>
-
               {/* Action Buttons */}
               <div className="flex flex-wrap justify-center gap-4 mb-6">
                 <a 
@@ -95,7 +86,6 @@ const UltimateContentBanner2027: React.FC = () => {
                   Learn More
                 </button>
               </div>
-
               {/* Navigation Dots */}
               <div className="flex justify-center gap-3">
                 {banners.map((_, index) => (
@@ -113,7 +103,6 @@ const UltimateContentBanner2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quick Access Links */}
         <div className="grid md:grid-cols-3 gap-4 mt-8 px-4">
           {banners.map((banner, index) => (
@@ -137,5 +126,6 @@ const UltimateContentBanner2027: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateContentBanner2027;

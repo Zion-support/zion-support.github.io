@@ -1,13 +1,12 @@
 import React from 'react';
 
-const TalentCardBadges = () => {
+const TalentCardBadges: React.FC = () => {
   return (
-    <div>
-      {/* TalentCardBadges component */}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TalentCardBadges</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
 
-
 export default TalentCardBadges;
-

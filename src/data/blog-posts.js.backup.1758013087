@@ -1,11 +1,9 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
     content: "Trusted GenAI Ops brings evaluation-first delivery, policy-as-code controls, and runtime guardrails together. This guide includes a minimal reference stack: dataset/versioning, scenario suites, promotion gates, human-in-the-loop, and evidence publishing.",
-=======
     id: 6001,
     title: "AI 2026: Policy-Driven Agents That Don't Break Prod",
     excerpt: "Practical guardrails wired to scorecards, incidents, and budgets—shippable today.",
@@ -818,4 +816,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

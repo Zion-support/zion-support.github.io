@@ -1,12 +1,16 @@
-import { Route } from "react-router-dom";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentsPage from "../pages/TalentsPage";
-
-export default function TalentRoutes() {
+import React from 'react';
+const TalentRoutes = () => {
   return (
-    <>
-      <Route path="directory" element={<TalentDirectory />} />
-      <Route path="list" element={<TalentsPage />} />
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">TalentRoutes</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+
+export default TalentRoutes;

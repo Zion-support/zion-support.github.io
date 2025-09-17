@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
 const RevolutionaryAdBanner2042: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
-  
   const ads = [
     {
       color: "from-cyan-600 to-blue-600",
@@ -20,16 +18,13 @@ const RevolutionaryAdBanner2042: React.FC = () => {
       icon: "🚀"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentAd((prev) => (prev + 1) % ads.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [ads.length]);
-
   return (
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center">
           {/* Badge */}
@@ -50,5 +45,6 @@ const RevolutionaryAdBanner2042: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryAdBanner2042;

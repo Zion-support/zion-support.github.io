@@ -48,12 +48,10 @@ export function PrimaryNav() {
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
-          
           {/* Navigation - hidden on mobile, shown on desktop */}
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
-          
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -88,7 +86,6 @@ export function PrimaryNav() {
             }
         }} searchSuggestions={suggestions}/>
             </form>
-            
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
               <PointsBadge />
@@ -106,13 +103,11 @@ export function PrimaryNav() {
                 </HoverCardContent>
               </HoverCard>
             </div>
-            
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-            
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (<>
@@ -126,19 +121,15 @@ export function PrimaryNav() {
               {isLoggedIn && <UserMenu />}
             </div>
           </div>
-          
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>
         </div>
-      </header>
-      {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} aria-hidden="true"/>
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>
-          </div>
-        </div>)}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>);
-}
+      </div>
+    </div>
+  );
+};
+
+
+export default PrimaryNav;

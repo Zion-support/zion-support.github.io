@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const UltimateContentShowcase2028: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const contentTabs = [
     {
       id: 'ai-revolution',
@@ -88,7 +85,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       color: 'from-pink-600 to-rose-600'
     }
   ];
-
   return (
     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 text-white relative overflow-hidden">
@@ -105,7 +101,6 @@ const UltimateContentShowcase2028: React.FC = () => {
               Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, Neural Interfaces, and Revolutionary Technology Solutions
             </p>
           </div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {contentTabs.map((tab, index) => (
@@ -123,7 +118,6 @@ const UltimateContentShowcase2028: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Active Tab Content */}
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="grid md:grid-cols-2 gap-8">
@@ -147,7 +141,6 @@ const UltimateContentShowcase2028: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Interactive Demo Section */}
           <div className="mt-12 text-center">
             <h3 className="text-3xl font-bold mb-6">🎮 Interactive Technology Demo</h3>
@@ -181,7 +174,6 @@ const UltimateContentShowcase2028: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Call to Action */}
           <div className="mt-12 text-center">
             <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -202,5 +194,6 @@ const UltimateContentShowcase2028: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateContentShowcase2028;

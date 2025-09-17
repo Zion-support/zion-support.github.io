@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/backup-main-20250916-071805
@@ -28,8 +26,6 @@ const ComprehensiveServices2025: React.FC = () => {
       content: "The neural interface technology has opened up possibilities we never thought possible.",
       rating: 5,
       avatar: "👩‍⚕️"
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -237,8 +233,6 @@ const ComprehensiveServices2025: React.FC = () => {
             Transform your business with our revolutionary technology services that push the boundaries of what's possible
           </p>
         </div>
-<<<<<<< HEAD
-=======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Technology</h3>
             <p className="text-blue-100">Revolutionary technological advances</p>
@@ -266,8 +260,6 @@ const ComprehensiveServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-=======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Technology</h3>
             <p className="text-blue-100">Revolutionary technological advances</p>

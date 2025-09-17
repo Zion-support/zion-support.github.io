@@ -12,7 +12,6 @@ import {
   TrendingUp,
   Sparkles
 } from 'lucide-react';
-
 const FeaturedContentSection2026 = () => {
   const featuredContent = [
     {
@@ -58,14 +57,12 @@ const FeaturedContentSection2026 = () => {
       color: "from-green-600 to-blue-600"
     }
   ];
-
   const stats = [
     { number: "500+", label: "Revolutionary Solutions", icon: Sparkles },
     { number: "99.9%", label: "Success Rate", icon: TrendingUp },
     { number: "50+", label: "Countries Served", icon: Globe },
     { number: "24/7", label: "AI Support", icon: Brain }
   ];
-
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
@@ -87,7 +84,6 @@ const FeaturedContentSection2026 = () => {
             Discover our latest revolutionary content and cutting-edge AI services that are shaping the future of technology.
           </p>
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -105,7 +101,6 @@ const FeaturedContentSection2026 = () => {
             </div>
           ))}
         </motion.div>
-
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
@@ -136,7 +131,6 @@ const FeaturedContentSection2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -145,7 +139,6 @@ const FeaturedContentSection2026 = () => {
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {content.description}
                 </p>
-
                 {/* Features */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {content.features.map((feature, featureIndex) => (
@@ -157,7 +150,6 @@ const FeaturedContentSection2026 = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <div className="flex items-center gap-4">
@@ -171,7 +163,6 @@ const FeaturedContentSection2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* CTA */}
                 <a
                   href={content.link}
@@ -184,7 +175,6 @@ const FeaturedContentSection2026 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -213,6 +203,8 @@ const FeaturedContentSection2026 = () => {
       </div>
     </section>
   );
+
 };
+
 
 export default FeaturedContentSection2026;

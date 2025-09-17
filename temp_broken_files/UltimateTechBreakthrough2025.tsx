@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 const UltimateTechBreakthrough2025: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const breakthroughTechnologies = [
     {
       id: 1,
@@ -63,7 +61,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       demo: "Live dashboard showing autonomous AI managing multiple business processes"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -74,9 +71,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
     }, 8000);
     return () => clearInterval(interval);
   }, []);
-
   const currentTech = breakthroughTechnologies[activeDemo];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -100,14 +95,12 @@ const UltimateTechBreakthrough2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Interactive Technology Showcase */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30 shadow-2xl">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">🌟 Interactive Technology Showcase</h2>
             <p className="text-2xl opacity-90">Experience our revolutionary technologies in real-time</p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technology Selector */}
             <div className="space-y-6">
@@ -138,7 +131,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                 </button>
               ))}
             </div>
-
             {/* Demo Display */}
             <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
@@ -147,7 +139,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                   <h3 className="text-3xl font-bold mb-4">{currentTech.title}</h3>
                   <p className="text-xl opacity-90 mb-6">{currentTech.demo}</p>
                 </div>
-
                 {/* Feature List */}
                 <div className="space-y-3 mb-8">
                   {currentTech.features.map((feature, index) => (
@@ -157,7 +148,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Demo Controls */}
                 <div className="space-y-4">
                   <button className={`w-full bg-gradient-to-r ${currentTech.gradient} text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all duration-300`}>
@@ -176,7 +166,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Stats */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -200,14 +189,12 @@ const UltimateTechBreakthrough2025: React.FC = () => {
             <div className="text-lg opacity-75">Unlimited potential applications</div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🏆 Revolutionary Success Stories</h2>
             <p className="text-xl opacity-90">See how our breakthrough technologies are transforming industries</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="text-4xl mb-4">🏢</div>
@@ -225,7 +212,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Breakthrough</h3>
@@ -242,7 +228,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="text-4xl mb-4">🧬</div>
               <h3 className="text-2xl font-bold mb-4">Neural Interface Success</h3>
@@ -261,7 +246,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-3xl p-16 border border-purple-400/30">
           <h2 className="text-5xl font-bold mb-8">Ready to Experience the Ultimate Breakthrough?</h2>
@@ -287,5 +271,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateTechBreakthrough2025;

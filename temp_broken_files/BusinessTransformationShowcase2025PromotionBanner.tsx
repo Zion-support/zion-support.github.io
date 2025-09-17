@@ -1,44 +1,16 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  ArrowRight
-  X
-  Star,
-  Zap,
-  Users,
-  DollarSign,
-  Target
-} from 'lucide-react';
-
-const BusinessTransformationShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1500);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+import React from 'react';
+const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-500/30 shadow-2xl"
         >
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4">
-                <divdiv
+                <div
                   className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-full"
                     scale: [1.051],
                     rotate: [01-10]
@@ -50,8 +22,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 >
                   <TrendingUp className="w-5 h-5 text-white" />
                   <span className="text-white font-bold text-sm">TRANSFORM</span>
-                </divdiv>
-                
+                </div>
                 <div className="hidden md:flex items-center gap-2 text-white">
                   <Users className="w-5 h-5 text-blue-300" />
                   <DollarSign className="w-5 h-5 text-green-300" />
@@ -59,7 +30,6 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                   <Zap className="w-5 h-5 text-yellow-300" />
                 </div>
               </div>
-
               {/* Center Content */}
               <div className="flex-1 text-center px-4">
                 <divh2 
@@ -84,7 +54,6 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                   Join industry leaders achieving unprecedented growth with our AI-powered solutions
                 </p>
               </div>
-
               {/* Right Actions */}
               <div className="flex items-center gap-3">
                 <divbutton
@@ -94,7 +63,6 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                   Transform Now
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
-                
                 <divbutton
                   onClick={handleDismiss}
                   className="text-white/70 hover:text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300"
@@ -103,7 +71,6 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 </divbutton>
               </div>
             </div>
-
             {/* Mobile Layout */}
             <div className="md:hidden mt-3 pt-3 border-t border-blue-500/30">
               <div className="flex items-center justify-between">
@@ -119,10 +86,9 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
               </div>
             </div>
           </div>
-
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <divdiv
+            <div
               className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500/20 rounded-full"
                 y: [020],
                 opacity: [0.30.70.3]
@@ -132,7 +98,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 ease: "easeInOut"
               }}
             />
-            <divdiv
+            <div
               className="absolute -top-2 -right-8 w-6 h-6 bg-purple-500/20 rounded-full"
                 y: [0-150],
                 opacity: [0.20.60.2]
@@ -143,7 +109,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 delay: 0.7
               }}
             />
-            <divdiv
+            <div
               className="absolute top-1/2 -right-4 w-4 h-4 bg-green-400/30 rounded-full"
                 x: [0-10],
                 opacity: [0.40.80.4]
@@ -155,10 +121,12 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
               }}
             />
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
+
 export default BusinessTransformationShowcase2025PromotionBanner;
+</div></div></div></div></div></div>

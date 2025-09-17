@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 >>>>>>> origin/backup-main-20250916-071805
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,8 +12,6 @@ import {
   Globe,
   Star,
   CheckCircle
-<<<<<<< HEAD
-=======
   Star, 
   Zap, 
   Brain, 
@@ -61,8 +57,6 @@ const RevolutionaryContentBanner2026 = () => {
       color: "from-green-600 to-blue-600",
       link: "/blog",
       features: ["AI Consciousness", "Quantum Computing", "Future Tech"]
-<<<<<<< HEAD
-=======
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
@@ -189,8 +183,6 @@ const RevolutionaryContentBanner2026 = () => {
         <div className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-2000"></div>
       </motion.div>
     </AnimatePresence>
-<<<<<<< HEAD
-=======
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);

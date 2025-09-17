@@ -7,13 +7,15 @@ import {
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+};
+
+
 
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -143,7 +145,7 @@ export default function PricingPage() {
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -183,14 +185,14 @@ export default function PricingPage() {
             <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
             </div>
-          </divdiv>
+          </div>
         </section>
 
         {/* Pricing Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
-              <divdiv
+              <div
                 key={category}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -207,7 +209,7 @@ export default function PricingPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, serviceIndex) => (
-                    <divdiv
+                    <div
                       key={service.id}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -328,10 +330,10 @@ export default function PricingPage() {
                           <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </section>
@@ -339,7 +341,7 @@ export default function PricingPage() {
         {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -404,7 +406,7 @@ export default function PricingPage() {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </main>

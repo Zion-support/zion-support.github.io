@@ -1,45 +1,14 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight
-  Star
-  Brain
-  Zap
-  TrendingUp
-  Sparkles,
-  X,
-  Play,
-  ExternalLink,
-  CheckCircle
-} from 'lucide-react';
-
-const InteractiveAIToolsShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+import React from 'react';
+const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600/90 via-purple-600/90 to-pink-600/90" />
-          
           {/* Floating AI Icons */}
           <div className="absolute top-4 left-8 w-6 h-6 text-white/20 animate-bounce">
             <Brain className="w-full h-full" />
@@ -53,12 +22,11 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
           <div className="absolute bottom-4 right-8 w-3 h-3 text-white/40 animate-pulse delay-500">
             <Sparkles className="w-full h-full" />
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Content */}
               <div className="flex-1 text-center lg:text-left">
-                <divdiv
+                <div
                   className="flex items-center justify-center lg:justify-start gap-3 mb-3"
                 >
                   <div className="flex items-center gap-1">
@@ -74,14 +42,12 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                   </div>
-                </divdiv>
-
+                </div>
                 <divh2
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
                 >
                   🤖 Interactive AI Tools Suite 2025
                 </divh2>
-
                 <divp
                   className="text-indigo-100 text-lg mb-4 max-w-2xl"
                 >
@@ -90,8 +56,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   <span className="font-semibold text-white"> 10x faster processing</span>and 
                   <span className="font-semibold text-white"> 24/7 availability</span>.
                 </divp>
-
-                <divdiv
+                <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
                   <div className="flex items-center gap-2 text-sm text-indigo-100">
@@ -110,9 +75,8 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                     <CheckCircle className="w-4 h-4 text-green-300" />
                     <span>Security Guard</span>
                   </div>
-                </divdiv>
-
-                <divdiv
+                </div>
+                <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >
                   <button className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl">
@@ -124,11 +88,10 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                     <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                     Explore Suite
                   </button>
-                </divdiv>
+                </div>
               </div>
-
               {/* AI Tools Preview */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row lg:flex-col gap-4"
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
@@ -146,9 +109,8 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   <div className="text-lg font-bold text-white mb-1">Analytics</div>
                   <div className="text-indigo-100 text-sm">10x faster</div>
                 </div>
-              </divdiv>
+              </div>
             </div>
-
             {/* Dismiss Button */}
             <button
               onClick={handleDismiss}
@@ -158,13 +120,14 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
               <X className="w-5 h-5" />
             </button>
           </div>
-
           {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-pulse" />
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
+
 export default InteractiveAIToolsShowcase2025PromotionBanner;
+</div></div></div></div></div>

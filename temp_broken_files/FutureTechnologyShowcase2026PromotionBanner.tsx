@@ -1,77 +1,26 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Rocket
-  ArrowRight
-  Star
-  Brain
-  Zap
-  Globe,
-  TrendingUp,
-  Users,
-  Award,
-  ChevronRight,
-  CheckCircle,
-  Lightbulb,
-  Target,
-  Shield,
-  Cpu,
-  Sparkles
-} from 'lucide-react';
-
-const FutureTechnologyShowcase2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const technologies = [
-    { icon: Rocketitle: 'Quantum 'Computing', 'color: 'from-purple-500 to-pink-500' },
-    { icon: Braintitle: 'Neural 'Interfaces', 'color: 'from-blue-500 to-cyan-500' },
-    { icon: Globetitle: 'Space 'Technology', 'color: 'from-green-500 to-emerald-500' },
-    { icon: Zaptitle: 'Biotech 'AI', 'color: 'from-orange-500 to-red-500' }
-  ];
-
-  const benefits = [
-    { icon: TrendingUptext: '1000x Performance' },
-    { icon: Userstext: 'Global Impact' },
-    { icon: Awardtext: '200+ Patents' },
-    { icon: Lightbulbtext: '50+ Technologies' }
-  ];
-
-  const stats = [
-    { value: '50+'label: 'Technologies' },
-    { value: '200+'label: 'Patents' },
-    { value: '500+'label: 'Research Papers' },
-    { value: '1M+'label: 'Global Impact' }
-  ];
-
+import React from 'react';
+const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-600/20 via-transparent to-purple-600/20"></div>
       </div>
-
       <div className="relative z-10 py-16 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <divdiv
+            <div
               className="space-y-8"
             >
               {/* Badge */}
-              <divdiv
+              <div
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Sparkles className="w-4 h-4" />
                 NEW: FUTURE TECHNOLOGY SHOWCASE 2026
-              </divdiv>
-
+              </div>
               {/* Main Heading */}
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
@@ -83,7 +32,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 <br />
                 Shaping Tomorrow
               </divh2>
-
               {/* Description */}
               <divp
                 className="text-xl text-gray-300 leading-relaxed"
@@ -91,9 +39,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 Explore cutting-edge technologies that will define the future of humanity
                 from quantum computing to neural interfaces and space technology.
               </divp>
-
               {/* Technologies Grid */}
-              <divdiv
+              <div
                 className="grid grid-cols-2 gap-4"
               >
                 {technologies.map((techindex) => (
@@ -104,10 +51,9 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                     <span className="text-white font-semibold">{tech.title}</span>
                   </div>
                 ))}
-              </divdiv>
-
+              </div>
               {/* Benefits */}
-              <divdiv
+              <div
                 className="space-y-3"
               >
                 {benefits.map((benefitindex) => (
@@ -116,10 +62,9 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                     <span className="text-gray-300">{benefit.text}</span>
                   </div>
                 ))}
-              </divdiv>
-
+              </div>
               {/* CTA Buttons */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center gap-2">
@@ -127,34 +72,31 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                   Explore Technologies
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                
                 <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
                   <Award className="w-5 h-5" />
                   View Research
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </divdiv>
-            </divdiv>
-
+              </div>
+            </div>
             {/* Right Content - Stats & Visual */}
-            <divdiv
+            <div
               className="space-y-8"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-
               {/* Visual Element */}
-              <divdiv
+              <div
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -172,7 +114,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
                   <Star className="w-4 h-4 text-white" />
@@ -186,8 +127,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 <div className="absolute top-1/4 -left-6 w-5 h-5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
                   <Globe className="w-2 h-2 text-white" />
                 </div>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -195,4 +136,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
   );
 };
 
+
 export default FutureTechnologyShowcase2026PromotionBanner;
+</div></div>

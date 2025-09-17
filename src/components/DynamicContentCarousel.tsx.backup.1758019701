@@ -13,8 +13,6 @@ const DynamicContentCarousel: React.FC = () => {
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
@@ -41,7 +39,5 @@ const DynamicContentCarousel: React.FC = () => {
 };
 
 export default DynamicContentCarousel;
-<<<<<<< HEAD
-=======
 export default DynamicContentCarousel;
 >>>>>>> origin/backup-main-20250916-071805

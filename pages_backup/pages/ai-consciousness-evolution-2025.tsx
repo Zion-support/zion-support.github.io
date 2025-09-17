@@ -1,90 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIConsciousnessEvolution2025() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-
-			title="AI Consciousness Evolution 2025"
-			slug="ai-consciousness-evolution-2025"
-			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
-			subtitle="From narrow tasks to contextual understanding with emotional intelligence."
-
-			pricePerMonthUSD={4999}
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Strategic R&D with demonstrable prototypes and IP"
-			features={[
-				"Affective signals and sentiment grounding"
-				"Self-reflection loops and memory consolidation"
-				"Safety layers for alignment and guardrails"
-				"Evaluation harness for subjective tasks"
-				"Multi-modal context fusion (text, voice, UI)"
-
-				"Partnered research roadmap and governance"
-			]}
-			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-
-			pricePerMonthUSD={4999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Strategic R&D with demonstrable prototypes and IP"
-			features={[
-				"Affective signals and sentiment grounding"
-				"Self-reflection loops and memory consolidation"
-				"Safety layers for alignment and guardrails"
-				"Evaluation harness for subjective tasks"
-				"Multi-modal context fusion (text, voice, UI)"
-
-				"Partnered research roadmap and governance"
-
-			]}
-			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-		/>
-	)
+const ai-consciousness-evolution-2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-consciousness-evolution-2025 | Zion Tech Group</title>
+        <meta name="description" content="ai-consciousness-evolution-2025 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-consciousness-evolution-2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default ai-consciousness-evolution-2025;

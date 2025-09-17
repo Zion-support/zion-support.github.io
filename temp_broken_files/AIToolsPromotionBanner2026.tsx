@@ -1,98 +1,8 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Star
-  TrendingUp
-  Users
-  Award,
-  ChevronRight,
-  Play,
-  BookOpen,
-  Lightbulb,
-  Target,
-  Globe,
-  X,
-  ArrowRight,
-  Code,
-  Database,
-  Shield,
-  BarChart3,
-  MessageSquare,
-  Image,
-  FileText,
-  Search,
-  Settings,
-  Cpu,
-  Network,
-  CheckCircle
-} from 'lucide-react';
-
-const AIToolsPromotionBanner2026 = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentToolsetCurrentTool] = useState(0);
-
-  const featuredTools = [
-    {
-      icon: Code,
-      name: "Neural Code Generator",
-      description: "AI-powered code generation",
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "bg-gradient-to-r from-blue-600/10 to-cyan-600/10",
-      borderColor: "border-blue-500/30"
-    },
-    {
-      icon: BarChart3,
-      name: "Intelligent Data Analyzer",
-      description: "Advanced analytics platform",
-      color: "from-green-600 to-emerald-600",
-      bgColor: "bg-gradient-to-r from-green-600/10 to-emerald-600/10",
-      borderColor: "border-green-500/30"
-    },
-    {
-      icon: FileText,
-      name: "Content Creation Suite",
-      description: "Complete content generation",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "bg-gradient-to-r from-purple-600/10 to-pink-600/10",
-      borderColor: "border-purple-500/30"
-    },
-    {
-      icon: Settings,
-      name: "Smart Automation Hub",
-      description: "Workflow automation",
-      color: "from-orange-600 to-red-600",
-      bgColor: "bg-gradient-to-r from-orange-600/10 to-red-600/10",
-      borderColor: "border-orange-500/30"
-    }
-  ];
-
-  const benefits = [
-    "24 AI Tools Available",
-    "50K+ Active Users",
-    "Free Trial Available",
-    "24/7 Support"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTool((prev) => (prev + 1) % featuredTools.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const currentFeature = featuredTools[currentTool];
-
-  if (!isVisible) return null;
-
+import React from 'react';
+const AIToolsPromotionBanner2026: React.FC = () => {
   return (
     <div>
-      <divdiv
+      <div
         className="relative overflow-hidden"
       >
         {/* Main Banner */}
@@ -101,7 +11,7 @@ const AIToolsPromotionBanner2026 = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4 flex-1">
-                <divdiv
+                <div
                   key={currentTool}
                   className="flex items-center gap-3"
                 >
@@ -116,9 +26,8 @@ const AIToolsPromotionBanner2026 = () => {
                       {currentFeature.description}
                     </p>
                   </div>
-                </divdiv>
+                </div>
               </div>
-
               {/* Center Benefits */}
               <div className="hidden lg:flex items-center gap-6">
                 {benefits.map((benefitindex) => (
@@ -128,7 +37,6 @@ const AIToolsPromotionBanner2026 = () => {
                   </div>
                 ))}
               </div>
-
               {/* Right Actions */}
               <div className="flex items-center gap-3">
                 <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
@@ -149,19 +57,17 @@ const AIToolsPromotionBanner2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Progress Bar */}
         <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
-          <divdiv
+          <div
             key={currentTool}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
-
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
               style={{
@@ -179,9 +85,11 @@ const AIToolsPromotionBanner2026 = () => {
             />
           ))}
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };
 
+
 export default AIToolsPromotionBanner2026;
+</div></div>

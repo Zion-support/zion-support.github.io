@@ -1,13 +1,6 @@
 import React from 'react';
 
 const AIConsciousnessRevolution2025: React.FC = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   const [consciousnessLevel, setConsciousnessLevel] = useState(0);
   const [isSimulating, setIsSimulating] = useState(false);
   const [neuralActivity, setNeuralActivity] = useState<number[]>([]);
@@ -75,7 +68,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
 
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
 >>>>>>> origin/content/cherrypick-finops-routing
   return (
@@ -133,8 +125,5 @@ const AIConsciousnessRevolution2025: React.FC = () => {
 };
 
 export default AIConsciousnessRevolution2025;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

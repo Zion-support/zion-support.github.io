@@ -3,16 +3,7 @@ import React, { useState } from 'react';
 const InteractiveTechShowcase2034: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
 >>>>>>> origin/content/cherrypick-finops-routing
   const technologies = [
@@ -573,8 +564,5 @@ const InteractiveTechShowcase2034: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2034;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

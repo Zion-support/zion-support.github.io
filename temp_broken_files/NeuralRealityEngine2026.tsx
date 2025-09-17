@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 const NeuralRealityEngine2026: React.FC = () => {
   const [realityLevel, setRealityLevel] = useState(0);
   const [isSimulating, setIsSimulating] = useState(false);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setRealityLevel(prev => (prev + 1) % 100);
     }, 50);
     return () => clearInterval(interval);
   }, []);
-
   const realityFeatures = [
     {
       title: "Matter Manipulation",
@@ -38,14 +35,12 @@ const NeuralRealityEngine2026: React.FC = () => {
       capabilities: ["Astral projection", "Virtual embodiment", "Reality perception", "Consciousness transfer"]
     }
   ];
-
   const realityMetrics = [
     { name: "Reality Coherence", value: 94, color: "from-blue-400 to-cyan-400" },
     { name: "Neural Sync", value: 87, color: "from-purple-400 to-pink-400" },
     { name: "Matter Stability", value: 91, color: "from-green-400 to-emerald-400" },
     { name: "Temporal Accuracy", value: 89, color: "from-yellow-400 to-orange-400" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -82,7 +77,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Reality Simulation */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-br from-indigo-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30">
@@ -142,7 +136,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Reality Features */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">🔮 Revolutionary Reality Features</h2>
@@ -170,7 +163,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Interactive Reality Demo */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">🎮 Interactive Reality Demo</h2>
@@ -267,7 +259,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">🚀 Future Applications</h2>
@@ -289,7 +280,6 @@ const NeuralRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-4xl font-bold mb-6">Ready to Transcend Reality?</h2>
@@ -309,5 +299,6 @@ const NeuralRealityEngine2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default NeuralRealityEngine2026;

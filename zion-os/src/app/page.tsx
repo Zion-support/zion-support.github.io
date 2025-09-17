@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 <<<<<<< HEAD
@@ -294,15 +295,27 @@ export default function HomePage() {
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+// @ts-nocheck
+import React from 'react';
+import Link from 'next/link';
+  ],
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <Link href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -313,6 +326,7 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -352,6 +366,13 @@ export default function HomePage() {
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+              </Link>
+              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
+                ✅ New: AI Safety & Governance 2025
+              </a>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -360,6 +381,7 @@ export default function HomePage() {
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
@@ -584,6 +606,8 @@ export default function HomePage() {
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -592,6 +616,7 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
               </Link>
+<<<<<<< HEAD
               </a>
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
@@ -726,6 +751,11 @@ import React from 'react'
 import Link from 'next/link'
 import FeatureCard from './components/FeatureCard'
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Operating Systems
+import FeatureCard from './components/FeatureCard';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 
 export default function HomePage() {
   const features = [
@@ -801,7 +831,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ]
+  ];
 
   return (
     <div className="min-h-screen">
@@ -809,6 +839,7 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1049,3 +1080,13 @@ export default function HomePage() {
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad

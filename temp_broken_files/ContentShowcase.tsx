@@ -23,17 +23,14 @@ import {
   Award,
   Target
 } from 'lucide-react';
-
 const ContentShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('blog');
-
   const tabs = [
     { id: 'blog', name: 'Latest Blog Posts', icon: BookOpen },
     { id: 'case-studies', name: 'Case Studies', icon: FileText },
     { id: 'webinars', name: 'Webinars', icon: Play },
     { id: 'whitepapers', name: 'White Papers', icon: FileText }
   ];
-
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { blogPosts } = require('../data/blog-posts.js');
   const latestFour = useMemo(() => {
@@ -45,7 +42,6 @@ const ContentShowcase: React.FC = () => {
       return blogPosts.slice(0, 4);
     }
   }, [blogPosts]);
-
   const caseStudies = [
     {
       id: 1,
@@ -83,7 +79,6 @@ const ContentShowcase: React.FC = () => {
       savings: "$3.2M in prevented losses"
     }
   ];
-
   const webinars = [
     {
       id: 1,
@@ -117,7 +112,6 @@ const ContentShowcase: React.FC = () => {
       topics: ["Cloud Design", "Cost Optimization", "Performance Tuning"]
     }
   ];
-
   const whitepapers = [
     {
       id: 1,
@@ -145,7 +139,6 @@ const ContentShowcase: React.FC = () => {
       topics: ["Cloud Architecture", "Best Practices", "Cost Management"]
     }
   ];
-
   const renderContent = () => {
     switch (activeTab) {
       case 'blog':
@@ -171,11 +164,9 @@ const ContentShowcase: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-blue-500" />
                 </div>
-                
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${
@@ -187,13 +178,10 @@ const ContentShowcase: React.FC = () => {
                       {post.category}
                     </span>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tag, idx) => (
                       <span key={idx} className="flex items-center text-xs text-gray-500">
@@ -202,7 +190,6 @@ const ContentShowcase: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-4">
                       <span className="flex items-center">
@@ -219,7 +206,6 @@ const ContentShowcase: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
@@ -232,7 +218,6 @@ const ContentShowcase: React.FC = () => {
                         <p className="text-xs text-gray-500">{post.authorRole}</p>
                       </div>
                     </div>
-                    
                     <divbutton
                       className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
                     >
@@ -245,12 +230,11 @@ const ContentShowcase: React.FC = () => {
             ))}
           </div>
         );
-      
       case 'case-studies':
         return (
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
-              <divdiv
+              <div
                 key={study.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
               >
@@ -260,9 +244,7 @@ const ContentShowcase: React.FC = () => {
                     <span className="text-sm font-semibold text-yellow-600">Featured Case Study</span>
                   </div>
                 )}
-                
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h3>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Client: {study.client}</h4>
@@ -272,13 +254,11 @@ const ContentShowcase: React.FC = () => {
                       <p className="text-red-700">{study.challenge}</p>
                     </div>
                   </div>
-                  
                   <div>
                     <div className="bg-blue-50 p-4 rounded-lg mb-4">
                       <h5 className="font-semibold text-blue-800 mb-2">Solution:</h5>
                       <p className="text-blue-700">{study.solution}</p>
                     </div>
-                    
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold text-green-800 mb-2">Results:</h5>
                       <ul className="space-y-1">
@@ -292,7 +272,6 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="flex items-center justify-between pt-4 border-t">
                   <div className="flex items-center space-x-6">
                     <div>
@@ -304,7 +283,6 @@ const ContentShowcase: React.FC = () => {
                       <p className="font-semibold text-green-600">{study.savings}</p>
                     </div>
                   </div>
-                  
                   <divbutton
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
                   >
@@ -312,16 +290,15 @@ const ContentShowcase: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         );
-      
       case 'webinars':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webinars.map((webinar, index) => (
-              <divdiv
+              <div
                 key={webinar.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
@@ -332,14 +309,11 @@ const ContentShowcase: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                   <Play className="w-12 h-12 text-blue-500" />
                 </div>
-                
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{webinar.title}</h3>
-                  
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="w-4 h-4 mr-2" />
@@ -354,7 +328,6 @@ const ContentShowcase: React.FC = () => {
                       {webinar.attendees}
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Topics:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -365,7 +338,6 @@ const ContentShowcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <divbutton
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
@@ -373,16 +345,15 @@ const ContentShowcase: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         );
-      
       case 'whitepapers':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
-              <divdiv
+              <div
                 key={paper.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
@@ -393,15 +364,12 @@ const ContentShowcase: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="h-32 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
                   <FileText className="w-12 h-12 text-indigo-500" />
                 </div>
-                
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{paper.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
-                  
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex items-center justify-between text-gray-600">
                       <span>Pages:</span>
@@ -412,7 +380,6 @@ const ContentShowcase: React.FC = () => {
                       <span className="font-semibold">{paper.downloads}</span>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Topics:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -423,7 +390,6 @@ const ContentShowcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <divbutton
                     className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
@@ -431,21 +397,19 @@ const ContentShowcase: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         );
-      
       default:
         return null;
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
@@ -461,16 +425,14 @@ const ContentShowcase: React.FC = () => {
             Stay ahead with our latest insights, case studies, and expert resources. 
             Discover how cutting-edge technology is transforming businesses worldwide.
           </p>
-        </divdiv>
-
+        </div>
         {/* Tab Navigation */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {tabs.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
-            
             return (
               <divbutton
                 key={tab.id}
@@ -488,18 +450,16 @@ const ContentShowcase: React.FC = () => {
               </divbutton>
             );
           })}
-        </divdiv>
-
+        </div>
         {/* Content */}
-          <divdiv
+          <div
             key={activeTab}
           >
             {renderContent()}
-          </divdiv>
+          </div>
         </div>
-
         {/* Newsletter Signup */}
-        <divdiv
+        <div
           className="mt-20"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center">
@@ -522,11 +482,13 @@ const ContentShowcase: React.FC = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
-
 export { ContentShowcase };
+
+
+
 export default ContentShowcase;

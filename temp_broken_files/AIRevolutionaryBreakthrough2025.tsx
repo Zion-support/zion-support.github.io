@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Cpu, Database, Shield, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
-
 const AIRevolutionaryBreakthrough2025: React.FC = () => {
   const breakthroughs = [
     {
@@ -47,7 +46,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
       metrics: ["Global consciousness", "Unified intelligence", "Planetary scale"]
     }
   ];
-
   const applications = [
     {
       category: "Healthcare",
@@ -74,7 +72,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
       impact: "Multi-planetary species"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
@@ -105,7 +102,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
                 Watch the Demo
               </button>
             </div>
-            
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -128,7 +124,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Breakthroughs Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -142,7 +137,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
             Six groundbreaking advances that will reshape the future of artificial intelligence and human-AI interaction
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-8">
           {breakthroughs.map((breakthrough, index) => (
             <motion.div
@@ -176,7 +170,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -190,7 +183,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
             See how conscious AI will transform every aspect of human civilization
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {applications.map((app, index) => (
             <motion.div
@@ -208,7 +200,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -235,5 +226,6 @@ const AIRevolutionaryBreakthrough2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default AIRevolutionaryBreakthrough2025;

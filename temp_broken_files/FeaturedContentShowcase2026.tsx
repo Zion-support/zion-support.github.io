@@ -1,158 +1,196 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
+import { ArrowRight, Calendar, Clock, User, TrendingUp, Eye, Heart } from 'lucide-react';
 const FeaturedContentShowcase2026: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: "AI Revolutionary Breakthrough 2026",
-      description: "Discover the most advanced AI technologies transforming industries worldwide with unprecedented capabilities and breakthrough innovations.",
-      image: "🚀",
-      link: "/ai-revolutionary-breakthrough-2026",
-      category: "AI Innovation",
+      title: "AI Innovation Hub 2026: The Future of Artificial Intelligence",
+      excerpt: "Explore the revolutionary AI innovations that are reshaping technology and transforming industries worldwide.",
+      author: "Dr. Sarah Chen",
+      authorRole: "Chief AI Officer",
+      publishDate: "2025-09-16",
       readTime: "8 min read",
+      category: "AI Innovation",
+      views: "12.5K",
+      likes: 847,
+      image: "/images/blog/ai-innovation-hub-2026.jpg",
       featured: true,
-      gradient: "from-purple-600 to-blue-600"
+      link: "/ai-innovation-hub-2026"
     },
     {
       id: 2,
-      title: "Quantum Computing Revolution",
-      description: "Witness quantum supremacy and explore how quantum processors are solving previously impossible problems in record time.",
-      image: "⚡",
-      link: "/quantum-computing-revolution-2026",
-      category: "Quantum Tech",
-      readTime: "12 min read",
+      title: "Advanced Tech Solutions 2026: Transforming Business Operations",
+      excerpt: "Comprehensive guide to next-generation technology solutions that deliver 10x performance improvements.",
+      author: "Marcus Rodriguez",
+      authorRole: "CTO",
+      publishDate: "2025-09-16",
+      readTime: "10 min read",
+      category: "Technology",
+      views: "8.3K",
+      likes: 623,
+      image: "/images/blog/advanced-tech-solutions-2026.jpg",
       featured: true,
-      gradient: "from-cyan-600 to-purple-600"
+      link: "/advanced-tech-solutions-2026"
     },
     {
       id: 3,
-      title: "Emotional Intelligence AI",
-      description: "Advanced AI systems with human-level emotional intelligence, enabling deeper understanding and natural interactions.",
-      image: "🧠",
-      link: "/emotional-intelligence-ai",
-      category: "AI Psychology",
-      readTime: "6 min read",
-      featured: false,
-      gradient: "from-emerald-600 to-teal-600"
-    },
-    {
-      id: 4,
-      title: "Autonomous Learning Systems",
-      description: "Self-improving AI that continuously learns and adapts without human intervention, creating exponentially smarter solutions.",
-      image: "🎯",
-      link: "/autonomous-learning-systems",
-      category: "Machine Learning",
-      readTime: "10 min read",
-      featured: false,
-      gradient: "from-orange-600 to-red-600"
+      title: "Quantum Computing Guide 2026: Mastering the Fundamentals",
+      excerpt: "Complete guide to quantum computing fundamentals, applications, and implementation strategies.",
+      author: "Dr. Elena Volkov",
+      authorRole: "Quantum Computing Expert",
+      publishDate: "2025-09-16",
+      readTime: "12 min read",
+      category: "Quantum Computing",
+      views: "15.7K",
+      likes: 1.2,
+      image: "/images/blog/quantum-computing-guide-2026.jpg",
+      featured: true,
+      link: "/quantum-computing-guide-2026"
     }
   ];
-
+  const categories = [
+    { name: "AI Innovation", count: 24, color: "bg-purple-500" },
+    { name: "Technology", count: 18, color: "bg-blue-500" },
+    { name: "Quantum Computing", count: 12, color: "bg-green-500" },
+    { name: "Future Tech", count: 8, color: "bg-pink-500" }
+  ];
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Featured Content 2026
+    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Featured Content
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Showcase 2026
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our most revolutionary and groundbreaking content that's shaping the future of technology
+            Discover our most popular and groundbreaking content that's shaping the future of technology
           </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Featured Articles */}
-          {featuredContent.filter(item => item.featured).map((item) => (
-            <div key={item.id} className="group">
-              <Link to={item.link} className="block">
-                <div className={`bg-gradient-to-r ${item.gradient} p-8 rounded-2xl text-white hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden`}>
-                  {/* Background pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full translate-y-12 -translate-x-12"></div>
+        </motion.div>
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          {featuredContent.map((content, index) => (
+            <motion.article
+              key={content.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group cursor-pointer"
+              onClick={() => window.location.href = content.link}
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300 h-full hover:scale-105">
+                {/* Image */}
+                <div className="relative h-48 bg-gradient-to-br from-purple-600 to-blue-600 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {content.category}
+                    </span>
                   </div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold">
-                        FEATURED
-                      </span>
-                      <span className="text-white/80 text-sm">{item.category}</span>
-                      <span className="text-white/60 text-sm">•</span>
-                      <span className="text-white/60 text-sm">{item.readTime}</span>
-                    </div>
-                    
-                    <div className="text-6xl mb-4">{item.image}</div>
-                    
-                    <h3 className="text-3xl font-bold mb-4 group-hover:text-cyan-200 transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    
-                    <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                      {item.description}
-                    </p>
-                    
-                    <div className="flex items-center text-white/80 group-hover:text-white transition-colors duration-300">
-                      <span className="font-semibold">Read More</span>
-                      <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                  <div className="absolute top-4 right-4 flex items-center gap-2">
+                    <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1">
+                      <Eye className="w-4 h-4 text-white" />
+                      <span className="text-white text-sm">{content.views}</span>
                     </div>
                   </div>
                 </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional Content Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {featuredContent.filter(item => !item.featured).map((item) => (
-            <div key={item.id} className="group">
-              <Link to={item.link} className="block">
-                <div className={`bg-gradient-to-r ${item.gradient} p-6 rounded-xl text-white hover:shadow-xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden`}>
-                  {/* Background pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-white rounded-full -translate-y-10 translate-x-10"></div>
-                  </div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="text-white/80 text-sm">{item.category}</span>
-                      <span className="text-white/60 text-sm">•</span>
-                      <span className="text-white/60 text-sm">{item.readTime}</span>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                    {content.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {content.excerpt}
+                  </p>
+                  {/* Author Info */}
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                      <User className="w-5 h-5 text-white" />
                     </div>
-                    
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl">{item.image}</div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-200 transition-colors duration-300">
-                          {item.title}
-                        </h3>
-                        <p className="text-white/90 text-sm leading-relaxed">
-                          {item.description}
-                        </p>
+                    <div>
+                      <p className="text-white font-semibold">{content.author}</p>
+                      <p className="text-gray-400 text-sm">{content.authorRole}</p>
+                    </div>
+                  </div>
+                  {/* Meta Info */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {content.publishDate}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {content.readTime}
                       </div>
                     </div>
+                    <div className="flex items-center gap-1">
+                      <Heart className="w-4 h-4 text-red-400" />
+                      <span>{content.likes}K</span>
+                    </div>
+                  </div>
+                  {/* Read More */}
+                  <div className="flex items-center text-cyan-400 group-hover:text-white transition-colors duration-300">
+                    <span className="font-semibold mr-2">Read More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </motion.article>
           ))}
         </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+        {/* Categories Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
+        >
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            Popular Categories
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {categories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                className="text-center cursor-pointer group"
+              >
+                <div className={`${category.color} w-16 h-16 rounded-2xl mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-white font-semibold mb-1">{category.name}</h4>
+                <p className="text-gray-400 text-sm">{category.count} articles</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 flex items-center gap-2 mx-auto">
             View All Content
+            <ArrowRight className="w-5 h-5" />
           </button>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
+
 
 export default FeaturedContentShowcase2026;

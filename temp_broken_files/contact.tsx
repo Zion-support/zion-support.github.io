@@ -15,6 +15,7 @@ import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovati
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -102,7 +103,7 @@ export default function ContactPage() {
         {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <divdiv
+          <div
             className="mb-8"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -112,14 +113,14 @@ export default function ContactPage() {
               Ready to leverage the power of AI, quantum computing, and cutting-edge technology? 
               Contact us today for a free consultation and discover how our revolutionary micro SaaS services can accelerate your growth.
             </p>
-          </divdiv>
+          </div>
 
           {/* Stats Grid */}
-          <divdiv
+          <div
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
             {stats.map((stat, index) => (
-              <divdiv
+              <div
                 key={stat.label}
                 className="text-center group"
               >
@@ -136,9 +137,9 @@ export default function ContactPage() {
                     {stat.label}
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -147,7 +148,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
@@ -157,7 +158,7 @@ export default function ContactPage() {
                 </h2>
                 
                 {isSubmitted ? (
-                  <divdiv
+                  <div
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -185,7 +186,7 @@ export default function ContactPage() {
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -199,7 +200,7 @@ export default function ContactPage() {
               Ready to revolutionize your business with cutting-edge 2029 technology? 
               Our team of experts is here to help you implement the future today.
             </p>
-          </divdiv>
+          </div>
         </section>
 
         {/* Contact Information Grid */}
@@ -207,7 +208,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Phone Contact */}
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -221,10 +222,10 @@ export default function ContactPage() {
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{contactInfo.mobile}</div>
                   <p className="text-sm text-gray-400">{contactInfo.hours}</p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Email Contact */}
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -238,10 +239,10 @@ export default function ContactPage() {
                   <div className="text-lg font-semibold text-purple-400 mb-2 break-all">{contactInfo.email}</div>
                   <p className="text-sm text-gray-400">Response time: &lt;2 hours</p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Address Contact */}
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -255,11 +256,11 @@ export default function ContactPage() {
                   <div className="text-sm font-semibold text-pink-400 mb-2 leading-relaxed">{contactInfo.address}</div>
                   <p className="text-sm text-gray-400">{contactInfo.timezone}</p>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Contact Form */}
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
@@ -275,7 +276,7 @@ export default function ContactPage() {
 
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
-                  <divdiv
+                  <div
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -283,7 +284,7 @@ export default function ContactPage() {
                     <p className="text-gray-300 text-lg">
                       Thank you for reaching out. Our team will get back to you within 2 hours with a personalized solution.
                     </p>
-                  </divdiv>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -411,14 +412,14 @@ export default function ContactPage() {
                   </form>
                 )}
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -429,11 +430,11 @@ export default function ContactPage() {
               <p className="text-xl text-gray-300">
                 Explore some of our most sought-after 2029 technology solutions
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -476,7 +477,7 @@ export default function ContactPage() {
                       <span className="text-sm text-gray-400">Trial: {service.trialDays} days</span>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -485,7 +486,7 @@ export default function ContactPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -522,7 +523,7 @@ export default function ContactPage() {
                   <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </main>

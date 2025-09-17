@@ -107,8 +107,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
       </div>
 
       {/* Secondary Promotional Banners */}

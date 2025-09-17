@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
@@ -78,10 +77,8 @@ import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromot
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
-<<<<<<< HEAD
 import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
-=======
 import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
 import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
 import RevolutionaryCaseStudies2026 from './pages/RevolutionaryCaseStudies2026';
@@ -294,10 +291,8 @@ const App: React.FC = () => {
     </Router>
   );
 };
-=======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -440,7 +435,6 @@ const Marketplace = () => (
     </div>
   </div>
 );
-=======
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -590,7 +584,6 @@ function App() {
                   </div>
                 } />
               </Routes>
-<<<<<<< HEAD
             </Suspense>
           </main>
           <Footer />
@@ -600,7 +593,6 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
-=======
             </main>
             <Footer />
             <ToastContainer />
@@ -614,4 +606,3 @@ function App() {
 }
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
 
-export default App;

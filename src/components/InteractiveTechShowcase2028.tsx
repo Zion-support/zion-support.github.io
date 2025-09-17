@@ -59,7 +59,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
               {tech.icon} {tech.title}
 =======
 import React, { useState, useEffect } from 'react';
-
 const InteractiveTechShowcase2028: React.FC = () => {
       ],
       color: 'from-purple-600 to-pink-600'
@@ -70,7 +69,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
     }
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 0,
@@ -133,7 +131,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
       borderColor: "border-indigo-400/30"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -142,10 +139,8 @@ const InteractiveTechShowcase2028: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const handleTechClick = (index: number) => {
     if (index === activeTech) return;
     setIsAnimating(true);
@@ -154,9 +149,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
       setIsAnimating(false);
     }, 300);
   };
-
   const currentTech = technologies[activeTech];
-
   return (
               </div>
               <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
@@ -164,7 +157,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
               </button>
             </div>
           </div>
-
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -180,7 +172,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
             Experience the future of technology through interactive demonstrations.
           </p>
         </div>
-
         {/* Technology Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {technologies.map((tech, index) => (
@@ -199,6 +190,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
             </button>
           ))}
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         {/* Active Technology Display */}
@@ -291,6 +283,8 @@ const InteractiveTechShowcase2028: React.FC = () => {
                   </div>
                 </div>cursor/fix-netlify-build-and-merge-to-main-a068
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
         {/* Main Display */}
         <div className="max-w-6xl mx-auto">
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-3xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${
@@ -313,11 +307,9 @@ const InteractiveTechShowcase2028: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {currentTech.description}
                 </p>
-
                 <div className="mb-8">
                   <h4 className="text-2xl font-bold text-cyan-300 mb-4">Key Features:</h4>
                   <div className="grid grid-cols-2 gap-3">
@@ -329,7 +321,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
                     href={`/pages/RevolutionaryTechShowcase2028`}
@@ -345,14 +336,12 @@ const InteractiveTechShowcase2028: React.FC = () => {
                   </a>
                 </div>
               </div>
-
               {/* Right Side - Interactive Visualization */}
               <div className="relative">
                 <div className={`bg-gradient-to-br from-slate-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 transition-all duration-500 ${
                   isAnimating ? 'opacity-50' : 'opacity-100'
                 }`}>
                   <h4 className="text-2xl font-bold text-center text-cyan-300 mb-6">Live Demonstration</h4>
-                  
                   {/* Animated Visualization */}
                   <div className="relative h-64 bg-gradient-to-br from-slate-900/50 to-blue-900/50 rounded-xl overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -360,7 +349,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
                         {currentTech.icon}
                       </div>
                     </div>
-                    
                     {/* Floating particles */}
                     <div className="absolute inset-0">
                       {[...Array(20)].map((_, i) => (
@@ -377,7 +365,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mt-6">
                     <div className="text-center">
@@ -398,7 +385,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Progress Indicator */}
         <div className="flex justify-center mt-8 space-x-2">
           {technologies.map((_, index) => (
@@ -413,7 +399,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-4 text-white">Ready to Experience the Future?</h3>
@@ -434,9 +419,14 @@ const InteractiveTechShowcase2028: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 export default InteractiveTechShowcase2028;
 =======
 export default InteractiveTechShowcase2028;

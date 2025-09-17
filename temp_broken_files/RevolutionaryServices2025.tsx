@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const RevolutionaryServices2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('ai');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const serviceCategories = {
     ai: {
       title: "Artificial Intelligence Solutions",
@@ -123,7 +120,6 @@ const RevolutionaryServices2025: React.FC = () => {
       ]
     }
   };
-
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -135,7 +131,6 @@ const RevolutionaryServices2025: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -144,7 +139,6 @@ const RevolutionaryServices2025: React.FC = () => {
       transition: { duration: 0.6 }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
@@ -160,14 +154,12 @@ const RevolutionaryServices2025: React.FC = () => {
           >
             🚀 REVOLUTIONARY SERVICES • JANUARY 2025
           </motion.div>
-          
           <motion.h1
             variants={itemVariants}
             className="text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent"
           >
             Revolutionary Services 2025
           </motion.h1>
-          
           <motion.p
             variants={itemVariants}
             className="text-2xl text-gray-600 max-w-4xl mx-auto mb-12"
@@ -176,7 +168,6 @@ const RevolutionaryServices2025: React.FC = () => {
             From AI automation to quantum computing, we deliver solutions that drive unprecedented results.
           </motion.p>
         </motion.div>
-
         {/* Service Categories */}
         <motion.div
           initial="hidden"
@@ -203,7 +194,6 @@ const RevolutionaryServices2025: React.FC = () => {
               </motion.button>
             ))}
           </div>
-
           {/* Services Grid */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -232,7 +222,6 @@ const RevolutionaryServices2025: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <div className="text-4xl mb-4">
                       {serviceCategories[activeCategory as keyof typeof serviceCategories].icon}
@@ -243,7 +232,6 @@ const RevolutionaryServices2025: React.FC = () => {
                       {service.price}
                     </div>
                   </div>
-
                   <div className="space-y-3 mb-8">
                     <h4 className="font-semibold text-gray-900">Key Features:</h4>
                     {service.features.map((feature, featureIndex) => (
@@ -253,7 +241,6 @@ const RevolutionaryServices2025: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   <div className="space-y-3">
                     <button className={`w-full bg-gradient-to-r ${serviceCategories[activeCategory as keyof typeof serviceCategories].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                       Get Started →
@@ -267,7 +254,6 @@ const RevolutionaryServices2025: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </motion.div>
-
         {/* Success Stories */}
         <motion.div
           initial="hidden"
@@ -279,7 +265,6 @@ const RevolutionaryServices2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">🏆 Client Success Stories</h2>
             <p className="text-xl text-gray-600">See how our revolutionary services transform businesses</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               variants={itemVariants}
@@ -295,7 +280,6 @@ const RevolutionaryServices2025: React.FC = () => {
               </p>
               <div className="text-sm text-gray-500">- CEO, Global Tech Corp</div>
             </motion.div>
-
             <motion.div
               variants={itemVariants}
               className="bg-white rounded-2xl p-8 shadow-lg"
@@ -310,7 +294,6 @@ const RevolutionaryServices2025: React.FC = () => {
               </p>
               <div className="text-sm text-gray-500">- CTO, Logistics Giant</div>
             </motion.div>
-
             <motion.div
               variants={itemVariants}
               className="bg-white rounded-2xl p-8 shadow-lg"
@@ -327,7 +310,6 @@ const RevolutionaryServices2025: React.FC = () => {
             </motion.div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial="hidden"
@@ -355,5 +337,6 @@ const RevolutionaryServices2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryServices2025;

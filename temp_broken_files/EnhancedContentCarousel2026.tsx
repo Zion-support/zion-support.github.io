@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Clock, User, Eye, Heart, Share2, BookOpen, Sparkles } from 'lucide-react';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -18,16 +17,12 @@ interface ContentItem {
   views: number;
   likes: number;
   isNew?: boolean;
-}
-
 interface EnhancedContentCarousel2026Props {
   content?: ContentItem[];
   autoPlay?: boolean;
   interval?: number;
   showControls?: boolean;
   maxItems?: number;
-}
-
 const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = ({
   content = [],
   autoPlay = true,
@@ -38,7 +33,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   // Default content if none provided
   const defaultContent: ContentItem[] = [
     {
@@ -144,19 +138,15 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
       isNew: true
     }
   ];
-
   const displayContent = content.length > 0 ? content.slice(0, maxItems) : defaultContent.slice(0, maxItems);
-
   useEffect(() => {
     if (isPlaying && displayContent.length > 1) {
       const timer = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % displayContent.length);
       }, interval);
-
       return () => clearInterval(timer);
     }
   }, [isPlaying, interval, displayContent.length]);
-
   const formatNumber = (num: number) => {
     if (num >= 1000000) {
       return (num / 1000000).toFixed(1) + 'M';
@@ -165,7 +155,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
     }
     return num.toString();
   };
-
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'AI Research': 'from-purple-500 to-pink-500',
@@ -178,7 +167,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
     };
     return colors[category] || 'from-gray-500 to-gray-600';
   };
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl border border-gray-700/50 p-8 shadow-2xl">
       {/* Header */}
@@ -192,7 +180,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
             <p className="text-gray-400">Discover the latest insights and breakthroughs</p>
           </div>
         </div>
-        
         {showControls && (
           <div className="flex items-center gap-2">
             <button
@@ -212,7 +199,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
           </div>
         )}
       </div>
-
       {/* Main Content Display */}
       <div className="relative">
         <AnimatePresence mode="wait">
@@ -237,15 +223,12 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
                   </div>
                 )}
               </div>
-              
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 {displayContent[currentIndex].title}
               </h3>
-              
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                 {displayContent[currentIndex].excerpt}
               </p>
-              
               <div className="flex items-center gap-6 mb-6 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
@@ -264,7 +247,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
                   <span>{formatNumber(displayContent[currentIndex].likes)} likes</span>
                 </div>
               </div>
-              
               <div className="flex flex-wrap gap-2 mb-6">
                 {displayContent[currentIndex].tags.slice(0, 4).map((tag) => (
                   <span
@@ -275,7 +257,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
                   </span>
                 ))}
               </div>
-              
               <div className="flex gap-4">
                 <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
                   Read Article
@@ -287,7 +268,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
                 </button>
               </div>
             </div>
-            
             <div className="relative">
               <div className="aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-white/10">
                 <img
@@ -300,14 +280,12 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
-              
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-bounce"></div>
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation */}
         {displayContent.length > 1 && (
           <div className="flex justify-center gap-2 mt-8">
@@ -325,7 +303,6 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
           </div>
         )}
       </div>
-
       {/* Content Grid Preview */}
       <div className="mt-12">
         <h3 className="text-xl font-bold text-white mb-6">More Content</h3>
@@ -367,6 +344,9 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
       </div>
     </div>
   );
+
 };
 
+
 export default EnhancedContentCarousel2026;
+</p></p>

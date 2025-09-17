@@ -34,12 +34,10 @@ import {
   Pause,
   RotateCcw
 } from 'lucide-react';
-
 const AIInnovationRevolution2025 = () => {
   const [activeSection, setActiveSection] = useState('overview');
   const [isAnimating, setIsAnimating] = useState(false);
   const [currentDemo, setCurrentDemo] = useState(0);
-
   const demos = [
     {
       id: 'neural-networks',
@@ -70,7 +68,6 @@ const AIInnovationRevolution2025 = () => {
       color: 'from-orange-500 to-red-500'
     }
   ];
-
   const innovations = [
     {
       title: "Conscious AI Systems",
@@ -101,7 +98,6 @@ const AIInnovationRevolution2025 = () => {
       color: "yellow"
     }
   ];
-
   const features = [
     {
       category: "Core AI Technologies",
@@ -131,7 +127,6 @@ const AIInnovationRevolution2025 = () => {
       ]
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Elena Rodriguez",
@@ -158,7 +153,6 @@ const AIInnovationRevolution2025 = () => {
       company: "FutureCorp"
     }
   ];
-
   const stats = [
     { label: "AI Models Deployed", value: "10,000+", icon: Brain },
     { label: "Data Points Processed", value: "1B+", icon: Database },
@@ -167,20 +161,17 @@ const AIInnovationRevolution2025 = () => {
     { label: "Cost Reduction", value: "85%", icon: TrendingUp },
     { label: "Customer Satisfaction", value: "98%", icon: Star }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -227,7 +218,6 @@ const AIInnovationRevolution2025 = () => {
           </motion.div>
         </div>
       </motion.div>
-
       {/* Interactive Demo Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div 
@@ -244,7 +234,6 @@ const AIInnovationRevolution2025 = () => {
             Experience our AI technologies in action
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             {demos.map((demo, index) => (
@@ -269,7 +258,6 @@ const AIInnovationRevolution2025 = () => {
               </motion.div>
             ))}
           </div>
-
           <motion.div
             key={currentDemo}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -298,7 +286,6 @@ const AIInnovationRevolution2025 = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Innovation Cards */}
       <div className="bg-gray-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -316,7 +303,6 @@ const AIInnovationRevolution2025 = () => {
               Discover the cutting-edge technologies that are changing everything
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {innovations.map((innovation, index) => (
               <motion.div
@@ -345,7 +331,6 @@ const AIInnovationRevolution2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Features Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div 
@@ -362,7 +347,6 @@ const AIInnovationRevolution2025 = () => {
             Everything you need to transform your business with AI
           </p>
         </motion.div>
-
         <div className="space-y-16">
           {features.map((category, categoryIndex) => (
             <motion.div
@@ -396,7 +380,6 @@ const AIInnovationRevolution2025 = () => {
           ))}
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -414,7 +397,6 @@ const AIInnovationRevolution2025 = () => {
               Numbers that speak for themselves
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -433,7 +415,6 @@ const AIInnovationRevolution2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Testimonials */}
       <div className="bg-gray-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -451,7 +432,6 @@ const AIInnovationRevolution2025 = () => {
               Don't just take our word for it - hear from the experts
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -486,7 +466,6 @@ const AIInnovationRevolution2025 = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -517,6 +496,8 @@ const AIInnovationRevolution2025 = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default AIInnovationRevolution2025;

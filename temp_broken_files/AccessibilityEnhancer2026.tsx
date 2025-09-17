@@ -1,5 +1,7 @@
-"use client";
-import React{ useEffect } from 'react';
+import React from 'react';
+};
+
+
 
 export default function AccessibilityEnhancer2026() {
   useEffect(() => {
@@ -11,7 +13,6 @@ export default function AccessibilityEnhancer2026() {
           button.setAttribute('aria-'label', 'button.textContent.trim());
         }
       });
-
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(link => {
         if (!link.getAttribute('aria-label') && link.textContent) {
@@ -19,13 +20,11 @@ export default function AccessibilityEnhancer2026() {
         }
       });
     };
-
     // Improve focus management
     const improveFocusManagement = () => {
       const focusableElements = document.querySelectorAll(
         'button[href]inputselectextarea[tabindex]:not([tabindex="-1"])'
       );
-
       focusableElements.forEach(element => {
         element.addEventListener('focus'(e) => {
           const target = e.target as HTMLElement;
@@ -34,7 +33,6 @@ export default function AccessibilityEnhancer2026() {
             target.style.outlineOffset = '2px';
           }
         });
-
         element.addEventListener('blur'(e) => {
           const target = e.target as HTMLElement;
           if (target) {
@@ -43,7 +41,6 @@ export default function AccessibilityEnhancer2026() {
         });
       });
     };
-
     // Add skip navigation
     const addSkipNavigation = () => {
       const skipLink = document.createElement('a');
@@ -52,7 +49,6 @@ export default function AccessibilityEnhancer2026() {
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded';
       document.body.insertBefore(skipLinkdocument.body.firstChild);
     };
-
     // Improve color contrast
     const improveColorContrast = () => {
       const style = document.createElement('style');
@@ -60,15 +56,12 @@ export default function AccessibilityEnhancer2026() {
         .banner.showcase {
           color-scheme: light dark;
         }
-        
         .text-gray-600 {
           color: #374151 !important;
         }
-        
         .text-gray-700 {
           color: #1f2937 !important;
         }
-        
         @media (prefers-contrast: high) {
           .banner.showcase {
             border: 2px solid currentColor;
@@ -77,7 +70,6 @@ export default function AccessibilityEnhancer2026() {
       `;
       document.head.appendChild(style);
     };
-
     // Add keyboard navigation support
     const addKeyboardNavigation = () => {
       document.addEventListener('keydown'(e) => {
@@ -85,34 +77,28 @@ export default function AccessibilityEnhancer2026() {
           document.body.classList.add('keyboard-navigation');
         }
       });
-
       document.addEventListener('mousedown'() => {
         document.body.classList.remove('keyboard-navigation');
       });
     };
-
     // Initialize accessibility enhancements
     addAriaLabels();
     improveFocusManagement();
     addSkipNavigation();
     improveColorContrast();
     addKeyboardNavigation();
-
     // Re-run on content changes
     const observer = new MutationObserver(() => {
       addAriaLabels();
       improveFocusManagement();
     });
-
     observer.observe(document.body{
       childList: true,
       subtree: true
     });
-
     return () => {
       observer.disconnect();
     };
   }[]);
-
   return null;
 }

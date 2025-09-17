@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const UltimateContentShowcase2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 mb-12 relative overflow-hidden">
@@ -17,7 +16,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             Discover our comprehensive collection of revolutionary technology content, featuring the most advanced AI, quantum computing, and neural interface solutions ever created
           </p>
         </div>
-        
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Featured Content */}
           <div className="space-y-8">
@@ -54,7 +52,6 @@ const UltimateContentShowcase2025: React.FC = () => {
                 Explore AI Consciousness →
               </a>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/40">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">⚛️</div>
@@ -89,7 +86,6 @@ const UltimateContentShowcase2025: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Column - Additional Content */}
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-10 border border-emerald-400/40">
@@ -125,7 +121,6 @@ const UltimateContentShowcase2025: React.FC = () => {
                 Start Neural Interface →
               </a>
             </div>
-
             <div className="bg-gradient-to-br from-orange-600/40 to-red-600/40 backdrop-blur-sm rounded-2xl p-10 border border-orange-400/40">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🌟</div>
@@ -161,7 +156,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -178,11 +172,9 @@ const UltimateContentShowcase2025: React.FC = () => {
           </div>
         </motion.div>
 import React, { useState } from 'react';
-
 const UltimateContentShowcase2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentSlides = [
     {
       id: 'revolutionary-breakthrough',
@@ -239,7 +231,6 @@ const UltimateContentShowcase2025: React.FC = () => {
       link: '/pages/InterdimensionalGateway2025'
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -248,25 +239,20 @@ const UltimateContentShowcase2025: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, contentSlides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600/20 via-transparent to-transparent"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -285,7 +271,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             Discover our groundbreaking collection of cutting-edge technology content that's reshaping the future
           </p>
         </motion.div>
-
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
           {/* Navigation Arrows */}
@@ -305,7 +290,6 @@ const UltimateContentShowcase2025: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Slide Container */}
           <div className="relative overflow-hidden rounded-2xl">
             <motion.div
@@ -322,7 +306,6 @@ const UltimateContentShowcase2025: React.FC = () => {
                   <div className="text-6xl mb-6">{contentSlides[currentSlide].icon}</div>
                   <h3 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h3>
                   <p className="text-xl opacity-80 mb-6">{contentSlides[currentSlide].description}</p>
-                  
                   <div className="space-y-3 mb-8">
                     {contentSlides[currentSlide].features.map((feature, index) => (
                       <motion.div
@@ -337,7 +320,6 @@ const UltimateContentShowcase2025: React.FC = () => {
                       </motion.div>
                     ))}
                   </div>
-
                   <div className="flex space-x-4">
                     <a
                       href={contentSlides[currentSlide].link}
@@ -353,7 +335,6 @@ const UltimateContentShowcase2025: React.FC = () => {
                     </button>
                   </div>
                 </div>
-
                 {/* Visual Element */}
                 <div className="flex items-center justify-center">
                   <motion.div
@@ -368,7 +349,6 @@ const UltimateContentShowcase2025: React.FC = () => {
               </div>
             </motion.div>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-2 mt-8">
             {contentSlides.map((_, index) => (
@@ -384,7 +364,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -411,7 +390,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -423,7 +401,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             <h3 className="text-3xl font-bold mb-4">📊 Content Impact Statistics</h3>
             <p className="text-xl opacity-80">The numbers that prove our revolutionary impact</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">50+</div>
@@ -443,7 +420,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -472,5 +448,6 @@ const UltimateContentShowcase2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateContentShowcase2025;

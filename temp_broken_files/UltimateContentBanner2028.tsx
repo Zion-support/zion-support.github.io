@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const UltimateContentBanner2028: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const slides = [
     {
       title: "🚀 Advanced Tech Solutions 2028",
@@ -27,7 +25,6 @@ const UltimateContentBanner2028: React.FC = () => {
       icon: "🌌"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -35,11 +32,9 @@ const UltimateContentBanner2028: React.FC = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [slides.length]);
-
   return (
             </p>
           </div>
-          
           {/* Carousel */}
           <div className="relative">
             <div className="overflow-hidden rounded-2xl">
@@ -73,7 +68,6 @@ const UltimateContentBanner2028: React.FC = () => {
                 ))}
               </div>
             </div>
-            
             {/* Navigation Dots */}
             <div className="flex justify-center mt-8 space-x-3">
               {slides.map((_, index) => (
@@ -89,7 +83,6 @@ const UltimateContentBanner2028: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Quick Access Links */}
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {slides.map((slide, index) => (
@@ -147,5 +140,6 @@ const UltimateContentBanner2028: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateContentBanner2028;

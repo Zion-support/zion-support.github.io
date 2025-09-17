@@ -1,10 +1,13 @@
 <<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2029.tsx
+<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2029.tsx
 import React, { useState, useEffect } from 'react';
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad:src/components/RevolutionaryTechShowcase2029.tsx
 const RevolutionaryTechShowcase2029: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 'consciousness-transfer',
@@ -73,7 +76,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
       borderColor: 'border-yellow-400/30'
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -82,12 +84,9 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const currentTech = technologies[activeTech];
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -103,7 +102,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
             Experience the most advanced technologies that will reshape humanity's future
           </p>
         </div>
-
         {/* Interactive Technology Display */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Technology Selector */}
@@ -135,7 +133,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Technology Details */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
             <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-xl p-8 border ${currentTech.borderColor} h-full`}>
@@ -146,11 +143,9 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
                   {currentTech.status}
                 </span>
               </div>
-              
               <p className="text-lg mb-6 text-center opacity-90">
                 {currentTech.description}
               </p>
-
               <div className="mb-6">
                 <h4 className="text-xl font-bold mb-4">Key Features:</h4>
                 <ul className="space-y-2">
@@ -162,7 +157,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className="text-center">
                 <button className={`bg-gradient-to-r ${currentTech.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Learn More →
@@ -171,7 +165,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {technologies.map((tech, index) => (
@@ -197,7 +190,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -373,5 +365,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryTechShowcase2029;

@@ -118,6 +118,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
   }, []);
 
   return (
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -159,6 +160,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+<<<<<<< HEAD:temp_broken_files/AbsoluteTechShowcase2031.tsx
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -202,27 +204,31 @@ const AbsoluteTechShowcase2031: React.FC = () => {
             }}
           />
         ))}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad:src/components/AbsoluteTechShowcase2031.tsx
       </div>
 
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
+          <h2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
             Beyond All Existence
-          </divh2>
-          <divp
+          </h2>
+          <p
             className="text-2xl text-gray-300 max-w-5xl mx-auto"
           >
             Experience technologies that transcend the very concept of existence itself, 
             enabling creation of absolute realities, manipulation of all timelines, and achievement of true absolute existence
-          </divp>
+          </p>
         </div>
 
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
+            <div
               key={currentTech}
               className="space-y-10"
             >
@@ -246,21 +252,31 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {absoluteTechs[currentTech].features.map((feature, index) => (
+                  <div
                     key={index}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(absoluteTechs[currentTech].stats).map(([key, value], index) => (
+                  <div
                     key={index}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Visual Representation */}
+            <div
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${absoluteTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -284,24 +300,17 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 
                 {/* Absolute Energy Effects */}
                 {[...Array(70)].map((_, i) => (
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-80"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      scale: [0, 5, 0],
-                      opacity: [0, 1, 0],
-                      x: [0, Math.random() * 500 - 250, 0],
-                      y: [0, Math.random() * 500 - 250, 0],
-                    }}
-                      duration: 6 + Math.random() * 5,
-                      repeat: Infinity,
-                      delay: Math.random() * 7,
-                    }}
                   />
                 ))}
               </div>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -320,6 +329,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
           </div>
 
           {/* Call to Action */}
+          <div
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">
@@ -336,6 +346,10 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 ⚡ Interdimensional Tech →
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
