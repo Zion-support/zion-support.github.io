@@ -13,8 +13,8 @@
   base = "."
 
 [build.environment]
-  NODE_VERSION = "22"
-  NODE_OPTIONS = "--max_old_space_size=6144"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=6144"
   # Use npm for dependency management
   NPM_FLAGS = "--ignore-scripts --no-optional"
   # Skip Netlify's Next.js plugin since this is a Vite static site
