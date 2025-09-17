@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title: string;
@@ -15,8 +16,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   ogImage = "/og-image.jpg"
 }) => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ]
+  };
+
   return (
-    <>
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -42,25 +56,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/ziontechgroup"
-            ]
-          })
-        }}
-      />
-    </>
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    </Helmet>
   );
 };
 
