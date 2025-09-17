@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction }  from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface CartItem {
   id: string;
@@ -8,17 +8,18 @@ interface CartItem {
   image?: string;
 }
 
-,interface CartState {
+interface CartState {
   items: CartItem[];
   total: number;
   itemCount: number;
 }
 
-,const initialState: CartState = {
+const initialState: CartState = {
   items: [],
-  total: "0",
-  itemCount: "0"}
-];
+  total: 0,
+  itemCount: 0
+};
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -27,10 +28,10 @@ const cartSlice = createSlice({
       const existingItem = state.items.find(item => item.id === action.payload.id);
       if (existingItem) {
         existingItem.quantity += action.payload.quantity;
-      } ,else {
+      } else {
         state.items.push(action.payload);
       }
-      ,state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
+      state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
     removeItem: (state, action: PayloadAction<string>) => {
@@ -50,7 +51,9 @@ const cartSlice = createSlice({
       state.items = [];
       state.total = 0;
       state.itemCount = 0;
-    }}});
+    }
+  }
+});
 
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 
