@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContentPromotion2027: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,5 +7,4 @@ const NewContentPromotion2027: React.FC = () => {
     </div>
   );
 };
-
 export default NewContentPromotion2027;

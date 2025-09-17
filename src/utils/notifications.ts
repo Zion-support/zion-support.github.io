@@ -12,7 +12,6 @@ export interface NotificationOptions {
   silent?: boolean;
   timestamp?: number;
   actions?: NotificationAction[];
-<<<<<<< HEAD
 }
 
 export interface NotificationAction {
@@ -39,7 +38,6 @@ export const notifications = {
     } catch (error) {
       console.warn('Failed to request notification permission:', error);
       return 'denied';
-=======
   data?: any;
 }
 
@@ -76,12 +74,10 @@ class NotificationManager {
   async requestPermission(): Promise<NotificationPermission> {
     if ('Notification' in window) {
       this.permission = await Notification.requestPermission();
->>>>>>> cursor/create-and-deploy-new-content-ee06
     }
     return this.permission;
   }
 
-<<<<<<< HEAD
   // Check current permission status
   getPermission: (): NotificationPermission => {
     if (!notifications.isSupported()) {
@@ -94,7 +90,6 @@ class NotificationManager {
   show: (options: NotificationOptions): Notification | null => {
     if (!notifications.isSupported() || Notification.permission !== 'granted') {
       console.warn('Notifications not supported or permission not granted');
-=======
   /**
    * Check if notifications are supported and permitted
    */
@@ -115,7 +110,6 @@ class NotificationManager {
   async showBrowserNotification(options: NotificationOptions): Promise<Notification | null> {
     if (!this.isSupported() || !this.isPermitted()) {
       console.warn('Notifications not supported or not permitted');
->>>>>>> cursor/create-and-deploy-new-content-ee06
       return null;
     }
 
@@ -128,12 +122,9 @@ class NotificationManager {
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
-<<<<<<< HEAD
         actions: options.actions || [],
-=======
         actions: options.actions,
         data: options.data
->>>>>>> cursor/create-and-deploy-new-content-ee06
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -150,7 +141,6 @@ class NotificationManager {
     }
   }
 
-<<<<<<< HEAD
   // Show a success notification
   success: (title: string, body?: string): Notification | null => {
     return notifications.show({
@@ -189,7 +179,6 @@ class NotificationManager {
       body,
       icon: '/icons/warning.png',
       tag: 'warning',
-=======
   /**
    * Add an in-app notification
    */
@@ -256,7 +245,6 @@ class NotificationManager {
       } catch (error) {
         console.error('Error in notification listener:', error);
       }
->>>>>>> cursor/create-and-deploy-new-content-ee06
     });
   },
 
@@ -374,3 +362,9 @@ export const notifications = {
 };
 
 export default notificationManager;
+// Notification utilities
+interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+        actions: options.actions || []

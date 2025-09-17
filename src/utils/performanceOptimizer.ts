@@ -2,41 +2,33 @@
  * Performance Optimization Utilities
  * Provides tools for optimizing React application performance
  */
-
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private observer: PerformanceObserver | null = null;
   private metrics: Map<string, number> = new Map();
-
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
     return PerformanceOptimizer.instance;
   }
-
   /**
    * Initialize performance monitoring
    */
   init(): void {
     if (typeof window === 'undefined') return;
-
     // Monitor Core Web Vitals
     this.observeCoreWebVitals();
-    
     // Monitor resource loading
     this.observeResourceTiming();
-    
     // Monitor long tasks
     this.observeLongTasks();
   }
-
   /**
    * Monitor Core Web Vitals (LCP, FID, CLS)
    */
   private observeCoreWebVitals(): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       // Largest Contentful Paint
       this.observer = new PerformanceObserver((list) => {
@@ -46,7 +38,6 @@ export class PerformanceOptimizer {
         console.log('LCP:', lastEntry.startTime);
       });
       this.observer.observe({ entryTypes: ['largest-contentful-paint'] });
-
       // First Input Delay
       this.observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -56,7 +47,6 @@ export class PerformanceOptimizer {
         });
       });
       this.observer.observe({ entryTypes: ['first-input'] });
-
       // Cumulative Layout Shift
       this.observer = new PerformanceObserver((list) => {
         let clsValue = 0;
@@ -74,13 +64,11 @@ export class PerformanceOptimizer {
       console.warn('Performance monitoring not supported:', error);
     }
   }
-
   /**
    * Monitor resource loading performance
    */
   private observeResourceTiming(): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       this.observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -96,13 +84,11 @@ export class PerformanceOptimizer {
       console.warn('Resource timing not supported:', error);
     }
   }
-
   /**
    * Monitor long tasks that block the main thread
    */
   private observeLongTasks(): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       this.observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -115,21 +101,18 @@ export class PerformanceOptimizer {
       console.warn('Long task monitoring not supported:', error);
     }
   }
-
   /**
    * Get performance metrics
    */
   getMetrics(): Map<string, number> {
     return new Map(this.metrics);
   }
-
   /**
    * Report performance metrics to analytics
    */
   reportMetrics(): void {
     const metrics = this.getMetrics();
     console.log('Performance Metrics:', Object.fromEntries(metrics));
-    
     // Send to analytics service if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
       metrics.forEach((value, key) => {
@@ -141,7 +124,6 @@ export class PerformanceOptimizer {
       });
     }
   }
-
   /**
    * Cleanup observers
    */
@@ -152,30 +134,24 @@ export class PerformanceOptimizer {
     }
   }
 }
-
 /**
  * React hook for performance optimization
  */
 export function usePerformanceOptimization() {
   const [metrics, setMetrics] = React.useState<Map<string, number>>(new Map());
-
   React.useEffect(() => {
     const optimizer = PerformanceOptimizer.getInstance();
     optimizer.init();
-
     const interval = setInterval(() => {
       setMetrics(optimizer.getMetrics());
     }, 5000);
-
     return () => {
       optimizer.cleanup();
       clearInterval(interval);
     };
   }, []);
-
   return metrics;
 }
-
 /**
  * Debounce utility for performance optimization
  */
@@ -189,7 +165,6 @@ export function debounce<T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(...args), wait);
   };
 }
-
 /**
  * Throttle utility for performance optimization
  */
@@ -206,7 +181,6 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
-
 /**
  * Memoization utility for expensive calculations
  */
@@ -215,20 +189,16 @@ export function memoize<T extends (...args: any[]) => any>(
   keyGenerator?: (...args: Parameters<T>) => string
 ): T {
   const cache = new Map<string, ReturnType<T>>();
-  
   return ((...args: Parameters<T>) => {
     const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
-    
     if (cache.has(key)) {
       return cache.get(key);
     }
-    
     const result = func(...args);
     cache.set(key, result);
     return result;
   }) as T;
 }
-
 /**
  * Image lazy loading utility
  */
@@ -242,12 +212,10 @@ export function createLazyImageObserver(
     threshold: 0.1,
     ...options
   };
-
   return new IntersectionObserver((entries) => {
     entries.forEach(callback);
   }, defaultOptions);
 }
-
 /**
  * Preload critical resources
  */
@@ -256,7 +224,6 @@ export function preloadCriticalResources(resources: string[]): void {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
-    
     if (resource.endsWith('.css')) {
       link.as = 'style';
     } else if (resource.endsWith('.js')) {
@@ -264,24 +231,19 @@ export function preloadCriticalResources(resources: string[]): void {
     } else if (resource.match(/\.(jpg|jpeg|png|webp|svg)$/)) {
       link.as = 'image';
     }
-    
     document.head.appendChild(link);
   });
 }
-
 /**
  * Bundle size analyzer
  */
 export function analyzeBundleSize(): void {
   if (typeof window === 'undefined') return;
-
   const scripts = Array.from(document.scripts);
   const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
-  
   console.log('Bundle Analysis:');
   console.log('Scripts:', scripts.length);
   console.log('Stylesheets:', stylesheets.length);
-  
   // Analyze script sizes
   scripts.forEach((script, index) => {
     if (script.src) {
@@ -289,5 +251,4 @@ export function analyzeBundleSize(): void {
     }
   });
 }
-
 export default PerformanceOptimizer;

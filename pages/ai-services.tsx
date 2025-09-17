@@ -1,11 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
-=======
 import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
 
 function AIServices() {
   const contact = {
@@ -831,7 +830,6 @@ function AIServices() {
     },
     {
       icon: Brain,
-<<<<<<< HEAD
       name: 'Generative AI Content Studio',
       description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
@@ -850,7 +848,6 @@ function AIServices() {
         'Consistent brand messaging across all channels',
         'Reduced content creation costs by 70%',
         'Improved content engagement and conversion rates'
-=======
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
       features: [
@@ -869,7 +866,6 @@ function AIServices() {
         'Reduced research and development costs',
         'Improved success rates in clinical trials',
         'Enhanced drug safety profiles'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       ]
     },
     {
@@ -895,7 +891,6 @@ function AIServices() {
       ]
     },
     {
-<<<<<<< HEAD
       icon: Brain,
       name: 'AI-Powered Quality Assurance',
       description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
@@ -915,7 +910,6 @@ function AIServices() {
         '50% reduction in quality control costs',
         'Real-time quality monitoring and alerts',
         'Improved product consistency and customer satisfaction'
-=======
       icon: TrendingUp,
       name: 'AI-Powered Financial Trading Algorithm',
       description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
@@ -1067,7 +1061,6 @@ function AIServices() {
         'Reduced transportation costs',
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       ]
     }
   ];

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentBanner2034: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">

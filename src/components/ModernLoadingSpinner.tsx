@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 interface LoadingSpinnerProps {
   message?: string;
   progress?: number;
@@ -9,7 +8,6 @@ interface LoadingSpinnerProps {
   variant?: 'default' | 'dots' | 'pulse' | 'wave' | 'spinner';
   className?: string;
 }
-
 const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   message = 'Loading...',
   progress,
@@ -19,7 +17,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className = ''
 }) => {
   const [dots, setDots] = useState('');
-
   useEffect(() => {
     if (variant === 'dots') {
       const interval = setInterval(() => {
@@ -28,21 +25,18 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       return () => clearInterval(interval);
     }
   }, [variant]);
-
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
   };
-
   const textSizeClasses = {
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl'
   };
-
   const renderSpinner = () => {
     switch (variant) {
       case 'dots':
@@ -65,7 +59,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             ))}
           </div>
         );
-
       case 'pulse':
         return (
           <motion.div
@@ -80,7 +73,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             }}
           />
         );
-
       case 'wave':
         return (
           <div className="flex space-x-1">
@@ -100,7 +92,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             ))}
           </div>
         );
-
       case 'spinner':
         return (
           <motion.div
@@ -113,7 +104,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             }}
           />
         );
-
       default:
         return (
           <motion.div
@@ -132,7 +122,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         );
     }
   };
-
   return (
     <AnimatePresence>
       <motion.div
@@ -150,7 +139,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           >
             {renderSpinner()}
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -160,7 +148,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             <h2 className={`${textSizeClasses[size]} font-semibold text-white`}>
               {message}{variant === 'dots' ? dots : ''}
             </h2>
-
             {showProgress && progress !== undefined && (
               <div className="w-64 mx-auto">
                 <div className="flex justify-between text-sm text-gray-300 mb-2">
@@ -177,7 +164,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
                 </div>
               </div>
             )}
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -192,5 +178,4 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </AnimatePresence>
   );
 };
-
 export default ModernLoadingSpinner;

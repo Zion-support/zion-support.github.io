@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentBanner2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
@@ -14,7 +13,6 @@ const UltimateContentBanner2036: React.FC = () => {
             Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🧠</div>
@@ -40,7 +38,6 @@ const UltimateContentBanner2036: React.FC = () => {
               Experience Breakthrough →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Consciousness</h3>
@@ -63,7 +60,6 @@ const UltimateContentBanner2036: React.FC = () => {
             </div>
           </div>
         </div>
-        
         <div className="text-center mt-8">
           <a href="/pages/UltimateTechBreakthrough2036" className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience Ultimate Breakthrough →
