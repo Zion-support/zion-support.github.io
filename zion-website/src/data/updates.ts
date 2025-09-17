@@ -15,6 +15,7 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -3089,6 +3090,9 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Guide'
   },
+=======
+  // Fresh content added 2025-09-16
+>>>>>>> origin/feat/new-content-2025-09-16-1758004867
   {
     title: 'Guide: AI Risk Mitigation in Production (2026)',
     summary: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
@@ -3103,6 +3107,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-16',
     tag: 'Release'
   },
+<<<<<<< HEAD
   // Fresh content added 2025-09-16 (new)
   {
     title: 'Playbook: Production RAG Latency Budgets (2026)',
@@ -3501,12 +3506,46 @@ export const siteUpdates: SiteUpdate[] = updates
 
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 =======
+=======
+
+  // Existing highlighted content
+  {
+    title: 'Deep Dive: Enterprise Agent Observability (2026)',
+    summary:
+      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
+    href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
+    date: '2025-09-15',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+    summary:
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
+    summary:
+      'Advanced real-time monitoring and analytics with predictive insights and anomaly detection.',
+    href: '/updates/real-time-ai-analytics-dashboard-v3-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  }
+]
+
+>>>>>>> origin/feat/new-content-2025-09-16-1758004867
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
     .sort((a, b) => safeDate(b.date) - safeDate(a.date))
     .slice(0, limit)
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+
+>>>>>>> origin/feat/new-content-2025-09-16-1758004867
