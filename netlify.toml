@@ -1,4 +1,5 @@
 [# Netlify build configuration for Next.js app in zion-website]
+# noop: retrigger netlify build
 [build]
   base = "zion-website"
   command = "npm ci && npm run build"
