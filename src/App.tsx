@@ -47,10 +47,6 @@ const LoadingSpinner = () => (
   </div>
 );
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e175393cdeb173fa96f986ebf86824b4a7d7da3a
 function App() {
   const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
     enableLazyLoading: true,
