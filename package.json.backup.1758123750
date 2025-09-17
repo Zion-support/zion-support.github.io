@@ -254,13 +254,9 @@
     "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production",
     "analyze": "NODE_OPTIONS=\"--max-old-space-size=6144\" vite build --mode production && npx vite-bundle-analyzer dist",
     "lighthouse": "lighthouse http://localhost:4173 --output html --output-path ./lighthouse-report.html",
-    "performance:audit": "lighthouse http://localhost:4173 --output html --output-path ./performance-audit.html",
-    "performance:analyze": "npm run build && npx vite-bundle-analyzer dist",
     "performance:test": "npm run build:optimized && npm run preview & sleep 5 && npm run lighthouse && pkill -f \"vite preview\"",
     "optimize:images": "node scripts/optimize-images.js",
-    "cleanup:cache": "node scripts/cleanup-cache.js",
-    "a11y:test": "axe-core --version && echo 'Accessibility testing available'",
-    "a11y:audit": "npm run build && npm run preview & sleep 5 && npx pa11y http://localhost:4173 && pkill -f 'vite preview'"
+    "cleanup:cache": "node scripts/cleanup-cache.js"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",

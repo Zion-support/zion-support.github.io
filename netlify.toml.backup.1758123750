@@ -1,5 +1,5 @@
 # Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 20:45 UTC) - post-massive-merge: all PRs merged, build verified
+# noop: retrigger netlify build (2025-09-17 20:05 UTC) - post-massive-merge: all PRs merged, build verified
 [build]
   # Build the root Vite app and publish static assets
   command = "npm run build:netlify"
@@ -195,19 +195,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
