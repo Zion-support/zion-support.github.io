@@ -250,7 +250,13 @@
     "front:directory": "node automation/front-index-directory-builder.cjs",
     "front:continuous": "node automation/continuous-front-runner.cjs",
     "front:continuous:fast": "node -e \"const cp=require('child_process'); const run=()=>cp.exec('node automation/continuous-front-runner.cjs',()=>{}); run(); setInterval(run, 1000*60*5);\"",
-    "ads:fast": "node automation/fast-advertising-orchestrator.cjs"
+    "ads:fast": "node automation/fast-advertising-orchestrator.cjs",
+    "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production",
+    "analyze": "NODE_OPTIONS=\"--max-old-space-size=6144\" vite build --mode production && npx vite-bundle-analyzer dist",
+    "lighthouse": "lighthouse http://localhost:4173 --output html --output-path ./lighthouse-report.html",
+    "performance:test": "npm run build:optimized && npm run preview & sleep 5 && npm run lighthouse && pkill -f \"vite preview\"",
+    "optimize:images": "node scripts/optimize-images.js",
+    "cleanup:cache": "node scripts/cleanup-cache.js"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
