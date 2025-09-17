@@ -1,6 +1,3 @@
-
-const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
-  return (
     </div>
   );
 };

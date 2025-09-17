@@ -1,4 +1,3 @@
-
 const App.minimal = () => {
   return (
       </div>

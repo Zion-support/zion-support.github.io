@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -14,7 +13,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
               <div className="absolute top-8 right-16 w-6 h-6 bg-purple-400 rounded-full animate-pulse delay-300"></div>
               <div className="absolute bottom-4 left-1/3 w-4 h-4 bg-indigo-400 rounded-full animate-pulse delay-700"></div>
             </div>
-
             <div className="relative max-w-7xl mx-auto px-4 py-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
@@ -26,7 +24,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                       <Brain className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   {/* Main content */}
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-1">
@@ -39,17 +36,14 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                         NEW RELEASE
                       </span>
                     </div>
-                    
                     <h3 className="text-lg font-bold mb-1">
                       🧠 Neural Consensus Revolution: $15B ROI Achieved!
                     </h3>
-                    
                     <p className="text-sm text-blue-100 mb-2">
                       Discover how Fortune 100 companies are using collective AI intelligence to achieve unprecedented business results. 
                       <span className="font-semibold text-yellow-300"> 99.9% decision accuracy</span> and 
                       <span className="font-semibold text-green-300"> 400% average ROI</span>.
                     </p>
-
                     {/* Key benefits */}
                     <div className="flex items-center space-x-4 text-xs text-blue-200">
                       <div className="flex items-center">
@@ -67,7 +61,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Action buttons */}
                 <div className="flex items-center space-x-3">
                   <a href="/src/pages/blog/ai-2026-neural-consensus-revolution" onClick={handleLearnMore}>
@@ -78,7 +71,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </divbutton>
                   </a>
-
                   <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi" onClick={handleLearnMore}>
                     <divbutton
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -87,7 +79,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                       <TrendingUp className="w-4 h-4 ml-2" />
                     </divbutton>
                   </a>
-
                   <button
                     onClick={handleDismiss}
                     className="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
@@ -98,7 +89,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Progress bar */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600">
               <div
@@ -110,6 +100,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
+
 };
 
 export default NeuralConsensus2026PromotionBanner;

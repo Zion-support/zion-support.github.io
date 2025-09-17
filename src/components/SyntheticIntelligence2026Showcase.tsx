@@ -1,15 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const SyntheticIntelligence2026Showcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const tabs = [
     {
       id: 0,
@@ -80,25 +77,21 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
       }
     }
   ];
-
   const achievements = [
     { metric: "99.8%", label: "Diagnostic Accuracy", color: "text-green-400" },
     { metric: "10x", label: "Faster Problem Solving", color: "text-blue-400" },
     { metric: "300%", label: "Efficiency Improvement", color: "text-purple-400" },
     { metric: "85%", label: "Market Prediction Accuracy", color: "text-orange-400" }
   ];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-cyan-900 to-blue-900 text-white py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-5 animate-pulse"></div>
-      
       {/* Floating Elements */}
       <div className="absolute top-20 left-20 w-20 h-20 bg-cyan-500 rounded-full opacity-20 animate-bounce"></div>
       <div className="absolute top-40 right-32 w-16 h-16 bg-blue-500 rounded-full opacity-30 animate-bounce delay-1000"></div>
       <div className="absolute bottom-32 left-40 w-12 h-12 bg-purple-500 rounded-full opacity-25 animate-bounce delay-2000"></div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
@@ -121,7 +114,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
             and solving problems we cannot even conceptualize
           </p>
         </motion.div>
-
         {/* Achievements */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -138,7 +130,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
             </div>
           ))}
         </motion.div>
-
         {/* Interactive Tabs */}
         <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-20">
           {/* Tab Navigation */}
@@ -160,7 +151,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
               </motion.button>
             ))}
           </div>
-
           {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -177,7 +167,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
               <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
                 {tabs[activeTab].content.description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {tabs[activeTab].content.features.map((feature, index) => (
                   <motion.div
@@ -194,7 +183,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
                   </motion.div>
                 ))}
               </div>
-
               <motion.a
                 href={tabs[activeTab].content.link}
                 whileHover={{ scale: 1.05 }}
@@ -209,7 +197,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
         {/* Call to Action */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -252,6 +239,7 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default SyntheticIntelligence2026Showcase;

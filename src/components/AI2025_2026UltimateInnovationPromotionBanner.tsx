@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
   return (
     <div>
@@ -11,7 +10,6 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30" />
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30" />
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             {/* Left Content */}
@@ -26,11 +24,9 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
                   🚀 New 2025-2026 Innovation Showcase
                 </span>
               </div>
-              
               <h2 className="text-2xl lg:text-3xl font-bold mb-2">
                 Experience the Ultimate AI Breakthroughs
               </h2>
-              
               <div className="flex items-center justify-center lg:justify-start mb-4">
                 <div
                   key={currentFeature}
@@ -42,13 +38,11 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
               <p className="text-gray-200 text-sm lg:text-base max-w-2xl">
                 Discover revolutionary AI innovations that will reshape our world. 
                 Quantum-AI fusioneural consensusand synthetic consciousness await.
               </p>
             </div>
-
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <divbutton
@@ -58,7 +52,6 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
                 Explore Now
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </divbutton>
-              
               <divbutton
                 className="border-2 border-white/30 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-white/10 transition-all duration-300 flex items-center"
               >
@@ -66,7 +59,6 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
                 Learn More
               </divbutton>
             </div>
-
             {/* Close Button */}
             <divbutton
               onClick={() => setIsVisible(false)}
@@ -76,7 +68,6 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
             </divbutton>
           </div>
         </div>
-
         {/* Animated Progress Bar */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20">
           <div
@@ -86,6 +77,7 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AI2025_2026UltimateInnovationPromotionBanner;

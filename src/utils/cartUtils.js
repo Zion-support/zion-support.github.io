@@ -1,5 +1,3 @@
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
@@ -21,6 +19,8 @@ export const cartUtils = {
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     if (existingItem) {
       return cart.map(cartItem =>
         cartItem.id === item.id
@@ -28,8 +28,6 @@ export const cartUtils = {
           : cartItem
       );
     }
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
@@ -49,39 +47,35 @@ export const cartUtils = {
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   removeItem: (cart, itemId) => {
     return cart.filter(item => item.id !== itemId);
   },
   
-=======
-  // Update item quantity
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   updateQuantity: (cart, itemId, quantity) => {
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
-=======
-    
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     return cart.map(item =>
       item.id === itemId ? { ...item, quantity } : item
     );
   },
   
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
   // Clear cart
   clearCart: () => {
@@ -92,11 +86,12 @@ export const cartUtils = {
   // Get total items count
 >>>>>>> cursor/create-and-deploy-new-content-d952
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   getTotalItems: (cart) => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   },
   
->>>>>>> cursor/create-and-deploy-new-content-cc9d
   },
   
   // Check if item is in cart
@@ -117,8 +112,9 @@ export const cartUtils = {
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   }
 };
 
 export default cartUtils;
-=======

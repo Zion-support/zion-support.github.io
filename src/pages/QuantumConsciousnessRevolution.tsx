@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumConsciousnessRevolution: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -25,7 +24,6 @@ const QuantumConsciousnessRevolution: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Quantum Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-800 to-purple-800 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
@@ -36,7 +34,6 @@ const QuantumConsciousnessRevolution: React.FC = () => {
             </p>
             <div className="text-cyan-400 font-bold">⚡ Infinite Speed</div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800 to-pink-800 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold mb-4">Consciousness Expansion</h3>
@@ -45,7 +42,6 @@ const QuantumConsciousnessRevolution: React.FC = () => {
             </p>
             <div className="text-purple-400 font-bold">🌌 Beyond Limits</div>
           </div>
-
           <div className="bg-gradient-to-br from-pink-800 to-red-800 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">✨</div>
             <h3 className="text-2xl font-bold mb-4">Creative Transcendence</h3>
@@ -55,7 +51,6 @@ const QuantumConsciousnessRevolution: React.FC = () => {
             <div className="text-pink-400 font-bold">🎨 Unlimited Creativity</div>
           </div>
         </div>
-
         {/* Quantum Stats */}
         <div className="bg-gradient-to-r from-indigo-800 to-purple-800 p-12 rounded-3xl mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Quantum Consciousness Impact</h2>
@@ -78,7 +73,6 @@ const QuantumConsciousnessRevolution: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -107,7 +101,6 @@ const QuantumConsciousnessRevolution: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Human Limitations?</h2>
@@ -126,6 +119,7 @@ const QuantumConsciousnessRevolution: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default QuantumConsciousnessRevolution;

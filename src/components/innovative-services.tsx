@@ -8,6 +8,8 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+};
+
 
 export default function InnovativeServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -36,12 +38,12 @@ export default function InnovativeServicesPage() {
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = getInnovativeServicesByCategory(selectedCategory);
-  }
+  };
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getInnovativeServicesByPriceRange(min, max);
-  }
+  };
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -50,7 +52,7 @@ export default function InnovativeServicesPage() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  }
+  };
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -313,6 +315,6 @@ export default function InnovativeServicesPage() {
                   <div className="mt-1">Website: {contactInfo.website}</div>
     </>
   );
-};
+
 
 export default innovative-services;

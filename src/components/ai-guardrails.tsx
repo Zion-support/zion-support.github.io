@@ -1,4 +1,6 @@
 import React from 'react';
+};
+
 
 export default function AIGuardrailsPage() {
 	const contactInfo = {
@@ -59,4 +61,3 @@ export default function AIGuardrailsPage() {
 						<div className="text-center mt-6">
 							<Button href="/services" variant="outline" className="border-rose-500 text-rose-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>
 	);
-}

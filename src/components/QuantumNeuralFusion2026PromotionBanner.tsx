@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function QuantumNeuralFusion2026PromotionBanner() {
   return (
@@ -119,4 +121,3 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
           >
             🎯 Get Your Personalized Implementation Plan
   );
-}

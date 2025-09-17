@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function RevolutionarySuccessStoryBanner() {
   return (
@@ -92,4 +94,3 @@ export default function RevolutionarySuccessStoryBanner() {
           <p className="text-emerald-100 text-sm">
             <span className="font-semibold">Success Metrics:</span> 65% cost reduction • 300% efficiency gain • 95% quality improvement • $100M ROI
   );
-}

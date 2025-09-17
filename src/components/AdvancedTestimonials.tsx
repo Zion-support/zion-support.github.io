@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedTestimonials: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -33,6 +32,7 @@ const AdvancedTestimonials: React.FC = () => {
                   "{testimonial.content}"
           ))}
   );
+
 };
 
 export default AdvancedTestimonials;

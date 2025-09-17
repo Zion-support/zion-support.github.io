@@ -1,6 +1,3 @@
-
-const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
-  return (
   );
 };
 

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const UltimateContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const slides = [
     {
       title: "🌟 ULTIMATE TECH SHOWCASE 2026",
@@ -47,16 +45,13 @@ const UltimateContentBanner: React.FC = () => {
       icon: "⚡"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(interval);
   }, [slides.length]);
-
   if (!isVisible) return null;
-
   return (
     <div className="relative overflow-hidden mb-8">
       <AnimatePresence mode="wait">
@@ -83,7 +78,6 @@ const UltimateContentBanner: React.FC = () => {
               />
             ))}
           </div>
-
           <div className="relative z-10">
             <div className="flex items-center justify-between">
               <div className="flex-1">
@@ -108,7 +102,6 @@ const UltimateContentBanner: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
               <div className="hidden lg:block ml-8">
                 <div className="text-8xl opacity-20 animate-pulse">
                   {slides[currentSlide].icon}
@@ -116,7 +109,6 @@ const UltimateContentBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Close Button */}
           <button
             onClick={() => setIsVisible(false)}
@@ -128,7 +120,6 @@ const UltimateContentBanner: React.FC = () => {
           </button>
         </motion.div>
       </AnimatePresence>
-
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-4">
         {slides.map((_, index) => (
@@ -143,6 +134,7 @@ const UltimateContentBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentBanner;

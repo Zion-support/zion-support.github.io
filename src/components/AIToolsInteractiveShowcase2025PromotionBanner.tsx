@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIToolsInteractiveShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 py-16">
@@ -86,13 +85,12 @@ const AIToolsInteractiveShowcase2025PromotionBanner: React.FC = () => {
           <p className="text-gray-400 text-sm">
             Join 25,000+ developers already using our AI tool suite
   );
-}
+};
 const toolCategories = [
   { icon: <Code className="h-8 w-8 text-white" />title: "Development"count: "45" },
   { icon: <Brain className="h-8 w-8 text-white" />title: "Machine Learning"count: "32" },
   { icon: <Target className="h-8 w-8 text-white" />title: "Business Automation"count: "67" },
   { icon: <Shield className="h-8 w-8 text-white" />title: "Security"count: "28" }
-];
 const featuredTools = [
   {
     icon: <Brain className="h-5 w-5 text-white" />,
@@ -114,8 +112,7 @@ const featuredTools = [
     category: "Customer Service",
     description: "Advanced conversational AI with human-like responses.",
     status: "Production Ready"
-  }
-];
+  };
 const liveDemos = [
   {
     title: "Neural Code Generation",
@@ -128,5 +125,4 @@ const liveDemos = [
     duration: "20 min",
     description: "See quantum algorithms process data 1000x faster.",
     complexity: "Advanced"
-  }
-];
+  };

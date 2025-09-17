@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +38,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +57,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Content Tabs */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +68,6 @@ const UltimateContentRevolution2025: React.FC = () => {
               {contentSections[activeTab].subtitle}
             </p>
           </div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center mb-12">
             {Object.keys(contentSections).map((tab) => (
@@ -88,7 +84,6 @@ const UltimateContentRevolution2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Content Grid */}
             <div
               key={activeTab}
@@ -114,7 +109,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,7 +116,6 @@ const UltimateContentRevolution2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
             <p className="text-xl text-gray-300">Hear from industry leaders 'who', 've transformed their businesses with our AI solutions</p>
           </div>
-
           <div className="relative">
               <div
                 key={currentSlide}
@@ -145,7 +138,6 @@ const UltimateContentRevolution2025: React.FC = () => {
                 <p className="text-lg text-gray-300 italic">"{testimonials[currentSlide].content}"</p>
               </div>
             </div>
-
             {/* Testimonial Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
               {testimonials.map((_index) => (
@@ -161,7 +153,6 @@ const UltimateContentRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -192,6 +183,7 @@ const UltimateContentRevolution2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentRevolution2025;

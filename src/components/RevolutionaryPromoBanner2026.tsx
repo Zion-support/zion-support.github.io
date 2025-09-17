@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const RevolutionaryPromoBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const promotionalContent = [
     {
       id: 1,
@@ -47,21 +45,16 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
       bgGradient: "from-rose-600/50 to-pink-600/50"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="relative overflow-hidden">
       <AnimatePresence mode="wait">
@@ -77,7 +70,6 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
           <div className={`absolute inset-0 bg-gradient-to-r ${promotionalContent[currentSlide].bgGradient} backdrop-blur-sm`}></div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-          
           <div className="relative z-10">
             <div className="flex items-center justify-between">
               <div className="flex-1">
@@ -106,7 +98,6 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
               <div className="hidden md:block ml-8">
                 <div className="text-6xl opacity-20">
                   {currentSlide === 0 && "🧠"}
@@ -117,7 +108,6 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Close Button */}
           <button
             onClick={handleClose}
@@ -127,7 +117,6 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-
           {/* Progress Indicators */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {promotionalContent.map((_, index) => (
@@ -142,7 +131,6 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
           </div>
         </motion.div>
       </AnimatePresence>
-
       {/* Additional Promotional Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {promotionalContent.slice(0, 4).map((item, index) => (
@@ -165,7 +153,6 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
           </motion.div>
         ))}
       </div>
-
       {/* Special Announcement Banner */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -195,6 +182,7 @@ const RevolutionaryPromoBanner2026: React.FC = () => {
       </motion.div>
     </div>
   );
+
 };
 
 export default RevolutionaryPromoBanner2026;

@@ -1,5 +1,4 @@
 import React from "react";
-
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -12,7 +11,6 @@ const Contact = () => {
             Get in touch with our team for your technology needs
           </p>
         </div>
-        
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-8 backdrop-blur-sm border border-blue-400/20">
             <h2 className="text-3xl font-bold mb-6 text-blue-300">Get In Touch</h2>
@@ -35,6 +33,7 @@ const Contact = () => {
       </div>
     </div>
   );
+
 };
 
 export default Contact;

@@ -1,6 +1,3 @@
-
-const AI2025UltimateInnovationShowcase: React.FC = () => {
-  return (
   );
 };
 

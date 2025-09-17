@@ -1,7 +1,6 @@
 import React from 'react';
 import { Brain, Circle, Cloud, Shield, Star, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryTech2026Showcase: React.FC = () => {
   const technologies = [
     {
@@ -47,7 +46,6 @@ const RevolutionaryTech2026Showcase: React.FC = () => {
       color: "from-red-500 to-pink-500"
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +62,6 @@ const RevolutionaryTech2026Showcase: React.FC = () => {
             Experience the future of technology with breakthrough innovations that are reshaping industries and transforming the way we work, think, and create.
           </p>
         </div>
-
         {/* Technology Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {technologies.map((tech, index) => {
@@ -77,21 +74,17 @@ const RevolutionaryTech2026Showcase: React.FC = () => {
               >
                 {/* Background gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
-                
                 {/* Content */}
                 <div className="relative z-10">
                   <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-400 transition-colors duration-300">
                     {tech.title}
                   </h3>
-                  
                   <p className="text-blue-100 mb-6 leading-relaxed">
                     {tech.description}
                   </p>
-                  
                   <div className="flex items-center text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">
                     Explore Technology
                     <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,9 +94,9 @@ const RevolutionaryTech2026Showcase: React.FC = () => {
                 </div>
               </Link>
             );
+};
           })}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 via-pink-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
@@ -134,6 +127,6 @@ const RevolutionaryTech2026Showcase: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default RevolutionaryTech2026Showcase;

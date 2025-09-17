@@ -1,6 +1,3 @@
-
-const Homepage2025: React.FC = () => {
-  return (
   );
 };
 

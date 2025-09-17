@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+};
+
 
 export default function AdvancedAutomation2026() {
   return (
@@ -119,4 +121,3 @@ export default function AdvancedAutomation2026() {
             <Link href="/demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
               Request Demo
   );
-}

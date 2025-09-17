@@ -1,157 +1,97 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Atom, Zap, Star, TrendingUp, Eye } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentShowcase2025: React.FC = () => {
-  const featuredContent = [
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const revolutionaryContent = [
     {
       id: 1,
-      title: "AI Revolutionary Breakthrough 2025",
-      description: "The most significant advancement in artificial intelligence history, revolutionizing how we think about, build, and deploy intelligent systems.",
-      icon: Brain,
-      gradient: "from-blue-600 to-purple-600",
-      link: "/pages/AIRevolutionaryBreakthrough2025",
-      category: "AI Innovation",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Quantum Computing Breakthrough 2025",
-      description: "The world's first commercially viable quantum computing breakthrough, delivering exponential computational power that transforms every industry.",
-      icon: Atom,
       gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingBreakthrough2025",
-      category: "Quantum Computing",
-      featured: true
+      borderColor: "border-cyan-400",
+      bgColor: "from-cyan-600/30 to-blue-600/30",
+      features: ["Quantum neural networks", "Exponential processing speed", "Quantum machine learning", "Parallel universe computing"],
+      link: "/pages/QuantumComputingRevolution2025"
     },
     {
       id: 3,
-      title: "Neural Interface Revolution 2025",
-      description: "The breakthrough that connects human consciousness directly to digital systems, revolutionizing human-computer interaction.",
-      icon: Zap,
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      category: "Neural Technology",
-      featured: true
-    }
-  ];
-
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-400/30 rounded-full px-6 py-2 mb-6">
-            <Star className="w-5 h-5 mr-2 text-yellow-400" />
-            <span className="text-sm font-medium">Revolutionary Content 2025</span>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY CONTENT SHOWCASE 2025
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Breakthrough Technology Showcase
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Experience the Future Today
           </h2>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the revolutionary technologies that are reshaping our world and defining the future of human progress.
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Discover groundbreaking technologies that are reshaping our world and defining the next decade
           </p>
-        </motion.div>
+        </div>
 
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <motion.div
-              key={content.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group relative"
-            >
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
-                {/* Featured Badge */}
-                {content.featured && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-1 rounded-full text-sm font-bold">
-                    <Star className="w-4 h-4 inline mr-1" />
-                    Featured
+        {/* Main Showcase */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
                   </div>
-                )}
-
-                {/* Icon */}
-                <div className={`bg-gradient-to-r ${content.gradient} p-4 rounded-xl w-fit mb-6`}>
-                  <content.icon className="w-8 h-8 text-white" />
                 </div>
+              ))}
+            </div>
+          </div>
 
-                {/* Category */}
-                <div className="inline-block bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-1 text-sm mb-4">
-                  <span className="text-blue-400 font-medium">{content.category}</span>
-                </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                  {content.title}
-                </h3>
+          {/* Play/Pause Button */}
+          <button
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+          >
+            {isAutoPlaying ? (
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            )}
+          </button>
+        </div>
 
-                {/* Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {content.description}
-                </p>
-
-                {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center w-full justify-center group`}
-                >
-                  Explore Now
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </div>
-            </motion.div>
+        {/* Dots Indicator */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {revolutionaryContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-400/30 rounded-2xl p-12">
-            <TrendingUp className="w-16 h-16 text-blue-400 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Stay Ahead of the Revolution
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of innovators and thought leaders who are already exploring these 
-              revolutionary technologies and shaping the future.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >
-                <Eye className="mr-2 w-5 h-5" />
-                View All Breakthroughs
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >
-                Get Updates
-              </motion.button>
-            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

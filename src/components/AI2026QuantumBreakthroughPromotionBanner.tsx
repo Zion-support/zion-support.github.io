@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2026QuantumBreakthroughPromotionBanner() {
   return (
@@ -75,4 +77,3 @@ export default function AI2026QuantumBreakthroughPromotionBanner() {
       <div className="absolute top-1/4 right-20 w-8 h-8 bg-blue-300/20 rounded-full animate-pulse delay-300">
         <div className="absolute inset-1 border border-blue-300/40 rounded-full"></div>
   );
-}

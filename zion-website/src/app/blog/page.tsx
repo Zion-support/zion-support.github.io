@@ -1,9 +1,6 @@
 import React from 'react';
 
 =======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 =======
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
@@ -308,6 +305,9 @@ import React from 'react';
 ]
 
 export default function BlogIndexPage() {
+=======
+const page: React.FC = () => {
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">page</h3>
@@ -317,34 +317,3 @@ export default function BlogIndexPage() {
 };
 
 export default page;
-=======
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
-          <p className="text-gray-600 mb-10">Insights, frameworks, and blueprints from Zion Tech Group.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.slug} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:shadow-sm transition">
-                <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-700">
-                    {post.title}
-                  </Link>
-                </h2>
-                <p className="text-gray-600">{post.summary}</p>
-                <div className="mt-4">
-                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold">
-                    Read →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5

@@ -1,6 +1,5 @@
 import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const NewContent2026PromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -11,7 +10,6 @@ const NewContent2026PromotionBanner: React.FC = () => {
         <div className="absolute top-20 right-20 w-16 h-16 bg-pink-400/20 rounded-full animate-bounce delay-1000"></div>
         <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-green-400/20 rounded-full animate-bounce delay-2000"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           {/* Main heading */}
@@ -22,12 +20,10 @@ const NewContent2026PromotionBanner: React.FC = () => {
             </h2>
             <Sparkles className="w-8 h-8 text-yellow-400 ml-3 animate-pulse" />
           </div>
-
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
             Revolutionary AI breakthroughs, quantum computing insights, and autonomous business solutions
           </p>
-
           {/* Feature highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -46,7 +42,6 @@ const NewContent2026PromotionBanner: React.FC = () => {
               <p className="text-blue-100">Self-learning analytics platforms</p>
             </div>
           </div>
-
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -64,7 +59,6 @@ const NewContent2026PromotionBanner: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
-
           {/* Latest articles preview */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold mb-8">Latest Articles</h3>
@@ -96,6 +90,7 @@ const NewContent2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NewContent2026PromotionBanner;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SpaceTimeComputing2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-900 via-orange-900 to-red-900 text-white">
@@ -26,7 +25,6 @@ const SpaceTimeComputing2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Revolutionary Technologies */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -37,7 +35,6 @@ const SpaceTimeComputing2027: React.FC = () => {
             Discover the most advanced space-time manipulation technologies ever created
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Instant Communication */}
           <div className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 backdrop-blur-sm rounded-2xl p-8 border border-yellow-500/30 hover:border-yellow-400/60 transition-all duration-300">
@@ -62,7 +59,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Time Manipulation */}
           <div className="bg-gradient-to-br from-orange-800/50 to-red-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/30 hover:border-orange-400/60 transition-all duration-300">
             <div className="text-6xl mb-4">⏰</div>
@@ -86,7 +82,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Dimensional Computing */}
           <div className="bg-gradient-to-br from-red-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/30 hover:border-red-400/60 transition-all duration-300">
             <div className="text-6xl mb-4">🌌</div>
@@ -110,7 +105,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Quantum Tunneling */}
           <div className="bg-gradient-to-br from-amber-800/50 to-yellow-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/30 hover:border-amber-400/60 transition-all duration-300">
             <div className="text-6xl mb-4">🌀</div>
@@ -134,7 +128,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Space-Time Folding */}
           <div className="bg-gradient-to-br from-orange-800/50 to-amber-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/30 hover:border-orange-400/60 transition-all duration-300">
             <div className="text-6xl mb-4">📐</div>
@@ -158,7 +151,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Temporal Data Storage */}
           <div className="bg-gradient-to-br from-red-800/50 to-orange-800/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/30 hover:border-red-400/60 transition-all duration-300">
             <div className="text-6xl mb-4">💾</div>
@@ -184,7 +176,6 @@ const SpaceTimeComputing2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Revolutionary Applications */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -195,7 +186,6 @@ const SpaceTimeComputing2027: React.FC = () => {
             Discover how space-time computing will transform every aspect of human civilization
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
             <h3 className="text-3xl font-bold mb-6 text-white">🌌 Universal Communication</h3>
@@ -218,7 +208,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
             <h3 className="text-3xl font-bold mb-6 text-white">⏰ Time Travel Research</h3>
             <ul className="space-y-4 text-gray-300">
@@ -240,7 +229,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
             <h3 className="text-3xl font-bold mb-6 text-white">🚀 Space Exploration</h3>
             <ul className="space-y-4 text-gray-300">
@@ -262,7 +250,6 @@ const SpaceTimeComputing2027: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
             <h3 className="text-3xl font-bold mb-6 text-white">🔬 Scientific Discovery</h3>
             <ul className="space-y-4 text-gray-300">
@@ -286,7 +273,6 @@ const SpaceTimeComputing2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-3xl p-12 border border-yellow-500/30">
@@ -309,6 +295,7 @@ const SpaceTimeComputing2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default SpaceTimeComputing2027;

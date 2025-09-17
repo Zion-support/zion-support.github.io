@@ -1,12 +1,10 @@
 import React from 'react';
-
 const EnhancedContentCarousel2037: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -19,7 +17,6 @@ const EnhancedContentCarousel2037: React.FC = () => {
             Explore the most advanced technologies that will define the future of humanity
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
@@ -72,7 +69,6 @@ const EnhancedContentCarousel2037: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -91,7 +87,6 @@ const EnhancedContentCarousel2037: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
           {slides.map((_, index) => (
@@ -104,7 +99,6 @@ const EnhancedContentCarousel2037: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <div className="grid md:grid-cols-3 gap-8">
@@ -128,6 +122,7 @@ const EnhancedContentCarousel2037: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default EnhancedContentCarousel2037;

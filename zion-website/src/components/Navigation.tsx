@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -41,6 +40,11 @@ const navigation = [
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+import React from 'react';
+
+const Navigation: React.FC = () => {
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Navigation</h3>
@@ -50,20 +54,6 @@ export default function Navigation() {
 };
 
 export default Navigation;
-=======
-"use client"
-
-
-const navLinks = [
-	{ name: 'About', href: '/about' },
-	{ name: 'Services', href: '/services' },
-	{ name: 'Solutions', href: '/solutions' },
-	{ name: 'Research', href: '/research' },
-	{ name: 'Updates', href: '/updates', badge: 'New' },
-]
-
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 export default function Navigation() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -87,3 +77,5 @@ export default function Navigation() {
 	)
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

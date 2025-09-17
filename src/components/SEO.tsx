@@ -9,14 +9,12 @@ export type SEOProps = {
   type?: string;
 };
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
-  image = 'https://zion.app/images/zion-tech-group-logo.png',
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion App - Revolutionary AI Solutions',
+  description = 'Revolutionary AI solutions for enterprise transformation',
+  keywords = 'AI, artificial intelligence, enterprise solutions, automation',
+  image = 'https://zion.app/og-image.jpg',
   url = 'https://zion.app',
   type = 'website'
 }) => {
 };
-export default SEO;
-export { SEO };

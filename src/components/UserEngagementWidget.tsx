@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-
 interface EngagementMetrics {
   activeUsers: number;
   sessionDuration: number;
@@ -12,7 +11,8 @@ interface EngagementMetrics {
   likes: number;
   bookmarks: number;
   downloads: number;
-}
+};
+
 
 export default function UserEngagementWidget() {
   const [metricsetMetrics] = useState<EngagementMetrics>({
@@ -142,6 +142,6 @@ export default function UserEngagementWidget() {
                 Live
       )}
   );
-};
+
 
 export default UserEngagementWidget;

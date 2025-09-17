@@ -1,5 +1,4 @@
 import React from 'react';
-
 const CaseStudyShowcase2026: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -12,19 +11,16 @@ const CaseStudyShowcase2026: React.FC = () => {
             <Award className="w-4 h-4 mr-2" />
             Success Stories 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Real Results from
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Real Companies
             </span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
         </div>
-
         {/* Industry Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -45,9 +41,9 @@ const CaseStudyShowcase2026: React.FC = () => {
                 {industry.title}
               </button>
             );
+};
           })}
         </div>
-
         {/* Case Studies Grid */}
           <div
             key={activeIndustry}
@@ -68,7 +64,6 @@ const CaseStudyShowcase2026: React.FC = () => {
                     </span>
                   </div>
                 )}
-
                 {/* Trending Badge */}
                 {caseStudy.trending && (
                   <div className="absolute top-4 right-4 z-10">
@@ -78,7 +73,6 @@ const CaseStudyShowcase2026: React.FC = () => {
                     </span>
                   </div>
                 )}
-
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -88,19 +82,16 @@ const CaseStudyShowcase2026: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   {/* Company */}
                   <div className="text-sm text-blue-600 font-medium mb-2">
                     {caseStudy.company}
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {caseStudy.title}
                   </h3>
-
                   {/* Challenge */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-1">Challenge:</h4>
@@ -108,7 +99,6 @@ const CaseStudyShowcase2026: React.FC = () => {
                       {caseStudy.challenge}
                     </p>
                   </div>
-
                   {/* Solution */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-1">Solution:</h4>
@@ -116,7 +106,6 @@ const CaseStudyShowcase2026: React.FC = () => {
                       {caseStudy.solution}
                     </p>
                   </div>
-
                   {/* Results */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
@@ -131,7 +120,6 @@ const CaseStudyShowcase2026: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Technologies */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
@@ -150,21 +138,18 @@ const CaseStudyShowcase2026: React.FC = () => {
                       )}
                     </div>
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <span>{caseStudy.duration}</span>
                     <span>•</span>
                     <span>{caseStudy.teamSize}</span>
                   </div>
-
                   {/* CTA Button */}
                   <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     View Case Study
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-
                 {/* Hover Overlay */}
                 <div
                     opacity: hoveredCase === caseStudy.id ? 1 : 0 
@@ -183,7 +168,6 @@ const CaseStudyShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -207,6 +191,6 @@ const CaseStudyShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default CaseStudyShowcase2026;

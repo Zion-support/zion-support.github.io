@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function RevolutionaryBreakthroughShowcase() {
   return (
@@ -94,4 +96,3 @@ export default function RevolutionaryBreakthroughShowcase() {
             >
               📺 Watch Live Demo
   );
-}

@@ -1,6 +1,3 @@
-
-const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
-  return (
     </div>
   );
 };

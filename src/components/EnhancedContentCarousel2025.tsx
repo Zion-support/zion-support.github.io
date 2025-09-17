@@ -1,16 +1,9 @@
-import React from 'react';
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 
-const EnhancedContentCarousel2025 = () => {
+const COMPONENT: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">EnhancedContentCarousel2025</h1>
-          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
-        </div>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       </div>
     </div>
   );
 };
-
-export default EnhancedContentCarousel2025;

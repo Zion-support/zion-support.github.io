@@ -1,11 +1,9 @@
 import React from 'react';
-
 const AI2025SuccessStoriesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.03%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div
@@ -15,18 +13,15 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
             <Award className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-purple-300 font-medium">Success Stories</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Real Results from
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Real Companies</span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies across industries are achieving remarkable results with our AI solutions. 
             See the measurable impact and transformation stories.
           </p>
         </div>
-
         {/* Success Stories Carousel */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -56,7 +51,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Active Story Display */}
             <div className="lg:col-span-2">
                 <div
@@ -73,7 +67,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
                       <p className="text-purple-300 font-medium">{successStories[activeStory].industry}</p>
                     </div>
                   </div>
-
                   {/* Challenge & Solution */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div>
@@ -91,7 +84,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
                       <p className="text-gray-300">{successStories[activeStory].solution}</p>
                     </div>
                   </div>
-
                   {/* Results Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                     {Object.entries(successStories[activeStory].results).map(([keyvalue]index) => (
@@ -101,7 +93,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Testimonial */}
                   <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
                     <div className="flex items-start space-x-3">
@@ -121,7 +112,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Overall Metrics */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Proven Impact Across All Projects</h3>
@@ -140,7 +130,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Industries Served */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Trusted Across Industries</h3>
@@ -159,7 +148,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -183,6 +171,7 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default AI2025SuccessStoriesShowcase;

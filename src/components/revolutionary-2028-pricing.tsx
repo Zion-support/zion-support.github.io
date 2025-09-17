@@ -1,5 +1,4 @@
 import React from 'react';
-
 const revolutionary-2028-pricing: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const revolutionary-2028-pricing: React.FC = () => {
     </div>
   );
 };
-
 const pricingTiers = [
   {
     name: 'Starter',
@@ -69,9 +67,7 @@ const pricingTiers = [
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
     href: '/contact'
-  }
-];
-
+  };
 const servicePricing = [
   {
     category: '🚀 2028 Futuristic Innovations',
@@ -88,8 +84,8 @@ const servicePricing = [
   {
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
-  }
-];
+  };
+
 
 export default function Revolutionary2028Pricing() {
   return (
@@ -330,4 +326,3 @@ export default function Revolutionary2028Pricing() {
       <UltraFuturisticFooter2028 />
     </>
   );
-}

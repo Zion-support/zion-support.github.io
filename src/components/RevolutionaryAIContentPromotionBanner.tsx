@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapTrendingUpStar
+};
+
 
 export default function RevolutionaryAIContentPromotionBanner() {
   return (
@@ -80,4 +82,3 @@ export default function RevolutionaryAIContentPromotionBanner() {
               <div className="text-lg font-semibold">Healthcare</div>
               <div className="text-lg font-semibold">Finance</div>
   );
-}

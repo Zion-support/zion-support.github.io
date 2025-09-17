@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, BookOpen, Sparkles, TrendingUp, Shield, Zap } from 'lucide-react';
-
 const NewBlogContentBanner2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const newContent = [
     {
       id: 1,
@@ -38,19 +36,14 @@ const NewBlogContentBanner2025: React.FC = () => {
       href: "/blog/ai-ethics-governance-2025"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % newContent.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
-
   const currentContent = newContent[currentIndex];
-
   if (!isVisible) return null;
-
   return (
     <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
       {/* Animated background elements */}
@@ -61,7 +54,6 @@ const NewBlogContentBanner2025: React.FC = () => {
           <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-2000"></div>
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left side - Content showcase */}
@@ -81,17 +73,14 @@ const NewBlogContentBanner2025: React.FC = () => {
                 <TrendingUp className="w-4 h-4" />
                 <span>TRENDING NOW</span>
               </div>
-
               {/* Title */}
               <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
                 {currentContent.title}
               </h2>
-
               {/* Description */}
               <p className="text-lg text-blue-100 leading-relaxed">
                 {currentContent.description}
               </p>
-
               {/* Meta info */}
               <div className="flex items-center gap-4 text-sm text-blue-200">
                 <span className="flex items-center gap-1">
@@ -101,7 +90,6 @@ const NewBlogContentBanner2025: React.FC = () => {
                 <span>•</span>
                 <span>{currentContent.readTime}</span>
               </div>
-
               {/* CTA Button */}
               <motion.a
                 href={currentContent.href}
@@ -113,7 +101,6 @@ const NewBlogContentBanner2025: React.FC = () => {
                 <ArrowRight className="w-4 h-4" />
               </motion.a>
             </motion.div>
-
             {/* Dots indicator */}
             <div className="flex gap-2 mt-6">
               {newContent.map((_, index) => (
@@ -127,7 +114,6 @@ const NewBlogContentBanner2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Right side - Content preview cards */}
           <div className="flex-1 max-w-md">
             <div className="space-y-4">
@@ -165,7 +151,6 @@ const NewBlogContentBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Close button */}
       <button
         onClick={() => setIsVisible(false)}
@@ -178,6 +163,7 @@ const NewBlogContentBanner2025: React.FC = () => {
       </button>
     </div>
   );
+
 };
 
 export default NewBlogContentBanner2025;

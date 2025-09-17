@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FeaturedContentSection: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -11,6 +10,7 @@ const FeaturedContentSection: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default FeaturedContentSection;

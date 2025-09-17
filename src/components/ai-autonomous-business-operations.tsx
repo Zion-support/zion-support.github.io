@@ -1,5 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+};
+
 
 export default function AIAutonomousBusinessOperations() {
 	return (
@@ -23,4 +25,3 @@ export default function AIAutonomousBusinessOperations() {
 			canonical="https://ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	);
-}

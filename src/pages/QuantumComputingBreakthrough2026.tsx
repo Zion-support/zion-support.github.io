@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const QuantumComputingBreakthrough2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
@@ -34,7 +33,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Technologies Grid */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -46,7 +44,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">⚛️ Quantum Technologies</h2>
           <p className="text-xl opacity-80">Revolutionary quantum computing solutions for the future</p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Quantum Supremacy */}
           <motion.div
@@ -73,7 +70,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               Explore Capabilities →
             </button>
           </motion.div>
-
           {/* Quantum Cryptography */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -99,7 +95,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               Learn Security →
             </button>
           </motion.div>
-
           {/* Quantum Machine Learning */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -125,7 +120,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               Discover ML →
             </button>
           </motion.div>
-
           {/* Quantum Simulation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -151,7 +145,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               Explore Simulation →
             </button>
           </motion.div>
-
           {/* Quantum Optimization */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -177,7 +170,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               Optimize Now →
             </button>
           </motion.div>
-
           {/* Quantum Communication */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -205,7 +197,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Applications */}
       <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -218,7 +209,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🌍 Quantum Applications</h2>
             <p className="text-xl opacity-80">Real-world applications of quantum computing</p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -230,7 +220,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Drug Discovery</h3>
               <p className="text-sm opacity-80">Accelerate pharmaceutical research with quantum simulation</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -241,7 +230,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Climate Science</h3>
               <p className="text-sm opacity-80">Model complex climate systems for better predictions</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -252,7 +240,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Financial Modeling</h3>
               <p className="text-sm opacity-80">Advanced risk assessment and portfolio optimization</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -266,7 +253,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Timeline */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -278,7 +264,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">⏰ Quantum Timeline</h2>
           <p className="text-xl opacity-80">The journey to quantum supremacy and beyond</p>
         </motion.div>
-
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             <motion.div
@@ -293,7 +278,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
                 <p className="opacity-80">First demonstrations of quantum advantage in specific problems</p>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -306,7 +290,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
                 <p className="opacity-80">Quantum computers outperform classical computers in practical applications</p>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -319,7 +302,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
                 <p className="opacity-80">Commercial quantum computing becomes accessible to enterprises</p>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -335,7 +317,6 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -361,6 +342,7 @@ const QuantumComputingBreakthrough2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default QuantumComputingBreakthrough2026;

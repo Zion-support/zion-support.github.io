@@ -1,11 +1,3 @@
- 
-import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-import { getLatestUpdates } from '@/data/updates'
-  { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
-  {
-    name: 'Quantum Computing',
->>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -14,19 +6,42 @@ import { getLatestUpdates } from '@/data/updates'
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+import {
+  ChartBarIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+import { 
+  LightBulbIcon, 
+  CpuChipIcon, 
+  GlobeAltIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+import {
+  ChartBarIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline'
+import { getLatestUpdates } from '../data/updates'
+  {
+    name: 'AI-Powered Research',
+    description:
+      'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon
+  },
+  {
+    name: 'Quantum Computing',
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     description:
       'Next-generation quantum neural networks for solving complex computational problems.',
-=======
-    description: 'Next-generation quantum neural networks for solving complex computational problems.',
->>>>>>> cursor/create-and-deploy-new-content-9c82
     icon: CpuChipIcon
   },
-  { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
-  {
-    name: 'Enterprise Security',
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -38,31 +53,23 @@ import { getLatestUpdates } from '@/data/updates'
     description: 'Next-generation quantum neural networks for solving complex computational problems.',
     icon: CpuChipIcon,
   },
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   {
     name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon,
+    description:
+      'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon
   },
   {
     name: 'Enterprise Security',
-    description: 'Military-grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon,
->>>>>>> origin/feat/news-and-fixes
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-    description: 'Military-grade security protocols protecting your most valuable digital assets.',
+    description:
+      'Military-grade security protocols protecting your most valuable digital assets.',
     icon: ShieldCheckIcon
->>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   },
   {
     name: 'Data Analytics',
@@ -71,10 +78,10 @@ import { getLatestUpdates } from '@/data/updates'
   },
   {
     name: 'Expert Team',
-    description: 'World-class researchers and engineers pushing the boundaries of technology.',
+    description:
+      'World-class researchers and engineers pushing the boundaries of technology.',
     icon: UserGroupIcon
   }
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -98,13 +105,22 @@ import { getLatestUpdates } from '@/data/updates'
 >>>>>>> origin/feat/content-promo
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+import React from 'react';
+
+const solutions = [
+  { name: 'Global Clients', value: '1000+' },
+  { name: 'Patents Filed', value: '25+' }
+]
+
+export default page;
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for solving complex computational problems.', icon: CpuChipIcon },
   { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
   { name: 'Enterprise Security', description: 'Military-grade security protocols protecting your most valuable digital assets.', icon: ShieldCheckIcon },
   { name: 'Data Analytics', description: 'Advanced analytics and insights driving informed decision-making.', icon: ChartBarIcon },
   { name: 'Expert Team', description: 'World-class researchers and engineers pushing the boundaries of technology.', icon: UserGroupIcon },
->>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 =======
@@ -132,26 +148,26 @@ import { getLatestUpdates } from '@/data/updates'
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 ]
 
 const stats = [
   { name: 'Research Papers Published', value: '150+' },
   { name: 'AI Models Deployed', value: '500+' },
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   { name: 'Global Clients', value: '1,000+' },
   { name: 'Patents Filed', value: '25+' },
 ]
 
 const solutions = [
-=======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -178,12 +194,13 @@ const solutions = [
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   { name: 'Global Clients', value: '1000+' },
   { name: 'Patents Filed', value: '25+' }
 ]
 
 const solutions = [
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -192,6 +209,8 @@ const solutions = [
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   {
     name: 'AI Research Assistant',
     description: 'Autonomous research platform that accelerates scientific discovery.',
@@ -205,8 +224,6 @@ const solutions = [
   {
     name: 'Autonomous Business Operations',
     description: 'AI-powered automation for enterprise efficiency.',
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 =======
@@ -231,12 +248,13 @@ const solutions = [
     href: '/solutions/autonomous-business',
 >>>>>>> origin/feat/news-and-fixes
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+    href: '/solutions/autonomous-business'
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   },
   {
     name: 'IT Asset Management',
     description: 'Intelligent management of digital infrastructure.',
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 =======
@@ -275,11 +293,14 @@ const solutions = [
 >>>>>>> origin/feat/news-and-fixes
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+    href: '/solutions/it-asset-management'
+  }
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   { name: 'AI Research Assistant', description: 'Autonomous research platform that accelerates scientific discovery.', href: '/solutions/ai-autonomous-research' },
   { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
   { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
->>>>>>> origin/feat/research-article-promo
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 =======
@@ -294,11 +315,10 @@ const solutions = [
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 ]
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
 const whatsNew = [
   { title: 'ContentForge AI v2', description: 'Major upgrade with SEO briefs, brand voice trainer, and new templates.', href: '/services', badge: 'New' },
   { title: 'SecureShield Audit Playbooks', description: 'Actionable remediation guides added to all cybersecurity audits.', href: '/services', badge: 'Update' },
@@ -306,8 +326,6 @@ const whatsNew = [
 >>>>>>> feat/clean-updates-content
 
 export default function HomePage() {
-  return (
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 =======
@@ -341,11 +359,11 @@ export default function HomePage() {
 
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 export default function HomePage() {
-  const latest = getLatestUpdates(6)
-  
-  return (
 =======
->>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+  const latest = getLatestUpdates(6)
+
+  return (
 =======
 >>>>>>> main
 =======
@@ -411,26 +429,21 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+    <div className="bg-black min-h-screen">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
->>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
               AI Agent Orchestration Platform v2.0 —
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
-              New: AI Autonomous Workflow Engine v1.0 —
-              <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
->>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
               <span className="mx-2 text-blue-300/60">|</span>
@@ -473,28 +486,15 @@ export default function HomePage() {
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+              <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
+            </p>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
           </div>
         </div>
       </div>
-      {/* Featured new blog posts */}
-      <div className="mx-auto mt-8 max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <a href="/blog/ai-2026-enterprise-agent-observability-deep-dive" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
-            <div className="text-sm text-blue-300">New</div>
-            <div className="mt-1 text-lg font-semibold">AI 2026: Enterprise Agent Observability — Deep Dive</div>
-            <div className="mt-1 text-gray-300 text-sm">Tracing, metrics, alerts, and audit‑ready signals for reliable agent systems.</div>
-          </a>
-          <a href="/blog/ai-2026-autonomous-ops-sre-for-agents" className="rounded-xl bg-white/5 p-4 text-white hover:bg-white/10 transition-colors duration-200">
-            <div className="text-sm text-blue-300">New</div>
-            <div className="mt-1 text-lg font-semibold">AI 2026: Autonomous Ops and SRE for Agents</div>
-            <div className="mt-1 text-gray-300 text-sm">SLOs, guardrails, budgets, and incident runbooks for production agents.</div>
-          </a>
-        </div>
-      </div>
-
       {/* Hero section */}
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
@@ -541,30 +541,32 @@ export default function HomePage() {
 =======
       <div className="relative isolate px-6 pt-14 lg:px-8">
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+      <div className="relative isolate px-6 pt-8 lg:px-8">
+    <div className="bg-black">
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                AI & Technology
-              </span>
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">AI & Technology</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
-=======
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
               Join the revolution that's reshaping industries worldwide.
 =======
@@ -590,11 +592,12 @@ export default function HomePage() {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
               Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
->>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -605,13 +608,13 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               <a
                 href="/contact"
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -649,11 +652,15 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+              </a>
+              <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
@@ -676,6 +683,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
 =======
                 href="/updates/autonomous-ops-sre-for-agents"
@@ -704,7 +713,16 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/content-promo
               </a>
->>>>>>> origin/feat/new-content-promos
+=======
+              <a
+                href="/blog/ai-2026-real-time-retrieval-architectures"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                New: Real‑Time Retrieval Architectures
+                <span aria-hidden>→</span>
+              </a>
+              <a
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 href="/blog/ai-2026-sovereign-ai-commerce"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
@@ -748,35 +766,23 @@ export default function HomePage() {
               </a>
               <a
                 href="/updates/secure-agent-operations-blueprint-2026"
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-                href="/updates/ai-content-studio-3-0"
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
-                href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
-                Launch: AI Content Studio v3.0
+                Blueprint: Secure Agent Ops 2026
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/quantum-ai-platform-2-0"
-                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+                href="/updates/agentic-ops-control-center-2-2"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
-                Launch: Quantum AI Platform v2.0
+                Launch: Ops Control Center v2.2
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/autonomous-business-suite-2026"
+                href="/updates/autonomous-compliance-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: Autonomous Business Suite 2026
+                Launch: Compliance Copilot v1.0
                 <span aria-hidden>→</span>
               </a>
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
@@ -793,7 +799,6 @@ export default function HomePage() {
               </a>
               <a
                 href="/updates/autonomous-ops-playbook-2026"
->>>>>>> origin/feature/autonomous-ops-sre-content
 =======
 =======
 =======
@@ -806,6 +811,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Deep Dive: Agent Observability
@@ -815,32 +822,10 @@ export default function HomePage() {
                 href="/blog/ai-2026-autonomous-business-operations-complete-guide"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
-              >
-                Deep Dive: Agent Observability
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/blog/ai-2026-autonomous-business-operations-complete-guide"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
-              >
->>>>>>> cursor/create-and-deploy-new-content-1912
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
                 Guide: Autonomous Business Ops
                 <span aria-hidden>→</span>
               </a>
               <a
->>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -849,19 +834,22 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 href="/blog/ai-2026-policy-as-code-production-blueprint"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
                 Blueprint: Policy‑as‑Code
                 <span aria-hidden>→</span>
               </a>
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               <a
                 href="/updates/production-guardrails-playbook"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
@@ -869,10 +857,6 @@ export default function HomePage() {
                 New: Production Guardrails Playbook
                 <span aria-hidden>→</span>
               </a>
-=======
-=======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-6f93
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
@@ -928,11 +912,12 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             </div>
           </div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-f995
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -942,6 +927,11 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+
+      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
+      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What’s New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest updates and releases</p>
@@ -958,7 +948,6 @@ export default function HomePage() {
         </div>
       </div>
 
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
@@ -985,13 +974,14 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -1063,6 +1053,16 @@ export default function HomePage() {
                   <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
                 </div>
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+=======
+            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            {latest.map((item) => (
+              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold leading-6 text-white">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
                     <span className="absolute inset-0" />
                     {item.title}
@@ -1083,9 +1083,6 @@ export default function HomePage() {
         </div>
       </div>
 
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -1096,6 +1093,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       {/* Latest on the blog */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -1103,9 +1102,6 @@ export default function HomePage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             New articles on enterprise AI, security, and autonomous systems.
-=======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 =======
@@ -1132,15 +1128,14 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -1170,11 +1165,12 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
                 summary:
                   'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
                 href: '/blog/ai-2026-enterprise-agent-observability-deep-dive'
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -1189,6 +1185,8 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               },
               {
                 title: 'AI 2026: Autonomous Business Operations — Complete Guide',
@@ -1201,7 +1199,6 @@ export default function HomePage() {
                 summary:
                   'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
                 href: '/blog/ai-2026-policy-as-code-production-blueprint'
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
@@ -1224,51 +1221,26 @@ export default function HomePage() {
                   'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
                 href: '/updates',
 >>>>>>> origin/feat/content-promo
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               },
               {
                 title: 'Community Challenge: Build a DApp',
                 summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates',
->>>>>>> origin/feat/content-promo
+=======
+                href: '/updates/dapp-challenge'
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
               },
               {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
-                summary:
-                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
-                href: '/blog/ai-2026-policy-as-code-production-blueprint'
-              },
-              {
-                title: 'AI 2026: Real‑Time Retrieval Architectures',
-                summary:
-                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
-                href: '/blog/ai-2026-real-time-retrieval-architectures'
-              },
-              {
 =======
->>>>>>> origin/feat/new-content-2025-09-15-b
+                href: '/updates/web3-learning-path'
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 title: 'AI 2026: Generative AI Risk Register',
                 summary:
                   'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
                 href: '/blog/ai-2026-generative-ai-risk-register'
-                href: '/updates'
-              },
-              {
-                title: 'Research Drop: AI Governance Blueprint 2025',
-                summary: 'A practical framework for responsible AI governance in enterprises.',
-                href: '/research'
-              },
-              {
-                title: 'Case Study: 40% Cost Reduction with Autonomous IT',
-                summary: 'How a global enterprise cut costs and improved SLAs using Zion OS.',
-                href: '/solutions'
-              },
-              {
-                title: 'Release Notes: v2.5 Platform Enhancements',
-                summary: 'Improved performance, new analytics dashboards, and security updates.',
-                href: '/about'
->>>>>>> origin/feat/homepage-content-updates
 =======
               },
               {
@@ -1329,6 +1301,9 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+              }
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
@@ -1347,9 +1322,6 @@ export default function HomePage() {
         </div>
       </div>
 =======
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-=======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 =======
 =======
@@ -1358,10 +1330,11 @@ export default function HomePage() {
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> origin/feat/news-and-fixes
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 
 >>>>>>> feat/clean-updates-content
       {/* Features section */}
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -1374,12 +1347,12 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Everything you need to accelerate innovation</p>
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -1449,6 +1422,12 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+          <p className="mt-6 text-lg leading-8 text-gray-300">Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results and maintain competitive advantage in the digital age.</p>
+            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
+            and maintain competitive advantage in the digital age.
+          </p>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -1460,7 +1439,6 @@ export default function HomePage() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{feature.description}</p>
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -1489,12 +1467,14 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+                  <p className="mt-6"><a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a></p>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
                       Learn more <span aria-hidden="true">→</span>
                     </a>
                   </p>
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -1539,6 +1519,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 </dd>
               </div>
             ))}
@@ -1546,11 +1528,9 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -1602,6 +1582,12 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Trusted by leading organizations worldwide
+            </h2>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             <p className="mt-4 text-lg leading-8 text-gray-300">Our track record speaks for itself</p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
@@ -1615,9 +1601,6 @@ export default function HomePage() {
         </div>
       </div>
 
-=======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -1680,6 +1663,9 @@ export default function HomePage() {
 =======
       {/* Solutions showcase */}
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+      {/* CTA section */}
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
@@ -1696,8 +1682,6 @@ export default function HomePage() {
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
                     <a href={solution.href}><span className="absolute inset-0" />{solution.name}</a>
-                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">AI Platform</span>
->>>>>>> origin/feat/research-article-promo
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
@@ -1709,15 +1693,25 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300">AI Platform</span>
+                </div>
+                <div className="group relative">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+                    <a href={solution.href}><span className="absolute inset-0" />{solution.name}</a>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <div className="text-sm leading-6">
-                    <p className="font-semibold text-white"><a href={solution.href} className="hover:text-blue-400 transition-colors duration-200"><span className="absolute inset-0" />Learn more</a></p>
->>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+                    <p className="font-semibold text-white">
+                      <a href={solution.href} className="hover:text-blue-400 transition-colors duration-200"><span className="absolute inset-0" />Learn more</a>
+                    </p>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                   </div>
                 </div>
               </article>
@@ -1726,10 +1720,6 @@ export default function HomePage() {
         </div>
       </div>
 
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
 =======
       {/* CTA section */}
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -1758,17 +1748,24 @@ export default function HomePage() {
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Zion Tech Group</h1>
+          <p className="mt-4 text-lg leading-8 text-gray-300">AI, automation, and secure infrastructure.</p>
+          <div className="mt-8">
+            <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">See all updates →</a>
+          </div>
+        </div>
+        <div className="mx-auto mt-12 max-w-4xl">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             {latest.map((item) => (
               <article key={item.href} className="rounded-2xl bg-white/5 p-6">
                 <h3 className="text-white font-semibold"><a href={item.href}>{item.title}</a></h3>
                 <p className="mt-2 text-sm text-gray-300">{item.summary}</p>
               </article>
             ))}
-=======
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
->>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -1841,6 +1838,15 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+            <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our technology can accelerate your growth and innovation.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             <a
               href="/contact"
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
@@ -1850,7 +1856,6 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -1892,13 +1897,13 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
           </div>
         </div>
       </div>
     </div>
   )
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
@@ -2200,3 +2205,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+}
+
+}
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

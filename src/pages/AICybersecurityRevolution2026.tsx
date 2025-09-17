@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AICybersecurityRevolution2026: React.FC = () => {
   return (
     <>
@@ -9,7 +8,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
         <meta name="description" content="Revolutionary AI cybersecurity systems that provide autonomous threat detection, prevention, and response with 99.9% accuracy and zero false positives." />
         <meta name="keywords" content="AI Security, Cybersecurity, Autonomous Defense, Zero Trust, Threat Detection" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
@@ -30,7 +28,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
                 <span>11 min read</span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-red-800/30 to-purple-800/30 rounded-xl p-8 backdrop-blur-sm border border-red-400/20 mb-8">
               <h2 className="text-3xl font-bold mb-6 text-red-300">Revolutionary AI Cybersecurity Systems</h2>
               <p className="text-lg text-gray-300 mb-6">
@@ -38,7 +35,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
                 Our latest breakthrough in AI cybersecurity represents a paradigm shift from reactive security to 
                 proactive, intelligent threat prevention.
               </p>
-              
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-red-700/40 to-purple-700/40 rounded-lg p-6">
                   <h3 className="text-xl font-bold mb-4 text-red-200">Key Features</h3>
@@ -49,7 +45,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
                     <li>• Self-healing security infrastructure</li>
                   </ul>
                 </div>
-                
                 <div className="bg-gradient-to-br from-purple-700/40 to-indigo-700/40 rounded-lg p-6">
                   <h3 className="text-xl font-bold mb-4 text-purple-200">Performance Metrics</h3>
                   <ul className="space-y-2 text-gray-300">
@@ -60,7 +55,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-red-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
                 <h3 className="text-2xl font-bold mb-4 text-red-200">Advanced Technology Stack</h3>
                 <p className="text-gray-300 mb-4">
@@ -70,7 +64,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
                   zero false positive rates.
                 </p>
               </div>
-
               <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4 text-purple-200">Implementation Benefits</h3>
                 <p className="text-gray-300">
@@ -81,7 +74,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
                 </p>
               </div>
             </div>
-
             <div className="text-center">
               <a 
                 href="/contact" 
@@ -95,6 +87,7 @@ const AICybersecurityRevolution2026: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default AICybersecurityRevolution2026;

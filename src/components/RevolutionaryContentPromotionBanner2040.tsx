@@ -18,11 +18,9 @@ import {
   Layers
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryContentPromotionBanner2040: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const revolutionaryContent = [
     {
       title: "Quantum Neural Revolution 2037",
@@ -55,22 +53,18 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
       highlight: "∞ Realities Available"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
     }, 6000);
     return () => clearInterval(interval);
   }, []);
-
   const slideVariants = {
     enter: { opacity: 0, x: 300 },
     center: { opacity: 1, x: 0 },
     exit: { opacity: 0, x: -300 }
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900/95 to-pink-900/95 backdrop-blur-lg border-b border-purple-400/30">
       <div className="container mx-auto px-4 py-4">
@@ -82,7 +76,6 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
           >
             <X className="w-5 h-5" />
           </button>
-
           {/* Content Carousel */}
           <div className="flex-1 mx-8 relative overflow-hidden">
             <AnimatePresence mode="wait">
@@ -100,13 +93,11 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
                   <Sparkles className="w-4 h-4 mr-2" />
                   REVOLUTIONARY 2040
                 </div>
-
                 {/* Content Info */}
                 <div className="flex items-center space-x-6">
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-3 rounded-xl">
                     <revolutionaryContent[currentSlide].icon className="w-8 h-8 text-purple-400" />
                   </div>
-                  
                   <div className="text-center">
                     <h3 className="text-lg font-bold text-white mb-1">
                       {revolutionaryContent[currentSlide].title}
@@ -133,7 +124,6 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex space-x-2">
             {revolutionaryContent.map((_, index) => (
@@ -149,7 +139,6 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Feature Highlights */}
         <motion.div 
           className="mt-4 flex justify-center space-x-6"
@@ -165,7 +154,6 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
           ))}
         </motion.div>
       </div>
-
       {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -197,6 +185,7 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentPromotionBanner2040;

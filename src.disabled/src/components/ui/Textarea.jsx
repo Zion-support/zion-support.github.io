@@ -1,10 +1,9 @@
->>>>>>> origin/merged-prs
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = 'Textarea'; export { Textarea };";
 import React from \'react\'; import { cn } from \"../../lib/utils\"; const Textarea = React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = \'Textarea\'; export { Textarea };\";
 const React from "react"; import { cn } from "././lib/utils"; const Textarea = React.forwardRef(({ className,.props },ref) => {; return(; <textarea; className = {; cn(; "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",; className; )}; ref={ref}; {.props}; />; )}); Textarea.displayName = "Textarea"; export { Textarea };";'"'"
 import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = 'Textarea'; export { Textarea };";
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -19,3 +18,5 @@ import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

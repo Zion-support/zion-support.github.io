@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const EnhancedContentShowcase2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const showcaseItems = [
     {
       title: "Ultimate Tech Revolution 2026",
@@ -30,16 +28,13 @@ const EnhancedContentShowcase2026: React.FC = () => {
       link: "/pages/RevolutionaryTechShowcase2026"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % showcaseItems.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [showcaseItems.length]);
-
   return (
     <div className="relative overflow-hidden">
       {/* Animated Background */}
@@ -58,7 +53,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
@@ -73,7 +67,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
             These revolutionary breakthroughs represent the pinnacle of human achievement.
           </p>
         </div>
-
         {/* Main Showcase Carousel */}
         <div className="relative mb-12">
           <div className="overflow-hidden rounded-3xl">
@@ -127,7 +120,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
             {showcaseItems.map((_, index) => (
@@ -141,7 +133,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {showcaseItems.map((item, index) => (
@@ -161,7 +152,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
             </a>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6 text-gray-900">Ready to Experience the Future?</h3>
@@ -186,6 +176,7 @@ const EnhancedContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default EnhancedContentShowcase2026;

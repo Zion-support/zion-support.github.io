@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20 mb-12 rounded-xl border border-indigo-400/20 relative overflow-hidden">
@@ -19,7 +18,6 @@ const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
             <span className="text-pink-300">Updated Daily</span>
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-gradient-to-br from-red-800/30 to-orange-800/30 rounded-xl p-6 backdrop-blur-sm border border-red-400/20 hover:border-red-400/40 transition-all duration-300">
             <div className="text-3xl mb-4">🛡️</div>
@@ -35,7 +33,6 @@ const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
               Explore
             </Link>
           </div>
-
           <div className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300">
             <div className="text-3xl mb-4">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-blue-300">Quantum ML</h3>
@@ -50,7 +47,6 @@ const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
               Discover
             </Link>
           </div>
-
           <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 rounded-xl p-6 backdrop-blur-sm border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
             <div className="text-3xl mb-4">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-green-300">Autonomous BI</h3>
@@ -65,7 +61,6 @@ const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
               Learn More
             </Link>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
             <div className="text-3xl mb-4">🚀</div>
             <h3 className="text-xl font-bold mb-3 text-purple-300">Edge AI</h3>
@@ -81,7 +76,6 @@ const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
             </Link>
           </div>
         </div>
-
         <div className="text-center">
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-xl p-8 border border-indigo-400/30">
             <h3 className="text-2xl font-bold mb-4 text-indigo-300">Ready to Transform Your Business?</h3>
@@ -107,6 +101,7 @@ const RevolutionaryTechShowcaseBanner2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryTechShowcaseBanner2026;

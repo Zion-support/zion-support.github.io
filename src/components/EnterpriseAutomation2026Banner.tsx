@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 CogBarChart3TargetArrowRightCheckCircle
+};
+
 
 export default function EnterpriseAutomation2026Banner() {
   return (
@@ -66,4 +68,3 @@ export default function EnterpriseAutomation2026Banner() {
             <CheckCircle className="w-4 h-4 mr-2" />
             Join 500+ enterprises achieving 340% ROI with AI automation
   );
-}

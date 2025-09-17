@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BlogPost2025Q4: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
@@ -29,6 +28,7 @@ const BlogPost2025Q4: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default BlogPost2025Q4;

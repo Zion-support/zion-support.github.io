@@ -1,6 +1,3 @@
-
-const AIRevolution2025PromotionBanner: React.FC = () => {
-  return (
   );
 };
 

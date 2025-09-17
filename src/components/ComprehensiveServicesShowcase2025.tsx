@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -19,7 +18,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             Discover our full range of cutting-edge technology solutions designed to 
             transform your business and drive unprecedented growth.
           </divp>
-          
           {/* Stats */}
           <div
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +41,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Service Navigation */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +64,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Featured Service */}
           <div
             key={activeService}
@@ -94,11 +90,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <p className="text-lg text-gray-600 mb-8">
                   {currentService.description}
                 </p>
-
                 {/* Features */}
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features</h4>
@@ -111,7 +105,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Proven Benefits</h4>
@@ -124,7 +117,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -140,7 +132,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Right Side - Visual */}
               <div className={`bg-gradient-to-br ${currentService.color} p-8 lg:p-12 flex items-center justify-center`}>
                 <div className="text-center text-white">
@@ -170,7 +161,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* All Services Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +185,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-white/90 text-sm">{service.description}</p>
               </div>
-              
               <div className="p-6">
                 <div className="space-y-3 mb-6">
                   {service.features.slice(03).map((featureidx) => (
@@ -205,7 +194,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-sm text-gray-500">
                     <div className="flex items-center gap-1">
@@ -217,7 +205,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                     <div className="font-semibold text-gray-900">{service.pricing}</div>
                   </div>
                 </div>
-                
                 <a
                   href={service.href}
                   className={`group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
@@ -229,7 +216,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -263,6 +249,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default ComprehensiveServicesShowcase2025;

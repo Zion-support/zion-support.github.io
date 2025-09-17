@@ -1,6 +1,3 @@
-
-const ComprehensiveServicesShowcase: React.FC = () => {
-  return (
     </div>
   );
 };

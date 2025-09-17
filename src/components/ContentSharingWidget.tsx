@@ -1,10 +1,10 @@
 import React from 'react';
-
 interface ContentSharingWidgetProps {
   title: string;
   url: string;
   description: string;
-}
+};
+
 
 export default function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) {
   const shareUrl = `https://zion.tech${url}`;
@@ -72,6 +72,6 @@ export default function ContentSharingWidget({ titleurldescription }: ContentSha
           >
             Copy
   );
-};
+
 
 export default ContentSharingWidget;

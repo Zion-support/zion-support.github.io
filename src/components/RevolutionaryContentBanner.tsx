@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const RevolutionaryContentBanner: React.FC = () => {
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
                         >
@@ -16,6 +14,7 @@ const RevolutionaryContentBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentBanner;

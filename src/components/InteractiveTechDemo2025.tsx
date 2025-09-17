@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Play
@@ -34,12 +33,9 @@ import {
   BookOpen,
   Lightbulb
 } from 'lucide-react';
-
-
   useEffect(() => {
     setIsVisible(true);
   }[]);
-
   useEffect(() => {
     let interval;
     if (isPlaying) {
@@ -52,19 +48,16 @@ import {
       }100);
     }
     return () => clearInterval(interval);
-
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
     if (progress >= 100) {
       setProgress(0);
     }
   };
-
   const handleReset = () => {
     setIsPlaying(false);
     setProgress(0);
   };
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,7 +67,6 @@ import {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -86,9 +78,7 @@ import {
       }
     }
   };
-
   const currentDemo = demos[activeDemo];
-
   return (
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -98,7 +88,6 @@ import {
             Experience our revolutionary technologies through interactive demonstrations and real-time simulations
           </p>
         </div>
-
                 </button>
               ))}
         {/* Demo Selector */}
@@ -119,7 +108,6 @@ import {
             ))}
           </div>
         </div>
-
         {/* Active Demo Display */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -147,7 +135,6 @@ import {
               </a>
             </div>
           </div>
-
           {/* Interactive Visualization */}
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <h4 className="text-2xl font-bold mb-6 text-center">Live Simulation</h4>
@@ -187,11 +174,9 @@ import {
                 ✅ System Online
               </div>
             </div>
-
           {/* Features and Metrics */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Real-Time Metrics</h3>
-              
               <div className="space-y-4">
                 {currentDemo.features.map((featureindex) => (
                   <div
@@ -233,7 +218,7 @@ import {
             </div>
           </div>
         );
-
+};
         {/* Technology Stats */}
         <div className="mt-16 bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-8">
           <h3 className="text-3xl font-bold text-center mb-8">Real-Time Technology Metrics</h3>
@@ -263,6 +248,6 @@ import {
       </div>
     </div>
   );
-};
+
 
 export default InteractiveTechDemo2025;

@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2026FuturePredictionsBanner() {
   return (
@@ -43,4 +45,3 @@ export default function AI2026FuturePredictionsBanner() {
               <h3 className="text-lg font-bold mb-2">Instant Knowledge Transfer</h3>
               <p className="text-sm opacity-90">Real-time skill and knowledge sharing</p>
   );
-}

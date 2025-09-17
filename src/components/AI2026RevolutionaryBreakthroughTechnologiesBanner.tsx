@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
   return (
     <divsection
@@ -11,7 +10,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
@@ -20,7 +18,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
           >
             <span className="text-sm font-bold tracking-wide uppercase">🚀 Revolutionary AI 2026</span>
           </div>
-
           {/* Main Heading */}
           <divh1
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
@@ -30,7 +27,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
               Technologies 2026
             </span>
           </divh1>
-
           {/* Subheading */}
           <divp
             className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90"
@@ -39,7 +35,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
             Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems 
             delivering unprecedented results.
           </divp>
-
           {/* Key Benefits */}
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
@@ -60,7 +55,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
               <p className="text-sm opacity-80">Revolutionary technologies delivering extraordinary returns</p>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -78,7 +72,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
               🚀 Get Implementation Support
             </a>
           </div>
-
           {/* Trust Indicators */}
           <div
             className="mt-12 pt-8 border-t border-white border-opacity-20"
@@ -94,13 +87,13 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-bounce opacity-60"></div>
       <div className="absolute top-40 right-20 w-3 h-3 bg-pink-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s' }}></div>
       <div className="absolute bottom-32 left-20 w-5 h-5 bg-blue-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s' }}></div>
     </divsection>
   );
+
 };
 
 export default AI2026RevolutionaryBreakthroughTechnologiesBanner;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIInnovationHub2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -15,7 +14,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
               <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
               <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
             </div>
-
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 py-12">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -39,7 +37,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       find everything you need to build the future.
                     </p>
                   </div>
-
                   {/* Rotating Innovation Showcase */}
                   <div
                     key={currentInnovation}
@@ -63,7 +60,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Categories */}
                   <div
                     className="mb-8"
@@ -80,7 +76,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Stats */}
                   <div
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
@@ -92,7 +87,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Action Buttons */}
                   <div
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
@@ -108,7 +102,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                     </button>
                   </div>
                 </div>
-
                 {/* Right Content - Visual */}
                 <div
                   className="flex-1 max-w-lg"
@@ -127,7 +120,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                           Your gateway to the future of AI technology
                         </p>
                       </div>
-                      
                       {/* Feature Grid */}
                       <div className="grid grid-cols-2 gap-4 mb-6">
                         {[
@@ -142,7 +134,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                           </div>
                         ))}
                       </div>
-
                       {/* Quick Stats */}
                       <div className="space-y-3">
                         {[
@@ -158,14 +149,12 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Floating Elements */}
                     <div
                       className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                     >
                       <Award className="w-8 h-8 text-white" />
                     </div>
-                    
                     <div
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center"
                     >
@@ -175,7 +164,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Dismiss Button */}
             <button
               onClick={() => setIsDismissed(true)}
@@ -184,13 +172,13 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
               <X className="w-6 h-6" />
             </button>
           </div>
-
           {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600" />
         </div>
       )}
     </div>
   );
+
 };
 
 export default AIInnovationHub2025PromotionBanner;

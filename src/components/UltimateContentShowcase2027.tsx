@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentShowcase2027: React.FC = () => {
   const revolutionaryContent = [
     {
@@ -69,7 +68,6 @@ const UltimateContentShowcase2027: React.FC = () => {
       features: ["Thought Control", "Virtual Reality", "Memory Enhancement", "Consciousness Upload"]
     }
   ];
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       <div className="container mx-auto px-4">
@@ -86,7 +84,6 @@ const UltimateContentShowcase2027: React.FC = () => {
             Experience revolutionary breakthroughs that will transform every aspect of human civilization.
           </p>
         </div>
-
         {/* Revolutionary Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {revolutionaryContent.map((content, index) => (
@@ -97,15 +94,12 @@ const UltimateContentShowcase2027: React.FC = () => {
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {content.icon}
               </div>
-              
               <h3 className={`text-2xl font-bold mb-4 ${content.textColor}`}>
                 {content.title}
               </h3>
-              
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {content.description}
               </p>
-
               {/* Features */}
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
@@ -119,7 +113,6 @@ const UltimateContentShowcase2027: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Call to Action */}
               <a
                 href={content.link}
@@ -130,7 +123,6 @@ const UltimateContentShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Additional Revolutionary Technologies */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-500/30 mb-16">
           <div className="text-center mb-12">
@@ -141,7 +133,6 @@ const UltimateContentShowcase2027: React.FC = () => {
               Explore even more groundbreaking technologies that are reshaping our world
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
               { icon: "🔬", name: "Quantum Biology", color: "from-green-500 to-emerald-500" },
@@ -171,7 +162,6 @@ const UltimateContentShowcase2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Ultimate Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-3xl p-12 border border-yellow-500/30">
@@ -195,6 +185,7 @@ const UltimateContentShowcase2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentShowcase2027;

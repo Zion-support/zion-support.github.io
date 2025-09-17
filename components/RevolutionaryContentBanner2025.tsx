@@ -1,6 +1,3 @@
-
-const RevolutionaryContentBanner2025: React.FC = () => {
-  return (
   );
 };
 

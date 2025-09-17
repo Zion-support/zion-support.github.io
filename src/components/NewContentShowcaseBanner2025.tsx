@@ -20,11 +20,9 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const NewContentShowcaseBanner2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const newContentItems = [
     {
       id: 1,
@@ -75,34 +73,26 @@ const NewContentShowcaseBanner2025: React.FC = () => {
       badge: "EVOLUTION"
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % newContentItems.length);
     }, 5000);
-    
     return () => clearInterval(interval);
   }, [isAutoPlaying, newContentItems.length]);
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % newContentItems.length);
     setIsAutoPlaying(false);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + newContentItems.length) % newContentItems.length);
     setIsAutoPlaying(false);
   };
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
   };
-
   const currentItem = newContentItems[currentIndex];
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 px-4 overflow-hidden">
       {/* Background Effects */}
@@ -134,7 +124,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
           }}
         />
       </div>
-
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <motion.div 
@@ -158,7 +147,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
             quantum computing, and interdimensional exploration.
           </p>
         </motion.div>
-
         {/* Main Content Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
@@ -184,15 +172,12 @@ const NewContentShowcaseBanner2025: React.FC = () => {
                       <div className="text-gray-400 text-sm font-semibold">{currentItem.category}</div>
                     </div>
                   </div>
-
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     {currentItem.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                     {currentItem.description}
                   </p>
-
                   {/* Features */}
                   <div className="grid grid-cols-1 gap-3 mb-8">
                     {currentItem.features.map((feature, index) => (
@@ -202,7 +187,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
@@ -218,7 +202,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
                     </button>
                   </div>
                 </div>
-
                 {/* Right Side - Visual */}
                 <div className="relative">
                   <div className="relative bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-2xl p-8 border border-purple-400/30">
@@ -227,7 +210,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
                       <div className="text-2xl font-bold text-white mb-2">{currentItem.title}</div>
                       <div className="text-purple-400 font-semibold">{currentItem.category}</div>
                     </div>
-                    
                     {/* Floating Elements */}
                     <motion.div
                       className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center"
@@ -243,7 +225,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
                     >
                       <Star className="w-6 h-6 text-black" />
                     </motion.div>
-                    
                     <motion.div
                       className="absolute bottom-4 left-4 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center"
                       animate={{
@@ -263,7 +244,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Controls */}
           <div className="flex items-center justify-between mt-8">
             <button
@@ -272,7 +252,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
-
             {/* Slide Indicators */}
             <div className="flex space-x-3">
               {newContentItems.map((_, index) => (
@@ -287,7 +266,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
                 />
               ))}
             </div>
-
             <button
               onClick={nextSlide}
               className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 transform hover:scale-110"
@@ -296,7 +274,6 @@ const NewContentShowcaseBanner2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Bottom Stats */}
         <motion.div 
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -325,6 +302,7 @@ const NewContentShowcaseBanner2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NewContentShowcaseBanner2025;

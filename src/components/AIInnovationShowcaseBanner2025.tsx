@@ -14,11 +14,9 @@ import {
   Users,
   Cpu
 } from 'lucide-react';
-
 const AIInnovationShowcaseBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       title: "🚀 Revolutionary AI Innovations 2025",
@@ -49,18 +47,14 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
       icon: <Award className="w-8 h-8" />
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [slides.length]);
-
   const currentSlideData = slides[currentSlide];
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -91,15 +85,12 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
                       New Release 2025
                     </span>
                   </div>
-                  
                   <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
                     {currentSlideData.title}
                   </h2>
-                  
                   <p className="text-lg lg:text-xl text-white/90 max-w-2xl">
                     {currentSlideData.subtitle}
                   </p>
-                  
                   <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mt-6">
                     <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 group">
                       {currentSlideData.cta}
@@ -112,7 +103,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
                   </div>
                 </motion.div>
               </div>
-
               {/* Visual Elements */}
               <div className="flex-1 lg:max-w-md">
                 <motion.div
@@ -145,7 +135,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Slide Indicators */}
         <div className="bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -163,7 +152,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
                   />
                 ))}
               </div>
-              
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-4 text-white/80 text-sm">
                   <div className="flex items-center gap-1">
@@ -179,7 +167,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
                     <span>25+ Beta</span>
                   </div>
                 </div>
-                
                 <button
                   onClick={() => setIsVisible(false)}
                   className="text-white/60 hover:text-white transition-colors"
@@ -190,7 +177,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-4 right-4 space-y-2">
           <motion.div
@@ -207,7 +193,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
           >
             <Star className="w-5 h-5 text-yellow-400" />
           </motion.div>
-          
           <motion.div
             animate={{ 
               y: [0, 10, 0],
@@ -224,12 +209,12 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
             <Rocket className="w-5 h-5 text-blue-400" />
           </motion.div>
         </div>
-
         {/* Bottom Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
       </motion.div>
     </AnimatePresence>
   );
+
 };
 
 export default AIInnovationShowcaseBanner2025;

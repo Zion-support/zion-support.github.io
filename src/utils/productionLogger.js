@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 // Production logger utility for safe logging in production environments
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -36,8 +35,10 @@ export const productionLogger = {
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+    }
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   }
 };
 
 export default productionLogger;
-=======

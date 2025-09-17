@@ -7,6 +7,11 @@ const UltimateTechBreakthrough2029: React.FC = () => {
           </div>
         </div>
 
+            </div>
+          </div>
+        </div>
+
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl mb-8 opacity-90">

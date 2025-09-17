@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ArrowRight, Star, Zap, Rocket, Brain, Globe } from 'lucide-react';
-
 const RevolutionaryContentPromotionBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const slides = [
     {
       icon: Brain,
@@ -28,21 +26,18 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
       bgColor: "from-yellow-900/30 to-orange-900/30"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       </div>
-
       <div className="relative container mx-auto px-6 py-16">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left Content */}
@@ -56,7 +51,6 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
                 <Sparkles className="h-8 w-8 text-yellow-400 mr-3" />
                 <span className="text-yellow-400 font-semibold text-lg">NEW RELEASE</span>
               </div>
-              
               <h1 className="text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
                   Revolutionary Content
@@ -64,12 +58,10 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
                 <br />
                 <span className="text-white">Just Dropped!</span>
               </h1>
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Discover our latest breakthrough innovations in AI technology, autonomous business systems, 
                 and quantum-powered solutions that are reshaping the future of enterprise.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -89,7 +81,6 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
               </div>
             </motion.div>
           </div>
-
           {/* Right Content - Sliding Showcase */}
           <div className="flex-1 max-w-lg">
             <div className="relative h-96 rounded-2xl overflow-hidden">
@@ -115,7 +106,6 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
-              
               {/* Slide Indicators */}
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {slides.map((_, index) => (
@@ -131,7 +121,6 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Features Strip */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -150,7 +139,6 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
             </div>
           ))}
         </motion.div>
-
         {/* Floating Elements */}
         <div className="absolute top-10 left-10 w-4 h-4 bg-yellow-400 rounded-full opacity-60 animate-pulse"></div>
         <div className="absolute top-32 right-20 w-3 h-3 bg-pink-400 rounded-full opacity-40 animate-bounce"></div>
@@ -158,6 +146,7 @@ const RevolutionaryContentPromotionBanner2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentPromotionBanner2025;

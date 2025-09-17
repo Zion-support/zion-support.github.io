@@ -25,6 +25,8 @@ import {
   Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
+};
+
 
 export default function AIContentGenerator() {
   const features = [
@@ -284,4 +286,3 @@ export default function AIContentGenerator() {
               <Link to="/contact">
                 Contact Sales
   );
-}

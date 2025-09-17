@@ -88,9 +88,7 @@ export const revolutionaryContent2025 = [
     featured: true,
     imageUrl: "/images/blog/metaverse-2-0-2025.jpg",
     slug: "metaverse-2-0-reality-blurring-experience"
-  }
-];
-
+  };
 export const revolutionaryServices2025 = [
   {
     id: "qs-001",
@@ -175,5 +173,4 @@ export const revolutionaryServices2025 = [
     pricing: "Starting at $30,000/month",
     category: "Metaverse 2.0",
     featured: true
-  }
-];
+  };

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
   const navigationItems = [
     {
       title: 'Home',
@@ -69,7 +67,6 @@ const EnhancedNavigation: React.FC = () => {
       ]
     }
   ];
-
   return (
     <nav className="bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +78,6 @@ const EnhancedNavigation: React.FC = () => {
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -98,7 +94,6 @@ const EnhancedNavigation: React.FC = () => {
                     <span className="mr-2">{item.icon}</span>
                     {item.title}
                   </Link>
-                  
                   {/* Dropdown Menu */}
                   {item.subItems && (
                     <div className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -123,7 +118,6 @@ const EnhancedNavigation: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -143,7 +137,6 @@ const EnhancedNavigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -184,6 +177,7 @@ const EnhancedNavigation: React.FC = () => {
       </div>
     </nav>
   );
+
 };
 
 export default EnhancedNavigation;

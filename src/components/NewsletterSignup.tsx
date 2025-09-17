@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-
 interface NewsletterSignupProps {
   variant?: 'default' | 'compact' | 'floating';
   showSuccessMessage?: boolean;
-}
-
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ 
   variant = 'default', 
   showSuccessMessage = true 
@@ -14,7 +11,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [interests, setInterests] = useState<string[]>([]);
   const [showInterests, setShowInterests] = useState(false);
-
   const interestOptions = [
     { id: 'ai-ml', label: 'AI & Machine Learning', emoji: '🧠', color: 'from-purple-600 to-pink-600' },
     { id: 'quantum', label: 'Quantum Computing', emoji: '⚛️', color: 'from-cyan-600 to-blue-600' },
@@ -25,11 +21,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
     { id: 'automation', label: 'Automation', emoji: '🤖', color: 'from-indigo-600 to-purple-600' },
     { id: 'blockchain', label: 'Blockchain', emoji: '🔗', color: 'from-gray-600 to-blue-600' }
   ];
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
     // Simulate API call
     setTimeout(() => {
       setIsSubscribed(true);
@@ -39,21 +33,19 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
       setShowInterests(false);
     }, 2000);
   };
-
   const toggleInterest = (interestId: string) => {
     setInterests(prev => 
       prev.includes(interestId) 
         ? prev.filter(id => id !== interestId)
         : [...prev, interestId]
     );
+};
   };
-
   const getSelectedInterests = () => {
     return interests.map(id => 
       interestOptions.find(option => option.id === id)?.label
     ).join(', ');
   };
-
   if (isSubscribed && showSuccessMessage) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center">
@@ -76,8 +68,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
         </button>
       </div>
     );
-  }
-
+  };
   if (variant === 'compact') {
     return (
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
@@ -101,8 +92,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
         </form>
       </div>
     );
-  }
-
+  };
   if (variant === 'floating') {
     return (
       <div className="fixed bottom-4 right-4 z-50">
@@ -134,8 +124,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
         </div>
       </div>
     );
-  }
-
+  };
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12 text-white relative overflow-hidden">
       {/* Background Animation */}
@@ -152,12 +141,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
           />
         ))}
       </div>
-
       <div className="relative z-10 text-center">
         <div className="inline-flex items-center px-6 py-3 bg-white/20 rounded-full text-sm font-bold mb-6">
           ✨ EXCLUSIVE ACCESS • NEWSLETTER
         </div>
-        
         <h2 className="text-4xl font-bold mb-4">
           🚀 Get Exclusive Access to Revolutionary Technology
         </h2>
@@ -165,7 +152,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
           Join thousands of innovators, scientists, and technologists who get first access to 
           breakthrough technologies, research insights, and revolutionary innovations.
         </p>
-
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <input
@@ -184,7 +170,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
               {isLoading ? 'Subscribing...' : 'Subscribe Now'}
             </button>
           </div>
-
           <div className="text-center mb-6">
             <button
               type="button"
@@ -194,7 +179,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
               {showInterests ? 'Hide' : 'Customize'} your interests
             </button>
           </div>
-
           {showInterests && (
             <div className="grid md:grid-cols-4 gap-4 mb-6">
               {interestOptions.map((option) => (
@@ -214,7 +198,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
               ))}
             </div>
           )}
-
           <div className="flex items-center justify-center space-x-6 text-sm text-white/80">
             <div className="flex items-center">
               <span className="text-green-400 mr-2">✓</span>
@@ -230,7 +213,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
             </div>
           </div>
         </form>
-
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
             <div className="text-3xl mb-2">📧</div>
@@ -251,6 +233,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
       </div>
     </div>
   );
-};
+
 
 export default NewsletterSignup;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Database, Cloud, Lock, BarChart3, Smartphone, Globe } from 'lucide-react';
-
 const AdvancedTechSolutions2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-blue-900">
@@ -30,7 +29,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Solutions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400 transition-colors">
@@ -51,7 +49,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
               Explore Solutions <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-colors">
             <div className="flex items-center mb-4">
               <Cpu className="w-8 h-8 text-blue-400 mr-3" />
@@ -70,7 +67,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
               Explore Solutions <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-colors">
             <div className="flex items-center mb-4">
               <Database className="w-8 h-8 text-purple-400 mr-3" />
@@ -89,7 +85,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
               Explore Solutions <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-red-400 transition-colors">
             <div className="flex items-center mb-4">
               <Lock className="w-8 h-8 text-red-400 mr-3" />
@@ -108,7 +103,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
               Explore Solutions <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-yellow-400 transition-colors">
             <div className="flex items-center mb-4">
               <BarChart3 className="w-8 h-8 text-yellow-400 mr-3" />
@@ -127,7 +121,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
               Explore Solutions <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400 transition-colors">
             <div className="flex items-center mb-4">
               <Smartphone className="w-8 h-8 text-cyan-400 mr-3" />
@@ -147,7 +140,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Technology Stack</h2>
@@ -182,7 +174,6 @@ const AdvancedTechSolutions2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -210,6 +201,7 @@ const AdvancedTechSolutions2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AdvancedTechSolutions2027;

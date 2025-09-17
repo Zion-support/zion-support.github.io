@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025SyntheticIntelligenceBreakthroughBanner() {
   return (
@@ -58,4 +60,3 @@ export default function AI2025SyntheticIntelligenceBreakthroughBanner() {
       <div className="absolute bottom-10 left-20 w-12 h-12 bg-pink-300 bg-opacity-20 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
       <div className="absolute bottom-20 right-10 w-14 h-14 bg-blue-300 bg-opacity-20 rounded-full animate-bounce" style={{ animationDelay: '3s' }}></div>
   );
-}

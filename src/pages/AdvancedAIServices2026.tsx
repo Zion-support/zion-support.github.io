@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AdvancedAIServices2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -9,7 +8,6 @@ const AdvancedAIServices2026: React.FC = () => {
         <meta name="description" content="Comprehensive AI services for 2026. From machine learning to quantum AI, we provide cutting-edge artificial intelligence solutions for your business." />
         <meta name="keywords" content="AI Services, Machine Learning, Deep Learning, AI Consulting, AI Implementation, AI Solutions" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -29,7 +27,6 @@ const AdvancedAIServices2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Machine Learning Services */}
@@ -49,7 +46,6 @@ const AdvancedAIServices2026: React.FC = () => {
               Learn More
             </button>
           </div>
-
           {/* Deep Learning Services */}
           <div className="bg-gradient-to-br from-green-900/50 to-teal-900/50 p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="text-4xl mb-4">🧠</div>
@@ -67,7 +63,6 @@ const AdvancedAIServices2026: React.FC = () => {
               Learn More
             </button>
           </div>
-
           {/* Quantum AI Services */}
           <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="text-4xl mb-4">⚛️</div>
@@ -85,7 +80,6 @@ const AdvancedAIServices2026: React.FC = () => {
               Learn More
             </button>
           </div>
-
           {/* Edge AI Services */}
           <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="text-4xl mb-4">📱</div>
@@ -103,7 +97,6 @@ const AdvancedAIServices2026: React.FC = () => {
               Learn More
             </button>
           </div>
-
           {/* AI Ethics & Governance */}
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="text-4xl mb-4">⚖️</div>
@@ -121,7 +114,6 @@ const AdvancedAIServices2026: React.FC = () => {
               Learn More
             </button>
           </div>
-
           {/* AI Automation */}
           <div className="bg-gradient-to-br from-emerald-900/50 to-green-900/50 p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="text-4xl mb-4">🤖</div>
@@ -140,7 +132,6 @@ const AdvancedAIServices2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Success Stories</h2>
@@ -169,7 +160,6 @@ const AdvancedAIServices2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Our Technology Stack</h2>
@@ -192,7 +182,6 @@ const AdvancedAIServices2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 p-12 rounded-2xl text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business with AI?</h2>
@@ -212,6 +201,7 @@ const AdvancedAIServices2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AdvancedAIServices2026;

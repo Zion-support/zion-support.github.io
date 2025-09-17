@@ -16,6 +16,8 @@ import {
   Cpu,
   Globe
 } from 'lucide-react';
+};
+
 
 export default function DeveloperToolsPage() {
   const developerTools = [
@@ -404,6 +406,6 @@ export default function DeveloperToolsPage() {
               Get Dev Consultation
     </>
   );
-};
+
 
 export default developer-tools;

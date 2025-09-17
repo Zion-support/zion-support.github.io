@@ -1,6 +1,3 @@
-
-const careers: React.FC = () => {
-  return (
       </div>
     </div>
   );

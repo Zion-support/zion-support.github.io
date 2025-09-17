@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
   return (
     <div
@@ -11,7 +10,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
@@ -27,19 +25,16 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                   New Technology Showcase
                 </span>
               </div>
-              
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
                 AI 2025 Ultimate
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   {' '}Technology Showcase
                 </span>
               </h2>
-              
               <p className="text-xl text-gray-300 mb-6 max-w-2xl">
                 Discover revolutionary AI technologies that will transform industries and reshape the future of human-computer interaction.
               </p>
             </div>
-
             {/* Rotating Feature Display */}
             <div
               key={currentFeature}
@@ -55,7 +50,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Stats */}
             <div
               className="flex flex-wrap gap-6 mb-8"
@@ -73,7 +67,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                 <span className="text-white font-semibold">Future Ready</span>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -94,7 +87,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Visual */}
           <div
             className="relative"
@@ -106,14 +98,12 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                   <Brain className="w-16 h-16 text-white" />
                 </div>
               </div>
-
               {/* Orbiting Elements */}
               {features.map((featureindex) => {
                 const angle = (index * 90) * (Math.PI / 180);
                 const radius = 120;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
-                
                 return (
                   <div
                     key={index}
@@ -134,8 +124,8 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                     </div>
                   </div>
                 );
+};
               })}
-
               {/* Connection Lines */}
               <svg className="absolute inset-0 w-full h-full">
                 {features.map((_index) => {
@@ -145,7 +135,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                   const y1 = 160; // Center y
                   const x2 = 160 + Math.cos(angle) * radius;
                   const y2 = 160 + Math.sin(angle) * radius;
-                  
                   return (
                     <line
                       key={index}
@@ -172,6 +161,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default AI2025UltimateTechnologyShowcaseBanner;

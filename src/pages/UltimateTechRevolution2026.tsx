@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateTechRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-black text-white">
@@ -31,13 +30,11 @@ const UltimateTechRevolution2026: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Revolutionary Technologies Section */}
         <div id="technologies" className="mb-20">
           <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Technologies
           </h2>
-          
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Quantum Consciousness */}
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-3xl p-10 border border-purple-400/50 hover:scale-105 transition-all duration-500">
@@ -72,7 +69,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                 Explore Quantum Consciousness →
               </a>
             </div>
-
             {/* Synthetic Intelligence */}
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-10 border border-cyan-400/50 hover:scale-105 transition-all duration-500">
               <div className="text-8xl mb-8 text-center">🤖</div>
@@ -106,7 +102,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                 Discover Synthetic AI →
               </a>
             </div>
-
             {/* Neural Interface Revolution */}
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-3xl p-10 border border-emerald-400/50 hover:scale-105 transition-all duration-500">
               <div className="text-8xl mb-8 text-center">🧬</div>
@@ -140,7 +135,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                 Connect Your Mind →
               </a>
             </div>
-
             {/* Space Technology */}
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-3xl p-10 border border-orange-400/50 hover:scale-105 transition-all duration-500">
               <div className="text-8xl mb-8 text-center">🚀</div>
@@ -176,7 +170,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolution Impact Section */}
         <div id="revolution" className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-3xl p-16 mb-20">
           <h2 className="text-5xl font-bold text-center mb-12">Revolution Impact</h2>
@@ -204,7 +197,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Timeline Section */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-center mb-16">Revolution Timeline</h2>
@@ -247,7 +239,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">Join the Ultimate Tech Revolution</h2>
@@ -279,6 +270,7 @@ const UltimateTechRevolution2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechRevolution2026;

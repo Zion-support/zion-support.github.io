@@ -1,7 +1,5 @@
-
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = {
     ai: {
       title: "Artificial Intelligence",
@@ -48,11 +46,9 @@ const NextGenTechShowcase2026: React.FC = () => {
       ]
     }
   };
-
   return (
         </div>
       </section>
-
       {/* Interactive Technology Tabs */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -67,7 +63,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Explore cutting-edge technologies that are defining the future
             </p>
           </motion.div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(technologies).map(([key, tech]) => (
@@ -85,7 +80,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -126,7 +120,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Innovation Timeline */}
       <section className="py-20 px-4 bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
         <div className="container mx-auto">
@@ -141,27 +134,45 @@ const NextGenTechShowcase2026: React.FC = () => {
               Major breakthroughs and milestones in next-generation technology
             </p>
           </motion.div>
-
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
             </div>
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+      {/* Footer */}
+      <footer className="relative z-10 border-t border-white/20 py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-3 mb-6 md:mb-0">
+              <div className="w-10 h-10 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-lg flex items-center justify-center">
+                <Rocket className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Zion Tech Group</h3>
+                <p className="text-sm text-gray-400">Next-Gen Technology 2026</p>
+              </div>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-gray-400 mb-2">© 2026 Zion Tech Group. All rights reserved.</p>
+              <p className="text-sm text-gray-500">Transcending reality through next-generation technology.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     </div>
   );
+
 };
 
 export default NextGenTechShowcase2026;

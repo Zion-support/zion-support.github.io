@@ -1,6 +1,3 @@
-
-const Status: React.FC = () => {
-  return (
   );
 };
 

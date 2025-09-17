@@ -1,4 +1,3 @@
-=======
     } catch (error) {
       console.warn('localStorage not available:', error);
       return null;
@@ -12,18 +11,11 @@
       console.warn('localStorage not available:', error);
     }
   },
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-=======
-  
-  clear: (): void => {
-    try {
-      localStorage.clear();
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 /**
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
@@ -169,17 +161,13 @@ export const safeStorage = {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
-=======
->>>>>>> cursor/create-and-deploy-new-content-634d
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     }
   }
 };
 
 export default safeStorage;
-=======
-    try {
-    } catch (error) {
-      console.warn('localStorage not available:', error);

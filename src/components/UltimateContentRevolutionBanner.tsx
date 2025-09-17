@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function UltimateContentRevolutionBanner() {
   return (
@@ -42,4 +44,3 @@ export default function UltimateContentRevolutionBanner() {
             <span className="bg-purple-500 text-white px-3 py-1 rounded-full">✅ Infinite Speed</span>
             <span className="bg-orange-500 text-white px-3 py-1 rounded-full">✅ Zero Latency</span>
   );
-}

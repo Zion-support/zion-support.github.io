@@ -6,7 +6,3 @@ export interface CartItem {
   image?: string;
   description?: string;
   category?: string;
-}
-
-export interface Cart {
-  items: CartItem[];

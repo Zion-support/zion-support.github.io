@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveAIToolsDemo2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -16,7 +15,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             See how our solutions can transform your workflow in real-time.
           </p>
         </div>
-
         {/* Demo Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -39,7 +37,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Interactive Demo Area */}
         <div
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
@@ -77,7 +74,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
@@ -91,7 +87,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
               />
             </div>
           </div>
-
           {/* Demo Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Features */}
@@ -106,7 +101,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Metrics */}
             <div>
               <h4 className="text-lg font-semibold mb-4">Performance Metrics</h4>
@@ -127,7 +121,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div
           className="mb-12"
@@ -152,7 +145,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -180,6 +172,7 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default InteractiveAIToolsDemo2026;

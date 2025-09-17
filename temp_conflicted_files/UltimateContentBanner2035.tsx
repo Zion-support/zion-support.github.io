@@ -1,10 +1,55 @@
 
 const UltimateContentBanner2035: React.FC = () => {
+  const [currentBanner, setCurrentBanner] = useState(0);
+
+  const banners = [
+    {
+      id: 1,
+      title: "Ultimate Tech Revolution 2035",
+      subtitle: "Synthetic Consciousness • Quantum Reality • Interdimensional AI",
+      description: "Experience the most advanced technological revolution featuring synthetic consciousness, quantum reality manipulation, and interdimensional AI",
+      link: "/pages/UltimateTechRevolution2035",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900 via-indigo-900 to-blue-900",
+      icon: "🚀"
+    },
+    {
+      id: 2,
+      title: "Revolutionary Tech Showcase 2035",
+      subtitle: "Interactive Demos • Quantum Simulation • Reality Manipulation",
+      description: "The most advanced technological showcase featuring interactive demos, quantum simulation, and reality manipulation",
+      link: "/pages/RevolutionaryTechShowcase2035",
+      color: "from-indigo-600 to-pink-600",
+      bgColor: "from-indigo-900 via-purple-900 to-pink-900",
+      icon: "🌟"
+    },
+    {
+      id: 3,
+      title: "Consciousness Technology 2035",
+      subtitle: "Synthetic Intelligence • Quantum Computing • Mind-Machine Fusion",
+      description: "Revolutionary technology that enhances human consciousness and creates synthetic intelligence",
+      link: "/pages/UltimateTechRevolution2035",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-900 via-teal-900 to-cyan-900",
+      icon: "🧠"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [banners.length]);
+
+  const currentBannerData = banners[currentBanner];
+
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252240%2522%2520height%253D%252240%2522%2520viewBox%253D%25220%25200%252040%252040%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.15%2522%253E%253Cpath%2520d%253D%2522M20%252020c0-11.046-8.954-20-20-20v20h20z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.15%22%3E%3Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
@@ -134,58 +179,8 @@ const UltimateContentBanner2035: React.FC = () => {
           </div>
         </div>
       </div>
-    <div className={`bg-gradient-to-r ${currentBannerData.bgColor} text-white py-12 mb-8 relative overflow-hidden transition-all duration-500`}>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2035
-          </div>
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            {currentBannerData.icon} {currentBannerData.title}
-          </h2>
-          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
-            {currentBannerData.description}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a
-              href={currentBannerData.link}
-              className={`bg-gradient-to-r ${currentBannerData.color} px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl`}
-            >
-              Explore Revolution →
-            </a>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
-              Interactive Demo
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Banner Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-4 h-4 rounded-full transition-all duration-300 ${
-              index === currentBanner ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-            }`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
 
 export default UltimateContentBanner2035;
-=======
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4">
-            <a href="/pages/UltimateTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🌟 Ultimate Revolution 2035
-            </a>
-            <a href="/pages/RevolutionaryTechBreakthrough2035" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
-              🚀 Tech Breakthrough 2035
-            </a>
-            <a href="/pages/UltimateTechRevolution2035" className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
-              🌌 Interdimensional Tech

@@ -1,6 +1,3 @@
-
-const FutureTechnologyShowcase2026: React.FC = () => {
-  return (
     </div>
   );
 };

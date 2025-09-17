@@ -1,6 +1,3 @@
-
-const NextGenAIInnovationPromotionBanner: React.FC = () => {
-  return (
   );
 };
 

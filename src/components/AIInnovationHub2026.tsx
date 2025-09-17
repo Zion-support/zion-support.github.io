@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -21,7 +20,6 @@ const AIInnovationHub2026: React.FC = () => {
               Explore the most groundbreaking AI innovationsbreakthrough technologiesand revolutionary 
               developments that are reshaping the future of artificial intelligence.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -38,7 +36,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Featured Innovations */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div
@@ -98,10 +95,10 @@ const AIInnovationHub2026: React.FC = () => {
                   </div>
                 </div>
               );
+};
             })}
           </div>
         </div>
-
         {/* Category Filter */}
         <div
           className="mb-12"
@@ -130,7 +127,6 @@ const AIInnovationHub2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Innovation Grid */}
         <div
         >
@@ -185,7 +181,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovation Detail Modal */}
       <div>
         {selectedInnovation && (
@@ -230,7 +225,6 @@ const AIInnovationHub2026: React.FC = () => {
                 <p className="text-gray-600 text-lg mb-6">
                   {selectedInnovation.description}
                 </p>
-                
                 {/* Metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                   {Object.entries(selectedInnovation.metrics).map(([keyvalue]) => (
@@ -240,7 +234,6 @@ const AIInnovationHub2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedInnovation.tags.map((tag) => (
                     <span
@@ -251,7 +244,6 @@ const AIInnovationHub2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-500">
                     Timeline: {selectedInnovation.timeline}
@@ -268,6 +260,6 @@ const AIInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default AIInnovationHub2026;

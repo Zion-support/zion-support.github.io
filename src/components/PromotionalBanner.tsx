@@ -11,7 +11,6 @@ import {
   TrendingUp,
   Clock
 } from 'lucide-react';
-
 interface PromoItem {
   id: string;
   title: string;
@@ -20,12 +19,9 @@ interface PromoItem {
   icon: React.ComponentType<any>;
   badge?: string;
   color: string;
-}
-
 const PromotionalBanner: React.FC = () => {
   const [currentPromo, setCurrentPromo] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const promotionalItems: PromoItem[] = [
     {
       id: 'ai-customer-success',
@@ -55,21 +51,16 @@ const PromotionalBanner: React.FC = () => {
       color: 'from-cyan-400 to-blue-500'
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promotionalItems.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -95,7 +86,6 @@ const PromotionalBanner: React.FC = () => {
                     </span>
                   )}
                 </div>
-                
                 <div className="flex-1">
                   <h3 className="text-white font-semibold text-lg">
                     {promotionalItems[currentPromo].title}
@@ -105,7 +95,6 @@ const PromotionalBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <Link
                 to={promotionalItems[currentPromo].link}
                 className="hidden sm:flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200 font-semibold"
@@ -113,7 +102,6 @@ const PromotionalBanner: React.FC = () => {
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
-
             <div className="flex items-center space-x-4">
               {/* Promo indicators */}
               <div className="hidden sm:flex items-center space-x-2">
@@ -127,7 +115,6 @@ const PromotionalBanner: React.FC = () => {
                   />
                 ))}
               </div>
-
               <button
                 onClick={handleClose}
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -136,7 +123,6 @@ const PromotionalBanner: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile CTA */}
           <div className="sm:hidden mt-3">
             <Link
@@ -151,6 +137,7 @@ const PromotionalBanner: React.FC = () => {
     </AnimatePresence>
   );
 };
-
 export { PromotionalBanner };
+
+
 export default PromotionalBanner;

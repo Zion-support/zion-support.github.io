@@ -16,10 +16,8 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { NEW_SERVICES_2026 } from '../data/newContent2026';
-
 const NewServices2026: React.FC = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Automation': return Brain;
@@ -30,7 +28,6 @@ const NewServices2026: React.FC = () => {
       default: return Award;
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI Automation': return 'from-purple-500 to-pink-500';
@@ -41,7 +38,6 @@ const NewServices2026: React.FC = () => {
       default: return 'from-gray-500 to-gray-600';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
@@ -56,7 +52,6 @@ const NewServices2026: React.FC = () => {
             <Award className="h-6 w-6" />
             <span>NEW SERVICES 2026</span>
           </motion.div>
-          
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Revolutionary AI Services
           </h1>
@@ -65,13 +60,11 @@ const NewServices2026: React.FC = () => {
             that are transforming industries and reshaping the future of business.
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {NEW_SERVICES_2026.map((service, index) => {
             const CategoryIcon = getCategoryIcon(service.category);
             const categoryColor = getCategoryColor(service.category);
-            
             return (
               <motion.div
                 key={service.id}
@@ -109,17 +102,14 @@ const NewServices2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Service Content */}
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-6 text-lg">
                     {service.description}
                   </p>
-
                   {/* Key Benefits */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Benefits</h4>
@@ -132,7 +122,6 @@ const NewServices2026: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h4>
@@ -147,7 +136,6 @@ const NewServices2026: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Technologies */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Technologies</h4>
@@ -162,7 +150,6 @@ const NewServices2026: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Service Details */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div className="flex items-center space-x-2">
@@ -174,7 +161,6 @@ const NewServices2026: React.FC = () => {
                       <span className="text-gray-600">{service.support}</span>
                     </div>
                   </div>
-
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3">
                     <motion.button
@@ -198,9 +184,9 @@ const NewServices2026: React.FC = () => {
                 </div>
               </motion.div>
             );
+};
           })}
         </div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -239,6 +225,6 @@ const NewServices2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default NewServices2026;

@@ -1,20 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Brain, Atom, TrendingUp, Eye, Sparkles } from 'lucide-react';
-
 const UltimateTechAdvertisingBanner2025: React.FC = () => {
   const highlights = [
     { icon: Brain, text: "AI Revolution", color: "text-blue-400" },
     { icon: Atom, text: "Quantum Computing", color: "text-cyan-400" },
     { icon: Zap, text: "Neural Interfaces", color: "text-purple-400" }
   ];
-
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-purple-900/50 to-pink-900/50"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-900/20 to-purple-900/30"></div>
-      
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -57,7 +54,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
           className="absolute top-1/2 left-1/3 w-16 h-16 bg-pink-500/20 rounded-full blur-xl"
         />
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           {/* Badge */}
@@ -70,7 +66,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
             <Sparkles className="w-5 h-5 mr-2 text-yellow-400" />
             <span className="text-sm font-medium text-yellow-400">Ultimate Tech Breakthrough 2025</span>
           </motion.div>
-
           {/* Main Headline */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +77,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
             <br />
             <span className="text-yellow-400">Breakthrough 2025</span>
           </motion.h2>
-
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -93,7 +87,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
             Experience the most significant technological breakthroughs in human history. 
             Three revolutionary technologies that are reshaping our world and defining the future.
           </motion.p>
-
           {/* Highlights */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -112,7 +105,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +121,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
               Explore All Breakthroughs
               <ArrowRight className="ml-2 w-5 h-5" />
             </motion.button>
-            
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -139,7 +130,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
               Watch Demo
             </motion.button>
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,6 +154,7 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default UltimateTechAdvertisingBanner2025;

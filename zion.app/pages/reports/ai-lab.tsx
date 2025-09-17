@@ -1,6 +1,3 @@
-
-const ai-lab: React.FC = () => {
-  return (
   );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryTechShowcase2026Banner: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
@@ -8,7 +7,6 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div 
@@ -18,20 +16,17 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
             <Sparkles className="w-4 h-4" />
             REVOLUTIONARY TECH SHOWCASE 2026
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future is
             <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Here Today
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience groundbreaking technologies that are reshaping our world and 
             defining the next decade of human progress.
           </p>
         </div>
-
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Slide Content */}
@@ -53,15 +48,12 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <h4 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   {currentSlideData.title}
                 </h4>
-
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {currentSlideData.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                   {currentSlideData.features.map((featureindex) => (
@@ -73,7 +65,6 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
@@ -86,7 +77,6 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual */}
               <div className="relative">
                 <div className={`relative bg-gradient-to-br ${currentSlideData.color} rounded-3xl p-8 aspect-square flex items-center justify-center`}>
@@ -96,20 +86,17 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
                     <div className="text-white text-2xl font-bold mb-2">{currentSlideData.title}</div>
                     <div className="text-white/80 text-lg">{currentSlideData.subtitle}</div>
                   </div>
-                  
                   {/* Floating Elements */}
                   <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full animate-pulse delay-1000"></div>
                   <div className="absolute top-1/2 left-4 w-4 h-4 bg-white/20 rounded-full animate-pulse delay-500"></div>
                 </div>
-
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-xl"></div>
               </div>
             </div>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center gap-3 mt-12">
             {slides.map((_index) => (
@@ -125,7 +112,6 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Bottom Stats */}
         <div 
           className="mt-20"
@@ -153,6 +139,7 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryTechShowcase2026Banner;

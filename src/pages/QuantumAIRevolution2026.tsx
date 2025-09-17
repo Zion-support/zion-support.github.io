@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const QuantumAIRevolution2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const quantumFeatures = [
     {
       title: "Quantum Neural Networks",
@@ -57,14 +55,12 @@ const QuantumAIRevolution2026: React.FC = () => {
       ]
     }
   ];
-
   const quantumStats = [
     { metric: "Processing Speed", value: "10^18", unit: "Operations/sec", improvement: "1000x" },
     { metric: "Memory Capacity", value: "10^15", unit: "Quantum Bits", improvement: "∞" },
     { metric: "Accuracy Rate", value: "99.99%", unit: "Precision", improvement: "50x" },
     { metric: "Energy Efficiency", value: "95%", unit: "Reduction", improvement: "10x" }
   ];
-
   const useCases = [
     {
       title: "Healthcare Revolution",
@@ -91,7 +87,6 @@ const QuantumAIRevolution2026: React.FC = () => {
       impact: "Autonomous space missions, 10x efficiency"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -125,7 +120,6 @@ const QuantumAIRevolution2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Stats */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -138,7 +132,6 @@ const QuantumAIRevolution2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Quantum Performance Metrics</h2>
             <p className="text-xl opacity-80">Revolutionary improvements over classical computing</p>
           </motion.div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {quantumStats.map((stat, index) => (
               <motion.div
@@ -157,7 +150,6 @@ const QuantumAIRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Features Tabs */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -173,7 +165,6 @@ const QuantumAIRevolution2026: React.FC = () => {
               computing paradigm ever created.
             </p>
           </motion.div>
-
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2">
@@ -192,7 +183,6 @@ const QuantumAIRevolution2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -208,7 +198,6 @@ const QuantumAIRevolution2026: React.FC = () => {
                   <div className="text-8xl mb-6">{quantumFeatures[activeTab].icon}</div>
                   <h3 className="text-4xl font-bold mb-6">{quantumFeatures[activeTab].title}</h3>
                   <p className="text-xl opacity-90 mb-8">{quantumFeatures[activeTab].description}</p>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {quantumFeatures[activeTab].benefits.map((benefit, index) => (
                       <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -216,12 +205,10 @@ const QuantumAIRevolution2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <button className="bg-gradient-to-r from-cyan-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                     Learn More →
                   </button>
                 </div>
-                
                 <div>
                   <h4 className="text-2xl font-bold mb-6">Key Applications</h4>
                   <div className="space-y-4">
@@ -238,7 +225,6 @@ const QuantumAIRevolution2026: React.FC = () => {
           </AnimatePresence>
         </div>
       </div>
-
       {/* Use Cases */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -254,7 +240,6 @@ const QuantumAIRevolution2026: React.FC = () => {
               for human advancement.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -275,7 +260,6 @@ const QuantumAIRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
@@ -302,6 +286,7 @@ const QuantumAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default QuantumAIRevolution2026;

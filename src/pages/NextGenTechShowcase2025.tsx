@@ -1,8 +1,4 @@
 import React from 'react';
-
-const NextGenTechShowcase2025: React.FC = () => {
-  return (
-
       {/* Technology Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -10,24 +6,19 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Revolutionary Technologies</h2>
             <p className="text-xl text-gray-600">Cutting-edge innovations transforming industries</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               </ul>
             </motion.div>
-
             <motion.div
               </ul>
             </motion.div>
-
             <motion.div
               </ul>
             </motion.div>
-
             <motion.div
               </ul>
             </motion.div>
-
             <motion.div
               </ul>
             </motion.div>
@@ -65,7 +56,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-pink-50 to-orange-50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Success Stories</h2>
@@ -96,7 +86,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Embrace the Future</h2>
@@ -112,9 +101,13 @@ const NextGenTechShowcase2025: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
+=======
+      </div>
+      </section>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     </div>
   );
+
 };
 
 export default NextGenTechShowcase2025;

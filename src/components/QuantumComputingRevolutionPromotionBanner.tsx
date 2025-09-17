@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
   return (
     <div
@@ -11,7 +10,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-spin" style={{ animationDuration: '15s' }}></div>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
@@ -31,7 +29,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 that are reshaping the boundaries of computational possibility.
               </p>
             </div>
-
             {/* Features List */}
             <div
               className="grid grid-cols-2 gap-2 mb-6"
@@ -43,7 +40,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -63,14 +59,12 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Quantum Stats */}
           <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Quantum Capabilities</h3>
-              
               {/* Animated Highlight */}
               <div
                 key={currentHighlight}
@@ -82,7 +76,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 <div className="text-4xl font-bold text-white mb-2">{highlights[currentHighlight].value}</div>
                 <div className="text-gray-400 text-sm">{highlights[currentHighlight].label}</div>
               </div>
-
               {/* Quantum Metrics */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-sm">
@@ -107,7 +100,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                   <span className="text-blue-400 font-semibold">Unbreakable</span>
                 </div>
               </div>
-
               {/* Urgency Indicator */}
               <div
                 className="mt-6 flex items-center justify-center gap-2 text-cyan-400 text-sm"
@@ -121,6 +113,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default QuantumComputingRevolutionPromotionBanner;

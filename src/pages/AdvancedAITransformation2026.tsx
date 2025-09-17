@@ -1,10 +1,8 @@
 import React from 'react';
-
 const AdvancedAITransformation2026: React.FC = () => {
   return (
         </div>
       </section>
-
       {/* Core Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -19,7 +17,6 @@ const AdvancedAITransformation2026: React.FC = () => {
               Experience the future of artificial intelligence with autonomous systems that think, adapt, and create
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -39,7 +36,6 @@ const AdvancedAITransformation2026: React.FC = () => {
                 <li>• Continuous optimization</li>
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +54,6 @@ const AdvancedAITransformation2026: React.FC = () => {
                 <li>• Adaptive learning</li>
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +75,6 @@ const AdvancedAITransformation2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Showcase */}
       <section className="py-20 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <div className="container mx-auto">
@@ -95,9 +89,9 @@ const AdvancedAITransformation2026: React.FC = () => {
               Cutting-edge AI technologies that push the boundaries of what's possible
             </p>
           </motion.div>
-
     </div>
   );
+
 };
 
 export default AdvancedAITransformation2026;

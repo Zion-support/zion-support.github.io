@@ -1,6 +1,3 @@
-
-const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
-  return (
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-}
+};
+
 
 export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {
   return (
@@ -68,4 +68,3 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
               © 2025 Zion Tech Group. All rights reserved.
     </>
   );
-}

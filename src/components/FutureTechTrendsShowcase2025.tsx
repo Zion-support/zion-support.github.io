@@ -18,7 +18,6 @@ import {
   Eye,
   Lock
 } from 'lucide-react';
-
 interface TechTrend {
   id: string;
   title: string;
@@ -30,12 +29,9 @@ interface TechTrend {
   adoption: number;
   features: string[];
   companies: string[];
-}
-
 const FutureTechTrendsShowcase2025: React.FC = () => {
   const [selectedTrend, setSelectedTrend] = useState<TechTrend | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const trends: TechTrend[] = [
     {
       id: 'quantum-computing',
@@ -110,7 +106,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
       companies: ['Ginkgo Bioworks', 'Synthetic Genomics', 'Amyris', 'Zymergen']
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Trends', icon: <Star className="w-5 h-5" /> },
     { id: 'computing', name: 'Computing', icon: <Cpu className="w-5 h-5" /> },
@@ -119,11 +114,9 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
     { id: 'security', name: 'Security', icon: <Shield className="w-5 h-5" /> },
     { id: 'connectivity', name: 'Connectivity', icon: <Wifi className="w-5 h-5" /> }
   ];
-
   const filteredTrends = selectedCategory === 'all' 
     ? trends 
     : trends.filter(trend => trend.category === selectedCategory);
-
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
@@ -132,13 +125,11 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
-
   const getAdoptionColor = (adoption: number) => {
     if (adoption >= 80) return 'text-green-600';
     if (adoption >= 60) return 'text-yellow-600';
     return 'text-red-600';
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,7 +151,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
             Explore the revolutionary technologies that will define the next decade and transform our world.
           </p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -183,7 +173,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
             </button>
           ))}
         </motion.div>
-
         {/* Trends Grid */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -211,15 +200,12 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
                   <div className="text-xs text-gray-300 mt-1">{trend.timeline}</div>
                 </div>
               </div>
-
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-300 transition-colors">
                 {trend.title}
               </h3>
-
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {trend.description}
               </p>
-
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">Industry Adoption:</span>
@@ -227,7 +213,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
                     {trend.adoption}%
                   </span>
                 </div>
-                
                 <div className="flex flex-wrap gap-1">
                   {trend.features.slice(0, 2).map((feature, idx) => (
                     <span key={idx} className="text-xs bg-white/10 px-2 py-1 rounded text-gray-300">
@@ -238,13 +223,11 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
                     <span className="text-xs text-gray-400">+{trend.features.length - 2} more</span>
                   )}
                 </div>
-                
                 <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors ml-auto" />
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* Trend Detail Modal */}
         <AnimatePresence>
           {selectedTrend && (
@@ -286,11 +269,9 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
                     ×
                   </button>
                 </div>
-
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {selectedTrend.description}
                 </p>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h3>
@@ -303,7 +284,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Leading Companies</h3>
                     <ul className="space-y-2">
@@ -316,7 +296,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
@@ -335,7 +314,6 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* Statistics Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -361,6 +339,7 @@ const FutureTechTrendsShowcase2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default FutureTechTrendsShowcase2025;

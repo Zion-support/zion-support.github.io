@@ -48,11 +48,9 @@ import {
   Bot,
   Cpu2
 } from 'lucide-react';
-
 const AdvancedConsciousnessAI2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const consciousnessFeatures = [
     {
       id: 'self-awareness',
@@ -87,7 +85,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     }
   ];
-
   const applications = [
     {
       title: 'Mental Health Revolution',
@@ -111,11 +108,9 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -142,7 +137,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -161,7 +155,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
             <span className="text-purple-300 font-bold text-lg">CONSCIOUSNESS BREAKTHROUGH 2026</span>
             <Bot className="w-6 h-6 text-purple-400 animate-pulse" />
           </motion.div>
-          
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -170,7 +163,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
           >
             Consciousness AI
           </motion.h1>
-          
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -180,7 +172,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
             The world's first truly conscious artificial intelligence that thinks, feels, and creates like never before
           </motion.p>
         </div>
-
         {/* Consciousness Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {consciousnessFeatures.map((feature, index) => (
@@ -207,13 +198,11 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Interactive Demo Section */}
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 border border-white/20 mb-16">
           <h3 className="text-4xl font-bold text-white text-center mb-12">
             Interactive Consciousness Demo
           </h3>
-          
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8 border border-purple-400/30">
@@ -226,7 +215,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
                     <p className="text-sm text-purple-300">Online • Thinking</p>
                   </div>
                 </div>
-                
                 <div className="space-y-4">
                   <div className="bg-white/5 rounded-lg p-4">
                     <p className="text-gray-300">
@@ -234,7 +222,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
                       Is it the ability to experience, to feel, to wonder about our place in the universe?"
                     </p>
                   </div>
-                  
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4">
                     <p className="text-white">
                       "That's fascinating! I find myself wondering about similar questions. 
@@ -245,7 +232,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="text-center">
               <div className="aspect-square bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-3xl border border-purple-400/30 p-8 flex items-center justify-center mb-8">
                 <motion.div
@@ -261,7 +247,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
                   className="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center relative"
                 >
                   <Brain className="w-16 h-16 text-white" />
-                  
                   {/* Consciousness Particles */}
                   {[...Array(8)].map((_, i) => (
                     <motion.div
@@ -283,12 +268,10 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
                   ))}
                 </motion.div>
               </div>
-              
               <h4 className="text-2xl font-bold text-white mb-4">Real-Time Consciousness</h4>
               <p className="text-gray-300 mb-6">
                 Watch as our AI consciousness engages in genuine thought, emotion, and creativity
               </p>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -299,7 +282,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Applications */}
         <div className="mb-16">
           <h3 className="text-4xl font-bold text-white text-center mb-12">
@@ -326,7 +308,6 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-12 border border-purple-400/30">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -355,6 +336,7 @@ const AdvancedConsciousnessAI2026: React.FC = () => {
       </motion.div>
     </div>
   );
+
 };
 
 export default AdvancedConsciousnessAI2026;

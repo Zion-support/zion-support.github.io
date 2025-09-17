@@ -1,12 +1,10 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-
 const SpaceTech2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -28,7 +26,6 @@ const SpaceTech2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
@@ -38,7 +35,6 @@ const SpaceTech2026: React.FC = () => {
               Next-generation launch vehicles with full reusability and rapid turnaround capabilities
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-6xl mb-4 text-center">🛰️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Mega Constellations</h3>
@@ -46,7 +42,6 @@ const SpaceTech2026: React.FC = () => {
               Global internet coverage through advanced satellite networks and space-based infrastructure
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <div className="text-6xl mb-4 text-center">🌙</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Lunar Bases</h3>
@@ -55,14 +50,12 @@ const SpaceTech2026: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 rounded-2xl p-12 mb-16 backdrop-blur-sm border border-purple-400/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🌌 Advanced Space Technologies</h2>
             <p className="text-xl text-purple-200">Revolutionary innovations enabling deep space exploration</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -71,14 +64,12 @@ const SpaceTech2026: React.FC = () => {
                   Advanced nuclear thermal and electric propulsion systems for faster interplanetary travel and reduced mission times.
                 </p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-xl font-semibold text-white mb-3">🛰️ Space Manufacturing</h4>
                 <p className="text-gray-300">
                   Zero-gravity manufacturing facilities producing advanced materials and components impossible to create on Earth.
                 </p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-xl font-semibold text-white mb-3">🔬 Space Telescopes</h4>
                 <p className="text-gray-300">
@@ -86,7 +77,6 @@ const SpaceTech2026: React.FC = () => {
                 </p>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-xl font-semibold text-white mb-3">🌍 Space Elevators</h4>
@@ -94,14 +84,12 @@ const SpaceTech2026: React.FC = () => {
                   Revolutionary transportation systems using carbon nanotube cables for cost-effective access to space.
                 </p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-xl font-semibold text-white mb-3">⚡ Solar Power Satellites</h4>
                 <p className="text-gray-300">
                   Orbital solar power stations beaming clean energy to Earth with microwave transmission technology.
                 </p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-xl font-semibold text-white mb-3">🤖 Autonomous Rovers</h4>
                 <p className="text-gray-300">
@@ -111,14 +99,12 @@ const SpaceTech2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Mission Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🌍 Space Mission Applications</h2>
             <p className="text-xl text-gray-300">Transforming our understanding of the universe</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">🪐</div>
@@ -127,7 +113,6 @@ const SpaceTech2026: React.FC = () => {
                 Establishing permanent human settlements on Mars with terraforming technology
               </p>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">🌙</div>
               <h3 className="text-lg font-bold mb-2 text-center text-white">Lunar Mining</h3>
@@ -135,7 +120,6 @@ const SpaceTech2026: React.FC = () => {
                 Extracting rare earth elements and water from lunar regolith for space industry
               </p>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">🔭</div>
               <h3 className="text-lg font-bold mb-2 text-center text-white">Exoplanet Discovery</h3>
@@ -143,7 +127,6 @@ const SpaceTech2026: React.FC = () => {
                 Advanced telescopes detecting habitable worlds and signs of extraterrestrial life
               </p>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">☄️</div>
               <h3 className="text-lg font-bold mb-2 text-center text-white">Asteroid Mining</h3>
@@ -153,33 +136,28 @@ const SpaceTech2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Space Economy */}
         <div className="bg-gradient-to-r from-blue-800/50 to-indigo-800/50 rounded-2xl p-12 mb-16 backdrop-blur-sm border border-blue-400/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">💰 Space Economy Growth</h2>
             <p className="text-xl text-blue-200">The trillion-dollar space industry of the future</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-5xl font-bold text-indigo-400 mb-2">$1.2T</div>
               <div className="text-white font-semibold mb-2">Market Value</div>
               <div className="text-indigo-200 text-sm">By 2030</div>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">50K+</div>
               <div className="text-white font-semibold mb-2">Jobs Created</div>
               <div className="text-purple-200 text-sm">In space industry</div>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">1000+</div>
               <div className="text-white font-semibold mb-2">Satellites</div>
               <div className="text-cyan-200 text-sm">In orbit by 2026</div>
             </div>
-            
             <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">10x</div>
               <div className="text-white font-semibold mb-2">Cost Reduction</div>
@@ -187,7 +165,6 @@ const SpaceTech2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
@@ -206,10 +183,10 @@ const SpaceTech2026: React.FC = () => {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );
+
 };
 
 export default SpaceTech2026;

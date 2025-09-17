@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContentShowcase2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
@@ -19,7 +18,6 @@ const NewContentShowcase2025: React.FC = () => {
             innovation hubs, and breakthrough demonstrations
           </p>
         </div>
-
         {/* Interactive Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
@@ -80,7 +78,6 @@ const NewContentShowcase2025: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center items-center space-x-4 mt-8">
             <button
@@ -91,7 +88,6 @@ const NewContentShowcase2025: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
             <div className="flex space-x-2">
               {newContent.map((_, index) => (
                 <button
@@ -103,7 +99,6 @@ const NewContentShowcase2025: React.FC = () => {
                 />
               ))}
             </div>
-            
             <button
               onClick={nextSlide}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
@@ -112,7 +107,6 @@ const NewContentShowcase2025: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-            
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
@@ -125,7 +119,6 @@ const NewContentShowcase2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="mt-20">
           <div
@@ -139,7 +132,6 @@ const NewContentShowcase2025: React.FC = () => {
               Explore all our revolutionary new content
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {newContent.map((content, index) => (
               <div
@@ -177,6 +169,7 @@ const NewContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NewContentShowcase2025;

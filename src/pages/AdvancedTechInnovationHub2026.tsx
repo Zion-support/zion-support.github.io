@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedTechInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -17,7 +16,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             technologies, revolutionary research, and cutting-edge solutions that are reshaping the future of humanity.
           </p>
         </div>
-
         {/* Innovation Showcase Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* AI Consciousness Lab */}
@@ -43,7 +41,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Quantum Computing Center */}
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">⚛️</div>
@@ -67,7 +64,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Neural Interface Lab */}
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧬</div>
@@ -91,7 +87,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Space Technology Lab */}
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🚀</div>
@@ -115,7 +110,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Biotechnology Innovation */}
           <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧬</div>
@@ -139,7 +133,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Cybersecurity Fortress */}
           <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🛡️</div>
@@ -164,7 +157,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Innovation Metrics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Impact Metrics</h2>
@@ -187,7 +179,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Roadmap */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Roadmap 2026-2030</h2>
@@ -230,7 +221,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="mb-8">
@@ -258,6 +248,7 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AdvancedTechInnovationHub2026;

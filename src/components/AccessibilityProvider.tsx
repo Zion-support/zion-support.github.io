@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AccessibilityProvider: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,16 +7,14 @@ const AccessibilityProvider: React.FC = () => {
     </div>
   );
 };
-
     toggleReducedMotion
   };
-,
   return (,
     <AccessibilityContext.Provider value={value}>,
       <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>,
         {children};
       </div>,
     </AccessibilityContext.Provider>)
-};
-,
+
+
 export default AccessibilityProvider,

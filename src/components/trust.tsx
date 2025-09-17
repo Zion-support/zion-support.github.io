@@ -3,6 +3,8 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
+};
+
 
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user');
@@ -27,7 +29,7 @@ export default function TrustPage() {
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
-  }
+  };
   async function submitAppeal(e: React.FormEvent) {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -37,7 +39,7 @@ export default function TrustPage() {
     await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
     form.reset();
-  }
+  };
   return (
     <EnhancedLayout>
       <div className="space-y-6">
@@ -84,6 +86,6 @@ export default function TrustPage() {
               )}
         )}
   );
-};
+
 
 export default trust;

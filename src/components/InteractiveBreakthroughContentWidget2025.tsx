@@ -1,7 +1,6 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface BreakthroughContent {
   id: string;
   title: string;
@@ -11,8 +10,6 @@ interface BreakthroughContent {
   icon: string;
   href: string;
   featured: boolean;
-}
-
 const breakthroughContent: BreakthroughContent[] = [
   {
     id: 'ai-2025-ultimate-breakthrough',
@@ -73,8 +70,9 @@ const breakthroughContent: BreakthroughContent[] = [
     icon: '🧠',
     href: '/neural-interface-revolution-2026',
     featured: false
-  }
-];
+  };
+};
+
 
 export default function InteractiveBreakthroughContentWidget2025() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
@@ -186,6 +184,6 @@ export default function InteractiveBreakthroughContentWidget2025() {
               >
                 View Case Studies
   );
-};
+
 
 export default InteractiveBreakthroughContentWidget2025;

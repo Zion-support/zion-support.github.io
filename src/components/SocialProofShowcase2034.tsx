@@ -1,16 +1,15 @@
-import React from 'react';
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 
-const SocialProofShowcase2034 = () => {
+const COMPONENT: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">SocialProofShowcase2034</h1>
-          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
         </div>
       </div>
     </div>
   );
 };
 
-export default SocialProofShowcase2034;

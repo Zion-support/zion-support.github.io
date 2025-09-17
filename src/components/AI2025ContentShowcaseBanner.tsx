@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025ContentShowcaseBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white py-4 px-4 relative overflow-hidden">
@@ -41,6 +40,7 @@ const AI2025ContentShowcaseBanner: React.FC = () => {
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
   );
+
 };
 
 export default AI2025ContentShowcaseBanner;

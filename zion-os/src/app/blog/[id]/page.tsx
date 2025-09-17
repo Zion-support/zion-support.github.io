@@ -1,6 +1,37 @@
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+import React from 'react';
+
+type Params = { params: { id: string } };
+
+const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-framework-2025': {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
+    excerpt:
+      'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-16',
+    readTime: '12 min read',
+    content: [
+      'AI governance is no longer optional—it\'s essential for building trust and ensuring responsible AI deployment at scale.',
+      'This framework covers policy development, risk assessment, compliance monitoring, and continuous governance across the AI lifecycle.',
+      'We outline practical implementation steps including governance structures, risk frameworks, compliance checklists, and monitoring systems.',
+      'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
+      'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
+      'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
+  'agentic-safety-patterns-2025': {
+    id: 'agentic-safety-patterns-2025',
+    title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+    excerpt:
+      'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
       'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
     ]
@@ -17,8 +48,6 @@
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
@@ -46,6 +75,8 @@
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     ]
   },
   'agent-safety-red-teaming-2025': {
@@ -71,10 +102,8 @@
     category: 'Case Studies',
     author: 'Michael Rodriguez',
     date: '2025-09-12',
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     readTime: '9 min read',
     ]
-    ],
   'ai-safety-red-teaming-2025': {
     id: 'ai-safety-red-teaming-2025',
     title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
@@ -103,11 +132,61 @@
       'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
       'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
       'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
-}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
 
 }
 
 =======
 }
 >>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
+=======
+    ]
+  }
+};
+
+}
+
+export default function BlogDetailPage({ params }: { params: { id: string } }) {
+  const post = POSTS[params.id];
+export default page;
+
+  if (!post) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-16">
+        <h1 className="text-3xl font-bold mb-4">Article not found</h1>
+        <p className="text-gray-600 mb-6">The article you are looking for does not exist or has been moved.</p>
+        <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
+      </div>
+    );
+  }
+
+  return (
+    <article className="min-h-screen">
+      <header className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="mb-3 flex items-center gap-2">
+            <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">{post.category}</span>
+            <span className="text-xs text-blue-100">{new Date(post.date).toLocaleDateString()}</span>
+            <span className="text-xs text-blue-100">• {post.readTime}</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">{post.title}</h1>
+          <p className="text-blue-100 mt-4 max-w-2xl">{post.excerpt}</p>
+        </div>
+      </header>
+
+      <div className="max-w-3xl mx-auto px-4 py-10">
+        <div className="prose prose-lg max-w-none prose-invert">
+          <p>{post.content || 'Content coming soon.'}</p>
+        </div>
+
+        <div className="mt-10">
+          <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+}
+
+}
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

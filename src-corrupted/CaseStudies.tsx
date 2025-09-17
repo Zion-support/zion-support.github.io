@@ -5,4 +5,3 @@ const CaseStudies: React.FC = () => {
   );
 };
 
-export default CaseStudies;

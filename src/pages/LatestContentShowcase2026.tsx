@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { latestContent2026, featuredServices2026 } from '../data/latestContent2026';
-
 const LatestContentShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -34,14 +33,12 @@ const LatestContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Latest Content Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Latest Content & Insights</h2>
           <p className="text-xl text-gray-300">Stay ahead with our cutting-edge research and breakthrough discoveries</p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {latestContent2026.map((content) => (
             <div key={content.id} className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
@@ -75,7 +72,6 @@ const LatestContentShowcase2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Featured Services Section */}
       <div className="bg-white/5 backdrop-blur-md border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -83,7 +79,6 @@ const LatestContentShowcase2026: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Featured Services 2026</h2>
             <p className="text-xl text-gray-300">Revolutionary solutions that transform your business operations</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredServices2026.map((service) => (
               <div key={service.id} className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
@@ -124,7 +119,6 @@ const LatestContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-md rounded-3xl p-12 text-center border border-white/10">
@@ -144,6 +138,7 @@ const LatestContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default LatestContentShowcase2026;

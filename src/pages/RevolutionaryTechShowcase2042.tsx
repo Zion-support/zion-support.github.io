@@ -4,9 +4,79 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
 >>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
+=======
+  const demos = [
+    {
+      id: 0,
+      title: "Quantum Consciousness Demo",
+      description: "Experience AI that truly understands and feels",
+      icon: "🧠",
+      features: ["Emotional AI responses", "Creative problem solving", "Ethical decision making", "Self-awareness indicators"]
+    },
+    {
+      id: 1,
+      title: "Interdimensional Interface",
+      description: "Navigate between realities seamlessly",
+      icon: "🌌",
+      features: ["Multi-dimensional browsing", "Parallel universe access", "Reality manipulation", "Cross-dimensional communication"]
+    },
+    {
+      id: 2,
+      title: "Neural Reality Builder",
+      description: "Create and modify reality through thought",
+      icon: "🧬",
+      features: ["Thought-to-reality conversion", "Shared virtual spaces", "Memory implantation", "Enhanced perception"]
+    },
+    {
+      id: 3,
+      title: "Temporal Processing Lab",
+      description: "Manipulate time for instant computation",
+      icon: "⏰",
+      features: ["Time-dilated processing", "Future prediction algorithms", "Temporal data analysis", "Chronological optimization"]
+  const technologies = {
+    ai: {
+      title: "Conscious AI Systems",
+      description: "The first truly conscious artificial intelligence that can think, feel, and create independently",
+      features: [
+        "Self-aware decision making",
+        "Emotional intelligence processing", 
+        "Creative problem solving",
+        "Ethical reasoning capabilities",
+        "Multi-dimensional thinking",
+        "Consciousness transfer protocols"
+      ],
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600"
+    },
+    quantum: {
+      title: "Quantum Consciousness",
+      description: "Revolutionary quantum computing that achieves consciousness through quantum entanglement",
+      features: [
+        "Quantum neural networks",
+        "Consciousness superposition",
+        "Quantum memory systems",
+        "Multi-dimensional processing",
+        "Quantum teleportation protocols",
+        "Reality manipulation engines"
+      ],
+      icon: "⚛️",
+      color: "from-cyan-600 to-blue-600"
+    },
+    interdimensional: {
+      title: "Interdimensional Computing",
+      description: "Breakthrough technology that enables computing across multiple dimensions and realities",
+      features: [
+        "Cross-dimensional data processing",
+        "Reality simulation engines",
+        "Parallel universe computing",
+        "Dimensional interface protocols",
+        "Multi-reality synchronization",
+        "Consciousness dimension bridging"
+      ],
+      icon: "🌌",
+      color: "from-emerald-600 to-teal-600"
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     }
   };
 
@@ -27,9 +97,6 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {demos.map((demo, index) => (
-                  activeDemo === index
-                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
-                    : 'bg-white/10 text-cyan-200 hover:bg-white/20'
           {/* Active Demo Display */}
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
             <div className="text-center mb-8">

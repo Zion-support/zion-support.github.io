@@ -1,5 +1,4 @@
 import React from 'react';
-
 const services: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const services: React.FC = () => {
     </div>
   );
 };
-
 const serviceCategories: Array<{
   id: string;
   title: string;
@@ -171,9 +169,9 @@ const serviceCategories: Array<{
     icon: <BarChart3 className="w-6 h-6" />,
     color: 'from-indigo-500 to-purple-600',
     description: 'Quantum-powered data analytics and insights'
-  }
-];
+  };
 import { realVerifiedServices } from '../data/real-verified-services';
+
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -580,4 +578,3 @@ export default function ServicesPage() {
                     <p>Need help choosing? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our experts</a> for personalized guidance.</p>
       <UltraFuturisticFooter2029 />
   );
-}

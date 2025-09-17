@@ -17,11 +17,9 @@ import {
   Award,
   Rocket
 } from 'lucide-react';
-
 const RevolutionaryServicesShowcase2026 = () => {
   const [activeService, setActiveService] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const services = [
     {
       id: 1,
@@ -138,13 +136,10 @@ const RevolutionaryServicesShowcase2026 = () => {
       category: "Synthetic AI"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const currentService = services[activeService];
-
   return (
     <div className="relative w-full py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Background Elements */}
@@ -164,7 +159,6 @@ const RevolutionaryServicesShowcase2026 = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -188,7 +182,6 @@ const RevolutionaryServicesShowcase2026 = () => {
             for businesses worldwide.
           </p>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
@@ -206,13 +199,11 @@ const RevolutionaryServicesShowcase2026 = () => {
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-6`}>
                 <service.icon className="w-8 h-8 text-white" />
               </div>
-              
               <div className="mb-4">
                 <span className="text-sm font-medium text-purple-300">{service.category}</span>
                 <h3 className="text-xl font-bold text-white mt-1">{service.title}</h3>
                 <p className="text-gray-300 text-sm mt-2">{service.subtitle}</p>
               </div>
-
               <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                 <div className="flex items-center space-x-1">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -223,9 +214,7 @@ const RevolutionaryServicesShowcase2026 = () => {
                   <span>{service.clients} clients</span>
                 </div>
               </div>
-
               <div className="text-lg font-semibold text-white mb-4">{service.pricing}</div>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -237,7 +226,6 @@ const RevolutionaryServicesShowcase2026 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Detailed Service View */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -261,9 +249,7 @@ const RevolutionaryServicesShowcase2026 = () => {
                     <p className="text-lg text-purple-200">{currentService.subtitle}</p>
                   </div>
                 </div>
-
                 <p className="text-gray-300 text-lg leading-relaxed">{currentService.description}</p>
-
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/10 rounded-xl p-4">
                     <div className="flex items-center space-x-2 mb-2">
@@ -280,10 +266,8 @@ const RevolutionaryServicesShowcase2026 = () => {
                     <p className="text-gray-300 text-sm">Active Clients</p>
                   </div>
                 </div>
-
                 <div className="text-2xl font-bold text-white">{currentService.pricing}</div>
               </div>
-
               {/* Features List */}
               <div className="space-y-6">
                 <h4 className="text-xl font-bold text-white">Key Features</h4>
@@ -301,7 +285,6 @@ const RevolutionaryServicesShowcase2026 = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -314,7 +297,6 @@ const RevolutionaryServicesShowcase2026 = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -340,6 +322,7 @@ const RevolutionaryServicesShowcase2026 = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryServicesShowcase2026;

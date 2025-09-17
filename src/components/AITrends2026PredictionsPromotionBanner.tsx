@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AITrends2026PredictionsPromotionBanner: React.FC = () => {
   return (
     <div>
@@ -10,7 +9,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-indigo-900/40"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-purple-900/80 to-indigo-900/80"></div>
-          
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_i) => (
@@ -31,7 +29,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
               />
             ))}
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left Content */}
@@ -43,20 +40,17 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
                     <TrendingUp className="w-4 h-4 mr-2" />
                     AI TRENDS & PREDICTIONS 2026
                   </div>
-                  
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Future Technology
                     <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                       Predictions
                     </span>
                   </h2>
-                  
                   <p className="text-lg text-gray-300 max-w-2xl">
                     Expert predictions and probability assessments for the most significant 
                     technological breakthroughs expected in 2026.
                   </p>
                 </div>
-
                 {/* Rotating Predictions */}
                 <div
                   key={currentPrediction}
@@ -81,7 +75,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-8">
                   {stats.map((statindex) => (
@@ -97,7 +90,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <a
@@ -108,7 +100,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
                     View Predictions
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
-                  
                   <a
                     href="/newsletter-signup"
                     className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
@@ -118,7 +109,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
                   </a>
                 </div>
               </div>
-
               {/* Right Content - Prediction Cards */}
               <div
                 className="flex-shrink-0 w-full lg:w-96"
@@ -146,7 +136,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
                           <div className="text-xs text-gray-300">probability</div>
                         </div>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <div className="flex items-center text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 mr-1" />
@@ -160,7 +149,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -172,6 +160,7 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
       )}
     </div>
   );
+
 };
 
 export default AITrends2026PredictionsPromotionBanner;

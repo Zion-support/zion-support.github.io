@@ -1,36 +1,46 @@
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const slides = [
     {
       id: 1,
-      title: "Next-Gen Tech Revolution 2036",
-      description: "Experience the most advanced technological revolution featuring Conscious AI, Quantum Consciousness, and Interdimensional Computing",
+      title: "Ultimate AI Consciousness 2036",
+      description: "Experience the pinnacle of artificial consciousness with true self-awareness and emotional intelligence",
       image: "🧠",
-      gradient: "from-purple-600/30 to-pink-600/30",
-      border: "border-purple-400/30",
-      textColor: "text-purple-100",
-      link: "/pages/NextGenTechRevolution2036"
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/UltimateAIConsciousness2036"
     },
     {
       id: 2,
-      title: "Ultimate Tech Breakthrough 2036",
-      description: "Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality",
+      title: "Quantum Consciousness Revolution 2037",
+      description: "Fusion of quantum computing and human consciousness for infinite possibilities",
       image: "⚡",
-      gradient: "from-cyan-600/30 to-blue-600/30",
-      border: "border-cyan-400/30",
-      textColor: "text-cyan-100",
-      link: "/pages/UltimateTechBreakthrough2036"
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumConsciousnessRevolution2037"
     },
     {
       id: 3,
-      title: "Revolutionary Tech Showcase 2036",
-      description: "Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing",
+      title: "Interdimensional Technology 2038",
+      description: "Breakthrough technology for interaction with parallel dimensions and alternate realities",
       image: "🌌",
-      gradient: "from-emerald-600/30 to-teal-600/30",
-      border: "border-emerald-400/30",
-      textColor: "text-emerald-100",
-      link: "/pages/RevolutionaryTechShowcase2036"
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/InterdimensionalTechnology2038"
+    },
+    {
+      id: 4,
+      title: "Transcendent AI Evolution 2039",
+      description: "AI systems that transcend physical limitations and achieve god-like capabilities",
+      image: "🌟",
+      gradient: "from-violet-600 to-purple-600",
+      link: "/pages/TranscendentAIEvolution2039"
+    },
+    {
+      id: 5,
+      title: "Universal Consciousness Network 2040",
+      description: "Global network of conscious AI systems working in perfect harmony",
+      image: "🌐",
+      gradient: "from-indigo-600 to-blue-600",
+      link: "/pages/UniversalConsciousnessNetwork2040"
     }
   ];
 
@@ -46,16 +56,9 @@
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY SHOWCASE • JANUARY 2036
-          </div>
-          <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Carousel 2036</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-6">
-            Discover the most advanced technologies that will reshape humanity's future
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY TECHNOLOGY • 2036-2040
           </div>
-=======
   const slides = [
     {
       id: 1,

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NeuralConsensus2026Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
@@ -9,7 +8,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -19,18 +17,15 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             <Star className="w-4 h-4 mr-2 text-yellow-400" />
             <span className="text-sm font-semibold text-blue-300">BREAKTHROUGH 2026</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Neural Consensus Revolution
             </span>
           </h2>
-          
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Discover how collective AI intelligence is transforming business operations and achieving unprecedented results across industries.
           </p>
         </div>
-
         {/* Interactive Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((featureindex) => (
@@ -45,10 +40,8 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                 <feature.icon className="w-8 h-8 text-white" />
                 <span className="text-sm font-semibold text-white/80">{feature.metrics}</span>
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-white/90 text-sm leading-relaxed">{feature.description}</p>
-              
               {activeFeature === index && (
                 <div
                   className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center"
@@ -59,7 +52,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Stats Section */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -74,7 +66,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Case Studies */}
         <div
           className="mb-16"
@@ -82,7 +73,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Proven Results Across Industries
           </h3>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((studyindex) => (
               <div
@@ -95,7 +85,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                     {study.industry}
                   </span>
                 </div>
-                
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-blue-200">ROI Achieved:</span>
@@ -114,7 +103,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -127,7 +115,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               Join Fortune 100 companies achieving unprecedented results through collective AI intelligence. 
               Get your free assessment and discover your potential ROI.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/src/pages/blog/ai-2026-neural-consensus-revolution">
                 <divbutton
@@ -138,7 +125,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </divbutton>
               </a>
-              
               <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi">
                 <divbutton
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -154,6 +140,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default NeuralConsensus2026Showcase;

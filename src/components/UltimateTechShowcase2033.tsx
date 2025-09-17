@@ -1,11 +1,9 @@
 import React from 'react';
-
 const UltimateTechShowcase2033: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-pink-600/30 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%226%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full text-lg font-semibold mb-6">
@@ -19,7 +17,6 @@ const UltimateTechShowcase2033: React.FC = () => {
             These revolutionary breakthroughs will reshape everything you know about intelligence and technology.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Transcendent AI Card */}
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
@@ -46,7 +43,6 @@ const UltimateTechShowcase2033: React.FC = () => {
               Explore Now →
             </a>
           </div>
-
           {/* Universal Tech Revolution Card */}
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">🌌</div>
@@ -72,7 +68,6 @@ const UltimateTechShowcase2033: React.FC = () => {
               Discover More →
             </a>
           </div>
-
           {/* Quantum Consciousness Card */}
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">🔮</div>
@@ -99,7 +94,6 @@ const UltimateTechShowcase2033: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Interactive Demo Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
           <h3 className="text-3xl font-bold text-center mb-6">Interactive Technology Demos</h3>
@@ -130,6 +124,7 @@ const UltimateTechShowcase2033: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechShowcase2033;

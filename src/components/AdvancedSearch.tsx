@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedSearch: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,6 +6,7 @@ const AdvancedSearch: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+
 };
 
 export default AdvancedSearch;

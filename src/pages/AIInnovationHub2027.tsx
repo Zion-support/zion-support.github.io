@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AIInnovationHub2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -8,7 +7,6 @@ const AIInnovationHub2027: React.FC = () => {
         <title>AIInnovationHub2027 | Zion Tech Group</title>
         <meta name="description" content="AIInnovationHub2027 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">AIInnovationHub2027</h1>
@@ -17,6 +15,7 @@ const AIInnovationHub2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AIInnovationHub2027;

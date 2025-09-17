@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedPricing: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -66,6 +65,7 @@ const AdvancedPricing: React.FC = () => {
             Contact our sales team
             <Infinity className="h-4 w-4 ml-2" />
   );
+
 };
 
 export default AdvancedPricing;

@@ -75,6 +75,7 @@ const QuantumNeuralFusion2026: React.FC = () => {
     }
   }, [isAutoPlaying, fusionTechnologies.length]);
 
+const QuantumNeuralFusion2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}

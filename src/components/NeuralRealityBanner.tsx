@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NeuralRealityBanner: React.FC = () => {
   return (
     <div
@@ -42,6 +41,7 @@ const NeuralRealityBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NeuralRealityBanner;

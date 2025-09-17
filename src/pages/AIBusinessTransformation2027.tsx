@@ -14,16 +14,13 @@ import {
   Target,
   CheckCircle
 } from 'lucide-react';
-
 const AIBusinessTransformation2027: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   React.useEffect(() => {
     scrollToTop();
   }, []);
-
   const sections = [
     {
       id: 'assessment',
@@ -81,7 +78,6 @@ const AIBusinessTransformation2027: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
@@ -131,7 +127,6 @@ const AIBusinessTransformation2027: React.FC = () => {
               </button>
             </div>
           </div>
-
           <div className="flex flex-wrap gap-2">
             <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
               AI Strategy
@@ -147,7 +142,6 @@ const AIBusinessTransformation2027: React.FC = () => {
             </span>
           </div>
         </motion.div>
-
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -164,7 +158,6 @@ const AIBusinessTransformation2027: React.FC = () => {
                   and 2027 represents the pinnacle of this revolution. Companies worldwide are leveraging 
                   AI to achieve unprecedented levels of efficiency, innovation, and competitive advantage.
                 </p>
-
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">
                   The AI Transformation Framework
                 </h2>
@@ -172,7 +165,6 @@ const AIBusinessTransformation2027: React.FC = () => {
                   Our comprehensive AI transformation framework consists of five critical phases that 
                   guide organizations through successful AI adoption and implementation.
                 </p>
-
                 {/* Framework Sections */}
                 <div className="space-y-8">
                   {sections.map((section, index) => (
@@ -202,11 +194,9 @@ const AIBusinessTransformation2027: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">
                   Key AI Technologies Driving Transformation
                 </h2>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   {[
                     {
@@ -232,11 +222,9 @@ const AIBusinessTransformation2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">
                   Industry Applications
                 </h2>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {[
                     { industry: "Healthcare", applications: ["Diagnostic imaging analysis", "Drug discovery acceleration", "Personalized treatment plans"] },
@@ -257,7 +245,6 @@ const AIBusinessTransformation2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">
                   Measuring Success
                 </h2>
@@ -279,7 +266,6 @@ const AIBusinessTransformation2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white mt-12">
                   <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Transformation?</h3>
                   <p className="text-blue-100 mb-6">
@@ -293,7 +279,6 @@ const AIBusinessTransformation2027: React.FC = () => {
               </div>
             </motion.article>
           </div>
-
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <motion.div
@@ -319,7 +304,6 @@ const AIBusinessTransformation2027: React.FC = () => {
                   Fortune 500 companies implement cutting-edge artificial intelligence solutions.
                 </p>
               </div>
-
               {/* Related Articles */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
@@ -342,6 +326,7 @@ const AIBusinessTransformation2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AIBusinessTransformation2027;

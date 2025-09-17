@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, TrendingUp, Users, Settings, BarChart3, Zap, Target, Globe } from 'lucide-react';
-
 const AutonomousBusinessEcosystem2025: React.FC = () => {
   const ecosystemFeatures = [
     {
@@ -41,14 +40,12 @@ const AutonomousBusinessEcosystem2025: React.FC = () => {
       benefits: ["Lightning-fast adaptation", "Market opportunity capture", "Competitive edge"]
     }
   ];
-
   const successMetrics = [
     { metric: "$2.5M+", label: "Average Revenue Increase" },
     { metric: "85%", label: "Cost Reduction" },
     { metric: "99.9%", label: "System Reliability" },
     { metric: "24/7", label: "Autonomous Operation" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-6 py-20">
@@ -72,7 +69,6 @@ const AutonomousBusinessEcosystem2025: React.FC = () => {
             autonomously while delivering unprecedented results and growth.
           </p>
         </motion.div>
-
         {/* Ecosystem Features */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {ecosystemFeatures.map((feature, index) => (
@@ -107,7 +103,6 @@ const AutonomousBusinessEcosystem2025: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Success Metrics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -129,7 +124,6 @@ const AutonomousBusinessEcosystem2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Implementation Timeline */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -164,6 +158,7 @@ const AutonomousBusinessEcosystem2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AutonomousBusinessEcosystem2025;

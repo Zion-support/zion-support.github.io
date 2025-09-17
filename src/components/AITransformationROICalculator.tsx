@@ -1,8 +1,6 @@
 "use client";
 'use client';
-
 import React, { useState } from 'react';
-
 interface ROICalculation {
   currentRevenue: number;
   currentCosts: number;
@@ -10,7 +8,8 @@ interface ROICalculation {
   expectedRevenueGrowth: number;
   implementationCost: number;
   timeframe: number;
-}
+};
+
 
 export default function AITransformationROICalculator() {
   const [inputs, setInputs] = useState<ROICalculation>({
@@ -192,6 +191,6 @@ export default function AITransformationROICalculator() {
               >
                 View Success Stories
   );
-};
+
 
 export default AITransformationROICalculator;

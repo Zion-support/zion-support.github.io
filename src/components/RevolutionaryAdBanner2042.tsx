@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2042: React.FC = () => {
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   const [currentAd, setCurrentAd] = useState(0);
   
   const ads = [
@@ -83,14 +84,12 @@ const RevolutionaryAdBanner2042: React.FC = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
 =======
-                  currentSlide === index ? 'bg-white' : 'bg-white/30'
->>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 }`}
               />
             ))}
           </div>
         </div>
-=======
 
         {/* Quick Links */}
         <div className="mt-12 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -121,7 +120,10 @@ const RevolutionaryAdBanner2042: React.FC = () => {
             <p className="text-sm opacity-75">Discover revolutionary innovations</p>
           </a>
         </div>
->>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
+=======
+=======
+>>>>>>> origin/merged-prs
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       </div>
     </div>
   );

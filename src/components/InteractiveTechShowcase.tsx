@@ -1,3 +1,4 @@
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
@@ -149,100 +150,40 @@ const InteractiveTechShowcase: React.FC = () => {
                 </div>
               </motion.button>
             ))}
-          </div>
+=======
+import React from 'react';
 
-          {/* Technology Display */}
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTech}
-                initial={{ opacity: 0, x: 50, rotateY: 90 }}
-                animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                exit={{ opacity: 0, x: -50, rotateY: -90 }}
-                transition={{ duration: 0.5 }}
-                className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl shadow-2xl`}
-              >
-                <div className="text-center mb-8">
-                  <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
-                  <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].name}</h3>
-                  <p className="text-xl opacity-90">{technologies[activeTech].description}</p>
-                </div>
-
-                {/* Features Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  {technologies[activeTech].features.map((feature, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
-                    >
-                      <span className="text-sm font-semibold">{feature}</span>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Performance Stats */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.performance}</div>
-                    <div className="text-xs opacity-90">Performance</div>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.accuracy}</div>
-                    <div className="text-xs opacity-90">Accuracy</div>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.speed}</div>
-                    <div className="text-xs opacity-90">Speed</div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+const COMPONENT: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
         </div>
 
-        {/* Interactive Demo Section */}
-        <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">🎮</div>
-              <h4 className="text-xl font-bold mb-3">Virtual Reality Demo</h4>
-              <p className="text-sm opacity-90 mb-4">Experience our technologies in immersive VR environments</p>
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Launch VR Demo
-              </button>
-            </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+>>>>>>> origin/merged-prs
+          </div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">🧪</div>
-              <h4 className="text-xl font-bold mb-3">Live Simulation</h4>
-              <p className="text-sm opacity-90 mb-4">Watch real-time simulations of our technologies in action</p>
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start Simulation
-              </button>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">📊</div>
-              <h4 className="text-xl font-bold mb-3">Performance Analytics</h4>
-              <p className="text-sm opacity-90 mb-4">View detailed performance metrics and analytics</p>
-              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                View Analytics
-              </button>
-            </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-81d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
           </div>
@@ -253,10 +194,19 @@ const InteractiveTechShowcase: React.FC = () => {
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+>>>>>>> origin/merged-prs
         </div>
       </div>
     </div>
   );
 };
 
-export default InteractiveTechShowcase;

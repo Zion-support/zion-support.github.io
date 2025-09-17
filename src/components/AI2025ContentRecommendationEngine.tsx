@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025ContentRecommendationEngine: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
@@ -22,7 +21,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* User Profile Summary */}
         <div className="bg-white/10 rounded-lg p-4">
           <div className="flex items-center justify-between">
@@ -52,7 +50,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Category Filters */}
       <div className="p-6 border-b border-gray-200">
         <div className="flex flex-wrap gap-2">
@@ -75,7 +72,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Content */}
       <div className="p-6">
         {isLoading ? (
@@ -96,7 +92,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
                 Sorted by relevance and match score
               </div>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {recommendations.map((itemindex) => (
                 <div
@@ -142,11 +137,9 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                       {item.description}
                     </p>
-
                     <div className="flex flex-wrap gap-1 mb-4">
                       {item.tags.slice(03).map(tag => (
                         <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
@@ -154,7 +147,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center space-x-4">
                         <span className="flex items-center">
@@ -174,7 +166,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
                         by {item.author}
                       </div>
                     </div>
-
                     <div className="bg-purple-50 rounded-lg p-3 mb-4">
                       <div className="flex items-start space-x-2">
                         <Lightbulb className="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0" />
@@ -184,7 +175,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
                         <Play className="w-4 h-4 mr-2" />
@@ -207,7 +197,6 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {recommendations.length === 0 && (
               <div className="text-center py-12">
                 <Target className="w-16 h-16 text-gray-300 mx-auto mb-4" />
@@ -220,6 +209,7 @@ const AI2025ContentRecommendationEngine: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AI2025ContentRecommendationEngine;

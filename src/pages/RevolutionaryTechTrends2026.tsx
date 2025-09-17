@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryTechTrends2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -17,7 +16,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             From quantum consciousness to synthetic intelligence, explore the innovations that will define the next decade.
           </p>
         </div>
-
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Quantum Consciousness Revolution */}
@@ -43,7 +41,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Synthetic Intelligence Evolution */}
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-6xl mb-6 text-center">🤖</div>
@@ -67,7 +64,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Neural Interface Breakthrough */}
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
             <div className="text-6xl mb-6 text-center">🧬</div>
@@ -91,7 +87,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Space Technology Revolution */}
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30">
             <div className="text-6xl mb-6 text-center">🚀</div>
@@ -116,7 +111,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Impact Section */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Impact on Industries</h2>
@@ -147,7 +141,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Predictions */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">What to Expect in 2026</h2>
@@ -174,7 +167,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <a 
@@ -187,6 +179,7 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryTechTrends2026;

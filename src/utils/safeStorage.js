@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -124,8 +123,10 @@ export const safeStorage = {
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     }
 >>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+    }
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   }
 };
 
 export default safeStorage;
-=======

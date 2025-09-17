@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
 const InnovationBanner: React.FC = () => {
   const [currentInnovation, setCurrentInnovation] = useState(0);
-  
   const innovations = [
     {
       title: "AI 2026 Ultimate Revolution",
@@ -33,26 +31,22 @@ const InnovationBanner: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2026"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [innovations.length]);
-
   return (
     <div className="relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 opacity-90"></div>
       <div className="absolute inset-0 bg-black opacity-20"></div>
-      
       {/* Floating Elements */}
       <div className="absolute top-4 left-4 text-2xl animate-bounce">🌟</div>
       <div className="absolute top-8 right-8 text-3xl animate-pulse">✨</div>
       <div className="absolute bottom-4 left-8 text-2xl animate-bounce delay-1000">🚀</div>
       <div className="absolute bottom-8 right-4 text-3xl animate-pulse delay-500">⚡</div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="text-center text-white">
           {/* Main Banner */}
@@ -67,7 +61,6 @@ const InnovationBanner: React.FC = () => {
               {innovations[currentInnovation].subtitle}
             </p>
           </div>
-
           {/* Innovation Indicators */}
           <div className="flex justify-center space-x-4 mb-8">
             {innovations.map((_, index) => (
@@ -82,7 +75,6 @@ const InnovationBanner: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Action Buttons */}
           <div className="flex justify-center space-x-6">
             <a 
@@ -95,7 +87,6 @@ const InnovationBanner: React.FC = () => {
               📺 Watch Demo
             </button>
           </div>
-
           {/* Quick Access Grid */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {innovations.map((innovation, index) => (
@@ -113,6 +104,7 @@ const InnovationBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default InnovationBanner;

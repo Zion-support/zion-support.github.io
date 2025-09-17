@@ -1,5 +1,4 @@
 import React from 'react';
-
 const quantum-trading-algorithm: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const quantum-trading-algorithm: React.FC = () => {
     </div>
   );
 };
-
 const features = [
   'Quantum-enhanced market prediction algorithms',
   'Real-time market data processing',
@@ -18,8 +16,6 @@ const features = [
   'Backtesting and simulation engine',
   'Custom strategy builder',
   'Performance analytics dashboard'
-];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -41,8 +37,8 @@ const pricingPlans = [
     period: 'month',
     features: ['Quantum algorithms', 'White-label solution', 'API access', 'Dedicated support', 'Custom integrations'],
     popular: false
-  }
-];
+  };
+
 
 export default function QuantumTradingAlgorithm() {
   return (
@@ -200,4 +196,3 @@ export default function QuantumTradingAlgorithm() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
-}

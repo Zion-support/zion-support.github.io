@@ -1,5 +1,4 @@
 import React from 'react';
-
 const DigitalTransformation2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -11,6 +10,7 @@ const DigitalTransformation2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default DigitalTransformation2025;

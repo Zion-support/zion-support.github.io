@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpDollarSignUsersZapTargetCheckCircle
+};
+
 
 export default function NewServicesShowcase2025() {
   const newServices = [
@@ -127,6 +129,6 @@ export default function NewServicesShowcase2025() {
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4 ml-2" />
   );
-};
+
 
 export default NewServicesShowcase2025;

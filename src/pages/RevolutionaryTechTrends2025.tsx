@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryTechTrends2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -42,7 +41,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Revolutionary Trends Section */}
       <section id="trends" className="py-24">
         <div className="container mx-auto px-4">
@@ -57,7 +55,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
               These groundbreaking trends are not just predictions—they're already transforming industries and creating new possibilities for businesses worldwide.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => {
               const IconComponent = trend.icon;
@@ -89,11 +86,11 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   </a>
                 </div>
               );
+};
             })}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
@@ -108,7 +105,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
               Early adoption of these revolutionary trends positions your organization at the forefront of innovation, driving measurable business outcomes.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
@@ -129,7 +125,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -155,6 +150,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
       </section>
     </div>
   );
-};
+
 
 export default RevolutionaryTechTrends2025;

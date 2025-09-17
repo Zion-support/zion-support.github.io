@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2026NeuralInterfacesPromotionBanner() {
   return (
@@ -81,4 +83,3 @@ export default function AI2026NeuralInterfacesPromotionBanner() {
       <div className="absolute bottom-1/4 left-20 w-6 h-6 bg-teal-300/20 rounded-full animate-pulse delay-700">
         <div className="absolute inset-1 border border-teal-300/40 rounded-full"></div>
   );
-}
