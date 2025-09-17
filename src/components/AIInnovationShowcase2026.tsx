@@ -8,22 +8,14 @@ const AIInnovationShowcase2026: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%25236366F1%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div
           className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
-            scale: [1.31],
-            opacity: [0.20.50.2],
-          }}
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
+            opacity
+                                    ease: "easeInOut"
           }}
         />
         <div
           className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
-            scale: [1.21.2],
-            opacity: [0.30.60.3],
-          }}
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
+            opacity
+                                    ease: "easeInOut"
           }}
         />
       </div>
@@ -192,12 +184,8 @@ const AIInnovationShowcase2026: React.FC = () => {
               {/* Floating Elements */}
               <div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
-                  y: [0-10],
-                  rotate: [0180360],
-                }}
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  rotate
+                                                      ease: "easeInOut"
                 }}
               >
                 <Star className="w-4 h-4 text-yellow-800" />
@@ -205,12 +193,8 @@ const AIInnovationShowcase2026: React.FC = () => {
               
               <div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
-                  scale: [1.21],
-                  opacity: [0.710.7],
-                }}
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  opacity
+                                                      ease: "easeInOut"
                 }}
               />
             </div>

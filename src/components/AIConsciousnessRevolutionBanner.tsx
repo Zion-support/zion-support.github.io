@@ -159,12 +159,7 @@ const AIConsciousnessRevolutionBanner = () => {
                 {/* Animated Brain Icon */}
                 <motion.div
                   animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0]
-                  }}
                   transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
@@ -175,67 +170,39 @@ const AIConsciousnessRevolutionBanner = () => {
                 {/* Consciousness Waves */}
                 <motion.div
                   animate={{ 
-                    opacity: [0.3, 0.8, 0.3],
-                    scale: [0.8, 1.2, 0.8]
-                  }}
                   transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="absolute inset-0 border border-purple-400/30 rounded-full"
                 />
                 <motion.div
                   animate={{ 
-                    opacity: [0.2, 0.6, 0.2],
-                    scale: [0.6, 1.4, 0.6]
-                  }}
                   transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 1
-                  }}
+                    delay
                   className="absolute inset-0 border border-pink-400/20 rounded-full"
                 />
 
                 {/* Floating Consciousness Elements */}
                 <motion.div
                   animate={{ 
-                    y: [0, -10, 0],
-                    opacity: [0.5, 1, 0.5]
-                  }}
                   transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="absolute top-2 right-2 w-3 h-3 bg-purple-400 rounded-full"
                 />
                 <motion.div
                   animate={{ 
-                    y: [0, 10, 0],
-                    opacity: [0.5, 1, 0.5]
-                  }}
                   transition={{ 
-                    duration: 2.5,
-                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 0.5
-                  }}
+                    delay
                   className="absolute bottom-2 left-2 w-3 h-3 bg-pink-400 rounded-full"
                 />
                 <motion.div
                   animate={{ 
-                    y: [0, -5, 0],
-                    opacity: [0.5, 1, 0.5]
-                  }}
                   transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 1
-                  }}
+                    delay
                   className="absolute top-1/2 left-2 w-2 h-2 bg-blue-400 rounded-full"
                 />
               </div>

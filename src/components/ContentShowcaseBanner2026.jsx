@@ -104,14 +104,8 @@ const ContentShowcaseBanner2026 = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-            }}
             transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
+              delay
           />
         ))}
       </div>

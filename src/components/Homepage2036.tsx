@@ -35,7 +35,6 @@ export default function Homepage2036() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
@@ -44,10 +43,7 @@ export default function Homepage2036() {
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0,
-      opacity: 1,
       transition: {
-        duration: 0.5
       }
     }
   };
@@ -67,14 +63,7 @@ export default function Homepage2036() {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                  y: [0, -100, 0],
-                  opacity: [0.3, 1, 0.3],
-                  scale: [1, 1.5, 1],
-                }}
-                  duration: 4 + Math.random() * 3,
-                  repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
+                                                      delay
               />
             ))}
           <div className="relative z-10 text-center max-w-6xl mx-auto">

@@ -16,9 +16,6 @@ const AI2025_2026UltimateTechnologyShowcase: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                opacity: [010],
-                scale: [010],
-              }}
                 duration: 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,

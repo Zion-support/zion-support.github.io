@@ -159,14 +159,8 @@ const RevolutionaryServicesShowcase2026 = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              scale: [0, 1, 0],
-              opacity: [0, 1, 0],
-            }}
             transition={{
-              duration: 2 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
+              delay
           />
         ))}
       </div>

@@ -23,14 +23,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                  y: [0-20],
-                  opacity: [0.40.80.4],
-                  scale: [1.51],
-                }}
-                  duration: 3 + Math.random() * 2,
-                  repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
+                                                      delay
               />
             ))}
           </div>
@@ -124,9 +117,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div
                       className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center shadow-2xl`}
-                        scale: [1.1],
-                        rotate: [05-50]
-                      }}
+                        rotate
                     >
                       <currentFeatureData.icon className="w-12 h-12 text-white" />
                     </div>
@@ -146,9 +137,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                         top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180)}%`,
                         transform: 'translate(-50%)',
                       }}
-                        scale: index === currentFeature ? [1.21] : 1,
-                        opacity: index === currentFeature ? [0.810.8] : 0.4,
-                      }}
+                                                                      }}
                     />
                   ))}
 
@@ -161,14 +150,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                         left: `${30 + (i * 10)}%`,
                         top: `${30 + (i * 8)}%`,
                       }}
-                        y: [0-150],
-                        opacity: [0.610.6],
-                        scale: [1.21],
-                      }}
-                        duration: 2 + i * 0.3,
-                        repeat: Infinity,
-                        delay: i * 0.4,
-                      }}
+                                                                        delay
                     />
                   ))}
                 </div>

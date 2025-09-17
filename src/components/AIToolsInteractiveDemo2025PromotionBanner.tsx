@@ -102,9 +102,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 {tools.map((toolindex) => (
                   <div
                     key={tool.name}
-                      opacity: currentTool === index ? 1 : 0.5,
-                      scale: currentTool === index ? 1 : 0.95
-                    }}
+                      scale
                     className={`p-4 rounded-lg border transition-all duration-300 ${
                       currentTool === index
                         ? 'bg-gradient-to-r ' + tool.color + ' border-white/20'

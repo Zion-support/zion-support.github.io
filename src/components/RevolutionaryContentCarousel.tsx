@@ -237,14 +237,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                      y: [0, -200, 0],
-                      opacity: [0.3, 1, 0.3],
-                      scale: [1, 2, 1],
-                    }}
-                      duration: 4 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 3,
-                    }}
+                                                                  delay
                   />
                 ))}
               </div>
@@ -347,15 +340,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0, -300, 0],
-                opacity: [0.3, 1, 0.3],
-                scale: [1, 3, 1],
-                rotate: [0, 360, 0],
-              }}
-                duration: 4 + Math.random() * 3,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
+                                                delay
             />
           ))}
         </div>

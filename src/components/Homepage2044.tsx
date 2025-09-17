@@ -76,14 +76,6 @@ const Homepage2044: React.FC = () => {
                   <div
                     key={i}
                     className="absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]"
-                      x: [0, 150, 0],
-                      y: [0, -150, 0],
-                      opacity: [0, 1, 0],
-                      scale: [0, 1.5, 0],
-                    }}
-                      duration: 8 + i * 0.3,
-                      repeat: Infinity as any,
-                      delay: i * 0.2,
                       ease: "easeInOut"
                     }}
                     style={{
@@ -105,23 +97,12 @@ const Homepage2044: React.FC = () => {
               {/* Floating geometric shapes */}
               <div
                 className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
-                  rotate: [45, 405],
-                  scale: [1, 1.2, 1],
-                  opacity: [0.3, 0.8, 0.3],
-                }}
-                  duration: 10,
-                  repeat: Infinity as any,
-                  ease: "linear"
+                                                      ease: "linear"
                 }}
               />
               <div
                 className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
-                  scale: [1, 1.5, 1],
-                  opacity: [0.3, 0.8, 0.3],
-                }}
-                  duration: 8,
-                  repeat: Infinity as any,
-                  ease: "easeInOut"
+                                                      ease: "easeInOut"
                 }}
               />
             </div>

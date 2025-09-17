@@ -16,12 +16,8 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <div
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
-                      rotate: [0360],
-                      scale: [1.1]
-                    }}
-                      duration: 4
-                      repeat: Infinity
-                      ease: "easeInOut" 
+                      scale
+                                                                  ease: "easeInOut" 
                     }}
                   >
                     <Building2 className="w-6 h-6 text-white" />
@@ -133,35 +129,21 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
-                scale: [1.21],
-                opacity: [0.30.60.3]
-              }}
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
+                opacity
+                                                ease: "easeInOut"
               }}
             />
             <div
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
-                scale: [1.31],
-                opacity: [0.20.40.2]
-              }}
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
+                opacity
+                                                ease: "easeInOut",
+                delay
             />
             <div
               className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
-                scale: [1.51],
-                opacity: [0.10.30.1]
-              }}
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5
-              }}
+                opacity
+                                                ease: "easeInOut",
+                delay
             />
           </div>
         </div>

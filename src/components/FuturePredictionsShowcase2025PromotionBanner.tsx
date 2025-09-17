@@ -104,9 +104,7 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
               {predictions.map((predictionindex) => (
                 <div
                   key={index}
-                    opacity: index === currentPrediction ? 1 : 0.3
-                    scale: index === currentPrediction ? 1 : 0.8 
-                  }}
+                    scale
                   className={`absolute ${
                     index === 0 ? 'top-4 left-1/2' :
                     index === 1 ? 'top-1/2 right-4' :

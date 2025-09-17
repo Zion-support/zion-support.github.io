@@ -886,6 +886,7 @@ const NewContentShowcase2026: React.FC = () => {
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     </div>
+    </div>
   );
 };
 

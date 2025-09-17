@@ -113,9 +113,6 @@ const QuantumComputingShowcase2025: React.FC = () => {
                             top: '50%',
                             transformOrigin: '0 0',
                           }}
-                            rotate: [0360],
-                            scale: [1.51],
-                          }}
                             duration: 3,
                             repeat: Infinity,
                             delay: i * 0.2,
@@ -134,9 +131,6 @@ const QuantumComputingShowcase2025: React.FC = () => {
                         style={{
                           left: `${Math.random() * 100}%`,
                           top: `${Math.random() * 100}%`,
-                        }}
-                          y: [0-30],
-                          opacity: [010],
                         }}
                           duration: 2,
                           repeat: Infinity,

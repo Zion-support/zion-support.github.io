@@ -69,15 +69,8 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30"
                   animate={{
-                    x: [0, 100, 0],
-                    y: [0, -100, 0],
-                    scale: [1, 1.5, 1],
-                  }}
                   transition={{
-                    duration: 8 + i * 0.5,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                  }}
+                    delay
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,

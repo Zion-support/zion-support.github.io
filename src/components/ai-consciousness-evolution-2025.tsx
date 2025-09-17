@@ -107,14 +107,7 @@ export default function AIConsciousnessEvolution2025() {
             <div
               key={i}
               className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30"
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
-                duration: 8 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.3,
-              }}
+                                                delay
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,

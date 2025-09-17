@@ -15,14 +15,8 @@ const NewsletterSignup2026: React.FC = () => {
           <div
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"
-              x: [0Math.random() * 200 - 100],
-              y: [0Math.random() * 200 - 100],
-              scale: [010],
-            }}
-              duration: Math.random() * 8 + 6,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-            }}
+              scale
+                                          delay
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

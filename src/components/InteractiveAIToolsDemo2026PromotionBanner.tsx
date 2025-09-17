@@ -22,10 +22,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-30],
-                opacity: [0.30.80.3],
-                scale: [1.51],
-              }}
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,

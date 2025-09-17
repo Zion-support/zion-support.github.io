@@ -64,9 +64,7 @@ const InteractiveAIToolsDemo2027PromotionBanner: React.FC = () => {
               {tools.map((toolindex) => (
                 <div
                   key={tool.name}
-                    opacity: currentTool === index ? 1 : 0,
-                    scale: currentTool === index ? 1 : 0.8
-                  }}
+                    scale
                   className="absolute inset-0 flex flex-col items-center justify-center"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${tool.color} rounded-full flex items-center justify-center shadow-lg`}>

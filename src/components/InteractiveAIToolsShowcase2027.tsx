@@ -13,14 +13,8 @@ const InteractiveAIToolsShowcase2027: React.FC = () => {
           <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
-              x: [0Math.random() * 1000],
-              y: [0Math.random() * 1000],
-              scale: [010],
-            }}
-              duration: Math.random() * 12 + 8,
-              repeat: Infinity,
-              delay: Math.random() * 6,
-            }}
+              scale
+                                          delay
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

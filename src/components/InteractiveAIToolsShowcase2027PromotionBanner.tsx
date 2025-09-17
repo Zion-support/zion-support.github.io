@@ -15,14 +15,8 @@ const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
           <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40"
-              x: [0Math.random() * 500],
-              y: [0Math.random() * 300],
-              scale: [010],
-            }}
-              duration: Math.random() * 10 + 8,
-              repeat: Infinity,
-              delay: Math.random() * 4,
-            }}
+              scale
+                                          delay
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

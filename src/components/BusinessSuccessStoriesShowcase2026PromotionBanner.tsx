@@ -159,10 +159,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                   return (
                     <div
                       key={index}
-                        opacity: isActive ? 1 : 0.6
-                        x: 0,
-                        scale: isActive ? 1 : 0.95
-                      }}
+                        scale
                       className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 cursor-pointer ${
                         isActive ? 'bg-white/10 border border-white/30' : 'hover:bg-white/5'
                       }`}

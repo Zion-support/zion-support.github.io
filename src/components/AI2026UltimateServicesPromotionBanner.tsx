@@ -129,24 +129,15 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
               {/* Floating Elements */}
               <div
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-60"
-                  y: [0-20],
-                  scale: [1.1],
-                }}
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  scale
+                                                      ease: "easeInOut"
                 }}
               />
               <div
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-60"
-                  y: [020],
-                  scale: [1.21],
-                }}
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
+                  scale
+                                                      ease: "easeInOut",
+                  delay
               />
             </div>
           </div>

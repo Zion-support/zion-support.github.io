@@ -109,13 +109,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                               <div
                                 key={i}
                                 className="w-4 h-4 bg-white/30 rounded"
-                                  scale: [1, 1.5, 1],
-                                  opacity: [0.3, 1, 0.3]
-                                }}
-                                  duration: 2,
-                                  repeat: Infinity,
-                                  delay: i * 0.1
-                                }}
+                                                                                                      delay
                               />
                             ))}
                           </div>
