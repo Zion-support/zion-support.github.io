@@ -1,3 +1,12 @@
-import * as React from 'react' const ThemeProvider = (props: any) => { const [theme, setTheme] = React.useState('system') React.useEffect(() => { const root = window.document.documentElement root.classList.remove('light', 'dark') if (theme === 'system') { const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches: ? 'dark' 'light' root.classList.add(systemTheme,)} else: {root.classList.add(theme)} }, [theme]) return (<ThemeContext.Provider value = { { theme, setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = (props: any) => { const context = React.useContext(ThemeContext) if (context === null) { throw new Error('useTheme must be used within a ThemeProvider')} return context} ',;',';';
-    ';';'; "';';';';
-</ThemeContext>
+import React from 'react';
+
+const ThemeContext: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ThemeContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ThemeContext;

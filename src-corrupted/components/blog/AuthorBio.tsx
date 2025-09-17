@@ -1,73 +1,12 @@
-<img
-        src={author.avatarUrl}
-        alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
-        onError={(e) => {
+import React from 'react';
 
-
-
-
-
-
-
-
-          target.src = '/images/blog-placeholder.svg'
-        }}
-      />
-      <div>
-
-
-
-
-
-
-
-
-
-
-
-        <p className="font-medium text-lg">{author.name}</p>
-        {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
-        <p>{author.bio}</p>
-      </div>
+const AuthorBio: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AuthorBio</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  )
+  );
+};
 
-
-
-
-
-
-interface AuthorBioProps {;
-  author: BlogAuthor;
-export function AuthorBio(): any ({ author }: AuthorBioProps) {;
-  if (!author && author.bio) return null;
-  return (
-    <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>interface AuthorBioProps {;
-  author: BlogAuthor;
-}
-interface AuthorBioProps {;
-  author: BlogAuthor;
-}
-
-export function AuthorBio(): any ({ author }: AuthorBioProps) {;
-  if (!author && author.bio) return null;
-  return (
-    <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;
-      <img
-        src={author && author.avatarUrl}
-        alt={author && author.name}
-        className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0'
-        onError={e => {;
-          const target = e && e.currentTarget as HTMLImageElement;
-          target && target.src = '/images/blog-placeholder && placeholder.svg';        }}
-
-  author.title 
-}</p>
-}<p> {
-  author.bio ;
-}</p>;
-}'"};
-
-
-
+export default AuthorBio;

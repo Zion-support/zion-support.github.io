@@ -1,7 +1,3 @@
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key: string): string | null => {
-    try {
     } catch (error) {
       console.warn('localStorage not available:', error);
       return null;
@@ -21,7 +17,6 @@ export const safeStorage = {
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
  */
-
 export const safeStorage = {
   /**
    * Safely get item from localStorage
@@ -35,7 +30,6 @@ export const safeStorage = {
       return null;
     }
   },
-
   /**
    * Safely set item in localStorage
    */
@@ -49,7 +43,6 @@ export const safeStorage = {
       return false;
     }
   },
-
   /**
    * Safely remove item from localStorage
    */
@@ -63,7 +56,6 @@ export const safeStorage = {
       return false;
     }
   },
-
   /**
    * Safely get item from sessionStorage
    */
@@ -76,7 +68,6 @@ export const safeStorage = {
       return null;
     }
   },
-
   /**
    * Safely set item in sessionStorage
    */
@@ -90,7 +81,6 @@ export const safeStorage = {
       return false;
     }
   },
-
   /**
    * Safely remove item from sessionStorage
    */
@@ -104,7 +94,6 @@ export const safeStorage = {
       return false;
     }
   },
-
   /**
    * Clear all localStorage
    */
@@ -118,7 +107,6 @@ export const safeStorage = {
       return false;
     }
   },
-
   /**
    * Clear all sessionStorage
    */
@@ -140,7 +128,6 @@ export const safeStorage = {
       return null;
     }
   },
-  
   setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);
@@ -148,7 +135,6 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
     }
   },
-  
   removeItem: (key: string): void => {
     try {
       localStorage.removeItem(key);
@@ -156,14 +142,16 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
     }
   },
-  
   clear: (): void => {
     try {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
     }
-  }
+  };
 };
 
 export default safeStorage;
+    try {
+    } catch (error) {
+      console.warn('localStorage not available:', error);

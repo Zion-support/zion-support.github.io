@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<any>(all)  const [searchTerm, setSearchTerm] = useState ()  const [selectedService, setSelectedService] = useState < any> (null)  ";
-</any>;
-import React, { useState, useEffect } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const "AdvancedInnovativeServicesShowcase2026": "React.FC = () => { const [selectedCategory", setSelectedCategory] = useState<any>(all)  const [searchTerm, setSearchTerm] = useState ()  const [selectedService, setSelectedService] = useState < any> (null)  ";
-</any>;
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import _React,{ useState,useEffect } from 'react' import { motion } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025 } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: Reac t.FC = () => { const [selectedCategory,setSelectedCategory] = useState<any>(all) const [searchTerm,setSearchTerm] = useState () const [selectedService,setSelectedService] = useState < any> (null) "; </any>;';';
+import React from 'react';
+
+const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedInnovativeServicesShowcase2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AdvancedInnovativeServicesShowcase2026;

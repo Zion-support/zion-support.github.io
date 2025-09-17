@@ -1,15 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function TestPage() {
+const test: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Test Page | Zion Tech Group</title>
-      </Head>
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>test | Zion Tech Group</title>
+        <meta name="description" content="test - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">test</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </>
-  ),
-}
+    </div>
+  );
+};
+
+export default test;

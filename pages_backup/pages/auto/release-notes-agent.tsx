@@ -1,39 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const ReleaseNotesAgent: NextPage = () => {
+const release-notes-agent: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>AI Release Notes Agent</title>
-        <meta name="description" content="Daily AI-generated release notes." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">AI Release Notes Agent</h1>
-        <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
-
-        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
-      </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>release-notes-agent | Zion Tech Group</title>
+        <meta name="description" content="release-notes-agent - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">release-notes-agent</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  )
-}
-export default ReleaseNotesAgent;
+  );
+};
 
-        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
-        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
-
-      </main>
-    </div>
-  )
-},
-
-
-
-
-
-
-
-
-
-
-
-
+export default release-notes-agent;
