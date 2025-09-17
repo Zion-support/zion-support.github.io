@@ -1,4 +1,15 @@
 [build]
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+# This is a VITE project, NOT a Next.js project
+# The build process uses Vite to create a static site in the 'dist' folder
+# No Next.js plugins or configurations are needed
+# Configuration updated to resolve merge conflicts
+
+[build]
   # Netlify installs dependencies automatically; run only the build step
   command = "npm run build:netlify"
   publish = "dist"
