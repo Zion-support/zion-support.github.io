@@ -1435,6 +1435,11 @@
     "h1": "Client Testimonials"
   },
   {
+    "route": "/testimonials",
+    "title": "Client Testimonials | Zion Tech Solutions",
+    "h1": "Client Testimonials"
+  },
+  {
     "route": "/thank-you",
     "title": "thank-you | Zion Tech Group",
     "h1": "thank-you"
