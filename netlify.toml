@@ -1,5 +1,5 @@
 # Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 21:05 UTC) - local build verified OK
+# noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
 [build]
   # Build Next.js app in zion-website; Next.js plugin will handle routing/output
   command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
