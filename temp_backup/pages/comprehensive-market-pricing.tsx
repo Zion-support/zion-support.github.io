@@ -19,4 +19,5 @@ const comprehensive-market-pricing: React.FC = () => {
   );
 };
 
-export default comprehensive-market-pricing;
+
+export default AdvancedQuantumComputing2026;

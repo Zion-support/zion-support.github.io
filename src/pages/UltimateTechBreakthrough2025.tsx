@@ -350,3 +350,8 @@ const UltimateTechBreakthrough2025: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
+    </div>
+  );
+};
+
+export default UltimateTechBreakthrough2025;

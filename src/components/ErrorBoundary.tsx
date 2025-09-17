@@ -9,7 +9,7 @@ interface State {
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
   };
@@ -27,11 +27,15 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-4">
+              We're sorry, but something unexpected happened.
+            </p>
             <button
               onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Reload Page
             </button>
@@ -43,5 +47,3 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;

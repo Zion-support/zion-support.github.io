@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const NextGenInnovationHub2027: React.FC = () => {
   return (
+<<<<<<< HEAD:src/pages/NextGenInnovationHub2027.tsx.backup
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -221,7 +221,6 @@ const NextGenInnovationHub2027: React.FC = () => {
               <span className="px-3 py-1 bg-violet-500/50 rounded-full text-xs font-semibold">
                 40+ Active Projects
               </span>
-=======
 import React, { useState, useEffect } from 'react';
 
 const NextGenInnovationHub2027: React.FC = () => {
@@ -450,7 +449,6 @@ const NextGenInnovationHub2027: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -480,7 +478,6 @@ const NextGenInnovationHub2027: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-2">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential for innovation</div>
-=======
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">📊 Innovation Hub Statistics</h2>
@@ -508,7 +505,6 @@ const NextGenInnovationHub2027: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
-<<<<<<< HEAD
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Be part of the team that's building the future of technology
           </p>
@@ -525,7 +521,6 @@ const NextGenInnovationHub2027: React.FC = () => {
             >
               Partner With Us
             </a>
-=======
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the most advanced innovation hub in the world and help shape the future of technology.
           </p>
@@ -538,10 +533,20 @@ const NextGenInnovationHub2027: React.FC = () => {
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-0cca
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">NextGenInnovationHub2027</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/NextGenInnovationHub2027.tsx
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD:src/pages/NextGenInnovationHub2027.tsx.backup
+=======
 export default NextGenInnovationHub2027;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/NextGenInnovationHub2027.tsx

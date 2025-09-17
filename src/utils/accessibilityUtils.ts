@@ -636,4 +636,6 @@ export const addAriaLabel = (element: HTMLElement, label: string): void => {
   element.setAttribute('aria-label', label);
 export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
   accessibilityManager.announce(message, priority);
+};
+
 export default AccessibilityManager;

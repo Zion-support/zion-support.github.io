@@ -19,4 +19,5 @@ const ai-marketing-automation-2030: React.FC = () => {
   );
 };
 
-export default ai-marketing-automation-2030;
+
+export default AISolutionsComprehensive2025;

@@ -229,3 +229,9 @@ const UltimateInteractiveShowcase: React.FC = () => {
             Contact Our Experts
           </button>
         </div>
+      </div>
+    </div>
+  );
+};
+
+export default UltimateInteractiveShowcase;

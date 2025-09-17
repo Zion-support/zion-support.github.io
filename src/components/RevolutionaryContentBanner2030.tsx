@@ -1,3 +1,7 @@
+import React from 'react';
+
+const RevolutionaryContentBanner2030: React.FC = () => {
+  return (
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
       <div className={`bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
@@ -26,3 +30,10 @@
               </a>
             ))}
           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryContentBanner2030;

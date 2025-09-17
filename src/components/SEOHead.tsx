@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title: string;
@@ -15,14 +16,39 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   ogImage = "/og-image.jpg"
 }) => {
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Leading provider of revolutionary technology solutions including quantum consciousness, interdimensional technology, and advanced AI systems.",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "Revolutionary technology solutions and consulting services",
+      "category": "Technology Services"
+    }
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
   return (
-    <>
-      {/* Primary Meta Tags */}
+    <Helmet>
       <title>{title}</title>
-      <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
+      <link rel="canonical" href={canonical} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
@@ -43,25 +69,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/ziontechgroup"
-            ]
-          })
-        }}
-      />
-    </>
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+      
+      {/* Additional Structured Data for Technology Services */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup"
+          ]
+        })}
+      </script>
+    </Helmet>
   );
 };
 

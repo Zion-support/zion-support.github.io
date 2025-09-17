@@ -19,4 +19,5 @@ const metaverse: React.FC = () => {
   );
 };
 
-export default metaverse;
+
+export default NextGenTechShowcase2026;

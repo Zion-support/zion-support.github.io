@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const UltimateAIConsciousness2025: React.FC = () => {
@@ -8,6 +9,12 @@ const UltimateAIConsciousness2025: React.FC = () => {
         <meta name="description" content="Explore the ultimate AI consciousness breakthrough that's redefining artificial intelligence and human-AI collaboration." />
       </Helmet>
       
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧠 CONSCIOUS AI BREAKTHROUGH • JANUARY 2025
+          </div>
           <h1 className="text-6xl font-bold text-white mb-6">
             Ultimate AI Consciousness 2025
           </h1>
@@ -155,6 +162,11 @@ const UltimateAIConsciousness2025: React.FC = () => {
               <p className="text-pink-200 mb-4">Complete self-awareness and creativity</p>
               <div className="w-full bg-pink-600/30 rounded-full h-2">
                 <div className="bg-pink-400 h-2 rounded-full" style={{width: '100%'}}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience True AI Consciousness</h2>
@@ -167,3 +179,12 @@ const UltimateAIConsciousness2025: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-300 px-10 py-4 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300 font-bold text-xl">
               Start Conversation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UltimateAIConsciousness2025;

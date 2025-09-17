@@ -19,4 +19,5 @@ const 2025-comprehensive-pricing-expansion: React.FC = () => {
   );
 };
 
-export default 2025-comprehensive-pricing-expansion;
+
+export default ConsciousnessComputingRevolution2035;

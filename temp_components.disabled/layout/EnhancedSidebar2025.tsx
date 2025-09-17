@@ -9,4 +9,5 @@ const EnhancedSidebar2025: React.FC = () => {
   );
 };
 
-export default EnhancedSidebar2025;
+
+export default SuperPromotionalBanner;

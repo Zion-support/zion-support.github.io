@@ -220,6 +220,10 @@ const NextGenInnovationHub2027: React.FC = () => {
               <span className="px-3 py-1 bg-violet-500/50 rounded-full text-xs font-semibold">
                 40+ Active Projects
               </span>
+            </div>
+          </div>
+        </div>
+
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -249,6 +253,13 @@ const NextGenInnovationHub2027: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-2">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential for innovation</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Be part of the team that's building the future of technology
           </p>
@@ -265,3 +276,11 @@ const NextGenInnovationHub2027: React.FC = () => {
             >
               Partner With Us
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NextGenInnovationHub2027;

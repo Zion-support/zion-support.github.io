@@ -1,31 +1,13 @@
-      id: 'ai-revolution',
-      title: 'Next-Gen AI Revolution 2027',
-      description: 'Conscious AI systems with quantum-enhanced processing',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      borderColor: 'border-purple-400',
-      bgColor: 'from-purple-600/30 to-pink-600/30',
-      link: '/pages/NextGenAIRevolution2027'
-    },
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const InteractiveTechShowcase2027: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const technologies = [
     {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Revolution 2027',
-      description: '1000+ qubit quantum computers achieving true supremacy',
-      icon: '⚡',
-      color: 'from-cyan-600 to-blue-600',
-      borderColor: 'border-cyan-400',
-      bgColor: 'from-cyan-600/30 to-blue-600/30',
-      link: '/pages/QuantumComputingRevolution2027'
-    },
-    {
-      id: 'neural-interface',
-      title: 'Neural Interface Revolution 2027',
-      description: 'Direct brain-computer communication and thought control',
-      icon: '🧬',
-      color: 'from-emerald-600 to-teal-600',
-      borderColor: 'border-emerald-400',
-      bgColor: 'from-emerald-600/30 to-teal-600/30',
-      link: '/pages/NeuralInterfaceRevolution2027'
+      id: 1,
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -36,32 +18,142 @@
         "Autonomous Decision Making"
       ],
       gradient: "from-purple-600 to-pink-600",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/RevolutionaryTechTrends2027"
-      description: "Immersive holographic interfaces that blur the line between reality and virtuality",
+      link: "/pages/ConsciousAISystems2027"
+    },
+    {
+      id: 2,
+      title: "Quantum Internet",
+      icon: "⚡",
+      description: "Ultra-secure quantum communication network",
       features: [
-        "3D Holographic Displays",
-        "Touchless Interaction",
-        "Spatial Computing",
-        "Augmented Reality"
+        "Quantum Encryption",
+        "Instant Communication",
+        "Hack-Proof Security",
+        "Global Quantum Network"
+      ],
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumInternet2027"
+    },
+    {
+      id: 3,
+      title: "Neural Interface Revolution",
+      icon: "🧬",
+      description: "Direct brain-computer communication and thought control",
+      features: [
+        "Thought Control",
+        "Memory Enhancement",
+        "Direct Brain Interface",
+        "Cognitive Augmentation"
       ],
       gradient: "from-emerald-600 to-teal-600",
-      color: "from-emerald-600 to-teal-600",
-      link: "/pages/RevolutionaryTechTrends2027"
+      link: "/pages/NeuralInterfaceRevolution2027"
+    },
+    {
+      id: 4,
+      title: "Molecular Manufacturing",
+      icon: "⚗️",
+      description: "Building the future atom by atom with perfect precision",
+      features: [
+        "Atomic Precision",
+        "Self-Replication",
+        "Programmable Matter",
+        "Zero Waste Production"
+      ],
+      gradient: "from-orange-600 to-red-600",
+      link: "/pages/MolecularManufacturing2027"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTech((prev) => (prev + 1) % technologies.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  const handleTechClick = (index: number) => {
+    if (index !== activeTech) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveTech(index);
+        setIsAnimating(false);
+      }, 300);
+    }
+  };
+
+  return (
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
+      <Helmet>
+        <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
+        <meta name="description" content="Experience the future of technology with our interactive 2027 tech showcase featuring conscious AI, quantum internet, neural interfaces, and molecular manufacturing." />
+      </Helmet>
+
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE TECH SHOWCASE 2027 • BREAKTHROUGH TECHNOLOGY
+          </div>
+          <h2 className="text-5xl font-bold mb-6">🌟 Interactive Technology Experience</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Explore our revolutionary 2027 technologies with interactive features and immersive experiences
+          </p>
+        </div>
+
+        {/* Interactive Tech Selector */}
         <div className="flex justify-center space-x-4 mb-12">
-          {techCategories.map((category, index) => (
+          {technologies.map((tech, index) => (
             <button
-              key={category.id}
-              onClick={() => setActiveTab(index)}
+              key={tech.id}
+              onClick={() => handleTechClick(index)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === index
-                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                activeTech === index
+                  ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg scale-105`
+                  : 'bg-white/20 text-white hover:bg-white/30'
               }`}
             >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.title}
+              {tech.icon} {tech.title}
             </button>
           ))}
-              className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
-                isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+        </div>
+
+        {/* Tech Display */}
+        <div
+          key={activeTech}
+          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+        >
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="text-6xl mb-6">{technologies[activeTech].icon}</div>
+                <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
+                <p className="text-xl text-gray-300 mb-6">{technologies[activeTech].description}</p>
+                <div className="space-y-3">
+                  {technologies[activeTech].features.map((feature, index) => (
+                    <div key={index} className="flex items-center text-lg">
+                      <span className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mr-4"></span>
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <button className="mt-8 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                  Explore Technology
+                </button>
+              </div>
+              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 rounded-xl p-8">
+                <div className="text-center">
+                  <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
+                  <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
+                  <p className="text-gray-300 mb-6">Experience this technology in action</p>
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg p-4">
+                    <p className="text-sm text-gray-400">Demo coming soon...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  );
+};
+
+export default InteractiveTechShowcase2027;

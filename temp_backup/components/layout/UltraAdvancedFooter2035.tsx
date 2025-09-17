@@ -9,4 +9,5 @@ const UltraAdvancedFooter2035: React.FC = () => {
   );
 };
 
-export default UltraAdvancedFooter2035;
+
+export default InteractiveTechDemo2035;

@@ -158,6 +158,9 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               </ul>
             </motion.div>
           ))}
+        </div>
+      </div>
+
       {/* Interactive Demo Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
         <div className="container mx-auto px-4">
@@ -220,6 +223,10 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Create Reality
               </motion.button>
             </motion.div>
+          </div>
+        </div>
+      </div>
+
       {/* Testimonials */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -271,3 +278,11 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
             >
               Schedule Demo
             </motion.button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryTechShowcase2030;

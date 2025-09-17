@@ -142,6 +142,10 @@ const UltimateTechBreakthrough2031: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Consciousness Transfer</h3>
                   <p className="text-orange-100">Transfer human consciousness into digital systems for immortality and enhanced capabilities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="text-center">
@@ -159,3 +163,8 @@ const UltimateTechBreakthrough2031: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+export default UltimateTechBreakthrough2031;

@@ -39,4 +39,6 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}) => {
     elementRef,
     isVisible: triggerOnce ? (isVisible || hasTriggered) : isVisible
   };
+};
+
 export default useLazyLoad;

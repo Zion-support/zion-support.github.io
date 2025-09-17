@@ -1,13 +1,16 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-    <div className="relative mb-8">
-      {/* Main Banner */}
-      <div className={`bg-gradient-to-r ${adContent[currentAd].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden animate-pulse`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
-            <h3 className="text-3xl font-bold">{adContent[currentAd].title}</h3>
-            <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
+
+const RevolutionaryAdBanner2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">RevolutionaryAdBanner2026</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
-    </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryAdBanner2026;

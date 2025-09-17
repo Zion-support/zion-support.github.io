@@ -1,47 +1,37 @@
-import React from 'react';
+"use client"
 
-export default function AutonomousItOpsCopilotPage() {
+export default function AutonomousItOpsCopilotV1Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-4xl px-6 pt-24">
-        <div className="prose prose-invert max-w-none">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
-            Autonomous IT Ops Copilot v1.0
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Launch • 2025-09-15</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Autonomous IT Operations Copilot v1.0
           </h1>
-          
-          <div className="text-lg text-gray-300 mb-8">
-            AI-powered IT operations automation with intelligent incident response and proactive monitoring.
-          </div>
-
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The Autonomous IT Ops Copilot v1.0 revolutionizes IT operations with AI-driven automation, 
-              intelligent incident response, and proactive monitoring capabilities. This comprehensive 
-              solution reduces manual overhead while improving system reliability and performance.
-            </p>
-          </div>
-
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Intelligent incident detection and classification</li>
-              <li>• Automated root cause analysis and remediation</li>
-              <li>• Proactive monitoring and alerting</li>
-              <li>• Self-healing infrastructure capabilities</li>
-              <li>• Integration with existing IT tools and workflows</li>
-            </ul>
-          </div>
-
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
-            <h2 className="text-2xl font-semibold text-white mb-4">Implementation</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Deploy the Autonomous IT Ops Copilot in your environment with our step-by-step implementation guide. 
-              Includes configuration templates, integration examples, and best practices for production deployment.
-            </p>
-          </div>
+          <p className="mt-4 text-gray-300">
+            Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.
+          </p>
+        </div>
+        <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-300">
+          <h2>Overview</h2>
+          <p>
+            The Autonomous IT Operations Copilot continuously monitors signals across logs, metrics, and traces,
+            detects anomalies, and recommends or executes safe remediation steps. It integrates with policy-as-code
+            guardrails and evaluates outcomes in real time.
+          </p>
+          <h2>Key capabilities</h2>
+          <ul>
+            <li>Early incident detection with adaptive baselines</li>
+            <li>Step-by-step remediation playbooks with approvals</li>
+            <li>SLA-aware traffic and model routing</li>
+            <li>Live evals and rollback criteria</li>
+          </ul>
+          <p>
+            Ready to try it in your environment? <a href="/contact">Contact us →</a>
+          </p>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -19,4 +19,5 @@ const comprehensive-pricing-2025-q4: React.FC = () => {
   );
 };
 
-export default comprehensive-pricing-2025-q4;
+
+export default QuantumRealityEngineering2025;

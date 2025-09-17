@@ -1,20 +1,27 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export type SEOProps = {
-  title?: string;
-  description?: string;
-  keywords?: string;
+interface SEOProps {
+  title: string;
+  description: string;
+  url: string;
   image?: string;
-  url?: string;
-  type?: string;
-};
+}
 
-export const SEO: React.FC<SEOProps> = ({
-  title = 'Zion App - Revolutionary AI Solutions',
-  description = 'Revolutionary AI solutions for enterprise transformation',
-  keywords = 'AI, artificial intelligence, enterprise solutions, automation',
-  image = 'https://zion.app/og-image.jpg',
-  url = 'https://zion.app',
-  type = 'website'
-}) => {
+export const SEO: React.FC<SEOProps> = ({ title, description, url, image }) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      {image && <meta property="og:image" content={image} />}
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
+    </Helmet>
+  );
 };

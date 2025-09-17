@@ -96,4 +96,6 @@ export const usePerformanceMonitor = () => {
     measurePerformance,
     logPerformanceMetrics
   };
+};
+
 export default usePerformanceMonitor;
