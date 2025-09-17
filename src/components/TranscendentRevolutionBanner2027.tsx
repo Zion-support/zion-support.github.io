@@ -167,4 +167,6 @@ const TranscendentRevolutionBanner2027: React.FC = () => {
     </motion.div>
   );
 
+};
+
 export default TranscendentRevolutionBanner2027;

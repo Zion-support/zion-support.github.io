@@ -7,4 +7,6 @@ const UltimateTechBanner2042= () => {
     </div>
   );
 
+};
+
 export default UltimateTechBanner2042;

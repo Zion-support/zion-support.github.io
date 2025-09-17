@@ -822,4 +822,6 @@ const NewContentShowcase2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentShowcase2026;

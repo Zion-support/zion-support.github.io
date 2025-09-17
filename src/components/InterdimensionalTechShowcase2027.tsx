@@ -161,4 +161,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalTechShowcase2027;

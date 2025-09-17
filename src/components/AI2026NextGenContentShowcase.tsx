@@ -7,4 +7,6 @@ const AI2026NextGenContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026NextGenContentShowcase;

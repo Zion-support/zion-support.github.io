@@ -7,4 +7,6 @@ const QuantumAIRevolutionShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumAIRevolutionShowcase2025;

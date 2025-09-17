@@ -202,4 +202,6 @@ const NextGenBiotech2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenBiotech2026;

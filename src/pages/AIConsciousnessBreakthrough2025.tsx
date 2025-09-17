@@ -16,4 +16,6 @@ const AIConsciousnessBreakthrough2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIConsciousnessBreakthrough2025;

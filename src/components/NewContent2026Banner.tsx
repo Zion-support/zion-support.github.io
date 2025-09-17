@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 };
 
+
 export default function NewContent2026Banner() {
   return (
     <section className="py-12 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
@@ -39,4 +40,3 @@ export default function NewContent2026Banner() {
           <Link href="/content" className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
             View All Content →
   );
-};

@@ -34,5 +34,7 @@ const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 
+};
+
 export default SEO;
 export { SEO };

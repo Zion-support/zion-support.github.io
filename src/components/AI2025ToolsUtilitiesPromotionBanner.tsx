@@ -152,5 +152,7 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default AI2025ToolsUtilitiesPromotionBanner;
 </div></div></div>

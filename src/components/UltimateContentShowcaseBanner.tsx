@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function UltimateContentShowcaseBanner() {
   return (
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-8 mb-8 rounded-2xl shadow-2xl">
@@ -35,4 +36,3 @@ export default function UltimateContentShowcaseBanner() {
           >
             Latest Breakthrough
   );
-};

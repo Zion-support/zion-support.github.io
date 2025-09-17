@@ -9,6 +9,7 @@ interface AdvancedHeroProps {
   backgroundImage?: string;
 };
 
+
 export default function AdvancedHero({
   title,
   subtitle,
@@ -49,4 +50,3 @@ export default function AdvancedHero({
             >
               Learn More
   );
-};

@@ -7,4 +7,6 @@ const MainSidebar: React.FC = () => {
     </div>
   );
 
+};
+
 export default MainSidebar;

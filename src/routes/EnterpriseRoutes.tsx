@@ -10,4 +10,6 @@ const EnterpriseRoutes = () => {
       </div>
     </div>
   );
+};
+
 export default EnterpriseRoutes;

@@ -150,4 +150,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
     </div>
   );
 
+};
+
 export default UltimateContentAdvertisingBanner2026;

@@ -16,4 +16,6 @@ const AIFutureInnovation2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIFutureInnovation2025;

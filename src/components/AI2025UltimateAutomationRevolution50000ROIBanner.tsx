@@ -7,4 +7,6 @@ const AI2025UltimateAutomationRevolution50000ROIBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateAutomationRevolution50000ROIBanner;

@@ -37,8 +37,8 @@ const pricingPlans = [
     period: 'month',
     features: ['Quantum algorithms', 'White-label solution', 'API access', 'Dedicated support', 'Custom integrations'],
     popular: false
-  }
-};
+  };
+
 
 export default function QuantumTradingAlgorithm() {
   return (
@@ -196,4 +196,3 @@ export default function QuantumTradingAlgorithm() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
-};

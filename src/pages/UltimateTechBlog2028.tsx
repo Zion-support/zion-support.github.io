@@ -16,4 +16,6 @@ const UltimateTechBlog2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechBlog2028;

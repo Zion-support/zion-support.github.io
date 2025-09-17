@@ -110,4 +110,6 @@ const AITrends2026Insights: React.FC = () => {
     </div>
   );
 
+};
+
 export default AITrends2026Insights;

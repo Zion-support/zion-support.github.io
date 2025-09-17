@@ -7,4 +7,6 @@ const ContentRevolutionNewsletter: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentRevolutionNewsletter;

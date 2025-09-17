@@ -7,4 +7,6 @@ const AdvancedTechInnovationBanner2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedTechInnovationBanner2027;

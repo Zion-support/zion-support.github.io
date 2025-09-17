@@ -11,4 +11,6 @@ const ITServices = () => {
     </div>
   );
 
+};
+
 export default ITServices;

@@ -7,4 +7,6 @@ const TrendingContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default TrendingContentShowcase;

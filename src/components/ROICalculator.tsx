@@ -7,4 +7,6 @@ const ROICalculator: React.FC = () => {
     </div>
   );
 
+};
+
 export default ROICalculator;

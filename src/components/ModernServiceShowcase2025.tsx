@@ -7,4 +7,6 @@ const ModernServiceShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default ModernServiceShowcase2025;

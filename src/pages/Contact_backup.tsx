@@ -11,4 +11,6 @@ const Contact_backup = () => {
     </div>
   );
 
+};
+
 export default Contact_backup;

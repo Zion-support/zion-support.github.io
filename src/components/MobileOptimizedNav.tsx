@@ -11,4 +11,6 @@ const MobileOptimizedNav = () => {
     </div>
   );
 
+};
+
 export default MobileOptimizedNav;

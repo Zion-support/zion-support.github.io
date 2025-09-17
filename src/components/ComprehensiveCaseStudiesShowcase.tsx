@@ -7,4 +7,6 @@ const ComprehensiveCaseStudiesShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveCaseStudiesShowcase;

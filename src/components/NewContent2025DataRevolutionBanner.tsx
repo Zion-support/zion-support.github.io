@@ -129,4 +129,6 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2025DataRevolutionBanner;

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
   return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">
@@ -98,4 +99,3 @@ export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
             <div className="text-gray-400 font-semibold">🏢 Fortune 500 Companies</div>
             <div className="text-gray-400 font-semibold">🔬 Research Institutions</div>
   );
-};

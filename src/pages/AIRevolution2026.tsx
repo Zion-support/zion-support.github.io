@@ -216,4 +216,6 @@ const AIRevolution2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIRevolution2026;

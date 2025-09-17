@@ -99,5 +99,7 @@ const TranscendentAI2033Banner: React.FC = () => {
     </divsection>
   );
 
+};
+
 export default TranscendentAI2033Banner;
 </div></div></div>

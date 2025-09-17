@@ -7,4 +7,6 @@ const LazyLoader: React.FC = () => {
     </div>
   );
 
+};
+
 export default LazyLoader;

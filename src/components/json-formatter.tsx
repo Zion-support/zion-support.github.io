@@ -5,6 +5,7 @@ import Button from '../components/ui/Button';
 import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 };
 
+
 export default function JSONFormatterPage() {
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
@@ -400,5 +401,6 @@ export default function JSONFormatterPage() {
               View Pricing
     </>
   );
+
 
 export default json-formatter;

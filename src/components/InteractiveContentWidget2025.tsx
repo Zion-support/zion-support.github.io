@@ -7,4 +7,6 @@ const InteractiveContentWidget2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentWidget2025;

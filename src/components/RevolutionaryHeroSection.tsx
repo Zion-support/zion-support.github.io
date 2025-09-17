@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function RevolutionaryHeroSection() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -131,4 +132,3 @@ export default function RevolutionaryHeroSection() {
       <div className="absolute bottom-1/3 left-20 w-3 h-3 bg-cyan-400 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute bottom-1/4 right-10 w-5 h-5 bg-indigo-400 rounded-full animate-pulse delay-1500"></div>
   );
-};

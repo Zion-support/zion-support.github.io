@@ -7,4 +7,6 @@ const ModernMobileOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default ModernMobileOptimizer;

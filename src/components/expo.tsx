@@ -11,4 +11,6 @@ const expo = () => {
     </div>
   );
 
+};
+
 export default expo;

@@ -116,4 +116,6 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentShowcasePromotionBanner;

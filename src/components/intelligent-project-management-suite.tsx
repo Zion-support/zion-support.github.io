@@ -11,4 +11,6 @@ const intelligent-project-management-suite = () => {
     </div>
   );
 
+};
+
 export default intelligent-project-management-suite;

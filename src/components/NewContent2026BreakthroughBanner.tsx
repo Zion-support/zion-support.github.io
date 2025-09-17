@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewContent2026BreakthroughBanner() {
   return (
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
@@ -89,4 +90,3 @@ export default function NewContent2026BreakthroughBanner() {
             >
               Download Implementation Guide
   );
-};

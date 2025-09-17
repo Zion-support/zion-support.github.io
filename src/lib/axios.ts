@@ -11,12 +11,12 @@ class InterceptorManager {
   use(fulfilled?: FulfilledFn, rejected?: RejectedFn): number {
     this.handlers.push({ fulfilled, rejected });
     return this.handlers.length - 1;
-  }
+  };
   eject(id: number) {
     if (this.handlers[id]) {
       this.handlers[id] = {};
     }
-  }
+  };
 export interface RequestConfig extends RequestInit {
   withCredentials?: boolean;
 export interface AxiosInstance {
@@ -164,7 +164,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       }
       throw err;
     }
-  }
+  };
   return instance;
 const defaultInstance = create();
 const customAxios: CustomAxiosStatic = {

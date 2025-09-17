@@ -540,4 +540,6 @@ const AdvancedRobotics2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedRobotics2026;

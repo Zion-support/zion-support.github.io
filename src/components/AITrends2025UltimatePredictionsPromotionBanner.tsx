@@ -3,6 +3,7 @@ import React from 'react';
 TrendingUpBarChart3GlobeCalendarArrowRightStarTargetZap
 };
 
+
 export default function AITrends2025UltimatePredictionsPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 border border-indigo-500/30 rounded-xl p-6 mb-8">
@@ -113,4 +114,3 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
             >
               Get Consultation
   );
-};

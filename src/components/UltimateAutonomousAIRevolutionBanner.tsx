@@ -7,4 +7,6 @@ const UltimateAutonomousAIRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAutonomousAIRevolutionBanner;

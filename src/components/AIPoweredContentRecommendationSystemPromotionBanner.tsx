@@ -210,4 +210,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIPoweredContentRecommendationSystemPromotionBanner;

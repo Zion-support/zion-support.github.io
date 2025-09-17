@@ -16,4 +16,6 @@ const AISolutionsComprehensive2025= () => {
     </div>
   );
 
+};
+
 export default AISolutionsComprehensive2025;

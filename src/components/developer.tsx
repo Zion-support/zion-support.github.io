@@ -4,6 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function DeveloperPage() {
   return (
     <>
@@ -20,4 +21,3 @@ export default function DeveloperPage() {
         <a href="/support" className="text-cyan-400 underline">Support</a>
     </>
   );
-};

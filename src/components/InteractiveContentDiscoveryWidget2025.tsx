@@ -7,5 +7,7 @@ const InteractiveContentDiscoveryWidget2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentDiscoveryWidget2025;
 </p></p></p>

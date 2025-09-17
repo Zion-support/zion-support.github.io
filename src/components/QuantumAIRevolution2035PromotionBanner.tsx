@@ -7,4 +7,6 @@ const QuantumAIRevolution2035PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumAIRevolution2035PromotionBanner;

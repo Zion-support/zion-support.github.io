@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026UltimateBreakthroughPredictionsBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
@@ -77,4 +78,3 @@ export default function AI2026UltimateBreakthroughPredictionsBanner() {
             <p className="text-cyan-400 font-bold text-lg">
               📅 Q1 2026: Quantum-Neural Fusion Launch | Q2 2026: Consciousness AI Emergence
   );
-};

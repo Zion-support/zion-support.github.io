@@ -628,4 +628,6 @@ const NextGenTechShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenTechShowcase2025;

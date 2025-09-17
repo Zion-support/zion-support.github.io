@@ -7,4 +7,6 @@ const EnhancedAccessibility2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedAccessibility2025;

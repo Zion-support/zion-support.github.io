@@ -16,4 +16,6 @@ const InterdimensionalRealityEngine2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalRealityEngine2028;

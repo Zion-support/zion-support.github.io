@@ -7,4 +7,6 @@ const EmbodiedAIContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default EmbodiedAIContentShowcase;

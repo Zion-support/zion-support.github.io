@@ -11,4 +11,6 @@ const BlogSection = () => {
     </div>
   );
 
+};
+
 export default BlogSection;

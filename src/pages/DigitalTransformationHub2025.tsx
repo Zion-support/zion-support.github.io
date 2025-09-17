@@ -16,4 +16,6 @@ const DigitalTransformationHub2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default DigitalTransformationHub2025;

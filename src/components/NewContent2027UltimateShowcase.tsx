@@ -7,4 +7,6 @@ const NewContent2027UltimateShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2027UltimateShowcase;

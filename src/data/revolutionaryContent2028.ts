@@ -356,7 +356,7 @@ The future of reality is conscious, and it's more incredible than we ever imagin
     likes: 2900,
     isNew: true,
     urgency: "Conscious Virtual Worlds"
-  }
+  };
 export const REVOLUTIONARY_CASE_STUDIES_2028: CaseStudy[] = [
   {
     id: "apple-consciousness-integration-2028",
@@ -417,7 +417,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2028: CaseStudy[] = [
     featured: true,
     image: "/images/disney-neural-reality-case-study.jpg",
     isNew: true
-  }
+  };
 export const REVOLUTIONARY_SERVICES_2028 = [
   {
     id: "consciousness-transfer-platform",
@@ -508,4 +508,4 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     category: "Conscious AI",
     isNew: true,
     urgency: "Truly conscious AI assistant"
-  }
+  };

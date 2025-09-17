@@ -30,4 +30,6 @@ const InteractiveTechShowcase = () => {
     </div>
   );
 
+};
+
 export default InteractiveTechShowcase;

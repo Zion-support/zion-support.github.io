@@ -18,8 +18,7 @@ export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTrigger
         {children}
       </button>
     );
-};
-  }
+  };
 PopoverTrigger.displayName = "PopoverTrigger";
 type PopoverContentProps = React.HTMLAttributes<HTMLDivElement> & {
   align?: "start" | "center" | "end";
@@ -31,9 +30,8 @@ export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentPro
         {children}
       </div>
     );
-};
-  }
+  };
 PopoverContent.displayName = "PopoverContent";
-};
+
 
 export default Popover;

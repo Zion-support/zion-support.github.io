@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 };
 
+
 export default function About() {
   const stats = [
     { icon: Users, value: '500+', label: 'Happy Clients', color: 'from-blue-500 to-cyan-500' },
@@ -221,4 +222,3 @@ export default function About() {
                   View Careers
     </>
   );
-};

@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target } from 'lucide-react';
 };
 
+
 export default function Fortune500AI600ROICaseStudyBanner() {
   return (
     <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-20 overflow-hidden">
@@ -142,4 +143,3 @@ export default function Fortune500AI600ROICaseStudyBanner() {
             Schedule Strategy Session
             <ArrowRight className="ml-2 w-5 h-5" />
   );
-};

@@ -7,4 +7,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAnalyticsEngine;

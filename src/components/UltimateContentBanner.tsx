@@ -135,4 +135,6 @@ const UltimateContentBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentBanner;

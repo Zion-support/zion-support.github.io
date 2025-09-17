@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightCalendarBrainZapGlobeTrendingUpTarget
 };
 
+
 export default function AIFuturePredictionsUltimate2025_2035Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -59,4 +60,3 @@ export default function AIFuturePredictionsUltimate2025_2035Banner() {
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
   );
-};

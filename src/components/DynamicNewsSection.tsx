@@ -7,4 +7,6 @@ const DynamicNewsSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default DynamicNewsSection;

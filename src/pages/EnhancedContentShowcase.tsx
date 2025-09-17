@@ -264,4 +264,6 @@ const EnhancedContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentShowcase;

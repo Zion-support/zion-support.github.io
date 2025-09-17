@@ -226,8 +226,9 @@ const SERVICE_COMPARISONS: ServiceComparison[] = [
       "Hardware requirements",
       "Content creation needed"
     ]
-  }
+  };
 };
+
 
 export default function ServicesComparison() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -457,4 +458,3 @@ export default function ServicesComparison() {
               <Mail className="h-5 w-5 mr-2" />
               Request Custom Quote
   );
-};

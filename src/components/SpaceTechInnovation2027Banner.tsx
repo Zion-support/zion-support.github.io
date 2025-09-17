@@ -11,4 +11,6 @@ const SpaceTechInnovation2027Banner = () => {
     </div>
   );
 
+};
+
 export default SpaceTechInnovation2027Banner;

@@ -16,4 +16,6 @@ const OmniversalAIConsciousness2035= () => {
     </div>
   );
 
+};
+
 export default OmniversalAIConsciousness2035;

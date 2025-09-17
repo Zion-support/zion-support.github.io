@@ -221,7 +221,7 @@ const ComprehensiveServices2026: React.FC = () => {
       </div>
     );
 };
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
       {/* Hero Section */}
@@ -469,5 +469,6 @@ const ComprehensiveServices2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default ComprehensiveServices2026;

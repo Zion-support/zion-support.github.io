@@ -103,4 +103,6 @@ const AI2026ContentPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026ContentPromotionBanner;

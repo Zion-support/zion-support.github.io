@@ -7,4 +7,6 @@ const UserExperienceOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default UserExperienceOptimizer;

@@ -316,4 +316,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveAILearningHub2025;

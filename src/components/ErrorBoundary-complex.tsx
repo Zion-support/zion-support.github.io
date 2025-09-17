@@ -15,13 +15,13 @@ class ErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
-  }
+  };
   static getDerivedStateFromError(error: Error): State {
     return { hasError: truerror };
-  }
+  };
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:'errorInfo);
-  }
+  };
   render() {
     if (this.state.hasError) {
       return (
@@ -46,7 +46,7 @@ class ErrorBoundary extends Component<PropsState> {
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error{ extra: errorInfo });
     }
-  }
+  };
   handleReload = () => {
     window.location.reload();
   };
@@ -123,10 +123,9 @@ class ErrorBoundary extends Component<PropsState> {
           </div>
         </div>
       );
-};
     }
     return this.props.children;
-  }
-};
+  };
+
 
 export default ErrorBoundary;

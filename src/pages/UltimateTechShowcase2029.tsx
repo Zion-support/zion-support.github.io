@@ -15,4 +15,6 @@ const UltimateTechShowcase2029: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechShowcase2029;

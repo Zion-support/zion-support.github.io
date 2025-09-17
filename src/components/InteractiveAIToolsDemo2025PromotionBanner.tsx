@@ -210,5 +210,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveAIToolsDemo2025PromotionBanner;
 </div></div></div></div></div></div></div></div>

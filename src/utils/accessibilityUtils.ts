@@ -41,7 +41,7 @@ class AccessibilityManager {
       ...config
     };
     this.initialize();
-  }
+  };
   private initialize(): void {
     if (typeof window === 'undefined') return;
     this.createScreenReaderAnnouncer();
@@ -50,7 +50,7 @@ class AccessibilityManager {
     this.setupFocusManagement();
     this.applyUserPreferences();
     this.monitorAccessibilityIssues();
-  }
+  };
   // Create screen reader announcer
   private createScreenReaderAnnouncer(): void {
     if (!this.config.enableScreenReaderSupport) return;
@@ -70,14 +70,14 @@ class AccessibilityManager {
       border: 0 !important;
     `;
     document.body.appendChild(this.announcer);
-  }
+  };
   // Setup keyboard navigation
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
     document.addEventListener('keydown', this.handleKeyboardNavigation.bind(this));
     this.addSkipLinks();
     this.enhanceTabOrder();
-  }
+  };
   private handleKeyboardNavigation(event: KeyboardEvent): void {
     // Handle common keyboard shortcuts
     switch (event.key) {
@@ -102,7 +102,7 @@ class AccessibilityManager {
         this.handleHomeEnd(event);
         break;
     }
-  }
+  };
   private handleTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
@@ -119,7 +119,7 @@ class AccessibilityManager {
         focusableElements[0]?.focus();
       }
     }
-  }
+  };
   private handleActivation(event: KeyboardEvent): void {
     const target = event.target as HTMLElement;
     // Handle activation for custom interactive elements
@@ -127,7 +127,7 @@ class AccessibilityManager {
       event.preventDefault();
       target.click();
     }
-  }
+  };
   private handleEscape(event: KeyboardEvent): void {
     // Close modals, dropdowns, etc.
     const openModal = document.querySelector('[role="dialog"][aria-hidden="false"]');
@@ -138,7 +138,7 @@ class AccessibilityManager {
     if (openDropdown) {
       openDropdown.setAttribute('aria-expanded', 'false');
     }
-  }
+  };
   private handleArrowNavigation(event: KeyboardEvent): void {
     const target = event.target as HTMLElement;
     const role = target.getAttribute('role');
@@ -146,7 +146,7 @@ class AccessibilityManager {
       event.preventDefault();
       this.navigateWithinGroup(target, event.key);
     }
-  }
+  };
   private handleHomeEnd(event: KeyboardEvent): void {
     const target = event.target as HTMLElement;
     const role = target.getAttribute('role');
@@ -159,7 +159,7 @@ class AccessibilityManager {
         siblings[siblings.length - 1]?.focus();
       }
     }
-  }
+  };
   // Add skip links for better navigation
   private addSkipLinks(): void {
     const skipLinks = [
@@ -196,7 +196,7 @@ class AccessibilityManager {
       skipContainer.appendChild(skipLink);
     });
     document.body.insertBefore(skipContainer, document.body.firstChild);
-  }
+  };
   // Enhance ARIA support
   private enhanceAriaSupport(): void {
     if (!this.config.enableAriaEnhancements) return;
@@ -204,7 +204,7 @@ class AccessibilityManager {
     this.enhanceFormElements();
     this.addLandmarkRoles();
     this.enhanceInteractiveElements();
-  }
+  };
   private addMissingLabels(): void {
     // Add labels to form inputs without labels
     const unlabeledInputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby]):not([id])');
@@ -224,7 +224,7 @@ class AccessibilityManager {
       const filename = src.split('/').pop()?.split('.')[0] || 'image';
       (img as HTMLImageElement).alt = `Image: ${filename}`;
     });
-  }
+  };
   private enhanceFormElements(): void {
     // Add required indicators
     const requiredFields = document.querySelectorAll('[required]');
@@ -251,7 +251,7 @@ class AccessibilityManager {
         }
       }
     });
-  }
+  };
   private addLandmarkRoles(): void {
     // Add landmark roles to common elements
     const landmarks = [
@@ -269,7 +269,7 @@ class AccessibilityManager {
         }
       });
     });
-  }
+  };
   private enhanceInteractiveElements(): void {
     // Enhance buttons
     const buttons = document.querySelectorAll('button, [role="button"]');
@@ -289,14 +289,14 @@ class AccessibilityManager {
         }
       }
     });
-  }
+  };
   // Focus management
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
     this.addFocusIndicators();
     this.manageFocusTrap();
     this.handleFocusRestoration();
-  }
+  };
   private addFocusIndicators(): void {
     const style = document.createElement('style');
     style.textContent = `
@@ -318,7 +318,7 @@ class AccessibilityManager {
       }
     `;
     document.head.appendChild(style);
-  }
+  };
   private manageFocusTrap(): void {
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
@@ -328,7 +328,7 @@ class AccessibilityManager {
         }
       }
     });
-  }
+  };
   private trapFocus(container: HTMLElement, event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements(container);
     const firstElement = focusableElements[0];
@@ -344,7 +344,7 @@ class AccessibilityManager {
         firstElement?.focus();
       }
     }
-  }
+  };
   private handleFocusRestoration(): void {
     let lastFocusedElement: HTMLElement | null = null;
     document.addEventListener('focusin', (event) => {
@@ -371,7 +371,7 @@ class AccessibilityManager {
       subtree: true,
       attributeFilter: ['aria-hidden']
     });
-  }
+  };
   // Apply user preferences
   private applyUserPreferences(): void {
     const preferences = this.getUserPreferences();
@@ -399,15 +399,15 @@ class AccessibilityManager {
         }
       });
     }
-  }
+  };
   private enableHighContrast(): void {
     document.documentElement.classList.add('high-contrast');
     this.announce('High contrast mode enabled');
-  }
+  };
   private enableLargeText(): void {
     document.documentElement.classList.add('large-text');
     this.announce('Large text mode enabled');
-  }
+  };
   private enableReducedMotion(): void {
     document.documentElement.classList.add('reduced-motion');
     const style = document.createElement('style');
@@ -422,7 +422,7 @@ class AccessibilityManager {
     `;
     document.head.appendChild(style);
     this.announce('Reduced motion mode enabled');
-  }
+  };
   // Utility functions
   private getFocusableElements(container: HTMLElement = document.body): HTMLElement[] {
     const focusableSelectors = [
@@ -438,14 +438,14 @@ class AccessibilityManager {
       .filter((element) => {
         return element.offsetWidth > 0 && element.offsetHeight > 0;
       }) as HTMLElement[];
-  }
+  };
   private getSiblingElements(element: HTMLElement): HTMLElement[] {
     const parent = element.parentElement;
     if (!parent) return [];
     const role = element.getAttribute('role');
     if (!role) return [];
     return Array.from(parent.querySelectorAll(`[role="${role}"]`)) as HTMLElement[];
-  }
+  };
   private navigateWithinGroup(current: HTMLElement, direction: string): void {
     const siblings = this.getSiblingElements(current);
     const currentIndex = siblings.indexOf(current);
@@ -456,7 +456,7 @@ class AccessibilityManager {
       nextIndex = (currentIndex - 1 + siblings.length) % siblings.length;
     }
     siblings[nextIndex]?.focus();
-  }
+  };
   private findNearbyHeading(element: HTMLElement): string | null {
     let current = element.parentElement;
     while (current) {
@@ -467,7 +467,7 @@ class AccessibilityManager {
       current = current.parentElement;
     }
     return null;
-  }
+  };
   private generateLabelText(input: HTMLInputElement): string {
     const type = input.type;
     const name = input.name;
@@ -482,11 +482,11 @@ class AccessibilityManager {
       case 'url': return 'Website URL';
       default: return 'Input field';
     }
-  }
+  };
   private closeModal(modal: HTMLElement): void {
     modal.setAttribute('aria-hidden', 'true');
     modal.style.display = 'none';
-  }
+  };
   private getUserPreferences(): any {
     try {
       const saved = localStorage.getItem('userPreferences');
@@ -494,7 +494,7 @@ class AccessibilityManager {
     } catch {
       return {};
     }
-  }
+  };
   private monitorAccessibilityIssues(): void {
     // Monitor for common accessibility issues
     const observer = new MutationObserver((mutations) => {
@@ -512,7 +512,7 @@ class AccessibilityManager {
       childList: true,
       subtree: true
     });
-  }
+  };
   private checkElementAccessibility(element: HTMLElement): void {
     // Check for common issues
     if (element.tagName === 'IMG' && !element.hasAttribute('alt')) {
@@ -524,7 +524,7 @@ class AccessibilityManager {
     if (element.hasAttribute('onclick') && !element.hasAttribute('role')) {
       console.warn('Clickable element without proper role detected:', element);
     }
-  }
+  };
   // Public API
   public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
     if (!this.announcer) return;
@@ -536,7 +536,7 @@ class AccessibilityManager {
         this.announcer.textContent = '';
       }
     }, 1000);
-  }
+  };
   public generateAccessibilityReport(): AccessibilityReport {
     const issues: AccessibilityIssue[] = [];
     let score = 100;
@@ -590,7 +590,7 @@ class AccessibilityManager {
         section508: score >= 85
       }
     };
-  }
+  };
   private generateRecommendations(issues: AccessibilityIssue[]): string[] {
     const recommendations: string[] = [];
     if (issues.some(i => i.element === 'img')) {
@@ -606,13 +606,13 @@ class AccessibilityManager {
     recommendations.push('Test with screen reader software');
     recommendations.push('Ensure sufficient color contrast ratios');
     return recommendations;
-  }
+  };
   public destroy(): void {
     // Cleanup event listeners and observers
     if (this.announcer) {
       this.announcer.remove();
     }
-  }
+  };
 // Export utilities
 export const accessibilityManager = new AccessibilityManager();
 export const checkColorContrast = (foreground: string, background: string): number => {

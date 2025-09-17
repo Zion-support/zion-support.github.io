@@ -210,4 +210,4 @@ export const newServices2026: Service[] = [
     deliveryTime: "36-48 months",
     support: "Space AI operations team",
     reviews: { rating: 5.0, count: 3 }
-  }
+  };

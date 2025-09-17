@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025UltimateBreakthroughPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
@@ -37,4 +38,3 @@ export default function AI2025UltimateBreakthroughPromotionBanner() {
           <div className="mt-8 text-sm text-gray-400">
             Join thousands of companies already experiencing the AI 2025 revolution
   );
-};

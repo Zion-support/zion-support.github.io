@@ -133,4 +133,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAnalyticsDashboard2026;

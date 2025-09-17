@@ -97,9 +97,10 @@ const services = [
     color: "from-purple-500 to-indigo-600",
     popular: false,
     category: "Consulting"
-  }
+  };
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
 };
+
 
 export default function UltimateServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = React.useState("All");
@@ -228,5 +229,6 @@ export default function UltimateServicesShowcase2025() {
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
   );
+
 
 export default UltimateServicesShowcase2025;

@@ -68,6 +68,7 @@ const sortOptions = [
   { label: 'Price: High to Low', value: 'price-high' }
 };
 
+
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
@@ -84,7 +85,6 @@ export default function ComprehensiveServicesShowcase2025() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
       );
-};
     }
     // Filter by category
     if (selectedCategory !== 'All Services') {
@@ -441,4 +441,3 @@ export default function ComprehensiveServicesShowcase2025() {
               >
                 View Pricing Plans
   );
-};

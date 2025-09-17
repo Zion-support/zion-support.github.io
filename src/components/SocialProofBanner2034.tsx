@@ -7,4 +7,6 @@ const SocialProofBanner2034: React.FC = () => {
     </div>
   );
 
+};
+
 export default SocialProofBanner2034;

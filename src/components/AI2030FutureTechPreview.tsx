@@ -7,5 +7,7 @@ const AI2030FutureTechPreview: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2030FutureTechPreview;
 </p></p>

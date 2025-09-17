@@ -16,4 +16,6 @@ const RevolutionaryAISolutions2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryAISolutions2026;

@@ -36,4 +36,6 @@ const BlogPostLayout: React.FC = () => {
       />
   );
 
+};
+
 export default BlogPostLayout;

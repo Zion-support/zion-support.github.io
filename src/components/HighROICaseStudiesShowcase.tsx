@@ -7,4 +7,6 @@ const HighROICaseStudiesShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default HighROICaseStudiesShowcase;

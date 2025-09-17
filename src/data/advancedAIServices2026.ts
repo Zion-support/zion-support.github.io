@@ -154,4 +154,4 @@ export const ADVANCED_AI_SERVICES_2026: AdvancedAIService[] = [
     isNew: true,
     discount: 15,
     urgency: "Predict the Future"
-  }
+  };

@@ -16,4 +16,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedIoTPlatform2026;

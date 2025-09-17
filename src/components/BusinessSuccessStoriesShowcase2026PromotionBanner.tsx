@@ -172,7 +172,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                       </div>
                     </div>
                   );
-};
                 })}
               </div>
               {/* Testimonial */}
@@ -236,6 +235,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default BusinessSuccessStoriesShowcase2026PromotionBanner;
 </div></div></div></div></div></div>

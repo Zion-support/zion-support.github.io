@@ -3,6 +3,7 @@ import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AutomationInsightsPage() {
   const automationTrends = [
     {
@@ -149,5 +150,6 @@ export default function AutomationInsightsPage() {
                   View Case Studies
     </>
   );
+
 
 export default automation-insights;

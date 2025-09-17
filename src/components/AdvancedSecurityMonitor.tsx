@@ -7,4 +7,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedSecurityMonitor;

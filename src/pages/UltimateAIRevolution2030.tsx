@@ -16,4 +16,6 @@ const UltimateAIRevolution2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAIRevolution2030;

@@ -7,4 +7,6 @@ const ComprehensiveImprovements2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveImprovements2025;

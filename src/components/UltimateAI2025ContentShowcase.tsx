@@ -7,4 +7,6 @@ const UltimateAI2025ContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAI2025ContentShowcase;

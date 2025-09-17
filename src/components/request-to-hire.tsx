@@ -11,4 +11,6 @@ const request-to-hire = () => {
     </div>
   );
 
+};
+
 export default request-to-hire;

@@ -204,4 +204,6 @@ const FeaturedContentSection2026 = () => {
     </section>
   );
 
+};
+
 export default FeaturedContentSection2026;

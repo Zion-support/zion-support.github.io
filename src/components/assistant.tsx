@@ -11,4 +11,6 @@ const assistant = () => {
     </div>
   );
 
+};
+
 export default assistant;

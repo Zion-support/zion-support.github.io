@@ -3,6 +3,7 @@ import React from 'react';
 SparklesBookOpenFileTextArrowRightStarClockCog
 };
 
+
 export default function NewContent2026ShowcaseBanner() {
   return (
     <section className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16">
@@ -110,4 +111,3 @@ export default function NewContent2026ShowcaseBanner() {
           <div className="text-sm opacity-70">
             Stay ahead of the AI revolution with our latest insights and breakthrough implementations
   );
-};

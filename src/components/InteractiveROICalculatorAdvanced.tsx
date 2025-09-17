@@ -7,4 +7,6 @@ const InteractiveROICalculatorAdvanced: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveROICalculatorAdvanced;

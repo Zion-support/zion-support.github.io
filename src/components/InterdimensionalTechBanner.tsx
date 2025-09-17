@@ -7,4 +7,6 @@ const InterdimensionalTechBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalTechBanner;

@@ -11,4 +11,6 @@ const EdgeAICompliance2026 = () => {
     </div>
   );
 
+};
+
 export default EdgeAICompliance2026;

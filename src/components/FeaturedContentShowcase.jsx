@@ -134,4 +134,6 @@ const FeaturedContentShowcase = () => {
     </div>
   );
 
+};
+
 export default FeaturedContentShowcase;

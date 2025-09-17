@@ -16,4 +16,6 @@ const AdvancedAIServices2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAIServices2027;

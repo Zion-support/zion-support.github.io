@@ -7,5 +7,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedServicesShowcase;
 </div></div>

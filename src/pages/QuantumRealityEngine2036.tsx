@@ -16,4 +16,6 @@ const QuantumRealityEngine2036: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumRealityEngine2036;

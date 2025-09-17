@@ -7,5 +7,7 @@ const ComprehensiveContentCarousel: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveContentCarousel;
 </p></p>

@@ -7,4 +7,6 @@ const AI2025InsightsShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025InsightsShowcase;

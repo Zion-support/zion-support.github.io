@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function CaseStudy25000ROIBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white py-16">
@@ -50,4 +51,3 @@ export default function CaseStudy25000ROIBanner() {
           <div className="mt-8 text-sm text-gray-400">
             <p>Real results from real companies - join the transformation revolution</p>
   );
-};

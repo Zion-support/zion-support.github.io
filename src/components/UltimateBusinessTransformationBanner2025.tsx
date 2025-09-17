@@ -7,5 +7,7 @@ const UltimateBusinessTransformationBanner2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateBusinessTransformationBanner2025;
 </p></p>

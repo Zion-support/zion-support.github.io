@@ -7,4 +7,6 @@ const NewContentShowcaseBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentShowcaseBanner;

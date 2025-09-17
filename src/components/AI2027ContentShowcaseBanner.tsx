@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2027ContentShowcaseBanner() {
   return (
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-20 relative overflow-hidden">
@@ -106,4 +107,3 @@ export default function AI2027ContentShowcaseBanner() {
       <div className="absolute top-1/3 right-10 w-16 h-16 bg-purple-400 bg-opacity-15 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 left-10 w-20 h-20 bg-pink-400 bg-opacity-10 rounded-full animate-pulse"></div>
   );
-};

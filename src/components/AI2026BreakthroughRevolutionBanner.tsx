@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026BreakthroughRevolutionBanner() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -40,4 +41,3 @@ export default function AI2026BreakthroughRevolutionBanner() {
             <h3 className="text-xl font-bold mb-2">Predictive Intelligence</h3>
             <p className="text-gray-300">98% accuracy in forecasting and predictions</p>
   );
-};

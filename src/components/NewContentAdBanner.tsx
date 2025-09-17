@@ -11,4 +11,6 @@ const NewContentAdBanner = () => {
     </div>
   );
 
+};
+
 export default NewContentAdBanner;

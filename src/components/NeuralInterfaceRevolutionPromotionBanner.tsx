@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NeuralInterfaceRevolutionPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900">
@@ -50,4 +51,3 @@ export default function NeuralInterfaceRevolutionPromotionBanner() {
           <line x1="20%" y1="80%" x2="10%" y2="90%" stroke="white" strokeWidth="2" className="animate-pulse delay-2000" />
           <line x1="90%" y1="90%" x2="80%" y2="80%" stroke="white" strokeWidth="2" className="animate-pulse delay-500" />
   );
-};

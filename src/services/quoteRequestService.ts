@@ -97,4 +97,4 @@ export const quoteRequestService = {
       .eq('id', id);
     if (error) throw error;
     return true;
-  }
+  };

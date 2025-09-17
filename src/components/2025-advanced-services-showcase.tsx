@@ -60,7 +60,7 @@ const categories = [
     icon: <Atom className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
-  }
+  };
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';
@@ -74,6 +74,7 @@ const getServiceFeatures = (service: any) => {
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
+
 
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -102,7 +103,6 @@ export default function AdvancedServicesShowcase() {
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
       );
-};
     }
     setFilteredServices(filtered);
   }, [selectedCategory, searchTerm]);
@@ -176,7 +176,6 @@ export default function AdvancedServicesShowcase() {
           >
             Contact
   );
-};
   const ServiceList = ({ service }: { service: any }) => (
     <div
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
@@ -245,7 +244,6 @@ export default function AdvancedServicesShowcase() {
               >
                 Contact Sales
   );
-};
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 
@@ -420,5 +418,6 @@ export default function AdvancedServicesShowcase() {
                 <Phone className="w-5 h-5" />
                 Call Now
   );
+
 
 export default 2025-advanced-services-showcase;

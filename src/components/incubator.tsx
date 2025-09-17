@@ -11,4 +11,6 @@ const incubator = () => {
     </div>
   );
 
+};
+
 export default incubator;

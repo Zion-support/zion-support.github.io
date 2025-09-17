@@ -7,4 +7,6 @@ const AdvancedContactForm: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedContactForm;

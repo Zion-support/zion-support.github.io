@@ -13,4 +13,6 @@ const ContentOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentOptimizer;

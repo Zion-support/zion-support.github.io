@@ -7,4 +7,6 @@ const MonitoringDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default MonitoringDashboard;

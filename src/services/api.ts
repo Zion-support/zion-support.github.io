@@ -10,7 +10,7 @@ class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError';
-  }
+  };
 interface ApiClientOptions {
   method?: string;
   body?: string;
@@ -26,7 +26,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
   };
   if (body) {
     config.body = body;
-  }
+  };
   try {
     const response = await fetch(endpoint, config);
     if (!response.ok) {
@@ -36,7 +36,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
   } catch (error) {
     console.error('API request failed:', error);
     throw error;
-  }
+  };
 export const api = {
   get: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'GET', headers: headers || {} }),

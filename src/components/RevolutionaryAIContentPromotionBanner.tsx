@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightSparklesZapTrendingUpStar
 };
 
+
 export default function RevolutionaryAIContentPromotionBanner() {
   return (
     <divsection
@@ -81,4 +82,3 @@ export default function RevolutionaryAIContentPromotionBanner() {
               <div className="text-lg font-semibold">Healthcare</div>
               <div className="text-lg font-semibold">Finance</div>
   );
-};

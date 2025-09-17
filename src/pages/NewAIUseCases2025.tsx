@@ -11,4 +11,6 @@ const NewAIUseCases2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewAIUseCases2025;

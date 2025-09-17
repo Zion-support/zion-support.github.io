@@ -7,4 +7,6 @@ const UltimateAutonomousAIContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAutonomousAIContentShowcase;

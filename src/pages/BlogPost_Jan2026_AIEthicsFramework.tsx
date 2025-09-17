@@ -164,4 +164,6 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlogPost_Jan2026_AIEthicsFramework;

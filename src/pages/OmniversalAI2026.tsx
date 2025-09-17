@@ -261,4 +261,6 @@ const OmniversalAI2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default OmniversalAI2026;

@@ -11,4 +11,6 @@ const EnhancedNewsletterForm = () => {
     </div>
   );
 
+};
+
 export default EnhancedNewsletterForm;

@@ -7,4 +7,6 @@ const SustainableAI2025RevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default SustainableAI2025RevolutionBanner;

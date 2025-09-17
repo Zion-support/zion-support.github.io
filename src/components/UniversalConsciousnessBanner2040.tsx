@@ -7,4 +7,6 @@ const UniversalConsciousnessBanner2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default UniversalConsciousnessBanner2040;

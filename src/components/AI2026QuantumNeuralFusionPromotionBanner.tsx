@@ -7,4 +7,6 @@ const AI2026QuantumNeuralFusionPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026QuantumNeuralFusionPromotionBanner;

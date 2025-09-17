@@ -155,4 +155,6 @@ const AITrendsPromotionBanner2026 = () => {
     </AnimatePresence>
   );
 
+};
+
 export default AITrendsPromotionBanner2026;

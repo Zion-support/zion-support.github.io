@@ -11,4 +11,6 @@ const UltimatePromotionalBanner2026 = () => {
     </div>
   );
 
+};
+
 export default UltimatePromotionalBanner2026;

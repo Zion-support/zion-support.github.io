@@ -7,4 +7,6 @@ const EnhancedDynamicContentCarousel: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedDynamicContentCarousel;

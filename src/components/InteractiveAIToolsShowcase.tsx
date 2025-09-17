@@ -7,4 +7,6 @@ const InteractiveAIToolsShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveAIToolsShowcase;

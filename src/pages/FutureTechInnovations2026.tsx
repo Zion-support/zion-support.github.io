@@ -11,4 +11,6 @@ const FutureTechInnovations2026 = () => {
     </div>
   );
 
+};
+
 export default FutureTechInnovations2026;

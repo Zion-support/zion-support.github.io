@@ -16,6 +16,8 @@ const UltimateAIConsciousness2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAIConsciousness2026;
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -98,9 +100,9 @@ export default UltimateAIConsciousness2026;
               Explore Consciousness →
             <a href="/pages/QuantumNeuralFusion2026" className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors font-semibold text-lg">
               Learn More About Quantum AI
-};
+
 
 export default UltimateAIConsciousness2026;
-};
+
 
 export default UltimateAIConsciousness2026;

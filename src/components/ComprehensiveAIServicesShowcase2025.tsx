@@ -221,4 +221,6 @@ const ComprehensiveAIServicesShowcase2025: React.FC = () => {
     </divsection>
   );
 
+};
+
 export default ComprehensiveAIServicesShowcase2025;

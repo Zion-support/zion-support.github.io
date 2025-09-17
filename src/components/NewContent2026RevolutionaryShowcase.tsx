@@ -7,4 +7,6 @@ const NewContent2026RevolutionaryShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2026RevolutionaryShowcase;

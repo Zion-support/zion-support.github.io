@@ -20,4 +20,6 @@ const ResponsibleAutonomyGuide2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default ResponsibleAutonomyGuide2026;

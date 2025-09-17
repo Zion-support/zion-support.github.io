@@ -7,4 +7,6 @@ const EdgeAI2025RevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default EdgeAI2025RevolutionBanner;

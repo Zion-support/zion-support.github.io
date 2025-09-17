@@ -7,4 +7,6 @@ const AIRevolution50000ROIPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIRevolution50000ROIPromotionBanner;

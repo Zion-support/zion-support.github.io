@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function UltimateContentShowcase2026PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 py-16">
@@ -79,4 +80,3 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             >
               Start with AI 2026 Breakthrough
   );
-};

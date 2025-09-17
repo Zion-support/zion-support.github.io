@@ -7,4 +7,6 @@ const NewContent2025FutureTrendsBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2025FutureTrendsBanner;

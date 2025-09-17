@@ -7,4 +7,6 @@ const AdvancedTechBreakthroughBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedTechBreakthroughBanner;

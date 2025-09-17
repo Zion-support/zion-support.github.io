@@ -7,4 +7,6 @@ const ServicesSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default ServicesSection;

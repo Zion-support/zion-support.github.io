@@ -165,4 +165,6 @@ const UltimateTechRevolution2033: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechRevolution2033;

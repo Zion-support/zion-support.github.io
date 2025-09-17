@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function UltimateContentRevolutionBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-8 px-4 relative overflow-hidden">
@@ -43,4 +44,3 @@ export default function UltimateContentRevolutionBanner() {
             <span className="bg-purple-500 text-white px-3 py-1 rounded-full">✅ Infinite Speed</span>
             <span className="bg-orange-500 text-white px-3 py-1 rounded-full">✅ Zero Latency</span>
   );
-};

@@ -20,8 +20,9 @@ const staggerContainer = {
     transition: {
       staggerChildren: 0.1
     }
-  }
+  };
 };
+
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
@@ -249,5 +250,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             >
               Visit Website
   );
+
 
 export default 2025-comprehensive-services-showcase-v2;

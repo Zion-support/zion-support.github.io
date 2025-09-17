@@ -7,4 +7,6 @@ const BusinessAutomationMastery2026PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default BusinessAutomationMastery2026PromotionBanner;

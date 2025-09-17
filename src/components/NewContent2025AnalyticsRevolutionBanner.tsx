@@ -7,4 +7,6 @@ const NewContent2025AnalyticsRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2025AnalyticsRevolutionBanner;

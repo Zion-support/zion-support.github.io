@@ -152,5 +152,7 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentCarousel2036_2038;
 </p></p>

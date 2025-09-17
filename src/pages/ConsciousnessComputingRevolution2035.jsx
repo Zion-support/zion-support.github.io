@@ -16,4 +16,6 @@ const ConsciousnessComputingRevolution2035= () => {
     </div>
   );
 
+};
+
 export default ConsciousnessComputingRevolution2035;

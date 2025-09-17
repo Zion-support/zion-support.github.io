@@ -11,4 +11,6 @@ const EdgeAIandIoT2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default EdgeAIandIoT2025;

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026BreakthroughRevolutionaryContentBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 py-16">
@@ -70,4 +71,3 @@ export default function AI2026BreakthroughRevolutionaryContentBanner() {
             >
               🔥 Revolutionary Webinar
   );
-};

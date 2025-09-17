@@ -16,4 +16,6 @@ const AdvancedCloudSolutions2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedCloudSolutions2026;

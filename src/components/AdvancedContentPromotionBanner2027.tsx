@@ -7,4 +7,6 @@ const AdvancedContentPromotionBanner2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedContentPromotionBanner2027;

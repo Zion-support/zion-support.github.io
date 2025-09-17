@@ -165,4 +165,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedPerformanceOptimizer;

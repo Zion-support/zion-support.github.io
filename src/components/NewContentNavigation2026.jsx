@@ -133,4 +133,6 @@ const NewContentNavigation2026 = () => {
     </div>
   );
 
+};
+
 export default NewContentNavigation2026;

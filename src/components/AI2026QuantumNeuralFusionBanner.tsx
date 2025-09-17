@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026QuantumNeuralFusionBanner() {
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
@@ -148,4 +149,3 @@ export default function AI2026QuantumNeuralFusionBanner() {
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-75 animation-delay-1000"></div>
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping opacity-75 animation-delay-2000"></div>
   );
-};

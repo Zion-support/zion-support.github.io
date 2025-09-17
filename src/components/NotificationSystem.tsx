@@ -7,5 +7,7 @@ const NotificationSystem: React.FC = () => {
     </div>
   );
 
+};
+
 export default NotificationSystem;
 </p></p></p></p></p>

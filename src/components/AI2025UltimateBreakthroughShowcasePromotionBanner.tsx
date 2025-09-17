@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3
 };
 
+
 export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
   return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
@@ -82,4 +83,3 @@ export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
           <div className="text-blue-200 text-sm">
             <span className="font-semibold">Limited Time:</span> Get exclusive access to breakthrough technologies and implementation guides
   );
-};

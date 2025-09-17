@@ -239,7 +239,6 @@ const ComprehensiveContent2026: React.FC = () => {
                   </div>
                 </motion.div>
               );
-};
             } else {
               return (
                 <motion.div
@@ -309,7 +308,6 @@ const ComprehensiveContent2026: React.FC = () => {
                   </div>
                 </motion.div>
               );
-};
             }
           })}
         </motion.div>
@@ -327,5 +325,6 @@ const ComprehensiveContent2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default ComprehensiveContent2026;

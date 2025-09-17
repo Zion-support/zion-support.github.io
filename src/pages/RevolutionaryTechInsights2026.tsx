@@ -11,25 +11,27 @@ const RevolutionaryTechInsights2026 = () => {
     </div>
   );
 
-export default RevolutionaryTechInsights2026;
 };
 
 export default RevolutionaryTechInsights2026;
-};
+
 
 export default RevolutionaryTechInsights2026;
-};
+
 
 export default RevolutionaryTechInsights2026;
-};
+
 
 export default RevolutionaryTechInsights2026;
-};
+
 
 export default RevolutionaryTechInsights2026;
-};
+
 
 export default RevolutionaryTechInsights2026;
-};
+
+
+export default RevolutionaryTechInsights2026;
+
 
 export default RevolutionaryTechInsights2026;

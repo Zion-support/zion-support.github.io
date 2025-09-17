@@ -16,4 +16,6 @@ const ConsciousnessTransfer2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default ConsciousnessTransfer2027;

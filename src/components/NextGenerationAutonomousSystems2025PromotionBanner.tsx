@@ -7,5 +7,7 @@ const NextGenerationAutonomousSystems2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenerationAutonomousSystems2025PromotionBanner;
 </p></p>

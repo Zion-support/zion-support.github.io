@@ -7,4 +7,6 @@ const ClientTestimonials: React.FC = () => {
     </div>
   );
 
+};
+
 export default ClientTestimonials;

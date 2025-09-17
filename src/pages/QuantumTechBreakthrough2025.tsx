@@ -180,4 +180,5 @@ const QuantumTechBreakthrough2025: React.FC = () => {
     </div>
   );
 
+
 export default QuantumTechBreakthrough2025;

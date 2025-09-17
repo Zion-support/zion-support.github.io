@@ -16,4 +16,6 @@ const NextGenAITransformation2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenAITransformation2025;

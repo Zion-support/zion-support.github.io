@@ -15,6 +15,7 @@ interface ContentItem {
   featured?: boolean;
 };
 
+
 export default function EnhancedContentDiscoveryWidget() {
   const [searchTermsetSearchTerm] = useState('');
   const [selectedCategorysetSelectedCategory] = useState('all');
@@ -268,5 +269,6 @@ export default function EnhancedContentDiscoveryWidget() {
               >
                 Browse All Content
   );
+
 
 export default EnhancedContentDiscoveryWidget;

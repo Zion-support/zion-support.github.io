@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightBrainZapTargetCodeDatabaseTrendingUp
 };
 
+
 export default function AIToolsUltimateShowcase2025Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -59,4 +60,3 @@ export default function AIToolsUltimateShowcase2025Banner() {
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
   );
-};

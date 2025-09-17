@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026BreakthroughContentPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white py-12 px-4 sm:px-6 lg:px-8">
@@ -60,4 +61,3 @@ export default function AI2026BreakthroughContentPromotionBanner() {
               <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">24/7</div>
               <div className="text-purple-200 text-sm">AI Support</div>
   );
-};

@@ -9,6 +9,7 @@ import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 };
 
+
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -234,5 +235,6 @@ export default function DemosPage() {
               Get Started
     </>
   );
+
 
 export default demos;

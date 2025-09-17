@@ -92,4 +92,6 @@ const AI2026UltimateRevolution: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026UltimateRevolution;

@@ -210,4 +210,6 @@ const TrendingTopicsWidget2026 = () => {
     </div>
   );
 
+};
+
 export default TrendingTopicsWidget2026;

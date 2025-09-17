@@ -7,4 +7,6 @@ const PerformanceEnhancer: React.FC = () => {
     </div>
   );
 
+};
+
 export default PerformanceEnhancer;

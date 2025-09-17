@@ -141,4 +141,6 @@ const FuturisticAIPromoBanner2026 = () => {
     </AnimatePresence>
   );
 
+};
+
 export default FuturisticAIPromoBanner2026;

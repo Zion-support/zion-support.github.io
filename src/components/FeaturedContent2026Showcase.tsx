@@ -22,6 +22,7 @@ interface FeaturedContent2026ShowcaseProps {
   className?: string;
 };
 
+
 export default function FeaturedContent2026Showcase({
   title = "🚀 Revolutionary AI Content 2026",
   subtitle = "Discover the latest AI breakthroughsuccess storiesand implementation guides that are transforming industries worldwide",
@@ -238,5 +239,4 @@ export default function FeaturedContent2026Showcase({
               >
                 Download Free Playbook
   );
-};
 export { FeaturedContent2026Showcase };

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025GlobalEnterpriseSuccessPromotionBanner() {
   return (
     <section className="py-8 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
@@ -53,4 +54,3 @@ export default function AI2025GlobalEnterpriseSuccessPromotionBanner() {
           <div className="mt-6 text-sm opacity-75">
             ⚡ Exclusive: Download the complete implementation blueprint used by Fortune 500 companies
   );
-};

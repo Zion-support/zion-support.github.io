@@ -7,4 +7,6 @@ const QuantumAIContentShowcase2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumAIContentShowcase2026;

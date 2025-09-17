@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightSparklesZapStarCheckCircle
 };
 
+
 export default function NewFeaturesShowcase2025PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl">
@@ -98,4 +99,3 @@ export default function NewFeaturesShowcase2025PromotionBanner() {
       <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-full blur-xl"></div>
       <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-full blur-xl"></div>
   );
-};

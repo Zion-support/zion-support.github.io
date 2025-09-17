@@ -16,4 +16,6 @@ const AdvancedTechBreakthrough2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedTechBreakthrough2025;

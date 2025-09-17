@@ -311,4 +311,6 @@ const EnhancedFeaturedContent2026 = () => {
     </div>
   );
 
+};
+
 export default EnhancedFeaturedContent2026;

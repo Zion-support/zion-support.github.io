@@ -7,4 +7,6 @@ const AIPoweredFeatures: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIPoweredFeatures;

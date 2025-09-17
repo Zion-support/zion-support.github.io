@@ -11,4 +11,6 @@ const Cookies = () => {
     </div>
   );
 
+};
+
 export default Cookies;

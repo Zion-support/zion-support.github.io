@@ -16,4 +16,6 @@ const RealityManipulation2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default RealityManipulation2026;

@@ -11,4 +11,6 @@ const ContentSpotlight = () => {
     </div>
   );
 
+};
+
 export default ContentSpotlight;

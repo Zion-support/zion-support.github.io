@@ -11,4 +11,6 @@ const AutonomousAgentRiskPlaybook2026 = () => {
     </div>
   );
 
+};
+
 export default AutonomousAgentRiskPlaybook2026;

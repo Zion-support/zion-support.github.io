@@ -368,4 +368,6 @@ const FeaturedContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default FeaturedContentShowcase2025;

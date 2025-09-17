@@ -7,4 +7,6 @@ const AI2025FutureVisionPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025FutureVisionPromotionBanner;

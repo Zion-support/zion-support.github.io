@@ -29,4 +29,6 @@ const AIExecutiveBriefQ1_2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIExecutiveBriefQ1_2026;

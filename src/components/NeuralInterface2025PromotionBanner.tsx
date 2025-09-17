@@ -7,4 +7,6 @@ const NeuralInterface2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralInterface2025PromotionBanner;

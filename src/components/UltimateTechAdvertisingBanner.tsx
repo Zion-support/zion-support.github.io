@@ -7,4 +7,6 @@ const UltimateTechAdvertisingBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechAdvertisingBanner;

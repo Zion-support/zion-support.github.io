@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 };
 
+
 export default function AI2030ContentShowcaseBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden relative">
@@ -142,4 +143,3 @@ export default function AI2030ContentShowcaseBanner() {
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                   Explore Our Services
   );
-};

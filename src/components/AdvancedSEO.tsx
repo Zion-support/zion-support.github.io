@@ -15,6 +15,7 @@ interface AdvancedSEOProps {
   tags?: string[];
 };
 
+
 export default function AdvancedSEO({
   title,
   description,
@@ -107,4 +108,3 @@ export default function AdvancedSEO({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
   );
-};

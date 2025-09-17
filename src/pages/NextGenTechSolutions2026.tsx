@@ -325,4 +325,6 @@ const NextGenTechSolutions2026 = () => {
     </div>
   );
 
+};
+
 export default NextGenTechSolutions2026;

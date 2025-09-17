@@ -22,7 +22,6 @@ describe('LazyLoader', () => {
         fallback={<div data-testid="loading">Loading...</div>}
       />
     );
-};
     await waitFor(() => {
       expect(screen.getByTestId('lazy-component')).toBeInTheDocument();
     });
@@ -39,7 +38,6 @@ describe('LazyLoader', () => {
         Lazy Component
       </div>
     );
-};
     const mockLazyComponentWithProps = () => Promise.resolve({ default: MockComponentWithProps });
     render(
       <LazyLoader 
@@ -47,7 +45,6 @@ describe('LazyLoader', () => {
         {...props}
       />
     );
-};
     await waitFor(() => {
       const component = screen.getByTestId('lazy-component');
       expect(component).toHaveAttribute('data-testprop', 'test-value');

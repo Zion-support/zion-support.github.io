@@ -73,7 +73,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
       </div>
     );
 };
-  }
+  };
   const containerClasses = variant === 'compact' 
     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6'
     : variant === 'modal'
@@ -218,5 +218,6 @@ const LeadGenerationForm: React.FC = () => {
       </form>
     </div>
   );
+
 
 export default LeadGenerationForm;

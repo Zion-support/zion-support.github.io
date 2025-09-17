@@ -263,4 +263,6 @@ const InteractiveTechShowcase2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveTechShowcase2028;

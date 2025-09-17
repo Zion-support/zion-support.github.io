@@ -234,4 +234,6 @@ const RevolutionaryInnovationHub2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryInnovationHub2025;

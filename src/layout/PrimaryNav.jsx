@@ -10,4 +10,6 @@ const PrimaryNav = () => {
       </div>
     </div>
   );
+};
+
 export default PrimaryNav;

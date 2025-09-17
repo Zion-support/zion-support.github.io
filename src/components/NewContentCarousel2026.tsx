@@ -198,5 +198,7 @@ const NewContentCarousel2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentCarousel2026;
 </p></p></p></p>

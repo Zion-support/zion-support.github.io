@@ -11,4 +11,6 @@ const UltimateContentCarousel2025 = () => {
     </div>
   );
 
+};
+
 export default UltimateContentCarousel2025;

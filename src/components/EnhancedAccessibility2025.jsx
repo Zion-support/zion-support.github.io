@@ -30,4 +30,6 @@ const EnhancedAccessibility2025 = () => {
     </div>
   );
 
+};
+
 export default EnhancedAccessibility2025;

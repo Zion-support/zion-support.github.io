@@ -16,4 +16,6 @@ const AITransformationMastery2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AITransformationMastery2026;

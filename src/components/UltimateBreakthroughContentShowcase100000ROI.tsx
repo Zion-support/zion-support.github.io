@@ -7,4 +7,6 @@ const UltimateBreakthroughContentShowcase100000ROI: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateBreakthroughContentShowcase100000ROI;

@@ -16,4 +16,6 @@ const QuantumAIFusion2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumAIFusion2026;

@@ -7,4 +7,6 @@ const TranscendentCosmicBanner2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentCosmicBanner2035;

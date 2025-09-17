@@ -11,4 +11,6 @@ const LatestContentPromotionBanner2026 = () => {
     </div>
   );
 
+};
+
 export default LatestContentPromotionBanner2026;

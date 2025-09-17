@@ -11,4 +11,6 @@ const NewContentPromoBanner = () => {
     </div>
   );
 
+};
+
 export default NewContentPromoBanner;

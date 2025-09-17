@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function UltimateBreakthrough2025PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4">
@@ -52,4 +53,3 @@ export default function UltimateBreakthrough2025PromotionBanner() {
         <div className="mt-8 text-yellow-400 font-semibold text-lg">
           ⏰ Limited Early Access Available - 'Don', 't Miss Out!
   );
-};

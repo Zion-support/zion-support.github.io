@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025TrendsPredictionsPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16">
@@ -40,4 +41,3 @@ export default function AI2025TrendsPredictionsPromotionBanner() {
           <div className="mt-8 text-sm text-gray-400">
             Comprehensive 15-minute read with actionable insights
   );
-};

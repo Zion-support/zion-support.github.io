@@ -10,4 +10,6 @@ const CloudMigration: React.FC = () => {
     </>
   );
 
+};
+
 export default CloudMigration;

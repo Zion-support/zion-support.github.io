@@ -7,4 +7,6 @@ const AdvancedAPIClient: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAPIClient;

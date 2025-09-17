@@ -7,4 +7,6 @@ const RevolutionaryContentCarousel2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentCarousel2030;

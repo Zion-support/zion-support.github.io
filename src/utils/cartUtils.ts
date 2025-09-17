@@ -53,14 +53,14 @@ class CartManager {
       });
     }
     this.recalculateCart();
-  }
+  };
   /**
    * Remove an item from the cart
    */
   removeItem(itemId: string): void {
     this.cart.items = this.cart.items.filter(item => item.id !== itemId);
     this.recalculateCart();
-  }
+  };
   /**
    * Update item quantity
    */
@@ -74,20 +74,20 @@ class CartManager {
       this.cart.items[itemIndex].quantity = quantity;
       this.recalculateCart();
     }
-  }
+  };
   /**
    * Clear all items from cart
    */
   clearCart(): void {
     this.cart.items = [];
     this.recalculateCart();
-  }
+  };
   /**
    * Get cart items
    */
   getCart(): Cart {
     return { ...this.cart };
-  }
+  };
   /**
    * Get cart summary
    */
@@ -101,25 +101,25 @@ class CartManager {
       shipping: this.cart.shipping,
       total: this.cart.total
     };
-  }
+  };
   /**
    * Check if cart is empty
    */
   isEmpty(): boolean {
     return this.cart.items.length === 0;
-  }
+  };
   /**
    * Get item count
    */
   getItemCount(): number {
     return this.cart.items.reduce((sum, item) => sum + item.quantity, 0);
-  }
+  };
   /**
    * Find item by ID
    */
   findItem(itemId: string): CartItem | undefined {
     return this.cart.items.find(item => item.id === itemId);
-  }
+  };
   /**
    * Calculate cart totals
    */
@@ -134,7 +134,7 @@ class CartManager {
     this.cart.total = this.cart.subtotal + this.cart.tax + this.cart.shipping;
     // Update timestamp
     this.cart.updatedAt = new Date().toISOString();
-  }
+  };
   /**
    * Apply discount
    */
@@ -145,28 +145,28 @@ class CartManager {
     const discountAmount = this.cart.subtotal * (percentage / 100);
     this.cart.subtotal -= discountAmount;
     this.recalculateCart();
-  }
+  };
   /**
    * Set shipping cost
    */
   setShippingCost(cost: number): void {
     this.shippingCost = cost;
     this.recalculateCart();
-  }
+  };
   /**
    * Set tax rate
    */
   setTaxRate(rate: number): void {
     this.taxRate = rate;
     this.recalculateCart();
-  }
+  };
   /**
    * Set free shipping threshold
    */
   setFreeShippingThreshold(threshold: number): void {
     this.freeShippingThreshold = threshold;
     this.recalculateCart();
-  }
+  };
   /**
    * Validate cart
    */
@@ -187,13 +187,13 @@ class CartManager {
       isValid: errors.length === 0,
       errors
     };
-  }
+  };
   /**
    * Export cart data
    */
   exportCart(): string {
     return JSON.stringify(this.cart, null, 2);
-  }
+  };
   /**
    * Import cart data
    */
@@ -211,7 +211,7 @@ class CartManager {
       console.error('Failed to import cart:', error);
       return false;
     }
-  }
+  };
 // Create default instance
 const cartManager = new CartManager();
 // Export convenience functions

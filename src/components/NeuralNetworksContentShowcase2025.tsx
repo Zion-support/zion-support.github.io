@@ -7,4 +7,6 @@ const NeuralNetworksContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralNetworksContentShowcase2025;

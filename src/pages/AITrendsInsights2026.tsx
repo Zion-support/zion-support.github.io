@@ -351,4 +351,6 @@ const AITrendsInsights2026 = () => {
     </div>
   );
 
+};
+
 export default AITrendsInsights2026;

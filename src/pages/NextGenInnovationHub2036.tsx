@@ -11,4 +11,6 @@ const NextGenInnovationHub2036 = () => {
     </div>
   );
 
+};
+
 export default NextGenInnovationHub2036;

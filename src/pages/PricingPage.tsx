@@ -11,4 +11,6 @@ const PricingPage = () => {
     </div>
   );
 
+};
+
 export default PricingPage;

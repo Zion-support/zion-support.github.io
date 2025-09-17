@@ -7,4 +7,6 @@ const AI2025UltimateInnovationShowcasePromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateInnovationShowcasePromotionBanner;

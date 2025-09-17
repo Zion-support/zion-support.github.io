@@ -7,4 +7,6 @@ const InnovationHub2025Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default InnovationHub2025Banner;

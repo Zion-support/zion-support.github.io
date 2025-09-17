@@ -180,4 +180,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumConsciousnessRevolution2025;

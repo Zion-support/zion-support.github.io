@@ -7,4 +7,6 @@ const InteractiveAIAssessmentTool: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveAIAssessmentTool;

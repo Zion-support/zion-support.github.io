@@ -171,4 +171,6 @@ const FutureTechShowcase2035_2037: React.FC = () => {
     </div>
   );
 
+};
+
 export default FutureTechShowcase2035_2037;

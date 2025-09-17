@@ -16,4 +16,6 @@ const InfiniteIntelligence2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default InfiniteIntelligence2035;

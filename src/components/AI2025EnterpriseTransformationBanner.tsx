@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025EnterpriseTransformationBanner() {
   return (
     <section className="bg-gradient-to-r from-slate-600 via-blue-600 to-indigo-600 py-16 px-4">
@@ -26,4 +27,3 @@ export default function AI2025EnterpriseTransformationBanner() {
             >
               Get Enterprise Consultation
   );
-};

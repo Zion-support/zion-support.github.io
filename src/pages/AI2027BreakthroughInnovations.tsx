@@ -222,4 +222,6 @@ const AI2027BreakthroughInnovations = () => {
     </div>
   );
 
+};
+
 export default AI2027BreakthroughInnovations;

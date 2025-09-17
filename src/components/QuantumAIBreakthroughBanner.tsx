@@ -7,4 +7,6 @@ const QuantumAIBreakthroughBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumAIBreakthroughBanner;

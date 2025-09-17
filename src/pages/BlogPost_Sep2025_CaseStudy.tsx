@@ -44,4 +44,6 @@ const BlogPost_Sep2025_CaseStudy: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlogPost_Sep2025_CaseStudy;

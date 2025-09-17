@@ -215,4 +215,6 @@ const AIInnovationShowcaseBanner2025: React.FC = () => {
     </AnimatePresence>
   );
 
+};
+
 export default AIInnovationShowcaseBanner2025;

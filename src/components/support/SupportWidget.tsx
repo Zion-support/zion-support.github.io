@@ -11,4 +11,6 @@ const SupportWidget = () => {
     </div>
   );
 
+};
+
 export default SupportWidget;

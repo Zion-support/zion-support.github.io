@@ -153,6 +153,7 @@ interface AnalyticsEvent {
   timestamp: number;
 };
 
+
 export default function AnalyticsMonitor() {
   useEffect(() => {
     // Initialize analytics tracking
@@ -314,8 +315,7 @@ export const AnalyticsDashboard: React.FC = () => {
       >
         📊
     );
-};
-  }
+  };
   return (
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm">
       <div className="flex justify-between items-center mb-4">
@@ -353,11 +353,11 @@ export const AnalyticsDashboard: React.FC = () => {
       )}
   );
 
+
 export default AnalyticsMonitor;
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
         );
-};
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
           // Track at 25%50%75%and 100%

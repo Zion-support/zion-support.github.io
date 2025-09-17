@@ -7,4 +7,6 @@ const AIContentRevolutionDemo: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIContentRevolutionDemo;

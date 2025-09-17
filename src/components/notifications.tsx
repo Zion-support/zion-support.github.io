@@ -4,5 +4,6 @@ const NotificationCenter = dynamic(() => import('../components/notifications/Not
   ssr: false,
 };
 
+
 export default function NotificationsPage() {
   return <NotificationCenter />;

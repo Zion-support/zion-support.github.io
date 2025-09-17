@@ -273,4 +273,6 @@ const LatestContentShowcase2026 = () => {
     </div>
   );
 
+};
+
 export default LatestContentShowcase2026;

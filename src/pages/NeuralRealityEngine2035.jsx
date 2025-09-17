@@ -16,4 +16,6 @@ const NeuralRealityEngine2035= () => {
     </div>
   );
 
+};
+
 export default NeuralRealityEngine2035;

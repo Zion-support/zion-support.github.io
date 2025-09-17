@@ -226,4 +226,6 @@ const QuantumAIRevolution2027: React.FC = () => {
     </>
   );
 
+};
+
 export default QuantumAIRevolution2027;

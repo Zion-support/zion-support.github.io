@@ -63,7 +63,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                 </div>
               </div>
             );
-};
           })}
         </div>
         {/* Success Stories */}
@@ -118,7 +117,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>
@@ -150,6 +148,7 @@ const BusinessTransformation2025Showcase: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default BusinessTransformation2025Showcase;
 </div></div>

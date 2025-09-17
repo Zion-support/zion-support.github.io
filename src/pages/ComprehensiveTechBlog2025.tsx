@@ -16,4 +16,6 @@ const ComprehensiveTechBlog2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveTechBlog2025;

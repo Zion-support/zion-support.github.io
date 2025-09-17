@@ -179,7 +179,7 @@ export const latestContent2026 = [
         <p>Our neural interface technology includes comprehensive safety protocols and ethical guidelines to ensure user privacy, security, and well-being while maximizing the benefits of brain-computer integration.</p>
       </div>
     `
-  }
+  };
 export const featuredServices2026 = [
   {
     id: 'ai-autonomous-operations',
@@ -244,4 +244,4 @@ export const featuredServices2026 = [
       'Secure neural data protection'
     ],
     imageUrl: '/images/services/neural-interface-integration.jpg'
-  }
+  };

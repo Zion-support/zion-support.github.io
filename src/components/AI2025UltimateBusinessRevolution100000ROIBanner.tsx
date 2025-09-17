@@ -140,4 +140,6 @@ const AI2025UltimateBusinessRevolution100000ROIBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateBusinessRevolution100000ROIBanner;

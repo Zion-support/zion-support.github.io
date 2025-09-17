@@ -192,4 +192,6 @@ const FeaturedContentShowcase = () => {
     </section>
   );
 
+};
+
 export default FeaturedContentShowcase;

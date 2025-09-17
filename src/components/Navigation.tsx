@@ -79,6 +79,7 @@ import SearchModal from "./SearchModal";
 origin/main
 };
 
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -88,7 +89,7 @@ export default function Navigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 } from './lucide-react';
 import SearchModal from "./SearchModal";
-};
+
 
 export default /**
  * Navigation - Function description
@@ -1116,7 +1117,6 @@ origin/automation-improvements-final
       />;
     </>;
   );
-};
               </div>)}
           </div>;
         </div>;

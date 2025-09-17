@@ -11,4 +11,6 @@ const download.page = () => {
     </div>
   );
 
+};
+
 export default download.page;

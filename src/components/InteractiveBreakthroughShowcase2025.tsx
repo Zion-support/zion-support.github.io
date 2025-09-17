@@ -7,4 +7,6 @@ const InteractiveBreakthroughShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveBreakthroughShowcase2025;

@@ -16,4 +16,6 @@ const NeuralRealityInterface2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralRealityInterface2025;

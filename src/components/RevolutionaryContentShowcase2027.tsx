@@ -165,4 +165,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentShowcase2027;

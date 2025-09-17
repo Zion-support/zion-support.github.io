@@ -89,4 +89,6 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralConsciousnessBreakthroughBanner;

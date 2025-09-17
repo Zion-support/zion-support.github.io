@@ -7,5 +7,7 @@ const SuccessStoriesBanner2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default SuccessStoriesBanner2025;
 </p></p>

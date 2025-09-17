@@ -7,4 +7,6 @@ const RevolutionaryInnovationTimeline: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryInnovationTimeline;

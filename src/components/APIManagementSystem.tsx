@@ -7,4 +7,6 @@ const APIManagementSystem: React.FC = () => {
     </div>
   );
 
+};
+
 export default APIManagementSystem;

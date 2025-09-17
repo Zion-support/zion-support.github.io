@@ -11,4 +11,6 @@ const ComprehensiveServicesLanding2027 = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveServicesLanding2027;

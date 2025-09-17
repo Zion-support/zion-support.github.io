@@ -86,13 +86,11 @@ const RevolutionaryContentCarousel2026 = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === revolutionaryContent.length - 1 ? 0 : prevIndex + 1
     );
-};
   };
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? revolutionaryContent.length - 1 : prevIndex - 1
     );
-};
   };
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -278,6 +276,7 @@ const RevolutionaryContentCarousel2026 = () => {
       </div>
     </div>
   );
+
 
 export default RevolutionaryContentCarousel2026;
 </div></div>

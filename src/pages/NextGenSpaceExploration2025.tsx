@@ -16,4 +16,6 @@ const NextGenSpaceExploration2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenSpaceExploration2025;

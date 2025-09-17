@@ -7,4 +7,6 @@ const ComprehensiveAdvertisingBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveAdvertisingBanner;

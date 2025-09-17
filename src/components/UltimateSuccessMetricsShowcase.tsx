@@ -7,4 +7,6 @@ const UltimateSuccessMetricsShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateSuccessMetricsShowcase;

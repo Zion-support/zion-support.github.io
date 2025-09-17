@@ -7,4 +7,6 @@ const ContentNavigation2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentNavigation2025;

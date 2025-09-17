@@ -16,4 +16,6 @@ const ComprehensiveAISolutions2029: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveAISolutions2029;

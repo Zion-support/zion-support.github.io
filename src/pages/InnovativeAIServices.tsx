@@ -16,4 +16,6 @@ const InnovativeAIServices: React.FC = () => {
     </div>
   );
 
+};
+
 export default InnovativeAIServices;

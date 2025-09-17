@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumRevolution2025Banner() {
   return (
     <section className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 overflow-hidden">
@@ -61,4 +62,3 @@ export default function QuantumRevolution2025Banner() {
               <div className="text-3xl font-bold text-yellow-400 mb-1">0</div>
               <div className="text-sm opacity-80">Energy Waste</div>
   );
-};

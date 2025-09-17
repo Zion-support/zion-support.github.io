@@ -11,4 +11,6 @@ const favorites = () => {
     </div>
   );
 
+};
+
 export default favorites;

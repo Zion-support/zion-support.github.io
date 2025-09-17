@@ -7,4 +7,6 @@ const AI2025TransformationDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025TransformationDashboard;

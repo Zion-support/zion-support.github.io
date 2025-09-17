@@ -178,4 +178,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAIToolsShowcase2025;

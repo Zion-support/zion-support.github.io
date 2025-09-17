@@ -16,4 +16,6 @@ const InnovationShowcase2025= () => {
     </div>
   );
 
+};
+
 export default InnovationShowcase2025;

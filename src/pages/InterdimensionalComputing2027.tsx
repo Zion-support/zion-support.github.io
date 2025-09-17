@@ -16,4 +16,6 @@ const InterdimensionalComputing2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalComputing2027;

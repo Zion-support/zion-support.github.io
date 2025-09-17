@@ -7,4 +7,6 @@ const UserEngagementTracker2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UserEngagementTracker2025;

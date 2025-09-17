@@ -7,4 +7,6 @@ const ComprehensiveBlogShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveBlogShowcase;

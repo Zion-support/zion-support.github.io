@@ -7,4 +7,6 @@ const UltimateROICalculator2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateROICalculator2025;

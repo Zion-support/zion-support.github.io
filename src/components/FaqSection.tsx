@@ -11,4 +11,6 @@ const FaqSection = () => {
     </div>
   );
 
+};
+
 export default FaqSection;

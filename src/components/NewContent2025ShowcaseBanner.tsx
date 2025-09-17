@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewContent2025ShowcaseBanner() {
   return (
     <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 py-20 px-4">
@@ -88,4 +89,3 @@ export default function NewContent2025ShowcaseBanner() {
           >
             Get Started with AI Transformation
   );
-};

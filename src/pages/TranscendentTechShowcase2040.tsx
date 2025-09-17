@@ -16,4 +16,6 @@ const TranscendentTechShowcase2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentTechShowcase2040;

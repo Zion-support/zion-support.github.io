@@ -129,5 +129,7 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechShowcase2025PromotionBanner;
 </div></div>

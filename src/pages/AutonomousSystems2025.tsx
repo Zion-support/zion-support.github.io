@@ -16,4 +16,6 @@ const AutonomousSystems2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AutonomousSystems2025;

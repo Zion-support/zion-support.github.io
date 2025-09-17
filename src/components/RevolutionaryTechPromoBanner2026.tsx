@@ -112,4 +112,6 @@ const RevolutionaryTechPromoBanner2026 = () => {
     </AnimatePresence>
   );
 
+};
+
 export default RevolutionaryTechPromoBanner2026;

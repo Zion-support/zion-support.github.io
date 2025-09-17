@@ -11,4 +11,6 @@ const button = () => {
     </div>
   );
 
+};
+
 export default button;

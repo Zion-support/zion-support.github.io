@@ -7,4 +7,6 @@ const NeuralInterface2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralInterface2026Banner;

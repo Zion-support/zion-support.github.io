@@ -16,4 +16,6 @@ const AdvancedMLOps2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedMLOps2025;

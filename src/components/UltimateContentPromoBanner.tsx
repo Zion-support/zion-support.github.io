@@ -94,4 +94,6 @@ const UltimateContentPromoBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentPromoBanner;

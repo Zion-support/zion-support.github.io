@@ -11,4 +11,6 @@ const AIAutonomousResearchAssistant = () => {
     </div>
   );
 
+};
+
 export default AIAutonomousResearchAssistant;

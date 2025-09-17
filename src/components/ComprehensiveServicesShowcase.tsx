@@ -8,6 +8,7 @@ import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 };
 
+
 export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -312,5 +313,6 @@ export default function ComprehensiveServicesShowcase() {
               >
                 Call +1 302 464 0950
   );
+
 
 export default ComprehensiveServicesShowcase;

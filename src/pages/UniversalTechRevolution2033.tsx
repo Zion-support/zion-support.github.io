@@ -190,4 +190,6 @@ const UniversalTechRevolution2033: React.FC = () => {
     </div>
   );
 
+};
+
 export default UniversalTechRevolution2033;

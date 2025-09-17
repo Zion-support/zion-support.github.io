@@ -68,7 +68,7 @@ const NewsletterSignup2025: React.FC = () => {
       </div>
     );
 };
-  }
+  };
   return (
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
@@ -187,5 +187,6 @@ const NewsletterSignup2025: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default NewsletterSignup2025;

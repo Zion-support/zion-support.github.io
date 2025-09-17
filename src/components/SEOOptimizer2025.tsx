@@ -257,4 +257,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
     </Helmet>
   );
 
+};
+
 export default SEOOptimizer2025;

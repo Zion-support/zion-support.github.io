@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NeuralInterfaceRevolution2026PromotionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-violet-900 via-purple-900 to-violet-900 overflow-hidden">
@@ -45,4 +46,3 @@ export default function NeuralInterfaceRevolution2026PromotionBanner() {
             >
               Get Started
   );
-};

@@ -30,4 +30,6 @@ const ComprehensiveImprovements2025 = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveImprovements2025;

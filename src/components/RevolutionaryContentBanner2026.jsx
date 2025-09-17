@@ -248,4 +248,6 @@ const RevolutionaryContentBanner2026 = () => {
     </AnimatePresence>
   );
 
+};
+
 export default RevolutionaryContentBanner2026;

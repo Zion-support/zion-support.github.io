@@ -7,4 +7,6 @@ const EnhancedContentShowcase2031: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentShowcase2031;

@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightCpuBrainZapShieldTrendingUpUsersActivity
 };
 
+
 export default function AutonomousEnterpriseBanner() {
   return (
     <div className="bg-gradient-to-r from-green-900 via-teal-900 to-blue-900 text-white py-16">
@@ -133,4 +134,3 @@ export default function AutonomousEnterpriseBanner() {
             >
               Explore Automation Services
   );
-};

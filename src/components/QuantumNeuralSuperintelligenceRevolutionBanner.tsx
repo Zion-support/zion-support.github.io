@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Star } from 'lucide-react';
 };
 
+
 export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
   return (
     <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
@@ -140,4 +141,3 @@ export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
             <p className="mb-2">🚀 <strong>Limited Time:</strong> Get exclusive access to our QNS implementation blueprint</p>
             <p>📈 <strong>Proven Results:</strong> Join 500+ enterprises already transforming with QNS</p>
   );
-};

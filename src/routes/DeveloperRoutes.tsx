@@ -10,4 +10,6 @@ const DeveloperRoutes = () => {
       </div>
     </div>
   );
+};
+
 export default DeveloperRoutes;

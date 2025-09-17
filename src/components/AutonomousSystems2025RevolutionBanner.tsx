@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AutonomousSystems2025RevolutionBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
@@ -107,4 +108,3 @@ export default function AutonomousSystems2025RevolutionBanner() {
               >
                 Explore Autonomous Solutions
   );
-};

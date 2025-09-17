@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025QuantumConsciousnessBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border border-cyan-500/30 rounded-xl mb-8">
@@ -62,4 +63,3 @@ export default function AI2025QuantumConsciousnessBreakthroughBanner() {
                   <div className="text-white font-semibold">Transcendent Intelligence</div>
                   <div className="text-gray-300 text-sm">∞ Potential</div>
   );
-};

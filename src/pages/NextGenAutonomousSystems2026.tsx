@@ -16,4 +16,6 @@ const NextGenAutonomousSystems2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenAutonomousSystems2026;

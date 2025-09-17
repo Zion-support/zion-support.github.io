@@ -7,4 +7,6 @@ const InteractiveTechDemo2039: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveTechDemo2039;

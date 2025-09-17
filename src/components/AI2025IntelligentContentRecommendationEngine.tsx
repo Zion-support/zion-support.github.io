@@ -7,4 +7,6 @@ const AI2025IntelligentContentRecommendationEngine: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025IntelligentContentRecommendationEngine;

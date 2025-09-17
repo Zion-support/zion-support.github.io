@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumComputingBreakthroughPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900 py-16">
@@ -90,4 +91,3 @@ export default function QuantumComputingBreakthroughPromotionBanner() {
               <span className="text-blue-400">✓</span>
               <span>Government Partnerships</span>
   );
-};

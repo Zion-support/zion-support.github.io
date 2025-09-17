@@ -11,4 +11,6 @@ const EnhancedContentCarousel2025 = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentCarousel2025;

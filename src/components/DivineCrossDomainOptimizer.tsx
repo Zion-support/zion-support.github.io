@@ -36,6 +36,7 @@ interface DivineCrossDomainOptimizerProps {
   className?: string;
 };
 
+
 export default function DivineCrossDomainOptimizer({ 
   showMetrics = true, 
   maxOptimizations = 5,
@@ -298,8 +299,7 @@ export default function DivineCrossDomainOptimizer({
               <div className="h-3 bg-slate-700 rounded w-2/3"></div>
           ))}
     );
-};
-  }
+  };
   return (
     <div className={className}>
       <div className="mb-6">
@@ -556,7 +556,6 @@ export default function DivineCrossDomainOptimizer({
                 <div className="text-cyan-400">{count}/{total}</div>
                 <div className="text-xs text-white/60">{percentage.toFixed(1)}%</div>
             );
-};
           })}
       <div className="mt-6 text-center">
         <a 
@@ -565,5 +564,6 @@ export default function DivineCrossDomainOptimizer({
         >
           View Full Divine Cross-Domain Analytics →
   );
+
 
 export default DivineCrossDomainOptimizer;

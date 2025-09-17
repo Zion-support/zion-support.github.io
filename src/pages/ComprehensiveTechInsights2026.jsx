@@ -11,4 +11,6 @@ const ComprehensiveTechInsights2026 = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveTechInsights2026;

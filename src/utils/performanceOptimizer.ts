@@ -34,7 +34,7 @@ class PerformanceOptimizer {
     };
     this.initializePerformanceMonitoring();
     this.applyOptimizations();
-  }
+  };
   // Initialize performance monitoring
   private initializePerformanceMonitoring(): void {
     if (typeof window === 'undefined') return;
@@ -44,7 +44,7 @@ class PerformanceOptimizer {
     this.monitorResourceLoading();
     // Monitor user interactions
     this.monitorUserInteractions();
-  }
+  };
   // Monitor Core Web Vitals
   private monitorCoreWebVitals(): void {
     if (!('PerformanceObserver' in window)) return;
@@ -89,7 +89,7 @@ class PerformanceOptimizer {
       });
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
-  }
+  };
   // Monitor resource loading performance
   private monitorResourceLoading(): void {
     if (typeof window === 'undefined') return;
@@ -100,7 +100,7 @@ class PerformanceOptimizer {
       this.reportMetric('Load Time', this.metrics.loadTime);
       this.reportMetric('DOM Content Loaded', this.metrics.domContentLoaded);
     });
-  }
+  };
   // Monitor user interactions
   private monitorUserInteractions(): void {
     if (typeof window === 'undefined') return;
@@ -115,7 +115,7 @@ class PerformanceOptimizer {
       }
     };
     checkTTI();
-  }
+  };
   // Apply performance optimizations
   private applyOptimizations(): void {
     if (this.config.enableLazyLoading) {
@@ -133,7 +133,7 @@ class PerformanceOptimizer {
     if (this.config.enableCaching) {
       this.enableSmartCaching();
     }
-  }
+  };
   // Enable lazy loading for images and components
   private enableLazyLoading(): void {
     if (typeof window === 'undefined') return;
@@ -165,7 +165,7 @@ class PerformanceOptimizer {
       });
     });
     lazyComponents.forEach((component) => componentObserver.observe(component));
-  }
+  };
   // Optimize images
   private optimizeImages(): void {
     if (typeof window === 'undefined') return;
@@ -189,7 +189,7 @@ class PerformanceOptimizer {
         }
       }
     });
-  }
+  };
   // Preload critical resources
   private preloadCriticalResources(): void {
     if (typeof window === 'undefined') return;
@@ -208,7 +208,7 @@ class PerformanceOptimizer {
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
       document.head.appendChild(link);
     });
-  }
+  };
   // Register service worker
   private registerServiceWorker(): void {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
@@ -221,7 +221,7 @@ class PerformanceOptimizer {
           console.log('Service Worker registration failed:', error);
         });
     });
-  }
+  };
   // Enable smart caching
   private enableSmartCaching(): void {
     if (typeof window === 'undefined') return;
@@ -246,7 +246,7 @@ class PerformanceOptimizer {
       }
       return response;
     };
-  }
+  };
   // Cache utilities
   private getFromCache(key: string): { data: any; timestamp: number } | null {
     try {
@@ -255,7 +255,7 @@ class PerformanceOptimizer {
     } catch {
       return null;
     }
-  }
+  };
   private setCache(key: string, data: any): void {
     try {
       localStorage.setItem(key, JSON.stringify({
@@ -265,17 +265,17 @@ class PerformanceOptimizer {
     } catch {
       // Handle localStorage quota exceeded
     }
-  }
+  };
   private isCacheExpired(timestamp: number, maxAge: number = 5 * 60 * 1000): boolean {
     return Date.now() - timestamp > maxAge;
-  }
+  };
   // Utility functions
   private supportsWebP(): boolean {
     const canvas = document.createElement('canvas');
     canvas.width = 1;
     canvas.height = 1;
     return canvas.toDataURL('image/webp').indexOf('webp') > -1;
-  }
+  };
   private async loadComponent(componentName: string, container: HTMLElement): Promise<void> {
     try {
       // Dynamic import for code splitting
@@ -287,7 +287,7 @@ class PerformanceOptimizer {
     } catch (error) {
       console.error(`Failed to load component ${componentName}:`, error);
     }
-  }
+  };
   // Report metrics
   private reportMetric(name: string, value: number): void {
     // Send to analytics
@@ -302,11 +302,11 @@ class PerformanceOptimizer {
     if (process.env.NODE_ENV === 'development') {
       console.log(`Performance Metric - ${name}: ${Math.round(value)}ms`);
     }
-  }
+  };
   // Public API
   public getMetrics(): Partial<PerformanceMetrics> {
     return { ...this.metrics };
-  }
+  };
   public getPerformanceScore(): number {
     const { 
       largestContentfulPaint = 0, 
@@ -329,7 +329,7 @@ class PerformanceOptimizer {
     if (firstContentfulPaint > 3000) score -= 20;
     else if (firstContentfulPaint > 1800) score -= 10;
     return Math.max(0, score);
-  }
+  };
   public generatePerformanceReport(): string {
     const metrics = this.getMetrics();
     const score = this.getPerformanceScore();
@@ -352,13 +352,13 @@ Optimization Status:
 - Service Worker: ${this.config.enableServiceWorker ? 'Enabled' : 'Disabled'}
 - Smart Caching: ${this.config.enableCaching ? 'Enabled' : 'Disabled'}
     `;
-  }
+  };
   // Cleanup
   public destroy(): void {
     if (this.observer) {
       this.observer.disconnect();
     }
-  }
+  };
 // Export utilities
 export const performanceOptimizer = new PerformanceOptimizer();
 export const measurePerformance = (name: string, fn: () => void): number => {
@@ -368,7 +368,7 @@ export const measurePerformance = (name: string, fn: () => void): number => {
   const duration = end - start;
   if (process.env.NODE_ENV === 'development') {
     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-  }
+  };
   return duration;
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
@@ -400,9 +400,9 @@ export const optimizeBundle = (): void => {
   // Enable tree shaking hints
   if (typeof window !== 'undefined') {
     (window as any).__TREE_SHAKING__ = true;
-  }
+  };
   // Enable code splitting hints
   if (typeof window !== 'undefined') {
     (window as any).__CODE_SPLITTING__ = true;
-  }
+  };
 export default PerformanceOptimizer;

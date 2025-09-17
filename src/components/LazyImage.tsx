@@ -20,6 +20,7 @@ interface LazyImageProps {;
   onError?: () => void;
 };
 
+
 export default function LazyImage({
   src
   alt
@@ -69,7 +70,6 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
-};
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
@@ -78,7 +78,7 @@ export default function LazyImage({
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  }
+  };
   const handleError = () => {
     setHasError(true);
     onError?.();
@@ -95,8 +95,7 @@ export default function LazyImage({
         </div>;
       </div>;
     );
-};
-  }
+  };
   return (
     <div ref={imgRef} className={`relative ${className}`} style={style}>;
       {!isInView && !priority && (;
@@ -109,7 +108,7 @@ export default function LazyImage({
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
-};
+
 
 export default /**
  * LazyImage - Function description
@@ -137,7 +136,6 @@ if ( {) {
         root_margin: "50px",
       },
     );
-};
     // Check condition
 if ( {) {
   $2
@@ -148,11 +146,11 @@ if ( {) {
   const handle_load = () =>: any {
     setIsLoaded (true);
     on_load?.();
-  }
+  };
   const handle_error = () =>: any {
     setHasError (true);
     on_error?.();
-  }
+  };
   // Check condition
 if ( {) {
   $2
@@ -167,7 +165,7 @@ if ( {) {
           <div className="text - sm">Image failed to load</div>;
         </div>;
       </div>);
-  }
+  };
   return (
     <div ref={img_ref} className={`relative ${class_name}`} style={style}>;
       {!isInView && !priority && (

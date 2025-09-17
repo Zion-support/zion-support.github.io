@@ -16,4 +16,6 @@ const QuantumNeuralInterface2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumNeuralInterface2026;

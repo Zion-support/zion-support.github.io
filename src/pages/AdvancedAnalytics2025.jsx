@@ -11,4 +11,6 @@ const AdvancedAnalytics2025 = () => {
     </div>
   );
 
+};
+
 export default AdvancedAnalytics2025;

@@ -7,4 +7,6 @@ const EnhancedContentDiscovery: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentDiscovery;

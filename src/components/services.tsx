@@ -169,9 +169,9 @@ const serviceCategories: Array<{
     icon: <BarChart3 className="w-6 h-6" />,
     color: 'from-indigo-500 to-purple-600',
     description: 'Quantum-powered data analytics and insights'
-  }
+  };
 import { realVerifiedServices } from '../data/real-verified-services';
-};
+
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -205,7 +205,6 @@ export default function ServicesPage() {
   const uniqueServices = allServices.filter((service, index, self) => 
     index === self.findIndex(s => s.id === service.id)
   );
-};
   // Get all categories
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
@@ -579,4 +578,3 @@ export default function ServicesPage() {
                     <p>Need help choosing? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our experts</a> for personalized guidance.</p>
       <UltraFuturisticFooter2029 />
   );
-};

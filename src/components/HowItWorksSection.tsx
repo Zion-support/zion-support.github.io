@@ -11,4 +11,6 @@ const HowItWorksSection = () => {
     </div>
   );
 
+};
+
 export default HowItWorksSection;

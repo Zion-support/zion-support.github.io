@@ -7,4 +7,6 @@ const NeuralSuperintelligenceBreakthroughBanner2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralSuperintelligenceBreakthroughBanner2025;

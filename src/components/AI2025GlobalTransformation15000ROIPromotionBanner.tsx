@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
   return (
     <section className="relative bg-gradient-to-r from-green-600 via-blue-600 to-purple-700 text-white py-12 overflow-hidden">
@@ -69,4 +70,3 @@ export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
               <span className="text-yellow-400">✓</span>
               <span>Global Scale Success</span>
   );
-};

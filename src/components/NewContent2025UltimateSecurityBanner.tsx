@@ -7,4 +7,6 @@ const NewContent2025UltimateSecurityBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2025UltimateSecurityBanner;

@@ -7,4 +7,6 @@ const AdvancedContentOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedContentOptimizer;

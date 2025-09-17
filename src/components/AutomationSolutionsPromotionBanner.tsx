@@ -3,6 +3,7 @@ import React from 'react';
 CalculatorArrowRightZapDollarSignClockTarget
 };
 
+
 export default function AutomationSolutionsPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
@@ -59,4 +60,3 @@ export default function AutomationSolutionsPromotionBanner() {
           <div className="mt-8 text-sm text-purple-200">
             <p>Transform your business with intelligent automation • Join 500+ successful implementations</p>
   );
-};

@@ -16,4 +16,6 @@ const TranscendentCosmicRevolution2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentCosmicRevolution2035;

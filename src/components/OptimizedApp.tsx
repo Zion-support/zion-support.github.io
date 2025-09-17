@@ -7,4 +7,6 @@ const OptimizedApp: React.FC = () => {
     </div>
   );
 
+};
+
 export default OptimizedApp;

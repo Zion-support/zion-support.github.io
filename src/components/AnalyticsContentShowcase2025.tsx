@@ -7,4 +7,6 @@ const AnalyticsContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AnalyticsContentShowcase2025;

@@ -10,4 +10,6 @@ const withAuth.js = () => {
       </div>
     </div>
   );
+};
+
 export default withAuth.js;

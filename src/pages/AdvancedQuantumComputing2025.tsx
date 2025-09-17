@@ -16,4 +16,6 @@ const AdvancedQuantumComputing2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedQuantumComputing2025;

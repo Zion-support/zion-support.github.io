@@ -114,7 +114,7 @@ const marketAnalysis = [
     category: "Business Intelligence",
     description: "Deep dive into enterprise AI adoption and business impact.",
     growth: "78% Adoption Rate"
-  }
+  };
 const industryImpact = [
   { icon: <Brain className="h-6 w-6 text-white" />name: "Healthcare"adoption: "92%"roi: "450%" },
   { icon: <Target className="h-6 w-6 text-white" />name: "Finance"adoption: "88%"roi: "380%" },
@@ -130,4 +130,4 @@ const futurePredictions = [
     title: "Quantum AI Revolution",
     description: "Quantum computing will enable unprecedented AI power.",
     timeline: "2026-2028"
-  }
+  };

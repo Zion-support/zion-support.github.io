@@ -15,6 +15,7 @@ import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovati
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 };
 
+
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
@@ -30,7 +31,6 @@ export default function PricingPage() {
   const uniqueServices = allServices.filter((service, index, self) => 
     index === self.findIndex(s => s.id === service.id)
   );
-};
   // Get all categories
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
@@ -312,4 +312,3 @@ export default function PricingPage() {
                     <span>Cutting-edge 2029 technology</span>
       <UltraFuturisticFooter2029 />
   );
-};

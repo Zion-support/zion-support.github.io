@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025GlobalTransformationBreakthroughBanner() {
   return (
     <div className="bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white py-12 relative overflow-hidden">
@@ -51,4 +52,3 @@ export default function AI2025GlobalTransformationBreakthroughBanner() {
               <div className="text-2xl font-bold text-yellow-400 mb-2">6</div>
               <div className="text-sm text-green-100">Months to Results</div>
   );
-};

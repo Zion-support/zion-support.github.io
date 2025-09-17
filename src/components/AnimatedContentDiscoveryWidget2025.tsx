@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3SearchFilterClockEye
 };
 
+
 export default function AnimatedContentDiscoveryWidget2025() {
   const [currentContentsetCurrentContent] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
@@ -181,5 +182,6 @@ export default function AnimatedContentDiscoveryWidget2025() {
             <a href="/recommendations" className="text-green-600 hover:text-green-700 font-semibold">
               Get Recommendations →
   );
+
 
 export default AnimatedContentDiscoveryWidget2025;

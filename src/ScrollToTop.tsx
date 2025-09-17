@@ -10,4 +10,6 @@ const ScrollToTop = () => {
       </div>
     </div>
   );
+};
+
 export default ScrollToTop;

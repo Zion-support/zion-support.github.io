@@ -7,4 +7,6 @@ const AI2026UltimateShowcaseBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026UltimateShowcaseBanner;

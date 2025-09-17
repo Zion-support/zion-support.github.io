@@ -177,5 +177,6 @@ const EnhancedHome: React.FC = () => {
     </div>
   );
 
+
 export default EnhancedHome;
 </div></div>

@@ -16,4 +16,6 @@ const NextGenTechBreakthrough2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenTechBreakthrough2027;

@@ -7,4 +7,6 @@ const AI2025ContentMarketingRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025ContentMarketingRevolutionBanner;

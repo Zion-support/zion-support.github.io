@@ -88,4 +88,6 @@ const AICybersecurityRevolution2026: React.FC = () => {
     </>
   );
 
+};
+
 export default AICybersecurityRevolution2026;

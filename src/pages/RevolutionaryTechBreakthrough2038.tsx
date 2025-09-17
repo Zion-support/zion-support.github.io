@@ -180,4 +180,6 @@ const RevolutionaryTechBreakthrough2038 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechBreakthrough2038;

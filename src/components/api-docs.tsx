@@ -11,4 +11,6 @@ const api-docs = () => {
     </div>
   );
 
+};
+
 export default api-docs;

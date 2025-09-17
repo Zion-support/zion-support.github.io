@@ -16,4 +16,6 @@ const QuantumRealityEngine2025= () => {
     </div>
   );
 
+};
+
 export default QuantumRealityEngine2025;

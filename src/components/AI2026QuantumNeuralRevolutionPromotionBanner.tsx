@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026QuantumNeuralRevolutionPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
@@ -77,4 +78,3 @@ export default function AI2026QuantumNeuralRevolutionPromotionBanner() {
             <p className="text-gray-400 text-sm mt-2">
               Join 5,000+ companies already achieving infinite processing with quantum AI
   );
-};

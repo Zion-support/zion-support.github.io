@@ -150,4 +150,6 @@ const LatestContentBanner2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default LatestContentBanner2026;

@@ -212,4 +212,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2027RevolutionaryBreakthrough;

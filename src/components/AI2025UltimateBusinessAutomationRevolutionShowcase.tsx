@@ -7,4 +7,6 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateBusinessAutomationRevolutionShowcase;

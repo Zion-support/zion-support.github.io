@@ -67,7 +67,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 <span className="font-medium">{category.title}</span>
               </button>
             );
-};
           })}
         </div>
         {/* Category Header */}
@@ -91,7 +90,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 </p>
               </div>
             );
-};
           })()}
         </div>
         {/* Tools Grid */}
@@ -168,7 +166,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 )}
               </div>
             );
-};
           })}
         </div>
         {/* CTA Section */}
@@ -202,5 +199,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default AIToolsUltimateShowcase2026;

@@ -10,4 +10,6 @@ const errorHandler = () => {
       </div>
     </div>
   );
+};
+
 export default errorHandler;

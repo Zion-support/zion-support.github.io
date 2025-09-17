@@ -7,4 +7,6 @@ const InteractiveAnalyticsWidget: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveAnalyticsWidget;

@@ -247,4 +247,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
     </>
   );
 
+};
+
 export default QuantumBusinessAutomation2027;

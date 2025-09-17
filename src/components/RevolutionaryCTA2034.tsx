@@ -7,4 +7,6 @@ const RevolutionaryCTA2034: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryCTA2034;

@@ -16,4 +16,6 @@ const QuantumNeuralFusion2032: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumNeuralFusion2032;

@@ -7,4 +7,6 @@ const AdvancedTesting: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedTesting;

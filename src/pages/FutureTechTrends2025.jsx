@@ -60,4 +60,6 @@ const FutureTechTrends2025= () => {
     </div>
   );
 
+};
+
 export default FutureTechTrends2025;

@@ -16,4 +16,6 @@ const RevolutionaryTechBlog2027= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechBlog2027;

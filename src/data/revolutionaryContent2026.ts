@@ -208,7 +208,7 @@ Are you ready to think your way into the future?
     likes: 987,
     isNew: true,
     urgency: "Revolutionary"
-  }
+  };
 export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
   {
     id: "microsoft-ai-transformation-2026",
@@ -309,7 +309,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     featured: true,
     image: "/images/amazon-case-study.jpg",
     isNew: true
-  }
+  };
 export const REVOLUTIONARY_SERVICES_2026 = [
   {
     id: "quantum-ai-processing",
@@ -445,7 +445,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     category: "Consciousness Technology",
     isNew: true,
     urgency: "Life-changing technology"
-  }
+  };
 export const REVOLUTIONARY_BLOG_POSTS_2027: BlogPost[] = [
   {
     id: "synthetic-intelligence-breakthrough-2027",
@@ -704,7 +704,7 @@ The holographic revolution is here. Are you ready to step into it?
     likes: 1950,
     isNew: true,
     urgency: "Trending Now"
-  }
+  };
 export const REVOLUTIONARY_CASE_STUDIES_2027: CaseStudy[] = [
   {
     id: "openai-synthetic-intelligence-2027",
@@ -765,4 +765,4 @@ export const REVOLUTIONARY_CASE_STUDIES_2027: CaseStudy[] = [
     featured: true,
     image: "/images/nvidia-case-study.jpg",
     isNew: true
-  }
+  };

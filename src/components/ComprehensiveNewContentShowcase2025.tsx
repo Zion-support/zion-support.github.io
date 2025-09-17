@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function ComprehensiveNewContentShowcase2025() {
   return (
     <section className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -116,4 +117,3 @@ export default function ComprehensiveNewContentShowcase2025() {
             >
               Explore Services
   );
-};

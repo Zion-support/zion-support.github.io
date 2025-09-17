@@ -7,5 +7,7 @@ const AnalyticsDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default AnalyticsDashboard;
 </p></p>

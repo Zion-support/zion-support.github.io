@@ -11,4 +11,6 @@ const Helpdesk = () => {
     </div>
   );
 
+};
+
 export default Helpdesk;

@@ -189,7 +189,6 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-};
   const renderAIDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">
@@ -233,7 +232,6 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-};
   const renderHologramDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">
@@ -261,7 +259,6 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-};
   const renderDemoContent = () => {
     switch (activeDemo) {
       case 'quantum':
@@ -376,5 +373,6 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default InteractiveTechDemo2026;

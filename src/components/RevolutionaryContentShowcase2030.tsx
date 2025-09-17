@@ -11,4 +11,6 @@ const RevolutionaryContentShowcase2030 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentShowcase2030;

@@ -1,6 +1,7 @@
 import React from 'react';
 };
 
+
 export default function SitemapPage() {
 	const links = [
 		{ name: 'Home', href: '/' },

@@ -11,4 +11,6 @@ const RevolutionaryAdBanner2036 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryAdBanner2036;

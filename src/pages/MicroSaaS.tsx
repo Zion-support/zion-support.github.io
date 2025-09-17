@@ -11,4 +11,6 @@ const MicroSaaS = () => {
     </div>
   );
 
+};
+
 export default MicroSaaS;

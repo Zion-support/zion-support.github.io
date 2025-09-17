@@ -11,4 +11,6 @@ const BlogPost2025 = () => {
     </div>
   );
 
+};
+
 export default BlogPost2025;

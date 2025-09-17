@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025RevolutionaryBreakthroughPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -91,4 +92,3 @@ export default function AI2025RevolutionaryBreakthroughPromotionBanner() {
               <div className="text-2xl font-bold">15,000% ROI</div>
               <div className="text-sm opacity-90">Proven Results</div>
   );
-};

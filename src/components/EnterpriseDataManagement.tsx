@@ -7,4 +7,6 @@ const EnterpriseDataManagement: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnterpriseDataManagement;

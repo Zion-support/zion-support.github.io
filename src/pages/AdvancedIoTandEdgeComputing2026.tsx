@@ -16,4 +16,6 @@ const AdvancedIoTandEdgeComputing2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedIoTandEdgeComputing2026;

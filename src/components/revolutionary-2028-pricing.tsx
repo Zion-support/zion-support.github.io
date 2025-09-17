@@ -67,7 +67,7 @@ const pricingTiers = [
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
     href: '/contact'
-  }
+  };
 const servicePricing = [
   {
     category: '🚀 2028 Futuristic Innovations',
@@ -84,8 +84,8 @@ const servicePricing = [
   {
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
-  }
-};
+  };
+
 
 export default function Revolutionary2028Pricing() {
   return (
@@ -326,4 +326,3 @@ export default function Revolutionary2028Pricing() {
       <UltraFuturisticFooter2028 />
     </>
   );
-};

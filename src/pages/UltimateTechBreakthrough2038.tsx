@@ -16,4 +16,6 @@ const UltimateTechBreakthrough2038: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechBreakthrough2038;

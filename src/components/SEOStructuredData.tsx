@@ -7,4 +7,6 @@ const SEOStructuredData: React.FC = () => {
     </div>
   );
 
+};
+
 export default SEOStructuredData;

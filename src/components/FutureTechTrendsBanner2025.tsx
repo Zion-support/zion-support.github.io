@@ -240,4 +240,6 @@ const FutureTechTrendsBanner2025: React.FC = () => {
     </AnimatePresence>
   );
 
+};
+
 export default FutureTechTrendsBanner2025;

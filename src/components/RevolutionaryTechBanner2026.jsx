@@ -30,4 +30,6 @@ const RevolutionaryTechBanner2026 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechBanner2026;

@@ -105,4 +105,6 @@ const InnovationBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default InnovationBanner;

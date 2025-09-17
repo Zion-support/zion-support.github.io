@@ -7,4 +7,6 @@ const QuantumComputingShowcase2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumComputingShowcase2035;

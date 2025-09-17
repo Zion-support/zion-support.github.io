@@ -167,4 +167,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
     </motion.div>
   );
 
+};
+
 export default UltimateRevolutionBanner2026;

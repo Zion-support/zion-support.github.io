@@ -7,5 +7,7 @@ const InteractiveContentDiscovery2026PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentDiscovery2026PromotionBanner;
 </div></div></div></div></div>

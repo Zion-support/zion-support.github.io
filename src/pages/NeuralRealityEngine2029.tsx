@@ -16,4 +16,6 @@ const NeuralRealityEngine2029: React.FC = () => {
     </div>
   );
 
+};
+
 export default NeuralRealityEngine2029;

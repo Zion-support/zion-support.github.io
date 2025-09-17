@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025RevolutionaryTrendsBreakthroughBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-12 relative overflow-hidden">
@@ -47,4 +48,3 @@ export default function AI2025RevolutionaryTrendsBreakthroughBanner() {
               <div className="text-2xl font-bold text-blue-400 mb-2">∞</div>
               <div className="text-sm text-blue-100">Matter Creation Potential</div>
   );
-};

@@ -295,7 +295,6 @@ const ContentShowcase: React.FC = () => {
             ))}
           </div>
         );
-};
       case 'webinars':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -351,7 +350,6 @@ const ContentShowcase: React.FC = () => {
             ))}
           </div>
         );
-};
       case 'whitepapers':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -404,7 +402,6 @@ const ContentShowcase: React.FC = () => {
             ))}
           </div>
         );
-};
       default:
         return null;
     }
@@ -453,7 +450,6 @@ const ContentShowcase: React.FC = () => {
                 <span>{tab.name}</span>
               </divbutton>
             );
-};
           })}
         </div>
         {/* Content */}
@@ -491,8 +487,7 @@ const ContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
 export { ContentShowcase };
-};
+
 
 export default ContentShowcase;

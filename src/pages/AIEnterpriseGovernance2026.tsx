@@ -54,4 +54,6 @@ on_fail:
     </div>
   );
 
+};
+
 export default AIEnterpriseGovernance2026;

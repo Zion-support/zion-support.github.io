@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026AdvancedAutomationPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-8 px-4 relative overflow-hidden">
@@ -47,4 +48,3 @@ export default function AI2026AdvancedAutomationPromotionBanner() {
             >
               Schedule Demo
   );
-};

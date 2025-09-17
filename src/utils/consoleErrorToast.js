@@ -10,5 +10,5 @@ console.error = function(...args) {
   const errorMessage = args.join(' ');
   if (errorMessage && !errorMessage.includes('Warning:')) {
     toast.error('An error occurred: ' + errorMessage);
-  }
+  };
 export default console.error;

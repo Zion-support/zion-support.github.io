@@ -11,4 +11,6 @@ const automated-financial-analytics-platform = () => {
     </div>
   );
 
+};
+
 export default automated-financial-analytics-platform;

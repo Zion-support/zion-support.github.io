@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 };
 
+
 export default function AI2035FutureVisionPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 py-16">
@@ -71,4 +72,3 @@ export default function AI2035FutureVisionPromotionBanner() {
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
             <span className="text-sm">Expert-curated content</span>
   );
-};

@@ -139,4 +139,6 @@ const ConsciousnessComputingBanner2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default ConsciousnessComputingBanner2026;

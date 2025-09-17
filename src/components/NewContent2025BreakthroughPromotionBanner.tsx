@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewContent2025BreakthroughPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
@@ -107,4 +108,3 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               <div className="text-3xl font-bold text-pink-400 mb-2">∞</div>
               <div className="text-sm text-gray-300">Scalability</div>
   );
-};

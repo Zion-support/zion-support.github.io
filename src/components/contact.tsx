@@ -14,6 +14,7 @@ import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovati
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 };
 
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -401,4 +402,3 @@ export default function ContactPage() {
                   <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>
       <UltraFuturisticFooter2029 />
   );
-};

@@ -11,4 +11,6 @@ const UltimatePromotionalBanner = () => {
     </div>
   );
 
+};
+
 export default UltimatePromotionalBanner;

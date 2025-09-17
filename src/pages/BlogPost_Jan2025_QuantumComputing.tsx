@@ -123,4 +123,6 @@ const BlogPost_Jan2025_QuantumComputing: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlogPost_Jan2025_QuantumComputing;

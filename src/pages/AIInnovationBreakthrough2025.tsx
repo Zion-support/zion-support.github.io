@@ -118,4 +118,6 @@ const AIInnovationBreakthrough2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIInnovationBreakthrough2025;

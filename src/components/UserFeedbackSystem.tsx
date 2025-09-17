@@ -7,4 +7,6 @@ const UserFeedbackSystem: React.FC = () => {
     </div>
   );
 
+};
+
 export default UserFeedbackSystem;

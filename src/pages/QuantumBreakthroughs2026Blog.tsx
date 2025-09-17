@@ -16,4 +16,6 @@ const QuantumBreakthroughs2026Blog: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumBreakthroughs2026Blog;

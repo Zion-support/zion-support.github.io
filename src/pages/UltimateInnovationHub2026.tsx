@@ -16,4 +16,6 @@ const UltimateInnovationHub2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateInnovationHub2026;

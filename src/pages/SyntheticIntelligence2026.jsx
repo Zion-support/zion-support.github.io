@@ -11,4 +11,6 @@ const SyntheticIntelligence2026 = () => {
     </div>
   );
 
+};
+
 export default SyntheticIntelligence2026;

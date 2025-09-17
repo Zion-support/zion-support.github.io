@@ -113,4 +113,6 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025LatestInnovationsShowcase;

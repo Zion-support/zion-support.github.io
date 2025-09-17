@@ -58,4 +58,6 @@ const RevolutionaryAIContentBanner2025= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryAIContentBanner2025;

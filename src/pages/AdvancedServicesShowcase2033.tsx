@@ -16,4 +16,6 @@ const AdvancedServicesShowcase2033: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedServicesShowcase2033;

@@ -11,4 +11,6 @@ const AIConsciousnessRevolution2025 = () => {
     </div>
   );
 
+};
+
 export default AIConsciousnessRevolution2025;

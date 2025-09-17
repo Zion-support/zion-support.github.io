@@ -16,4 +16,6 @@ const TechTrends2026Blog: React.FC = () => {
     </div>
   );
 
+};
+
 export default TechTrends2026Blog;

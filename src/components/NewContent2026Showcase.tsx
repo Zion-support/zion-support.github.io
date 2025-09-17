@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewContent2026Showcase() {
   return (
     <section className="py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -136,4 +137,3 @@ export default function NewContent2026Showcase() {
             >
               📺 Webinars
   );
-};

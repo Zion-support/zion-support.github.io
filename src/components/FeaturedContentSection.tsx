@@ -11,4 +11,6 @@ const FeaturedContentSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default FeaturedContentSection;

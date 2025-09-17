@@ -132,5 +132,7 @@ const UltimateTechShowcase2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechShowcase2026Banner;
 </div></div>

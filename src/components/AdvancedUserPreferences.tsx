@@ -7,4 +7,6 @@ const AdvancedUserPreferences: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedUserPreferences;

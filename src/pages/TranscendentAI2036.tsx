@@ -16,4 +16,6 @@ const TranscendentAI2036: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentAI2036;

@@ -6,6 +6,7 @@ interface SimpleLayoutProps {
   children: React.ReactNode;
 };
 
+
 export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
   return (
     <>
@@ -15,4 +16,3 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
       {children}
     </>
   );
-};

@@ -16,4 +16,6 @@ const BlockchainRevolution2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlockchainRevolution2027;

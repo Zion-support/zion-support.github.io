@@ -11,4 +11,6 @@ const AdvancedTechInnovation2027 = () => {
     </div>
   );
 
+};
+
 export default AdvancedTechInnovation2027;

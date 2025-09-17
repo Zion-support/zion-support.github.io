@@ -7,4 +7,6 @@ const AI2026AutonomousSystemsBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026AutonomousSystemsBanner;

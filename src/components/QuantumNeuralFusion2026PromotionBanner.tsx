@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumNeuralFusion2026PromotionBanner() {
   return (
     <section className="relative py-16 px-4 overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
@@ -120,4 +121,3 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
           >
             🎯 Get Your Personalized Implementation Plan
   );
-};

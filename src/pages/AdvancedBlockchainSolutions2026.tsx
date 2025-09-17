@@ -16,4 +16,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedBlockchainSolutions2026;

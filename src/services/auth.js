@@ -5,7 +5,7 @@ class AuthService {
   constructor() {
     this.token = localStorage.getItem('token');
     this.user = JSON.parse(localStorage.getItem('user') || 'null');
-  }
+  };
   // Login user
   async login(credentials) {
     try {
@@ -37,7 +37,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Login failed');
     }
-  }
+  };
   // Register user
   async register(userData) {
     try {
@@ -69,7 +69,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Registration failed');
     }
-  }
+  };
   // Logout user
   async logout() {
     try {
@@ -84,23 +84,23 @@ class AuthService {
     } catch (error) {
       throw new Error('Logout failed');
     }
-  }
+  };
   // Get current user
   getCurrentUser() {
     return this.user;
-  }
+  };
   // Get current token
   getCurrentToken() {
     return this.token;
-  }
+  };
   // Check if user is authenticated
   isAuthenticated() {
     return !!this.token && !!this.user;
-  }
+  };
   // Check if user has specific role
   hasRole(role) {
     return this.user && this.user.role === role;
-  }
+  };
   // Refresh token
   async refreshToken() {
     try {
@@ -117,7 +117,7 @@ class AuthService {
     } catch (error) {
       throw new Error('Token refresh failed');
     }
-  }
+  };
   // Forgot password
   async forgotPassword(email) {
     try {
@@ -134,7 +134,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password reset request failed');
     }
-  }
+  };
   // Reset password
   async resetPassword(token, newPassword) {
     try {
@@ -150,7 +150,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password reset failed');
     }
-  }
+  };
   // Update user profile
   async updateProfile(profileData) {
     try {
@@ -171,7 +171,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Profile update failed');
     }
-  }
+  };
   // Change password
   async changePassword(currentPassword, newPassword) {
     try {
@@ -190,7 +190,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password change failed');
     }
-  }
+  };
   // Verify email
   async verifyEmail(token) {
     try {
@@ -211,7 +211,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Email verification failed');
     }
-  }
+  };
   // Get user permissions
   getUserPermissions() {
     if (!this.user) return [];
@@ -222,12 +222,12 @@ class AuthService {
       moderator: ['read:all', 'write:all', 'moderate:content']
     };
     return permissions[this.user.role] || [];
-  }
+  };
   // Check if user has specific permission
   hasPermission(permission) {
     const permissions = this.getUserPermissions();
     return permissions.includes(permission);
-  }
+  };
 // Create singleton instance
 const authService = new AuthService();
 // Named exports for commonly used methods

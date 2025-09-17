@@ -7,4 +7,6 @@ const TranscendentConsciousnessBanner2038: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentConsciousnessBanner2038;

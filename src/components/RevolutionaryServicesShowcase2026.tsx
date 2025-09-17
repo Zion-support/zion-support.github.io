@@ -487,7 +487,6 @@ const RevolutionaryServicesShowcase2026 = () => {
                 </Link>
               </div>
             );
-};
           })}
         </div>
         {/* Call to Action */}
@@ -519,5 +518,6 @@ const RevolutionaryServicesShowcase2026 = () => {
       </div>
     </div>
   );
+
 
 export default RevolutionaryServicesShowcase2026;

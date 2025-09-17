@@ -296,4 +296,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default SyntheticBiologyRevolution2027;

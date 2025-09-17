@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightBrainCpuZapTrendingUpGlobe
 };
 
+
 export default function AI2026FuturePredictionsRevolutionaryBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border border-cyan-500/30 rounded-2xl mb-8">
@@ -69,4 +70,3 @@ export default function AI2026FuturePredictionsRevolutionaryBanner() {
       {/* Bottom gradient */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400"></div>
   );
-};

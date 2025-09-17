@@ -7,4 +7,6 @@ const QuantumNeuralFusion2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumNeuralFusion2026Banner;

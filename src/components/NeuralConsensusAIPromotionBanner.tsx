@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NeuralConsensusAIPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-8 px-4 relative overflow-hidden">
@@ -47,4 +48,3 @@ export default function NeuralConsensusAIPromotionBanner() {
             >
               Start Free Trial
   );
-};

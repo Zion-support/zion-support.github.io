@@ -296,4 +296,6 @@ const TranscendentAI2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentAI2027;

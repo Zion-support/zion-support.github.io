@@ -124,4 +124,6 @@ const AdvancedContentManagementSystemPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedContentManagementSystemPromotionBanner;

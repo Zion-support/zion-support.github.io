@@ -10,4 +10,6 @@ const App.full = () => {
       </div>
     </div>
   );
+};
+
 export default App.full;

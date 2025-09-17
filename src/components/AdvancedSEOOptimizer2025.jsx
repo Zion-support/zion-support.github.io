@@ -30,4 +30,6 @@ const AdvancedSEOOptimizer2025 = () => {
     </div>
   );
 
+};
+
 export default AdvancedSEOOptimizer2025;

@@ -87,4 +87,6 @@ const RevolutionaryContentShowcase= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentShowcase;

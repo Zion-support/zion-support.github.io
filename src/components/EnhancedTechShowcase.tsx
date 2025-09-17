@@ -7,4 +7,6 @@ const EnhancedTechShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedTechShowcase;

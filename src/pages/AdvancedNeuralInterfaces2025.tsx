@@ -16,4 +16,6 @@ const AdvancedNeuralInterfaces2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedNeuralInterfaces2025;

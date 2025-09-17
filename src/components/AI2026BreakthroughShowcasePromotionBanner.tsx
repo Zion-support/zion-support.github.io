@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026BreakthroughShowcasePromotionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -45,4 +46,3 @@ export default function AI2026BreakthroughShowcasePromotionBanner() {
             >
               Get Started
   );
-};

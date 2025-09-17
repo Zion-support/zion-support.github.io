@@ -203,5 +203,7 @@ const ContentManagementSystem: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentManagementSystem;
 </p></p></p></p>

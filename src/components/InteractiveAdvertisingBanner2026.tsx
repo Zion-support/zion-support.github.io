@@ -451,4 +451,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveAdvertisingBanner2026;

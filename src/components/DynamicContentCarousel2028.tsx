@@ -7,5 +7,7 @@ const DynamicContentCarousel2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default DynamicContentCarousel2028;
 </p></p>

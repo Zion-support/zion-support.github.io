@@ -94,4 +94,6 @@ const TestimonialSection: React.FC = () => {
     </section>
   );
 
+};
+
 export default TestimonialSection;

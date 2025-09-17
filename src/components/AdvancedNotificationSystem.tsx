@@ -7,4 +7,6 @@ const AdvancedNotificationSystem: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedNotificationSystem;

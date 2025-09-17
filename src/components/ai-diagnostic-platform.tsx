@@ -37,8 +37,8 @@ const pricingPlans = [
     period: 'month',
     features: ['Custom AI models', 'White-label solution', 'Dedicated support', 'Custom integrations', 'Training included'],
     popular: false
-  }
-};
+  };
+
 
 export default function AIDiagnosticPlatform() {
   return (
@@ -196,4 +196,3 @@ export default function AIDiagnosticPlatform() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
-};

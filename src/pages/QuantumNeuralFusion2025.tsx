@@ -16,4 +16,6 @@ const QuantumNeuralFusion2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumNeuralFusion2025;

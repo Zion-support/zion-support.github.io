@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 };
 
+
 export default function EntertainmentMediaSolutions() {
   return (
     <>
@@ -15,4 +16,3 @@ export default function EntertainmentMediaSolutions() {
           <p className="text-gray-300">Accelerate productionoptimize distributionand personalize experiences with AI-driven media platforms.</p>
     </>
   );
-};

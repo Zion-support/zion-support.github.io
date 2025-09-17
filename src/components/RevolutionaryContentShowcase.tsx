@@ -303,4 +303,6 @@ const RevolutionaryContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentShowcase;

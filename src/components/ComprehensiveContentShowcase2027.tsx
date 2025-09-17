@@ -7,4 +7,6 @@ const ComprehensiveContentShowcase2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveContentShowcase2027;

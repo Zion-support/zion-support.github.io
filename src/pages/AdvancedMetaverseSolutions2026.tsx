@@ -16,4 +16,6 @@ const AdvancedMetaverseSolutions2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedMetaverseSolutions2026;

@@ -16,4 +16,6 @@ const AdvancedAITransformation2026= () => {
     </div>
   );
 
+};
+
 export default AdvancedAITransformation2026;

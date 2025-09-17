@@ -16,4 +16,6 @@ const UltimateTechRevolution2027= () => {
     </div>
   );
 
+};
+
 export default UltimateTechRevolution2027;

@@ -7,5 +7,7 @@ const NewContentDiscoveryWidget: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentDiscoveryWidget;
 </p></p>

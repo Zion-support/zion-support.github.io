@@ -271,5 +271,7 @@ const UltimateTechBlog2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechBlog2025;
 </div></div></div></div>

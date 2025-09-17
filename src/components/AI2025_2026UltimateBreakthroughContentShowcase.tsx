@@ -7,4 +7,6 @@ const AI2025_2026UltimateBreakthroughContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025_2026UltimateBreakthroughContentShowcase;

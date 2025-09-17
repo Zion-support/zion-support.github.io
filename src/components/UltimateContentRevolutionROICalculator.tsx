@@ -7,4 +7,6 @@ const UltimateContentRevolutionROICalculator: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentRevolutionROICalculator;

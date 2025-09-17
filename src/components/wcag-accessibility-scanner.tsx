@@ -6,6 +6,7 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 };
 
+
 export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
@@ -39,4 +40,3 @@ export default function WCAGScannerPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
   );
-};

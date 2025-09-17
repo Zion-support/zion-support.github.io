@@ -6,6 +6,7 @@ interface SocialSharingWidgetProps {
   hashtags?: string[];
 };
 
+
 export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }: SocialSharingWidgetProps) {
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
@@ -79,5 +80,6 @@ export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }
             ))}
       )}
   );
+
 
 export default SocialSharingWidget;

@@ -16,4 +16,6 @@ const AdvancedTechInsights2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedTechInsights2026;

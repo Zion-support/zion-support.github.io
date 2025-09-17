@@ -209,7 +209,6 @@ const ContentRecommendationSystem: React.FC = () => {
                   </div>
                 </motion.div>
               );
-};
             })}
           </AnimatePresence>
         </motion.div>
@@ -259,5 +258,6 @@ const ContentRecommendationSystem: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default ContentRecommendationSystem;

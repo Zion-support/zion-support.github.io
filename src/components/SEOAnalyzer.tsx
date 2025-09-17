@@ -224,5 +224,7 @@ const SEOAnalyzer: React.FC = () => {
     </div>
   );
 
+};
+
 export default SEOAnalyzer;
 </p></p>

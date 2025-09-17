@@ -248,4 +248,6 @@ const AIConsciousnessRevolutionBanner = () => {
     </AnimatePresence>
   );
 
+};
+
 export default AIConsciousnessRevolutionBanner;

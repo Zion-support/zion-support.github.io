@@ -156,4 +156,6 @@ const NewContentBanner2025 = () => {
     </div>
   );
 
+};
+
 export default NewContentBanner2025;

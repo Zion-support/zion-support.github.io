@@ -10,4 +10,6 @@ const CommunityRoutes = () => {
       </div>
     </div>
   );
+};
+
 export default CommunityRoutes;

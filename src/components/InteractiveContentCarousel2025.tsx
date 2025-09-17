@@ -7,4 +7,6 @@ const InteractiveContentCarousel2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentCarousel2025;

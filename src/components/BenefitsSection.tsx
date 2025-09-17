@@ -11,4 +11,6 @@ const BenefitsSection = () => {
     </div>
   );
 
+};
+
 export default BenefitsSection;

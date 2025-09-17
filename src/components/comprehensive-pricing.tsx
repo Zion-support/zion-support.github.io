@@ -8,6 +8,7 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 };
 
+
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
@@ -36,7 +37,7 @@ export default function ComprehensivePricingPage() {
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = filteredServices.filter(service => service.category === selectedCategory);
-  }
+  };
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
@@ -44,7 +45,7 @@ export default function ComprehensivePricingPage() {
       const price = parseFloat(service.price.replace('$', '').replace(',', ''));
       return price >= min && (max === Infinity || price <= max);
     });
-  }
+  };
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -53,8 +54,7 @@ export default function ComprehensivePricingPage() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-};
-  }
+  };
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -514,5 +514,6 @@ export default function ComprehensivePricingPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
   );
+
 
 export default comprehensive-pricing;

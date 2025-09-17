@@ -7,4 +7,6 @@ const AdvancedLoadingSpinner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedLoadingSpinner;

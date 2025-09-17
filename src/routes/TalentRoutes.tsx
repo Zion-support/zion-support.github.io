@@ -10,4 +10,6 @@ const TalentRoutes = () => {
       </div>
     </div>
   );
+};
+
 export default TalentRoutes;

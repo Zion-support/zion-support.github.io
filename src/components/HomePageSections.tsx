@@ -144,4 +144,6 @@ const HomePageSections: React.FC = () => {
     </div>
   );
 
+};
+
 export default HomePageSections;

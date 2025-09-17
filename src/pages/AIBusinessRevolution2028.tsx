@@ -16,4 +16,6 @@ const AIBusinessRevolution2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIBusinessRevolution2028;

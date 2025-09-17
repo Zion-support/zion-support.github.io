@@ -7,4 +7,6 @@ const UltimateContentCarousel2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentCarousel2035;

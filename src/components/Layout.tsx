@@ -7,6 +7,7 @@ interface LayoutProps {
   description?: string;
 };
 
+
 export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {
   return (
     <>
@@ -67,4 +68,3 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
               © 2025 Zion Tech Group. All rights reserved.
     </>
   );
-};

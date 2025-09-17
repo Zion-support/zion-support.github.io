@@ -7,4 +7,6 @@ const AnalyticsTracker: React.FC = () => {
     </div>
   );
 
+};
+
 export default AnalyticsTracker;

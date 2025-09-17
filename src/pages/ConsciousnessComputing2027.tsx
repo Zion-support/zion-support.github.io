@@ -11,4 +11,6 @@ const ConsciousnessComputing2027 = () => {
     </div>
   );
 
+};
+
 export default ConsciousnessComputing2027;

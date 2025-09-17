@@ -7,4 +7,6 @@ const SecurityEnhancer: React.FC = () => {
     </div>
   );
 
+};
+
 export default SecurityEnhancer;

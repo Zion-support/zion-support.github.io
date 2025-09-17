@@ -232,4 +232,6 @@ const ContentAdvertisingBanner = () => {
     </div>
   );
 
+};
+
 export default ContentAdvertisingBanner;

@@ -224,4 +224,6 @@ const QuantumComputingRevolutionBanner = () => {
     </AnimatePresence>
   );
 
+};
+
 export default QuantumComputingRevolutionBanner;

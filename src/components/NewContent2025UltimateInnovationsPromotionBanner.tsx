@@ -3,6 +3,7 @@ import React from 'react';
 BrainTrendingUpZapArrowRightStarSparkles
 };
 
+
 export default function NewContent2025UltimateInnovationsPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 border border-purple-500/30 rounded-xl p-6 mb-8">
@@ -98,4 +99,3 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
             >
               Get Started Today
   );
-};

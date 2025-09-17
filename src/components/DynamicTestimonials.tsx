@@ -7,4 +7,6 @@ const DynamicTestimonials: React.FC = () => {
     </div>
   );
 
+};
+
 export default DynamicTestimonials;

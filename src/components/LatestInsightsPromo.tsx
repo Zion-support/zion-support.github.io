@@ -53,4 +53,6 @@ const LatestInsightsPromo: React.FC = () => {
     </section>
   );
 
+};
+
 export default LatestInsightsPromo;

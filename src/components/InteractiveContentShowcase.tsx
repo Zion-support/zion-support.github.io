@@ -276,4 +276,6 @@ const InteractiveContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentShowcase;

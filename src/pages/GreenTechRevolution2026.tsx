@@ -16,4 +16,6 @@ const GreenTechRevolution2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default GreenTechRevolution2026;

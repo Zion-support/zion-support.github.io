@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewContent2025RevolutionaryBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white overflow-hidden">
@@ -56,4 +57,3 @@ export default function NewContent2025RevolutionaryBanner() {
             >
               📧 Get Updates
   );
-};

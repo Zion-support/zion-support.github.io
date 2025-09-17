@@ -11,4 +11,6 @@ const changelog = () => {
     </div>
   );
 
+};
+
 export default changelog;

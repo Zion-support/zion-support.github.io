@@ -7,4 +7,6 @@ const AdvancedAIAssistant: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAIAssistant;

@@ -7,4 +7,6 @@ const ContactSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContactSection;

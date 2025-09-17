@@ -63,7 +63,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
                 {story.company}
               </button>
             );
-};
           })}
         </div>
         {/* Active Story Display */}
@@ -162,5 +161,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
       </div>
     </section>
   );
+
 
 export default AISuccessStoriesShowcase;

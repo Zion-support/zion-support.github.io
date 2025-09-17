@@ -11,4 +11,6 @@ const UltimateAIConsciousness2036 = () => {
     </div>
   );
 
+};
+
 export default UltimateAIConsciousness2036;

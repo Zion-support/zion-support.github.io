@@ -11,6 +11,7 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 };
 
+
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -303,5 +304,6 @@ export default function InnovativeServicesShowcase() {
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-white">{contactInfo.address}</span>
   );
+
 
 export default innovative-services-showcase;

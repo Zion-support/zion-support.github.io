@@ -11,4 +11,6 @@ const AdvancedAISolutions2026 = () => {
     </div>
   );
 
+};
+
 export default AdvancedAISolutions2026;

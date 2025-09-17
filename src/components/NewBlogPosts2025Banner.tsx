@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewBlogPosts2025Banner() {
   return (
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
@@ -108,4 +109,3 @@ export default function NewBlogPosts2025Banner() {
             >
               Explore More Articles
   );
-};

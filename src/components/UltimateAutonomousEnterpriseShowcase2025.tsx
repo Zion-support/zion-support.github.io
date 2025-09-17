@@ -7,4 +7,6 @@ const UltimateAutonomousEnterpriseShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAutonomousEnterpriseShowcase2025;

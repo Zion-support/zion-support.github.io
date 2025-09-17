@@ -7,4 +7,6 @@ const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025AutonomousOperationsRevolutionBanner;

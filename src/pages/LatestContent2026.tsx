@@ -173,4 +173,6 @@ const LatestContent2026 = () => {
     </div>
   );
 
+};
+
 export default LatestContent2026;

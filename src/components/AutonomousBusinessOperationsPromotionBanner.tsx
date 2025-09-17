@@ -7,4 +7,6 @@ const AutonomousBusinessOperationsPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AutonomousBusinessOperationsPromotionBanner;

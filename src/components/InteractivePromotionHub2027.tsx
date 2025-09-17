@@ -7,4 +7,6 @@ const InteractivePromotionHub2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractivePromotionHub2027;

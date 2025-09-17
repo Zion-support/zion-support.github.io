@@ -94,4 +94,6 @@ const AI2025AutonomousSystemsRevolutionBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default AI2025AutonomousSystemsRevolutionBanner;

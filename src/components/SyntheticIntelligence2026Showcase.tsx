@@ -240,4 +240,6 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default SyntheticIntelligence2026Showcase;

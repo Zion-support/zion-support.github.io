@@ -18,7 +18,7 @@ afterAll(() => {
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error');
-  }
+  };
   return <div>No error</div>;
 describe('ErrorBoundary', () => {
   it('renders children when there is no error', () => {
@@ -36,7 +36,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     expect(screen.getByText('Something went wrong')).toBeInTheDocument();
     expect(screen.getByText("We're sorry, but something unexpected happened.")).toBeInTheDocument();
   });
@@ -48,7 +47,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     expect(screen.getByText('Error Details:')).toBeInTheDocument();
     expect(screen.getByText(/Test error/)).toBeInTheDocument();
     process.env.NODE_ENV = originalEnv;
@@ -61,7 +59,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     expect(screen.queryByText('Error Details:')).not.toBeInTheDocument();
     process.env.NODE_ENV = originalEnv;
   });
@@ -72,14 +69,12 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     expect(onError).toHaveBeenCalledWith(
       expect.any(Error),
       expect.objectContaining({
         componentStack: expect.any(String),
       })
     );
-};
   });
   it('renders custom fallback when provided', () => {
     const customFallback = <div>Custom error message</div>;
@@ -88,7 +83,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     expect(screen.getByText('Custom error message')).toBeInTheDocument();
     expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument();
   });
@@ -98,7 +92,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     expect(screen.getByText('Something went wrong')).toBeInTheDocument();
     const tryAgainButton = screen.getByText('Try Again');
     fireEvent.click(tryAgainButton);
@@ -113,7 +106,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     const reloadButton = screen.getByText('Reload Page');
     fireEvent.click(reloadButton);
     expect(reloadSpy).toHaveBeenCalled();
@@ -125,7 +117,6 @@ describe('ErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-};
     const errorHeading = screen.getByRole('heading', { level: 3 });
     expect(errorHeading).toHaveTextContent('Something went wrong');
     const tryAgainButton = screen.getByRole('button', { name: 'Try Again' });

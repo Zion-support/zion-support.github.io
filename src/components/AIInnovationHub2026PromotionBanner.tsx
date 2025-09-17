@@ -90,7 +90,6 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                         <div className="text-gray-300 text-sm">{category.count} innovations</div>
                       </div>
                     );
-};
                   })}
                 </div>
               </div>
@@ -171,5 +170,6 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default AIInnovationHub2026PromotionBanner;

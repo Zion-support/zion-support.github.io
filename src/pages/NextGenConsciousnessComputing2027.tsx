@@ -16,4 +16,6 @@ const NextGenConsciousnessComputing2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenConsciousnessComputing2027;

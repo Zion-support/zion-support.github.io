@@ -7,4 +7,6 @@ const NewContentPromotion2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentPromotion2040;

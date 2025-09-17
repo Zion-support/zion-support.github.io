@@ -320,4 +320,6 @@ const ComprehensiveCaseStudies2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveCaseStudies2026;

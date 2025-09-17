@@ -209,4 +209,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIMachineLearningRevolution2026;

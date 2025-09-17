@@ -7,5 +7,7 @@ const AdvancedErrorBoundary: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedErrorBoundary;
 </p></p></p>

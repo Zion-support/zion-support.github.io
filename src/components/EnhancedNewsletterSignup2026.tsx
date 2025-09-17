@@ -34,7 +34,7 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
       </div>
     );
 };
-  }
+  };
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
@@ -182,5 +182,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default EnhancedNewsletterSignup2026;

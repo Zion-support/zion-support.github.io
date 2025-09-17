@@ -430,7 +430,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                   <p className="text-gray-300 text-sm leading-relaxed">{story.result}</p>
                 </motion.div>
               );
-};
             })}
           </div>
         </div>
@@ -465,6 +464,7 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default RevolutionaryTechSolutions2026;
 </div></div></div></div></div></div></div></div>

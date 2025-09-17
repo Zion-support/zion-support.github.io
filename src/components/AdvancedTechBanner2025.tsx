@@ -141,4 +141,6 @@ const AdvancedTechBanner2025: React.FC = () => {
     </motion.div>
   );
 
+};
+
 export default AdvancedTechBanner2025;

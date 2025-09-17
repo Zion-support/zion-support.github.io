@@ -7,4 +7,6 @@ const RevolutionaryAIServices2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryAIServices2026;

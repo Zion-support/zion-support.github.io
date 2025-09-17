@@ -58,4 +58,6 @@ const QuantumComputingBanner2025= () => {
     </div>
   );
 
+};
+
 export default QuantumComputingBanner2025;

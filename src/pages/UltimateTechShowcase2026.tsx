@@ -827,4 +827,6 @@ const UltimateTechShowcase2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechShowcase2026;

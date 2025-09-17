@@ -7,4 +7,6 @@ const RevolutionaryTechBanner2027-2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechBanner2027-2030;

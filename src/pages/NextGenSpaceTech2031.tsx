@@ -16,4 +16,6 @@ const NextGenSpaceTech2031: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenSpaceTech2031;

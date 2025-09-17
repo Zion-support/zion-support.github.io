@@ -16,4 +16,6 @@ const AdvancedServices2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedServices2025;

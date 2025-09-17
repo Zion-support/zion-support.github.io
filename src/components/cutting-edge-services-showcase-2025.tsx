@@ -48,8 +48,8 @@ const serviceCategories = [
     color: 'from-teal-500 to-emerald-600',
     gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length
-  }
-};
+  };
+
 
 export default function CuttingEdgeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -340,4 +340,3 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
     </>
   );
-};

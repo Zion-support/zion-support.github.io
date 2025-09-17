@@ -156,7 +156,6 @@ const TechnologyTrends2026: React.FC = () => {
                   </span>
                 </button>
               );
-};
             })}
           </div>
         </div>
@@ -220,7 +219,6 @@ const TechnologyTrends2026: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>
@@ -363,5 +361,6 @@ const TechnologyTrends2026: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default TechnologyTrends2026;

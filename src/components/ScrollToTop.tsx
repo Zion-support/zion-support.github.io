@@ -7,4 +7,6 @@ const ScrollToTop: React.FC = () => {
     </div>
   );
 
+};
+
 export default ScrollToTop;

@@ -7,4 +7,6 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTransformationSuccessBanner;

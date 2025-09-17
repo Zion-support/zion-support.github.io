@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026FuturePredictionsPromotionBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
@@ -117,4 +118,3 @@ export default function AI2026FuturePredictionsPromotionBanner() {
             <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
             <div className="text-gray-300 text-sm">Customer Satisfaction</div>
   );
-};

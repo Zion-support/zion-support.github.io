@@ -16,4 +16,6 @@ const RevolutionaryServices2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryServices2035;

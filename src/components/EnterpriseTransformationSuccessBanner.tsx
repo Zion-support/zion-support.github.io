@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function EnterpriseTransformationSuccessBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white">
@@ -91,4 +92,3 @@ export default function EnterpriseTransformationSuccessBanner() {
       <div className="absolute bottom-20 left-10 w-3 h-3 bg-blue-400 rounded-full animate-ping delay-1000"></div>
       <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-2000"></div>
   );
-};

@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward
 };
 
+
 export default function RevolutionaryContentShowcase2025Banner() {
   const contentTypes = [
     { icon: BookOpename: "Articles"count: "150+"color: "blue" },
@@ -43,7 +44,6 @@ export default function RevolutionaryContentShowcase2025Banner() {
                       <span className="text-sm font-medium">{type.name}</span>
                     <span className="text-sm font-bold">{type.count}</span>
                 );
-};
               })}
             <div className="flex flex-wrap gap-4">
               <a 
@@ -105,5 +105,6 @@ export default function RevolutionaryContentShowcase2025Banner() {
                 <span className="text-xs text-gray-400">Live Event</span>
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
   );
+
 
 export default RevolutionaryContentShowcase2025Banner;

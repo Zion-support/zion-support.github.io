@@ -261,4 +261,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default SyntheticIntelligenceRevolution2026;

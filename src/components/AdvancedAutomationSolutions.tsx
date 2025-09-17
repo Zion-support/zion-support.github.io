@@ -7,4 +7,6 @@ const AdvancedAutomationSolutions: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAutomationSolutions;

@@ -16,4 +16,6 @@ const QuantumRealityManipulation2029: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumRealityManipulation2029;

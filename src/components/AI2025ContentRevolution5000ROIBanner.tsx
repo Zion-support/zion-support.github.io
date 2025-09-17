@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap
 };
 
+
 export default function AI2025ContentRevolution5000ROIBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-emerald-900 to-green-900 rounded-3xl p-8 md:p-12 mb-16 border border-green-500/20">
@@ -107,4 +108,3 @@ export default function AI2025ContentRevolution5000ROIBanner() {
           <p className="text-green-200 text-sm">
             Join 500+ companies achieving breakthrough results with AI 2025
   );
-};

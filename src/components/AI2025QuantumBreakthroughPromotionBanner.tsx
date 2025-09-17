@@ -94,4 +94,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default AI2025QuantumBreakthroughPromotionBanner;

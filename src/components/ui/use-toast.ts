@@ -40,7 +40,7 @@ const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
 const addToRemoveQueue = (toastId: string) => {
   if (toastTimeouts.has(toastId)) {
     return
-  }
+  };
   const timeout = setTimeout(() => {
     toastTimeouts.delete(toastId)
     dispatch({
@@ -95,7 +95,7 @@ export const reducer = (state: State, action: Action): State => {
         ...state,
         toasts: state.toasts.filter((t) => t.id !== action.toastId),
       }
-  }
+  };
 const listeners: Array<(state: State) => void> = []
 let memoryState: State = { toasts: [] }
 function dispatch(action: Action) {
@@ -127,7 +127,7 @@ function toast({ ...props }: Toast) {
     id: id,
     dismiss,
     update,
-  }
+  };
 function useToast() {
   const [state, setState] = React.useState<State>(memoryState)
   React.useEffect(() => {
@@ -143,5 +143,5 @@ function useToast() {
     ...state,
     toast,
     dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
-  }
+  };
 export { useToast, toast }

@@ -16,4 +16,6 @@ const EnhancedMicroSaasServices: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedMicroSaasServices;

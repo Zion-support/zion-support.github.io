@@ -7,4 +7,6 @@ const AdvancedAnalyticsTracker: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAnalyticsTracker;

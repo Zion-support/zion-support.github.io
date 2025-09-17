@@ -73,4 +73,6 @@ const RevolutionaryContentBanner2033= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentBanner2033;

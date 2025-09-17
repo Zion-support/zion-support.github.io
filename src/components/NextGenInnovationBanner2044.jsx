@@ -7,4 +7,6 @@ const NextGenInnovationBanner2044= () => {
     </div>
   );
 
+};
+
 export default NextGenInnovationBanner2044;

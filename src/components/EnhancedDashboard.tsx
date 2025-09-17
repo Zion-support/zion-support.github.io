@@ -7,4 +7,6 @@ const EnhancedDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedDashboard;

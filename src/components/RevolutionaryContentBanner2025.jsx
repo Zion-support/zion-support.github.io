@@ -7,4 +7,6 @@ const RevolutionaryContentBanner2025= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentBanner2025;

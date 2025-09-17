@@ -11,4 +11,6 @@ const NeuralInterfaceFuture = () => {
     </div>
   );
 
+};
+
 export default NeuralInterfaceFuture;

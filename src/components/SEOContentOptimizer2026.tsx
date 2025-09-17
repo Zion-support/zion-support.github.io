@@ -138,7 +138,7 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
     }
     structuredData.articleSection = articleData.section;
     structuredData.keywords = articleData.tags.join(", ");
-  }
+  };
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -202,5 +202,7 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
       </script>
     </Helmet>
   );
+
+};
 
 export default SEOContentOptimizer2026;

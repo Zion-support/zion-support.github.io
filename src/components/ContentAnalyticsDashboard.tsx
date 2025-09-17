@@ -7,5 +7,7 @@ const ContentAnalyticsDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentAnalyticsDashboard;
 </div></div>

@@ -414,4 +414,6 @@ const DynamicContentCarousel2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default DynamicContentCarousel2026;

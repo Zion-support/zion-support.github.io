@@ -7,4 +7,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default RealTimePerformanceDashboard;

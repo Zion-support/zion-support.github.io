@@ -7,4 +7,6 @@ const AI2025UltimateSuccessFrameworkBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateSuccessFrameworkBanner;

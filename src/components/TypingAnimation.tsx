@@ -36,4 +36,6 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     </span>
   );
 
+};
+
 export default TypingAnimation;

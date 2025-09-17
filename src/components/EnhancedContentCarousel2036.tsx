@@ -131,4 +131,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentCarousel2036;

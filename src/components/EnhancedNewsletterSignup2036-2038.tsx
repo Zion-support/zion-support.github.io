@@ -73,4 +73,6 @@ const EnhancedNewsletterSignup2036_2038: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedNewsletterSignup2036_2038;

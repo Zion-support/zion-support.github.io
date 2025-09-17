@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026EnterpriseTransformationPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white">
@@ -83,4 +84,3 @@ export default function AI2026EnterpriseTransformationPromotionBanner() {
             <p className="text-yellow-400 font-semibold animate-pulse">
               ⚡ Limited Time: Free implementation consultation
   );
-};

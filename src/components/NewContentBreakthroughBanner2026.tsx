@@ -227,4 +227,6 @@ const NewContentBreakthroughBanner2026 = () => {
     </div>
   );
 
+};
+
 export default NewContentBreakthroughBanner2026;

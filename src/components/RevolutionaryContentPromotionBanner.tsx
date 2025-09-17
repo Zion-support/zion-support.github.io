@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function RevolutionaryContentPromotionBanner() {
   const [isVisiblesetIsVisible] = useState(true);
   const [currentPromotionsetCurrentPromotion] = useState(0);
@@ -84,5 +85,6 @@ export default function RevolutionaryContentPromotionBanner() {
         }
       `}</style>
   );
+
 
 export default RevolutionaryContentPromotionBanner;

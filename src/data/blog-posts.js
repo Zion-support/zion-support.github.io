@@ -2384,7 +2384,7 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/real-time-evals-guardrails-2026.jpg",
     slug: "real-time-evals-ship-guardrails-fast"
-  }
+  };
 // Fresh promoted content (2025-09-16)
 export const newPromoted2025 = [
   {
@@ -2437,7 +2437,7 @@ export const newPromoted2025 = [
     featured: true,
     imageUrl: "/images/blog/evidence-driven-ai-governance-2026.jpg",
     slug: "ai-2026-evidence-driven-ai-governance"
-  }
+  };
 // Latest additions (2025-09-16)
 const latest2025 = [
   {
@@ -2487,7 +2487,7 @@ const latest2025 = [
     featured: true,
     imageUrl: "/images/blog/budget-aware-routing-2026.jpg",
     slug: "finops-budget-aware-routing-30-percent-savings"
-  }
+  };
   ,
   {
     id: 10024,
@@ -2536,7 +2536,7 @@ const latest2025 = [
     featured: true,
     imageUrl: "/images/blog/agentic-systems-maturity-2026.jpg",
     slug: "ai-2026-operational-maturity-models-for-agentic-systems"
-  }
+  };
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug);
 export const getBlogPostsByCategory = (category) => {
@@ -2974,7 +2974,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/future-work-ai-human-collaboration-2026.jpg",
     slug: "future-work-ai-human-collaboration-excellence"
-  }
+  };
   ,
   {
     id: 8101,
@@ -3005,7 +3005,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/agent-platform-slos-practical-2026.jpg",
     slug: "agent-platform-slos-practical-blueprint"
-  }
+  };
   ,
   {
     id: 9103,
@@ -3081,7 +3081,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
     slug: "cost-aware-model-routing-copy-paste-policy"
-  }
+  };
   ,
   {
     id: 9510,
@@ -3142,7 +3142,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/incident-lifecycle-playbook-2026.jpg",
     slug: "ai-2026-incident-lifecycle-playbook"
-  }
+  };
 // Additional fresh content (2029 preview)
 export const extraContent2029 = [
   {
@@ -3280,7 +3280,7 @@ export const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/production-eval-gates-2029.jpg",
     slug: "production-eval-gates-2029"
-  }
+  };
   ,
   {
     id: 9907,
@@ -3407,7 +3407,7 @@ export const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-2025.jpg",
     slug: "edge-ai-bringing-intelligence-network-edge"
-  }
+  };
 // Latest 2026 Content - Fresh and Engaging
 const latestContent2026 = [
   {
@@ -3484,7 +3484,7 @@ const latestContent2026 = [
     featured: true,
     imageUrl: "/images/blog/ai-powered-education-2026.jpg",
     slug: "ai-powered-education-personalized-learning-revolution"
-  }
+  };
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list

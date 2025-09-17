@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 };
 
+
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
@@ -255,5 +256,6 @@ export default function Careers() {
               >
                 Learn More About Us
   );
+
 
 export default CareersPage;

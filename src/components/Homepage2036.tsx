@@ -22,7 +22,7 @@ const categories = [
   { name: 'IT Infrastructure', icon: <Cpu className="w-6 h-6" />, count: 120, color: 'from-orange-500 to-red-600' },
   { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, count: 90, color: 'from-blue-500 to-indigo-600' },
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6" />, count: 70, color: 'from-yellow-500 to-orange-600' }
-};
+
 
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -324,4 +324,3 @@ export default function Homepage2036() {
                   <Phone className="w-5 h-5" />
                   Call Us Now
   );
-};

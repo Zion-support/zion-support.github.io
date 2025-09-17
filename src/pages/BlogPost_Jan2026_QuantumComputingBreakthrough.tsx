@@ -194,4 +194,6 @@ const BlogPost_Jan2026_QuantumComputingBreakthrough: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlogPost_Jan2026_QuantumComputingBreakthrough;

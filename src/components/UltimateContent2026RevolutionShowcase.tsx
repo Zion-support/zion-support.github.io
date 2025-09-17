@@ -7,5 +7,7 @@ const UltimateContent2026RevolutionShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContent2026RevolutionShowcase;
 </p></p>

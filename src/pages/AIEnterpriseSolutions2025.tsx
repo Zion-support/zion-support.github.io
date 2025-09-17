@@ -271,4 +271,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
     </>
   );
 
+};
+
 export default AIEnterpriseSolutions2025;

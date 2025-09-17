@@ -11,4 +11,6 @@ const RevolutionaryContentCarousel2039 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentCarousel2039;

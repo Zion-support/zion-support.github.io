@@ -296,4 +296,6 @@ const SpaceTimeComputing2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default SpaceTimeComputing2027;

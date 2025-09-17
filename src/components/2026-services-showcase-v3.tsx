@@ -4,6 +4,7 @@ import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026S
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 };
 
+
 export default function ServicesShowcase2026V3() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -95,4 +96,3 @@ export default function ServicesShowcase2026V3() {
                     <div className="text-white font-medium">{contactInfo.address}</div>
                     <div className="text-gray-400 text-sm">Address</div>
   );
-};

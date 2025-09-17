@@ -7,4 +7,6 @@ const AdvancedSEOStructuredData: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedSEOStructuredData;

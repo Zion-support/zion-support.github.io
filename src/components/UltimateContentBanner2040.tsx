@@ -7,4 +7,6 @@ const UltimateContentBanner2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentBanner2040;

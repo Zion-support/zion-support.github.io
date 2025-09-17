@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AdvancedAutomationSolutions2026PromotionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-emerald-900 via-teal-900 to-emerald-900 overflow-hidden">
@@ -45,4 +46,3 @@ export default function AdvancedAutomationSolutions2026PromotionBanner() {
             >
               Get Started
   );
-};

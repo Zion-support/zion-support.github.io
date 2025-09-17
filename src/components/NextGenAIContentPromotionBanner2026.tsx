@@ -143,4 +143,6 @@ const NextGenAIContentPromotionBanner2026 = () => {
     </AnimatePresence>
   );
 
+};
+
 export default NextGenAIContentPromotionBanner2026;

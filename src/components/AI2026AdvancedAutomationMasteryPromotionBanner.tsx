@@ -7,4 +7,6 @@ const AI2026AdvancedAutomationMasteryPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026AdvancedAutomationMasteryPromotionBanner;

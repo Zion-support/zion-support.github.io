@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumComputingBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white">
@@ -76,4 +77,3 @@ export default function QuantumComputingBreakthroughBanner() {
             >
               🔥 Quantum Webinars
   );
-};

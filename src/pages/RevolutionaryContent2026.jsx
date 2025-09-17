@@ -202,7 +202,6 @@ const RevolutionaryContent2026 = () => {
                 </Link>
               </motion.div>
             );
-};
           })}
         </motion.div>
         {/* Bottom CTA */}
@@ -240,5 +239,6 @@ const RevolutionaryContent2026 = () => {
       </div>
     </div>
   );
+
 
 export default RevolutionaryContent2026;

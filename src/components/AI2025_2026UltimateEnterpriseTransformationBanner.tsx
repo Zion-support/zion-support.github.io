@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowRightIconSparklesIconChartBarIconCpuChipIcon } from '@heroicons/react/24/outline';
 };
 
+
 export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
   return (
     <section className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 overflow-hidden">
@@ -69,4 +70,3 @@ export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
   );
-};

@@ -11,4 +11,6 @@ const SocialProofShowcase2034 = () => {
     </div>
   );
 
+};
+
 export default SocialProofShowcase2034;

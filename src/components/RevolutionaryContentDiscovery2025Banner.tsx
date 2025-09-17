@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsers
 };
 
+
 export default function RevolutionaryContentDiscovery2025Banner() {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
@@ -106,4 +107,3 @@ export default function RevolutionaryContentDiscovery2025Banner() {
                 <Users className="w-4 h-4 mr-2" />
                 Get Consultation
   );
-};

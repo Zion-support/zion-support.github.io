@@ -361,4 +361,6 @@ const TechnologyTrends2026Blog: React.FC = () => {
     </div>
   );
 
+};
+
 export default TechnologyTrends2026Blog;

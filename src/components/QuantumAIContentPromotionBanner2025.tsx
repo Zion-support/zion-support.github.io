@@ -170,4 +170,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
     </AnimatePresence>
   );
 
+};
+
 export default QuantumAIContentPromotionBanner2025;

@@ -7,4 +7,6 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AutonomousEnterpriseContentShowcase;

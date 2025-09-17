@@ -7,4 +7,6 @@ const RevolutionaryContentAdvertising: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentAdvertising;

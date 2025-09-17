@@ -16,4 +16,6 @@ const QuantumComputingBreakthrough2035: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumComputingBreakthrough2035;

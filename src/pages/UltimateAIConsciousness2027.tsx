@@ -16,4 +16,6 @@ const UltimateAIConsciousness2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAIConsciousness2027;

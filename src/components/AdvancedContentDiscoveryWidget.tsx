@@ -3,6 +3,7 @@ import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AdvancedContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('trending');
   const contentCategories = {
@@ -209,5 +210,6 @@ export default function AdvancedContentDiscoveryWidget() {
             <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
               Subscribe
   );
+
 
 export default AdvancedContentDiscoveryWidget;

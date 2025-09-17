@@ -7,4 +7,6 @@ const AI2035SingularityPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2035SingularityPromotionBanner;

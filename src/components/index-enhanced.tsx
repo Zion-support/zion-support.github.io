@@ -11,4 +11,6 @@ const index-enhanced = () => {
     </div>
   );
 
+};
+
 export default index-enhanced;

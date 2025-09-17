@@ -7,4 +7,6 @@ const RevolutionaryNewsletterSignup: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryNewsletterSignup;

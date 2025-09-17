@@ -16,4 +16,6 @@ const AutonomousTechEcosystem2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default AutonomousTechEcosystem2030;

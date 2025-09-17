@@ -7,4 +7,6 @@ const AIImplementationGuideBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIImplementationGuideBanner;

@@ -7,4 +7,6 @@ const NextGenInnovationBanner2041: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenInnovationBanner2041;

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025NewContentPromotionBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
@@ -91,4 +92,3 @@ export default function AI2025NewContentPromotionBanner() {
             >
               💬 Get Expert Consultation
   );
-};

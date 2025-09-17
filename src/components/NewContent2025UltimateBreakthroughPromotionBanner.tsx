@@ -7,4 +7,6 @@ const NewContent2025UltimateBreakthroughPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2025UltimateBreakthroughPromotionBanner;

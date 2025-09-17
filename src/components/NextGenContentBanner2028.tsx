@@ -7,4 +7,6 @@ const NextGenContentBanner2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenContentBanner2028;

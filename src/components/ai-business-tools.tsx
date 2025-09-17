@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 };
 
+
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {
@@ -402,5 +403,6 @@ export default function AIBusinessToolsPage() {
               Explore More Tools
     </>
   );
+
 
 export default ai-business-tools;

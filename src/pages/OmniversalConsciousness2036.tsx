@@ -273,4 +273,6 @@ const OmniversalConsciousness2036: React.FC = () => {
     </div>
   );
 
+};
+
 export default OmniversalConsciousness2036;

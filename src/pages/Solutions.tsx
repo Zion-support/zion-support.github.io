@@ -11,4 +11,6 @@ const Solutions = () => {
     </div>
   );
 
+};
+
 export default Solutions;

@@ -7,4 +7,6 @@ const SmartContentManager: React.FC = () => {
     </div>
   );
 
+};
+
 export default SmartContentManager;

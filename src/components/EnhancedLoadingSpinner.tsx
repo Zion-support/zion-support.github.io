@@ -7,5 +7,7 @@ const EnhancedLoadingSpinner: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedLoadingSpinner;
 </div></div></div></div></div></div></div></div>

@@ -29,4 +29,6 @@ const BlogPost2025Q4: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlogPost2025Q4;

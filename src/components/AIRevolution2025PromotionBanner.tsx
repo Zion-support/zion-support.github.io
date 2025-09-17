@@ -132,5 +132,7 @@ const AIRevolution2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIRevolution2025PromotionBanner;
 </div></div></div>

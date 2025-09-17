@@ -11,4 +11,6 @@ const _app = () => {
     </div>
   );
 
+};
+
 export default _app;

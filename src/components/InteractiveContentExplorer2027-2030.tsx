@@ -7,4 +7,6 @@ const InteractiveContentExplorer2027-2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveContentExplorer2027-2030;

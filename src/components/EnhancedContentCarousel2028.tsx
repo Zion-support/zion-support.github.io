@@ -7,5 +7,7 @@ const EnhancedContentCarousel2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentCarousel2028;
 </p></p>

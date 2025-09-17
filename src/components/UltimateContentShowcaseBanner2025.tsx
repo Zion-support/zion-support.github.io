@@ -11,4 +11,6 @@ const UltimateContentShowcaseBanner2025 = () => {
     </div>
   );
 
+};
+
 export default UltimateContentShowcaseBanner2025;

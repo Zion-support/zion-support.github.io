@@ -7,6 +7,8 @@ const AnalyticsIntegration2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default function AnalyticsIntegration2026() {
   useEffect(() => {
     // Google Analytics 4 integration

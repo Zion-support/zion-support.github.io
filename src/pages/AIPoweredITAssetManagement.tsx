@@ -11,4 +11,6 @@ const AIPoweredITAssetManagement = () => {
     </div>
   );
 
+};
+
 export default AIPoweredITAssetManagement;

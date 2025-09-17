@@ -174,4 +174,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AISolutionsComprehensive2025;

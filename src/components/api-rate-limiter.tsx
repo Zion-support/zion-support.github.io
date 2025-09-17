@@ -5,6 +5,7 @@ import Button from '../components/ui/Button';
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 };
 
+
 export default function APIRateLimiterPage() {
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
@@ -306,7 +307,7 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
-  }
+  };
 console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
@@ -322,7 +323,7 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
-  }
+  };
 console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
@@ -403,5 +404,6 @@ print('Rate Limit Info:', {
               View Pricing
     </>
   );
+
 
 export default api-rate-limiter;

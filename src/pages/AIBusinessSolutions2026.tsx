@@ -11,4 +11,6 @@ const AIBusinessSolutions2026 = () => {
     </div>
   );
 
+};
+
 export default AIBusinessSolutions2026;

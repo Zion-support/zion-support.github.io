@@ -7,4 +7,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedPerformanceMonitor;

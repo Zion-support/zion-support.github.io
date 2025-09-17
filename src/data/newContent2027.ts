@@ -47,4 +47,4 @@ The consciousness revolution is here, and it's transforming everything we know a
     featured: true,
     imageUrl: "/images/blog/ai-consciousness-revolution-2027.jpg",
     slug: "ai-2027-consciousness-revolution-self-aware-systems"
-  }
+  };

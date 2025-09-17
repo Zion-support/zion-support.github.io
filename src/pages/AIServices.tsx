@@ -11,4 +11,6 @@ const AIServices = () => {
     </div>
   );
 
+};
+
 export default AIServices;

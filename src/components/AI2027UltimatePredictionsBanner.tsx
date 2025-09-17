@@ -7,4 +7,6 @@ const AI2027UltimatePredictionsBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2027UltimatePredictionsBanner;

@@ -7,4 +7,6 @@ const ComprehensiveTechShowcase2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveTechShowcase2026;

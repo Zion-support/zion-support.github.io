@@ -16,4 +16,6 @@ const CosmicAIConsciousness2029: React.FC = () => {
     </div>
   );
 
+};
+
 export default CosmicAIConsciousness2029;

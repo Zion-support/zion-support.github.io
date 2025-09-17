@@ -7,4 +7,6 @@ const UltimateAI2026Showcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAI2026Showcase;

@@ -16,4 +16,6 @@ const NextGenQuantumComputing2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenQuantumComputing2025;

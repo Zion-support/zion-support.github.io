@@ -7,5 +7,7 @@ const TestimonialShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default TestimonialShowcase;
 </p></p></p></p>

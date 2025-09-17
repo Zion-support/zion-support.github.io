@@ -16,4 +16,6 @@ const InterdimensionalAI2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalAI2030;

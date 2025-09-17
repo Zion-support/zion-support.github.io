@@ -7,4 +7,6 @@ const ConsciousnessAI2025RevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default ConsciousnessAI2025RevolutionBanner;

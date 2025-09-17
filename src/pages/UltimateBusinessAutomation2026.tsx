@@ -16,4 +16,6 @@ const UltimateBusinessAutomation2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateBusinessAutomation2026;

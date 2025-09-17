@@ -24,11 +24,13 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       type,
       disabled
     });
-  }
+  };
   return (
     <button type={type} className={classes} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );
+
+};
 
 export default Button;

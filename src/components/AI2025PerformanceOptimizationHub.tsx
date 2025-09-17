@@ -7,4 +7,6 @@ const AI2025PerformanceOptimizationHub: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025PerformanceOptimizationHub;

@@ -11,4 +11,6 @@ const Homepage2025 = () => {
     </div>
   );
 
+};
+
 export default Homepage2025;

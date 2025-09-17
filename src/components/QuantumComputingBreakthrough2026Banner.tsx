@@ -7,4 +7,6 @@ const QuantumComputingBreakthrough2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumComputingBreakthrough2026Banner;

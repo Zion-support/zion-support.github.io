@@ -11,4 +11,6 @@ const ServiceLandingTemplate = () => {
     </div>
   );
 
+};
+
 export default ServiceLandingTemplate;

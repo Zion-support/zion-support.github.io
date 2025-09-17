@@ -189,4 +189,6 @@ const FutureTechPredictions2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default FutureTechPredictions2025;

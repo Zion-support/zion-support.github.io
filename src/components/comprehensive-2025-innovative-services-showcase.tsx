@@ -171,7 +171,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>
@@ -221,7 +220,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>
@@ -264,5 +262,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
       </section>
     </Layout>
   );
+
 
 export default Comprehensive2025InnovativeServicesShowcase;

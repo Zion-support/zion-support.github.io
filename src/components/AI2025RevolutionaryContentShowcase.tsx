@@ -7,4 +7,6 @@ const AI2025RevolutionaryContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025RevolutionaryContentShowcase;

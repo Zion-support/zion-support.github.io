@@ -7,5 +7,7 @@ const AISolutions2025UltimatePromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AISolutions2025UltimatePromotionBanner;
 </p></p>

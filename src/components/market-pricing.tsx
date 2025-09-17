@@ -7,6 +7,7 @@ import {
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
   const markets = [
@@ -661,5 +662,6 @@ export default function MarketPricing() {
               >
                 Get Custom Quote
   );
+
 
 export default MarketPricing;

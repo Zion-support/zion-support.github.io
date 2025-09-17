@@ -89,5 +89,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechRevolutionBanner;
 </div></div>

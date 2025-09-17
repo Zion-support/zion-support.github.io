@@ -165,4 +165,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentShowcase2025;

@@ -7,4 +7,6 @@ const UltimateAutonomousEnterpriseBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAutonomousEnterpriseBanner;

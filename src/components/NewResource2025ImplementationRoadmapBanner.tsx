@@ -7,4 +7,6 @@ const NewResource2025ImplementationRoadmapBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewResource2025ImplementationRoadmapBanner;

@@ -7,4 +7,6 @@ const InnovationShowcaseBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default InnovationShowcaseBanner;

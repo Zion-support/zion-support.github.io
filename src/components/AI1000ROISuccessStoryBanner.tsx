@@ -7,4 +7,6 @@ const AI1000ROISuccessStoryBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI1000ROISuccessStoryBanner;

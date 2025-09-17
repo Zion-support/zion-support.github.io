@@ -144,5 +144,7 @@ const AI2025SuccessStoriesPromotionBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default AI2025SuccessStoriesPromotionBanner;
 </div></div></div></div>

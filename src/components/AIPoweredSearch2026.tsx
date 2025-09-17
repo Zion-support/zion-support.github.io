@@ -7,5 +7,7 @@ const AIPoweredSearch2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIPoweredSearch2026;
 </p></p>

@@ -7,4 +7,6 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default PostHumanBusinessOperationsPromotionBanner;

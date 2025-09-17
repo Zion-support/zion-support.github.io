@@ -7,5 +7,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AutonomousOperationsContentShowcase;
 </p></p></p>

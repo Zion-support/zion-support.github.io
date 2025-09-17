@@ -146,4 +146,6 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default AI2026QuantumConsciousnessBreakthroughBanner;

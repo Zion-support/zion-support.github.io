@@ -7,5 +7,7 @@ const ModernPerformanceMonitor: React.FC = () => {
     </div>
   );
 
+};
+
 export default ModernPerformanceMonitor;
 </p></p>

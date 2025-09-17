@@ -7,4 +7,6 @@ const TrendingContentSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default TrendingContentSection;

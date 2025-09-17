@@ -166,5 +166,7 @@ const quantum-ai-neural-network-platform: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumAINeuralNetworkPlatform;
 </div></div></div></div>

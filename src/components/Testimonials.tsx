@@ -58,13 +58,11 @@ const Testimonials: React.FC = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
-};
   };
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
-};
   };
   const currentTestimonial = testimonials[currentIndex];
   return (
@@ -145,5 +143,6 @@ const Testimonials: React.FC = () => {
       </div>
     </section>
   );
+
 
 export default Testimonials;

@@ -105,5 +105,5 @@ export const safeStorage = {
         return false;
       }
     }
-  }
+  };
 export default safeStorage;

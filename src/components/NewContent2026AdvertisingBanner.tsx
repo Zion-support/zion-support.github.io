@@ -230,4 +230,5 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
     </AnimatePresence>
   );
 
+
 export default NewContent2026AdvertisingBanner;

@@ -197,4 +197,6 @@ const RevolutionaryAIConsciousness2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryAIConsciousness2025;

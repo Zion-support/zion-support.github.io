@@ -233,4 +233,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
     </AnimatePresence>
   );
 
+};
+
 export default PostQuantumConsciousnessBanner2026;

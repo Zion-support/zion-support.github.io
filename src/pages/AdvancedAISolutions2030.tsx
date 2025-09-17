@@ -16,4 +16,6 @@ const AdvancedAISolutions2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedAISolutions2030;

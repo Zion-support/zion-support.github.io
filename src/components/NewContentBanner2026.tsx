@@ -167,5 +167,7 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
     </AnimatePresence>
   );
 
+};
+
 export default NewContentBanner2026;
 </div></div>

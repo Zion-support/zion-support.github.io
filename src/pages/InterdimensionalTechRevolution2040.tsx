@@ -11,4 +11,6 @@ const InterdimensionalTechRevolution2040 = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalTechRevolution2040;

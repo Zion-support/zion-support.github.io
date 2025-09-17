@@ -16,4 +16,6 @@ const UniversalTechMastery2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default UniversalTechMastery2030;

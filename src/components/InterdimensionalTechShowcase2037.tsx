@@ -7,4 +7,6 @@ const InterdimensionalTechShowcase2037: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalTechShowcase2037;

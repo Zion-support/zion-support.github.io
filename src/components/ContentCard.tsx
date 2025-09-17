@@ -7,5 +7,7 @@ const ContentCard: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentCard;
 </div></div>

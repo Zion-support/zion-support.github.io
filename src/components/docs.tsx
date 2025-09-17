@@ -11,4 +11,6 @@ const docs = () => {
     </div>
   );
 
+};
+
 export default docs;

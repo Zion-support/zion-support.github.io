@@ -7,4 +7,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default BusinessIntelligenceDashboard;

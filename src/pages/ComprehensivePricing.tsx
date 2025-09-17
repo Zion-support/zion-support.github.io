@@ -11,4 +11,6 @@ const ComprehensivePricing = () => {
     </div>
   );
 
+};
+
 export default ComprehensivePricing;

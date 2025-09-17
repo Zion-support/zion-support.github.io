@@ -22,13 +22,13 @@ export const DynamicPieChart = dynamic(
   { 
     loading: LoadingSkeleton,
     ssr: false 
-  }
+  };
 export const DynamicBarChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.BarChart })),
   { 
     loading: LoadingSkeleton,
     ssr: false 
-  }
+  };
 // TODO: Uncomment when these components are available
 // export const DynamicPDFGenerator = dynamic(
 //   () => import('../components/pdf/PDFGenerator'),
@@ -64,7 +64,7 @@ export const DynamicVirtualList = dynamic(
   { 
     loading: LoadingSkeleton,
     ssr: false 
-  }
+  };
 // Usage examples:
 // Replace: import Chart from '../components/charts/Chart';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';

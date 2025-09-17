@@ -323,4 +323,6 @@ const EnterpriseSolutions2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnterpriseSolutions2025;

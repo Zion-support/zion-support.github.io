@@ -82,4 +82,5 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
     </div>
   );
 
+
 export default ScrollAnimation;

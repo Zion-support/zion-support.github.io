@@ -7,5 +7,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedTestimonialsSection;
 </div></div></div>

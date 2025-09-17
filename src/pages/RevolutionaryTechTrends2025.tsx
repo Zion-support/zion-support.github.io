@@ -121,7 +121,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
               );
-};
             })}
           </div>
         </div>
@@ -151,5 +150,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
       </section>
     </div>
   );
+
 
 export default RevolutionaryTechTrends2025;

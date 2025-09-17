@@ -7,5 +7,7 @@ const ContentSearch: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentSearch;
 </p></p></p>

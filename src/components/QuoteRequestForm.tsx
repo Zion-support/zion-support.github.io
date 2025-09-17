@@ -7,4 +7,6 @@ const QuoteRequestForm: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuoteRequestForm;

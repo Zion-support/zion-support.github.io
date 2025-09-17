@@ -186,4 +186,6 @@ const RevolutionaryContentPromotionBanner2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentPromotionBanner2040;

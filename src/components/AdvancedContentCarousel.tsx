@@ -7,4 +7,6 @@ const AdvancedContentCarousel: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedContentCarousel;

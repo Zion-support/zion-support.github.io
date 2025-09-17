@@ -31,6 +31,7 @@ interface UserSession {
   };
 };
 
+
 export default function AdvancedMonitoring() {
   const [errorsetErrors] = useState<ErrorLog[]>([]);
   const [performancesetPerformance] = useState<PerformanceMetrics | null>(null);
@@ -278,7 +279,7 @@ export default function AdvancedMonitoring() {
   // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
-  }
+  };
   return (
     <div className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg text-sm z-50 max-w-md">
       <div className="flex items-center justify-between mb-4">
@@ -340,5 +341,6 @@ export default function AdvancedMonitoring() {
               ))}
       )}
   );
+
 
 export default AdvancedMonitoring;

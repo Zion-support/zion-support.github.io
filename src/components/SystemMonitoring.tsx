@@ -7,4 +7,6 @@ const SystemMonitoring: React.FC = () => {
     </div>
   );
 
+};
+
 export default SystemMonitoring;

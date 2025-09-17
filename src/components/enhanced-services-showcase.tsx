@@ -20,6 +20,7 @@ import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
 };
 
+
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -427,7 +428,6 @@ export default function EnhancedServicesShowcase() {
                   View Pricing
                   <DollarSign className="ml-2 w-6 h-6" />
   );
-};
 // Button component (if not imported)
 const Button = ({ 
   href, 
@@ -460,10 +460,8 @@ const Button = ({
       <a href={href} className={classes}>
         {children}
     );
-};
-  }
+  };
   return (
     <button onClick={onClick} className={classes}>
       {children}
   );
-};

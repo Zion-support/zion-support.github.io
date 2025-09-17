@@ -11,4 +11,6 @@ const AIInnovationHub2025 = () => {
     </div>
   );
 
+};
+
 export default AIInnovationHub2025;

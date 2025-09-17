@@ -11,4 +11,6 @@ const UltimateInteractiveShowcase = () => {
     </div>
   );
 
+};
+
 export default UltimateInteractiveShowcase;

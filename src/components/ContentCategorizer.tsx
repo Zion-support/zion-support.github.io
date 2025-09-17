@@ -7,4 +7,6 @@ const ContentCategorizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContentCategorizer;

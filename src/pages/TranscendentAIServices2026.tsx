@@ -289,4 +289,6 @@ const TranscendentAIServices2026 = () => {
     </div>
   );
 
+};
+
 export default TranscendentAIServices2026;

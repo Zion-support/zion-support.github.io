@@ -7,4 +7,6 @@ const SEOOptimizedContentHub: React.FC = () => {
     </div>
   );
 
+};
+
 export default SEOOptimizedContentHub;

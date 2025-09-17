@@ -7,4 +7,6 @@ const AI2025UltimateBreakthrough100000ROIBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateBreakthrough100000ROIBanner;

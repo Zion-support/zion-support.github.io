@@ -16,4 +16,6 @@ const UltimateAIBreakthrough2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAIBreakthrough2025;

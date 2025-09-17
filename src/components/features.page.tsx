@@ -11,4 +11,6 @@ const features.page = () => {
     </div>
   );
 
+};
+
 export default features.page;

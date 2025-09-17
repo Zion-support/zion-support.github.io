@@ -171,4 +171,6 @@ const RevolutionaryCTASection2034: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryCTASection2034;

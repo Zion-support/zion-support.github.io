@@ -172,7 +172,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
                   </CardContent>
                 </Card>
               );
-};
             })}
           </div>
         </div>
@@ -229,5 +228,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default ConsciousAIRevolution2025;

@@ -7,4 +7,6 @@ const EnhancedContentShowcase= () => {
     </div>
   );
 
+};
+
 export default EnhancedContentShowcase;

@@ -7,4 +7,6 @@ const SuperPromotionalBanner= () => {
     </div>
   );
 
+};
+
 export default SuperPromotionalBanner;

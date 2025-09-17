@@ -198,4 +198,6 @@ const RevolutionaryContentPromotionBanner2026 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentPromotionBanner2026;

@@ -8,6 +8,7 @@ interface EngagementData {
   conversionRate: number;
 };
 
+
 export default function InteractiveEngagementWidget() {
   const [isVisiblesetIsVisible] = useState(false);
   const [engagementDatasetEngagementData] = useState<EngagementData>({
@@ -114,5 +115,6 @@ export default function InteractiveEngagementWidget() {
         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs py-2 px-3 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
           Join {engagementData.visitors.toLocaleString()}+ Successful Clients
   );
+
 
 export default InteractiveEngagementWidget;

@@ -7,4 +7,6 @@ const AIAutomationROICalculator: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIAutomationROICalculator;

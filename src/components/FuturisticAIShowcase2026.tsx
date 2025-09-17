@@ -265,4 +265,6 @@ const FuturisticAIShowcase2026 = () => {
     </div>
   );
 
+};
+
 export default FuturisticAIShowcase2026;

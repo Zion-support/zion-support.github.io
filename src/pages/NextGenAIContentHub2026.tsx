@@ -271,4 +271,6 @@ const NextGenAIContentHub2026 = () => {
     </div>
   );
 
+};
+
 export default NextGenAIContentHub2026;

@@ -52,8 +52,9 @@ const SECURITY_SERVICE_CATEGORIES = [
     description: 'Identity verification and access management',
     icon: Lock,
     services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
-  }
+  };
 };
+
 
 export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -203,7 +204,6 @@ export default function CybersecurityServicesPage() {
                       <Badge variant="secondary" className="bg-red-500/20 text-red-600">
                         {category.services.length} Services
                 );
-};
               })}
         {/* Security Services Showcase */}
         <section className="py-16 bg-zion-blue">
@@ -919,4 +919,3 @@ export default function CybersecurityServicesPage() {
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
       <TrustedBySection />
   );
-};

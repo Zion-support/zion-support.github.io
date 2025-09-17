@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2027FuturePredictionsPromotionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-rose-900 via-pink-900 to-rose-900 overflow-hidden">
@@ -45,4 +46,3 @@ export default function AI2027FuturePredictionsPromotionBanner() {
             >
               Get Started
   );
-};

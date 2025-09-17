@@ -170,5 +170,7 @@ const NewContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentShowcase2025;
 </p></p>

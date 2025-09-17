@@ -178,4 +178,6 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 
+};
+
 export default EnhancedNavigation;

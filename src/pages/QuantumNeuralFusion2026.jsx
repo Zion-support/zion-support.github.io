@@ -11,4 +11,6 @@ const QuantumNeuralFusion2026 = () => {
     </div>
   );
 
+};
+
 export default QuantumNeuralFusion2026;

@@ -7,4 +7,6 @@ const NewSuccessStoriesShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewSuccessStoriesShowcase2025;

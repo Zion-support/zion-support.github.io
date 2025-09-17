@@ -120,4 +120,6 @@ const PerformanceOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default PerformanceOptimizer;

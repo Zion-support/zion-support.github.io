@@ -7,4 +7,6 @@ const AdvancedSearch: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedSearch;

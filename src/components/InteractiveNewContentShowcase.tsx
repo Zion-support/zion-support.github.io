@@ -7,4 +7,6 @@ const InteractiveNewContentShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveNewContentShowcase;

@@ -7,4 +7,6 @@ const InteractiveDemoWidget: React.FC = () => {
     </div>
   );
 
+};
+
 export default InteractiveDemoWidget;

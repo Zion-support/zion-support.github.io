@@ -16,4 +16,6 @@ const RevolutionaryCaseStudies2025= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryCaseStudies2025;

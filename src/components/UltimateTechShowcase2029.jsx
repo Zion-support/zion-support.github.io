@@ -7,4 +7,6 @@ const UltimateTechShowcase2029= () => {
     </div>
   );
 
+};
+
 export default UltimateTechShowcase2029;

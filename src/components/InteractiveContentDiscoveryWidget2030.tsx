@@ -70,8 +70,9 @@ const contentItems: ContentItem[] = [
     icon: '🔬',
     featured: false,
     tags: ['artificial 'consciousness', 'synthetic 'minds', 'AI creativity']
-  }
+  };
 };
+
 
 export default function InteractiveContentDiscoveryWidget2030() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
@@ -91,7 +92,6 @@ export default function InteractiveContentDiscoveryWidget2030() {
         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
-};
     }
     setFilteredContent(filtered);
   }[selectedCategorysearchTerm]);
@@ -214,5 +214,6 @@ export default function InteractiveContentDiscoveryWidget2030() {
               >
                 Our Services
   );
+
 
 export default InteractiveContentDiscoveryWidget2030;

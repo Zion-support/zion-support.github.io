@@ -2,6 +2,7 @@
 import React{ useStateuseEffectuseRef } from 'react';
 };
 
+
 export default function AnimatedSuccessMetrics() {
   const [isVisiblesetIsVisible] = useState(false);
   const [countsetCounts] = useState({
@@ -58,7 +59,6 @@ export default function AnimatedSuccessMetrics() {
       },
       { threshold: 0.1 }
     );
-};
     if (ref.current) {
       observer.observe(ref.current);
     }
@@ -142,7 +142,6 @@ export default function AnimatedSuccessMetrics() {
                     ></div>
                   ))}
             );
-};
           })}
         {/* Additional Stats */}
         <div className="mt-16 text-center">
@@ -160,5 +159,6 @@ export default function AnimatedSuccessMetrics() {
                 <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Innovation</div>
   );
+
 
 export default AnimatedSuccessMetrics;

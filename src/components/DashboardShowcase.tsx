@@ -7,5 +7,7 @@ const DashboardShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default DashboardShowcase;
 </p></p></p>

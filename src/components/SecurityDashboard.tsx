@@ -7,4 +7,6 @@ const SecurityDashboard: React.FC = () => {
     </div>
   );
 
+};
+
 export default SecurityDashboard;

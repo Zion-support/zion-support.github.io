@@ -7,4 +7,6 @@ const UltimateBusinessRevolutionShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateBusinessRevolutionShowcase;

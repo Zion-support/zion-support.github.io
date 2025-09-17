@@ -7,4 +7,6 @@ const EnhancedErrorBoundary: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedErrorBoundary;

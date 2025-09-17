@@ -7,4 +7,6 @@ const InteractiveContentShowcase2025= () => {
     </div>
   );
 
+};
+
 export default InteractiveContentShowcase2025;

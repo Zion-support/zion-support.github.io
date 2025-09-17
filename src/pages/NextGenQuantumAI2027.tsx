@@ -16,4 +16,6 @@ const NextGenQuantumAI2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenQuantumAI2027;

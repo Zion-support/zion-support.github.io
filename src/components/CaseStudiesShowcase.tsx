@@ -7,4 +7,6 @@ const CaseStudiesShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default CaseStudiesShowcase;

@@ -2,6 +2,7 @@
 import React{ useState } from 'react';
 };
 
+
 export default function RevolutionaryNewsletterSignup2026() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -39,8 +40,7 @@ export default function RevolutionaryNewsletterSignup2026() {
                 <h4 className="font-bold mb-2">ROI Opportunities</h4>
                 <p className="text-sm text-gray-300">Exclusive investment and ROI opportunities</p>
     );
-};
-  }
+  };
   return (
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,5 +149,6 @@ export default function RevolutionaryNewsletterSignup2026() {
             >
               Exclusive Content
   );
+
 
 export default RevolutionaryNewsletterSignup2026;

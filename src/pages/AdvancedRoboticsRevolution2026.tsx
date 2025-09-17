@@ -16,4 +16,6 @@ const AdvancedRoboticsRevolution2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedRoboticsRevolution2026;

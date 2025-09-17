@@ -184,4 +184,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedHolographicReality2026;

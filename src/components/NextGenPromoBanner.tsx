@@ -7,4 +7,6 @@ const NextGenPromoBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenPromoBanner;

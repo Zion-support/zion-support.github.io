@@ -16,4 +16,6 @@ const QuantumSupremacy2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumSupremacy2027;

@@ -7,4 +7,6 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAutomationRevolutionShowcase;

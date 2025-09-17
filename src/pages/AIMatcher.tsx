@@ -16,4 +16,6 @@ const AIMatcher: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIMatcher;

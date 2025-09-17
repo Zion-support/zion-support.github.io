@@ -11,4 +11,6 @@ const SEOHead = () => {
     </div>
   );
 
+};
+
 export default SEOHead;

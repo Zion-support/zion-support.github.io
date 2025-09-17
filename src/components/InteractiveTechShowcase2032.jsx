@@ -7,4 +7,6 @@ const InteractiveTechShowcase2032= () => {
     </div>
   );
 
+};
+
 export default InteractiveTechShowcase2032;

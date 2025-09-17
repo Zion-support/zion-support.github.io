@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026UltimateInnovationShowcasePromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 text-white py-12">
@@ -55,4 +56,3 @@ export default function AI2026UltimateInnovationShowcasePromotionBanner() {
                   <span className="text-2xl">🔮</span>
                   <span className="text-sm">Predictive Analytics 2.0 - 99.9% accuracy</span>
   );
-};

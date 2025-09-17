@@ -10,4 +10,6 @@ const capabilities.page: React.FC = () => {
         ))}
   );
 
+};
+
 export default capabilities.page;

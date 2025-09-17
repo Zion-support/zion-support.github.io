@@ -155,4 +155,6 @@ const UltimateTechAdvertisingBanner2025: React.FC = () => {
     </section>
   );
 
+};
+
 export default UltimateTechAdvertisingBanner2025;

@@ -11,4 +11,6 @@ const open-app = () => {
     </div>
   );
 
+};
+
 export default open-app;

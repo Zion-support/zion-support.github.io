@@ -22,5 +22,5 @@ export const productionLogger = {
       console.info(...args);
     }
     }
-  }
+  };
 export default productionLogger;

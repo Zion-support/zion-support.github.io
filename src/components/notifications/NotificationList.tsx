@@ -11,4 +11,6 @@ const NotificationList = () => {
     </div>
   );
 
+};
+
 export default NotificationList;

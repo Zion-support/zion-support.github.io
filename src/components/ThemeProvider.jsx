@@ -7,4 +7,6 @@ const ThemeProvider= () => {
     </div>
   );
 
+};
+
 export default ThemeProvider;

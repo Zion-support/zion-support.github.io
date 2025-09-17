@@ -440,4 +440,6 @@ const FutureTechRevolution2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default FutureTechRevolution2026;

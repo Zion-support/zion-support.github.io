@@ -11,4 +11,6 @@ const TalentOnboardingSteps = () => {
     </div>
   );
 
+};
+
 export default TalentOnboardingSteps;

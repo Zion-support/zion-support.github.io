@@ -6,4 +6,6 @@ const AuthRoutes= () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+};
+
 export default AuthRoutes;

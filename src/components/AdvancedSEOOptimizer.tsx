@@ -7,5 +7,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedSEOOptimizer;
 </div></div></div></div></div>

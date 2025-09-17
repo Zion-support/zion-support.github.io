@@ -179,5 +179,7 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIInnovationHub2025PromotionBanner;
 </div></div></div></div>

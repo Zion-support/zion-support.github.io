@@ -7,4 +7,6 @@ const AI2026RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026RevolutionaryBreakthroughAnnouncementBanner;

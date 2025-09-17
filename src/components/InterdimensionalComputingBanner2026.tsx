@@ -130,4 +130,6 @@ const InterdimensionalComputingBanner2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalComputingBanner2026;

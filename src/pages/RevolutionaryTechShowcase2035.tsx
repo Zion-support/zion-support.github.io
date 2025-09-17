@@ -11,4 +11,6 @@ const RevolutionaryTechShowcase2035 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechShowcase2035;

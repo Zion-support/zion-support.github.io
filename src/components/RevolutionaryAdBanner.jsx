@@ -7,4 +7,6 @@ const RevolutionaryAdBanner= () => {
     </div>
   );
 
+};
+
 export default RevolutionaryAdBanner;

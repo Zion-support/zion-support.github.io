@@ -7,4 +7,6 @@ const ComprehensiveServices2028Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveServices2028Banner;

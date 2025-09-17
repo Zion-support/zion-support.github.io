@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightCalendarClockUserTrendingUpStarEyeThumbsUp
 };
 
+
 export default function FeaturedContentSection2025() {
   const featuredContent = [
     {
@@ -187,5 +188,6 @@ export default function FeaturedContentSection2025() {
             >
               Get Custom Content
   );
+
 
 export default FeaturedContentSection2025;

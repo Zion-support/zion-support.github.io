@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2026FuturePredictionsBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16">
@@ -63,4 +64,3 @@ export default function AI2026FuturePredictionsBreakthroughBanner() {
       <div className="absolute bottom-10 left-20 text-2xl animate-bounce delay-1000">🌌</div>
       <div className="absolute bottom-20 right-10 text-3xl animate-pulse delay-500">🔮</div>
   );
-};

@@ -16,4 +16,6 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedConsciousnessComputing2026;

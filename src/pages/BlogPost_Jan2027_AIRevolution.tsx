@@ -240,4 +240,6 @@ const BlogPost_Jan2027_AIRevolution: React.FC = () => {
     </div>
   );
 
+};
+
 export default BlogPost_Jan2027_AIRevolution;

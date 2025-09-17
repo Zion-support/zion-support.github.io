@@ -144,4 +144,6 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateBreakthrough2026Banner;

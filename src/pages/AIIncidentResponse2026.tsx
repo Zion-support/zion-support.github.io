@@ -11,4 +11,6 @@ const AIIncidentResponse2026 = () => {
     </div>
   );
 
+};
+
 export default AIIncidentResponse2026;

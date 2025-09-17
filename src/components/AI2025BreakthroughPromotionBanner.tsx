@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 };
 
+
 export default function AI2025BreakthroughPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 py-8">
@@ -63,4 +64,3 @@ export default function AI2025BreakthroughPromotionBanner() {
               <span className="text-green-400">✓</span>
               <span>Consciousness AI</span>
   );
-};

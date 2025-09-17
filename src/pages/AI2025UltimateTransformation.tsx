@@ -127,4 +127,6 @@ const AI2025UltimateTransformation: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2025UltimateTransformation;

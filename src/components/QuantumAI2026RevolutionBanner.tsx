@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumAI2026RevolutionBanner() {
   return (
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-16 px-4">
@@ -26,4 +27,3 @@ export default function QuantumAI2026RevolutionBanner() {
             >
               Join the Revolution
   );
-};

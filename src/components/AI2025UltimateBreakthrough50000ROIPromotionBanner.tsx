@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025UltimateBreakthrough50000ROIPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
@@ -82,4 +83,3 @@ export default function AI2025UltimateBreakthrough50000ROIPromotionBanner() {
               <div className="w-3 h-3 bg-purple-500 rounded-full mr-2 animate-pulse"></div>
               <span className="text-sm">Revolutionary Technology</span>
   );
-};

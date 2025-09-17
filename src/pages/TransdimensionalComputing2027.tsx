@@ -16,4 +16,6 @@ const TransdimensionalComputing2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default TransdimensionalComputing2027;

@@ -7,4 +7,6 @@ const ContactForm: React.FC = () => {
     </div>
   );
 
+};
+
 export default ContactForm;

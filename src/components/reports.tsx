@@ -234,5 +234,7 @@ const reports: React.FC = () => {
     </UltraAdvancedFuturisticBackground>
   );
 
+};
+
 export default ReportsPage;
 </div></div>

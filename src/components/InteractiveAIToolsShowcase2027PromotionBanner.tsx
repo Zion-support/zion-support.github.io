@@ -187,7 +187,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
                             <span className="text-blue-200">({category.count})</span>
                           </div>
                         );
-};
                       })}
                     </div>
                   </div>
@@ -246,6 +245,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default InteractiveAIToolsShowcase2027PromotionBanner;
 </div></div></div>

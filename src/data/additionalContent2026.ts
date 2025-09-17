@@ -52,7 +52,7 @@ export const ADDITIONAL_BLOG_POSTS_2026 = [
     isNew: true,
     urgency: "Trending",
     type: "blog"
-  }
+  };
 export const ADDITIONAL_SERVICES_2026 = [
   {
     id: "ai-transformation-consulting",
@@ -119,4 +119,4 @@ export const ADDITIONAL_SERVICES_2026 = [
     isNew: true,
     featured: true,
     icon: "autonomous-platform"
-  }
+  };

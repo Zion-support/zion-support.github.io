@@ -52,5 +52,5 @@ export const cartUtils = {
   // Get item from cart
   getItem: (cart, itemId) => {
     return cart.find(item => item.id === itemId);
-  }
+  };
 export default cartUtils;

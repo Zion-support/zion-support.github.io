@@ -15,6 +15,7 @@ import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-auton
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
 };
 
+
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -316,4 +317,3 @@ export default function UltimateServicesShowcase2029() {
       <UltraFuturisticFooter2029 />
     </>
   );
-};

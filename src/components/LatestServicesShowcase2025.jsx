@@ -304,4 +304,6 @@ const LatestServicesShowcase2025 = () => {
     </div>
   );
 
+};
+
 export default LatestServicesShowcase2025;

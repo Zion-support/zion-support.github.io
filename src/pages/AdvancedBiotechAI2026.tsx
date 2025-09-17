@@ -489,4 +489,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedBiotechAI2026;

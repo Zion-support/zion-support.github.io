@@ -11,4 +11,6 @@ const 500 = () => {
     </div>
   );
 
+};
+
 export default 500;

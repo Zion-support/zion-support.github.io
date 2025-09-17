@@ -15,6 +15,6 @@ const AccessibilityProvider: React.FC = () => {
         {children};
       </div>,
     </AccessibilityContext.Provider>)
-};
+
 
 export default AccessibilityProvider,

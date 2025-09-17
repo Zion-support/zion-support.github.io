@@ -16,4 +16,6 @@ const MetaverseIntegration2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default MetaverseIntegration2026;

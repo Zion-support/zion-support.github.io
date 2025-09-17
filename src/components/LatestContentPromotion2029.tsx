@@ -11,4 +11,6 @@ const LatestContentPromotion2029 = () => {
     </div>
   );
 
+};
+
 export default LatestContentPromotion2029;

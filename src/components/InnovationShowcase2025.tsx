@@ -7,5 +7,7 @@ const InnovationShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default InnovationShowcase2025;
 </p></p>

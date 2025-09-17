@@ -259,4 +259,6 @@ const ContentShowcaseBanner2026 = () => {
     </div>
   );
 
+};
+
 export default ContentShowcaseBanner2026;

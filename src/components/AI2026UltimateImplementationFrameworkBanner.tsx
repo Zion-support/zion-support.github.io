@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users } from 'lucide-react';
 };
 
+
 export default function AI2026UltimateImplementationFrameworkBanner() {
   return (
     <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -121,4 +122,3 @@ export default function AI2026UltimateImplementationFrameworkBanner() {
             Start Your AI Transformation
             <ArrowRight className="ml-2 w-5 h-5" />
   );
-};

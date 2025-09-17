@@ -18,19 +18,19 @@ const search_data: SearchResult[] = [;
     description: "Machine learning, computer vision, NLP, and AI solutions"
     url: "/ai-services"
     category: "Services"
-  }
+  };
   {
     title: "IT Services"
     description: "Cloud infrastructure, cybersecurity, and IT solutions"
     url: "/it-services"
     category: "Services"
-  }
+  };
   {
     title: "Micro SaaS"
     description: "Custom micro SaaS platforms and automation tools"
     url: "/micro-saas"
     category: "Services"
-  }
+  };
   {
     title: "Cloud Solutions",
     description: "AWS, Azure, GCP migration and cloud infrastructure",
@@ -42,7 +42,7 @@ const search_data: SearchResult[] = [;
     description: "Security audits, penetration testing, and compliance"
     url: "/cybersecurity"
     category: "Services"
-  }
+  };
   {
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
@@ -55,38 +55,38 @@ const search_data: SearchResult[] = [;
     description: "Complete digital transformation solutions"
     url: "/digital-transformation"
     category: "Solutions"
-  }
+  };
   {
     title: "Enterprise Solutions"
     description: "Large-scale enterprise technology solutions"
     url: "/enterprise-solutions"
     category: "Solutions"
-  }
+  };
   {
     title: "Startup Solutions"
     description: "Technology solutions for startups and SMBs"
     url: "/startup-solutions"
     category: "Solutions"
-  }
+  };
   // Industries
   {
     title: "Healthcare"
     description: "Technology solutions for healthcare industry"
     url: "/industries/healthcare"
     category: "Industries"
-  }
+  };
   {
     title: "Finance"
     description: "Financial technology and fintech solutions"
     url: "/industries/finance"
     category: "Industries"
-  }
+  };
   {
     title: "Education"
     description: "Educational technology and e-learning solutions"
     url: "/industries/education"
     category: "Industries"
-  }
+  };
   {
     title: "Manufacturing",
     description: "Industrial IoT and manufacturing automation",
@@ -99,31 +99,31 @@ const search_data: SearchResult[] = [;
     description: "Learn about Zion Tech Group and our mission"
     url: "/about"
     category: "Company"
-  }
+  };
   {
     title: "Contact"
     description: "Get in touch with our team"
     url: "/contact"
     category: "Company"
-  }
+  };
   {
     title: "Careers"
     description: "Join our team and build the future"
     url: "/careers"
     category: "Company"
-  }
+  };
   {
     title: "Blog"
     description: "Latest insights and technology trends"
     url: "/blog"
     category: "Company"
-  }
+  };
   {
     title: "Pricing"
     description: "Transparent pricing for all our services"
     url: "/pricing"
     category: "Company"
-  }
+  };
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -153,7 +153,7 @@ const search_data: SearchResult[] = [;
       setResults(filtered);
     } else {;
       setResults([]);
-};
+
 
 export default /**
  * SearchModal - Function description
@@ -189,7 +189,6 @@ if ( {) {
           item.description.toLowerCase ().includes (query.toLowerCase ()) ||;
           item.category.toLowerCase ().includes (query.toLowerCase ()),
       );
-};
       set_results (filtered);
     } else {
       set_results ([]);
@@ -222,7 +221,7 @@ if ( {) {
   };
   const handleRecentClick = (search: string) => {;
     setQuery(search);
-  }
+  };
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">;
@@ -279,7 +278,7 @@ if ( {) {
   $2
       handleResultClick (results[selected_index]);
     }
-  }
+  };
   const handleResultClick = (result: SearchResult) =>: any {
     // Add to recent searches;
     const new_recent = [;
@@ -290,10 +289,10 @@ if ( {) {
     local_storage.set_item ("recent - searches", JSON.stringify (new_recent));
     // Navigate to result;
     window.location.href = result.url;
-  }
+  };
   const handleRecentClick = (search: string) =>: any {
     set_query (search);
-  }
+  };
   // Check condition
 if (return null) {
   $2
@@ -367,5 +366,6 @@ if (return null) {
       </div>;
     </div>;
   );
+
 
 export default SearchModal;

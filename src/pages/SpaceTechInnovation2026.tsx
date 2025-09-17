@@ -674,4 +674,6 @@ const SpaceTechInnovation2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default SpaceTechInnovation2026;

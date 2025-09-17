@@ -11,4 +11,6 @@ const UltimateContentShowcase2026 = () => {
     </div>
   );
 
+};
+
 export default UltimateContentShowcase2026;

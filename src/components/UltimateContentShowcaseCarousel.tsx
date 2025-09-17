@@ -312,5 +312,7 @@ const UltimateContentShowcaseCarousel = () => {
     </div>
   );
 
+};
+
 export default UltimateContentShowcaseCarousel;
 </div></div>

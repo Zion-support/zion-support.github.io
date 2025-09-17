@@ -112,7 +112,7 @@ const featuredTools = [
     category: "Customer Service",
     description: "Advanced conversational AI with human-like responses.",
     status: "Production Ready"
-  }
+  };
 const liveDemos = [
   {
     title: "Neural Code Generation",
@@ -125,4 +125,4 @@ const liveDemos = [
     duration: "20 min",
     description: "See quantum algorithms process data 1000x faster.",
     complexity: "Advanced"
-  }
+  };

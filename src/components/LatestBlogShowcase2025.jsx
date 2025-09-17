@@ -310,4 +310,6 @@ const LatestBlogShowcase2025 = () => {
     </div>
   );
 
+};
+
 export default LatestBlogShowcase2025;

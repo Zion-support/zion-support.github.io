@@ -7,4 +7,6 @@ const AdvancedNeuralNetworks2025Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedNeuralNetworks2025Banner;

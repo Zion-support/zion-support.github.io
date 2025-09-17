@@ -70,7 +70,7 @@ const pricingTiers = [
     cta: 'Contact Sales',
     ctaLink: '/contact',
     popular: false
-  }
+  };
 const serviceCategories = [
   {
     name: 'AI & Consciousness Services',
@@ -99,13 +99,13 @@ const serviceCategories = [
     color: 'from-teal-500 to-emerald-500',
     services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
     description: 'Innovative business solutions for modern enterprises'
-  }
+  };
 const stats = [
   { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-};
+
 
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -378,4 +378,3 @@ export default function CuttingEdgePricing2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
     </>
   );
-};

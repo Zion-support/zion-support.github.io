@@ -119,4 +119,6 @@ const RevolutionaryTestimonialsShowcase: React.FC = () => {
               View All Case Studies
   );
 
+};
+
 export default RevolutionaryTestimonialsShowcase;

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function GlobalEnterpriseSuccessBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white">
@@ -60,4 +61,3 @@ export default function GlobalEnterpriseSuccessBanner() {
             <div className="text-lg text-green-400 font-bold">
               Sarah JohnsonCEOGlobal Enterprise Solutions
   );
-};

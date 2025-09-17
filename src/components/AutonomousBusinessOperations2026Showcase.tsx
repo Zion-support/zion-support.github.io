@@ -7,4 +7,6 @@ const AutonomousBusinessOperations2026Showcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default AutonomousBusinessOperations2026Showcase;

@@ -102,4 +102,4 @@ The technology combines quantum entanglement communication with advanced paralle
     featured: true,
     imageUrl: "/images/blog/interdimensional-business-2026.jpg",
     slug: "interdimensional-business-operating-multiple-realities"
-  }
+  };

@@ -11,4 +11,6 @@ const NextGenAIRevolution2027 = () => {
     </div>
   );
 
+};
+
 export default NextGenAIRevolution2027;

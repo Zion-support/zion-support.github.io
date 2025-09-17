@@ -36,7 +36,7 @@ class NotificationManager {
       this.permission = await Notification.requestPermission();
     }
     return this.permission;
-  }
+  };
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
     if (!('Notification' in window)) {
       console.warn('This browser does not support notifications');
@@ -105,7 +105,7 @@ class NotificationManager {
       this.permission = await Notification.requestPermission();
     }
     return this.permission;
-  }
+  };
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
     if (!('Notification' in window)) {
       console.warn('This browser does not support notifications');
@@ -150,7 +150,7 @@ class NotificationManager {
       console.error('Error showing notification:', error);
       return null;
     }
-  }
+  };
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -158,7 +158,7 @@ class NotificationManager {
       icon: '/icons/success.png',
       tag: 'success',
     });
-  }
+  };
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       console.warn('Failed to show notification:', error);
@@ -184,7 +184,7 @@ class NotificationManager {
       console.error('Error showing notification:', error);
       return null;
     }
-  }
+  };
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -192,7 +192,7 @@ class NotificationManager {
       icon: '/icons/success.png',
       tag: 'success',
     });
-  }
+  };
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -201,7 +201,7 @@ class NotificationManager {
       tag: 'error',
       requireInteraction: true,
     });
-  }
+  };
   showInfo(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -209,7 +209,7 @@ class NotificationManager {
       icon: '/icons/info.png',
       tag: 'info',
     });
-  }
+  };
   showWarning(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -217,7 +217,7 @@ class NotificationManager {
       icon: '/icons/warning.png',
       tag: 'warning',
     });
-  }
+  };
 export const notificationManager = new NotificationManager();
 export default notificationManager;
       requireInteraction: true
@@ -244,11 +244,11 @@ export default notificationManager;
       icon: '/icons/warning.png',
       tag: 'warning'
     });
-  }
+  };
 export default notifications;
       requireInteraction: true,
     });
-  }
+  };
   showInfo(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -256,7 +256,7 @@ export default notifications;
       icon: '/icons/info.png',
       tag: 'info',
     });
-  }
+  };
   showWarning(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -264,6 +264,6 @@ export default notifications;
       icon: '/icons/warning.png',
       tag: 'warning',
     });
-  }
+  };
 export const notificationManager = new NotificationManager();
 export default notificationManager;

@@ -7,4 +7,6 @@ const SecurityMonitor: React.FC = () => {
     </div>
   );
 
+};
+
 export default SecurityMonitor;

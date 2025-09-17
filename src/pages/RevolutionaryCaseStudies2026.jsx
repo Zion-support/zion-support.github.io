@@ -378,4 +378,6 @@ const RevolutionaryCaseStudies2026 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryCaseStudies2026;

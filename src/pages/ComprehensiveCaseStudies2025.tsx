@@ -16,4 +16,6 @@ const ComprehensiveCaseStudies2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveCaseStudies2025;

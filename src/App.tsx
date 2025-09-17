@@ -43,6 +43,8 @@ import TranscendentAI2027 from './pages/TranscendentAI2027';
 import QuantumConsciousnessRevolution2027 from './pages/QuantumConsciousnessRevolution2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import SpaceTimeComputing2027 from './pages/SpaceTimeComputing2027';
+};
+
 export default function App(): JSX.Element {
   return (
     <Router>

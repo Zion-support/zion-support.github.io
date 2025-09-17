@@ -312,4 +312,6 @@ const InnovationShowcase2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default InnovationShowcase2026;

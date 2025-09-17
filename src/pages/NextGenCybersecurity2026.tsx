@@ -16,4 +16,6 @@ const NextGenCybersecurity2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default NextGenCybersecurity2026;

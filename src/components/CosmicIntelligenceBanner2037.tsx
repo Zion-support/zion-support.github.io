@@ -7,4 +7,6 @@ const CosmicIntelligenceBanner2037: React.FC = () => {
     </div>
   );
 
+};
+
 export default CosmicIntelligenceBanner2037;

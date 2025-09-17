@@ -16,4 +16,6 @@ const NextGenAIConsciousness2025= () => {
     </div>
   );
 
+};
+
 export default NextGenAIConsciousness2025;

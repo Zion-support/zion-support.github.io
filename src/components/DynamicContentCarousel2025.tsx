@@ -209,4 +209,6 @@ const DynamicContentCarousel2025: React.FC = () => {
     </section>
   );
 
+};
+
 export default DynamicContentCarousel2025;

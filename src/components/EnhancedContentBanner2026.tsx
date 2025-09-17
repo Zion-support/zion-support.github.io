@@ -7,4 +7,6 @@ const EnhancedContentBanner2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedContentBanner2026;

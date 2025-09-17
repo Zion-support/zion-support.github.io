@@ -7,4 +7,6 @@ const UltimateTechShowcase2027-2030: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechShowcase2027-2030;

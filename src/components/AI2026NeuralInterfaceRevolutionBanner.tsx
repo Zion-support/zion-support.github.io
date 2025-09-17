@@ -7,5 +7,7 @@ const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026NeuralInterfaceRevolutionBanner;
 </p></p>

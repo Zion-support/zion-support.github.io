@@ -7,4 +7,6 @@ const ResponsiveTechGrid: React.FC = () => {
     </div>
   );
 
+};
+
 export default ResponsiveTechGrid;

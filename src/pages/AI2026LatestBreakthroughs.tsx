@@ -11,4 +11,6 @@ const AI2026LatestBreakthroughs = () => {
     </div>
   );
 
+};
+
 export default AI2026LatestBreakthroughs;

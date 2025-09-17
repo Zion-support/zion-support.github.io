@@ -16,4 +16,6 @@ const QuantumLeap2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumLeap2028;

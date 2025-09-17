@@ -174,7 +174,7 @@ const services: Service[] = [
     deliveryTime: '1-3 weeks',
     complexity: 'simple',
     tags: [', 'Training', 'Education', 'Skills', 'Workshops']
-  }
+  };
 const categories = [', 'All', 'Consulting', 'Development', 'Automation', 'Analytics', 'Security', 'Infrastructure', 'Integration'Education'];
 const pricingTypes = {
   free: { label: ''Free', 'color: 'bg-gray-100 text-gray-800' },
@@ -187,6 +187,7 @@ const complexityLevels = {
   complex: { label: ''Complex', 'color: 'text-orange-400' },
   expert: { label: ''Expert', 'color: 'text-red-400' }
 };
+
 
 export default function ComprehensiveServiceShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
@@ -470,5 +471,6 @@ export default function ComprehensiveServiceShowcase2025() {
                       Contact Sales
         )}
   );
+
 
 export default ComprehensiveServiceShowcase2025;

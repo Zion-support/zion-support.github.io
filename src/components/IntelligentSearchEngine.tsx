@@ -7,4 +7,6 @@ const IntelligentSearchEngine: React.FC = () => {
     </div>
   );
 
+};
+
 export default IntelligentSearchEngine;

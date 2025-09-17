@@ -11,4 +11,6 @@ const EquipmentDetail = () => {
     </div>
   );
 
+};
+
 export default EquipmentDetail;

@@ -11,4 +11,6 @@ const AI2027RevolutionaryBreakthroughBanner = () => {
     </div>
   );
 
+};
+
 export default AI2027RevolutionaryBreakthroughBanner;

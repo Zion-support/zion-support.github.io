@@ -5,6 +5,7 @@ import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 };
 
+
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const microSaasServices = [
@@ -2131,5 +2132,6 @@ export default function MicroSaasPage() {
               Contact Sales
     </>
   );
+
 
 export default micro-saas;

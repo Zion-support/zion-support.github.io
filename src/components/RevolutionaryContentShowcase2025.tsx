@@ -141,4 +141,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     </section>
   );
 
+};
+
 export default RevolutionaryContentShowcase2025;

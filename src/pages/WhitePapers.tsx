@@ -11,4 +11,6 @@ const WhitePapers = () => {
     </div>
   );
 
+};
+
 export default WhitePapers;

@@ -11,4 +11,6 @@ const DigitalTransformation2025 = () => {
     </div>
   );
 
+};
+
 export default DigitalTransformation2025;

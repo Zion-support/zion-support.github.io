@@ -7,4 +7,6 @@ const NewContentNavigationBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentNavigationBanner;

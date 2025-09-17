@@ -18,5 +18,5 @@ export const notifications = {
   },
   info: (message) => {
     notifications.show(message, 'info');
-  }
+  };
 export default notifications;

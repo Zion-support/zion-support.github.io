@@ -7,4 +7,6 @@ const NewContentShowcase2045: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContentShowcase2045;

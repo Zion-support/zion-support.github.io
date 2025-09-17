@@ -7,4 +7,6 @@ const TrendingContentSection2032: React.FC = () => {
     </div>
   );
 
+};
+
 export default TrendingContentSection2032;

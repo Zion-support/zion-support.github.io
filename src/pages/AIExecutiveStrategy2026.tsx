@@ -54,4 +54,6 @@ const AIExecutiveStrategy2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AIExecutiveStrategy2026;

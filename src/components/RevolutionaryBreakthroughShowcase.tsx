@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function RevolutionaryBreakthroughShowcase() {
   return (
     <div className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
@@ -95,4 +96,3 @@ export default function RevolutionaryBreakthroughShowcase() {
             >
               📺 Watch Live Demo
   );
-};

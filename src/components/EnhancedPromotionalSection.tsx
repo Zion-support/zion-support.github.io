@@ -7,4 +7,6 @@ const EnhancedPromotionalSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedPromotionalSection;

@@ -7,4 +7,6 @@ const RevolutionaryTestimonials2028: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTestimonials2028;

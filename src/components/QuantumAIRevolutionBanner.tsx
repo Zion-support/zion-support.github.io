@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightCpuBrainZapShieldTrendingUp
 };
 
+
 export default function QuantumAIRevolutionBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
@@ -92,4 +93,3 @@ export default function QuantumAIRevolutionBanner() {
             >
               Explore Quantum AI Services
   );
-};

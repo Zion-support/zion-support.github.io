@@ -7,4 +7,6 @@ const AI2026FutureVisionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026FutureVisionBanner;

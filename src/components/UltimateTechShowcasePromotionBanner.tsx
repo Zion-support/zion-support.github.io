@@ -119,5 +119,7 @@ const UltimateTechShowcasePromotionBanner = () => {
     </AnimatePresence>
   );
 
+};
+
 export default UltimateTechShowcasePromotionBanner;
 </div></div>

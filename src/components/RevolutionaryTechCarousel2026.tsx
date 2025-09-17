@@ -191,5 +191,7 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechCarousel2026;
 </p></p>

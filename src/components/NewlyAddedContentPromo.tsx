@@ -67,4 +67,5 @@ const NewlyAddedContentPromo: React.FC = () => {
 	);
 };
 
+
 export default NewlyAddedContentPromo;

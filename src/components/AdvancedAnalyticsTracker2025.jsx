@@ -30,4 +30,6 @@ const AdvancedAnalyticsTracker2025 = () => {
     </div>
   );
 
+};
+
 export default AdvancedAnalyticsTracker2025;

@@ -11,4 +11,6 @@ const alert-dialog = () => {
     </div>
   );
 
+};
+
 export default alert-dialog;

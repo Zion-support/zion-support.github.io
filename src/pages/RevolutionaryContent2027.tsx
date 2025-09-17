@@ -225,4 +225,6 @@ const RevolutionaryContent2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContent2027;

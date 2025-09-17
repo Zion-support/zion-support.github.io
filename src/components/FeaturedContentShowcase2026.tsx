@@ -230,4 +230,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
     </div>
   );
 
+};
+
 export default FeaturedContentShowcase2026;

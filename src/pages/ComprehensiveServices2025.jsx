@@ -11,4 +11,6 @@ const ComprehensiveServices2025 = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveServices2025;

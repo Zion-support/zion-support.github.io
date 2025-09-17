@@ -7,4 +7,6 @@ const AI2026FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026FuturePredictionsUltimateBreakthroughBanner;

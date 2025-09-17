@@ -7,4 +7,6 @@ const TranscendentContentCarousel2038: React.FC = () => {
     </div>
   );
 
+};
+
 export default TranscendentContentCarousel2038;

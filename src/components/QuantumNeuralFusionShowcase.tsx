@@ -7,4 +7,6 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default QuantumNeuralFusionShowcase;

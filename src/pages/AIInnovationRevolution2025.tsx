@@ -497,4 +497,6 @@ const AIInnovationRevolution2025 = () => {
     </div>
   );
 
+};
+
 export default AIInnovationRevolution2025;

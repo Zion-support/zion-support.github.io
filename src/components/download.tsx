@@ -11,4 +11,6 @@ const download = () => {
     </div>
   );
 
+};
+
 export default download;

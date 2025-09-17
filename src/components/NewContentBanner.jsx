@@ -89,4 +89,6 @@ const NewContentBanner = () => {
     </div>
   );
 
+};
+
 export default NewContentBanner;

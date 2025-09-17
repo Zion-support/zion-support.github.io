@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function NewContent2025ImplementationToolkitBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-500 via-pink-600 to-rose-700 text-white py-8 px-4">
@@ -36,4 +37,3 @@ export default function NewContent2025ImplementationToolkitBanner() {
             >
               Get Expert Help
   );
-};

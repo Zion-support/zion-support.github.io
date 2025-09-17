@@ -11,4 +11,6 @@ const AIBusinessSolutionsPromoBanner2026 = () => {
     </div>
   );
 
+};
+
 export default AIBusinessSolutionsPromoBanner2026;

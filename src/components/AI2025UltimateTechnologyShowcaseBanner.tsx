@@ -147,7 +147,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                       opacity="0.3"
                     />
                   );
-};
                 })}
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -162,5 +161,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
       </div>
     </div>
   );
+
 
 export default AI2025UltimateTechnologyShowcaseBanner;

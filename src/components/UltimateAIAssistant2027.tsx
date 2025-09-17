@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function UltimateAIAssistant2027() {
   const [currentCapabilitysetCurrentCapability] = useState(0);
   const [isTypingsetIsTyping] = useState(false);
@@ -196,5 +197,6 @@ export default function UltimateAIAssistant2027() {
             >
               Get Expert Demo
   );
+
 
 export default UltimateAIAssistant2027;

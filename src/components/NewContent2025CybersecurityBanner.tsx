@@ -7,4 +7,6 @@ const NewContent2025CybersecurityBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewContent2025CybersecurityBanner;

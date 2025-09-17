@@ -97,8 +97,8 @@ const serviceCategories = [
     services: [...realMicroSaasServices2025],
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
-  }
-};
+  };
+
 
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -113,7 +113,6 @@ export default function InnovativeServicesShowcase2025() {
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
     )
   );
-};
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
@@ -320,4 +319,3 @@ export default function InnovativeServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
-};

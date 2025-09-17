@@ -68,8 +68,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
         </button>
       </div>
     );
-};
-  }
+  };
   if (variant === 'compact') {
     return (
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
@@ -93,8 +92,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
         </form>
       </div>
     );
-};
-  }
+  };
   if (variant === 'floating') {
     return (
       <div className="fixed bottom-4 right-4 z-50">
@@ -126,8 +124,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
         </div>
       </div>
     );
-};
-  }
+  };
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12 text-white relative overflow-hidden">
       {/* Background Animation */}
@@ -236,5 +233,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
       </div>
     </div>
   );
+
 
 export default NewsletterSignup;

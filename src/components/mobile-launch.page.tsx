@@ -11,4 +11,6 @@ const mobile-launch.page = () => {
     </div>
   );
 
+};
+
 export default mobile-launch.page;

@@ -20,7 +20,7 @@ class FetchWithRetry {
   };
   private async sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  };
   private async fetchWithTimeout(url: string, options: RequestInit, timeout: number): Promise<Response> {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
@@ -35,7 +35,7 @@ class FetchWithRetry {
       clearTimeout(timeoutId);
       throw error;
     }
-  }
+  };
   async fetch<T = any>(url: string, options: FetchOptions = {}): Promise<FetchResult<T>> {
     const config = { ...this.defaultOptions, ...options };
     let lastError: Error | null = null;
@@ -94,10 +94,10 @@ class FetchWithRetry {
       error: lastError?.message || 'Unknown error occurred',
       retryCount: config.retries!
     };
-  }
+  };
   async get<T = any>(url: string, options: Omit<FetchOptions, 'method'> = {}): Promise<FetchResult<T>> {
     return this.fetch<T>(url, { ...options, method: 'GET' });
-  }
+  };
   async post<T = any>(url: string, data?: any, options: Omit<FetchOptions, 'method' | 'body'> = {}): Promise<FetchResult<T>> {
     return this.fetch<T>(url, {
       ...options,
@@ -108,7 +108,7 @@ class FetchWithRetry {
         ...options.headers
       }
     });
-  }
+  };
   async put<T = any>(url: string, data?: any, options: Omit<FetchOptions, 'method' | 'body'> = {}): Promise<FetchResult<T>> {
     return this.fetch<T>(url, {
       ...options,
@@ -119,13 +119,13 @@ class FetchWithRetry {
         ...options.headers
       }
     });
-  }
+  };
   async delete<T = any>(url: string, options: Omit<FetchOptions, 'method'> = {}): Promise<FetchResult<T>> {
     return this.fetch<T>(url, { ...options, method: 'DELETE' });
-  }
+  };
   setDefaultOptions(options: Partial<FetchOptions>): void {
     this.defaultOptions = { ...this.defaultOptions, ...options };
-  }
+  };
 // Create default instance
 const fetchWithRetry = new FetchWithRetry();
 // Export convenience functions

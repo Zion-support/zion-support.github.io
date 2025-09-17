@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumComputingSolutions2025Banner() {
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 py-16 px-4">
@@ -82,4 +83,3 @@ export default function QuantumComputingSolutions2025Banner() {
             <div className="text-sm font-bold text-white">Financial Modeling</div>
             <div className="text-xs text-yellow-400">10,000x ROI</div>
   );
-};

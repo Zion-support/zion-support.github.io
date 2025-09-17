@@ -3,6 +3,7 @@ import React from 'react';
 CogBarChart3TargetArrowRightCheckCircle
 };
 
+
 export default function EnterpriseAutomation2026Banner() {
   return (
     <section className="bg-gradient-to-r from-green-800 via-blue-800 to-purple-800 text-white py-16">
@@ -67,4 +68,3 @@ export default function EnterpriseAutomation2026Banner() {
             <CheckCircle className="w-4 h-4 mr-2" />
             Join 500+ enterprises achieving 340% ROI with AI automation
   );
-};

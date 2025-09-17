@@ -73,6 +73,7 @@ const news: React.FC = () => {
       tags: ["Awards", "Financial Services", "Quantum Computing"]
 };
 
+
 export default function News() {
   const featuredNews = [
     {
@@ -86,7 +87,7 @@ export default function News() {
       image: '/api/placeholder/600/400',
       tags: ['AI', 'Quantum Computing', 'Innovation'],
 import Head from 'next/head';
-};
+
 
 export default function NewsPage() {
   const newsArticles = [
@@ -261,7 +262,7 @@ import {
   BookOpen, Globe, Video
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-};
+
 
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -964,7 +965,6 @@ export default function News() {
               >
                 Contact Our Team
   );
-};
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -983,7 +983,6 @@ export default function News() {
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
   );
-};
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
       date: "2025-01-18",
@@ -1143,4 +1142,3 @@ export default function News() {
                     Subscribe
     </>
   );
-};

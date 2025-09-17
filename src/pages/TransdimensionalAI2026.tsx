@@ -261,4 +261,6 @@ const TransdimensionalAI2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default TransdimensionalAI2026;

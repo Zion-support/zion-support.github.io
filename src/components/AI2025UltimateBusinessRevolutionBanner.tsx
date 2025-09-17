@@ -165,4 +165,6 @@ const AI2025UltimateBusinessRevolutionBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default AI2025UltimateBusinessRevolutionBanner;

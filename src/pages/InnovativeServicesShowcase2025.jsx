@@ -11,4 +11,6 @@ const InnovativeServicesShowcase2025 = () => {
     </div>
   );
 
+};
+
 export default InnovativeServicesShowcase2025;

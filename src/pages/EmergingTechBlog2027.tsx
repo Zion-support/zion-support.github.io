@@ -16,4 +16,6 @@ const EmergingTechBlog2027: React.FC = () => {
     </div>
   );
 
+};
+
 export default EmergingTechBlog2027;

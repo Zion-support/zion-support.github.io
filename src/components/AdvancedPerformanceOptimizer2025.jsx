@@ -30,4 +30,6 @@ const AdvancedPerformanceOptimizer2025 = () => {
     </div>
   );
 
+};
+
 export default AdvancedPerformanceOptimizer2025;

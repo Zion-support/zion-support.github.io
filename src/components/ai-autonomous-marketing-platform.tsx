@@ -11,4 +11,6 @@ const ai-autonomous-marketing-platform = () => {
     </div>
   );
 
+};
+
 export default ai-autonomous-marketing-platform;

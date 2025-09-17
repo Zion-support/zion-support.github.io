@@ -7,4 +7,6 @@ const Fortune500SuccessBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default Fortune500SuccessBanner;

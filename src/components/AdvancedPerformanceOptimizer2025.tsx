@@ -7,4 +7,6 @@ const AdvancedPerformanceOptimizer2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedPerformanceOptimizer2025;

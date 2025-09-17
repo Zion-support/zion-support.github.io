@@ -232,5 +232,7 @@ const RevolutionaryInnovationBanner2025 = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryInnovationBanner2025;
 </div></div>

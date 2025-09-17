@@ -11,4 +11,6 @@ const EnhancedSearch = () => {
     </div>
   );
 
+};
+
 export default EnhancedSearch;

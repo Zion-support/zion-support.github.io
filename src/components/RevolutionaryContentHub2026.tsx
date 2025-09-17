@@ -7,4 +7,6 @@ const RevolutionaryContentHub2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryContentHub2026;

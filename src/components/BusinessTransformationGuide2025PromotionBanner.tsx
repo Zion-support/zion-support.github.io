@@ -7,5 +7,7 @@ const BusinessTransformationGuide2025PromotionBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default BusinessTransformationGuide2025PromotionBanner;
 </p></p>

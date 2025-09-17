@@ -126,9 +126,10 @@ const caseStudies: CaseStudy[] = [
     role: 'Chief Medical Officer',
     image: '/api/placeholder/400/300',
     tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
-  }
+  };
 const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
 };
+
 
 export default function InteractiveCaseStudies2025() {
   const [selectedIndustrysetSelectedIndustry] = useState('All');
@@ -316,5 +317,6 @@ export default function InteractiveCaseStudies2025() {
                     Schedule Consultation
         )}
   );
+
 
 export default InteractiveCaseStudies2025;

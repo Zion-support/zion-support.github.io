@@ -7,4 +7,6 @@ const EnhancedTrendingContentSection: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnhancedTrendingContentSection;

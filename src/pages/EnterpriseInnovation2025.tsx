@@ -16,4 +16,6 @@ const EnterpriseInnovation2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default EnterpriseInnovation2025;

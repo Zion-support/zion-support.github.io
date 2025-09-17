@@ -7,4 +7,6 @@ const AdvancedSEOAnalytics: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedSEOAnalytics;

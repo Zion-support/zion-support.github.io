@@ -171,4 +171,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default AdvancedSpaceTech2026;

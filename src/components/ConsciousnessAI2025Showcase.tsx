@@ -7,4 +7,6 @@ const ConsciousnessAI2025Showcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default ConsciousnessAI2025Showcase;

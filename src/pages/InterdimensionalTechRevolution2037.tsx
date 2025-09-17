@@ -16,4 +16,6 @@ const InterdimensionalTechRevolution2037: React.FC = () => {
     </div>
   );
 
+};
+
 export default InterdimensionalTechRevolution2037;

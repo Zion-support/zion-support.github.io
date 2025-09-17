@@ -16,4 +16,6 @@ const ConsciousAISystems2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default ConsciousAISystems2026;

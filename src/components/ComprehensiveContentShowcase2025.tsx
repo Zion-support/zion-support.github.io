@@ -7,4 +7,6 @@ const ComprehensiveContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default ComprehensiveContentShowcase2025;

@@ -120,4 +120,6 @@ const UltimateContentRevolution2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentRevolution2026Banner;

@@ -7,4 +7,6 @@ const UltimateTechShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateTechShowcase;

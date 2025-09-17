@@ -120,4 +120,6 @@ const RevolutionaryTechShowcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default RevolutionaryTechShowcase;

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function ComprehensiveContentShowcase() {
   return (
     <section className="py-20 bg-gray-50">
@@ -187,4 +188,3 @@ export default function ComprehensiveContentShowcase() {
             >
               Subscribe to Updates
   );
-};

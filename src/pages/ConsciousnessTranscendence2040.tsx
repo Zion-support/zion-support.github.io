@@ -346,4 +346,6 @@ const ConsciousnessTranscendence2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default ConsciousnessTranscendence2040;

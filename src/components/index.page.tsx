@@ -11,4 +11,6 @@ const index.page = () => {
     </div>
   );
 
+};
+
 export default index.page;

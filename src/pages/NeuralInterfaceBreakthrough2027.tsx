@@ -321,4 +321,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
     </div>
   );
 
+};
+
 export default NeuralInterfaceBreakthrough2027;

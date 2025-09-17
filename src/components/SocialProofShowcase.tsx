@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function SocialProofShowcase() {
   const testimonials = [
     {
@@ -149,5 +150,6 @@ export default function SocialProofShowcase() {
             >
               View All Case Studies
   );
+
 
 export default SocialProofShowcase;

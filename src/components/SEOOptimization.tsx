@@ -7,4 +7,6 @@ const SEOOptimization: React.FC = () => {
     </div>
   );
 
+};
+
 export default SEOOptimization;

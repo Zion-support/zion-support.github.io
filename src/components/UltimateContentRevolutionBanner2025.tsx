@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function UltimateContentRevolutionBanner2025() {
   return (
     <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16 px-4 overflow-hidden">
@@ -92,4 +93,3 @@ export default function UltimateContentRevolutionBanner2025() {
         <div className="mt-12 text-sm opacity-80">
           <p>✨ Exclusive access to revolutionary content • 🚀 Limited time offer • 💎 Premium quality guaranteed</p>
   );
-};

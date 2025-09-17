@@ -16,4 +16,6 @@ const SpaceTechAI2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default SpaceTechAI2025;

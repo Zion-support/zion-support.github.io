@@ -7,4 +7,6 @@ const AI2026_2030FuturePredictionsRevolutionaryBanner: React.FC = () => {
     </div>
   );
 
+};
+
 export default AI2026_2030FuturePredictionsRevolutionaryBanner;

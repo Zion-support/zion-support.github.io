@@ -119,5 +119,7 @@ const AIInnovationRevolutionPromotionBanner = () => {
     </AnimatePresence>
   );
 
+};
+
 export default AIInnovationRevolutionPromotionBanner;
 </div></div>

@@ -7,4 +7,6 @@ const UltimateContentDiscoveryWidget2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContentDiscoveryWidget2025;

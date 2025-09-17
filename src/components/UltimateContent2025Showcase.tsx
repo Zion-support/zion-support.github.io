@@ -7,4 +7,6 @@ const UltimateContent2025Showcase: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateContent2025Showcase;

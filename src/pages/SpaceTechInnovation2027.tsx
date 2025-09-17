@@ -11,4 +11,6 @@ const SpaceTechInnovation2027 = () => {
     </div>
   );
 
+};
+
 export default SpaceTechInnovation2027;

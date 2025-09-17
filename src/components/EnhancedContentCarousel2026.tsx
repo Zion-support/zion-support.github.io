@@ -345,5 +345,7 @@ const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = 
     </div>
   );
 
+};
+
 export default EnhancedContentCarousel2026;
 </p></p>

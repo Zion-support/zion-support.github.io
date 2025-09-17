@@ -143,5 +143,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
     </divsection>
   );
 
+};
+
 export default InteractiveContentDiscovery2033;
 </div></div></div>

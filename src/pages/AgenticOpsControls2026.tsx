@@ -11,4 +11,6 @@ const AgenticOpsControls2026 = () => {
     </div>
   );
 
+};
+
 export default AgenticOpsControls2026;

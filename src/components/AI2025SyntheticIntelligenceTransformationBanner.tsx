@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function AI2025SyntheticIntelligenceTransformationBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 border border-green-500/30 rounded-xl mb-8">
@@ -69,4 +70,3 @@ export default function AI2025SyntheticIntelligenceTransformationBanner() {
                   <div className="font-semibold">Chief Technology Officer</div>
                   <div>Fortune 500 Manufacturing Leader</div>
   );
-};

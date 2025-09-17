@@ -70,4 +70,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default NewContent2025RevolutionaryShowcaseBanner;

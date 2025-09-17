@@ -84,4 +84,6 @@ const NeuralInterfaces2025RevolutionBanner: React.FC = () => {
     </section>
   );
 
+};
+
 export default NeuralInterfaces2025RevolutionBanner;

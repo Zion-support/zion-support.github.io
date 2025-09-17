@@ -7,4 +7,6 @@ const UltimateContentBanner2035= () => {
     </div>
   );
 
+};
+
 export default UltimateContentBanner2035;

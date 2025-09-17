@@ -7,4 +7,6 @@ const EmbodiedAI2026Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default EmbodiedAI2026Banner;

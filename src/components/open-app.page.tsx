@@ -11,4 +11,6 @@ const open-app.page = () => {
     </div>
   );
 
+};
+
 export default open-app.page;

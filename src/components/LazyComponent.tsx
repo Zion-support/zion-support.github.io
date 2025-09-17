@@ -16,6 +16,7 @@ interface LazyComponentProps {
   className?: string;
 };
 
+
 export default function LazyComponent({ 
   component
   fallback = <LoadingSpinner size="md" text="Loading..." />,
@@ -26,7 +27,6 @@ export default function LazyComponent({
     <Suspense fallback={fallback}>
       <LazyLoadedComponent {...props} />
   );
-};
 // Pre-configured lazy components for common use cases
 export const LazyROICalculator = (props: any) => (
   <LazyComponent 

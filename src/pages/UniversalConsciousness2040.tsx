@@ -16,4 +16,6 @@ const UniversalConsciousness2040: React.FC = () => {
     </div>
   );
 
+};
+
 export default UniversalConsciousness2040;

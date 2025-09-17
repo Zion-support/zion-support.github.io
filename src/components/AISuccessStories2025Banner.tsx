@@ -3,6 +3,7 @@ import React from 'react';
 ArrowRightTrendingUpUsersDollarSignAwardCheckCircleStar
 };
 
+
 export default function AISuccessStories2025Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl mx-4 my-8 border border-purple-500/20">
@@ -120,4 +121,3 @@ export default function AISuccessStories2025Banner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
   );
-};

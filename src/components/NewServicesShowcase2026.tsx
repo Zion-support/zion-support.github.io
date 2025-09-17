@@ -213,4 +213,6 @@ const NewServicesShowcase2026: React.FC = () => {
     </div>
   );
 
+};
+
 export default NewServicesShowcase2026;

@@ -2,6 +2,7 @@ import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
+
 export default function QuantumAIBreakthroughPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-8 px-4 relative overflow-hidden">
@@ -47,4 +48,3 @@ export default function QuantumAIBreakthroughPromotionBanner() {
             >
               Schedule Consultation
   );
-};

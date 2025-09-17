@@ -7,4 +7,6 @@ const UltimateAIRevolution2025Banner: React.FC = () => {
     </div>
   );
 
+};
+
 export default UltimateAIRevolution2025Banner;

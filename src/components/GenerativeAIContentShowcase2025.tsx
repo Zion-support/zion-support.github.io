@@ -7,4 +7,6 @@ const GenerativeAIContentShowcase2025: React.FC = () => {
     </div>
   );
 
+};
+
 export default GenerativeAIContentShowcase2025;

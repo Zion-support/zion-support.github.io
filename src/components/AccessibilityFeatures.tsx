@@ -7,4 +7,6 @@ const AccessibilityFeatures: React.FC = () => {
     </div>
   );
 
+};
+
 export default AccessibilityFeatures;
