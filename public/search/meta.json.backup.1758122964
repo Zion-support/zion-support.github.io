@@ -466,6 +466,10 @@
   },
   {
     "route": "/case-studies",
+<<<<<<< HEAD
+    "title": "case-studies | Zion Tech Group",
+    "h1": "case-studies"
+=======
     "title": "Case Studies | Zion Tech Solutions",
     "h1": "Success Stories & Case Studies"
   },
@@ -473,6 +477,7 @@
     "route": "/categories",
     "title": "",
     "h1": ""
+>>>>>>> origin/cursor/create-and-deploy-new-content-8bb9
   },
   {
     "route": "/ci-cd-security-hardening",
@@ -1646,8 +1651,13 @@
   },
   {
     "route": "/products",
+<<<<<<< HEAD
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+=======
     "title": "Products & Solutions | Zion Tech Solutions",
     "h1": "Technology Products & Solutions"
+>>>>>>> origin/cursor/create-and-deploy-new-content-8bb9
   },
   {
     "route": "/plans/enterprise",
