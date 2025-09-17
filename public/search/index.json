@@ -1,5 +1,8 @@
-    "title": "2025-advanced-services-showcase | Zion Tech Group",
-    "h1": "2025-advanced-services-showcase"
+[
+  {
+    "route": "/2025-advanced-services-showcase",
+    "title": "2025 Advanced Services Showcase — Zion Tech Group",
+    "h1": "2025 Advanced Services Showcase"
   },
   {
     "route": "/2025-comprehensive-advanced-services-showcase",
@@ -533,288 +536,8 @@
   },
   {
     "route": "/comprehensive-2025-services-showcase",
-    "title": "comprehensive-2025-services-showcase | Zion Tech Group",
-    "h1": "comprehensive-2025-services-showcase"
-  },
-  {
-    "route": "/comprehensive-2026-services-showcase",
-    "title": "comprehensive-2026-services-showcase | Zion Tech Group",
-    "h1": "comprehensive-2026-services-showcase"
-  },
-  {
-    "route": "/comprehensive-2037-services-showcase",
-    "title": "comprehensive-2037-services-showcase | Zion Tech Group",
-    "h1": "comprehensive-2037-services-showcase"
-  },
-  {
-    "route": "/comprehensive-pricing-2025",
-    "title": "comprehensive-pricing-2025 | Zion Tech Group",
-    "h1": "comprehensive-pricing-2025"
-  },
-  {
-    "route": "/comprehensive-services-overview-2025",
-    "title": "comprehensive-services-overview-2025 | Zion Tech Group",
-    "h1": "comprehensive-services-overview-2025"
-  },
-  {
-    "route": "/comprehensive-services-showcase-2025",
-    "title": "comprehensive-services-showcase-2025 | Zion Tech Group",
-    "h1": "comprehensive-services-showcase-2025"
-  },
-  {
-    "route": "/comprehensive-services-showcase-2026",
-    "title": "comprehensive-services-showcase-2026 | Zion Tech Group",
-    "h1": "comprehensive-services-showcase-2026"
-  },
-  {
-    "route": "/comprehensive-services-showcase-2036",
-    "title": "comprehensive-services-showcase-2036 | Zion Tech Group",
-    "h1": "comprehensive-services-showcase-2036"
-  },
-  {
-    "route": "/comprehensive-services-showcase-2038",
-    "title": "comprehensive-services-showcase-2038 | Zion Tech Group",
-    "h1": "comprehensive-services-showcase-2038"
-  },
-  {
-    "route": "/comprehensive-services-showcase",
-    "title": "comprehensive-services-showcase | Zion Tech Group",
-    "h1": "comprehensive-services-showcase"
-  },
-  {
-    "route": "/contact",
-    "title": "",
-    "h1": "Contact Us"
-  },
-  {
-    "route": "/contact",
-    "title": "contact | Zion Tech Group",
-    "h1": "contact"
-  },
-  {
-    "route": "/contact",
-    "title": "contact | Zion Tech Group",
-    "h1": "contact"
-  },
-  {
-    "route": "/content-hub",
-    "title": "content-hub | Zion Tech Group",
-    "h1": "content-hub"
-  },
-  {
-    "route": "/cookies",
-    "title": "cookies | Zion Tech Group",
-    "h1": "cookies"
-  },
-  {
-    "route": "/cron-job-scheduler",
-    "title": "cron-job-scheduler | Zion Tech Group",
-    "h1": "cron-job-scheduler"
-  },
-  {
-    "route": "/customer-service-ai",
-    "title": "customer-service-ai | Zion Tech Group",
-    "h1": "customer-service-ai"
-  },
-  {
-    "route": "/cutting-edge-services-2025",
-    "title": "cutting-edge-services-2025 | Zion Tech Group",
-    "h1": "cutting-edge-services-2025"
-  },
-  {
-    "route": "/cybersecurity-services",
-    "title": "cybersecurity-services | Zion Tech Group",
-    "h1": "cybersecurity-services"
-  },
-  {
-    "route": "/cybersecurity",
-    "title": "cybersecurity | Zion Tech Group",
-    "h1": "cybersecurity"
-  },
-  {
-    "route": "/dashboard",
-    "title": "dashboard | Zion Tech Group",
-    "h1": "dashboard"
-  },
-  {
-    "route": "/data-catalog-lineage",
-    "title": "data-catalog-lineage | Zion Tech Group",
-    "h1": "data-catalog-lineage"
-  },
-  {
-    "route": "/data-quality-monitor",
-    "title": "data-quality-monitor | Zion Tech Group",
-    "h1": "data-quality-monitor"
-  },
-  {
-    "route": "/design-map",
-    "title": "design-map | Zion Tech Group",
-    "h1": "design-map"
-  },
-  {
-    "route": "/developer",
-    "title": "developer | Zion Tech Group",
-    "h1": "developer"
-  },
-  {
-    "route": "/docs",
-    "title": "docs | Zion Tech Group",
-    "h1": "docs"
-  },
-  {
-    "route": "/dpa",
-    "title": "dpa | Zion Tech Group",
-    "h1": "dpa"
-  },
-  {
-    "route": "/edge-computing-orchestration",
-    "title": "edge-computing-orchestration | Zion Tech Group",
-    "h1": "edge-computing-orchestration"
-  },
-  {
-    "route": "/email-deliverability-monitor",
-    "title": "email-deliverability-monitor | Zion Tech Group",
-    "h1": "email-deliverability-monitor"
-  },
-  {
-    "route": "/email-dmarc-analyzer",
-    "title": "email-dmarc-analyzer | Zion Tech Group",
-    "h1": "email-dmarc-analyzer"
-  },
-  {
-    "route": "/emerging-tech-services",
-    "title": "emerging-tech-services | Zion Tech Group",
-    "h1": "emerging-tech-services"
-  },
-  {
-    "route": "/emerging-tech",
-    "title": "emerging-tech | Zion Tech Group",
-    "h1": "emerging-tech"
-  },
-  {
-    "route": "/enhanced-home",
-    "title": "enhanced-home | Zion Tech Group",
-    "h1": "enhanced-home"
-  },
-  {
-    "route": "/enhanced-navigation",
-    "title": "enhanced-navigation | Zion Tech Group",
-    "h1": "enhanced-navigation"
-  },
-  {
-    "route": "/enhanced-services-showcase-2025",
-    "title": "enhanced-services-showcase-2025 | Zion Tech Group",
-    "h1": "enhanced-services-showcase-2025"
-  },
-  {
-    "route": "/enterprise-ai-operations-center",
-    "title": "enterprise-ai-operations-center | Zion Tech Group",
-    "h1": "enterprise-ai-operations-center"
-  },
-  {
-    "route": "/enterprise-it",
-    "title": "enterprise-it | Zion Tech Group",
-    "h1": "enterprise-it"
-  },
-  {
-    "route": "/enterprise",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/entertainment-media-solutions",
-    "title": "entertainment-media-solutions | Zion Tech Group",
-    "h1": "entertainment-media-solutions"
-  },
-  {
-    "route": "/error",
-    "title": "error | Zion Tech Group",
-    "h1": "error"
-  },
-  {
-    "route": "/events.page",
-    "title": "events.page | Zion Tech Group",
-    "h1": "events.page"
-  },
-  {
-    "route": "/events",
-    "title": "events | Zion Tech Group",
-    "h1": "events"
-  },
-  {
-    "route": "/expanded-services-2027.page",
-    "title": "expanded-services-2027.page | Zion Tech Group",
-    "h1": "expanded-services-2027.page"
-  },
-  {
-    "route": "/expanded-services-pricing-2027.page",
-    "title": "expanded-services-pricing-2027.page | Zion Tech Group",
-    "h1": "expanded-services-pricing-2027.page"
-  },
-  {
-    "route": "/explore",
-    "title": "explore | Zion Tech Group",
-    "h1": "explore"
-  },
-  {
-    "route": "/faq",
-    "title": "faq | Zion Tech Group",
-    "h1": "faq"
-  },
-  {
-    "route": "/feature-flags-edge",
-    "title": "feature-flags-edge | Zion Tech Group",
-    "h1": "feature-flags-edge"
-  },
-  {
-    "route": "/fintech-solutions",
-    "title": "fintech-solutions | Zion Tech Group",
-    "h1": "fintech-solutions"
-  },
-  {
-    "route": "/foundation",
-    "title": "foundation | Zion Tech Group",
-    "h1": "foundation"
-  },
-  {
-    "route": "/get-started",
-    "title": "get-started | Zion Tech Group",
-    "h1": "get-started"
-  },
-  {
-    "route": "/github-compliance-bot",
-    "title": "github-compliance-bot | Zion Tech Group",
-    "h1": "github-compliance-bot"
-  },
-  {
-    "route": "/guides",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/healthcare-ai-solutions",
-    "title": "healthcare-ai-solutions | Zion Tech Group",
-    "h1": "healthcare-ai-solutions"
-  },
-  {
-    "route": "/help",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/image-optimizer-cdn",
-    "title": "image-optimizer-cdn | Zion Tech Group",
-    "h1": "image-optimizer-cdn"
-  },
-  {
-    "route": "/incident-copilot",
-    "title": "incident-copilot | Zion Tech Group",
-    "h1": "incident-copilot"
-  },
-  {
-    "route": "/incident-postmortem-generator",
-    "title": "incident-postmortem-generator | Zion Tech Group",
-    "h1": "incident-postmortem-generator"
+    "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
+    "h1": "2025 Innovative Services Showcase"
   },
   {
     "route": "/comprehensive-2026-services-showcase",
@@ -1258,8 +981,8 @@
   },
   {
     "route": "/pricing-2025",
-    "title": "pricing-2025 | Zion Tech Group",
-    "h1": "pricing-2025"
+    "title": "2025 Pricing & Services — Zion Tech Group",
+    "h1": "2025 Pricing & Services"
   },
   {
     "route": "/pricing-2033",
@@ -2427,9 +2150,44 @@
     "h1": "5G Technology And Its Impact On IoT"
   },
   {
+    "route": "/blog/[id]",
+    "title": "Not Found | Zion Tech Group",
+    "h1": "Article not found"
+  },
+  {
     "route": "/blog/[slug]",
     "title": "",
     "h1": "{post.title}"
+  },
+  {
+    "route": "/blog/agentic-crm-autonomous-revenue-workflows-2025",
+    "title": "Agentic CRM: Autonomous Revenue Workflows (2025) | Zion Tech Group",
+    "h1": "Agentic CRM: Autonomous Revenue Workflows (2025)"
+  },
+  {
+    "route": "/blog/agentic-product-playbooks",
+    "title": "Agentic Product Playbooks: Shipping Autonomous Workflows | Zion Tech Group",
+    "h1": "Agentic Product Playbooks: Shipping Autonomous Workflows"
+  },
+  {
+    "route": "/blog/ai-2025-enterprise-automation-strategy",
+    "title": "Enterprise Automation Strategy 2025: Practical AI Patterns | Zion Tech Group",
+    "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
+  },
+  {
+    "route": "/blog/ai-2026-agent-platform-slos-best-practices",
+    "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
+    "h1": "AI 2026: Agent Platform SLOs — Best Practices"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
+    "title": "",
+    "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-cost-optimization-blueprint",
+    "title": "",
+    "h1": "AI 2026: Cost Optimization Blueprint"
   },
   {
     "route": "/blog/ai-2026-edge-agents-production-guide",
@@ -2437,14 +2195,54 @@
     "h1": "AI 2026: Edge Agents in Production"
   },
   {
+    "route": "/blog/ai-2026-evaluation-cookbook",
+    "title": "",
+    "h1": "AI 2026: Evaluation Cookbook"
+  },
+  {
+    "route": "/blog/ai-2026-foundation-model-quality-engineering",
+    "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
+    "h1": "Foundation Model Quality Engineering (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-operational-evals-blueprint",
+    "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Operational Evals — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-operationalizing-agentic-workflows",
+    "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
+    "h1": "Operationalizing Agentic Workflows in 2026"
+  },
+  {
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
     "title": "",
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+    "route": "/blog/ai-2026-runtime-guardrails-blueprint",
+    "title": "",
+    "h1": "AI 2026: Runtime Guardrails Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-safety-evals-operational-checklist",
+    "title": "",
+    "h1": "AI 2026: Safety Evals Operational Checklist"
+  },
+  {
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
+  },
+  {
+    "route": "/blog/autonomous-evaluation-playbooks-2025",
+    "title": "Autonomous Evaluation Playbooks (2025) | Zion Tech Group",
+    "h1": "Autonomous Evaluation Playbooks (2025)"
+  },
+  {
+    "route": "/blog/cloud-cost-optimization-2025",
+    "title": "Cloud Cost Optimization 2025: Modern FinOps Patterns | Zion Tech Group",
+    "h1": "Cloud Cost Optimization 2025: Modern FinOps Patterns"
   },
   {
     "route": "/blog/cloud-native-automation",
@@ -2455,6 +2253,11 @@
     "route": "/blog/cybersecurity-autonomous-systems",
     "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
+  },
+  {
+    "route": "/blog/genai-2025-practical-compliance-patterns",
+    "title": "GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group",
+    "h1": "GenAI for Regulated Industries (2025): Practical Compliance Patterns"
   },
   {
     "route": "/blog",
@@ -2792,5 +2595,3 @@
     "h1": "Storybook Academy"
   }
 ]
-=======
-[]
