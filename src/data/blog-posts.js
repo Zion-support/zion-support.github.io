@@ -2632,7 +2632,8 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-  {
+
+export const blogPost9501 = {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
     excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
@@ -2646,8 +2647,9 @@ export const getBlogTags = () => {
     featured: true,
     imageUrl: "/images/blog/exec-guide-eval-gates-2026.jpg",
     slug: "exec-guide-eval-gates-ship-tomorrow"
-  },
-  {
+  };
+
+export const blogPost9511 = {
     id: 9511,
     title: "Playbook: Safe Agent Rollouts in 7 Days",
     excerpt: "A day‑by‑day plan with eval gates, scorecards, and rollback drills.",
@@ -2661,8 +2663,9 @@ export const getBlogTags = () => {
     featured: true,
     imageUrl: "/images/blog/safe-agent-rollouts-7-days.jpg",
     slug: "playbook-safe-agent-rollouts-7-days"
-  },
-  {
+  };
+
+export const blogPost9512 = {
     id: 9512,
     title: "Blueprint: Cost‑Aware Model Routing That Holds Quality",
     excerpt: "Reduce spend 30%+ with confidence‑tier routing and online evals.",
