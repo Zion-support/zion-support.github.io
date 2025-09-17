@@ -8,57 +8,88 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+export const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    const reportWebVitals = (metric: any) => {
-      // Send to analytics service (replace with your preferred analytics)
-      console.log('Web Vitals:', metric);
-      
-      // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        });
-      }
-    };
-
-    // Import web-vitals dynamically
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(reportWebVitals);
-      getFID(reportWebVitals);
-      getFCP(reportWebVitals);
-      getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
-    });
-
-    // Monitor performance timing
+    // Core Web Vitals monitoring
     const observer = new PerformanceObserver((list) => {
+      const metrics: PerformanceMetrics = {};
+      
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          console.log('Navigation timing:', {
-            domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-            loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-            totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
-          });
+        switch (entry.entryType) {
+          case 'largest-contentful-paint':
+            metrics.lcp = entry.startTime;
+            break;
+          case 'first-input':
+            metrics.fid = (entry as any).processingStart - entry.startTime;
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              metrics.cls = entry.value;
+            }
+            break;
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              metrics.fcp = entry.startTime;
+            }
+            break;
+          case 'navigation':
+            metrics.ttfb = (entry as any).responseStart - (entry as any).requestStart;
+            break;
         }
       }
+      
+      // Log metrics for debugging
+      if (Object.keys(metrics).length > 0) {
+        console.log('Performance Metrics:', metrics);
+      }
+      
+      // Send to analytics if available
+      if (typeof window !== 'undefined' && window.gtag) {
+        Object.entries(metrics).forEach(([key, value]) => {
+          if (value !== undefined) {
+            window.gtag('event', 'performance_metric', {
+              metric_name: key,
+              metric_value: Math.round(value),
+              event_category: 'Performance'
+            });
+          }
+        });
+      }
     });
 
-    observer.observe({ entryTypes: ['navigation'] });
+    try {
+      observer.observe({ 
+        entryTypes: [
+          'largest-contentful-paint', 
+          'first-input', 
+          'layout-shift',
+          'paint',
+          'navigation'
+        ] 
+      });
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
+    }
 
-    return () => {
-      observer.disconnect();
-    };
+    // Memory usage monitoring
+    if ('memory' in performance) {
+      const logMemoryUsage = () => {
+        const memory = (performance as any).memory;
+        console.log('Memory Usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+        });
+      };
+      
+      // Log memory usage every 30 seconds
+      const memoryInterval = setInterval(logMemoryUsage, 30000);
+      
+      return () => clearInterval(memoryInterval);
+    }
   }, []);
 
-  return null; // This component doesn't render anything
+  return null;
 };
 
 export default PerformanceMonitor;
