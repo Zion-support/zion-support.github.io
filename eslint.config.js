@@ -9,13 +9,40 @@ export default [
   {
     ignores: [
       'dist', 
-      'node_modules', 
+      'node_modules',
+      'src_backup_temp/**/*',
+      'zion-os.disabled/**/*',
+      'zion-os/**/*',
+      'zion.app/**/*',
+      'zion_academy/**/*',
+      'temp_exclude/**/*',
+      'backup/**/*',
+      'backups/**/*',
+      'broken_components/**/*',
+      'broken_files_backup/**/*',
+      'test_build/**/*',
+      'zion-os.disabled/**/*',
+      '*.cjs',
+      '*.js',
+      '!src/**/*.js',
+      '!src/**/*.jsx',
+      '!src/**/*.ts',
+      '!src/**/*.tsx'
+    ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
+      },
+    },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
@@ -24,4 +51,6 @@ export default [
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'warn',
+    },
+  },
 ]

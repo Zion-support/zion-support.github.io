@@ -12,4 +12,6 @@ export const LanguageProvider = ({ children, authState }) => {
       {children}
     </LanguageContext.Provider>
   );
+};
+
 export const useLanguage = () => useContext(LanguageContext);

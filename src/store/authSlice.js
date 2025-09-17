@@ -29,7 +29,9 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
@@ -60,7 +62,9 @@ export const signupUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
@@ -73,7 +77,9 @@ export const logoutUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 // Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
   'auth/checkAuthStatus',
@@ -92,13 +98,17 @@ export const checkAuthStatus = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 const initialState = {
   user: null,
   token: localStorage.getItem('token'),
   isAuthenticated: false,
   isLoading: false,
   error: null
+};
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
