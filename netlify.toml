@@ -1,9 +1,9 @@
-# Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
+# Netlify build configuration for Vite React app
+# Updated to build the correct Vite project (2025-01-17)
 [build]
-  # Build Next.js app in zion-website; Next.js plugin will handle routing/output
-  command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
-  publish = "zion-website/.next"
+  # Build Vite React app in root directory
+  command = "npm ci --ignore-scripts --no-audit && npm run build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -17,13 +17,12 @@
   # Keep functions path relative to repo root
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["zion-website/public/**/*", "public/**/*"]
+  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# No plugins needed for Vite static site
 
 # Fix MIME type issues
 [[headers]]
@@ -203,9 +202,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js plugin removed; this is a Vite static site build
-
-# Note: Do not add SPA catch-all redirects for Next.js; the plugin manages routing
+# Note: This is a Vite static site build with SPA routing handled by _redirects
 
 # Security Headers
 [[headers]]
