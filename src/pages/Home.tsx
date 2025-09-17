@@ -371,7 +371,7 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -10,6 +10,11 @@ interface PerformanceMetrics {
 
 export const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
+    // Check if PerformanceObserver is available (not available in test environments)
+    if (typeof PerformanceObserver === 'undefined') {
+      return;
+    }
+
     // Core Web Vitals monitoring
     const observer = new PerformanceObserver((list) => {
       const metrics: PerformanceMetrics = {};

@@ -74,16 +74,13 @@ export async function fetchOnboardingProgress(userId: stringrole: 'talent' | 'cl
 
 export function fallbackTalentProgress(): TalentOnboarding {
   return {
-    profile_complete: trueskills_added: true,
-    availability_set: false,
-    first_job_applied: false,
+    profile_complete: trueskills_added: trueavailability_set: falsefirst_job_applied: false,
   };
 }
 
 export function fallbackClientProgress(): ClientOnboarding {
   return {
-    job_posted: true,
-    talent_invited: false,
+    job_posted: truetalent_invited: false,
     quote_received: false,
     first_hire_complete: false,
   };

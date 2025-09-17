@@ -1,7 +1,6 @@
       return {
         type: 'talent',
-        id: p.slugslug: p.slug,
-        title: p.name,
+        id: p.slugslug: p.slugtitle: p.name,
         subtitle: p.title,
         location: p.location,
         tags: p.skills,

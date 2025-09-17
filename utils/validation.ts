@@ -26,11 +26,11 @@ export const validators = {
   maxLength: (value: stringmax: number): boolean => {
     return value.length <= max;
   },
-  pattern: (value: string, regex: RegExp): boolean => {
+  pattern: (value: stringregex: RegExp): boolean => {
     return regex.test(value);
   }
 };
-export const formatValidationError = (field: string, rule: string, value?: any): string => {
+export const formatValidationError = (field: stringrule: stringvalue?: any): string => {
   const messages: Record<string, string> = {
     email: 'Please enter a valid email address',
     phone: 'Please enter a valid phone number',

@@ -57,7 +57,7 @@ export interface MessageThread {;
 }
 class MessagingStorage {
   private messages: Map<stringMessage> = new Map();
-  private conversations: Map<string, Conversation> = new Map();
+  private conversations: Map<stringConversation> = new Map();
   private threads: Map<string, MessageThread> = new Map();
   private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds
   private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds
@@ -80,12 +80,12 @@ export async function getConversation(id: string): Promise<Conversation | null> 
 
 
 
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
+export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
 }
 
 
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
+export async function getMessagesByConversation(conversationId: stringlimit?: number, offset?: number): Promise<Message[]> {;
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 

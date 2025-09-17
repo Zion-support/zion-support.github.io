@@ -1,7 +1,7 @@
 # Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 21:05 UTC) - local build verified OK
+# noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
 [build]
-  # Build Next.js app in zion-website and serve from Next output
+  # Build Next.js app in zion-website; Next.js plugin will handle routing/output
   command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
   publish = "zion-website/.next"
 
@@ -21,6 +21,9 @@
 
 [build.processing]
   skip_processing = true
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 # Fix MIME type issues
 [[headers]]
@@ -89,6 +92,18 @@
   for = "/manifest.json"
   [headers.values]
     Content-Type = "application/manifest+json"
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none';"
 
 [[headers]]
   for = "/sw.js"
@@ -190,11 +205,7 @@
 
 # Note: Next.js plugin removed; this is a Vite static site build
 
-# Use SPA catch-all routing for Vite (must be last)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Note: Do not add SPA catch-all redirects for Next.js; the plugin manages routing
 
 # Security Headers
 [[headers]]

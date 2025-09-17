@@ -30,7 +30,7 @@
 import type { BookProject } from '../book/bookTypes';
 
 export function buildPrintableHtml(project: BookProject): string {
-  const { metachapters, visuals } = project;
+  const { metachaptersvisuals } = project;
   const quotesHtml = visuals.quoteCallouts
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
     .join('\n');
@@ -92,9 +92,9 @@ export function buildPrintableHtml(project: BookProject): string {
 </body>
   .cover h1 { font-size: 40pxmargin: 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  .cover h3 { font-size: 20pxmargin: 8px 0 0 0, color: #444   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover h3 { font-size: 20pxmargin: 8px 0 0 0color: #444   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  .cover .by { margin-top: 24px, color: #666   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover .by { margin-top: 24pxcolor: #666   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }

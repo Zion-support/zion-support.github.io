@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   return (
-    <nav className="bg-gray-800 bg-opacity-90 backdrop-blur-sm border-b border-gray-700">
+    <nav id="navigation" className="bg-gray-800 bg-opacity-90 backdrop-blur-sm border-b border-gray-700" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
