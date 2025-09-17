@@ -395,3 +395,33 @@ body {
   background: #f1f1f1;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:block { display: block; }
+  .\32xl\:hidden { display: none; }
+  .\32xl\:flex { display: flex; }
+  .\32xl\:grid { display: grid; }
+}
