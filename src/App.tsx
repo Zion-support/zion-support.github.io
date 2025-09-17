@@ -100,6 +100,8 @@ const ServicesPage = React.lazy(() => import('./pages/Services'));
 const BlogPage = React.lazy(() => import('./pages/Blog'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const AdvancedTechShowcase2025 = React.lazy(() => import('./pages/AdvancedTechShowcase2025'));
+const FutureInnovationLab2025 = React.lazy(() => import('./pages/FutureInnovationLab2025'));
 
 const App = () => {
   return (
@@ -123,6 +125,8 @@ const App = () => {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
+                <Route path="/pages/FutureInnovationLab2025" element={<FutureInnovationLab2025 />} />
               </Routes>
             </Suspense>
           </main>

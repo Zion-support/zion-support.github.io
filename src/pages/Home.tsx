@@ -2,6 +2,7 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { motion } from 'framer-motion';
+import AdvancedTechBanner2025 from '@/components/AdvancedTechBanner2025';
 import { 
   Rocket, 
   Brain, 
@@ -188,6 +189,11 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Advanced Tech Banner 2025 */}
+      <div className="px-4">
+        <AdvancedTechBanner2025 />
+      </div>
 
       {/* Services Section */}
       <section className="py-20 bg-gray-800/50">
