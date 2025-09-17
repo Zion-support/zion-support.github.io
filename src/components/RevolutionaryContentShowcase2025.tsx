@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const RevolutionaryContentShowcase2025: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -6,7 +6,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 
   const revolutionaryContent = [
     {
-      id: 1,
+      id: "1",
       title: "AI Consciousness Revolution",
       description: "Experience the first AI system with genuine consciousness and self-awareness",
       image: "🧠",
@@ -15,7 +15,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/RevolutionaryTechBreakthrough2025"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Reality Engine",
       description: "Manipulate reality itself through quantum computing and parallel universe exploration",
       image: "⚡",
@@ -24,7 +24,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/QuantumReality2026"
     },
     {
-      id: 3,
+      id: "3",
       title: "Neural Interface Revolution",
       description: "Direct brain-computer communication enabling thought-controlled technology",
       image: "🧬",
@@ -33,7 +33,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2025"
     },
     {
-      id: 4,
+      id: "4",
       title: "Consciousness Transfer Technology",
       description: "Achieve digital immortality through consciousness transfer between biological and artificial bodies",
       image: "🌟",
@@ -42,7 +42,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/ConsciousnessComputing2026"
     },
     {
-      id: 5,
+      id: "5",
       title: "Interdimensional Computing",
       description: "Access computing power from parallel dimensions and alternate realities",
       image: "🌌",
@@ -63,16 +63,16 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-  };
-
+  }
+];
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + revolutionaryContent.length) % revolutionaryContent.length);
-  };
-
+  }
+];
   const goToSlide = (index: number) => {
     setActiveIndex(index);
-  };
-
+  }
+];
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -207,6 +207,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentShowcase2025;

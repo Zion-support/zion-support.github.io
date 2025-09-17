@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const RevolutionaryAdCarousel: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
@@ -7,7 +7,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
 
   const advertisements = [
     {
-      id: 1,
+      id: "1",
       title: "🚀 ULTIMATE BREAKTHROUGH 2025",
       subtitle: "Revolutionary Quantum Consciousness AI",
       description: "Experience the world's first AI system with quantum-enhanced consciousness capabilities. 97% accuracy in ethical decision making.",
@@ -19,7 +19,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "BREAKTHROUGH"
     },
     {
-      id: 2,
+      id: "2",
       title: "🌟 NEXT-GEN INNOVATION HUB",
       subtitle: "Pioneering Future Technologies",
       description: "Discover breakthrough technologies that will revolutionize industries and transform human potential with unlimited possibilities.",
@@ -31,7 +31,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "INNOVATION"
     },
     {
-      id: 3,
+      id: "3",
       title: "🌌 INTERDIMENSIONAL TECH 2035",
       subtitle: "Computing from Parallel Dimensions",
       description: "Unlimited processing capacity from parallel dimensions. Experience computing power that transcends current limitations.",
@@ -43,7 +43,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "REVOLUTIONARY"
     },
     {
-      id: 4,
+      id: "4",
       title: "🧬 NEURAL INTERFACE REVOLUTION",
       subtitle: "Direct Brain-Computer Interface",
       description: "Revolutionary neural interface technology enabling thought-controlled devices with 99.8% accuracy in thought recognition.",
@@ -68,12 +68,12 @@ const RevolutionaryAdCarousel: React.FC = () => {
 
   const nextAd = () => {
     setCurrentAd((prev) => (prev + 1) % advertisements.length);
-  };
-
+  }
+];
   const prevAd = () => {
     setCurrentAd((prev) => (prev - 1 + advertisements.length) % advertisements.length);
-  };
-
+  }
+];
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       <div 
@@ -84,9 +84,9 @@ const RevolutionaryAdCarousel: React.FC = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentAd}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
+            initial={{ opacity: "0", x: 300 }}
+            animate={{ opacity: "1", x: 0 }}
+            exit={{ opacity: "0", x: -300 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
             className="relative"
           >
@@ -99,8 +99,8 @@ const RevolutionaryAdCarousel: React.FC = () => {
                 {/* Content */}
                 <div>
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: "0", y: 20 }}
+                    animate={{ opacity: "1", y: 0 }}
                     transition={{ delay: 0.2 }}
                     className="mb-6"
                   >
@@ -119,16 +119,16 @@ const RevolutionaryAdCarousel: React.FC = () => {
                   </motion.div>
 
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: "0", y: 20 }}
+                    animate={{ opacity: "1", y: 0 }}
                     transition={{ delay: 0.4 }}
                     className="space-y-3 mb-8"
                   >
                     {advertisements[currentAd].features.map((feature, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: "0", x: -20 }}
+                        animate={{ opacity: "1", x: 0 }}
                         transition={{ delay: 0.6 + index * 0.1 }}
                         className="flex items-center"
                       >
@@ -139,8 +139,8 @@ const RevolutionaryAdCarousel: React.FC = () => {
                   </motion.div>
 
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: "0", y: 20 }}
+                    animate={{ opacity: "1", y: 0 }}
                     transition={{ delay: 0.8 }}
                     className="flex flex-wrap gap-4"
                   >
@@ -165,8 +165,8 @@ const RevolutionaryAdCarousel: React.FC = () => {
                 {/* Visual */}
                 <div className="flex justify-center">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: "0", scale: 0.8 }}
+                    animate={{ opacity: "1", scale: 1 }}
                     transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
                     className="relative"
                   >
@@ -220,6 +220,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryAdCarousel;

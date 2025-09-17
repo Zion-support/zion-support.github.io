@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState }  from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -17,7 +17,6 @@ export const useTheme = () => {
   }
   return context;
 };
-
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('dark');
 
@@ -32,9 +31,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const value = {
     theme,
     setTheme,
-    isDark,
+    isDark
   };
-
   return (
     <ThemeContext.Provider value={value}>
       {children}

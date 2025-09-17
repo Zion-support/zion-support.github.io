@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const NeuralInterfaceRevolution2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
@@ -69,8 +69,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -99,8 +99,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 
         {/* Connection Status */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: "0", scale: 0.9 }}
+          animate={{ opacity: "1", scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16 text-center"
         >
@@ -144,8 +144,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
           {neuralFeatures.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 20 }}
+              animate={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`bg-gradient-to-br ${feature.gradient} p-8 rounded-2xl text-white shadow-2xl transform hover:scale-105 transition-all duration-300`}
             >
@@ -169,8 +169,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 
         {/* Interactive Demo Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
@@ -181,8 +181,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             {demoSessions.map((demo, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: "0", scale: 0.9 }}
+                animate={{ opacity: "1", scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
                 className={`p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
                   activeDemo === index 
@@ -213,8 +213,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 
         {/* Technology Deep Dive */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
@@ -261,8 +261,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
           className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white"
         >
@@ -284,6 +284,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NeuralInterfaceRevolution2026;

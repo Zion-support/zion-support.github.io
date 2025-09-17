@@ -11,6 +11,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2025BreakthroughAnnouncementBanner;

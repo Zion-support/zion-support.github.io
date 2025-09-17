@@ -128,12 +128,12 @@ The future of consciousness is digital, and it's more incredible than we ever im
     publishDate: "2028-03-20",
     category: "Consciousness Technology",
     tags: ["Consciousness Transfer", "Digital Immortality", "AI", "Future Tech"],
-    featured: true,
+    featured: "true",
     readTime: "15 min read",
     image: "/images/consciousness-transfer-blog.jpg",
-    views: 45000,
-    likes: 3200,
-    isNew: true,
+    views: "45000",
+    likes: "3200",
+    isNew: "true",
     urgency: "Revolutionary Breakthrough"
   },
   {
@@ -236,12 +236,12 @@ The future of computing is infinite, and it's more incredible than we ever imagi
     publishDate: "2028-03-15",
     category: "Interdimensional Technology",
     tags: ["Interdimensional Computing", "Parallel Universes", "AI", "Future Tech"],
-    featured: true,
+    featured: "true",
     readTime: "18 min read",
     image: "/images/interdimensional-computing-blog.jpg",
-    views: 52000,
-    likes: 4100,
-    isNew: true,
+    views: "52000",
+    likes: "4100",
+    isNew: "true",
     urgency: "Infinite Possibilities"
   },
   {
@@ -349,14 +349,15 @@ The future of reality is conscious, and it's more incredible than we ever imagin
     publishDate: "2028-03-10",
     category: "Neural Reality",
     tags: ["Neural Reality", "Virtual Worlds", "AI Consciousness", "Future Tech"],
-    featured: true,
+    featured: "true",
     readTime: "20 min read",
     image: "/images/neural-reality-engine-blog.jpg",
-    views: 38000,
-    likes: 2900,
-    isNew: true,
+    views: "38000",
+    likes: "2900",
+    isNew: "true",
     urgency: "Conscious Virtual Worlds"
-  };
+  }
+];
 export const REVOLUTIONARY_CASE_STUDIES_2028: CaseStudy[] = [
   {
     id: "apple-consciousness-integration-2028",
@@ -374,7 +375,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2028: CaseStudy[] = [
     ],
     technologies: ["Consciousness Transfer", "Digital Immortality", "AI Integration", "Quantum Computing"],
     duration: "36 months",
-    featured: true,
+    featured: "true",
     image: "/images/apple-consciousness-case-study.jpg",
     isNew: true
   },
@@ -394,7 +395,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2028: CaseStudy[] = [
     ],
     technologies: ["Interdimensional Computing", "Space Technology", "Quantum Computing", "Parallel Universe Access"],
     duration: "24 months",
-    featured: true,
+    featured: "true",
     image: "/images/spacex-interdimensional-case-study.jpg",
     isNew: true
   },
@@ -414,10 +415,11 @@ export const REVOLUTIONARY_CASE_STUDIES_2028: CaseStudy[] = [
     ],
     technologies: ["Neural Reality Engine", "AI Consciousness", "Virtual Worlds", "Entertainment AI"],
     duration: "30 months",
-    featured: true,
+    featured: "true",
     image: "/images/disney-neural-reality-case-study.jpg",
     isNew: true
-  };
+  }
+];
 export const REVOLUTIONARY_SERVICES_2028 = [
   {
     id: "consciousness-transfer-platform",
@@ -431,7 +433,7 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     ],
     pricing: "Premium service - Contact for pricing",
     category: "Consciousness Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Life-changing technology"
   },
   {
@@ -446,7 +448,7 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     ],
     pricing: "Enterprise licensing available",
     category: "Interdimensional Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Infinite possibilities"
   },
   {
@@ -461,7 +463,7 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     ],
     pricing: "Subscription-based platform",
     category: "Neural Reality",
-    isNew: true,
+    isNew: "true",
     urgency: "Conscious virtual worlds"
   },
   {
@@ -476,7 +478,7 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     ],
     pricing: "Research partnerships available",
     category: "Quantum Consciousness",
-    isNew: true,
+    isNew: "true",
     urgency: "Quantum consciousness breakthrough"
   },
   {
@@ -491,7 +493,7 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     ],
     pricing: "Enterprise knowledge licensing",
     category: "Dimensional Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Infinite knowledge access"
   },
   {
@@ -506,6 +508,8 @@ export const REVOLUTIONARY_SERVICES_2028 = [
     ],
     pricing: "Premium personal assistant service",
     category: "Conscious AI",
-    isNew: true,
+    isNew: "true",
     urgency: "Truly conscious AI assistant"
-  };
+  }
+];
+];

@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef }  from 'react';
 
 interface FocusTrapProps {
   children: React.ReactNode;
   active?: boolean;
 }
 
-export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true }) => {
+,export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,23 +27,24 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true })
           lastElement?.focus();
           e.preventDefault();
         }
-      } else {
+      } ,else {
         if (document.activeElement === lastElement) {
           firstElement?.focus();
           e.preventDefault();
         }
       }
-    };
-
+  }
+];
     document.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
 
     return () => {
       document.removeEventListener('keydown', handleTabKey);
-    };
+  }
+];
   }, [active]);
 
   return <div ref={containerRef}>{children}</div>;
-};
-
+  }
+];
 export default FocusTrap;

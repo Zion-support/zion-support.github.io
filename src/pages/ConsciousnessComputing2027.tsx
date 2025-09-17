@@ -11,6 +11,6 @@ const ConsciousnessComputing2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default ConsciousnessComputing2027;

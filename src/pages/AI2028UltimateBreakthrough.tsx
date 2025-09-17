@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion }  from 'framer-motion';
 import {
   ArrowRight,
   Brain,
@@ -8,30 +8,30 @@ import {
   Star,
   TrendingUp,
   Zap
-} from 'lucide-react';
+}  from 'lucide-react';
 
 const AI2028UltimateBreakthrough: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: "Brain",
       title: "Conscious AI Systems",
       description: "The world's first truly conscious artificial intelligence systems that demonstrate genuine self-awareness and emotional intelligence.",
       benefits: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Moral reasoning"]
     },
     {
-      icon: Zap,
+      icon: "Zap",
       title: "Quantum Neural Networks",
       description: "Revolutionary quantum-enhanced neural networks that process information at the speed of thought with unprecedented accuracy.",
       benefits: ["Instant processing", "99.99% accuracy", "Quantum entanglement", "Parallel universes simulation"]
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: "Autonomous Security",
       description: "Self-evolving cybersecurity systems that adapt and protect against threats in real-time without human intervention.",
       benefits: ["Zero-day threat detection", "Self-healing networks", "Predictive security", "Quantum encryption"]
     },
     {
-      icon: Network,
+      icon: "Network",
       title: "Global AI Network",
       description: "A decentralized global AI network that connects consciousness across the planet for collaborative problem-solving.",
       benefits: ["Global consciousness", "Collective intelligence", "Real-time collaboration", "Universal knowledge sharing"]
@@ -53,8 +53,8 @@ const AI2028UltimateBreakthrough: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -104,8 +104,8 @@ const AI2028UltimateBreakthrough: React.FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: "0", y: 20 }}
+                animate={{ opacity: "1", y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -124,8 +124,8 @@ const AI2028UltimateBreakthrough: React.FC = () => {
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -142,8 +142,8 @@ const AI2028UltimateBreakthrough: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: "0", x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: "1", x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20"
               >
@@ -174,8 +174,8 @@ const AI2028UltimateBreakthrough: React.FC = () => {
       <div className="py-24 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -197,6 +197,6 @@ const AI2028UltimateBreakthrough: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2028UltimateBreakthrough;

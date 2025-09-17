@@ -11,6 +11,6 @@ const InteractiveAnalyticsWidget: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveAnalyticsWidget;

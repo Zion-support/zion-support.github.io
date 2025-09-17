@@ -11,6 +11,6 @@ const contact: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default contact;

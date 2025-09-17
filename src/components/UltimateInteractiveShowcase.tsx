@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const UltimateInteractiveShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('revolution');
@@ -93,8 +93,8 @@ const UltimateInteractiveShowcase: React.FC = () => {
         }
       ]
     }
-  };
-
+  }
+];
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white mb-16">
       <div className="text-center mb-12">
@@ -129,17 +129,17 @@ const UltimateInteractiveShowcase: React.FC = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={activeCategory}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
+          exit={{ opacity: "0", y: -20 }}
           transition={{ duration: 0.5 }}
           className="grid md:grid-cols-3 gap-8"
         >
           {categories[activeCategory as keyof typeof categories].items.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: "0", scale: 0.9 }}
+              animate={{ opacity: "1", scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -10 }}
               onHoverStart={() => setHoveredItem(index)}
@@ -173,8 +173,8 @@ const UltimateInteractiveShowcase: React.FC = () => {
                   {item.features.map((feature, idx) => (
                     <motion.div
                       key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: "0", x: -20 }}
+                      animate={{ opacity: "1", x: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 + idx * 0.1 }}
                       className="flex items-center text-sm"
                     >
@@ -232,6 +232,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateInteractiveShowcase;

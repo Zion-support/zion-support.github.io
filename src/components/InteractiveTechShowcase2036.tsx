@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const InteractiveTechShowcase2036: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -6,7 +6,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
 
   const technologies = [
     {
-      id: 1,
+      id: "1",
       name: "AI Consciousness",
       icon: "🧠",
       description: "True artificial consciousness with self-awareness and emotional intelligence",
@@ -15,7 +15,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-purple-900 to-pink-900"
     },
     {
-      id: 2,
+      id: "2",
       name: "Quantum Computing",
       icon: "⚡",
       description: "Quantum-enhanced processing with superposition and entanglement capabilities",
@@ -24,7 +24,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-cyan-900 to-blue-900"
     },
     {
-      id: 3,
+      id: "3",
       name: "Interdimensional Tech",
       icon: "🌌",
       description: "Technology that interacts with parallel dimensions and alternate realities",
@@ -33,7 +33,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-emerald-900 to-teal-900"
     },
     {
-      id: 4,
+      id: "4",
       name: "Neural Interfaces",
       icon: "🧬",
       description: "Direct brain-computer interfaces for seamless human-AI integration",
@@ -42,7 +42,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-violet-900 to-purple-900"
     },
     {
-      id: 5,
+      id: "5",
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
       icon: "🌍",
@@ -76,8 +76,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }
-  };
-
+  }
+];
   const currentTech = technologies[activeTech];
 
   return (
@@ -189,6 +189,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveTechShowcase2036;

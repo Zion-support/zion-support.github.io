@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion }  from 'framer-motion';
 
 const FeaturedNewContent: React.FC = () => {
   const featuredContent = [
@@ -36,8 +36,8 @@ const FeaturedNewContent: React.FC = () => {
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 30 }}
+          whileInView={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -57,8 +57,8 @@ const FeaturedNewContent: React.FC = () => {
           {featuredContent.map((content, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 30 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="group"
@@ -108,8 +108,8 @@ const FeaturedNewContent: React.FC = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 30 }}
+          whileInView={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
           className="text-center mt-16"
@@ -126,6 +126,6 @@ const FeaturedNewContent: React.FC = () => {
       </div>
     </section>
   );
-};
-
+  }
+];
 export default FeaturedNewContent;

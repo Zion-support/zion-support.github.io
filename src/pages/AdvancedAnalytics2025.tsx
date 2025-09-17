@@ -11,6 +11,6 @@ const AdvancedAnalytics2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AdvancedAnalytics2025;

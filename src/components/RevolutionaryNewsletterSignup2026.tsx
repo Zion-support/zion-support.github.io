@@ -11,6 +11,6 @@ const RevolutionaryNewsletterSignup2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryNewsletterSignup2026;

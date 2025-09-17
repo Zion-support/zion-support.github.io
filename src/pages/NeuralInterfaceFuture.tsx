@@ -11,6 +11,6 @@ const NeuralInterfaceFuture: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NeuralInterfaceFuture;

@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy }  from 'react';
+import { BrowserRouter as Router, Routes, Route }  from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
 import Footer from './Footer';
@@ -75,8 +75,7 @@ export default function AppOptimizedLazy(): React.JSX.Element {
                           style={{
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 3}s`,
-                          }}
+                            animationDelay: `${Math.random() * 3}s`}}
                         />
                       ))}
                     </div>

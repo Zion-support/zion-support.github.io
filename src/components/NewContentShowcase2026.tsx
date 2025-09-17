@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link }  from 'react-router-dom';
 
 const NewContentShowcase2026: React.FC = () => {
   return (
@@ -99,6 +99,6 @@ const NewContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NewContentShowcase2026;

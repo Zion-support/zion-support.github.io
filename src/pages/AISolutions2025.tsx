@@ -11,6 +11,6 @@ const AISolutions2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AISolutions2025;

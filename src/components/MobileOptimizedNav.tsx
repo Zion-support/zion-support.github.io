@@ -11,6 +11,6 @@ const MobileOptimizedNav: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default MobileOptimizedNav;

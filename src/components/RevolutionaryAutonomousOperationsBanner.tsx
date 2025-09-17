@@ -11,6 +11,6 @@ const RevolutionaryAutonomousOperationsBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryAutonomousOperationsBanner;

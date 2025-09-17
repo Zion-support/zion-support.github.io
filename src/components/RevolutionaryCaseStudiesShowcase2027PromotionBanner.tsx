@@ -11,6 +11,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryCaseStudiesShowcase2027PromotionBanner;

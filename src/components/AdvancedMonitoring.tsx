@@ -11,6 +11,6 @@ const AdvancedMonitoring: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AdvancedMonitoring;

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const RevolutionaryCaseStudies2029: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(0);
 
   const caseStudies = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Implementation at Fortune 500",
       company: "GlobalTech Industries",
       industry: "Manufacturing",
@@ -23,7 +23,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Sarah Chen, CTO, GlobalTech Industries"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Computing Breakthrough in Healthcare",
       company: "MediQuantum Solutions",
       industry: "Healthcare",
@@ -41,7 +41,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Dr. Michael Rodriguez, Chief Medical Officer, MediQuantum Solutions"
     },
     {
-      id: 3,
+      id: "3",
       title: "Neural Interface Revolution in Education",
       company: "EduNeural Academy",
       industry: "Education",
@@ -59,7 +59,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Dr. Emily Watson, Director of Innovation, EduNeural Academy"
     },
     {
-      id: 4,
+      id: "4",
       title: "Interdimensional Portal for Space Exploration",
       company: "Cosmic Ventures",
       industry: "Space Technology",
@@ -77,7 +77,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Commander Alex Thompson, Mission Director, Cosmic Ventures"
     },
     {
-      id: 5,
+      id: "5",
       title: "Reality Manipulation for Entertainment",
       company: "MetaReality Studios",
       industry: "Entertainment",
@@ -95,7 +95,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Jessica Park, Creative Director, MetaReality Studios"
     },
     {
-      id: 6,
+      id: "6",
       title: "Cosmic Intelligence Network for Global Communication",
       company: "UniComm Corporation",
       industry: "Telecommunications",
@@ -119,8 +119,8 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
     if (value.includes('+')) return 'text-cyan-400';
     if (value.includes('$')) return 'text-emerald-400';
     return 'text-purple-400';
-  };
-
+  }
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -298,6 +298,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryCaseStudies2029;

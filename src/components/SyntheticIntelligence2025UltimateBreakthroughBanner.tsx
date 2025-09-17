@@ -11,6 +11,6 @@ const SyntheticIntelligence2025UltimateBreakthroughBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SyntheticIntelligence2025UltimateBreakthroughBanner;

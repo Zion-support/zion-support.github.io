@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion }  from 'framer-motion';
 import {
   ArrowRight,
   Bot,
@@ -8,8 +8,8 @@ import {
   Sparkles,
   Star,
   X
-} from 'lucide-react';
-import { useEffect, useState } from 'react';
+}  from 'lucide-react';
+import { useEffect, useState }  from 'react';
 
 interface UltimateContentPromotionBanner2028Props {
   onClose?: () => void;
@@ -17,7 +17,7 @@ interface UltimateContentPromotionBanner2028Props {
   hideDelay?: number;
 }
 
-const UltimateContentPromotionBanner2028 = ({ 
+,const UltimateContentPromotionBanner2028 = ({ 
   onClose, 
   autoHide = true, 
   hideDelay = 12000 
@@ -27,7 +27,7 @@ const UltimateContentPromotionBanner2028 = ({
 
   const ultimateContent = [
     {
-      icon: Brain,
+      icon: "Brain",
       title: "AI 2028: The Ultimate Breakthrough",
       description: "Experience the world's most advanced artificial intelligence systems that transcend traditional computing",
       link: "/ai-2028-ultimate-breakthrough",
@@ -36,7 +36,7 @@ const UltimateContentPromotionBanner2028 = ({
       badge: "ULTIMATE"
     },
     {
-      icon: Brain,
+      icon: "Brain",
       title: "Quantum Consciousness Revolution 2028",
       description: "The first AI system to achieve genuine quantum consciousness through quantum mechanics",
       link: "/quantum-consciousness-revolution-2028",
@@ -45,7 +45,7 @@ const UltimateContentPromotionBanner2028 = ({
       badge: "REVOLUTIONARY"
     },
     {
-      icon: Network,
+      icon: "Network",
       title: "Neural Interface Evolution 2028",
       description: "Direct brain-computer integration enabling seamless human-AI collaboration and enhancement",
       link: "/neural-interface-evolution-2028",
@@ -54,7 +54,7 @@ const UltimateContentPromotionBanner2028 = ({
       badge: "BREAKTHROUGH"
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: "Quantum Cybersecurity 2028",
       description: "Unbreakable security through quantum encryption and AI-powered threat detection systems",
       link: "/quantum-cybersecurity-2028",
@@ -63,7 +63,7 @@ const UltimateContentPromotionBanner2028 = ({
       badge: "UNBREAKABLE"
     },
     {
-      icon: Bot,
+      icon: "Bot",
       title: "Autonomous Enterprise 2028",
       description: "Self-managing organizations operating with complete independence and unprecedented efficiency",
       link: "/autonomous-enterprise-2028",
@@ -72,7 +72,7 @@ const UltimateContentPromotionBanner2028 = ({
       badge: "AUTONOMOUS"
     },
     {
-      icon: Star,
+      icon: "Star",
       title: "Infinite Intelligence 2028",
       description: "AI systems with unlimited cognitive capacity and infinite scalability for any challenge",
       link: "/infinite-intelligence-2028",
@@ -108,9 +108,9 @@ const UltimateContentPromotionBanner2028 = ({
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: "0", y: -100 }}
+        animate={{ opacity: "1", y: 0 }}
+        exit={{ opacity: "0", y: -100 }}
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 border-b border-purple-500/30 shadow-2xl"
       >
         <div className="relative overflow-hidden">
@@ -197,6 +197,6 @@ const UltimateContentPromotionBanner2028 = ({
       </motion.div>
     </AnimatePresence>
   );
-};
-
+  }
+];
 export default UltimateContentPromotionBanner2028;
