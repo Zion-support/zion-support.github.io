@@ -1,55 +1,51 @@
+// @ts-nocheck
 import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
+import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for solving complex computational problems.', icon: CpuChipIcon },
   { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
   { name: 'Enterprise Security', description: 'Military-grade security protocols protecting your most valuable digital assets.', icon: ShieldCheckIcon },
-  { name: 'Advanced Analytics', description: 'Real-time data processing and insights to drive informed decision making.', icon: ChartBarIcon },
-  { name: 'Team Collaboration', description: 'Seamless collaboration tools for distributed teams and remote workforces.', icon: UserGroupIcon }
+  { name: 'Data Analytics', description: 'Advanced analytics and insights driving informed decision-making.', icon: ChartBarIcon },
+  { name: 'Expert Team', description: 'World-class researchers and engineers pushing the boundaries of technology.', icon: UserGroupIcon },
 ]
 
 const stats = [
+  { name: 'Research Papers Published', value: '150+' },
+  { name: 'AI Models Deployed', value: '500+' },
   { name: 'Global Clients', value: '1,000+' },
   { name: 'Patents Filed', value: '25+' },
-  { name: 'Countries Served', value: '50+' },
-  { name: 'Years of Innovation', value: '10+' }
 ]
 
 const solutions = [
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI-powered automation for end-to-end business processes with intelligent decision making and continuous optimization.',
-    href: '/solutions/autonomous-business'
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Comprehensive asset lifecycle management with predictive analytics and automated compliance monitoring.',
-    href: '/solutions/it-asset-management'
-  }
+  { name: 'AI Research Assistant', description: 'Autonomous research platform that accelerates scientific discovery.', href: '/solutions/ai-autonomous-research' },
+  { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
+  { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
+  { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
 ]
 
 const latest = getLatestUpdates(3)
 
 export default function HomePage() {
   return (
-    <div className="bg-black">
-      {/* Promo banner */}
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
-            <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Real-Time Agent Cost Optimizer v1.0 —
-              <a href="/updates/real-time-agent-cost-optimizer-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost optimizer</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              Production RAG Latency Budgets —
-              <a href="/updates/production-rag-latency-budgets" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">latency guide</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
-            </p>
-          </div>
+    <div className="bg-black min-h-screen">
+      {/* Promo banner for fresh content */}
+      <div className="mx-auto max-w-7xl px-6 pt-6">
+        <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
+          <p className="text-sm sm:text-base font-semibold text-blue-200">
+            New: Evidence Vault v1.1 —
+            <a href="/updates/agent-evidence-vault-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also: Agent Risk Dashboard v1.1 —
+            <a href="/updates/agent-risk-dashboard-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guide: Multimodal Agents Guardrails (2026) —
+            <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
+          </p>
         </div>
       </div>
 
@@ -69,11 +65,79 @@ export default function HomePage() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
+=======
+import {
+  ChartBarIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline'
+
+const features = [
+  {
+    name: 'AI-Powered Solutions',
+    description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
+    icon: CpuChipIcon,
+  },
+  {
+    name: 'Cloud Infrastructure',
+    description: 'Scalable and secure cloud infrastructure designed for modern applications.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Micro SaaS Development',
+    description: 'Custom micro SaaS solutions that drive revenue and efficiency.',
+    icon: LightBulbIcon,
+  },
+  {
+    name: 'Enterprise Security',
+    description: 'Comprehensive security solutions to protect your digital assets.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Data Analytics',
+    description: 'Advanced analytics and business intelligence to drive informed decisions.',
+    icon: ChartBarIcon,
+  },
+  {
+    name: 'Team Collaboration',
+    description: 'Tools and platforms that enhance team productivity and collaboration.',
+    icon: UserGroupIcon,
+  },
+]
+
+export default async function HomePage() {
+  const updates = await getLatestUpdates()
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Transforming businesses with cutting-edge AI, cloud infrastructure, and micro SaaS solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
+>>>>>>> origin/resolve-conflicts-and-improvements
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -203,6 +267,87 @@ export default function HomePage() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 transition-all duration-200 hover:scale-105">Get Started</a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
+=======
+      {/* Features Section */}
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-xl font-semibold text-gray-900">{feature.name}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Latest Updates Section */}
+      {updates && updates.length > 0 && (
+        <div className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Latest Updates
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Stay informed with our latest insights and developments
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {updates.slice(0, 6).map((update) => (
+                <div key={update.id} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-3">
+                    <span className="text-sm font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                      {update.category}
+                    </span>
+                    <span className="text-sm text-gray-500 ml-auto">
+                      {update.date}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {update.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {update.excerpt}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CTA Section */}
+      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our solutions can accelerate your digital transformation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Schedule Consultation
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              View Portfolio
+            </button>
+>>>>>>> origin/resolve-conflicts-and-improvements
           </div>
         </div>
       </div>

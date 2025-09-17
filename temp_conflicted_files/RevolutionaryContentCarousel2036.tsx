@@ -116,4 +116,3 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2036;
->>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526

@@ -1,28 +1,32 @@
+import React from "react";
 
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Evidence‑Driven Rollback Playbook (2026)</h1>
-        <p className="mt-4 text-gray-300">How to trigger, execute, and verify safe rollbacks with signed evidence.</p>
-        <div className="mt-10 space-y-6 text-gray-300">
-          <p>
-            This playbook codifies a safe rollback process for autonomous systems using objective eval gates
-            and signed evidence. It defines when to roll back, how to coordinate actions across services,
-            and how to verify recovery using pre‑agreed SLOs and checklists.
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Update</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Page Title
+          </h1>
+          <p className="mt-4 text-gray-300">
+            Page description and summary.
           </p>
-          <h2 className="text-xl font-semibold text-white">What’s Inside</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Rollback triggers and thresholds with evaluator signals</li>
-            <li>Operational steps with change evidence and lineage capture</li>
-            <li>Post‑rollback verification and audit‑ready reporting</li>
+        </div>
+        <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-300">
+          <h2>Overview</h2>
+          <p>Content overview and details.</p>
+          <h2>Key features</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
           </ul>
-          <div className="mt-8">
-            <a href="/updates" className="text-blue-400 hover:text-blue-300 font-semibold">Back to updates →</a>
-          </div>
+          <p>
+            <a href="/contact">Contact us →</a>
+          </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

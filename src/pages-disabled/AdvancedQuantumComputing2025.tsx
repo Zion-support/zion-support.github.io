@@ -1,0 +1,162 @@
+import React from 'react';
+
+const AdvancedQuantumComputing2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Advanced Quantum Computing 2025
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the next generation of quantum computing with exponential processing power, 
+            quantum supremacy, and revolutionary applications that will reshape our digital future.
+          </p>
+        </div>
+
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Achieve computational advantages that classical computers cannot match, solving problems in seconds that would take millennia.
+            </p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• 10^15x faster than classical computers</li>
+              <li>• Exponential speedup for specific algorithms</li>
+              <li>• Quantum advantage in optimization</li>
+              <li>• Breakthrough cryptography applications</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Revolutionary artificial intelligence powered by quantum computing, enabling unprecedented machine learning capabilities.
+            </p>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Quantum machine learning algorithms</li>
+              <li>• Quantum neural networks</li>
+              <li>• Enhanced pattern recognition</li>
+              <li>• Quantum-enhanced optimization</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Security</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Unbreakable quantum cryptography and security protocols that protect against even quantum attacks.
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Quantum key distribution</li>
+              <li>• Post-quantum cryptography</li>
+              <li>• Quantum random number generation</li>
+              <li>• Unhackable communication</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Applications Section */}
+        <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-3">🧬</div>
+              <h3 className="text-lg font-bold mb-2">Drug Discovery</h3>
+              <p className="text-sm opacity-90">Accelerate pharmaceutical research with quantum molecular simulation</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-3">🌍</div>
+              <h3 className="text-lg font-bold mb-2">Climate Modeling</h3>
+              <p className="text-sm opacity-90">Solve complex climate equations with quantum precision</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-3">💰</div>
+              <h3 className="text-lg font-bold mb-2">Financial Modeling</h3>
+              <p className="text-sm opacity-90">Revolutionary portfolio optimization and risk analysis</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-3">🚀</div>
+              <h3 className="text-lg font-bold mb-2">Space Exploration</h3>
+              <p className="text-sm opacity-90">Advanced navigation and communication systems</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Technology Specifications */}
+        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Quantum Technology Specifications</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-cyan-400">Hardware Specifications</h3>
+              <ul className="space-y-4 text-lg">
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></span>
+                  <span>1000+ Qubits Quantum Processor</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></span>
+                  <span>99.9% Quantum Gate Fidelity</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></span>
+                  <span>Ultra-Low Temperature Operation (10mK)</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></span>
+                  <span>Advanced Error Correction</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-purple-400">Software Capabilities</h3>
+              <ul className="space-y-4 text-lg">
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-purple-500 rounded-full mr-4"></span>
+                  <span>Quantum Development Kit</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-purple-500 rounded-full mr-4"></span>
+                  <span>Hybrid Classical-Quantum Algorithms</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-purple-500 rounded-full mr-4"></span>
+                  <span>Real-time Quantum Simulation</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-3 h-3 bg-purple-500 rounded-full mr-4"></span>
+                  <span>Cloud Quantum Computing Access</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience Quantum Computing?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the quantum revolution and unlock unprecedented computational power for your organization.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Get Quantum Access →
+            </a>
+            <a href="/pages/QuantumComputingRevolution2025" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdvancedQuantumComputing2025;

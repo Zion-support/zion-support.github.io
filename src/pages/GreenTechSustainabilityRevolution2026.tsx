@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 const GreenTechSustainabilityRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
@@ -30,27 +30,32 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Environmental Impact Stats */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
           Our Environmental Impact
         </h2>
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm p-8 rounded-2xl border border-green-400/30 text-center">
             <div className="text-5xl mb-4">🌍</div>
             <h3 className="text-3xl font-bold mb-2 text-green-300">2.5M</h3>
             <p className="text-gray-300">Tons of CO₂ Removed</p>
           </div>
+
           <div className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 backdrop-blur-sm p-8 rounded-2xl border border-teal-400/30 text-center">
             <div className="text-5xl mb-4">🌱</div>
             <h3 className="text-3xl font-bold mb-2 text-teal-300">50K</h3>
             <p className="text-gray-300">Acres Restored</p>
           </div>
+
           <div className="bg-gradient-to-br from-emerald-800/50 to-green-800/50 backdrop-blur-sm p-8 rounded-2xl border border-emerald-400/30 text-center">
             <div className="text-5xl mb-4">⚡</div>
             <h3 className="text-3xl font-bold mb-2 text-emerald-300">100%</h3>
             <p className="text-gray-300">Renewable Energy</p>
           </div>
+
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 text-center">
             <div className="text-5xl mb-4">🐋</div>
             <h3 className="text-3xl font-bold mb-2 text-cyan-300">1M+</h3>
@@ -58,11 +63,13 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Revolutionary Technologies */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
           Revolutionary Green Technologies
         </h2>
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm p-8 rounded-2xl border border-green-400/30 hover:border-green-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌊</div>
@@ -75,6 +82,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
               Available Q1 2026
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 backdrop-blur-sm p-8 rounded-2xl border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌬️</div>
             <h3 className="text-2xl font-bold mb-4 text-teal-300">Atmospheric Carbon Capture</h3>
@@ -86,6 +94,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
               Available Q2 2026
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-emerald-800/50 to-green-800/50 backdrop-blur-sm p-8 rounded-2xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-emerald-300">Smart Reforestation</h3>
@@ -97,6 +106,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
               Available Q1 2026
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-cyan-300">Fusion Energy</h3>
@@ -108,6 +118,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
               Available Q3 2026
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">♻️</div>
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Waste Elimination</h3>
@@ -119,6 +130,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
               Available Q2 2026
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-rose-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-rose-400/30 hover:border-rose-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🌡️</div>
             <h3 className="text-2xl font-bold mb-4 text-rose-300">Climate Stabilization</h3>
@@ -132,12 +144,14 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Technology Deep Dive */}
       <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
             Green Technology Architecture
           </h2>
+          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-cyan-300">Eco-Smart Processing Units</h3>
@@ -190,11 +204,13 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Success Stories */}
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Environmental Success Stories
         </h2>
+        
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-400/20">
@@ -204,6 +220,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
                 Great Barrier Reef, bringing back vibrant marine life and protecting coastal communities.
               </p>
             </div>
+            
             <div className="bg-gradient-to-r from-teal-800/30 to-cyan-800/30 p-6 rounded-xl border border-teal-400/20">
               <h3 className="text-2xl font-bold mb-4 text-teal-300">Amazon Rainforest Recovery</h3>
               <p className="text-gray-300">
@@ -211,6 +228,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
                 creating new habitats for endangered species and sequestering massive amounts of CO₂.
               </p>
             </div>
+            
             <div className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-400/20">
               <h3 className="text-2xl font-bold mb-4 text-cyan-300">Arctic Ice Restoration</h3>
               <p className="text-gray-300">
@@ -219,6 +237,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
               </p>
             </div>
           </div>
+          
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-400/20">
               <h3 className="text-2xl font-bold mb-4 text-purple-300">Urban Air Purification</h3>
@@ -227,6 +246,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
                 cities, improving public health and creating cleaner urban environments.
               </p>
             </div>
+            
             <div className="bg-gradient-to-r from-rose-800/30 to-pink-800/30 p-6 rounded-xl border border-rose-400/20">
               <h3 className="text-2xl font-bold mb-4 text-rose-300">Ocean Plastic Cleanup</h3>
               <p className="text-gray-300">
@@ -234,6 +254,7 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
                 the world's oceans, protecting marine life and restoring ocean health.
               </p>
             </div>
+            
             <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 p-6 rounded-xl border border-indigo-400/20">
               <h3 className="text-2xl font-bold mb-4 text-indigo-300">Renewable Energy Revolution</h3>
               <p className="text-gray-300">
@@ -244,16 +265,41 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
+
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">GreenTechSustainabilityRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+            Join the Green Revolution
+          </h2>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Together, we can reverse climate change and create a sustainable future for all life on Earth. 
+            The time to act is now.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <button className="bg-gradient-to-r from-green-600 to-teal-600 px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Start Your Impact
+            </button>
+            <button className="border-2 border-green-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-green-400/20 transition-all duration-300">
+              View Impact Report
+            </button>
+            <button className="border-2 border-teal-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-teal-400/20 transition-all duration-300">
+              Download Action Plan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="bg-black/50 backdrop-blur-sm py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-400">
+            © 2026 Zion Tech Group. Saving our planet, one innovation at a time.
+          </p>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default GreenTechSustainabilityRevolution2026;

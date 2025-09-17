@@ -1,133 +1,14 @@
 import React from 'react';
 const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
   return (
-    <div>
-      {isVisible && (
-        <div
-          className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden"
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600/90 via-purple-600/90 to-pink-600/90" />
-          {/* Floating AI Icons */}
-          <div className="absolute top-4 left-8 w-6 h-6 text-white/20 animate-bounce">
-            <Brain className="w-full h-full" />
-          </div>
-          <div className="absolute top-8 right-12 w-4 h-4 text-white/30 animate-pulse delay-1000">
-            <Zap className="w-full h-full" />
-          </div>
-          <div className="absolute bottom-6 left-16 w-5 h-5 text-white/25 animate-bounce delay-2000">
-            <TrendingUp className="w-full h-full" />
-          </div>
-          <div className="absolute bottom-4 right-8 w-3 h-3 text-white/40 animate-pulse delay-500">
-            <Sparkles className="w-full h-full" />
-          </div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              {/* Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <div
-                  className="flex items-center justify-center lg:justify-start gap-3 mb-3"
-                >
-                  <div className="flex items-center gap-1">
-                    <Sparkles className="w-5 h-5 text-yellow-300" />
-                    <span className="text-yellow-300 font-semibold text-sm uppercase tracking-wide">
-                      Interactive AI Tools
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                  </div>
-                </div>
-                <divh2
-                  className="text-2xl lg:text-3xl font-bold text-white mb-2"
-                >
-                  🤖 Interactive AI Tools Suite 2025
-                </divh2>
-                <divp
-                  className="text-indigo-100 text-lg mb-4 max-w-2xl"
-                >
-                  Experience the power of artificial intelligence with our comprehensive suite of interactive tools. 
-                  <span className="font-semibold text-white"> 98.5% accuracy</span>
-                  <span className="font-semibold text-white"> 10x faster processing</span>and 
-                  <span className="font-semibold text-white"> 24/7 availability</span>.
-                </divp>
-                <div
-                  className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
-                >
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
-                    <span>AI Assistant</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
-                    <span>Data Analyzer</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
-                    <span>Content Generator</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
-                    <span>Security Guard</span>
-                  </div>
-                </div>
-                <div
-                  className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
-                >
-                  <button className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl">
-                    <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Try AI Tools
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
-                  <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 flex items-center justify-center group">
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Explore Suite
-                  </button>
-                </div>
-              </div>
-              {/* AI Tools Preview */}
-              <div
-                className="flex flex-col sm:flex-row lg:flex-col gap-4"
-              >
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
-                  <Brain className="w-8 h-8 text-white mx-auto mb-2" />
-                  <div className="text-lg font-bold text-white mb-1">AI Assistant</div>
-                  <div className="text-indigo-100 text-sm">98.5% accuracy</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
-                  <Zap className="w-8 h-8 text-white mx-auto mb-2" />
-                  <div className="text-lg font-bold text-white mb-1">Automation</div>
-                  <div className="text-indigo-100 text-sm">85% efficiency</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
-                  <TrendingUp className="w-8 h-8 text-white mx-auto mb-2" />
-                  <div className="text-lg font-bold text-white mb-1">Analytics</div>
-                  <div className="text-indigo-100 text-sm">10x faster</div>
-                </div>
-              </div>
-            </div>
-            {/* Dismiss Button */}
-            <button
-              onClick={handleDismiss}
-              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-300 p-1"
-              aria-label="Dismiss banner"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-          {/* Animated Border */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-pulse" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">InteractiveAIToolsShowcase2025PromotionBanner</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
-      )}
+      </div>
     </div>
   );
-};
-
-
+  };
 export default InteractiveAIToolsShowcase2025PromotionBanner;
-</div></div></div></div></div>

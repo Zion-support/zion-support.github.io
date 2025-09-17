@@ -1,17 +1,16 @@
 // Notification provider component
 import React from 'react';
-import { NotificationContext } from './NotificationContext';
+import { NotificationContext }  from './NotificationContext';
 
 export const NotificationProvider = ({ children }) => {
   const value = {
     notifications: [],
     addNotification: () => {},
-    removeNotification: () => {}
+    removeNotification: () => {};
   };
-  
   return (
     <NotificationContext.Provider value={value}>
-      {children}
+      {children};
     </NotificationContext.Provider>
   );
-};
+  };

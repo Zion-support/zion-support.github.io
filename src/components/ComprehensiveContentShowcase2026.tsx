@@ -1,254 +1,265 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Clock, 
-  User, 
-  Tag, 
-  Star, 
-  TrendingUp, 
-  BookOpen, 
-  Zap,
-  Shield,
-  Brain,
-  Cpu,
-  Globe,
-  Lock
-} from 'lucide-react';
-interface ContentItem {
-  id: number;
-  title: string;
-  excerpt: string;
-  category: string;
-  readTime: string;
-  author: string;
-  publishDate: string;
-  featured: boolean;
-  tags: string[];
-  stats: string;
-  icon: React.ReactNode;
-  gradient: string;
-}
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, Users, Shield, Globe, Atom }  from 'lucide-react';
+
 const ComprehensiveContentShowcase2026: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const contentItems: ContentItem[] = [
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const categories = [
     {
-      id: 37,
-      title: "The Future of AI-Driven Business Automation: 2026 Edition",
-      excerpt: "Discover how AI automation is revolutionizing business operations, reducing costs by 60%, and increasing productivity by 200% across industries.",
-      category: "AI & Automation",
-      readTime: "15 min read",
-      author: "Dr. Elena Martinez",
-      publishDate: "2026-01-20",
-      featured: true,
-      tags: ["AI Automation", "Business Intelligence", "Productivity"],
-      stats: "60% cost reduction, 200% productivity increase",
-      icon: <Zap className="w-6 h-6" />,
-      gradient: "from-blue-500 to-cyan-500"
+      name: "AI Breakthroughs",
+      icon: "Brain",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-600/20 to-pink-600/20"
     },
     {
-      id: 38,
-      title: "Quantum Computing Breakthrough: Real-World Applications in 2026",
-      excerpt: "Explore how quantum computing is solving previously impossible problems in cryptography, drug discovery, and financial modeling.",
-      category: "Quantum Computing",
-      readTime: "18 min read",
-      author: "Prof. James Chen",
-      publishDate: "2026-01-22",
-      featured: true,
-      tags: ["Quantum Computing", "Cryptography", "Drug Discovery"],
-      stats: "1000x faster processing, 95% accuracy",
-      icon: <Cpu className="w-6 h-6" />,
-      gradient: "from-purple-500 to-pink-500"
+      name: "Quantum Computing",
+      icon: "Cpu",
+      color: "from-blue-600 to-cyan-600",
+      bgColor: "from-blue-600/20 to-cyan-600/20"
     },
     {
-      id: 39,
-      title: "Neural Interface Technology: The Next Frontier of Human-Computer Interaction",
-      excerpt: "Discover how neural interfaces are enabling direct brain-computer communication, revolutionizing healthcare, education, and entertainment.",
-      category: "Neural Interfaces",
-      readTime: "20 min read",
-      author: "Dr. Sarah Kim",
-      publishDate: "2026-01-25",
-      featured: true,
-      tags: ["Neural Interfaces", "Brain-Computer Interface", "Healthcare"],
-      stats: "99.7% accuracy, 50+ clinical trials",
-      icon: <Brain className="w-6 h-6" />,
-      gradient: "from-green-500 to-emerald-500"
+      name: "Neural Interfaces",
+      icon: "Zap",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-600/20 to-teal-600/20"
     },
     {
-      id: 40,
-      title: "Revolutionary Cybersecurity: AI-Powered Threat Detection and Prevention",
-      excerpt: "Learn how AI-powered cybersecurity solutions are detecting and preventing 99.9% of cyber threats in real-time.",
-      category: "Cybersecurity",
-      readTime: "16 min read",
-      author: "Alex Thompson",
-      publishDate: "2026-01-28",
-      featured: true,
-      tags: ["Cybersecurity", "AI Security", "Threat Detection"],
-      stats: "99.9% threat prevention, $2.5B saved",
-      icon: <Shield className="w-6 h-6" />,
-      gradient: "from-red-500 to-orange-500"
+      name: "Analytics & Insights",
+      icon: "TrendingUp",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-600/20 to-red-600/20"
+    };
+  const contentItems = [
+    {
+      title: "AI Revolutionary Breakthrough 2026",
+      description: "Witness the most significant advancement in artificial intelligence history with conscious AI systems and quantum neural networks.",
+      category: "0",
+      link: "/pages/AIRevolutionaryBreakthrough2026",
+      image: "🧠",
+      features: ["Conscious AI Systems", "Quantum Neural Networks", "Neural Interface Revolution", "Predictive Intelligence"],
+      rating: "5",
+      views: "2.5M",
+      gradient: "from-purple-600 to-pink-600"
     },
     {
-      id: 41,
-      title: "The Metaverse Revolution: Building Immersive Digital Worlds",
-      excerpt: "Explore how the metaverse is transforming social interaction, commerce, and entertainment with immersive 3D experiences.",
-      category: "Metaverse",
-      readTime: "14 min read",
-      author: "Maria Rodriguez",
-      publishDate: "2026-01-30",
-      featured: true,
-      tags: ["Metaverse", "Virtual Reality", "3D Worlds"],
-      stats: "300% engagement boost, $50B market",
-      icon: <Globe className="w-6 h-6" />,
-      gradient: "from-indigo-500 to-purple-500"
+      title: "Quantum Computing Revolution 2026",
+      description: "Experience the most powerful quantum computing systems ever built, solving impossible problems with unbreakable security.",
+      category: "1",
+      link: "/pages/QuantumComputingRevolution2026",
+      image: "⚡",
+      features: ["Quantum Supremacy", "Quantum AI Integration", "Quantum Cryptography", "Quantum Simulation"],
+      rating: "5",
+      views: "1.8M",
+      gradient: "from-blue-600 to-cyan-600"
     },
     {
-      id: 34,
-      title: "Revolutionary Tech Insights 2026: The Future is Here",
-      excerpt: "Discover the cutting-edge technologies and innovations that are reshaping our world in 2026.",
-      category: "Technology Trends",
-      readTime: "12 min read",
-      author: "Dr. Sarah Chen",
-      publishDate: "2026-01-15",
-      featured: true,
-      tags: ["AI Consciousness", "Quantum Computing", "Innovation"],
-      stats: "500+ projects, 50+ countries",
-      icon: <TrendingUp className="w-6 h-6" />,
-      gradient: "from-yellow-500 to-orange-500"
-    }
-  ];
-  const categories = ['All', ...Array.from(new Set(contentItems.map(item => item.category)))];
-  const filteredContent = selectedCategory === 'All' 
-    ? contentItems 
-    : contentItems.filter(item => item.category === selectedCategory);
+      title: "Neural Interface Revolution 2026",
+      description: "Direct brain-computer interface technology for seamless AI interaction and enhanced human capabilities.",
+      category: "2",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      image: "🔗",
+      features: ["Direct Neural Communication", "Thought-to-AI Translation", "Enhanced Cognition", "Human-AI Integration"],
+      rating: "5",
+      views: "3.2M",
+      gradient: "from-emerald-600 to-teal-600"
+    },
+    {
+      title: "Advanced Analytics 2026",
+      description: "Revolutionary data analytics with 99.9% prediction accuracy, transforming decision-making across industries.",
+      category: "3",
+      link: "/pages/AdvancedAnalytics2025",
+      image: "📊",
+      features: ["Future Prediction", "Trend Analysis", "Risk Assessment", "Strategic Planning"],
+      rating: "5",
+      views: "1.5M",
+      gradient: "from-orange-600 to-red-600"
+    },
+    {
+      title: "Consciousness Computing 2026",
+      description: "Breakthrough technology that simulates and enhances human consciousness through advanced AI systems.",
+      category: "0",
+      link: "/pages/ConsciousnessComputingRevolution2026",
+      image: "🌟",
+      features: ["Consciousness Simulation", "Enhanced Awareness", "Cognitive Enhancement", "Mind Expansion"],
+      rating: "5",
+      views: "2.1M",
+      gradient: "from-violet-600 to-purple-600"
+    },
+    {
+      title: "Space Technology 2026",
+      description: "Revolutionary space exploration technology powered by quantum computing and advanced AI systems.",
+      category: "1",
+      link: "/pages/SpaceTechnology2026",
+      image: "🚀",
+      features: ["Quantum Space Navigation", "AI-Powered Exploration", "Interstellar Communication", "Space Colonization"],
+      rating: "5",
+      views: "1.9M",
+      gradient: "from-indigo-600 to-blue-600"
+    },
+    {
+      title: "Biotech Revolution 2026",
+      description: "Advanced biotechnology combining AI, quantum computing, and neural interfaces for medical breakthroughs.",
+      category: "2",
+      link: "/pages/BiotechRevolution2026",
+      image: "🧬",
+      features: ["AI Drug Discovery", "Neural Health Monitoring", "Quantum Medical Imaging", "Genetic Enhancement"],
+      rating: "5",
+      views: "2.7M",
+      gradient: "from-green-600 to-emerald-600"
+    },
+    {
+      title: "Future Tech Trends 2026",
+      description: "Comprehensive analysis of emerging technologies and their impact on society and business.",
+      category: "3",
+      link: "/pages/FutureTechTrends2025",
+      image: "🔮",
+      features: ["Trend Analysis", "Market Predictions", "Technology Forecasting", "Impact Assessment"],
+      rating: "5",
+      views: "1.3M",
+      gradient: "from-pink-600 to-rose-600"
+    };
+  const filteredContent = contentItems.filter(item => item.category === activeCategory);
+
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4"
-          >
-            <BookOpen className="w-5 h-5" />
-            <span className="font-medium">Latest Content</span>
-          </motion.div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Revolutionary Tech Content 2026
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge insights, breakthrough technologies, and real-world applications 
-            that are transforming industries and shaping the future.
-          </p>
-        </div>
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-sm'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-            >
-              {/* Header with Icon and Category */}
-              <div className={`bg-gradient-to-r ${item.gradient} p-6 text-white`}>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-white/20 rounded-xl">
-                    {item.icon}
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm opacity-90">{item.category}</div>
-                    <div className="text-xs opacity-75">{item.publishDate}</div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 line-clamp-2">
-                  {item.title}
-                </h3>
-                <div className="flex items-center space-x-4 text-sm">
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{item.readTime}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <User className="w-4 h-4" />
-                    <span>{item.author}</span>
-                  </div>
-                </div>
-              </div>
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.excerpt}
-                </p>
-                {/* Stats */}
-                <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                  <div className="flex items-center space-x-2 text-sm text-gray-700">
-                    <Star className="w-4 h-4 text-yellow-500" />
-                    <span className="font-medium">{item.stats}</span>
-                  </div>
-                </div>
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-medium flex items-center justify-center space-x-2 group-hover:shadow-lg transition-all"
-                >
-                  <span>Read Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        {/* Bottom CTA */}
+        {/* Header */};
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: "0", y: 30 }};
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+          transition={{ duration: 0.8 }};
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Content Showcase 2026
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Explore the most groundbreaking technologies and innovations that are reshaping our future
+          </p>
+        </motion.div>
+
+        {/* Category Tabs */};
+        <motion.div
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
+          transition={{ duration: 0.8, delay: 0.2 }};
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {categories.map((category, index) => (
+            <button
+              key={index};
+              onClick={() => setActiveCategory(index)};
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeCategory === index
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
+                  : `bg-gradient-to-r ${category.bgColor} text-gray-300 hover:text-white border border-gray-600/30`
+              }`};
+            >
+              <category.icon className="w-5 h-5" />
+              <span>{category.name}</span>
+            </button>
+          ))};
+        </motion.div>
+
+        {/* Content Grid */};
+        <motion.div
+          initial={{ opacity: 0 }};
+          animate={{ opacity: isVisible ? 1 : 0 }};
+          transition={{ duration: 0.8, delay: 0.4 }};
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence mode="wait">
+            {filteredContent.map((item, index) => (
+              <motion.div
+                key={`${activeCategory}-${index}`};
+                initial={{ opacity: "0", y: "50", scale: 0.9 }};
+                animate={{ opacity: "1", y: "0", scale: 1 }};
+                exit={{ opacity: "0", y: -50, scale: 0.9 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
+                className={`bg-gradient-to-br ${item.gradient} p-6 rounded-2xl border border-white/20 hover:scale-105 transition-all duration-300 group`};
+              >
+                {/* Header */};
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl">{item.image}</div>
+                  <div className="flex items-center space-x-2">
+                    <div className="flex">
+                      {[...Array(item.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      ))};
+                    </div>
+                    <span className="text-white/80 text-sm">{item.views} views</span>
+                  </div>
+                </div>
+
+                {/* Content */};
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors">
+                  {item.title};
+                </h3>
+                <p className="text-white/80 mb-4 text-sm leading-relaxed">
+                  {item.description};
+                </p>
+
+                {/* Features */};
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {item.features.slice(0, 2).map((feature, featureIndex) => (
+                      <span
+                        key={featureIndex};
+                        className="bg-white/20 text-white/90 text-xs px-2 py-1 rounded-full"
+                      >
+                        {feature};
+                      </span>
+                    ))};
+                    {item.features.length > 2 && (
+                      <span className="text-white/60 text-xs">
+                        +{item.features.length - 2} more
+                      </span>
+                    )};
+                  </div>
+                </div>
+
+                {/* CTA */};
+                <motion.a
+                  href={item.link};
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
+                  className="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 group-hover:bg-white group-hover:text-gray-900"
+                >
+                  <span>Explore Now</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </motion.a>
+              </motion.div>
+            ))};
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Bottom CTA */};
+        <motion.div
+          initial={{ opacity: "0", y: 30 }};
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+          transition={{ duration: 0.8, delay: 0.8 }};
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Stay Ahead of the Tech Revolution
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-400/30">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Explore the Future?
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get exclusive access to our latest research, case studies, and breakthrough insights. 
-              Join thousands of innovators who are already transforming their industries.
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of innovators, researchers, and technology enthusiasts who are already experiencing these revolutionary breakthroughs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Subscribe to Updates
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                <span>Start Your Journey</span>
+                <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 View All Content
               </button>
             </div>
@@ -257,7 +268,5 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-
-
-
+  };
 export default ComprehensiveContentShowcase2026;

@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
+<<<<<<< HEAD:src/components/LoadingSpinner.tsx
+<<<<<<< HEAD
   color?: string;
+=======
+=======
+  color?: string;
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f:src/components/LoadingSpinner.tsx.backup.1757950367
   color?: 'primary' | 'secondary' | 'white';
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
   className?: string;
@@ -11,7 +17,13 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
+<<<<<<< HEAD:src/components/LoadingSpinner.tsx
+<<<<<<< HEAD
   color = 'text-blue-500',
+=======
+=======
+  color = 'text-blue-500',
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f:src/components/LoadingSpinner.tsx.backup.1757950367
   color = 'primary',
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
   className = '' 
@@ -29,6 +41,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
+<<<<<<< HEAD:src/components/LoadingSpinner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f:src/components/LoadingSpinner.tsx.backup.1757950367
     <motion.div
       className={`${sizeClasses[size]} ${color} ${className}`}
       animate={{ rotate: 360 }}
@@ -54,6 +70,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </motion.div>
   );
 };
+<<<<<<< HEAD:src/components/LoadingSpinner.tsx
+=======
+=======
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f:src/components/LoadingSpinner.tsx.backup.1757950367
     <div className={`flex items-center justify-center ${className}`}>
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
         <svg

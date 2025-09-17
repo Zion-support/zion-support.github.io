@@ -1,20 +1,17 @@
-import React from "react";
-const RevolutionaryTechBreakthrough2038 = () => {
+import React from 'react';
+import { motion }  from 'framer-motion';
+
+const RevolutionaryTechBreakthrough2038: React.FC = () => {
   return (
-    <div>
-      <div>
-        <div>
-          <h1>Revolutionary Tech Breakthrough2038</h1>
-          <p>Content coming soon...</p>
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -35,13 +32,16 @@ const RevolutionaryTechBreakthrough2038 = () => {
               </button>
             </div>
           </motion.div>
-      {/* Revolutionary Features */}
+        </div>
+      </div>
+
+      {/* Revolutionary Features */};
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: "0", y: 20 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.6 }};
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
           >
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -55,10 +55,11 @@ const RevolutionaryTechBreakthrough2038 = () => {
               <li>• Digital Immortality</li>
             </ul>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: "0", y: 20 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.6, delay: 0.2 }};
             className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30"
           >
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -72,10 +73,11 @@ const RevolutionaryTechBreakthrough2038 = () => {
               <li>• Parallel Realities</li>
             </ul>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: "0", y: 20 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.6, delay: 0.4 }};
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
           >
             <div className="text-6xl mb-4 text-center">🌟</div>
@@ -91,17 +93,19 @@ const RevolutionaryTechBreakthrough2038 = () => {
           </motion.div>
         </div>
       </div>
-      {/* Interactive Lab */}
+
+      {/* Interactive Lab */};
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-6">🧪 Revolutionary Technology Lab</h2>
           <p className="text-xl opacity-90">Experiment with the most advanced technologies ever created</p>
         </div>
+        
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: "0", x: -20 }};
+            whileInView={{ opacity: "1", x: 0 }};
+            transition={{ duration: 0.6 }};
             className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">🧬 Consciousness Lab</h3>
@@ -121,10 +125,11 @@ const RevolutionaryTechBreakthrough2038 = () => {
               </button>
             </div>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: "0", x: 20 }};
+            whileInView={{ opacity: "1", x: 0 }};
+            transition={{ duration: 0.6 }};
             className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">⚡ Quantum Processor</h3>
@@ -146,49 +151,51 @@ const RevolutionaryTechBreakthrough2038 = () => {
           </motion.div>
         </div>
       </div>
-      {/* Revolutionary Statistics */}
+
+      {/* Revolutionary Statistics */};
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-8 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: "0", scale: 0.8 }};
+            whileInView={{ opacity: "1", scale: 1 }};
+            transition={{ duration: 0.6 }};
           >
             <div className="text-4xl font-bold mb-2">∞</div>
             <div className="text-lg opacity-90">Processing Power</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial={{ opacity: "0", scale: 0.8 }};
+            whileInView={{ opacity: "1", scale: 1 }};
+            transition={{ duration: 0.6, delay: 0.1 }};
           >
             <div className="text-4xl font-bold mb-2">100%</div>
             <div className="text-lg opacity-90">Consciousness Fidelity</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: "0", scale: 0.8 }};
+            whileInView={{ opacity: "1", scale: 1 }};
+            transition={{ duration: 0.6, delay: 0.2 }};
           >
             <div className="text-4xl font-bold mb-2">0ms</div>
             <div className="text-lg opacity-90">Transfer Time</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={{ opacity: "0", scale: 0.8 }};
+            whileInView={{ opacity: "1", scale: 1 }};
+            transition={{ duration: 0.6, delay: 0.3 }};
           >
             <div className="text-4xl font-bold mb-2">∞</div>
             <div className="text-lg opacity-90">Reality Dimensions</div>
           </motion.div>
         </div>
       </div>
-      {/* Call to Action */}
+
+      {/* Call to Action */};
       <div className="container mx-auto px-4 py-16 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: "0", y: 20 }};
+          whileInView={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.8 }};
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolutionary Breakthrough?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
@@ -206,8 +213,5 @@ const RevolutionaryTechBreakthrough2038 = () => {
       </div>
     </div>
   );
-
-};
-
-
+  };
 export default RevolutionaryTechBreakthrough2038;
