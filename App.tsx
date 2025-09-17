@@ -69,6 +69,8 @@ import CosmicConsciousness2030 from './src/pages/CosmicConsciousness2030';
 import UltimateFutureShowcase2030 from './src/components/UltimateFutureShowcase2030';
 import UltimateTechRevolution2035 from './src/pages/UltimateTechRevolution2035';
 import UltimateRevolutionShowcase2035 from './src/components/UltimateRevolutionShowcase2035';
+import UniversalSingularity2040 from './src/pages/UniversalSingularity2040';
+import UniversalSingularityShowcase2040 from './src/components/UniversalSingularityShowcase2040';
 
 export default function App(): JSX.Element {
   return (
@@ -112,6 +114,9 @@ export default function App(): JSX.Element {
                       <a href="/pages/UltimateTechRevolution2035" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-lg border border-white/30 hover:scale-105 transform">
                         🚀 Ultimate Revolution →
                       </a>
+                      <a href="/pages/UniversalSingularity2040" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold text-lg border border-white/30 hover:scale-105 transform">
+                        🌌 Universal Singularity →
+                      </a>
                       <a href="/pages/CosmicConsciousness2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold text-lg border border-white/30 hover:scale-105 transform">
                         🌟 Cosmic Consciousness →
                       </a>
@@ -129,6 +134,11 @@ export default function App(): JSX.Element {
                       </a>
                     </div>
                   </div>
+                </div>
+
+                {/* Universal Singularity Showcase 2040 */}
+                <div className="mb-12">
+                  <UniversalSingularityShowcase2040 />
                 </div>
 
                 {/* Ultimate Revolution Showcase 2035 */}
@@ -438,6 +448,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RealitySynthesis2029" element={<RealitySynthesis2029 />} />
           <Route path="/pages/CosmicConsciousness2030" element={<CosmicConsciousness2030 />} />
           <Route path="/pages/UltimateTechRevolution2035" element={<UltimateTechRevolution2035 />} />
+          <Route path="/pages/UniversalSingularity2040" element={<UniversalSingularity2040 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/contact" element={
