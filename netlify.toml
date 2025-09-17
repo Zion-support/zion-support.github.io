@@ -181,4 +181,4 @@
   to = "/index.html"
   status = 200
 
-# build trigger: chore(netlify): retrigger Netlify deploy with no functional changes (timestamp: 2025-09-17T00:00:00Z)
+# build trigger: chore(netlify): retrigger Netlify deploy with no functional changes
