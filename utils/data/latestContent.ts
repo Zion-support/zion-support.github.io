@@ -1,3 +1,5 @@
+export const latestContent = [
+  {
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
@@ -98,3 +100,7 @@
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
+    tag: "Blueprint",
+    date: "2025-09-15",
+  }
+];
