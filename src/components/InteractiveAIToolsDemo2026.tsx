@@ -133,7 +133,7 @@ const InteractiveAIToolsDemo2026 = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -143,10 +143,10 @@ const InteractiveAIToolsDemo2026 = () => {
             Experience the power of our cutting-edge AI tools through interactive demonstrations. 
             See how our solutions can transform your workflow in real-time.
           </p>
-        </divdiv>
+        </div>
 
         {/* Demo Selector */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {demos.map((demoindex) => (
@@ -166,10 +166,10 @@ const InteractiveAIToolsDemo2026 = () => {
               <p className="text-sm text-blue-200">{demo.description}</p>
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Interactive Demo Area */}
-        <divdiv
+        <div
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
         >
           <div className="flex items-center justify-between mb-6">
@@ -213,7 +213,7 @@ const InteractiveAIToolsDemo2026 = () => {
               <span className="text-sm text-blue-200">{progress}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
-              <divdiv
+              <div
                 className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
                 style={{ width: `${progress}%` }}
               />
@@ -254,10 +254,10 @@ const InteractiveAIToolsDemo2026 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
@@ -279,10 +279,10 @@ const InteractiveAIToolsDemo2026 = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
@@ -304,7 +304,7 @@ const InteractiveAIToolsDemo2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

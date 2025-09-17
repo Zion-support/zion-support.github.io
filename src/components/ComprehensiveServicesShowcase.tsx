@@ -74,7 +74,7 @@ export default function ComprehensiveServicesShowcase() {
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -119,10 +119,10 @@ export default function ComprehensiveServicesShowcase() {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Search and Filters */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-12"
@@ -173,10 +173,10 @@ export default function ComprehensiveServicesShowcase() {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-12"
@@ -198,14 +198,14 @@ export default function ComprehensiveServicesShowcase() {
               </button>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
@@ -267,7 +267,7 @@ export default function ComprehensiveServicesShowcase() {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -275,7 +275,7 @@ export default function ComprehensiveServicesShowcase() {
           <div className="space-y-6">
             <div>
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                 >
@@ -352,7 +352,7 @@ export default function ComprehensiveServicesShowcase() {
                       </a>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -360,17 +360,17 @@ export default function ComprehensiveServicesShowcase() {
 
         {/* No Results */}
         {filteredServices.length === 0 && (
-          <divdiv
+          <div
             className="text-center py-20"
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-white/60">Try adjusting your search or filter criteria</p>
-          </divdiv>
+          </div>
         )}
 
         {/* Contact CTA */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-20 text-center"
@@ -398,7 +398,7 @@ export default function ComprehensiveServicesShowcase() {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

@@ -14,21 +14,21 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
       icon: Brain,
       color: "from-purple-500 to-pink-500",
       urgency: "BREAKING"
-    },
+
     {
       title: "Quantum-Neural Fusion",
       description: "'World', 's first quantum-neural hybrid achieves 10,000x processing speed increase",
       icon: Zap,
       color: "from-blue-500 to-cyan-500",
       urgency: "REVOLUTIONARY"
-    },
+
     {
       title: "Autonomous AI Ecosystem",
       description: "Self-evolving AI systems now create and manage other AI entities autonomously",
       icon: Rocket,
       color: "from-green-500 to-emerald-500",
       urgency: "UNPRECEDENTED"
-    }
+
   ];
 
   useEffect(() => {
@@ -43,32 +43,32 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-500/20 shadow-2xl"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             {/* Left side - Urgency Badge */}
             <div className="flex items-center gap-4">
-              <divdiv
+              <div
                 key={currentBreakthrough}
                 className={`px-4 py-2 rounded-full bg-gradient-to-r ${breakthroughs[currentBreakthrough].color} text-white font-bold text-sm animate-pulse`}
               >
                 {breakthroughs[currentBreakthrough].urgency}
-              </divdiv>
+              </div>
               
               {/* Rotating Icon */}
-              <divdiv
+              <div
                 key={`icon-${currentBreakthrough}`}
                 className={`p-2 rounded-full bg-gradient-to-r ${breakthroughs[currentBreakthrough].color}`}
               >
                 <breakthroughs[currentBreakthrough].icon className="w-6 h-6 text-white" />
-              </divdiv>
+              </div>
             </div>
 
             {/* Center - Breakthrough Content */}
             <div className="flex-1 text-center px-8">
-              <divdiv
+              <div
                 key={`content-${currentBreakthrough}`}
                 className="space-y-1"
               >
@@ -78,7 +78,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 <p className="text-sm text-gray-300 max-w-md mx-auto">
                   {breakthroughs[currentBreakthrough].description}
                 </p>
-              </divdiv>
+              </div>
             </div>
 
             {/* Right side - CTA and Close */}
@@ -109,15 +109,15 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-20],
-                opacity: [010],
+
+
               }}
                 duration: 3,
                 repeat: Infinity,
@@ -126,7 +126,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             />
           ))}
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

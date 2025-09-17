@@ -149,13 +149,13 @@ const TechnologyTrendsShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 text-sm font-medium mb-4"
           >
             <TrendingUp className="w-4 h-4 mr-2" />
             Technology Trends Showcase 2025
-          </divdiv>
+          </div>
           
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +198,7 @@ const TechnologyTrendsShowcase2025 = () => {
         </div>
 
         {/* Main Trend Display */}
-          <divdiv
+          <div
             key={activeTrend}
             className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12"
           >
@@ -261,20 +261,20 @@ const TechnologyTrendsShowcase2025 = () => {
                   {/* Features */}
                   <div className="space-y-3">
                     {currentTrend.features.map((featureindex) => (
-                      <divdiv
+                      <div
                         key={index}
                         className="flex items-center"
                       >
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                         <span className="text-gray-700">{feature}</span>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Right Side - Visual */}
                 <div className="relative">
-                  <divdiv
+                  <div
                     className={`h-80 rounded-xl bg-gradient-to-br ${currentTrend.color} p-8 text-white relative overflow-hidden`}
                   >
                     <div className="absolute inset-0 bg-black/10" />
@@ -294,11 +294,11 @@ const TechnologyTrendsShowcase2025 = () => {
                         ))}
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Auto-play Controls */}
@@ -318,7 +318,7 @@ const TechnologyTrendsShowcase2025 = () => {
 
         {/* Future Predictions */}
         <div className="mb-16">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-8"
           >
@@ -328,11 +328,11 @@ const TechnologyTrendsShowcase2025 = () => {
             <p className="text-lg text-gray-600">
               Based on current trends and expert analysis
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {predictions.map((predictionindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-xl shadow-lg p-6 text-center"
@@ -360,13 +360,13 @@ const TechnologyTrendsShowcase2025 = () => {
                     </span>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white"
         >
@@ -390,7 +390,7 @@ const TechnologyTrendsShowcase2025 = () => {
               Get Expert Consultation
             </divbutton>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

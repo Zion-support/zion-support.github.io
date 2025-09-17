@@ -65,7 +65,7 @@ const AdvancedTechTrends2026 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -79,11 +79,11 @@ const AdvancedTechTrends2026 = () => {
             Discover the revolutionary technologies that will transform your business 
             and give you a competitive edge in the next decade.
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trendindex) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="group relative"
@@ -108,11 +108,11 @@ const AdvancedTechTrends2026 = () => {
                   <TrendingUp className="w-5 h-5 text-green-400" />
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -132,7 +132,7 @@ const AdvancedTechTrends2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

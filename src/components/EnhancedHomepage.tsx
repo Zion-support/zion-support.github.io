@@ -107,8 +107,8 @@ const EnhancedHomepage: React.FC = () => {
       transition: {
         duration: 0.8,
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -119,8 +119,8 @@ const EnhancedHomepage: React.FC = () => {
       transition: {
         duration: 0.6,
         ease: "easeOut" as const
-      }
-    }
+
+
   };
 
   const heroVariants = {
@@ -131,18 +131,18 @@ const EnhancedHomepage: React.FC = () => {
       transition: {
         duration: 1,
         ease: "easeOut" as const
-      }
-    }
+
+
   };
 
   const floatingVariants = {
     animate: {
-      y: [-10, 10, -10],
+
       transition: {
         duration: 3,
         ease: "easeInOut" as const
-      }
-    }
+
+
   };
 
   const handleCategoryChange = (categoryId: string) => {
@@ -150,7 +150,7 @@ const EnhancedHomepage: React.FC = () => {
     const category = categories.find(cat => cat.id === categoryId);
     if (category) {
       setColorScheme(category.scheme);
-    }
+
   };
 
   return (
@@ -201,7 +201,7 @@ const EnhancedHomepage: React.FC = () => {
             </divp>
 
             {/* CTA Buttons */}
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
             >
               <a href="/services">
@@ -221,10 +221,10 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
                 </divbutton>
               </a>
-            </divdiv>
+            </div>
 
             {/* Contact Information */}
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
             >
               <div className="flex items-center space-x-2">
@@ -239,29 +239,29 @@ const EnhancedHomepage: React.FC = () => {
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Floating Elements */}
-          <divdiv
+          <div
             className="absolute top-20 left-10 text-cyan-400/20"
           >
             <Atom className="w-8 h-8" />
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="absolute top-40 right-20 text-blue-400/20"
             style={{ animationDelay: '1s' }}
           >
             <Brain className="w-6 h-6" />
-          </divdiv>
+          </div>
           
-          <divdiv
+          <div
             className="absolute bottom-40 left-20 text-purple-400/20"
             style={{ animationDelay: '2s' }}
           >
             <Rocket className="w-7 h-7" />
-          </divdiv>
+          </div>
         </divsection>
 
         {/* Category Filter */}
@@ -275,7 +275,7 @@ const EnhancedHomepage: React.FC = () => {
               Explore Our Revolutionary Services
             </divh2>
             
-            <divdiv 
+            <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
               {categories.map((category) => (
@@ -292,7 +292,7 @@ const EnhancedHomepage: React.FC = () => {
                   {category.name}
                 </divbutton>
               ))}
-            </divdiv>
+            </div>
           </div>
         </divsection>
 
@@ -301,7 +301,7 @@ const EnhancedHomepage: React.FC = () => {
           className="py-16 px-4 lg:px-8"
         >
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {getFilteredServices().slice(0, 12).map((service, index) => (
@@ -323,10 +323,10 @@ const EnhancedHomepage: React.FC = () => {
                   technologies={['AI', 'Cloud', 'Security', 'Automation']}
                 />
               ))}
-            </divdiv>
+            </div>
             
             {getFilteredServices().length > 12 && (
-              <divdiv 
+              <div 
                 className="text-center mt-12"
               >
                 <a href="/services">
@@ -337,7 +337,7 @@ const EnhancedHomepage: React.FC = () => {
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
                   </divbutton>
                 </a>
-              </divdiv>
+              </div>
             )}
           </div>
         </divsection>
@@ -353,10 +353,10 @@ const EnhancedHomepage: React.FC = () => {
               Featured Revolutionary Services
             </divh2>
             
-            <divdiv 
+            <div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
             >
-                <divdiv
+                <div
                   key={currentServiceIndex}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
                 >
@@ -397,9 +397,9 @@ const EnhancedHomepage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </divsection>
 
@@ -421,7 +421,7 @@ const EnhancedHomepage: React.FC = () => {
               Get started today and experience the power of AI consciousness and quantum computing.
             </divp>
             
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <a href="/quote">
@@ -441,7 +441,7 @@ const EnhancedHomepage: React.FC = () => {
                   <Phone className="inline-block ml-2 w-5 h-5" />
                 </divbutton>
               </a>
-            </divdiv>
+            </div>
           </div>
         </divsection>
       </UltraFuturisticBackground>

@@ -25,7 +25,7 @@ export default function AIToolsShowcase2025PromotionBanner() {
   if (isDismissed) return null;
 
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 border-b border-purple-500/20 overflow-hidden"
     >
       {/* Animated Background */}
@@ -147,6 +147,6 @@ export default function AIToolsShowcase2025PromotionBanner() {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animate-pulse" />
-    </divdiv>
+    </div>
   );
 }

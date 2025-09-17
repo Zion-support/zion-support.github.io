@@ -110,13 +110,13 @@ const AISuccessStoriesShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-4"
           >
             <Star className="w-4 h-4 mr-2" />
             AI Success Stories
-          </divdiv>
+          </div>
           
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ const AISuccessStoriesShowcase = () => {
         </div>
 
         {/* Metrics Overview */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -151,7 +151,7 @@ const AISuccessStoriesShowcase = () => {
               </div>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -175,7 +175,7 @@ const AISuccessStoriesShowcase = () => {
         </div>
 
         {/* Active Story Display */}
-          <divdiv
+          <div
             key={activeStory}
             className="bg-white rounded-3xl p-8 md:p-12 shadow-xl"
           >
@@ -239,11 +239,11 @@ const AISuccessStoriesShowcase = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -271,7 +271,7 @@ const AISuccessStoriesShowcase = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

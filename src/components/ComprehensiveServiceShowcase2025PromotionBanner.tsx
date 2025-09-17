@@ -89,7 +89,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
   ];
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
     >
       {/* Animated Background */}
@@ -106,7 +106,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <divdiv
+            <div
               className="space-y-4"
             >
               <div className="flex items-center space-x-2">
@@ -127,16 +127,16 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                 From strategy consulting to implementationwe offer a complete range of AI services 
                 to transform your business and drive innovation across all industries.
               </p>
-            </divdiv>
+            </div>
 
             {/* Service Categories */}
-            <divdiv
+            <div
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-white mb-4">Service Categories</h3>
               <div className="grid grid-cols-2 gap-4">
                 {categories.map((categoryindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300"
                   >
@@ -149,13 +149,13 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                         <div className="text-gray-400 text-sm">{category.count} services</div>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Key Benefits */}
-            <divdiv
+            <div
               className="space-y-3"
             >
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Services</h3>
@@ -172,10 +172,10 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
@@ -191,11 +191,11 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                   Get Pricing
                 </span>
               </button>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Service Showcase */}
-          <divdiv
+          <div
             className="relative"
           >
             <div className="space-y-6">
@@ -239,7 +239,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
               {/* Service Grid */}
               <div className="grid grid-cols-2 gap-4">
                 {services.slice(04).map((serviceindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-white/20 transition-all duration-300 ${
                       currentService === index ? 'ring-2 ring-purple-500' : ''
@@ -255,21 +255,21 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                       <Star className="h-3 w-3 text-yellow-400 fill-current" />
                       <span className="text-white text-xs ml-1">{service.rating}</span>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="bg-white/5 rounded-lg p-4 text-center"
                   >
                     <stat.icon className="h-6 w-6 text-purple-400 mx-auto mb-2" />
                     <div className="text-white text-xl font-bold">{stat.value}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -287,6 +287,6 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" />
         </svg>
       </div>
-    </divdiv>
+    </div>
   );
 }

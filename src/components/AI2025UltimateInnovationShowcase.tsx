@@ -53,7 +53,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
   ];
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
     >
       {/* Background Effects */}
@@ -61,7 +61,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -74,12 +74,12 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
-        </divdiv>
+        </div>
 
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
-            <divdiv
+            <div
               key={index}
               className="group relative"
             >
@@ -93,18 +93,18 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{innovation.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{innovation.metrics}</div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <divdiv
+        <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Proven Results & Impact</h2>
           <div className="grid md:grid-cols-5 gap-6">
             {benefits.map((benefitindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -112,13 +112,13 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
                   <benefit.icon className={`w-6 h-6 ${benefit.color}`} />
                 </div>
                 <p className="text-white font-semibold text-sm">{benefit.text}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -139,9 +139,9 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join thousands of enterprises already transforming with our AI innovations
           </p>
-        </divdiv>
+        </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

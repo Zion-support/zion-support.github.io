@@ -57,7 +57,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   }[]);
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 py-20"
     >
       {/* Animated Background */}
@@ -72,15 +72,15 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30"
             >
               <Zap className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-yellow-400 font-semibold">Interactive AI Demo</span>
-            </divdiv>
+            </div>
 
             {/* Main Headline */}
-            <divdiv
+            <div
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Try AI Tools{' '}
@@ -92,17 +92,17 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 Experience the power of AI firsthand. Generate contentcreate visualswrite codeand analyze data with our interactive demo. 
                 No signup required - just click and create!
               </p>
-            </divdiv>
+            </div>
 
             {/* Rotating Tool Showcase */}
-            <divdiv
+            <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="flex items-center mb-4">
                 <Brain className="w-6 h-6 text-yellow-400 mr-3" />
                 <span className="text-white font-semibold">Featured Tool:</span>
               </div>
-              <divdiv
+              <div
                 key={currentTool}
                 className="flex items-center"
               >
@@ -117,11 +117,11 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                     Click to try it now
                   </div>
                 </div>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
 
             {/* Benefits Grid */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-4"
             >
               {benefits.map((benefitindex) => (
@@ -130,10 +130,10 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                   <span className="text-white font-medium text-sm">{benefit}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
@@ -145,12 +145,12 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 <Users className="w-5 h-5 mr-2" />
                 View All Tools
               </button>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Interactive Preview */}
           <div className="relative">
-            <divdiv
+            <div
               className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/20 shadow-2xl"
             >
               {/* Demo Interface */}
@@ -169,7 +169,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">Select AI Tool</h3>
                   <div className="grid grid-cols-3 gap-2">
                     {tools.slice(06).map((toolindex) => (
-                      <divdiv
+                      <div
                         key={index}
                         className={`p-3 rounded-lg text-center cursor-pointer transition-all duration-300 ${
                           index === currentTool
@@ -181,7 +181,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                           {tool.icon}
                         </div>
                         <div className="text-xs font-medium">{tool.name}</div>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -235,13 +235,13 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
 
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 rounded-2xl pointer-events-none" />
-            </divdiv>
+            </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
-                y: [0-10],
-                rotate: [050]
+
+
               }}
                 duration: 2,
                 repeat: Infinity,
@@ -249,12 +249,12 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               }}
             >
               <Zap className="w-6 h-6 text-black" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
-                y: [010],
-                rotate: [0-50]
+
+
               }}
                 duration: 2.5,
                 repeat: Infinity,
@@ -262,12 +262,12 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               }}
             >
               <Sparkles className="w-5 h-5 text-white" />
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Bottom Stats */}
-        <divdiv
+        <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           {stats.map((statindex) => (
@@ -276,9 +276,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

@@ -112,7 +112,7 @@ export default function ServicesShowcase2027() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <divdiv
+          <div
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -168,7 +168,7 @@ export default function ServicesShowcase2027() {
                 <span>View Pricing</span>
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -248,7 +248,7 @@ export default function ServicesShowcase2027() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               {sortedServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="group"
                 >
@@ -320,14 +320,14 @@ export default function ServicesShowcase2027() {
                       </span>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
 
           {/* No Results */}
           {sortedServices.length === 0 && (
-            <divdiv
+            <div
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -343,7 +343,7 @@ export default function ServicesShowcase2027() {
               >
                 Clear Filters
               </button>
-            </divdiv>
+            </div>
           )}
         </div>
       </section>

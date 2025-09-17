@@ -352,7 +352,7 @@ const AIToolsUltimateShowcase2026 = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
@@ -372,10 +372,10 @@ const AIToolsUltimateShowcase2026 = () => {
             revolutionize productivitydevelopmentanalyticsand more. 
             Choose from 50+ cutting-edge solutions.
           </p>
-        </divdiv>
+        </div>
 
         {/* Stats */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => {
@@ -395,10 +395,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Category Navigation */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(categories).map(([keycategory]) => {
@@ -419,10 +419,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </button>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Category Header */}
-        <divdiv
+        <div
           key={activeCategory}
           className="text-center mb-12"
         >
@@ -446,10 +446,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             );
           })()}
-        </divdiv>
+        </div>
 
         {/* Tools Grid */}
-        <divdiv
+        <div
           key={activeCategory}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
@@ -457,7 +457,7 @@ const AIToolsUltimateShowcase2026 = () => {
             const ToolIcon = tool.icon;
             
             return (
-              <divdiv
+              <div
                 key={index}
                 onHoverStart={() => setHoveredTool(index)}
                 onHoverEnd={() => setHoveredTool(null)}
@@ -521,19 +521,19 @@ const AIToolsUltimateShowcase2026 = () => {
 
                 {/* Hover Effect */}
                 {hoveredTool === index && (
-                  <divdiv
+                  <div
                     className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Popular
-                  </divdiv>
+                  </div>
                 )}
-              </divdiv>
+              </div>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 relative overflow-hidden">
@@ -563,7 +563,7 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

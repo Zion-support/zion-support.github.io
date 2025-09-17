@@ -51,7 +51,7 @@ const NewsletterSignup2025: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
         
         <div className="relative z-10 text-center">
-          <divdiv
+          <div
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-green-500 rounded-full mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
@@ -82,7 +82,7 @@ const NewsletterSignup2025: React.FC = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     );
@@ -94,7 +94,7 @@ const NewsletterSignup2025: React.FC = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25224%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       
       <div className="relative z-10">
-        <divdiv
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -111,16 +111,16 @@ const NewsletterSignup2025: React.FC = () => {
             early demos, and insider insights from the cutting edge of AI consciousness 
             and quantum computing.
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
-          <divdiv
+          <div
           >
             <h3 className="text-3xl font-bold mb-8">Why Join Our Community?</h3>
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-start space-x-4"
                 >
@@ -131,13 +131,13 @@ const NewsletterSignup2025: React.FC = () => {
                     <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
 
           {/* Signup Form */}
-          <divdiv
+          <div
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -187,10 +187,10 @@ const NewsletterSignup2025: React.FC = () => {
               By subscribing, you agree to receive updates about our revolutionary technologies. 
               Unsubscribe at any time.
             </p>
-          </divdiv>
+          </div>
         </div>
 
-        <divdiv
+        <div
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6 inline-block">
@@ -211,7 +211,7 @@ const NewsletterSignup2025: React.FC = () => {
               🧠 Meet Conscious AI →
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

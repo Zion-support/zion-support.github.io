@@ -145,7 +145,7 @@ const UltimateContentHub2026 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -159,10 +159,10 @@ const UltimateContentHub2026 = () => {
             Access our comprehensive library of cutting-edge contentguidesand resources 
             to stay ahead in the AI revolution.
           </p>
-        </divdiv>
+        </div>
 
         {/* Search and Filters */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
@@ -218,10 +218,10 @@ const UltimateContentHub2026 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Content Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1 }}
           className={`grid gap-8 ${
             viewMode === 'grid' 
@@ -234,7 +234,7 @@ const UltimateContentHub2026 = () => {
               const TypeIcon = getTypeIcon(item.type);
               
               return (
-                <divdiv
+                <div
                   key={item.id}
                   className={`group bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 ${
                     viewMode === 'list' ? 'flex' : ''
@@ -300,21 +300,21 @@ const UltimateContentHub2026 = () => {
                       </button>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Load More */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-12"
         >
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all">
             Load More Content
           </button>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

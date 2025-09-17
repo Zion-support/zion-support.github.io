@@ -67,7 +67,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
 
   if (isSubmitted) {
     return (
-      <divdiv
+      <div
         className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center text-white"
       >
         <div className="text-6xl mb-4">🎉</div>
@@ -80,7 +80,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
             📧 Check your email for confirmation and next steps
           </p>
         </div>
-      </divdiv>
+      </div>
     );
   }
 
@@ -93,7 +93,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
   const textColor = variant === 'modal' ? 'text-gray-900' : 'text-white';
 
   return (
-    <divdiv
+    <div
       whileInView={{ opacity: 1, y: 0 }}
       className={containerClasses}
     >
@@ -236,7 +236,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
           🔒 Your information is secure and will never be shared
         </p>
       </form>
-    </divdiv>
+    </div>
   );
 };
 

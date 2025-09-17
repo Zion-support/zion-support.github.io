@@ -194,7 +194,7 @@ const EnhancedContentSearch2025: React.FC = () => {
       {/* Search Results */}
       <div>
         {showResults && (
-          <divdiv
+          <div
             className="space-y-4"
           >
             <div className="flex items-center justify-between mb-6">
@@ -220,7 +220,7 @@ const EnhancedContentSearch2025: React.FC = () => {
             ) : (
               <div className="grid gap-4">
                 {filteredResults.map((item, index) => (
-                  <divdiv
+                  <div
                     key={item.id}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
                   >
@@ -253,16 +253,16 @@ const EnhancedContentSearch2025: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             )}
-          </divdiv>
+          </div>
         )}
       </div>
 
       {/* Quick Access */}
-      <divdiv
+      <div
         className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6"
       >
         <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Access</h3>
@@ -285,7 +285,7 @@ const EnhancedContentSearch2025: React.FC = () => {
             </a>
           ))}
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

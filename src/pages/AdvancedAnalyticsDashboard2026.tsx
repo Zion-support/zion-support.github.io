@@ -199,7 +199,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div>
           {analyticsData.map((itemindex) => (
-            <divdiv
+            <div
               key={item.id}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
             >
@@ -227,7 +227,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
               <div className="text-xs text-gray-500">
                 {item.description}
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>

@@ -158,7 +158,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 mb-6">
@@ -175,7 +175,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
             Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
             boost productivityand drive innovation across all aspects of your business.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Navigation */}
         <div className="mb-12">
@@ -210,7 +210,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {filteredTools.map((toolindex) => (
-              <divdiv
+              <div
                 key={tool.id}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 group"
               >
@@ -262,7 +262,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
                     </button>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -272,7 +272,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Tools?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((featureindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
@@ -281,13 +281,13 @@ const AI2025ToolsUtilitiesShowcase = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">{feature.text}</h4>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-2xl p-8 border border-indigo-500/20">
@@ -305,7 +305,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

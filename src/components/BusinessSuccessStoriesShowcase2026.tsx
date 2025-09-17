@@ -231,7 +231,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -246,10 +246,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             Discover how leading companies across industries achieved unprecedented success 
             with our AI solutions. See the measurable impact on their bottom line.
           </p>
-        </divdiv>
+        </div>
 
         {/* Featured Stories */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
@@ -260,7 +260,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               const industryColor = getIndustryColor(story.industry);
 
               return (
-                <divdiv
+                <div
                   key={story.id}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
@@ -359,14 +359,14 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       </button>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* All Stories Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
@@ -377,7 +377,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               const industryColor = getIndustryColor(story.industry);
 
               return (
-                <divdiv
+                <div
                   key={story.id}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
@@ -437,14 +437,14 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       Read Story
                     </button>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center"
         >
@@ -467,7 +467,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

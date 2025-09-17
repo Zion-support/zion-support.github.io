@@ -120,7 +120,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-            <divdiv
+            <div
               className="text-center"
             >
               <divh1 
@@ -140,7 +140,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               </divp>
 
               {/* Hero Stats */}
-              <divdiv 
+              <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
               >
                 {heroStats.map((stat, index) => (
@@ -154,10 +154,10 @@ export default function CuttingEdgeServicesShowcase2025() {
                     <div className="text-sm text-white/70">{stat.label}</div>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* CTA Buttons */}
-              <divdiv 
+              <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 <a
@@ -173,15 +173,15 @@ export default function CuttingEdgeServicesShowcase2025() {
                 >
                   Get Started
                 </a>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Search and Filter Section */}
         <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv 
+            <div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -248,20 +248,20 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <List className="w-5 h-5" />
                 </button>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView="visible"
               viewport={{ once: true }}
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
@@ -353,13 +353,13 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* No Results */}
             {filteredServices.length === 0 && (
-              <divdiv
+              <div
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -374,7 +374,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 >
                   Clear Filters
                 </button>
-              </divdiv>
+              </div>
             )}
           </div>
         </section>
@@ -382,7 +382,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -439,7 +439,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </Layout>

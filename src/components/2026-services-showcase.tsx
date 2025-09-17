@@ -86,7 +86,7 @@ export default function ServicesShowcase2026() {
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -117,7 +117,7 @@ export default function ServicesShowcase2026() {
                   <div className="text-gray-400 text-sm">Emerging Tech</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
@@ -178,7 +178,7 @@ export default function ServicesShowcase2026() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="group"
                 >
@@ -252,19 +252,19 @@ export default function ServicesShowcase2026() {
                       Learn More
                     </a>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* No Results */}
             {filteredServices.length === 0 && (
-              <divdiv
+              <div
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>
-              </divdiv>
+              </div>
             )}
           </div>
         </section>
@@ -272,7 +272,7 @@ export default function ServicesShowcase2026() {
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
@@ -311,7 +311,7 @@ export default function ServicesShowcase2026() {
                   View Pricing
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

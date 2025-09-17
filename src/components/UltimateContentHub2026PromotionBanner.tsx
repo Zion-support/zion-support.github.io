@@ -115,7 +115,7 @@ const UltimateContentHub2026PromotionBanner = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-purple-900 text-white overflow-hidden"
         >
           {/* Background Pattern */}
@@ -132,13 +132,13 @@ const UltimateContentHub2026PromotionBanner = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div>
-                <divdiv
+                <div
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-4"
                 >
                   <Grid className="w-4 h-4" />
                   <span>Ultimate Content Hub</span>
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                </divdiv>
+                </div>
 
                 <divh2
                   className="text-3xl md:text-4xl font-bold mb-4"
@@ -153,7 +153,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                 </divp>
 
                 {/* Content Types */}
-                <divdiv
+                <div
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
                 >
                   {contentTypes.map((typeindex) => (
@@ -163,10 +163,10 @@ const UltimateContentHub2026PromotionBanner = () => {
                       <span className="text-xs opacity-70">({type.count})</span>
                     </div>
                   ))}
-                </divdiv>
+                </div>
 
                 {/* Stats */}
-                <divdiv
+                <div
                   className="flex flex-wrap items-center gap-6 text-sm mb-6"
                 >
                   <div className="flex items-center gap-2">
@@ -181,10 +181,10 @@ const UltimateContentHub2026PromotionBanner = () => {
                     <Clock className="w-4 h-4" />
                     <span>Updated Daily</span>
                   </div>
-                </divdiv>
+                </div>
 
                 {/* CTA Buttons */}
-                <divdiv
+                <div
                   className="flex flex-col sm:flex-row gap-4"
                 >
                   <button className="bg-white text-slate-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -194,11 +194,11 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-slate-800 transition-all duration-300">
                     Start Free Trial
                   </button>
-                </divdiv>
+                </div>
               </div>
 
               {/* Preview Section */}
-              <divdiv
+              <div
                 className="relative"
               >
                 {/* Content Preview Card */}
@@ -212,7 +212,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                   </div>
 
                   {/* Content Preview */}
-                    <divdiv
+                    <div
                       key={activePreview}
                       className="space-y-4"
                     >
@@ -260,7 +260,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                           </button>
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
 
                   {/* Preview Indicators */}
@@ -280,11 +280,11 @@ const UltimateContentHub2026PromotionBanner = () => {
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse" />
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" />
-              </divdiv>
+              </div>
             </div>
 
             {/* Bottom Features */}
-            <divdiv
+            <div
               className="mt-12 pt-6 border-t border-white/20"
             >
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
@@ -305,7 +305,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <span className="text-sm">Expert Content</span>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Dismiss Button */}
@@ -316,7 +316,7 @@ const UltimateContentHub2026PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </divdiv>
+        </div>
       )}
     </div>
   );

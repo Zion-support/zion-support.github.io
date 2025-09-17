@@ -202,7 +202,7 @@ const CaseStudyShowcase2026 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
@@ -220,10 +220,10 @@ const CaseStudyShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
-        </divdiv>
+        </div>
 
         {/* Industry Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(industries).map(([keyindustry]) => {
@@ -243,15 +243,15 @@ const CaseStudyShowcase2026 = () => {
               </button>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Case Studies Grid */}
-          <divdiv
+          <div
             key={activeIndustry}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredCaseStudies.map((caseStudyindex) => (
-              <divdiv
+              <div
                 key={caseStudy.id}
                 onHoverStart={() => setHoveredCase(caseStudy.id)}
                 onHoverEnd={() => setHoveredCase(null)}
@@ -363,7 +363,7 @@ const CaseStudyShowcase2026 = () => {
                 </div>
 
                 {/* Hover Overlay */}
-                <divdiv
+                <div
                     opacity: hoveredCase === caseStudy.id ? 1 : 0 
                   }}
                   className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center"
@@ -375,14 +375,14 @@ const CaseStudyShowcase2026 = () => {
                       View Details
                     </button>
                   </div>
-                </divdiv>
-              </divdiv>
+                </div>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -400,7 +400,7 @@ const CaseStudyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
