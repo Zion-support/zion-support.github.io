@@ -400,6 +400,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
             📞 Schedule Private Demo
           </a>
         </div>
+<<<<<<< HEAD
+=======
 =======
 =======
             </div>

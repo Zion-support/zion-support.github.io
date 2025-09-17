@@ -99,6 +99,7 @@ const DynamicContentCarousel = () => {
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

@@ -22,10 +22,13 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -500,6 +503,8 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
@@ -703,6 +708,7 @@ export const siteUpdates: SiteUpdate[] = [
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
@@ -3358,6 +3364,8 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
@@ -3371,6 +3379,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -3567,6 +3576,7 @@ export const getLatestUpdates = (limit = 6) => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
   }
 ]
 

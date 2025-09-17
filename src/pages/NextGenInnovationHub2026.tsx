@@ -3,6 +3,13 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Header from '../Header';
+import EnhancedFooter from '../components/EnhancedFooter';
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
 =======
@@ -303,6 +310,9 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Enter VR Lab
               </button>
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
         {/* Success Stories */}
         <div className="mb-16">
@@ -340,6 +350,7 @@ const NextGenInnovationHub2026: React.FC = () => {
               </p>
               <div className="text-cyan-300 font-semibold">99.9% Time Reduction</div>
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </div>
           </div>
         </div>
@@ -374,10 +385,20 @@ const NextGenInnovationHub2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Be part of the future. Explore our innovations and transform your business today.
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Innovate?</h2>
           <p className="text-2xl text-cyan-200 mb-8 max-w-4xl mx-auto">
             Join the next generation of innovators and be part of the technological 
             revolution that's changing the world
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -413,6 +434,9 @@ const NextGenInnovationHub2026: React.FC = () => {
         </div>
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-12a7
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f995

@@ -11,7 +11,17 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -326,7 +336,18 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
 =======
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">
@@ -370,6 +391,15 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -381,6 +411,9 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
@@ -415,7 +448,17 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -495,9 +538,14 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -790,7 +838,17 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -891,6 +949,11 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
@@ -898,6 +961,7 @@ export default function HomePage() {
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -909,6 +973,9 @@ export default function HomePage() {
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
@@ -996,6 +1063,15 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -1007,6 +1083,9 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-5863
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863

@@ -89,6 +89,20 @@ const InteractiveTechShowcase2025: React.FC = () => {
 <<<<<<< HEAD
         }
       ]
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+  const [activeTab, setActiveTab] = useState('ai');
+>>>>>>> cursor/create-and-deploy-new-content-261d
+    }
+  };
+
+  return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
 >>>>>>> cursor/create-and-deploy-new-content-9601
     }
   };

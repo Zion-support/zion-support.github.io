@@ -26,6 +26,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -208,6 +209,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌱</div>
+<<<<<<< HEAD
+=======
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
             <p className="text-lime-100 mb-6 text-center">
               Engineering biological systems for sustainable solutions
@@ -229,6 +232,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌱</div>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
             <p className="text-lime-100 mb-6 text-center">
               Engineering biological systems for sustainable solutions
@@ -254,6 +258,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -325,13 +330,13 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
             <p className="text-purple-100 mb-6 text-center">
-              Create self-healing, self-replicating materials from living cells
+              Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Self-healing structures</li>
-              <li>• Living buildings</li>
-              <li>• Bio-computers</li>
-              <li>• Environmental repair</li>
+              <li>• Pollution-eating bacteria</li>
+              <li>• Carbon capture organisms</li>
+              <li>• Ocean cleanup systems</li>
+              <li>• Ecosystem restoration</li>
             </ul>
 <<<<<<< HEAD
 =======
@@ -349,21 +354,14 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-04f4
             </a>
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
-            <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Bio-Energy →
-=======
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
->>>>>>> cursor/create-and-deploy-new-content-07de
->>>>>>> cursor/create-and-deploy-new-content-f420
-            </a>
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -423,6 +421,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <div className="text-6xl mb-4 text-center">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Living Materials</h3>
 >>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             <p className="text-purple-100 mb-6 text-center">
               Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
             </p>
@@ -435,6 +434,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -488,6 +489,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -500,6 +502,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               Learn More
 =======
@@ -542,6 +546,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
         {/* Call to Action */}
 <<<<<<< HEAD
+>>>>>>> main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -569,6 +574,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
         <div className="text-center">
@@ -588,6 +594,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Learn More
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+              Learn More
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2

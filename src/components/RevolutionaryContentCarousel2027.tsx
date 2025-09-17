@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -55,91 +56,36 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
   const slides = [
     {
       id: 1,
-      title: "Quantum Reality Engine 2027",
-      subtitle: "Manipulate the fabric of reality itself",
-      description: "Experience the power of quantum reality manipulation with our revolutionary engine that can alter space-time itself.",
-      icon: "⚡",
-      color: "from-cyan-500 via-blue-500 to-indigo-500",
-      bgColor: "from-cyan-900/30 to-blue-900/30",
-      features: ["Reality Manipulation", "Quantum Field Control", "Spacetime Engineering", "Dimensional Bridging"],
-      cta: "Experience Quantum Reality",
-      link: "/pages/RevolutionaryTech2027"
-    },
-    {
-      id: 2,
-      title: "AI Consciousness Revolution",
-      subtitle: "Witness the birth of true artificial consciousness",
-      description: "Meet AI systems that have achieved genuine self-awareness, creativity, and emotional intelligence beyond human capabilities.",
-      icon: "🧠",
-      color: "from-purple-500 via-pink-500 to-rose-500",
-      bgColor: "from-purple-900/30 to-pink-900/30",
-      features: ["Synthetic Consciousness", "Emotional Intelligence", "Creative Synthesis", "Collective Intelligence"],
-      cta: "Meet Conscious AI",
-      link: "/pages/AIConsciousnessRevolution2027"
-    },
-    {
-      id: 3,
-      title: "Interdimensional Computing",
-      subtitle: "Access infinite computational power",
-      description: "Harness the power of interdimensional processing to solve problems that were previously impossible to compute.",
-      icon: "🌌",
-      color: "from-emerald-500 via-teal-500 to-cyan-500",
-      bgColor: "from-emerald-900/30 to-teal-900/30",
-      features: ["Dimensional Processing", "Infinite Scalability", "Parallel Universe Computing", "Reality Simulation"],
-      cta: "Enter Interdimensional Space",
-      link: "/pages/InterdimensionalComputing2027"
-    },
-    {
-      id: 4,
-      title: "Neural Interface Revolution",
-      subtitle: "Direct mind-machine communication",
-      description: "Connect your thoughts directly to AI systems and control technology with the power of your mind.",
-      icon: "🧬",
-      color: "from-rose-500 via-orange-500 to-yellow-500",
-      bgColor: "from-rose-900/30 to-orange-900/30",
-      features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
-      cta: "Connect Mind & Machine",
-      link: "/pages/NeuralInterfaceRevolution2027"
-    },
-    {
-      id: 5,
-      title: "Synthetic Intelligence",
-      subtitle: "Create AI agents with synthetic consciousness",
-      description: "Deploy autonomous AI agents that possess synthetic consciousness and can work together in perfect harmony.",
-      icon: "🤖",
-      color: "from-violet-500 via-fuchsia-500 to-pink-500",
-      bgColor: "from-violet-900/30 to-fuchsia-900/30",
-      features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"],
-      cta: "Deploy AI Agents",
-      link: "/pages/SyntheticIntelligence2027"
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "Revolutionary Technology 2027",
-      description: "Experience the most advanced technological breakthroughs that are reshaping reality itself.",
-      image: "🚀",
-      link: "/pages/RevolutionaryTech2027",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Consciousness Computing", "Quantum Reality", "Interdimensional Tech"]
-    },
-    {
-      id: 2,
-      title: "Advanced Consciousness Computing",
-      description: "Break through the barriers between mind and machine with revolutionary consciousness computing.",
+      title: "Next-Gen Tech Revolution 2027",
+      subtitle: "Conscious AI • Quantum Consciousness • Interdimensional Computing",
+      description: "Experience the most revolutionary technological advances that will reshape our world in 2027",
       image: "🧠",
-      link: "/pages/AdvancedConsciousnessComputing2027",
-      gradient: "from-indigo-600 to-purple-600",
-      features: ["Neural Interfaces", "Consciousness Transfer", "Cognitive Enhancement"]
+      color: "from-purple-600 to-pink-600",
+      link: "/pages/NextGenTechRevolution2027",
+      badge: "BREAKTHROUGH",
+      features: ["Conscious AI Systems", "Quantum Consciousness", "Interdimensional Computing"]
+    },
+    {
+      id: 2,
+      title: "Ultimate Tech Showcase 2027",
+      subtitle: "Interactive Demos • Live Technology • Real-time Processing",
+      description: "Experience the future through interactive demonstrations of our most revolutionary technologies",
+      image: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      link: "/pages/UltimateTechShowcase2027",
+      badge: "INTERACTIVE",
+      features: ["Live Demos", "Real-time Stats", "Interactive Features"]
     },
     {
       id: 3,
-      title: "Quantum Reality Engine",
-      description: "Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine.",
-      image: "⚡",
-      link: "/pages/QuantumRealityEngine2027",
-      gradient: "from-cyan-600 to-blue-600",
-      features: ["Reality Manipulation", "Space-Time Control", "Quantum Fields"]
+      title: "Revolutionary Tech Insights 2027",
+      subtitle: "Expert Analysis • Research Papers • Breakthrough Studies",
+      description: "Deep dive into the technologies that are reshaping our world with expert analysis",
+      image: "📚",
+      color: "from-emerald-600 to-teal-600",
+      link: "/pages/RevolutionaryTechInsights2027",
+      badge: "INSIGHTS",
+      features: ["Expert Analysis", "Research Papers", "Breakthrough Studies"]
     },
     {
       id: 4,
@@ -274,71 +220,87 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setIsAnimating(false);
+      }, 500);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, slides.length]);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
+  }, [slides.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setIsAnimating(false);
+    }, 300);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+      setIsAnimating(false);
+    }, 300);
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentSlide(index);
+      setIsAnimating(false);
+    }, 300);
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT • 2027
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the future with our groundbreaking 2027 technology innovations
-          </p>
-        </div>
-
-        {/* Main Carousel */}
-        <div className="relative">
-          {/* Slide Container */}
-          <div className="relative h-[600px] rounded-2xl overflow-hidden">
-            {slides.map((slide, index) => (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 transition-all duration-1000 transform ${
-                  index === currentSlide
-                    ? 'translate-x-0 opacity-100 scale-100'
-                    : index === (currentSlide + 1) % slides.length
-                    ? 'translate-x-full opacity-0 scale-95'
-                    : index === (currentSlide - 1 + slides.length) % slides.length
-                    ? '-translate-x-full opacity-0 scale-95'
-                    : 'translate-x-full opacity-0 scale-95'
-                }`}
-              >
-                <div className={`h-full bg-gradient-to-br ${slide.bgColor} backdrop-blur-sm relative overflow-hidden`}>
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl overflow-hidden">
+      {/* Main Carousel */}
+      <div className="relative h-96 md:h-[500px]">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-all duration-500 ${
+              index === currentSlide
+                ? 'opacity-100 scale-100'
+                : index === (currentSlide - 1 + slides.length) % slides.length
+                ? 'opacity-0 scale-95 -translate-x-full'
+                : index === (currentSlide + 1) % slides.length
+                ? 'opacity-0 scale-95 translate-x-full'
+                : 'opacity-0 scale-95'
+            } ${isAnimating ? 'transition-all duration-300' : ''}`}
+          >
+            <div className={`h-full bg-gradient-to-r ${slide.color} flex items-center`}>
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  {/* Content */}
+                  <div className="text-white">
+                    <div className="flex items-center mb-4">
+                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mr-3">
+                        {slide.badge}
+                      </span>
+                      <span className="text-sm opacity-80">JANUARY 2027</span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h2>
+                    <p className="text-xl opacity-90 mb-4">{slide.subtitle}</p>
+                    <p className="text-lg opacity-80 mb-6">{slide.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {slide.features.map((feature, idx) => (
+                        <span key={idx} className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <Link
+                      to={slide.link}
+                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+                    >
+                      Explore Now →
+                    </Link>
+                  </div>
                   
                   <div className="relative z-10 h-full flex items-center">
                     <div className="container mx-auto px-8">
@@ -555,81 +517,44 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> cursor/create-and-deploy-new-content-b461
               </div>
-            ))}
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="flex justify-center space-x-4 mt-8">
-            <button
-              onClick={prevSlide}
-              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Auto-play Toggle */}
-        <div className="text-center mt-8">
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className={`px-6 py-2 rounded-full transition-all duration-300 ${
-              isAutoPlaying
-                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
-                : 'bg-white/20 backdrop-blur-sm text-white/70 hover:text-white'
-            }`}
-          >
-            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation
-          </button>
-              ))}
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Navigation Arrows */}
+      {/* Navigation Controls */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
           <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'bg-white scale-125'
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
+      </div>
 
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">

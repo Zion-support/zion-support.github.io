@@ -205,6 +205,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+=======
 =======
 import { motion } from 'framer-motion';
 =======
@@ -736,6 +739,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
+<<<<<<< HEAD
+        <motion.div
+=======
 =======
         <motion.div
 =======

@@ -6,6 +6,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const techCategories = [
     {
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -56,6 +57,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
@@ -136,13 +141,23 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 =======
@@ -156,6 +171,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,6 +267,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
@@ -259,6 +282,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
   }, [activeTab]);
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
       <Helmet>
         <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
@@ -275,6 +299,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
@@ -333,13 +359,23 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 =======
@@ -354,6 +390,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -409,6 +449,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
@@ -498,13 +542,23 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 =======
@@ -518,6 +572,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -593,6 +651,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
@@ -617,6 +679,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -627,6 +692,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 =======

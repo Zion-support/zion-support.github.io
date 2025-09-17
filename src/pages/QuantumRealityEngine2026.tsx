@@ -533,6 +533,15 @@ export default QuantumRealityEngine2026;
 <<<<<<< HEAD
 export default QuantumRealityEngine2026;
 >>>>>>> cursor/create-and-deploy-new-content-1912
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 <<<<<<< HEAD
 =======

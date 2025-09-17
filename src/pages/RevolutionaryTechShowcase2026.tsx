@@ -106,6 +106,7 @@ import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <Helmet>
         <title>Revolutionary Tech Showcase 2026 | Zion Tech Group</title>

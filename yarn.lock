@@ -458,8 +458,15 @@
 "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.6", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.7", "@babel/runtime@^7.26.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.6", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.7", "@babel/runtime@^7.26.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+=======
 <<<<<<< HEAD
 "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.7", "@babel/runtime@^7.26.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 "@babel/runtime@^7.11.2", "@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.7", "@babel/runtime@^7.26.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
 >>>>>>> cursor/create-and-deploy-new-content-079e
@@ -598,12 +605,18 @@
   integrity sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA==
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 "@esbuild/linux-x64@0.18.20":
   version "0.18.20"
   resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.18.20.tgz"
   integrity sha512-UYqiqemphJcNsFEskc73jQ7B9jgwjWrSayxawS6UVFZGWrAAtkzjxSqnoclCXxWtfwLdzU+vTpcNYhpn43uP1w==
 
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
@@ -938,16 +951,23 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 "@radix-ui/number@1.1.1":
   version "1.1.1"
   resolved "https://registry.npmjs.org/@radix-ui/number/-/number-1.1.1.tgz"
@@ -2043,6 +2063,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 "@types/trusted-types@^2.0.2", "@types/trusted-types@^2.0.7":
 =======
@@ -2051,6 +2076,7 @@
 =======
 "@types/trusted-types@^2.0.2":
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   version "2.0.7"
   resolved "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.7.tgz"
   integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
@@ -2924,12 +2950,18 @@ core-js-compat@^3.43.0:
     browserslist "^4.25.3"
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 core-js@^3.6.0, core-js@^3.8.3:
   version "3.45.1"
   resolved "https://registry.npmjs.org/core-js/-/core-js-3.45.1.tgz"
   integrity sha512-L4NPsJlCfZsPeXukyzHFlg/i7IIVwHSItR0wg0FLNqYClJ4MQYTYLbC7EkjKYRLZF2iof2MUgN0EGy7MdQFChg==
 
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
@@ -2977,7 +3009,10 @@ css-box-model@^1.2.1:
     tiny-invariant "^1.0.6"
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 css-line-break@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/css-line-break/-/css-line-break-2.1.0.tgz"
@@ -2985,6 +3020,9 @@ css-line-break@^2.1.0:
   dependencies:
     utrie "^1.0.2"
 
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
@@ -3203,7 +3241,10 @@ dom-helpers@^5.0.1:
     csstype "^3.0.2"
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 dompurify@^3.2.4:
   version "3.2.6"
   resolved "https://registry.npmjs.org/dompurify/-/dompurify-3.2.6.tgz"
@@ -3211,10 +3252,13 @@ dompurify@^3.2.4:
   optionalDependencies:
     "@types/trusted-types" "^2.0.7"
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
   version "1.0.1"
@@ -4093,6 +4137,9 @@ http-proxy-agent@^7.0.2:
   integrity sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 html2canvas@^1.0.0-rc.5:
   version "1.4.1"
@@ -5716,6 +5763,7 @@ process@^0.11.10:
   resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 process@^0.11.10:
@@ -5723,6 +5771,8 @@ process@^0.11.10:
   resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 prompts@^2.0.1:
   version "2.4.2"
@@ -5788,7 +5838,10 @@ raf-schd@^4.0.3:
   integrity sha512-tQkJl2GRWh83ui2DiPTJz9wEiMN20syf+5oKfB03yYP7ioZcJwsIK8FjrtLwH1m7C7e+Tt2yYBlrOpdT+dyeIQ==
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 raf@^3.4.1:
   version "3.4.1"
   resolved "https://registry.npmjs.org/raf/-/raf-3.4.1.tgz"
@@ -5796,10 +5849,13 @@ raf@^3.4.1:
   dependencies:
     performance-now "^2.1.0"
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz"
@@ -5940,16 +5996,22 @@ regenerate@^1.4.2:
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 regenerator-runtime@^0.13.7:
   version "0.13.11"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 regexp.prototype.flags@^1.5.3, regexp.prototype.flags@^1.5.4:
   version "1.5.4"
   resolved "https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.5.4.tgz"
@@ -6418,11 +6480,18 @@ stackback@0.0.2:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 stackblur-canvas@^2.0.0:
   version "2.7.0"
   resolved "https://registry.npmjs.org/stackblur-canvas/-/stackblur-canvas-2.7.0.tgz"
   integrity sha512-yf7OENo23AGJhBriGx0QivY5JP6Y1HbrrDI6WLt6C5auYZXlQrheoY8hD4ibekFKz1HOfE48Ww8kMWMnJD/zcQ==
 
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
@@ -6594,6 +6663,12 @@ systeminformation@5.27.7:
   version "5.27.7"
   resolved "https://registry.npmjs.org/systeminformation/-/systeminformation-5.27.7.tgz"
   integrity sha512-saaqOoVEEFaux4v0K8Q7caiauRwjXC4XbD2eH60dxHXbpKxQ8kH9Rf7Jh+nryKpOUSEFxtCdBlSUx0/lO6rwRg==
+=======
+svg-pathdata@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.npmjs.org/svg-pathdata/-/svg-pathdata-6.0.3.tgz"
+  integrity sha512-qsjeeq5YjBZ5eMdFuUa4ZosMLxgr5RZ+F+Y1OrDhuOCEInRMA3x74XdBtggJcj9kOeInz0WE+LgCPDkZFlBYJw==
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 
 =======
 >>>>>>> cursor/create-and-deploy-new-content-079e

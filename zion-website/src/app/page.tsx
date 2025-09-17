@@ -6,7 +6,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -387,6 +391,8 @@ const stats = [
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
@@ -530,6 +536,8 @@ const solutions = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -541,6 +549,7 @@ const solutions = [
 =======
 =======
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -864,6 +873,8 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1502,6 +1513,9 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
@@ -1602,6 +1616,7 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1648,6 +1663,7 @@ export default function HomePage() {
 >>>>>>> origin/feat/updates-and-home-whats-new
 <<<<<<< HEAD
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
@@ -2025,6 +2041,7 @@ export default function HomePage() {
       {/* Features section */}
 <<<<<<< HEAD
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
@@ -2192,6 +2209,8 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
@@ -2218,6 +2237,7 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                   <p className="mt-6"><a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">Learn more <span aria-hidden="true">→</span></a></p>
 =======
 <<<<<<< HEAD
@@ -2708,6 +2728,8 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
@@ -2772,7 +2794,11 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

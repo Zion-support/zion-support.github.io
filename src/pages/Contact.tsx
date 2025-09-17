@@ -83,6 +83,16 @@ const Contact: React.FC = () => {
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+
+const Contact: React.FC = () => {
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   const [formData, setFormData] = useState({
     name: '',
     email: '',

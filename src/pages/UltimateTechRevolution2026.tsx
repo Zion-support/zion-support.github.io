@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+=======
+import Header from '../Header';
+import Footer from '../Footer';
+>>>>>>> cursor/create-and-deploy-new-content-de2c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,10 +37,23 @@ const UltimateTechRevolution2026: React.FC = () => {
             🌟 ULTIMATE REVOLUTION • 2026
 =======
 
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE REVOLUTION • 2026
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
+=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>

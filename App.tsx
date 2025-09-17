@@ -70,11 +70,19 @@ import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
+import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
+import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
 import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
 import RevolutionaryTechShowcase2027 from './src/pages/RevolutionaryTechShowcase2027';
+import RevolutionaryTech2027 from './src/pages/RevolutionaryTech2027';
+import UltimateInnovation2027 from './src/pages/UltimateInnovation2027';
 import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
 import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
 import UltimateTechBlog2026 from './src/pages/UltimateTechBlog2026';
+import NextGenTechRevolution2027 from './src/pages/NextGenTechRevolution2027';
+import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
+import RevolutionaryTechInsights2027 from './src/pages/RevolutionaryTechInsights2027';
 import UltimateContentBanner from './src/components/UltimateContentBanner';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
 import EnhancedContentCarousel2027 from './src/components/EnhancedContentCarousel2027';
@@ -108,6 +116,9 @@ export default function App(): JSX.Element {
                 
                 {/* Revolutionary Content Banner 2026 */}
                 <RevolutionaryContentBanner2026 />
+
+                {/* Revolutionary Content Banner 2027 */}
+                <RevolutionaryContentBanner2027 />
 
                 {/* Ultimate Content Banner */}
                 <UltimateContentBanner />
@@ -211,7 +222,7 @@ export default function App(): JSX.Element {
                 {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Featured: Revolutionary Technology 2025</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Featured: Revolutionary Technology 2025-2027</h2>
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />

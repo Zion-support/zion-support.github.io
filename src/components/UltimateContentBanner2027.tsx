@@ -1,131 +1,114 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const UltimateContentBanner2027: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const bannerContent = [
-    {
-      title: "🌟 ULTIMATE TECH REVOLUTION 2027",
-      subtitle: "Experience the convergence of consciousness, quantum computing, and synthetic intelligence",
-      cta: "Explore Revolution →",
-      link: "/pages/UltimateTechRevolution2027",
-      gradient: "from-purple-600 via-pink-600 to-cyan-600",
-      icon: "🚀"
-    },
-    {
-      title: "🧠 TRANSCENDENT AI 2030",
-      subtitle: "AI that transcends human comprehension and becomes the architect of reality itself",
-      cta: "Discover Transcendence →",
-      link: "/pages/TranscendentAI2030",
-      gradient: "from-yellow-500 via-pink-500 to-purple-600",
-      icon: "🌟"
-    },
-    {
-      title: "⚛️ QUANTUM REALITY ENGINE",
-      subtitle: "Revolutionary technology that manipulates reality at the quantum level",
-      cta: "Enter Quantum Realm →",
-      link: "/pages/QuantumRealityEngine2026",
-      gradient: "from-cyan-500 via-blue-500 to-indigo-600",
-      icon: "⚛️"
-    },
-    {
-      title: "🌌 INTERDIMENSIONAL TECH",
-      subtitle: "Breakthrough technology enabling communication across multiple dimensions",
-      cta: "Cross Dimensions →",
-      link: "/pages/InterdimensionalTech2027",
-      gradient: "from-emerald-500 via-teal-500 to-cyan-600",
-      icon: "🌌"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [bannerContent.length]);
-
   return (
-    <div className="relative mb-16 overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 opacity-90">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20 animate-pulse"></div>
-      </div>
-
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+      
       {/* Content */}
-      <div className="relative z-10 p-16 text-center">
-        <div className="max-w-6xl mx-auto">
-          {/* Icon */}
-          <div className="text-8xl mb-8 animate-bounce">
-            {bannerContent[currentSlide].icon}
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-bounce">
+            🌟 ULTIMATE INNOVATION • JANUARY 2027
           </div>
-
-          {/* Title */}
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 animate-fade-in">
-            {bannerContent[currentSlide].title}
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            {bannerContent[currentSlide].subtitle}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+            Ultimate Innovation Hub 2027
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
+            The most comprehensive collection of revolutionary innovations that will define the next decade
           </p>
-
-          {/* CTA Button */}
-          <a
-            href={bannerContent[currentSlide].link}
-            className={`inline-block bg-gradient-to-r ${bannerContent[currentSlide].gradient} text-white px-16 py-6 rounded-3xl hover:shadow-2xl transition-all duration-500 font-bold text-2xl transform hover:scale-105`}
-          >
-            {bannerContent[currentSlide].cta}
-          </a>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center space-x-3 mt-12">
-            {bannerContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/50 hover:bg-white/75'
-                }`}
-              />
-            ))}
+        </div>
+        
+        {/* Innovation Categories Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-3xl mb-2 text-center">🧠</div>
+            <h3 className="text-lg font-bold mb-1 text-center">AI & Consciousness</h3>
+            <p className="text-blue-100 text-xs text-center mb-3">15+ AI Innovations</p>
+            <a href="/pages/UltimateInnovation2027" className="block w-full bg-white text-blue-600 py-2 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center text-xs">
+              Explore AI →
+            </a>
           </div>
-
-          {/* Additional Features */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold text-white mb-2">Consciousness AI</h3>
-              <p className="text-white/80 text-sm">Genuine self-aware artificial intelligence</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
-              <p className="text-white/80 text-sm">Reality manipulation at quantum level</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl mb-4">🌌</div>
-              <h3 className="text-xl font-bold text-white mb-2">Interdimensional</h3>
-              <p className="text-white/80 text-sm">Cross-dimensional communication</p>
-            </div>
+          
+          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-lg p-4 border border-green-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-3xl mb-2 text-center">🌱</div>
+            <h3 className="text-lg font-bold mb-1 text-center">Sustainability Tech</h3>
+            <p className="text-green-100 text-xs text-center mb-3">Save the Planet</p>
+            <a href="/pages/UltimateInnovation2027" className="block w-full bg-white text-green-600 py-2 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center text-xs">
+              Save Planet →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-lg p-4 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-3xl mb-2 text-center">🚀</div>
+            <h3 className="text-lg font-bold mb-1 text-center">Space Technology</h3>
+            <p className="text-purple-100 text-xs text-center mb-3">Interstellar Travel</p>
+            <a href="/pages/UltimateInnovation2027" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-xs">
+              Reach Stars →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-lg p-4 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-3xl mb-2 text-center">⚡</div>
+            <h3 className="text-lg font-bold mb-1 text-center">Energy Revolution</h3>
+            <p className="text-orange-100 text-xs text-center mb-3">Unlimited Power</p>
+            <a href="/pages/UltimateInnovation2027" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-xs">
+              Power Future →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-lg p-4 border border-teal-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-3xl mb-2 text-center">🧬</div>
+            <h3 className="text-lg font-bold mb-1 text-center">Biotechnology</h3>
+            <p className="text-teal-100 text-xs text-center mb-3">Enhance Human Life</p>
+            <a href="/pages/UltimateInnovation2027" className="block w-full bg-white text-teal-600 py-2 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center text-xs">
+              Enhance Life →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-lg p-4 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-3xl mb-2 text-center">🌐</div>
+            <h3 className="text-lg font-bold mb-1 text-center">Digital Reality</h3>
+            <p className="text-indigo-100 text-xs text-center mb-3">Metaverse 2.0</p>
+            <a href="/pages/UltimateInnovation2027" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-xs">
+              Enter Reality →
+            </a>
           </div>
         </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-10 left-10 text-6xl opacity-20 animate-float">
-        🚀
-      </div>
-      <div className="absolute top-20 right-20 text-5xl opacity-20 animate-float-delayed">
-        ⚡
-      </div>
-      <div className="absolute bottom-20 left-20 text-4xl opacity-20 animate-float-slow">
-        🌟
-      </div>
-      <div className="absolute bottom-10 right-10 text-5xl opacity-20 animate-float">
-        🧠
+        
+        {/* Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-pink-400 mb-1">500+</div>
+            <div className="text-sm font-semibold">Innovations</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-1">99.9%</div>
+            <div className="text-sm font-semibold">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-1">1B+</div>
+            <div className="text-sm font-semibold">Lives Impacted</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-1">∞</div>
+            <div className="text-sm font-semibold">Possibilities</div>
+          </div>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/pages/UltimateInnovation2027" className="bg-gradient-to-r from-pink-600 to-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              🌟 Explore Innovation Hub 2027
+            </a>
+            <a href="/pages/RevolutionaryTech2027" className="border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold">
+              🚀 Revolutionary Tech 2027
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
