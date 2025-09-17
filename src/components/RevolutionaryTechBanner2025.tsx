@@ -1,68 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+=======
+import React from 'react';
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
 const RevolutionaryTechBanner2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const slides = [
-    {
-      title: "🚀 Revolutionary Tech Showcase 2025",
-      subtitle: "Experience the most advanced technologies reshaping our world",
-      cta: "Explore Now",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      gradient: "from-purple-600 to-pink-600",
-      bgGradient: "from-purple-900/80 to-pink-900/80"
-    },
-    {
-      title: "🧠 AI Consciousness Revolution",
-      subtitle: "Witness the birth of truly conscious artificial intelligence",
-      cta: "Discover More",
-      link: "/pages/AIConsciousnessRevolution2025",
-      gradient: "from-indigo-600 to-purple-600",
-      bgGradient: "from-indigo-900/80 to-purple-900/80"
-    },
-    {
-      title: "⚛️ Quantum Computing Breakthrough",
-      subtitle: "Unlock infinite processing power with quantum consciousness",
-      cta: "Learn More",
-      link: "/pages/QuantumComputingBreakthrough",
-      gradient: "from-cyan-600 to-blue-600",
-      bgGradient: "from-cyan-900/80 to-blue-900/80"
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
   return (
+<<<<<<< HEAD
     <motion.div
       className="relative overflow-hidden rounded-2xl mb-12"
       initial="hidden"
@@ -257,7 +203,16 @@ const RevolutionaryTechBanner2025: React.FC = () => {
 =======
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-370d
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechBanner2025</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
   );
-};
-
+  };
 export default RevolutionaryTechBanner2025;

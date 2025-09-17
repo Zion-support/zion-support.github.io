@@ -1,19 +1,12 @@
+import React from 'react';
 
-import { StepProps } from "./types";
-
-interface ResumeStepsProps {
-  steps: StepProps[];
-  activeTab: string;
-  onChange: (value: string) => void;
-}
-
+const ResumeSteps: React.FC = () => {
   return (
-    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
-      {steps.map((step) => (
-        <TabsTrigger key={step.id} value={step.id}>
-          {step.label}
-        </TabsTrigger>
-      ))}
-    </TabsList>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ResumeSteps</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default ResumeSteps;

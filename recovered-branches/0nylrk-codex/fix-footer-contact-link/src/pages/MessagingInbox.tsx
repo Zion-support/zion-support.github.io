@@ -1,38 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    activeConversation, 
-    setActiveConversation, 
-    markAsRead,
-    fetchConversations,
-    isLoading
-  useEffect(() => {
-    // Fetch conversations when component mounts
-    const loadData = async () => {
-      try {
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
+const MessagingInbox: React.FC = () => {
   return (
-    <ProtectedRoute>
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto py-8 px-4">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
-              <MessageSquare className="h-6 w-6" />
-              Messages
-            </h1>
-          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
-              {/* Conversations List */}
-              {isLoading ? (
-                <div className="flex-1 flex items-center justify-center p-8">
-                  <div className="animate-pulse">Loading conversations...</div>
-                </div>
-              ) : (
-                <ConversationsList
-
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {isMobile && <div className="h-16"></div>}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>MessagingInbox | Zion Tech Group</title>
+        <meta name="description" content="MessagingInbox - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">MessagingInbox</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </ProtectedRoute>
+    </div>
+  );
+};
+
+export default MessagingInbox;

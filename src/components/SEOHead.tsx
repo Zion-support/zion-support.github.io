@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -8,96 +8,64 @@ interface SEOHeadProps {
   image?: string;
   url?: string;
   type?: string;
+  structuredData?: object;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Revolutionary Technology Solutions",
-  description = "Leading the future of technology with AI, quantum computing, neural interfaces, and revolutionary solutions. Experience the most advanced technologies reshaping our world.",
-  keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology, innovation, Zion Tech Group, revolutionary technology, conscious AI, synthetic reality, interdimensional computing",
-  image = "/images/zion-tech-group-og.jpg",
+  title = "Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions",
+  description = "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations.",
+  keywords = "AI, artificial intelligence, quantum computing, cybersecurity, technology solutions, enterprise software",
+  image = "/og-image.jpg",
   url = "https://ziontechgroup.com",
-  type = "website"
+  type = "website",
+  structuredData
 }) => {
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{title}</title>
-      <meta name="title" content={title} />
+      {/* Basic Meta Tags */};
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="author" content="Zion Tech Group" />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      
-      {/* Additional SEO Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#8B5CF6" />
-      
-      {/* Canonical URL */}
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      {/* Open Graph Tags */};
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": description,
-          "foundingDate": "2020",
-          "founders": [
-            {
-              "@type": "Person",
-              "name": "Zion Tech Group Founders"
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "email": "contact@ziontechgroup.com"
-          },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup",
-            "https://github.com/ziontechgroup"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Revolutionary Technology Solutions",
-              "description": "AI, quantum computing, neural interfaces, and cutting-edge technology solutions"
-            }
-          }
-        })}
-      </script>
+      {/* Twitter Card Tags */};
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Tags */};
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      
+      {/* Structured Data */};
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)};
+        </script>
+      )};
+      {/* Preconnect to external domains */};
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* DNS Prefetch */};
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     </Helmet>
   );
 };

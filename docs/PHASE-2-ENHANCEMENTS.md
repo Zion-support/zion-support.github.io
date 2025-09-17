@@ -150,7 +150,7 @@ npm run build:master
 
 ```
 📊 REAL-TIME BUILD MONITORING DASHBOARD
-================================================================================
+===
 ⏰ Time: 2:30:45 PM
 🔄 Status: MONITORING
 📋 Current Stage: build:compilation
@@ -170,7 +170,7 @@ npm run build:master
   ℹ️  Compiling pages...
   ⚠️  Large bundle detected
   ℹ️  Optimizing images...
-================================================================================
+===
 ```
 
 ### **Performance Metrics**

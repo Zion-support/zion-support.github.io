@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
 
 const SocialProofShowcase2034: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -11,13 +16,21 @@ const SocialProofShowcase2034: React.FC = () => {
 
   const testimonials = [
     {
+<<<<<<< HEAD
       id: 1,
+=======
+      id: "1",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       name: "Dr. Sarah Chen",
       title: "Chief Technology Officer",
       company: "FutureTech Corp",
       image: "👩‍💼",
       quote: "Zion Tech Group's revolutionary AI solutions have completely transformed our operations. We've seen a 500% increase in productivity and a 60% reduction in costs. Their conscious AI systems are truly groundbreaking.",
+<<<<<<< HEAD
       rating: 5,
+=======
+      rating: "5",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       results: [
         "500% productivity increase",
         "60% cost reduction",
@@ -26,6 +39,7 @@ const SocialProofShowcase2034: React.FC = () => {
       ],
       industry: "Technology",
       projectDuration: "6 months"
+<<<<<<< HEAD
     },
     {
       id: 2,
@@ -63,12 +77,55 @@ const SocialProofShowcase2034: React.FC = () => {
     },
     {
       id: 4,
+=======
+    },
+    {
+      id: "2",
+      name: "Marcus Rodriguez",
+      title: "CEO",
+      company: "Quantum Solutions Inc",
+      image: "👨‍💼",
+      quote: "The quantum computing solutions provided by Zion Tech Group have solved problems we thought were impossible. Their interdimensional computing technology is absolutely revolutionary.",
+      rating: "5",
+      results: [
+        "Exponential processing power",
+        "Impossible problem solving",
+        "99.9% quantum accuracy",
+        "Multi-dimensional processing"
+      ],
+      industry: "Quantum Computing",
+      projectDuration: "4 months"
+    },
+    {
+      id: "3",
+      name: "Dr. Elena Volkov",
+      title: "Research Director",
+      company: "Interdimensional Labs",
+      image: "👩‍🔬",
+      quote: "Working with Zion Tech Group has opened up entirely new possibilities for scientific research. Their neural interface technology allows us to explore consciousness itself.",
+      rating: "5",
+      results: [
+        "Consciousness exploration",
+        "Neural data breakthrough",
+        "Real-time brain mapping",
+        "Thought-controlled systems"
+      ],
+      industry: "Research",
+      projectDuration: "8 months"
+    },
+    {
+      id: "4",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       name: "James Thompson",
       title: "CTO",
       company: "Global Manufacturing Co",
       image: "👨‍🔧",
       quote: "The AI-powered automation systems from Zion Tech Group have revolutionized our manufacturing processes. We've achieved unprecedented efficiency and quality improvements.",
+<<<<<<< HEAD
       rating: 5,
+=======
+      rating: "5",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       results: [
         "75% efficiency increase",
         "90% quality improvement",
@@ -79,13 +136,21 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "5 months"
     },
     {
+<<<<<<< HEAD
       id: 5,
+=======
+      id: "5",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       name: "Dr. Maria Santos",
       title: "Chief Medical Officer",
       company: "HealthFirst Medical",
       image: "👩‍⚕️",
       quote: "Zion Tech Group's AI diagnostic systems have transformed healthcare delivery. We can now diagnose conditions with superhuman accuracy and speed.",
+<<<<<<< HEAD
       rating: 5,
+=======
+      rating: "5",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       results: [
         "99.8% diagnostic accuracy",
         "60% faster diagnosis",
@@ -96,13 +161,21 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "7 months"
     },
     {
+<<<<<<< HEAD
       id: 6,
+=======
+      id: "6",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       name: "David Kim",
       title: "VP of Engineering",
       company: "FinTech Innovations",
       image: "👨‍💻",
       quote: "The AI fraud detection and risk assessment systems from Zion Tech Group have completely eliminated fraud losses while reducing false positives by 70%.",
+<<<<<<< HEAD
       rating: 5,
+=======
+      rating: "5",
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
       results: [
         "100% fraud elimination",
         "70% fewer false positives",
@@ -111,9 +184,13 @@ const SocialProofShowcase2034: React.FC = () => {
       ],
       industry: "Finance",
       projectDuration: "3 months"
+<<<<<<< HEAD
     }
   ];
 
+=======
+    };
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
   const stats = [
     {
       number: "10,000+",
@@ -144,9 +221,13 @@ const SocialProofShowcase2034: React.FC = () => {
       number: "15+",
       label: "Years Experience",
       icon: "🎯"
+<<<<<<< HEAD
     }
   ];
 
+=======
+    };
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
   const caseStudies = [
     {
       title: "Fortune 500 AI Transformation",
@@ -189,18 +270,28 @@ const SocialProofShowcase2034: React.FC = () => {
       ],
       timeline: "6 months",
       industry: "Healthcare"
+<<<<<<< HEAD
     }
   ];
 
+=======
+    };
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
   if (!isVisible) return null;
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
       <div className="container mx-auto px-4">
         <motion.div
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+=======
+          initial={{ opacity: "0", y: 50 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 1 }};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
           className="text-center mb-16"
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -215,6 +306,7 @@ const SocialProofShowcase2034: React.FC = () => {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
           {stats.map((stat, index) => (
@@ -223,27 +315,52 @@ const SocialProofShowcase2034: React.FC = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
+=======
+        {/* Stats Section */};
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index};
+              initial={{ opacity: "0", scale: 0.5 }};
+              animate={{ opacity: "1", scale: 1 }};
+              transition={{ delay: index * 0.1 }};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300 hover:scale-105"
             >
               <div className="text-4xl mb-3">{stat.icon}</div>
               <div className="text-3xl font-bold text-indigo-400 mb-2">{stat.number}</div>
               <div className="text-sm text-gray-300">{stat.label}</div>
             </motion.div>
+<<<<<<< HEAD
           ))}
         </div>
 
         {/* Testimonials Carousel */}
+=======
+          ))};
+        </div>
+
+        {/* Testimonials Carousel */};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
           
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
+<<<<<<< HEAD
                 key={activeTestimonial}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
+=======
+                key={activeTestimonial};
+                initial={{ opacity: "0", x: 50 }};
+                animate={{ opacity: "1", x: 0 }};
+                exit={{ opacity: "0", x: -50 }};
+                transition={{ duration: 0.5 }};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-500/30"
               >
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -260,7 +377,11 @@ const SocialProofShowcase2034: React.FC = () => {
                     <div className="flex items-center space-x-1 mb-6">
                       {[...Array(testimonials[activeTestimonial]?.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400 text-2xl">⭐</span>
+<<<<<<< HEAD
                       ))}
+=======
+                      ))};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                     </div>
                     
                     <blockquote className="text-xl text-gray-300 leading-relaxed italic mb-6">
@@ -269,7 +390,11 @@ const SocialProofShowcase2034: React.FC = () => {
                     
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <span className="px-3 py-1 bg-indigo-600/30 text-indigo-300 rounded-full">
+<<<<<<< HEAD
                         {testimonials[activeTestimonial]?.industry}
+=======
+                        {testimonials[activeTestimonial]?.industry};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                       </span>
                       <span>{testimonials[activeTestimonial]?.projectDuration}</span>
                     </div>
@@ -282,41 +407,71 @@ const SocialProofShowcase2034: React.FC = () => {
                         <div key={idx} className="bg-green-600/20 rounded-lg p-4 text-center">
                           <div className="text-lg font-bold text-green-400">{result}</div>
                         </div>
+<<<<<<< HEAD
                       ))}
+=======
+                      ))};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                     </div>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
             
+<<<<<<< HEAD
             {/* Navigation */}
             <div className="flex justify-center space-x-4 mt-8">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveTestimonial(index)}
+=======
+            {/* Navigation */};
+            <div className="flex justify-center space-x-4 mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index};
+                  onClick={() => setActiveTestimonial(index)};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     activeTestimonial === index
                       ? 'bg-indigo-400 scale-125'
                       : 'bg-gray-600 hover:bg-gray-500'
+<<<<<<< HEAD
                   }`}
                 />
               ))}
+=======
+                  }`};
+                />
+              ))};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Case Studies */}
+=======
+        {/* Case Studies */};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Success Stories</h3>
           
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
+=======
+                key={index};
+                initial={{ opacity: "0", y: 50 }};
+                animate={{ opacity: "1", y: 0 }};
+                transition={{ delay: index * 0.2 }};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                 className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/60 transition-all duration-300"
               >
                 <div className="grid lg:grid-cols-2 gap-8">
@@ -324,7 +479,11 @@ const SocialProofShowcase2034: React.FC = () => {
                     <div className="flex items-center space-x-4 mb-4">
                       <h4 className="text-2xl font-bold">{study.title}</h4>
                       <span className="px-3 py-1 bg-green-600/30 text-green-300 rounded-full text-sm">
+<<<<<<< HEAD
                         {study.industry}
+=======
+                        {study.industry};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                       </span>
                     </div>
                     <p className="text-lg text-gray-300 mb-4">{study.company}</p>
@@ -352,16 +511,28 @@ const SocialProofShowcase2034: React.FC = () => {
                         <div key={idx} className="bg-green-600/20 rounded-lg p-4 text-center">
                           <div className="text-lg font-bold text-green-400">{result}</div>
                         </div>
+<<<<<<< HEAD
                       ))}
+=======
+                      ))};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
                     </div>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
+=======
+            ))};
+          </div>
+        </div>
+
+        {/* Call to Action */};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-indigo-500/30 text-center">
           <h3 className="text-4xl font-bold mb-6">Join Our Success Stories</h3>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -370,15 +541,25 @@ const SocialProofShowcase2034: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
+<<<<<<< HEAD
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+=======
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
               className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
             >
               Start Your Success Story
             </motion.button>
             <motion.button
+<<<<<<< HEAD
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+=======
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
               className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600/20 transition-all duration-300"
             >
               View More Case Studies
@@ -388,6 +569,5 @@ const SocialProofShowcase2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default SocialProofShowcase2034;

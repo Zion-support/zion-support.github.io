@@ -1,4 +1,4 @@
-import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/navigation';
+import { NavigationItemNavigationCategoryNavigationConfig } from '../types/navigation';
 
 export class NavigationGenerator {
   private services: NavigationItem[] = [];
@@ -32,7 +32,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<200ms',
-          users: '10,000+'
+          users: '10000+'
         },
         lastUpdated: '2025-01-15',
         priority: 1
@@ -49,7 +49,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<100ms',
-          users: '5,000+'
+          users: '5000+'
         },
         lastUpdated: '2025-01-15',
         priority: 2
@@ -66,7 +66,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.8%',
           response: '<500ms',
-          users: '2,000+'
+          users: '2000+'
         },
         lastUpdated: '2025-01-15',
         priority: 3
@@ -619,11 +619,9 @@ export class NavigationGenerator {
     // Create category objects
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
       id: name.toLowerCase().replace(/\s+/g, '-'),
-      name,
-      slug: name.toLowerCase().replace(/\s+/g, '-'),
+      nameslug: name.toLowerCase().replace(/\s+/g, '-'),
       icon: this.getCategoryIcon(name),
-      serviceCount: services.length,
-      services: services.map(s => s.id),
+      serviceCount: services.lengthservices: services.map(s => s.id),
       priority: this.getCategoryPriority(name)
     }));
 
@@ -634,8 +632,7 @@ export class NavigationGenerator {
         name: 'Company',
         slug: 'company',
         icon: '🏢',
-        serviceCount: 0,
-        services: [],
+        serviceCount: 0services: [],
         priority: 1
       },
       {
@@ -643,16 +640,14 @@ export class NavigationGenerator {
         name: 'Resources',
         slug: 'resources',
         icon: '📚',
-        serviceCount: 0,
-        services: [],
+        serviceCount: 0services: [],
         priority: 2
       },
       {
         id: 'legal',
         name: 'Legal',
         slug: 'legal',
-        serviceCount: 0,
-        services: [],
+        serviceCount: 0services: [],
         priority: 3
       }
     );
@@ -812,8 +807,7 @@ export class NavigationGenerator {
       {
         id: 'service-overview',
         label: 'Overview',
-        href: service.href,
-        priority: 1
+        href: service.hrefpriority: 1
       },
       {
         id: 'service-demo',
@@ -831,8 +825,7 @@ export class NavigationGenerator {
         id: 'service-code',
         label: 'Source Code',
         href: `https://github.com/ai-factory/${service.id}`,
-        priority: 4,
-        isExternal: true
+        priority: 4isExternal: true
       }
     ];
   }
@@ -854,8 +847,7 @@ export class NavigationGenerator {
       },
       ...categoryServices.map(service => ({
         id: `service-${service.id}`,
-        label: service.label,
-        href: service.href,
+        label: service.labelhref: service.href,
         status: service.status,
         priority: service.priority || 10
       }))
@@ -934,15 +926,13 @@ export class NavigationGenerator {
           id: 'github',
           label: 'GitHub',
           href: 'https://github.com/Zion-Holdings/zion.app',
-          isExternal: true,
-          priority: 1
+          isExternal: truepriority: 1
         },
         {
           id: 'website',
           label: 'Website',
           href: 'https://ziontechgroup.com',
-          isExternal: true,
-          priority: 2
+          isExternal: truepriority: 2
         }
       ]
     };

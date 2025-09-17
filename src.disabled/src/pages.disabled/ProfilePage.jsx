@@ -37,6 +37,8 @@ export default function ProfilePage({ }: ProfilePageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ProfilePage.jsx
 }
 }

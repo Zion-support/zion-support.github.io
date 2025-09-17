@@ -36,7 +36,10 @@ export default function NewProductsPage({ }: NewProductsPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
+
+}
 :src.disabled/src/pages.disabled/NewProductsPage.jsx
 }
 }

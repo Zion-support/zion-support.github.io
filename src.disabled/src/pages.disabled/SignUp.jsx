@@ -36,7 +36,10 @@ export default function SignUp({ }: SignUpProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
+
+}
 :src.disabled/src/pages.disabled/SignUp.jsx
 }
 }

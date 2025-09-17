@@ -4,7 +4,7 @@ const UltimateTechInnovation2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ ULTIMATE INNOVATION • JANUARY 2028
@@ -17,7 +17,7 @@ const UltimateTechInnovation2028: React.FC = () => {
           </p>
         </div>
 
-        {/* Innovation Categories */}
+        {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -77,7 +77,7 @@ const UltimateTechInnovation2028: React.FC = () => {
           </div>
         </div>
 
-        {/* Innovation Showcase */}
+        {/* Innovation Showcase */};
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Innovation Showcase</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -126,7 +126,7 @@ const UltimateTechInnovation2028: React.FC = () => {
           </div>
         </div>
 
-        {/* Innovation Statistics */}
+        {/* Innovation Statistics */};
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-5xl font-bold text-purple-400 mb-2">1000+</div>
@@ -146,7 +146,7 @@ const UltimateTechInnovation2028: React.FC = () => {
           </div>
         </div>
 
-        {/* Interactive Features */}
+        {/* Interactive Features */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 text-center">
             <div className="text-5xl mb-4">🎮</div>
@@ -182,7 +182,7 @@ const UltimateTechInnovation2028: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -200,6 +200,5 @@ const UltimateTechInnovation2028: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default UltimateTechInnovation2028;
