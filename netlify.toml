@@ -1,9 +1,10 @@
-# Netlify build configuration for Next.js app
+# Netlify build configuration for Vite React app
+# Updated to work with Vite instead of Next.js (2025-01-17)
 # noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
 [build]
-  # Build Next.js app in zion-website; Next.js plugin will handle routing/output
-  command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
-  publish = "zion-website/.next"
+  # Build Vite React app
+  command = "npm ci --ignore-scripts --no-audit && npm run build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -206,24 +207,9 @@
 
 # Note: This is a Vite static site build with SPA routing handled by _redirects
 
-# Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
-
-# SPA catch-all redirect for client-side routing
+# SPA fallback for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
