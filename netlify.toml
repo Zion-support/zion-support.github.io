@@ -1,8 +1,7 @@
 # Netlify build configuration for Vite static app
-# noop: retrigger netlify build (2025-09-17 17:45 UTC) - local build verified OK
-
+# Build: install and build
 [build]
-  command = "npm run build"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   base = "."
   command_timeout = "30m"
