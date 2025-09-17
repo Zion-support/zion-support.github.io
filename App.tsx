@@ -62,6 +62,9 @@ import AI2026UltimateBreakthrough from './src/pages/AI2026UltimateBreakthrough';
 import AIAutonomousResearchAssistant from './src/pages/AIAutonomousResearchAssistant';
 import AIBusinessAutomation2026 from './src/pages/AIBusinessAutomation2026';
 import AIConsciousnessEvolution2026 from './src/pages/AIConsciousnessEvolution2026';
+import AIFutureTrends2027 from './src/pages/AIFutureTrends2027';
+import AIInnovationHub2026 from './src/pages/AIInnovationHub2026';
+import AITransformationMastery2026 from './src/pages/AITransformationMastery2026';
 
 export default function App(): JSX.Element {
   return (
@@ -750,6 +753,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIAutonomousResearchAssistant" element={<AIAutonomousResearchAssistant />} />
           <Route path="/pages/AIBusinessAutomation2026" element={<AIBusinessAutomation2026 />} />
           <Route path="/pages/AIConsciousnessEvolution2026" element={<AIConsciousnessEvolution2026 />} />
+          <Route path="/pages/AIFutureTrends2027" element={<AIFutureTrends2027 />} />
+          <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
+          <Route path="/pages/AITransformationMastery2026" element={<AITransformationMastery2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
