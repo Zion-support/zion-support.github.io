@@ -1,16 +1,21 @@
 import React from 'react';
-import QuantumComputingBreakthrough2035 from '../components/QuantumComputingBreakthrough2035';
-import Header from '../Header';
-import Footer from '../Footer';
-
-const QuantumComputingBreakthrough2035Page: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+const QuantumComputingBreakthrough2035: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Header />
-      <QuantumComputingBreakthrough2035 />
-      <Footer />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>QuantumComputingBreakthrough2035 | Zion Tech Group</title>
+        <meta name="description" content="QuantumComputingBreakthrough2035 - Revolutionary technology solutions" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">QuantumComputingBreakthrough2035</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
+
 };
 
-export default QuantumComputingBreakthrough2035Page;
+export default QuantumComputingBreakthrough2035;

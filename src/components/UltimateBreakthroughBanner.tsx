@@ -1,8 +1,7 @@
 import React from 'react';
-
 const UltimateBreakthroughBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       whileInView={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden"
     >
@@ -36,8 +35,9 @@ const UltimateBreakthroughBanner: React.FC = () => {
           <span className="bg-white/20 px-3 py-1 rounded-full">⚡ Revolutionary Tech</span>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
+
 };
 
 export default UltimateBreakthroughBanner;

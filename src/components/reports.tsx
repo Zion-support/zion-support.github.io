@@ -133,7 +133,7 @@ const ReportsPage: React.FC = () => {
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </divp>
             
-            <divdiv
+            <div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
             >
               <span className="flex items-center space-x-2">
@@ -148,14 +148,14 @@ const ReportsPage: React.FC = () => {
                 <Eye className="w-5 h-5" />
                 <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
               </span>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -163,10 +163,10 @@ const ReportsPage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured Report
               </h2>
-            </divdiv>
+            </div>
 
             {reports.filter(report => report.featured).map((report, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 whileInView={{ opacity: 1, y: 0 }}
@@ -228,7 +228,7 @@ const ReportsPage: React.FC = () => {
                     <span>Preview Report</span>
                   </button>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </section>
@@ -236,7 +236,7 @@ const ReportsPage: React.FC = () => {
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -247,10 +247,10 @@ const ReportsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive research across different technology domains
               </p>
-            </divdiv>
+            </div>
 
             {/* Category Pills */}
-            <divdiv 
+            <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -267,7 +267,7 @@ const ReportsPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>
               ))}
-            </divdiv>
+            </div>
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,7 +325,7 @@ const ReportsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -351,7 +351,7 @@ const ReportsPage: React.FC = () => {
                   View Research Services
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

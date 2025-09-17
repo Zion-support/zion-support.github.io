@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIEnterpriseGovernance2026: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-12">
@@ -11,7 +10,6 @@ const AIEnterpriseGovernance2026: React.FC = () => {
         <p className="text-gray-600 text-lg mb-8">
           Executable guardrails, audit trails, and rollout policies teams actually use.
         </p>
-
         <div className="prose prose-lg max-w-none">
           <p>
             Turn governance from documents into code. Implement reference controls mapped to systems,
@@ -19,7 +17,6 @@ const AIEnterpriseGovernance2026: React.FC = () => {
             velocity. This guide shows practical templates, repository layouts, and runtime hooks
             that keep your delivery fast and compliant.
           </p>
-
           <h2>What Good Looks Like</h2>
           <ul>
             <li>Policies as executable checks in CI/CD with clear pass/fail signals</li>
@@ -27,7 +24,6 @@ const AIEnterpriseGovernance2026: React.FC = () => {
             <li>Immutable audit trails linking data, model, and release artifacts</li>
             <li>Runtime monitors with alerts on drift, safety, and bias regressions</li>
           </ul>
-
           <h2>Reference Repo Layout</h2>
           <pre>
 {`governance/
@@ -36,9 +32,7 @@ const AIEnterpriseGovernance2026: React.FC = () => {
   checklists/          # launch and change-management checklists
   evidence/            # automated evidence exports (immutable)
   playbooks/           # incident/rollback runbooks
-`}
           </pre>
-
           <h2>Rollout Policy Example</h2>
           <pre>
 {`require:
@@ -50,9 +44,7 @@ on_fail:
   - block_release
   - open_ticket: risk
   - require_rollback_playbook
-`}
           </pre>
-
           <p>
             Start small: gate critical paths, make signals visible, and iterate. Governance that ships
             is governance that lasts.
@@ -61,7 +53,7 @@ on_fail:
       </div>
     </div>
   );
+
 };
 
 export default AIEnterpriseGovernance2026;
-

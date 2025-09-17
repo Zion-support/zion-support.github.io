@@ -11,7 +11,6 @@ import React from 'react';
             </button>
           </div>
         </div>
-
         {/* Interdimensional Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -27,7 +26,6 @@ import React from 'react';
               <li>• Consciousness transfer</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Tunneling</h3>
@@ -41,7 +39,6 @@ import React from 'react';
               <li>• Temporal synchronization</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
@@ -56,7 +53,6 @@ import React from 'react';
             </ul>
           </div>
         </div>
-
         {/* Technology Deep Dive */}
         <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Interdimensional Technology Architecture</h2>
@@ -105,7 +101,6 @@ import React from 'react';
             </div>
           </div>
         </div>
-
         {/* Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -122,7 +117,6 @@ import React from 'react';
                 • Population distribution optimization
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-bold mb-3">Scientific Discovery</h3>
@@ -135,7 +129,6 @@ import React from 'react';
                 • Universal law discovery
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-bold mb-3">Business Expansion</h3>
@@ -150,7 +143,6 @@ import React from 'react';
             </div>
           </div>
         </div>
-
         {/* Dimensional Map */}
         <div className="bg-gradient-to-r from-cyan-800/50 to-blue-800/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Dimensional Universe Map</h2>
@@ -177,7 +169,6 @@ import React from 'react';
             </div>
           </div>
         </div>
-
         {/* Safety Protocols */}
         <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Safety & Security Protocols</h2>
@@ -225,7 +216,6 @@ import React from 'react';
               </ul>
             </div>
           </div>
-
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore Interdimensional Space?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
@@ -241,11 +231,10 @@ import React from 'react';
             </button>
           </div>
         </div>
-      </main>
-
-      <EnhancedFooter />
+      </div>
     </div>
   );
+
 };
 
 export default InterdimensionalTechRevolution2025;

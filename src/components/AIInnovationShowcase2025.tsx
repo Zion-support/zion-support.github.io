@@ -156,7 +156,7 @@ export default function AIInnovationShowcase2025() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -189,13 +189,13 @@ export default function AIInnovationShowcase2025() {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => (
@@ -211,15 +211,15 @@ export default function AIInnovationShowcase2025() {
               {category}
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Innovations Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div>
             {filteredInnovations.map((innovationindex) => (
-              <divdiv
+              <div
                 key={innovation.id}
                 className="group cursor-pointer"
                 onClick={() => handleInnovationClick(innovation)}
@@ -280,20 +280,20 @@ export default function AIInnovationShowcase2025() {
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
       </div>
 
       {/* Innovation Detail Modal */}
       <div>
         {selectedInnovation && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedInnovation(null)}
           >
-            <divdiv
+            <div
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
               onClick={(e) => e.stopPropagation()}
             >
@@ -354,15 +354,15 @@ export default function AIInnovationShowcase2025() {
                   Learn More
                 </button>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
 
       {/* Loading Overlay */}
       <div>
         {isLoading && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -371,7 +371,7 @@ export default function AIInnovationShowcase2025() {
                 <span className="text-white text-lg">Loading innovation details...</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         )}
       </div>
     </div>

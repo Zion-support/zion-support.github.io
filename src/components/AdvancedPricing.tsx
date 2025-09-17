@@ -89,7 +89,7 @@ export default function AdvancedPricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingTiers.map((tierindex) => (
-            <divdiv
+            <div
               key={tier.name}
               whileInView={{ opacity: 1, y: 0 }}
               className={`relative rounded-xl p-8 ${
@@ -148,7 +148,7 @@ export default function AdvancedPricing() {
               >
                 {tier.ctaText}
               </diva>
-            </divdiv>
+            </div>
           ))}
         </div>
 

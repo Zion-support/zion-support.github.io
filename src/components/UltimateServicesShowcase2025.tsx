@@ -115,7 +115,7 @@ export default function UltimateServicesShowcase2025() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -150,12 +150,12 @@ export default function UltimateServicesShowcase2025() {
               </button>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((serviceindex) => (
-            <divdiv
+            <div
               key={service.id}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -207,12 +207,12 @@ export default function UltimateServicesShowcase2025() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="bg-white rounded-2xl shadow-xl p-8 mb-16"
@@ -240,10 +240,10 @@ export default function UltimateServicesShowcase2025() {
               <div className="text-sm text-gray-600">Countries Served</div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
@@ -273,7 +273,7 @@ export default function UltimateServicesShowcase2025() {
               View Success Stories
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

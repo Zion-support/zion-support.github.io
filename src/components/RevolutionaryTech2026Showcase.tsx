@@ -1,135 +1,132 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const RevolutionaryTech2026Showcase = () => {
+import { Brain, Circle, Cloud, Shield, Star, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+const RevolutionaryTech2026Showcase: React.FC = () => {
   const technologies = [
     {
-      title: "Quantum Neural Networks",
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.",
-      icon: "🧠⚡",
-      features: ["Quantum Speed"Neural Learning"Exponential Growth"],
-      href: "/quantum-neural-networks-2026",
-      category: "Quantum AI"
+      icon: Brain,
+      title: "AI Consciousness Revolution",
+      description: "Self-aware AI systems with genuine consciousness and emotional intelligence",
+      link: "/ai-consciousness-revolution-2025",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Autonomous Business AI",
-      description: "Self-managing AI systems that handle complex business operations with minimal human oversight.",
-      icon: "🏢🤖",
-      features: ["Self-Learning"Autonomous Decisions"Continuous Optimization"],
-      href: "/autonomous-business-ai-2026",
-      category: "Business AI"
+      icon: Cloud,
+      title: "Quantum Cloud Computing",
+      description: "Infinite scalability and instant processing with quantum principles",
+      link: "/quantum-cloud-computing-2026",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognition.",
-      icon: "🔗🧠",
-      features: ["Brain-Computer Interface"Enhanced Cognition"Seamless Integration"],
-      href: "/neural-interface-tech-2026",
-      category: "Neural Tech"
+      icon: Shield,
+      title: "AI Cybersecurity Defense",
+      description: "Zero-trust autonomous defense with 99.9% threat prevention",
+      link: "/ai-cybersecurity-revolution-2026",
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Predictive Analytics Engine",
-      description: "Advanced AI that predicts future trends and outcomes with 99.9% accuracy using quantum algorithms.",
-      icon: "📊🔮",
-      features: ["99.9% Accuracy"Quantum Algorithms"Future Prediction"],
-      href: "/predictive-analytics-2026",
-      category: "Analytics"
+      icon: Zap,
+      title: "Quantum Business Automation",
+      description: "1000% ROI through quantum AI automation systems",
+      link: "/quantum-business-automation-2027",
+      color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "Synthetic Intelligence",
-      description: "Distributed AI networks that create emergent intelligence beyond individual system capabilities.",
-      icon: "🌐🧠",
-      features: ["Distributed Intelligence"Emergent Behavior"Global Network"],
-      href: "/synthetic-intelligence-2026",
-      category: "Synthetic AI"
+      icon: Circle,
+      title: "Autonomous Business Intelligence",
+      description: "Self-learning analytics platform with predictive insights",
+      link: "/autonomous-business-intelligence-2026",
+      color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Edge Computing AI",
-      description: "Ultra-fast AI processing at the edge with quantum-enhanced capabilities for real-time decisions.",
-      icon: "⚡💻",
-      features: ["Real-time Processing"Edge Computing"Quantum Enhanced"],
-      href: "/edge-computing-ai-2026",
-      category: "Edge AI"
+      icon: Star,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer integration for enhanced cognition",
+      link: "/neural-interface-revolution-2027",
+      color: "from-red-500 to-pink-500"
     }
   ];
-
   return (
-    <section className="py-24 bg-white">
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-            Revolutionary Technologies
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
-              2026 Edition
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              REVOLUTIONARY
             </span>
+            <br />
+            <span className="text-white">TECH 2026</span>
           </h2>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Discover the most advanced AI technologies that will reshape industries
-            transform businessesand revolutionize how we interact with technology.
+          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            Experience the future of technology with breakthrough innovations that are reshaping industries and transforming the way we work, think, and create.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {technologies.map((techindex) => (
-            <div
-              key={index}
-              className="group relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-200"
-            >
-              <div className="absolute top-0 right-0 bg-gradient-to-l from-purple-500 to-blue-500 text-white px-4 py-2 rounded-bl-2xl rounded-tr-3xl text-sm font-bold">
-                {tech.category}
-              </div>
-              
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {tech.icon}
-              </div>
-              
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                {tech.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {tech.description}
-              </p>
-              
-              <div className="mb-6">
-                <div className="flex flex-wrap gap-2">
-                  {tech.features.map((featureIndex) => (
-                    <span
-                      key={featureIndex}
-                      className="bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <a
-                href={tech.href}
-                className="inline-flex items-center text-purple-600 font-bold hover:text-purple-800 transition-colors group-hover:translate-x-2 transform duration-300"
+        {/* Technology Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {technologies.map((tech, index) => {
+            const IconComponent = tech.icon;
+            return (
+              <Link
+                key={index}
+                to={tech.link}
+                className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl"
               >
-                Explore Technology
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </a>
-            </div>
-          ))}
+                {/* Background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-400 transition-colors duration-300">
+                    {tech.title}
+                  </h3>
+                  <p className="text-blue-100 mb-6 leading-relaxed">
+                    {tech.description}
+                  </p>
+                  <div className="flex items-center text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">
+                    Explore Technology
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            );
+};
+          })}
         </div>
-
-        <div className="text-center mt-20">
-          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-1 rounded-2xl inline-block">
-            <a
-              href="/revolutionary-tech-2026"
-              className="block bg-white text-gray-900 px-12 py-6 rounded-xl font-bold text-xl hover:bg-gray-50 transition-colors"
-            >
-              🚀 Explore All 2026 Technologies
-            </a>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-yellow-500/20 via-pink-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Join thousands of forward-thinking companies already leveraging these revolutionary technologies to achieve unprecedented growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold rounded-lg hover:from-yellow-400 hover:to-orange-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Get Started Today
+                <Star className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/comprehensive-services-2025"
+                className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/30 border border-white/30 transform hover:scale-105 transition-all duration-300"
+              >
+                View All Services
+                <Zap className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+
 
 export default RevolutionaryTech2026Showcase;

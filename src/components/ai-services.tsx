@@ -85,14 +85,14 @@ export default function AIServices() {
                   ))}
                 </ul>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -101,11 +101,11 @@ export default function AIServices() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business and accelerate innovation
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.title}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
                 >
@@ -132,7 +132,7 @@ export default function AIServices() {
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </diva>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function AIServices() {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business with AI?
@@ -161,7 +161,7 @@ export default function AIServices() {
                   View Case Studies
                 </divbutton>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

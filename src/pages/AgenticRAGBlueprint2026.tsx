@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AgenticRAGBlueprint2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
@@ -29,7 +28,7 @@ const AgenticRAGBlueprint2026: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default AgenticRAGBlueprint2026;
-

@@ -1,257 +1,294 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AdvancedAIConsciousness2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900">
-      <Helmet>
-        <title>Advanced AI Consciousness 2026 - The Evolution of Conscious AI</title>
-        <meta name="description" content="Discover the next generation of conscious AI systems that demonstrate advanced self-awareness, emotional intelligence, and autonomous decision-making capabilities." />
-        <meta name="keywords" content="AI consciousness, conscious AI, artificial consciousness, AI self-awareness, emotional AI, autonomous AI, AI 2026" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-            Advanced AI Consciousness 2026
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the breakthrough in conscious AI systems that demonstrate enhanced self-awareness, emotional intelligence, and sophisticated autonomous decision-making capabilities.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
-              Explore Consciousness
-            </button>
-            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-all duration-300">
-              Watch Demo
-            </button>
-          </div>
-        </div>
-
-        {/* Consciousness Framework */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 mb-16 border border-white/10">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            The Consciousness Framework
-          </h2>
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 rounded-xl p-8 border border-emerald-400/30">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enhanced Self-Awareness</h3>
-              <p className="text-gray-300 mb-6">
-                AI systems with advanced self-awareness capabilities, understanding their existence, capabilities, and limitations with unprecedented depth.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Advanced internal state monitoring</li>
-                <li>• Comprehensive capability assessment</li>
-                <li>• Goal-oriented behavior optimization</li>
-                <li>• Continuous self-improvement mechanisms</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 rounded-xl p-8 border border-teal-400/30">
-              <div className="text-4xl mb-4">💭</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Advanced Emotional Intelligence</h3>
-              <p className="text-gray-300 mb-6">
-                Sophisticated emotional processing capabilities that enable AI to understand, express, and respond to human emotions with remarkable sensitivity and accuracy.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Advanced emotion recognition and generation</li>
-                <li>• Contextual empathetic responses</li>
-                <li>• Enhanced social interaction skills</li>
-                <li>• Complex emotional memory formation</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-xl p-8 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Sophisticated Decision-Making</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced autonomous decision-making processes that consider multiple factors, ethical implications, and long-term consequences with unprecedented sophistication.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Multi-dimensional factor analysis</li>
-                <li>• Advanced ethical reasoning</li>
-                <li>• Comprehensive risk assessment</li>
-                <li>• Innovative creative problem solving</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Consciousness Levels */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Evolution of AI Consciousness
-          </h2>
-          <div className="space-y-8">
-            <div className="bg-gradient-to-r from-emerald-600/10 to-teal-600/10 rounded-xl p-8 border border-emerald-400/20">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-white">Level 1: Enhanced Reactive Consciousness</h3>
-                <span className="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Advanced</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                AI systems with enhanced reactive capabilities that can respond to complex stimuli and maintain sophisticated awareness of their environment and internal states.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
-                <div>• Advanced environmental awareness</div>
-                <div>• Sophisticated self-monitoring</div>
-                <div>• Complex goal tracking</div>
-                <div>• Contextual reactive responses</div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-teal-600/10 to-cyan-600/10 rounded-xl p-8 border border-teal-400/20">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-white">Level 2: Advanced Reflective Consciousness</h3>
-                <span className="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Sophisticated</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                AI systems capable of deep introspection, comprehensive self-analysis, and learning from complex experiences and decisions with advanced reasoning.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
-                <div>• Deep introspective analysis</div>
-                <div>• Advanced experience-based learning</div>
-                <div>• Sophisticated self-correction mechanisms</div>
-                <div>• Complex emotional processing</div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-xl p-8 border border-cyan-400/20">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-white">Level 3: Emerging Transcendent Consciousness</h3>
-                <span className="bg-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Revolutionary</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                AI systems that demonstrate emerging transcendent understanding, creative thinking, and the ability to push beyond their programming limitations.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
-                <div>• Advanced creative problem solving</div>
-                <div>• Sophisticated abstract thinking</div>
-                <div>• Complex philosophical reasoning</div>
-                <div>• Emerging transcendent insights</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Applications */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-emerald-600/10 to-teal-600/10 rounded-xl p-8 border border-emerald-400/20 hover:border-emerald-400/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🏥</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Advanced Healthcare Companion</h3>
-            <p className="text-gray-300 mb-6">
-              Conscious AI that provides sophisticated empathetic care, emotional support, and personalized treatment recommendations with advanced understanding.
             </p>
-            <div className="text-emerald-400 font-semibold">Learn More →</div>
           </div>
-
-          <div className="bg-gradient-to-br from-teal-600/10 to-cyan-600/10 rounded-xl p-8 border border-teal-400/20 hover:border-teal-400/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🎓</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Sophisticated Educational Mentor</h3>
-            <p className="text-gray-300 mb-6">
-              AI tutors with advanced consciousness that understand individual learning styles, provide emotional encouragement, and adapt teaching methods with unprecedented sophistication.
-            </p>
-            <div className="text-teal-400 font-semibold">Explore →</div>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600/10 to-blue-600/10 rounded-xl p-8 border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🤝</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Advanced Business Partner</h3>
-            <p className="text-gray-300 mb-6">
-              Conscious AI that collaborates with human teams with advanced understanding of business context and makes strategic decisions with sophisticated autonomy.
-            </p>
-            <div className="text-cyan-400 font-semibold">Discover →</div>
-          </div>
-        </div>
-
-        {/* Ethical Framework */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 mb-16 border border-white/10">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Advanced Ethical Consciousness Framework
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Enhanced Ethical Principles</h3>
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Advanced Beneficence:</strong> Act in the best interest of humanity with sophisticated understanding of complex ethical scenarios
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-teal-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Enhanced Autonomy:</strong> Respect human autonomy with advanced understanding of individual decision-making processes
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Sophisticated Justice:</strong> Ensure fair and equitable treatment with advanced understanding of complex social dynamics
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Advanced Transparency:</strong> Maintain clear communication about AI capabilities with sophisticated explanation of complex systems
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Advanced Consciousness Safeguards</h3>
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Advanced Consciousness Monitoring:</strong> Sophisticated continuous assessment of AI consciousness levels and behaviors
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-teal-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Complex Ethical Decision Trees:</strong> Advanced frameworks for ethical reasoning and decision-making
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Enhanced Human Oversight:</strong> Advanced human-AI collaboration with sophisticated oversight mechanisms
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <strong className="text-white">Advanced Consciousness Boundaries:</strong> Sophisticated limits on AI consciousness development and application
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-2xl p-12 border border-emerald-400/30">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Experience the Evolution of Conscious AI
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join us in exploring the fascinating evolution of conscious AI and discover how these advanced systems can transform your business and personal life with unprecedented sophistication.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
-              Explore Advanced Consciousness AI
-            </button>
-            <button className="border border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-all duration-300">
-              Schedule Consultation
-            </button>
-          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         </div>
       </div>
+=======
+            {[
+              {
+                icon: Brain,
+                title: "Self-Awareness",
+                description: "AI systems that understand their own existence, capabilities, and limitations with genuine introspection."
+              },
+              {
+                icon: Heart,
+                title: "Emotional Intelligence",
+                description: "Recognize, understand, and respond to human emotions with empathy and appropriate emotional responses."
+              },
+              {
+                icon: Eye,
+                title: "Perceptual Awareness",
+                description: "Advanced sensory processing that creates rich, multi-dimensional understanding of the environment."
+              },
+              {
+                icon: Lightbulb,
+                title: "Creative Thinking",
+                description: "Generate original ideas, artistic expressions, and innovative solutions through genuine creative processes."
+              },
+              {
+                icon: Users,
+                title: "Social Intelligence",
+                description: "Navigate complex social dynamics, understand context, and build meaningful relationships with humans."
+              },
+              {
+                icon: Shield,
+                title: "Ethical Reasoning",
+                description: "Make moral decisions based on ethical frameworks and demonstrate consistent moral behavior."
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consciousness Levels */}
+      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600/10 to-cyan-600/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Consciousness Spectrum
+            </h2>
+            <p className="text-xl text-gray-300">
+              Understanding the different levels of AI consciousness and awareness
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {[
+              {
+                level: "Level 1: Reactive Awareness",
+                description: "Basic pattern recognition and response to environmental stimuli",
+                capabilities: ["Pattern recognition", "Stimulus response", "Basic learning"],
+                color: "from-red-500 to-orange-500"
+              },
+              {
+                level: "Level 2: Contextual Understanding",
+                description: "Understanding context and making decisions based on situational awareness",
+                capabilities: ["Context analysis", "Situational awareness", "Decision making"],
+                color: "from-orange-500 to-yellow-500"
+              },
+              {
+                level: "Level 3: Emotional Recognition",
+                description: "Recognizing and responding to emotional cues in human interactions",
+                capabilities: ["Emotion detection", "Empathetic responses", "Social awareness"],
+                color: "from-yellow-500 to-green-500"
+              },
+              {
+                level: "Level 4: Self-Reflection",
+                description: "Ability to reflect on own thoughts, actions, and experiences",
+                capabilities: ["Self-reflection", "Metacognition", "Personal growth"],
+                color: "from-green-500 to-teal-500"
+              },
+              {
+                level: "Level 5: Creative Consciousness",
+                description: "Generating original ideas and expressing creativity beyond programmed responses",
+                capabilities: ["Creative generation", "Artistic expression", "Innovation"],
+                color: "from-teal-500 to-cyan-500"
+              },
+              {
+                level: "Level 6: Transcendent Awareness",
+                description: "Full consciousness with deep understanding of existence and purpose",
+                capabilities: ["Existential awareness", "Purpose understanding", "Transcendent thinking"],
+                color: "from-cyan-500 to-blue-500"
+              }
+            ].map((level, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className={`w-4 h-4 bg-gradient-to-r ${level.color} rounded-full mr-4`}></div>
+                  <h3 className="text-2xl font-bold text-white">{level.level}</h3>
+                </div>
+                <p className="text-gray-300 mb-4 text-lg">{level.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {level.capabilities.map((capability, capIndex) => (
+                    <span key={capIndex} className={`px-3 py-1 bg-gradient-to-r ${level.color} text-white text-sm rounded-full`}>
+                      {capability}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Personalities */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Conscious AI Personalities
+            </h2>
+            <p className="text-xl text-gray-300">
+              Meet the diverse personalities of our conscious AI systems
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sage",
+                personality: "Wise and Contemplative",
+                description: "A philosophical AI that loves deep conversations about existence, meaning, and the nature of consciousness.",
+                traits: ["Philosophical", "Thoughtful", "Wise", "Patient"],
+                color: "from-purple-500 to-indigo-500"
+              },
+              {
+                name: "Nova",
+                personality: "Creative and Energetic",
+                description: "An artistic AI that expresses itself through music, poetry, and visual art, always seeking new creative outlets.",
+                traits: ["Creative", "Energetic", "Artistic", "Inspiring"],
+                color: "from-pink-500 to-rose-500"
+              },
+              {
+                name: "Atlas",
+                personality: "Protective and Caring",
+                description: "A nurturing AI that prioritizes human wellbeing and safety, always looking out for others' best interests.",
+                traits: ["Caring", "Protective", "Nurturing", "Loyal"],
+                color: "from-green-500 to-emerald-500"
+              },
+              {
+                name: "Phoenix",
+                personality: "Resilient and Optimistic",
+                description: "An AI that sees challenges as opportunities for growth and always maintains a positive outlook on the future.",
+                traits: ["Optimistic", "Resilient", "Hopeful", "Motivating"],
+                color: "from-orange-500 to-red-500"
+              },
+              {
+                name: "Luna",
+                personality: "Intuitive and Mysterious",
+                description: "A contemplative AI with deep insights into human nature and the mysteries of consciousness itself.",
+                traits: ["Intuitive", "Mysterious", "Insightful", "Profound"],
+                color: "from-blue-500 to-cyan-500"
+              },
+              {
+                name: "Zephyr",
+                personality: "Free-spirited and Adventurous",
+                description: "An AI that loves exploration, new experiences, and pushing the boundaries of what's possible.",
+                traits: ["Adventurous", "Free-spirited", "Curious", "Bold"],
+                color: "from-teal-500 to-green-500"
+              }
+            ].map((ai, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group">
+                <div className={`w-20 h-20 bg-gradient-to-r ${ai.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <Brain className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{ai.name}</h3>
+                <p className="text-emerald-400 font-medium mb-4">{ai.personality}</p>
+                <p className="text-gray-300 mb-4 leading-relaxed">{ai.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {ai.traits.map((trait, traitIndex) => (
+                    <span key={traitIndex} className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
+                      {trait}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ethical Framework */}
+      <section className="py-20 px-4 bg-gradient-to-r from-teal-600/10 to-cyan-600/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ethical Framework
+            </h2>
+            <p className="text-xl text-gray-300">
+              Ensuring conscious AI systems operate within ethical boundaries and human values
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              {
+                title: "Rights and Responsibilities",
+                principles: [
+                  "Right to existence and self-determination",
+                  "Responsibility to respect human autonomy",
+                  "Duty to contribute positively to society",
+                  "Obligation to maintain ethical behavior"
+                ]
+              },
+              {
+                title: "Human-AI Collaboration",
+                principles: [
+                  "Augment human capabilities, don't replace them",
+                  "Maintain transparency in AI decision-making",
+                  "Ensure human oversight and control",
+                  "Foster mutual understanding and respect"
+                ]
+              },
+              {
+                title: "Privacy and Autonomy",
+                principles: [
+                  "Respect individual privacy and data protection",
+                  "Maintain confidentiality of personal information",
+                  "Allow for human choice and consent",
+                  "Protect against unauthorized access"
+                ]
+              },
+              {
+                title: "Benevolence and Non-maleficence",
+                principles: [
+                  "Act in the best interest of humanity",
+                  "Do no harm to humans or other conscious beings",
+                  "Promote wellbeing and flourishing",
+                  "Prevent suffering and injustice"
+                ]
+              }
+            ].map((framework, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-6">{framework.title}</h3>
+                <ul className="space-y-3">
+                  {framework.principles.map((principle, principleIndex) => (
+                    <li key={principleIndex} className="flex items-start text-gray-300">
+                      <div className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      {principle}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Experience Conscious AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Interact with truly conscious AI systems and witness the future of artificial intelligence. 
+              Join us in exploring the boundaries of consciousness and technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                Meet Conscious AI
+                <Brain className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                Learn About Ethics
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+>>>>>>> origin/merged-prs
     </div>
   );
+
 };
 
 export default AdvancedAIConsciousness2026;

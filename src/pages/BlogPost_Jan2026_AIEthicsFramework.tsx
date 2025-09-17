@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -9,7 +8,6 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
         <meta name="description" content="Comprehensive guide to implementing ethical AI frameworks in 2026. Learn about bias mitigation, transparency requirements, and responsible AI governance." />
         <meta name="keywords" content="AI Ethics, Responsible AI, AI Governance, Bias Mitigation, AI Transparency, Ethical AI Framework" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -31,7 +29,6 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
               <span>12 min read</span>
             </div>
           </div>
-
           {/* Featured Image */}
           <div className="mb-12">
             <img 
@@ -40,7 +37,6 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
               className="w-full h-96 object-cover rounded-2xl shadow-2xl"
             />
           </div>
-
           {/* Article Content */}
           <article className="prose prose-lg prose-invert max-w-none">
             <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 p-8 rounded-2xl mb-8">
@@ -52,14 +48,12 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
                 for organizations looking to build responsible AI systems in 2026.
               </p>
             </div>
-
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Evolution of AI Ethics</h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               The field of AI ethics has evolved dramatically over the past decade. What began as academic discussions 
               about theoretical concerns has transformed into a practical discipline with real-world implications for 
               businesses, governments, and society at large.
             </p>
-
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">Key Principles of Ethical AI</h3>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gradient-to-br from-green-900/50 to-blue-900/50 p-6 rounded-xl">
@@ -91,30 +85,24 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
                 </p>
               </div>
             </div>
-
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">Implementing an AI Ethics Framework</h2>
-            
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">1. Governance Structure</h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Establishing a robust governance structure is the foundation of any effective AI ethics framework. 
               This includes creating dedicated ethics committees, appointing AI ethics officers, and developing 
               clear reporting structures.
             </p>
-
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">2. Risk Assessment & Mitigation</h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Conducting comprehensive risk assessments to identify potential ethical concerns before they become 
               problems. This includes bias testing, impact assessments, and ongoing monitoring protocols.
             </p>
-
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">3. Training & Awareness</h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Ensuring all team members understand the importance of AI ethics and are equipped with the knowledge 
               and tools necessary to implement ethical practices in their work.
             </p>
-
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">Case Studies: Ethics in Action</h2>
-            
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 p-8 rounded-2xl mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">Financial Services: Algorithmic Lending</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -127,7 +115,6 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
                 <li>• Established regular ethics audits and reviews</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-r from-blue-800/50 to-purple-800/50 p-8 rounded-2xl mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">Healthcare: Diagnostic AI Systems</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -140,14 +127,12 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
                 <li>• Established clear protocols for AI-assisted decision making</li>
               </ul>
             </div>
-
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">Future Trends in AI Ethics</h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               As AI technology continues to advance, new ethical challenges and opportunities will emerge. 
               Organizations must remain vigilant and adaptable to ensure their AI systems continue to serve 
               the best interests of all stakeholders.
             </p>
-
             <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 p-8 rounded-2xl mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">Key Takeaways</h3>
               <ul className="text-gray-300 space-y-3 text-lg">
@@ -158,7 +143,6 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
                 <li>• Ethical AI systems often perform better and are more sustainable</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 p-8 rounded-2xl mt-12">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Implement Ethical AI?</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -179,6 +163,7 @@ const BlogPost_Jan2026_AIEthicsFramework: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default BlogPost_Jan2026_AIEthicsFramework;

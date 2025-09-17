@@ -31,7 +31,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
   ];
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
     >
       {/* Animated Background */}
@@ -41,7 +41,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <divdiv
+            <div
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -55,10 +55,10 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 Discover revolutionary AI breakthroughs that are transforming industries worldwide. 
                 Experience the future of artificial intelligence today.
               </p>
-            </divdiv>
+            </div>
 
             {/* Features List */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {features.map((featureindex) => (
@@ -67,10 +67,10 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -86,18 +86,18 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
               >
                 Get Started
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <divdiv
+          <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
               
               {/* Animated Stat */}
-              <divdiv
+              <div
                 key={currentStat}
                 className="text-center mb-6"
               >
@@ -106,7 +106,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
-              </divdiv>
+              </div>
 
               {/* Static Stats */}
               <div className="space-y-4">
@@ -125,17 +125,17 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
               </div>
 
               {/* Urgency Indicator */}
-              <divdiv
+              <div
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time offer - Act now!</span>
-              </divdiv>
+              </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

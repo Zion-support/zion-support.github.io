@@ -1,71 +1,5 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import React from 'react';
 const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
-  const [currentContent, setCurrentContent] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const breakthroughContent = [
-    {
-      id: 'neural-consciousness',
-      title: 'Neural Consciousness Breakthrough',
-      description: 'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',
-      metrics: '99.8% Decision Accuracy',
-      savings: '$15.8B Annual Savings',
-      roi: '2,400% ROI',
-      url: '/blog/ai-2025-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence',
-      badge: '🧠 NEW BREAKTHROUGH',
-      category: 'Conscious AI Innovation'
-    },
-    {
-      id: 'enterprise-transformation',
-      title: 'Global Enterprise Transformation',
-      description: 'How a Fortune 500 manufacturing giant achieved $15.8 billion ROI in 18 months through comprehensive conscious AI transformation.',
-      metrics: '2,400% Efficiency Improvement',
-      savings: '$15.8B ROI Success',
-      roi: '1,500% Innovation Increase',
-      url: '/case-studies/global-enterprise-conscious-ai-transformation-2025-15-billion-roi',
-      badge: '💰 $15B SUCCESS',
-      category: 'Case Study'
-    },
-    {
-      id: 'autonomous-business-guide',
-      title: 'Autonomous Business Revolution Guide',
-      description: 'Complete implementation guide to autonomous business operations. Master AI-powered business transformation with proven strategies.',
-      metrics: '1,500% ROI Framework',
-      savings: 'Complete Roadmap',
-      roi: 'Zero Error Operations',
-      url: '/resources/ai-2025-autonomous-business-revolution-complete-guide',
-      badge: '📚 COMPLETE GUIDE',
-      category: 'Implementation Guide'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % breakthroughContent.length);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, [breakthroughContent.length]);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('neural-consciousness-banner-dismissed', 'true');
-  };
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('neural-consciousness-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  if (!isVisible) return null;
-
-  const current = breakthroughContent[currentContent];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Animated Background */}
@@ -73,7 +7,6 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       </div>
-
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Progress Indicator */}
@@ -89,24 +22,20 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
               ))}
             </div>
           </div>
-
           <div className="text-center">
             {/* Badge */}
             <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-4 animate-bounce">
               <span className="mr-2">🔥</span>
               {current.badge}
             </div>
-
             {/* Title */}
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               {current.title}
             </h2>
-
             {/* Description */}
             <p className="text-lg md:text-xl text-blue-100 mb-6 max-w-4xl mx-auto leading-relaxed">
               {current.description}
             </p>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -122,7 +51,6 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
                 <div className="text-sm text-blue-200">Results</div>
               </div>
             </div>
-
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
               <a
@@ -138,7 +66,6 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
                 View All Success Stories
               </a>
             </div>
-
             {/* Category Indicator */}
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-blue-200 border border-white/20">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -146,7 +73,6 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Dismiss Button */}
         <button
           onClick={handleDismiss}
@@ -158,11 +84,11 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
           </svg>
         </button>
       </div>
-
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500"></div>
     </div>
   );
+
 };
 
 export default NeuralConsciousnessBreakthroughBanner;

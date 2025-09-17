@@ -1,16 +1,21 @@
-import React from 'react',;',';';
-    ';';';';
-import { SEO } from '../components/SEO';
-const TransformationServices: Reac t.FC = () => {
-  return (<>
-      <SEO title="TransformationServices - Zion Tech Group"  />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">TransformationServices</h1>
-          <p className="text-lg text-gray-600">Content coming soon...</p>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const TransformationServices: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>TransformationServices | Zion Tech Group</title>
+        <meta name="description" content="TransformationServices - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">TransformationServices</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

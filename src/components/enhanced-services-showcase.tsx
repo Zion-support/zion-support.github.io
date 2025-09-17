@@ -169,7 +169,7 @@ export default function EnhancedServicesShowcase() {
         {/* Hero Section */}
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Enhanced Services Showcase
@@ -195,14 +195,14 @@ export default function EnhancedServicesShowcase() {
                   <span className="text-pink-300 font-semibold">24/7 Support</span>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Featured Service Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -213,11 +213,11 @@ export default function EnhancedServicesShowcase() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our most innovative and high-impact service categories
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredServices.map((category, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -251,7 +251,7 @@ export default function EnhancedServicesShowcase() {
                       </Button>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -339,14 +339,14 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid/List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }
             >
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >
@@ -470,9 +470,9 @@ export default function EnhancedServicesShowcase() {
                       </div>
                     </div>
                   )}
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
 
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
@@ -497,7 +497,7 @@ export default function EnhancedServicesShowcase() {
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -543,7 +543,7 @@ export default function EnhancedServicesShowcase() {
                   <DollarSign className="ml-2 w-6 h-6" />
                 </Button>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

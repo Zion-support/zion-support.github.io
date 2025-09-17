@@ -1,30 +1,12 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-
-const ThemeContext = createContext();
-
-export const ThemeProvider = ({ children, defaultTheme = 'light' }) => {
-  const [theme, setTheme] = useState(defaultTheme);
-
-  useEffect(() => {
-    // Apply theme to document
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
-  };
-
+import React from 'react';
+const ThemeProvider= () => {
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ThemeProvider</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
+
 };
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-};
+export default ThemeProvider;

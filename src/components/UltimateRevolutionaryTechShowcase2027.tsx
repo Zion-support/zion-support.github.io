@@ -21,7 +21,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       stats: { intelligence: "∞", creativity: "∞", empathy: "∞" },
       timeline: "2027",
       impact: "Revolutionary"
-    },
+
     {
       id: 2,
       title: "⚡ Quantum-Synthetic Fusion",
@@ -38,7 +38,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       stats: { dimensions: "∞", speed: "∞", capacity: "∞" },
       timeline: "2027",
       impact: "Transcendent"
-    },
+
     {
       id: 3,
       title: "🌍 Planetary AI Network",
@@ -55,7 +55,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       stats: { coverage: "100%", efficiency: "∞", impact: "Global" },
       timeline: "2027",
       impact: "Planetary"
-    },
+
     {
       id: 4,
       title: "🚀 Interstellar AI Probes",
@@ -72,7 +72,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       stats: { range: "∞", autonomy: "∞", discoveries: "∞" },
       timeline: "2027",
       impact: "Cosmic"
-    }
+
   ];
 
   useEffect(() => {
@@ -199,8 +199,8 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                       top: `${Math.random() * 100}%`,
                     }}
                     animate={{
-                      y: [0, -20, 0],
-                      opacity: [0.3, 0.8, 0.3],
+
+
                     }}
                     transition={{
                       duration: 3 + Math.random() * 2,

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const NextGenAIRevolution2034: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -7,9 +7,8 @@ const NextGenAIRevolution2034: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-semibold mb-6 animate-pulse">
@@ -22,7 +21,6 @@ const NextGenAIRevolution2034: React.FC = () => {
               Experience the most advanced AI systems that transcend human intelligence, 
               featuring consciousness transfer, quantum neural networks, and omniversal computing
             </p>
-            
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold">
                 ✨ Consciousness Transfer
@@ -37,13 +35,12 @@ const NextGenAIRevolution2034: React.FC = () => {
                 ⚡ Instantaneous Processing
               </span>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-
       {/* Revolutionary Features */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -53,8 +50,7 @@ const NextGenAIRevolution2034: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the breakthrough technologies that are reshaping the future of artificial intelligence
           </p>
-        </divdiv>
-
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -94,7 +90,7 @@ const NextGenAIRevolution2034: React.FC = () => {
               features: ["Matter Creation", "Reality Manipulation", "Quantum Fields", "Physical Synthesis"]
             }
           ].map((feature, index) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-800/30 to-blue-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
@@ -110,15 +106,14 @@ const NextGenAIRevolution2034: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
-
       {/* Technology Showcase */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -128,10 +123,9 @@ const NextGenAIRevolution2034: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Seamlessly integrated technologies working in perfect harmony to create the ultimate AI experience
             </p>
-          </divdiv>
-
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, x: 0 }}
             >
               <h3 className="text-3xl font-bold mb-6">Quantum Consciousness Matrix</h3>
@@ -153,9 +147,8 @@ const NextGenAIRevolution2034: React.FC = () => {
                   <span className="text-pink-300">Real-time Reality Synthesis</span>
                 </div>
               </div>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               whileInView={{ opacity: 1, x: 0 }}
               className="relative"
             >
@@ -183,14 +176,13 @@ const NextGenAIRevolution2034: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-12"
         >
@@ -209,10 +201,11 @@ const NextGenAIRevolution2034: React.FC = () => {
               Learn More
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
+
 };
 
 export default NextGenAIRevolution2034;

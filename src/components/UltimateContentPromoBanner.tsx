@@ -1,53 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const UltimateContentPromoBanner: React.FC = () => {
-  const [currentPromo, setCurrentPromo] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const promotionalContent = [
-    {
-      title: "🚀 Next-Gen Innovation Hub 2026",
-      subtitle: "Experience the convergence of cutting-edge technologies",
-      description: "From quantum-enhanced AI to neural reality engines, discover innovations that will transform industries",
-      link: "/pages/NextGenInnovationHub2026",
-      gradient: "from-purple-600 via-pink-600 to-cyan-600",
-      badge: "BREAKTHROUGH",
-      features: ["Quantum-Enhanced AI", "Neural Reality Engine", "Synthetic Intelligence"]
-    },
-    {
-      title: "🌟 Ultimate Tech Showcase 2026",
-      subtitle: "The most advanced technologies revolutionizing industries",
-      description: "Interactive demonstrations of quantum computing, neural interfaces, and reality engineering",
-      link: "/pages/UltimateTechShowcase2026",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      badge: "ULTIMATE",
-      features: ["Interactive Demos", "Real-World Applications", "Technology Statistics"]
-    },
-    {
-      title: "⚡ Revolutionary Tech Breakthrough 2025",
-      subtitle: "Witness the most groundbreaking technological breakthroughs",
-      description: "From quantum neural fusion to consciousness transfer, experience the future today",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      badge: "REVOLUTIONARY",
-      features: ["Quantum Neural Fusion", "Consciousness Transfer", "Reality Fabrication"]
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentPromo((prev) => (prev + 1) % promotionalContent.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative z-10 p-8 md:p-12">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -60,7 +17,6 @@ const UltimateContentPromoBanner: React.FC = () => {
             Discover our most advanced and innovative content featuring breakthrough technologies that are reshaping our digital future
           </p>
         </div>
-
         {/* Promotional Carousel */}
         <div className="relative">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
@@ -75,7 +31,6 @@ const UltimateContentPromoBanner: React.FC = () => {
                   {promotionalContent[currentPromo].description}
                 </p>
               </div>
-
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {promotionalContent[currentPromo].features.map((feature, index) => (
                   <div
@@ -89,7 +44,6 @@ const UltimateContentPromoBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="text-center">
                 <a
                   href={promotionalContent[currentPromo].link}
@@ -100,7 +54,6 @@ const UltimateContentPromoBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {promotionalContent.map((_, index) => (
@@ -116,7 +69,6 @@ const UltimateContentPromoBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {promotionalContent.map((content, index) => (
@@ -141,6 +93,7 @@ const UltimateContentPromoBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentPromoBanner;

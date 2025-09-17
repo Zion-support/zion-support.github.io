@@ -109,7 +109,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
           </divp>
-          <divdiv 
+          <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a 
@@ -124,7 +124,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             >
               Get Started
             </a>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -138,7 +138,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             Ready to Transform Your Business?
           </divh2>
-          <divdiv 
+          <div 
             className="grid md:grid-cols-3 gap-8"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -158,7 +158,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -173,7 +173,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Our Comprehensive Service Portfolio
           </divh2>
           
-          <divdiv 
+          <div 
             className="space-y-20"
             whileInView="animate"
             viewport={{ once: true }}
@@ -193,7 +193,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
-                    <divdiv
+                    <div
                       key={service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                     >
@@ -233,12 +233,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -253,7 +253,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Market Impact & Growth
           </divh2>
           
-          <divdiv 
+          <div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -274,7 +274,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
               <div className="text-white text-lg">Service Categories</div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -295,7 +295,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
           </divp>
-          <divdiv 
+          <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -312,7 +312,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             >
               Visit Website
             </a>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>

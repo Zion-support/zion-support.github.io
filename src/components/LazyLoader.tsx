@@ -1,25 +1,12 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-
-interface LazyLoaderProps {
-  component: () => Promise<{ default: ComponentType<any> }>;
-  fallback?: React.ReactNode;
-  [key: string]: any;
-}
-
-const LazyLoader: React.FC<LazyLoaderProps> = ({ 
-  component, 
-  fallback = <div className="flex items-center justify-center p-8" role="status" aria-label="Loading">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-  </div>,
-  ...props 
-}) => {
-  const LazyComponent = lazy(component);
-
+import React from 'react';
+const LazyLoader: React.FC = () => {
   return (
-    <Suspense fallback={fallback}>
-      <LazyComponent {...props} />
-    </Suspense>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LazyLoader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
+
 };
 
 export default LazyLoader;

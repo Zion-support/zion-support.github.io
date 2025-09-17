@@ -2,9 +2,6 @@
 
 import React from 'react'
 
-<<<<<<< HEAD
-const navigation = [
-=======
 const navLinks = [
 	{ name: 'About', href: '/about' },
 	{ name: 'Services', href: '/services' },
@@ -13,7 +10,6 @@ const navLinks = [
 	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 export default function Navigation() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">

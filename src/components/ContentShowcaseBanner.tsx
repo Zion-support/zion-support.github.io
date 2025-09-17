@@ -1,13 +1,13 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function ContentShowcaseBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentSlidesetCurrentSlide] = useState(0);
-
   const showcaseItems = [
     {
       title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
@@ -45,28 +45,22 @@ export default function ContentShowcaseBanner() {
       badge: "TRENDS"
     }
   ];
-
   useEffect(() => {
     // Show banner after 3 seconds
     const showTimer = setTimeout(() => {
       setIsVisible(true);
     }3000);
-
     // Auto-rotate slides every 6 seconds
     const rotationTimer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
     }6000);
-
     return () => {
       clearTimeout(showTimer);
       clearInterval(rotationTimer);
     };
   }[]);
-
   if (!isVisible) return null;
-
   const currentItem = showcaseItems[currentSlide];
-
   return (
     <div className="fixed bottom-4 right-4 z-40 max-w-sm">
       <div className="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105">
@@ -81,11 +75,6 @@ export default function ContentShowcaseBanner() {
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
         {/* Content */}
         <div className="p-4">
           <div className="flex items-start space-x-3">
@@ -94,24 +83,15 @@ export default function ContentShowcaseBanner() {
               <div className="flex items-center space-x-2 mb-2">
                 <span className="inline-block bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
                   {currentItem.badge}
-                </span>
-              </div>
               <h4 className="font-bold text-gray-900 text-sm leading-tight mb-2">
                 {currentItem.title}
-              </h4>
               <p className="text-gray-600 text-xs mb-3 leading-relaxed">
                 {currentItem.description}
-              </p>
               <a
                 href={currentItem.link}
                 className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-xs hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Now →
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Progress indicator */}
         <div className="px-4 pb-3">
           <div className="flex space-x-1">
@@ -124,13 +104,10 @@ export default function ContentShowcaseBanner() {
                 }`}
               />
             ))}
-          </div>
-        </div>
-      </div>
-
       {/* Floating animation elements */}
       <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce"></div>
       <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse"></div>
-    </div>
   );
-}
+
+
+export default ContentShowcaseBanner;

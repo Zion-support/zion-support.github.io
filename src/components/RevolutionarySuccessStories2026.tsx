@@ -148,7 +148,7 @@ const RevolutionarySuccessStories2026 = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
@@ -170,10 +170,10 @@ const RevolutionarySuccessStories2026 = () => {
             See how industry leaders are achieving unprecedented success with our AI and automation solutions. 
             These 'aren', 't just promises—'they', 're proven results.
           </p>
-        </divdiv>
+        </div>
 
         {/* Overall Stats */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -185,10 +185,10 @@ const RevolutionarySuccessStories2026 = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Success Stories Navigation */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -211,7 +211,7 @@ const RevolutionarySuccessStories2026 = () => {
           </div>
 
           {/* Story Content */}
-            <divdiv
+            <div
               key={activeStory}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
@@ -305,12 +305,12 @@ const RevolutionarySuccessStories2026 = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
@@ -338,7 +338,7 @@ const RevolutionarySuccessStories2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

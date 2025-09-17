@@ -19,7 +19,7 @@ const TranscendentAI2033Banner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="text-center lg:text-left"
           >
@@ -51,10 +51,10 @@ const TranscendentAI2033Banner: React.FC = () => {
                 Explore Infinity
               </divbutton>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Feature Grid */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="grid grid-cols-2 gap-6"
           >
@@ -80,7 +80,7 @@ const TranscendentAI2033Banner: React.FC = () => {
                 description: "Omniversal travel network"
               }
             ].map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-indigo-800/20 to-purple-800/20 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 text-center hover:border-indigo-400/40 transition-all group"
@@ -94,9 +94,9 @@ const TranscendentAI2033Banner: React.FC = () => {
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                   {feature.description}
                 </p>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
       </div>
 

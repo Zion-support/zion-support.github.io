@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Sparkles, Brain, Zap, Rocket, Star } from 'lucide-react';
-
 const NewContentNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const newContentItems = [
     {
       title: "Synthetic Intelligence 2026",
@@ -55,7 +53,6 @@ const NewContentNavigation2026 = () => {
       featured: true
     }
   ];
-
   return (
     <div className="relative">
       <button
@@ -66,7 +63,6 @@ const NewContentNavigation2026 = () => {
         New 2026 Content
         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
-
       {isOpen && (
         <div className="absolute top-full right-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-sm border border-white/10 rounded-2xl shadow-2xl z-50 overflow-hidden">
           {/* Header */}
@@ -77,7 +73,6 @@ const NewContentNavigation2026 = () => {
             </h3>
             <p className="text-cyan-100 text-sm">Explore the future of technology</p>
           </div>
-
           {/* Content List */}
           <div className="max-h-96 overflow-y-auto">
             {newContentItems.map((item, index) => (
@@ -109,7 +104,6 @@ const NewContentNavigation2026 = () => {
               </Link>
             ))}
           </div>
-
           {/* Footer */}
           <div className="bg-slate-800/50 p-4 border-t border-white/5">
             <div className="flex gap-2">
@@ -129,7 +123,6 @@ const NewContentNavigation2026 = () => {
           </div>
         </div>
       )}
-
       {/* Backdrop */}
       {isOpen && (
         <div
@@ -139,6 +132,7 @@ const NewContentNavigation2026 = () => {
       )}
     </div>
   );
+
 };
 
 export default NewContentNavigation2026;

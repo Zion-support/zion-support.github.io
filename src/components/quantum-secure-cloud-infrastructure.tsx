@@ -1,6 +1,8 @@
 import React from 'react';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
+};
+
 
 export default function QuantumSecureCloudInfrastructure() {
 	return (
@@ -23,4 +25,3 @@ export default function QuantumSecureCloudInfrastructure() {
 			url="https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	);
-}

@@ -1,95 +1,14 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Users
-  Award
-  DollarSign
-  Clock
-  Target,
-  ArrowRight,
-  X,
-  ChevronRight,
-  Star,
-  Quote,
-  BarChart3,
-  Zap,
-  Brain,
-  Rocket,
-  CheckCircle,
-  Play
-} from 'lucide-react';
-
-const BusinessSuccessStories2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentStorysetCurrentStory] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const stories = [
-    {
-      company: 'TechCorp Global',
-      industry: 'Technology',
-      logo: 'TC',
-      color: 'from-blue-500 to-purple-500',
-      roi: '850%',
-      savings: '$2.3M'
-    },
-    {
-      company: 'InnovateLabs',
-      industry: 'R&D',
-      logo: 'IL',
-      color: 'from-green-500 to-teal-500',
-      roi: '720%',
-      savings: '$1.8M'
-    },
-    {
-      company: 'FutureTech Industries',
-      industry: 'Manufacturing',
-      logo: 'FT',
-      color: 'from-orange-500 to-red-500',
-      roi: '920%',
-      savings: '$3.1M'
-    }
-  ];
-
-  const features = [
-    'Real Success Stories',
-    'Proven ROI Results',
-    'Industry Leaders',
-    'Detailed Case Studies'
-  ];
-
-  const stats = [
-    { value: '850%'label: 'Avg ROI' },
-    { value: '$2.4'M', 'label: 'Avg Savings' },
-    { value: '99.8%'label: 'Success Rate' },
-    { value: '15k+'label: 'Hours Saved' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStory((prev) => (prev + 1) % stories.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (isDismissed) return null;
-
+import React from 'react';
+const BusinessSuccessStories2027PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <divdiv
+            <div
               className="absolute inset-0 opacity-30"
                 background: [
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
@@ -100,7 +19,6 @@ const BusinessSuccessStories2027PromotionBanner = () => {
               }}
             />
           </div>
-
           <div className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
@@ -116,21 +34,18 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                     ))}
                   </div>
                 </div>
-
                 <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
                   🏆 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                     Business Success Stories 2027
                   </span>
                 </h2>
-                
                 <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
                   Discover how leading companies achieved extraordinary results with our AI solutions. 
                   Real storiesproven ROIand detailed case studies from industry leaders.
                 </p>
-
                 {/* Rotating Success Stories */}
                 <div className="flex items-center gap-4 mb-4">
-                    <divdiv
+                    <div
                       key={currentStory}
                       className="flex items-center gap-3"
                     >
@@ -145,10 +60,9 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                           {stories[currentStory].industry} • {stories[currentStory].roi} ROI • {stories[currentStory].savings} saved
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="flex flex-wrap items-center gap-3 text-xs">
                   {features.map((featureindex) => (
@@ -159,7 +73,6 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                   ))}
                 </div>
               </div>
-
               {/* Center - Success Stats */}
               <div className="hidden lg:flex items-center gap-6">
                 <div className="text-center">
@@ -177,7 +90,6 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                   <div className="text-xs text-gray-400">Success Rate</div>
                 </div>
               </div>
-
               {/* Right Content - CTA */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
@@ -185,13 +97,11 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                   <span>View Stories</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-                
                 <button className="px-6 py-3 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center gap-2">
                   <BarChart3 className="w-4 h-4" />
                   <span>See ROI Calculator</span>
                 </button>
               </div>
-
               {/* Dismiss Button */}
               <button
                 onClick={() => setIsDismissed(true)}
@@ -200,7 +110,6 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                 <X className="w-4 h-4 text-gray-400 hover:text-white" />
               </button>
             </div>
-
             {/* Mobile Stats */}
             <div className="lg:hidden mt-4 grid grid-cols-4 gap-4">
               {stats.map((statindex) => (
@@ -211,13 +120,14 @@ const BusinessSuccessStories2027PromotionBanner = () => {
               ))}
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </divdiv>
+        </div>
       )}
     </div>
   );
+
 };
 
 export default BusinessSuccessStories2027PromotionBanner;
+</div></div></div>

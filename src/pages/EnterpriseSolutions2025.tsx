@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const EnterpriseSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900">
@@ -7,7 +7,7 @@ const EnterpriseSolutions2025: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <divdiv
+          <div
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🏢 ENTERPRISE SOLUTIONS • 2025
@@ -26,10 +26,9 @@ const EnterpriseSolutions2025: React.FC = () => {
                 Request Demo
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
-
       {/* Solution Categories */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -37,7 +36,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Enterprise Solutions</h2>
             <p className="text-xl text-gray-300">End-to-end solutions designed for enterprise-scale operations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -83,7 +81,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 roi: "200% productivity increase"
               }
             ].map((solution, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-gradient-to-br from-slate-800/50 to-blue-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 hover:scale-105 transition-all duration-300"
               >
@@ -101,12 +99,11 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-3">
                   <p className="text-white font-semibold text-sm">ROI: {solution.roi}</p>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-900/50 to-indigo-900/50">
         <div className="container mx-auto">
@@ -114,7 +111,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-xl text-gray-300">Tailored solutions for different industry verticals</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
@@ -184,7 +180,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 benefits: "70% service efficiency, 95% citizen satisfaction"
               }
             ].map((industry, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
               >
@@ -203,12 +199,11 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-4">
                   <p className="text-white font-semibold">Benefits: {industry.benefits}</p>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -216,7 +211,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-gray-300">A proven methodology for successful enterprise implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -244,7 +238,7 @@ const EnterpriseSolutions2025: React.FC = () => {
                 duration: "Ongoing"
               }
             ].map((phase, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -256,12 +250,11 @@ const EnterpriseSolutions2025: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-lg p-2">
                   <p className="text-blue-300 font-semibold text-sm">Duration: {phase.duration}</p>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Success Metrics */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/50 to-blue-900/50">
         <div className="container mx-auto">
@@ -269,7 +262,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Proven Success Metrics</h2>
             <p className="text-xl text-gray-300">Real results from our enterprise implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -293,23 +285,22 @@ const EnterpriseSolutions2025: React.FC = () => {
                 description: "Round-the-clock enterprise support and monitoring"
               }
             ].map((metric, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center border border-white/20"
               >
                 <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
                 <div className="text-xl font-semibold text-white mb-2">{metric.label}</div>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <divdiv
+          <div
             className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -326,11 +317,12 @@ const EnterpriseSolutions2025: React.FC = () => {
                 Schedule Consultation
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>
   );
+
 };
 
 export default EnterpriseSolutions2025;

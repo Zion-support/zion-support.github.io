@@ -1,39 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const index: React.FC = () => {
   return (
-    <Layout>
-      <Head>
-        <title>Blog - Zion AI Marketplace</title>
-        <meta name="description" content="Insights on AI, DevOps, and digital transformation." />
-        <meta property="og:title" content="Zion Blog" />
-        <meta property="og:description" content="Insights on AI, DevOps, and digital transformation." />
-        <meta property="og:image" content="/images/og/blog-default.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Blog" />
-        <meta name="twitter:description" content="Insights on AI, DevOps, and digital transformation." />
-        <meta name="twitter:image" content="/images/og/blog-default.jpg" />
-      </Head>
-
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-4">Zion Blog</h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-3">Thought leadership on AI, DevOps, and building with speed.</p>
-        <div className="mb-6">
-          <PageShareButtons
-            title="Zion Blog"
-            url={typeof window === 'undefined' ? 'https://zion.app/blog' : window.location.href}
-            description="Insights on AI and DevOps from Zion."
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: 'Zion Blog', network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=blog' }) }).catch(() => {})}
-          />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((p) => (
-            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg">
-              <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
-              <p className="text-gray-400 mb-4">{p.excerpt}</p>
-              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-            </div>
-          ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </Layout>
+    </div>
+  );
+};
+
+export default index;

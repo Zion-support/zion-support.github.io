@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 const UltimateContentShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState('breakthrough');
-
   const contentCategories = {
     breakthrough: {
       title: "Revolutionary Breakthroughs",
@@ -86,9 +84,7 @@ const UltimateContentShowcase2030: React.FC = () => {
       ]
     }
   };
-
   const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
@@ -99,7 +95,6 @@ const UltimateContentShowcase2030: React.FC = () => {
           Explore the most revolutionary technological breakthroughs that are reshaping reality itself
         </p>
       </div>
-
       {/* Tab Navigation */}
       <div className="flex justify-center mb-8">
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
@@ -118,14 +113,12 @@ const UltimateContentShowcase2030: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Content Grid */}
       <div className="mb-8">
         <div className="text-center mb-6">
           <h3 className="text-3xl font-bold mb-2">{currentCategory.title}</h3>
           <p className="text-lg opacity-90">{currentCategory.description}</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {currentCategory.items.map((item, index) => (
             <div
@@ -150,7 +143,6 @@ const UltimateContentShowcase2030: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center">
         <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
@@ -168,6 +160,7 @@ const UltimateContentShowcase2030: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentShowcase2030;

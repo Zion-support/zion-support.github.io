@@ -106,7 +106,7 @@ const NextGenAIInnovationShowcase2025 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 opacity-20"></div>
         
         <div className="relative z-10 container mx-auto px-6 py-20">
-          <divdiv
+          <div
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full text-sm font-medium mb-6">
@@ -143,7 +143,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                 <ArrowRight className="w-5 h-5" />
               </divbutton>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -152,7 +152,7 @@ const NextGenAIInnovationShowcase2025 = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center"
@@ -162,7 +162,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                 </div>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -171,7 +171,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       {/* Innovation Showcase */}
       <div className="py-20">
         <div className="container mx-auto px-6">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -181,13 +181,13 @@ const NextGenAIInnovationShowcase2025 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Innovation Cards */}
             <div className="space-y-6">
               {innovations.map((innovationindex) => (
-                <divdiv
+                <div
                   key={innovation.id}
                   whileInView={{ opacity: 1x: 0 }}
                   className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
@@ -216,13 +216,13 @@ const NextGenAIInnovationShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Interactive Demo Area */}
             <div className="relative">
-                <divdiv
+                <div
                   key={activeFeature}
                   className={`bg-gradient-to-br ${innovations[activeFeature].color} p-8 rounded-3xl h-96 flex flex-col justify-center items-center text-center relative overflow-hidden`}
                 >
@@ -233,26 +233,26 @@ const NextGenAIInnovationShowcase2025 = () => {
                     <p className="text-lg opacity-90 mb-6">{innovations[activeFeature].description}</p>
                     
                     {isPlaying && (
-                      <divdiv
+                      <div
                         className="space-y-3"
                       >
                         {innovations[activeFeature].features.map((featureidx) => (
-                          <divdiv
+                          <div
                             key={idx}
                             className="flex items-center gap-3 text-left"
                           >
                             <CheckCircle className="w-5 h-5 text-green-400" />
                             <span>{feature}</span>
-                          </divdiv>
+                          </div>
                         ))}
-                      </divdiv>
+                      </div>
                     )}
                   </div>
                   
                   {/* Animated Background Elements */}
                   <div className="absolute top-4 right-4 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/20 rounded-full animate-pulse delay-1000"></div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -262,17 +262,17 @@ const NextGenAIInnovationShowcase2025 = () => {
       {/* Testimonials */}
       <div className="py-20 bg-black/30">
         <div className="container mx-auto px-6">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
             <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
@@ -287,7 +287,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -296,7 +296,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
@@ -337,7 +337,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                 24/7 Support
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </div>

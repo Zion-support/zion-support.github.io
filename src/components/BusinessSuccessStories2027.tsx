@@ -161,7 +161,7 @@ const BusinessSuccessStories2027 = () => {
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-        <divdiv
+        <div
           className="absolute top-0 left-0 w-full h-full"
             background: [
               'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
@@ -175,7 +175,7 @@ const BusinessSuccessStories2027 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 mb-6">
@@ -197,10 +197,10 @@ const BusinessSuccessStories2027 = () => {
             Discover how leading companies achieved extraordinary results using our 
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
           </p>
-        </divdiv>
+        </div>
 
         {/* Story Navigation */}
-        <divdiv
+        <div
           className="flex justify-center mb-8"
         >
           <div className="flex items-center gap-4">
@@ -239,10 +239,10 @@ const BusinessSuccessStories2027 = () => {
               <Play className={`w-6 h-6 text-white ${isPlaying ? 'animate-pulse' : ''}`} />
             </button>
           </div>
-        </divdiv>
+        </div>
 
         {/* Story Content */}
-          <divdiv
+          <div
             key={currentStory}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8"
           >
@@ -353,11 +353,11 @@ const BusinessSuccessStories2027 = () => {
                 ))}
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">
@@ -377,7 +377,7 @@ const BusinessSuccessStories2027 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

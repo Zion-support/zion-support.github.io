@@ -70,7 +70,7 @@ const RevolutionaryContentPromo: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -83,12 +83,12 @@ const RevolutionaryContentPromo: React.FC = () => {
             Explore our latest breakthrough content featuring cutting-edge AI, Quantum Computing, 
             Neural Interfaces, and Next-Generation Technologies that will transform our world
           </p>
-        </divdiv>
+        </div>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
-            <divdiv
+            <div
               key={index}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
@@ -126,16 +126,16 @@ const RevolutionaryContentPromo: React.FC = () => {
 
               {/* Hover Effect */}
               {hoveredCard === index && (
-                <divdiv
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"
                 />
               )}
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Interactive Features Section */}
-        <divdiv
+        <div
           className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30 mb-16"
         >
           <div className="text-center mb-8">
@@ -160,10 +160,10 @@ const RevolutionaryContentPromo: React.FC = () => {
               <p className="text-purple-200">Get AI-powered predictions about technology trends</p>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <h3 className="text-4xl font-bold text-white mb-6">Ready to Explore the Future?</h3>
@@ -179,7 +179,7 @@ const RevolutionaryContentPromo: React.FC = () => {
               Download All Content
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

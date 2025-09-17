@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144\" vite build --mode production",
-    "lint": "eslint .",
-    "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
+    "build:netlify": "vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -43,6 +42,7 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@reduxjs/toolkit": "^2.9.0",
     "@rollup/rollup-linux-x64-gnu": "^4.50.2",
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/supabase-js": "^2.39.3",
@@ -57,14 +57,14 @@
     "cmdk": "^0.2.1",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.0.0-rc19",
-    "framer-motion": "^10.18.0",
+    "framer-motion": "^10.16.4",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
     "input-otp": "^1.1.0",
     "jspdf": "^3.0.2",
     "jspdf-autotable": "^3.8.1",
     "lucide-react": "^0.544.0",
-    "motion-utils": "^12.23.6",
+    "motion-utils": "^11.18.1",
     "next-themes": "^0.4.6",
     "postcss": "^8.4.24",
     "react": "^18.3.1",
@@ -73,8 +73,10 @@
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.50.1",
     "react-i18next": "^14.0.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.20.1",
     "recharts": "^2.12.0",
+    "redux-persist": "^6.0.0",
     "rollup-plugin-visualizer": "^6.0.3",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
@@ -87,7 +89,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.19.15",
+    "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "cypress": "^12.17.2",
@@ -97,5 +99,8 @@
     "jest": "^29.6.1",
     "rollup-plugin-visualizer": "^6.0.3",
     "vitest": "^0.34.1"
+  },
+  "resolutions": {
+    "motion-utils": "^12.23.6"
   }
 }

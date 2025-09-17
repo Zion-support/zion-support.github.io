@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
@@ -8,8 +7,6 @@ interface AnalyticsData {
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
-}
-
 const AdvancedAnalytics: React.FC = () => {
   const [analytics, setAnalytics] = useState<AnalyticsData>({
     pageViews: 0,
@@ -20,15 +17,12 @@ const AdvancedAnalytics: React.FC = () => {
     trafficSources: [],
     deviceTypes: []
   });
-
   const [timeRange, setTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     // Simulate loading analytics data
     const loadAnalytics = () => {
       setIsLoading(true);
-      
       setTimeout(() => {
         setAnalytics({
           pageViews: Math.floor(Math.random() * 10000) + 5000,
@@ -57,23 +51,19 @@ const AdvancedAnalytics: React.FC = () => {
         setIsLoading(false);
       }, 1000);
     };
-
     loadAnalytics();
   }, [timeRange]);
-
   const formatNumber = (num: number) => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'K';
     }
     return num.toString();
   };
-
   const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
-
   if (isLoading) {
     return (
       <div className="bg-white rounded-2xl p-8 shadow-lg">
@@ -87,8 +77,8 @@ const AdvancedAnalytics: React.FC = () => {
         </div>
       </div>
     );
-  }
-
+};
+  };
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
       <div className="flex items-center justify-between mb-8">
@@ -109,7 +99,6 @@ const AdvancedAnalytics: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white">
@@ -117,26 +106,22 @@ const AdvancedAnalytics: React.FC = () => {
           <div className="text-3xl font-bold">{formatNumber(analytics.pageViews)}</div>
           <div className="text-sm opacity-80 mt-1">+12% from last period</div>
         </div>
-        
         <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white">
           <div className="text-sm opacity-80">Unique Visitors</div>
           <div className="text-3xl font-bold">{formatNumber(analytics.uniqueVisitors)}</div>
           <div className="text-sm opacity-80 mt-1">+8% from last period</div>
         </div>
-        
         <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-6 text-white">
           <div className="text-sm opacity-80">Bounce Rate</div>
           <div className="text-3xl font-bold">{analytics.bounceRate.toFixed(1)}%</div>
           <div className="text-sm opacity-80 mt-1">-3% from last period</div>
         </div>
-        
         <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white">
           <div className="text-sm opacity-80">Avg. Session</div>
           <div className="text-3xl font-bold">{formatDuration(analytics.avgSessionDuration)}</div>
           <div className="text-sm opacity-80 mt-1">+15% from last period</div>
         </div>
       </div>
-
       {/* Charts and Data */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Top Pages */}
@@ -156,7 +141,6 @@ const AdvancedAnalytics: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Traffic Sources */}
         <div className="bg-gray-50 rounded-xl p-6">
           <h4 className="text-xl font-bold text-gray-900 mb-4">🌐 Traffic Sources</h4>
@@ -177,7 +161,6 @@ const AdvancedAnalytics: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Device Types */}
         <div className="bg-gray-50 rounded-xl p-6">
           <h4 className="text-xl font-bold text-gray-900 mb-4">📱 Device Types</h4>
@@ -202,7 +185,6 @@ const AdvancedAnalytics: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Real-time Activity */}
         <div className="bg-gray-50 rounded-xl p-6">
           <h4 className="text-xl font-bold text-gray-900 mb-4">⚡ Real-time Activity</h4>
@@ -227,6 +209,6 @@ const AdvancedAnalytics: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default AdvancedAnalytics;
