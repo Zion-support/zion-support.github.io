@@ -1,10 +1,10 @@
 [build]
   # Netlify installs dependencies automatically; run only the build step
-  command = "npm run build:netlify" # ci-trigger 2025-09-17T13:34:00Z
+  command = "npm run build:netlify"
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
-# ci: retrigger Netlify deploy (no functional change) 2025-09-17T13:34:00Z
+# ci: retrigger Netlify deploy (no functional change) 2025-09-17T13:47:30Z
 
 [build.environment]
   NODE_VERSION = "20"
