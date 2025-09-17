@@ -1,22 +1,22 @@
 [# Netlify build configuration for Vite app]
 # noop: retrigger netlify build (2025-09-17 14:55 UTC)
 [build]
-  command = "npm run build:netlify"
-  publish = "dist"
-  base = "."
+  # Build the Next.js app located in zion-website
+  base = "zion-website"
+  command = "npm run build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 [functions]
+  # Keep functions path relative to repo root
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*"]
+  included_files = ["zion-website/public/**/*", "public/**/*"]
 
 [build.processing]
   skip_processing = true
