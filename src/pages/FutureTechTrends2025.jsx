@@ -1,19 +1,10 @@
-import React from 'react';
-
-const FutureTechTrends2025 = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Future Tech Trends2025</h1>
-          <p className="text-xl text-gray-600 mb-8">Coming soon - Revolutionary technology showcase</p>
-          <a href="/" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Back to Home
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>FutureTechTrends2025 | Zion Tech Group</title>
+        <meta name="description" content="FutureTechTrends2025 - Revolutionary technology solutions" />
+      </Helmet>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default FutureTechTrends2025;
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Explore Trends
+          </button>

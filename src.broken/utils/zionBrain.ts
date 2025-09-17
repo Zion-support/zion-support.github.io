@@ -56,12 +56,6 @@ export function detectIntent(text: string): RouterResult {
     { chain: 'daoExplainer', keywords: ['dao', 'governance token', 'proposal', 'treasury'] },
     { chain: 'tokenomicsSimulator', keywords: ['tokenomics', 'supply', 'emission', 'vesting', 'circulating'] },
     { chain: 'governanceSummarizer', keywords: ['governance', 'vote', 'snapshot', 'summary', 'forum'] },
-<<<<<<< HEAD
-    { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] }];
-=======
-    { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   for (const rule of rules) {
     if (rule.keywords.some((k) => lower.includes(k))) {
@@ -109,13 +103,6 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
       suggestions: [
         'Removed vague qualifiers and redundant phrases',
         'Added explicit constraints and output format',
-<<<<<<< HEAD
-        userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor']};
-=======
-        userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor',
-      ],
-    };
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   try {
@@ -128,17 +115,6 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
-<<<<<<< HEAD
-        { role: 'user', content: user }],
-      temperature: 0.2,
-      max_tokens: 400});
-=======
-        { role: 'user', content: user },
-      ],
-      temperature: 0.2,
-      max_tokens: 400,
-    });
->>>>>>> origin/auto/autonomy-17186719616
     const optimized = resp.choices?.[0]?.message?.content?.trim() || heuristicTighten(original, userIntent);
     return { optimized, suggestions: ['Used OpenAI optimization for speed and specificity'] };
   } catch {
@@ -178,12 +154,6 @@ export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
     const enriched: LogEntry = {
       id: randomUUID(),
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-      ...entry};
-=======
-      ...entry,
-    };
->>>>>>> origin/auto/autonomy-17186719616
     current.entries.push(enriched);
     fs.writeFileSync(logsPath, JSON.stringify(current, null, 2));
   } catch {

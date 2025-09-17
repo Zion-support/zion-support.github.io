@@ -20,12 +20,6 @@ export const quoteRequestService = {
     // Format the data to include talent_name
     return data.map((item: any) => ({
       ...item,
-<<<<<<< HEAD
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
-=======
-      talent_name: item.talent?.display_name || 'Unknown Talent',
-    })) as QuoteRequest[];
->>>>>>> origin/auto/autonomy-17186719616
   },
   
   // Get quote requests for a specific talent
@@ -57,12 +51,6 @@ export const quoteRequestService = {
     
     return {
       ...data,
-<<<<<<< HEAD
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-=======
-      talent_name: data.talent?.display_name || 'Unknown Talent',
-    } as QuoteRequest;
->>>>>>> origin/auto/autonomy-17186719616
   },
   
   // Update quote request status

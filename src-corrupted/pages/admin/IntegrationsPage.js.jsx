@@ -1,14 +1,22 @@
-import React from "react";
-import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-export default function IntegrationsPage
-export {IntegrationsPage}() {
-    return (<ProtectedRoute adminOnly={true}>
-      <SEO title="Integrations - Zion AI Marketplace" description="Connect your Zion account with CRMs and Applicant Tracking Systems." />
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const IntegrationsPage.js: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>IntegrationsPage.js | Zion Tech Group</title>
+        <meta name="description" content="IntegrationsPage.js - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main className="min-h-screen bg-background">
-        <IntegrationsHub  />
-      </main>
-      
-    </ProtectedRoute>)}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">IntegrationsPage.js</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default IntegrationsPage.js;

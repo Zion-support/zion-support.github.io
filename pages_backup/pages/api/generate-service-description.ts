@@ -14,7 +14,6 @@ import OpenAI from 'openai';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export type GenerateServiceDescriptionRequest = {
 
   title: string;
@@ -31,7 +30,6 @@ import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {
 
   title: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   keyFeatures: string[];
   targetAudience: string;
   additionalNotes?: string;
@@ -59,12 +57,8 @@ export type GenerateServiceDescriptionRequest = {
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default async function handler(
   req: NextApiRequest
@@ -359,7 +353,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

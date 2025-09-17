@@ -1,2 +1,22 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const NewsPage = () => {; return (; <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const NewsPage = () => {; return (; <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const news: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>news | Zion Tech Group</title>
+        <meta name="description" content="news - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">news</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default news;

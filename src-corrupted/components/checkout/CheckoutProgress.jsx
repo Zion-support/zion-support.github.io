@@ -1,19 +1,12 @@
-import React from 'react';'''
-import {Steps, Step} from '@/components/ui/steps';
-export default function CheckoutProgress
-export {CheckoutProgress}({currentStep, className}) {
-    return (<Steps currentStep={currentStep} className={className}>
-      <Step status="incomplete" label="Shipping" />
-      <Step status="incomplete" label="Payment" />
-      <Step status="incomplete" label="Review" />
-    </Steps>)}
+import React from 'react';
 
-export {CheckoutProgress};
+const CheckoutProgress: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CheckoutProgress</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-export {CheckoutProgress};
-
-export {CheckoutProgress};
-
-export {CheckoutProgress};
-
-export {CheckoutProgress};
+export default CheckoutProgress;

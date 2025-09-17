@@ -1,72 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
-<<<<<<< HEAD
-    <h1>Welcome to Zion Academy</h1>
-    <p>Your journey to upskilling starts here!</p>
-    <a href="{{ url_for("course_list") }}">Browse Courses</a>
-
-    {% if latest_updates %}
-    <hr>
-    <section>
-        <h2>Latest Updates</h2>
-        <ul>
-            {% for u in latest_updates %}
-            <li>
-                <a href="{{ url_for('update_detail', update_id=u.id) }}">{{ u.title }}</a>
-                <span> · {{ u.created_at.strftime('%b %d, %Y') }}</span>
-                {% if u.summary %}
-                    <div>{{ u.summary }}</div>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-        <p><a href="{{ url_for('updates_list') }}">See all updates</a></p>
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-3">Welcome to Zion Academy</h1>
+            <p class="text-lg opacity-90 mb-6">Your journey to upskilling starts here.</p>
+            <a href="{{ url_for('course_list') }}" class="inline-block bg-white text-blue-700 font-semibold px-5 py-2 rounded shadow hover:shadow-md hover:-translate-y-0.5 transition">Browse Courses</a>
+        </div>
     </section>
-    {% endif %}
-=======
-    <div class="container mx-auto px-4 py-10">
-        <div class="bg-white rounded-xl shadow p-8 mb-10">
-            <h1 class="text-4xl font-extrabold text-gray-900 mb-3">Welcome to Zion Academy</h1>
-            <p class="text-lg text-gray-600 mb-6">Your journey to upskilling starts here!</p>
-            <a href="{{ url_for("course_list") }}" class="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Browse Courses</a>
+
+    {% if latest_updates and latest_updates|length > 0 %}
+    <section class="container mx-auto px-4 mt-8">
+        {# Featured banner for the top/latest update #}
+        {% set featured = latest_updates[0] %}
+        <div class="bg-white border rounded-lg shadow-sm overflow-hidden">
+            <div class="p-6 md:p-8">
+                <p class="text-sm text-blue-700 font-semibold uppercase tracking-wide">Just In</p>
+                <h2 class="text-2xl font-bold mt-1"><a class="hover:underline" href="{{ url_for('update_detail', update_id=featured.id) }}">{{ featured.title }}</a></h2>
+                <p class="text-gray-600 mt-2">{{ featured.summary or featured.content[:140] ~ ('…' if featured.content|length > 140 else '') }}</p>
+                <div class="mt-4 flex items-center gap-4 text-sm text-gray-500">
+                    <span>{{ featured.created_at.strftime('%b %d, %Y') }}</span>
+                    <a class="text-blue-700 hover:underline" href="{{ url_for('updates_list') }}">See all updates</a>
+                </div>
+            </div>
         </div>
 
-        <section class="bg-blue-50 border border-blue-100 rounded-xl p-6">
-            <div class="flex items-start justify-between mb-4">
-                <div>
-                    <h2 class="text-2xl font-semibold text-blue-900">Latest Updates</h2>
-                    <p class="text-blue-800/80">News, announcements, and feature releases from Zion Academy.</p>
-                </div>
-                <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-blue-200 rounded-lg hover:bg-blue-50">View all</a>
-            </div>
-
-            {% set latest = [] %}
-            {% if updates is defined %}
-                {% set latest = updates[:3] %}
-            {% else %}
-                {# Fallback: show a simple CTA if updates not provided #}
-                <div class="flex items-center justify-between">
-                    <p class="text-blue-900">Check what’s new: course launches, features, events, and more.</p>
-                    <a href="{{ url_for('updates_list') }}" class="text-blue-700 hover:underline">See updates →</a>
-                </div>
-            {% endif %}
-
-            {% if latest %}
-            <ul class="divide-y divide-blue-100 bg-white rounded-lg border border-blue-100">
-                {% for u in latest %}
-                <li class="p-4">
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <a class="text-lg font-medium text-gray-900 hover:text-blue-700" href="{{ url_for('update_detail', update_id=u.id) }}">{{ u.title }}</a>
-                            <p class="text-sm text-gray-600 mt-1">{{ (u.summary or u.content[:140]) }}{% if (u.summary is not string and u.content|length > 140) %}...{% endif %}</p>
-                        </div>
-                        <span class="ml-4 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">{{ u.update_type|title }}</span>
-                    </div>
+        <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-3">More updates</h3>
+            <ul class="grid md:grid-cols-3 gap-4">
+                {% for u in latest_updates %}
+                <li class="bg-white border rounded-lg p-4 shadow-sm">
+                    <a class="font-semibold hover:underline" href="{{ url_for('update_detail', update_id=u.id) }}">{{ u.title }}</a>
+                    <div class="text-sm text-gray-500 mt-1">{{ u.created_at.strftime('%b %d, %Y') }}</div>
+                    {% if u.summary %}
+                        <p class="text-gray-600 mt-2">{{ u.summary }}</p>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
-            {% endif %}
-        </section>
-    </div>
->>>>>>> ae78a241413f04b853a8cb652af3c863231dcf08
+        </div>
+    </section>
+    {% endif %}
 {% endblock %}

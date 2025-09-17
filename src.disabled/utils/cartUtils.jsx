@@ -1,16 +1,12 @@
-"export\": const validateCartItem = item => { export const updateItemQuantity = (cart,export const removeFromCart = (cart,itemId) => { export const mergeCarts = (cart1,cart2) => { export const mergeCartItems = (cart1,cart2) => { export const isCartEmpty = cart => { export const importCartData = cartData => { export const getCartSummary = cart => { export const getCartKey = (userId = null) => { export const getCartItemCount = cart => { export const formatPrice = (price,currency = \'USD\') => { export const exportCartData = cart => { export const clearCart = () => { export const calculateTax = subtotal => { export const calculateShipping = subtotal => { export const calculateCartTotal = cart => { export const calculateCartSubtotal = cart => { export const addToCart = (cart,newItem) => { itemId,quantity) => {\''\"";
-export: const validateCartItem = item => { export const updateItemQuantity = (cart,export const removeFromCart = (cart,itemId) => { export const mergeCarts = (cart1,cart2) => { export const mergeCartItems = (cart1,cart2) => { export const isCartEmpty = cart => { export const importCartData = cartData => { export const getCartSummary = cart => { export const getCartKey = (userId = null) => { export const getCartItemCount = cart => { export const formatPrice = (price,currency = "USD") => { export const exportCartData = cart => { export const clearCart = () => { export const calculateTax = subtotal => { export const calculateShipping = subtotal => { export const calculateCartTotal = cart => { export const calculateCartSubtotal = cart => { export const addToCart = (cart,newItem) => { itemId,quantity) => {"""";'"'"
 import React from 'react';
-interface CartUtilsProps {
-  // Add props here as needed
-}
-export default function CartUtils({ }: CartUtilsProps) {
+
+const cartUtils: React.FC = () => {
   return (
-    <div>
-      <h1>CartUtils</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">cartUtils</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+};
 
-
-
+export default cartUtils;

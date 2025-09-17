@@ -1,53 +1,12 @@
-import { Loader2 } from 'lucide-react';
-import { NavigationButtonsProps } from "./types";
-export const NavigationButtons = ({;
-  onBack;
-  onNext;
-  isNextDisabled = false;
-  backLabel = "Back";
-  nextLabel = "Next";
-  isLoading = false}: NavigationButtonsProps) => {;
+import React from 'react';
+
+const NavigationButtons: React.FC = () => {
   return (
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant='outline' onClick={onBack}>;
-export const NavigationButtons = ({;
-  onBack,;
-  onNext,;
-  isNextDisabled = false,;
-  backLabel = 'Back',;
-  nextLabel = 'Next',;
-  isLoading = false,;
-}: NavigationButtonsProps) => {;
-  return (
-    <div className='flex justify-between'>;
-      {onBack && (;
-        <Button variant='outline' onClick={onBack}>          {backLabel}
-
-        <Button variant="outline" onClick={onBack}>
-
-  return (
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant="outline" onClick={onBack}>;
-          {backLabel}
-        </Button>;
-      )}
-
-
-          {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
-        </Button>;
-      )}
-
-    </div>;
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NavigationButtons</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
-
-
-
-"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>;
-      )}
-
+export default NavigationButtons;

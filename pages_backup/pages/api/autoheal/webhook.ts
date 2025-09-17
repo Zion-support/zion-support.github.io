@@ -111,22 +111,18 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
     } catch (error) {
 
     } catch (e) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     } catch (e) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       // ignore if missing;
     }
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 ;
 

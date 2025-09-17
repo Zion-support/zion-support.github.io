@@ -7,4 +7,3 @@ export default function StarRating(props: any) {}"});,"})';
 }"});,"})',',';';
     '";,"});,})';';
 export {StarRating};,});,"})';';';
->>>>>>> pr-10728,"});,"})"';';';';

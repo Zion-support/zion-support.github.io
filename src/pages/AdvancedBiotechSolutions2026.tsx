@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedBiotechSolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
@@ -25,7 +24,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Core Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
@@ -41,7 +39,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
               <li>• Therapeutic applications</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Synthetic Biology</h3>
@@ -55,7 +52,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
               <li>• Bio-manufacturing</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💊</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Personalized Medicine</h3>
@@ -69,7 +65,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
               <li>• Predictive medicine</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Agricultural Biotech</h3>
@@ -83,7 +78,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
               <li>• Pest resistance</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Neurotechnology</h3>
@@ -97,7 +91,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
               <li>• Memory augmentation</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🦠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Microbiome Engineering</h3>
@@ -112,14 +105,12 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Breakthrough Applications */}
         <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Breakthrough Applications</h2>
             <p className="text-xl text-gray-300">Real-world applications of our biotech solutions</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
@@ -133,7 +124,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                   <span>95% treatment success rate</span>
                 </div>
               </div>
-              
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Synthetic Organ Production</h3>
                 <p className="text-gray-300 mb-4">
@@ -146,7 +136,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6 border border-purple-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Longevity Enhancement</h3>
@@ -159,7 +148,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                   <span>15-year lifespan extension</span>
                 </div>
               </div>
-              
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Climate-Resistant Agriculture</h3>
                 <p className="text-gray-300 mb-4">
@@ -174,14 +162,12 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Research & Development */}
         <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Research & Development</h2>
             <p className="text-xl text-indigo-200">Cutting-edge research driving biotech innovation</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
@@ -192,7 +178,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                 State-of-the-art research facilities with advanced equipment for genetic engineering and synthetic biology
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
                 🤝
@@ -202,7 +187,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                 Rigorous clinical testing with 500+ active trials across multiple therapeutic areas
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
                 🌍
@@ -214,7 +198,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -222,33 +205,28 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             <div className="text-xl text-white mb-2">Active Trials</div>
             <div className="text-gray-400">Clinical research studies</div>
           </div>
-          
           <div className="text-center">
             <div className="text-6xl font-bold text-cyan-400 mb-2">95%</div>
             <div className="text-xl text-white mb-2">Success Rate</div>
             <div className="text-gray-400">Treatment effectiveness</div>
           </div>
-          
           <div className="text-center">
             <div className="text-6xl font-bold text-purple-400 mb-2">50M</div>
             <div className="text-xl text-white mb-2">Lives Improved</div>
             <div className="text-gray-400">Patients worldwide</div>
           </div>
-          
           <div className="text-center">
             <div className="text-6xl font-bold text-orange-400 mb-2">$2B</div>
             <div className="text-xl text-white mb-2">Research Investment</div>
             <div className="text-gray-400">Annual R&D funding</div>
           </div>
         </div>
-
         {/* Ethical Framework */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-emerald-400/30">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold text-white mb-4">Ethical Framework</h2>
             <p className="text-xl text-emerald-200">Responsible biotechnology development</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-white mb-4">Our Principles</h3>
@@ -271,7 +249,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-white mb-4">Regulatory Compliance</h3>
               <div className="space-y-3">
@@ -295,7 +272,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
           <h2 className="text-4xl font-bold text-white mb-6">Transform Healthcare with Biotech</h2>
@@ -315,6 +291,8 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default AdvancedBiotechSolutions2026;

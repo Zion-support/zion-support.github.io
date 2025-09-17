@@ -1,135 +1,22 @@
-
-<<<<<<< HEAD
-
 import React from 'react';
-import { SEO  } from '@/components/SEO';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
+import { Helmet } from 'react-helmet-async';
 
-import {SEO} from '@/components/SEO';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
-
-
-
-
-
-
-import React from 'react',
-import { SEO } from '@/components/SEO',
-import { AppHeader } from '@/layout/AppHeader',
-import { Footer } from '@/components/Footer',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
-
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
-
->>>>>>> origin/auto/autonomy-17186719616
-function ProjectMilestones() {
+const ProjectMilestones: React.FC = () => {
   return (
-    <ProtectedRoute>
-      <>
-<<<<<<< HEAD
-
-        <SEO
-          title="Payment Milestones | Zion AI Marketplace"
-
-import {SEO} from '@/components/SEO';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
-function ProjectMilestones() {;
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO
-          title="Payment Milestones | Zion AI Marketplace" 
-          description="Manage project payment milestones and deliverables"
-import React from 'react';
-import {SEO} from '@/components / SEO';
-import {AppHeader} from '@/layout / AppHeader';
-import {Footer} from '@/components / Footer';
-import {ProtectedRoute} from '@/components / ProtectedRoute';
-import {ProjectMilestonesContent} from '@/components / projects / milestones / ProjectMilestonesContent';
-/**
- * ProjectMilestones - Function description
- */
-function ProjectMilestones() {
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO;
-          title="Payment Milestones | Zion AI Marketplace";
-          description="Manage project payment milestones and deliverables";
-
-        />;
-        <AppHeader />;
-        <ProjectMilestonesContent />;
-        <Footer />;
-      </>;
-
-
-
-
-    </ProtectedRoute>);
-}
-
-=======
-;
-
-
-export default ProjectMilestones;
-
-    </ProtectedRoute>);
-}
-
-;
-
-export default ProjectMilestones;
-
-;
-export default ProjectMilestones;
-
-
-=======
-        <SEO 
-          title="Payment Milestones | Zion AI Marketplace" 
-          description="Manage project payment milestones and deliverables"
-        />
-        <AppHeader />
-        <ProjectMilestonesContent />
-        <Footer />
-      </>
-    </ProtectedRoute>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ProjectMilestones | Zion Tech Group</title>
+        <meta name="description" content="ProjectMilestones - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ProjectMilestones</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default ProjectMilestones;
->>>>>>> origin/auto/autonomy-17186719616

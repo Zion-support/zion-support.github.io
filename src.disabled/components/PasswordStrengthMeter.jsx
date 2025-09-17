@@ -1,4 +1,12 @@
-import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordStrength';"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"""
-import { ; calculatePasswordStrength,getStrengthLabel } from \'@/utils/passwordStrength\';\"export function PasswordStrengthMeter({ password }) {\" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className=\"mt-2\" aria-live=\"polite\">\" <Progress value={value} className=\"h-2\" />\" <p className=\"text-xs text-zion-slate-light mt-1\">{label}</p>\" </div>\" )} \";\"
-const { ; calculatePasswordStrength,getStrengthLabel } from "@/utils/passwordStrength";"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"'"'"
-import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordStrength';"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"""
+import React from 'react';
+
+const PasswordStrengthMeter: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PasswordStrengthMeter</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default PasswordStrengthMeter;

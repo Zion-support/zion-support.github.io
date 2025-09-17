@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 const NeuralInterfaceTechnology2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('mind-control');
@@ -114,122 +113,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         'Enhanced situational awareness',
         'Reduced cognitive load'
       ],
-      image: '🛡️',
-      testimonial: 'This technology gives us a significant tactical advantage in the field.'
-    }
-  ];
-
-  const technicalSpecs = [
-    {
-      category: 'Signal Processing',
-      specs: [
-        'Neural signal sampling: 10,000 Hz',
-        'Signal-to-noise ratio: 40 dB',
-        'Latency: < 10ms',
-        'Bandwidth: 1 Gbps'
-      ]
-    },
-    {
-      category: 'Safety & Security',
-      specs: [
-        'Biocompatible materials',
-        'Encrypted neural data',
-        'Fail-safe mechanisms',
-        'Medical grade certification'
-      ]
-    },
-    {
-      category: 'Connectivity',
-      specs: [
-        'Wireless range: 100 meters',
-        'Battery life: 24 hours',
-        'Bluetooth 6.0 compatibility',
-        'Cloud synchronization'
-      ]
-    },
-    {
-      category: 'Performance',
-      specs: [
-        'Accuracy: 95-99.9%',
-        'Response time: < 50ms',
-        'Concurrent channels: 256',
-        'Data processing: Real-time'
-      ]
-    ]
-  ];
-
-  const demos = [
-    {
-      id: 'mind-control',
-      title: 'Mind-Controlled Devices',
-      description: 'Control computers, phones, and smart devices with your thoughts',
-      features: ['Cursor movement', 'Text input', 'App navigation', 'Voice commands']
-    },
-    {
-      id: 'neural-gaming',
-      title: 'Neural Gaming Experience',
-      description: 'Play games using only your mind - no controllers needed',
-      features: ['Character movement', 'Action commands', 'Strategy decisions', 'Real-time feedback']
-    },
-    {
-      id: 'memory-enhancement',
-      title: 'Memory Enhancement',
-      description: 'Boost your memory and learning capabilities',
-      features: ['Information storage', 'Quick recall', 'Learning acceleration', 'Memory organization']
-    },
-    {
-      id: 'communication',
-      title: 'Silent Communication',
-      description: 'Communicate with others through neural interfaces',
-      features: ['Thought messaging', 'Emotion sharing', 'Group communication', 'Language translation']
-    }
-  ];
-
-  const pricing = [
-    {
-      name: 'Neural Starter',
-      price: '$2,500',
-      period: 'one-time',
-      description: 'Basic neural interface for personal use',
-      features: [
-        'Non-invasive BCI device',
-        'Basic thought control',
-        'Mobile app integration',
-        '1-year warranty',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Neural Professional',
-      price: '$8,500',
-      period: 'one-time',
-      description: 'Advanced neural interface for professionals',
-      features: [
-        'High-precision BCI',
-        'Advanced signal processing',
-        'Multiple device control',
-        '3-year warranty',
-        'Priority support',
-        'Custom training'
-      ],
-      popular: true
-    },
-    {
-      name: 'Neural Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Enterprise-grade neural solutions',
-      features: [
-        'Custom neural implants',
-        'Maximum precision',
-        'Bulk deployment',
-        'Lifetime warranty',
-        'Dedicated support',
-        'On-site installation',
-        'Custom development'
-      ],
-      popular: false
     }
   ];
 
@@ -239,10 +122,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🧬 NEURAL INTERFACE 2026 • MIND-MACHINE CONNECTION
@@ -264,22 +144,20 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 Try Neural Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Connection Status */}
       {isConnected && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
           className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-4 px-4 text-center"
         >
           <div className="flex items-center justify-center space-x-2">
             <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
             <span className="font-semibold">Neural Interface Connected - Ready for Mind Control</span>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Technology Showcase */}
@@ -294,11 +172,8 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {neuralTechnologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -342,7 +217,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                     Learn More
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -426,11 +301,8 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-teal-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30"
               >
                 <div className="flex items-center mb-4">
@@ -458,7 +330,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 <div className="bg-white/10 rounded-lg p-4">
                   <p className="text-sm italic text-teal-200">"{useCase.testimonial}"</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -476,11 +348,8 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technicalSpecs.map((spec, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
               >
                 <h3 className="text-xl font-bold mb-4 text-cyan-300">{spec.category}</h3>
@@ -492,7 +361,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -510,11 +379,8 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((tier, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 relative ${
                   tier.popular ? 'ring-2 ring-emerald-400 scale-105' : ''
                 }`}
@@ -552,7 +418,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 }`}>
                   Get Started
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -561,10 +427,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-12 max-w-4xl mx-auto"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
@@ -579,11 +442,12 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 Contact Neural Experts
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
   );
 };
+
 
 export default NeuralInterfaceTechnology2026;

@@ -1,6 +1,5 @@
-// @ts-nocheck
+<<<<<<< HEAD
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -10,36 +9,14 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
-      id: 'agentic-safety-patterns-2025',
-      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
-      excerpt: 'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
-      category: 'AI Safety',
+      id: 'ai-safety-governance-2025',
+      title: 'AI Safety and Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'A practical framework for policy-as-code, graded permissions, and human-in-the-loop controls.',
+      category: 'AI Ethics',
       author: 'Dr. Emily Watson',
       date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/agentic-safety-patterns.jpg',
-      featured: true
-    },
-    {
-      id: 'multi-agent-supply-chains',
-      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
-      excerpt: 'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
-      category: 'AI Solutions',
-      author: 'Dr. Sarah Chen',
-      date: '2025-09-12',
       readTime: '8 min read',
-      image: '/blog/multi-agent-supply-chains.jpg',
-      featured: true
-    },
-    {
-      id: 'ai-foundation-models-2025',
-      title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
-      excerpt: 'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. David Kim',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/foundation-models-2025.jpg',
+      image: '/blog/ai-safety-governance.jpg',
       featured: true
     },
     {
@@ -99,122 +76,91 @@ export default function BlogPage() {
     }
   ];
 
-  // Inject new featured posts
-  featuredPosts.unshift(
-    {
-      id: 'ai-governance-framework-2025',
-      title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
-      excerpt: 'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
-      category: 'AI Governance',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-16',
-      readTime: '12 min read',
-      image: '/blog/ai-governance-framework.jpg',
-      featured: true
-    },
-    {
-      id: 'agent-safety-red-teaming-2025',
-      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-      excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '11 min read',
-      image: '/blog/agent-safety-red-teaming.jpg',
-      featured: true
-    }
-  );
-
   const recentPosts = [
     {
-      id: 'enterprise-agent-guardrails',
-      title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
-      excerpt: 'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
-      category: 'Cybersecurity',
+      id: 'ai-safety-governance-2025',
+      title: 'AI Safety and Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Implement measurable guardrails for autonomous AI: policy-as-code, graded permissions, red‑team loops.',
+      category: 'AI Ethics',
       author: 'Dr. Emily Watson',
-      date: '2025-09-14',
+      date: '2025-09-15',
       readTime: '8 min read',
-      image: '/blog/enterprise-agent-guardrails.jpg'
+      image: '/blog/ai-safety-governance.jpg'
     },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
       excerpt: 'Deploy AI-driven observability, incident response, and remediation to cut MTTR.',
       category: 'AI Solutions',
+=======
+  const featuredPosts: PostListItem[] = [
+    {
+      id: 'ai-governance-2025',
+      title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Implement measurable, reversible, and auditable controls for production AI.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
+      excerpt: 'How to deploy policy engines, observability, and reversible rollouts as autonomy grows.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '11 min read',
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
       author: 'Michael Rodriguez',
       date: '2025-09-05',
       readTime: '7 min read',
-      image: '/blog/autonomous-it.jpg'
-    },
-    {
-      id: 'sovereign-ai-commerce-2025',
-      title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
-      excerpt: 'A practical guide to deploying autonomous, self-regulating AI marketplaces powered by Zion OS.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/sovereign-ai-commerce.jpg'
+      image: '/blog/autonomous-it.jpg',
     },
     {
       id: 'secure-agent-marketplaces',
       title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
-      excerpt: 'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
+      excerpt:
+        'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
       category: 'Cybersecurity',
       author: 'Dr. Emily Watson',
       date: '2025-09-02',
       readTime: '8 min read',
-      image: '/blog/secure-agent-marketplaces.jpg'
+      image: '/blog/secure-agent-marketplaces.jpg',
     },
     {
-      id: 'cybersecurity-ai-trends',
-      title: 'AI-Powered Cybersecurity: Trends and Best Practices for 2024',
-      excerpt: 'Stay ahead of evolving cyber threats with the latest AI-powered security solutions and best practices.',
+      id: 'ai-ops-cost-optimization-2025',
+      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
+      excerpt: 'Deploy AI-driven observability and predictive autoscaling to cut spend while improving reliability.',
+      image: '/blog/ai-ops-cost.jpg',
+      id: 'ai-ops-cost-optimization-2025',
+      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
+      excerpt: 'A 6-week rollout to reduce cloud and ops costs by 30–50% using AI-driven rightsizing and autoscaling.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-ops-cost.jpg'
+    },
+    {
+      id: 'agentic-sales-playbooks',
+      title: 'Agentic Sales Playbooks: Autonomous Pipelines from Lead to Close',
+      excerpt: 'Build autonomous sales loops with RAG, orchestration, and CRM integration with human-in-the-loop.',
+      category: 'AI Solutions',
+      author: 'Dr. David Kim',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/agentic-sales.jpg'
+    },
+    {
+      id: 'agent-safety-tooling',
+      title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
+      excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
       category: 'Cybersecurity',
       author: 'Dr. James Wilson',
+<<<<<<< HEAD
       date: '2024-01-12',
       readTime: '6 min read',
       image: '/blog/ai-cybersecurity.jpg'
-    },
-    {
-      id: 'edge-ai-on-device-inference',
-      title: 'Edge AI: On-Device Inference for Privacy and Speed',
-      excerpt: 'How to deploy efficient on-device models to reduce latency and protect user data.',
-      category: 'AI Solutions',
-      author: 'Priya Natarajan',
-      date: '2024-01-18',
-      readTime: '7 min read',
-      image: '/blog/edge-ai.jpg'
-    },
-    {
-      id: 'autonomous-agents-in-enterprise',
-      title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls',
-      excerpt: 'Design patterns for safe, measurable, and ROI-positive agent deployments across workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2024-01-16',
-      readTime: '9 min read',
-      image: '/blog/enterprise-agents.jpg'
-    },
-    {
-      id: 'post-quantum-cryptography-roadmap',
-      title: 'Post-Quantum Cryptography: A Practical Migration Roadmap',
-      excerpt: 'Assessing risk, selecting algorithms, and planning phased rollouts to PQC.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-14',
-      readTime: '8 min read',
-      image: '/blog/pqc-roadmap.jpg'
-    },
-    {
-      id: 'llm-evals-in-production',
-      title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics',
-      excerpt: 'Move beyond static benchmarks with continuous evals, guardrails, and feedback loops.',
-      category: 'Data Science',
-      author: 'Michael Rodriguez',
-      date: '2024-01-11',
-      readTime: '7 min read',
-      image: '/blog/llm-evals.jpg'
     },
     {
       id: 'data-science-business-intelligence',
@@ -268,37 +214,13 @@ export default function BlogPage() {
     }
   ];
 
-  // Add new recent posts
-  recentPosts.unshift(
-    {
-      id: 'agent-safety-red-teaming-2025',
-      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-      excerpt: 'Playbooks to systematically evaluate and improve multi‑agent safety.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '11 min read',
-      image: '/blog/agent-safety-red-teaming.jpg'
-    },
-    {
-      id: 'ai-automation-case-studies-2025',
-      title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
-      excerpt: 'Five deployments with measurable KPIs and lessons learned.',
-      category: 'Case Studies',
-      author: 'Michael Rodriguez',
-      date: '2025-09-12',
-      readTime: '9 min read',
-      image: '/blog/ai-automation-case-studies.jpg'
-    }
-  );
-
   const categories = [
-    { name: 'All Posts', count: 16, active: true },
+    { name: 'All Posts', count: 12, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 4, active: false },
-    { name: 'Quantum Computing', count: 3, active: false },
+    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
-    { name: 'Data Science', count: 2, active: false },
+    { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
@@ -327,13 +249,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-foundation-models-2025"
+            href="/blog/sovereign-ai-commerce-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Foundation Models in 2025: Practical Enterprise Patterns That Work"
+            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                FM
+                SA
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -341,265 +263,30 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Foundation Models in 2025: Practical Enterprise Patterns That Work
+                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.
+                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+=======
+    { name: 'AI Solutions', count: 4, active: false },
+    { name: 'Accessibility', count: 1, active: false },
+    { name: 'Infrastructure', count: 1, active: false },
+            href="/blog/ai-ops-cost-optimization-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                AO
+                AG
+                AG
+                  AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  Cut cloud and ops costs with AI-driven rightsizing and predictive autoscaling without sacrificing reliability.
+                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
                 </p>
-              </div>
-              <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      {/* Featured Posts */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Articles</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Deep insights and breakthrough research from our leading experts
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
-              <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                  <span className="text-white text-4xl font-bold">
-                    {post.title.split(' ').slice(0, 2).map(word => word[0]).join('')}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-gray-500 text-sm">{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                        <span className="text-gray-600 text-sm font-medium">
-                          {post.author.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">{post.author}</p>
-                        <p className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
-                      </div>
-                    </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      Read More →
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories and Tags */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Categories */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Categories</h3>
-              <div className="space-y-3">
-                {categories.map((category, index) => (
-                  <button
-                    key={index}
-                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors duration-200 ${
-                      category.active
-                        ? 'bg-blue-100 text-blue-800 border border-blue-200'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
-                  >
-                    <span className="font-medium">{category.name}</span>
-                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            {/* Tags */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Popular Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {tags.map((tag, index) => (
-                  <button
-                    key={index}
-                    className="bg-white text-gray-700 px-3 py-2 rounded-lg border border-gray-200 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors duration-200"
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recent Posts */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Recent Articles</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay current with the latest developments in AI, quantum computing, and technology
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recentPosts.map((post, index) => (
-              <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="h-40 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-                  <span className="text-white text-3xl font-bold">
-                    {post.title.split(' ').slice(0, 2).map(word => word[0]).join('')}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-gray-500 text-sm">{post.readTime}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3 text-sm">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-                        <span className="text-gray-600 text-xs font-medium">
-                          {post.author.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <span className="text-xs text-gray-500">{post.author}</span>
-                    </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      Read More →
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get the latest insights, research updates, and industry news delivered directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            />
-            <button className="bg-white text-blue-900 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-blue-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </section>
-
-      {/* Author Spotlight */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Authors</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert insights from our team of researchers, engineers, and thought leaders
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                KS
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. Kleber Santos</h3>
-              <p className="text-blue-600 text-sm mb-2">CEO & Founder</p>
-              <p className="text-gray-600 text-sm">AI Research & Business Strategy</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                SC
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. Sarah Chen</h3>
-              <p className="text-blue-600 text-sm mb-2">CTO</p>
-              <p className="text-gray-600 text-sm">Quantum Computing & Architecture</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                EW
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. Emily Watson</h3>
-              <p className="text-blue-600 text-sm mb-2">Chief Research Officer</p>
-              <p className="text-gray-600 text-sm">AI Consciousness & Ethics</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                DK
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Dr. David Kim</h3>
-              <p className="text-blue-600 text-sm mb-2">Senior AI Researcher</p>
-              <p className="text-gray-600 text-sm">Machine Learning & Neural Networks</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Learn More?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Explore our services, research, and solutions to see how we can help transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              Explore Services
-            </Link>
-            <Link
-              href="/research-development"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-            >
-              View Research
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
