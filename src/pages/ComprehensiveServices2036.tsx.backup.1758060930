@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center space-x-2">
                   <span className="text-green-400">✓</span>
@@ -25,7 +22,6 @@
               </ul>
               <button className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors font-semibold">
                 Contact Sales
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -38,4 +34,3 @@
             <a href="/pages/RevolutionaryTechShowcase2036" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
               View Showcase
             </a>
-<<<<<<< HEAD

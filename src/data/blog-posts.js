@@ -2743,7 +2743,6 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-=======
 // Additional content for enhanced engagement
 export const additionalContent2026 = [
   {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   const slides = [
     {
@@ -40,13 +39,11 @@
       image: "🌐",
       gradient: "from-indigo-600 to-blue-600",
       link: "/pages/UniversalConsciousnessNetwork2040"
-<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🌟 Future Technology Showcase</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Discover the most revolutionary technologies that will reshape humanity's future
@@ -55,7 +52,6 @@
 
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
-<<<<<<< HEAD
                   <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                       <div>
@@ -67,7 +63,6 @@
                           className={`inline-block bg-gradient-to-r ${slide.gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
                         >
                           Explore Technology →
-<<<<<<< HEAD
                       <div className="space-y-4">
                         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                           <h4 className="font-bold mb-2">Revolutionary Features</h4>
@@ -88,7 +83,6 @@
                           </ul>
                         </div>
                       </div>
-<<<<<<< HEAD
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -108,7 +102,5 @@
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-<<<<<<< HEAD
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-<<<<<<< HEAD

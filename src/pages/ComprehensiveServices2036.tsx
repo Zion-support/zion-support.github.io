@@ -249,7 +249,6 @@ const ComprehensiveServices2036: React.FC = () => {
   );
 };
 export default ComprehensiveServices2036;
-=======
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center space-x-2">
                   <span className="text-green-400">✓</span>

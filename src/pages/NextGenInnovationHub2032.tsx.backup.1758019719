@@ -9,8 +9,6 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 NEXT-GEN INNOVATION • JANUARY 2032
             🧠 NEXT-GEN INNOVATION • JANUARY 2032
-<<<<<<< HEAD
-=======
             🧠 NEXT-GEN INNOVATION • JANUARY 2032
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • 2032
@@ -41,8 +39,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             <div className="text-center">
               <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full">50+ Active Projects</span>
             </div>
-<<<<<<< HEAD
-=======
             🧠 INNOVATION HUB • JANUARY 2032
 >>>>>>> origin/backup-main-20250916-071805
           </div>
@@ -302,8 +298,6 @@ const NextGenInnovationHub2032: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-=======
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -427,8 +421,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             </ul>
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Visit AI Lab →
-<<<<<<< HEAD
-=======
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
         </div>
@@ -494,8 +486,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             <button className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Tour
             </button>
-<<<<<<< HEAD
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Ultimate Breakthrough →

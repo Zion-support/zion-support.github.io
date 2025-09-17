@@ -123,7 +123,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
   );
 };
 export default RevolutionaryTechBanner2025;
-=======
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">

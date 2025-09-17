@@ -1,8 +1,5 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">🔄</span>
@@ -24,7 +21,6 @@
                   <h4 className="font-semibold text-purple-200">Enhanced Capabilities</h4>
                   <p className="text-sm text-purple-300">Access to superhuman computational abilities</p>
                 </div>
-<<<<<<< HEAD
         {/* Revolutionary Applications */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -51,7 +47,6 @@
               <p className="text-pink-100">
                 Achieve true immortality through digital consciousness preservation, 
                 living indefinitely in optimized digital environments.
-<<<<<<< HEAD
         {/* Technical Specifications */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div>
@@ -106,7 +101,6 @@
                   <p className="text-sm text-purple-300">Always return to biological form</p>
                 </div>
               </div>
-<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Join the Consciousness Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">

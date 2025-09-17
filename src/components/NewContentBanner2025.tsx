@@ -1,4 +1,3 @@
-=======
     <div className="bg-gradient-to-r from-green-900 via-teal-900 to-cyan-900 text-white py-12 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">

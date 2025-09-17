@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -68,7 +67,6 @@ a {
 }
 
 /* Custom animations */
-=======
 /* Custom animations for enhanced content */
 >>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526
 @keyframes fadeIn {
@@ -143,9 +141,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-<<<<<<< HEAD
   background: #555;
-=======
   background: linear-gradient(45deg, #7c3aed, #db2777);
 }
 
@@ -404,4 +400,3 @@ body {
   padding: 2rem;
   text-align: center;
 >>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526
-}

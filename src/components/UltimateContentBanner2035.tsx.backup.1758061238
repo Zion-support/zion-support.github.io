@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
             <a href="/pages/UltimateTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -17,7 +9,6 @@ import React from 'react';
             </a>
             <a href="/pages/UltimateTechRevolution2035" className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
               🌌 Interdimensional Tech
-=======
 
 const UltimateContentBanner2035: React.FC = () => {
   return (

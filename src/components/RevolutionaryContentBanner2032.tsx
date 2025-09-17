@@ -7,7 +7,6 @@ const RevolutionaryContentBanner2032: React.FC = () => {
   );
 };
 export default RevolutionaryContentBanner2032;
-=======
     <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >

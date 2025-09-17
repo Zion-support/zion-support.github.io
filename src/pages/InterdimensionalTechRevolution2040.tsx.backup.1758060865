@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -57,7 +55,6 @@
               <li>• Physics Constant Adjustment</li>
               <li>• Dimensional Field Control</li>
               <li>• Reality Optimization</li>
-<<<<<<< HEAD
         {/* Revolutionary Applications */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -67,9 +64,7 @@
               <p className="text-purple-100 mb-6 text-lg">
                 Tap into unlimited resources from parallel dimensions, solving energy crises, 
                 material shortages, and environmental challenges through interdimensional mining and harvesting.
-<<<<<<< HEAD
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Enter the Multiverse</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">

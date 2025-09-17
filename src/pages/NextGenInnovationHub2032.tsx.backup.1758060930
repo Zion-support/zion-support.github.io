@@ -1,7 +1,5 @@
-<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION • JANUARY 2032
-<<<<<<< HEAD
             Discover and explore the most revolutionary technologies shaping humanity's future. 
             Our innovation hub showcases cutting-edge solutions that will transform every aspect of life.
           </p>
@@ -151,7 +149,6 @@
             </ul>
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Visit AI Lab →
-<<<<<<< HEAD
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Innovation Hub

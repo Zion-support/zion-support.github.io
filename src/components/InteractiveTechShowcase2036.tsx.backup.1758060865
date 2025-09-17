@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
       icon: "🌍",
@@ -12,10 +9,6 @@
       ],
       gradient: "from-pink-600 to-red-600",
       bgGradient: "from-pink-600/20 to-red-600/20"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -24,7 +17,3 @@
         setIsAnimating(false);
       }, 300);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD

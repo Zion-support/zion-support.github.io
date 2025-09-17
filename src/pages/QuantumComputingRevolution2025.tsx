@@ -691,7 +691,5 @@ const QuantumComputingRevolution2025: React.FC = () => {
   );
 };
 export default QuantumComputingRevolution2025;
-=======
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn More

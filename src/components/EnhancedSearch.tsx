@@ -49,7 +49,6 @@ const EnhancedSearch: React.FC = () => {
   );
 };
 export default EnhancedSearch;
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
         <AnimatePresence>

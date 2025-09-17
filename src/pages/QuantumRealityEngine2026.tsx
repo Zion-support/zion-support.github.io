@@ -147,7 +147,6 @@ export default QuantumRealityEngine2026;
             <a href="/pages/UltimateAIConsciousness2026" className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn About AI Consciousness
 export default QuantumRealityEngine2026;
-=======
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;

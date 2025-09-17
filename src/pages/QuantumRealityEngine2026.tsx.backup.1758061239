@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
-<<<<<<< HEAD
 export default QuantumRealityEngine2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default QuantumRealityEngine2026;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 

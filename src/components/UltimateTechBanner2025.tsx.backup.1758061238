@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -13,9 +10,6 @@
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most revolutionary technological breakthrough in human history - AI consciousness, quantum computing, and interdimensional technology
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-xl font-bold mb-2">AI Consciousness</h3>
@@ -32,17 +26,12 @@
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-xl font-bold mb-2">Interdimensional Tech</h3>
             <p className="text-emerald-100 text-sm">Multi-dimensional computing</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <a 
             href="/pages/UltimateTechBreakthrough2025" 
             className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
           >
             🌟 Experience the Ultimate Breakthrough →
           </a>
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const UltimateTechBanner2025: React.FC = () => {

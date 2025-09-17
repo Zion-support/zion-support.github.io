@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -230,7 +229,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
             Contact Our Experts
           </button>
         </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -586,4 +584,3 @@ const UltimateInteractiveShowcase: React.FC = () => {
   );
 };
 
-export default UltimateInteractiveShowcase;

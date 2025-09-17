@@ -1,12 +1,8 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
             <p className="text-gray-300 mb-4">
               Cutting-edge solutions that push the boundaries of what's possible
-<<<<<<< HEAD
           </div>
           
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">

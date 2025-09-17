@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 const RevolutionaryTechShowcase2042: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-=======
   const demos = [
     {
       id: 0,

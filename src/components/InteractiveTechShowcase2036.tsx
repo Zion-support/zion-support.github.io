@@ -39,7 +39,6 @@
     },
     {
       id: 5,
-=======
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
       icon: "🌍",

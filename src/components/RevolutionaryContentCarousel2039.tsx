@@ -128,7 +128,6 @@
     </div>
   );
 };
-=======
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
           {contentSlides.map((_, index) => (

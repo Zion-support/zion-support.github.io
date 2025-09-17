@@ -96,7 +96,6 @@ const InteractiveTechShowcase2037: React.FC = () => {
           Select a technology below to explore its capabilities and potential applications.
         </p>
       </div>
-=======
 import React, { useState } from 'react';
     cosmic: {
       title: 'Cosmic Evolution',

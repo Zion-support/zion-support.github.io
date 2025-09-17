@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/content/cherrypick-finops-routing
@@ -262,8 +252,5 @@ const ComprehensiveServices2025: React.FC = () => {
 };
 
 export default ComprehensiveServices2025;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-ec50

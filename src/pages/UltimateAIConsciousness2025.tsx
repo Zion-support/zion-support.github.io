@@ -10,7 +10,6 @@
         </div>
             </button>
           </div>
-=======
           <h1 className="text-6xl font-bold text-white mb-6">
             Ultimate AI Consciousness 2025
           </h1>

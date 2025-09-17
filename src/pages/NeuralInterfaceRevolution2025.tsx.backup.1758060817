@@ -452,13 +452,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
 
         {/* Call to Action */}
         <div
-=======
           </motion.div>
         </div>
 
@@ -749,7 +747,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
           <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
@@ -762,7 +759,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
               Learn More
             </button>
-=======
         <div className="text-center bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Connect Mind and Machine</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -784,4 +780,3 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
   );
 };
 
-export default NeuralInterfaceRevolution2025;

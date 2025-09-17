@@ -197,7 +197,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     </div>
   );
 };
-=======
       title: "AI Consciousness Revolution 2025",
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",

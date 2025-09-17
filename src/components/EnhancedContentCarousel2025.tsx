@@ -515,7 +515,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
     </div>
   );
 };
-=======
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 const EnhancedContentCarousel2025: React.FC = () => {

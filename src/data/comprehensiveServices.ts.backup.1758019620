@@ -480,10 +480,8 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "24-32 weeks",
     support: "Quantum computing experts",
     reviews: { rating: 4.9, count: 45 }
-<<<<<<< HEAD
   },
   ...newServices2026
-=======
   }
 >>>>>>> origin/aggressive-merge-backup-20250916-072750
 ];

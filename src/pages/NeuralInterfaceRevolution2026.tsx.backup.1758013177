@@ -127,8 +127,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       treatment: 'Optical neural enhancement',
       results: ['Memory restoration', 'Improved cognition', 'Independent living'],
       timeline: '12 months'
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Eye, Ear, Hand, Heart } from 'lucide-react';
@@ -256,8 +254,6 @@ const NeuralInterfaceRevolution2026 = () => {
               <div className="text-4xl font-bold text-teal-400 mb-2">{neuralData.latency}ms</div>
               <div className="text-lg opacity-80">Response Latency</div>
             </div>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -395,8 +391,6 @@ const NeuralInterfaceRevolution2026 = () => {
               {tab.charAt(0).toUpperCase() + tab.slice(1).replace('-', ' ')}
             </button>
           ))}
-<<<<<<< HEAD
-=======
       {/* Applications */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -708,8 +702,6 @@ const NeuralInterfaceRevolution2026 = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-=======
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

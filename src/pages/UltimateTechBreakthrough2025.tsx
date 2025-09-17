@@ -271,7 +271,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
     </div>
   );
 };
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 const UltimateTechBreakthrough2025: React.FC = () => {

@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
@@ -80,7 +79,6 @@ export const blogPosts = [
     title: "AI 2026: Safe Tool Use Blueprint",
     excerpt: "Permissioned tool use with risk tiers, policy-as-code, sandboxes, and runtime checks.",
     content: "Standardize tool catalogs, enforce risk tiers, and gate dangerous actions with human-in-the-loop and eval harnesses. Includes reference policies and enforcement hooks.",
-=======
     id: 63,
     title: "AI 2026: Runtime Guardrails Blueprint",
     excerpt: "Runtime checks, policy-as-code, and safe tool envelopes for agents.",
@@ -262,8 +260,6 @@ export const blogPosts = [
     slug: "interdimensional-ai-computing-multiple-realities"
   },
   {
-<<<<<<< HEAD
-=======
     id: 39,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
@@ -370,7 +366,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -626,7 +621,6 @@ export const blogPosts = [
     slug: "holographic-reality-next-generation-immersive-technology"
   },
   {
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     id: 33,
     title: "AI 2026: Agent Platform Operations",
@@ -849,7 +843,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
   },
@@ -1089,11 +1082,8 @@ export const blogPosts = [
     readTime: "13 min read",
     category: "Temporal AI",
     tags: ["Temporal AI", "Time Computing", "Causality", "Temporal Optimization"],
-=======
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
-=======
     imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
     slug: "next-gen-innovation-hub-future-born"
   },
@@ -1263,7 +1253,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
   },
   {
     id: 51,
@@ -1369,8 +1358,6 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/edge-ai-iot-fusion-2026.jpg",
     slug: "edge-ai-iot-perfect-fusion-smart-everything"
-=======
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -1513,4 +1500,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

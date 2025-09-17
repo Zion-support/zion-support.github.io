@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react';
 const NextGenInnovationHub2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -233,4 +232,3 @@ const NextGenInnovationHub2026: React.FC = () => {
     </div>
   );
 };
-export default NextGenInnovationHub2026;

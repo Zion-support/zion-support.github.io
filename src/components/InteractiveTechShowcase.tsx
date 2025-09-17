@@ -33,9 +33,6 @@ const InteractiveTechShowcase: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
-      ]
-    }
-  };
   return (
     <div className="max-w-7xl mx-auto">
       {/* Technology Selector */}

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-6f93
 
@@ -39,7 +37,6 @@ const UltimateTechBanner2030: React.FC = () => {
   }, [slides.length]);
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -89,7 +86,6 @@ const UltimateTechBanner2030: React.FC = () => {
           >
             🌟 Explore Ultimate Tech Revolution 2030 →
           </a>
-=======
     <div className="relative overflow-hidden mb-12">
       <div
         key={currentSlide}
@@ -136,4 +132,3 @@ const UltimateTechBanner2030: React.FC = () => {
   );
 };
 
-export default UltimateTechBanner2030;

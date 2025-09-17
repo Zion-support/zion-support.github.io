@@ -26,7 +26,6 @@
   );
 };
 export default RevolutionaryContentBanner2030;
-=======
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
       <div className={`bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>

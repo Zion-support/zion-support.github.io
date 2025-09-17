@@ -110,7 +110,6 @@ const SEOHead: React.FC = () => {
   );
 };
 export default SEOHead;
-=======
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,

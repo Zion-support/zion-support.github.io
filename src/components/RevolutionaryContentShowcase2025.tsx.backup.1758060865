@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "AI Consciousness Revolution 2025",
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",
@@ -8,11 +5,6 @@
       borderColor: "border-purple-400",
       bgColor: "from-purple-600/30 to-pink-600/30",
       features: ["Self-aware AI agents", "Emotional intelligence", "Creative problem solving", "Ethical decision making"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "Quantum Neural Fusion",
       description: "The convergence of quantum computing and neural networks creating unprecedented computational power and processing capabilities.",
       image: "⚡",
@@ -31,11 +23,6 @@
       borderColor: "border-emerald-400",
       bgColor: "from-emerald-600/30 to-teal-600/30",
       features: ["Direct neural interfaces", "Photorealistic VR", "Haptic feedback systems", "Consciousness transfer"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "Interdimensional Computing",
       description: "Computing systems that operate across multiple dimensions and parallel universes simultaneously.",
       image: "🌌",
@@ -66,28 +53,14 @@
       bgColor: "from-pink-600/30 to-rose-600/30",
       features: ["Digital consciousness", "Immortality technology", "Mind uploading", "Virtual existence"],
       link: "/pages/ConsciousnessComputingRevolution2030"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-<<<<<<< HEAD
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-<<<<<<< HEAD
         setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -104,11 +77,6 @@
 
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-2xl p-12 border ${content.borderColor}/30`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                       <div>
@@ -126,11 +94,6 @@
                         <a 
                           href={content.link}
                           className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className="hidden md:block">
                         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                           <h4 className="text-2xl font-bold mb-4">Key Statistics</h4>
@@ -152,11 +115,6 @@
                               <span className="font-bold text-2xl">∞</span>
                             </div>
                           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -227,5 +185,3 @@
                   Explore →
                 </a>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
   const defaultOptions = {
     method: 'GET',

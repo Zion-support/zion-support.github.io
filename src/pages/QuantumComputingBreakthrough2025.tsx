@@ -46,7 +46,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <li>• Protein Folding Simulation</li>
               <li>• Drug Interaction Modeling</li>
               <li>• Molecular Design</li>
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

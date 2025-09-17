@@ -2,7 +2,6 @@
     </div>
   );
 };
-=======
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white mb-16">
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">

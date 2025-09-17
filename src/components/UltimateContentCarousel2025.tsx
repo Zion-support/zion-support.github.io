@@ -70,7 +70,6 @@ import React, { useState, useEffect } from 'react';
 };
 export default UltimateContentCarousel2025;
 </p></p>
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 const UltimateContentCarousel2025 = () => {

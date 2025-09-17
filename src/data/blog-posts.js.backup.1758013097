@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
@@ -50,7 +49,6 @@ export const blogPosts = [
     title: "AI 2026: Production Evidence Hub — Blueprint",
     excerpt: "Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.",
     content: "Build a system of record for AI operations: eval results, guardrail signals, incidents, changes, and approvals. Tie deployment gates to evidence thresholds and expose exec-ready dashboards.",
-=======
     id: 7001,
     title: "AI 2026: Governed Tool Use Case Studies",
     excerpt: "Real incidents and fixes: approvals, risk tiers, and runtime checks that work.",
@@ -97,12 +95,10 @@ export const blogPosts = [
     slug: "ai-2026-reliable-autonomy-operations"
   },
   {
-<<<<<<< HEAD
     id: 1003,
     title: "AI 2026: Agentic Sandbox Patterns",
     excerpt: "Isolation domains, least privilege, and runtime guards for safe tool use.",
     content: "Design sandboxes for agents: request scoping, time + budget caps, permissioned tools, and defense-in-depth. Covers break-glass patterns and audit trails.",
-=======
     id: 6001,
     title: "AI 2026: Policy-Driven Agents That Don't Break Prod",
     excerpt: "Practical guardrails wired to scorecards, incidents, and budgets—shippable today.",
@@ -112,7 +108,6 @@ export const blogPosts = [
     authorRole: "Platform Staff Engineer",
     publishDate: "2025-09-16",
     readTime: "6 min read",
-<<<<<<< HEAD
     category: "Safety",
     tags: ["Sandbox", "Tool Use", "Guards"],
     featured: true,
@@ -124,7 +119,6 @@ export const blogPosts = [
     title: "AI 2026: Safe Tool Use Blueprint",
     excerpt: "Permissioned tool use with risk tiers, policy-as-code, sandboxes, and runtime checks.",
     content: "Standardize tool catalogs, enforce risk tiers, and gate dangerous actions with human-in-the-loop and eval harnesses. Includes reference policies and enforcement hooks.",
-=======
     category: "Governance",
     tags: ["Policy-as-Code", "Guardrails", "Scorecards"],
     featured: true,
@@ -908,11 +902,9 @@ export const blogPosts = [
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -1153,4 +1145,3 @@ export const newContent2026 = [
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026];
 
-export const BLOG_POSTS = allBlogPosts;

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
         <AnimatePresence>
           {isFocused && searchTerm && (
             <motion.div
@@ -15,7 +13,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div className="p-2">
                   {filteredSuggestions.map((suggestion, index) => (
                     <motion.div
-<<<<<<< HEAD
       {/* Quick Access Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

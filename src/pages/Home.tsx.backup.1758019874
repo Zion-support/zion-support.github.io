@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import { useNotifications } from '../context/notifications/NotificationContext';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-<<<<<<< HEAD
-=======
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
 import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
@@ -88,7 +86,6 @@ const Home: React.FC = () => {
           <RevolutionaryContentShowcase />
         </div>
 
-<<<<<<< HEAD
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
@@ -101,7 +98,6 @@ const Home: React.FC = () => {
               <h3 className="text-3xl font-bold text-white mb-4">🚀 AI 2026: Enterprise Automation</h3>
               <p className="text-gray-300 mb-6">Transform your business with next-generation AI automation that learns and scales autonomously.</p>
               <Link to="/pages/AI2026EnterpriseAutomation" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Now →</Link>
-=======
         {/* Enhanced Content Advertising */}
         <EnhancedContentAdvertising />
 

@@ -69,7 +69,6 @@
     </div>
   );
 };
-=======
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">

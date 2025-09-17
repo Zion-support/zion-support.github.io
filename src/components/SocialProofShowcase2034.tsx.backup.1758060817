@@ -3,13 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const SocialProofShowcase2034: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
-=======
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 
@@ -67,7 +65,6 @@ const SocialProofShowcase2034: React.FC = () => {
     },
     {
       id: 4,
-<<<<<<< HEAD
       name: "James Thompson",
       title: "CTO",
       company: "Global Manufacturing Co",
@@ -149,7 +146,6 @@ const SocialProofShowcase2034: React.FC = () => {
       number: "15+",
       label: "Years Experience",
       icon: "🎯"
-=======
       name: "Prof. James Wilson",
       title: "Director, Neural Research Lab",
       company: "Advanced Neural Interface Institute",
@@ -168,7 +164,6 @@ const SocialProofShowcase2034: React.FC = () => {
 
   const caseStudies = [
     {
-<<<<<<< HEAD
       title: "Fortune 500 AI Transformation",
       company: "GlobalTech Corp",
       challenge: "Transform legacy systems and achieve 400% efficiency improvement",
@@ -213,7 +208,6 @@ const SocialProofShowcase2034: React.FC = () => {
   ];
 
   if (!isVisible) return null;
-=======
       id: 1,
       title: "Global AI Consciousness Network",
       company: "United Nations Technology Initiative",
@@ -374,7 +368,6 @@ const SocialProofShowcase2034: React.FC = () => {
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </motion.div>
             </AnimatePresence>
             
@@ -391,7 +384,6 @@ const SocialProofShowcase2034: React.FC = () => {
                   }`}
                 />
               ))}
-=======
               </div>
 
               {/* Results */}
@@ -411,7 +403,6 @@ const SocialProofShowcase2034: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Case Studies */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Success Stories</h3>
@@ -464,7 +455,6 @@ const SocialProofShowcase2034: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-=======
         {/* Global Impact Stats */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16">
           <h3 className="text-4xl font-bold text-center mb-12">🌍 Global Impact Statistics</h3>
@@ -526,4 +516,3 @@ const SocialProofShowcase2034: React.FC = () => {
   );
 };
 
-export default SocialProofShowcase2034;

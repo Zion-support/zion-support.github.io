@@ -72,7 +72,6 @@
     </div>
   );
 };
-=======
     <div className="relative mb-8">
       <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 border border-purple-400/30 shadow-2xl relative overflow-hidden">
         {/* Animated Background */}

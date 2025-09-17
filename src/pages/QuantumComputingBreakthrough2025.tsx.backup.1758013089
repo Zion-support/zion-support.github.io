@@ -2,8 +2,6 @@ import React from 'react';
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -116,8 +114,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <li>• Route optimization</li>
               <li>• Resource allocation</li>
             </ul>
-<<<<<<< HEAD
-=======
             <div className="text-center">
               <div className="inline-block bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold">
                 Coming Soon
@@ -126,8 +122,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Quantum Performance Metrics */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -162,8 +156,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Quantum Applications */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -263,8 +255,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Quantum Demo */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -327,9 +317,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the quantum revolution and harness the power of quantum computing to solve your most complex challenges.
           </p>
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="/pages/RevolutionaryTechShowcase2025" 

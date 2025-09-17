@@ -20,7 +20,6 @@
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Learn More
-=======
             Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
           </p>
           <div className="flex justify-center space-x-4">

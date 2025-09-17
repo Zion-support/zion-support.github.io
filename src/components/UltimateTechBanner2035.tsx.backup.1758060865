@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-black text-white py-12 px-4 mb-8 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">

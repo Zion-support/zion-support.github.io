@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export const notifications = {
   // Request notification permission
   requestPermission: async () => {

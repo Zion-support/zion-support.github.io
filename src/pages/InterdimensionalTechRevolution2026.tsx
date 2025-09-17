@@ -6,7 +6,6 @@ const InterdimensionalTechRevolution2026 = () => {
         <div>
           <h1>Interdimensional Tech Revolution2026</h1>
           <p>Content coming soon...</p>
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">

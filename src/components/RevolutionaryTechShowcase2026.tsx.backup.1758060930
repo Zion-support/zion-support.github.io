@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -32,7 +30,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                     ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg`
                     : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
-<<<<<<< HEAD
         </div>
 
         {/* CTA Section */}
@@ -41,5 +38,4 @@ import { motion, AnimatePresence } from 'framer-motion';
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Join us in the most significant technological revolution in human history. 
             Transform your reality with our breakthrough technologies.
-<<<<<<< HEAD
         </div>

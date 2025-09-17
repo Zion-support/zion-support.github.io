@@ -1,7 +1,6 @@
 import React from 'react';
 const RevolutionaryAdBanner2034: React.FC = () => {
   return (
-=======
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -18,7 +17,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
   );
 };
 export default RevolutionaryAdBanner2034;
-=======
       </div>
       <div className="relative z-10">
         <div className="flex items-center justify-between">

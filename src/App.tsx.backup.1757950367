@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
@@ -13,7 +12,6 @@ import { PromotionalBanner } from './components/PromotionalBanner';
 import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
 // Removed direct import to avoid name collision with lazy import below
 import { ServicesHighlight } from './components/ServicesHighlight';
-=======
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { EnhancedLoading } from "./components/ui/enhanced-loading";
@@ -53,7 +51,6 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
 
-<<<<<<< HEAD
 // Enhanced services pages
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
@@ -66,7 +63,6 @@ const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/Innovati
 const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
-=======
 // New enhanced service pages
 const ComprehensiveITServices = lazy(() => import('./pages/ComprehensiveITServices'));
 const EnhancedMicroSaasServices = lazy(() => import('./pages/EnhancedMicroSaasServices'));
@@ -187,7 +183,6 @@ const Marketplace = () => (
 
 function App() {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
@@ -330,7 +325,6 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
-=======
     <ThemeProvider>
       <WhitelabelProvider>
         <Router>
@@ -396,4 +390,3 @@ function App() {
   );
 }
 
-export default App;

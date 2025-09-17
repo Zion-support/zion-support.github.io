@@ -160,7 +160,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
   );
 };
 export default RevolutionaryTechShowcase2037;
-=======
 import React, { useState, useEffect } from 'react';
           {/* Interactive Demo Grid */}
           <div className="max-w-7xl mx-auto">

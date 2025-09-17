@@ -1,6 +1,4 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
-<<<<<<< HEAD
               </div>
 
               <div className="flex items-start space-x-4">

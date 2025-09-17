@@ -4,13 +4,11 @@ import { Helmet } from 'react-helmet-async';
 export type SEOProps = {
   title?: string;
   description?: string;
-<<<<<<< HEAD
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
 };
-=======
   keywords?: string[];
   author?: string;
   canonical?: string;
@@ -39,7 +37,6 @@ interface OrganizationSchema {
   url: string;
   logo: string;
   description: string;
-<<<<<<< HEAD
   address: {
     '@type': string;
     streetAddress: string;
@@ -342,7 +339,6 @@ export function SEO({
       document.head.appendChild(link);
     });
   }, []);
-=======
   keywords?: string;
 
   url?: string;
@@ -374,10 +370,7 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   return (
     <Helmet>
-<<<<<<< HEAD
-=======
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -390,11 +383,9 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-=======
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
@@ -513,7 +504,6 @@ const SEO: React.FC<SEOProps> = ({
           }
         `}
       </style>
-=======
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

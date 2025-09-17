@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -8,7 +7,6 @@
           Explore our revolutionary technologies through interactive demonstrations and detailed insights
         </p>
       </div>
-<<<<<<< HEAD
       {/* Active Content Display */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
         <div className="grid md:grid-cols-2 gap-8">
@@ -20,7 +18,6 @@
                   {contentTabs[activeTab as keyof typeof contentTabs].content.title}
                 </h3>
                 <div className={`w-16 h-1 bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} rounded-full mt-2`}></div>
-<<<<<<< HEAD
         </div>
       </div>
 

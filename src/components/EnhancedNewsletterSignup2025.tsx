@@ -120,7 +120,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
     </div>
   );
 };
-=======
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-16">

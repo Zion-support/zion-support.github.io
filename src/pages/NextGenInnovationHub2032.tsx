@@ -111,7 +111,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             </ul>
             <div className="text-center">
               <span className="px-3 py-1 bg-pink-500 text-white text-xs rounded-full">20+ Discoveries</span>
-=======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION • JANUARY 2032
             Discover and explore the most revolutionary technologies shaping humanity's future. 

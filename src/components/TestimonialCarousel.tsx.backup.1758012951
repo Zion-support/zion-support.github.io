@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
 import {
   Carousel,
-=======
 
 import {  Carousel,  Carousel
   CarouselContent
@@ -162,9 +160,7 @@ export function TestimonialCarousel() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
-=======
 
 >>>>>>> origin/merged-prs

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 
@@ -42,7 +40,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -73,7 +70,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg`
                     : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
-=======
         <divdiv
           className="text-center mb-16"
         >
@@ -251,7 +247,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               </divdiv>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* CTA Section */}
@@ -260,7 +255,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Join us in the most significant technological revolution in human history. 
             Transform your reality with our breakthrough technologies.
-=======
         </divdiv>
 
         {/* Technology Categories */}
@@ -310,9 +304,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               Contact Our Experts
             </button>
           </div>
-<<<<<<< HEAD
         </div>
-=======
         </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
@@ -320,4 +312,3 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
   );
 };
 
-export default RevolutionaryTechShowcase2026;

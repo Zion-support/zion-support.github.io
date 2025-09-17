@@ -176,7 +176,6 @@
     </div>
   );
 };
-=======
   useEffect(() => {
     setIsVisible(true);
   }, []);

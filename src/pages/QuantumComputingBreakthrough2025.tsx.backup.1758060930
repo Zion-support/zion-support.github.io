@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -71,7 +70,6 @@
               <li>• Materials design</li>
               <li>• Climate solutions</li>
             </ul>
-<<<<<<< HEAD
       {/* Quantum Performance Metrics */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -101,7 +99,6 @@
               <div className="text-lg opacity-80">Uptime</div>
               <div className="text-sm text-emerald-200">Continuous operation</div>
             </div>
-<<<<<<< HEAD
       {/* Quantum Applications */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -196,7 +193,6 @@
                 <span className="text-purple-400">99%</span>
               </div>
             </div>
-<<<<<<< HEAD
       {/* Quantum Demo */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Contact() {
   const { showToast: toast } = useToast();
 import React, { useState } from 'react';
@@ -15,7 +14,6 @@ import React from 'react';
 
 const Contact: React.FC = () => {
 
-=======
 >>>>>>> origin/backup-main-20250916-090016
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -74,7 +72,6 @@ const Contact: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
@@ -84,7 +81,6 @@ const Contact: React.FC = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           className="max-w-4xl mx-auto text-center"
-=======
 >>>>>>> origin/backup-main-20250916-090016
         >
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -94,7 +90,6 @@ const Contact: React.FC = () => {
             Ready to transform your business with revolutionary technology? 
             Get in touch with our experts and discover what's possible.
           </p>
-<<<<<<< HEAD
       </section>
 
       {/* Contact Methods Grid */}
@@ -123,7 +118,6 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
-=======
 >>>>>>> origin/backup-main-20250916-090016
                 className="text-center py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -132,11 +126,9 @@ const Contact: React.FC = () => {
               >
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-<<<<<<< HEAD
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
-=======
 >>>>>>> origin/backup-main-20250916-090016
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -242,7 +234,6 @@ const Contact: React.FC = () => {
               </form>
             )}
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Emergency Support Section */}
@@ -307,11 +298,9 @@ const Contact: React.FC = () => {
             ))}
           </div>
         </div>
-=======
 >>>>>>> origin/backup-main-20250916-090016
       </div>
     </div>
   );
 };
 
-export default Contact;

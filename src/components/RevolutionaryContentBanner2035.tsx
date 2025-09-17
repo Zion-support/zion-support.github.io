@@ -96,7 +96,6 @@
     </div>
   );
 };
-=======
   const slides = [
     {
       title: "🌟 Revolutionary Tech Showcase 2035",

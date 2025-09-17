@@ -1513,7 +1513,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
-=======
           </div>
         </div>
         {/* Call to Action */}

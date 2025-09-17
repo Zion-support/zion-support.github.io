@@ -168,7 +168,6 @@ const UltimateContentBanner2035: React.FC = () => {
   );
 };
 export default UltimateContentBanner2035;
-=======
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
             <a href="/pages/UltimateTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">

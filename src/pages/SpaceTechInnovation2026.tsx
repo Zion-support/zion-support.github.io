@@ -106,7 +106,6 @@ const SpaceTechInnovation2026: React.FC = () => {
   );
 };
 export default SpaceTechInnovation2026;
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}

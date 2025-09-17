@@ -149,6 +149,5 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             </Link>
           </div>
         </div>
-=======
       </div>
     </>

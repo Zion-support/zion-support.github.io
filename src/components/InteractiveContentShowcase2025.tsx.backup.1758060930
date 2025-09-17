@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const contentData = {
     ai: {
       title: 'AI Revolution',
@@ -47,7 +46,6 @@
         ],
         link: '/pages/AdvancedBiotechRevolution2026'
       }
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -116,7 +114,6 @@
                   Interactive Experience
                 </div>
               </div>
-<<<<<<< HEAD
         {/* Additional Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           <div className="text-center">

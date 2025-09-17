@@ -206,7 +206,6 @@ const App: React.FC = () => {
     </Router>
   );
 };
-=======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -349,4 +348,3 @@ function App() {
 }
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
 
-export default App;

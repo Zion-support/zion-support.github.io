@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'ai-revolution',
       title: 'Next-Gen AI Revolution 2027',
       description: 'Conscious AI systems with quantum-enhanced processing',
@@ -32,14 +26,6 @@
       borderColor: 'border-emerald-400',
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       link: '/pages/NeuralInterfaceRevolution2027'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -52,7 +38,6 @@
       gradient: "from-purple-600 to-pink-600",
       color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
-<<<<<<< HEAD
       description: "Immersive holographic interfaces that blur the line between reality and virtuality",
       features: [
         "3D Holographic Displays",
@@ -63,20 +48,6 @@
       gradient: "from-emerald-600 to-teal-600",
       color: "from-emerald-600 to-teal-600",
       link: "/pages/RevolutionaryTechTrends2027"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="flex justify-center space-x-4 mb-12">
           {techCategories.map((category, index) => (
             <button
@@ -92,20 +63,8 @@
               {category.title}
             </button>
           ))}
-<<<<<<< HEAD
               className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-500 ${
                 isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const InteractiveTechShowcase2027: React.FC = () => {

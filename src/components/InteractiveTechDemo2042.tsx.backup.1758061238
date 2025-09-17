@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -78,7 +76,6 @@
   const startDemo = () => {
     setIsRunning(true);
     setProgress(0);
-<<<<<<< HEAD
     setProgress(0);
   };
 
@@ -120,7 +117,6 @@
                 }`}
               >
                 {demo.icon} {demo.title.split(' ')[0]}
-<<<<<<< HEAD
         {/* Active Demo Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
           <div className="grid md:grid-cols-2 gap-8">
@@ -138,7 +134,6 @@
                   <div key={index} className="flex items-center text-sm">
                     <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                     {feature}
-<<<<<<< HEAD
               <div className="flex space-x-4">
                 <button
                   onClick={startDemo}
@@ -190,7 +185,6 @@
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
         {/* Navigation Controls */}
         <div className="flex justify-center space-x-4">
           <button
@@ -224,7 +218,6 @@
               {demo.icon} {demo.title.split(' ')[0]}
             </button>
           ))}
-=======
 import React from 'react';
 
 const InteractiveTechDemo2042: React.FC = () => {

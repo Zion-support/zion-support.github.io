@@ -2,7 +2,6 @@ import React from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -24,7 +23,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <h3 className="text-xl font-bold mb-3 text-center">Reality Manipulation</h3>
             <p className="text-indigo-100 mb-4 text-sm text-center">
               Technology that can manipulate the fundamental fabric of reality itself
-=======
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">RevolutionaryContentBanner2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>

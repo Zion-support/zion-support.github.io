@@ -244,7 +244,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Learn More
             </button>
           </div>
-=======
           </div>
         </div>
       </div>

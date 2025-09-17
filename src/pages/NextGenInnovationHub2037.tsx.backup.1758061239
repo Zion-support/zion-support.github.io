@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6">🚀 Next-Gen Innovation Hub 2037</h1>
-<<<<<<< HEAD
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
@@ -140,7 +136,6 @@ import React from 'react';
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300">Innovation Lab</div>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">Be part of the most advanced research and development community</p>
           <div className="flex justify-center space-x-4">
@@ -149,7 +144,6 @@ import React from 'react';
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               View All Projects
-=======
 import { Helmet } from 'react-helmet-async';
 
 const NextGenInnovationHub2037: React.FC = () => {

@@ -6,7 +6,6 @@ const RevolutionaryTechBreakthrough2038 = () => {
         <div>
           <h1>Revolutionary Tech Breakthrough2038</h1>
           <p>Content coming soon...</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

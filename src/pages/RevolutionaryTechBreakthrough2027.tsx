@@ -135,7 +135,6 @@
   );
 };
 export default RevolutionaryTechBreakthrough2027;
-=======
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

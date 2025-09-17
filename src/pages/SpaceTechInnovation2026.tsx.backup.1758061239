@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-=======
 
 const SpaceTechInnovation2026: React.FC = () => {
   return (
@@ -14,7 +11,6 @@ const SpaceTechInnovation2026: React.FC = () => {
         <meta name="description" content="SpaceTechInnovation2026 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -26,7 +22,6 @@ const SpaceTechInnovation2026: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Revolutionary space technology that will make human colonization of Mars and deep space exploration a reality.
-<<<<<<< HEAD
         {/* Technology Specifications */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8">
@@ -72,7 +67,6 @@ const SpaceTechInnovation2026: React.FC = () => {
               </div>
             </div>
           </div>
-=======
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">SpaceTechInnovation2026</h1>

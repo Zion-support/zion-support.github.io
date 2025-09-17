@@ -1,87 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <divdiv
-<<<<<<< HEAD
           <divdiv
           >
             <div className="mb-8">
               <divdiv
-<<<<<<< HEAD
             <div className="mb-8">
-<<<<<<< HEAD
             <div className="mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="mb-8">
-<<<<<<< HEAD
               </divdiv>
-<<<<<<< HEAD
               <divbutton
-<<<<<<< HEAD
               </divbutton>
               <divbutton
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Learn More
               </divbutton>
-<<<<<<< HEAD
                 <divdiv
-<<<<<<< HEAD
                 </divdiv>
               ))}
             </div>
           </divdiv>
-<<<<<<< HEAD
             <divdiv
-<<<<<<< HEAD
             </divdiv>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {techInsights.map((insight, index) => (
                 <divdiv
-<<<<<<< HEAD
                 </divdiv>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
                 <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -121,18 +73,8 @@
                       <div className="text-xs text-indigo-400">{testimonial.company}</div>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <divdiv
-<<<<<<< HEAD
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
                 >
@@ -145,23 +87,14 @@
                 </divbutton>
               </div>
             </divdiv>
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+export default RevolutionaryTechInsights2026;
+export default RevolutionaryTechInsights2026;
+export default RevolutionaryTechInsights2026;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 

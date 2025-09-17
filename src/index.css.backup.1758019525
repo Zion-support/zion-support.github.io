@@ -3,14 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
-=======
-<<<<<<< HEAD
 /* Custom CSS Variables */
 :root {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -19,22 +16,11 @@ html {
 }
 
 /* Base styles */
-=======
-<<<<<<< HEAD
 @layer base {
   :root {
     --font-size: 16px;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/merged-prs
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
@@ -45,9 +31,7 @@ body {
 
 /* Custom utilities */
 .gradient-text {
-<<<<<<< HEAD
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-=======
   background: var(--primary-gradient);
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
   -webkit-background-clip: text;
@@ -61,10 +45,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-<<<<<<< HEAD
 /* Animations */
 @keyframes fadeInUp {
-=======
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -99,17 +81,12 @@ body {
     transform: translateY(30px);
   }
   to {
-<<<<<<< HEAD
     opacity: 1;
     transform: translateY(0);
-=======
     transform: rotate(360deg);
   }
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
 
 /* Basic styles for the components */
@@ -172,16 +149,10 @@ body {
 .bg-gray-100 { background-color: #f3f4f6; }
 .p-6 { padding: 1.5rem; }
 .space-y-4 > * + * { margin-top: 1rem; }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -196,7 +167,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-<<<<<<< HEAD
   
   /* Accessibility enhancements */
   .keyboard-navigation *:focus {
@@ -236,8 +206,6 @@ body {
     clip: auto;
     white-space: normal;
   }
-=======
-=======
 /* Basic styles */
 body {
   margin: 0;
@@ -340,4 +308,3 @@ body {
   .text-4xl {
     font-size: 1.75rem;
   }
-}

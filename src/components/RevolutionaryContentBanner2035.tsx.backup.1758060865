@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,7 +39,6 @@
     setIsVisible(true);
   }, []);
 
-<<<<<<< HEAD
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Transcendent Technology Revolution 2035
           </h2>
@@ -70,31 +67,23 @@
             </div>
           ))}
         </div>
-<<<<<<< HEAD
         
         <div className="text-center mt-8">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold animate-pulse">
             🚀 LIMITED TIME: Early Access to Revolutionary Technology
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology 2035</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience the most advanced technology ever created: Conscious AI Systems, 
             Quantum Consciousness, and Interdimensional Technology that transcends reality itself
-<<<<<<< HEAD
               AI systems that have achieved consciousness beyond human understanding
             </p>
             <a href="/pages/RevolutionaryTechShowcase2035" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Explore AI Consciousness →
-<<<<<<< HEAD
             <a href="/pages/ComprehensiveServices2035" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               View Services →
-<<<<<<< HEAD
             <a href="/pages/RevolutionaryTechShowcase2035" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
         
         <div className="mt-12 text-lg opacity-75">
           <p>🌟 The most advanced technology content ever created • Revolutionary breakthroughs • Infinite possibilities • Future is now</p>

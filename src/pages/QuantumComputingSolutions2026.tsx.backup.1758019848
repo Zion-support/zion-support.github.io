@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import QuantumComputingSolutions2026 from '../components/QuantumComputingSolutions2026';
 
@@ -6,11 +5,9 @@ export default function QuantumComputingSolutions2026Page() {
   return <QuantumComputingSolutions2026 />;
 }
 
-=======
 import React, { useState } from 'react';
 
 const QuantumComputingSolutions2026: React.FC = () => {
-<<<<<<< HEAD
   const [selectedSolution, setSelectedSolution] = useState('overview');
 
   const solutions = [
@@ -41,7 +38,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
             </button>
             <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-colors font-semibold text-lg">
               Request Demo
-=======
   const solutions = [
     {
       title: 'Quantum Supremacy Platform',

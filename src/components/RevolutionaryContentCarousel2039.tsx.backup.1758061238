@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "🚀 Ultimate Tech Breakthrough 2039",
       description: "Experience the most revolutionary technological advances that will reshape our universe in 2039",
       features: ["Conscious AI Universes", "Quantum Consciousness Transfer", "Interdimensional Reality Engine"],
       link: "/pages/UltimateTechBreakthrough2039",
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900 to-pink-900"
-<<<<<<< HEAD
       bgGradient: "from-emerald-900 to-teal-900"
     },
     {
@@ -17,15 +14,11 @@
       link: "/pages/TranscendentTechRevolution2039",
       gradient: "from-violet-600 to-fuchsia-600",
       bgGradient: "from-violet-900 to-fuchsia-900"
-<<<<<<< HEAD
     return () => clearInterval(timer);
   }, [contentSlides.length]);
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Content Carousel 2039</h2>
           <p className="text-xl opacity-90">Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology</p>
-<<<<<<< HEAD
           <div className="overflow-hidden rounded-xl">
-<<<<<<< HEAD
               {contentSlides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${slide.bgGradient} rounded-xl p-12 text-center`}>
@@ -46,7 +39,6 @@
                     >
                       Explore {slide.title.split(' ')[0]} →
                     </a>
-<<<<<<< HEAD
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -108,7 +100,6 @@
             </a>
           </div>
         </div>
-=======
 import React from 'react';
 
 const RevolutionaryContentCarousel2039: React.FC = () => {

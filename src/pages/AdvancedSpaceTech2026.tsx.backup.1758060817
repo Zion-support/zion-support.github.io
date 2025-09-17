@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
 import { motion } from 'framer-motion';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 
@@ -47,7 +41,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Mission Overview */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -162,7 +155,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="flex items-center"
-=======
           {/* Active Mission Display */}
             <divdiv
               key={activeMission}
@@ -175,7 +167,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
                   <p className="text-blue-100">Mars Rover Mission Launch</p>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="w-8 h-8 bg-blue-500 rounded-full border-4 border-white flex-shrink-0"></div>
               <div className="w-1/2 pl-8"></div>
             </motion.div>
@@ -211,7 +202,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
               <div className="w-8 h-8 bg-purple-500 rounded-full border-4 border-white flex-shrink-0"></div>
               <div className="w-1/2 pl-8"></div>
             </motion.div>
-=======
               <h2 className="text-4xl font-bold mb-4">
                 {spaceMissions[activeMission as keyof typeof spaceMissions].title}
               </h2>
@@ -395,4 +385,3 @@ const AdvancedSpaceTech2026: React.FC = () => {
   );
 };
 
-export default AdvancedSpaceTech2026;

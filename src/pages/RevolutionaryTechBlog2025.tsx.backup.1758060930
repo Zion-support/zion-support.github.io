@@ -1,14 +1,10 @@
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             📰 REVOLUTIONARY INSIGHTS • JANUARY 2025
-<<<<<<< HEAD
         </div>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-8 text-center">Featured Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 hover:scale-105 transition-all duration-300">
@@ -49,7 +45,6 @@
                 <button className="text-emerald-400 hover:text-emerald-300 font-semibold">Read More →</button>
               </div>
             </article>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
           <div className="space-y-8">
             <article className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -57,7 +52,6 @@
                 <div className="md:w-1/3">
                   <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
                     <span className="text-4xl">🤖</span>
-<<<<<<< HEAD
               </div>
             </article>
 
@@ -138,7 +132,6 @@
               <p className="text-sm text-gray-300 mb-4">Emerging technologies and trends</p>
               <button className="text-orange-400 hover:text-orange-300 font-semibold">Explore Future →</button>
             </div>
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Latest Tech Insights</h2>

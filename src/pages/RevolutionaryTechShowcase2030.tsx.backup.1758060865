@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -159,7 +158,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               </ul>
             </motion.div>
           ))}
-<<<<<<< HEAD
       {/* Interactive Demo Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
         <div className="container mx-auto px-4">
@@ -222,7 +220,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Create Reality
               </motion.button>
             </motion.div>
-<<<<<<< HEAD
       {/* Testimonials */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">

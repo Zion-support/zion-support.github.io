@@ -220,7 +220,6 @@
       demoUrl: "/pages/RevolutionaryTechShowcase2034"
     }
   ];
-=======
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);

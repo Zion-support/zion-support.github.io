@@ -15,7 +15,6 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Interactive Consciousness Demo */}
       <div className="bg-gradient-to-r from-purple-900/30 to-cyan-900/30 py-20">
@@ -95,7 +94,6 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
       {/* Consciousness Applications */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -230,7 +228,6 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
             </motion.button>
           </div>
         </motion.div>
-=======
     </div>
   );
 };

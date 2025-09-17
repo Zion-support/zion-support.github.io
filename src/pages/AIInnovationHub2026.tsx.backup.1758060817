@@ -3,7 +3,6 @@ import React from 'react';
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-<<<<<<< HEAD
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -27,7 +26,6 @@ const AIInnovationHub2026: React.FC = () => {
                 🧠 AI Research
               </button>
             </div>
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <divdiv
@@ -47,7 +45,6 @@ const AIInnovationHub2026: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our comprehensive range of AI innovations across multiple domains
           </p>
-<<<<<<< HEAD
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -167,7 +164,6 @@ const AIInnovationHub2026: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
               <div className="text-lg opacity-80">AI Models Deployed</div>
-=======
         </divdiv>
 
         {/* AI Innovation Categories */}
@@ -333,7 +329,6 @@ const AIInnovationHub2026: React.FC = () => {
               <div className="text-lg opacity-80">Researchers</div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Call to Action */}
@@ -341,7 +336,6 @@ const AIInnovationHub2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">Join the AI Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Be part of the future of AI innovation. Access cutting-edge research, tools, and community.
-=======
         </divdiv>
 
         {/* AI Applications */}
@@ -413,9 +407,7 @@ const AIInnovationHub2026: React.FC = () => {
               📚 Research Papers
             </button>
           </div>
-<<<<<<< HEAD
         </div>
-=======
         </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
@@ -423,4 +415,3 @@ const AIInnovationHub2026: React.FC = () => {
   );
 };
 
-export default AIInnovationHub2026;

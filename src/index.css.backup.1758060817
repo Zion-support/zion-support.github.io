@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -112,7 +106,6 @@
 }
 
 >>>>>>> cursor/create-and-deploy-new-content-1912
-=======
 >>>>>>> cursor/create-and-deploy-new-content-b33e
 >>>>>>> cursor/create-and-deploy-new-content-291f
 /* Accessibility Enhancements */
@@ -225,8 +218,6 @@
   border: 0;
 }
 
-<<<<<<< HEAD
-=======
 .high-contrast button,
 .high-contrast input,
 .high-contrast select,
@@ -372,4 +363,3 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}

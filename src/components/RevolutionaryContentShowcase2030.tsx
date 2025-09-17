@@ -15,7 +15,6 @@
   );
 };
 export default RevolutionaryContentShowcase2030;
-=======
   return (
     <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 rounded-3xl p-16 mb-16 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm"></div>

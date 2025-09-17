@@ -1,26 +1,17 @@
 // Notification utilities
 interface NotificationOptions {
-<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
-=======
-<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
-=======
-<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
-=======
-=======
-=======
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -30,15 +21,6 @@ interface NotificationOptions {
  */
 
 export interface NotificationOptions {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -84,13 +66,6 @@ class NotificationManager {
         console.warn('Notification permission denied');
         return null;
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -142,15 +117,6 @@ export const notifications = {
     if (Notification.permission !== 'granted') {
       console.warn('Notification permission not granted');
       return null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -161,12 +127,6 @@ export const notifications = {
   actions?: NotificationAction[];
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 }
 
 class NotificationManager {
@@ -197,13 +157,6 @@ class NotificationManager {
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -237,13 +190,6 @@ class NotificationManager {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -269,15 +215,6 @@ class NotificationManager {
    */
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -315,13 +252,6 @@ class NotificationManager {
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3
@@ -355,15 +285,6 @@ export default notificationManager;
 };
 
 export default notifications;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>> cursor/create-and-deploy-new-content-bec3

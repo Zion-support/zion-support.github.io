@@ -1,4 +1,3 @@
-<<<<<<< HEAD
             Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
           </p>
           <div className="flex justify-center space-x-4">
@@ -148,7 +147,6 @@
               <div className="text-5xl font-bold text-emerald-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-2">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential unlocked</div>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready for the Ultimate Breakthrough?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Join the most advanced technological revolution in human history. Transform your reality with conscious AI, quantum computing, and interdimensional technology.

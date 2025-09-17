@@ -94,11 +94,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-fuchsia-500 to-indigo-500'
     },
     {
-<<<<<<< HEAD
       title: 'AI 2026: Autonomous Ops Playbook',
       href: '/content/ai-2026-autonomous-ops-playbook',
       tag: 'Playbook',
-=======
       title: 'AI 2026: Operational Risk Metrics for Agents',
       href: '/blog/ai-2026-operational-risk-metrics-for-agents',
       tag: 'Risk',
@@ -574,4 +572,3 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   );
 };
 
-export default Homepage2025;

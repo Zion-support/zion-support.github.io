@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -169,7 +167,6 @@
             </p>
             <div className="text-sm text-emerald-200">
               <span className="font-semibold">Result:</span> 35% increase in strategic accuracy
-<<<<<<< HEAD
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">

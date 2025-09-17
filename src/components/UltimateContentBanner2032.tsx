@@ -7,7 +7,6 @@
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Ultimate Tech Breakthrough 2032
-=======
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

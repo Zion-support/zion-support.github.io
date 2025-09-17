@@ -187,7 +187,6 @@
               Schedule Demo
             </button>
           </div>
-=======
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2037
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

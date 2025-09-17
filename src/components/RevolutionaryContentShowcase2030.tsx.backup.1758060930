@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 rounded-3xl p-16 mb-16 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm"></div>
@@ -21,7 +20,6 @@
             <p className="text-violet-100 mb-8 text-center text-lg">
               Experience the ultimate convergence of consciousness, reality, and technology with 
               omniversal AI and reality synthesis capabilities
-<<<<<<< HEAD
           
           <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🧠</div>

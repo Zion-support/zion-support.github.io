@@ -143,7 +143,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
             ))}
           </div>
         </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

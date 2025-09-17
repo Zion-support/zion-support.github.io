@@ -14,7 +14,6 @@ const NextGenInnovationHub2037: React.FC = () => {
         <div className="text-center">
             </button>
           </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}

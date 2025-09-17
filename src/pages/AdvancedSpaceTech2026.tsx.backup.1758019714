@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 >>>>>>> origin/backup-main-20250916-071805
 import React, { useState, useEffect } from 'react';

@@ -46,7 +46,6 @@
       features: ['Infinite processing', 'Parallel realities', 'Quantum entanglement', 'Zero latency']
     },
     {
-=======
   ];
       title: "Conscious AI Networks",
       description: "Self-aware AI systems that collaborate and evolve together",
@@ -126,7 +125,6 @@
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
-=======
     }
   ];
   const filteredInnovations = selectedCategory === 'all' 
@@ -185,7 +183,6 @@
                 <div className="flex items-center space-x-2">
                   <span className={`px-3 py-1 ${getStatusColor(innovations[selectedInnovation].status)} text-white text-sm rounded-full`}>
                     {innovations[selectedInnovation].status}
-=======
               </div>
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between items-center">
@@ -254,7 +251,6 @@
         </div>
         {/* Call to Action */}
         <div className="text-center">
-=======
               <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
               <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
               <div className="text-sm opacity-80">Continuous development</div>

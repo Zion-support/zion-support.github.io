@@ -464,8 +464,5 @@ const UltimateTechBreakthrough2036: React.FC = () => {
 };
 
 export default UltimateTechBreakthrough2036;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

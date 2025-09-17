@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
@@ -29,7 +28,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/production-evals-cookbook-2026.jpg",
     slug: "ai-2026-production-evals-practical-cookbook"
-=======
     id: 4001,
     title: "AI 2026: Edge Agents Production Guide",
     excerpt: "Blueprint to deploy low-latency edge agents with budget-aware routing.",
@@ -421,7 +419,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 33,
     title: "AI 2026: Agent Platform Operations",
     excerpt: "SLOs, incidents, change management, and eval-gated releases for agent platforms.",
@@ -643,7 +640,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-=======
     imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
     slug: "next-gen-innovation-hub-future-born"
   },
@@ -813,10 +809,7 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -958,4 +951,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

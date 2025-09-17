@@ -226,7 +226,6 @@ const InteractiveContentShowcase2026 = () => {
   );
 };
 export default InteractiveContentShowcase2026;
-=======
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">

@@ -50,7 +50,6 @@ const UltimateContentBanner2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most revolutionary technology content featuring AI Innovation, Quantum Computing, and Neural Interfaces
           </p>
-=======
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -137,7 +136,6 @@ const UltimateContentBanner2026: React.FC = () => {
               🧠 Innovation Hub →
             </a>
           </div>
-=======
         <div className="mt-6 text-lg opacity-90">
           🚀 50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities 🚀
         </div>
@@ -145,4 +143,3 @@ const UltimateContentBanner2026: React.FC = () => {
     </div>
   );
 };
-export default UltimateContentBanner2026;

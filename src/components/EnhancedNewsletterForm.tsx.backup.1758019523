@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useRef } from "react";
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
 >>>>>>> origin/merged-prs
 
 export function EnhancedNewsletterForm() {
 
-<<<<<<< HEAD
   const [email, setEmail] = useState("");
-=======
 >>>>>>> origin/merged-prs
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -27,19 +23,15 @@ export function EnhancedNewsletterForm() {
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
 
-<<<<<<< HEAD
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
-=======
 >>>>>>> origin/merged-prs
       return;
     }
 
     setIsSubmitting(true);
     try {
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/merged-prs
       const res = await fetch("/api/newsletter", {
@@ -50,8 +42,6 @@ export function EnhancedNewsletterForm() {
 
       const data = await res.json().catch(() => ({}));
 
-<<<<<<< HEAD
-=======
     }
   }
 
@@ -78,9 +68,7 @@ export function EnhancedNewsletterForm() {
     } finally {
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
   };
-=======
   }
 
           toast.success(data.message || "Thanks for subscribing!")
@@ -112,13 +100,11 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
-<<<<<<< HEAD
       
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
-=======
 
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
@@ -139,8 +125,6 @@ export function EnhancedNewsletterForm() {
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-<<<<<<< HEAD
-=======
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setEmail(e.target.value)
             }
@@ -207,9 +191,7 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 
 }
 

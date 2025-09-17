@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 >>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526
 import { Helmet } from 'react-helmet-async';
@@ -13,13 +10,11 @@ const AIConsciousnessRevolution2026: React.FC = () => {
         <meta name="description" content="AIConsciousnessRevolution2026 - Revolutionary technology solutions" />
       </Helmet>
       
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 AI CONSCIOUSNESS REVOLUTION • 2026
-<<<<<<< HEAD
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Experience Consciousness
             </button>
@@ -195,7 +190,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
-=======
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">AIConsciousnessRevolution2026</h1>

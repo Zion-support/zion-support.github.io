@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -246,7 +243,6 @@
               Learn More
             </button>
           </div>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 

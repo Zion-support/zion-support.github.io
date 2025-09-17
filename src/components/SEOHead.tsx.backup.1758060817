@@ -7,7 +7,6 @@ interface SEOHeadProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-<<<<<<< HEAD
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -16,7 +15,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology, innovation, 2025, revolutionary tech, Zion Tech Group",
   canonical,
   ogImage = "/og-image.jpg"
-=======
   structuredData?: any;
 }
 
@@ -58,8 +56,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   return (
     <Helmet>
-<<<<<<< HEAD
-=======
       {/* Basic Meta Tags */}
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <title>{title}</title>
@@ -67,7 +63,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonical} />
       
-<<<<<<< HEAD
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
@@ -86,7 +81,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-=======
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -122,7 +116,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-<<<<<<< HEAD
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
@@ -132,7 +125,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ]
-=======
           "@type": "Service",
           "name": "Revolutionary Technology Solutions",
           "description": "Advanced technology solutions including quantum consciousness, interdimensional technology, and AI systems",
@@ -176,4 +168,3 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 
-export default SEOHead;

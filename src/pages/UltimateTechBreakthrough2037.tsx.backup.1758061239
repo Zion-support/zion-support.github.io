@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6">🚀 Ultimate Tech Breakthrough 2037</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-<<<<<<< HEAD
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -45,7 +42,6 @@
               <li>• Cross-Dimensional Communication</li>
               <li>• Infinite Possibilities</li>
             </ul>
-<<<<<<< HEAD
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Revolutionary Features 2037</h2>
             <p className="text-xl opacity-90">Discover the most advanced features that will define the future</p>
@@ -106,8 +102,6 @@
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Success Metrics */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Breakthrough Success Metrics</h2>
@@ -153,15 +147,10 @@
                 <h3 className="text-xl font-bold mb-4 text-purple-300">Infinite Reality</h3>
                 <p className="text-purple-100">Create and control infinite realities and dimensions</p>
               </div>
-<<<<<<< HEAD
           <p className="text-xl mb-8 opacity-90">Join us in shaping the next evolution of human-AI collaboration</p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey →
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 

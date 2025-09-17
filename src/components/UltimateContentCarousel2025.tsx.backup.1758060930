@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
@@ -15,7 +14,6 @@ const UltimateContentCarousel2025 = () => {
   }[]);
 
   const slides = [
-<<<<<<< HEAD
     <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
     >
@@ -127,7 +125,6 @@ const UltimateContentCarousel2025 = () => {
                   </div>
                 </div>
               </divdiv>
-<<<<<<< HEAD
         {/* Additional Info */}
         <divdiv
           className="mt-16 text-center"
@@ -145,5 +142,4 @@ const UltimateContentCarousel2025 = () => {
               <Download className="w-5 h-5" />
               <span>Free Resources & Guides</span>
             </div>
-<<<<<<< HEAD
     </divsection>

@@ -2,8 +2,6 @@ import React from 'react';
 
 const RevolutionaryContentBanner2030: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
       <div className={`bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
@@ -32,7 +30,6 @@ const RevolutionaryContentBanner2030: React.FC = () => {
               </a>
             ))}
           </div>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -160,7 +157,6 @@ const RevolutionaryContentBanner2030: React.FC = () => {
             Join thousands of users already experiencing the future of technology
           </p>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -190,4 +186,3 @@ const RevolutionaryContentBanner2030: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentBanner2030;

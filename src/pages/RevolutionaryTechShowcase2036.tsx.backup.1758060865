@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
 
   const demos = [
@@ -74,4 +73,3 @@
               </button>
             ))}
           </div>
-<<<<<<< HEAD

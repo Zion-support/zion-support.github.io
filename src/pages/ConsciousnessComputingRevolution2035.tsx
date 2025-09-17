@@ -223,7 +223,6 @@
   );
 };
 export default ConsciousnessComputingRevolution2035;
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
             <div className="space-y-4">
