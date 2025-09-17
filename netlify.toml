@@ -4,7 +4,7 @@
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
- # ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:00:01Z
+# ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:45:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -94,7 +94,7 @@
 
 # Removed Next.js plugin since this is a Vite project
 
-# Redirects for SEO/legacy URLs
+# Redirects for SEO/legacy URLs (no-op reformat trigger)
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -175,10 +175,10 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Handle client-side routing for SPA
+# Handle client-side routing for SPA (no-op)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
- # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2)
+# build trigger: chore(netlify): retrigger Netlify deploy (no-op change v3)
