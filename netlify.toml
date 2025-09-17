@@ -1,7 +1,7 @@
 # Netlify build configuration for Next.js app (zion-website)
-# noop: retrigger netlify build (2025-09-17 21:20 UTC) - local build verified OK
+# Updated: Next SSR build with Netlify Next.js plugin
 [build]
-  # Build Next.js app in zion-website and serve from Next output
+  # Build Next.js app in zion-website and publish Next output for Netlify adapter
   command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
   publish = "zion-website/.next"
 
