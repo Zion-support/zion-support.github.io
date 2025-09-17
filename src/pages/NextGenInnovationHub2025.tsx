@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 const NextGenInnovationHub2025: React.FC = () => {
@@ -59,6 +60,9 @@ const NextGenInnovationHub2025: React.FC = () => {
       color: "from-orange-500 to-red-500"
 =======
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/revolutionary-content-2025
 import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
@@ -96,6 +100,7 @@ const NextGenInnovationHub2025: React.FC = () => {
 
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -125,9 +130,49 @@ const NextGenInnovationHub2025: React.FC = () => {
               </button>
             </div>
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-blue-900 to-purple-900 text-white">
+      {/* Hero Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+        transition={{ duration: 0.8 }}
+        className="relative py-20 px-4 text-center overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={{ scale: isVisible ? 1 : 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse"
+          >
+            🧠 NEXT-GEN INNOVATION HUB • 2025
+          </motion.div>
+          
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-7xl font-bold mb-6 bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent"
+          >
+            Next-Gen Innovation Hub 2025
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-2xl opacity-90 max-w-4xl mx-auto mb-12"
+          >
+            Discover and explore the most revolutionary technologies shaping humanity's future
+          </motion.p>
+>>>>>>> origin/revolutionary-content-2025
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Innovation Tabs */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -152,6 +197,21 @@ const NextGenInnovationHub2025: React.FC = () => {
                 activeTab === key
                   ? `bg-gradient-to-r ${innovation.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
+=======
+      {/* Innovation Categories */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          {Object.keys(innovations).map((innovation) => (
+            <motion.button
+              key={innovation}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveInnovation(innovation)}
+              className={`p-6 rounded-xl transition-all duration-300 ${
+                activeInnovation === innovation
+                  ? `bg-gradient-to-r ${innovations[innovation as keyof typeof innovations].color} text-white shadow-lg`
+                  : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+>>>>>>> origin/revolutionary-content-2025
               }`}
             >
               <span className="mr-2">{innovation.icon}</span>
@@ -220,6 +280,7 @@ const NextGenInnovationHub2025: React.FC = () => {
               See how our innovations are transforming industries and creating new possibilities
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div
@@ -309,6 +370,16 @@ const NextGenInnovationHub2025: React.FC = () => {
         <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/30"
+=======
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="text-center mt-16"
+>>>>>>> origin/revolutionary-content-2025
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Join the Innovation Revolution
@@ -384,6 +455,7 @@ const NextGenInnovationHub2025: React.FC = () => {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Stats Section */}
@@ -708,6 +780,8 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+>>>>>>> origin/revolutionary-content-2025
       </div>
 >>>>>>> origin/resolved-merge-conflicts-2025
     </div>

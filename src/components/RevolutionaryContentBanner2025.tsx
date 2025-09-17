@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -30,6 +31,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, Brain, Rocket, Star } from 'lucide-react';
 >>>>>>> origin/feat/realtime-rag-content
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/revolutionary-content-2025
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const newContent = [
@@ -215,12 +220,24 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   }, [slides.length]);
 
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-black text-white py-16">
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
+=======
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden rounded-2xl mb-12"
+    >
+      {/* Background */}
+      <div className={`absolute inset-0 bg-gradient-to-r ${currentSlideData.bgColor} backdrop-blur-sm`}></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.3),transparent_50%)]"></div>
+>>>>>>> origin/revolutionary-content-2025
       
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
@@ -332,6 +349,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
@@ -580,6 +598,9 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       </div>
       </div>
 =======
+=======
+        </div>
+>>>>>>> origin/revolutionary-content-2025
       </div>
 
       {/* Slide Indicators */}
