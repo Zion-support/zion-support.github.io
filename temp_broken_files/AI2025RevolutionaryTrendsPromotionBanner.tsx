@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryTrendsPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025RevolutionaryTrendsPromotionBanner.tsx
 
-export default function AI2025RevolutionaryTrendsPromotionBanner() {
+const function AI2025RevolutionaryTrendsPromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryTrendsPromotionBanner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -75,3 +80,17 @@ export default function AI2025RevolutionaryTrendsPromotionBanner() {
       <div className="absolute bottom-20 left-20 w-5 h-5 bg-purple-400 rounded-full animate-bounce delay-2000"></div>
       <div className="absolute bottom-10 right-10 w-2 h-2 bg-green-400 rounded-full animate-bounce delay-500"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025RevolutionaryTrendsPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025RevolutionaryTrendsPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025RevolutionaryTrendsPromotionBanner.tsx

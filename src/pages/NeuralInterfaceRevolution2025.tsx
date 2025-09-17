@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 import React from 'react';
 
 
@@ -9,6 +12,7 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
@@ -1339,6 +1343,13 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
             Bridge the gap between mind and machine with our revolutionary neural interface technology that enables direct brain-computer communication.
           </p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">NeuralInterfaceRevolution2025</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
         </div>
       </div>
     </div>
@@ -1346,5 +1357,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
 
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 export default NeuralInterfaceRevolution2025;

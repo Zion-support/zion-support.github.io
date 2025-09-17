@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/UltimateContentShowcaseBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/UltimateContentShowcaseBanner.tsx
 
-export default function UltimateContentShowcaseBanner() {
+const function UltimateContentShowcaseBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/UltimateContentShowcaseBanner.tsx
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-8 mb-8 rounded-2xl shadow-2xl">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-6">
@@ -37,3 +42,17 @@ export default function UltimateContentShowcaseBanner() {
           >
             Latest Breakthrough
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function UltimateContentShowcaseBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function UltimateContentShowcaseBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/UltimateContentShowcaseBanner.tsx

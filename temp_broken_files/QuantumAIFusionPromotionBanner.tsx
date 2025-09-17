@@ -1,15 +1,19 @@
+<<<<<<< HEAD:temp_broken_files/QuantumAIFusionPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumAIFusionPromotionBanner.tsx
 
-export default function QuantumAIFusionPromotionBanner() {
+const function QuantumAIFusionPromotionBanner() { = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-teal-900 to-emerald-900">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD:temp_broken_files/QuantumAIFusionPromotionBanner.tsx
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-full text-white font-bold text-lg mb-6 animate-pulse">
             ⚡ QUANTUM AI FUSION 2030
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -46,3 +50,14 @@ export default function QuantumAIFusionPromotionBanner() {
         <div className="absolute bottom-10 left-20 w-12 h-12 bg-emerald-500 rounded-full opacity-20 animate-ping delay-2000"></div>
         <div className="absolute bottom-20 right-10 w-14 h-14 bg-cyan-400 rounded-full opacity-20 animate-ping delay-500"></div>
   );
+=======
+          <h1 className="text-5xl font-bold mb-6">function QuantumAIFusionPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumAIFusionPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumAIFusionPromotionBanner.tsx

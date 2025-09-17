@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2025Banner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumComputingSolutions2025Banner.tsx
 
-export default function QuantumComputingSolutions2025Banner() {
+const function QuantumComputingSolutions2025Banner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2025Banner.tsx
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -84,3 +89,17 @@ export default function QuantumComputingSolutions2025Banner() {
             <div className="text-sm font-bold text-white">Financial Modeling</div>
             <div className="text-xs text-yellow-400">10,000x ROI</div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumComputingSolutions2025Banner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumComputingSolutions2025Banner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumComputingSolutions2025Banner.tsx

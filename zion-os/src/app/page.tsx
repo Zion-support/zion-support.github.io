@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 <<<<<<< HEAD
@@ -304,10 +305,20 @@ import Link from 'next/link';
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+// @ts-nocheck
+import React from 'react';
+import Link from 'next/link';
+  ],
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <Link href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -316,6 +327,8 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -326,6 +339,7 @@ import Link from 'next/link';
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -373,6 +387,13 @@ import Link from 'next/link';
               </a>
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+              </Link>
+              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
+                ✅ New: AI Safety & Governance 2025
+              </a>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -381,6 +402,7 @@ import Link from 'next/link';
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -608,6 +630,8 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -616,6 +640,7 @@ import Link from 'next/link';
                 📊 Explore Examples
               </a>
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </a>
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
@@ -745,6 +770,10 @@ import Link from 'next/link';
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Operating Systems
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 import FeatureCard from './components/FeatureCard';
 =======
 import React from 'react'
@@ -839,6 +868,7 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1081,6 +1111,8 @@ export default function HomePage() {
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
               <FeatureCard
                 key={index}
                 icon={feature.icon}
@@ -1089,4 +1121,7 @@ export default function HomePage() {
                 features={feature.features}
                 gradient={feature.gradient}
               />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

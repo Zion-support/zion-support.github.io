@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Fortune 500 Manufacturing Giant Achieves 99.2% Uptime with AI Transformation"
 excerpt: "How a global manufacturing leader transformed operations with AI, achieving 99.2% uptime and $34.7M in annual savings."
@@ -226,3 +227,5 @@ The success of this transformation demonstrates that AI is not just a technology
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

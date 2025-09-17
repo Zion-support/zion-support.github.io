@@ -1,13 +1,28 @@
+<<<<<<< HEAD:temp_broken_files/services-advertising.tsx
 import React from 'react';
 const services-advertising: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">services-advertising</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
+=======
+import React from "react";
+
+const function ServicesAdvertisingPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ServicesAdvertisingPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/services-advertising.tsx
     </div>
   );
 };
 
+<<<<<<< HEAD:temp_broken_files/services-advertising.tsx
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -1012,3 +1027,6 @@ export default function ServicesAdvertisingPage() {
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
 	);
 }
+=======
+export default function ServicesAdvertisingPage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/services-advertising.tsx

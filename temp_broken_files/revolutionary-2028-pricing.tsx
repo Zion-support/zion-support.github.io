@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/revolutionary-2028-pricing.tsx
 import React from 'react';
 const revolutionary-2028-pricing: React.FC = () => {
   return (
@@ -329,3 +330,21 @@ export default function Revolutionary2028Pricing() {
     </>
   );
 }
+=======
+import React from "react";
+
+const function Revolutionary2028Pricing() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function Revolutionary2028Pricing() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function Revolutionary2028Pricing() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/revolutionary-2028-pricing.tsx

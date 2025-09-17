@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/micro-saas.tsx
 import React from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
@@ -2137,3 +2138,21 @@ export default function MicroSaasPage() {
 
 
 export default micro-saas;
+=======
+import React from "react";
+
+const function MicroSaasPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function MicroSaasPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function MicroSaasPage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/micro-saas.tsx

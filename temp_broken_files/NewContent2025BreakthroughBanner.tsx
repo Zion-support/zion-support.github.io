@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/NewContent2025BreakthroughBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NewContent2025BreakthroughBanner.tsx
 
-export default function NewContent2025BreakthroughBanner() {
+const function NewContent2025BreakthroughBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/NewContent2025BreakthroughBanner.tsx
     <section className="py-20 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,3 +75,17 @@ export default function NewContent2025BreakthroughBanner() {
           >
             Download All Resources
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function NewContent2025BreakthroughBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function NewContent2025BreakthroughBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NewContent2025BreakthroughBanner.tsx

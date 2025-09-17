@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2027ContentShowcaseBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2027ContentShowcaseBanner.tsx
 
-export default function AI2027ContentShowcaseBanner() {
+const function AI2027ContentShowcaseBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2027ContentShowcaseBanner.tsx
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-20 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -108,3 +113,17 @@ export default function AI2027ContentShowcaseBanner() {
       <div className="absolute top-1/3 right-10 w-16 h-16 bg-purple-400 bg-opacity-15 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 left-10 w-20 h-20 bg-pink-400 bg-opacity-10 rounded-full animate-pulse"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2027ContentShowcaseBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2027ContentShowcaseBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2027ContentShowcaseBanner.tsx

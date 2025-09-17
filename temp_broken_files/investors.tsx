@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/investors.tsx
 import React from 'react';
 import Head from 'next/head';
 };
@@ -20,3 +21,21 @@ export default function InvestorsPage() {
 					<div className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className="text-2xl font-bold text-white">15+</div><div className="text-slate-400 text-sm">Years experience</div></div>
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 	);
+=======
+import React from "react";
+
+const function InvestorsPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function InvestorsPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function InvestorsPage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/investors.tsx

@@ -1,12 +1,17 @@
+<<<<<<< HEAD:temp_broken_files/AIFuturePredictionsUltimate2025_2035Banner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarBrainZapGlobeTrendingUpTarget
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AIFuturePredictionsUltimate2025_2035Banner.tsx
 
-export default function AIFuturePredictionsUltimate2025_2035Banner() {
+const function AIFuturePredictionsUltimate2025_2035Banner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AIFuturePredictionsUltimate2025_2035Banner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -61,3 +66,17 @@ export default function AIFuturePredictionsUltimate2025_2035Banner() {
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIFuturePredictionsUltimate2025_2035Banner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AIFuturePredictionsUltimate2025_2035Banner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AIFuturePredictionsUltimate2025_2035Banner.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
 import React from 'react';
 import SEO from '../components/SEO';
 import { 
@@ -256,3 +257,21 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
 
 export default 2025-comprehensive-services-showcase-v2;
+=======
+import React from "react";
+
+const function ComprehensiveServicesShowcase2025V2() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2025V2() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function ComprehensiveServicesShowcase2025V2() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/2025-comprehensive-services-showcase-v2.tsx

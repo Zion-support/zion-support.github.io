@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/QuantumRevolution2025Banner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumRevolution2025Banner.tsx
 
-export default function QuantumRevolution2025Banner() {
+const function QuantumRevolution2025Banner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/QuantumRevolution2025Banner.tsx
     <section className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -63,3 +68,17 @@ export default function QuantumRevolution2025Banner() {
               <div className="text-3xl font-bold text-yellow-400 mb-1">0</div>
               <div className="text-sm opacity-80">Energy Waste</div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumRevolution2025Banner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumRevolution2025Banner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumRevolution2025Banner.tsx

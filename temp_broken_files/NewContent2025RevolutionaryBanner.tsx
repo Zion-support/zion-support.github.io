@@ -1,15 +1,19 @@
+<<<<<<< HEAD:temp_broken_files/NewContent2025RevolutionaryBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NewContent2025RevolutionaryBanner.tsx
 
-export default function NewContent2025RevolutionaryBanner() {
+const function NewContent2025RevolutionaryBanner() { = () => {
   return (
-    <section className="relative py-16 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD:temp_broken_files/NewContent2025RevolutionaryBanner.tsx
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium animate-pulse">🚀 REVOLUTIONARY CONTENT</span>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -58,3 +62,14 @@ export default function NewContent2025RevolutionaryBanner() {
             >
               📧 Get Updates
   );
+=======
+          <h1 className="text-5xl font-bold mb-6">function NewContent2025RevolutionaryBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function NewContent2025RevolutionaryBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NewContent2025RevolutionaryBanner.tsx

@@ -1,14 +1,19 @@
+<<<<<<< HEAD:temp_broken_files/AI2025FuturePredictionsBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025FuturePredictionsBanner.tsx
 
-export default function AI2025FuturePredictionsBanner() {
+const function AI2025FuturePredictionsBanner() { = () => {
   return (
-    <section className="bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-800 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD:temp_broken_files/AI2025FuturePredictionsBanner.tsx
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full px-6 py-2 mb-6 text-black">
             <span className="text-sm font-bold">🔮 AI FUTURE PREDICTIONS 2025</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -42,3 +47,14 @@ export default function AI2025FuturePredictionsBanner() {
               <h3 className="text-lg font-semibold mb-2">Global Integration</h3>
               <p className="text-sm opacity-90">Industry transformation</p>
   );
+=======
+          <h1 className="text-5xl font-bold mb-6">function AI2025FuturePredictionsBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025FuturePredictionsBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025FuturePredictionsBanner.tsx

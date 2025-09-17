@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/contact.tsx
 export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
@@ -85,8 +86,13 @@ export default function ContactPage() {
     { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' },
     { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
   ];
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/contact.tsx
 
+const function Page(){return null} = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/contact.tsx
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>
         <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services</title>
@@ -530,5 +536,17 @@ export default function ContactPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function Page(){return null}</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/contact.tsx
   );
-}
+};
+
+export default function Page(){return null};

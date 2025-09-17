@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/AIContentGenerator.tsx
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -286,5 +287,20 @@ export default function AIContentGenerator() {
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
               <Link to="/contact">
                 Contact Sales
+=======
+
+const function AIContentGenerator() {: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIContentGenerator() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/AIContentGenerator.tsx
   );
-}
+};
+
+export default function AIContentGenerator() {;

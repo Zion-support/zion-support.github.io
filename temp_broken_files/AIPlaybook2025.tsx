@@ -3,8 +3,9 @@ import React from 'react';
 
 
 
-export default function AIPlaybook2025(): JSX.Element {
+const function AIPlaybook2025(): JSX.Element {: React.FC = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AIPlaybook2025.tsx
     <main className="container mx-auto px-4 py-16">
       <div className="text-center max-w-4xl mx-auto">
         <div className="inline-block px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -48,3 +49,17 @@ export default function AIPlaybook2025(): JSX.Element {
               >
                 Explore Services
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIPlaybook2025(): JSX.Element {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AIPlaybook2025(): JSX.Element {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/AIPlaybook2025.tsx

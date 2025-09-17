@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Fetch with retry utility for robust API calls
 // Fetch with retry utility
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
@@ -25,3 +26,5 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
 };
 
 export default fetchWithRetry;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

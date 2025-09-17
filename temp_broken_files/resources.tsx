@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/resources.tsx
 import React from 'react';
 const resources: React.FC = () => {
   return (
@@ -22,9 +23,27 @@ const resources: React.FC = () => {
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
           ))}
+=======
+import React from "react";
+
+const function ResourcesPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ResourcesPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/resources.tsx
   );
 
 };
 
+<<<<<<< HEAD:temp_broken_files/resources.tsx
 
 export default ResourcesPage;
+=======
+export default function ResourcesPage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/resources.tsx

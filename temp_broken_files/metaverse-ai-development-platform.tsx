@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/metaverse-ai-development-platform.tsx
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star } from 'lucide-react';
@@ -41,5 +42,21 @@ export default function MetaverseAIPlatformPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+=======
+import React from "react";
+
+const function MetaverseAIPlatformPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function MetaverseAIPlatformPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/metaverse-ai-development-platform.tsx
   );
-}
+};
+
+export default function MetaverseAIPlatformPage() {;

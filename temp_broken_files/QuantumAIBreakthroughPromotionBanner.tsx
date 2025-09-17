@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/QuantumAIBreakthroughPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumAIBreakthroughPromotionBanner.tsx
 
-export default function QuantumAIBreakthroughPromotionBanner() {
+const function QuantumAIBreakthroughPromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/QuantumAIBreakthroughPromotionBanner.tsx
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-8 px-4 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -49,3 +54,17 @@ export default function QuantumAIBreakthroughPromotionBanner() {
             >
               Schedule Consultation
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumAIBreakthroughPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumAIBreakthroughPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumAIBreakthroughPromotionBanner.tsx

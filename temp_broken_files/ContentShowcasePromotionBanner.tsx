@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/ContentShowcasePromotionBanner.tsx
 import React from 'react';
 ArrowRightStarZapBrainAtom
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ContentShowcasePromotionBanner.tsx
 
-export default function ContentShowcasePromotionBanner() {
+const function ContentShowcasePromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/ContentShowcasePromotionBanner.tsx
     <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -72,3 +77,17 @@ export default function ContentShowcasePromotionBanner() {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
               Subscribe to Updates
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ContentShowcasePromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function ContentShowcasePromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ContentShowcasePromotionBanner.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/AIToolsUtilities2025Banner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightWrenchCodeDatabaseBarChart3ShieldZapBrainStar
@@ -96,3 +97,21 @@ export default function AIToolsUtilities2025Banner() {
 
 
 export default AIToolsUtilities2025Banner;
+=======
+import React from "react";
+
+const function AIToolsUtilities2025Banner() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIToolsUtilities2025Banner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AIToolsUtilities2025Banner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AIToolsUtilities2025Banner.tsx

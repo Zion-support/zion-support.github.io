@@ -1,14 +1,19 @@
+<<<<<<< HEAD:temp_broken_files/AI2025TrendsPredictionsPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025TrendsPredictionsPromotionBanner.tsx
 
-export default function AI2025TrendsPredictionsPromotionBanner() {
+const function AI2025TrendsPredictionsPromotionBanner() { = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD:temp_broken_files/AI2025TrendsPredictionsPromotionBanner.tsx
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 mb-6">
             <span className="text-blue-300 font-semibold text-sm animate-pulse">🔮 EXPERT ANALYSIS</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
@@ -42,3 +47,14 @@ export default function AI2025TrendsPredictionsPromotionBanner() {
           <div className="mt-8 text-sm text-gray-400">
             Comprehensive 15-minute read with actionable insights
   );
+=======
+          <h1 className="text-5xl font-bold mb-6">function AI2025TrendsPredictionsPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025TrendsPredictionsPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025TrendsPredictionsPromotionBanner.tsx

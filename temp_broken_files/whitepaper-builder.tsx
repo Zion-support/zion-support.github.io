@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/whitepaper-builder.tsx
 import React, { useMemo, useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
@@ -46,3 +47,21 @@ export default function WhitepaperBuilderPage() {
 
 
 export default whitepaper-builder;
+=======
+import React from "react";
+
+const function WhitepaperBuilderPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function WhitepaperBuilderPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function WhitepaperBuilderPage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/whitepaper-builder.tsx

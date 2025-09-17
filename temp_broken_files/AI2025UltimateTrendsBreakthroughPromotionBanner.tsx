@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025UltimateTrendsBreakthroughPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025UltimateTrendsBreakthroughPromotionBanner.tsx
 
-export default function AI2025UltimateTrendsBreakthroughPromotionBanner() {
+const function AI2025UltimateTrendsBreakthroughPromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025UltimateTrendsBreakthroughPromotionBanner.tsx
     <section className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white py-12 overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
@@ -72,3 +77,17 @@ export default function AI2025UltimateTrendsBreakthroughPromotionBanner() {
               <span className="text-green-400">✓</span>
               <span>Industry-Leading Accuracy</span>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025UltimateTrendsBreakthroughPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025UltimateTrendsBreakthroughPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025UltimateTrendsBreakthroughPromotionBanner.tsx

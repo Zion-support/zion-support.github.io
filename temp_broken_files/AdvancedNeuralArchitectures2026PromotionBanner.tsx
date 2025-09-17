@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AdvancedNeuralArchitectures2026PromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AdvancedNeuralArchitectures2026PromotionBanner.tsx
 
-export default function AdvancedNeuralArchitectures2026PromotionBanner() {
+const function AdvancedNeuralArchitectures2026PromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AdvancedNeuralArchitectures2026PromotionBanner.tsx
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -75,3 +80,17 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
             <a href="/services" className="text-purple-300 hover:text-white transition-colors">
               Our Services →
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AdvancedNeuralArchitectures2026PromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AdvancedNeuralArchitectures2026PromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AdvancedNeuralArchitectures2026PromotionBanner.tsx

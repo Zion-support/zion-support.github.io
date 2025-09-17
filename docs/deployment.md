@@ -51,6 +51,7 @@ VITE_APP_ENV=production
 
 _Generated automatically by Smart Documentation Generator_
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Deployment Strategies and Processes
 
 This document outlines the deployment strategies and processes for the various components of the Zion platform.
@@ -173,3 +174,5 @@ The Next.js frontend application has two main deployment configurations:
 _This document will continue to evolve. Create detailed playbooks for each environment and update this guide whenever deployment steps change._
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

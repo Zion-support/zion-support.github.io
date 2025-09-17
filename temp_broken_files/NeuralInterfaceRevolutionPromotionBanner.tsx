@@ -1,15 +1,19 @@
+<<<<<<< HEAD:temp_broken_files/NeuralInterfaceRevolutionPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NeuralInterfaceRevolutionPromotionBanner.tsx
 
-export default function NeuralInterfaceRevolutionPromotionBanner() {
+const function NeuralInterfaceRevolutionPromotionBanner() { = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD:temp_broken_files/NeuralInterfaceRevolutionPromotionBanner.tsx
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full text-white font-bold text-lg mb-6 animate-pulse">
             🧠 NEURAL INTERFACE REVOLUTION 2035
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -52,3 +56,14 @@ export default function NeuralInterfaceRevolutionPromotionBanner() {
           <line x1="20%" y1="80%" x2="10%" y2="90%" stroke="white" strokeWidth="2" className="animate-pulse delay-2000" />
           <line x1="90%" y1="90%" x2="80%" y2="80%" stroke="white" strokeWidth="2" className="animate-pulse delay-500" />
   );
+=======
+          <h1 className="text-5xl font-bold mb-6">function NeuralInterfaceRevolutionPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function NeuralInterfaceRevolutionPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NeuralInterfaceRevolutionPromotionBanner.tsx

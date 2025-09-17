@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025GlobalTransformationBreakthroughBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025GlobalTransformationBreakthroughBanner.tsx
 
-export default function AI2025GlobalTransformationBreakthroughBanner() {
+const function AI2025GlobalTransformationBreakthroughBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025GlobalTransformationBreakthroughBanner.tsx
     <div className="bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white py-12 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -53,3 +58,17 @@ export default function AI2025GlobalTransformationBreakthroughBanner() {
               <div className="text-2xl font-bold text-yellow-400 mb-2">6</div>
               <div className="text-sm text-green-100">Months to Results</div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025GlobalTransformationBreakthroughBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025GlobalTransformationBreakthroughBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025GlobalTransformationBreakthroughBanner.tsx

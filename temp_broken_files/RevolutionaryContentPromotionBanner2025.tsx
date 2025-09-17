@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentPromotionBanner2025.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarBookOpenPlayZapBrainTrendingUpUsersTargetCheckCircleAwardDollarSign
@@ -141,10 +142,16 @@ export default function RevolutionaryContentPromotionBanner2025({
               <ArrowRight className="h-4 w-4 ml-1" />
     );
   }
+=======
+import React from "react";
+
+const function RevolutionaryContentPromotionBanner2025({  = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryContentPromotionBanner2025.tsx
   return (
-    <section className={`py-12 ${currentContent.bgColor} ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentPromotionBanner2025.tsx
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-4">
             <Star className="h-4 w-4 text-yellow-400 mr-2" />
             <span className="text-sm font-semibold">FEATURED CONTENT</span>
@@ -170,3 +177,14 @@ export default function RevolutionaryContentPromotionBanner2025({
 
 
 export default RevolutionaryContentPromotionBanner2025;
+=======
+          <h1 className="text-5xl font-bold mb-6">function RevolutionaryContentPromotionBanner2025({ </h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function RevolutionaryContentPromotionBanner2025({ ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryContentPromotionBanner2025.tsx

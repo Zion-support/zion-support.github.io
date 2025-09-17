@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/pricing.tsx
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -129,8 +130,13 @@ export default function PricingPage() {
     : microSaasServices.filter(service => service.category === selectedCategory);
 
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/pricing.tsx
 
+const function PricingPage() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/pricing.tsx
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title>
@@ -413,5 +419,17 @@ export default function PricingPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function PricingPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/pricing.tsx
   );
-}
+};
+
+export default function PricingPage() {;

@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2026BreakthroughShowcasePromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2026BreakthroughShowcasePromotionBanner.tsx
 
-export default function AI2026BreakthroughShowcasePromotionBanner() {
+const function AI2026BreakthroughShowcasePromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2026BreakthroughShowcasePromotionBanner.tsx
     <section className="relative py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
@@ -47,3 +52,17 @@ export default function AI2026BreakthroughShowcasePromotionBanner() {
             >
               Get Started
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2026BreakthroughShowcasePromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2026BreakthroughShowcasePromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2026BreakthroughShowcasePromotionBanner.tsx

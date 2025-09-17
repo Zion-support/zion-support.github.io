@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { 
@@ -445,5 +446,21 @@ export default function ComprehensiveServicesShowcase2025() {
                 className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
               >
                 View Pricing Plans
+=======
+import React from "react";
+
+const function ComprehensiveServicesShowcase2025() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2025() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/comprehensive-services-showcase-2025.tsx
   );
-}
+};
+
+export default function ComprehensiveServicesShowcase2025() {;

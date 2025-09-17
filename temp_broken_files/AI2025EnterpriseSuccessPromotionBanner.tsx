@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025EnterpriseSuccessPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025EnterpriseSuccessPromotionBanner.tsx
 
-export default function AI2025EnterpriseSuccessPromotionBanner() {
+const function AI2025EnterpriseSuccessPromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025EnterpriseSuccessPromotionBanner.tsx
     <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
@@ -72,3 +77,17 @@ export default function AI2025EnterpriseSuccessPromotionBanner() {
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 fill-white">
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025EnterpriseSuccessPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025EnterpriseSuccessPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025EnterpriseSuccessPromotionBanner.tsx

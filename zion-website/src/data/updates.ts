@@ -1,8 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release' | 'Blueprint' | 'Field Guide' | 'Blog'
+=======
+export type SiteUpdate = {
+  title: string
+  summary: string
+  href: string
+  date?: string
+  tag?: string
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 
 <<<<<<< HEAD
 export const siteUpdates: SiteUpdate[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -355,6 +366,9 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+    title: 'Deep Dive: Enterprise Agent Observability (2026)',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
   },
   // Newly added 2025-09-15 (to advertise on homepage)
   {
@@ -364,6 +378,7 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/enterprise-retrieval-observability-2026',
     date: '2025-09-15',
     tag: 'Report'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -2998,6 +3013,10 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -3005,6 +3024,7 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .slice(0, limit)
 }
 
+<<<<<<< HEAD
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
@@ -3157,6 +3177,9 @@ export const siteUpdates: SiteUpdate[] = [
     id: 'dapp-challenge',
     title: 'Community Challenge: Build a DApp',
     summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+=======
+    id: 'advanced-blockchain-course',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     date: '2025-09-08',
     href: '/updates/dapp-challenge',
   },
@@ -3176,6 +3199,7 @@ export const siteUpdates: SiteUpdate[] = [
   },
 ]
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feature/updates-content
@@ -3484,3 +3508,5 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .slice(0, limit)
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

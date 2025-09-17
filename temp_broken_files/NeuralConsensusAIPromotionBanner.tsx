@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/NeuralConsensusAIPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NeuralConsensusAIPromotionBanner.tsx
 
-export default function NeuralConsensusAIPromotionBanner() {
+const function NeuralConsensusAIPromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/NeuralConsensusAIPromotionBanner.tsx
     <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-8 px-4 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -49,3 +54,17 @@ export default function NeuralConsensusAIPromotionBanner() {
             >
               Start Free Trial
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function NeuralConsensusAIPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function NeuralConsensusAIPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NeuralConsensusAIPromotionBanner.tsx

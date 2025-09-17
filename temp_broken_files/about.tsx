@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/about.tsx
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -245,5 +246,21 @@ export default function AboutPage() {
               <p className="text-gray-400 text-lg">
                 Start your 21-day free trial today and experience the future of technology
     </>
+=======
+import React from "react";
+
+const function AboutPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AboutPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/about.tsx
   );
-}
+};
+
+export default function AboutPage() {;

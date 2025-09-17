@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025UltimateBreakthroughAnnouncementBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025UltimateBreakthroughAnnouncementBanner.tsx
 
-export default function AI2025UltimateBreakthroughAnnouncementBanner() {
+const function AI2025UltimateBreakthroughAnnouncementBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025UltimateBreakthroughAnnouncementBanner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
@@ -79,3 +84,17 @@ export default function AI2025UltimateBreakthroughAnnouncementBanner() {
         <div className="absolute bottom-20 left-20 w-24 h-24 bg-pink-500/10 rounded-full animate-ping delay-2000"></div>
         <div className="absolute bottom-10 right-10 w-12 h-12 bg-cyan-500/10 rounded-full animate-ping delay-3000"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025UltimateBreakthroughAnnouncementBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025UltimateBreakthroughAnnouncementBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025UltimateBreakthroughAnnouncementBanner.tsx

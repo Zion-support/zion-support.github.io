@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/BlogPostLayout.tsx
 import React from 'react';
 const BlogPostLayout: React.FC = () => {
   return (
@@ -39,3 +40,21 @@ const BlogPostLayout: React.FC = () => {
 
 
 export default BlogPostLayout;
+=======
+import React from "react";
+
+const function BlogPostLayout({ postcontent }: BlogPostLayoutProps) { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/BlogPostLayout.tsx

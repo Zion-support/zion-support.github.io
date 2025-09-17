@@ -1,12 +1,17 @@
+<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateEnterpriseTransformationBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRightIconSparklesIconChartBarIconCpuChipIcon } from '@heroicons/react/24/outline';
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025_2026UltimateEnterpriseTransformationBanner.tsx
 
-export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
+const function AI2025_2026UltimateEnterpriseTransformationBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateEnterpriseTransformationBanner.tsx
     <section className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/neural-network-pattern.svg')] bg-cover opacity-10"></div>
@@ -71,3 +76,17 @@ export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025_2026UltimateEnterpriseTransformationBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025_2026UltimateEnterpriseTransformationBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025_2026UltimateEnterpriseTransformationBanner.tsx

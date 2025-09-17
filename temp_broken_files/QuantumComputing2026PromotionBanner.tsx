@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/QuantumComputing2026PromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumComputing2026PromotionBanner.tsx
 
-export default function QuantumComputing2026PromotionBanner() {
+const function QuantumComputing2026PromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/QuantumComputing2026PromotionBanner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 py-12 px-4">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10">
@@ -68,3 +73,17 @@ export default function QuantumComputing2026PromotionBanner() {
           <p className="text-white/70 text-sm mt-4">
             Join the quantum revolution - 5,000+ companies already achieving quantum supremacy
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumComputing2026PromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumComputing2026PromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumComputing2026PromotionBanner.tsx

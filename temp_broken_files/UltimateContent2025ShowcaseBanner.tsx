@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/UltimateContent2025ShowcaseBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/UltimateContent2025ShowcaseBanner.tsx
 
-export default function UltimateContent2025ShowcaseBanner() {
+const function UltimateContent2025ShowcaseBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/UltimateContent2025ShowcaseBanner.tsx
     <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -78,3 +83,17 @@ export default function UltimateContent2025ShowcaseBanner() {
             <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300 text-sm">Support Available</div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function UltimateContent2025ShowcaseBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function UltimateContent2025ShowcaseBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/UltimateContent2025ShowcaseBanner.tsx

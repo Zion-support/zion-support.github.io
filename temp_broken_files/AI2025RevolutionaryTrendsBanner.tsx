@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryTrendsBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025RevolutionaryTrendsBanner.tsx
 
-export default function AI2025RevolutionaryTrendsBanner() {
+const function AI2025RevolutionaryTrendsBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025RevolutionaryTrendsBanner.tsx
     <section className="py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
       <div className="relative max-w-7xl mx-auto px-4">
@@ -56,3 +61,17 @@ export default function AI2025RevolutionaryTrendsBanner() {
             >
               🚀 See Breakthrough Technology
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025RevolutionaryTrendsBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025RevolutionaryTrendsBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025RevolutionaryTrendsBanner.tsx

@@ -1,12 +1,17 @@
+<<<<<<< HEAD:temp_broken_files/AIToolsUltimateShowcase2025Banner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapTargetCodeDatabaseTrendingUp
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AIToolsUltimateShowcase2025Banner.tsx
 
-export default function AIToolsUltimateShowcase2025Banner() {
+const function AIToolsUltimateShowcase2025Banner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AIToolsUltimateShowcase2025Banner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -61,3 +66,17 @@ export default function AIToolsUltimateShowcase2025Banner() {
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIToolsUltimateShowcase2025Banner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AIToolsUltimateShowcase2025Banner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AIToolsUltimateShowcase2025Banner.tsx

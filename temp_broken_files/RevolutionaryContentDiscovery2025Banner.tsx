@@ -1,12 +1,17 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentDiscovery2025Banner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsers
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryContentDiscovery2025Banner.tsx
 
-export default function RevolutionaryContentDiscovery2025Banner() {
+const function RevolutionaryContentDiscovery2025Banner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentDiscovery2025Banner.tsx
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -108,3 +113,17 @@ export default function RevolutionaryContentDiscovery2025Banner() {
                 <Users className="w-4 h-4 mr-2" />
                 Get Consultation
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function RevolutionaryContentDiscovery2025Banner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function RevolutionaryContentDiscovery2025Banner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryContentDiscovery2025Banner.tsx

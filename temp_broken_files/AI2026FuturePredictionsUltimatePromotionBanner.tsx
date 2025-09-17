@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2026FuturePredictionsUltimatePromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2026FuturePredictionsUltimatePromotionBanner.tsx
 
-export default function AI2026FuturePredictionsUltimatePromotionBanner() {
+const function AI2026FuturePredictionsUltimatePromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2026FuturePredictionsUltimatePromotionBanner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 py-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -73,3 +78,17 @@ export default function AI2026FuturePredictionsUltimatePromotionBanner() {
       <div className="absolute bottom-10 right-10 w-16 h-16 bg-yellow-300/20 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-5 w-12 h-12 bg-purple-300/20 rounded-full animate-pulse delay-500"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2026FuturePredictionsUltimatePromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2026FuturePredictionsUltimatePromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2026FuturePredictionsUltimatePromotionBanner.tsx

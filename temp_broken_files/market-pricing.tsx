@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
 import React, { useState } from 'react';
 import { 
   TrendingUp, TrendingDown, DollarSign, Target, 
@@ -662,8 +663,26 @@ export default function MarketPricing() {
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
                 Get Custom Quote
+=======
+import React from "react";
+
+const function MarketPricing() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function MarketPricing() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/market-pricing.tsx
   );
 
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
 
 
 export default MarketPricing;
+=======
+export default function MarketPricing() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/market-pricing.tsx

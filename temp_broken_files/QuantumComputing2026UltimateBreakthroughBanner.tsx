@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/QuantumComputing2026UltimateBreakthroughBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumComputing2026UltimateBreakthroughBanner.tsx
 
-export default function QuantumComputing2026UltimateBreakthroughBanner() {
+const function QuantumComputing2026UltimateBreakthroughBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/QuantumComputing2026UltimateBreakthroughBanner.tsx
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Animated background */}
       <div className="absolute inset-0">
@@ -62,3 +67,17 @@ export default function QuantumComputing2026UltimateBreakthroughBanner() {
       <div className="absolute bottom-20 left-20 w-12 h-12 bg-pink-500/20 rounded-full animate-pulse delay-2000"></div>
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-rose-500/20 rounded-full animate-pulse delay-500"></div>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumComputing2026UltimateBreakthroughBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumComputing2026UltimateBreakthroughBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumComputing2026UltimateBreakthroughBanner.tsx

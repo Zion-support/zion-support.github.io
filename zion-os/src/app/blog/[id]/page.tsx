@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import React from 'react';
 import { getPostById } from '../../../data/blog';
@@ -60,6 +61,9 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
       'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
       'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
     ]
@@ -76,6 +80,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,12 +111,11 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     category: 'Case Studies',
     author: 'Michael Rodriguez',
     date: '2025-09-12',
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     readTime: '9 min read',
-    content: [
-      'We summarize five production deployments covering incident response, customer support, finance reconciliations, and supply chain routing.',
-      'Each case breaks down the business objective, design, controls, and the measurable outcome (MTTR, CSAT, margin, error rates).',
-      'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
     ]
+<<<<<<< HEAD
   },
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
@@ -203,11 +207,14 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     readTime: '9 min read',
     ]
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
       'As organizations adopt autonomous AI, governance must evolve from policy documents to executable guardrails. This blueprint provides a practical approach to building verifiable, adaptive governance that scales.',
       'We cover policy definition (goals, constraints, metrics), enforcement via policy engines, safe action gates with human-in-the-loop, and continuous assurance through telemetry and audits.',
       'Implementation patterns include risk-tiered action pipelines, signed policies with provenance, and sandboxed evaluation environments. We map responsibilities across product, security, compliance, and operations.',
       'The result is a governance system that enables faster iteration while reducing risk, with transparent accountability across stakeholders.'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -367,6 +374,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   },
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
   'ai-safety-red-teaming-2025': {
     id: 'ai-safety-red-teaming-2025',
     title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
@@ -395,6 +404,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
       'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
       'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
+<<<<<<< HEAD
 <<<<<<< HEAD
   'ai-governance-operating-systems': {
     id: 'ai-governance-operating-systems',
@@ -532,3 +542,10 @@ export default function BlogPostPage({ params }: Params) {
 =======
 }
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+}
+
+}
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

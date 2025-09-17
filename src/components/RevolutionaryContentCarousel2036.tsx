@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -154,3 +155,21 @@
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+=======
+import React from "react";
+
+const RevolutionaryContentCarousel2036 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryContentCarousel2036</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryContentCarousel2036;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/AI2025ContentPromotionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025ContentPromotionBanner.tsx
 
-export default function AI2025ContentPromotionBanner() {
+const function AI2025ContentPromotionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/AI2025ContentPromotionBanner.tsx
     <div className="bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 py-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6">
@@ -78,3 +83,17 @@ export default function AI2025ContentPromotionBanner() {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AI2025ContentPromotionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AI2025ContentPromotionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AI2025ContentPromotionBanner.tsx

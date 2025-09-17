@@ -1,11 +1,16 @@
+<<<<<<< HEAD:temp_broken_files/NewContent2025ShowcaseBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NewContent2025ShowcaseBanner.tsx
 
-export default function NewContent2025ShowcaseBanner() {
+const function NewContent2025ShowcaseBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/NewContent2025ShowcaseBanner.tsx
     <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -90,3 +95,17 @@ export default function NewContent2025ShowcaseBanner() {
           >
             Get Started with AI Transformation
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function NewContent2025ShowcaseBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function NewContent2025ShowcaseBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NewContent2025ShowcaseBanner.tsx

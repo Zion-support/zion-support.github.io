@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/AIPoweredITAssetManagement.tsx
 import { Link } from 'react-router-dom';
 import { 
   Monitor, 
@@ -1461,6 +1462,20 @@ const AIPoweredITAssetManagement: React.FC = () => {
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
             >
               View Pricing
+=======
+import React from 'react';
+
+const AIPoweredITAssetManagement: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">AIPoweredITAssetManagement</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/AIPoweredITAssetManagement.tsx
   );
 };
 

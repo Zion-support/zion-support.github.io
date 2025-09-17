@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
 import React, { useState } from 'react';
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
@@ -318,3 +319,21 @@ export default function ComprehensiveServicesShowcase() {
 
 
 export default ComprehensiveServicesShowcase;
+=======
+import React from "react";
+
+const function ComprehensiveServicesShowcase() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function ComprehensiveServicesShowcase() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ComprehensiveServicesShowcase.tsx

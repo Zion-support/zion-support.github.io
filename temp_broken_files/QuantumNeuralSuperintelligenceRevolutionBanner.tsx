@@ -1,12 +1,17 @@
+<<<<<<< HEAD:temp_broken_files/QuantumNeuralSuperintelligenceRevolutionBanner.tsx
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Star } from 'lucide-react';
 };
 
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumNeuralSuperintelligenceRevolutionBanner.tsx
 
-export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
+const function QuantumNeuralSuperintelligenceRevolutionBanner() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/QuantumNeuralSuperintelligenceRevolutionBanner.tsx
     <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -142,3 +147,17 @@ export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
             <p className="mb-2">🚀 <strong>Limited Time:</strong> Get exclusive access to our QNS implementation blueprint</p>
             <p>📈 <strong>Proven Results:</strong> Join 500+ enterprises already transforming with QNS</p>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumNeuralSuperintelligenceRevolutionBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumNeuralSuperintelligenceRevolutionBanner() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/QuantumNeuralSuperintelligenceRevolutionBanner.tsx

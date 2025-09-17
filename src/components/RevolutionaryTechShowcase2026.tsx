@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -374,6 +375,17 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <p className="text-indigo-200 text-sm text-center">Quantum-enhanced neural networks</p>
             </div>
           </div>
+=======
+import React from "react";
+
+const RevolutionaryTechShowcase2026 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryTechShowcase2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
         </div>
       </div>
     </div>
@@ -381,5 +393,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 export default RevolutionaryTechShowcase2026;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/locations.tsx
 import React from 'react';
 import Head from 'next/head';
 };
@@ -18,3 +19,21 @@ export default function LocationsPage() {
 					<p className="text-slate-300">364 E Main St STE 1008 Middletown DE 19709</p>
 				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
 	);
+=======
+import React from "react";
+
+const function LocationsPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function LocationsPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function LocationsPage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/locations.tsx

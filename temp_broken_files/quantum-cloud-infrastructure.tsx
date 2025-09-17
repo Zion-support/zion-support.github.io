@@ -1,12 +1,15 @@
+<<<<<<< HEAD:temp_broken_files/quantum-cloud-infrastructure.tsx
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 };
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/quantum-cloud-infrastructure.tsx
 
-
-
-export default function QuantumCloudInfrastructurePage() {
+const function QuantumCloudInfrastructurePage() { = () => {
   return (
+<<<<<<< HEAD:temp_broken_files/quantum-cloud-infrastructure.tsx
     <Layout>
       <Head>
         <title>Quantum Cloud Infrastructure | Zion Tech Group</title>
@@ -28,3 +31,17 @@ export default function QuantumCloudInfrastructurePage() {
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
   );
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function QuantumCloudInfrastructurePage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function QuantumCloudInfrastructurePage() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/quantum-cloud-infrastructure.tsx
