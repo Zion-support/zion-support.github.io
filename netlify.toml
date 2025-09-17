@@ -161,12 +161,11 @@
   status = 301
 
 [[redirects]]
-<<<<<<< HEAD
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
 
-# Additional redirects from the other branch
+# Additional redirects unified from conflicting branches
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -207,21 +206,8 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Handle client-side routing for SPA (this is also in _redirects file)
+# Handle client-side routing for SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-=======
-from = "/affiliate-attribution-suite"
-to = "/services/affiliate-attribution-suite/"
-<<<<<<< HEAD
-status = 301
-=======
-<<<<<<< HEAD
-status = 301
-=======
-status = 301
->>>>>>> 79992479b4902964b4a5ef1267a2a2e3ae279c60
->>>>>>> aab6cad50d24864653d33f46d023039adfa50215
->>>>>>> origin/merge-pr-12271
