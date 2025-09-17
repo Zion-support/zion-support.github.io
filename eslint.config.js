@@ -223,6 +223,8 @@ export default [
       '**/*.js',
       '**/*.cjs',
       '**/*.mjs',
+      '**/dist/**',
+      '**/build/**',
       '**/src-clean/**',
       '**/zion_academy/**',
       '**/token/**',
@@ -231,7 +233,9 @@ export default [
       '**/next-sitemap.config.js',
       '**/sentry.*.config.js',
       '**/server.mjs',
-      '**/script.js'
+      '**/script.js',
+      '**/next-*.js',
+      '**/sentry.*.js'
     ]
   },
   js.configs.recommended,
