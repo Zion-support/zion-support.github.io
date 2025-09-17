@@ -1,3 +1,23 @@
+[build]
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  # Safe to include; it runs post-build if available. Netlify will skip if not installed.
+
+[functions]
+  node_bundler = "esbuild"
+
+[headers]
+  for = "/assets/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
 # Netlify build configuration for Vite static app
 # Build: install and build
 # noop: retrigger netlify build (2025-09-17 18:32 UTC) - local build verified OK
