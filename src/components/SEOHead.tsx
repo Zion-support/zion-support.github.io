@@ -1,3 +1,11 @@
+import React from 'react';
+
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -6,6 +14,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology, innovation, 2025, revolutionary tech, Zion Tech Group",
   canonical,
   ogImage = "/og-image.jpg"
+}) => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ]
+  };
+
+  return (
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
@@ -24,12 +53,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
-          ]
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+    </>
+  );
+};
+
+export default SEOHead;
