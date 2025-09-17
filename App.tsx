@@ -21,6 +21,11 @@ import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import UltimateTechRevolution2033 from './src/pages/UltimateTechRevolution2033';
+import RevolutionaryAIBreakthrough2033 from './src/pages/RevolutionaryAIBreakthrough2033';
+import NextGenSpaceTech2033 from './src/pages/NextGenSpaceTech2033';
+import RevolutionaryContentBanner2033 from './src/components/RevolutionaryContentBanner2033';
+import InteractiveTechShowcase2033 from './src/components/InteractiveTechShowcase2033';
 
 export default function App(): JSX.Element {
   return (
@@ -78,6 +83,14 @@ export default function App(): JSX.Element {
                       </span>
                     </div>
                   </div>
+                </div>
+
+                {/* ULTRA-PROMINENT NEW 2033 CONTENT BANNER */}
+                <RevolutionaryContentBanner2033 />
+
+                {/* INTERACTIVE TECH SHOWCASE 2033 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2033 />
                 </div>
 
                 {/* Hero Section */}
@@ -257,6 +270,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
           <Route path="/pages/AdvancedHolographicTechnology2026" element={<AdvancedHolographicTechnology2026 />} />
+          
+          {/* 2033 Revolutionary Content Routes */}
+          <Route path="/pages/UltimateTechRevolution2033" element={<UltimateTechRevolution2033 />} />
+          <Route path="/pages/RevolutionaryAIBreakthrough2033" element={<RevolutionaryAIBreakthrough2033 />} />
+          <Route path="/pages/NextGenSpaceTech2033" element={<NextGenSpaceTech2033 />} />
           
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
