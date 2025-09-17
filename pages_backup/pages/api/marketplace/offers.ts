@@ -34,7 +34,6 @@ import {
   saveProject,;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "../../../utils/marketplace/store";
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -330,7 +329,6 @@ if ( {) {
 if ( {) {
   $2
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -468,7 +466,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req.body || {};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       if (!id || !action) return bad(res, "Missing id or action");
       const existing = getOfferById(id);
       if (!existing) return bad(res, "Offer not found", 404);
@@ -476,7 +473,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         req,
         existing,
         req && req.headers["x-demo-talent-slug"] as string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
       if (action === "accept") {
 
@@ -484,7 +480,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED";
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
         // Create a project upon acceptance
         const project: Project = {
@@ -501,8 +496,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           documents: existing.agreementUrl
 
@@ -636,7 +629,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   url: existing && existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString(),
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ]
 
             : []
@@ -644,7 +636,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -663,10 +654,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

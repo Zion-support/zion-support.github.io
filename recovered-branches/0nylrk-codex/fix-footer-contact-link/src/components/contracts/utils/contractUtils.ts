@@ -40,12 +40,6 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
-      milestones: milestoneData}
-=======
-      milestones: milestoneData,
-    }
->>>>>>> origin/auto/autonomy-17186719616
   });
   
   if (error) {

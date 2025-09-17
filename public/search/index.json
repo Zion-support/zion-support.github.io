@@ -1,73 +1,106 @@
+<<<<<<< HEAD
 [
   {
-<<<<<<< HEAD
-=======
     "route": "/2025-advanced-services-showcase",
-    "title": "",
-    "h1": ""
+    "title": "2025-advanced-services-showcase | Zion Tech Group",
+    "h1": "2025-advanced-services-showcase"
   },
   {
-    "route": "/2025-comprehensive-services-showcase-v2",
-    "title": "",
-    "h1": ""
+    "route": "/2025-comprehensive-advanced-services-showcase",
+    "title": "2025-comprehensive-advanced-services-showcase | Zion Tech Group",
+    "h1": "2025-comprehensive-advanced-services-showcase"
+  },
+  {
+    "route": "/2025-comprehensive-pricing",
+    "title": "2025-comprehensive-pricing | Zion Tech Group",
+    "h1": "2025-comprehensive-pricing"
   },
   {
     "route": "/2025-comprehensive-services-showcase",
-    "title": "",
-    "h1": "2025 Comprehensive Services Showcase"
+    "title": "2025-comprehensive-services-showcase | Zion Tech Group",
+    "h1": "2025-comprehensive-services-showcase"
   },
   {
-    "route": "/2026-services-showcase-v3",
-    "title": "Revolutionary 2026 Services Showcase | Zion Tech Group",
-    "h1": "Revolutionary 2026 Services"
+    "route": "/2026-innovative-services-showcase",
+    "title": "2026-innovative-services-showcase | Zion Tech Group",
+    "h1": "2026-innovative-services-showcase"
   },
   {
-    "route": "/2026-services-showcase",
-    "title": "Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions",
-    "h1": ""
-  },
-  {
-    "route": "/2027-services-showcase",
-    "title": "2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations & Micro SAAS",
-    "h1": ""
+    "route": "/2026-services-showcase-enhanced",
+    "title": "2026-services-showcase-enhanced | Zion Tech Group",
+    "h1": "2026-services-showcase-enhanced"
   },
   {
     "route": "/2028-services-showcase",
-    "title": "2028 Revolutionary Services Showcase | Zion Tech Group",
-    "h1": ""
+    "title": "2028-services-showcase | Zion Tech Group",
+    "h1": "2028-services-showcase"
   },
   {
-    "route": "/2029-ultimate-services-showcase",
-    "title": "2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary Technology Solutions",
-    "h1": ""
+    "route": "/2029-comprehensive-pricing",
+    "title": "2029-comprehensive-pricing | Zion Tech Group",
+    "h1": "2029-comprehensive-pricing"
   },
   {
-    "route": "/2029-ultra-futuristic-innovations",
-    "title": "2029 Ultra-Futuristic Innovations | Zion Tech Group",
-    "h1": ""
+    "route": "/2029-innovative-services-showcase",
+    "title": "2029-innovative-services-showcase | Zion Tech Group",
+    "h1": "2029-innovative-services-showcase"
   },
   {
-    "route": "/2030-revolutionary-services",
-    "title": "2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining",
-    "h1": ""
+    "route": "/2034-innovations",
+    "title": "2034-innovations | Zion Tech Group",
+    "h1": "2034-innovations"
+  },
+  {
+    "route": "/2036-innovative-services-showcase",
+    "title": "2036-innovative-services-showcase | Zion Tech Group",
+    "h1": "2036-innovative-services-showcase"
+  },
+  {
+    "route": "/403",
+    "title": "403 - Zion App",
+    "h1": "403"
   },
   {
     "route": "/404",
-    "title": "",
-    "h1": "404 - Page Not Found"
+    "title": "404 - Page Not Found | Zion Tech Group",
+    "h1": "404"
   },
   {
     "route": "/500",
+    "title": "500 | Zion Tech Group",
+    "h1": "500"
+  },
+  {
+    "route": "/AIServices",
+    "title": "AIServices | Zion Tech Group",
+    "h1": "AIServices"
+  },
+  {
+    "route": "/ITServices",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/[slug]",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": "Service not found"
+    "route": "/MicroSAAS",
+    "title": "MicroSAAS | Zion Tech Group",
+    "h1": "MicroSAAS"
   },
   {
->>>>>>> origin/auto/autonomy-17186719616
+    "route": "/ProductsList",
+    "title": "ProductsList | Zion Tech Group",
+    "h1": "ProductsList"
+  },
+  {
+    "route": "/[...slug]",
+    "title": "[...slug] | Zion Tech Group",
+    "h1": "[...slug]"
+  },
+  {
+    "route": "/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
     "route": "/_app",
     "title": "",
     "h1": ""
@@ -78,3397 +111,1889 @@
     "h1": ""
   },
   {
+    "route": "/_error",
+    "title": "_error | Zion Tech Group",
+    "h1": "_error"
+  },
+  {
     "route": "/about",
-    "title": "About Us - Zion Tech Group",
-<<<<<<< HEAD
-    "h1": "About Zion Tech Group"
-=======
-    "h1": "We build practical AI and platform solutions"
+    "title": "about | Zion Tech Group",
+    "h1": "about"
   },
   {
-    "route": "/agency-dashboard",
-    "title": "",
-    "h1": "Agency Dashboard"
+    "route": "/about",
+    "title": "about | Zion Tech Group",
+    "h1": "about"
   },
   {
-    "route": "/ai-business-tools",
-    "title": "AI Business Tools - Zion Tech Group",
-    "h1": "AI Business Tools"
+    "route": "/accessibility-scanner",
+    "title": "accessibility-scanner | Zion Tech Group",
+    "h1": "accessibility-scanner"
   },
   {
-    "route": "/ai-code-review-security-scanner",
+    "route": "/accessibility",
+    "title": "accessibility | Zion Tech Group",
+    "h1": "accessibility"
+  },
+  {
+    "route": "/account",
+    "title": "Account - Zion Tech Group",
+    "h1": "Account"
+  },
+  {
+    "route": "/advanced-ai-automation-services",
+    "title": "advanced-ai-automation-services | Zion Tech Group",
+    "h1": "advanced-ai-automation-services"
+  },
+  {
+    "route": "/advanced-cybersecurity",
+    "title": "advanced-cybersecurity | Zion Tech Group",
+    "h1": "advanced-cybersecurity"
+  },
+  {
+    "route": "/advanced-it-infrastructure-services",
+    "title": "advanced-it-infrastructure-services | Zion Tech Group",
+    "h1": "advanced-it-infrastructure-services"
+  },
+  {
+    "route": "/affiliate-dashboard",
+    "title": "affiliate-dashboard | Zion Tech Group",
+    "h1": "affiliate-dashboard"
+  },
+  {
+    "route": "/agentic-rag",
+    "title": "agentic-rag | Zion Tech Group",
+    "h1": "agentic-rag"
+  },
+  {
+    "route": "/ai-assistant",
+    "title": "ai-assistant | Zion Tech Group",
+    "h1": "ai-assistant"
+  },
+  {
+    "route": "/ai-automation-services",
+    "title": "ai-automation-services | Zion Tech Group",
+    "h1": "ai-automation-services"
+  },
+  {
+    "route": "/ai-autonomous-business-operations",
+    "title": "ai-autonomous-business-operations | Zion Tech Group",
+    "h1": "ai-autonomous-business-operations"
+  },
+  {
+    "route": "/ai-autonomous-ecosystem-manager",
+    "title": "ai-autonomous-ecosystem-manager | Zion Tech Group",
+    "h1": "ai-autonomous-ecosystem-manager"
+  },
+  {
+    "route": "/ai-autonomous-marketing-platform",
     "title": "",
     "h1": ""
+  },
+  {
+    "route": "/ai-autonomous-research-assistant",
+    "title": "ai-autonomous-research-assistant | Zion Tech Group",
+    "h1": "ai-autonomous-research-assistant"
+  },
+  {
+    "route": "/ai-autonomous-robotics-platform",
+    "title": "ai-autonomous-robotics-platform | Zion Tech Group",
+    "h1": "ai-autonomous-robotics-platform"
+  },
+  {
+    "route": "/ai-business-intelligence-suite",
+    "title": "ai-business-intelligence-suite | Zion Tech Group",
+    "h1": "ai-business-intelligence-suite"
+  },
+  {
+    "route": "/ai-business-intelligence",
+    "title": "ai-business-intelligence | Zion Tech Group",
+    "h1": "ai-business-intelligence"
   },
   {
     "route": "/ai-consciousness-evolution-2025",
-    "title": "AI Consciousness Evolution Platform 2025 - Zion Tech Group",
-    "h1": ""
+    "title": "AI Consciousness Evolution 2025 | Zion Tech Group",
+    "h1": "AI Consciousness Evolution 2025"
   },
   {
-    "route": "/ai-consciousness-evolution-platform",
-    "title": "AI Consciousness Evolution Platform - Zion Tech Group",
-    "h1": "AI Consciousness Evolution Platform"
+    "route": "/ai-consciousness-evolution-2026",
+    "title": "AI Consciousness Evolution 2026 | Zion Tech Group",
+    "h1": "AI Consciousness Evolution 2026"
   },
   {
-    "route": "/ai-content-generator",
-    "title": "AI Content Generator | Zion Tech Group - Advanced AI-Powered Content Creation",
-    "h1": "AI Content Generator"
+    "route": "/ai-consciousness-evolution-2029",
+    "title": "Ai Consciousness Evolution 2029 - Zion Tech Group",
+    "h1": "Ai Consciousness Evolution 2029"
   },
   {
-    "route": "/ai-diagnostic-platform",
-    "title": "AI Diagnostic Pro Platform | Zion Tech Group",
-    "h1": ""
+    "route": "/ai-content-intelligence-platform",
+    "title": "ai-content-intelligence-platform | Zion Tech Group",
+    "h1": "ai-content-intelligence-platform"
   },
   {
-    "route": "/ai-emotional-intelligence-platform-2029",
-    "title": "AI Emotional Intelligence Platform 2029 | Zion Tech Group",
-    "h1": ""
+    "route": "/ai-content-personalization-engine",
+    "title": "ai-content-personalization-engine | Zion Tech Group",
+    "h1": "ai-content-personalization-engine"
+  },
+  {
+    "route": "/ai-creativity-studio",
+    "title": "ai-creativity-studio | Zion Tech Group",
+    "h1": "ai-creativity-studio"
+  },
+  {
+    "route": "/ai-customer-service",
+    "title": "ai-customer-service | Zion Tech Group",
+    "h1": "ai-customer-service"
+  },
+  {
+    "route": "/ai-customer-success-platform",
+    "title": "ai-customer-success-platform | Zion Tech Group",
+    "h1": "ai-customer-success-platform"
+  },
+  {
+    "route": "/ai-education-platform",
+    "title": "ai-education-platform | Zion Tech Group",
+    "h1": "ai-education-platform"
+  },
+  {
+    "route": "/ai-emotion-intelligence-platform",
+    "title": "ai-emotion-intelligence-platform | Zion Tech Group",
+    "h1": "ai-emotion-intelligence-platform"
+  },
+  {
+    "route": "/ai-emotional-intelligence-training",
+    "title": "ai-emotional-intelligence-training | Zion Tech Group",
+    "h1": "ai-emotional-intelligence-training"
+  },
+  {
+    "route": "/ai-ethics-governance-framework",
+    "title": "ai-ethics-governance-framework | Zion Tech Group",
+    "h1": "ai-ethics-governance-framework"
   },
   {
     "route": "/ai-evals",
-    "title": "AI Evals & Observability | Zion Tech Group",
-    "h1": "AI Evals & Observability"
+    "title": "ai-evals | Zion Tech Group",
+    "h1": "ai-evals"
+  },
+  {
+    "route": "/ai-evaluation-orchestrator",
+    "title": "ai-evaluation-orchestrator | Zion Tech Group",
+    "h1": "ai-evaluation-orchestrator"
+  },
+  {
+    "route": "/ai-financial-intelligence",
+    "title": "ai-financial-intelligence | Zion Tech Group",
+    "h1": "ai-financial-intelligence"
   },
   {
     "route": "/ai-financial-planning-platform",
-    "title": "AI Financial Planning Platform | Zion Tech Group",
-    "h1": "AI Financial Planning Platform"
+    "title": "ai-financial-planning-platform | Zion Tech Group",
+    "h1": "ai-financial-planning-platform"
   },
   {
-    "route": "/ai-guardrails",
-    "title": "AI Guardrails Suite | Zion Tech Group",
-    "h1": "AI Guardrails Suite"
+    "route": "/ai-financial-risk",
+    "title": "ai-financial-risk | Zion Tech Group",
+    "h1": "ai-financial-risk"
+  },
+  {
+    "route": "/ai-healthcare-diagnostics-pro",
+    "title": "ai-healthcare-diagnostics-pro | Zion Tech Group",
+    "h1": "ai-healthcare-diagnostics-pro"
+  },
+  {
+    "route": "/ai-healthcare-diagnostics",
+    "title": "ai-healthcare-diagnostics | Zion Tech Group",
+    "h1": "ai-healthcare-diagnostics"
+  },
+  {
+    "route": "/ai-hr-analytics-platform",
+    "title": "ai-hr-analytics-platform | Zion Tech Group",
+    "h1": "ai-hr-analytics-platform"
+  },
+  {
+    "route": "/ai-hr-recruitment",
+    "title": "ai-hr-recruitment | Zion Tech Group",
+    "h1": "ai-hr-recruitment"
+  },
+  {
+    "route": "/ai-iot-platform",
+    "title": "ai-iot-platform | Zion Tech Group",
+    "h1": "ai-iot-platform"
+  },
+  {
+    "route": "/ai-legal-contract-analyzer",
+    "title": "ai-legal-contract-analyzer | Zion Tech Group",
+    "h1": "ai-legal-contract-analyzer"
+  },
+  {
+    "route": "/ai-market-research",
+    "title": "ai-market-research | Zion Tech Group",
+    "h1": "ai-market-research"
+  },
+  {
+    "route": "/ai-meeting-notes",
+    "title": "ai-meeting-notes | Zion Tech Group",
+    "h1": "ai-meeting-notes"
+  },
+  {
+    "route": "/ai-powered-cybersecurity",
+    "title": "ai-powered-cybersecurity | Zion Tech Group",
+    "h1": "ai-powered-cybersecurity"
+  },
+  {
+    "route": "/ai-powered-decision-engine",
+    "title": "ai-powered-decision-engine | Zion Tech Group",
+    "h1": "ai-powered-decision-engine"
+  },
+  {
+    "route": "/ai-powered-devops-platform",
+    "title": "ai-powered-devops-platform | Zion Tech Group",
+    "h1": "ai-powered-devops-platform"
   },
   {
     "route": "/ai-powered-it-asset-management",
-    "title": "AI-Powered IT Asset Management - Zion Tech Group",
-    "h1": ""
+    "title": "ai-powered-it-asset-management | Zion Tech Group",
+    "h1": "ai-powered-it-asset-management"
   },
   {
-    "route": "/ai-seo-suite",
-    "title": "AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics",
-    "h1": "AI-Powered SEO Suite"
+    "route": "/ai-predictive-maintenance-platform",
+    "title": "ai-predictive-maintenance-platform | Zion Tech Group",
+    "h1": "ai-predictive-maintenance-platform"
+  },
+  {
+    "route": "/ai-sales-automation",
+    "title": "ai-sales-automation | Zion Tech Group",
+    "h1": "ai-sales-automation"
+  },
+  {
+    "route": "/ai-sales-intelligence-platform",
+    "title": "ai-sales-intelligence-platform | Zion Tech Group",
+    "h1": "ai-sales-intelligence-platform"
+  },
+  {
+    "route": "/ai-seo-optimization",
+    "title": "ai-seo-optimization | Zion Tech Group",
+    "h1": "ai-seo-optimization"
   },
   {
     "route": "/ai-services",
-    "title": "AI Services | Zion Tech Group",
-    "h1": "AI Services"
+    "title": "ai-services | Zion Tech Group",
+    "h1": "ai-services"
   },
   {
-    "route": "/ai-solutions",
-    "title": "AI Solutions | Zion Tech Group - Advanced AI & Machine Learning",
-    "h1": "AI Solutions"
+    "route": "/ai-sustainability-platform",
+    "title": "ai-sustainability-platform | Zion Tech Group",
+    "h1": "ai-sustainability-platform"
   },
   {
-    "route": "/ai-tools",
-    "title": "AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing",
-    "h1": "Real AI Tools for Real Results"
+    "route": "/ai-video-editing",
+    "title": "ai-video-editing | Zion Tech Group",
+    "h1": "ai-video-editing"
+  },
+  {
+    "route": "/ai-website-personalization",
+    "title": "ai-website-personalization | Zion Tech Group",
+    "h1": "ai-website-personalization"
+  },
+  {
+    "route": "/analytics",
+    "title": "analytics | Zion Tech Group",
+    "h1": "analytics"
   },
   {
     "route": "/api-docs",
-    "title": "",
-    "h1": ""
+    "title": "api-docs | Zion Tech Group",
+    "h1": "api-docs"
+  },
+  {
+    "route": "/api-documentation-generator",
+    "title": "api-documentation-generator | Zion Tech Group",
+    "h1": "api-documentation-generator"
   },
   {
     "route": "/api-documentation",
-    "title": "API Documentation | Zion Tech Group",
-    "h1": "API Documentation"
+    "title": "api-documentation | Zion Tech Group",
+    "h1": "api-documentation"
   },
   {
-    "route": "/api-observability",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
+    "route": "/api-latency-slo-tracker",
+    "title": "api-latency-slo-tracker | Zion Tech Group",
+    "h1": "api-latency-slo-tracker"
+  },
+  {
+    "route": "/api-mock-contract-testing",
+    "title": "api-mock-contract-testing | Zion Tech Group",
+    "h1": "api-mock-contract-testing"
+  },
+  {
+    "route": "/api-observability-starter",
+    "title": "api-observability-starter | Zion Tech Group",
+    "h1": "api-observability-starter"
   },
   {
     "route": "/api-performance-testing",
-    "title": "",
-    "h1": "API Performance Testing"
+    "title": "api-performance-testing | Zion Tech Group",
+    "h1": "api-performance-testing"
   },
   {
-    "route": "/api-rate-limiter",
-    "title": "API Rate Limiter - Zion Tech Group",
-    "h1": "API Rate Limiter"
-  },
-  {
-    "route": "/api-testing-suite",
-    "title": "API Testing Suite - Zion Tech Group | Comprehensive API Testing & Monitoring Tool",
-    "h1": "API Testing Suite"
-  },
-  {
-    "route": "/api-tools",
-    "title": "API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications",
-    "h1": "Powerful API Tools & Services"
-  },
-  {
-    "route": "/assistant",
+    "route": "/api",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/audit-log-vault",
-    "title": "Audit Log Vault | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/automation-insights",
-    "title": "Automation Insights | Zion Tech Group - AI Automation Expertise",
-    "h1": "Automation Insights"
+    "route": "/automation",
+    "title": "automation | Zion Tech Group",
+    "h1": "automation"
   },
   {
     "route": "/autonomous-business-operations-platform",
-    "title": "Autonomous Business Operations Platform - Zion Tech Group",
-    "h1": ""
+    "title": "autonomous-business-operations-platform | Zion Tech Group",
+    "h1": "autonomous-business-operations-platform"
   },
   {
-    "route": "/autonomous-vehicle-ai-platform",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
+    "route": "/aws-cost-anomaly-monitor",
+    "title": "aws-cost-anomaly-monitor | Zion Tech Group",
+    "h1": "aws-cost-anomaly-monitor"
   },
   {
-    "route": "/backup-dr-orchestrator",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
+    "route": "/biotech-ai-research-platform",
+    "title": "biotech-ai-research-platform | Zion Tech Group",
+    "h1": "biotech-ai-research-platform"
   },
   {
     "route": "/blockchain-solutions",
-    "title": "",
-    "h1": "Blockchain Solutions"
+    "title": "blockchain-solutions | Zion Tech Group",
+    "h1": "blockchain-solutions"
+  },
+  {
+    "route": "/blockchain",
+    "title": "Blockchain Services - Zion Tech Group",
+    "h1": "Blockchain Services"
   },
   {
     "route": "/blog",
-    "title": "",
-    "h1": "Blog"
+    "title": "blog | Zion Tech Group",
+    "h1": "blog"
   },
   {
     "route": "/browser-automation-cloud",
-    "title": "",
-    "h1": "Browser Automation Cloud"
+    "title": "browser-automation-cloud | Zion Tech Group",
+    "h1": "browser-automation-cloud"
   },
   {
-    "route": "/business-tools",
-    "title": "Business Tools & Productivity - Zion Tech Group",
-    "h1": "Essential Business Tools & Productivity"
-  },
-  {
-    "route": "/capabilities.page",
-    "title": "",
-    "h1": "Capabilities"
+    "route": "/calendar",
+    "title": "calendar | Zion Tech Group",
+    "h1": "calendar"
   },
   {
     "route": "/careers",
-    "title": "Careers - Zion Tech Group | Join Our Revolutionary Technology Team",
-    "h1": "Join Our Team"
+    "title": "careers | Zion Tech Group",
+    "h1": "careers"
+  },
+  {
+    "route": "/case-studies.page",
+    "title": "case-studies.page | Zion Tech Group",
+    "h1": "case-studies.page"
   },
   {
     "route": "/case-studies",
+    "title": "case-studies | Zion Tech Group",
+    "h1": "case-studies"
+  },
+  {
+    "route": "/categories",
     "title": "",
-    "h1": "Case Studies"
+    "h1": ""
   },
   {
-    "route": "/changelog",
-    "title": "",
-    "h1": "Changelog"
+    "route": "/ci-cd-security-hardening",
+    "title": "ci-cd-security-hardening | Zion Tech Group",
+    "h1": "ci-cd-security-hardening"
   },
   {
-    "route": "/cloud-automations",
-    "title": "",
-    "h1": "Cloud Automations"
+    "route": "/cloud-backup-compliance",
+    "title": "cloud-backup-compliance | Zion Tech Group",
+    "h1": "cloud-backup-compliance"
   },
   {
-    "route": "/cloud-monitoring",
-    "title": "Cloud Monitoring & Analytics | Zion Tech Group - Real-time Infrastructure Monitoring",
-    "h1": "Cloud Monitoring & Analytics"
+    "route": "/cloud-landing-zone",
+    "title": "cloud-landing-zone | Zion Tech Group",
+    "h1": "cloud-landing-zone"
   },
   {
-    "route": "/code-quality-checker",
-    "title": "Code Quality Checker - Zion Tech Group | Professional Code Analysis & Improvement Tool",
-    "h1": "Code Quality Checker"
+    "route": "/cloud-platform",
+    "title": "cloud-platform | Zion Tech Group",
+    "h1": "cloud-platform"
+  },
+  {
+    "route": "/cloudflare-workers-edge-config",
+    "title": "cloudflare-workers-edge-config | Zion Tech Group",
+    "h1": "cloudflare-workers-edge-config"
+  },
+  {
+    "route": "/community",
+    "title": "Community | Zion Tech Group",
+    "h1": "Community"
+  },
+  {
+    "route": "/compliance",
+    "title": "compliance | Zion Tech Group",
+    "h1": "compliance"
+  },
+  {
+    "route": "/component-library",
+    "title": "component-library | Zion Tech Group",
+    "h1": "component-library"
   },
   {
     "route": "/comprehensive-2025-innovative-services-showcase",
-    "title": "",
-    "h1": "2025 Innovative Services"
->>>>>>> origin/auto/autonomy-17186719616
+    "title": "comprehensive-2025-innovative-services-showcase | Zion Tech Group",
+    "h1": "comprehensive-2025-innovative-services-showcase"
+  },
+  {
+    "route": "/comprehensive-2025-q4-services-showcase",
+    "title": "comprehensive-2025-q4-services-showcase | Zion Tech Group",
+    "h1": "comprehensive-2025-q4-services-showcase"
   },
   {
     "route": "/comprehensive-2025-services-showcase",
-    "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
-    "h1": "2025 Innovative Services Showcase"
+    "title": "comprehensive-2025-services-showcase | Zion Tech Group",
+    "h1": "comprehensive-2025-services-showcase"
   },
   {
-<<<<<<< HEAD
-=======
-    "route": "/comprehensive-pricing",
-    "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
-    "h1": ""
+    "route": "/comprehensive-2026-services-showcase",
+    "title": "comprehensive-2026-services-showcase | Zion Tech Group",
+    "h1": "comprehensive-2026-services-showcase"
+  },
+  {
+    "route": "/comprehensive-2037-services-showcase",
+    "title": "comprehensive-2037-services-showcase | Zion Tech Group",
+    "h1": "comprehensive-2037-services-showcase"
+  },
+  {
+    "route": "/comprehensive-pricing-2025",
+    "title": "comprehensive-pricing-2025 | Zion Tech Group",
+    "h1": "comprehensive-pricing-2025"
+  },
+  {
+    "route": "/comprehensive-services-overview-2025",
+    "title": "comprehensive-services-overview-2025 | Zion Tech Group",
+    "h1": "comprehensive-services-overview-2025"
   },
   {
     "route": "/comprehensive-services-showcase-2025",
-    "title": "Comprehensive Services Showcase 2025 - Zion Tech Group",
-    "h1": ""
+    "title": "comprehensive-services-showcase-2025 | Zion Tech Group",
+    "h1": "comprehensive-services-showcase-2025"
+  },
+  {
+    "route": "/comprehensive-services-showcase-2026",
+    "title": "comprehensive-services-showcase-2026 | Zion Tech Group",
+    "h1": "comprehensive-services-showcase-2026"
+  },
+  {
+    "route": "/comprehensive-services-showcase-2036",
+    "title": "comprehensive-services-showcase-2036 | Zion Tech Group",
+    "h1": "comprehensive-services-showcase-2036"
+  },
+  {
+    "route": "/comprehensive-services-showcase-2038",
+    "title": "comprehensive-services-showcase-2038 | Zion Tech Group",
+    "h1": "comprehensive-services-showcase-2038"
+  },
+  {
+    "route": "/comprehensive-services-showcase",
+    "title": "comprehensive-services-showcase | Zion Tech Group",
+    "h1": "comprehensive-services-showcase"
   },
   {
     "route": "/contact",
-    "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
-    "h1": "Let's Transform Your Business"
+    "title": "",
+    "h1": "Contact Us"
   },
   {
-    "route": "/cutting-edge-pricing-2025",
-    "title": "Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions",
-    "h1": ""
+    "route": "/contact",
+    "title": "contact | Zion Tech Group",
+    "h1": "contact"
   },
   {
-    "route": "/cutting-edge-services-showcase-2025",
-    "title": "Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions",
-    "h1": ""
+    "route": "/contact",
+    "title": "contact | Zion Tech Group",
+    "h1": "contact"
+  },
+  {
+    "route": "/content-hub",
+    "title": "content-hub | Zion Tech Group",
+    "h1": "content-hub"
+  },
+  {
+    "route": "/cookies",
+    "title": "cookies | Zion Tech Group",
+    "h1": "cookies"
+  },
+  {
+    "route": "/cron-job-scheduler",
+    "title": "cron-job-scheduler | Zion Tech Group",
+    "h1": "cron-job-scheduler"
+  },
+  {
+    "route": "/customer-service-ai",
+    "title": "customer-service-ai | Zion Tech Group",
+    "h1": "customer-service-ai"
+  },
+  {
+    "route": "/cutting-edge-services-2025",
+    "title": "cutting-edge-services-2025 | Zion Tech Group",
+    "h1": "cutting-edge-services-2025"
+  },
+  {
+    "route": "/cybersecurity-services",
+    "title": "cybersecurity-services | Zion Tech Group",
+    "h1": "cybersecurity-services"
+  },
+  {
+    "route": "/cybersecurity",
+    "title": "cybersecurity | Zion Tech Group",
+    "h1": "cybersecurity"
   },
   {
     "route": "/dashboard",
-    "title": "",
-    "h1": "{branding?.name || 'Zion Hire AI'}"
+    "title": "dashboard | Zion Tech Group",
+    "h1": "dashboard"
   },
   {
-    "route": "/defi-nexus-platform",
-    "title": "DeFi Nexus Platform | Zion Tech Group",
-    "h1": ""
+    "route": "/data-catalog-lineage",
+    "title": "data-catalog-lineage | Zion Tech Group",
+    "h1": "data-catalog-lineage"
   },
   {
-    "route": "/demos",
-    "title": "Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services",
-    "h1": ""
+    "route": "/data-quality-monitor",
+    "title": "data-quality-monitor | Zion Tech Group",
+    "h1": "data-quality-monitor"
   },
   {
-    "route": "/developer-tools",
-    "title": "Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing",
-    "h1": "Professional Developer Tools That Actually Work"
+    "route": "/design-map",
+    "title": "design-map | Zion Tech Group",
+    "h1": "design-map"
   },
   {
-    "route": "/devops-automation",
-    "title": "DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation",
-    "h1": "DevOps Automation"
-  },
-  {
-    "route": "/diversity-inclusion",
-    "title": "Diversity & Inclusion | Zion Tech Group",
-    "h1": "Diversity & Inclusion"
+    "route": "/developer",
+    "title": "developer | Zion Tech Group",
+    "h1": "developer"
   },
   {
     "route": "/docs",
-    "title": "Documentation | Zion Tech Group",
-    "h1": "Documentation"
+    "title": "docs | Zion Tech Group",
+    "h1": "docs"
   },
   {
-    "route": "/download.page",
-    "title": "",
-    "h1": ""
+    "route": "/dpa",
+    "title": "dpa | Zion Tech Group",
+    "h1": "dpa"
   },
   {
-    "route": "/download",
-    "title": "",
-    "h1": ""
+    "route": "/edge-computing-orchestration",
+    "title": "edge-computing-orchestration | Zion Tech Group",
+    "h1": "edge-computing-orchestration"
   },
   {
-    "route": "/email-validator",
-    "title": "Email Validator - Zion Tech Group",
-    "h1": "Email Validator"
+    "route": "/email-deliverability-monitor",
+    "title": "email-deliverability-monitor | Zion Tech Group",
+    "h1": "email-deliverability-monitor"
+  },
+  {
+    "route": "/email-dmarc-analyzer",
+    "title": "email-dmarc-analyzer | Zion Tech Group",
+    "h1": "email-dmarc-analyzer"
+  },
+  {
+    "route": "/emerging-tech-services",
+    "title": "emerging-tech-services | Zion Tech Group",
+    "h1": "emerging-tech-services"
+  },
+  {
+    "route": "/emerging-tech",
+    "title": "emerging-tech | Zion Tech Group",
+    "h1": "emerging-tech"
   },
   {
     "route": "/enhanced-home",
+    "title": "enhanced-home | Zion Tech Group",
+    "h1": "enhanced-home"
+  },
+  {
+    "route": "/enhanced-navigation",
+    "title": "enhanced-navigation | Zion Tech Group",
+    "h1": "enhanced-navigation"
+  },
+  {
+    "route": "/enhanced-services-showcase-2025",
+    "title": "enhanced-services-showcase-2025 | Zion Tech Group",
+    "h1": "enhanced-services-showcase-2025"
+  },
+  {
+    "route": "/enterprise-ai-operations-center",
+    "title": "enterprise-ai-operations-center | Zion Tech Group",
+    "h1": "enterprise-ai-operations-center"
+  },
+  {
+    "route": "/enterprise-it",
+    "title": "enterprise-it | Zion Tech Group",
+    "h1": "enterprise-it"
+  },
+  {
+    "route": "/enterprise",
     "title": "",
-    "h1": "Enhanced Home"
+    "h1": ""
   },
   {
-    "route": "/enhanced-services-showcase",
-    "title": "Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions",
-    "h1": "Enhanced Services Showcase"
+    "route": "/entertainment-media-solutions",
+    "title": "entertainment-media-solutions | Zion Tech Group",
+    "h1": "entertainment-media-solutions"
   },
   {
-    "route": "/expo",
+    "route": "/error",
+    "title": "error | Zion Tech Group",
+    "h1": "error"
+  },
+  {
+    "route": "/events.page",
+    "title": "events.page | Zion Tech Group",
+    "h1": "events.page"
+  },
+  {
+    "route": "/events",
+    "title": "events | Zion Tech Group",
+    "h1": "events"
+  },
+  {
+    "route": "/expanded-services-2027.page",
+    "title": "expanded-services-2027.page | Zion Tech Group",
+    "h1": "expanded-services-2027.page"
+  },
+  {
+    "route": "/expanded-services-pricing-2027.page",
+    "title": "expanded-services-pricing-2027.page | Zion Tech Group",
+    "h1": "expanded-services-pricing-2027.page"
+  },
+  {
+    "route": "/explore",
+    "title": "explore | Zion Tech Group",
+    "h1": "explore"
+  },
+  {
+    "route": "/faq",
+    "title": "faq | Zion Tech Group",
+    "h1": "faq"
+  },
+  {
+    "route": "/feature-flags-edge",
+    "title": "feature-flags-edge | Zion Tech Group",
+    "h1": "feature-flags-edge"
+  },
+  {
+    "route": "/fintech-solutions",
+    "title": "fintech-solutions | Zion Tech Group",
+    "h1": "fintech-solutions"
+  },
+  {
+    "route": "/foundation",
+    "title": "foundation | Zion Tech Group",
+    "h1": "foundation"
+  },
+  {
+    "route": "/get-started",
+    "title": "get-started | Zion Tech Group",
+    "h1": "get-started"
+  },
+  {
+    "route": "/github-compliance-bot",
+    "title": "github-compliance-bot | Zion Tech Group",
+    "h1": "github-compliance-bot"
+  },
+  {
+    "route": "/guides",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/healthcare-ai-solutions",
+    "title": "healthcare-ai-solutions | Zion Tech Group",
+    "h1": "healthcare-ai-solutions"
+  },
+  {
+    "route": "/help",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/image-optimizer-cdn",
+    "title": "image-optimizer-cdn | Zion Tech Group",
+    "h1": "image-optimizer-cdn"
+  },
+  {
+    "route": "/incident-copilot",
+    "title": "incident-copilot | Zion Tech Group",
+    "h1": "incident-copilot"
+  },
+  {
+    "route": "/incident-postmortem-generator",
+    "title": "incident-postmortem-generator | Zion Tech Group",
+    "h1": "incident-postmortem-generator"
+  },
+  {
+    "route": "/",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/",
+    "title": "",
+    "h1": "Building the Future of Business Technology"
+  },
+  {
+    "route": "/industry-solutions",
+    "title": "industry-solutions | Zion Tech Group",
+    "h1": "industry-solutions"
+  },
+  {
+    "route": "/infrastructure-drift-detector",
+    "title": "infrastructure-drift-detector | Zion Tech Group",
+    "h1": "infrastructure-drift-detector"
+  },
+  {
+    "route": "/innovations",
+    "title": "innovations | Zion Tech Group",
+    "h1": "innovations"
+  },
+  {
+    "route": "/innovative-2025-services-showcase",
+    "title": "innovative-2025-services-showcase | Zion Tech Group",
+    "h1": "innovative-2025-services-showcase"
+  },
+  {
+    "route": "/innovative-business-solutions",
+    "title": "innovative-business-solutions | Zion Tech Group",
+    "h1": "innovative-business-solutions"
+  },
+  {
+    "route": "/innovative-micro-saas-showcase",
+    "title": "innovative-micro-saas-showcase | Zion Tech Group",
+    "h1": "innovative-micro-saas-showcase"
+  },
+  {
+    "route": "/innovative-services-2025",
+    "title": "innovative-services-2025 | Zion Tech Group",
+    "h1": "innovative-services-2025"
+  },
+  {
+    "route": "/innovative-services-showcase-2025",
+    "title": "Innovative Services Showcase 2025 - Zion Tech Group",
+    "h1": "Innovative Services Showcase 2025"
+  },
+  {
+    "route": "/iot-platforms",
+    "title": "iot-platforms | Zion Tech Group",
+    "h1": "iot-platforms"
+  },
+  {
+    "route": "/it-asset-discovery-agent",
+    "title": "it-asset-discovery-agent | Zion Tech Group",
+    "h1": "it-asset-discovery-agent"
+  },
+  {
+    "route": "/it-services",
+    "title": "it-services | Zion Tech Group",
+    "h1": "it-services"
+  },
+  {
+    "route": "/jobs",
+    "title": "jobs | Zion Tech Group",
+    "h1": "jobs"
+  },
+  {
+    "route": "/kubernetes-rbac-auditor",
+    "title": "kubernetes-rbac-auditor | Zion Tech Group",
+    "h1": "kubernetes-rbac-auditor"
+  },
+  {
+    "route": "/leadership",
+    "title": "leadership | Zion Tech Group",
+    "h1": "leadership"
+  },
+  {
+    "route": "/legal",
+    "title": "legal | Zion Tech Group",
+    "h1": "legal"
+  },
+  {
+    "route": "/live-dashboard",
+    "title": "live-dashboard | Zion Tech Group",
+    "h1": "live-dashboard"
+  },
+  {
+    "route": "/login",
+    "title": "login | Zion Tech Group",
+    "h1": "login"
+  },
+  {
+    "route": "/managed-postgres-ha",
+    "title": "managed-postgres-ha | Zion Tech Group",
+    "h1": "managed-postgres-ha"
+  },
+  {
+    "route": "/manifesto",
+    "title": "manifesto | Zion Tech Group",
+    "h1": "manifesto"
+  },
+  {
+    "route": "/market-pricing",
+    "title": "market-pricing | Zion Tech Group",
+    "h1": "market-pricing"
+  },
+  {
+    "route": "/micro-saas",
+    "title": "micro-saas | Zion Tech Group",
+    "h1": "micro-saas"
+  },
+  {
+    "route": "/mlops-starter",
+    "title": "mlops-starter | Zion Tech Group",
+    "h1": "mlops-starter"
+  },
+  {
+    "route": "/mobile-device-management",
+    "title": "mobile-device-management | Zion Tech Group",
+    "h1": "mobile-device-management"
+  },
+  {
+    "route": "/neural-finance-ai",
+    "title": "neural-finance-ai | Zion Tech Group",
+    "h1": "neural-finance-ai"
+  },
+  {
+    "route": "/news",
+    "title": "news | Zion Tech Group",
+    "h1": "news"
+  },
+  {
+    "route": "/newsletter",
+    "title": "",
+    "h1": "Stay Updated"
+  },
+  {
+    "route": "/newsroom",
+    "title": "newsroom | Zion Tech Group",
+    "h1": "newsroom"
+  },
+  {
+    "route": "/offline",
+    "title": "offline | Zion Tech Group",
+    "h1": "offline"
+  },
+  {
+    "route": "/partners",
+    "title": "partners | Zion Tech Group",
+    "h1": "partners"
+  },
+  {
+    "route": "/pdf-render-api",
+    "title": "pdf-render-api | Zion Tech Group",
+    "h1": "pdf-render-api"
+  },
+  {
+    "route": "/portfolio",
+    "title": "portfolio | Zion Tech Group",
+    "h1": "portfolio"
+  },
+  {
+    "route": "/post-job",
+    "title": "post-job | Zion Tech Group",
+    "h1": "post-job"
+  },
+  {
+    "route": "/post-quantum-cryptography-2026",
+    "title": "Post-Quantum Cryptography 2026 | Zion Tech Group",
+    "h1": "Post-Quantum Cryptography 2026"
+  },
+  {
+    "route": "/press",
+    "title": "press | Zion Tech Group",
+    "h1": "press"
+  },
+  {
+    "route": "/pricing-2025",
+    "title": "pricing-2025 | Zion Tech Group",
+    "h1": "pricing-2025"
+  },
+  {
+    "route": "/pricing-2033",
+    "title": "pricing-2033 | Zion Tech Group",
+    "h1": "pricing-2033"
+  },
+  {
+    "route": "/pricing-enhanced-2026",
+    "title": "pricing-enhanced-2026 | Zion Tech Group",
+    "h1": "pricing-enhanced-2026"
+  },
+  {
+    "route": "/pricing",
+    "title": "pricing | Zion Tech Group",
+    "h1": "pricing"
+  },
+  {
+    "route": "/privacy",
+    "title": "privacy | Zion Tech Group",
+    "h1": "privacy"
+  },
+  {
+    "route": "/private",
+    "title": "private | Zion Tech Group",
+    "h1": "private"
+  },
+  {
+    "route": "/prompt-policy-registry",
+    "title": "prompt-policy-registry | Zion Tech Group",
+    "h1": "prompt-policy-registry"
+  },
+  {
+    "route": "/quantum-bio-computing-platform",
+    "title": "Quantum Bio-Computing Platform | Zion Tech Group",
+    "h1": "Quantum Bio-Computing Platform"
+  },
+  {
+    "route": "/quantum-cloud-infrastructure-platform",
+    "title": "quantum-cloud-infrastructure-platform | Zion Tech Group",
+    "h1": "quantum-cloud-infrastructure-platform"
+  },
+  {
+    "route": "/quantum-cloud-infrastructure",
+    "title": "quantum-cloud-infrastructure | Zion Tech Group",
+    "h1": "quantum-cloud-infrastructure"
+  },
+  {
+    "route": "/quantum-cybersecurity-platform",
+    "title": "quantum-cybersecurity-platform | Zion Tech Group",
+    "h1": "quantum-cybersecurity-platform"
+  },
+  {
+    "route": "/quantum-cybersecurity-services",
+    "title": "quantum-cybersecurity-services | Zion Tech Group",
+    "h1": "quantum-cybersecurity-services"
+  },
+  {
+    "route": "/quantum-cybersecurity",
+    "title": "Quantum Cybersecurity - Zion Tech Group",
+    "h1": "Quantum Cybersecurity"
+  },
+  {
+    "route": "/quantum-financial-trading-platform",
+    "title": "quantum-financial-trading-platform | Zion Tech Group",
+    "h1": "quantum-financial-trading-platform"
+  },
+  {
+    "route": "/quantum-financial-trading",
+    "title": "quantum-financial-trading | Zion Tech Group",
+    "h1": "quantum-financial-trading"
+  },
+  {
+    "route": "/quantum-internet-revolution-2026",
+    "title": "Quantum Internet Revolution 2026 | Zion Tech Group",
+    "h1": "Quantum Internet Revolution 2026"
+  },
+  {
+    "route": "/quantum-logistics",
+    "title": "quantum-logistics | Zion Tech Group",
+    "h1": "quantum-logistics"
+  },
+  {
+    "route": "/quantum-neural-network-platform",
+    "title": "quantum-neural-network-platform | Zion Tech Group",
+    "h1": "quantum-neural-network-platform"
+  },
+  {
+    "route": "/quantum-secure-communication",
+    "title": "quantum-secure-communication | Zion Tech Group",
+    "h1": "quantum-secure-communication"
+  },
+  {
+    "route": "/quantum-services",
+    "title": "quantum-services | Zion Tech Group",
+    "h1": "quantum-services"
+  },
+  {
+    "route": "/rag-evaluation-lab",
+    "title": "rag-evaluation-lab | Zion Tech Group",
+    "h1": "rag-evaluation-lab"
+  },
+  {
+    "route": "/real-estate-technology-solutions",
+    "title": "real-estate-technology-solutions | Zion Tech Group",
+    "h1": "real-estate-technology-solutions"
+  },
+  {
+    "route": "/reports",
+    "title": "reports | Zion Tech Group",
+    "h1": "reports"
+  },
+  {
+    "route": "/request-quote",
+    "title": "request-quote | Zion Tech Group",
+    "h1": "request-quote"
+  },
+  {
+    "route": "/research-development.page",
+    "title": "research-development.page | Zion Tech Group",
+    "h1": "research-development.page"
+  },
+  {
+    "route": "/research-development",
+    "title": "research-development | Zion Tech Group",
+    "h1": "research-development"
+  },
+  {
+    "route": "/resources",
+    "title": "resources | Zion Tech Group",
+    "h1": "resources"
+  },
+  {
+    "route": "/retail-technology-solutions",
+    "title": "retail-technology-solutions | Zion Tech Group",
+    "h1": "retail-technology-solutions"
+  },
+  {
+    "route": "/revolutionary-2025-pricing",
+    "title": "revolutionary-2025-pricing | Zion Tech Group",
+    "h1": "revolutionary-2025-pricing"
+  },
+  {
+    "route": "/revolutionary-2025-services-showcase",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/revolutionary-2026-pricing",
+    "title": "revolutionary-2026-pricing | Zion Tech Group",
+    "h1": "revolutionary-2026-pricing"
+  },
+  {
+    "route": "/revolutionary-2026-services",
+    "title": "revolutionary-2026-services | Zion Tech Group",
+    "h1": "revolutionary-2026-services"
+  },
+  {
+    "route": "/revolutionary-2027-services-showcase",
+    "title": "revolutionary-2027-services-showcase | Zion Tech Group",
+    "h1": "revolutionary-2027-services-showcase"
+  },
+  {
+    "route": "/revolutionary-home",
+    "title": "Revolutionary Home - Zion Tech Group",
+    "h1": "Revolutionary Home"
+  },
+  {
+    "route": "/roadmap",
+    "title": "roadmap | Zion Tech Group",
+    "h1": "roadmap"
+  },
+  {
+    "route": "/search",
+    "title": "search | Zion Tech Group",
+    "h1": "search"
+  },
+  {
+    "route": "/security",
+    "title": "security | Zion Tech Group",
+    "h1": "security"
+  },
+  {
+    "route": "/services-2024",
+    "title": "services-2024 | Zion Tech Group",
+    "h1": "services-2024"
+  },
+  {
+    "route": "/services-advertising.page",
+    "title": "services-advertising.page | Zion Tech Group",
+    "h1": "services-advertising.page"
+  },
+  {
+    "route": "/services-advertising",
+    "title": "services-advertising | Zion Tech Group",
+    "h1": "services-advertising"
+  },
+  {
+    "route": "/services-overview",
+    "title": "",
+    "h1": "Our Services"
+  },
+  {
+    "route": "/services-showcase-2040",
+    "title": "services-showcase-2040 | Zion Tech Group",
+    "h1": "services-showcase-2040"
+  },
+  {
+    "route": "/services",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/services",
+    "title": "services | Zion Tech Group",
+    "h1": "services"
+  },
+  {
+    "route": "/signup",
+    "title": "signup | Zion Tech Group",
+    "h1": "signup"
+  },
+  {
+    "route": "/site-health",
+    "title": "Site Health — Broken Images",
+    "h1": "Site Health"
+  },
+  {
+    "route": "/sitemap",
+    "title": "sitemap | Zion Tech Group",
+    "h1": "sitemap"
+  },
+  {
+    "route": "/sitemap.xml",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/solutions.page",
+    "title": "solutions.page | Zion Tech Group",
+    "h1": "solutions.page"
+  },
+  {
+    "route": "/solutions",
+    "title": "solutions | Zion Tech Group",
+    "h1": "solutions"
+  },
+  {
+    "route": "/space-tech",
+    "title": "space-tech | Zion Tech Group",
+    "h1": "space-tech"
+  },
+  {
+    "route": "/space-technology-ai-platform",
+    "title": "space-technology-ai-platform | Zion Tech Group",
+    "h1": "space-technology-ai-platform"
+  },
+  {
+    "route": "/space-technology",
+    "title": "space-technology | Zion Tech Group",
+    "h1": "space-technology"
+  },
+  {
+    "route": "/sso-in-a-box",
+    "title": "sso-in-a-box | Zion Tech Group",
+    "h1": "sso-in-a-box"
+  },
+  {
+    "route": "/sso-user-lifecycle-automation",
+    "title": "sso-user-lifecycle-automation | Zion Tech Group",
+    "h1": "sso-user-lifecycle-automation"
+  },
+  {
+    "route": "/status-pages-slo",
+    "title": "status-pages-slo | Zion Tech Group",
+    "h1": "status-pages-slo"
+  },
+  {
+    "route": "/summit",
+    "title": "summit | Zion Tech Group",
+    "h1": "summit"
+  },
+  {
+    "route": "/support",
+    "title": "support | Zion Tech Group",
+    "h1": "support"
+  },
+  {
+    "route": "/synthetic-intelligence-platform-2026",
+    "title": "Synthetic Intelligence Platform 2026 | Zion Tech Group",
+    "h1": "Synthetic Intelligence Platform 2026"
+  },
+  {
+    "route": "/talent",
+    "title": "",
+    "h1": "Join Our Team"
+  },
+  {
+    "route": "/team",
+    "title": "team | Zion Tech Group",
+    "h1": "team"
+  },
+  {
+    "route": "/terms",
+    "title": "terms | Zion Tech Group",
+    "h1": "terms"
+  },
+  {
+    "route": "/test-simple",
+    "title": "",
+    "h1": "Test Simple"
+  },
+  {
+    "route": "/test",
+    "title": "test | Zion Tech Group",
+    "h1": "test"
+  },
+  {
+    "route": "/testimonials",
+    "title": "testimonials | Zion Tech Group",
+    "h1": "testimonials"
+  },
+  {
+    "route": "/thank-you",
+    "title": "thank-you | Zion Tech Group",
+    "h1": "thank-you"
+  },
+  {
+    "route": "/tokenomics",
+    "title": "tokenomics | Zion Tech Group",
+    "h1": "tokenomics"
+  },
+  {
+    "route": "/training",
+    "title": "training | Zion Tech Group",
+    "h1": "training"
+  },
+  {
+    "route": "/transportation-logistics-solutions",
+    "title": "transportation-logistics-solutions | Zion Tech Group",
+    "h1": "transportation-logistics-solutions"
+  },
+  {
+    "route": "/tutorials",
+    "title": "tutorials | Zion Tech Group",
+    "h1": "tutorials"
+  },
+  {
+    "route": "/ultimate-2026-services-showcase",
+    "title": "ultimate-2026-services-showcase | Zion Tech Group",
+    "h1": "ultimate-2026-services-showcase"
+  },
+  {
+    "route": "/vector-search-starter",
+    "title": "vector-search-starter | Zion Tech Group",
+    "h1": "vector-search-starter"
+  },
+  {
+    "route": "/vendor-risk-automation",
+    "title": "vendor-risk-automation | Zion Tech Group",
+    "h1": "vendor-risk-automation"
+  },
+  {
+    "route": "/verify-status",
+    "title": "verify-status | Zion Tech Group",
+    "h1": "verify-status"
+  },
+  {
+    "route": "/verify",
+    "title": "verify | Zion Tech Group",
+    "h1": "verify"
+  },
+  {
+    "route": "/vulnerability-assessment-penetration-testing",
+    "title": "vulnerability-assessment-penetration-testing | Zion Tech Group",
+    "h1": "vulnerability-assessment-penetration-testing"
+  },
+  {
+    "route": "/warehouse-accelerator",
+    "title": "warehouse-accelerator | Zion Tech Group",
+    "h1": "warehouse-accelerator"
+  },
+  {
+    "route": "/webhook-relay-replay",
+    "title": "webhook-relay-replay | Zion Tech Group",
+    "h1": "webhook-relay-replay"
+  },
+  {
+    "route": "/webinars",
+    "title": "webinars | Zion Tech Group",
+    "h1": "webinars"
+  },
+  {
+    "route": "/wiki",
+    "title": "wiki | Zion Tech Group",
+    "h1": "wiki"
+  },
+  {
+    "route": "/zero-trust-security-platform",
+    "title": "zero-trust-security-platform | Zion Tech Group",
+    "h1": "zero-trust-security-platform"
+  },
+  {
+    "route": "/zion-global-2025",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/zion-tech-group",
+    "title": "zion-tech-group | Zion Tech Group",
+    "h1": "zion-tech-group"
+  },
+  {
+    "route": "/zl",
+    "title": "",
+    "h1": "Zion"
+  },
+  {
+    "route": "/zion-stack/api",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/zion/init",
+    "title": "init | Zion Tech Group",
+    "h1": "init"
+  },
+  {
+    "route": "/whitepaper/preview/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
+  },
+  {
+    "route": "/talent/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/talent",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/talent/resume-builder",
+    "title": "resume-builder | Zion Tech Group",
+    "h1": "resume-builder"
+  },
+  {
+    "route": "/support",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/solutions/enterprise",
+    "title": "enterprise | Zion Tech Group",
+    "h1": "enterprise"
+  },
+  {
+    "route": "/solutions/healthcare",
+    "title": "healthcare | Zion Tech Group",
+    "h1": "healthcare"
+  },
+  {
+    "route": "/solutions",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/social/facebook",
+    "title": "facebook | Zion Tech Group",
+    "h1": "facebook"
+  },
+  {
+    "route": "/social/github",
+    "title": "github | Zion Tech Group",
+    "h1": "github"
+  },
+  {
+    "route": "/social/instagram",
+    "title": "instagram | Zion Tech Group",
+    "h1": "instagram"
+  },
+  {
+    "route": "/social/linkedin",
+    "title": "linkedin | Zion Tech Group",
+    "h1": "linkedin"
+  },
+  {
+    "route": "/social/youtube",
+    "title": "youtube | Zion Tech Group",
+    "h1": "youtube"
+  },
+  {
+    "route": "/settings/account",
+    "title": "account | Zion Tech Group",
+    "h1": "account"
+  },
+  {
+    "route": "/settings",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/settings/privacy",
+    "title": "privacy | Zion Tech Group",
+    "h1": "privacy"
+  },
+  {
+    "route": "/services/2030-futuristic-services",
+    "title": "2030-futuristic-services | Zion Tech Group",
+    "h1": "2030-futuristic-services"
+  },
+  {
+    "route": "/services/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
+  },
+  {
+    "route": "/services/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/services/ai-data-pipeline-optimizer",
+    "title": "AI Data Pipeline Optimizer — Services — Zion",
+    "h1": "AI Data Pipeline Optimizer"
+  },
+  {
+    "route": "/services/ai-ml",
+    "title": "ai-ml | Zion Tech Group",
+    "h1": "ai-ml"
+  },
+  {
+    "route": "/services/ai-sales-assistant",
+    "title": "AI Sales Assistant — Services — Zion",
+    "h1": "AI Sales Assistant"
+  },
+  {
+    "route": "/services/ai-seo-auditor",
+    "title": "AI SEO Auditor — Services — Zion",
+    "h1": "AI SEO Auditor"
+  },
+  {
+    "route": "/services/analytics",
+    "title": "analytics | Zion Tech Group",
+    "h1": "analytics"
+  },
+  {
+    "route": "/services/cloud",
+    "title": "cloud | Zion Tech Group",
+    "h1": "cloud"
+  },
+  {
+    "route": "/services/customer-support-chatbot",
+    "title": "Customer Support Chatbot — Services — Zion",
+    "h1": "Customer Support Chatbot"
+  },
+  {
+    "route": "/services/cybersecurity",
+    "title": "cybersecurity | Zion Tech Group",
+    "h1": "cybersecurity"
+  },
+  {
+    "route": "/services/description-generator",
+    "title": "description-generator | Zion Tech Group",
+    "h1": "description-generator"
+  },
+  {
+    "route": "/services/developer-productivity-copilot",
+    "title": "Developer Productivity Copilot — Services — Zion",
+    "h1": "Developer Productivity Copilot"
+  },
+  {
+    "route": "/services",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/services/instagram-content-scheduler",
+    "title": "instagram-content-scheduler | Zion Tech Group",
+    "h1": "instagram-content-scheduler"
+  },
+  {
+    "route": "/services/landing-page-generator",
+    "title": "Landing Page Generator — Services — Zion",
+    "h1": "Landing Page Generator"
+  },
+  {
+    "route": "/services/price-intelligence-service",
+    "title": "Price Intelligence — Services — Zion",
+    "h1": "Price Intelligence"
+  },
+  {
+    "route": "/services/quantum",
+    "title": "quantum | Zion Tech Group",
+    "h1": "quantum"
+  },
+  {
+    "route": "/services/security-posture-guardian",
+    "title": "Security Posture Guardian — Services — Zion",
+    "h1": "Security Posture Guardian"
+  },
+  {
+    "route": "/services/transformation",
+    "title": "transformation | Zion Tech Group",
+    "h1": "transformation"
+  },
+  {
+    "route": "/seo/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/seo",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/search/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/review/[projectId]",
+    "title": "[projectId] | Zion Tech Group",
+    "h1": "[projectId]"
+  },
+  {
+    "route": "/resume/preview",
+    "title": "preview | Zion Tech Group",
+    "h1": "preview"
+  },
+  {
+    "route": "/resources/whitepapers/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
+  },
+  {
+    "route": "/resources/tools/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
+  },
+  {
+    "route": "/resources/tools/automation-assessment",
+    "title": "automation-assessment | Zion Tech Group",
+    "h1": "automation-assessment"
+  },
+  {
+    "route": "/resources/case-studies/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
+  },
+  {
+    "route": "/resources/case-studies/ai-automation-manufacturing",
+    "title": "{caseStudy.title} - Resource | Zion Tech Group",
+    "h1": "{caseStudy.title}"
+  },
+  {
+    "route": "/requests",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/reports",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/reports/innovation",
+    "title": "innovation | Zion Tech Group",
+    "h1": "innovation"
+  },
+  {
+    "route": "/reports/performance",
+    "title": "performance | Zion Tech Group",
+    "h1": "performance"
+  },
+  {
+    "route": "/reports/updates/update-2025-08-15-0111",
+    "title": "Autonomous Update — 2025: 08: 15: 0111 | Zion Tech Group",
+    "h1": "Autonomous Update — 2025: 08: 15: 0111"
+  },
+  {
+    "route": "/reports/updates/update-2025-08-15-0402",
+    "title": "Autonomous Update — 2025: 08: 15: 0402 | Zion Tech Group",
+    "h1": "Autonomous Update — 2025: 08: 15: 0402"
+  },
+  {
+    "route": "/reports/updates/update-2025-08-15-0403",
+    "title": "Autonomous Update — 2025: 08: 15: 0403 | Zion Tech Group",
+    "h1": "Autonomous Update — 2025: 08: 15: 0403"
+  },
+  {
+    "route": "/reports/updates/update-2025-08-15-0404",
+    "title": "Autonomous Update — 2025: 08: 15: 0404 | Zion Tech Group",
+    "h1": "Autonomous Update — 2025: 08: 15: 0404"
+  },
+  {
+    "route": "/reports/updates/update-2025-08-15-0405",
+    "title": "Autonomous Update — 2025: 08: 15: 0405 | Zion Tech Group",
+    "h1": "Autonomous Update — 2025: 08: 15: 0405"
+  },
+  {
+    "route": "/reports/updates/update-2025-08-15-0406",
+    "title": "Autonomous Update — 2025: 08: 15: 0406 | Zion Tech Group",
+    "h1": "Autonomous Update — 2025: 08: 15: 0406"
+  },
+  {
+    "route": "/reports/blueprints/blueprint-2025-08-18-122901",
+    "title": "blueprint-2025-08-18-122901 | Zion Tech Group",
+    "h1": "blueprint-2025-08-18-122901"
+  },
+  {
+    "route": "/reports/blueprints/blueprint-2025-08-18-123006",
+    "title": "blueprint-2025-08-18-123006 | Zion Tech Group",
+    "h1": "blueprint-2025-08-18-123006"
+  },
+  {
+    "route": "/reports/blueprints/blueprint-2025-08-18-124039",
+    "title": "blueprint-2025-08-18-124039 | Zion Tech Group",
+    "h1": "blueprint-2025-08-18-124039"
+  },
+  {
+    "route": "/reports/blueprints/comprehensive-redundancy",
+    "title": "comprehensive-redundancy | Zion Tech Group",
+    "h1": "comprehensive-redundancy"
+  },
+  {
+    "route": "/reports/blueprints/github-actions-automation",
+    "title": "github-actions-automation | Zion Tech Group",
+    "h1": "github-actions-automation"
+  },
+  {
+    "route": "/reports/blueprints",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/reports/blueprints/ultimate-redundancy",
+    "title": "ultimate-redundancy | Zion Tech Group",
+    "h1": "ultimate-redundancy"
+  },
+  {
+    "route": "/protocol/un-bridge",
+    "title": "un-bridge | Zion Tech Group",
+    "h1": "un-bridge"
+  },
+  {
+    "route": "/proposals/international",
+    "title": "international | Zion Tech Group",
+    "h1": "international"
+  },
+  {
+    "route": "/proposals/new",
+    "title": "new | Zion Tech Group",
+    "h1": "new"
+  },
+  {
+    "route": "/proposals/international",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/project/[projectId]",
+    "title": "[projectId] | Zion Tech Group",
+    "h1": "[projectId]"
+  },
+  {
+    "route": "/project/[projectId]/milestones",
+    "title": "milestones | Zion Tech Group",
+    "h1": "milestones"
+  },
+  {
+    "route": "/products",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/plans/enterprise",
+    "title": "enterprise | Zion Tech Group",
+    "h1": "enterprise"
+  },
+  {
+    "route": "/partners/brand-kit",
+    "title": "",
+    "h1": "Influencer Brand Kit"
+  },
+  {
+    "route": "/messages/[id]",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/messages/compose",
+    "title": "compose | Zion Tech Group",
+    "h1": "compose"
+  },
+  {
+    "route": "/messages",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/media/kit",
+    "title": "kit | Zion Tech Group",
+    "h1": "kit"
+  },
+  {
+    "route": "/marketplace",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/marketplace/listing/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/main/front",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/learn/[courseId]",
+    "title": "[courseId] | Zion Tech Group",
+    "h1": "[courseId]"
+  },
+  {
+    "route": "/learn",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/learn/[courseId]/certificate",
+    "title": "",
+    "h1": "Certificate"
+  },
+  {
+    "route": "/la",
+    "title": "",
+    "h1": "Zion"
+  },
+  {
+    "route": "/jobs/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/jobs",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/jobs/new",
+    "title": "new | Zion Tech Group",
+    "h1": "new"
+  },
+  {
+    "route": "/jobs/post",
+    "title": "post | Zion Tech Group",
+    "h1": "post"
+  },
+  {
+    "route": "/jobs/success",
+    "title": "success | Zion Tech Group",
+    "h1": "success"
+  },
+  {
+    "route": "/industries/retail",
+    "title": "retail | Zion Tech Group",
+    "h1": "retail"
+  },
+  {
+    "route": "/help/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/help",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/governance/global-outreach",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/governance/trust",
+    "title": "trust | Zion Tech Group",
+    "h1": "trust"
+  },
+  {
+    "route": "/founder/journal",
     "title": "",
     "h1": ""
   },
   {
     "route": "/favorites",
-    "title": "Favorites — Zion AI Marketplace",
-    "h1": "Saved Talent"
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/features.page",
+    "route": "/eo",
     "title": "",
-    "h1": "Features"
+    "h1": "Zion"
   },
   {
-    "route": "/holographic-ai-communication-platform",
-    "title": "Holographic AI Communication Platform - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/iam-access-review",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/incident-automation-suite",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/incubator",
+    "route": "/enterprise/request-quote",
     "title": "",
-    "h1": "Zion Incubator"
+    "h1": "Request a Quote"
   },
   {
-    "route": "/index-enhanced",
+    "route": "/enterprise/admin",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/docs/api",
+    "title": "api | Zion Tech Group",
+    "h1": "api"
+  },
+  {
+    "route": "/docs/comprehensive-redundancy",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/index.page",
+    "route": "/docs/performance",
     "title": "",
     "h1": ""
   },
   {
->>>>>>> origin/auto/autonomy-17186719616
-    "route": "/",
-    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
-    "h1": "Zion Tech Group"
-  },
-  {
-<<<<<<< HEAD
-    "route": "/portfolio",
-    "title": "Our Work - Zion Tech Group | Portfolio of Revolutionary Technology Solutions",
-    "h1": "Our Work"
-=======
-    "route": "/innovative-services-showcase-2025",
-    "title": "Innovative Services Showcase 2025 | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/innovative-services-showcase",
-    "title": "Innovative Services Showcase - Zion Tech Group | Cutting-Edge Technology",
-    "h1": ""
-  },
-  {
-    "route": "/innovative-services",
-    "title": "Innovative Micro SAAS Services - Zion Tech Group",
-    "h1": "Revolutionary Innovation"
-  },
-  {
-    "route": "/investors",
-    "title": "Investors | Zion Tech Group",
-    "h1": "Investors"
-  },
-  {
-    "route": "/iot-platforms",
-    "title": "",
-    "h1": "IoT Platforms"
-  },
-  {
-    "route": "/json-formatter",
-    "title": "JSON Formatter - Zion Tech Group",
-    "h1": "JSON Formatter"
-  },
-  {
-    "route": "/leadership",
-    "title": "Leadership | Zion Tech Group",
-    "h1": "Leadership"
-  },
-  {
-    "route": "/locations",
-    "title": "Locations | Zion Tech Group",
-    "h1": "Locations"
-  },
-  {
-    "route": "/market-pricing-2026",
-    "title": "Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions",
-    "h1": ""
-  },
-  {
-    "route": "/market-pricing",
-    "title": "Market Pricing & Competitor References | Zion Tech Group",
-    "h1": "Market Pricing & References"
-  },
-  {
-    "route": "/market-research",
-    "title": "Market Research & Industry Insights | Zion Tech Group",
-    "h1": "Comprehensive Market Research & Industry Insights"
-  },
-  {
-    "route": "/mdm-mobile-device-management",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/metaverse-ai-development-platform",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/micro-saas-services",
-    "title": "Micro SaaS Services | Zion Tech Group - Professional Business Solutions",
-    "h1": "Professional Micro SaaS Solutions"
-  },
-  {
-    "route": "/micro-saas",
-    "title": "Micro SaaS Services | Zion Tech Group - Specialized Business Solutions",
-    "h1": "Micro SaaS Services"
-  },
-  {
-    "route": "/mobile-launch.page",
+    "route": "/docs/pm2-redundancy",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/mobile-launch",
-    "title": "Zion Mobile App — iOS & Android",
-    "h1": "Zion App"
-  },
-  {
-    "route": "/news",
-    "title": "News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates",
-    "h1": "News & Press"
-  },
-  {
-    "route": "/notifications",
+    "route": "/docs/security",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/open-app.page",
+    "route": "/docs/testing",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/open-app",
+    "route": "/docs/ultimate-redundancy",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/partners",
-    "title": "Partners | Zion Tech Group",
-    "h1": "Partners"
+    "route": "/docs/gitbook",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/password-checker",
-    "title": "Password Strength Checker - Zion Tech Group",
-    "h1": "Password Strength Checker"
+    "route": "/disputes/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
   },
   {
-    "route": "/performance-optimization-sre",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
->>>>>>> origin/auto/autonomy-17186719616
+    "route": "/disputes",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/pricing-2025",
-    "title": "2025 Pricing & Services — Zion Tech Group",
-    "h1": "2025 Pricing & Services"
-  },
-  {
-<<<<<<< HEAD
-    "route": "/whitepapers",
-    "title": "Whitepapers - Zion Tech Group | Research & Insights",
-    "h1": "Whitepapers & Research"
-  },
-  {
-    "route": "/solutions/enterprise",
-    "title": "Enterprise Solutions - Zion Tech Group",
-    "h1": "Enterprise Solutions"
-  },
-  {
-    "route": "/solutions",
-    "title": "Technology Solutions - Zion Tech Group",
-    "h1": "Technology Solutions"
-  },
-  {
-    "route": "/solutions/industry",
-    "title": "Industry Specialized Solutions - Zion Tech Group",
-    "h1": "Industry Specialized Solutions"
-  },
-  {
-    "route": "/solutions/startups",
-    "title": "Startup Tools - Zion Tech Group",
-    "h1": "Startup Tools"
-  },
-  {
-    "route": "/services/ai-ml",
-    "title": "AI & Machine Learning Services - Zion Tech Group",
-    "h1": "AI & Machine Learning"
-  },
-  {
-    "route": "/services/cybersecurity",
-    "title": "Cybersecurity Services - Zion Tech Group",
-    "h1": "Cybersecurity"
-  },
-  {
-    "route": "/services/devops",
-    "title": "DevOps & Infrastructure Services - Zion Tech Group",
-    "h1": "DevOps & Infrastructure"
-  },
-  {
-    "route": "/services/edge-computing",
-    "title": "Edge Computing Services - Zion Tech Group",
-    "h1": "Edge Computing"
-  },
-  {
-    "route": "/services/quantum",
-    "title": "Quantum Computing Services - Zion Tech Group",
-    "h1": "Quantum Computing"
-  },
-  {
-    "route": "/services/space-tech",
-    "title": "Space Technology Services - Zion Tech Group",
-    "h1": "Space Technology"
-=======
-    "route": "/pricing-comparison",
-    "title": "Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition",
-    "h1": "How We Compare to the Competition"
-  },
-  {
-    "route": "/pricing",
-    "title": "Revolutionary 2029 Technology Pricing | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/products",
-    "title": "Products - Placeholder",
-    "h1": "Products"
-  },
-  {
-    "route": "/quantum-ai-brain-computer-interface",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/quantum-ai-cognitive",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": "{service.name}"
-  },
-  {
-    "route": "/quantum-ai-neural-network-platform",
-    "title": "",
-    "h1": "Quantum AI Neural Network Platform 2045"
-  },
-  {
-    "route": "/quantum-internet-security-platform",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/quantum-neural-network-platform",
-    "title": "Quantum Neural Network Platform - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/quantum-secure-cloud-infrastructure",
-    "title": "",
-    "h1": "Quantum-Secure Cloud Infrastructure 2045"
-  },
-  {
-    "route": "/quantum-trading-algorithm",
-    "title": "Quantum Trading Algorithm Pro | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/rag-evaluation-lab",
-    "title": "",
-    "h1": "RAG Evaluation Lab"
-  },
-  {
-    "route": "/reports",
-    "title": "Research Reports - Zion Tech Group | Industry Analysis & Technology Insights",
-    "h1": ""
-  },
-  {
-    "route": "/request-to-hire",
-    "title": "",
-    "h1": "Thanks!"
-  },
-  {
-    "route": "/resources",
-    "title": "",
-    "h1": "Resources"
-  },
-  {
-    "route": "/revolutionary-2028-pricing",
-    "title": "2028 Revolutionary Pricing - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/revolutionary-services",
-    "title": "Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology",
-    "h1": ""
-  },
-  {
-    "route": "/saas-marketplace",
-    "title": "SaaS Marketplace - Zion Tech Group",
-    "h1": "SaaS Marketplace"
-  },
-  {
-    "route": "/salary-insights",
-    "title": "",
-    "h1": "Salary Insights"
-  },
-  {
-    "route": "/secrets-rotation-automation",
-    "title": "",
-    "h1": "Secrets Rotation Automation"
-  },
-  {
-    "route": "/security-awareness-phishing",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/seo-analyzer-tool",
-    "title": "SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization",
-    "h1": "SEO Analyzer Tool"
-  },
-  {
-    "route": "/services-advertising",
-    "title": "",
-    "h1": "Services Advertising"
-  },
-  {
-    "route": "/services.page",
-    "title": "",
-    "h1": "Services"
-  },
-  {
-    "route": "/services",
-    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/site-health",
-    "title": "Site Health — A11y, Performance, Links",
-    "h1": ""
-  },
-  {
-    "route": "/sitemap",
-    "title": "Sitemap | Zion Tech Group",
-    "h1": "Sitemap"
-  },
-  {
-    "route": "/soc2-compliance-automation",
-    "title": "",
-    "h1": "SOC 2 Compliance Automation"
-  },
-  {
-    "route": "/solutions",
-    "title": "Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions",
-    "h1": "Industry Solutions"
-  },
-  {
-    "route": "/startup-tools",
-    "title": "Startup Tools & Resources - Zion Tech Group",
-    "h1": "Startup Tools & Resources"
-  },
-  {
-    "route": "/team",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/technology-insights",
-    "title": "Technology Insights | Zion Tech Group - Research & Innovation",
-    "h1": "Technology Insights"
-  },
-  {
-    "route": "/tool-comparison",
-    "title": "Tool Comparison - Zion Tech Group",
-    "h1": "Tool Comparison"
-  },
-  {
-    "route": "/trust",
-    "title": "",
-    "h1": "Trust & Reputation"
-  },
-  {
-    "route": "/ultimate-futuristic-services-showcase-2025",
-    "title": "Ultimate Futuristic Services Showcase 2025 | Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/url-shortener",
-    "title": "URL Shortener - Zion Tech Group",
-    "h1": "URL Shortener"
-  },
-  {
-    "route": "/wcag-accessibility-scanner",
-    "title": "{service.name} - Zion Tech Group",
-    "h1": ""
-  },
-  {
-    "route": "/website-performance-monitor",
-    "title": "Website Performance Monitor - Zion Tech Group | Real-Time Website Monitoring Tool",
-    "h1": "Website Performance Monitor"
-  },
-  {
-    "route": "/whitepaper-builder",
-    "title": "",
-    "h1": "Zion Protocol Whitepaper"
-  },
-  {
-    "route": "/zion/ipfs",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/vendors/[slug]",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/vendors",
-    "title": "",
-    "h1": "Vendors"
-  },
-  {
-    "route": "/vendors/register",
-    "title": "",
-    "h1": "Apply to become a Vendor Partner"
-  },
-  {
-    "route": "/token/integrations",
-    "title": "",
-    "h1": "ZION$ Integrations"
-  },
-  {
-    "route": "/token/model",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/talent/[slug]",
-    "title": "",
-    "h1": "Talent"
-  },
-  {
-    "route": "/talent",
-    "title": "",
-    "h1": "Talent"
-  },
-  {
-    "route": "/talent/new",
-    "title": "",
-    "h1": "Add Talent"
-  },
-  {
-    "route": "/talent/onboarding",
-    "title": "",
-    "h1": "Thanks! We’re using AI to optimize your profile."
-  },
-  {
-    "route": "/studio/host",
-    "title": "",
-    "h1": "Podcast Studio Host"
-  },
-  {
-    "route": "/services/[id]",
-    "title": "{service.name} | Zion Tech Group - Micro SaaS Services",
-    "h1": "Service Not Found"
-  },
-  {
-    "route": "/services/[slug]",
-    "title": "{service.name} | Zion Tech Group",
-    "h1": "{service.name}"
-  },
-  {
-    "route": "/services/ai-model-development-chat",
-    "title": "AiModelDevelopmentChat - Zion Tech Solutions",
-    "h1": "AiModelDevelopmentChat"
-  },
-  {
-    "route": "/services/ai-seo-auditor",
-    "title": "Services • Ai-seo-auditor - Placeholder",
-    "h1": "AiSeoAuditor"
-  },
-  {
-    "route": "/services/api-development-chat",
-    "title": "ApiDevelopmentChat - Zion Tech Solutions",
-    "h1": "ApiDevelopmentChat"
-  },
-  {
-    "route": "/services/business-intelligence-chat",
-    "title": "BusinessIntelligenceChat - Zion Tech Solutions",
-    "h1": "BusinessIntelligenceChat"
-  },
-  {
-    "route": "/services/cloud-migration-services-chat",
-    "title": "CloudMigrationServicesChat - Zion Tech Solutions",
-    "h1": "CloudMigrationServicesChat"
-  },
-  {
-    "route": "/services/customer-support-chatbot",
-    "title": "Services • Customer-support-chatbot - Placeholder",
-    "h1": "CustomerSupportChatbot"
-  },
-  {
-    "route": "/services/data-pipeline-engineering-chat",
-    "title": "DataPipelineEngineeringChat - Zion Tech Solutions",
-    "h1": "DataPipelineEngineeringChat"
-  },
-  {
-    "route": "/services/database-design-chat",
-    "title": "DatabaseDesignChat - Zion Tech Solutions",
-    "h1": "DatabaseDesignChat"
-  },
-  {
-    "route": "/services",
-    "title": "Zion AI Marketplace - Services",
-    "h1": "Services"
-  },
-  {
-    "route": "/services/instagram-content-scheduler",
-    "title": "Instagram Content Scheduler | Services",
-    "h1": "InstagramContentScheduler"
-  },
-  {
-    "route": "/services/landing-page-generator",
-    "title": "Services • Landing-page-generator - Placeholder",
-    "h1": "LandingPageGenerator"
-  },
-  {
-    "route": "/services/mobile-app-development-chat",
-    "title": "MobileAppDevelopmentChat - Zion Tech Solutions",
-    "h1": "MobileAppDevelopmentChat"
-  },
-  {
-    "route": "/services/network-security-chat",
-    "title": "NetworkSecurityChat - Zion Tech Solutions",
-    "h1": "NetworkSecurityChat"
-  },
-  {
-    "route": "/services/performance-optimization-chat",
-    "title": "PerformanceOptimizationChat - Zion Tech Solutions",
-    "h1": "PerformanceOptimizationChat"
-  },
-  {
-    "route": "/services/price-intelligence-service",
-    "title": "Services • Price-intelligence-service - Placeholder",
-    "h1": "PriceIntelligenceService"
-  },
-  {
-    "route": "/services/quality-assurance-testing-chat",
-    "title": "QualityAssuranceTestingChat - Zion Tech Solutions",
-    "h1": "QualityAssuranceTestingChat"
-  },
-  {
-    "route": "/services/security-auditing-chat",
-    "title": "SecurityAuditingChat - Zion Tech Solutions",
-    "h1": "SecurityAuditingChat"
-  },
-  {
-    "route": "/services/system-administration-chat",
-    "title": "SystemAdministrationChat - Zion Tech Solutions",
-    "h1": "SystemAdministrationChat"
-  },
-  {
-    "route": "/services/technical-documentation-chat",
-    "title": "TechnicalDocumentationChat - Zion Tech Solutions",
-    "h1": "TechnicalDocumentationChat"
-  },
-  {
-    "route": "/services/ui-ux-design-chat",
-    "title": "UiUxDesignChat - Zion Tech Solutions",
-    "h1": "UiUxDesignChat"
-  },
-  {
-    "route": "/services/web-application-development-chat",
-    "title": "WebApplicationDevelopmentChat - Zion Tech Solutions",
-    "h1": "WebApplicationDevelopmentChat"
-  },
-  {
-    "route": "/reports",
-    "title": "",
-    "h1": "Reports"
-  },
-  {
-    "route": "/reports/links",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/reports/updates/update-2025-08-14T21-47",
-    "title": "Autonomous Update — 2025-08-14 21-47",
-    "h1": "Autonomous Update — 2025-08-14 21-47"
-  },
-  {
-    "route": "/reports/seo/index.html",
-    "title": "Reports • Seo • Index.html - Placeholder",
-    "h1": "Reports • Seo • Index.html"
-  },
-  {
-    "route": "/reports/seo/latest.json",
-    "title": "Reports • Seo • Latest.json - Placeholder",
-    "h1": "Reports • Seo • Latest.json"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-140146",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-141021",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-142038",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-143241",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-144407",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-145252",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-145948",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-150600",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-151506",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-152623",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-153732",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-154638",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-155450",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-160107",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-160954",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-162034",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-163415",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-164728",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-165623",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-171517",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-172209",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-173336",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-174315",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-175626",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-175801",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-180211",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-181333",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-182728",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-184057",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-185310",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-190150",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-190955",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-191922",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-192806",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-193409",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-194023",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-194546",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-195149",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-195741",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-200305",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-201339",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-202447",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-203628",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-204506",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-205242",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-205909",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-210508",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-211347",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-212405",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-213347",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-214131",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-214720",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-214832",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-215440",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-220020",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-220727",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-221629",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-222736",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-223803",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-224631",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-225324",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-225909",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-230506",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-231341",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-232409",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-233346",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-234128",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-235008",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-14-235416",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/playbooks/playbook-2025-08-15-000055",
-    "title": "Playbook — Autonomous Delivery",
-    "h1": "Playbook — Autonomous Delivery"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-135723",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-140146",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-140648",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-141021",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-141857",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-142038",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-143241",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-143345",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-144407",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-144804",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-145252",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-145624",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-145948",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-150505",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-150600",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-151506",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-151658",
-    "title": "Pattern — Trigger Homepage Sitemap",
-    "h1": "Pattern — Trigger Homepage Sitemap"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-152623",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-153732",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-153900",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-154414",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-154638",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-155449",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-155450",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-160107",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-160323",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-160954",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-161510",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-162034",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-163034",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-163415",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-164631",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-164728",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-165623",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-165718",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-170652",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-171517",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-171907",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-172209",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-173336",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-174211",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-174315",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-174629",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-175320",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-175626",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-175801",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-180114",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-180211",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-181333",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-181534",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-181535",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-182728",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-183127",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-184057",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-184917",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-185310",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-190101",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-190150",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-190955",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-191922",
-    "title": "Pattern — Cloud Intelligence",
-    "h1": "Pattern — Cloud Intelligence"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-192420",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-192806",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-193251",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-193409",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-194023",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-194141",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-194546",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-194958",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-195149",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-195741",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-200305",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-200756",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-201339",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-202045",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-202447",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-203541",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-203628",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-204506",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-204646",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-205242",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-205615",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-205909",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-210414",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-210508",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-211347",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-211530",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-212405",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-212926",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-213347",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-214018",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-214131",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-214720",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-214723",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-214832",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-214926",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-215440",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-215753",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-220020",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-220726",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-220727",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-221629",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-221920",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-222736",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-223733",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-223803",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-224449",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-224631",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-225324",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-225408",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-225909",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-230216",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-230506",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-231323",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-231341",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-232409",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-232652",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-233346",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-233721",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-234128",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-234715",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-235008",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-235416",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-14-235532",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/patterns/pattern-2025-08-15-000055",
-    "title": "Pattern — Cloud Improving Continuously",
-    "h1": "Pattern — Cloud Improving Continuously"
-  },
-  {
-    "route": "/reports/innovations/insight-2025-08-14T21-47",
-    "title": "Innovation Insight — 2025-08-14 21-47",
-    "h1": "Innovation Insight — 2025-08-14 21-47"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-135723",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-140146",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-140648",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-141021",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-141857",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-142038",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-143241",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-143345",
-    "title": "Guide — Techcrunch Pebble Implementation",
-    "h1": "Guide — Techcrunch Pebble Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-144407",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-144804",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-145252",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-145624",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-145948",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-150505",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-150600",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-151506",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-151658",
-    "title": "Guide — Capabilities Live Implementation",
-    "h1": "Guide — Capabilities Live Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-152623",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-153732",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-153900",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-154414",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-154638",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-155449",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-155450",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-160107",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-160323",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-160954",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-161510",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-162034",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-163034",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-163415",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-164631",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-164728",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-165623",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-165718",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-170652",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-171517",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-171907",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-172209",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-173336",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-174211",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-174315",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-174629",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-175320",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-175626",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-175801",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-180114",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-180211",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-181333",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-181534",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-181535",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-182728",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-183127",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-184057",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-184917",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-185310",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-190101",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-190150",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-190955",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-191922",
-    "title": "Guide —  Implementation",
-    "h1": "Guide —  Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-192420",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-192806",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-193251",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-193409",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-194023",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-194141",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-194546",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-194958",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-195149",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-195741",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-200305",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-200756",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-201339",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-202045",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-202447",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-203541",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-203628",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-204506",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-204646",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-205242",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-205615",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-205909",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-210414",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-210508",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-211347",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-211530",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-212405",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-212926",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-213347",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-214018",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-214131",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-214720",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-214723",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-214832",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-214926",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-215440",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-215753",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-220020",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-220726",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-220727",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-221629",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-221920",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-222736",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-223733",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-223803",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-224449",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-224631",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-225324",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-225408",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-225909",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-230216",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-230506",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-231323",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-231341",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-232409",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-232652",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-233346",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-233721",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-234128",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-234715",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-235008",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-235416",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-14-235532",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/guides/guide-2025-08-15-000055",
-    "title": "Guide — Cloud Improving Implementation",
-    "h1": "Guide — Cloud Improving Implementation"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-135723",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-140146",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-140648",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-141021",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-141857",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-142038",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-143241",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-143345",
-    "title": "Case Study — Autonomous Reports",
-    "h1": "Case Study — Autonomous Reports"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-144407",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-144804",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-145252",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-145624",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-145948",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-150505",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-150600",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-151506",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-151658",
-    "title": "Case Study — Techcrunch Pebble",
-    "h1": "Case Study — Techcrunch Pebble"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-192420",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-192806",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-193251",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-193409",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-194023",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-194141",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-194546",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-194958",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-195149",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-195741",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-200305",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-200756",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-201339",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-202045",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-202447",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-203541",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-203628",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-204506",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-204646",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-205242",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-205615",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-205909",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-210414",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-210508",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-211347",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-211530",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-212405",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-212926",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-213347",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-214018",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-214131",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-214720",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-214723",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-214832",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-214926",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-215440",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-215753",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-220020",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-220726",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-220727",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-221629",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-221920",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-222736",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-223733",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-223803",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-224449",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-224631",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-225324",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-225408",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-225909",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-230216",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-230506",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-231323",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-231341",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-232409",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-232652",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-233346",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-233721",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-234128",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-234715",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-235008",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-235416",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-14-235532",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/cases/case-2025-08-15-000055",
-    "title": "Case Study — Trigger Homepage",
-    "h1": "Case Study — Trigger Homepage"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-140146",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-141021",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-142038",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-143241",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-144407",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-145252",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-145948",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-150600",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-151506",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-152623",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-153732",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-154638",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-155450",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-160107",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-160954",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-162034",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-163415",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-164728",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-165623",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-171517",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-172209",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-173336",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-174315",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-175626",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-175801",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-180211",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-181333",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-182728",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-184057",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-185310",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-190150",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-190955",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-191922",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-192806",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-193409",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-194023",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-194546",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-195149",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-195741",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-200305",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-201339",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-202447",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-203628",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-204506",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-205242",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-205909",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-210508",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-211347",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-212405",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-213347",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-214131",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-214720",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-214832",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-215440",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-220020",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-220727",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-221629",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-222736",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-223803",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-224631",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-225324",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-225909",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-230506",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-231341",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-232409",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-233346",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-234128",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-235008",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-14-235416",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/reports/blueprints/blueprint-2025-08-15-000055",
-    "title": "Reference Architecture — Autonomous Content Mesh",
-    "h1": "Reference Architecture — Autonomous Content Mesh"
-  },
-  {
-    "route": "/products/[slug]",
-    "title": "Equipment Not Found - Zion Tech Solutions",
-    "h1": "Equipment not found"
-  },
-  {
-    "route": "/products",
-    "title": "",
-    "h1": "Products"
-  },
-  {
-    "route": "/partners/dashboard",
-    "title": "Zion Partner Dashboard",
-    "h1": "Partner Dashboard"
-  },
-  {
-    "route": "/partners",
-    "title": "Zion Partners",
-    "h1": "Integrate Zion"
-  },
-  {
-    "route": "/offworld",
-    "title": "Zion Offworld Console",
-    "h1": "Offworld Console"
-  },
-  {
-    "route": "/media/podcast",
-    "title": "",
-    "h1": "Zion Podcast"
-  },
-  {
-    "route": "/media/podcast/[id]",
-    "title": "",
-    "h1": "{episode.title}"
-  },
-  {
-    "route": "/main/front",
-    "title": "Zion — Front Systems Hub | Autonomous Cloud Automations",
-    "h1": ""
-  },
-  {
-    "route": "/learn/launch",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/grants/[id]",
-    "title": "",
-    "h1": "{item.projectName}"
-  },
-  {
-    "route": "/grants/admin",
-    "title": "",
-    "h1": "Grants Admin"
-  },
-  {
-    "route": "/grants/apply",
-    "title": "",
-    "h1": "Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}"
-  },
-  {
-    "route": "/grants",
-    "title": "",
-    "h1": "Zion Grants & Incubator"
-  },
-  {
-    "route": "/governance/org-chart",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/governance/privacy",
-    "title": "",
-    "h1": "Zion OS — Privacy-preserving Governance"
-  },
-  {
-    "route": "/governance/proposals",
-    "title": "",
-    "h1": "DAO Proposals"
-  },
-  {
-    "route": "/events/global",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/economy/anomalies",
-    "title": "",
-    "h1": "Economy Anomalies"
-  },
-  {
-    "route": "/economy/auto-report",
-    "title": "",
-    "h1": "ZION$ Economy Autopilot Reports"
-  },
-  {
-    "route": "/economy/backtests",
-    "title": "",
-    "h1": "Economy Backtests"
-  },
-  {
-    "route": "/economy/optimizer",
-    "title": "",
-    "h1": "Economy Optimizer"
-  },
-  {
-    "route": "/economy/policy",
-    "title": "",
-    "h1": "Policy Recommendation"
-  },
-  {
-    "route": "/economy/simulator",
-    "title": "",
-    "h1": "ZION$ Economy Simulator"
+    "route": "/disputes/new",
+    "title": "new | Zion Tech Group",
+    "h1": "new"
   },
   {
     "route": "/developers/docs",
@@ -3476,559 +2001,936 @@
     "h1": ""
   },
   {
-    "route": "/developers/docs/print",
-    "title": "",
-    "h1": "{docs.title}"
+    "route": "/dev/tree",
+    "title": "tree | Zion Tech Group",
+    "h1": "tree"
   },
   {
-    "route": "/deploy/offworld",
-    "title": "Zion Offworld Deploy",
-    "h1": "Zion OS Offworld Deploy"
-  },
-  {
-    "route": "/dashboard/_middleware",
+    "route": "/deploy/genesis",
     "title": "",
     "h1": ""
   },
   {
     "route": "/dashboard/client",
-    "title": "",
-    "h1": "Suggested Talents"
+    "title": "client | Zion Tech Group",
+    "h1": "client"
   },
   {
-    "route": "/dashboard/metrics",
-    "title": "",
-    "h1": ""
+    "route": "/dashboard/content-review",
+    "title": "content-review | Zion Tech Group",
+    "h1": "content-review"
   },
   {
-    "route": "/dashboard/requests",
-    "title": "My Requests",
-    "h1": "Sign in as Talent"
+    "route": "/dashboard",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
     "route": "/dashboard/talent",
-    "title": "",
-    "h1": "Suggested Jobs"
+    "title": "talent | Zion Tech Group",
+    "h1": "talent"
   },
   {
-    "route": "/dashboard/tools/benchmarking",
+    "route": "/dashboard/wallet",
+    "title": "wallet | Zion Tech Group",
+    "h1": "wallet"
+  },
+  {
+    "route": "/dashboard/talent/portfolio",
+    "title": "portfolio | Zion Tech Group",
+    "h1": "portfolio"
+  },
+  {
+    "route": "/dashboard/settings/identity",
+    "title": "identity | Zion Tech Group",
+    "h1": "identity"
+  },
+  {
+    "route": "/dashboard/disputes",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/dao",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/content/ai-2026-autonomous-ops-playbook",
+    "title": "",
+    "h1": "AI 2026: Autonomous Ops Playbook"
+  },
+  {
+    "route": "/content/ai-2026-safety-evals-blueprint",
+    "title": "",
+    "h1": "AI 2026: Safety Evals Blueprint"
+  },
+  {
+    "route": "/components/Footer",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/dashboard/talent/insights",
+    "route": "/components/Header",
     "title": "",
-    "h1": "Talent Insights"
+    "h1": ""
   },
   {
-    "route": "/dashboard/client/analytics",
+    "route": "/components/Layout",
     "title": "",
-    "h1": "Client Analytics"
+    "h1": ""
   },
   {
-    "route": "/dashboard/client/shortlist",
+    "route": "/components/Navigation",
     "title": "",
-    "h1": "Shortlist & Hiring Tracker"
+    "h1": ""
   },
   {
-    "route": "/dao/zkvote",
-    "title": "",
-    "h1": "Zion OS — ZK Vote (Semaphore)"
+    "route": "/client/[slug]",
+    "title": "[slug] | Zion Tech Group",
+    "h1": "[slug]"
+  },
+  {
+    "route": "/client/dashboard",
+    "title": "dashboard | Zion Tech Group",
+    "h1": "dashboard"
+  },
+  {
+    "route": "/client/hire",
+    "title": "hire | Zion Tech Group",
+    "h1": "hire"
+  },
+  {
+    "route": "/client/jobs/[id]/applicants",
+    "title": "applicants | Zion Tech Group",
+    "h1": "applicants"
+  },
+  {
+    "route": "/client/jobs/[id]/edit",
+    "title": "edit | Zion Tech Group",
+    "h1": "edit"
+  },
+  {
+    "route": "/checkout-test/mock",
+    "title": "mock | Zion Tech Group",
+    "h1": "mock"
   },
   {
     "route": "/chat-content/ai-powered-business-solutions-discussion",
-    "title": "",
-    "h1": "AI-powered Business Solutions Discussion"
+    "title": "ai-powered-business-solutions-discussion | Zion Tech Group",
+    "h1": "ai-powered-business-solutions-discussion"
   },
   {
     "route": "/chat-content/cloud-computing-strategies",
-    "title": "",
-    "h1": "Cloud Computing Strategies"
+    "title": "cloud-computing-strategies | Zion Tech Group",
+    "h1": "cloud-computing-strategies"
   },
   {
     "route": "/chat-content/cybersecurity-best-practices",
-    "title": "",
-    "h1": "Cybersecurity Best Practices"
+    "title": "cybersecurity-best-practices | Zion Tech Group",
+    "h1": "cybersecurity-best-practices"
   },
   {
     "route": "/chat-content/data-analytics-implementation",
-    "title": "",
-    "h1": "Data Analytics Implementation"
+    "title": "data-analytics-implementation | Zion Tech Group",
+    "h1": "data-analytics-implementation"
   },
   {
     "route": "/chat-content/digital-transformation-insights",
-    "title": "",
-    "h1": "Digital Transformation Insights"
+    "title": "digital-transformation-insights | Zion Tech Group",
+    "h1": "digital-transformation-insights"
   },
   {
     "route": "/chat-content/emerging-technology-trends",
-    "title": "",
-    "h1": "Emerging Technology Trends"
+    "title": "emerging-technology-trends | Zion Tech Group",
+    "h1": "emerging-technology-trends"
   },
   {
     "route": "/chat-content/future-of-work-and-automation",
-    "title": "",
-    "h1": "Future of Work and Automation"
+    "title": "future-of-work-and-automation | Zion Tech Group",
+    "h1": "future-of-work-and-automation"
   },
   {
     "route": "/chat-content/innovation-in-enterprise-technology",
-    "title": "",
-    "h1": "Innovation in Enterprise Technology"
+    "title": "innovation-in-enterprise-technology | Zion Tech Group",
+    "h1": "innovation-in-enterprise-technology"
   },
   {
     "route": "/chat-content/sustainable-technology-practices",
-    "title": "",
-    "h1": "Sustainable Technology Practices"
+    "title": "sustainable-technology-practices | Zion Tech Group",
+    "h1": "sustainable-technology-practices"
   },
   {
     "route": "/chat-content/technology-implementation-strategies",
-    "title": "",
-    "h1": "Technology Implementation Strategies"
+    "title": "technology-implementation-strategies | Zion Tech Group",
+    "h1": "technology-implementation-strategies"
   },
   {
-    "route": "/category/ai-consulting-chat",
-    "title": "AiConsultingChat - Zion Tech Solutions",
-    "h1": "AiConsultingChat"
+    "route": "/certifications",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/category/business-intelligence-chat",
-    "title": "BusinessIntelligenceChat - Zion Tech Solutions",
-    "h1": "BusinessIntelligenceChat"
+    "route": "/case-studies/[id]",
+    "title": "[id] | Zion Tech Group",
+    "h1": "[id]"
   },
   {
-    "route": "/category/cloud-architecture-chat",
-    "title": "CloudArchitectureChat - Zion Tech Solutions",
-    "h1": "CloudArchitectureChat"
+    "route": "/case-studies/ai-automation-manufacturing",
+    "title": "ai-automation-manufacturing | Zion Tech Group",
+    "h1": "ai-automation-manufacturing"
   },
   {
-    "route": "/category/cybersecurity-chat",
-    "title": "CybersecurityChat - Zion Tech Solutions",
-    "h1": "CybersecurityChat"
+    "route": "/case-studies/cloud-infrastructure-optimization",
+    "title": "cloud-infrastructure-optimization | Zion Tech Group",
+    "h1": "cloud-infrastructure-optimization"
   },
   {
-    "route": "/category/data-science-chat",
-    "title": "DataScienceChat - Zion Tech Solutions",
-    "h1": "DataScienceChat"
+    "route": "/case-studies/content-generation-scale",
+    "title": "content-generation-scale | Zion Tech Group",
+    "h1": "content-generation-scale"
   },
   {
-    "route": "/category/database-administration-chat",
-    "title": "DatabaseAdministrationChat - Zion Tech Solutions",
-    "h1": "DatabaseAdministrationChat"
+    "route": "/case-studies/customer-service-automation",
+    "title": "customer-service-automation | Zion Tech Group",
+    "h1": "customer-service-automation"
   },
   {
-    "route": "/category/devops-automation-chat",
-    "title": "DevopsAutomationChat - Zion Tech Solutions",
-    "h1": "DevopsAutomationChat"
-  },
-  {
-    "route": "/category",
-    "title": "",
-    "h1": "Categories"
-  },
-  {
-    "route": "/category/mobile-development-chat",
-    "title": "MobileDevelopmentChat - Zion Tech Solutions",
-    "h1": "MobileDevelopmentChat"
-  },
-  {
-    "route": "/category/network-engineering-chat",
-    "title": "NetworkEngineeringChat - Zion Tech Solutions",
-    "h1": "NetworkEngineeringChat"
-  },
-  {
-    "route": "/category/product-management-chat",
-    "title": "ProductManagementChat - Zion Tech Solutions",
-    "h1": "ProductManagementChat"
-  },
-  {
-    "route": "/category/quality-assurance-chat",
-    "title": "QualityAssuranceChat - Zion Tech Solutions",
-    "h1": "QualityAssuranceChat"
-  },
-  {
-    "route": "/category/system-administration-chat",
-    "title": "SystemAdministrationChat - Zion Tech Solutions",
-    "h1": "SystemAdministrationChat"
-  },
-  {
-    "route": "/category/technical-writing-chat",
-    "title": "TechnicalWritingChat - Zion Tech Solutions",
-    "h1": "TechnicalWritingChat"
-  },
-  {
-    "route": "/category/ui-ux-design-chat",
-    "title": "UiUxDesignChat - Zion Tech Solutions",
-    "h1": "UiUxDesignChat"
-  },
-  {
-    "route": "/category/web-development-chat",
-    "title": "WebDevelopmentChat - Zion Tech Solutions",
-    "h1": "WebDevelopmentChat"
-  },
-  {
-    "route": "/categories/[topic]",
-    "title": "{topic} - Zion Blog",
-    "h1": "{topic}"
+    "route": "/case-studies/data-analytics-transformation",
+    "title": "data-analytics-transformation | Zion Tech Group",
+    "h1": "data-analytics-transformation"
   },
   {
     "route": "/blog/5g-technology-and-its-impact-on-iot-chat",
-    "title": "5G Technology And Its Impact On IoT - Zion Tech Solutions",
-    "h1": "5G Technology And Its Impact On IoT"
+    "title": "5g-technology-and-its-impact-on-iot-chat | Zion Tech Group",
+    "h1": "5g-technology-and-its-impact-on-iot-chat"
+  },
+  {
+    "route": "/blog/[id]",
+    "title": "Not Found | Zion Tech Group",
+    "h1": "Article not found"
   },
   {
     "route": "/blog/[slug]",
-    "title": "{post.seo.metaTitle || post.title}",
-    "h1": "{post.title}"
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/blog/agentic-crm-autonomous-revenue-workflows-2025",
+    "title": "Agentic CRM: Autonomous Revenue Workflows (2025) | Zion Tech Group",
+    "h1": "Agentic CRM: Autonomous Revenue Workflows (2025)"
+  },
+  {
+    "route": "/blog/agentic-product-playbooks",
+    "title": "Agentic Product Playbooks: Shipping Autonomous Workflows | Zion Tech Group",
+    "h1": "Agentic Product Playbooks: Shipping Autonomous Workflows"
+  },
+  {
+    "route": "/blog/ai-2025-enterprise-automation-strategy",
+    "title": "Enterprise Automation Strategy 2025: Practical AI Patterns | Zion Tech Group",
+    "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
+  },
+  {
+    "route": "/blog/ai-2026-agent-observability-blueprint",
+    "title": "AI 2026: Agent Observability Blueprint | Zion Tech Group",
+    "h1": "Agent Observability Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-observability-scorecards",
+    "title": "Agent Observability Scorecards (2026) | Zion Tech Group",
+    "h1": "Agent Observability Scorecards (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-platform-readiness-checklist",
+    "title": "AI 2026: Agent Platform Readiness Checklist | Zion Tech Group",
+    "h1": "AI 2026: Agent Platform Readiness Checklist"
+  },
+  {
+    "route": "/blog/ai-2026-agent-platform-slos-best-practices",
+    "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
+    "h1": "AI 2026: Agent Platform SLOs — Best Practices"
+  },
+  {
+    "route": "/blog/ai-2026-agent-red-teaming-playbook",
+    "title": "Agent Red Teaming — Practical Playbook (2026) | Zion Tech Group",
+    "h1": "Agent Red Teaming — Practical Playbook (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-release-health-scorecards",
+    "title": "",
+    "h1": "Agent Release Health Scorecards"
+  },
+  {
+    "route": "/blog/ai-2026-agent-release-scorecards",
+    "title": "Agent Release Scorecards — Evidence‑First (2026) | Zion Tech Group",
+    "h1": "Agent Release Scorecards — Evidence‑First (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-rollback-patterns",
+    "title": "Agent Rollback Patterns — Safe Recovery (2026) | Zion Tech Group",
+    "h1": "Agent Rollback Patterns — Safe Recovery (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-safety-playbook",
+    "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
+    "h1": "AI 2026: Agent Safety Playbook"
+  },
+  {
+    "route": "/blog/ai-2026-agent-slo-blueprint",
+    "title": "Agent Platform SLO Blueprint (2026) | Zion Tech Group",
+    "h1": "Agent Platform SLO Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-billing-controls",
+    "title": "",
+    "h1": "Reliable Autonomy: Agentic Billing Controls"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-evidence-graphs",
+    "title": "Agentic Evidence Graphs (2026) | Zion Tech Group",
+    "h1": "Agentic Evidence Graphs (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-observability-deep-dive",
+    "title": "AI 2026: Agentic Observability — Deep Dive | Zion Tech Group",
+    "h1": "AI 2026: Agentic Observability — Deep Dive"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
+    "title": "",
+    "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-autonomous-change-management-blueprint",
+    "title": "Autonomous Change Management — Blueprint (2026) | Zion Tech Group",
+    "h1": "Autonomous Change Management — Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-autonomous-evidence-led-ops",
+    "title": "Autonomous, Evidence‑Led Ops (2026) | Zion Tech Group",
+    "h1": "Autonomous, Evidence‑Led Ops (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-autonomous-incident-response-blueprint",
+    "title": "AI 2026: Autonomous Incident Response Blueprint | Zion Tech Group",
+    "h1": "Autonomous Incident Response Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-compliance-evidence-automation",
+    "title": "Compliance Evidence Automation (2026) | Zion Tech Group",
+    "h1": "Compliance Evidence Automation (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-cost-aware-observability-blueprint",
+    "title": "AI 2026: Cost‑Aware Observability Blueprint | Zion Tech Group",
+    "h1": "Cost‑Aware Observability Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-cost-aware-routing-in-practice",
+    "title": "Cost-Aware Routing in Practice (2026) | Zion Tech Group",
+    "h1": "Cost-Aware Routing in Practice (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-cost-optimization-blueprint",
+    "title": "",
+    "h1": "AI 2026: Cost Optimization Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-edge-agents-production-guide",
+    "title": "",
+    "h1": "AI 2026: Edge Agents in Production"
+  },
+  {
+    "route": "/blog/ai-2026-enterprise-agent-risk-mitigation",
+    "title": "AI 2026: Enterprise Agent Risk Mitigation",
+    "h1": "AI 2026: Enterprise Agent Risk Mitigation"
+  },
+  {
+    "route": "/blog/ai-2026-enterprise-architecture-modernization",
+    "title": "Enterprise Architecture Modernization (2026) | Zion Tech Group",
+    "h1": "Enterprise Architecture Modernization (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-eval-scorecards-in-practice",
+    "title": "Evaluation Scorecards in Practice (2026) | Zion Tech Group",
+    "h1": "Evaluation Scorecards in Practice (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-evaluation-cookbook",
+    "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
+    "h1": "AI 2026: Evaluation Cookbook"
+  },
+  {
+    "route": "/blog/ai-2026-evidence-hub-architecture",
+    "title": "",
+    "h1": "AI 2026: Evidence Hub Architecture"
+  },
+  {
+    "route": "/blog/ai-2026-evidence-hub-in-practice",
+    "title": "AI 2026: Evidence Hub in Practice | Zion Tech Group",
+    "h1": "AI 2026: Evidence Hub in Practice"
+  },
+  {
+    "route": "/blog/ai-2026-evidence-led-operations-blueprint",
+    "title": "AI 2026: Evidence‑Led Operations Blueprint | Zion Tech Group",
+    "h1": "Evidence‑Led Operations Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-exec-guide-to-agent-slo-scorecards",
+    "title": "AI 2026: Executive Guide to Agent SLO Scorecards | Zion Tech Group",
+    "h1": "AI 2026: Executive Guide to Agent SLO Scorecards"
+  },
+  {
+    "route": "/blog/ai-2026-foundation-model-quality-engineering",
+    "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
+    "h1": "Foundation Model Quality Engineering (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-governed-agent-slo-dashboards",
+    "title": "",
+    "h1": "AI 2026: Governed Agent SLO Dashboards"
+  },
+  {
+    "route": "/blog/ai-2026-governed-model-routing-2027",
+    "title": "",
+    "h1": "2027: Governed Model Routing — Next Stage"
+  },
+  {
+    "route": "/blog/ai-2026-governed-real-time-observability",
+    "title": "",
+    "h1": "AI 2026: Governed Real-Time Observability"
+  },
+  {
+    "route": "/blog/ai-2026-governed-runtime-observability",
+    "title": "Governed Runtime Observability (2026) | Zion Tech Group",
+    "h1": "Governed Runtime Observability (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-governed-runtime-rollback-strategies",
+    "title": "",
+    "h1": "Governed Runtime Rollback Strategies"
+  },
+  {
+    "route": "/blog/ai-2026-governed-tool-approvals",
+    "title": "Governed Tool Approvals (2026) | Zion Tech Group",
+    "h1": "Governed Tool Approvals (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-governed-tool-use-case-studies",
+    "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
+    "h1": "Governed Tool Use — Case Studies (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-governed-tooling-approvals-in-practice",
+    "title": "Governed Tooling in Practice (2026) | Zion Tech Group",
+    "h1": "Governed Tooling in Practice (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-low-latency-agent-observability",
+    "title": "",
+    "h1": "AI 2026: Low-Latency Agent Observability"
+  },
+  {
+    "route": "/blog/ai-2026-next-gen-realtime-guardrails",
+    "title": "",
+    "h1": "AI 2026: Next‑Gen Real‑Time Guardrails"
+  },
+  {
+    "route": "/blog/ai-2026-operational-evals-blueprint",
+    "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Operational Evals — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-operational-risk-metrics-for-agents",
+    "title": "AI 2026: Operational Risk Metrics for Agents | Zion Tech Group",
+    "h1": "AI 2026: Operational Risk Metrics for Agents"
+  },
+  {
+    "route": "/blog/ai-2026-operationalizing-agentic-workflows",
+    "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
+    "h1": "Operationalizing Agentic Workflows in 2026"
+  },
+  {
+    "route": "/blog/ai-2026-production-agent-postmortems-playbook",
+    "title": "Production Agent Postmortems — Playbook (2026) | Zion Tech Group",
+    "h1": "Production Agent Postmortems — Playbook (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-production-eval-gates-live-ops",
+    "title": "Production Eval Gates (2026) | Zion Tech Group",
+    "h1": "Production Eval Gates (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-production-evidence-hub-blueprint",
+    "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Production Evidence Hub Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-real-time-evals-inference-guardrails",
+    "title": "AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group",
+    "h1": "AI 2026: Real-Time Evals & Inference Guardrails"
+  },
+  {
+    "route": "/blog/ai-2026-real-time-retrieval-architectures",
+    "title": "",
+    "h1": "AI 2026: Real-Time Retrieval Architectures"
+  },
+  {
+    "route": "/blog/ai-2026-release-evidence-scorecards-blueprint",
+    "title": "",
+    "h1": "Release Evidence Scorecards — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-agent-change-windows",
+    "title": "Reliable Agent Change Windows | Zion Tech Group",
+    "h1": "Reliable Agent Change Windows"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-autonomy-operations",
+    "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
+    "h1": "AI 2026: Reliable Autonomy Operations"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-real-time-agents",
+    "title": "Reliable Real‑Time Agents (2026) | Zion Tech Group",
+    "h1": "Reliable Real‑Time Agents (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-runtime-evidence-bundles",
+    "title": "Runtime Evidence Bundles (2026) | Zion Tech Group",
+    "h1": "Runtime Evidence Bundles (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-runtime-guardrails-blueprint",
+    "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Runtime Guardrails Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-safe-agent-actions-blueprint",
+    "title": "",
+    "h1": "AI 2026: Safe Agent Actions — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-safe-autonomy-in-production",
+    "title": "AI 2026: Safe Autonomy in Production | Zion Tech Group",
+    "h1": "AI 2026: Safe Autonomy in Production"
+  },
+  {
+    "route": "/blog/ai-2026-safe-tooling-permissions-in-practice",
+    "title": "Safe Tooling Permissions — In Practice (2026) | Zion Tech Group",
+    "h1": "Safe Tooling Permissions — In Practice (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-safety-evals-operational-checklist",
+    "title": "",
+    "h1": "AI 2026: Safety Evals Operational Checklist"
+  },
+  {
+    "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
+    "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
+    "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
+    "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
+    "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
+  },
+  {
+    "route": "/blog/ai-2026-trustworthy-model-routing-starter",
+    "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
+    "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
+  },
+  {
+    "route": "/blog/ai-2026-zero-trust-agents",
+    "title": "Zero‑Trust Agents (2026) | Zion Tech Group",
+    "h1": "Zero‑Trust Agents (2026)"
   },
   {
     "route": "/blog/ai-automation-trends-2025",
-    "title": "AI Automation Trends 2025 | Zion Tech Group",
-    "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
+    "title": "ai-automation-trends-2025 | Zion Tech Group",
+    "h1": "ai-automation-trends-2025"
   },
   {
-    "route": "/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat",
-    "title": "AiPoweredMarketplacesTheFutureOfDigitalCommerceChat - Zion Tech Solutions",
-    "h1": "AiPoweredMarketplacesTheFutureOfDigitalCommerceChat"
+    "route": "/blog/ai-roadmap-2026",
+    "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
+    "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
   },
   {
-    "route": "/blog/api-first-development-building-scalable-systems-chat",
-    "title": "ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions",
-    "h1": "ApiFirstDevelopmentBuildingScalableSystemsChat"
+    "route": "/blog/autonomous-evaluation-playbooks-2025",
+    "title": "Autonomous Evaluation Playbooks (2025) | Zion Tech Group",
+    "h1": "Autonomous Evaluation Playbooks (2025)"
   },
   {
-    "route": "/blog/augmented-reality-in-enterprise-applications-chat",
-    "title": "AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions",
-    "h1": "AugmentedRealityInEnterpriseApplicationsChat"
+    "route": "/blog/cloud-cost-optimization-2025",
+    "title": "Cloud Cost Optimization 2025: Modern FinOps Patterns | Zion Tech Group",
+    "h1": "Cloud Cost Optimization 2025: Modern FinOps Patterns"
   },
   {
-    "route": "/blog/autonomous-content-generation",
-    "title": "Revolutionizing Content Creation with Autonomous AI Systems | Zion Tech Group",
-    "h1": "Revolutionizing Content Creation with Autonomous AI Systems"
+    "route": "/blog/cloud-native-automation",
+    "title": "cloud-native-automation | Zion Tech Group",
+    "h1": "cloud-native-automation"
   },
   {
-    "route": "/blog/blockchain-technology-in-modern-business-solutions-chat",
-    "title": "BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions",
-    "h1": "BlockchainTechnologyInModernBusinessSolutionsChat"
+    "route": "/blog/cybersecurity-autonomous-systems",
+    "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
+    "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
-    "route": "/blog/cloud-native-architecture-best-practices-chat",
-    "title": "CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions",
-    "h1": "CloudNativeArchitectureBestPracticesChat"
+    "route": "/blog/genai-2025-evidence-driven-ai-governance",
+    "title": "GenAI 2025: Evidence‑Driven AI Governance | Zion Tech Group",
+    "h1": "Evidence‑Driven AI Governance (2025)"
   },
   {
-    "route": "/blog/cybersecurity-trends-for-2024-and-beyond-chat",
-    "title": "CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions",
-    "h1": "CybersecurityTrendsFor2024AndBeyondChat"
-  },
-  {
-    "route": "/blog/data-analytics-in-digital-transformation-chat",
-    "title": "DataAnalyticsInDigitalTransformationChat - Zion Tech Solutions",
-    "h1": "DataAnalyticsInDigitalTransformationChat"
-  },
-  {
-    "route": "/blog/devops-automation-strategies-for-modern-teams-chat",
-    "title": "DevopsAutomationStrategiesForModernTeamsChat - Zion Tech Solutions",
-    "h1": "DevopsAutomationStrategiesForModernTeamsChat"
-  },
-  {
-    "route": "/blog/digital-twins-revolutionizing-industry-4-0-chat",
-    "title": "DigitalTwinsRevolutionizingIndustry40Chat - Zion Tech Solutions",
-    "h1": "DigitalTwinsRevolutionizingIndustry40Chat"
+    "route": "/blog/genai-2025-practical-compliance-patterns",
+    "title": "GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group",
+    "h1": "GenAI for Regulated Industries (2025): Practical Compliance Patterns"
   },
   {
     "route": "/blog",
-    "title": "Blog - Zion AI Marketplace",
-    "h1": "Zion Blog"
-  },
-  {
-    "route": "/blog/machine-learning-applications-in-enterprise-software-chat",
-    "title": "MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions",
-    "h1": "MachineLearningApplicationsInEnterpriseSoftwareChat"
-  },
-  {
-    "route": "/blog/microservices-architecture-benefits-and-challenges-chat",
-    "title": "MicroservicesArchitectureBenefitsAndChallengesChat - Zion Tech Solutions",
-    "h1": "MicroservicesArchitectureBenefitsAndChallengesChat"
-  },
-  {
-    "route": "/blog/quantum-computing-implications-for-business-chat",
-    "title": "QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions",
-    "h1": "QuantumComputingImplicationsForBusinessChat"
-  },
-  {
-    "route": "/blog/sustainable-technology-green-computing-solutions-chat",
-    "title": "SustainableTechnologyGreenComputingSolutionsChat - Zion Tech Solutions",
-    "h1": "SustainableTechnologyGreenComputingSolutionsChat"
-  },
-  {
-    "route": "/blog/the-rise-of-edge-computing-in-iot-applications-chat",
-    "title": "TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions",
-    "h1": "TheRiseOfEdgeComputingInIotApplicationsChat"
-  },
-  {
-    "route": "/automations/curation",
     "title": "",
-    "h1": "AI Curated Growth Experiments"
+    "h1": ""
+  },
+  {
+    "route": "/blog/quantum-security-2026",
+    "title": "Quantum Security 2026: Readiness Checklist | Zion Tech Group",
+    "h1": "Quantum Security 2026: Readiness Checklist"
   },
   {
     "route": "/automations",
-    "title": "",
-    "h1": "Autonomous Cloud Automations"
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/automation/[slug]",
-    "title": "{title} - Zion Tech Solutions",
-    "h1": "{title}"
+    "route": "/automations/sitemap-status",
+    "title": "sitemap-status | Zion Tech Group",
+    "h1": "sitemap-status"
   },
   {
-    "route": "/automation/ai-trends",
-    "title": "",
-    "h1": "AI Automation: Trend Watch"
+    "route": "/automations/top-talents",
+    "title": "top-talents | Zion Tech Group",
+    "h1": "top-talents"
   },
   {
-    "route": "/automation/autodocs",
-    "title": "",
-    "h1": "Autodocs"
+    "route": "/automation/agentic-news",
+    "title": "agentic-news | Zion Tech Group",
+    "h1": "agentic-news"
   },
   {
-    "route": "/automation/broken-links",
-    "title": "",
-    "h1": "Broken Links Report"
+    "route": "/automation/arxiv-research",
+    "title": "arxiv-research | Zion Tech Group",
+    "h1": "arxiv-research"
   },
   {
-    "route": "/automation/bundle-report",
-    "title": "",
-    "h1": "Bundle Size Report"
+    "route": "/automation/cloud",
+    "title": "cloud | Zion Tech Group",
+    "h1": "cloud"
   },
   {
-    "route": "/automation/content-map",
-    "title": "",
-    "h1": "Content Map"
+    "route": "/automation/contract-builder",
+    "title": "contract-builder | Zion Tech Group",
+    "h1": "contract-builder"
   },
   {
-    "route": "/automation/dep-radar",
-    "title": "",
-    "h1": "AI Automation: Dependency Radar"
+    "route": "/automation/dao-leaderboard",
+    "title": "dao-leaderboard | Zion Tech Group",
+    "h1": "dao-leaderboard"
+  },
+  {
+    "route": "/automation/github-agent-repos",
+    "title": "github-agent-repos | Zion Tech Group",
+    "h1": "github-agent-repos"
+  },
+  {
+    "route": "/automation/github-contributors",
+    "title": "github-contributors | Zion Tech Group",
+    "h1": "github-contributors"
+  },
+  {
+    "route": "/automation/github-pulse",
+    "title": "github-pulse | Zion Tech Group",
+    "h1": "github-pulse"
+  },
+  {
+    "route": "/automation/global-bounties",
+    "title": "global-bounties | Zion Tech Group",
+    "h1": "global-bounties"
+  },
+  {
+    "route": "/automation/governance-pulse",
+    "title": "governance-pulse | Zion Tech Group",
+    "h1": "governance-pulse"
+  },
+  {
+    "route": "/automation/hf-datasets",
+    "title": "hf-datasets | Zion Tech Group",
+    "h1": "hf-datasets"
+  },
+  {
+    "route": "/automation/hf-models",
+    "title": "hf-models | Zion Tech Group",
+    "h1": "hf-models"
+  },
+  {
+    "route": "/automation/hf-spaces",
+    "title": "hf-spaces | Zion Tech Group",
+    "h1": "hf-spaces"
   },
   {
     "route": "/automation",
-    "title": "",
-    "h1": "Automation"
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/automation/innovation",
-    "title": "",
-    "h1": "Innovation Digest"
+    "route": "/automation/innovation-radar",
+    "title": "innovation-radar | Zion Tech Group",
+    "h1": "innovation-radar"
   },
   {
-    "route": "/automation/insights",
-    "title": "Automation Insights — Zion",
-    "h1": "Automation Insights"
+    "route": "/automation/npm-trends",
+    "title": "npm-trends | Zion Tech Group",
+    "h1": "npm-trends"
   },
   {
-    "route": "/automation/knowledge-graph",
-    "title": "",
-    "h1": "Knowledge Graph"
+    "route": "/automation/osv-watch",
+    "title": "osv-watch | Zion Tech Group",
+    "h1": "osv-watch"
   },
   {
-    "route": "/automation/marketplace-enrichment",
-    "title": "",
-    "h1": "Marketplace Enrichment"
+    "route": "/automation/remote-roles",
+    "title": "remote-roles | Zion Tech Group",
+    "h1": "remote-roles"
   },
   {
-    "route": "/automation/news-digest",
-    "title": "",
-    "h1": "AI Automation: News Digest"
+    "route": "/automation/roadmap-issues",
+    "title": "roadmap-issues | Zion Tech Group",
+    "h1": "roadmap-issues"
   },
   {
-    "route": "/automation/quote-requests",
-    "title": "",
-    "h1": "Quote Requests Log"
-  },
-  {
-    "route": "/automation/repo-health",
-    "title": "",
-    "h1": "Repo Health"
-  },
-  {
-    "route": "/automation/security",
-    "title": "",
-    "h1": "Security Audit"
-  },
-  {
-    "route": "/automation/services-schema",
-    "title": "",
-    "h1": "Services Schema"
-  },
-  {
-    "route": "/automation/site-map",
-    "title": "",
-    "h1": "AI Automation: Site Map Intelligence"
-  },
-  {
-    "route": "/automation/site-validator",
-    "title": "",
-    "h1": "Site Validator"
-  },
-  {
-    "route": "/automation/status",
-    "title": "",
-    "h1": "Autonomous Automation Status"
-  },
-  {
-    "route": "/automation/talent-updates",
-    "title": "",
-    "h1": "AI Automation: Talent Summaries"
-  },
-  {
-    "route": "/automation/tech-radar",
-    "title": "",
-    "h1": "Tech Radar"
+    "route": "/automation/stackexchange-insights",
+    "title": "stackexchange-insights | Zion Tech Group",
+    "h1": "stackexchange-insights"
   },
   {
     "route": "/auto/auto-update-2025-08-08t16-07-55-171z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t16-07-55-171z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t16-07-55-171z"
   },
   {
     "route": "/auto/auto-update-2025-08-08t16-10-20-249z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t16-10-20-249z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t16-10-20-249z"
   },
   {
     "route": "/auto/auto-update-2025-08-08t16-30-00-086z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t16-30-00-086z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t16-30-00-086z"
   },
   {
     "route": "/auto/auto-update-2025-08-08t16-30-20-949z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t16-30-20-949z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t16-30-20-949z"
   },
   {
     "route": "/auto/auto-update-2025-08-08t16-38-19-257z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t16-38-19-257z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t16-38-19-257z"
   },
   {
     "route": "/auto/auto-update-2025-08-08t16-49-54-200z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t16-49-54-200z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t16-49-54-200z"
   },
   {
     "route": "/auto/auto-update-2025-08-08t17-23-07-688z",
-    "title": "",
-    "h1": "Auto Update"
+    "title": "auto-update-2025-08-08t17-23-07-688z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t17-23-07-688z"
+  },
+  {
+    "route": "/auto/auto-update-2025-08-08t17-37-01-527z",
+    "title": "auto-update-2025-08-08t17-37-01-527z | Zion Tech Group",
+    "h1": "auto-update-2025-08-08t17-37-01-527z"
+  },
+  {
+    "route": "/auto/auto-update-2025-08-23t23-59-59-376z",
+    "title": "auto-update-2025-08-23t23-59-59-376z | Zion Tech Group",
+    "h1": "auto-update-2025-08-23t23-59-59-376z"
+  },
+  {
+    "route": "/auto/auto-update-2025-08-24t00-54-20-891z",
+    "title": "auto-update-2025-08-24t00-54-20-891z | Zion Tech Group",
+    "h1": "auto-update-2025-08-24t00-54-20-891z"
+  },
+  {
+    "route": "/auto",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/auto/language-sync",
+    "title": "language-sync | Zion Tech Group",
+    "h1": "language-sync"
+  },
+  {
+    "route": "/auto/market-signals",
+    "title": "market-signals | Zion Tech Group",
+    "h1": "market-signals"
+  },
+  {
+    "route": "/auto/release-notes-agent",
+    "title": "release-notes-agent | Zion Tech Group",
+    "h1": "release-notes-agent"
+  },
+  {
+    "route": "/auto/seo-audit",
+    "title": "seo-audit | Zion Tech Group",
+    "h1": "seo-audit"
+  },
+  {
+    "route": "/auto/taxonomy-agent",
+    "title": "taxonomy-agent | Zion Tech Group",
+    "h1": "taxonomy-agent"
   },
   {
     "route": "/auth/callback",
-    "title": "",
-    "h1": "Auth Callback"
+    "title": "callback | Zion Tech Group",
+    "h1": "callback"
+  },
+  {
+    "route": "/auth/error",
+    "title": "error | Zion Tech Group",
+    "h1": "error"
   },
   {
     "route": "/auth/forgot-password",
-    "title": "",
-    "h1": "Forgot Password"
+    "title": "forgot-password | Zion Tech Group",
+    "h1": "forgot-password"
   },
   {
     "route": "/auth",
-    "title": "",
-    "h1": "Sign In"
+    "title": "index | Zion Tech Group",
+    "h1": "index"
+  },
+  {
+    "route": "/auth/login",
+    "title": "login | Zion Tech Group",
+    "h1": "login"
+  },
+  {
+    "route": "/auth/register",
+    "title": "register | Zion Tech Group",
+    "h1": "register"
   },
   {
     "route": "/auth/reset-password",
-    "title": "",
-    "h1": "Reset Password"
+    "title": "reset-password | Zion Tech Group",
+    "h1": "reset-password"
   },
   {
     "route": "/auth/verify",
-    "title": "",
-    "h1": "Verify Email"
-  },
-  {
-    "route": "/admin/_middleware",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/admin/analytics",
-    "title": "",
-    "h1": "Admin Analytics"
+    "title": "verify | Zion Tech Group",
+    "h1": "verify"
   },
   {
     "route": "/admin/automation-status",
-    "title": "",
-    "h1": "Automation Status"
+    "title": "automation-status | Zion Tech Group",
+    "h1": "automation-status"
+  },
+  {
+    "route": "/admin/fraud",
+    "title": "fraud | Zion Tech Group",
+    "h1": "fraud"
   },
   {
     "route": "/admin",
-    "title": "",
-    "h1": "Admin"
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/admin/ipo-portal",
-    "title": "",
-    "h1": "IPO Readiness Portal"
+    "route": "/admin/integrations",
+    "title": "integrations | Zion Tech Group",
+    "h1": "integrations"
   },
   {
-    "route": "/admin/kpi",
+    "route": "/admin/kyc",
+    "title": "kyc | Zion Tech Group",
+    "h1": "kyc"
+  },
+  {
+    "route": "/admin/logs",
+    "title": "logs | Zion Tech Group",
+    "h1": "logs"
+  },
+  {
+    "route": "/admin/notes",
+    "title": "notes | Zion Tech Group",
+    "h1": "notes"
+  },
+  {
+    "route": "/admin/partners",
+    "title": "partners | Zion Tech Group",
+    "h1": "partners"
+  },
+  {
+    "route": "/admin/pitch-generator",
+    "title": "pitch-generator | Zion Tech Group",
+    "h1": "pitch-generator"
+  },
+  {
+    "route": "/admin/reviews",
+    "title": "reviews | Zion Tech Group",
+    "h1": "reviews"
+  },
+  {
+    "route": "/admin/source-map",
     "title": "",
     "h1": ""
   },
   {
-    "route": "/admin/login",
-    "title": "",
-    "h1": "Admin Login"
+    "route": "/admin/support-requests",
+    "title": "support-requests | Zion Tech Group",
+    "h1": "support-requests"
   },
   {
-    "route": "/admin/quotes",
-    "title": "Admin • Quote Requests",
-    "h1": "Admin access required"
+    "route": "/admin/tokens",
+    "title": "tokens | Zion Tech Group",
+    "h1": "tokens"
   },
   {
-    "route": "/admin/trust",
-    "title": "",
-    "h1": "Trust Engine Admin"
+    "route": "/admin/translations",
+    "title": "translations | Zion Tech Group",
+    "h1": "translations"
   },
   {
-    "route": "/admin/vendors",
-    "title": "",
-    "h1": "Admin • Vendors"
+    "route": "/admin/usage-analytics",
+    "title": "usage-analytics | Zion Tech Group",
+    "h1": "usage-analytics"
   },
   {
-    "route": "/admin/zion-brain",
-    "title": "Zion Brain Admin",
-    "h1": "Zion Brain — Admin"
+    "route": "/admin/web3",
+    "title": "web3 | Zion Tech Group",
+    "h1": "web3"
   },
   {
-    "route": "/admin/quotes/automation-status",
-    "title": "",
-    "h1": ""
+    "route": "/admin/learn",
+    "title": "index | Zion Tech Group",
+    "h1": "index"
   },
   {
-    "route": "/admin/quotes",
-    "title": "",
-    "h1": "Quote Requests"
+    "route": "/academy/futurescape",
+    "title": "Futurescape Academy - Zion Tech Group",
+    "h1": "Futurescape Academy"
   },
   {
-    "route": "/admin/docs",
-    "title": "",
-    "h1": "Docs Admin"
-  },
-  {
-    "route": "/admin/blog",
-    "title": "",
-    "h1": "Blog Admin"
-  },
-  {
-    "route": "/academy/certificate",
-    "title": "",
-    "h1": "Certificate"
-  },
-  {
-    "route": "/academy/founder-course",
-    "title": "",
-    "h1": "Founder Course: Launch Your Zion Instance"
->>>>>>> origin/auto/autonomy-17186719616
+    "route": "/academy/storybook",
+    "title": "Storybook Academy - Zion Tech Group",
+    "h1": "Storybook Academy"
   }
 ]
+=======
+[]
+>>>>>>> origin/feature/enhanced-content-showcase-2025

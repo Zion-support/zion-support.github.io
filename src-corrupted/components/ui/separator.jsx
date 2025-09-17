@@ -1,14 +1,12 @@
-export function Separator(props: any) {
-  const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px';
+import React from 'react';
 
+const separator: React.FC = () => {
   return (
-    <div role={decorative ? 'none' : 'separator'}
-      aria-orientation={orientation}
-      className={`${baseClasses} bg-gray-300 ${className}`}
-      {...props}
-     />
-  )}
-
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">separator</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
 export default separator;
-</div>

@@ -24,13 +24,6 @@ serve(async (req) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
-<<<<<<< HEAD
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
-=======
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-      },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   try {
@@ -39,12 +32,6 @@ serve(async (req) => {
     if (!authHeader) {
       return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Verify the token with Supabase auth
@@ -54,12 +41,6 @@ serve(async (req) => {
     if (authError || !user) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Parse URL to determine action
@@ -90,22 +71,10 @@ serve(async (req) => {
 
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error processing request:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });
 
@@ -123,12 +92,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       console.error('Error generating API key:', keyGenError);
       return new Response(JSON.stringify({ error: 'Failed to generate API key' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Store the key in the database (hash it first)
@@ -138,12 +101,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       console.error('Error hashing API key:', hashError);
       return new Response(JSON.stringify({ error: 'Failed to process API key' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Insert the API key record
@@ -155,24 +112,12 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
         key_hash: hashData,
         name: name,
         scopes: scopes,
-<<<<<<< HEAD
-        expires_at: expiresAt})
-=======
-        expires_at: expiresAt,
-      })
->>>>>>> origin/auto/autonomy-17186719616
       .select('id, name, key_prefix, scopes, created_at, expires_at, is_active');
 
     if (insertError || !insertData) {
       console.error('Error inserting API key:', insertError);
       return new Response(JSON.stringify({ error: 'Failed to save API key' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Return the created key (only shown once)
@@ -182,22 +127,10 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       message: 'API key created successfully. Save this key as it won\'t be shown again.'
     }), {
       status: 201,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in createApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -213,32 +146,14 @@ async function getUserApiKeys(userId: string) {
       console.error('Error fetching API keys:', error);
       return new Response(JSON.stringify({ error: 'Failed to fetch API keys' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({ keys: data }), {
       status: 200,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in getUserApiKeys:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -255,12 +170,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
     if (keyError || !keyData) {
       return new Response(JSON.stringify({ error: 'API key not found or access denied' }), {
         status: 404,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Generate a new API key
@@ -270,12 +179,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       console.error('Error generating new API key:', keyGenError);
       return new Response(JSON.stringify({ error: 'Failed to generate new API key' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Hash the new key
@@ -285,12 +188,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       console.error('Error hashing new API key:', hashError);
       return new Response(JSON.stringify({ error: 'Failed to process new API key' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Update the key record with new hash
@@ -298,12 +195,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .from('api_keys')
       .update({
         key_hash: hashData,
-<<<<<<< HEAD
-        updated_at: new Date().toISOString()})
-=======
-        updated_at: new Date().toISOString(),
-      })
->>>>>>> origin/auto/autonomy-17186719616
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, key_prefix, scopes, created_at, expires_at, is_active');
@@ -312,12 +203,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       console.error('Error updating API key:', updateError);
       return new Response(JSON.stringify({ error: 'Failed to update API key' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Return the regenerated key
@@ -327,22 +212,10 @@ async function regenerateApiKey(userId: string, keyId: string) {
       message: 'API key regenerated successfully. Save this key as it won\'t be shown again.'
     }), {
       status: 200,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in regenerateApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -359,12 +232,6 @@ async function revokeApiKey(userId: string, keyId: string) {
       console.error('Error revoking API key:', error);
       return new Response(JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
         status: error ? 500 : 404,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({
@@ -372,22 +239,10 @@ async function revokeApiKey(userId: string, keyId: string) {
       key: data[0]
     }), {
       status: 200,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in revokeApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -403,23 +258,11 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     if (!keyIds || keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Get logs for those keys
@@ -435,31 +278,13 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       console.error('Error fetching API logs:', logsError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
-<<<<<<< HEAD
-        headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({ logs, count }), {
       status: 200,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in getApiLogs:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }

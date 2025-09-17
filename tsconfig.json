@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,28 +14,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
-      "@layout/*": ["src/layout/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@types/*": ["src/types/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@data/*": ["src/data/*"],
-      "@services/*": ["src/services/*"],
-      "@context/*": ["src/context/*"],
-      "@constants/*": ["src/constants/*"]
+      "@/*": ["src/*"]
     },
     "types": ["vite/client", "node"]
   },
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -48,6 +36,37 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "**/*.spec.tsx"
   ]
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+    "**/*.spec.tsx",
+    "coverage"
+  ]
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+    "**/*.spec.tsx"
+  ]
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+>>>>>>> origin/feat/new-sept-2025-content-and-blog-promo
+=======
+>>>>>>> origin/feat/realtime-rag-content
+=======
+>>>>>>> origin/feature/enhanced-content-showcase-2025
+=======
+>>>>>>> origin/merge-new-content-1757989975

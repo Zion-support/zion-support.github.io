@@ -1,8 +1,22 @@
-import React from 'react'; export default AdvancedServicesShowcase2025; const AdvancedServicesShowcase2025: Reac t.FC = () => {; const [selectedCategory, setSelectedCategory] = useState < string> ("all") ; const [searchTerm, setSearchTerm] = useState < string> (") ; const allServices = [; ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: "Micro SaaS" }) ) ,; ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: "IT Services" }) ) ,; ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: "AI Solutions" }) ) ; ]; const filteredServices = allServices.filter(service => {; const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||; service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||; service.tags.some(tag => tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ; return matchesCategory && matchesSearch}) ; const categories = [ { id: "all", name: "All Services", count: allService s.length }, { id: "Micro SaaS", name: "Micro SaaS", count: ADVANCED_MICRO_SAAS_SERVICES_202 5.length }, { id: "IT Services", name: "IT Services", count: SPECIALIZED_IT_SERVICES_202 5.length }, { id: "AI Solutions", name: "AI Solutions", count: ADVANCED_AI_SERVICES_202 5.length }; ]; return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Advanced Services Showcase 2025 - Zion Tech Group" description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."  /> {} <div  className="relative overflow-hidden"> <div  className="max - w-7xl mx - auto px-4 sm: p x-6 lg: p x-8 py-24"> <div  className="text-center"> <h1 className="text-5xl md: tex t-6xl font - bold text-white mb-6"> Advanced Services Showcase 2025 </h1> <p className="text-xl md: tex t-2xl text-gray - 300 mb-8 max - w-4xl mx -auto"> Discover our cutting - edge portfolio of micro SaaS solutions, specialized IT services, and advanced AI platforms designed to transform your business operations and drive innovation.</p> <div  className="flex flex - col sm: fle x - row gap-4 justify -center"> <a href="https:
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+const AdvancedServicesShowcase2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>AdvancedServicesShowcase2025 | Zion Tech Group</title>
+        <meta name="description" content="AdvancedServicesShowcase2025 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AdvancedServicesShowcase2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdvancedServicesShowcase2025;

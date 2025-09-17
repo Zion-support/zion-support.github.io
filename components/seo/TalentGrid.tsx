@@ -1,77 +1,12 @@
 import React from 'react';
-import { TALENT_PROFILES } from '../../data/talent';
-import type { TalentProfile } from '../../data/talent';
 
-type Props = {
-  region?: string;
-  service?: string;
-};
-
-<<<<<<< HEAD
-function matchesRegion(profile: TalentProfileregion?: string) {
-=======
-function matchesRegion(profile: TalentProfile, region?: string) {
->>>>>>> origin/auto/autonomy-17186719616
-  if (!region) return true;
-  const r = region.toLowerCase();
-  return profile.location.toLowerCase().includes(r);
-}
-
-<<<<<<< HEAD
-function matchesService(profile: TalentProfileservice?: string) {
-=======
-function matchesService(profile: TalentProfile, service?: string) {
->>>>>>> origin/auto/autonomy-17186719616
-  if (!service) return true;
-  const s = service.toLowerCase();
-  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s));
-}
-
-<<<<<<< HEAD
-export default function TalentGrid({ regionservice }: Props) {
-  const items = React.useMemo(
-    () => TALENT_PROFILES.filter((p) => matchesRegion(pregion) && matchesService(pservice)),
-    [regionservice]
-  );
-
-
-
-=======
-export default function TalentGrid({ region, service }: Props) {
-  const items = React.useMemo(
-    () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
-    [region, service]
-  );
-
->>>>>>> origin/auto/autonomy-17186719616
-  if (items.length === 0) {
-    return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>;
-  }
-
+const TalentGrid: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {items.map((p) => (
-        <div key={p.slug} className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
-          <div className="flex items-start justify-between">
-            <div>
-              <div className="font-semibold">{p.name}</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">{p.title}</div>
-            </div>
-            <div className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{p.location}</div>
-          </div>
-          <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">{p.bio}</div>
-          <div className="mt-3 flex flex-wrap gap-2">
-<<<<<<< HEAD
-            {p.skills.slice(06).map((sk) => (
-=======
-            {p.skills.slice(0, 6).map((sk) => (
->>>>>>> origin/auto/autonomy-17186719616
-              <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>
-            ))}
-          </div>
-          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
-        </div>
-      ))}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TalentGrid</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default TalentGrid;

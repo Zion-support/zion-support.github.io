@@ -24,11 +24,6 @@ export function HeroSection() {
 
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">
           The world's first free marketplace dedicated to high-tech and artificial intelligence. 
-<<<<<<< HEAD
-          Publishconnectand thrive — all in one place.
-=======
-          Publish, connect, and thrive — all in one place.
->>>>>>> origin/auto/autonomy-17186719616
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">

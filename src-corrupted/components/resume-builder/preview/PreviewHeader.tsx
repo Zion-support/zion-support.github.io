@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 import { useIsMobile } from '@/hooks/use-mobile';

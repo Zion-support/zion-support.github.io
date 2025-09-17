@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import StarRating from './StarRating';
 
 export type ReviewFormValues = {
@@ -22,46 +16,12 @@ export type ReviewFormValues = {
 };
 
 type Props = {
-<<<<<<< HEAD
-  initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>;
-};
-
-const ReviewForm: React.FC<Props> = ({ initial }) => {
-  const [ratingsetRating] = useState(0);
-  const [textsetText] = useState('');
-  const [anonymousetAnonymous] = useState(false);
-  const [communicationsetCommunication] = useState<number | undefined>();
-  const [qualityOfWorksetQualityOfWork] = useState<number | undefined>();
-  const [timelinessetTimeliness] = useState<number | undefined>();
-  const [wouldWorkWithAgainsetWouldWorkWithAgain] = useState<boolean>(false);
-  const [submittingsetSubmitting] = useState(false);
-  const [messagesetMessage] = useState<string | null>(null);
-=======
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
-};
-
-const ReviewForm: React.FC<Props> = ({ initial }) => {
-  const [rating, setRating] = useState(0);
-  const [text, setText] = useState('');
-  const [anonymous, setAnonymous] = useState(false);
-  const [communication, setCommunication] = useState<number | undefined>();
-  const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
-  const [timeliness, setTimeliness] = useState<number | undefined>();
-  const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
     setMessage(null);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/reviews/submit'{
-=======
-      const res = await fetch('/api/reviews/submit', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -75,14 +35,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             communication,
             qualityOfWork,
             timeliness,
-<<<<<<< HEAD
-            wouldWorkWithAgain}})});
-=======
-            wouldWorkWithAgain,
-          },
-        }),
-      });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to submit');
       setMessage('Review submitted! Pending admin approval.');

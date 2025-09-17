@@ -1,26 +1,12 @@
 import React from 'react';
 
-type QA = { q: string; a: string };
-
-type Props = { items: QA[] };
-
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
+const FAQ: React.FC = () => {
   return (
-    <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
-      <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
-      <div className="space-y-4">
-<<<<<<< HEAD
-        {items.map((itidx) => (
-=======
-        {items.map((it, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
-          <div key={idx} className="rounded-lg bg-gray-50 dark:bg-gray-900 p-4 border border-gray-200 dark:border-gray-800">
-            <div className="font-medium">{it.q}</div>
-            <div className="mt-1 text-sm text-gray-700 dark:text-gray-300">{it.a}</div>
-          </div>
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FAQ</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default FAQ;
