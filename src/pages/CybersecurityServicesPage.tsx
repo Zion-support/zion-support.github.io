@@ -501,6 +501,7 @@ export default function CybersecurityServicesPage() {
               </a>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
       {/* Security Threats Overview */}
@@ -618,6 +619,14 @@ export default function CybersecurityServicesPage() {
                   </div>
                 </CardContent>
               </Card>
+=======
+
+          <div className="flex flex-wrap gap-1">
+            {service.tags.map((tag: string, index: number) => (
+              <Badge variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
+                {tag}
+              </Badge>
+>>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
             ))}
           </div>
           {filteredServices.length === 0 && (
