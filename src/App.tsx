@@ -1,22 +1,19 @@
-import React, { JSX } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import AppRouter from './components/Router';
 import './index.css';
-
 
 export default function App(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionary technology solutions and insights for the future
-            </p>
-          </div>
-        </div>
+        <Navigation />
+        <main>
+          <AppRouter />
+        </main>
+        <Footer />
       </div>
     </Router>
   );
