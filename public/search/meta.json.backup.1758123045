@@ -2690,21 +2690,88 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-release-evidence-scorecards-blueprint",
+    "title": "",
+    "h1": "Release Evidence Scorecards — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-agent-change-windows",
+    "title": "Reliable Agent Change Windows | Zion Tech Group",
+    "h1": "Reliable Agent Change Windows"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-autonomy-operations",
+    "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
+    "h1": "AI 2026: Reliable Autonomy Operations"
+  },
+  {
+    "route": "/blog/ai-2026-reliable-real-time-agents",
+    "title": "Reliable Real‑Time Agents (2026) | Zion Tech Group",
+    "h1": "Reliable Real‑Time Agents (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-runtime-evidence-bundles",
+    "title": "Runtime Evidence Bundles (2026) | Zion Tech Group",
+    "h1": "Runtime Evidence Bundles (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5c97
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
     "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-safe-autonomy-in-production",
+    "title": "AI 2026: Safe Autonomy in Production | Zion Tech Group",
+    "h1": "AI 2026: Safe Autonomy in Production"
+  },
+  {
+    "route": "/blog/ai-2026-safe-tooling-permissions-in-practice",
+    "title": "Safe Tooling Permissions — In Practice (2026) | Zion Tech Group",
+    "h1": "Safe Tooling Permissions — In Practice (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5c97
     "route": "/blog/ai-2026-safety-evals-operational-checklist",
     "title": "",
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
+    "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5c97
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
+    "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
+    "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
+  },
+  {
+    "route": "/blog/ai-2026-trustworthy-model-routing-starter",
+    "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
+    "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
+  },
+  {
+    "route": "/blog/ai-2026-zero-trust-agents",
+    "title": "Zero‑Trust Agents (2026) | Zion Tech Group",
+    "h1": "Zero‑Trust Agents (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5c97
     "route": "/blog/ai-automation-trends-2025",
     "title": "ai-automation-trends-2025 | Zion Tech Group",
     "h1": "ai-automation-trends-2025"
