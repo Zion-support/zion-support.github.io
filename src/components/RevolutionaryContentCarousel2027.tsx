@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
   const getCurrentItems = () => {
@@ -359,25 +358,4 @@
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
-=======
-import React from "react";
 
-const RevolutionaryContentCarousel2027 = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">RevolutionaryContentCarousel2027</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
-        </div>
-      </div>
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
-export default RevolutionaryContentCarousel2027;

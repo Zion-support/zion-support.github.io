@@ -1,30 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useNotifications } from '../components/NotificationSystem';
-import React from 'react';
-import React from 'react';
-import React from 'react';
-
-import React from 'react';
-
-=======
->>>>>>> origin/merge-new-content-1757989975
-import { Helmet } from 'react-helmet-async';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
-import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
-import NeuralRealityBanner from '../components/NeuralRealityBanner';
-import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
-import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
-import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
-import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
-import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
-import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertisingBanner';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 
 const Home: React.FC = () => {
   return (
@@ -102,36 +77,11 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
-=======
 
-<<<<<<< HEAD
-        {/* Revolutionary Content Banner */}
-        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-=======
-        {/* Content Showcases */}
+      {/* Call to Action */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
-          <EnhancedContentShowcase />
-        </div>
-
-        <div className="container mx-auto px-4 py-20">
-          <RevolutionaryContentShowcase />
-        </div>
-
-        {/* Enhanced Content Advertising */}
-        <EnhancedContentAdvertising />
-
-        {/* Revolutionary Tech Advertising Banner */}
-        <RevolutionaryTechAdvertisingBanner />
-
-        {/* Interactive Tech Showcase */}
-        <InteractiveTechShowcase />
-
-        {/* Call to Action */}
-        <divsection className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-20">
->>>>>>> cursor/create-and-deploy-new-content-376e
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Technology Showcase 2026
@@ -178,11 +128,9 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-36f9
           </div>
         </div>
-      </div>
->>>>>>> origin/merge-new-content-1757989975
+      </section>
     </div>
   );
 };

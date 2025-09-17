@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     } catch (error) {
       console.warn('localStorage not available:', error);
       return null;
@@ -156,11 +155,3 @@ export default safeStorage;
     try {
     } catch (error) {
       console.warn('localStorage not available:', error);
-=======
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key: string): string | null => {
-    try {
-    } catch (error) {
-      console.warn('localStorage not available:', error);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

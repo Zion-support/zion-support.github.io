@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     }
   },
   setItem: (key, value) => {
@@ -100,5 +99,3 @@
 };
 
 export default safeStorage;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
