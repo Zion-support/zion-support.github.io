@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 interface CookieType {
   id: string;
   name: string;
