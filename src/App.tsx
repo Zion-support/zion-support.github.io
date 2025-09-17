@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
+// Import custom hooks and components
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { ThemeProvider } from './components/ThemeProvider';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import SEOHead from './components/SEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+
 // Lazy load pages for better performance
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/HomePage'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
@@ -36,27 +47,6 @@ const LoadingSpinner = () => (
   </div>
 );
 
-// Simple home component
-const Home = () => (
-  <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-white mb-6">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-300 mb-8">
-          Leading AI, Quantum Computing & Cybersecurity Solutions
-        </p>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
-          <p className="text-white">
-            Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. 
-            Interactive AI calculator, enterprise case studies, and personalized recommendations.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 function App() {
   const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
