@@ -66,36 +66,3 @@ const mergeSpecificFiles = () => {
     
     return true;
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Error in selective merge:', error.message);
-    return false;
-  }
-};
-
-// Main execution
-const main = () => {
-  if (mergeSpecificFiles()) {
-    console.log('✅ Selective merge completed');
-    
-    // Add the merged files
-    try {
-      execSync('git add .', { stdio: 'inherit' });
-      console.log('📝 Files added to staging area');
-      
-      // Commit the changes
-      execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
-      console.log('✅ Changes committed');
-      
-=======
-    console.error("Error in selective merge:", error.message);
-    console.error("Error in selective merge:", error.message);
->>>>>>> origin/merge-pr-12271
-    } catch (error) {
-      console.error('Error committing changes:', error.message);
-    }
-  } else {
-    console.log('❌ Selective merge failed');
-  }
-};
-
-main();

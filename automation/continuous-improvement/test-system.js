@@ -37,7 +37,6 @@ class TestSystem {
    * Run all tests
    */
   async runAllTests() {
-    console.log('🧪 Running Zion App Continuous Improvement System Tests');    console.log('========================================================');    console.log('');
     try {
       await this.testFileStructure();
       await this.testDependencies();
@@ -325,7 +324,6 @@ const hasLogFiles = logFiles.some(file => file.includes('.log'));
    * Display test results
    */
   displayResults() {
-    console.log('');    console.log('📊 Test Results Summary');    console.log('=======================');    console.log(`Total Tests: ${this.testResults.total}`);
     console.log(`Passed: ${this.testResults.passed}`);
     console.log(`Failed: ${this.testResults.failed}`);
     console.log(`Success Rate: ${((this.testResults.passed / this.testResults.total) * 100).toFixed(1)}%`);

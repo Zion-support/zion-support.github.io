@@ -1,90 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousResearchAssistant() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-
-			title="AI Autonomous Research Assistant"
-			slug="ai-autonomous-research-assistant"
-			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
-			subtitle="Always-on competitive and market intelligence at analyst-level quality."
-
-			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation: 1–2 weeks"
-			roiNote="Average ROI 3–6x within 60 days"
-			features={[
-				"Automated web and document monitoring with source citations"
-				"Daily/weekly executive briefs and dashboards"
-				"Regulatory watchlists and impact analysis"
-				"RFP/RFI opportunity discovery and alerts"
-				"Export to Slides/Docs/Notion"
-
-				"Compliance-friendly data handling, audit logs"
-			]}
-			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
-
-			pricePerMonthUSD={1299  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 1–2 weeks"
-			roiNote="Average ROI 3–6x within 60 days"
-			features={[
-				"Automated web and document monitoring with source citations"
-				"Daily/weekly executive briefs and dashboards"
-				"Regulatory watchlists and impact analysis"
-				"RFP/RFI opportunity discovery and alerts"
-				"Export to Slides/Docs/Notion"
-
-				"Compliance-friendly data handling, audit logs"
-
-			]}
-			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
-		/>
-	)
+const ai-autonomous-research-assistant: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-autonomous-research-assistant | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-research-assistant - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-autonomous-research-assistant</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default ai-autonomous-research-assistant;

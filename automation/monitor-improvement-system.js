@@ -100,7 +100,6 @@ class ImprovementSystemMonitor {
         const report = JSON.parse(fs.readFileSync(this.reportPath, 'utf8'));
         
         logger.info('\n📊 Improvement System Summary');
-        logger.info('============================');
         logger.info(`Total Cycles: ${report.summary.totalCycles}`);
         logger.info(`Total Improvements: ${report.summary.totalImprovements}`);
         logger.info(`Total Errors: ${report.summary.totalErrors}`);

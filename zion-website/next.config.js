@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
+const path = require('path')
 const nextConfig = {
-<<<<<<< HEAD
+  // Next.js 15: move experimental.outputFileTracingRoot to top-level
+  outputFileTracingRoot: path.join(__dirname, '..'),
   eslint: {
-    ignoreDuringBuilds: true
-  }
-=======
-	/* config options here */
->>>>>>> origin/feat/new-content-home-20250915
+    // Netlify builds fail if ESLint config contains unsupported options; skip at build time
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig

@@ -1,20 +1,15 @@
-import React, { createContext, useContext, useState } from 'react';
-
+// Whitelabel context
+import React, { createContext, useContext } from 'react';
 const WhitelabelContext = createContext();
-
-export const useWhitelabel = () => {
-  const context = useContext(WhitelabelContext);
-  if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  }
-  return context;
-};
-
 export const WhitelabelProvider = ({ children }) => {
+  const value = {
+    theme: 'default',
+    branding: {}
   };
-
   return (
     <WhitelabelContext.Provider value={value}>
       {children}
     </WhitelabelContext.Provider>
   );
+};
+export const useWhitelabel = () => useContext(WhitelabelContext);

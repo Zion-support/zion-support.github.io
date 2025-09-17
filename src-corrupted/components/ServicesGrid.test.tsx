@@ -1,14 +1,12 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function ServicesGrid.test() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ServicesGrid.test - Zion Tech Group" description="Professional ServicesGrid.test services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ServicesGrid.test</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ServicesGrid.test services to help your business grow.
-        </p>
-      </div>
-  );"}"
+import React from 'react';
 
-</div>
+const ServicesGrid.test: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ServicesGrid.test</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ServicesGrid.test;

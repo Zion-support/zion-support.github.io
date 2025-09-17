@@ -1,33 +1,12 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React from 'react';
 
-const knownPrefixes = ['services']
-
-export default function GenericPage(){
-  const router = useRouter()
-  const slugParts = Array.isArray(router.query.slug) ? router.query.slug : []
-  const path = '/' + slugParts.join('/')
-
-  const isServiceDetail = slugParts.length === 2 && slugParts[0] === 'services'
-
-  if (isServiceDetail) {
-    // Let the statically generated services/[id] handle it by linking
-    const id = slugParts[1]
-    return (
-      <main style={{padding:20,fontFamily:'sans-serif'}}>
-        <h1>Redirecting…</h1>
-        <p>This service is available here: <Link href={`/services/${id}/`}>{`/services/${id}/`}</Link></p>
-        <p><Link href="/services/">Back to Services</Link></p>
-      </main>
-    )
-  }
-
+const [...slug]: React.FC = () => {
   return (
-    <main style={{padding:20,fontFamily:'sans-serif'}}>
-      <h1>{path || 'Page'}</h1>
-      <p>This page is under construction. Please check back soon.</p>
-      <p><Link href="/">Go to Home</Link></p>
-      <p><Link href="/services/">Browse Services</Link></p>
-    </main>
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">[...slug]</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default [...slug];

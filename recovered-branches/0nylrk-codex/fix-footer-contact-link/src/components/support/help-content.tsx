@@ -28,7 +28,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         id: "create-account",
         title: "Creating your account",;
         content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.";
-=======
 } from "lucide-react";
 
 export const HELP_CATEGORIES: HelpCategory[] = [

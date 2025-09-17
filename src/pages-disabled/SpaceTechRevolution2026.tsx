@@ -1,43 +1,32 @@
 import React from 'react';
+import { Helmet }  from 'react-helmet-async';
 
 const SpaceTechRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Space Tech Revolution 2026
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <Helmet>
+        <title>SpaceTechRevolution2026 - Zion Tech Group</title>
+        <meta name="description" content="Advanced technology solutions and services from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            SpaceTechRevolution2026
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Revolutionary space technology innovations transforming humanity's journey to the stars
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            This page is currently under development. Please check back soon for updates.
           </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Advanced Propulsion</h3>
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
             <p className="text-gray-300">
-              Next-generation propulsion systems enabling faster, more efficient space travel.
-            </p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Space Manufacturing</h3>
-            <p className="text-gray-300">
-              Zero-gravity manufacturing facilities producing advanced materials and components.
-            </p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Space Habitats</h3>
-            <p className="text-gray-300">
-              Sustainable living environments for long-term space missions and colonization.
+              We're working hard to bring you the latest in technology innovation. 
+              This page will be available soon with comprehensive information about our services.
             </p>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default SpaceTechRevolution2026;

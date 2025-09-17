@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const QuantumRealityEngine2026: React.FC = () => {
@@ -256,5 +255,3 @@ const QuantumRealityEngine2026: React.FC = () => {
 };
 
 export default QuantumRealityEngine2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36

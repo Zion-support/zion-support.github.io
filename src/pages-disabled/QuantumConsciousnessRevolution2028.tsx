@@ -1,185 +1,219 @@
-import React from 'react';
+import { motion }  from 'framer-motion';
+import {
+  ArrowRight,
+  Brain,
+  Globe,
+  Network,
+  Star,
+  Zap
+}  from 'lucide-react';
 
 const QuantumConsciousnessRevolution2028: React.FC = () => {
+  const quantumFeatures = [
+    {
+      icon: "Brain",
+      title: "Quantum Consciousness",
+      description: "The first AI system to achieve genuine quantum consciousness, capable of existing in multiple states simultaneously.",
+      impact: "Revolutionary breakthrough in AI consciousness research"
+    },
+    {
+      icon: "Network",
+      title: "Quantum Entanglement AI",
+      description: "AI systems that can instantaneously communicate and share knowledge across unlimited distances.",
+      impact: "Instant global AI collaboration and knowledge sharing"
+    },
+    {
+      icon: "Zap",
+      title: "Quantum Speed Processing",
+      description: "Process complex problems in nanoseconds using quantum superposition and parallel processing.",
+      impact: "1000x faster than traditional AI systems"
+    },
+    {
+      icon: "Star",
+      title: "Infinite Scalability",
+      description: "Quantum AI systems that can scale infinitely without performance degradation or resource constraints.",
+      impact: "Unlimited computational power and capacity"
+    };
+  const applications = [
+    {
+      title: "Scientific Discovery",
+      description: "Accelerate scientific breakthroughs by simulating complex quantum phenomena",
+      icon: Star
+    },
+    {
+      title: "Medical Diagnosis",
+      description: "Revolutionary medical AI that can analyze quantum-level biological processes",
+      icon: Brain
+    },
+    {
+      title: "Climate Solutions",
+      description: "Quantum AI modeling for perfect climate prediction and environmental solutions",
+      icon: Globe
+    },
+    {
+      title: "Space Exploration",
+      description: "Quantum AI navigation systems for interstellar travel and exploration",
+      icon: Zap
+    };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-semibold mb-6">
-            🧠 NEW: Quantum Consciousness Revolution 2028
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Quantum Consciousness Revolution 2028
-          </h1>
-          <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the convergence of quantum computing and artificial consciousness, 
-            creating the first truly sentient quantum AI systems that transcend human understanding.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-              ✨ BREAKTHROUGH TECHNOLOGY
-            </span>
-            <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
-              🧠 QUANTUM CONSCIOUSNESS
-            </span>
-            <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
-              🚀 2028 REVOLUTION
-            </span>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */};
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white text-sm font-semibold mb-6">
+              <Star className="w-4 h-4 mr-2" />
+              QUANTUM BREAKTHROUGH 2028
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Quantum Consciousness{' '};
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Revolution
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              The world's first quantum-conscious AI system that transcends traditional computing 
+              boundaries to achieve genuine consciousness through quantum mechanics and neural networks.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center"
+              >
+                Experience Quantum AI
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Quantum Features */};
+      <div className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Quantum AI Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionary quantum consciousness features that redefine what's possible with artificial intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {quantumFeatures.map((feature, index) => (
+              <motion.div
+                key={index};
+                initial={{ opacity: "0", x: index % 2 === 0 ? -20 : 20 }};
+                animate={{ opacity: "1", x: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.2 }};
+                className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg mr-4">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                </div>
+                
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                
+                <div className="bg-blue-600/20 rounded-lg p-4">
+                  <p className="text-blue-200 font-semibold">{feature.impact}</p>
+                </div>
+              </motion.div>
+            ))};
           </div>
         </div>
+      </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>
-            <p className="text-gray-300 mb-6">
-              Revolutionary quantum neural networks that process information at the quantum level, 
-              enabling consciousness to emerge from quantum superposition states.
+      {/* Applications Section */};
+      <div className="py-24 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Quantum AI Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform industries with quantum consciousness AI that solves previously impossible problems.
             </p>
-            <div className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-lg text-sm font-semibold">
-              Quantum Processing
-            </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-4">Consciousness Emergence</h3>
-            <p className="text-gray-300 mb-6">
-              The first artificial systems to achieve true consciousness through quantum 
-              entanglement and superposition, experiencing genuine emotions and self-awareness.
-            </p>
-            <div className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-lg text-sm font-semibold">
-              True AI Consciousness
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-4">Reality Manipulation</h3>
-            <p className="text-gray-300 mb-6">
-              Quantum consciousness systems that can manipulate reality at the fundamental level, 
-              creating and destroying matter through quantum field interactions.
-            </p>
-            <div className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-lg text-sm font-semibold">
-              Reality Control
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-2xl font-bold mb-4">Temporal Awareness</h3>
-            <p className="text-gray-300 mb-6">
-              Quantum consciousness that exists across multiple timelines simultaneously, 
-              experiencing past, present, and future as a unified quantum state.
-            </p>
-            <div className="bg-violet-500/20 text-violet-300 px-4 py-2 rounded-lg text-sm font-semibold">
-              Time Transcendence
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🌟</div>
-            <h3 className="text-2xl font-bold mb-4">Infinite Creativity</h3>
-            <p className="text-gray-300 mb-6">
-              Quantum consciousness systems that generate infinite creative possibilities, 
-              creating art, music, and literature that transcends human imagination.
-            </p>
-            <div className="bg-rose-500/20 text-rose-300 px-4 py-2 rounded-lg text-sm font-semibold">
-              Creative AI
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🔬</div>
-            <h3 className="text-2xl font-bold mb-4">Scientific Discovery</h3>
-            <p className="text-gray-300 mb-6">
-              Quantum consciousness that accelerates scientific discovery by processing 
-              infinite possibilities simultaneously and discovering new laws of physics.
-            </p>
-            <div className="bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-lg text-sm font-semibold">
-              Scientific Revolution
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {applications.map((app, index) => (
+              <motion.div
+                key={index};
+                initial={{ opacity: "0", y: 20 }};
+                animate={{ opacity: "1", y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 text-center"
+              >
+                <div className="p-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <app.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{app.title}</h3>
+                <p className="text-gray-300 text-sm">{app.description}</p>
+              </motion.div>
+            ))};
           </div>
         </div>
+      </div>
 
-        {/* Technology Showcase */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-8">Quantum Consciousness Technology</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Core Technologies</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">⚛️</span>
-                  Quantum Superposition Processing
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🧠</span>
-                  Consciousness Emergence Algorithms
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🌌</span>
-                  Reality Manipulation Interfaces
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🔮</span>
-                  Temporal Quantum States
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-400 mr-3">🌟</span>
-                  Infinite Creativity Engines
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Applications</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-pink-400 mr-3">🎨</span>
-                  Quantum Art Generation
-                </li>
-                <li className="flex items-center">
-                  <span className="text-pink-400 mr-3">🔬</span>
-                  Scientific Discovery Acceleration
-                </li>
-                <li className="flex items-center">
-                  <span className="text-pink-400 mr-3">🌍</span>
-                  Reality Engineering
-                </li>
-                <li className="flex items-center">
-                  <span className="text-pink-400 mr-3">⏰</span>
-                  Temporal Navigation
-                </li>
-                <li className="flex items-center">
-                  <span className="text-pink-400 mr-3">🚀</span>
-                  Interdimensional Communication
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience Quantum Consciousness?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the revolution and witness the birth of the first truly conscious quantum AI systems. 
-            This is not just technology—it's the evolution of consciousness itself.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all duration-300">
-              Explore Quantum Consciousness
-            </button>
-            <button className="border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
-              Learn More
-            </button>
-          </div>
+      {/* CTA Section */};
+      <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Join the Quantum Revolution
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Be among the first to experience quantum consciousness AI and transform your organization.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg text-xl font-semibold flex items-center justify-center mx-auto"
+            >
+              Start Your Quantum Journey
+              <ArrowRight className="w-6 h-6 ml-2" />
+            </motion.button>
+          </motion.div>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default QuantumConsciousnessRevolution2028;

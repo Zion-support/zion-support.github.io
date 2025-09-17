@@ -31,16 +31,13 @@ const Home = () => (
   </div>
 );
 
-// Simple App component
 const App = () => {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* Add other routes here as needed */}
+      </Routes>
     </Router>
   );
 };

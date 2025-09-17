@@ -1,160 +1,140 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const banners = [
+    {
+      title: "🚀 Revolutionary Tech Breakthrough 2025",
+      description: "Discover the most revolutionary technology breakthroughs reshaping our digital future",
+      link: "/pages/RevolutionaryTechBreakthrough2025",
+      gradient: "from-purple-600 to-pink-600",
+      textColor: "text-purple-600"
+    },
+    {
+      title: "🧪 Next-Gen Innovation Hub 2026",
+      description: "Welcome to the world's most advanced innovation hub where the future is being created",
+      link: "/pages/NextGenInnovationHub2026",
+      gradient: "from-green-600 to-teal-600",
+      textColor: "text-white"
+    };
+  const featuredContent = [
+    {
+      title: "Revolutionary Tech Breakthrough 2025",
+      description: "Discover the most revolutionary technology breakthroughs reshaping our digital future",
+      link: "/pages/RevolutionaryTechBreakthrough2025",
+      gradient: "from-purple-600 to-pink-600",
+      textColor: "text-white"
+    },
+    {
+      title: "Next-Gen Innovation Hub 2026",
+      description: "Welcome to the world's most advanced innovation hub where the future is being created",
+      link: "/pages/NextGenInnovationHub2026",
+      gradient: "from-green-600 to-teal-600",
+      icon: "🧪",
+      badge: "HOT"
+    },
+    {
+      title: "AI-Powered Solutions 2025",
+      description: "Experience the next generation of AI-powered solutions that transform businesses",
+      link: "/pages/AIPoweredSolutions2025",
+      gradient: "from-blue-600 to-indigo-600",
+      icon: "🤖",
+      badge: "TRENDING"
+    };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % banners.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [banners.length]);
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-        <div className="absolute top-4 right-4 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-bounce"></div>
-        <div className="absolute bottom-4 left-4 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-8"
-        >
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-bounce">🚀</span>
-            <h2 className="text-3xl md:text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h2>
-            <span className="text-4xl animate-bounce">🚀</span>
-          </div>
-          <p className="text-xl md:text-2xl opacity-95 max-w-4xl mx-auto">
-            Experience the future of technology with our groundbreaking new content featuring 
-            <span className="font-bold text-yellow-300"> Quantum Consciousness AI</span>, 
-            <span className="font-bold text-cyan-300"> Neural Reality Engines</span>, and 
-            <span className="font-bold text-green-300"> Synthetic Intelligence</span>
-          </p>
-        </motion.div>
-
-        {/* Featured Content Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-8"
-        >
-          {/* Revolutionary Tech 2026 */}
-          <motion.a
-            href="/pages/RevolutionaryTech2026"
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
-          >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">🧠</div>
-            <div className="font-bold text-lg">Revolutionary Tech 2026</div>
-            <div className="text-sm opacity-90">Quantum Consciousness & Neural Reality</div>
-          </motion.a>
-
-          {/* Ultimate Innovation 2026 */}
-          <motion.a
-            href="/pages/UltimateInnovation2026"
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
-          >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">🌟</div>
-            <div className="font-bold text-lg">Ultimate Innovation 2026</div>
-            <div className="text-sm opacity-90">Consciousness Transfer & Quantum Teleportation</div>
-          </motion.a>
-
-          {/* Advanced AI Transformation 2026 */}
-          <motion.a
-            href="/pages/AdvancedAITransformation2026"
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
-          >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">🤖</div>
-            <div className="font-bold text-lg">AI Transformation 2026</div>
-            <div className="text-sm opacity-90">Advanced AI Systems & Synthetic Intelligence</div>
-          </motion.a>
-
-          {/* Quantum Neural Fusion 2026 */}
-          <motion.a
-            href="/pages/QuantumNeuralFusion2026"
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
-          >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">⚛️</div>
-            <div className="font-bold text-lg">Quantum-Neural Fusion</div>
-            <div className="text-sm opacity-90">Quantum Computing Meets Neural Networks</div>
-          </motion.a>
-
-          {/* Next-Gen Tech Showcase 2026 */}
-          <motion.a
-            href="/pages/NextGenTechShowcase2026"
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
-          >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">🚀</div>
-            <div className="font-bold text-lg">Next-Gen Showcase</div>
-            <div className="text-sm opacity-90">Cutting-Edge Technology Innovations</div>
-          </motion.a>
-
-          {/* Neural Interface Revolution 2026 */}
-          <motion.a
-            href="/pages/NeuralInterfaceRevolution2026"
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
-          >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">🧬</div>
-            <div className="font-bold text-lg">Neural Interface Revolution</div>
-            <div className="text-sm opacity-90">Direct Brain-Computer Interfaces</div>
-          </motion.a>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center"
-        >
-          <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <motion.a
-              href="/pages/RevolutionaryTech2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg border-2 border-white/30"
-            >
-              🌟 Explore Revolutionary Content →
-            </motion.a>
-            <motion.a
-              href="/pages/UltimateInnovation2026"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30"
-            >
-              🚀 Ultimate Innovation 2026 →
-            </motion.a>
-          </div>
-          
-          <div className="mt-6 text-center">
-            <p className="text-lg opacity-90 mb-4">
-              <span className="font-bold text-yellow-300">NEW:</span> Experience the most advanced technological breakthroughs of 2026
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
+      {/* Animated Background */};
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 opacity-30"></div>
+      
+      <div className="relative z-10 py-16 px-8">
+        <div className="text-center">
+          <div className="mb-8">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Revolutionary Content
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Experience the future of technology with our cutting-edge innovations
             </p>
-            <div className="flex flex-wrap justify-center gap-2 text-sm">
-              <span className="bg-white/20 px-3 py-1 rounded-full">Quantum Consciousness AI</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">Neural Reality Engines</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">Synthetic Intelligence</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">Consciousness Transfer</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">Quantum Teleportation</span>
-            </div>
           </div>
-        </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Content Banner
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Discover groundbreaking content that's reshaping the future of technology and innovation
+          </p>
+        </div>
+
+        {/* Main Banner Carousel */};
+        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
+          {banners.map((banner, index) => (
+            <div
+              key={index};
+              className={`absolute inset-0 bg-gradient-to-br ${banner.gradient} flex items-center justify-center transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`};
+            >
+              <div className="text-center text-white p-8">
+                <h3 className="text-3xl font-bold mb-4">{banner.title}</h3>
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{banner.description}</p>
+                <a 
+                  href={banner.link};
+                  className={`inline-block bg-white ${banner.textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`};
+                >
+                  Explore Now →
+                </a>
+              </div>
+            </div>
+          ))};
+        </div>
+
+        {/* Featured Content Grid */};
+        <div className="grid md:grid-cols-3 gap-6">
+          {featuredContent.map((content, index) => (
+            <div
+              key={index};
+              className={`bg-gradient-to-br ${content.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20`};
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-4xl">{content.icon}</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">
+                  {content.badge};
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">{content.title}</h3>
+              <p className="text-sm opacity-90 mb-4">{content.description}</p>
+              <a 
+                href={content.link};
+                className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
+              >
+                Learn More →
+              </a>
+            </div>
+          ))};
+        </div>
+
+        {/* Navigation Dots */};
+        <div className="flex justify-center mt-8 space-x-2">
+          {banners.map((_, index) => (
+            <button
+              key={index};
+              onClick={() => setCurrentSlide(index)};
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+              }`};
+            />
+          ))};
+        </div>
       </div>
     </div>
   );
-};
-
+  };
 export default RevolutionaryContentBanner;
