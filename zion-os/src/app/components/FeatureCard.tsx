@@ -10,6 +10,8 @@ export interface FeatureCardProps {
 	href: string;
 	isActive: boolean;
 	onClick: () => void;
+	features?: string[];
+	gradient?: string;
 }
 
 function FeatureCard({

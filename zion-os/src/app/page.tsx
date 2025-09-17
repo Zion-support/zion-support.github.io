@@ -1,3 +1,5 @@
+"use client";
+
 import FeatureCard from "./components/FeatureCard";
 import Link from "next/link";
 

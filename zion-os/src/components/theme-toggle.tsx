@@ -1,156 +1,35 @@
-<<<<<<< HEAD
-
-"use client";
-import { useTheme } from "@/components/theme-provider";
-import { Moon, Sun, Monitor } from "lucide-react";
-export function ThemeToggle() {const { theme, setTheme } = useTheme();
-"use client",;
-import { useTheme } from "@/components/theme-provider",;
-import { Moon, Sun, Monitor } from "lucide-react",;
-export function ThemeToggle() {;
-  const { theme, setTheme } = useTheme();
-
-  return (;
-    <div className="flex items-center gap-2">;
-      <span className="sr-only">Theme</span>;
-      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
-        <button;
-          onClick={() => setTheme("light")}
-
-          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
-            theme === "light";
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
-
-"use client",
-import { use_theme  } from '@/components / theme - provider';,
-import { Moon, Sun, Monitor  } from './lucide-react';,
-export /**
- * ThemeToggle - Function description
- */
-function ThemeToggle() {
-  const { theme, set_theme } = use_theme ();
-  return (
-    <div className="flex items - center gap - 2">;
-      <span className="sr - only">Theme</span>;
-      <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p - 1">;
-        <button;
-          on_click={() => set_theme ("light")}
-          className={`rounded px - 2 py - 1 text - sm transition - colors ${
-            theme === "light";
-              ? "bg - zion - blue text - white";
-              : "text - zinc - 400 hover:text - zinc - 100";
-
-
-"use client",;
-import { useTheme } from "@/components/theme-provider",;
-import { Moon, Sun, Monitor } from "lucide-react",;
-export function ThemeToggle() {;
-  const { theme, setTheme } = useTheme();
-  return (;
-    <div className="flex items-center gap-2">;
-      <span className="sr-only">Theme</span>;
-      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
-        <button;
-          onClick={() => setTheme("light")}
-
-
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
-            theme === "light";
-
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
-          }`}
-          aria - label="Switch to light theme";
-          aria - pressed={theme === "light"}
-        >;
-          <Sun className="h - 4 w - 4" />;
-        </button>;
-        <button;
-          onClick={() => setTheme("system")}
-
-          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "system";
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
-            theme === "system";
-
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
-          }`}
-          aria - label="Switch to system theme";
-          aria - pressed={theme === "system"}
-        >;
-          <Monitor className="h - 4 w - 4" />;
-        </button>;
-        <button;
-          onClick={() => setTheme("dark")}
-
-          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "dark";
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
-            theme === "dark";
-
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
-          }`}
-          aria - label="Switch to dark theme";
-          aria - pressed={theme === "dark"}
-        >;
-          <Moon className="h - 4 w - 4" />;
-        </button>;
-      </div>;
-    </div>);
-}
-=======
 "use client";
 
-import { useTheme } from "@/components/theme-provider";
-import { Moon, Sun, Monitor } from "lucide-react";
+import { useTheme } from "./theme-provider";
+import { Sun, Moon, Monitor } from "lucide-react";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
+  const themes = [
+    { value: 'light', icon: Sun, label: 'Light' },
+    { value: 'dark', icon: Moon, label: 'Dark' },
+    { value: 'system', icon: Monitor, label: 'System' }
+  ] as const;
+
   return (
-    <div className="flex items-center gap-2">
-      <span className="sr-only">Theme</span>
-      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">
+    <div className="flex items-center space-x-2">
+      {themes.map(({ value, icon: Icon, label }) => (
         <button
-          onClick={() => setTheme("light")}
-          className={`rounded px-2 py-1 text-sm transition-colors ${
-            theme === "light"
-              ? "bg-zion-blue text-white"
-              : "text-zinc-400 hover:text-zinc-100"
+          key={value}
+          onClick={() => setTheme(value as 'light' | 'dark' | 'system')}
+          className={`p-2 rounded-lg transition-colors ${
+            theme === value
+              ? 'bg-blue-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           }`}
-          aria-label="Switch to light theme"
-          aria-pressed={theme === "light"}
+          aria-label={`Switch to ${label} theme`}
         >
-          <Sun className="h-4 w-4" />
+          <Icon className="w-4 h-4" />
         </button>
-        <button
-          onClick={() => setTheme("system")}
-          className={`rounded px-2 py-1 text-sm transition-colors ${
-            theme === "system"
-              ? "bg-zion-blue text-white"
-              : "text-zinc-400 hover:text-zinc-100"
-          }`}
-          aria-label="Switch to system theme"
-          aria-pressed={theme === "system"}
-        >
-          <Monitor className="h-4 w-4" />
-        </button>
-        <button
-          onClick={() => setTheme("dark")}
-          className={`rounded px-2 py-1 text-sm transition-colors ${
-            theme === "dark"
-              ? "bg-zion-blue text-white"
-              : "text-zinc-400 hover:text-zinc-100"
-          }`}
-          aria-label="Switch to dark theme"
-          aria-pressed={theme === "dark"}
-        >
-          <Moon className="h-4 w-4" />
-        </button>
-      </div>
+      ))}
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
+
+export default ThemeToggle;
