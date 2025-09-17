@@ -5,10 +5,6 @@
   command = "npm run build:netlify"
   publish = "dist"
 
-[[plugins]]
-  # Enable Netlify's official Next.js runtime to support SSR/ISR and routing
-  package = "@netlify/plugin-nextjs"
-
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
@@ -102,7 +98,7 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-## Removed Next.js plugin since this project builds a static Vite app
+## Note: Next.js plugin removed; this project builds a static Vite app with Vite
 
 
 # Redirects for SEO/legacy URLs
