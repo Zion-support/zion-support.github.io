@@ -5,12 +5,14 @@ import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import PerformanceMonitor from "./components/PerformanceMonitor";
-import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
+import AdvancedErrorBoundary from "./components/AdvancedErrorBoundary";
 import EnhancedSEOHead from "./components/EnhancedSEOHead";
 import ModernAccessibilityEnhancer from "./components/ModernAccessibilityEnhancer";
 import ModernLoadingSpinner from "./components/ModernLoadingSpinner";
+import UserExperienceOptimizer from "./components/UserExperienceOptimizer";
 import { PerformanceOptimizer } from "./utils/performanceOptimizer";
 import PerformanceMonitor from "./utils/performanceMonitor";
+import { useAnalytics } from "./hooks/useAnalytics";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -49,6 +51,8 @@ function App() {
     enableCaching: true
   });
 
+  const { trackPageView, trackEvent } = useAnalytics();
+
   useEffect(() => {
     // Prefetch critical resources
     measurePerformance('App initialization', () => {
@@ -69,6 +73,13 @@ function App() {
     perfOptimizer.init();
     perfMonitor.init();
     
+    // Track page view
+    trackPageView({
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    });
+    
     // Report performance metrics after page load
     const handleLoad = () => {
       setTimeout(() => {
@@ -78,6 +89,13 @@ function App() {
         // Log performance score
         const score = perfMonitor.getPerformanceScore();
         console.log(`Performance Score: ${score}/100`);
+        
+        // Track performance event
+        trackEvent({
+          action: 'performance_metrics',
+          category: 'performance',
+          custom_parameters: { score }
+        });
       }, 2000);
     }
     
@@ -91,14 +109,36 @@ function App() {
   }, [prefetchResource, cacheResource, measurePerformance]);
 
   return (
-    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+    <AdvancedErrorBoundary 
+      enableReporting={true}
+      enableRecovery={true}
+      onError={(error, errorInfo) => {
+        console.error('App Error:', error, errorInfo);
+        trackEvent({
+          action: 'error_occurred',
+          category: 'error',
+          custom_parameters: {
+            error_message: error.message,
+            error_stack: error.stack,
+            component_stack: errorInfo.componentStack
+          }
+        });
+      }}
+    >
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
             <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
               <EnhancedSEOHead />
               <ModernAccessibilityEnhancer showControls={process.env.NODE_ENV === 'development'} />
+              <UserExperienceOptimizer 
+                enableA11y={true}
+                enablePerformance={true}
+                enablePersonalization={true}
+                enableFeedback={true}
+              />
               <PerformanceMonitor showMetrics={process.env.NODE_ENV === 'development'} />
+              
               {/* Skip Links for Accessibility */}
               <div className="sr-only focus-within:not-sr-only">
                 <a href="#main-content" className="skip-link">
@@ -127,7 +167,7 @@ function App() {
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </EnhancedErrorBoundary>
+    </AdvancedErrorBoundary>
   );
 }
 
