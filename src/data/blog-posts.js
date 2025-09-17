@@ -3561,9 +3561,5 @@ export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent202
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)
