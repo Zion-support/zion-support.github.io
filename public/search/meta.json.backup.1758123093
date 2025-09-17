@@ -2885,6 +2885,8 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-reliable-autonomy-operations",
     "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
     "h1": "AI 2026: Reliable Autonomy Operations"
@@ -2895,31 +2897,40 @@
     "h1": "Reliable Real‑Time Agents (2026)"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-4918
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
     "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-safe-autonomy-in-production",
     "title": "AI 2026: Safe Autonomy in Production | Zion Tech Group",
     "h1": "AI 2026: Safe Autonomy in Production"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-4918
     "route": "/blog/ai-2026-safety-evals-operational-checklist",
     "title": "",
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
     "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-4918
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
     "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
     "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
@@ -2930,6 +2941,7 @@
     "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-4918
     "route": "/blog/ai-automation-trends-2025",
     "title": "ai-automation-trends-2025 | Zion Tech Group",
     "h1": "ai-automation-trends-2025"
