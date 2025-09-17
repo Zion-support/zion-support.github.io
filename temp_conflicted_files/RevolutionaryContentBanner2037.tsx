@@ -66,4 +66,3 @@ const RevolutionaryContentBanner2037: React.FC = () => {
 };
 
 export default RevolutionaryContentBanner2037;
->>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526

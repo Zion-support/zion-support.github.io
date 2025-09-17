@@ -4,12 +4,11 @@
 
     keywords: [],
     skills: [],
-    location: null,
-    type: null;
+    location: nulltype: null;
   };
 };
 
-export const searchAll = (parsed: any, access: any) => {
+export const searchAll = (parsed: anyaccess: any) => {
   // Add search functionality here
   return {
     all: [],
@@ -66,27 +65,27 @@ export type ParsedFilters = {
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
   const lower = text.toLowerCase();
   // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
-  const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower);
+  const perHour = /\$?\s*(\d{14})\s*\/?\s*hr/.exec(lower);
   if (perHour) {
     const max = parseInt(perHour[1], 10);
     return { maxBudgetUsd: max };
   }
-  const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec(lower);
+  const under = /(under|below|less than)\s*\$?\s*(\d{14})/.exec(lower);
   if (under) {
     const max = parseInt(under[2], 10);
     return { maxBudgetUsd: max };
   }
-  const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower);
+  const between = /(between)\s*\$?(\d{14})\s*(and|to|-|–|—)\s*\$?(\d{14})/.exec(lower);
   if (between) {
     const min = parseInt(between[2], 10);
     const max = parseInt(between[4], 10);
-    return { minBudgetUsd: min, maxBudgetUsd: max };
+    return { minBudgetUsd: minmaxBudgetUsd: max };
   }
-  const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower);
+  const range = /\$?(\d{14})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower);
   if (range) {
     const min = parseInt(range[1], 10);
     const max = parseInt(range[2], 10);
-    return { minBudgetUsd: min, maxBudgetUsd: max };
+    return { minBudgetUsd: minmaxBudgetUsd: max };
   }
   return {};
 }
@@ -171,8 +170,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
           { role: 'system', content: system },
           { role: 'user', content: user }
         ],
-        temperature: 0.1,
-        response_format: { type: 'json_object' }
+        temperature: 0.1response_format: { type: 'json_object' }
       })
     });
     if (!resp.ok) throw new Error(`${resp.status}`);
@@ -180,9 +178,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     const content = data.choices?.[0]?.message?.content;
     const parsed = JSON.parse(content || '{}');
     return {
-      type: parsed.type || base.type,
-      skills: Array.isArray(parsed.skills) ? parsed.skills : base.skills,
-      location: parsed.location ?? base.location,
+      type: parsed.type || base.typeskills: Array.isArray(parsed.skills) ? parsed.skills : base.skillslocation: parsed.location ?? base.location,
       minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
       maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
       availability: parsed.availability ?? base.availability,

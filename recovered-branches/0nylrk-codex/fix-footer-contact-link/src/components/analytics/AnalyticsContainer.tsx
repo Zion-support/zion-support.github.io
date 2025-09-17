@@ -3,14 +3,13 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
 
 interface AnalyticsContainerProps {
   children: React.ReactNode;
 }
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/AnalyticsContainer.tsx
   
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin';
@@ -36,6 +35,13 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       <SEO 
         title="Analytics Dashboard" 
         noindex
+=======
+  return (
+    <div className="min-h-screen flex flex-col bg-zion-blue">
+      <SEO
+        title="Analytics Dashboard"
+        description="Track your performance metrics and insights"
+>>>>>>> origin/website-improvements-v2:src/components/analytics/AnalyticsContainer.tsx
       />
       <Header />
       <main className="flex-1 p-6 md:p-8 container mx-auto">

@@ -1,4 +1,10 @@
+import * as React from "react";
 
+type RootProps = {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  };
 const AlertDialog = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -9,9 +15,6 @@ const AlertDialog = () => {
         </div>
       </div>
     </div>
-};
-
+  );
+  };
 export default AlertDialog;
-
-=======
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
