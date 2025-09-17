@@ -3,7 +3,6 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import next from '@next/eslint-plugin-next';
 
 export default [
   js.configs.recommended,
@@ -19,7 +18,6 @@ export default [
         },
       },
       globals: {
-<<<<<<< HEAD
         // Browser globals
         window: 'readonly',
         document: 'readonly',
@@ -35,20 +33,12 @@ export default [
         location: 'readonly',
         history: 'readonly',
         // DOM types
-=======
-        window: 'readonly',
-        document: 'readonly',
-        localStorage: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
         HTMLDivElement: 'readonly',
         MouseEvent: 'readonly',
         Node: 'readonly',
-<<<<<<< HEAD
         PerformanceObserver: 'readonly',
         // Node.js globals
         process: 'readonly',
@@ -58,23 +48,17 @@ export default [
         global: 'readonly',
         // React globals
         React: 'readonly',
-=======
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       },
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next,
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'error',
@@ -112,6 +96,8 @@ export default [
       'src.disabled/**',
       'src.broken/**',
       'src.pages.disabled/**',
+      'src_backup_temp/**',
+      'src_backup/**',
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
@@ -121,6 +107,9 @@ export default [
       'lib/**',
       'lib.corrupted/**',
       'zion-os.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion.app/**',
       'zion_academy/**',
       'contracts.disabled/**',
       'corrupted-files-backup/**',
@@ -136,11 +125,14 @@ export default [
       'types/**',
       'types.disabled/**',
       'utils/**',
+      'utils.disabled/**',
 
       // Tests and mocks
       '__tests__/**',
       'tests/**',
       'tests.disabled/**',
+      'test/**',
+      'test_build/**',
       '*.test.*',
 
       // Temp and backups
@@ -160,6 +152,8 @@ export default [
       'temp_broken_components/**',
       'temp_working/**',
       'temp_*/**',
+      'temp-problematic-pages/**',
+      'temp-backup/**',
 
       // Scripts/configs and CJS files not intended for lint
       'scripts/**',
@@ -194,6 +188,11 @@ export default [
       'pages.__backup/**',
       'pages-disabled/**',
       'pages.disabled_auto/**',
+
+      // Token and blockchain related
+      'token/**',
+      'dao/**',
+      'zion-ai-assistant/**',
     ],
   },
 ];
