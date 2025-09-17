@@ -140,6 +140,7 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
               <div className="text-4xl font-bold mb-2">24/7</div>
               <div className="text-sm opacity-90">Availability</div>
             </div>
+<<<<<<< HEAD:src/pages/RevolutionaryTechShowcase2034.tsx.backup.1758013181
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2034: React.FC = () => {
@@ -582,6 +583,8 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Book Demo
             </button>
+=======
+>>>>>>> origin/new-content-merge-1758000738:src/pages/RevolutionaryTechShowcase2034.tsx
           </div>
         </div>
       </div>
