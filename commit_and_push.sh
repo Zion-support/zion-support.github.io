@@ -1,35 +1,44 @@
 #!/bin/bash
 
-echo "🔧 Resolving merge conflicts and pushing to main..."
-
-# Change to workspace directory
-cd /workspace
-
-# Add all resolved files
-echo "📝 Adding resolved files..."
-git add .
-
-# Check if there are any changes to commit
-if git diff --cached --quiet; then
-    echo "ℹ️  No changes to commit"
-else
-    echo "💾 Committing resolved conflicts..."
-    git commit -m "Resolve merge conflicts and integrate new AI 2025 content
-
-- Resolved merge conflicts in tailwind.config.ts
-- Resolved merge conflicts in src/pages/PricingPage.js
-- Resolved merge conflicts in src/pages/FAQ.js
-- Resolved merge conflicts in app/case-studies/page.tsx
-- Integrated new AI 2025 Ultimate Breakthrough Revolution content
-- Added new case studies with high ROI metrics
-- Created new blog posts about AI trends and predictions
-- Added promotional banners for better content discovery
-
-All conflicts resolved and new content successfully integrated."
+# Check if we're in a git repository
+if [ ! -d ".git" ]; then
+    echo "Not in a git repository"
+    exit 1
 fi
 
-# Push changes to main
-echo "🚀 Pushing changes to main..."
-git push origin main
+# Check current branch
+echo "Current branch:"
+git branch --show-current
 
-echo "✅ Merge conflicts resolved and changes pushed to main!"
+# Check status
+echo "Git status:"
+git status --porcelain
+
+# Add all changes
+echo "Adding all changes..."
+git add .
+
+# Commit changes
+echo "Committing changes..."
+git commit -m "Fix Netlify build configuration and dependencies
+
+- Ensure all dependencies are properly installed
+- Verify Vite build process works correctly
+- Confirm Netlify configuration is properly set up
+- Build generates dist folder with all required assets"
+
+# Push to current branch
+echo "Pushing to current branch..."
+git push origin HEAD
+
+# Check if we need to merge to main
+current_branch=$(git branch --show-current)
+if [ "$current_branch" != "main" ]; then
+    echo "Current branch is $current_branch, not main"
+    echo "To merge to main, you may need to:"
+    echo "1. Switch to main: git checkout main"
+    echo "2. Merge this branch: git merge $current_branch"
+    echo "3. Push to main: git push origin main"
+fi
+
+echo "Done!"
