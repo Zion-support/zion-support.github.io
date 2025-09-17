@@ -12,6 +12,8 @@ import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentPromoBanner2026 from '../components/NewContentPromoBanner2026';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
@@ -775,14 +777,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Promo: New Article - Enterprise AI Security Blueprint 2026 */}
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div>
-                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Security Blueprint</h3>
-                <p className="text-gray-600 max-w-2xl">A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 2026.</p>
+        {/* New Content Promotion Banner */}
+        <NewContentPromoBanner />
+        
+        {/* NEW 2026 CONTENT PROMOTION BANNER */}
+        <NewContentPromoBanner2026 />
+
+        {/* AI Tools Showcase Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
               </div>
               <div className="shrink-0">
                 <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
@@ -860,14 +867,68 @@ export default function HomePage() {
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
 
-        {/* New Content Promo: Hyperautomation Business Playbook 2026 */}
-        <section className="py-6 bg-gradient-to-r from-blue-50 to-purple-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
-              <div>
-                <div className="text-sm font-semibold text-purple-700 mb-2">New content</div>
-                <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Secure Agent Routing Strategies</h2>
-                <p className="text-gray-600 mt-2">Least‑privilege, tiered trust, and eval‑gated routing for safe autonomy.</p>
+      {/* Dynamic Content Carousel */}
+      <DynamicContentCarousel />
+
+      {/* New Content Discovery */}
+      <NewContentDiscovery />
+
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner variant="featured" maxItems={4} />
+
+      {/* Featured New Content Showcase */}
+      <FeaturedNewContentShowcase title="Featured in January 2025" subtitle="Fresh articles, resources, and case studies just released" showViewAll={true} viewAllHref="/content-showcase" columns={3} />
+
+      {/* Featured Content Showcase */}
+      <FeaturedContentShowcase />
+      
+      {/* NEW 2026 CONTENT SHOWCASE */}
+      <NewContentShowcase2026 />
+
+      {/* NEW CONTENT SPOTLIGHT SECTION */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Revolutionary AI Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest breakthrough content: AI 2025 Year in Review, Workforce Transformation strategies, 
+              Sustainability success stories, and the complete AI Implementation Master Guide 2026. Expert insights 
+              to accelerate your AI success in 2025 and beyond.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Cards */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-year-in-review' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive analysis of AI breakthroughs and enterprise adoption trends</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
               </div>
               <div className="flex gap-3">
                 <Link href="/blog/ai-2026-secure-agent-routing-strategies" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
