@@ -1,11 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ QUANTUM BREAKTHROUGH • JANUARY 2025
@@ -17,6 +21,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ QUANTUM BREAKTHROUGH 2025 • REVOLUTIONARY COMPUTING
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
           <h1 className="text-6xl font-bold text-white mb-6">
             Quantum Computing Revolution 2025
@@ -24,6 +30,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
             Enter the quantum realm where impossible problems become solvable. Experience computing power that defies classical limitations.
           </p>
+<<<<<<< HEAD
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Quantum
@@ -299,6 +306,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -456,6 +465,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -470,6 +480,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (

@@ -5,6 +5,7 @@ const InteractiveContentShowcase2025: React.FC = () => {
 
   const contentData = {
     ai: {
+<<<<<<< HEAD
       title: "Revolutionary AI Breakthrough 2025",
       description: "Experience the most advanced AI technologies reshaping industries",
       icon: "🧠",
@@ -94,12 +95,15 @@ const InteractiveContentShowcase2025: React.FC = () => {
         ],
         link: '/pages/AdvancedBiotechRevolution2026'
       }
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     }
   };
 
   const currentContent = contentData[activeTab as keyof typeof contentData];
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -118,10 +122,13 @@ const InteractiveContentShowcase2025: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive experiences. 
             Click on different categories to discover the future of innovation.
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </p>
         </div>
 
         {/* Tab Navigation */}
+<<<<<<< HEAD
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex space-x-2">
             {Object.entries(contentData).map(([key, content]) => (
@@ -150,12 +157,15 @@ const InteractiveContentShowcase2025: React.FC = () => {
               >
                 <span className="text-xl mr-2">{tab.icon}</span>
                 {tab.title}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               </button>
             ))}
           </div>
         </div>
 
         {/* Content Display */}
+<<<<<<< HEAD
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-8xl mb-6 text-center md:text-left">{currentContent.icon}</div>
@@ -232,6 +242,8 @@ const InteractiveContentShowcase2025: React.FC = () => {
                 >
                   Explore {contentTabs[activeTab as keyof typeof contentTabs].title} →
                 </a>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               </div>
               <div className="text-center">
                 <div className="text-8xl mb-4 opacity-50">
@@ -245,6 +257,7 @@ const InteractiveContentShowcase2025: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -282,6 +295,8 @@ const InteractiveContentShowcase2025: React.FC = () => {
             <div className="text-4xl mb-3">🔮</div>
             <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>
             <p className="text-sm opacity-90">AI-powered predictions about technology trends and developments</p>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>

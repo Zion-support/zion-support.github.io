@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 import React from 'react';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
@@ -22,6 +25,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["Research Labs", "Innovation Process", "Global Network", "Breakthrough Ideas"]
     },
     {
+<<<<<<< HEAD
       title: "Advanced Space Technology 2026",
       description: "Revolutionary space exploration technologies enabling interplanetary travel",
       icon: "🛸",
@@ -32,6 +36,9 @@ import React, { useState } from 'react';
 import React from 'react';
 
 import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -68,6 +75,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["1000+ Qubits", "Quantum Algorithms", "Cryptography", "Simulation"]
     },
     {
+<<<<<<< HEAD
       id: 2,
       title: '🧠 AI Consciousness Evolution',
       content: 'Witness the evolution of AI consciousness and self-awareness in our advanced AI systems.',
@@ -91,6 +99,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       icon: '🧬',
       description: 'Step into virtual worlds through direct brain interface',
       link: '/pages/NeuralRealityEngine2026'
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       id: 3,
       title: '⚡ Quantum Reality 2026',
       content: 'Explore the quantum reality with our advanced quantum computing solutions and applications.',
@@ -101,6 +111,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
         'Quantum AI Integration'
       ],
       link: '/pages/QuantumReality2026'
+<<<<<<< HEAD
       title: "Advanced Space Technology 2026",
       description: "Revolutionary space exploration technologies enabling interplanetary travel",
       icon: "🛸",
@@ -117,6 +128,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["1000+ Qubits", "Quantum Algorithms", "Cryptography", "Simulation"]
     },
     {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       title: "Advanced Robotics 2026",
       description: "Next-generation autonomous robotics with human-like capabilities",
       icon: "🤖",
@@ -125,6 +138,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["Humanoid Robots", "AI Integration", "Autonomous Systems", "Precision Control"]
     },
     {
+<<<<<<< HEAD
       title: "Advanced Robotics 2026",
       description: "Next-generation autonomous robotics with human-like capabilities",
       icon: "🤖",
@@ -133,6 +147,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["Humanoid Robots", "AI Integration", "Autonomous Systems", "Precision Control"]
     },
     {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer interfaces enabling thought-controlled technology",
       icon: "🧬",
@@ -148,6 +164,21 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
+=======
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <motion.div
@@ -170,6 +201,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <motion.div
@@ -230,6 +262,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • BREAKTHROUGH TECHNOLOGY
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
             Revolutionary Content Showcase 2026
@@ -237,9 +271,12 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
           </p>
+<<<<<<< HEAD
         </div>
         </div>
         </motion.div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -265,6 +302,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   {item.description}
                 </p>
+<<<<<<< HEAD
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-center">Key Features:</h4>
@@ -300,6 +338,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
         >
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               {tab.title}
             </button>
               <div className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 h-full`}>
@@ -314,6 +354,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   {item.description}
                 </p>
+<<<<<<< HEAD
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-center">Key Features:</h4>
@@ -339,6 +380,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 </div>
               </div>
             </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           ))}
         </div>
 
@@ -551,8 +594,11 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               <h4 className="text-xl font-bold mb-2">Early Access</h4>
               <p className="text-gray-300">Be among the first to experience breakthrough technologies</p>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             <div className="text-center">
               <div className="text-4xl mb-4">💡</div>
               <h4 className="text-xl font-bold mb-2">Innovation Updates</h4>
@@ -570,6 +616,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </div>
         </motion.div>
           )}
+<<<<<<< HEAD
 
           {activeTab === 'neural' && (
             <div className="grid md:grid-cols-2 gap-8">
@@ -626,6 +673,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                   </ul>
                 </div>
               </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -705,6 +754,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 Explore {contentTabs[activeTab].title.split(' ')[1]} →
               </a>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
             <div className="text-center">
@@ -724,6 +774,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </div>
         </div>
           )}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -766,7 +818,10 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               Start Your Journey
             </a>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         <div className="text-center mt-12">
           <a
             href="/pages/RevolutionaryTechBreakthrough2026"

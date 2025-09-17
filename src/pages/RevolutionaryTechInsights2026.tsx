@@ -302,12 +302,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               >
             <div className="mb-8">
             <div className="mb-8">
+<<<<<<< HEAD
             <div className="mb-8">
             <div className="mb-8">
             <div className="mb-8">
             <div className="mb-8">
             <div className="mb-8">
             <div className="mb-8">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </div>
@@ -599,6 +602,7 @@ export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
+<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
@@ -606,3 +610,5 @@ export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
 export default RevolutionaryTechInsights2026;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068

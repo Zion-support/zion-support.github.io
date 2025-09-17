@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
@@ -9,6 +10,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -22,6 +25,7 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most advanced technological innovations that are reshaping the future of humanity. 
             From quantum consciousness to neural reality interfaces, discover what's possible in 2026.
+<<<<<<< HEAD
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
@@ -326,6 +330,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </div>
           </motion.div>
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -367,6 +373,7 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
         {/* Revolutionary Features Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Revolutionary Features</h2>
@@ -409,6 +416,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>
@@ -431,6 +440,7 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Our Experts
+<<<<<<< HEAD
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
@@ -438,6 +448,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-lg">
               Watch Demo
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
           </div>
         </div>
@@ -611,7 +623,10 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       </div>
     </div>
   );

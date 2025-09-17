@@ -7,6 +7,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   const revolutionaryContent = [
     {
       id: 1,
+<<<<<<< HEAD
       title: "AI Consciousness Revolution 2025",
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",
@@ -14,6 +15,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       borderColor: "border-purple-400",
       bgColor: "from-purple-600/30 to-pink-600/30",
       features: ["Self-aware AI agents", "Emotional intelligence", "Creative problem solving", "Ethical decision making"],
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       title: "AI Consciousness Revolution",
       description: "Experience the first AI system with genuine consciousness and self-awareness",
       image: "🧠",
@@ -23,6 +26,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     },
     {
       id: 2,
+<<<<<<< HEAD
       title: "Quantum Neural Fusion",
       description: "The convergence of quantum computing and neural networks creating unprecedented computational power and processing capabilities.",
       image: "⚡",
@@ -41,6 +45,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       borderColor: "border-emerald-400",
       bgColor: "from-emerald-600/30 to-teal-600/30",
       features: ["Direct neural interfaces", "Photorealistic VR", "Haptic feedback systems", "Consciousness transfer"],
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       title: "Quantum Reality Engine",
       description: "Manipulate reality itself through quantum computing and parallel universe exploration",
       image: "⚡",
@@ -59,6 +65,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     },
     {
       id: 4,
+<<<<<<< HEAD
       title: "Interdimensional Computing",
       description: "Computing systems that operate across multiple dimensions and parallel universes simultaneously.",
       image: "🌌",
@@ -89,6 +96,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       bgColor: "from-pink-600/30 to-rose-600/30",
       features: ["Digital consciousness", "Immortality technology", "Mind uploading", "Virtual existence"],
       link: "/pages/ConsciousnessComputingRevolution2030"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       title: "Consciousness Transfer Technology",
       description: "Achieve digital immortality through consciousness transfer between biological and artificial bodies",
       image: "🌟",
@@ -110,21 +119,27 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
+<<<<<<< HEAD
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
         setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       }, 5000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
+<<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
   };
 
@@ -137,6 +152,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -153,6 +169,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -205,6 +223,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             >
               {revolutionaryContent.map((content, index) => (
                 <div key={content.id} className="w-full flex-shrink-0">
+<<<<<<< HEAD
                   <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-2xl p-12 border ${content.borderColor}/30`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                       <div>
@@ -222,6 +241,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                         <a 
                           href={content.link}
                           className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                   <div className={`bg-gradient-to-br ${content.gradient} p-12 min-h-[600px] flex items-center`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center w-full">
                       {/* Content */}
@@ -249,6 +270,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                           Explore {content.title} →
                         </a>
                       </div>
+<<<<<<< HEAD
                       <div className="hidden md:block">
                         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                           <h4 className="text-2xl font-bold mb-4">Key Statistics</h4>
@@ -270,6 +292,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                               <span className="font-bold text-2xl">∞</span>
                             </div>
                           </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                       
                       {/* Visual Element */}
                       <div className="relative">
@@ -285,6 +309,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -355,6 +380,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                   Explore →
                 </a>
               </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (

@@ -5,6 +5,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Revolutionary Tech Showcase 2027 - Zion Tech Group</title>
         <meta name="description" content="Explore the most revolutionary technology showcase of 2027 featuring cutting-edge innovations" />
         <meta name="keywords" content="tech showcase 2027, revolutionary technology, AI showcase, quantum computing, neural interfaces" />
@@ -31,6 +32,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-lg">
                   Watch Live Demo
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         <title>Revolutionary Technology Showcase 2027 | Zion Tech Group</title>
         <meta name="description" content="Experience the future of technology with our revolutionary 2027 showcase featuring AI, quantum computing, and neural interfaces." />
         <meta name="keywords" content="revolutionary technology, AI 2027, quantum computing, neural interfaces, future tech" />
@@ -189,6 +192,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <span className="px-3 py-1 bg-pink-500/50 rounded-full text-xs font-semibold">LIFE</span>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Featured Technologies */}
@@ -353,6 +357,10 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                   Try Demo
                 </button>
               </div>
+=======
+                </button>
+              </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
           <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
@@ -440,6 +448,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Success Stories */}
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -494,6 +503,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-lg">
                 Schedule Demo
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Revolutionary Content Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -624,6 +635,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
         {/* Innovation Timeline */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Timeline 2027</h2>
@@ -752,6 +764,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
   );
 };
 

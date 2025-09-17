@@ -119,6 +119,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <div className="text-2xl font-bold">24/7</div>
               <div className="text-2xl font-bold">Updates</div>
             </div>
+<<<<<<< HEAD
     // Simulate subscription
     setIsSubscribed(true);
     setTimeout(() => setIsSubscribed(false), 3000);
@@ -187,6 +188,8 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <div className="text-3xl mb-2">🌌</div>
             <h3 className="text-lg font-semibold mb-2">Space Updates</h3>
             <p className="text-sm opacity-90">Space exploration missions and cosmic discoveries</p>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>

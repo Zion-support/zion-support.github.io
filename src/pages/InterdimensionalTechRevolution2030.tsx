@@ -3,8 +3,11 @@ import React from 'react';
 
 const InterdimensionalTechRevolution2030: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-indigo-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -26,6 +29,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               Explore Parallels
             </button>
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Interdimensional Technologies */}
@@ -84,6 +88,8 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">🌌 Interdimensional Technologies</h2>
             <p className="text-xl opacity-80">Access realities beyond our dimension</p>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -110,6 +116,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               </button>
             </div>
 
+<<<<<<< HEAD
           <div className="bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Dimensional Computing</h3>
@@ -204,6 +211,8 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               <div className="text-6xl mb-4">🌌</div>
               <h3 className="text-2xl font-bold mb-4">Infinite Dimensions</h3>
               <p className="text-purple-200">Access to unlimited parallel universes and realities</p>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -222,6 +231,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               <h3 className="text-2xl font-bold mb-4">Dimensional Processing</h3>
               <p className="text-indigo-200">Computing power across infinite parallel dimensions</p>
             </div>
+<<<<<<< HEAD
             <div className="text-center">
               <div className="text-6xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Reality Control</h3>
@@ -354,10 +364,14 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Learn More
               </button>
             </div>
+=======
+            </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -419,6 +433,8 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 <li>• Custom physics engines</li>
                 <li>• Personalized reality bubbles</li>
                 <li>• Infinite creative possibilities</li>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Interdimensional Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -474,6 +490,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               </button>
             </motion.div>
 
+<<<<<<< HEAD
         {/* Dimensional Showcase */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-800/20 to-fuchsia-800/20 p-8 rounded-2xl border border-violet-400/30">
@@ -502,6 +519,8 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             <button className="px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-300">
               Enter Gamma
             </button>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             {/* Consciousness Transfer */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -527,6 +546,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Dimensional Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
@@ -551,6 +571,8 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </div>
         </div>
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-6xl font-bold mb-6">Transcend Dimensions</h2>

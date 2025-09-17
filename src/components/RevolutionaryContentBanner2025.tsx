@@ -131,7 +131,10 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </div>
         </motion.div>
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -170,6 +173,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden mb-12">
       {/* Main Banner */}
+<<<<<<< HEAD
       <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="relative z-10">
@@ -291,6 +295,11 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       <div className="absolute top-4 right-4 text-6xl animate-bounce opacity-20">🚀</div>
       <div className="absolute bottom-4 left-4 text-4xl animate-pulse opacity-20">⚡</div>
       <div className="absolute top-1/2 right-8 text-3xl animate-ping opacity-30">🧠</div>
+=======
+        </div>
+      </div>
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-6">
         {contentSlides.map((_, index) => (

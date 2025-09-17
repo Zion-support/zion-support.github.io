@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
@@ -171,11 +174,14 @@ const UltimateTechRevolution2027: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 import { ArrowRight, Zap, Brain, Cpu, Globe, Shield, Rocket, Star } from 'lucide-react';
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
@@ -489,7 +495,10 @@ const UltimateTechRevolution2027: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       </div>
 
       {/* CTA Section */}

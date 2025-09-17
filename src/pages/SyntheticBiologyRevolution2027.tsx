@@ -6,9 +6,12 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
       <div className="container mx-auto px-4 py-20">
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
       <div className="container mx-auto px-4 py-20">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -26,6 +29,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -47,6 +51,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-16 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
               Watch Demo
+=======
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -83,6 +90,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </ul>
             <a href="/pages/SyntheticDNA" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
               Explore DNA Tech →
+<<<<<<< HEAD
         {/* Revolutionary Applications */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
@@ -116,6 +124,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </ul>
             <a href="/pages/SyntheticMedicine2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Medicine →
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </a>
           </div>
 
@@ -137,6 +147,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌱</div>
+<<<<<<< HEAD
             <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
             <p className="text-lime-100 mb-6 text-center">
               Engineering biological systems for sustainable solutions
@@ -149,6 +160,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
             </a>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
 
           <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
@@ -162,8 +175,11 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Carbon Capture</li>
               <li>• Renewable Energy</li>
             </ul>
+<<<<<<< HEAD
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -228,16 +244,22 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Ocean cleanup systems</li>
               <li>• Ecosystem restoration</li>
             </ul>
+<<<<<<< HEAD
             <a href="/pages/EnvironmentalRestoration2027" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Restoration →
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </a>
           </div>
         </div>
 
         {/* Call to Action */}
             </a>
+<<<<<<< HEAD
             <a href="/pages/BioEngineering" className="block w-full bg-white text-lime-600 py-3 rounded-lg hover:bg-lime-50 transition-colors font-semibold text-center">
               Engineer Life →
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -327,6 +349,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
+<<<<<<< HEAD
               Learn More
               Learn More
         {/* Technology Impact Stats */}
@@ -353,12 +376,17 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <div className="text-lg text-cyan-200 mb-2">Environmental Impact</div>
               <div className="text-sm text-gray-400">Carbon-neutral bio-systems</div>
             </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </a>
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
         <div className="text-center">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -371,6 +399,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Get Started
             </button>
             <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-2xl">
+<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Redesign Life?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
@@ -381,6 +410,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               Start Your Journey →
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               Learn More
               Learn More
               Learn More

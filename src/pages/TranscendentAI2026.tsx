@@ -199,8 +199,11 @@ const TranscendentAI2026: React.FC = () => {
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
               </div>
               </div>
+<<<<<<< HEAD
               </div>
               </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -267,7 +270,10 @@ const TranscendentAI2026: React.FC = () => {
                   </p>
                 </div>
               ))}
+<<<<<<< HEAD
               </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </div>
           </div>
         </div>
@@ -470,8 +476,11 @@ const TranscendentAI2026: React.FC = () => {
 
               </div>
         {/* Revolutionary Applications */}
+<<<<<<< HEAD
               </div>
         {/* Revolutionary Applications */}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -657,6 +666,7 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </motion.section>
 
+<<<<<<< HEAD
           </div>
         </motion.section>
 
@@ -689,6 +699,8 @@ const TranscendentAI2026: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-4 text-emerald-300">Universal Awareness</h3>
                 <p className="text-gray-300">Consciousness spanning across dimensions and realities</p>
               </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Future Vision */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}

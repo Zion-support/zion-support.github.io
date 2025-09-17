@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const UltimateContentShowcase2026: React.FC = () => {
+<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -398,6 +399,13 @@ const UltimateContentShowcase2026: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
             Hear from leading experts about our revolutionary technologies
           </p>
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const showcaseItems = [
+    {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -446,7 +454,10 @@ const UltimateContentShowcase2026: React.FC = () => {
               📞 Schedule Demo
             </button>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         </div>
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
@@ -519,6 +530,7 @@ const UltimateContentShowcase2026: React.FC = () => {
             Experience the most advanced technologies that will reshape our world forever
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -556,6 +568,8 @@ const UltimateContentShowcase2026: React.FC = () => {
               Explore Consciousness →
             </a>
           </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">⚡</div>

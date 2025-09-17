@@ -51,8 +51,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Space Habitats",
         "Interstellar Communication"
       ],
+<<<<<<< HEAD
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       impact: "Revolutionary"
       impact: "Unprecedented"
       impact: "Unprecedented"
@@ -106,10 +109,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+<<<<<<< HEAD
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
@@ -131,12 +137,15 @@ const RevolutionaryContentCarousel: React.FC = () => {
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+<<<<<<< HEAD
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
@@ -323,6 +332,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </a>
         ))}
       </div>
+<<<<<<< HEAD
 
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-3 mt-8">
@@ -363,6 +373,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </motion.button>
         ))}
       </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     </div>
   );
 };

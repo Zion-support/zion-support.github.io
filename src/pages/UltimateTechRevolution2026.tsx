@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Header';
@@ -8,6 +9,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
@@ -21,6 +27,7 @@ const UltimateTechRevolution2026: React.FC = () => {
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -29,6 +36,8 @@ const UltimateTechRevolution2026: React.FC = () => {
             🌟 ULTIMATE REVOLUTION • 2026
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -238,6 +247,7 @@ const UltimateTechRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Be part of the most significant technological advancement in human history. 
             Transform your future with our revolutionary solutions.
+<<<<<<< HEAD
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Tech Revolution 2026
           </h1>
@@ -245,11 +255,14 @@ const UltimateTechRevolution2026: React.FC = () => {
             The most advanced technological revolution in human history. Experience the convergence 
             of quantum computing, neural interfaces, and consciousness transfer that will redefine 
             what it means to be human.
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
+<<<<<<< HEAD
             <button className="border-2 border-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-xl">
               Watch the Future
             </button>
@@ -422,6 +435,8 @@ const UltimateTechRevolution2026: React.FC = () => {
               Schedule Experience
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Our Experts
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
           </div>
         </div>

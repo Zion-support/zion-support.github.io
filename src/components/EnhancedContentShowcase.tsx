@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -44,10 +47,13 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
+<<<<<<< HEAD
       link: "/pages/AdvancedAITransformation2026",
       features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
       category: "AI & Machine Learning",
       year: "2026"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
   const contentCategories = [
@@ -142,6 +148,7 @@ const EnhancedContentShowcase: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
+<<<<<<< HEAD
     },
     {
       id: 4,
@@ -149,6 +156,8 @@ const EnhancedContentShowcase: React.FC = () => {
       features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
       category: "AI & Machine Learning",
       year: "2026"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     },
     {
       id: 2,
@@ -180,6 +189,7 @@ const EnhancedContentShowcase: React.FC = () => {
     },
     {
       id: 3,
+<<<<<<< HEAD
       title: "Next-Gen Tech Showcase 2026",
       description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
       image: "🌟",
@@ -194,6 +204,11 @@ const EnhancedContentShowcase: React.FC = () => {
     },
     {
       id: 4,
+=======
+    },
+    {
+      id: 4,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       title: "Quantum-Neural Fusion 2026",
       description: "Revolutionary fusion of quantum computing and neural interfaces for unprecedented capabilities",
       icon: "⚛️",
@@ -238,6 +253,7 @@ const EnhancedContentShowcase: React.FC = () => {
       image: "🤖",
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/SyntheticIntelligence2026",
+<<<<<<< HEAD
       features: ["Synthetic Consciousness", "Autonomous Agents", "Creative AI", "Collective Intelligence"],
       category: "Synthetic Intelligence",
       year: "2026"
@@ -264,6 +280,8 @@ const EnhancedContentShowcase: React.FC = () => {
       category: "Neural Interfaces",
       year: "2026"
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     }
   ];
 
@@ -273,10 +291,13 @@ const EnhancedContentShowcase: React.FC = () => {
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
       }, 5000);
       }, 5000);
+<<<<<<< HEAD
       }, 5000);
       }, 6000);
       }, 5000);
       }, 5000);
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, showcaseItems.length]);
@@ -368,6 +389,7 @@ const EnhancedContentShowcase: React.FC = () => {
         }
       ]
     }
+<<<<<<< HEAD
           title: "Autonomous AI Systems",
           description: "Self-evolving AI with independent decision making",
           link: "/pages/NextGenInnovationHub2026",
@@ -426,6 +448,8 @@ const EnhancedContentShowcase: React.FC = () => {
 
   const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
   const colorClasses = getColorClasses(currentCategory.color);
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
   ];
 
   const stats = [
@@ -520,8 +544,11 @@ const EnhancedContentShowcase: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
+<<<<<<< HEAD
           <motion.div
           <div
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -544,6 +571,7 @@ const EnhancedContentShowcase: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Experience our most advanced and revolutionary content featuring cutting-edge technologies that are reshaping the future
             </p>
+<<<<<<< HEAD
           </motion.div>
           </div>
         </div>
@@ -553,6 +581,11 @@ const EnhancedContentShowcase: React.FC = () => {
       <div className="bg-gray-50 px-8 py-4">
         <div className="flex justify-center space-x-2">
           {Object.entries(contentCategories).map(([key, category]) => (
+=======
+        </div>
+      </div>
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -583,9 +616,13 @@ const EnhancedContentShowcase: React.FC = () => {
 
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16">
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+=======
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -600,6 +637,7 @@ const EnhancedContentShowcase: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white rounded-xl p-2 shadow-lg">
@@ -617,6 +655,8 @@ const EnhancedContentShowcase: React.FC = () => {
                 {category.title}
               </button>
             ))}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Main Showcase Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
@@ -681,6 +721,7 @@ const EnhancedContentShowcase: React.FC = () => {
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
+<<<<<<< HEAD
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
@@ -692,6 +733,8 @@ const EnhancedContentShowcase: React.FC = () => {
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               >
                 <div className={`w-full h-full bg-gradient-to-br ${contentSlides[currentSlide].bgGradient} backdrop-blur-sm rounded-xl p-8 border ${contentSlides[currentSlide].borderColor}`}>
                   <div className="flex flex-col lg:flex-row items-center h-full">
@@ -703,10 +746,13 @@ const EnhancedContentShowcase: React.FC = () => {
                         {contentSlides[currentSlide].description}
                       </p>
                       
+<<<<<<< HEAD
                       <div className="grid grid-cols-2 gap-4 mb-8">
                         {showcaseItems[currentSlide].features.map((feature, index) => (
                           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                             <span className="text-sm font-semibold">{feature}</span>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                       {/* Features */}
                       <div className="grid grid-cols-2 gap-2 mb-6">
                         {contentSlides[currentSlide].features.map((feature, index) => (
@@ -776,17 +822,21 @@ const EnhancedContentShowcase: React.FC = () => {
           {/* Navigation Controls */}
           <div className="flex justify-center items-center space-x-4 mb-8">
             <button
+<<<<<<< HEAD
               key={key}
               onClick={() => setActiveTab(key)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === key
                   ? `${colorClasses.bg} text-white shadow-lg`
                   : `text-gray-600 hover:bg-gray-200`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               onClick={prevSlide}
               className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
             >
               ←
             </button>
+<<<<<<< HEAD
             
             <div className="flex space-x-2">
               {showcaseItems.map((_, index) => (
@@ -908,10 +958,13 @@ const EnhancedContentShowcase: React.FC = () => {
                 isAutoPlaying 
                   ? 'bg-green-500/20 text-green-400 border border-green-400/30' 
                   : 'bg-gray-500/20 text-gray-400 border border-gray-400/30'
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               }`}
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -953,13 +1006,21 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
 
           ))}
+=======
+        </div>
+      </div>
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Content Grid */}
       <div className="p-8">
         {/* Content Grid */}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contentCategories[activeTab as keyof typeof contentCategories].content.map((item, index) => (
             <div
@@ -1015,10 +1076,13 @@ const EnhancedContentShowcase: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
               Explore Now →
             </a>
           </motion.div>
         ))}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             {/* Content Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
@@ -1034,6 +1098,7 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className="container mx-auto px-4 py-20 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
@@ -1077,14 +1142,19 @@ const EnhancedContentShowcase: React.FC = () => {
                 <a
                   href={item.link}
                   className="block w-full bg-white/20 text-white text-center py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                 >
                   Explore →
                 </a>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
         </motion.div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
@@ -1176,6 +1246,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 <motion.div
               Explore Now →
             </a>
+<<<<<<< HEAD
           </motion.div>
           </div>
         ))}
@@ -1183,6 +1254,9 @@ const EnhancedContentShowcase: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentCategories[activeCategory].content.map((item, index) => (
                 <div
+=======
+        ))}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -1254,10 +1328,13 @@ const EnhancedContentShowcase: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
           </motion.div>
         </AnimatePresence>
           </div>
         
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
         {/* Call to Action */}
         <div
@@ -1279,7 +1356,10 @@ const EnhancedContentShowcase: React.FC = () => {
               Create Account
             </button>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         </div>
       </div>
     </div>

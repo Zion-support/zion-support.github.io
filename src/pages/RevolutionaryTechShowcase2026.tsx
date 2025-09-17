@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
@@ -97,6 +98,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Demo →
               </button>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -257,6 +260,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Technology Showcase Grid */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Technology Showcase</h2>
@@ -328,6 +332,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <div className="text-emerald-200 mb-2">Scalability</div>
               <div className="text-sm opacity-75">Unlimited capacity</div>
             </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Technology Impact Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
@@ -353,6 +359,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -364,6 +371,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
