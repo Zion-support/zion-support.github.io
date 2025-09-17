@@ -57,7 +57,6 @@ export const latestContent: ContentItem[] = [
     href: "/blog/ai-2026-autonomous-customer-support-agents",
 
 
->>>>>>> origin/content-update-2027
     tag: "Guide",
     date: "2025-09-15",
   },
@@ -75,18 +74,13 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
->>>>>>> origin/content-update-2027
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
 
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 
->>>>>>> cursor/create-and-deploy-new-content-376e
 
->>>>>>> cursor/create-and-deploy-new-content-9e5a
->>>>>>> origin/content-update-2027
     tag: "Blueprint",
     date: "2025-09-15",
   },

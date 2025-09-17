@@ -15,10 +15,6 @@ try {
       const original = content;
       
       // Remove merge conflict markers
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]+/g, '$1');
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
       
       if (content !== original) {
         fs.writeFileSync(filePath, content, 'utf8');

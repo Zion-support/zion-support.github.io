@@ -82,43 +82,13 @@ const DynamicContentCarousel = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/DynamicContentCarousel.jsx
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      
-      {/* Navigation Dots */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {carouselItems.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-<<<<<<< HEAD:temp_broken_files/DynamicContentCarousel.jsx
-<<<<<<< HEAD
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-<<<<<<< HEAD:temp_broken_files/DynamicContentCarousel.jsx
-<<<<<<< HEAD:src/components/DynamicContentCarousel.jsx
-=======
-<<<<<<< HEAD:temp_broken_files/DynamicContentCarousel.jsx
-=======
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 =======
               currentSlide === index ? 'bg-white' : 'bg-white/50'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
->>>>>>> ac7fba6932d34fbe5c3a14454537102b07eb816c:src/components/DynamicContentCarousel.jsx
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005:temp_broken_files/DynamicContentCarousel.jsx
 =======
-<<<<<<< HEAD
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/DynamicContentCarousel.jsx
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8c02:src/components/DynamicContentCarousel.jsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a0ff
             }`}
           />
         ))}
@@ -138,7 +108,6 @@ const DynamicContentCarousel = () => {
             />
           ))}
         </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/DynamicContentCarousel.jsx
       </div>
     </div>
   );

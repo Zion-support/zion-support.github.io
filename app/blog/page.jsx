@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-      title: "AI 2026: Agent Risk Maturity Matrix",
-      description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
-      slug: "ai-2026-agent-risk-maturity-matrix",
-      category: "AI Governance",
-      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
-      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
-      slug: "ai-2026-secure-agent-architecture",
-      category: "Security Architecture",
-=======
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
@@ -55,5 +45,4 @@ const BlogPage = () => {
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
       category: "Enterprise AI",
->>>>>>> origin/feat/add-production-safety-checklist-and-promo
       date: "2025-09-15",
