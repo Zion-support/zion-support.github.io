@@ -151,6 +151,57 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Additional Content Showcase */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Frameworks & Case Studies</h2>
+            <p className="text-gray-600 text-lg">Comprehensive guides and real-world success stories for enterprise AI transformation</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <a
+              href="/blog/ai-2026-autonomous-operations-framework"
+              className="group block bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 text-white flex items-center justify-center text-xl font-bold">AO</div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">Framework</span>
+                    <span className="text-xs text-gray-500">New</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Autonomous Operations Framework 2026</h3>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">Complete blueprint for building self-managing, self-optimizing, and self-healing AI systems that scale infinitely.</p>
+              <div className="flex items-center text-indigo-600 font-medium text-sm group-hover:text-indigo-700">
+                Read Framework <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </a>
+
+            <a
+              href="/case-studies/ai-automation-healthcare-transformation"
+              className="group block bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-teal-500 to-cyan-600 text-white flex items-center justify-center text-xl font-bold">HC</div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs px-2 py-1 rounded-full bg-teal-100 text-teal-800">Healthcare</span>
+                    <span className="text-xs text-gray-500">Featured</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">Healthcare Transformation Success</h3>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">340% efficiency gain and 60% cost reduction in major healthcare system serving 2.3M patients annually.</p>
+              <div className="flex items-center text-teal-600 font-medium text-sm group-hover:text-teal-700">
+                Read Case Study <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
