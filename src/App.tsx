@@ -5,9 +5,12 @@ import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import PerformanceMonitor from "./components/PerformanceMonitor";
-import ErrorBoundary from "./components/ErrorBoundary";
-import SEOHead from "./components/SEOHead";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
+import EnhancedSEOHead from "./components/EnhancedSEOHead";
+import ModernAccessibilityEnhancer from "./components/ModernAccessibilityEnhancer";
+import ModernLoadingSpinner from "./components/ModernLoadingSpinner";
+import { PerformanceOptimizer } from "./utils/performanceOptimizer";
+import PerformanceMonitor from "./utils/performanceMonitor";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -28,49 +31,54 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-// Loading Component
+// Loading Component - now using the modern version
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4"></div>
-      <p className="text-white text-lg">Loading...</p>
-    </div>
-  </div>
+  <ModernLoadingSpinner 
+    message="Loading Zion Tech Group..."
+    variant="default"
+    size="lg"
+  />
 );
 
 function App() {
   useEffect(() => {
     // Initialize performance monitoring
-    const perfMonitor = new PerformanceMonitor();
+    const perfOptimizer = PerformanceOptimizer.getInstance();
+    const perfMonitor = PerformanceMonitor.getInstance();
+    
+    perfOptimizer.init();
+    perfMonitor.init();
     
     // Report performance metrics after page load
     const handleLoad = () => {
       setTimeout(() => {
-        if (perfMonitor.reportMetrics) {
-          perfMonitor.reportMetrics();
-        }
+        perfOptimizer.reportMetrics();
+        perfMonitor.reportMetrics();
+        
+        // Log performance score
+        const score = perfMonitor.getPerformanceScore();
+        console.log(`Performance Score: ${score}/100`);
       }, 2000);
     };
     
     window.addEventListener('load', handleLoad);
     
     return () => {
-      if (perfMonitor.cleanup) {
-        perfMonitor.cleanup();
-      }
+      perfOptimizer.cleanup();
+      perfMonitor.cleanup();
       window.removeEventListener('load', handleLoad);
     };
   }, []);
 
   return (
-    <ErrorBoundary fallback={<ErrorFallback error={new Error('Unknown error')} resetErrorBoundary={() => window.location.reload()} />}>
+    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
             <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-              <SEOHead />
-              <AccessibilityEnhancer />
-              <PerformanceMonitor />
+              <EnhancedSEOHead />
+              <ModernAccessibilityEnhancer showControls={process.env.NODE_ENV === 'development'} />
+              <PerformanceMonitor showMetrics={process.env.NODE_ENV === 'development'} />
               {/* Skip Links for Accessibility */}
               <div className="sr-only focus-within:not-sr-only">
                 <a href="#main-content" className="skip-link">
@@ -97,9 +105,9 @@ function App() {
               <Footer />
             </div>
           </Router>
-        </WhitelabelProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+          </WhitelabelProvider>
+        </ThemeProvider>
+      </EnhancedErrorBoundary>
   );
 }
 
