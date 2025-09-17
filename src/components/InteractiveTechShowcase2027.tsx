@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const technologies = [
     {
-      id: 0,
+      id: 1,
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -25,51 +21,59 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: "/pages/ConsciousAISystems2027"
     },
     {
-      id: 1,
+      id: 2,
       title: "Quantum Internet",
       icon: "⚡",
-      description: "Ultra-secure quantum communication networks spanning the globe",
+      description: "Ultra-secure quantum communication network",
       features: [
         "Quantum Encryption",
-        "Instant Global Communication",
-        "Unhackable Networks",
-        "Quantum Teleportation"
+        "Instant Communication",
+        "Hack-Proof Security",
+        "Global Quantum Network"
       ],
       gradient: "from-cyan-600 to-blue-600",
       link: "/pages/QuantumInternet2027"
     },
     {
-      id: 2,
+      id: 3,
       title: "Neural Interface Revolution",
       icon: "🧬",
       description: "Direct brain-computer communication and thought control",
       features: [
         "Thought Control",
         "Memory Enhancement",
-        "Direct Neural Upload",
-        "Consciousness Transfer"
+        "Direct Brain Interface",
+        "Cognitive Augmentation"
       ],
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2027"
     },
     {
-      id: 3,
+      id: 4,
       title: "Molecular Manufacturing",
       icon: "⚗️",
-      description: "Build anything atom by atom with molecular precision",
+      description: "Building the future atom by atom with perfect precision",
       features: [
-        "Atomic Assembly",
-        "Custom Materials",
-        "Instant Manufacturing",
-        "Self-Repairing Objects"
+        "Atomic Precision",
+        "Self-Replication",
+        "Programmable Matter",
+        "Zero Waste Production"
       ],
       gradient: "from-orange-600 to-red-600",
       link: "/pages/MolecularManufacturing2027"
     }
   ];
 
-  const handleTechChange = (index: number) => {
-    if (index !== activeTech && !isAnimating) {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTech((prev) => (prev + 1) % technologies.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  const handleTechClick = (index: number) => {
+    if (index !== activeTech) {
       setIsAnimating(true);
       setTimeout(() => {
         setActiveTech(index);
@@ -79,57 +83,74 @@ const InteractiveTechShowcase2027: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Tech Showcase 2027
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the revolutionary technologies that will reshape our world
+    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">
+      <Helmet>
+        <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
+        <meta name="description" content="Experience the future of technology with our interactive 2027 tech showcase featuring conscious AI, quantum internet, neural interfaces, and molecular manufacturing." />
+      </Helmet>
+
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE TECH SHOWCASE 2027 • BREAKTHROUGH TECHNOLOGY
+          </div>
+          <h2 className="text-5xl font-bold mb-6">🌟 Interactive Technology Experience</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Explore our revolutionary 2027 technologies with interactive features and immersive experiences
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* Interactive Tech Selector */}
+        <div className="flex justify-center space-x-4 mb-12">
           {technologies.map((tech, index) => (
             <button
               key={tech.id}
-              onClick={() => handleTechChange(index)}
-              className={`p-6 rounded-xl border-2 transition-all duration-300 ${
+              onClick={() => handleTechClick(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTech === index
-                  ? 'border-purple-400 bg-purple-600/20'
-                  : 'border-gray-600 bg-gray-800/50 hover:border-purple-300'
+                  ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg scale-105`
+                  : 'bg-white/20 text-white hover:bg-white/30'
               }`}
             >
-              <div className="text-4xl mb-4">{tech.icon}</div>
-              <h3 className="text-lg font-bold mb-2">{tech.title}</h3>
-              <p className="text-sm text-gray-300">{tech.description}</p>
+              {tech.icon} {tech.title}
             </button>
           ))}
         </div>
 
-        <div className={`bg-gradient-to-br ${technologies[activeTech].gradient} backdrop-blur-sm rounded-2xl p-12 border border-white/20`}>
-          <div className="text-center">
-            <div className="text-8xl mb-6">{technologies[activeTech].icon}</div>
-            <h2 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              {technologies[activeTech].description}
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {technologies[activeTech].features.map((feature, idx) => (
-                <div key={idx} className="flex items-center text-white/80">
-                  <span className="w-3 h-3 bg-white/50 rounded-full mr-4"></span>
-                  {feature}
+        {/* Tech Display */}
+        <div
+          key={activeTech}
+          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+        >
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="text-6xl mb-6">{technologies[activeTech].icon}</div>
+                <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
+                <p className="text-xl text-gray-300 mb-6">{technologies[activeTech].description}</p>
+                <div className="space-y-3">
+                  {technologies[activeTech].features.map((feature, index) => (
+                    <div key={index} className="flex items-center text-lg">
+                      <span className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mr-4"></span>
+                      {feature}
+                    </div>
+                  ))}
                 </div>
-              ))}
+                <button className="mt-8 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                  Explore Technology
+                </button>
+              </div>
+              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 rounded-xl p-8">
+                <div className="text-center">
+                  <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
+                  <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
+                  <p className="text-gray-300 mb-6">Experience this technology in action</p>
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg p-4">
+                    <p className="text-sm text-gray-400">Demo coming soon...</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <button className="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
-              Explore Technology
-            </button>
           </div>
-        </div>
       </div>
     </div>
   );

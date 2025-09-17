@@ -99,7 +99,7 @@ const DynamicContentCarousel = () => {
 >>>>>>> ac7fba6932d34fbe5c3a14454537102b07eb816c:src/components/DynamicContentCarousel.jsx
 >>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005:temp_broken_files/DynamicContentCarousel.jsx
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-c435:src/components/DynamicContentCarousel.jsx
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8c02:src/components/DynamicContentCarousel.jsx
             }`}
           />
         ))}

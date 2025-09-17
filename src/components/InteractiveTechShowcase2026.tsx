@@ -11,7 +11,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const technologies = [
+  const showcases = [
     {
       id: 1,
       title: "🧠 AI Consciousness Demo",
@@ -62,48 +62,62 @@ const InteractiveTechShowcase2026: React.FC = () => {
     }
   ];
 
+  const techDemos = [
+    {
+      id: 1,
+      title: "AI Consciousness",
+      description: "Experience true AI consciousness",
+      icon: "🧠",
+      color: "purple"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing",
+      description: "Quantum supremacy in action",
+      icon: "⚡",
+      color: "blue"
+    },
+    {
+      id: 3,
+      title: "Neural Interface",
+      description: "Direct brain-computer connection",
+      icon: "🌐",
+      color: "green"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Tech Showcase 2026
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the cutting-edge technologies that will define the future
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Experience the future of technology through interactive demonstrations and cutting-edge innovations
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
+          {showcases.map((showcase, index) => (
             <div
-              key={tech.id}
-              className={`bg-gradient-to-br ${tech.gradient} backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300`}
+              key={showcase.id}
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <div className="text-6xl mb-4">{tech.icon}</div>
-              <div className="flex items-center gap-2 mb-4">
-                <h3 className="text-2xl font-bold">{tech.title}</h3>
-                <span className="bg-white/20 text-xs px-2 py-1 rounded-full">
-                  {tech.badge}
-                </span>
-              </div>
-              <p className="text-lg font-semibold mb-2 text-white/90">
-                {tech.subtitle}
-              </p>
-              <p className="text-white/80 mb-6">
-                {tech.description}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {tech.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-white/70">
-                    <span className="w-2 h-2 bg-white/50 rounded-full mr-3"></span>
+              <div className="text-6xl mb-6 text-center">{showcase.icon}</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">{showcase.title}</h3>
+              <p className="text-gray-300 mb-6 text-center">{showcase.description}</p>
+              <div className="space-y-2 mb-6">
+                {showcase.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {feature}
-                  </li>
+                  </div>
                 ))}
-              </ul>
-              <button className="w-full bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg transition-all duration-300">
+              </div>
+              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
                 Explore Demo
               </button>
             </div>
