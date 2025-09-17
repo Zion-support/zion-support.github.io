@@ -36,7 +36,12 @@
     "pm2:status": "pm2 status",
     "pm2:delete": "pm2 delete all",
     "pm2:save": "pm2 save",
-    "pm2:startup": "pm2 startup"
+    "pm2:startup": "pm2 startup",
+    "analyze": "node scripts/performance-monitor.js",
+    "build:analyze": "npm run build:netlify && npm run analyze",
+    "build:optimize": "node scripts/optimize-build.js",
+    "build:full": "npm run health-check && npm run build:optimize && npm run analyze",
+    "health-check": "node scripts/health-check.js"
   },
   "npmConfig": {
     "optional": false,
