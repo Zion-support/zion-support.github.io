@@ -1,74 +1,12 @@
+import React from 'react';
 
-import React from "react";
-
-export function PaymentMethods() {
-  // Mock payment methods
-  const paymentMethods = [
-    {
-      id: "pm-1",
-      type: "credit_card",
-      brand: "Visa",
-      last4: "4242",
-      expMonth: 12,
-      expYear: 2025,
-    {
-      id: "pm-2",
-      type: "credit_card",
-      brand: "Mastercard",
-      last4: "8888",
-      expMonth: 4,
-      expYear: 2026,
-  ];
-
+const PaymentMethods: React.FC = () => {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Payment Methods</CardTitle>
-        <CardDescription>Manage your payment methods for automatic billing</CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {paymentMethods.map((method) => (
-          <div 
-            key={method.id}
-            className={`flex items-center justify-between p-4 rounded-lg border ${
-              method.isDefault ? "bg-muted border-primary" : "border-border"
-            }`}
-          >
-            <div className="flex items-center space-x-4">
-              <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">
-                <CreditCard className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="font-medium">
-                  {method.brand} •••• {method.last4}
-                  {method.isDefault && (
-                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
-                      Default
-                    </span>
-                  )}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Expires {method.expMonth}/{method.expYear}
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              {!method.isDefault && (
-                <Button size="sm" variant="ghost">Set Default</Button>
-              )}
-              <Button size="sm" variant="ghost" className="text-destructive">
-                <Trash className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        ))}
-      </CardContent>
-      <CardFooter>
-        <Button className="gap-1">
-          <Plus className="h-4 w-4" />
-          Add Payment Method
-        </Button>
-      </CardFooter>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PaymentMethods</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default PaymentMethods;

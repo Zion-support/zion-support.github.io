@@ -36,7 +36,10 @@ export default function ForumPostPage({ }: ForumPostPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
+
+}
 :src.disabled/src/pages.disabled/ForumPostPage.jsx
 }
 }

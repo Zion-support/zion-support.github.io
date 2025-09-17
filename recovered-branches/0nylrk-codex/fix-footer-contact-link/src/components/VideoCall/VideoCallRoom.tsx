@@ -1,29 +1,12 @@
-
 import React from 'react';
-import { Button } from "@/components/ui/button";
 
-interface VideoCallRoomProps {
-  room?: string;
-  token?: string;
-  serverUrl?: string;
-  onDisconnect?: () => void;
-  className?: string;
-}
-
+const VideoCallRoom: React.FC = () => {
   return (
-    <Card className={className || "w-full max-w-3xl mx-auto"}>
-      <CardHeader>
-        <CardTitle>Video Call</CardTitle>
-      </CardHeader>
-      <CardContent className="flex flex-col items-center justify-center p-8">
-        <p className="text-center mb-4">
-          Video calling functionality is currently unavailable.
-          Please check back later or use an alternative communication method.
-        </p>
-        <div className="flex gap-2">
-          <Button onClick={onDisconnect}>Close</Button>
-        </div>
-      </CardContent>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">VideoCallRoom</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default VideoCallRoom;

@@ -1,139 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-// Import refactored components
-import {
-  FraudStatsCards,
-  FraudFilters,
-  FraudFlagsTable,
-  FraudTabContent
-  const [flags, setFlags] = useState<FraudFlag[]>([]);
-  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [severityFilter, setSeverityFilter] = useState<string | null>(null);
-  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null);
-  // Fetch fraud flags
-  const fetchFraudFlags = async () => {
-    setIsLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from("fraud_flags")
-        .select("*")
-    // Apply search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(
-        (flag) =>
-
-
-
-
-    }
-    // Apply status filter
-    if (statusFilter) {
-      result = result.filter((flag) => flag.status === statusFilter)
-    }
-    // Apply severity filter
-    if (severityFilter) {
-      result = result.filter((flag) => flag.severity === severityFilter)
-    }
-    // Apply content type filter
-    if (contentTypeFilter) {
-      result = result.filter((flag) => flag.content_type === contentTypeFilter)
-    }
-
-    setFilteredFlags(result)
-  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
-  const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
-    try {
-      const status = action === 'ignore' ? 'ignored' : 'actioned';
-      const actionTaken = action === 'ignore' ? 'none' : action
-      const { error } = await supabase
-        .from("fraud_flags")
-        .update({
-          status;
-          action_taken: actionTaken
-          reviewed_at: new Date().toISOString()
-          flag.user_email?.toLowerCase().includes(query) ||
-          flag.content_excerpt.toLowerCase().includes(query) ||
-          flag.reason.toLowerCase().includes(query)
-      );
-    }
-
-    // Apply status filter
-    if (statusFilter) {
-      result = result.filter((flag) => flag.status === statusFilter);
-    }
-
-    // Apply severity filter
-    if (severityFilter) {
-      result = result.filter((flag) => flag.severity === severityFilter);
-    }
-
-    // Apply content type filter
-    if (contentTypeFilter) {
-      result = result.filter((flag) => flag.content_type === contentTypeFilter);
-    }
-
-    setFilteredFlags(result);
-  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
-
-  const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
-    try {
-      const status = action === 'ignore' ? 'ignored' : 'actioned';
-      const actionTaken = action === 'ignore' ? 'none' : action;
+const FraudDetection: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>FraudDetection | Zion Tech Group</title>
+        <meta name="description" content="FraudDetection - Revolutionary technology solutions" />
+      </Helmet>
       
-      const { error } = await supabase
-        .from("fraud_flags")
-        .update({
-          status,
-          action_taken: actionTaken,
-          reviewed_at: new Date().toISOString(),
-          // In a real app, you'd get the current user's ID
-          reviewed_by: 'admin'
-        })
-        .eq("id", flagId);
-
-  const resetFilters = () => {
-    setSearchQuery("");
-    setStatusFilter(null);
-    setSeverityFilter(null);
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Fraud Detection
-            </h1>
-            <p className="text-zion-slate-light mt-2">
-              Monitor suspicious activities and protect the marketplace from fraud and abuse
-            </p>
-          </div>
-              disabled={isLoading}
-            >
-              Refresh Data
-            </Button>
-          </div>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">FraudDetection</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-        <Tabs defaultValue="all" className="mb-8">
-          <TabsList>
-            <TabsTrigger value="all">All Flags</TabsTrigger>
-            <TabsTrigger value="pending">Pending Review</TabsTrigger>
-            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
-            <TabsTrigger value="actioned">Actioned</TabsTrigger>
-          </TabsList>
-                <FraudFlagsTable
-                  flags={filteredFlags}
-                  isLoading={isLoading}
-                  hasFilters={hasFilters}
-                  resetFilters={resetFilters}
-                  onAction={handleAction}
-                />
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="actioned">
-            <FraudTabContent tabValue="actioned" />
-          </TabsContent>
-        </Tabs>
       </div>
-    </AppLayout>
+    </div>
+  );
+};
+
+export default FraudDetection;

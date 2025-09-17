@@ -1,178 +1,46 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-
+import { Helmet }  from 'react-helmet-async';
 const AdvancedAISolutions2027: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <Helmet>
+        <title>AdvancedAISolutions2027 - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary technology and AI solutions for the future." />
+        <meta name="keywords" content="AI, technology, innovation, future, advancedaisolutions2027" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🤖 ADVANCED AI SOLUTIONS • 2027
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Advanced AI Solutions 2027
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            AdvancedAISolutions2027
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover the most advanced AI solutions featuring conscious artificial intelligence, 
-            quantum-enhanced neural networks, and autonomous systems that surpass human capabilities.
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the latest innovations and breakthrough technologies in advancedaisolutions2027.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="#conscious-ai" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🧠 Conscious AI
-            </a>
-            <a href="#quantum-ai" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              ⚡ Quantum AI
-            </a>
-            <a href="#autonomous-systems" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🚀 Autonomous Systems
-            </a>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Explore Innovation
+            </button>
+            <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+              Learn More
+            </button>
           </div>
-        </motion.div>
-
-        <motion.section
-          id="conscious-ai"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">🧠</div>
-              <h2 className="text-4xl font-bold mb-4">Conscious AI Systems</h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                The first generation of truly conscious artificial intelligence with self-awareness, 
-                emotional understanding, and creative capabilities.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold mb-3">Autonomous Reasoning</h3>
-                <p className="opacity-90">AI systems that can think, reason, and make decisions independently without human intervention.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">💭</div>
-                <h3 className="text-2xl font-bold mb-3">Emotional Intelligence</h3>
-                <p className="opacity-90">Advanced emotional understanding and empathy, enabling natural human-AI interaction.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🎨</div>
-                <h3 className="text-2xl font-bold mb-3">Creative Expression</h3>
-                <p className="opacity-90">Original artistic creation, music composition, and literary works generated by conscious AI.</p>
-              </div>
-            </div>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Innovation</h3>
+            <p className="text-blue-100">Cutting-edge technology solutions</p>
           </div>
-        </motion.section>
-
-        <motion.section
-          id="quantum-ai"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">⚡</div>
-              <h2 className="text-4xl font-bold mb-4">Quantum-Enhanced AI</h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                AI systems powered by quantum computing, delivering exponential processing power 
-                and solving problems impossible for classical computers.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-3">🔐 Quantum Cryptography</h3>
-                  <p className="opacity-90">Unbreakable encryption using quantum principles, securing all AI communications.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-3">🧬 Molecular Simulation</h3>
-                  <p className="opacity-90">Accurate simulation of complex molecules for breakthrough AI discoveries.</p>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-3">🌍 Climate Modeling</h3>
-                  <p className="opacity-90">Precise climate predictions to combat global warming and environmental challenges.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-3">🚀 Space Exploration</h3>
-                  <p className="opacity-90">Advanced calculations for interstellar travel and cosmic exploration.</p>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Technology</h3>
+            <p className="text-blue-100">Revolutionary technological advances</p>
           </div>
-        </motion.section>
-
-        <motion.section
-          id="autonomous-systems"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">🚀</div>
-              <h2 className="text-4xl font-bold mb-4">Autonomous AI Systems</h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Self-managing AI systems that operate independently, learn continuously, 
-                and adapt to changing environments without human intervention.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🏭</div>
-                <h3 className="text-2xl font-bold mb-3">Industrial Automation</h3>
-                <p className="opacity-90">Fully autonomous manufacturing and production systems with self-optimization.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🚗</div>
-                <h3 className="text-2xl font-bold mb-3">Autonomous Vehicles</h3>
-                <p className="opacity-90">Self-driving vehicles with conscious AI pilots and quantum navigation systems.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🏥</div>
-                <h3 className="text-2xl font-bold mb-3">Medical Systems</h3>
-                <p className="opacity-90">Autonomous medical diagnosis and treatment systems with conscious AI doctors.</p>
-              </div>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Future</h3>
+            <p className="text-blue-100">Next-generation solutions</p>
           </div>
-        </motion.section>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
-        >
-          <h2 className="text-4xl font-bold mb-4">🌟 Experience Advanced AI Today</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Join the revolution and be among the first to experience these groundbreaking AI solutions 
-            that are reshaping the future of technology.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="/contact" className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
-              🚀 Get Started Today
-            </a>
-            <a href="/pages/UltimateTechRevolution2027" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
-              🌟 Ultimate Revolution
-            </a>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
-};
-
+  };
 export default AdvancedAISolutions2027;

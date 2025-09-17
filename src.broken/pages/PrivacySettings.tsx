@@ -1,22 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const PrivacySettings: React.FC = () => {
   return (
-    <>
-      <Header />
-      <SEO title="Privacy Settings" description="Manage your cookie preferences" />
-      <main className="container mx-auto px-4 py-8 space-y-6">
-        <h1 className="text-2xl font-bold">Privacy Settings</h1>
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <span>Analytics Cookies</span>
-            <Switch checked={analytics} onCheckedChange={setAnalytics} />
-          </div>
-          <div className="flex items-center justify-between">
-            <span>Advertising Cookies</span>
-            <Switch checked={ads} onCheckedChange={setAds} />
-          </div>
-          <Button onClick={handleSave}>Save Preferences</Button>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>PrivacySettings | Zion Tech Group</title>
+        <meta name="description" content="PrivacySettings - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">PrivacySettings</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </main>
-      <Footer />
-    </>
-}
+      </div>
+    </div>
+  );
+};
+
+export default PrivacySettings;

@@ -37,6 +37,8 @@ export default function ClientDashboard({ }: ClientDashboardProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ClientDashboard.jsx
 }
 }
