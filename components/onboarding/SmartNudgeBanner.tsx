@@ -1,31 +1,12 @@
+import React from 'react';
 
-export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client';
-  userId?: string | null;
-  message: string;
-};
-
-
-  React.useEffect(() => {
-    try {
-      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');
-    } catch {}
-
-  const dismiss = React.useCallback(() => {
-    setHidden(true);
-    try {
-
-  if (hidden) return null;
-
+const SmartNudgeBanner: React.FC = () => {
   return (
-    <div className="relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4">
-      <button onClick={dismiss} aria-label="Dismiss" className="absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10">
-        <X size={16} />
-      </button>
-      <div className="text-sm">
-        {message}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SmartNudgeBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default SmartNudgeBanner;

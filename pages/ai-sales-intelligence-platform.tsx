@@ -1,25 +1,22 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AISalesIntelligencePlatform() {
-	return (
-		<ServiceLanding
-			title="AI Sales Intelligence Platform"
-			slug="ai-sales-intelligence-platform"
-			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
-			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
-			pricePerMonthUSD={1499}
-			implementationWeeks="Implementation: 1–3 weeks"
-			roiNote="Average ROI 3–8x within 60 days"
-			features={[
-				"AI lead scoring using firmographics, intent, and engagement",
-				"One-click hyper-personalized emails and sequences",
-				"Meeting prep briefs and objection handling",
-				"Forecasting with scenario simulations",
-				"CRM automations for notes, tasks, and next steps",
-				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
-			]}
-			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
-			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
-		/>
-	)
-}
+const ai-sales-intelligence-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-sales-intelligence-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-sales-intelligence-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-sales-intelligence-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-sales-intelligence-platform;

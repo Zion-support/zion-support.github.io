@@ -1,3 +1,12 @@
 import React from 'react';
-import {Header} from "@/components/Header";";"";" import {Footer} from "@/components/Footer";";"";" import SEO from "@/components/SEO";";"";" import {GradientHeading} from "@/components/GradientHeading";";" export default function About(props: any) {;"";" return (<>";"";" <SEO title="About Zion - The Future of AI & Tech Marketplace" description="Learn about Zion&apos;s mission to create the first free marketplace dedicated to high-tech and artificial intelligence." keywords="about Zion, AI marketplace, tech platform, mission, vision, team" canonical="https:''''"';';';';
-</SEO>
+
+const About.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">About.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default About.js;

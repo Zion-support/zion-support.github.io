@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
-
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -13,3 +8,5 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
 };
+
+module.exports = nextConfig;

@@ -1,1 +1,22 @@
-{"url": "https://github.com/Zion-Holdings/zion.app/pull/new/chore/trusted-genai-ops-2026"}
+<<<<<<< HEAD
+[
+  {
+    "title": "feat(website): add new updates and refresh homepage banner",
+    "branch": "content/updates-2025-09-15-b",
+    "base": "main",
+    "url": "https://github.com/Zion-Holdings/zion.app/pull/new/content/updates-2025-09-15-b",
+    "status": "needs_review"
+  }
+]
+=======
+{
+  "url": "https://github.com/Zion-Holdings/zion.app/pull/new/feat/content-incident-response-2026",
+  "prs": [
+    {
+      "title": "Add AI Lab field guide: incident triage with eval gates",
+      "head": "cursor/create-and-deploy-new-content-80c6",
+      "base": "main"
+    }
+  ]
+}
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f

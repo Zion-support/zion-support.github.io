@@ -12,7 +12,6 @@ import {
   Infinity,
   Eye,
   Heart,
-<<<<<<< HEAD
   Zap,
   Rocket,
   Globe,
@@ -33,7 +32,6 @@ import {
   Activity,
   Waves,
   Hexagon
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
 } from 'lucide-react';
@@ -77,9 +75,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/FutureTechBreakthrough2026",
       status: "Breakthrough",
-<<<<<<< HEAD
       impact: "Revolutionary"
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
     },
@@ -99,9 +95,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
-<<<<<<< HEAD
       impact: "Revolutionary"
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
     },
@@ -126,22 +120,18 @@ const RevolutionaryContentCarousel: React.FC = () => {
     {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
-<<<<<<< HEAD
       subtitle: "Quantum Computing Meets Neural Interfaces",
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
       features: [
-<<<<<<< HEAD
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
       ],
@@ -151,25 +141,21 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 6,
-<<<<<<< HEAD
       title: "Synthetic Intelligence 2026",
       subtitle: "AI with Genuine Consciousness",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
       features: [
-<<<<<<< HEAD
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
       status: "Live Now",
@@ -177,7 +163,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const stats = [
     { number: '∞', label: 'Computational Power', icon: Zap },
     { number: '0ms', label: 'Processing Latency', icon: Gauge },
@@ -186,7 +171,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     { number: '∞', label: 'Storage Capacity', icon: Database },
     { number: '∞', label: 'Reality Simulations', icon: Globe }
   ];
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
   useEffect(() => {
@@ -210,7 +194,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     setCurrentSlide(index);
   };
 
-<<<<<<< HEAD
   const currentContent = revolutionaryContent[currentSlide];
 
   return (
@@ -411,11 +394,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </motion.button>
         ))}
       </div>
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
     </div>
   );
 };
 
-export default RevolutionaryContentCarousel;
