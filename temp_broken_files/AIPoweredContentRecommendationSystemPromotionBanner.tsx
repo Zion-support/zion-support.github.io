@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-import React from 'react';
-const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -103,7 +99,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
       {/* Background Pattern */}
@@ -147,10 +142,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
         {/* AI Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
@@ -165,10 +157,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
         {/* AI Capabilities */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -188,10 +177,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
         {/* Features Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
@@ -210,10 +196,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
         {/* Content Types Showcase */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
@@ -234,10 +217,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
         {/* AI Demo Section */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
@@ -304,10 +284,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystemPromotionBanner.tsx
         {/* Call to Action */}
         <div
           className="text-center"

@@ -1,17 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-};
-
-
-=======
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
 
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -195,20 +181,14 @@ export default function RevolutionaryServicesPage() {
                   Revolutionary
                 <br />
                 <span className="text-white">Micro SaaS Services</span>
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
               </divh1>
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
               <divp 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
               >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
                 Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible.
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
               </divp>
               
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
               {/* Service Count Stats */}
               <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -225,12 +205,9 @@ export default function RevolutionaryServicesPage() {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
                   <div className="text-gray-400">Average ROI</div>
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
                 </div>
               </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
               {/* CTA Buttons */}
               <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -249,15 +226,12 @@ export default function RevolutionaryServicesPage() {
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
         {/* Contact Information Banner */}
         <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
           <div className="container mx-auto px-4">
@@ -296,9 +270,6 @@ export default function RevolutionaryServicesPage() {
                     <p className="text-sm text-gray-400 mb-3">{category.description}</p>
                     <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
                     <div className="text-xs text-gray-500">Services</div>
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-              ))}
-=======
                   </UltraFuturisticCard>
                 </div>
               ))}
@@ -306,7 +277,6 @@ export default function RevolutionaryServicesPage() {
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
         {/* Popular Services Showcase */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -322,12 +292,9 @@ export default function RevolutionaryServicesPage() {
                 <span className="text-white">Revolutionary Services</span>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
               </p>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -364,9 +331,6 @@ export default function RevolutionaryServicesPage() {
                            >
                              Learn More
                              <ExternalLink className="ml-2 w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-              ))}
-=======
                            </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -376,7 +340,6 @@ export default function RevolutionaryServicesPage() {
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
@@ -434,15 +397,12 @@ export default function RevolutionaryServicesPage() {
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <List className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
                     </button>
                   </div>
                 </div>
               </div>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
             {/* Services Display */}
             <div 
               className={viewMode === 'grid' 
@@ -528,15 +488,11 @@ export default function RevolutionaryServicesPage() {
                                View Details
                                <Eye className="ml-2 w-4 h-4" />
                     )}
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-              ))}
-=======
                   </UltraFuturisticCard>
                 </div>
               ))}
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
             {filteredServices.length === 0 && (
               <div 
                 className="text-center py-16"
@@ -553,11 +509,8 @@ export default function RevolutionaryServicesPage() {
                            }}
                          >
                            Clear Filters
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
                          </Button>
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
             )}
         {/* Service Details Modal */}
         <div>
@@ -642,9 +595,6 @@ export default function RevolutionaryServicesPage() {
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-          )}
-=======
                          </Button>
                       </div>
                     </div>
@@ -655,7 +605,6 @@ export default function RevolutionaryServicesPage() {
           )}
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -696,8 +645,6 @@ export default function RevolutionaryServicesPage() {
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
-<<<<<<< HEAD:temp_broken_files/revolutionary-services.tsx
-=======
                 </div>
               </div>
             </div>
@@ -705,7 +652,6 @@ export default function RevolutionaryServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
->>>>>>> origin/merge-new-content-1757989975:src/components/revolutionary-services.tsx
   );
 
 
@@ -728,4 +674,3 @@ const function RevolutionaryServicesPage() { = () => {
 };
 
 export default function RevolutionaryServicesPage() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/revolutionary-services.tsx

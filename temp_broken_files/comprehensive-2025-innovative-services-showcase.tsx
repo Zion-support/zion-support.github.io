@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/comprehensive-2025-innovative-services-showcase.tsx
-const comprehensive-2025-innovative-services-showcase: React.FC = () => {
-=======
 import SEO from '../components/SEO';
 import { 
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
@@ -33,7 +30,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     return cat ? cat.color : 'from-gray-500 to-gray-600';
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-2025-innovative-services-showcase.tsx
   return (
     <Layout>
       <SEO 
@@ -69,10 +65,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               <Star className="w-5 h-5" />
               <span>Innovation Leader 2025</span>
             </div>
-<<<<<<< HEAD:temp_broken_files/comprehensive-2025-innovative-services-showcase.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-2025-innovative-services-showcase.tsx
             <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               2025 Innovative Services
             </h1>
@@ -119,10 +112,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Explore our comprehensive range of innovative services across cutting-edge technology domains
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/comprehensive-2025-innovative-services-showcase.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-2025-innovative-services-showcase.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
               const IconComponent = category.icon;
@@ -165,10 +155,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Our most popular and innovative services that are transforming industries
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/comprehensive-2025-innovative-services-showcase.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-2025-innovative-services-showcase.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
@@ -236,10 +223,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Explore our entire collection of innovative services designed for the future
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/comprehensive-2025-innovative-services-showcase.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-2025-innovative-services-showcase.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);

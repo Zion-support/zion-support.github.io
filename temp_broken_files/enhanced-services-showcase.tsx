@@ -1,190 +1,9 @@
-<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { 
-  Star, TrendingUp, Zap, Brain, Rocket, Shield, 
-  DollarSign, Users, Clock, CheckCircle, ArrowRight,
-  Phone, Mail, MapPin, ExternalLink, Search, Filter,
-  Grid, List, ChevronDown, ChevronUp, Sparkles,
-  Crown, Award, Target, Globe, Cpu, Database
-} from 'lucide-react';
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { realMarketServices } from '../data/real-market-services';
-import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
-};
-
-
-
-export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-  // Combine all services for comprehensive showcase
-  const allServices = [
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-    ...enhancedRealMicroSaasServices,
-    ...innovativeAIServices,
-    ...quantumSpaceServices,
-    ...enterpriseITServices,
-    ...realMarketServices,
-    ...newVerifiedServicesQ22025
-  ];
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'next-gen-ai', name: 'ArrowRight-Gen AI', icon: '🧠', count: nextGenerationAIServices.length },
-    { id: 'cutting-edge-it', name: 'Cutting-Edge IT', icon: '⚡', count: cuttingEdgeITServices.length },
-    { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
-    { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
-  ];
-  const sortOptions = [
-    { id: 'name', name: 'Name A-Z' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
-    { id: 'rating', name: 'Rating' },
-    { id: 'customers', name: 'Customer Count' },
-    { id: 'popularity', name: 'Popularity' }
-  ];
-  // Filter and sort services
-  const filteredServices = React.useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
-        (selectedCategory === 'next-gen-ai' && nextGenerationAIServices.includes(service)) ||
-        (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||
-        (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||
-        (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesSearch;
-    });
-    // Sort services
-    switch (sortBy) {
-      case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, '')));
-        break;
-      case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
-        break;
-      case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        break;
-      case 'customers':
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
-        break;
-      case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      default:
-        break;
-    }
-    return filtered;
-  }, [allServices, selectedCategory, searchTerm, sortBy]);
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-  const featuredServices = [
-    {
-      title: '🚀 ArrowRight-Generation AI Services',
-      description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
-      services: nextGenerationAIServices.slice(0, 3),
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      title: '⚡ Cutting-Edge IT Infrastructure',
-      description: 'Advanced infrastructure solutions for the modern enterprise',
-      services: cuttingEdgeITServices.slice(0, 3),
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      title: '💻 Innovative Micro SaaS Solutions',
-      description: 'Creative and practical SaaS tools for every business need',
-      services: innovativeMicroSaasV2Services.slice(0, 3),
-      color: 'from-green-500 to-emerald-600'
-    }
-  ];
-  return (
-    <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">
-      <div className="min-h-screen">
-        <Head>
-          <title>Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions</title>
-          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology" />
-          <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="600+ cutting-edge technology services showcase" />
-          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase" />
-        {/* Hero Section */}
-        <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-                Enhanced Services Showcase
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                600+ Revolutionary AI, Quantum Computing & IT Services
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30">
-                  <Users className="w-5 h-5 text-cyan-400" />
-                  <span className="text-cyan-300 font-semibold">600+ Services</span>
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 border border-purple-500/30">
-                  <TrendingUp className="w-5 h-5 text-purple-400" />
-                  <span className="text-purple-300 font-semibold">1000% ROI</span>
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30">
-                  <Zap className="w-5 h-5 text-pink-400" />
-                  <span className="text-pink-300 font-semibold">24/7 Support</span>
-<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
-=======
                 </div>
               </div>
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
         {/* Featured Service Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -197,12 +16,9 @@ export default function EnhancedServicesShowcase() {
                 Featured Service Categories
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our most innovative and high-impact service categories
-<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
-=======
               </p>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredServices.map((category, index) => (
                 <div
@@ -231,13 +47,10 @@ export default function EnhancedServicesShowcase() {
                         className="mt-6 w-full"
                       >
                         View All {category.title.split(' ')[0" Services
-<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
-=======
                       </Button>
                     </div>
                   </div>
                 </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
               ))}
         {/* Filters and Search */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -397,14 +210,10 @@ export default function EnhancedServicesShowcase() {
                           >
                             Get Started
                   )}
-<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
-              ))}
-=======
                 </div>
               ))}
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
@@ -458,8 +267,6 @@ export default function EnhancedServicesShowcase() {
                 >
                   View Pricing
                   <DollarSign className="ml-2 w-6 h-6" />
-<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
-=======
                 </Button>
               </div>
             </div>
@@ -467,7 +274,6 @@ export default function EnhancedServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticMatrixBackground>
->>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
   );
 }
 // Button component (if not imported)
@@ -525,4 +331,3 @@ const function EnhancedServicesShowcase() { = () => {
 };
 
 export default function EnhancedServicesShowcase() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/enhanced-services-showcase.tsx

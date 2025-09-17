@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/UltimateTechRevolution2027.tsx
-<<<<<<< HEAD:temp_broken_files/UltimateTechRevolution2027.tsx
-import { motion } from 'framer-motion';cursor/fix-netlify-build-and-merge-to-main-a068
-=======
 import { motion } from 'framer-motion';
 
 const UltimateTechRevolution2027: React.FC = () => {
@@ -10,7 +6,6 @@ const UltimateTechRevolution2027: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/UltimateTechRevolution2027.tsx
 =======
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -19,7 +14,6 @@ import { ArrowRight, Brain, Zap, Atom, Globe, Rocket, Shield, Cpu, Network } fro
 const UltimateTechRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/UltimateTechRevolution2027.tsx
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -267,10 +261,6 @@ const UltimateTechRevolution2027: React.FC = () => {
             </Button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateTechRevolution2027.tsx
-      </section>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/UltimateTechRevolution2027.tsx
       </div>
     </div>
   );

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-import React from 'react';
-const NextGenAIInnovationShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -103,7 +99,6 @@ const NextGenAIInnovationShowcase2025 = () => {
     return () => clearInterval(interval);
   }[]);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -129,33 +124,20 @@ const NextGenAIInnovationShowcase2025 = () => {
               enhance human capabilitiesand unlock unlimited potential for the next decade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Play className="w-5 h-5" />
                 {isPlaying ? 'Pause Demo' : 'Watch Demo'}
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-              </divbutton>
-              <divbutton
-=======
               </button>
               
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 Explore Innovations
                 <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-              </divbutton>
-=======
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
             </div>
           </div>
         </div>
@@ -194,10 +176,7 @@ const NextGenAIInnovationShowcase2025 = () => {
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Innovation Cards */}
             <div className="space-y-6">
@@ -280,10 +259,7 @@ const NextGenAIInnovationShowcase2025 = () => {
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
             <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
               <div
@@ -320,32 +296,19 @@ const NextGenAIInnovationShowcase2025 = () => {
               Join thousands of forward-thinking organizations already leveraging next-generation AI technologies
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Rocket className="w-5 h-5" />
                 Start Your Transformation
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-              </divbutton>
-              <divbutton
-=======
               </button>
               
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Users className="w-5 h-5" />
                 Schedule Consultation
-<<<<<<< HEAD:temp_broken_files/NextGenAIInnovationShowcase2025.tsx
-              </divbutton>
-=======
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIInnovationShowcase2025.tsx
             </div>
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">

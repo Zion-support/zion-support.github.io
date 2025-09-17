@@ -1,11 +1,4 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveEngagementWidget.tsx
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:temp_broken_files/InteractiveEngagementWidget.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveEngagementWidget.tsx
 interface EngagementData {
   visitors: number;
   timeOnSite: number;
@@ -116,25 +109,19 @@ export default function InteractiveEngagementWidget() {
                 {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (
                   <span key={i} className="text-yellow-400 text-xs">★</span>
                 ))}
-<<<<<<< HEAD:temp_broken_files/InteractiveEngagementWidget.tsx
-=======
               </div>
             </div>
           </div>
         </div>
       </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveEngagementWidget.tsx
       {/* Call to action */}
       <div className="mt-3 pt-3 border-t">
         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs py-2 px-3 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
           Join {engagementData.visitors.toLocaleString()}+ Successful Clients
-<<<<<<< HEAD:temp_broken_files/InteractiveEngagementWidget.tsx
-=======
         </button>
       </div>
     </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveEngagementWidget.tsx
   );
 
 
@@ -157,4 +144,3 @@ const function InteractiveEngagementWidget() { = () => {
 };
 
 export default function InteractiveEngagementWidget() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/InteractiveEngagementWidget.tsx

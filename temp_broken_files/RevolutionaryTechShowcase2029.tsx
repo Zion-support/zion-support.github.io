@@ -1,10 +1,4 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2029.tsx
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2029.tsx
-import React, { useState, useEffect } from 'react';
-
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad:src/components/RevolutionaryTechShowcase2029.tsx
 const RevolutionaryTechShowcase2029: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -350,14 +344,8 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Community
             </button>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2029.tsx
-            <button className="border-2 border-white text-white px-12 py-6 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-xl">
-              View All Technologies
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/RevolutionaryTechShowcase2029.tsx
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/RevolutionaryTechShowcase2029.tsx
             </button>
           </div>
         </div>

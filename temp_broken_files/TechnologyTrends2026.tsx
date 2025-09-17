@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/TechnologyTrends2026.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -60,7 +57,6 @@ interface TrendItem {
   challenges: string[];
 }
 
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrends2026.tsx
 const TechnologyTrends2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
@@ -192,10 +188,7 @@ const TechnologyTrends2026: React.FC = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/TechnologyTrends2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrends2026.tsx
         {/* Category Filter */}
         <div
           className="mb-12"
@@ -224,10 +217,7 @@ const TechnologyTrends2026: React.FC = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/TechnologyTrends2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrends2026.tsx
         {/* Trends Grid */}
         <div
         >

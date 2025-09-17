@@ -1,8 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase.tsx
-const RevolutionaryCaseStudiesShowcase: React.FC = () => {
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpUsersDollarSignZapAwardTarget
 
@@ -70,7 +65,6 @@ const caseStudies = [
 ];
 
 export default function RevolutionaryCaseStudiesShowcase() {
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,12 +82,9 @@ export default function RevolutionaryCaseStudiesShowcase() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies are achieving extraordinary results with our AI solutions. 
             These 'aren', 't just numbers—'they', 're transformations that matter.
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase.tsx
-=======
           </p>
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase.tsx
         {/* Featured Case Studies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {caseStudies.filter(study => study.featured).map((studyindex) => (
@@ -126,12 +117,9 @@ export default function RevolutionaryCaseStudiesShowcase() {
                 >
                   Read Full Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase.tsx
-=======
                 </a>
               </div>
             </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase.tsx
           ))}
         {/* Additional Case Studies */}
         <div
@@ -168,16 +156,12 @@ export default function RevolutionaryCaseStudiesShowcase() {
                 >
                   Read More
                   <ArrowRight className="w-3 h-3 ml-1" />
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase.tsx
-          ))}
-=======
                 </a>
               </div>
             </div>
           ))}
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -202,14 +186,11 @@ export default function RevolutionaryCaseStudiesShowcase() {
             >
               <Users className="w-5 h-5 mr-2" />
               View All Case Studies
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase.tsx
-=======
             </a>
           </div>
         </div>
       </div>
     </section>
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase.tsx
   );
 };
 
@@ -232,4 +213,3 @@ const function RevolutionaryCaseStudiesShowcase() { = () => {
 };
 
 export default function RevolutionaryCaseStudiesShowcase() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryCaseStudiesShowcase.tsx

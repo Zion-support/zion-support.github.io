@@ -1,14 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-const quantum-trading-algorithm: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">quantum-trading-algorithm</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
 import Head from 'next/head';
 import { 
   TrendingUp, Brain, Shield, Zap, Target, 
@@ -21,7 +10,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
 };
 const features = [
   'Quantum-enhanced market prediction algorithms',
@@ -90,12 +78,9 @@ export default function QuantumTradingAlgorithm() {
               <span className="text-white">Algorithm Pro</span>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </p>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -112,14 +97,11 @@ export default function QuantumTradingAlgorithm() {
             >
               <Phone className="w-5 h-5 mr-2" />
               Contact Sales
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </a>
           </div>
         </div>
       </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,12 +114,9 @@ export default function QuantumTradingAlgorithm() {
               Revolutionary Trading Technology
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of algorithmic trading with quantum computing integration and AI-powered market analysis.
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </p>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -149,10 +128,7 @@ export default function QuantumTradingAlgorithm() {
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
             ))}
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
@@ -166,12 +142,9 @@ export default function QuantumTradingAlgorithm() {
               Choose Your Plan
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed for traders of all levels, from individual investors to institutional clients.
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </p>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -202,11 +175,8 @@ export default function QuantumTradingAlgorithm() {
                   ))}
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                   Get Started
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
                 </button>
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
             ))}
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -220,12 +190,9 @@ export default function QuantumTradingAlgorithm() {
               Ready to Transform Your Trading?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </p>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -236,11 +203,8 @@ export default function QuantumTradingAlgorithm() {
                 <Phone className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -250,11 +214,8 @@ export default function QuantumTradingAlgorithm() {
                 <Mail className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -264,14 +225,11 @@ export default function QuantumTradingAlgorithm() {
                 <MapPin className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-<<<<<<< HEAD:temp_broken_files/quantum-trading-algorithm.tsx
-=======
             </div>
           </div>
         </div>
       </section>
     </Layout>
->>>>>>> origin/merge-new-content-1757989975:src/components/quantum-trading-algorithm.tsx
   );
 }
 =======
@@ -291,4 +249,3 @@ const function QuantumTradingAlgorithm() { = () => {
 };
 
 export default function QuantumTradingAlgorithm() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/quantum-trading-algorithm.tsx

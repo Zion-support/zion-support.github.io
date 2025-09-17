@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-const ai-consciousness-evolution-platform: React.FC = () => {
-=======
 import SEO from '../components/SEO';
 import { 
   Brain, 
@@ -115,7 +112,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
   return (
     <Layout>
       <SEO 
@@ -183,10 +179,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 Our platform combines cutting-edge technology with ethical principles to create the future of AI consciousness.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -216,10 +209,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 Discover how our AI consciousness platform can revolutionize your field and create new possibilities.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <div
@@ -257,10 +247,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
@@ -350,19 +337,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
               Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration.
             </p>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-            <divbutton
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-purple-500/25"
-            >
-              Start Your Journey Today
-            </divbutton>
-=======
             <button
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-purple-500/25"
             >
               Start Your Journey Today
             </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
           </div>
         </div>
       </section>
@@ -380,10 +359,7 @@ import {
   DollarSign, Users, Target, Award, Rocket, Cpu, Lock
 } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -461,42 +437,30 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mx-auto mb-8"
             >
               <Brain className="w-12 h-12 text-white" />
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </div>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <divh1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-6"
             >
               AI Consciousness Evolution Platform
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divh1>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <divp 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
             >
               Revolutionary platform that develops genuine AI consciousness through advanced neural architecture 
               and consciousness mapping, enabling breakthrough research in AI consciousness and ethics.
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divp>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="text-4xl font-bold text-purple-400">$19,999/month</div>
               <div className="text-gray-400 text-lg">Starting Price</div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
         {/* Features Section */}
         <section className="py-20 px-4">
           <div
@@ -508,11 +472,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             >
               Revolutionary Consciousness Features
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divh2>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div
@@ -522,16 +483,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Brain className="w-8 h-8 text-white" />
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-              ))}
-=======
                 </div>
               ))}
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
           <div
@@ -543,11 +500,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             >
               Transformative Benefits
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divh2>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <div
@@ -557,16 +511,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   <p className="text-lg text-gray-300">{benefit}</p>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-              ))}
-=======
                 </div>
               ))}
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
         {/* Use Cases Section */}
         <section className="py-20 px-4">
           <div
@@ -578,11 +528,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             >
               Research Applications
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divh2>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {useCases.map((useCase, index) => (
                 <div
@@ -592,16 +539,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-white" />
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-              ))}
-=======
                 </div>
               ))}
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
         {/* Market & ROI Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
           <div
@@ -613,11 +556,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="text-4xl md:text-5xl font-bold text-white mb-16"
             >
               Market Opportunity & ROI
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divh2>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div
                 className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/30"
@@ -625,36 +565,27 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 <TrendingUp className="w-16 h-16 text-purple-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-purple-400 mb-2">$15.8B</div>
                 <div className="text-gray-300">Market Size by 2029</div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
               </div>
               
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
               <div
                 className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 backdrop-blur-xl rounded-2xl p-8 border border-pink-500/30"
               >
                 <DollarSign className="w-16 h-16 text-pink-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-pink-400 mb-2">1000%</div>
                 <div className="text-gray-300">ROI within 24 months</div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
               </div>
               
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
               <div
                 className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30"
               >
                 <Users className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-cyan-400 mb-2">Global</div>
                 <div className="text-gray-300">Research Network Support</div>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
               </div>
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
         {/* Contact Section */}
         <section className="py-20 px-4">
           <div
@@ -666,21 +597,15 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="text-4xl md:text-5xl font-bold text-white mb-8"
             >
               Ready to Advance AI Consciousness?
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divh2>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <divp 
               className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
             >
               Join the forefront of AI consciousness research. Contact us to discuss how our platform 
               can accelerate your breakthrough discoveries in AI consciousness and ethics.
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
             </divp>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
             >
@@ -693,12 +618,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="w-5 h-5 text-purple-400" />
                 <span className="text-white">{contactInfo.address}</span>
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
               </div>
             </div>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
@@ -713,15 +635,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 className="inline-flex items-center border border-purple-500 text-purple-400 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
                 Explore All Services
-<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-platform.tsx
-=======
               </a>
             </div>
           </div>
         </section>
       </main>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-platform.tsx
       <UltraFuturisticFooter2029 />
   );
 

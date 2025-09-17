@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NewContent2025UltimateShowcasePromotionBanner.tsx
-import React from 'react';
-const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -75,7 +71,6 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025UltimateShowcasePromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -178,17 +173,11 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                   <div
                     className="absolute inset-0 rounded-full border-2 border-white/20"
                   />
-<<<<<<< HEAD:temp_broken_files/NewContent2025UltimateShowcasePromotionBanner.tsx
-                  <div
-                    className="absolute inset-4 rounded-full border-2 border-white/30"
-                  />
-=======
                   
                   <div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
                   />
                   
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2025UltimateShowcasePromotionBanner.tsx
                   <div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
                   />

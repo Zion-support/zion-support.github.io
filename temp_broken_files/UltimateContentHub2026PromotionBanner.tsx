@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-import React from 'react';
-const UltimateContentHub2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -116,7 +112,6 @@ const UltimateContentHub2026PromotionBanner = () => {
     return typeMap[type] || FileText;
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -142,28 +137,19 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <span>Ultimate Content Hub</span>
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
                 <divh2
                   className="text-3xl md:text-4xl font-bold mb-4"
                 >
                   DiscoverLearnand Master
                 </divh2>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
                 <divp
                   className="text-lg md:text-xl opacity-90 mb-6"
                 >
                   Access 1,247+ pieces of cutting-edge content including articlesvideostutorialsand case studies from industry experts.
                 </divp>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
                 {/* Content Types */}
                 <div
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
@@ -176,10 +162,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
                 {/* Stats */}
                 <div
                   className="flex flex-wrap items-center gap-6 text-sm mb-6"
@@ -197,10 +180,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                     <span>Updated Daily</span>
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
                 {/* CTA Buttons */}
                 <div
                   className="flex flex-col sm:flex-row gap-4"
@@ -275,10 +255,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentHub2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentHub2026PromotionBanner.tsx
                   {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">
                     {contentPreviews.map((_index) => (

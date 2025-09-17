@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveSuccessMetrics2025.tsx
-import React from 'react';
-const InteractiveSuccessMetrics2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -165,7 +161,6 @@ const InteractiveSuccessMetrics2025 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveSuccessMetrics2025.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -184,17 +179,11 @@ const InteractiveSuccessMetrics2025 = () => {
               Success Metrics 2025
             </h2>
           </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveSuccessMetrics2025.tsx
-            Real-time performance metrics showcasing unprecedented business transformation results.
-            See how our clients achieve extraordinary growth and efficiency.
-          </divp>
-=======
           
             Real-time performance metrics showcasing unprecedented business transformation results.
             See how our clients achieve extraordinary growth and efficiency.
           </divp>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveSuccessMetrics2025.tsx
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300"
@@ -204,10 +193,7 @@ const InteractiveSuccessMetrics2025 = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveSuccessMetrics2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveSuccessMetrics2025.tsx
         {/* Main Metrics Display */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Current Metric Showcase */}
@@ -253,18 +239,11 @@ const InteractiveSuccessMetrics2025 = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveSuccessMetrics2025.tsx
-            {/* Metric Navigation */}
-            <div className="flex justify-center mt-6 space-x-4">
-              {metrics.map((_index) => (
-                <divbutton
-=======
 
             {/* Metric Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
               {metrics.map((_index) => (
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveSuccessMetrics2025.tsx
                   key={index}
                   onClick={() => {
                     setCurrentMetric(index);

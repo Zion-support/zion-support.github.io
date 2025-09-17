@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NewContentNavigation.tsx
-import React from 'react';
-const NewContentNavigation: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -139,7 +135,6 @@ const NewContentNavigation = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentNavigation.tsx
   return (
     <div
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
@@ -247,10 +242,7 @@ const NewContentNavigation = () => {
             </div>
           )}
         </div>
-<<<<<<< HEAD:temp_broken_files/NewContentNavigation.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentNavigation.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-12"

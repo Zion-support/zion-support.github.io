@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2025PromotionBanner.tsx
-import React from 'react';
-const AITrendsPredictions2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -55,7 +51,6 @@ const AITrendsPredictions2025PromotionBanner = () => {
 
   if (isDismissed || !isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2025PromotionBanner.tsx
   return (
     <div>
       <div

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIToolsUltimateShowcase2026PromotionBanner.tsx
-import React from 'react';
-const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -111,7 +107,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsUltimateShowcase2026PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -247,10 +242,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                       ))}
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIToolsUltimateShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsUltimateShowcase2026PromotionBanner.tsx
                   {/* Floating Elements */}
                   <div
                       y: [0-10],
@@ -264,10 +256,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   >
                     NEW!
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIToolsUltimateShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsUltimateShowcase2026PromotionBanner.tsx
                   <div
                       y: [010],
                       x: [050]
@@ -281,10 +270,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   >
                     1M+ Users
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIToolsUltimateShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsUltimateShowcase2026PromotionBanner.tsx
                   <div
                       scale: [1.1],
                       opacity: [0.710.7]

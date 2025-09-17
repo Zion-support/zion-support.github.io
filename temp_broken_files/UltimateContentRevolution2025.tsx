@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2025.tsx
-import React from 'react';
-const UltimateContentRevolution2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -175,7 +171,6 @@ const UltimateContentRevolution2025 = () => {
     return () => clearInterval(interval);
   }[]);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2025.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -314,10 +309,7 @@ const UltimateContentRevolution2025 = () => {
                 <p className="text-lg text-gray-300 italic">"{testimonials[currentSlide].content}"</p>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2025.tsx
             {/* Testimonial Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
               {testimonials.map((_index) => (

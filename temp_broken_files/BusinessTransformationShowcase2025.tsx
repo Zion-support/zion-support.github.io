@@ -1,11 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-import React from 'react';
-const BusinessTransformationShowcase2025: React.FC = () => {
-  return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%25234F46E5%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-=======
 "use client";
 'use client';
 
@@ -136,7 +128,6 @@ const BusinessTransformationShowcase2025 = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%234F46E5" fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
       <div
         className="container mx-auto px-4 py-16 relative z-10"
       >
@@ -147,10 +138,7 @@ const BusinessTransformationShowcase2025 = () => {
             <Zap className="w-4 h-4" />
             BUSINESS TRANSFORMATION 2025
           </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
             Transform Your Business
           </h1>
@@ -159,10 +147,7 @@ const BusinessTransformationShowcase2025 = () => {
             AI-powered business transformation solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
         {/* Metrics Grid */}
           {metrics.map((metricindex) => {
             const Icon = metric.icon;
@@ -185,10 +170,7 @@ const BusinessTransformationShowcase2025 = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
         {/* Active Metric Details */}
           <div
             key={activeMetric}
@@ -230,30 +212,19 @@ const BusinessTransformationShowcase2025 = () => {
                     <div className="text-xl text-gray-300 mb-6">
                       {metrics[activeMetric].title}
                     </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-                    <divbutton
-=======
                     <button
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
                       className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300 mx-auto"
                     >
                       Learn More
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-                    </divbutton>
-=======
                     </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
         {/* Success Stories */}
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Success Stories
@@ -285,10 +256,7 @@ const BusinessTransformationShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
         {/* Call to Action */}
         <div 
           className="text-center"
@@ -302,18 +270,6 @@ const BusinessTransformationShowcase2025 = () => {
               with our AI-powered transformation solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/BusinessTransformationShowcase2025.tsx
-              <divbutton
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-              >
-                Start Your Transformation
-              </divbutton>
-              <divbutton
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                View Case Studies
-              </divbutton>
-=======
               <button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300"
               >
@@ -324,7 +280,6 @@ const BusinessTransformationShowcase2025 = () => {
               >
                 View Case Studies
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationShowcase2025.tsx
             </div>
           </div>
         </div>

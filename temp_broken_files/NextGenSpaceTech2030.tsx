@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
 const NextGenSpaceTech2030: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
@@ -11,12 +8,6 @@ const NextGenSpaceTech2030: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -42,10 +33,6 @@ const NextGenSpaceTech2030: React.FC = () => {
       {/* Space Technology Categories */}
       <div className="container mx-auto px-4 py-20">
         <div
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          initial={{ opacity: 0, y: 50 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -54,17 +41,10 @@ const NextGenSpaceTech2030: React.FC = () => {
             Cutting-edge space technologies that will revolutionize space exploration and colonization
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Advanced Propulsion Systems */}
-          <div
-            initial={{ opacity: 0, scale: 0.9 }}
-=======
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Advanced Propulsion Systems */}
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -84,15 +64,9 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Propulsion →
             </button>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          {/* Space Habitats */}
-          <div
-            initial={{ opacity: 0, scale: 0.9 }}
-=======
 
           {/* Space Habitats */}
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -112,15 +86,9 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Habitats →
             </button>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          {/* Asteroid Mining */}
-          <div
-            initial={{ opacity: 0, scale: 0.9 }}
-=======
 
           {/* Asteroid Mining */}
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -140,15 +108,9 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Mining →
             </button>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          {/* Interplanetary Communication */}
-          <div
-            initial={{ opacity: 0, scale: 0.9 }}
-=======
 
           {/* Interplanetary Communication */}
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -168,15 +130,9 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Communication →
             </button>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          {/* Space Manufacturing */}
-          <div
-            initial={{ opacity: 0, scale: 0.9 }}
-=======
 
           {/* Space Manufacturing */}
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -196,15 +152,9 @@ const NextGenSpaceTech2030: React.FC = () => {
               Explore Manufacturing →
             </button>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          {/* Space Defense */}
-          <div
-            initial={{ opacity: 0, scale: 0.9 }}
-=======
 
           {/* Space Defense */}
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -230,10 +180,6 @@ const NextGenSpaceTech2030: React.FC = () => {
       <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
           <div
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-            initial={{ opacity: 0, y: 50 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -242,15 +188,9 @@ const NextGenSpaceTech2030: React.FC = () => {
               Our roadmap for space exploration and colonization through 2030
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          <div className="space-y-8">
-            <div
-              initial={{ opacity: 0, x: -50 }}
-=======
 
           <div className="space-y-8">
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-6"
             >
@@ -260,13 +200,8 @@ const NextGenSpaceTech2030: React.FC = () => {
                 <p className="text-white/80">Establishment of the first permanent lunar base with 50 residents</p>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-            <div
-              initial={{ opacity: 0, x: -50 }}
-=======
 
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-6"
             >
@@ -276,13 +211,8 @@ const NextGenSpaceTech2030: React.FC = () => {
                 <p className="text-white/80">Launch of the first crewed mission to Mars with advanced life support systems</p>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-            <div
-              initial={{ opacity: 0, x: -50 }}
-=======
 
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-6"
             >
@@ -292,13 +222,8 @@ const NextGenSpaceTech2030: React.FC = () => {
                 <p className="text-white/80">Begin commercial asteroid mining operations with automated systems</p>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-            <div
-              initial={{ opacity: 0, x: -50 }}
-=======
 
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-6"
             >
@@ -314,10 +239,6 @@ const NextGenSpaceTech2030: React.FC = () => {
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
         <div
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          initial={{ opacity: 0, y: 50 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -326,15 +247,9 @@ const NextGenSpaceTech2030: React.FC = () => {
             Revolutionary space technologies currently in development
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-        <div className="grid md:grid-cols-2 gap-8">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-=======
 
         <div className="grid md:grid-cols-2 gap-8">
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30"
           >
@@ -357,13 +272,8 @@ const NextGenSpaceTech2030: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          <div
-            initial={{ opacity: 0, y: 50 }}
-=======
 
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
           >
@@ -391,10 +301,6 @@ const NextGenSpaceTech2030: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
-<<<<<<< HEAD:temp_broken_files/NextGenSpaceTech2030.tsx
-          initial={{ opacity: 0, y: 50 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenSpaceTech2030.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-12 border border-blue-400/30"
         >

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-import React from 'react';
-const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -84,7 +80,6 @@ const BusinessSuccessStories2025PromotionBanner = () => {
     { name: ''Manufacturing', 'projects: 25icon: Building2 }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Animated Background */}
@@ -106,10 +101,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               <Sparkles className="w-4 h-4 mr-2" />
               REAL SUCCESS STORIES
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-5xl font-bold mb-6"
@@ -119,10 +111,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                 Stories
               </span>
             </divh2>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8"
@@ -130,10 +119,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               Discover how businesses across industries have transformed their operations 
               and achieved remarkable results with our cutting-edge solutions.
             </divp>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
             {/* Stats */}
             <div
               className="grid grid-cols-2 gap-4 mb-8"
@@ -145,10 +131,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
             {/* Industries */}
             <div
               className="mb-8"
@@ -164,10 +147,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -189,10 +169,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
           {/* Right Content - Testimonial Carousel */}
           <div
             className="relative"
@@ -240,10 +217,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025PromotionBanner.tsx
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2 mb-4">
                 {testimonials.map((_index) => (

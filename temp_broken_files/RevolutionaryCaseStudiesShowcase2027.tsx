@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027.tsx
-import React from 'react';
-const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -184,7 +180,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,10 +199,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
             Real projectsreal resultsreal transformation.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027.tsx
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -222,10 +214,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027.tsx
         {/* Case Study Navigation */}
         <div
           className="mb-12"
@@ -246,10 +235,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027.tsx
         {/* Case Study Content */}
           <div
             key={activeCase}
@@ -346,10 +332,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2027.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

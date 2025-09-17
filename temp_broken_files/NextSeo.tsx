@@ -1,16 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NextSeo.tsx
-import React from 'react';
-interface NextSeoProps {
-  title?: string;
-  description?: string;
-  openGraph?: Record<string, unknown>;
-const NextSeo: React.FC<NextSeoProps> = () => null;
-export { NextSeo };
-};
-
-
-
-=======
 import React from "react";
 
 const NextSeo = () => {
@@ -26,5 +13,4 @@ const NextSeo = () => {
   );
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/NextSeo.tsx
 export default NextSeo;

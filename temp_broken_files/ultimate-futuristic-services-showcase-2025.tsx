@@ -1,14 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ultimate-futuristic-services-showcase-2025.tsx
-<<<<<<< HEAD:temp_broken_files/ultimate-futuristic-services-showcase-2025.tsx
-import React from 'react';
-const ultimate-futuristic-services-showcase-2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ultimate-futuristic-services-showcase-2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -33,7 +22,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> origin/merge-new-content-1757989975:src/components/ultimate-futuristic-services-showcase-2025.tsx
 };
 const serviceCategories = [
   {
@@ -196,9 +184,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                   <div className="text-left">
                     <div className="text-2xl font-bold text-white">{stat.number}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
-<<<<<<< HEAD:temp_broken_files/ultimate-futuristic-services-showcase-2025.tsx
-              ))}
-=======
                   </div>
                 </div>
               ))}
@@ -207,7 +192,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
         </div>
       </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ultimate-futuristic-services-showcase-2025.tsx
       {/* Search and Filter Section */}
       <section className="py-12 bg-gradient-to-r from-black via-purple-900/10 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,9 +341,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                       <a href={`mailto:${contactInfo.email}`} className="flex items-center text-purple-400 hover:text-purple-300">
                         <Mail className="w-4 h-4 mr-1" />
                         {contactInfo.email}
-<<<<<<< HEAD:temp_broken_files/ultimate-futuristic-services-showcase-2025.tsx
-            ))}
-=======
                       </a>
                     </div>
                   </div>
@@ -368,7 +349,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
             ))}
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ultimate-futuristic-services-showcase-2025.tsx
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className="text-center py-16">
@@ -407,15 +387,12 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors"
               >
                 View Pricing
-<<<<<<< HEAD:temp_broken_files/ultimate-futuristic-services-showcase-2025.tsx
-=======
               </a>
             </div>
           </div>
         </div>
       </section>
     </Layout>
->>>>>>> origin/merge-new-content-1757989975:src/components/ultimate-futuristic-services-showcase-2025.tsx
   );
 }
 =======
@@ -435,4 +412,3 @@ const function UltimateFuturisticServicesShowcase2025() { = () => {
 };
 
 export default function UltimateFuturisticServicesShowcase2025() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ultimate-futuristic-services-showcase-2025.tsx

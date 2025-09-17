@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027.tsx
-import React from 'react';
-const BusinessSolutionsShowcase2027: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -161,7 +157,6 @@ const BusinessSolutionsShowcase2027 = () => {
     { number: "24/7"label: "Support Available"icon: Shield }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -182,10 +177,7 @@ const BusinessSolutionsShowcase2027 = () => {
             enhance efficiencyand drive innovation across all industries and company sizes.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027.tsx
         {/* Category Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -205,10 +197,7 @@ const BusinessSolutionsShowcase2027 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027.tsx
         {/* Solutions Display */}
           <div
             key={activeCategory}
@@ -268,10 +257,7 @@ const BusinessSolutionsShowcase2027 = () => {
             )}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027.tsx
         {/* Stats Section */}
         <div
           className="mt-20"
@@ -294,10 +280,7 @@ const BusinessSolutionsShowcase2027 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027.tsx
         {/* Testimonials */}
         <div
           className="mt-20"
@@ -331,10 +314,7 @@ const BusinessSolutionsShowcase2027 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-20"

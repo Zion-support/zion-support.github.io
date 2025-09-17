@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/UltimateTechRevolution2032Banner.tsx
-=======
 import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechRevolution2032Banner.tsx
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
     <divsection
@@ -37,21 +34,6 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/UltimateTechRevolution2032">
-<<<<<<< HEAD:temp_broken_files/UltimateTechRevolution2032Banner.tsx
-                <divbutton
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
-                >
-                  Explore Revolution <ArrowRight className="w-5 h-5" />
-                </divbutton>
-              </Link>
-              <divbutton
-                className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
-              >
-                Learn More
-              </divbutton>
-            </div>
-          </div>
-=======
                 <button
                   className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
                 >
@@ -66,7 +48,6 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
             </div>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechRevolution2032Banner.tsx
           {/* Right Content - Feature Grid */}
           <div
             whileInView={{ opacity: 1, x: 0 }}

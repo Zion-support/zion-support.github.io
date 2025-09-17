@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentDiscoveryWidget2026.tsx
-import React from 'react';
-const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -204,7 +200,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentDiscoveryWidget2026.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       {/* Background Effects */}
@@ -230,10 +225,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             articlestutorialsand insights tailored to your interests.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentDiscoveryWidget2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentDiscoveryWidget2026.tsx
         {/* Search and Filters */}
         <div
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20"
@@ -301,10 +293,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentDiscoveryWidget2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentDiscoveryWidget2026.tsx
         {/* Content Grid */}
         <div
           className={`grid gap-6 ${
@@ -408,10 +397,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentDiscoveryWidget2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentDiscoveryWidget2026.tsx
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div

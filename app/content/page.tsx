@@ -14,10 +14,6 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-        <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
-=======
         {/* Added Sept 2025: New content promotions */}
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
@@ -111,7 +107,6 @@ export default function ContentIndexPage() {
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="hover:underline">
               AI 2026: Trusted Autonomy Field Manual
@@ -159,10 +154,6 @@ export default function ContentIndexPage() {
           <Link href="/content/ai-2026-agent-posture-management" className="text-fuchsia-700 font-semibold">Read Guide →</Link>
         </article>
         <article className="bg-white p-6 rounded-xl shadow">
-<<<<<<< HEAD
-          <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
-=======
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/hyperautomation-blueprint-2026" className="hover:underline">
               Hyperautomation Blueprint 2026
@@ -171,9 +162,6 @@ export default function ContentIndexPage() {
           <p className="text-gray-600 mb-4">
             A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise.
           </p>
-<<<<<<< HEAD
-          <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold">Read Guide →</Link>
-=======
           <Link href="/content/secure-agentic-data-pipelines-2026" className="text-emerald-600 font-semibold">Read Guide →</Link>
         </article>
 
@@ -366,7 +354,6 @@ export default function ContentIndexPage() {
             Align reliability, quality, cost, and speed with AI-driven automation and observability.
           </p>
           <Link href="/content/ai-2026-operational-excellence-blueprint" className="text-purple-600 font-semibold">Read Blueprint →</Link>
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
@@ -379,9 +366,6 @@ export default function ContentIndexPage() {
           <p className="text-gray-600 mb-4">
             How edge-native agents enable ultra-low-latency decisioning and intelligent automation at the edge.
           </p>
-<<<<<<< HEAD
-          <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold">Read Article →</Link>
-=======
           <Link href="/blog/ai-2026-trustworthy-rag-blueprint" className="text-blue-600 font-semibold">Read Article →</Link>
         </article>
 
@@ -451,7 +435,6 @@ export default function ContentIndexPage() {
             Practical governance: policy-as-code, evals, monitoring, and risk workflows for trustworthy AI.
           </p>
           <Link href="/content/enterprise-ai-governance-2026" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">

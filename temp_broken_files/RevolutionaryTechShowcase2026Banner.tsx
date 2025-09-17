@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2026Banner.tsx
-import React from 'react';
-const RevolutionaryTechShowcase2026Banner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -69,7 +65,6 @@ const RevolutionaryTechShowcase2026Banner = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2026Banner.tsx
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
@@ -97,10 +92,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
             defining the next decade of human progress.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2026Banner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2026Banner.tsx
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Slide Content */}
@@ -171,10 +163,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2026Banner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2026Banner.tsx
           {/* Slide Indicators */}
           <div className="flex justify-center gap-3 mt-12">
             {slides.map((_index) => (

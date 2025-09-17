@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/EnterpriseSolutions2025.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/EnterpriseSolutions2025.tsx
 const EnterpriseSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900">

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025.tsx
-import React from 'react';
-const BusinessSuccessStories2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -131,7 +127,6 @@ const BusinessSuccessStories2025 = () => {
     { name: ''Education', 'count: 15icon: BookOpen }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025.tsx
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,10 +141,7 @@ const BusinessSuccessStories2025 = () => {
             Discover how businesses across industries have transformed their operations and achieved remarkable results with our solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025.tsx
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -164,10 +156,7 @@ const BusinessSuccessStories2025 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025.tsx
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {successStories.map((storyindex) => (
@@ -253,10 +242,7 @@ const BusinessSuccessStories2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStories2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStories2025.tsx
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
