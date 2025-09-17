@@ -1,30 +1,84 @@
-
-# Allow all crawlers
 User-agent: *
 Allow: /
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 
-# Sitemap location
-Sitemap: https://app.ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Specific rules for major crawlers
-User-agent: Googlebot
-Allow: /
+# Revolutionary Technology Content 2026
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_headers
+Disallow: /*.backup
+Disallow: /*.log
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
+<<<<<<< HEAD
+=======
+=======
 
-User-agent: Bingbot
-Allow: /
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
-User-agent: Yandexbot
-Allow: /
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
 
-User-agent: Twitterbot
-Allow: /
+# Allow all content pages
+Allow: /pages/
+Allow: /blog/
+Allow: /contact/
 
-User-agent: facebookexternalhit
-Allow: /
-
-# Disallow admin and authentication pages
-Disallow: /dashboard/
-Disallow: /login/
-Disallow: /signup/
-Disallow: /forgot-password/
-Disallow: /onboarding/
+# Crawl delay
+Crawl-delay: 1
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56

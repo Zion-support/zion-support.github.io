@@ -1,151 +1,262 @@
+# Zion App - Revolutionary AI Solutions
 
-# Welcome to your Lovable project
+A cutting-edge web application showcasing revolutionary AI solutions for enterprise transformation.
 
-## Project info
+## 🚀 Features
 
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
+- **Advanced AI Showcase**: Comprehensive display of AI innovations and breakthroughs
+- **Quantum Computing**: Revolutionary quantum computing solutions and applications
+- **Space Technology**: Next-generation space technology innovations
+- **Biotechnology**: Advanced biotechnology and genetic engineering solutions
+- **Neural Interfaces**: Brain-computer interface technologies
+- **Responsive Design**: Fully responsive and mobile-optimized interface
+- **Performance Optimized**: Built with Vite for lightning-fast builds and optimal performance
+- **PWA Support**: Progressive Web App capabilities for enhanced user experience
 
-## How can I edit this code?
+## 🛠️ Technology Stack
 
-There are several ways of editing your application.
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Framer Motion
+- **UI Components**: Radix UI, Lucide React
+- **State Management**: Redux Toolkit, React Query
+- **Build Tools**: Vite, ESLint, TypeScript
+- **Deployment**: Netlify
+- **CI/CD**: GitHub Actions
 
-**Use Lovable**
+## 📦 Quick Start
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js 18+ 
+- npm or yarn
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Clone the repository
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
 
-Follow these steps:
+# Install dependencies
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
-
-# If you're using OpenAI Codex environments, a convenience script is available:
-./.codex/setup.sh  # Installs dependencies using npm
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
+# Start development server
+npm run dev
 ```
 
-> **IMPORTANT**: This project requires internet access to install dependencies. Without network connectivity, the build process will fail with errors about missing modules like 'react', 'react-router-dom', and 'lucide-react'.
+## 🏗️ Build Scripts
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Integrations
-
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-
-## Troubleshooting
-
-### Network Issues
-
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
-
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
-
-### Package Manager Issues
-
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
-
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
-
-If you see a warning about `rimraf@3.0.2` being deprecated, install the latest
-version of `rimraf`:
-
-```sh
-npm install rimraf@^5 --save-dev
+### Development
+```bash
+npm run dev              # Start development server
+npm run dev:backend      # Start backend server (if available)
+npm run dev:hybrid       # Start both frontend and backend
 ```
 
-This updates the dependency to a supported v5 release.
-
-To prevent memory leaks from the deprecated `inflight` package, the project pins
-`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
-`npm install` to ensure this version is installed.
-
-### Whitelabel Tenant Errors
-
-If the app logs **"Error loading tenant"** during startup, the request to the
-Supabase edge function that provides whitelabel settings failed. Confirm that
-`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
-that you have network connectivity. The tenant hook will retry a few times
-before giving up.
-
-## Testing
-
-Run unit tests with:
-
-```sh
-npm run test
+### Building
+```bash
+npm run build            # Standard build
+npm run build:netlify    # Netlify-optimized build
+npm run build:optimize   # Optimized build with performance enhancements
+npm run build:full       # Full build pipeline with health checks and analysis
 ```
 
-To watch tests during development:
-
-```sh
-npm run test:watch
+### Quality Assurance
+```bash
+npm run lint             # Run ESLint
+npm run type-check       # TypeScript type checking
+npm run health-check     # Comprehensive health checks
+npm run analyze          # Performance analysis
 ```
 
-### End-to-End Tests
-
-Open Cypress for interactive debugging:
-
-```sh
-npm run cypress:open
+### Deployment
+```bash
+npm run start            # Preview production build
+npm run build:analyze    # Build with performance analysis
 ```
 
-Run the Cypress suite headlessly:
+## 🔧 Configuration
 
-```sh
-npm run cypress:run
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+VITE_API_URL=your_api_url
+VITE_APP_TITLE=Zion App
+VITE_APP_DESCRIPTION=Revolutionary AI Solutions
 ```
 
-### Coverage Report
+### Build Configuration
 
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
+The application uses Vite with the following optimizations:
+
+- **Code Splitting**: Automatic chunk splitting for optimal loading
+- **Tree Shaking**: Dead code elimination
+- **Compression**: Gzip and Brotli compression
+- **Bundle Analysis**: Built-in bundle size analysis
+- **PWA Support**: Service worker and manifest generation
+
+## 📊 Performance Monitoring
+
+The application includes comprehensive performance monitoring:
+
+### Health Checks
+- Package.json validation
+- Build file verification
+- Dependency checking
+- Configuration validation
+
+### Performance Analysis
+- Bundle size analysis
+- Chunk optimization recommendations
+- Loading performance metrics
+- Resource optimization suggestions
+
+### Usage
+```bash
+npm run health-check     # Run health checks
+npm run analyze          # Analyze performance
+npm run build:full       # Full pipeline with monitoring
+```
+
+## 🚀 Deployment
+
+### Netlify Deployment
+
+The application is configured for seamless Netlify deployment:
+
+1. **Automatic Builds**: Triggered on push to main branch
+2. **Environment Variables**: Configured via Netlify dashboard
+3. **Redirects**: Handled via `_redirects` file
+4. **Build Settings**: Optimized in `netlify.toml`
+
+#### Deployment Status
+
+Replace the placeholders with your Netlify site ID and site name to enable the live badge:
+
+```md
+[![Netlify Status](https://api.netlify.com/api/v1/badges/<site-id>/deploy-status)](https://app.netlify.com/sites/<site-name>/deploys)
+```
+
+### Manual Deployment
+
+```bash
+# Build for production
+npm run build:netlify
+
+# Deploy to Netlify (if Netlify CLI is installed)
+netlify deploy --prod --dir=dist
+```
+
+## 🔄 CI/CD Pipeline
+
+GitHub Actions workflow includes:
+
+1. **Health Checks**: Validate project configuration
+2. **Linting & Type Checking**: Code quality validation
+3. **Build & Test**: Compile and test application
+4. **Performance Analysis**: Bundle size and optimization analysis
+5. **Deployment**: Automatic deployment to Netlify
+
+## 📁 Project Structure
+
+```
+zion.app/
+├── src/
+│   ├── components/          # Reusable UI components
+│   ├── pages/              # Page components
+│   ├── hooks/              # Custom React hooks
+│   ├── utils/              # Utility functions
+│   ├── types/              # TypeScript type definitions
+│   └── styles/             # Global styles
+├── public/                 # Static assets
+├── scripts/                # Build and utility scripts
+├── .github/workflows/      # CI/CD workflows
+├── netlify.toml           # Netlify configuration
+├── vite.config.ts         # Vite configuration
+└── package.json           # Dependencies and scripts
+```
+
+## 🎯 Key Features
+
+### AI Innovation Showcase
+- Comprehensive AI technology displays
+- Interactive demonstrations
+- Real-time performance metrics
+
+### Quantum Computing Solutions
+- Quantum algorithm implementations
+- Performance benchmarking
+- Educational content
+
+### Space Technology
+- Advanced propulsion systems
+- Habitat technologies
+- Resource extraction solutions
+
+### Biotechnology
+- Genetic engineering tools
+- Synthetic biology applications
+- Medical technology innovations
+
+## 🔧 Development Tools
+
+### Scripts Available
+
+- `npm run dev` - Development server
+- `npm run build` - Production build
+- `npm run lint` - Code linting
+- `npm run type-check` - TypeScript validation
+- `npm run health-check` - Project health validation
+- `npm run analyze` - Performance analysis
+- `npm run build:full` - Complete build pipeline
+
+### Code Quality
+
+- **ESLint**: Code style and quality enforcement
+- **TypeScript**: Type safety and better developer experience
+- **Prettier**: Code formatting (if configured)
+- **Husky**: Git hooks for quality assurance
+
+## 📈 Performance Optimizations
+
+- **Bundle Splitting**: Automatic code splitting for optimal loading
+- **Lazy Loading**: Route-based code splitting
+- **Image Optimization**: Responsive images and modern formats
+- **Caching**: Aggressive caching strategies
+- **Compression**: Gzip and Brotli compression
+- **CDN**: Content delivery network optimization
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+For support and questions:
+
+- Create an issue in the repository
+- Contact the development team
+- Check the documentation
+
+## 🔮 Future Enhancements
+
+- Advanced AI integration
+- Real-time collaboration features
+- Enhanced mobile experience
+- Progressive Web App improvements
+- Performance monitoring dashboard
+- Advanced analytics integration
+
+---
+
+**Built with ❤️ by the Zion Holdings team**

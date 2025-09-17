@@ -1,0 +1,306 @@
+
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,
+  Search
+
+// Mock category data
+const categoriesInfo: Record<string, ForumCategoryInfo> = {
+  "getting-hired": {
+    id: "getting-hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.",
+
+
+
+    adminOnly: false,
+    icon: "Briefcase"
+  },
+
+  "project-help": {
+
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+
+    icon: "MessageSquare"
+
+  }
+  "ai-tools": {
+
+
+    icon: "Code"
+  }
+  },
+  "ai-tools": {
+
+    id: "ai-tools"
+    name: "AI Tools Discussion"
+    description: "Discuss AI tools, frameworks, and best practices.";
+    adminOnly: false
+
+    icon: "Code"
+  },
+
+  "feedback": {
+
+    id: "feedback"
+    name: "Feedback & Feature Requests"
+    description: "Share your feedback and suggest new features."
+    adminOnly: false
+
+    icon: "FileText"
+
+  }
+  },
+
+  "announcements": {
+
+    id: "announcements"
+    name: "Announcements"
+    description: "Official announcements from the Zion team."
+    adminOnly: true
+
+    icon: "Megaphone"
+  }
+
+}
+},
+
+    adminOnly: false,
+    icon: "Briefcase"
+  },
+  "project-help": {
+    id: "project-help",
+    name: "Project Help",
+    description: "Get help with your ongoing projects and collaboration.",
+    adminOnly: false,
+    icon: "MessageSquare"
+  },
+  "ai-tools": {
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,
+    icon: "Code"
+  },
+  "feedback": {
+    id: "feedback",
+    name: "Feedback & Feature Requests",
+    description: "Share your feedback and suggest new features.",
+    adminOnly: false,
+    icon: "FileText"
+  },
+  "announcements": {
+    id: "announcements",
+    name: "Announcements",
+    description: "Official announcements from the Zion team.",
+    adminOnly: true,
+    icon: "Megaphone"
+  }
+};
+
+// Mock data for posts by category
+const postsByCategory: Record<string, ForumPost[]> = {
+  "getting-hired": [
+    {
+      id: "2",
+      title: "How to build an effective AI talent profile?",
+      content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
+      authorId: "user2",
+      authorName: "Sarah Chen",
+      authorAvatar: "https://i.pravatar.cc/150?img=5",
+      categoryId: "getting-hired",
+      tags: ["profile", "tips", "hiring"],
+      createdAt: "2025-04-03T09:15:00Z",
+      updatedAt: "2025-04-03T09:15:00Z",
+      upvotes: 32,
+      downvotes: 0,
+      replyCount: 8,
+      isPinned: true,
+      isFeatured: true
+    },
+    {
+      id: "6",
+      title: "Portfolio pieces that clients actually care about",
+      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...",
+      authorId: "user6",
+      authorName: "James Wilson",
+      categoryId: "getting-hired",
+      tags: ["portfolio", "projects", "examples"],
+      createdAt: "2025-04-07T11:30:00Z",
+      updatedAt: "2025-04-07T11:30:00Z",
+      upvotes: 19,
+      downvotes: 2,
+    {
+      id: "5",
+      title: "How to handle client scope creep?",
+      content: "I'm working on a project where the client keeps adding requirements...",
+    {
+      id: "7",
+      title: "Comparing different vector embedding models",
+      content: "I've been experimenting with these different embedding models and here are my findings...",
+    {
+      id: "8",
+      title: "Suggestion for improving the jobs matching algorithm",
+      content: "I think the job matching could be improved by considering these additional factors...",
+
+const iconMap = {
+  "Briefcase": Briefcase,
+  "MessageSquare": MessageSquare,
+  "Code": Code,
+  "FileText": FileText,
+  "Megaphone": Megaphone
+        title={`${category.name} | Community Forum | Zion AI Marketplace`}
+        description={category.description}
+        keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
+      />
+      <div className="container py-8">
+        <div className="flex items-center gap-3 mb-6">
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+            Forum
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <span className="font-medium">{category.name}</span>
+        </div>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-zion-purple/10 rounded-full">
+              <IconComponent className="h-8 w-8 text-zion-purple" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold">{category.name}</h1>
+              <p className="text-muted-foreground mt-1">{category.description}</p>
+            </div>
+          </div>
+          {canCreatePost && (
+            <Button asChild>
+              <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
+                Create New Post
+              </Link>
+            </Button>
+          )}
+        </div>
+
+
+
+      <div className="container py-8">;
+        <div className="flex items-center gap-3 mb-6">;
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
+            Forum;
+          </Link>;
+          <span className="text-muted-foreground">/</span>;
+          <span className="font-medium">{category && category.name}</span>;
+        </div>;
+
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
+          <div className="flex items-center gap-4">;
+            <div className="p-3 bg-zion-purple/10 rounded-full">;
+              <IconComponent className="h-8 w-8 text-zion-purple" />;
+            </div>;
+            <div>;
+              <h1 className="text-3xl font-bold">{category && category.name}</h1>;
+              <p className="text-muted-foreground mt-1">{category && category.description}</p>;
+            </div>;
+          </div>;
+
+          {canCreatePost && (;
+            <Button asChild>;
+              <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
+                Create New Post;
+              </Link>;
+            </Button>;
+          )}
+        </div>;
+
+        <div className="mb-6">;
+          <div className="relative">;
+            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />;
+
+            <Input;
+              placeholder="Search posts in this category...";
+              className="pl-10";
+
+              value={searchQuery}
+
+              onChange={(e) => setSearchQuery(e && e.target.value)}
+            />;
+          </div>;
+        </div>;
+
+        {posts && posts.length > 0 ? (;
+          <div className="space-y-4">;
+            {filteredPosts && filteredPosts.map((post) => (;
+              <PostCard key={post && post.id} post={post} />;
+            ))}
+          </div>;
+        ) : (;
+          <div className="text-center py-16">;
+            <h2 className="text-xl font-medium mb-2">No posts yet</h2>;
+            <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>;
+
+            {canCreatePost && (;
+              <Button asChild>;
+                <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
+                  Create New Post;
+                </Link>;
+              </Button>;
+
+            )}
+          </div>;
+        )}
+
+      </div>
+    </AppLayout>
+  )
+}
+      </div>;
+    </AppLayout>;
+  );
+}
+
+  "Megaphone": Megaphone;
+}
+;
+
+        
+        <div className="mb-6">
+          <div className="relative">
+            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+        
+        {posts.length > 0 ? (
+          <div className="space-y-4">
+            {filteredPosts.map((post) => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <h2 className="text-xl font-medium mb-2">No posts yet</h2>
+            <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
+            
+            {canCreatePost && (
+              <Button asChild>
+                <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
+                  Create New Post
+                </Link>
+              </Button>
+            )}
+          </div>
+        )}
+      </div>
+    </AppLayout>
+  );
+}
