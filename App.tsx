@@ -303,7 +303,12 @@ import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarouse
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 
-export default function App(): JSX.Element {
+// Import only existing components
+import Home from './src/pages/Home';
+import About from './About';
+import Blog from './src/pages/Blog';
+
+function App() {
   return (
     <ErrorBoundary>
       <Router>
@@ -1633,10 +1638,9 @@ export default function App(): JSX.Element {
             </main>
           } />
         </Routes>
-        
-        <Footer />
       </div>
     </Router>
-    </ErrorBoundary>
   );
 }
+
+export default App;

@@ -248,7 +248,6 @@ import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
 
 export default function App(): JSX.Element {
   return (
-    <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-white">
         <ScrollToTop />
@@ -1320,7 +1319,6 @@ export default function App(): JSX.Element {
 >>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
-                  <RevolutionaryContentShowcase />
                 </div>
 
                 {/* Revolutionary Content Showcase 2026 */}
@@ -1682,7 +1680,6 @@ export default function App(): JSX.Element {
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Interactive Technology Showcase</h2>
                     <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
                   </div>
-                  <InteractiveTechShowcase />
                 </div>
 
                 {/* NEW: Interactive Technology Showcase 2025 - Latest Interactive Features */}

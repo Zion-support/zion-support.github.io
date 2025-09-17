@@ -325,7 +325,6 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   },
   {
     title: 'Guide: Real-Time Evals Starter Kit',
->>>>>>> origin/feat/new-updates-and-home-ad
     summary:
       'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
     href: '/insights/state-of-ai-automation-2025',
@@ -342,7 +341,6 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
->>>>>>> origin/feat/content-sept15-1757928952
     summary:
       'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
     href: '/blog/ai-2026-policy-as-code-production-blueprint',
@@ -351,7 +349,6 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   },
   {
     title: 'Launch: Autonomous Sales Copilot v1.0',
->>>>>>> origin/feat/content-policy-as-code
     summary:
       'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
     href: '/updates/autonomous-ops-sre-for-agents',
@@ -360,7 +357,6 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   },
   {
     title: 'Launch: AI Agent Safety Certification (Beta)',
->>>>>>> origin/feature/autonomous-ops-sre-content
     summary:
       'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
     href: '/updates/agent-platform-operations',

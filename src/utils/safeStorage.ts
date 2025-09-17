@@ -39,7 +39,6 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
     }
   },
-<<<<<<< HEAD
     } catch (error) {
       console.warn('localStorage not available:', error);
 =======

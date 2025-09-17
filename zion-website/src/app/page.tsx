@@ -303,7 +303,6 @@ const whatsNew = [
   { title: 'ContentForge AI v2', description: 'Major upgrade with SEO briefs, brand voice trainer, and new templates.', href: '/services', badge: 'New' },
   { title: 'SecureShield Audit Playbooks', description: 'Actionable remediation guides added to all cybersecurity audits.', href: '/services', badge: 'Update' },
 ]
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 
 export default function HomePage() {
   return (
@@ -666,31 +665,13 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-6f93
                 href="/blog/ai-2026-enterprise-agent-observability-deep-dive"
-=======
-                href="/updates/autonomous-ops-sre-for-agents"
-=======
-                href="/blog/ai-2026-policy-as-code-production-blueprint"
-                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
-=======
-                href="/updates/agentic-ops-dashboard-1-0"
-                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
-              >
-                Launch: Agentic Ops Dashboard
-                <span aria-hidden>→</span>
-=======
->>>>>>> origin/feat/news-and-fixes
-=======
->>>>>>> origin/feat/research-article-promo
               </a>
               <a
                 href="/updates/autonomous-sales-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
->>>>>>> origin/feat/new-updates-and-homepage-promo
               >
                 Blueprint: Policy‑as‑Code in Production
                 <span aria-hidden>→</span>
-=======
->>>>>>> origin/feat/content-promo
               </a>
 >>>>>>> origin/feat/new-content-promos
                 href="/blog/ai-2026-sovereign-ai-commerce"
@@ -1347,9 +1328,6 @@ export default function HomePage() {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> origin/feat/news-and-fixes
 
-=======
-
->>>>>>> origin/feat/research-article-promo
       {/* Features section */}
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======

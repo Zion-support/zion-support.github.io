@@ -47,7 +47,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
->>>>>>> 1f7620a0edd89cd971bd6e6ace7dea7c2db60693
     excerpt:
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
     category: 'AI Safety',
@@ -113,7 +112,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     ]
   },
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
