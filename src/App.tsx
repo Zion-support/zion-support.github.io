@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 
 
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
