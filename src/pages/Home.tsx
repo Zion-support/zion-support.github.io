@@ -3,6 +3,8 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { motion } from 'framer-motion';
 import AdvancedTechBanner2025 from '@/components/AdvancedTechBanner2025';
+import SystemDashboard from '@/components/SystemDashboard';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import { 
   Rocket, 
   Brain, 
@@ -284,6 +286,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* System Dashboard */}
+      <div className="px-4">
+        <SystemDashboard />
+      </div>
+
       {/* Performance Metrics Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,6 +327,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Signup */}
+      <div className="px-4 py-16">
+        <NewsletterSignup />
+      </div>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-br from-purple-900 to-blue-900">
