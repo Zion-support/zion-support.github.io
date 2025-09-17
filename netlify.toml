@@ -185,3 +185,4 @@
 
 # ci: retrigger deploy 2025-09-17
 # ci: retrigger netlify build
+# ci: verified local Netlify build succeeds on 2025-09-17
