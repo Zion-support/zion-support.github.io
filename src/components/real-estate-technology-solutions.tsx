@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+};
+
 
 export default function RealEstateTechnologySolutions() {
   return (
@@ -14,4 +16,3 @@ export default function RealEstateTechnologySolutions() {
           <p className="text-gray-300">Unlock data-driven decisions and automation across property lifecyclevaluationand operations.</p>
     </>
   );
-}

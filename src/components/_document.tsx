@@ -1,5 +1,4 @@
 import React from 'react';
-
 const _document: React.FC = () => {
   return (
     <Html lang="en">
@@ -14,4 +13,3 @@ const _document: React.FC = () => {
         <Main />
         <NextScript />
   )
-}

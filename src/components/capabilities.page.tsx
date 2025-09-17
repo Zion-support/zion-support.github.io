@@ -1,5 +1,4 @@
 import React from 'react';
-
 const capabilities.page: React.FC = () => {
   return (
     <EnhancedLayout>
@@ -10,6 +9,7 @@ const capabilities.page: React.FC = () => {
             {c}
         ))}
   );
+
 };
 
 export default capabilities.page;

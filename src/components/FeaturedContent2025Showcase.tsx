@@ -1,6 +1,46 @@
 import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const FeaturedContent2025Showcase: React.FC = () => {
+  const featuredContent = [
+    {
+      type: "Implementation Guide",
+      title: "AI 2025 Enterprise Automation Revolution",
+      description: "Complete guide to achieving 300-500% ROI with strategic AI automation implementation",
+      href: "/blog/ai-2025-enterprise-automation-revolution-complete-guide",
+      readTime: "12 min read",
+      featured: true,
+      badge: "NEW",
+      badgeColor: "bg-green-500",
+      stats: "340% Average ROI",
+      category: "Automation"
+    },
+    {
+      type: "Case Study",
+      title: "Global Manufacturing 1200% ROI Success",
+      description: "Fortune 500 manufacturing company achieves $2.4B value creation through AI automation",
+      href: "/case-studies/ai-2025-global-manufacturing-automation-1200-roi-success-story",
+      readTime: "8 min read",
+      featured: true,
+      badge: "FEATURED",
+      badgeColor: "bg-blue-500",
+      stats: "$2.4B Value Created",
+      category: "Success Story"
+    },
+    {
+      type: "Future Tech",
+      title: "Quantum AI 2026 Business Revolution",
+      description: "Next-generation quantum computing applications transforming enterprise operations",
+      href: "/blog/quantum-ai-2026-business-revolution-complete-guide",
+      readTime: "10 min read",
+      featured: false,
+      badge: "TRENDING",
+      badgeColor: "bg-purple-500",
+      stats: "2026 Predictions",
+      category: "Quantum Computing"
+    }
+  ];
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

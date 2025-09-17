@@ -1,6 +1,95 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  ArrowRight
+  Star
+  Users
+  TrendingUp
+  Zap,
+  Cpu,
+  Target,
+  Globe,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Award,
+  X,
+  Sparkles,
+  Rocket,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search
+} from 'lucide-react';
 
 const AIInnovationHub2026PromotionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentInnovationsetCurrentInnovation] = useState(0);
+
+  const innovations = [
+    {
+      icon: Brain,
+      title: 'Consciousness-Level AI',
+      description: 'Revolutionary self-aware AI systems',
+      impact: 'Revolutionary',
+      color: 'from-purple-500 to-pink-500'
+
+    {
+      icon: Atom,
+      title: 'Quantum-Neural Fusion',
+      description: 'Quantum computing meets neural networks',
+      impact: 'Revolutionary',
+      color: 'from-cyan-500 to-blue-500'
+
+    {
+      icon: Network,
+      title: 'Neural Interface Tech',
+      description: 'Direct brain-computer communication',
+      impact: 'High',
+      color: 'from-green-500 to-emerald-500'
+
+    {
+      icon: Zap,
+      title: 'Autonomous Operations',
+      description: 'Complete business automation AI',
+      impact: 'High',
+      color: 'from-yellow-500 to-orange-500'
+
+  ];
+
+  const categories = [
+    { icon: Brainame: 'AI 'Core', 'count: '32+'color: 'purple' },
+    { icon: Atomname: 'Quantum 'AI', 'count: '18+'color: 'cyan' },
+    { icon: Networkname: 'Neural 'Networks', 'count: '24+'color: 'green' },
+    { icon: Zapname: ''Automation', 'count: '15+'color: 'yellow' },
+    { icon: Cpuname: ''Robotics', 'count: '12+'color: 'red' },
+    { icon: Microscopename: 'BioTech 'AI', 'count: '8+'color: 'pink' }
+  ];
+
+  const stats = [
+    { label: 'Active 'Innovations', 'value: '89+'icon: Lightbulb },
+    { label: 'Research 'Projects', 'value: '156+'icon: Microscope },
+    { label: 'Deployed 'Solutions', 'value: '42+'icon: Rocket },
+    { label: 'Global 'Impact', 'value: '2.5M+'icon: Users }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
   return (
     <div>
       <div
@@ -142,8 +231,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
               {/* Floating Innovation Icons */}
               <div
-                  y: [0-10],
-                  rotate: [050]
+
+
                 }}
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
               >
@@ -151,8 +240,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </div>
               
               <div
-                  y: [010],
-                  rotate: [0-50]
+
+
                 }}
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
               >
@@ -160,8 +249,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </div>
 
               <div
-                  y: [0-150],
-                  x: [050]
+
+
                 }}
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
               >

@@ -18,7 +18,6 @@ import {
   Brain,
   Database
 } from 'lucide-react';
-
 const NextGenTechSolutions2026 = () => {
   const solutions = [
     {
@@ -112,14 +111,12 @@ const NextGenTechSolutions2026 = () => {
       color: "from-indigo-500 to-purple-500"
     }
   ];
-
   const stats = [
     { number: "500+", label: "Revolutionary Solutions", icon: Sparkles },
     { number: "99.9%", label: "Success Rate", icon: CheckCircle },
     { number: "50+", label: "Countries Served", icon: Globe },
     { number: "24/7", label: "AI Support", icon: Brain }
   ];
-
   const caseStudies = [
     {
       title: "Mars Colony Establishment",
@@ -140,7 +137,6 @@ const NextGenTechSolutions2026 = () => {
       client: "TechForward Industries"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
@@ -168,7 +164,6 @@ const NextGenTechSolutions2026 = () => {
               From interdimensional computing to omniversal AI consciousness, we're building tomorrow's world today.
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -185,7 +180,6 @@ const NextGenTechSolutions2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -208,7 +202,6 @@ const NextGenTechSolutions2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -225,7 +218,6 @@ const NextGenTechSolutions2026 = () => {
               Cutting-edge technologies that are pushing the boundaries of what's possible in the digital age.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <motion.div
@@ -244,11 +236,9 @@ const NextGenTechSolutions2026 = () => {
                     <span className="text-blue-400 text-sm font-medium">{solution.category}</span>
                   </div>
                 </div>
-
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
-
                 <ul className="space-y-2 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
@@ -257,7 +247,6 @@ const NextGenTechSolutions2026 = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-blue-400">{solution.impact}</span>
                   <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:scale-105">
@@ -269,7 +258,6 @@ const NextGenTechSolutions2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Case Studies */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -286,7 +274,6 @@ const NextGenTechSolutions2026 = () => {
               Real-world implementations of our revolutionary technology solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -308,7 +295,6 @@ const NextGenTechSolutions2026 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -338,6 +324,7 @@ const NextGenTechSolutions2026 = () => {
       </section>
     </div>
   );
+
 };
 
 export default NextGenTechSolutions2026;

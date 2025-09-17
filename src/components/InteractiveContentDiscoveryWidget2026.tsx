@@ -1,7 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -10,8 +9,6 @@ interface ContentItem {
   url: string;
   featured: boolean;
   tags: string[];
-}
-
 const contentItems: ContentItem[] = [
   {
     id: 'ai-2025-2026-breakthrough',
@@ -66,8 +63,9 @@ const contentItems: ContentItem[] = [
     url: '/services/micro-saas',
     featured: false,
     tags: [', 'SaaS', 'Micro', 'Custom', 'Solutions']
-  }
-];
+  };
+};
+
 
 export default function InteractiveContentDiscoveryWidget2026() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
@@ -181,6 +179,6 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
   );
-};
+
 
 export default InteractiveContentDiscoveryWidget2026;

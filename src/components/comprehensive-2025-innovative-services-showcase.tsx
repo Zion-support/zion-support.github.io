@@ -1,6 +1,35 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { 
+  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
+  Rocket, Lock, Palette, Factory, Database, Cloud, 
+  Cpu, Eye, Target, Users, BarChart3
+} from 'lucide-react';
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
-const comprehensive-2025-innovative-services-showcase: React.FC = () => {
+const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
+  const categories = [
+    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' },
+    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
+    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
+    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
+    { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
+  ];
+
+  const getCategoryIcon = (category: string) => {
+    const cat = categories.find(c => c.name === category);
+    return cat ? cat.icon : Star;
+  };
+
+  const getCategoryColor = (category: string) => {
+    const cat = categories.find(c => c.name === category);
+    return cat ? cat.color : 'from-gray-500 to-gray-600';
+  };
+
   return (
     <Layout>
       <SEO 

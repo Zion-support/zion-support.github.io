@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AdvancedAnalyticsInsights2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
@@ -20,7 +19,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             and real-time intelligence that drives strategic business decisions.
           </p>
         </div>
-
         {/* Analytics Capabilities */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
@@ -39,7 +37,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Demand planning optimization</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200"
           >
@@ -56,7 +53,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Dynamic alert systems</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200"
           >
@@ -73,7 +69,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Intelligent data exploration</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200"
           >
@@ -90,7 +85,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Immersive data experiences</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200"
           >
@@ -107,7 +101,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               <li>• Historical trend analysis</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200"
           >
@@ -125,7 +118,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div
           className="bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-3xl p-12 mb-16 text-white"
@@ -137,7 +129,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               and creating competitive advantages for forward-thinking organizations.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl mb-4">🏦</div>
@@ -169,7 +160,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div
           className="grid md:grid-cols-3 gap-8 mb-16"
@@ -199,7 +189,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div
           className="bg-white rounded-3xl p-12 mb-16 shadow-xl"
@@ -211,7 +200,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
               unparalleled insights and performance.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl mb-4">🤖</div>
@@ -243,7 +231,6 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -267,6 +254,7 @@ const AdvancedAnalyticsInsights2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AdvancedAnalyticsInsights2025;

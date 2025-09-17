@@ -1,6 +1,52 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+BellZapTrendingUpUsersAwardGlobeArrowRightClock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryTechAnnouncementBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentAnnouncementsetCurrentAnnouncement] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentAnnouncement(prev => (prev + 1) % 3);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const announcements = [
+    {
+      title: "AI 2025 Breakthrough Achieved",
+      description: "Revolutionary AI technology delivering 5,000% ROI increase",
+      icon: Zap,
+      color: "from-purple-500 to-blue-500",
+      urgency: "Just Announced"
+    },
+    {
+      title: "Quantum Supremacy Unlocked",
+      description: "Error-corrected quantum computers now available",
+      icon: TrendingUp,
+      color: "from-blue-500 to-cyan-500",
+      urgency: "Breaking News"
+    },
+    {
+      title: "Global Implementation Success",
+      description: "10M+ users transformed across 150+ countries",
+      icon: Users,
+      color: "from-green-500 to-emerald-500",
+      urgency: "Worldwide Impact"
+    }
+  ];
+
+  const stats = [
+    { icon: Awardvalue: "99.9%"label: "Success Rate" },
+    { icon: Globevalue: "150+"label: "Countries" },
+    { icon: Usersvalue: "10M+"label: "Users" }
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"

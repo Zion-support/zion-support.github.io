@@ -1,6 +1,74 @@
-import React from 'react';
+"use client";
+'use client';
 
-const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Building2
+  TrendingUp
+  Users
+  Shield
+  ArrowRight
+  CheckCircle,
+  Star,
+  Award,
+  Zap,
+  Target,
+  BarChart3,
+  Globe,
+  Rocket,
+  Brain,
+  Sparkles
+} from 'lucide-react';
+
+const BusinessSolutionsShowcase2027PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % 4);
+    }2000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const stats = [
+    { number: "500+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-500 to-emerald-500" },
+    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-500 to-orange-500" },
+    { number: "300%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-500 to-cyan-500" },
+    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-500 to-pink-500" }
+  ];
+
+  const solutions = [
+    {
+      title: "Enterprise Solutions",
+      description: "Comprehensive enterprise-grade solutions",
+      icon: Building2,
+      color: "from-blue-600 to-indigo-600"
+    },
+    {
+      title: "Startup Solutions"
+      description: "Rapid deployment for growing startups",
+      icon: Rocket,
+      color: "from-green-600 to-emerald-600"
+    },
+    {
+      title: "SMB Solutions",
+      description: "Affordable yet powerful for SMBs",
+      icon: Users,
+      color: "from-purple-600 to-pink-600"
+    }
+  ];
+
+  const features = [
+    "AI-Powered Business Intelligence",
+    "Advanced Security Solutions",
+    "Cloud Infrastructure Management",
+    "Rapid MVP Development",
+    "Growth Analytics Platform",
+    "Digital Transformation"
+  ];
+
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -130,4 +198,3 @@ const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
 };
 
 export default BusinessSolutionsShowcase2027PromotionBanner;
-</div></div>

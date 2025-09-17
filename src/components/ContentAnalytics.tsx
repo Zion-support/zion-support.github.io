@@ -1,18 +1,16 @@
 "use client";
 import React{ useEffectuseState } from 'react';
-
 interface ContentMetrics {
   pageViews: number;
   timeOnPage: number;
   scrollDepth: number;
   clickThroughRate: number;
   bounceRate: number;
-}
-
 interface ContentAnalyticsProps {
   pageId: string;
   pageTitle: string;
-}
+};
+
 
 export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsProps) {
   const [metricsetMetrics] = useState<ContentMetrics>({
@@ -77,7 +75,7 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
   // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
-  }
+  };
   return (
     <>
       {/* Analytics Toggle Button */}
@@ -122,6 +120,6 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
       )}
     </>
   );
-};
+
 
 export default ContentAnalytics;

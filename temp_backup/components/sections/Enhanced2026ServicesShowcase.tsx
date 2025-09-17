@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Lock } from 'lucide-react';
-import { cuttingEdgeInnovationServices } from '../../data/2026-cutting-edge-innovations';
-import { enterpriseSolutions2026 } from '../../data/2026-enterprise-solutions';
-import { specializedSolutions2026 } from '../../data/2026-specialized-solutions';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Enhanced2026ServicesShowcase: React.FC = () => {
   return (

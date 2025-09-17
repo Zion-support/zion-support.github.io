@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" <div className="flex flex-col sm: fle x-row gap-4 justify-center mb-12"> <a" href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const NewServicesLanding2025: React.FC = () => {
   return (

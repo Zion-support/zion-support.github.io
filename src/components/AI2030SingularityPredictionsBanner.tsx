@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2030SingularityPredictionsBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-black via-purple-900 to-indigo-900 text-white py-24 overflow-hidden">
@@ -7,13 +6,11 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%221%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] animate-pulse"></div>
       </div>
-      
       {/* Floating Cosmic Elements */}
       <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-20 animate-bounce"></div>
       <div className="absolute bottom-40 left-1/4 w-28 h-28 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-20 animate-ping"></div>
       <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-gradient-to-r from-green-400 to-blue-400 rounded-full opacity-20 animate-pulse"></div>
-
       <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-full px-10 py-4 mb-10">
@@ -28,7 +25,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
             <span className="text-pink-300 font-bold"> new forms of consciousness</span>.
           </p>
         </div>
-
         {/* Timeline Section */}
         <div className="mb-20">
           <h3 className="text-4xl font-bold text-center mb-12 text-purple-200">
@@ -45,7 +41,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
                 <li>• Human-AI collaboration</li>
               </ul>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400 border-opacity-30">
               <div className="text-5xl mb-4">⚡</div>
               <h4 className="text-2xl font-bold mb-4 text-blue-300">2027-2028</h4>
@@ -56,7 +51,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
                 <li>• Cross-domain intelligence</li>
               </ul>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-green-400 border-opacity-30">
               <div className="text-5xl mb-4">🌐</div>
               <h4 className="text-2xl font-bold mb-4 text-green-300">2029</h4>
@@ -67,7 +61,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
                 <li>• Paradigm shifts</li>
               </ul>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-orange-400 border-opacity-30">
               <div className="text-5xl mb-4">🚀</div>
               <h4 className="text-2xl font-bold mb-4 text-orange-300">2030</h4>
@@ -80,7 +73,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Key Predictions */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Left Column - Technological Breakthroughs */}
@@ -88,7 +80,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
             <h3 className="text-4xl font-bold text-purple-200 mb-8">
               Revolutionary Breakthroughs
             </h3>
-            
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">⚛️</div>
@@ -99,7 +90,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
               </p>
               <div className="text-yellow-300 font-semibold">→ Explore Quantum Future</div>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🧠</div>
@@ -110,7 +100,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
               </p>
               <div className="text-yellow-300 font-semibold">→ Discover BCI Technology</div>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🔄</div>
@@ -122,13 +111,11 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
               <div className="text-yellow-300 font-semibold">→ Learn About Evolution</div>
             </div>
           </div>
-
           {/* Right Column - Impact Predictions */}
           <div className="space-y-8">
             <h3 className="text-4xl font-bold text-purple-200 mb-8">
               Transformative Impact
             </h3>
-            
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">💰</div>
@@ -139,7 +126,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
               </p>
               <div className="text-yellow-300 font-semibold">→ Explore New Economy</div>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🏥</div>
@@ -150,7 +136,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
               </p>
               <div className="text-yellow-300 font-semibold">→ Discover Health Future</div>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🌍</div>
@@ -163,7 +148,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Preparation Strategies */}
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-12 border border-white border-opacity-20 mb-16">
           <h3 className="text-4xl font-bold text-center mb-12 text-purple-200">
@@ -202,7 +186,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-10">
@@ -232,6 +215,7 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default AI2030SingularityPredictionsBanner;

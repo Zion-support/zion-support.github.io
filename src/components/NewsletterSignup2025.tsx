@@ -1,4 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { 
+  Mail, 
+  Send, 
+  CheckCircle, 
+  Star,
+  Sparkles,
+  ArrowRight,
+  Bell,
+  Zap
+} from 'lucide-react';
 
 const NewsletterSignup2025: React.FC = () => {
   const [email, setEmail] = useState('');

@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+};
+
 
 export default function AISeosuitePage() {
   const features = [
@@ -402,6 +404,6 @@ export default function AISeosuitePage() {
               Watch Demo
     </>
   );
-};
+
 
 export default ai-seo-suite;

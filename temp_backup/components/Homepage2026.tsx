@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from './layout/Layout';
-import Link from 'next/link';
-
-import { 
-  ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
-  Users, Building, Rocket, CheckCircle, Phone, Mail
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Homepage2026: React.FC = () => {
   return (

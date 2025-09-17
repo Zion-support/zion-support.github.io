@@ -1,7 +1,5 @@
 import React from 'react';
-
 const ContentDiscoveryHub2034: React.FC = () => {
-
   const contentItems = [
     {
       id: 1,
@@ -16,10 +14,8 @@ const ContentDiscoveryHub2034: React.FC = () => {
       title: "Comprehensive Services 2034",
           </p>
         </div>
-
         {/* Search and Filters */}
             </div>
-
             {/* Year Filter */}
             <div>
             </a>
@@ -28,6 +24,7 @@ const ContentDiscoveryHub2034: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default ContentDiscoveryHub2034;

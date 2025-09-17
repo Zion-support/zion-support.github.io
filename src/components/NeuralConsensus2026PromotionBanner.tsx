@@ -1,6 +1,40 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+BrainZapTrendingUpUsersArrowRightXCheckCircleStar
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('neural-consensus-banner-dismissed');
+    if (!dismissed) {
+      const timer = setTimeout(() => setIsVisible(true)2000);
+      return () => clearTimeout(timer);
+    }
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('neural-consensus-banner-'dismissed', 'true');
+  };
+
+  const handleLearnMore = () => {
+    // Track banner interaction
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag(', 'event', 'neural_consensus_banner_click'{
+        event_category: 'engagement',
+        event_label: 'learn_more_clicked'
+      });
+    }
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -113,4 +147,3 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
 };
 
 export default NeuralConsensus2026PromotionBanner;
-</div></div></div>

@@ -1,6 +1,35 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+CpuAtomZapClockShieldGlobeTrendingUp
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentHighlightsetCurrentHighlight] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentHighlight(prev => (prev + 1) % 3);
+    }3000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const highlights = [
+    { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-500 to-cyan-500" },
+    { icon: Zapvalue: "10^18"label: "Ops/Second"color: "from-purple-500 to-pink-500" },
+    { icon: Shieldvalue: "Unbreakable"label: "Encryption"color: "from-green-500 to-emerald-500" }
+  ];
+
+  const features = [
+    "Error-Corrected Quantum Computers",
+    "Quantum Supremacy Achievement",
+    "Quantum Internet Infrastructure",
+    "Quantum-AI Fusion Technology"
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 py-12"

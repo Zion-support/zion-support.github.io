@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { Settings, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, Factory, Cog, BarChart3 } from 'lucide-react';
-import SEO from '../components/SEO';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const manufacturing-ai-solutions: React.FC = () => {
   return (

@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025GlobalEnterpriseTransformationPromotionBanner() {
   return (
@@ -47,4 +49,3 @@ export default function AI2025GlobalEnterpriseTransformationPromotionBanner() {
           <div className="mt-6 text-sm text-gray-400">
             💼 Free enterprise transformation consultation for companies with 500+ employees
   );
-}

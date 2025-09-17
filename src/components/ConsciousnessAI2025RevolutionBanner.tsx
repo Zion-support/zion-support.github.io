@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ConsciousnessAI2025RevolutionBanner: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,6 +6,7 @@ const ConsciousnessAI2025RevolutionBanner: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+
 };
 
 export default ConsciousnessAI2025RevolutionBanner;

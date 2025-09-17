@@ -1,6 +1,61 @@
-import React from 'react';
+"use client";
+'use client';
 
-const NextGenAIInnovationPromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  ArrowRight
+  Star
+  Play
+  X,
+  Sparkles,
+  Rocket,
+  TrendingUp
+} from 'lucide-react';
+
+const NextGenAIInnovationPromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+
+  const announcements = [
+    {
+      title: "🚀 Quantum-AI Fusion Breakthrough",
+      subtitle: "1000x Processing Power Increase",
+      action: "Explore Now",
+      color: "from-purple-600 to-blue-600"
+
+    {
+      title: "🧠 Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      action: "Learn More",
+      color: "from-blue-600 to-cyan-600"
+
+    {
+      title: "🤖 Autonomous AI Systems",
+      subtitle: "Self-Managing Business Operations",
+      action: "Discover",
+      color: "from-green-600 to-emerald-600"
+
+    {
+      title: "✨ Conscious AI Framework",
+      subtitle: "Genuine Understanding & Intelligence",
+      action: "Experience",
+      color: "from-orange-600 to-red-600"
+
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % announcements.length);
+    }3000);
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
+  const currentAnnouncement = announcements[currentSlide];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white"
@@ -11,8 +66,8 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
         
         {/* Floating Elements */}
         <div
-            y: [0-20],
-            rotate: [050]
+
+
           }}
             duration: 4,
             repeat: Infinity,
@@ -24,8 +79,8 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
         </div>
         
         <div
-            y: [0150],
-            rotate: [0-50]
+
+
           }}
             duration: 3,
             repeat: Infinity,
@@ -125,4 +180,3 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
 };
 
 export default NextGenAIInnovationPromotionBanner;
-</div></div></div>

@@ -1,6 +1,54 @@
-import React from 'react';
+"use client";
+'use client';
 
-const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Rocket
+  ArrowRight
+  Star
+  Brain
+  Zap
+  Globe,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Lightbulb,
+  Target,
+  Shield,
+  Cpu,
+  Sparkles
+} from 'lucide-react';
+
+const FutureTechnologyShowcase2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const technologies = [
+    { icon: Rocketitle: 'Quantum 'Computing', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Braintitle: 'Neural 'Interfaces', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: Globetitle: 'Space 'Technology', 'color: 'from-green-500 to-emerald-500' },
+    { icon: Zaptitle: 'Biotech 'AI', 'color: 'from-orange-500 to-red-500' }
+  ];
+
+  const benefits = [
+    { icon: TrendingUptext: '1000x Performance' },
+    { icon: Userstext: 'Global Impact' },
+    { icon: Awardtext: '200+ Patents' },
+    { icon: Lightbulbtext: '50+ Technologies' }
+  ];
+
+  const stats = [
+    { value: '50+'label: 'Technologies' },
+    { value: '200+'label: 'Patents' },
+    { value: '500+'label: 'Research Papers' },
+    { value: '1M+'label: 'Global Impact' }
+  ];
+
   return (
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -148,4 +196,3 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
 };
 
 export default FutureTechnologyShowcase2026PromotionBanner;
-</div></div>

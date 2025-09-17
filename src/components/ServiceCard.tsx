@@ -1,6 +1,24 @@
-import React from 'react';
+"use client";
+import React, { useState, useCallback } from 'react';
+import { ArrowRight, Brain } from 'lucide-react';
 
-const ServiceCard: React.FC = () => {
+interface ServiceCardProps {
+  service: {
+    id: string;
+    name: string;
+    description: string;
+    type: string;
+    pricing: {
+      starter: string;
+    };
+    slug: string;
+  };
+  index: number;
+  isCurrent: boolean;
+  onClick: (service: { slug: string }) => void;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {
   return (
     <div
       className={`relative group cursor-pointer ${
@@ -180,4 +198,3 @@ const ServiceCard: React.FC = () => {
 };
 
 export default ServiceCard;
-</div></div></div></div>

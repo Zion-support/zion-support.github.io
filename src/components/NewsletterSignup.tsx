@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');

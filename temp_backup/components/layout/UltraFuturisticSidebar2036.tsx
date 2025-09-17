@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  X, Home, Globe, Rocket, Brain, Atom, Shield, Target, 
-  Sparkles, DollarSign, BookOpen, Building, Users, 
-  ChevronRight, Zap, Star, TrendingUp, Award, 
-  Settings, HelpCircle, MessageCircle, Phone, Mail
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticSidebar2036: React.FC = () => {
   return (

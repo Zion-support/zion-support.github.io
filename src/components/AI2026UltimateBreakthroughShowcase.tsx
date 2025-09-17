@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2026UltimateBreakthroughShowcase() {
   const breakthroughs = [
@@ -132,6 +134,6 @@ export default function AI2026UltimateBreakthroughShowcase() {
               >
                 📚 Implementation Guide
   );
-};
+
 
 export default AI2026UltimateBreakthroughShowcase;

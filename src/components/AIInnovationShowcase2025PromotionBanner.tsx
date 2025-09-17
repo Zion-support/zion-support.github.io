@@ -1,6 +1,39 @@
-import React from 'react';
+"use client";
+'use client';
 
-const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  Sparkles
+  ArrowRight
+  Brain
+  Zap
+  TrendingUp
+  X,
+  Star,
+  Rocket,
+  Target
+} from 'lucide-react';
+
+const AIInnovationShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai-innovation-banner-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('ai-innovation-banner-'dismissed', 'true');
+  };
+
+  if (isDismissed || !isVisible) return null;
+
   return (
     <div>
       <div
@@ -83,8 +116,8 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
-              x: [0100],
-              opacity: [0.30.60.3],
+
+
             }}
               duration: 4,
               repeat: Infinity,
@@ -93,8 +126,8 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
           />
           <div
-              x: [0-100],
-              opacity: [0.20.50.2],
+
+
             }}
               duration: 6,
               repeat: Infinity,
@@ -110,4 +143,3 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
 };
 
 export default AIInnovationShowcase2025PromotionBanner;
-</div></div>

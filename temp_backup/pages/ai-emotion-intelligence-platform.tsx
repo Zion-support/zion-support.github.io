@@ -1,20 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
-  Zap, DollarSign, Shield, Mail, MapPin, Brain,
-  Sparkles, Users, Clock, Award, Eye, Heart,
-  MessageCircle, BarChart3, Globe, Smartphone
-} from 'lucide-react';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-emotion-intelligence-platform: React.FC = () => {
   return (

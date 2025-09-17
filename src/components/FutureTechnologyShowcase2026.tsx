@@ -1,6 +1,194 @@
-import React from 'react';
+"use client";
+'use client';
 
-const FutureTechnologyShowcase2026: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Rocket
+  Brain
+  Zap
+  Globe
+  Star
+  TrendingUp
+  Users
+  Award,
+  ChevronRight,
+  Play,
+  Download,
+  Lightbulb,
+  Target,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Eye,
+  Sparkles
+} from 'lucide-react';
+
+const FutureTechnologyShowcase2026 = () => {
+  const [activeCategorysetActiveCategory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const categories = [
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      icon: Rocket,
+      color: 'from-purple-600 to-pink-600',
+      description: 'Revolutionary quantum computing solutions for exponential performance',
+      technologies: [
+        {
+          name: 'Quantum Neural Networks',
+          description: 'Hybrid quantum-classical neural networks for superior pattern recognition',
+          status: 'Available Now',
+          impact: '1000x faster processing',
+          applications: ['Drug 'Discovery', 'Financial 'Modeling', 'Climate Simulation']
+        },
+        {
+          name: 'Quantum Cryptography',
+          description: 'Unbreakable encryption using quantum principles',
+          status: 'Beta Testing',
+          impact: 'Theoretically unbreakable',
+          applications: ['Secure 'Communications', 'Data 'Protection', 'Blockchain Security']
+        },
+        {
+          name: 'Quantum Optimization',
+          description: 'Solving complex optimization problems in seconds',
+          status: 'In Development',
+          impact: 'Exponential speedup',
+          applications: [', 'Logistics', 'Supply 'Chain', 'Resource Allocation']
+        }
+      ]
+    },
+    {
+      id: 'neural-interfaces',
+      title: 'Neural Interfaces',
+      icon: Brain,
+      color: 'from-blue-600 to-cyan-600',
+      description: 'Direct brain-computer interfaces for thought-controlled computing',
+      technologies: [
+        {
+          name: 'Thought-Controlled Computing',
+          description: 'Control devices and applications using only your thoughts',
+          status: 'Available Now',
+          impact: '95% accuracy in neural signal processing',
+          applications: [', 'Accessibility', 'Gaming'Medical Devices']
+        },
+        {
+          name: 'Memory Enhancement',
+          description: 'AI-powered memory augmentation and cognitive enhancement',
+          status: 'Beta Testing',
+          impact: '300% memory improvement',
+          applications: [', 'Learning', 'Medical 'Treatment', 'Cognitive Therapy']
+        },
+        {
+          name: 'Emotional AI',
+          description: 'AI systems that understand and respond to human emotions',
+          status: 'In Development',
+          impact: '99.7% emotional recognition',
+          applications: ['Mental 'Health', 'Customer 'Service', 'Education']
+        }
+      ]
+    },
+    {
+      id: 'space-technology',
+      title: 'Space Technology',
+      icon: Globe,
+      color: 'from-green-600 to-emerald-600',
+      description: 'Advanced space-based technology solutions for global connectivity',
+      technologies: [
+        {
+          name: 'Satellite Internet Networks',
+          description: 'Global high-speed internet coverage from space',
+          status: 'Available Now',
+          impact: 'Global coverage with 1ms latency',
+          applications: ['Remote 'Areas', 'IoT 'Connectivity', 'Emergency Communications']
+        },
+        {
+          name: 'Space Manufacturing',
+          description: 'Manufacturing in zero-gravity for superior materials',
+          status: 'Beta Testing',
+          impact: 'Revolutionary material properties',
+          applications: [', 'Semiconductors', 'Pharmaceuticals'Advanced Materials']
+        },
+        {
+          name: 'Asteroid Mining',
+          description: 'Extracting rare materials from asteroids',
+          status: 'In Development',
+          impact: 'Unlimited rare earth elements',
+          applications: [', 'Electronics', 'Renewable 'Energy', 'Space Exploration']
+        }
+      ]
+    },
+    {
+      id: 'biotech-ai',
+      title: 'Biotech AI',
+      icon: Zap,
+      color: 'from-orange-600 to-red-600',
+      description: 'Combining biotechnology with AI for personalized medicine',
+      technologies: [
+        {
+          name: 'Personalized Medicine',
+          description: 'AI-powered personalized treatment plans based on genetics',
+          status: 'Available Now',
+          impact: '50% better treatment outcomes',
+          applications: ['Cancer 'Treatment', 'Rare 'Diseases', 'Preventive Care']
+        },
+        {
+          name: 'Synthetic Biology',
+          description: 'Designing biological systems using AI',
+          status: 'Beta Testing',
+          impact: 'Revolutionary drug development',
+          applications: ['Drug 'Discovery', 'Biofuels'Environmental Cleanup']
+        },
+        {
+          name: 'Longevity Research',
+          description: 'AI-driven research into extending human lifespan',
+          status: 'In Development',
+          impact: 'Potential 50% lifespan extension',
+          applications: ['Anti-'Aging', 'Disease 'Prevention', 'Health Optimization']
+        }
+      ]
+    }
+  ];
+
+  const stats = [
+    { label: ''Technologies', 'value: '50+'icon: Lightbulb },
+    { label: ''Patents', 'value: '200+'icon: Award },
+    { label: 'Research 'Papers', 'value: '500+'icon: Star },
+    { label: 'Global 'Impact', 'value: '1M+'icon: Users }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'Quantum PhysicistMIT',
+      content: 'The quantum computing platform has revolutionized our research capabilities. We can now solve problems that would take classical computers centuries.',
+      rating: 5,
+      company: 'MIT'
+    },
+    {
+      name: 'Prof. Michael Rodriguez',
+      role: 'NeuroscientistStanford',
+      content: 'The neural interface technology is groundbreaking. It has opened up entirely new possibilities for human-computer interaction.',
+      rating: 5,
+      company: 'Stanford University'
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'Biotech ResearcherHarvard',
+      content: 'The biotech AI integration has accelerated our drug discovery process by 1000x. We are seeing results that were impossible before.',
+      rating: 5,
+      company: 'Harvard Medical'
+    }
+  ];
+
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}

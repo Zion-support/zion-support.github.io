@@ -1,4 +1,7 @@
-=======
+import React from 'react';
+
+const RevolutionaryContentBanner2025: React.FC = () => {
+  return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">

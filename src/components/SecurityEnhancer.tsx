@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const SecurityEnhancer: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SecurityEnhancer</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+const SecurityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Add security headers and CSP
+    const addSecurityHeaders = () => {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'Content-Security-Policy';
+      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(meta);
+    };
+
+    addSecurityHeaders();
+  }, []);
+
+  return <>{children}</>;
 };
 
 export default SecurityEnhancer;

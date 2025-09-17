@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BlogPostLayout: React.FC = () => {
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -36,6 +35,7 @@ const BlogPostLayout: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }}
       />
   );
+
 };
 
 export default BlogPostLayout;

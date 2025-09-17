@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 TrendingUpBarChart3GlobeCalendarArrowRightStarTargetZap
+};
+
 
 export default function AITrends2025UltimatePredictionsPromotionBanner() {
   return (
@@ -112,4 +114,3 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
             >
               Get Consultation
   );
-}

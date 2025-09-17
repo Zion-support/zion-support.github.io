@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpUsersDollarSignAwardCheckCircleStar
+};
+
 
 export default function AISuccessStories2025Banner() {
   return (
@@ -119,4 +121,3 @@ export default function AISuccessStories2025Banner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
   );
-}

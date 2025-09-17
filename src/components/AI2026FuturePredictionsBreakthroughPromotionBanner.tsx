@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2026FuturePredictionsBreakthroughPromotionBanner() {
   return (
@@ -35,4 +37,3 @@ export default function AI2026FuturePredictionsBreakthroughPromotionBanner() {
                 <div className="text-2xl font-bold">99.7%</div>
                 <div className="text-sm text-purple-200">Consciousness AI</div>
   );
-}

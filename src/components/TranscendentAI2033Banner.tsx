@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TranscendentAI2033Banner: React.FC = () => {
   return (
@@ -108,4 +110,3 @@ const TranscendentAI2033Banner: React.FC = () => {
 };
 
 export default TranscendentAI2033Banner;
-</div></div></div>

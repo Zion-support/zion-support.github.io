@@ -1,6 +1,35 @@
-import React from 'react';
+"use client";
+'use client';
 
-const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight
+  Star
+  Brain
+  Zap
+  TrendingUp
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle
+} from 'lucide-react';
+
+const InteractiveAIToolsShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -139,4 +168,3 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
 };
 
 export default InteractiveAIToolsShowcase2025PromotionBanner;
-</div></div></div></div></div>

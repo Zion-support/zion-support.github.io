@@ -1,6 +1,52 @@
-import React from 'react';
+"use client";
+'use client';
 
-const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  ArrowRight
+  Star
+  Zap
+  Rocket
+  Shield,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  BarChart3,
+  Globe,
+  Cpu
+} from 'lucide-react';
+
+const ComprehensiveAISolutions2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const solutions = [
+    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-500 to-purple-500' },
+    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Zaptitle: ''Automation', 'color: 'from-green-500 to-blue-500' },
+    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-500 to-orange-500' }
+  ];
+
+  const benefits = [
+    { icon: TrendingUptext: '99.9% Uptime' },
+    { icon: Userstext: '1000+ Enterprises' },
+    { icon: Awardtext: 'Industry Leading' },
+    { icon: BarChart3text: '60% Cost Reduction' }
+  ];
+
+  const stats = [
+    { value: '10,000+'label: 'AI Models' },
+    { value: '500+'label: 'Solutions' },
+    { value: '1,000+'label: 'Enterprises' },
+    { value: '99.9%'label: 'Uptime' }
+  ];
+
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
@@ -145,4 +191,3 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
 };
 
 export default ComprehensiveAISolutions2026PromotionBanner;
-</div></div>

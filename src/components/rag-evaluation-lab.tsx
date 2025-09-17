@@ -1,4 +1,6 @@
 import React from 'react';
+};
+
 
 export default function RAGEvaluationLabPage() {
 	return (
@@ -44,4 +46,3 @@ export default function RAGEvaluationLabPage() {
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 		</>
 	);
-}

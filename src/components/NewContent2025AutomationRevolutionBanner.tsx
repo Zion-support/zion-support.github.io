@@ -1,4 +1,5 @@
 import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
@@ -156,4 +157,3 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 };
 
 export default NewContent2025AutomationRevolutionBanner;
-</div></div></div>

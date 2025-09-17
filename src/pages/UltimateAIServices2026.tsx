@@ -31,15 +31,12 @@ import {
   Heart,
   StarIcon
 } from 'lucide-react';
-
 const UltimateAIServices2026 = () => {
   const [activeService, setActiveService] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const services = [
     {
       id: 1,
@@ -126,7 +123,6 @@ const UltimateAIServices2026 = () => {
       category: "Neural Tech"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -147,14 +143,12 @@ const UltimateAIServices2026 = () => {
       rating: 5
     }
   ];
-
   const stats = [
     { label: "AI Models Deployed", value: "10,000+", icon: <Bot className="w-6 h-6" /> },
     { label: "Quantum Qubits", value: "1M+", icon: <Atom className="w-6 h-6" /> },
     { label: "Consciousness Units", value: "500+", icon: <Brain className="w-6 h-6" /> },
     { label: "Dimensions Processed", value: "∞", icon: <Infinity className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -201,7 +195,6 @@ const UltimateAIServices2026 = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Stats Section */}
       <motion.div 
         className="py-16 bg-black/20"
@@ -229,7 +222,6 @@ const UltimateAIServices2026 = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Services Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -246,7 +238,6 @@ const UltimateAIServices2026 = () => {
               Discover our cutting-edge AI solutions that are reshaping the future of technology and human-AI collaboration.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -289,7 +280,6 @@ const UltimateAIServices2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <motion.div 
         className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20"
@@ -327,7 +317,6 @@ const UltimateAIServices2026 = () => {
           </div>
         </div>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div 
         className="py-20"
@@ -355,6 +344,7 @@ const UltimateAIServices2026 = () => {
       </motion.div>
     </div>
   );
+
 };
 
 export default UltimateAIServices2026;

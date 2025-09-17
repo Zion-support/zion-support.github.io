@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-
-import UltraFuturisticNavigation2046 from './UltraFuturisticNavigation2046';
-import UltraFuturisticFooter2046 from './UltraFuturisticFooter2046';
-import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticLayout2046: React.FC = () => {
   return (

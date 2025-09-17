@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapClockTrendingUpCheckCircle
+};
+
 
 export default function AITrends2025UltimatePredictionsBanner() {
   return (
@@ -86,4 +88,3 @@ export default function AITrends2025UltimatePredictionsBanner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
   );
-}

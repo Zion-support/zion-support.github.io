@@ -1,6 +1,61 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  Zap
+  Brain
+  Code
+  Image
+  FileText
+  BarChart3,
+  Video,
+  Music,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Sparkles,
+  TrendingUp
+} from 'lucide-react';
 
 const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
+  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  const tools = [
+    { name: 'Text 'Generator', 'icon: <FileText className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Code 'Assistant', 'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Data 'Analyzer', 'icon: <BarChart3 className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'Video 'Creator', 'icon: <Video className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Music 'Composer', 'icon: <Music className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
+  ];
+
+  const benefits = [
+    "Real-time AI processing",
+    "Multiple tool categories",
+    "Instant results",
+    "Professional quality output"
+  ];
+
+  const stats = [
+    { value: "50+"label: "AI Tools" },
+    { value: "98%"label: "Accuracy" },
+    { value: "2.3s"label: "Avg. Speed" },
+    { value: "10K+"label: "Users" }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentTool((prev) => (prev + 1) % tools.length);
+    }2000);
+    return () => clearInterval(interval);
+  }[]);
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 py-20"
@@ -185,8 +240,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
-                y: [0-10],
-                rotate: [050]
+
+
               }}
                 duration: 2,
                 repeat: Infinity,
@@ -198,8 +253,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
 
             <div
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
-                y: [010],
-                rotate: [0-50]
+
+
               }}
                 duration: 2.5,
                 repeat: Infinity,
@@ -228,4 +283,3 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
 };
 
 export default InteractiveAIToolsDemo2025PromotionBanner;
-</div></div></div></div></div></div></div></div>

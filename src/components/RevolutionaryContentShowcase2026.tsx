@@ -1,148 +1,134 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const RevolutionaryContentShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const showcaseItems = [
-    {
-      id: 1,
-      title: "AI Consciousness Platform",
-      description: "Revolutionary AI that achieves true consciousness and self-awareness",
-      image: "🧠",
-      color: "from-purple-500 to-pink-500",
-      link: "/pages/AIConsciousnessRevolution2025",
-      badge: "BREAKTHROUGH",
-      features: ["Self-Awareness", "Emotional Intelligence", "Creative Problem Solving", "Autonomous Learning"]
-    },
-    {
-      id: 2,
-      title: "Quantum Neural Interface",
-      description: "Direct brain-computer interface using quantum entanglement principles",
-      image: "⚛️",
-      color: "from-blue-500 to-cyan-500",
-      link: "/pages/QuantumNeuralFusion2026",
-      badge: "FUTURE",
-      features: ["Quantum Computing", "Neural Networks", "Brain Interface", "Quantum Entanglement"]
-    },
-    {
-      id: 3,
-      title: "Synthetic Reality Engine",
-      description: "Create and manipulate reality through advanced quantum field manipulation",
-      image: "🌌",
-      color: "from-indigo-500 to-purple-500",
-      link: "/pages/SyntheticReality2027",
-      badge: "REVOLUTIONARY",
-      features: ["Reality Manipulation", "Quantum Fields", "Synthetic Worlds", "Consciousness Transfer"]
-    },
-    {
+import React from 'react';
+import { motion } from 'framer-motion';
       id: 4,
       title: "Revolutionary Tech Blog 2026",
-      description: "Latest insights on AI consciousness, quantum computing, and neural interfaces",
+      description: "Latest insights on AI consciousness, quantum computing, and neural interfaces.",
       image: "📝",
       color: "from-emerald-500 to-teal-500",
       link: "/pages/RevolutionaryTechBlog2026",
       badge: "INSIGHTS",
       features: ["Tech Insights", "AI Consciousness", "Quantum Computing", "Neural Interfaces"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white py-20">
+    },
+    {
+      title: "Quantum Computing Revolution 2026",
+      description: "Breakthrough quantum computing with exponential processing power",
+      icon: "⚛️",
+      link: "/pages/QuantumComputingRevolution2026",
+      gradient: "from-violet-600 to-purple-600",
+      features: ["1000+ Qubits", "Quantum Algorithms", "Cryptography", "Simulation"]
+    },
+    {
+      title: "Neural Interface Revolution 2026",
+      description: "Direct brain-computer interfaces enabling thought-controlled technology",
+      icon: "🧬",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      gradient: "from-rose-600 to-pink-600",
+      features: ["Non-Invasive BCI", "Thought Control", "Neural Data", "Medical Applications"]
+            🌟 REVOLUTIONARY CONTENT 2026 • BREAKTHROUGH INNOVATION
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-                🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
-              </div>
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Revolutionary Content Showcase 2026
-              </h2>
-              <p className="text-xl opacity-90 max-w-4xl mx-auto">
-                Experience the most groundbreaking content that will define the future of humanity
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {showcaseItems.map((item, index) => (
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY CONTENT 2026 • EXCLUSIVE
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        {/* Content Grid */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8">All Revolutionary Content</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredContent.map((content, index) => (
               <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative"
-              >
-                <div className={`bg-gradient-to-br ${item.color} p-8 rounded-2xl h-full transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
-                  <div className="text-6xl mb-4">{item.image}</div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs font-bold">
-                      {item.badge}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                  <p className="text-white text-opacity-90 mb-6">{item.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {item.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm">
-                        <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <a
-                    href={item.link}
-                    className="inline-block w-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                  >
-                    Explore Content
-                  </a>
+                key={content.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
+                onClick={() => setCurrentSlide(index)}
+              <div className={`bg-gradient-to-br ${item.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:scale-105 transition-all duration-300 h-full`}>
+                <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
                 </div>
-              </motion.div>
-            ))}
+                
+                <h3 className="text-2xl font-bold mb-4 text-center">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  {item.description}
+                </p>
+                
+                <h3 className="text-2xl font-bold mb-4 text-center">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  {item.description}
+                </p>
+          ))}
+        </div>
+
+        {/* Active Tab Content */}
+        <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h4 className="text-xl font-bold mb-2">Early Access</h4>
+              <p className="text-gray-300">Be among the first to experience breakthrough technologies</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">💡</div>
+              <h4 className="text-xl font-bold mb-2">Innovation Updates</h4>
+              <p className="text-gray-300">Regular updates on the latest technological breakthroughs</p>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-8 rounded-2xl">
-              <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
-              <p className="text-xl mb-8 opacity-90">
-                Join thousands of innovators already exploring this revolutionary content
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/pages/RevolutionaryTechBlog2026"
-                  className="bg-white text-purple-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl"
-                >
-                  Explore All Content
-                </a>
-                <a 
-                  href="/pages/QuantumConsciousnessRevolution2026"
-                  className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-xl"
-                >
-                  Start Your Journey
-                </a>
-              </div>
-            </div>
-          </motion.div>
+          <div className="text-center mt-8">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 mr-4">
+              Get Early Access
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              View All Content
+            </button>
+          </div>
         </motion.div>
-      </div>
-    </div>
-  );
-};
+            </div>
+          )}
+        </div>
 
-export default RevolutionaryContentShowcase2026;
+        {/* Call to Action */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Don't miss out on the most revolutionary technological breakthroughs of 2026. 
+            Explore our cutting-edge content and discover what's possible.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <a 
+              href="/pages/RevolutionaryTechBreakthrough2026"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl"
+            >
+              Explore All Content
+            </a>
+            <a 
+              href="/pages/QuantumConsciousnessRevolution2026"
+              className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-xl"
+            >
+              Start Your Journey
+            </a>
+          </div>
+        </div>

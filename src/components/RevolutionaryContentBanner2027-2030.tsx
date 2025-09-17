@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RevolutionaryContentBanner2027-2030: React.FC = () => {
+const RevolutionaryContentBanner2027_2030: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white">
       {/* Animated Background */}
@@ -85,4 +85,4 @@ const RevolutionaryContentBanner2027-2030: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentBanner2027-2030;
+export default RevolutionaryContentBanner2027_2030;

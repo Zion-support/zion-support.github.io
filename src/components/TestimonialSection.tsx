@@ -1,6 +1,37 @@
 import React from 'react';
+import { Star, Quote } from 'lucide-react';
 
 const TestimonialSection: React.FC = () => {
+  const testimonials = [
+    {
+      id: 1,
+      name: "Dr. Sarah Chen",
+      role: "CTO, QuantumTech Solutions",
+      company: "QuantumTech Solutions",
+      content: "Zion Tech Group's quantum computing platform has revolutionized our research capabilities. The performance improvements are beyond anything we've seen before.",
+      rating: 5,
+      avatar: "/avatars/sarah-chen.jpg"
+    },
+    {
+      id: 2,
+      name: "Marcus Rodriguez",
+      role: "VP of Engineering",
+      company: "InnovateCorp",
+      content: "The AI-powered automation suite has reduced our deployment time by 80%. Zion Tech Group truly understands enterprise needs.",
+      rating: 5,
+      avatar: "/avatars/marcus-rodriguez.jpg"
+    },
+    {
+      id: 3,
+      name: "Dr. Emily Watson",
+      role: "Head of AI Research",
+      company: "NeuroTech Industries",
+      content: "Their consciousness AI platform is groundbreaking. We've achieved breakthroughs in neural network optimization that seemed impossible.",
+      rating: 5,
+      avatar: "/avatars/emily-watson.jpg"
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4">

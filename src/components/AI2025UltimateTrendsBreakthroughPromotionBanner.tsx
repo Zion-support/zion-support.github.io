@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025UltimateTrendsBreakthroughPromotionBanner() {
   return (
@@ -69,4 +71,3 @@ export default function AI2025UltimateTrendsBreakthroughPromotionBanner() {
               <span className="text-green-400">✓</span>
               <span>Industry-Leading Accuracy</span>
   );
-}

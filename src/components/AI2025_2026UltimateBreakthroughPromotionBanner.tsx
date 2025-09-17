@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025_2026UltimateBreakthroughPromotionBanner() {
   return (
@@ -57,4 +59,3 @@ export default function AI2025_2026UltimateBreakthroughPromotionBanner() {
               <span className="text-green-400">✓</span>
               <span>24/7 Support</span>
   );
-}

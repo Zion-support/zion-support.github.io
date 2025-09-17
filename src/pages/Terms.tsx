@@ -23,17 +23,14 @@ import {
   Cpu
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
 const Terms: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Terms of Service - Zion Tech Group"
         description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
       />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -55,7 +52,6 @@ const Terms: React.FC = () => {
           </divdiv>
         </div>
       </section>
-
       {/* Key Terms Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -71,7 +67,6 @@ const Terms: React.FC = () => {
               relationship between you and Zion Tech Group.
             </p>
           </divdiv>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
               <divdiv
@@ -89,7 +84,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* User Obligations */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -105,7 +99,6 @@ const Terms: React.FC = () => {
               that help ensure a secure and productive environment.
             </p>
           </divdiv>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {userObligations.map((obligation, index) => (
               <divdiv
@@ -120,7 +113,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Prohibited Activities */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -147,7 +139,6 @@ const Terms: React.FC = () => {
                 ))}
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -177,7 +168,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Levels */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -193,7 +183,6 @@ const Terms: React.FC = () => {
               and ensure optimal service delivery.
             </p>
           </divdiv>
-
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceLevels.map((level, index) => (
@@ -223,7 +212,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Intellectual Property */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -248,7 +236,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -292,7 +279,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -333,7 +319,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -367,7 +352,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -402,7 +386,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -436,7 +419,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -470,7 +452,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -498,7 +479,6 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </divdiv>
-
             <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -529,7 +509,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Limitation of Liability */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -545,7 +524,6 @@ const Terms: React.FC = () => {
               the scope of our liability and your responsibilities.
             </p>
           </divdiv>
-
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -588,7 +566,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -604,7 +581,6 @@ const Terms: React.FC = () => {
               helps ensure a smooth transition for all parties.
             </p>
           </divdiv>
-
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
@@ -645,7 +621,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -661,7 +636,6 @@ const Terms: React.FC = () => {
               please contact our legal team.
             </p>
           </divdiv>
-
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -683,7 +657,6 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
@@ -716,7 +689,7 @@ const Terms: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default Terms;
-

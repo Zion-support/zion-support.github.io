@@ -1,6 +1,61 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const PromotionalBanner: React.FC = () => {
+  const [currentBanner, setCurrentBanner] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const banners = [
+    {
+      id: 0,
+      title: "🚀 BREAKTHROUGH 2026: AI REVOLUTION",
+      subtitle: "Experience the most advanced AI technologies ever created",
+      cta: "Explore Now →",
+      link: "/pages/AdvancedAITransformation2026",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      bgPattern: "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)"
+    },
+    {
+      id: 1,
+      title: "⚡ QUANTUM COMPUTING BREAKTHROUGH",
+      subtitle: "1000+ qubit processors now available for enterprise",
+      cta: "Learn More →",
+      link: "/pages/QuantumComputingRevolution2026",
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      bgPattern: "radial-gradient(circle at 30% 40%, rgba(6, 182, 212, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)"
+    },
+    {
+      id: 2,
+      title: "🧬 NEURAL INTERFACE REVOLUTION",
+      subtitle: "Direct brain-computer communication is here",
+      cta: "Discover →",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+      bgPattern: "radial-gradient(circle at 40% 30%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 70%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)"
+    },
+    {
+      id: 3,
+      title: "🌟 ULTIMATE TECH SHOWCASE 2026",
+      subtitle: "See all revolutionary technologies in one place",
+      cta: "View Showcase →",
+      link: "/pages/UltimateTechShowcase2026",
+      gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
+      bgPattern: "radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(192, 132, 252, 0.3) 0%, transparent 50%)"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [banners.length]);
+
+  const closeBanner = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
   return (
     <div>
       <div

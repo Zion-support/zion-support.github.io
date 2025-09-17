@@ -1,6 +1,57 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateInnovationShowcase: React.FC = () => {
+  const [activeTabsetActiveTab] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const innovations = [
+    {
+      title: "Quantum-AI Fusion Technology",
+      description: "Revolutionary fusion of quantum computing and artificial intelligence delivering unprecedented processing power",
+      icon: Cpu,
+      metrics: "10,000x faster processing",
+      color: "from-purple-600 to-blue-600"
+    },
+    {
+      title: "Autonomous Business Operations",
+      description: "Self-managing business systems that adapt and optimize without human intervention",
+      icon: Brain,
+      metrics: "99.9% automation accuracy",
+      color: "from-green-600 to-emerald-600"
+    },
+    {
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration",
+      icon: Zap,
+      metrics: "Real-time consciousness sync",
+      color: "from-orange-600 to-red-600"
+    },
+    {
+      title: "Transcendent Intelligence",
+      description: "AI systems that transcend traditional limitationsachieving superhuman cognitive abilities",
+      icon: Rocket,
+      metrics: "Beyond human comprehension",
+      color: "from-indigo-600 to-purple-600"
+    }
+  ];
+
+  const benefits = [
+    { icon: TrendingUptext: "2,500-5,000% ROI Increase"color: "text-green-500" },
+    { icon: Targetext: "99.9% Accuracy Rate"color: "text-blue-500" },
+    { icon: Userstext: "10M+ Users Impacted"color: "text-purple-500" },
+    { icon: Globetext: "Global Implementation"color: "text-orange-500" },
+    { icon: Shieldtext: "Enterprise Security"color: "text-red-500" }
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"

@@ -23,6 +23,8 @@ import {
   Activity
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
+};
+
 
 export default function AIFinancialTrading() {
   const features = [
@@ -365,6 +367,6 @@ export default function AIFinancialTrading() {
               Visit our website
               <ExternalLink className="ml-2 w-4 h-4" />
   );
-};
+
 
 export default ai-financial-trading;

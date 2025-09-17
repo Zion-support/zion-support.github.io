@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-",
-
-
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const advanced-cybersecurity-suite: React.FC = () => {
   return (
@@ -16,7 +9,4 @@ const advanced-cybersecurity-suite: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default advanced-cybersecurity-suite;
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

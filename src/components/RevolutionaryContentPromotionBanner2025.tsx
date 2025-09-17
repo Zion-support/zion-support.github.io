@@ -1,173 +1,152 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-ArrowRightStarBookOpenPlayZapBrainTrendingUpUsersTargetCheckCircleAwardDollarSign
-
-interface RevolutionaryContentPromotionBanner2025Props {
-  variant?: 'featured' | 'compact' | 'hero';
-  className?: string;
-}
-
-export default function RevolutionaryContentPromotionBanner2025({ 
-  variant = 'featured'
-  className = ', ' 
-}: RevolutionaryContentPromotionBanner2025Props) {
-  const content = {
-    featured: {
-      title: "🚀 Revolutionary AI Content 2025",
-      subtitle: "Discover the Future of Enterprise Automation",
-      description: "Explore cutting-edge AI solutionsreal success storiesand implementation guides that are transforming businesses worldwide.",
-      bgColor: "bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600",
-      textColor: "text-white",
-      buttonText: "Explore Now",
-      buttonHref: "/blog/ai-2025-enterprise-automation-revolution",
-      stats: [
-        { label: "15,000% ROI"value: "Achieved" },
-        { label: "$2.3B Revenue"value: "Generated" },
-        { label: "500+ Clients"value: "Transformed" }
-      ]
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles, ArrowRight, Star, Zap, Rocket, Brain, Globe } from 'lucide-react';
+const RevolutionaryContentPromotionBanner2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      icon: Brain,
+      title: "Next-Gen AI Revolution",
+      subtitle: "Experience the future of artificial intelligence",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-900/30 to-pink-900/30"
     },
-    compact: {
-      title: "New AI Content 2025",
-      subtitle: "Latest Insights & Case Studies",
-      description: "Discover how AI is revolutionizing enterprise operations with real-world success stories.",
-      bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
-      textColor: "text-white",
-      buttonText: "Read More",
-      buttonHref: "/case-studies/ai-2025-global-enterprise-transformation-ultimate-success"
+    {
+      icon: Globe,
+      title: "Autonomous Business Ecosystem",
+      subtitle: "Transform your business into a self-managing powerhouse",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-900/30 to-cyan-900/30"
     },
-    hero: {
-      title: "🌟 The AI Revolution is Here",
-      subtitle: "Transform Your Business with Cutting-Edge AI Solutions",
-      description: "Join 500+ enterprises that have achieved unprecedented success through our AI-powered automation solutions. Discover real case studiesimplementation guidesand the latest AI innovations.",
-      bgColor: "bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900",
-      textColor: "text-white",
-      buttonText: "Start Your Journey",
-      buttonHref: "/contact",
-      secondaryButtonText: "View Success Stories",
-      secondaryButtonHref: "/case-studies"
+    {
+      icon: Zap,
+      title: "Quantum-Powered Solutions",
+      subtitle: "Lightning-fast processing with quantum computing",
+      color: "from-yellow-500 to-orange-500",
+      bgColor: "from-yellow-900/30 to-orange-900/30"
     }
-  };
-  const currentContent = content[variant];
-  if (variant === 'hero') {
-    return (
-      <section className={`py-20 ${currentContent.bgColor} ${className}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm mb-6">
-              <Star className="h-5 w-5 text-yellow-400 mr-2" />
-              <span className="text-sm font-semibold">NEW CONTENT 2025</span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-              {currentContent.title}
-            <p className="text-2xl md:text-3xl text-white/90 mb-4 max-w-4xl mx-auto">
-              {currentContent.subtitle}
-            <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
-              {currentContent.description}
-            {/* Featured Content Grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <a 
-                href="/blog/ai-2025-enterprise-automation-revolution"
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <BookOpen className="h-6 w-6 text-cyan-400 mr-2" />
-                  <h3 className="text-lg font-semibold">AI Enterprise Revolution</h3>
-                <p className="text-white/80 text-sm mb-4">
-                  Discover how AI is transforming enterprise operations with real-world insights and implementation strategies.
-                <div className="flex items-center text-cyan-400 text-sm font-medium">
-                  Read Article <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-              <a 
-                href="/case-studies/ai-2025-global-enterprise-transformation-ultimate-success"
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <Award className="h-6 w-6 text-purple-400 mr-2" />
-                  <h3 className="text-lg font-semibold">15,000% ROI Success</h3>
-                <p className="text-white/80 text-sm mb-4">
-                  Real case study: How a Fortune 500 company achieved unprecedented results through AI transformation.
-                <div className="flex items-center text-purple-400 text-sm font-medium">
-                  View Case Study <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-              <a 
-                href="/resources/ai-2025-implementation-quick-start-guide"
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <Zap className="h-6 w-6 text-pink-400 mr-2" />
-                  <h3 className="text-lg font-semibold">Quick Start Guide</h3>
-                <p className="text-white/80 text-sm mb-4">
-                  Step-by-step implementation guide to start your AI transformation journey today.
-                <div className="flex items-center text-pink-400 text-sm font-medium">
-                  Get Started <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                <div className="text-white/80 text-sm">Enterprises Transformed</div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">15,000%</div>
-                <div className="text-white/80 text-sm">Average ROI</div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">$50B+</div>
-                <div className="text-white/80 text-sm">Value Generated</div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
-                <div className="text-white/80 text-sm">Success Rate</div>
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href={currentContent.buttonHref}
-                className="px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center"
-              >
-                {currentContent.buttonText}
-                <ArrowRight className="h-5 w-5 ml-2" />
-              <a 
-                href={currentContent.secondaryButtonHref}
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-105 flex items-center"
-              >
-                {currentContent.secondaryButtonText}
-                <Play className="h-5 w-5 ml-2" />
-    );
-  }
-  if (variant === 'compact') {
-    return (
-      <section className={`py-8 ${currentContent.bgColor} ${className}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-white mb-2">{currentContent.title}</h3>
-              <p className="text-white/90 text-sm">{currentContent.description}</p>
-            <a 
-              href={currentContent.buttonHref}
-              className="ml-6 px-6 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/30 transition-colors flex items-center"
-            >
-              {currentContent.buttonText}
-              <ArrowRight className="h-4 w-4 ml-1" />
-    );
-  }
+  ];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
   return (
-    <section className={`py-12 ${currentContent.bgColor} ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-4">
-            <Star className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-sm font-semibold">FEATURED CONTENT</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {currentContent.title}
-          <p className="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
-            {currentContent.description}
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mb-8">
-            {currentContent.stats?.map((statindex) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">{stat.label}</div>
-                <div className="text-white/80 text-sm">{stat.value}</div>
-            ))}
-          <a 
-            href={currentContent.buttonHref}
-            className="inline-flex items-center px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
-          >
-            {currentContent.buttonText}
-            <ArrowRight className="h-5 w-5 ml-2" />
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      </div>
+      <div className="relative container mx-auto px-6 py-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          {/* Left Content */}
+          <div className="flex-1 mb-8 lg:mb-0 lg:pr-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex items-center mb-4">
+                <Sparkles className="h-8 w-8 text-yellow-400 mr-3" />
+                <span className="text-yellow-400 font-semibold text-lg">NEW RELEASE</span>
+              </div>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                  Revolutionary Content
+                </span>
+                <br />
+                <span className="text-white">Just Dropped!</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Discover our latest breakthrough innovations in AI technology, autonomous business systems, 
+                and quantum-powered solutions that are reshaping the future of enterprise.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                >
+                  Explore New Features
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300"
+                >
+                  Watch Demo
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+          {/* Right Content - Sliding Showcase */}
+          <div className="flex-1 max-w-lg">
+            <div className="relative h-96 rounded-2xl overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5 }}
+                  className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColor} backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8`}
+                >
+                  <div className="flex flex-col items-center justify-center h-full text-center">
+                    <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r ${slides[currentSlide].color} mb-6`}>
+                      <slides[currentSlide].icon className="h-10 w-10 text-white" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-4">
+                      {slides[currentSlide].title}
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      {slides[currentSlide].subtitle}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+              {/* Slide Indicators */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/30'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Features Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          {[
+            { icon: Rocket, text: "Lightning Fast Deployment" },
+            { icon: Star, text: "Enterprise Grade Security" },
+            { icon: Zap, text: "Quantum-Powered Performance" }
+          ].map((feature, index) => (
+            <div key={index} className="flex items-center justify-center space-x-3 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4">
+              <feature.icon className="h-6 w-6 text-yellow-400" />
+              <span className="text-gray-300 font-medium">{feature.text}</span>
+            </div>
+          ))}
+        </motion.div>
+        {/* Floating Elements */}
+        <div className="absolute top-10 left-10 w-4 h-4 bg-yellow-400 rounded-full opacity-60 animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-3 h-3 bg-pink-400 rounded-full opacity-40 animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-purple-400 rounded-full opacity-50 animate-ping"></div>
+      </div>
+    </div>
   );
+
 };
 
 export default RevolutionaryContentPromotionBanner2025;

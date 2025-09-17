@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LatestInnovationShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white relative overflow-hidden">
@@ -14,7 +13,6 @@ const LatestInnovationShowcase: React.FC = () => {
             Experience the cutting-edge innovations that are defining the future of technology
           </p>
         </div>
-
         {/* Innovation Carousel */}
         <div className="relative">
             <div
@@ -51,7 +49,6 @@ const LatestInnovationShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
             {innovations.map((_, index) => (
@@ -67,7 +64,6 @@ const LatestInnovationShowcase: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Play/Pause Button */}
           <div className="flex justify-center mt-4">
             <button
@@ -78,7 +74,6 @@ const LatestInnovationShowcase: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {innovations.map((innovation, index) => (
@@ -95,6 +90,7 @@ const LatestInnovationShowcase: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default LatestInnovationShowcase;

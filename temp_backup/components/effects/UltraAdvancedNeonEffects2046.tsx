@@ -1,46 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useRef } from 'react';
-
-
-interface NeonEffectProps {
-  children: React.ReactNode;
-  variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch' | 'consciousness' | 'quantum-neon' | 'neural' | 'quantum-consciousness' | 'quantum-holographic';
-  intensity?: 'low' | 'medium' | 'high';
-  interactive?: boolean;
-  className?: string;
-  consciousness?: number;
-  pulseRate?: number;
-  quantumState?: number;
-}
-
-interface NeonGlowProps {
-  children: React.ReactNode;
-  color: string;
-  intensity: number;
-  spread?: number;
-  className?: string;
-  consciousness?: number;
-  quantumState?: number;
-}
-
-// Enhanced Neon Glow Component with consciousness and quantum effects
-const NeonGlow: React.FC<NeonGlowProps> = ({ 
-  children, 
-  color, 
-  intensity, 
-  spread = 20, 
-  className = '',
-  consciousness = 0,
-  quantumState = 0
-}) => {
-  const baseColor = color;
-  const glowColor = color + '80';
-  const shadowColor = color + '40';
-  const consciousnessGlow = consciousness > 0 ? `0 0 ${spread * (1 + consciousness)}px ${color}` : '';
-  const quantumGlow = quantumState > 0 ? `0 0 ${spread * (1 + Math.sin(quantumState) * 0.5)}px ${color}40` : '';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedNeonEffects2046: React.FC = () => {
   return (

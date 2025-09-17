@@ -1,6 +1,42 @@
-import React from 'react';
+"use client";
+'use client';
 
-const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Atom
+  Zap
+  Shield
+  Lock,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Target,
+  Brain,
+  X
+} from 'lucide-react';
+
+const QuantumComputingSolutions2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)3000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
+  const solutions = [
+    { icon: Targetlabel: ''Optimization', 'color: 'text-purple-400' },
+    { icon: Locklabel: ''Encryption', 'color: 'text-green-400' },
+    { icon: Atomlabel: ''Simulation', 'color: 'text-cyan-400' },
+    { icon: Brainlabel: 'AI/'ML', 'color: 'text-red-400' }
+  ];
+
   return (
     <div>
       {isVisible && (
@@ -19,9 +55,9 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
-                    y: [0-40],
-                    x: [0Math.random() * 10 - 50],
-                    opacity: [0.40.80.4],
+
+
+
                   }}
                     duration: 4 + Math.random() * 2,
                     repeat: Infinity,
@@ -113,4 +149,3 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
 };
 
 export default QuantumComputingSolutions2026PromotionBanner;
-</div></div></div></div></div></div>

@@ -1,6 +1,63 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Building2
+  Zap
+  TrendingUp
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock,
+  Shield,
+  DollarSign,
+  Target,
+  BarChart3,
+  Workflow,
+  Database,
+  MessageSquare,
+  CreditCard,
+  PieChart,
+  Activity,
+  Play,
+  Sparkles,
+  Globe,
+  Lock,
+  Cloud,
+  Bot,
+  Brain
+} from 'lucide-react';
 
 const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
+  const [currentStatsetCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  const stats = [
+    { value: '300%'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" /> },
+    { value: '80%'label: 'Time 'Saved', 'icon: <Clock className="w-6 h-6" /> },
+    { value: '500+'label: 'Enterprise 'Clients', 'icon: <Building2 className="w-6 h-6" /> },
+    { value: '99.9%'label: ''Uptime', 'icon: <Shield className="w-6 h-6" /> }
+  ];
+
+  const solutions = [
+    { name: 'Workflow 'Orchestrator', 'icon: <Workflow className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'Data 'Pipeline', 'icon: <Database className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Customer 'Service', 'icon: <MessageSquare className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Financial 'Automation', 'icon: <CreditCard className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'HR 'Automation', 'icon: <Users className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Business 'Intelligence', 'icon: <PieChart className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }2500);
+    return () => clearInterval(interval);
+  }[]);
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-20"
@@ -137,8 +194,8 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
 
             {/* Floating Elements */}
             <div
-                y: [0-10],
-                rotate: [050]
+
+
               }}
                 duration: 3,
                 repeat: Infinity,
@@ -150,8 +207,8 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             </div>
 
             <div
-                y: [010],
-                rotate: [0-50]
+
+
               }}
                 duration: 4,
                 repeat: Infinity,

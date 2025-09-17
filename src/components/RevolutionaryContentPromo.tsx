@@ -1,6 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const RevolutionaryContentPromo: React.FC = () => {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const contentItems = [
+    {
+      title: "Ultimate Tech Showcase 2026",
+      description: "Experience the most advanced technologies that will reshape our world",
+      icon: "🚀",
+      link: "/pages/UltimateTechShowcase2026",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-600/20 to-pink-600/20",
+      borderColor: "border-purple-400/30",
+      features: ["Interactive demos", "Live technology previews", "Expert insights"]
+    },
+    {
+      title: "Future Tech Trends 2026",
+      description: "Discover the revolutionary technologies that will shape our future",
+      icon: "🔮",
+      link: "/pages/FutureTechTrends2026",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-600/20 to-blue-600/20",
+      borderColor: "border-cyan-400/30",
+      features: ["Trend analysis", "Future predictions", "Industry impact"]
+    },
+    {
+      title: "Consciousness Computing",
+      description: "The next frontier where AI achieves true consciousness and self-awareness",
+      icon: "🧠",
+      link: "/pages/AIConsciousnessEvolution2026",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-600/20 to-teal-600/20",
+      borderColor: "border-emerald-400/30",
+      features: ["AI consciousness", "Emotional intelligence", "Creative AI"]
+    },
+    {
+      title: "Quantum Supremacy",
+      description: "Exponential computing power that solves impossible problems",
+      icon: "⚡",
+      link: "/pages/QuantumComputingRevolution2026",
+      color: "from-violet-600 to-purple-600",
+      bgColor: "from-violet-600/20 to-purple-600/20",
+      borderColor: "border-violet-400/30",
+      features: ["1000+ qubits", "Quantum algorithms", "Supremacy achieved"]
+    },
+    {
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer communication and enhancement",
+      icon: "🧬",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      color: "from-orange-600 to-red-600",
+      bgColor: "from-orange-600/20 to-red-600/20",
+      borderColor: "border-orange-400/30",
+      features: ["Brain-computer interface", "Thought control", "Neural enhancement"]
+    },
+    {
+      title: "Space Technology Innovation",
+      description: "Revolutionary space exploration and colonization",
+      icon: "🌌",
+      link: "/pages/SpaceTechInnovation2026",
+      color: "from-indigo-600 to-purple-600",
+      bgColor: "from-indigo-600/20 to-purple-600/20",
+      borderColor: "border-indigo-400/30",
+      features: ["Mars colonization", "Space habitats", "Interstellar travel"]
+    }
+  ];
+
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">

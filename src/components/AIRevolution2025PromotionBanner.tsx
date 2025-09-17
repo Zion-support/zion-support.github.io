@@ -1,6 +1,71 @@
-import React from 'react';
+"use client";
+'use client';
 
-const AIRevolution2025PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  ArrowRight
+  Star
+  Play
+  X,
+  Sparkles,
+  Rocket,
+  TrendingUp,
+  Clock,
+  Users
+} from 'lucide-react';
+
+const AIRevolution2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+
+  const announcements = [
+    {
+      title: "🚀 AI Revolution 2025 is Here",
+      subtitle: "Quantum-AI Fusion & Neural Interfaces",
+      action: "Explore Now",
+      color: "from-purple-600 to-blue-600",
+      icon: Brain,
+      badge: "BREAKTHROUGH"
+
+    {
+      title: "🧠 Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      action: "Discover",
+      color: "from-blue-600 to-cyan-600",
+      icon: Zap,
+      badge: "INNOVATION"
+
+    {
+      title: "🤖 Autonomous AI Systems",
+      subtitle: "Self-Managing Business Operations",
+      action: "Learn More",
+      color: "from-green-600 to-emerald-600",
+      icon: Rocket,
+      badge: "FUTURE"
+
+    {
+      title: "✨ Conscious AI Framework",
+      subtitle: "Genuine Understanding & Intelligence",
+      action: "Experience",
+      color: "from-orange-600 to-red-600",
+      icon: Sparkles,
+      badge: "REVOLUTION"
+
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % announcements.length);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
+  const currentAnnouncement = announcements[currentSlide];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900 text-white shadow-2xl"
@@ -11,8 +76,8 @@ const AIRevolution2025PromotionBanner: React.FC = () => {
         
         {/* Floating Elements */}
         <div
-            y: [0-20],
-            rotate: [050]
+
+
           }}
             duration: 4,
             repeat: Infinity,
@@ -24,8 +89,8 @@ const AIRevolution2025PromotionBanner: React.FC = () => {
         </div>
         
         <div
-            y: [0150],
-            rotate: [0-50]
+
+
           }}
             duration: 3,
             repeat: Infinity,
@@ -38,8 +103,8 @@ const AIRevolution2025PromotionBanner: React.FC = () => {
         </div>
 
         <div
-            y: [0-10],
-            x: [010]
+
+
           }}
             duration: 5,
             repeat: Infinity,
@@ -145,4 +210,3 @@ const AIRevolution2025PromotionBanner: React.FC = () => {
 };
 
 export default AIRevolution2025PromotionBanner;
-</div></div></div>

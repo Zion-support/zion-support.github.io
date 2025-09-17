@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const NeuralInterfaceRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -29,7 +28,6 @@ const NeuralInterfaceRevolution2027: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
@@ -44,7 +42,6 @@ const NeuralInterfaceRevolution2027: React.FC = () => {
               between human consciousness and AI processing power.
             </p>
           </div>
-
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-purple-400">Revolutionary Capabilities</h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -78,7 +75,6 @@ const NeuralInterfaceRevolution2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-green-400">Non-Invasive Technology</h2>
             <p className="text-lg text-gray-300 mb-6">
@@ -106,7 +102,6 @@ const NeuralInterfaceRevolution2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Experience the Future Today</h2>
             <p className="text-xl mb-6">
@@ -123,6 +118,7 @@ const NeuralInterfaceRevolution2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NeuralInterfaceRevolution2027;

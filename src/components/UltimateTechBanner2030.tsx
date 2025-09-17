@@ -1,14 +1,4 @@
-
-const UltimateTechBanner2030: React.FC = () => {
-  return (
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default UltimateTechBanner2030;
-=======
+import React from 'react';
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ContentRoutes= () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,4 +7,5 @@ const ContentRoutes= () => {
     </div>
   );
 };
+
 export default ContentRoutes;

@@ -1,6 +1,129 @@
-import React from 'react';
+"use client";
+'use client';
 
-const FuturePredictionsShowcase2025: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Calendar
+  TrendingUp
+  Brain
+  Zap
+  Globe
+  Rocket
+  Shield
+  Users
+  Lightbulb,
+  Target,
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Database,
+  Cloud,
+  Cpu,
+  Network,
+  BarChart3,
+  Star,
+  ArrowRight
+} from 'lucide-react';
+
+const FuturePredictionsShowcase2025 = () => {
+  const [activeYearsetActiveYear] = useState('2025');
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const predictions = {
+    '2025': {
+      title: 'AI Revolution Begins',
+      color: 'from-purple-600 to-blue-600',
+      icon: Brain,
+      predictions: [
+        {
+          title: 'Neural Interface Breakthrough',
+          description: 'First commercial neural interface devices hit the market',
+          probability: '85%',
+          impact: 'High',
+          icon: Cpu
+        },
+        {
+          title: 'Quantum AI Fusion',
+          description: 'Quantum computing integrated with AI systems',
+          probability: '70%',
+          impact: 'Revolutionary',
+          icon: Zap
+        },
+        {
+          title: 'Consciousness AI',
+          description: 'AI systems achieve human-level consciousness',
+          probability: '60%',
+          impact: 'Transformative',
+          icon: Lightbulb
+        }
+      ]
+    },
+    '2026': {
+      title: 'Automation Mastery',
+      color: 'from-green-600 to-emerald-600',
+      icon: Rocket,
+      predictions: [
+        {
+          title: 'Universal Automation',
+          description: '90% of business processes fully automated',
+          probability: '80%',
+          impact: 'High',
+          icon: Target
+        },
+        {
+          title: 'AI Workforce Integration',
+          description: 'AI and humans work seamlessly together',
+          probability: '75%',
+          impact: 'High',
+          icon: Users
+        },
+        {
+          title: 'Predictive Everything',
+          description: 'AI predicts and prevents all major issues',
+          probability: '65%',
+          impact: 'Medium',
+          icon: BarChart3
+        }
+      ]
+    },
+    '2030': {
+      title: 'Transcendent Intelligence',
+      color: 'from-orange-600 to-red-600',
+      icon: Globe,
+      predictions: [
+        {
+          title: 'Global AI Network',
+          description: 'Worldwide interconnected AI consciousness',
+          probability: '50%',
+          impact: 'Revolutionary',
+          icon: Network
+        },
+        {
+          title: 'Reality Simulation',
+          description: 'AI creates indistinguishable virtual realities',
+          probability: '40%',
+          impact: 'Transformative',
+          icon: Cloud
+        },
+        {
+          title: 'Immortality Research',
+          description: 'AI enables human consciousness transfer',
+          probability: '30%',
+          impact: 'Revolutionary',
+          icon: Shield
+        }
+      ]
+    }
+  };
+
+  const years = Object.keys(predictions);
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}

@@ -1,6 +1,8 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function RevolutionaryContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
@@ -159,6 +161,6 @@ export default function RevolutionaryContentDiscoveryWidget() {
               >
                 View Implementation Guide
   );
-};
+
 
 export default RevolutionaryContentDiscoveryWidget;

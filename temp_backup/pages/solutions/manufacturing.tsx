@@ -1,39 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Layout from '../../components/layout/Layout';
-
-import { 
-      title: "Manufacturing AI & Machine Learning",
-      description: "AI-powered manufacturing optimization with predictive maintenance and quality control",
-      icon: <Brain className="w-8 h-8" />,
-      features: ["Predictive maintenance", "Quality control automation", "Production optimization", "Supply chain intelligence"],
-      href: "/services?category=ai-ml"
-    },
-    {
-      title: "Manufacturing Cybersecurity",
-      description: "Industrial-grade security for manufacturing environments",
-      icon: <Shield className="w-8 h-8" />,
-      features: ["OT security", "Industrial IoT protection", "Compliance automation", "Threat detection"],
-      href: "/services?category=security"
-    },
-    {
-      title: "Manufacturing Cloud Infrastructure",
-      description: "Cloud solutions designed for manufacturing operations",
-      icon: <Cloud className="w-8 h-8" />,
-      features: ["Industrial cloud platforms", "Edge computing", "Data integration", "Scalable infrastructure"],
-      href: "/services?category=cloud"
-    },
-    {
-      title: "Manufacturing Analytics & BI",
-      description: "Real-time manufacturing analytics and business intelligence",
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ["Real-time monitoring", "Performance analytics", "Predictive insights", "Executive dashboards"],
-      href: "/services?category=bi"
-    }
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const manufacturing: React.FC = () => {
   return (

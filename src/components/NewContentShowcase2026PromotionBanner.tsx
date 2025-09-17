@@ -1,6 +1,34 @@
-import React from 'react';
+"use client";
+'use client';
 
-const NewContentShowcase2026PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Sparkles
+  ArrowRight
+  Star
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  CheckCircle,
+  Play,
+  ExternalLink
+} from 'lucide-react';
+
+const NewContentShowcase2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const features = [
+    'Revolutionary AI Innovations',
+    'Advanced Automation Solutions'
+    'Future Technology Predictions',
+    'Interactive Demonstrations'
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"
@@ -114,4 +142,3 @@ const NewContentShowcase2026PromotionBanner: React.FC = () => {
 };
 
 export default NewContentShowcase2026PromotionBanner;
-</div></div></div>

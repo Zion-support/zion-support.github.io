@@ -1,6 +1,42 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+ArrowRightStarTrendingUpUsersGlobeZapAwardClock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentShowcasePromotionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat(prev => (prev + 1) % 4);
+    }3000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const stats = [
+    { icon: TrendingUpvalue: "5,000%"label: "ROI Increase"color: "from-green-500 to-emerald-500" },
+    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-500 to-cyan-500" },
+    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-500 to-pink-500" },
+    { icon: Globevalue: "150+"label: "Countries"color: "from-orange-500 to-red-500" }
+  ];
+
+  const solutions = [
+    "AI 2025 Ultimate Innovation",
+    "Quantum Computing Revolution",
+    "Advanced Automation Solutions",
+    "Enterprise Transformation"
+  ];
+
+  const features = [
+    { icon: Startext: "5-Star Rated Solutions"color: "text-yellow-500" },
+    { icon: Zaptext: "Lightning Fast Implementation"color: "text-blue-500" },
+    { icon: Userstext: "10M+ Satisfied Customers"color: "text-green-500" }
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"

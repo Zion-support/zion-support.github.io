@@ -1,6 +1,12 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { 
+  Brain, Shield, Code, CheckCircle, Zap, 
+  ArrowRight, Star, TrendingUp, Users, 
+  Lock, Eye, BarChart3, Globe, Award
+} from 'lucide-react';
 
-const ai-code-review-security-scanner: React.FC = () => {
+const AICodeReviewSecurityScanner = () => {
   return (
     <>
       <SEO 
@@ -460,4 +466,3 @@ const ai-code-review-security-scanner: React.FC = () => {
 };
 
 export default AICodeReviewSecurityScanner;
-</div></div></div></div></div></div>

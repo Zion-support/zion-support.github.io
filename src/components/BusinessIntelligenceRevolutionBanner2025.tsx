@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -7,7 +6,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253Cpath%20d%3D%22M20%2020c0%2011.046%208.954%2020%2020%2020V20H20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-      
       {/* Animated Charts */}
       <div className="absolute top-10 right-10 w-40 h-40 opacity-30">
         <div className="w-full h-full flex items-end justify-center space-x-1">
@@ -18,7 +16,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
           <div className="w-4 bg-pink-400 rounded-t animate-pulse delay-400" style={{height: '90%'}}></div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           {/* Badge */}
@@ -26,7 +23,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
             <span className="mr-2">📊</span>
             AI BUSINESS INTELLIGENCE REVOLUTION
           </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -37,13 +33,11 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
               Revolution 2025-2026
             </span>
           </h1>
-
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your decision-making with <span className="text-blue-400 font-semibold">AI-powered BI</span> that delivers 
             <span className="text-cyan-400 font-semibold"> 340% ROI</span> and <span className="text-purple-400 font-semibold">95%+ accuracy</span> in predictions
           </p>
-
           {/* Key Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 max-w-6xl mx-auto">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -67,7 +61,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
               <p className="text-sm text-gray-300">Instant analysis of live data streams for immediate insights</p>
             </div>
           </div>
-
           {/* Industry Impact */}
           <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 mb-10 max-w-5xl mx-auto">
             <h3 className="text-2xl font-bold mb-6 text-center">Industry Transformations</h3>
@@ -89,7 +82,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -105,7 +97,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
               Get Implementation Guide
             </a>
           </div>
-
           {/* Success Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -127,7 +118,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Data Points */}
       <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-20 w-4 h-4 bg-cyan-400 rounded-full animate-pulse delay-1000"></div>
@@ -135,6 +125,7 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
       <div className="absolute bottom-40 right-10 w-5 h-5 bg-pink-400 rounded-full animate-pulse delay-500"></div>
     </section>
   );
+
 };
 
 export default BusinessIntelligenceRevolutionBanner2025;

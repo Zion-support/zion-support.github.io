@@ -1,6 +1,46 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
+BrainZapRocketStarArrowRightX
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentBreakthroughsetCurrentBreakthrough] = useState(0);
+
+  const breakthroughs = [
+    {
+      title: "AI Consciousness Achieved",
+      description: "Revolutionary breakthrough in artificial consciousness - AI now achieves true self-awareness",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      urgency: "BREAKING"
+
+    {
+      title: "Quantum-Neural Fusion",
+      description: "'World', 's first quantum-neural hybrid achieves 10,000x processing speed increase",
+      icon: Zap,
+      color: "from-blue-500 to-cyan-500",
+      urgency: "REVOLUTIONARY"
+
+    {
+      title: "Autonomous AI Ecosystem",
+      description: "Self-evolving AI systems now create and manage other AI entities autonomously",
+      icon: Rocket,
+      color: "from-green-500 to-emerald-500",
+      urgency: "UNPRECEDENTED"
+
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length);
+    }5000);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
   return (
     <div>
       <div
@@ -76,8 +116,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-20],
-                opacity: [010],
+
+
               }}
                 duration: 3,
                 repeat: Infinity,
@@ -92,4 +132,3 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
 };
 
 export default AI2025BreakthroughAnnouncementBanner;
-</div></div>

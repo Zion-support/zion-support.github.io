@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AnalyticsIntegration: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,10 +7,9 @@ const AnalyticsIntegration: React.FC = () => {
     </div>
   );
 };
-
 interface AnalyticsIntegrationProps {
   children: React.ReactNode;
-}
+
 
 export default function AnalyticsIntegration({ children }: AnalyticsIntegrationProps) {
   const router = useRouter();
@@ -158,11 +156,9 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
     };
   }[]);
   return <>{children}</>;
-}
 // Global type declarations
 declare global {
   interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
-  }
-}
+  };

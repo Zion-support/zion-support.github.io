@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+};
+
 
 export default function AI2025BreakthroughPromotionBanner() {
   return (
@@ -62,4 +64,3 @@ export default function AI2025BreakthroughPromotionBanner() {
               <span className="text-green-400">✓</span>
               <span>Consciousness AI</span>
   );
-}

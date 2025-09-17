@@ -1,6 +1,35 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+ArrowRightZapBrainTrendingUpUsersAwardClock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat(prev => (prev + 1) % 3);
+    }3000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const stats = [
+    { icon: TrendingUpvalue: "5,000%"label: "ROI Increase"color: "from-green-500 to-emerald-500" },
+    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-500 to-cyan-500" },
+    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-500 to-pink-500" }
+  ];
+
+  const features = [
+    "Quantum-AI Fusion Technology",
+    "Autonomous Business Operations"
+    "Neural Interface Revolution",
+    "Transcendent Intelligence"
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"

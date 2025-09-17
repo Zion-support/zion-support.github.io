@@ -1,9 +1,10 @@
-
 import React from 'react';
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { SEO } from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+};
+
 
 export default function RequestQuote() {
   return (
@@ -61,4 +62,3 @@ export default function RequestQuote() {
                   Get the best value for your investment with our transparent pricing and no hidden costs.
       <Footer />
   );
-}

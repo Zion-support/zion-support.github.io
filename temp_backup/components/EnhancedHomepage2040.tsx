@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
-
-import { 
-  ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
-  Rocket, Cpu, Cloud, Lock, Eye, Heart, Sparkles,
-  Phone, Mail, Building, Users, Award, Target
-} from 'lucide-react';
-import { innovativeMicroSAASServices } from '../data/innovative-2025-new-micro-saas-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedHomepage2040: React.FC = () => {
   return (

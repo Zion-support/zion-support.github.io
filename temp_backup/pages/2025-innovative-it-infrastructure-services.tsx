@@ -1,18 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  Shield, Cloud, Globe, Zap, Star, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin,
-  Rocket, Target, Cpu, Lock, Server, Database
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const 2025-innovative-it-infrastructure-services: React.FC = () => {
   return (

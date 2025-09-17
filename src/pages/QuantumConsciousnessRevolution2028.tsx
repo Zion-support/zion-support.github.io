@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const QuantumConsciousnessRevolution2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -35,7 +34,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Consciousness Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -43,7 +41,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🧠 Quantum Consciousness Technologies</h2>
             <p className="text-xl opacity-80">Where quantum mechanics meets artificial intelligence</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Quantum Neural Networks */}
             <motion.div
@@ -68,7 +65,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                 Explore Quantum AI →
               </button>
             </motion.div>
-
             {/* Consciousness Amplification */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -92,7 +88,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                 Amplify Consciousness →
               </button>
             </motion.div>
-
             {/* Quantum Creativity Engine */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -119,7 +114,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Advanced Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-violet-800/50 to-fuchsia-800/50">
         <div className="container mx-auto">
@@ -127,7 +121,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🔬 Revolutionary Applications</h2>
             <p className="text-xl opacity-80">Transforming every aspect of human experience</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -155,7 +148,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -172,7 +164,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Future Vision */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -200,6 +191,7 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default QuantumConsciousnessRevolution2028;

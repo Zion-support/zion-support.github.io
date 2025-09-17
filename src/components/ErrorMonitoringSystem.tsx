@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface ErrorLog {
   id: string;
   timestamp: string;
@@ -10,13 +9,10 @@ interface ErrorLog {
   userAgent: string;
   url: string;
   resolved: boolean;
-}
-
 const ErrorMonitoringSystem: React.FC = () => {
   const [errors, setErrors] = useState<ErrorLog[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [filter, setFilter] = useState<'all' | 'error' | 'warning' | 'info'>('all');
-
   useEffect(() => {
     // Simulate error data
     const mockErrors: ErrorLog[] = [
@@ -73,14 +69,12 @@ const ErrorMonitoringSystem: React.FC = () => {
         resolved: true
       }
     ];
-
     setErrors(mockErrors);
   }, []);
-
   const filteredErrors = errors.filter(error => 
     filter === 'all' || error.level === filter
   );
-
+};
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'error': return 'text-red-600 bg-red-100';
@@ -89,7 +83,6 @@ const ErrorMonitoringSystem: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getLevelIcon = (level: string) => {
     switch (level) {
       case 'error': return '❌';
@@ -98,19 +91,15 @@ const ErrorMonitoringSystem: React.FC = () => {
       default: return '📝';
     }
   };
-
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();
   };
-
   const getErrorCount = (level: string) => {
     return errors.filter(error => error.level === level).length;
   };
-
   const getUnresolvedCount = () => {
     return errors.filter(error => !error.resolved).length;
   };
-
   return (
     <div className="fixed top-32 right-4 z-50">
       <button
@@ -127,7 +116,6 @@ const ErrorMonitoringSystem: React.FC = () => {
           </div>
         )}
       </button>
-
       {isVisible && (
         <div className="absolute top-12 right-0 w-96 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 p-6 max-h-[80vh] overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
@@ -141,7 +129,6 @@ const ErrorMonitoringSystem: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div className="text-center p-3 bg-gray-50 rounded-lg">
@@ -161,7 +148,6 @@ const ErrorMonitoringSystem: React.FC = () => {
               <div className="text-sm text-gray-600">Unresolved</div>
             </div>
           </div>
-
           {/* Filters */}
           <div className="flex space-x-2 mb-4">
             {['all', 'error', 'warning', 'info'].map((level) => (
@@ -178,7 +164,6 @@ const ErrorMonitoringSystem: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Error List */}
           <div className="space-y-3">
             {filteredErrors.map((error) => (
@@ -206,18 +191,15 @@ const ErrorMonitoringSystem: React.FC = () => {
                     </svg>
                   </button>
                 </div>
-                
                 <div className="text-sm text-gray-900 mb-2 font-medium">
                   {error.message}
                 </div>
-                
                 <div className="text-xs text-gray-500 space-y-1">
                   <div><span className="font-medium">Source:</span> {error.source}</div>
                   <div><span className="font-medium">URL:</span> {error.url}</div>
                   <div><span className="font-medium">Time:</span> {formatTimestamp(error.timestamp)}</div>
                   <div><span className="font-medium">User Agent:</span> {error.userAgent.substring(0, 50)}...</div>
                 </div>
-
                 {error.stack && (
                   <details className="mt-2">
                     <summary className="text-xs text-gray-600 cursor-pointer hover:text-gray-800">
@@ -231,7 +213,6 @@ const ErrorMonitoringSystem: React.FC = () => {
               </div>
             ))}
           </div>
-
           {filteredErrors.length === 0 && (
             <div className="text-center py-8 text-gray-500">
               <div className="text-4xl mb-2">🎉</div>
@@ -242,7 +223,7 @@ const ErrorMonitoringSystem: React.FC = () => {
       )}
     </div>
   );
-};
+
 
 export default ErrorMonitoringSystem;
 </p></p></p></p>

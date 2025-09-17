@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useRef } from 'react';
-
-import { MessageCircle, X, Send } from 'lucide-react';
-
-interface ChatMessage {
-  id: string;
-  text: string;
-  sender: 'user' | 'bot';
-  timestamp: Date;
-  type: 'text' | 'quick-reply';
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const LiveChatWidget: React.FC = () => {
   return (

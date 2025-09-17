@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Clock, Users, TrendingUp, Brain, Zap, Rocket } from 'lucide-react';
-
 interface NewContentItem {
   id: string;
   title: string;
@@ -12,12 +11,9 @@ interface NewContentItem {
   views: number;
   likes: number;
   isNew?: boolean;
-}
-
 const NewContentShowcaseBanner2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const newContent: NewContentItem[] = [
     {
       id: "quantum-consciousness-ai-2026",
@@ -64,7 +60,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
       isNew: true
     }
   ];
-
   const getUrgencyColor = (urgency?: string) => {
     switch (urgency) {
       case "Must Read": return "from-red-500 to-pink-600";
@@ -74,7 +69,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
       default: return "from-blue-500 to-cyan-600";
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case "blog": return <Brain className="w-5 h-5" />;
@@ -83,23 +77,18 @@ const NewContentShowcaseBanner2026: React.FC = () => {
       default: return <Rocket className="w-5 h-5" />;
     }
   };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % newContent.length);
     }, 8000);
-
     return () => clearInterval(interval);
   }, [newContent.length]);
-
   const currentContent = newContent[currentIndex];
-
   return (
     <div className="relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20" />
-      
       <div className="relative z-10 py-16 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -123,7 +112,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
               Discover the latest breakthroughs in AI, quantum computing, and neural technology that are reshaping our future
             </p>
           </motion.div>
-
           {/* Content Carousel */}
           <div className="relative">
             <AnimatePresence mode="wait">
@@ -156,15 +144,12 @@ const NewContentShowcaseBanner2026: React.FC = () => {
                         </div>
                       )}
                     </div>
-
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
                       {currentContent.title}
                     </h3>
-
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                       {currentContent.excerpt}
                     </p>
-
                     <div className="flex items-center gap-6 mb-6">
                       <div className="flex items-center gap-2 text-gray-400">
                         <Clock className="w-4 h-4" />
@@ -179,7 +164,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
                         <span className="text-sm">{currentContent.likes.toLocaleString()} likes</span>
                       </div>
                     </div>
-
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button className="group flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                         Read Now
@@ -190,7 +174,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Visual Element */}
                   <div className="w-full lg:w-96 h-64 lg:h-80 relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl" />
@@ -210,7 +193,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-
             {/* Navigation Dots */}
             <div className="flex justify-center mt-8 gap-2">
               {newContent.map((_, index) => (
@@ -226,7 +208,6 @@ const NewContentShowcaseBanner2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Bottom CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -250,6 +231,7 @@ const NewContentShowcaseBanner2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NewContentShowcaseBanner2026;

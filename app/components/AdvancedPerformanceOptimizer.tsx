@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-'use client';
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Zap, TrendingUp, Clock, Database, Globe, 
-  Shield, CheckCircle, AlertCircle, Loader,
-  BarChart3, Brain, ArrowRight
-} from 'lucide-react';
-
-interface PerformanceMetric {
-  id: string;
-  name: string;
-  value: number;
-  target: number;
-  unit: string;
-  status: 'excellent' | 'good' | 'warning' | 'critical';
-  trend: 'up' | 'down' | 'stable';
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedPerformanceOptimizer: React.FC = () => {
   return (

@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
-
 interface AnalyticsProps {
   eventName: string;
   eventData?: Record<string, any>;
-}
-
 const Analytics: React.FC<AnalyticsProps> = ({ eventName, eventData = {} }) => {
   useEffect(() => {
     // Track page views and events
@@ -16,10 +13,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ eventName, eventData = {} }) => {
       });
     }
   }, [eventName, eventData]);
-
   return null;
-};
-
 // Enhanced tracking functions
 export const trackPageView = (pageName: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -27,9 +21,7 @@ export const trackPageView = (pageName: string) => {
       page_title: pageName,
       page_location: window.location.href,
     });
-  }
-};
-
+  };
 export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
@@ -37,11 +29,10 @@ export const trackEvent = (action: string, category: string, label?: string, val
       event_label: label,
       value: value,
     });
-  }
-};
-
+  };
 export const trackContentEngagement = (contentType: string, contentId: string) => {
   trackEvent('content_view', 'engagement', `${contentType}_${contentId}`);
 };
+
 
 export default Analytics;

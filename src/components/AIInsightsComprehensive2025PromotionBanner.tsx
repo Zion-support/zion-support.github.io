@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIInsightsComprehensive2025PromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 py-16">
@@ -95,13 +94,12 @@ const AIInsightsComprehensive2025PromotionBanner: React.FC = () => {
           <p className="text-gray-400 text-sm">
             Join 75,000+ professionals accessing our strategic AI intelligence
   );
-}
+};
 const keyMetrics = [
   { value: "87%"label: "AI Success Rate" },
   { value: "340%"label: "Average ROI" },
   { value: "2.3M"label: "Jobs Created" },
   { value: "45%"label: "Market Growth" }
-];
 const marketAnalysis = [
   {
     icon: <TrendingUp className="h-5 w-5 text-white" />,
@@ -116,14 +114,12 @@ const marketAnalysis = [
     category: "Business Intelligence",
     description: "Deep dive into enterprise AI adoption and business impact.",
     growth: "78% Adoption Rate"
-  }
-];
+  };
 const industryImpact = [
   { icon: <Brain className="h-6 w-6 text-white" />name: "Healthcare"adoption: "92%"roi: "450%" },
   { icon: <Target className="h-6 w-6 text-white" />name: "Finance"adoption: "88%"roi: "380%" },
   { icon: <Users className="h-6 w-6 text-white" />name: "Manufacturing"adoption: "85%"roi: "420%" },
   { icon: <Globe className="h-6 w-6 text-white" />name: "Retail"adoption: "78%"roi: "320%" }
-];
 const futurePredictions = [
   {
     title: "Artificial General Intelligence",
@@ -134,5 +130,4 @@ const futurePredictions = [
     title: "Quantum AI Revolution",
     description: "Quantum computing will enable unprecedented AI power.",
     timeline: "2026-2028"
-  }
-];
+  };

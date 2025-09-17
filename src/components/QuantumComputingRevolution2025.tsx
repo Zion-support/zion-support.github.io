@@ -1,6 +1,60 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+CpuZapAtomShieldTargetTrendingUpGlobeLock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingRevolution2025: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeFeaturesetActiveFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setActiveFeature(prev => (prev + 1) % 4);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const quantumFeatures = [
+    {
+      title: "Error-Corrected Quantum Computers",
+      description: "Breakthrough quantum error correction enabling stable quantum computation at scale",
+      icon: Cpu,
+      metrics: "99.99% Quantum Fidelity",
+      color: "from-blue-600 to-cyan-600"
+    },
+    {
+      title: "Quantum Supremacy Achievement",
+      description: "Quantum computers solving problems impossible for classical computers",
+      icon: Zap,
+      metrics: "10^18 Operations/Second",
+      color: "from-purple-600 to-pink-600"
+    },
+    {
+      title: "Quantum Internet Infrastructure",
+      description: "Global quantum communication network with unbreakable encryption",
+      icon: Globe,
+      metrics: "Instant Global Transfer",
+      color: "from-green-600 to-emerald-600"
+    },
+    {
+      title: "Quantum-AI Fusion",
+      description: "Revolutionary combination of quantum computing and artificial intelligence",
+      icon: Atom,
+      metrics: "Exponential AI Acceleration",
+      color: "from-orange-600 to-red-600"
+    }
+  ];
+
+  const capabilities = [
+    { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" },
+    { icon: TrendingUptext: "Exponential Speed"description: "Millions of times faster processing" },
+    { icon: Shieldtext: "Quantum Advantage"description: "Solve impossible problems" },
+    { icon: Locktext: "Secure Communications"description: "Quantum key distribution" }
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20"

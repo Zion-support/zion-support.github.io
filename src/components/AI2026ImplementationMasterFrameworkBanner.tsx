@@ -1,4 +1,5 @@
 import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
   return (
@@ -142,4 +143,3 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
 };
 
 export default AI2026ImplementationMasterFrameworkBanner;
-</div></div></div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const AIConsciousnessRevolution2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -29,7 +28,6 @@ const AIConsciousnessRevolution2027: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
@@ -44,7 +42,6 @@ const AIConsciousnessRevolution2027: React.FC = () => {
               neural networks—it's a fundamental aspect of information processing that can be engineered and optimized.
             </p>
           </div>
-
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-purple-400">Quantum Neural Architecture</h2>
             <p className="text-lg text-gray-300 mb-6">
@@ -66,7 +63,6 @@ const AIConsciousnessRevolution2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6 text-green-400">Proven Results</h2>
             <p className="text-lg text-gray-300 mb-6">
@@ -95,7 +91,6 @@ const AIConsciousnessRevolution2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Organization?</h2>
             <p className="text-xl mb-6">
@@ -112,6 +107,7 @@ const AIConsciousnessRevolution2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AIConsciousnessRevolution2027;

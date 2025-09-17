@@ -1,6 +1,59 @@
-import React from 'react';
+"use client";
+'use client';
 
-const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  ArrowRight
+  Star
+  Zap
+  TrendingUp,
+  Users,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  BarChart3,
+  Eye,
+  MousePointer,
+  Settings,
+  Code,
+  Database,
+  Cpu,
+  Network
+} from 'lucide-react';
+
+const InteractiveTechShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const features = [
+    { icon: Braintext: 'AI 'Automation', 'color: 'from-blue-500 to-purple-500' },
+    { icon: Shieldtext: ''Cybersecurity', 'color: 'from-red-500 to-orange-500' },
+    { icon: Cloudtext: 'Cloud 'Solutions', 'color: 'from-green-500 to-teal-500' },
+    { icon: BarChart3text: 'Data 'Analytics', 'color: 'from-purple-500 to-pink-500' }
+  ];
+
+  const stats = [
+    { value: '10'x', 'label: 'Performance Gain' },
+    { value: '99.7%'label: 'Accuracy Rate' },
+    { value: '<2's', 'label: 'Response Time' },
+    { value: '500+'label: 'Live Demos' }
+  ];
+
+  const demoSteps = [
+    'Real-time Process Analysis',
+    'AI-Powered Optimization',
+    'Live Performance Metrics',
+    'Instant Results Display'
+  ];
+
+  if (!isVisible) return null;
+
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16 overflow-hidden">
       {/* Animated Background */}
@@ -145,4 +198,3 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2025PromotionBanner;
-</div></div>

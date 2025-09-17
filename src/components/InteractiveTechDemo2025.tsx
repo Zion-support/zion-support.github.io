@@ -223,7 +223,7 @@ import {
                 <span className="text-purple-300 font-mono">{demoData.consciousnessLevel.toFixed(1)}%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-3">
-                <div
+                <motion.div
                   className="bg-gradient-to-r from-purple-400 to-pink-400 h-3 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${demoData.consciousnessLevel}%` }}

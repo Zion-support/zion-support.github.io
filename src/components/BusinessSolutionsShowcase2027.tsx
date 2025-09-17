@@ -1,6 +1,162 @@
-import React from 'react';
+"use client";
+'use client';
 
-const BusinessSolutionsShowcase2027: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Building2
+  TrendingUp
+  Users
+  Shield
+  Zap
+  Target
+  BarChart3
+  Globe
+  Cpu
+  Database
+  Cloud
+  Settings,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Lightbulb,
+  Rocket,
+  Brain,
+  Lock
+} from 'lucide-react';
+
+const BusinessSolutionsShowcase2027 = () => {
+  const [activeCategorysetActiveCategory] = useState('enterprise');
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const categories = {
+    enterprise: {
+      title: 'Enterprise Solutions',
+      subtitle: 'Comprehensive enterprise-grade solutions for large organizations',
+      icon: Building2,
+      color: 'from-blue-600 to-indigo-600',
+      solutions: [
+        {
+          title: 'AI-Powered Business Intelligence',
+          description: 'Advanced analytics and insights powered by machine learning algorithms',
+          features: ['Real-time 'Analytics', 'Predictive 'Modeling', 'Custom Dashboards'],
+          icon: BarChart3,
+          roi: '300% ROI'
+        },
+        {
+          title: 'Enterprise Security Suite',
+          description: 'Comprehensive security solutions protecting your digital assets',
+          features: ['Zero-Trust 'Architecture', 'AI Threat 'Detection', 'Compliance Management'],
+          icon: Shield,
+          roi: '99.9% Security'
+        },
+        {
+          title: 'Cloud Infrastructure Management',
+          description: 'Scalable cloud solutions optimized for enterprise workloads',
+          features: ['Multi-Cloud 'Support', 'Auto-'Scaling', 'Cost Optimization'],
+          icon: Cloud,
+          roi: '50% Cost Reduction'
+        }
+      ]
+    },
+    startup: {
+      title: 'Startup Solutions',
+      subtitle: 'Rapid deployment solutions designed for growing startups',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
+      solutions: [
+        {
+          title: 'Rapid MVP Development',
+          description: 'Fast-track your product development with our proven frameworks',
+          features: ['2-Week 'Delivery', 'Scalable 'Architecture', 'Technical Support'],
+          icon: Zap,
+          roi: '80% Faster Launch'
+        },
+        {
+          title: 'Growth Analytics Platform',
+          description: 'Data-driven insights to accelerate your startup growth',
+          features: ['User Behavior 'Analysis', 'Conversion 'Tracking', 'Growth Hacking Tools'],
+          icon: TrendingUp,
+          roi: '200% Growth Rate'
+        },
+        {
+          title: 'Automated Operations',
+          description: 'Streamline operations with intelligent automation tools',
+          features: ['Process 'Automation', 'Workflow 'Optimization', 'Resource Management'],
+          icon: Settings,
+          roi: '60% Efficiency Gain'
+        }
+      ]
+    },
+    smb: {
+      title: 'SMB Solutions',
+      subtitle: 'Affordable yet powerful solutions for small and medium businesses',
+      icon: Users,
+      color: 'from-purple-600 to-pink-600',
+      solutions: [
+        {
+          title: 'Digital Transformation Package',
+          description: 'Complete digital transformation tailored for SMBs',
+          features: ['Process 'Digitization', 'Customer 'Experience', 'Operational Efficiency'],
+          icon: Lightbulb,
+          roi: '150% Productivity'
+        },
+        {
+          title: 'Customer Relationship Management',
+          description: 'AI-powered CRM to enhance customer relationships',
+          features: ['Lead 'Management', 'Sales 'Automation', 'Customer Insights'],
+          icon: Target,
+          roi: '40% Sales Increase'
+        },
+        {
+          title: 'Financial Management Suite',
+          description: 'Comprehensive financial tools for better business management',
+          features: ['Expense 'Tracking', 'Revenue 'Analytics', 'Financial Forecasting'],
+          icon: BarChart3,
+          roi: '25% Cost Savings'
+        }
+      ]
+    }
+  };
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CEOTechCorp",
+      company: "Fortune 500",
+      content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 300% ROI in just 6 months.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "FounderStartupXYZ",
+      company: "Series A Startup",
+      content: "Their rapid MVP development helped us launch 3 months ahead of schedule. The quality and speed were incredible.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Operations DirectorLocalBiz",
+      company: "SMB",
+      content: "The digital transformation package revolutionized our operations. 'We', 're now 60% more efficient and our customers love the new experience.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
+  const stats = [
+    { number: "500+"label: "Projects Completed"icon: CheckCircle },
+    { number: "99.9%"label: "Client Satisfaction"icon: Star },
+    { number: "300%"label: "Average ROI"icon: TrendingUp },
+    { number: "24/7"label: "Support Available"icon: Shield }
+  ];
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}

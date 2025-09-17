@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-import { Menu, X, ChevronDown, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ModernHeader: React.FC = () => {
   return (

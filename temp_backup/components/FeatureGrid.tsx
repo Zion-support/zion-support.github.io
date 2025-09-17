@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const FeatureGrid: React.FC = () => {
   return (

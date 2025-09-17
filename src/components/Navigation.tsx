@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
@@ -15,10 +14,8 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
-
 import React, { useState } from './react';
 import Link from './next / link';
-
 import {
   Menu,
   X,
@@ -30,7 +27,6 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-
   Instagram,
   Github,
   ArrowRight,
@@ -40,32 +36,23 @@ import {
   Shield,
   Zap,
   Globe,
-
 ursor/integrate-build-improve-and-re-verify-8f7d
-
   BarChart3,
   Search,;
-
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
   BarChart3
 } from 'lucide-react;
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-
-
 import React, { useState } from "react";
 import Link from "next/link";
 import {
 origin/automation-improvements-final
-
-
   Menu
   X
   ChevronDown
@@ -89,8 +76,10 @@ origin/automation-improvements-final
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
 origin/main
+};
+
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -100,7 +89,8 @@ export default function Navigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 } from './lucide-react';
 import SearchModal from "./SearchModal";
-;
+
+
 export default /**
  * Navigation - Function description
  */
@@ -111,7 +101,6 @@ function Navigation() {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
   const [isResourcesOpen, setIsResourcesOpen] = useState (false);
   const [isSearchOpen, setIsSearchOpen] = useState (false);
-;
   const services = [;
     {
       name: "AI Services"
@@ -150,7 +139,6 @@ function Navigation() {
       icon: Shield
     }
   ];
-;
   const solutions = [;
     {
       name: "Enterprise Solutions",
@@ -442,7 +430,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
-;
   const quick_links = [;
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
@@ -451,7 +438,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     { name: "Support", href: "/support" },
     { name: "Status", href: "/status" },
   ];
-;
   return (
     <>;
       {/* Top Bar */}
@@ -1141,4 +1127,3 @@ origin/automation-improvements-final
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
-}

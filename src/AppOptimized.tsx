@@ -2,8 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
+// Redux store removed - using React Query for state management
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import MobileOptimizer from './components/MobileOptimizer';
@@ -11,7 +10,6 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOHead from './components/SEOHead';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -19,7 +17,6 @@ const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
-
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,8 +37,7 @@ const AppOptimized: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
-          <Provider store={store}>
-            <SecurityEnhancer>
+          <SecurityEnhancer>
               <AccessibilityEnhancer>
                 <MobileOptimizer>
                   <Router>
@@ -63,7 +59,6 @@ const AppOptimized: React.FC = () => {
                 </MobileOptimizer>
               </AccessibilityEnhancer>
             </SecurityEnhancer>
-          </Provider>
         </QueryClientProvider>
       </HelmetProvider>
     </ErrorBoundary>

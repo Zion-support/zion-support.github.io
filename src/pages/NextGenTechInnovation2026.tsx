@@ -16,7 +16,6 @@ import {
   Target,
   Rocket
 } from 'lucide-react';
-
 const NextGenTechInnovation2026: React.FC = () => {
   const innovations = [
     {
@@ -62,14 +61,12 @@ const NextGenTechInnovation2026: React.FC = () => {
       color: "from-teal-500 to-blue-500"
     }
   ];
-
   const stats = [
     { icon: Users, value: "10M+", label: "Active Users" },
     { icon: Target, value: "99.9%", label: "Accuracy Rate" },
     { icon: TrendingUp, value: "500%", label: "Performance Gain" },
     { icon: Rocket, value: "24/7", label: "Autonomous Operations" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -111,7 +108,6 @@ const NextGenTechInnovation2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +130,6 @@ const NextGenTechInnovation2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovations Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,7 +146,6 @@ const NextGenTechInnovation2026: React.FC = () => {
               Discover the cutting-edge innovations that will define the next decade of technological advancement.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
               <motion.div
@@ -165,15 +159,12 @@ const NextGenTechInnovation2026: React.FC = () => {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${innovation.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <innovation.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {innovation.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-6">
                     {innovation.description}
                   </p>
-                  
                   <ul className="space-y-2">
                     {innovation.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-400">
@@ -188,7 +179,6 @@ const NextGenTechInnovation2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -224,6 +214,7 @@ const NextGenTechInnovation2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NextGenTechInnovation2026;

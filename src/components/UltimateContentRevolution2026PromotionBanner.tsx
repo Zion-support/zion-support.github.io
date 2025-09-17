@@ -1,6 +1,36 @@
-import React from 'react';
+"use client";
+'use client';
 
-const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  ArrowRight
+  X,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
+  Award
+} from 'lucide-react';
+
+const UltimateContentRevolution2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -118,8 +148,8 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full"
-                y: [0-10],
-                opacity: [0.510.5],
+
+
               }}
                 duration: 2,
                 repeat: Infinity,
@@ -128,8 +158,8 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
             />
             <div
               className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full"
-                y: [0-80],
-                opacity: [0.30.80.3],
+
+
               }}
                 duration: 1.5,
                 repeat: Infinity,
@@ -139,8 +169,8 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
             />
             <div
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
-                y: [0-60],
-                opacity: [0.40.90.4],
+
+
               }}
                 duration: 2.5,
                 repeat: Infinity,
@@ -156,4 +186,3 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
 };
 
 export default UltimateContentRevolution2026PromotionBanner;
-</div></div></div></div></div></div>

@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function QuantumAIFusion2026PromotionBanner() {
   return (
@@ -65,4 +67,3 @@ export default function QuantumAIFusion2026PromotionBanner() {
       <div className="absolute bottom-1/4 left-1/3 w-5 h-5 bg-blue-400 rounded-full animate-bounce"></div>
       <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-ping"></div>
   );
-}

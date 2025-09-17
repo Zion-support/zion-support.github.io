@@ -9,35 +9,3 @@ const EnhancedFuturisticNavigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedFuturisticNavigation;
-=======
-</motion>
-</ChevronDown>
-</motion>
-</motion>
-</item>
-</motion>
-</ChevronDown>
-</item>
-</Search>
-</motion>
-</Menu>
-</X>
-</User>
-</Bell>
-</Search>
-</dropdownItem>
-</motion>
-</item>
-</ChevronDown>
-</item>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-import { useEffect } from 'react';,
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

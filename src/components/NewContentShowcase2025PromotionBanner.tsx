@@ -1,6 +1,70 @@
-import React from 'react';
+"use client";
+'use client';
 
-const NewContentShowcase2025PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  Sparkles,
+  Rocket
+} from 'lucide-react';
+
+const NewContentShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Rotate features every 3 seconds
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 3);
+    }3000);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Solutions',
+      description: 'Revolutionary AI technology',
+      color: 'from-purple-500 to-blue-500'
+    },
+    {
+      icon: Zap,
+      title: 'Automation',
+      description: 'Intelligent workflow automation',
+      color: 'from-green-500 to-teal-500'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Advanced cybersecurity protection',
+      color: 'from-red-500 to-orange-500'
+    }
+  ];
+
+  const stats = [
+    { label: 'New 'Features', 'value: '50+'icon: Sparkles },
+    { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
+    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star },
+    { label: 'ROI 'Increase', 'value: '300%'icon: TrendingUp }
+  ];
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -176,4 +240,3 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
 };
 
 export default NewContentShowcase2025PromotionBanner;
-</div></div></div></div></div></div>

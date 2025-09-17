@@ -1,6 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const NewContentShowcase2025: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const newContent = [
+    {
+      title: "Revolutionary Tech Breakthrough 2025",
+      description: "Experience the most revolutionary technology breakthroughs that are reshaping our world",
+      image: "🧠",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-900/50 to-pink-900/50",
+      features: ["Quantum Consciousness", "Neural Reality", "Holographic Displays", "Space Technology"],
+      link: "/pages/RevolutionaryTechBreakthrough2025"
+    },
+    {
+      title: "Next-Gen Innovation Hub 2025",
+      description: "Discover the most advanced innovation hub where cutting-edge technologies converge",
+      image: "🌟",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-900/50 to-cyan-900/50",
+      features: ["AI Revolution", "Quantum Computing", "Neural Interfaces", "Space Innovation"],
+      link: "/pages/NextGenInnovationHub2025"
+    },
+    {
+      title: "Advanced Tech Showcase 2025",
+      description: "Interactive technology showcase featuring cutting-edge innovations and experiences",
+      image: "🚀",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-900/50 to-emerald-900/50",
+      features: ["Interactive Demos", "Tech Carousel", "Live Statistics", "Future Vision"],
+      link: "/pages/AdvancedTechShowcase2025"
+    }
+  ];
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % newContent.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, newContent.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % newContent.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + newContent.length) % newContent.length);
+  };
+
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -180,4 +230,3 @@ const NewContentShowcase2025: React.FC = () => {
 };
 
 export default NewContentShowcase2025;
-</p></p>

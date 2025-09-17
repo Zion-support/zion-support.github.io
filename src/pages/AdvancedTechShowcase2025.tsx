@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-
 const AdvancedTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       id: 1,
@@ -68,7 +65,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
       applications: ["Financial forecasting", "Climate prediction", "Supply chain optimization", "Risk assessment"]
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -76,7 +72,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
         <meta name="description" content="Discover the most advanced technologies of 2025: Neural Quantum Processing, Holographic Data Storage, Bio-Integrated Computing, and Temporal Computing Systems." />
         <link rel="canonical" href="https://ziontechgroup.com/pages/AdvancedTechShowcase2025" />
       </Helmet>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
@@ -105,7 +100,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Technology Tabs */}
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -124,7 +118,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Technology Details */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -143,7 +136,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
                   <p className="text-lg mb-6 text-gray-300">
                     {technologies[activeTab].description}
                   </p>
-                  
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold mb-3 text-cyan-400">Key Features</h3>
                     <ul className="space-y-2">
@@ -156,7 +148,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">Applications</h3>
                   <div className="grid grid-cols-2 gap-3">
@@ -169,7 +160,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="mt-6 p-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-lg">
                     <h4 className="font-semibold mb-2">Ready to Transform Your Business?</h4>
                     <p className="text-sm text-gray-300 mb-3">
@@ -184,7 +174,6 @@ const AdvancedTechShowcase2025: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
         {/* Call to Action */}
         <div className="container mx-auto px-6 py-12 text-center">
           <motion.div
@@ -212,6 +201,7 @@ const AdvancedTechShowcase2025: React.FC = () => {
       </motion.div>
     </>
   );
+
 };
 
 export default AdvancedTechShowcase2025;

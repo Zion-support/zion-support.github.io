@@ -1,11 +1,3 @@
-  const [activeTab, setActiveTab] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  const techCategories = [
-    {
-      id: 0,
-=======
       id: 'ai-revolution',
       title: 'Next-Gen AI Revolution 2027',
       description: 'Conscious AI systems with quantum-enhanced processing',

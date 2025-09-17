@@ -1,6 +1,44 @@
-import React from 'react';
+"use client";
+'use client';
 
-const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  TrendingUp
+  Brain
+  Zap
+  ArrowRight
+  Star,
+  Sparkles,
+  Target,
+  Clock
+} from 'lucide-react';
+
+const AI2025TrendsInnovationPromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }2000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const stats = [
+    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" },
+    { icon: Brainvalue: "85%"label: "Efficiency Boost" },
+    { icon: Zapvalue: "60%"label: "Faster Processing" },
+    { icon: Targetvalue: "95%"label: "Success Rate" }
+  ];
+
+  const features = [
+    "Generative AI Revolution",
+    "Edge AI Computing"
+    "Quantum AI Integration",
+    "Predictive Analytics"
+  ];
+
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -147,4 +185,3 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
 };
 
 export default AI2025TrendsInnovationPromotionBanner;
-</div></div></div>

@@ -1,6 +1,130 @@
-import React from 'react';
+"use client";
+'use client';
 
-const InteractiveAIDemo2025: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  Bot
+  MessageCircle
+  Send
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Lightbulb,
+  Target,
+  TrendingUp
+} from 'lucide-react';
+
+const InteractiveAIDemo2025 = () => {
+  const [messagesetMessages] = useState([
+    {
+      id: 1,
+      type: 'ai',
+      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
+      timestamp: new Date(),
+      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
+    }
+  ]);
+  const [inputValuesetInputValue] = useState('');
+  const [isTypingsetIsTyping] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const aiResponses = [
+    {
+      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
+      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
+      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
+      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
+      icon: Target,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
+      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
+
+  const handleSendMessage = async () => {
+    if (!inputValue.trim() || isTyping) return;
+
+    const userMessage = {
+      id: messages.length + 1,
+      type: 'user',
+      content: inputValue,
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prevuserMessage]);
+    setInputValue(', ');
+    setIsTyping(true);
+
+    // Simulate AI response delay
+    setTimeout(() => {
+      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+      const aiMessage = {
+        id: messages.length + 2,
+        type: 'ai',
+        content: randomResponse.content,
+        timestamp: new Date(),
+        features: randomResponse.features,
+        icon: randomResponse.icon,
+        color: randomResponse.color
+      };
+      setMessages(prev => [...prevaiMessage]);
+      setIsTyping(false);
+    }1500);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  if (!isVisible) return null;
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}

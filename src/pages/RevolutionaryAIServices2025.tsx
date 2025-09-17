@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryAIServices2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
@@ -29,7 +28,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Revolutionary AI Services Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -38,7 +36,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
             Discover our cutting-edge AI services that are transforming businesses and creating new possibilities
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {/* Autonomous AI Agents */}
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -61,7 +58,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Quantum AI Processing */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">⚡</div>
@@ -83,7 +79,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Neural Interface AI */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧠</div>
@@ -105,7 +100,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* AI-Powered Analytics */}
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">📊</div>
@@ -127,7 +121,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* AI Content Generation */}
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">✍️</div>
@@ -149,7 +142,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* AI Cybersecurity */}
           <div className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🛡️</div>
@@ -172,14 +164,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
             <p className="text-xl opacity-90">See how our AI services are transforming businesses</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="flex items-center space-x-2 mb-4">
@@ -192,7 +182,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </p>
               <div className="text-sm font-semibold">- Sarah Johnson, CTO</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-blue-500 text-white text-sm rounded-full">$5M</span>
@@ -204,7 +193,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </p>
               <div className="text-sm font-semibold">- Dr. Michael Chen, CEO</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">99.9%</span>
@@ -218,7 +206,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -237,6 +224,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryAIServices2025;

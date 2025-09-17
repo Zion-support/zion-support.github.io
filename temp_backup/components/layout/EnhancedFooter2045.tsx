@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import Link from 'next/link';
-import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, ArrowUp,
-  Brain, Atom, Shield, Target, Cpu, Database,
-  Twitter, Linkedin, Github, Youtube, Facebook, Instagram
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedFooter2045: React.FC = () => {
   return (

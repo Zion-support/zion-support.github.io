@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
-
-import { useEffect, useState } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const index: React.FC = () => {
   return (

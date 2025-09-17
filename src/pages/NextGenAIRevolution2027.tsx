@@ -108,14 +108,6 @@
             </button>
           </motion.div>
         </div>
-=======
-          </motion.div>
-        </div>
-      </div>
-
-            </button>
-          </div>
-        </motion.div>
       </div>
 
       {/* AI Applications Section */}

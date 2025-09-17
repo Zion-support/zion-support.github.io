@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function DynamicContentShowcase() {
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -224,6 +226,6 @@ export default function DynamicContentShowcase() {
             >
               View Success Stories
   );
-};
+
 
 export default DynamicContentShowcase;

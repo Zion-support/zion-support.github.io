@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
@@ -106,4 +108,3 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
 };
 
 export default UltimateTechRevolution2032Banner;
-</div></div></div>

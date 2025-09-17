@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useCallback, Suspense } from 'react';
-import Layout from './layout/Layout';
-
-import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2,
-  Zap, Globe, Cpu, Eye, Atom, Heart
-} from 'lucide-react';
-
-// Lazy load heavy components
-const LazyServiceCard = React.lazy(() => import('./ServiceCard'));
-const LazyTestimonialSection = React.lazy(() => import('./TestimonialSection'));
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedHomepage2026: React.FC = () => {
   return (

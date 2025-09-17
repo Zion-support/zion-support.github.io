@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AISolutionsPage() {
   const aiSolutions = [
@@ -190,6 +192,6 @@ export default function AISolutionsPage() {
                   Explore Insights
     </>
   );
-};
+
 
 export default ai-solutions;

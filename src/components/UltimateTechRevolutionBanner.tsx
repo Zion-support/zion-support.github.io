@@ -101,4 +101,3 @@ const UltimateTechRevolutionBanner: React.FC = () => {
 };
 
 export default UltimateTechRevolutionBanner;
-</div></div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RevolutionaryContentBanner2034-2036: React.FC = () => {
+const RevolutionaryContentBanner2034_2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
@@ -64,4 +64,4 @@ const RevolutionaryContentBanner2034-2036: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentBanner2034-2036;
+export default RevolutionaryContentBanner2034_2036;

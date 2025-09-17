@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Zap, Shield, Target, TrendingUp, Users, Globe } from 'lucide-react';
-
 const AI2027RevolutionaryBreakthrough: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -39,7 +38,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Key Breakthroughs Section */}
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +50,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
               automation, and human-machine interaction.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Breakthrough 1 */}
             <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
@@ -70,7 +67,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
                 <li>• Autonomous learning adaptation</li>
               </ul>
             </div>
-
             {/* Breakthrough 2 */}
             <div className="bg-gradient-to-br from-green-900/30 to-blue-900/30 rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
@@ -87,7 +83,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
                 <li>• Real-time optimization</li>
               </ul>
             </div>
-
             {/* Breakthrough 3 */}
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -104,7 +99,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
                 <li>• Zero-trust architecture</li>
               </ul>
             </div>
-
             {/* Breakthrough 4 */}
             <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
@@ -121,7 +115,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
                 <li>• Scientific discovery acceleration</li>
               </ul>
             </div>
-
             {/* Breakthrough 5 */}
             <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
@@ -138,7 +131,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
                 <li>• Business optimization</li>
               </ul>
             </div>
-
             {/* Breakthrough 6 */}
             <div className="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
@@ -158,7 +150,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Impact Statistics */}
       <div className="py-24 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +162,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
               unprecedented opportunities for growth and innovation.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-blue-400 mb-2">85%</div>
@@ -192,7 +182,6 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-24 bg-black/40">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -222,6 +211,7 @@ const AI2027RevolutionaryBreakthrough: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AI2027RevolutionaryBreakthrough;

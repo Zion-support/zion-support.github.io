@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function UltimateInnovation2025Banner() {
   return (
@@ -60,4 +62,3 @@ export default function UltimateInnovation2025Banner() {
               <div className="text-3xl font-bold text-green-400 mb-1">10x</div>
               <div className="text-sm opacity-80">Faster Processing</div>
   );
-}

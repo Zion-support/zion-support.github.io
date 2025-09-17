@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
-import Link from 'next/link';
-import { 
-  ArrowRight, Play, Star, CheckCircle, 
-  Brain, Rocket, Shield, Atom, Users, Award
-} from 'lucide-react';
-
-const heroStats = [
-  { number: '500+', label: 'Enterprise Clients', icon: <Users className="w-5 h-5" /> },
-  { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-5 h-5" /> },
-  { number: '24/7', label: 'AI Support', icon: <Brain className="w-5 h-5" /> },
-  { number: '50+', label: 'AI Services', icon: <Rocket className="w-5 h-5" /> }
-];
-
-const heroFeatures = [
-  'AI-Powered Business Automation',
-  'Quantum Cybersecurity Solutions',
-  'Micro SAAS Rapid Deployment',
-  'Enterprise-Grade Infrastructure'
-];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedHeroSection: React.FC = () => {
   return (

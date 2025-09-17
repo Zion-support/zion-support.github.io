@@ -1,19 +1,15 @@
-import { Route, Routes } from "react-router-dom";
-import EnterprisePlans from "../pages/EnterprisePlans";
-import EnterpriseAdmin from "../pages/EnterpriseAdmin";
-import CompanyWorkspace from "../pages/CompanyWorkspace";
-import EnterpriseBilling from "../pages/EnterpriseBilling";
-import EnterpriseDemo from "../pages/EnterpriseDemo";
-
-export default function EnterpriseRoutes() {
+import React from 'react';
+const EnterpriseRoutes = () => {
   return (
-    <Routes>
-      {/* Enterprise Routes */}
-      <Route path="/enterprise" element={<EnterprisePlans />} />
-      <Route path="/plans/enterprise" element={<EnterprisePlans />} />
-      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />
-      <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
-      <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">EnterpriseRoutes</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default EnterpriseRoutes;

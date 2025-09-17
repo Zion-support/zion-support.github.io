@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, 
-  Facebook, Twitter, Linkedin, Instagram, 
-  Github, Youtube, Rocket, Brain, Atom, 
-  Shield, Zap, Star, Heart, ArrowUp
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticFooter2031: React.FC = () => {
   return (

@@ -1,16 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { 
-  CheckCircle, AlertCircle, XCircle, Clock, 
-  Activity, Server, Database, Globe, Zap,
-  ArrowRight, RefreshCw, TrendingUp, TrendingDown,
-  Wifi, Shield, Cpu, HardDrive, Network, Monitor,
-  Brain, Rocket, Building
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const status: React.FC = () => {
   return (

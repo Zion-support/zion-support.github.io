@@ -1,6 +1,36 @@
-import React from 'react';
+"use client";
+'use client';
 
-const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  DollarSign
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle,
+  Award
+} from 'lucide-react';
+
+const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1500);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -135,4 +165,3 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
 };
 
 export default BusinessSuccessStoriesShowcase2025PromotionBanner;
-</div></div></div></div></div>

@@ -130,15 +130,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
 
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
-        </div>
-      </div>
-
-          </div>
-        </div>
-      </div>
-
-          </div>
-=======
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
           <p className="text-xl opacity-80">Discover the technologies that will define the next decade</p>

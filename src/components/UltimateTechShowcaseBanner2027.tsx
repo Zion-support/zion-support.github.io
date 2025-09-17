@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const UltimateTechShowcaseBanner2027: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900 py-20">
@@ -11,22 +10,18 @@ const UltimateTechShowcaseBanner2027: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-full px-8 py-4 mb-8 border border-emerald-400/30">
             <span className="text-emerald-300 font-bold text-lg">🌟 Ultimate Tech Showcase 2027</span>
           </div>
-          
           <h2 className="text-6xl md:text-7xl font-bold text-white mb-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
             The Next Evolution
           </h2>
-          
           <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
             Experience the most advanced technology showcase featuring conscious AI, quantum computing, and revolutionary breakthroughs that define the future of human-AI collaboration.
           </p>
         </div>
-
         {/* Featured Technologies */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-10 border border-white/20 hover:border-emerald-400/50 transition-all duration-300 group">
@@ -57,7 +52,6 @@ const UltimateTechShowcaseBanner2027: React.FC = () => {
               Explore Consciousness AI →
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-10 border border-white/20 hover:border-teal-400/50 transition-all duration-300 group">
             <div className="flex items-center mb-6">
               <div className="text-5xl mr-4 group-hover:scale-110 transition-transform duration-300">⚛️</div>
@@ -87,7 +81,6 @@ const UltimateTechShowcaseBanner2027: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Technology Stack</h3>
@@ -114,7 +107,6 @@ const UltimateTechShowcaseBanner2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 mb-16 border border-white/10">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Proven Success Metrics</h3>
@@ -141,7 +133,6 @@ const UltimateTechShowcaseBanner2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-2xl p-12 border border-emerald-400/30">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -168,6 +159,7 @@ const UltimateTechShowcaseBanner2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechShowcaseBanner2027;

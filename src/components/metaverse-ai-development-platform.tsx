@@ -4,6 +4,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star } from 'lucide-r
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+};
+
 
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/metaverse-ai-development-platform'));
@@ -39,4 +41,3 @@ export default function MetaverseAIPlatformPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
   );
-}

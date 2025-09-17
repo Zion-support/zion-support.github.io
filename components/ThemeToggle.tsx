@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Sun, Moon, Monitor } from 'lucide-react';
-
-interface ThemeToggleProps {
-  currentTheme: 'dark' | 'light';
-  onThemeChange: (theme: 'dark' | 'light') => void;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
-  const themes = [
-    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
-    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
-  ] as const;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ThemeToggle: React.FC = () => {
   return (
