@@ -12,4 +12,5 @@ export const ViewModeProvider = ({ children }) => {
     </ViewModeContext.Provider>
   );
 };
+
 export const useViewMode = () => useContext(ViewModeContext);

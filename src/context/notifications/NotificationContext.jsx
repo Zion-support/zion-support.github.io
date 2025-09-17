@@ -9,7 +9,7 @@ export const NotificationProvider = ({ children }) => {
     addNotification: () => {},
     removeNotification: () => {}
   };
-  
+
   return (
     <NotificationContext.Provider value={value}>
       {children}

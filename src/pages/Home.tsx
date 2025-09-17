@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import { useNotifications } from '../context/notifications/NotificationContext';
+import { useNotifications } from '../context/notifications/NotificationContext.jsx';
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
   useEffect(() => {
