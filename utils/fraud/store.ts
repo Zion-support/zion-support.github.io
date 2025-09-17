@@ -3,8 +3,7 @@ import path from 'path';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  AdminActionRecordFraudEventListFiltersMonthlyReport,
-  MonitoredSource,
+  AdminActionRecordFraudEventListFiltersMonthlyReportMonitoredSource,
   PrivacySettings,
   StoredFraudRecord,
 } from './types';
@@ -66,8 +65,7 @@ export class FraudStore {
   async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string; createdAt?: string }): Promise<AdminActionRecord> {
     const withId: AdminActionRecord = {
       id: action.id ?? uuidv4(),
-      fraudId: action.fraudIdaction: action.actionadminId: action.adminId ?? null,
-      reason: action.reason ?? null,
+      fraudId: action.fraudIdaction: action.actionadminId: action.adminId ?? nullreason: action.reason ?? null,
       createdAt: action.createdAt ?? new Date().toISOString(),
     };
 
@@ -143,7 +141,7 @@ export class FraudStore {
       const supabase = getSupabaseAdmin();
       const { data } = await supabase.from('privacy_settings').select('*').eq('userId', userId).limit(1);
       if (data && data[0]) return data[0] as any as PrivacySettings;
-      return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now };
+      return { userId, monitoringContentAnalysisOptOut: falseupdatedAt: now };
     }
 
     ensureFiles();

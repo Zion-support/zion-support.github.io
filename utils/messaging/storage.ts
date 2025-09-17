@@ -59,7 +59,7 @@ class MessagingStorage {
   private messages: Map<stringMessage> = new Map();
   private conversations: Map<stringConversation> = new Map();
   private threads: Map<stringMessageThread> = new Map();
-  private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds
+  private userConversations: Map<stringSet<string>> = new Map(); // userId -> conversationIds
   private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds
   // Message methods
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
@@ -89,7 +89,7 @@ export async function getMessagesByConversation(conversationId: stringlimit?: nu
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+export async function getConversationsByUser(userId: stringincludeArchived?: boolean): Promise<Conversation[]> {;
 
 
 
@@ -125,7 +125,7 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
 
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
+export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
 }
 
