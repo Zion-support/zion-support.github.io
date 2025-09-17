@@ -2,26 +2,21 @@ export type SecurityConfig = {
   enableCSP?: boolean;
   sanitizeDOM?: boolean;
 };
-
 export const defaultSecurityConfig: SecurityConfig = {
   enableCSP: false,
   sanitizeDOM: true
 };
-
 export class SecurityManager {
   private config: SecurityConfig;
-
   constructor(config: SecurityConfig = defaultSecurityConfig) {
     this.config = config;
   }
-
   initialize(): void {
     if (typeof document === "undefined") return;
     if (this.config.sanitizeDOM) {
       this.stripInlineEventHandlers();
     }
   }
-
   private stripInlineEventHandlers(): void {
     try {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
@@ -42,6 +37,4 @@ export class SecurityManager {
     }
   }
 }
-
 export default SecurityManager;
-

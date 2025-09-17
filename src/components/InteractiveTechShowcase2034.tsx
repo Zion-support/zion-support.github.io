@@ -1,8 +1,6 @@
 import React, { useState }  from 'react';
-
 const InteractiveTechShowcase2034: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = [
     {
       id: "1",
@@ -89,7 +87,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
       demoUrl: "/pages/RevolutionaryTechShowcase2034"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -98,10 +95,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
         setIsAnimating(false);
       }, 500);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white mb-12">
       <div className="text-center mb-12">
@@ -112,7 +107,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
           Explore our revolutionary 2034 technologies with interactive demonstrations and real-time capabilities
         </p>
       </div>
-
       <div className="grid md:grid-cols-4 gap-4 mb-8">
         {Object.entries(technologies).map(([key, tech]) => (
           <button
@@ -129,7 +123,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
           </button>
         ))}
       </div>
-
       <div className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -156,7 +149,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
             Experience the future with interactive demonstrations of the most revolutionary technologies ever created
           </p>
         </div>
-
         {/* Technology Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Technology Cards */}
@@ -192,7 +184,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Active Technology Display */}
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
@@ -202,7 +193,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
                 <p className="text-xl opacity-90 leading-relaxed">{technologies[activeTech].description}</p>
               </div>
-
               {/* Features Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {technologies[activeTech].features.map((feature, index) => (
@@ -215,7 +205,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Metrics */}
               <div className="bg-white/10 rounded-2xl p-6 mb-8">
                 <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>
@@ -228,7 +217,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Interactive Controls */}
               <div className="space-y-4">
                 <a

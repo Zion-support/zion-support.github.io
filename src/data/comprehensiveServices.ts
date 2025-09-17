@@ -482,5 +482,4 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     reviews: { rating: 4.9, count: 45 }
   },
   ...newServices2026
-
 ];

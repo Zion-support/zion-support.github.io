@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function AppSafe() {
   return (
     <div style={{ padding: 16 }}>
@@ -8,4 +7,3 @@ export default function AppSafe() {
     </div>
   );
 }
-

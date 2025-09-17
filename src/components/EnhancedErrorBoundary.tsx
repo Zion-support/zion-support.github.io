@@ -1,24 +1,20 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
-
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -28,7 +24,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: ''
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -36,25 +31,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-
     // Log error to external service
     this.logError(error, errorInfo);
-
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
-
   private logError = (error: Error, errorInfo: ErrorInfo) => {
     const errorData = {
       message: error.message,
@@ -66,7 +56,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       retryCount: this.retryCount
     };
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Details');
@@ -75,11 +64,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Error Data:', errorData);
       console.groupEnd();
     }
-
     // Send to error reporting service
     this.sendToErrorService(errorData);
   };
-
   private sendToErrorService = (errorData: any) => {
     // In a real application, you would send this to your error reporting service
     // like Sentry, LogRocket, or Bugsnag
@@ -99,7 +86,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.warn('Failed to send error to reporting service:', e);
     }
   };
-
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
@@ -115,11 +101,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       window.location.reload();
     }
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleReportBug = () => {
     const errorData = {
       errorId: this.state.errorId,
@@ -128,7 +112,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       timestamp: new Date().toISOString()
     };
-
     // Create a mailto link with error details
     const subject = encodeURIComponent(`Bug Report - Error ID: ${this.state.errorId}`);
     const body = encodeURIComponent(`
@@ -138,20 +121,16 @@ Error Details:
 - URL: ${window.location.href}
 - Timestamp: ${new Date().toISOString()}
 - User Agent: ${navigator.userAgent}
-
 Please describe what you were doing when this error occurred:
 [Your description here]
     `);
-
     window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -174,7 +153,6 @@ Please describe what you were doing when this error occurred:
                 We're sorry, but something unexpected happened. Our team has been notified.
               </p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -191,7 +169,6 @@ Please describe what you were doing when this error occurred:
                 <p><strong>Retry Attempt:</strong> {this.retryCount + 1} of {this.maxRetries + 1}</p>
               </div>
             </motion.div>
-
             {this.props.showDetails && this.state.errorInfo && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -207,7 +184,6 @@ Please describe what you were doing when this error occurred:
                 </pre>
               </motion.div>
             )}
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -220,14 +196,12 @@ Please describe what you were doing when this error occurred:
               >
                 {this.retryCount < this.maxRetries ? 'Try Again' : 'Reload Page'}
               </button>
-              
               <button
                 onClick={this.handleReload}
                 className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 transform hover:scale-105"
               >
                 Reload Page
               </button>
-              
               <button
                 onClick={this.handleReportBug}
                 className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 transform hover:scale-105"
@@ -235,7 +209,6 @@ Please describe what you were doing when this error occurred:
                 Report Bug
               </button>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -250,9 +223,7 @@ Please describe what you were doing when this error occurred:
         </motion.div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;

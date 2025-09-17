@@ -1,9 +1,7 @@
 import React, { useState, useEffect }  from 'react';
-
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
   const showcases = [
     {
       id: "1",
@@ -54,7 +52,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       badge: "NEURAL"
     }
   ];
-
   const techDemos = [
     {
       id: "1",
@@ -78,7 +75,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       color: "green"
     }
   ];
-
   return (
     <div className="relative mb-16 overflow-hidden">
       {/* Main Showcase Banner */}
@@ -94,7 +90,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               Experience revolutionary technologies through interactive demonstrations and live demos
             </p>
           </div>
-
           {/* Interactive Demo Carousel */}
           <div 
             className="relative h-96 rounded-2xl overflow-hidden mb-8"
@@ -146,7 +141,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
             {/* Navigation Controls */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
               {showcases.map((_, index) => (
@@ -162,7 +156,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Interactive Tech Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {showcases.map((showcase, index) => (
@@ -188,7 +181,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </div>
         ))}
       </div>
-
       {/* Live Demo Statistics */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white mb-12">
         <div className="text-center mb-8">
@@ -214,7 +206,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
         <h3 className="text-4xl font-bold mb-6">🌟 Ready to Experience the Future?</h3>

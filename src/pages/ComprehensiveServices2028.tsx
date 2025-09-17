@@ -9,7 +9,6 @@ import {
   Smartphone,
   Star
 }  from 'lucide-react';
-
 const ComprehensiveServices2028: React.FC = () => {
   const serviceCategories = [
     {
@@ -97,26 +96,22 @@ const ComprehensiveServices2028: React.FC = () => {
       gradient: "from-pink-500 to-rose-500"
     }
   ];
-
   const stats = [
     { number: "500+", label: "Projects Completed", icon: Star },
     { number: "99.9%", label: "Client Satisfaction", icon: Star },
     { number: "24/7", label: "Support Available", icon: Globe },
     { number: "∞", label: "Scalability", icon: Brain }
   ];
-
   const technologies = [
     "Quantum Computing", "Neural Interfaces", "AI Consciousness", "Quantum Encryption",
     "Autonomous Systems", "Neural Networks", "Quantum AI", "Brain-Computer Interfaces",
     "Predictive Analytics", "Quantum Security", "Self-Evolving AI", "Infinite Scalability"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: "0", y: 20 }}
@@ -128,19 +123,16 @@ const ComprehensiveServices2028: React.FC = () => {
               <Star className="w-4 h-4 mr-2" />
               COMPREHENSIVE SERVICES 2028
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Revolutionary{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Tech Services
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our comprehensive suite of AI-powered services, 
               quantum computing solutions, and neural interface technologies.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -150,7 +142,6 @@ const ComprehensiveServices2028: React.FC = () => {
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -162,7 +153,6 @@ const ComprehensiveServices2028: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +175,6 @@ const ComprehensiveServices2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Service Categories */}
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,7 +191,6 @@ const ComprehensiveServices2028: React.FC = () => {
               Comprehensive technology services powered by quantum computing, AI consciousness, and neural interfaces.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -218,9 +206,7 @@ const ComprehensiveServices2028: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6">{category.description}</p>
-                
                 <div className="space-y-3">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex items-center">
@@ -234,7 +220,6 @@ const ComprehensiveServices2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technologies Section */}
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -251,7 +236,6 @@ const ComprehensiveServices2028: React.FC = () => {
               We leverage the most advanced technologies to deliver revolutionary solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map((tech, index) => (
               <motion.div
@@ -267,7 +251,6 @@ const ComprehensiveServices2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

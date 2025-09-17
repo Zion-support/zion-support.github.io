@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
-
 const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 'ai-revolution',
@@ -37,7 +35,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: '/pages/NeuralInterfaceRevolution2027'
     }
   ];
-
   const technologies = [
     {
       id: "0",
@@ -96,15 +93,12 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: "/pages/MolecularManufacturing2027"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % technologies.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -129,7 +123,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
         </div>
-
         {/* Tech Categories */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {techCategories.map((category, index) => (
@@ -152,7 +145,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Interactive Tech Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {technologies.map((tech, index) => (
@@ -184,7 +176,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">

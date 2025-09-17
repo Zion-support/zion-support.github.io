@@ -1,8 +1,6 @@
 import React, { useState }  from 'react';
-
 const RevolutionaryCaseStudies2029: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(0);
-
   const caseStudies = [
     {
       id: "1",
@@ -113,7 +111,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Dr. Robert Kim, Chief Scientist, UniComm Corporation"
     }
   ];
-
   const getResultColor = (value: string) => {
     if (value.includes('∞') || value.includes('100%')) return 'text-green-400';
     if (value.includes('+')) return 'text-cyan-400';
@@ -136,7 +133,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             Real-world success stories showcasing the transformative power of our revolutionary technologies
           </p>
         </div>
-
         {/* Case Study Navigation */}
         <div className="mb-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -160,7 +156,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Selected Case Study */}
         <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30 mb-16">
           <div className="grid lg:grid-cols-2 gap-8">
@@ -179,23 +174,19 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                   <div className="text-sm text-orange-400 font-semibold">{caseStudies[selectedCase].industry}</div>
                 </div>
               </div>
-
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-orange-400">Challenge</h3>
                   <p className="opacity-90">{caseStudies[selectedCase].challenge}</p>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-cyan-400">Solution</h3>
                   <p className="opacity-90">{caseStudies[selectedCase].solution}</p>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-emerald-400">Description</h3>
                   <p className="opacity-90">{caseStudies[selectedCase].description}</p>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2">
@@ -208,7 +199,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div>
               <h3 className="text-2xl font-bold mb-6 text-center">Results</h3>
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -237,7 +227,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                   <div className="text-sm opacity-90">Satisfaction</div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 border border-orange-400/30">
                 <h4 className="text-lg font-semibold mb-3 text-orange-400">Client Testimonial</h4>
                 <p className="italic mb-4 opacity-90">"{caseStudies[selectedCase].testimonial}"</p>
@@ -248,14 +237,12 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">📊 Overall Success Metrics</h2>
             <p className="text-xl opacity-90">Cumulative results across all our revolutionary technology implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
@@ -279,7 +266,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>

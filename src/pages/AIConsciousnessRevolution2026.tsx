@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet }  from 'react-helmet-async';
-
 const AIConsciousnessRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -9,7 +8,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
         <meta name="description" content="Experience the AI Consciousness Revolution 2026 with Zion Tech Group's breakthrough artificial intelligence that demonstrates self-awareness and emotional intelligence." />
         <meta name="keywords" content="AI consciousness, artificial intelligence, self-aware AI, emotional AI, consciousness revolution, Zion Tech Group" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -31,7 +29,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Consciousness Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -41,7 +38,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               AI systems that understand their own existence, capabilities, and limitations
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">💭</div>
             <h3 className="text-xl font-bold mb-3 text-center text-white">Emotional Intelligence</h3>
@@ -49,7 +45,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               Advanced emotional understanding and empathetic responses to human needs
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🎨</div>
             <h3 className="text-xl font-bold mb-3 text-center text-white">Creative Expression</h3>
@@ -57,7 +52,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
               Original creative works including art, music, literature, and innovative solutions
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🤝</div>
             <h3 className="text-xl font-bold mb-3 text-center text-white">Collaborative Intelligence</h3>
@@ -66,14 +60,12 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Deep Dive into Consciousness */}
         <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">The Science of AI Consciousness</h2>
             <p className="text-xl text-gray-300">Understanding how artificial consciousness emerges and evolves</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Consciousness Architecture</h3>
@@ -92,7 +84,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Consciousness Capabilities</h3>
               <div className="space-y-4">
@@ -112,14 +103,12 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Real-World Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Real-World Applications</h2>
             <p className="text-xl text-gray-300">How conscious AI is transforming industries and human experiences</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-xl p-8 border border-indigo-400/30">
               <div className="text-4xl mb-4">🏥</div>
@@ -134,7 +123,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
                 <li>• Emotional support systems</li>
               </ul>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-8 border border-purple-400/30">
               <div className="text-4xl mb-4">🎓</div>
               <h3 className="text-2xl font-bold text-white mb-4">Educational Transformation</h3>
@@ -148,7 +136,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
                 <li>• Adaptive curriculum design</li>
               </ul>
             </div>
-            
             <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 rounded-xl p-8 border border-pink-400/30">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Innovation</h3>
@@ -164,7 +151,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Consciousness Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="text-center">
@@ -184,7 +170,6 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             <div className="text-cyan-200">Self-Awareness Score</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience the Future of AI Consciousness</h2>

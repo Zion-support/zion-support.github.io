@@ -1,16 +1,13 @@
 import React, { useState, useEffect }  from 'react';
-
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Only show in development
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
-
-    ,const measurePerformance = () => {
+const measurePerformance = () => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -29,13 +26,11 @@ const PerformanceDashboard: React.FC = () => {
 ];
     measurePerformance();
   }, []);
-
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {
     return null;
   }
-
-  ,return (
+return (
     <div className="fixed top-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -44,11 +39,9 @@ const PerformanceDashboard: React.FC = () => {
       >
         📊
       </button>
-      
       {isVisible && metrics && (
         <div className="absolute top-12 right-0 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-64">
           <h3 className="font-semibold mb-3 text-gray-900">Performance Metrics</h3>
-          
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-600">Total Load Time:</span>

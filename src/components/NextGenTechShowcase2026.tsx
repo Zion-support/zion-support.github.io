@@ -1,8 +1,6 @@
 import React, { useState }  from 'react';
-
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const techCategories = {
     ai: {
       title: 'Advanced AI Systems',
@@ -109,7 +107,6 @@ const NextGenTechShowcase2026: React.FC = () => {
             Experience the cutting-edge technologies that are reshaping our world and defining the future
           </p>
         </div>
-
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(techCategories).map(([key, category]) => (
@@ -127,7 +124,6 @@ const NextGenTechShowcase2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Display */}
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8">
@@ -150,7 +146,6 @@ const NextGenTechShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Interactive Features */}
         <div className="mt-16 text-center">
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -159,19 +154,16 @@ const NextGenTechShowcase2026: React.FC = () => {
               <h4 className="font-semibold mb-2">AI Consciousness</h4>
               <p className="text-sm text-gray-300">Self-aware AI systems</p>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm p-6 rounded-xl border border-purple-400/30">
               <div className="text-4xl mb-3">⚡</div>
               <h4 className="font-semibold mb-2">Quantum Speed</h4>
               <p className="text-sm text-gray-300">Exponential processing</p>
             </div>
-            
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm p-6 rounded-xl border border-green-400/30">
               <div className="text-4xl mb-3">🧬</div>
               <h4 className="font-semibold mb-2">Gene Editing</h4>
               <p className="text-sm text-gray-300">Precision biology</p>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm p-6 rounded-xl border border-cyan-400/30">
               <div className="text-4xl mb-3">🚀</div>
               <h4 className="font-semibold mb-2">Space Travel</h4>
@@ -179,7 +171,6 @@ const NextGenTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">

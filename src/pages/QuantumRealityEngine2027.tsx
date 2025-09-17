@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumRealityEngine2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
@@ -17,7 +16,6 @@ const QuantumRealityEngine2027: React.FC = () => {
             creating, modifying, and controlling the fundamental laws of physics
           </p>
         </div>
-
         {/* Engine Capabilities */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
@@ -33,7 +31,6 @@ const QuantumRealityEngine2027: React.FC = () => {
               <li>• Time-space distortion</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Dimension Control</h3>
@@ -47,7 +44,6 @@ const QuantumRealityEngine2027: React.FC = () => {
               <li>• Reality bridging</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⏰</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Temporal Control</h3>
@@ -62,7 +58,6 @@ const QuantumRealityEngine2027: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Technical Specifications */}
         <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -71,7 +66,6 @@ const QuantumRealityEngine2027: React.FC = () => {
               Revolutionary quantum technology that defies the laws of physics as we know them
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -95,7 +89,6 @@ const QuantumRealityEngine2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4 text-indigo-400">Reality Manipulation Range</h3>
                 <div className="space-y-4">
@@ -118,7 +111,6 @@ const QuantumRealityEngine2027: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">Capabilities Matrix</h3>
@@ -141,7 +133,6 @@ const QuantumRealityEngine2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4 text-cyan-400">Safety Protocols</h3>
                 <div className="space-y-4">
@@ -166,7 +157,6 @@ const QuantumRealityEngine2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">Ready to Control Reality?</h2>

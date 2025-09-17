@@ -1,11 +1,8 @@
 import React, { useState }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
-
 const EnhancedSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isFocused, setIsFocused] = useState(false);
-
   const searchSuggestions = [
     { title: "Consciousness Computing", category: "AI", icon: "🧠" },
     { title: "Quantum Neural Networks", category: "Quantum", icon: "⚡" },
@@ -14,12 +11,10 @@ const EnhancedSearch: React.FC = () => {
     { title: "Neural Interface Matrix", category: "Neural", icon: "🔗" },
     { title: "Revolutionary Breakthrough", category: "Featured", icon: "🚀" }
   ];
-
   const filteredSuggestions = searchSuggestions.filter(item =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   return (
     <div className="relative max-w-2xl mx-auto">
       <motion.div
@@ -42,7 +37,6 @@ const EnhancedSearch: React.FC = () => {
             <span className="text-2xl">🔍</span>
           </div>
         </div>
-
         <AnimatePresence>
           {isFocused && searchTerm && (
             <motion.div
@@ -80,7 +74,6 @@ const EnhancedSearch: React.FC = () => {
           )}
         </AnimatePresence>
       </motion.div>
-
       {/* Quick Access Buttons */}
       <motion.div
         initial={{ opacity: "0", y: 20 }}

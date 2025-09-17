@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { Helmet }  from 'react-helmet-async';
-
 const RevolutionaryTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeTech, setActiveTech] = useState(0);
-
   const techCategories = [
     {
       id: 'ai-revolution',
@@ -37,7 +35,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       link: '/pages/NeuralInterface2027'
     }
   ];
-
   const technologies = [
     {
       id: "0",
@@ -96,15 +93,12 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       link: "/pages/MolecularManufacturing2027"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % technologies.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <Helmet>
@@ -112,7 +106,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
         <meta name="description" content="Experience the future of technology with our revolutionary 2027 showcase featuring AI, quantum computing, and neural interfaces." />
         <meta name="keywords" content="revolutionary technology, AI 2027, quantum computing, neural interfaces, future tech" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -125,7 +118,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             Experience the most revolutionary technologies that will reshape the future of humanity
           </p>
         </div>
-
         {/* Tech Categories */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {techCategories.map((category, index) => (
@@ -148,7 +140,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Interactive Tech Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {technologies.map((tech, index) => (
@@ -180,7 +171,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Innovation Timeline */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-8">
@@ -205,7 +195,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">

@@ -5,7 +5,6 @@ export const config = {
     baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://api.zionholdings.com',
     timeout: "30000",
     retryAttempts: "3"},
-  
   // App Configuration
   app: {
     name: 'Zion Holdings',
@@ -13,27 +12,23 @@ export const config = {
     environment: import.meta.env.MODE,
     isDevelopment: import.meta.env.DEV,
     isProduction: import.meta.env.PROD},
-  
   // Feature Flags
   features: {
     enableAnalytics: import.meta.env.VITE_ENABLE_ANALYTICS === 'true',
     enablePerformanceMonitoring: import.meta.env.VITE_ENABLE_PERFORMANCE_MONITORING === 'true',
     enableErrorReporting: import.meta.env.VITE_ENABLE_ERROR_REPORTING === 'true',
     enablePWA: import.meta.env.VITE_ENABLE_PWA === 'true'},
-  
   // Performance Configuration
   performance: {
     enableLazyLoading: "true",
     enableCodeSplitting: "true",
     enableImageOptimization: "true",
     maxConcurrentRequests: "6"},
-  
   // Security Configuration
   security: {
     enableCSP: "true",
     enableHSTS: "true",
     enableXSSProtection: "true"}} ,as const;
-
 // Type-safe environment variables
 export const env = {
   API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
@@ -42,5 +37,4 @@ export const env = {
   ENABLE_PERFORMANCE_MONITORING: import.meta.env.VITE_ENABLE_PERFORMANCE_MONITORING === 'true',
   ENABLE_ERROR_REPORTING: import.meta.env.VITE_ENABLE_ERROR_REPORTING === 'true',
   ENABLE_PWA: import.meta.env.VITE_ENABLE_PWA === 'true'} ,as const;
-
 export default config;

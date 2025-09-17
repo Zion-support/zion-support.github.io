@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentBanner2030: React.FC = () => {
   return (
     <div className="relative overflow-hidden mb-12">

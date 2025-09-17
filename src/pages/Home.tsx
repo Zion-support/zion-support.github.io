@@ -13,20 +13,17 @@ import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
 import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
 import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
-
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: "true", margin: "-100px" });
-
   useEffect(() => {
     setIsLoaded(true);
     if (isInView) {
       setIsVisible(true);
     }
   }, [isInView]);
-
   const handleGetStarted = useCallback(() => {
     // Smooth scroll to services section
     const servicesSection = document.getElementById('services');
@@ -34,7 +31,6 @@ const Home: React.FC = () => {
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
-
   const handleLearnMore = useCallback(() => {
     // Smooth scroll to about section
     const aboutSection = document.getElementById('about');
@@ -42,7 +38,6 @@ const Home: React.FC = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
@@ -56,7 +51,6 @@ const Home: React.FC = () => {
         <meta name="twitter:title" content="Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions" />
         <meta name="twitter:description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <motion.div 
           ref={ref}
@@ -92,22 +86,18 @@ const Home: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* NEW: Ultimate Tech Showcase 2027 Banner */}
         <div className="container mx-auto px-4">
           <UltimateTechShowcase2027Banner />
         </div>
-
         {/* NEW: Comprehensive Services 2028 Banner */}
         <div className="container mx-auto px-4">
           <ComprehensiveServices2028Banner />
         </div>
-
         {/* NEW: Revolutionary Tech Blog 2027 Banner */}
         <div className="container mx-auto px-4">
           <RevolutionaryTechBlog2027Banner />
         </div>
-
         {/* NEW: Ultimate Tech Showcase Banner */}
         <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
@@ -134,17 +124,14 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* NEW: Ultimate Breakthrough Banner */}
         <div className="container mx-auto px-4">
           <UltimateBreakthroughBanner />
         </div>
-
         {/* NEW: Neural Reality Interface Banner */}
         <div className="container mx-auto px-4">
           <NeuralRealityBanner />
         </div>
-
         {/* Services Grid */}
         <div id="services" className="container mx-auto px-4 py-20">
           <motion.div 
@@ -159,7 +146,6 @@ const Home: React.FC = () => {
               Explore our comprehensive range of cutting-edge technologies and services
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: "0", y: 50 }}
@@ -178,7 +164,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: "0", y: 50 }}
               whileInView={{ opacity: "1", y: 0 }}
@@ -196,7 +181,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: "0", y: 50 }}
               whileInView={{ opacity: "1", y: 0 }}
@@ -214,7 +198,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: "0", y: 50 }}
               whileInView={{ opacity: "1", y: 0 }}
@@ -232,7 +215,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: "0", y: 50 }}
               whileInView={{ opacity: "1", y: 0 }}
@@ -250,7 +232,6 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: "0", y: 50 }}
               whileInView={{ opacity: "1", y: 0 }}
@@ -270,25 +251,19 @@ const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
         </div>
-
         <div className="container mx-auto px-4 py-20">
           <RevolutionaryContentShowcase />
         </div>
-
         {/* Enhanced Content Advertising */}
         <EnhancedContentAdvertising />
-
         {/* Revolutionary Tech Advertising Banner */}
         <RevolutionaryTechAdvertisingBanner />
-
         {/* Interactive Tech Showcase */}
         <InteractiveTechShowcase />
-
         {/* Call to Action */}
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
@@ -308,7 +283,6 @@ const Home: React.FC = () => {
           </div>
         </div>
         </motion.section>
-
         {/* Lazy Loaded Components */}
         <React.Suspense fallback={<div className="py-20 text-center">Loading...</div>}>
           <CategoriesSection />
@@ -335,7 +309,6 @@ const Home: React.FC = () => {
           <ServicesShowcase />
           <RevolutionaryContentShowcase2027 />
         </React.Suspense>
-
         {/* About Section */}
         <div id="about" className="container mx-auto px-4 py-20">
           <motion.div 

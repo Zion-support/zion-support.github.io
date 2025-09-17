@@ -1,7 +1,6 @@
 // Notification provider component
 import React from 'react';
 import { NotificationContext }  from './NotificationContext';
-
 export const NotificationProvider = ({ children }) => {
   const value = {
     notifications: [],

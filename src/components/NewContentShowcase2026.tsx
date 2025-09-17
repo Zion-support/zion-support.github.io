@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link }  from 'react-router-dom';
-
 const NewContentShowcase2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -24,7 +22,6 @@ const NewContentShowcase2026: React.FC = () => {
             Discover the latest breakthroughs in AI, quantum computing, and advanced technologies that are reshaping our world.
           </p>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* AI Innovation Hub */}
@@ -41,7 +38,6 @@ const NewContentShowcase2026: React.FC = () => {
               Learn More →
             </Link>
           </div>
-
           {/* Quantum Computing */}
           <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
             <div className="text-4xl mb-4">⚛️</div>
@@ -56,7 +52,6 @@ const NewContentShowcase2026: React.FC = () => {
               Explore →
             </Link>
           </div>
-
           {/* Advanced Analytics */}
           <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
             <div className="text-4xl mb-4">📊</div>
@@ -72,7 +67,6 @@ const NewContentShowcase2026: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold text-white mb-6">

@@ -1,9 +1,7 @@
 import React, { useState, useEffect }  from 'react';
-
 const RevolutionaryContentShowcase2025: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const revolutionaryContent = [
     {
       id: "1",
@@ -51,7 +49,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/InterdimensionalRealityEngine2028"
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -60,7 +57,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
-
   const nextSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
   }
@@ -88,7 +84,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             Discover groundbreaking technologies that are reshaping our world and defining the next decade
           </p>
         </div>
-
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Navigation Buttons */}
@@ -100,7 +95,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -109,7 +103,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Auto-play Toggle */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -117,7 +110,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           >
             {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
           </button>
-
           {/* Content Slides */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -133,7 +125,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                         <div className="text-8xl mb-6">{content.image}</div>
                         <h3 className="text-4xl font-bold text-white mb-4">{content.title}</h3>
                         <p className="text-xl text-white/90 mb-6">{content.description}</p>
-                        
                         {/* Features */}
                         <div className="flex flex-wrap gap-2 mb-8">
                           {content.features.map((feature, featureIndex) => (
@@ -145,7 +136,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                        
                         <a
                           href={content.link}
                           className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
@@ -153,7 +143,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                           Explore {content.title} →
                         </a>
                       </div>
-                      
                       {/* Visual Element */}
                       <div className="relative">
                         <div className="w-full h-96 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
@@ -167,7 +156,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (
@@ -183,7 +171,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Revolutionary Content</h3>

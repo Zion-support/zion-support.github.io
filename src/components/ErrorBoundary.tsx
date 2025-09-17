@@ -1,44 +1,36 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -54,12 +46,10 @@ class ErrorBoundary extends Component<Props, State> {
                 </h3>
               </div>
             </div>
-            
             <div className="mt-4">
               <p className="text-sm text-gray-600">
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
-              
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-4">
                   <summary className="text-sm font-medium text-gray-700 cursor-pointer">
@@ -78,7 +68,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </details>
               )}
             </div>
-            
             <div className="mt-6">
               <button
                 onClick={() => window.location.reload()}
@@ -91,9 +80,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;

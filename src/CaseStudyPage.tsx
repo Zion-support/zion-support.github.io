@@ -1,9 +1,7 @@
 import React from 'react';
 import { useParams }  from 'react-router-dom';
-
 const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
@@ -15,5 +13,4 @@ const CaseStudyPage: React.FC = () => {
     </div>
   );
   }
-
 export default CaseStudyPage;

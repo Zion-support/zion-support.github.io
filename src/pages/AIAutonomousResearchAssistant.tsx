@@ -42,7 +42,6 @@ import {
   Shield
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-
 const AIAutonomousResearchAssistant: React.FC = () => {
   return (
     <>
@@ -51,7 +50,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered research assistant that autonomously conducts research, analyzes data, and generates insights for your business." />
         <meta name="keywords" content="AI research assistant, autonomous research, AI analytics, research automation, data analysis" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 overflow-hidden">
@@ -74,7 +72,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -106,7 +103,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -125,5 +121,4 @@ const AIAutonomousResearchAssistant: React.FC = () => {
     </>
   );
 };
-
 export default AIAutonomousResearchAssistant;

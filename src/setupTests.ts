@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -28,12 +27,10 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()}))});
-
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
   writable: "true",
   value: jest.fn()});
-
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
@@ -42,7 +39,6 @@ const localStorageMock = {
   clear: jest.fn()}
 ];
 global.localStorage = localStorageMock;
-
 // Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
@@ -51,14 +47,11 @@ const sessionStorageMock = {
   clear: jest.fn()}
 ];
 global.sessionStorage = sessionStorageMock;
-
 // Mock fetch
 global.fetch = jest.fn();
-
 // Mock console methods to reduce noise in tests
 const originalError = console.error;
 const originalWarn = console.warn;
-
 beforeAll(() => {
   console.error = (...args: any[]) => {
     if (
@@ -67,7 +60,7 @@ beforeAll(() => {
     ) {
       return;
     }
-    ,originalError.call(console, ...args);
+originalError.call(console, ...args);
   }
 ];
   console.warn = (...args: any[]) => {
@@ -78,11 +71,10 @@ beforeAll(() => {
     ) {
       return;
     }
-    ,originalWarn.call(console, ...args);
+originalWarn.call(console, ...args);
   }
 ];
 });
-
 afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;

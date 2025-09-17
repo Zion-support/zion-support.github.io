@@ -70,7 +70,7 @@ export async function safeFetch(url: "string", options: RequestInit = {}) {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      ,return response;
+return response;
     } ,catch (error) {
       lastError = error;
       // Wait before retrying (exponential backoff)

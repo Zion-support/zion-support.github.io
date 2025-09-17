@@ -6,8 +6,7 @@ export interface Webhook {
   secret?: string;
   failureCount: number;
 }
-
-,export interface WebhookEvent {
+export interface WebhookEvent {
   id: string;
   webhookId: string;
   event: string;
@@ -18,13 +17,11 @@ export interface Webhook {
   lastAttempt?: string;
   error?: string;
 }
-
-,export interface UseWebhooksOptions {
+export interface UseWebhooksOptions {
   autoRefresh?: boolean;
   refreshInterval?: number;
 }
-
-,export const useWebhooks = (options: UseWebhooksOptions = {}) => {
+export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const { autoRefresh = true, refreshInterval = 30000 } = options;
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [events, setEvents] = useState<WebhookEvent[]>([]);
@@ -39,7 +36,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to fetch webhooks');
       }
-      ,const data = await response.json();
+const data = await response.json();
       setWebhooks(data.webhooks || []);
     } ,catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhooks');
@@ -57,7 +54,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to fetch webhook events');
       }
-      ,const data = await response.json();
+const data = await response.json();
       setEvents(data.events || []);
     } ,catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
@@ -78,7 +75,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to create webhook');
       }
-      ,const newWebhook = await response.json();
+const newWebhook = await response.json();
       setWebhooks(prev => [...prev, newWebhook]);
       return newWebhook;
     } ,catch (err) {
@@ -101,7 +98,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to update webhook');
       }
-      ,const updatedWebhook = await response.json();
+const updatedWebhook = await response.json();
       setWebhooks(prev => prev.map(webhook => 
         webhook.id === id ? updatedWebhook : webhook
       ));
@@ -123,7 +120,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to delete webhook');
       }
-      ,setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
+setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
     } ,catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to delete webhook');
       throw err;
@@ -141,7 +138,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to test webhook');
       }
-      ,const result = await response.json();
+const result = await response.json();
       return result;
     } ,catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to test webhook');
@@ -160,7 +157,7 @@ export interface Webhook {
       if (!response.ok) {
         throw new Error('Failed to retry webhook event');
       }
-      ,const result = await response.json();
+const result = await response.json();
       return result;
     } ,catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to retry webhook event');

@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { Link }  from 'react-router-dom';
-
 const RevolutionaryContentBanner2027: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "🧠 Conscious AI Systems",
     "⚡ Quantum Consciousness", 
@@ -13,7 +11,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
     "⚗️ Molecular Manufacturing",
     "🌟 Holographic Reality"
   ];
-
   const bannerContent = [
     {
       title: "Revolutionary Content Banner 2027",
@@ -37,21 +34,17 @@ const RevolutionaryContentBanner2027: React.FC = () => {
       link: "/pages/TechBreakthrough2027"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [features.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 opacity-30"></div>
-      
       <div className="relative z-10 p-8 md:p-12">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -64,7 +57,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             Experience the most revolutionary content and innovations that will reshape the future
           </p>
         </div>
-
         {/* Main Banner Carousel */}
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           {bannerContent.map((banner, index) => (
@@ -87,7 +79,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Features Showcase */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {bannerContent.map((content, index) => (
@@ -112,7 +103,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Features Animation */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
@@ -122,7 +112,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation Dots */}
         <div className="flex justify-center mt-8 space-x-2">
           {bannerContent.map((_, index) => (

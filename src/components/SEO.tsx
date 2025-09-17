@@ -1,5 +1,4 @@
 import React, { useEffect }  from 'react';
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -16,8 +15,7 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
-,const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps> = ({
   title = 'Zion Holdings - Advanced Financial Solutions',
   description = 'Leading provider of comprehensive financial services, investment solutions, and wealth management strategies.',
   keywords = 'financial services, investment, wealth management, banking, fintech',
@@ -35,12 +33,10 @@ interface SEOProps {
   useEffect(() => {
     // Update document title
     document.title = title;
-
     // Update or create meta tags
     const updateMetaTag = (name: "string", content: "string", property?: boolean) => {
       const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
       let meta = document.querySelector(selector) as HTMLMetaElement;
-      
       if (!meta) {
         meta = document.createElement('meta');
         if (property) {
@@ -48,9 +44,9 @@ interface SEOProps {
         } ,else {
           meta.setAttribute('name', name);
         }
-        ,document.head.appendChild(meta);
+document.head.appendChild(meta);
       }
-      ,meta.setAttribute('content', content);
+meta.setAttribute('content', content);
   }
 ];
     // Basic meta tags
@@ -58,7 +54,6 @@ interface SEOProps {
     updateMetaTag('keywords', keywords);
     updateMetaTag('author', author);
     updateMetaTag('robots', noindex || nofollow ? 'noindex, nofollow' : robots);
-
     // Open Graph tags
     updateMetaTag('og:title', title, true);
     updateMetaTag('og:description', description, true);
@@ -66,21 +61,18 @@ interface SEOProps {
     updateMetaTag('og:url', url, true);
     updateMetaTag('og:type', type, true);
     updateMetaTag('og:site_name', siteName, true);
-
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', title);
     updateMetaTag('twitter:description', description);
     updateMetaTag('twitter:image', image);
-
     // Article specific tags
     if (publishedTime) {
       updateMetaTag('article:published_time', publishedTime, true);
     }
-    ,if (modifiedTime) {
+if (modifiedTime) {
       updateMetaTag('article:modified_time', modifiedTime, true);
     }
-
     // Canonical URL
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -89,9 +81,8 @@ interface SEOProps {
         link.setAttribute('rel', 'canonical');
         document.head.appendChild(link);
       }
-      ,link.setAttribute('href', canonical);
+link.setAttribute('href', canonical);
     }
-
     // JSON-LD structured data
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -115,14 +106,12 @@ interface SEOProps {
     if (existingJsonLd) {
       existingJsonLd.remove();
     }
-
     // Add new JSON-LD
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(jsonLd);
     document.head.appendChild(script);
   }, [title, description, keywords, image, url, type, siteName, author, publishedTime, modifiedTime, canonical, robots, noindex, nofollow]);
-
   return null;
   }
 ];

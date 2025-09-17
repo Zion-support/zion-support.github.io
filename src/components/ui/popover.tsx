@@ -1,5 +1,4 @@
 import * as React from "react";
-
 type PopoverRootProps = {
   children: React.ReactNode;
   open?: boolean;
@@ -10,8 +9,7 @@ type PopoverRootProps = {
 export function Popover({ children, className }: PopoverRootProps) {
   return <div className={className}>{children}</div>;
 }
-
-,type PopoverTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type PopoverTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   asChild?: boolean;
   }
 ];
@@ -25,7 +23,6 @@ export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTrigger
   }
 );
 PopoverTrigger.displayName = "PopoverTrigger";
-
 type PopoverContentProps = React.HTMLAttributes<HTMLDivElement> & {
   align?: "start" | "center" | "end";
   side?: "top" | "right" | "bottom" | "left";
@@ -41,6 +38,4 @@ export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentPro
   }
 );
 PopoverContent.displayName = "PopoverContent";
-
 export default Popover;
-

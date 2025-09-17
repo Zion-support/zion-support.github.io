@@ -1,14 +1,11 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
 const RevolutionaryServices2034: React.FC = () => {
   const [activeService, setActiveService] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const services = [
     {
       id: "1",
@@ -107,7 +104,6 @@ const RevolutionaryServices2034: React.FC = () => {
       category: "Dimensional Technology"
     }
   ];
-
   const categories = [
     "All Services",
     "Consciousness Technology",
@@ -117,18 +113,15 @@ const RevolutionaryServices2034: React.FC = () => {
     "Neural Technology",
     "Dimensional Technology"
   ];
-
   const filteredServices = activeService === 0 
     ? services 
     : services.filter(service => service.category === categories[activeService]);
-
   const stats = [
     { label: "Services Available", value: "1000+", icon: "🚀" },
     { label: "Clients Served", value: "100K+", icon: "👥" },
     { label: "Success Rate", value: "100%", icon: "✅" },
     { label: "Universal Reach", value: "∞", icon: "🌍" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -156,7 +149,6 @@ const RevolutionaryServices2034: React.FC = () => {
               Revolutionary services that transcend the boundaries of human understanding and capability
             </p>
           </div>
-
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
@@ -175,14 +167,12 @@ const RevolutionaryServices2034: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Services Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-4">Revolutionary Services</h2>
           <p className="text-2xl opacity-80">Choose from our comprehensive suite of advanced technologies</p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, index) => (
@@ -199,7 +189,6 @@ const RevolutionaryServices2034: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((service, index) => (
@@ -219,7 +208,6 @@ const RevolutionaryServices2034: React.FC = () => {
                   {service.pricing}
                 </div>
               </div>
-              
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center space-x-2 text-sm">
@@ -228,7 +216,6 @@ const RevolutionaryServices2034: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              
               <div className="flex flex-col space-y-2">
                 <button className={`w-full bg-gradient-to-r ${service.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Learn More →
@@ -240,7 +227,6 @@ const RevolutionaryServices2034: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">

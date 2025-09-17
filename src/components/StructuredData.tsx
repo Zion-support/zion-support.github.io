@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface StructuredDataProps {
   data: any;
 }
-
-,export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
+export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
   return (
     <script
       type="application/ld+json"

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion }  from 'framer-motion';
-
 const NextGenInnovationHub2025: React.FC = () => {
   const innovations = [
     {
@@ -32,14 +31,12 @@ const NextGenInnovationHub2025: React.FC = () => {
       gradient: "from-green-500 to-teal-600"
     }
   ];
-
   const stats = [
     { number: "500+", label: "Active Projects", icon: "🚀" },
     { number: "99.9%", label: "Success Rate", icon: "✅" },
     { number: "50+", label: "Countries Served", icon: "🌍" },
     { number: "24/7", label: "Support Available", icon: "🛠️" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -80,7 +77,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
@@ -108,7 +104,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Innovation Showcase */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-6">
@@ -126,7 +121,6 @@ const NextGenInnovationHub2025: React.FC = () => {
               Discover our breakthrough technologies that are reshaping the future and creating new possibilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-12">
             {innovations.map((innovation, index) => (
               <motion.div
@@ -144,9 +138,7 @@ const NextGenInnovationHub2025: React.FC = () => {
                     <div className={`w-16 h-1 bg-gradient-to-r ${innovation.gradient} rounded-full`}></div>
                   </div>
                 </div>
-                
                 <p className="text-gray-600 mb-6 text-lg">{innovation.description}</p>
-                
                 <div className="space-y-3 mb-8">
                   {innovation.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
@@ -155,7 +147,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -168,7 +159,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-6 text-center">

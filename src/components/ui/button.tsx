@@ -1,7 +1,6 @@
 import { cn }  from '@/lib/utils';
 import { cva, type VariantProps }  from 'class-variance-authority';
 import React, { forwardRef }  from 'react';
-
 const buttonVariants = cva(
   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
@@ -22,14 +21,12 @@ const buttonVariants = cva(
       variant: 'default',
       size: 'default'}}
 );
-
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   className?: string;
 }
-
-,const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
       <button
@@ -41,7 +38,6 @@ export interface ButtonProps
   }
 );
 Button.displayName = 'Button';
-
 export { Button, buttonVariants
   }
 ];

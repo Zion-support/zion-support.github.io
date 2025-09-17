@@ -1,18 +1,14 @@
 // Whitelabel context
 import React, { createContext, useContext, ReactNode }  from 'react';
-
 interface WhitelabelContextType {
   theme: string;
   branding: Record<string, any>;
 }
-
-,const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
-
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 interface WhitelabelProviderProps {
   children: ReactNode;
 }
-
-,export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
   const value: WhitelabelContextType = {
     theme: 'default',
     branding: {}
@@ -30,6 +26,6 @@ export const useWhitelabel = (): WhitelabelContextType => {
   if (context === undefined) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
-  ,return context;
+return context;
   }
 ];

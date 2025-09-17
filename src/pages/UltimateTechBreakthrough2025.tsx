@@ -1,14 +1,11 @@
 import React, { useState, useEffect }  from 'react';
 import { motion }  from 'framer-motion';
-
 const UltimateTechBreakthrough2025: React.FC = () => {
   const [activeBreakthrough, setActiveBreakthrough] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const breakthroughs = [
     {
       id: "1",
@@ -95,7 +92,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       timeline: "Q1 2026"
     }
   ];
-
   const applications = [
     {
       category: "Healthcare",
@@ -142,7 +138,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       icon: "💼"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -163,7 +158,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       avatar: "👩‍⚕️"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -191,7 +185,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               Witness the most revolutionary technological breakthroughs in human history. These innovations will reshape reality itself.
             </p>
           </div>
-
           {/* Breakthrough Showcase */}
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {breakthroughs.map((breakthrough, index) => (
@@ -209,16 +202,13 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     <p className="text-purple-300 text-sm">{breakthrough.timeline}</p>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {breakthrough.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-purple-300">Impact:</h4>
                   <p className="text-gray-300 text-sm">{breakthrough.impact}</p>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-blue-300">Key Features:</h4>
                   <ul className="text-gray-400 space-y-2 text-sm">
@@ -230,7 +220,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-green-400">{breakthrough.stats.efficiency}</div>
@@ -249,14 +238,12 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     <div className="text-xs text-gray-300">Cost Reduction</div>
                   </div>
                 </div>
-
                 <button className={`w-full bg-gradient-to-r ${breakthrough.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Explore Breakthrough →
                 </button>
               </motion.div>
             ))}
           </div>
-
           {/* Applications Section */}
           <motion.div
             initial={{ opacity: "0", y: 50 }}
@@ -268,7 +255,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Applications</h2>
               <p className="text-xl opacity-90">Transforming every aspect of human existence</p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {applications.map((app, index) => (
                 <motion.div
@@ -293,7 +279,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* Expert Testimonials */}
           <motion.div
             initial={{ opacity: "0", y: 50 }}
@@ -305,7 +290,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               <h2 className="text-4xl font-bold mb-4">💬 Expert Testimonials</h2>
               <p className="text-xl opacity-90">Hear from leading experts in the field</p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -325,7 +309,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: "0", y: 50 }}

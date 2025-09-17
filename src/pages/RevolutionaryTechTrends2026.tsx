@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
 const RevolutionaryTechTrends2026: React.FC = () => {
   const [currentTrend, setCurrentTrend] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const trends = [
     {
       title: "Synthetic Intelligence",
@@ -52,7 +50,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       gradient: "from-violet-600 to-fuchsia-600"
     }
   ];
-
   const marketData = [
     { sector: "AI & Machine Learning", growth: "450%", value: "$2.3T", timeline: "2026-2030" },
     { sector: "Quantum Computing", growth: "800%", value: "$1.8T", timeline: "2026-2030" },
@@ -60,7 +57,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
     { sector: "Holographic Tech", growth: "350%", value: "$800B", timeline: "2026-2030" },
     { sector: "Consciousness Tech", growth: "1000%", value: "$500B", timeline: "2026-2030" }
   ];
-
   const predictions = [
     {
       year: "2026",
@@ -93,7 +89,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       impact: "Transcendent"
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -102,7 +97,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, trends.length]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -136,7 +130,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Market Data */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -149,7 +142,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Market Projections 2026-2030</h2>
             <p className="text-xl opacity-80">Exponential growth in revolutionary technologies</p>
           </motion.div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {marketData.map((data, index) => (
               <motion.div
@@ -169,7 +161,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Trends Carousel */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -185,7 +176,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               creating new possibilities for human advancement.
             </p>
           </motion.div>
-
           {/* Main Trend Display */}
           <div className="relative max-w-6xl mx-auto mb-12">
             <div className="relative overflow-hidden rounded-2xl">
@@ -203,7 +193,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                       <div className="text-8xl mb-6">{trends[currentTrend].icon}</div>
                       <h3 className="text-4xl font-bold mb-6">{trends[currentTrend].title}</h3>
                       <p className="text-xl opacity-90 mb-8">{trends[currentTrend].description}</p>
-                      
                       <div className="flex items-center space-x-6 mb-8">
                         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
                           <div className="text-2xl font-bold">{trends[currentTrend].impact}</div>
@@ -214,12 +203,10 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                           <div className="text-sm opacity-80">Timeline</div>
                         </div>
                       </div>
-                      
                       <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                         Learn More →
                       </button>
                     </div>
-                    
                     <div>
                       <h4 className="text-2xl font-bold mb-6">Key Applications</h4>
                       <div className="grid grid-cols-2 gap-4">
@@ -234,7 +221,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                 </motion.div>
               </AnimatePresence>
             </div>
-
             {/* Navigation Controls */}
             <button
               onClick={() => setCurrentTrend((prev) => (prev - 1 + trends.length) % trends.length)}
@@ -244,7 +230,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
             <button
               onClick={() => setCurrentTrend((prev) => (prev + 1) % trends.length)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -253,7 +238,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-
             {/* Play/Pause Button */}
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -270,7 +254,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               )}
             </button>
           </div>
-
           {/* Trend Indicators */}
           <div className="flex justify-center space-x-3 mb-12">
             {trends.map((_, index) => (
@@ -285,7 +268,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Predictions */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -300,7 +282,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               Expert predictions for the next five years of technological advancement
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {predictions.map((prediction, index) => (
               <motion.div
@@ -329,7 +310,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">

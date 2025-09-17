@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion }  from 'framer-motion';
-
 const FeaturedNewContent: React.FC = () => {
   const featuredContent = [
     {
@@ -31,7 +30,6 @@ const FeaturedNewContent: React.FC = () => {
       features: ["Parallel Processing", "Infinite Power", "Dimension Sync"]
     }
   ];
-
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
@@ -52,7 +50,6 @@ const FeaturedNewContent: React.FC = () => {
             Discover our latest breakthrough innovations that are reshaping the future of technology
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
             <motion.div
@@ -70,7 +67,6 @@ const FeaturedNewContent: React.FC = () => {
                       {content.badge}
                     </span>
                   </div>
-                  
                   <div className="text-center mb-6">
                     <div className="text-8xl mb-4 group-hover:scale-110 transition-transform duration-300">
                       {content.image}
@@ -83,7 +79,6 @@ const FeaturedNewContent: React.FC = () => {
                       {content.description}
                     </p>
                   </div>
-
                   <div className="space-y-2 mb-8">
                     {content.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
@@ -92,7 +87,6 @@ const FeaturedNewContent: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   <motion.a
                     href={content.link}
                     whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
@@ -106,7 +100,6 @@ const FeaturedNewContent: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         <motion.div
           initial={{ opacity: "0", y: 30 }}
           whileInView={{ opacity: "1", y: 0 }}

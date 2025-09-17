@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
 const AdvancedAIConsciousness2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
   const consciousnessFeatures = [
     {
       title: "🧠 Quantum Consciousness Processing",
@@ -31,7 +29,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       impact: "99% human-level performance"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -55,15 +52,12 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       avatar: "👩‍⚕️"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-12">
@@ -96,7 +90,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             </span>
           </div>
         </motion.div>
-
         {/* Features Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {consciousnessFeatures.map((feature, index) => (
@@ -124,7 +117,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Interactive Demo Section */}
         <motion.div
           initial={{ opacity: "0", y: 20 }}
@@ -171,7 +163,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Testimonials Section */}
         <motion.div
           initial={{ opacity: "0", y: 20 }}
@@ -208,7 +199,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: "0", y: 20 }}

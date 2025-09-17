@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
 const NeuralInterfaceRevolution2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [connectionStatus, setConnectionStatus] = useState('disconnected');
-
   const neuralFeatures = [
     {
       title: "🧠 Direct Brain-Computer Interface",
@@ -31,7 +29,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       latency: "< 5ms"
     }
   ];
-
   const demoSessions = [
     {
       name: "Mind-Controlled Navigation",
@@ -52,7 +49,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       status: "ready"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setConnectionStatus(prev => 
@@ -60,10 +56,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
         prev === 'syncing' ? 'connected' : 'connected'
       );
     }, 3000);
-
     return () => clearInterval(timer);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-100">
       <div className="container mx-auto px-4 py-12">
@@ -96,7 +90,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </span>
           </div>
         </motion.div>
-
         {/* Connection Status */}
         <motion.div
           initial={{ opacity: "0", scale: 0.9 }}
@@ -138,7 +131,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Features Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {neuralFeatures.map((feature, index) => (
@@ -166,7 +158,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Interactive Demo Section */}
         <motion.div
           initial={{ opacity: "0", y: 20 }}
@@ -210,7 +201,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Technology Deep Dive */}
         <motion.div
           initial={{ opacity: "0", y: 20 }}
@@ -258,7 +248,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: "0", y: 20 }}

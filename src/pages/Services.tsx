@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Services: React.FC = () => {
   const services = [
     {
@@ -23,7 +22,6 @@ const Services: React.FC = () => {
       icon: '☁️'
     }
   ];
-
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">

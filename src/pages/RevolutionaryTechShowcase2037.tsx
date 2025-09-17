@@ -1,5 +1,4 @@
 import React, { useState, useEffect }  from 'react';
-
 const RevolutionaryTechShowcase2037: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -14,7 +13,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
             Interactive showcase of cutting-edge technologies that will define the future of humanity
           </p>
         </div>
-
           {/* Interactive Demo Grid */}
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -53,7 +51,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Selected Demo Details */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
               <div className="text-center mb-12">
@@ -63,7 +60,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                   {demos[activeDemo].description}
                 </p>
               </div>
-
               <div className="grid md:grid-cols-2 gap-12">
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Demo Features</h3>
@@ -76,7 +72,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="space-y-8">
                   <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-8">
                     <h3 className="text-2xl font-bold mb-6">Demo Statistics</h3>
@@ -101,7 +96,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-2xl p-8 border border-indigo-400/30">
                     <h3 className="text-xl font-bold mb-4">Experience Level</h3>
                     <div className="text-3xl font-bold text-indigo-300 mb-2">Revolutionary</div>
@@ -114,7 +108,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
               </div>
             </div>
           </div>
-
         {/* Interactive Demo Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🎮 Interactive Technology Demo</h2>
@@ -145,7 +138,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>

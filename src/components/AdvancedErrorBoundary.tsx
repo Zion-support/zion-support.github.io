@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -8,7 +7,6 @@ interface Props {
   enableReporting?: boolean;
   enableRecovery?: boolean;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
@@ -16,10 +14,8 @@ interface State {
   errorId?: string;
   retryCount: number;
 }
-
 class AdvancedErrorBoundary extends Component<Props, State> {
   private analytics: any;
-
   constructor(props: Props) {
     super(props);
     this.state = { 
@@ -27,7 +23,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       retryCount: 0 
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     return { 
@@ -36,15 +31,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       errorId 
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError, enableReporting = true } = this.props;
-    
     this.setState({ errorInfo });
-
     // Generate error ID for tracking
     const errorId = this.state.errorId || `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
     // Log error details
     const errorDetails = {
       errorId,
@@ -56,7 +47,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
       retryCount: this.state.retryCount
     };
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
@@ -65,23 +55,19 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       console.error('Error Details:', errorDetails);
       console.groupEnd();
     }
-
     // Report to analytics if enabled
     if (enableReporting && this.analytics) {
       this.analytics.trackError(error, 'error_boundary');
     }
-
     // Report to error tracking service in production
     if (process.env.NODE_ENV === 'production' && enableReporting) {
       this.reportError(errorDetails);
     }
-
     // Call custom error handler
     if (onError) {
       onError(error, errorInfo);
     }
   }
-
   // Report error to external service
   private reportError = (errorDetails: any) => {
     // Here you would integrate with services like Sentry, LogRocket, etc.
@@ -95,12 +81,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       console.warn('Failed to report error:', err);
     });
   };
-
   // Retry mechanism
   private handleRetry = () => {
     const { retryCount } = this.state;
     const maxRetries = 3;
-
     if (retryCount < maxRetries) {
       this.setState(prevState => ({
         hasError: false,
@@ -114,7 +98,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       window.location.reload();
     }
   };
-
   // Reset error boundary
   private handleReset = () => {
     this.setState({
@@ -125,12 +108,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       retryCount: 0
     });
   };
-
   // Go to home page
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   // Copy error details for support
   private handleCopyError = () => {
     const { error, errorInfo, errorId } = this.state;
@@ -142,7 +123,6 @@ Component Stack: ${errorInfo?.componentStack}
 URL: ${window.location.href}
 Timestamp: ${new Date().toISOString()}
     `.trim();
-
     navigator.clipboard.writeText(errorText).then(() => {
       alert('Error details copied to clipboard');
     }).catch(() => {
@@ -156,19 +136,15 @@ Timestamp: ${new Date().toISOString()}
       alert('Error details copied to clipboard');
     });
   };
-
   render() {
     const { hasError, error, errorInfo, errorId, retryCount } = this.state;
     const { children, fallback } = this.props;
-
     if (hasError) {
       if (fallback) {
         return fallback;
       }
-
       const isDevelopment = process.env.NODE_ENV === 'development';
       const maxRetries = 3;
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-800 text-white flex items-center justify-center p-4">
           <div className="text-center max-w-2xl mx-auto">
@@ -186,7 +162,6 @@ Timestamp: ${new Date().toISOString()}
                 </p>
               )}
             </div>
-            
             {/* Error Details for Development */}
             {isDevelopment && (
               <div className="bg-gray-800 rounded-lg p-6 mb-8 text-left">
@@ -209,7 +184,6 @@ Timestamp: ${new Date().toISOString()}
                 )}
               </div>
             )}
-
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <button
@@ -219,21 +193,18 @@ Timestamp: ${new Date().toISOString()}
               >
                 {retryCount >= maxRetries ? 'Max Retries Reached' : `Try Again (${retryCount}/${maxRetries})`}
               </button>
-              
               <button
                 onClick={this.handleReset}
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 Reset
               </button>
-              
               <button
                 onClick={this.handleGoHome}
                 className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 Go Home
               </button>
-              
               <button
                 onClick={() => window.location.reload()}
                 className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
@@ -241,7 +212,6 @@ Timestamp: ${new Date().toISOString()}
                 Reload Page
               </button>
             </div>
-
             {/* Support Information */}
             <div className="mt-8 text-sm text-gray-400">
               <p className="mb-2">If this problem persists, please contact our support team.</p>
@@ -272,20 +242,15 @@ Timestamp: ${new Date().toISOString()}
         </div>
       );
     }
-
     return children;
   }
 }
-
 // Hook version for functional components
 export const useErrorBoundary = () => {
   const analytics = useAnalytics();
-
   const reportError = (error: Error, context?: string) => {
     analytics.trackError(error, context);
   };
-
   return { reportError };
 };
-
 export default AdvancedErrorBoundary;

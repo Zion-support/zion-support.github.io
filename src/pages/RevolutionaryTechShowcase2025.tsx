@@ -1,15 +1,12 @@
 import React, { useState, useEffect }  from 'react';
 import { motion }  from 'framer-motion';
 import { Helmet }  from 'react-helmet-async';
-
 const RevolutionaryTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       id: "1",
@@ -64,7 +61,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-orange-600 to-red-600"
     }
   ];
-
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -85,7 +81,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       logo: "🧠"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -148,7 +143,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.
             </p>
           </div>
-
           {/* Technology Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {technologies.map((tech, index) => (
@@ -178,7 +172,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Interactive Demo Section */}
           <motion.div
             initial={{ opacity: "0", scale: 0.9 }}
@@ -190,7 +183,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Demo</h2>
               <p className="text-xl opacity-90">Experience our technologies in real-time</p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl mb-4">⚡</div>
@@ -212,7 +204,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           {/* Case Studies */}
           <motion.div
             initial={{ opacity: "0", y: 50 }}
@@ -224,7 +215,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
               <p className="text-xl opacity-90">Real results from real companies</p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
@@ -242,7 +232,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: "0", y: 50 }}

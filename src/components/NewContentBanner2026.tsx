@@ -1,24 +1,19 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
 import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, X }  from 'lucide-react';
-
 const NewContentBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   const slides = [
     {
       title: "🚀 AI Revolutionary Breakthrough 2026",
@@ -65,9 +60,7 @@ const NewContentBanner2026: React.FC = () => {
       features: ["Future Prediction", "Trend Analysis", "Risk Assessment", "Strategic Planning"]
     }
   ];
-
   if (isDismissed) return null;
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -81,7 +74,6 @@ const NewContentBanner2026: React.FC = () => {
           {/* Background Animation */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center justify-between">
               {/* Content */}
@@ -99,7 +91,6 @@ const NewContentBanner2026: React.FC = () => {
                     <div className={`bg-gradient-to-r ${slides[currentSlide].gradient} p-3 rounded-lg flex-shrink-0`}>
                       <slides[currentSlide].icon className="w-6 h-6 text-white" />
                     </div>
-
                     {/* Text Content */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center space-x-4 mb-2">
@@ -123,7 +114,6 @@ const NewContentBanner2026: React.FC = () => {
                       <p className="text-gray-300 text-xs">
                         {slides[currentSlide].description}
                       </p>
-                      
                       {/* Features */}
                       <div className="flex flex-wrap gap-2 mt-2">
                         {slides[currentSlide].features.slice(0, 2).map((feature, index) => (
@@ -144,7 +134,6 @@ const NewContentBanner2026: React.FC = () => {
                   </motion.div>
                 </AnimatePresence>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex items-center space-x-4 flex-shrink-0">
                 <motion.a
@@ -156,7 +145,6 @@ const NewContentBanner2026: React.FC = () => {
                   <span>{slides[currentSlide].cta}</span>
                   <ArrowRight className="w-4 h-4" />
                 </motion.a>
-                
                 <button
                   onClick={() => setIsDismissed(true)}
                   className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
@@ -167,7 +155,6 @@ const NewContentBanner2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-purple-900/30">
             <motion.div

@@ -1,8 +1,6 @@
 import React, { useState, useEffect }  from 'react';
-
 const RevolutionaryContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const banners = [
     {
       title: "🚀 Revolutionary Tech Breakthrough 2025",
@@ -19,7 +17,6 @@ const RevolutionaryContentBanner: React.FC = () => {
       textColor: "text-white"
     }
   ];
-
   const featuredContent = [
     {
       title: "Revolutionary Tech Breakthrough 2025",
@@ -45,20 +42,17 @@ const RevolutionaryContentBanner: React.FC = () => {
       badge: "TRENDING"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [banners.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 opacity-30"></div>
-      
       <div className="relative z-10 py-16 px-8">
         <div className="text-center">
           <div className="mb-8">
@@ -76,7 +70,6 @@ const RevolutionaryContentBanner: React.FC = () => {
             Discover groundbreaking content that's reshaping the future of technology and innovation
           </p>
         </div>
-
         {/* Main Banner Carousel */}
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           {banners.map((banner, index) => (
@@ -99,7 +92,6 @@ const RevolutionaryContentBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {featuredContent.map((content, index) => (
@@ -124,7 +116,6 @@ const RevolutionaryContentBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Navigation Dots */}
         <div className="flex justify-center mt-8 space-x-2">
           {banners.map((_, index) => (

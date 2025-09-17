@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link }  from 'react-router-dom';
-
 const Navigation: React.FC = () => {
   return (
     <nav id="navigation" className="bg-gray-800 bg-opacity-90 backdrop-blur-sm border-b border-gray-700" role="navigation" aria-label="Main navigation">
@@ -50,5 +49,4 @@ const Navigation: React.FC = () => {
     </nav>
   );
 }
-
 export default Navigation;

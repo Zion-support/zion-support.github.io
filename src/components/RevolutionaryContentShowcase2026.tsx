@@ -1,9 +1,7 @@
 import React, { useState }  from 'react';
 import { motion }  from 'framer-motion';
-
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const contentItems = [
     {
       title: "Revolutionary Tech Breakthrough 2026",
@@ -22,7 +20,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["Research Labs", "Innovation Process", "Global Network", "Breakthrough Ideas"]
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -34,7 +31,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             Discover the future of technology and innovation
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {contentItems.map((item, index) => (
             <motion.div

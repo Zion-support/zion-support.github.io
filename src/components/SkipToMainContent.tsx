@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const SkipToMainContent: React.FC = () => {
   return (
     <a

@@ -11,7 +11,7 @@ export const usePerformanceMonitor = () => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
-    ,const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     const metrics: Partial<PerformanceMetrics> = {};
     // Load time
@@ -47,7 +47,7 @@ export const usePerformanceMonitor = () => {
     if (navigation) {
       metrics.timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
     }
-    ,return metrics as PerformanceMetrics;
+return metrics as PerformanceMetrics;
   }, []);
   const logPerformanceMetrics = useCallback((metrics: PerformanceMetrics) => {
     console.group('🚀 Performance Metrics');
@@ -89,7 +89,7 @@ export const usePerformanceMonitor = () => {
     } ,else {
       window.addEventListener('load', handleLoad);
     }
-    ,return () => {
+return () => {
       window.removeEventListener('load', handleLoad);
   }
 ];

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Header: React.FC = () => {
   return (
     <header className="bg-gray-800 text-white py-4">
@@ -9,5 +8,4 @@ const Header: React.FC = () => {
     </header>
   );
   }
-
 export default Header;

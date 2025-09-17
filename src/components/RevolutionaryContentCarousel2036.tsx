@@ -1,8 +1,6 @@
 import React, { useState, useEffect }  from 'react';
-
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: "1",
@@ -45,14 +43,12 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       link: "/pages/UniversalConsciousnessNetwork2040"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
@@ -66,7 +62,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             Discover the most revolutionary technologies that will reshape humanity's future
           </p>
         </div>
-
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
             <div 
@@ -117,7 +112,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -132,7 +126,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}

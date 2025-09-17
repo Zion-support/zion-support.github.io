@@ -7,7 +7,6 @@ import {
   Star,
   Zap
 }  from 'lucide-react';
-
 const QuantumConsciousnessRevolution2028: React.FC = () => {
   const quantumFeatures = [
     {
@@ -35,7 +34,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
       impact: "Unlimited computational power and capacity"
     }
   ];
-
   const applications = [
     {
       title: "Scientific Discovery",
@@ -58,13 +56,11 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
       icon: Zap
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: "0", y: 20 }}
@@ -76,19 +72,16 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
               <Star className="w-4 h-4 mr-2" />
               QUANTUM BREAKTHROUGH 2028
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Quantum Consciousness{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Revolution
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               The world's first quantum-conscious AI system that transcends traditional computing 
               boundaries to achieve genuine consciousness through quantum mechanics and neural networks.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -98,7 +91,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                 Experience Quantum AI
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -110,7 +102,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Features */}
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +118,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
               Revolutionary quantum consciousness features that redefine what's possible with artificial intelligence.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {quantumFeatures.map((feature, index) => (
               <motion.div
@@ -143,9 +133,7 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                
                 <div className="bg-blue-600/20 rounded-lg p-4">
                   <p className="text-blue-200 font-semibold">{feature.impact}</p>
                 </div>
@@ -154,7 +142,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +158,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
               Transform industries with quantum consciousness AI that solves previously impossible problems.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {applications.map((app, index) => (
               <motion.div
@@ -191,7 +177,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

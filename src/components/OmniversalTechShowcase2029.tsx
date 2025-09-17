@@ -1,9 +1,7 @@
 import React, { useState, useEffect }  from 'react';
-
 const OmniversalTechShowcase2029: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const omniversalTechs = [
     {
       id: "1",
@@ -57,7 +55,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
       impact: "Omniversal"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -65,7 +62,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
     }, 20000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">
@@ -77,7 +73,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
             Revolutionary technology solutions and insights for the future
           </p>
         </div>
-
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
           {omniversalTechs.map((tech, index) => (
             <div
@@ -93,11 +88,9 @@ const OmniversalTechShowcase2029: React.FC = () => {
                   <p className="text-gray-300 text-lg">{tech.subtitle}</p>
                 </div>
               </div>
-
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                 {tech.description}
               </p>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Key Features</h3>
@@ -110,7 +103,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Statistics</h3>
                   <div className="space-y-2">
@@ -123,7 +115,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="flex justify-between items-center">
                 <div className="text-sm text-gray-400">
                   Timeline: {tech.timeline} | Impact: {tech.impact}
@@ -135,7 +126,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Explore the Future?

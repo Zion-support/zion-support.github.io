@@ -1,9 +1,7 @@
 import React, { useState }  from 'react';
 import { Link }  from 'react-router-dom';
-
 const UltimateContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all');
-
   const content = [
     {
       id: "1",
@@ -54,11 +52,9 @@ const UltimateContentShowcase2026: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2026"
     }
   ];
-
   const filteredContent = activeTab === 'all' 
     ? content 
     : content.filter(item => item.category === activeTab);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -71,7 +67,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Discover the latest breakthroughs in technology and innovation that are reshaping our world.
           </p>
         </div>
-
         {/* Filter Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {['all', 'ai', 'quantum', 'analytics', 'biotech', 'space', 'neural'].map((tab) => (
@@ -88,7 +83,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredContent.map((item) => (
@@ -108,7 +102,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">

@@ -14,7 +14,7 @@ export const useRequireAuth = (options: UseRequireAuthOptions = {}) => {
         navigate(redirectTo);
         return;
       }
-      ,if (requireRole && user?.role !== requireRole) {
+if (requireRole && user?.role !== requireRole) {
         navigate('/unauthorized');
         return;
       }

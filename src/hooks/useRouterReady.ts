@@ -16,7 +16,7 @@ export function useRouteChange() {
       window.next.router.events.on('routeChangeComplete', handleComplete)
       window.next.router.events.on('routeChangeError', handleComplete)
     }
-    ,return () => {
+return () => {
       if (typeof window !== 'undefined' && window.next) {
         window.next.router.events.off('routeChangeStart', handleStart)
         window.next.router.events.off('routeChangeComplete', handleComplete)

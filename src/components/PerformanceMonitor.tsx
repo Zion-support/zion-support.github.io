@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PerformanceOptimizer } from '../utils/performanceOptimizer';
-
 interface PerformanceMetrics {
   LCP?: number;
   FID?: number;
@@ -10,7 +9,6 @@ interface PerformanceMetrics {
   TTFB?: number;
   memory?: number;
 }
-
 interface PerformanceMonitorProps {
   showMetrics?: boolean;
   threshold?: {
@@ -20,7 +18,6 @@ interface PerformanceMonitorProps {
   };
   onThresholdExceeded?: (metric: string, value: number) => void;
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showMetrics = false,
   threshold = {
@@ -33,50 +30,39 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
-
   const checkThresholds = useCallback((newMetrics: PerformanceMetrics) => {
     const newAlerts: string[] = [];
-
     if (newMetrics.LCP && newMetrics.LCP > threshold.LCP) {
       newAlerts.push(`LCP is ${newMetrics.LCP.toFixed(0)}ms (threshold: ${threshold.LCP}ms)`);
       onThresholdExceeded?.('LCP', newMetrics.LCP);
     }
-
     if (newMetrics.FID && newMetrics.FID > threshold.FID) {
       newAlerts.push(`FID is ${newMetrics.FID.toFixed(0)}ms (threshold: ${threshold.FID}ms)`);
       onThresholdExceeded?.('FID', newMetrics.FID);
     }
-
     if (newMetrics.CLS && newMetrics.CLS > threshold.CLS) {
       newAlerts.push(`CLS is ${newMetrics.CLS.toFixed(3)} (threshold: ${threshold.CLS})`);
       onThresholdExceeded?.('CLS', newMetrics.CLS);
     }
-
     setAlerts(newAlerts);
   }, [threshold, onThresholdExceeded]);
-
   useEffect(() => {
     const optimizer = PerformanceOptimizer.getInstance();
     optimizer.init();
-
     const updateMetrics = () => {
       const newMetrics = optimizer.getMetrics();
       setMetrics(newMetrics);
       checkThresholds(newMetrics);
     };
-
     // Update metrics every 5 seconds
     const interval = setInterval(updateMetrics, 5000);
-
     // Initial update
     updateMetrics();
-
     return () => {
       optimizer.cleanup();
       clearInterval(interval);
     };
   }, [checkThresholds]);
-
   useEffect(() => {
     // Monitor memory usage
     if ('memory' in performance) {
@@ -87,7 +73,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     }
   }, []);
-
   const getMetricColor = (metric: string, value: number) => {
     switch (metric) {
       case 'LCP':
@@ -100,7 +85,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         return 'text-gray-400';
     }
   };
-
   const getMetricStatus = (metric: string, value: number) => {
     switch (metric) {
       case 'LCP':
@@ -119,11 +103,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         return 'Unknown';
     }
   };
-
   if (!showMetrics) {
     return null;
   }
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -142,7 +124,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               ✕
             </button>
           </div>
-
           <div className="space-y-3">
             {Object.entries(metrics).map(([key, value]) => (
               <div key={key} className="flex justify-between items-center">
@@ -159,7 +140,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               </div>
             ))}
           </div>
-
           {alerts.length > 0 && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
@@ -176,7 +156,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               </div>
             </motion.div>
           )}
-
           <div className="mt-4 pt-4 border-t border-gray-700">
             <button
               onClick={() => {
@@ -192,7 +171,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         </motion.div>
       )}
-
       {/* Toggle button */}
       <motion.button
         initial={{ opacity: 0 }}
@@ -207,5 +185,4 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     </AnimatePresence>
   );
 };
-
 export default PerformanceMonitor;

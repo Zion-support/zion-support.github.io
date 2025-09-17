@@ -1,5 +1,4 @@
 import React from 'react';
-
 const About: React.FC = () => {
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">

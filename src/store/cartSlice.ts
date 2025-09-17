@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
 interface CartItem {
   id: string;
   name: string;
@@ -7,19 +6,16 @@ interface CartItem {
   quantity: number;
   image?: string;
 }
-
 interface CartState {
   items: CartItem[];
   total: number;
   itemCount: number;
 }
-
 const initialState: CartState = {
   items: [],
   total: 0,
   itemCount: 0
 };
-
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -54,7 +50,5 @@ const cartSlice = createSlice({
     }
   }
 });
-
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
-
 export default cartSlice.reducer;

@@ -140,10 +140,10 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         Object.assign(headers, reqInit.headers as Record<string, string>);
       }
     }
-    ,if (authToken) {
+if (authToken) {
       headers['Authorization'] = `Bearer ${authToken}`;
     }
-    ,const withCreds = reqInit.withCredentials ?? defaultWithCreds;
+const withCreds = reqInit.withCredentials ?? defaultWithCreds;
     delete reqInit.withCredentials;
     const response = await fetch(url, {
       ...reqInit,
@@ -164,7 +164,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
           res = await h.fulfilled(res);
         }
       }
-      ,return res;
+return res;
     } ,else {
       const err: AxiosError = Object.assign(new Error('Request failed'), {
         response: "result",
@@ -174,7 +174,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
           await h.rejected(err);
         }
       }
-      ,throw err;
+throw err;
     }
   }
 ];

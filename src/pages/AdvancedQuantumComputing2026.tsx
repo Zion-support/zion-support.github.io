@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -31,7 +30,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Features Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -42,7 +40,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             Revolutionary technology solutions and insights for the future
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Quantum Supremacy</h3>

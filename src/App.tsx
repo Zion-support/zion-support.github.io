@@ -13,10 +13,8 @@ import UserExperienceOptimizer from "./components/UserExperienceOptimizer";
 import { PerformanceOptimizer } from "./utils/performanceOptimizer";
 import PerformanceMonitor from "./utils/performanceMonitor";
 import { useAnalytics } from "./hooks/useAnalytics";
-
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
-
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white flex items-center justify-center">
@@ -32,7 +30,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
-
 // Loading Component - now using the modern version
 const LoadingSpinner = () => (
   <ModernLoadingSpinner 
@@ -41,7 +38,6 @@ const LoadingSpinner = () => (
     size="lg"
   />
 );
-
 function App() {
   const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
     enableLazyLoading: true,
@@ -50,46 +46,37 @@ function App() {
     enablePrefetching: true,
     enableCaching: true
   });
-
   const { trackPageView, trackEvent } = useAnalytics();
-
   useEffect(() => {
     // Prefetch critical resources
     measurePerformance('App initialization', () => {
       prefetchResource('/assets/vendor-DgTrhVr3.js', 'script');
       prefetchResource('/assets/index-CWbMb2zs.js', 'script');
     });
-
     // Cache app configuration
     cacheResource('app-config', {
       version: '1.0.0',
       features: ['performance-monitoring', 'accessibility', 'error-boundary']
     }, 300000); // 5 minutes
-
     // Initialize performance monitoring
     const perfOptimizer = PerformanceOptimizer.getInstance();
     const perfMonitor = PerformanceMonitor.getInstance();
-    
     perfOptimizer.init();
     perfMonitor.init();
-    
     // Track page view
     trackPageView({
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname
     });
-    
     // Report performance metrics after page load
     const handleLoad = () => {
       setTimeout(() => {
         perfOptimizer.reportMetrics();
         perfMonitor.reportMetrics();
-        
         // Log performance score
         const score = perfMonitor.getPerformanceScore();
         console.log(`Performance Score: ${score}/100`);
-        
         // Track performance event
         trackEvent({
           action: 'performance_metrics',
@@ -98,16 +85,13 @@ function App() {
         });
       }, 2000);
     }
-    
     window.addEventListener('load', handleLoad);
-    
     return () => {
       perfOptimizer.cleanup();
       perfMonitor.cleanup();
       window.removeEventListener('load', handleLoad);
     };
   }, [prefetchResource, cacheResource, measurePerformance]);
-
   return (
     <AdvancedErrorBoundary 
       enableReporting={true}
@@ -138,7 +122,6 @@ function App() {
                 enableFeedback={true}
               />
               <PerformanceMonitor showMetrics={process.env.NODE_ENV === 'development'} />
-              
               {/* Skip Links for Accessibility */}
               <div className="sr-only focus-within:not-sr-only">
                 <a href="#main-content" className="skip-link">
@@ -149,19 +132,16 @@ function App() {
                 </a>
               </div>
               <Navigation />
-              
               {/* Main Content with enhanced Suspense and Error Boundary */}
               <main id="main-content" className="pt-20 min-h-screen" role="main">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
-                    
                     {/* Catch all route */}
                     <Route path="*" element={<Home />} />
                   </Routes>
                 </Suspense>
               </main>
-              
               <Footer />
             </div>
           </Router>
@@ -170,5 +150,4 @@ function App() {
     </AdvancedErrorBoundary>
   );
 }
-
 export default App;

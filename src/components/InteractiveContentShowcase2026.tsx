@@ -1,8 +1,6 @@
 import React, { useState }  from 'react';
-
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
-
   const contentTabs = {
     consciousness: {
       title: 'AI Consciousness',
@@ -108,7 +106,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
           Explore our revolutionary technologies through interactive demonstrations and detailed insights
         </p>
       </div>
-
       {/* Interactive Tabs */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {Object.entries(contentTabs).map(([key, tab]) => (
@@ -126,7 +123,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
           </button>
         ))}
       </div>
-
       {/* Active Content Display */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
         <div className="grid md:grid-cols-2 gap-8">
@@ -143,7 +139,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
               {contentTabs[activeTab as keyof typeof contentTabs].content.description}
             </p>
-            
             <div className="space-y-6">
               <div>
                 <h4 className="text-xl font-bold mb-4 text-cyan-400">Key Features</h4>
@@ -158,7 +153,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div>
             <h4 className="text-xl font-bold mb-4 text-purple-400">Real-World Applications</h4>
             <div className="space-y-4">
@@ -171,7 +165,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
                 </div>
               ))}
             </div>
-            
             <div className="mt-8">
               <a 
                 href={`/pages/${activeTab === 'consciousness' ? 'ConsciousnessComputing2026' : 
@@ -186,7 +179,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center mt-12">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>

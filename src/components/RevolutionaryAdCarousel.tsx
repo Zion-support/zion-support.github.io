@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
 const RevolutionaryAdCarousel: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const advertisements = [
     {
       id: "1",
@@ -55,17 +53,13 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "BREAKTHROUGH"
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentAd((prev) => (prev + 1) % advertisements.length);
     }, 5000);
-    
     return () => clearInterval(interval);
   }, [advertisements.length, isAutoPlaying]);
-
   const nextAd = () => {
     setCurrentAd((prev) => (prev + 1) % advertisements.length);
   }
@@ -93,7 +87,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-            
             <div className="relative z-10 p-12 text-white">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Content */}
@@ -117,7 +110,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
                       {advertisements[currentAd].description}
                     </p>
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: "0", y: 20 }}
                     animate={{ opacity: "1", y: 0 }}
@@ -137,7 +129,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
                       </motion.div>
                     ))}
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: "0", y: 20 }}
                     animate={{ opacity: "1", y: 0 }}
@@ -161,7 +152,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
                     </motion.button>
                   </motion.div>
                 </div>
-
                 {/* Visual */}
                 <div className="flex justify-center">
                   <motion.div
@@ -180,7 +170,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation */}
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
           <motion.button
@@ -202,7 +191,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
             →
           </motion.button>
         </div>
-
         {/* Dots Indicator */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
           {advertisements.map((_, index) => (

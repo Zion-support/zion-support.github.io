@@ -10,21 +10,18 @@ import {
   X
 }  from 'lucide-react';
 import { useEffect, useState }  from 'react';
-
 interface UltimateContentPromotionBanner2028Props {
   onClose?: () => void;
   autoHide?: boolean;
   hideDelay?: number;
 }
-
-,const UltimateContentPromotionBanner2028 = ({ 
+const UltimateContentPromotionBanner2028 = ({ 
   onClose, 
   autoHide = true, 
   hideDelay = 12000 
 }: UltimateContentPromotionBanner2028Props) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const ultimateContent = [
     {
       icon: "Brain",
@@ -81,30 +78,23 @@ interface UltimateContentPromotionBanner2028Props {
       badge: "INFINITE"
     }
   ];
-
   useEffect(() => {
     if (autoHide) {
       const timer = setTimeout(() => {
         setIsVisible(false);
         onClose?.();
       }, hideDelay);
-
       return () => clearTimeout(timer);
     }
   }, [autoHide, hideDelay, onClose]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev: number) => (prev + 1) % ultimateContent.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [ultimateContent.length]);
-
   const currentContent = ultimateContent[currentSlide];
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -116,7 +106,6 @@ interface UltimateContentPromotionBanner2028Props {
         <div className="relative overflow-hidden">
           {/* Animated background */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-pulse" />
-          
           {/* Content */}
           <div className="relative px-4 py-4">
             <div className="flex items-center justify-between max-w-7xl mx-auto">
@@ -125,7 +114,6 @@ interface UltimateContentPromotionBanner2028Props {
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${currentContent.gradient} shadow-lg`}>
                   <currentContent.icon className="w-7 h-7 text-white" />
                 </div>
-
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center space-x-2 mb-2">
@@ -139,16 +127,13 @@ interface UltimateContentPromotionBanner2028Props {
                       ))}
                     </div>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-2 truncate">
                     {currentContent.title}
                   </h3>
-                  
                   <p className="text-sm text-gray-300 line-clamp-2">
                     {currentContent.description}
                   </p>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex items-center space-x-3">
                   <motion.a
@@ -162,7 +147,6 @@ interface UltimateContentPromotionBanner2028Props {
                   </motion.a>
                 </div>
               </div>
-
               {/* Close button */}
               <button
                 onClick={() => {
@@ -174,7 +158,6 @@ interface UltimateContentPromotionBanner2028Props {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
             {/* Progress indicators */}
             <div className="flex justify-center space-x-2 mt-3">
               {ultimateContent.map((_, index) => (
@@ -190,7 +173,6 @@ interface UltimateContentPromotionBanner2028Props {
               ))}
             </div>
           </div>
-
           {/* Animated border */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" />
         </div>

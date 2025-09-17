@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet }  from 'react-helmet-async';
-
 const AdvancedTechInnovation2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -9,7 +8,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
         <meta name="description" content="Discover the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities" />
         <meta name="keywords" content="tech innovation 2027, advanced technology, AI breakthrough, quantum computing, neural interfaces, space tech" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -23,7 +21,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
             Explore the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities
           </p>
         </div>
-
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -42,7 +39,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               <span className="px-3 py-1 bg-blue-500/50 rounded-full text-xs font-semibold">CONSCIOUS</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
@@ -59,7 +55,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">QUANTUM</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-pulse">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
@@ -76,7 +71,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               <span className="px-3 py-1 bg-emerald-500/50 rounded-full text-xs font-semibold">NEURAL</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
@@ -93,7 +87,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               <span className="px-3 py-1 bg-orange-500/50 rounded-full text-xs font-semibold">COSMIC</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-pulse">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Metaverse 4.0</h3>
@@ -110,7 +103,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
               <span className="px-3 py-1 bg-violet-500/50 rounded-full text-xs font-semibold">IMMERSIVE</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Biotech Revolution</h3>
@@ -128,7 +120,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Innovation Timeline */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Timeline 2027</h2>
@@ -163,7 +154,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Showcase */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Technology Showcase</h2>
@@ -179,7 +169,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                   <span className="text-sm opacity-75">Zion Tech Group 2027</span>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
                 <h3 className="text-2xl font-bold mb-4">Quantum AI Fusion</h3>
                 <p className="text-cyan-100 mb-4">
@@ -191,7 +180,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold mb-4">Neural Reality Interface</h3>
@@ -203,7 +191,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
                   <span className="text-sm opacity-75">Coming 2027</span>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
                 <h3 className="text-2xl font-bold mb-4">Space Colonization Tech</h3>
                 <p className="text-orange-100 mb-4">
@@ -217,7 +204,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Global Impact */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Global Impact Statistics</h2>
@@ -240,7 +226,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Shape the Future with Us</h2>

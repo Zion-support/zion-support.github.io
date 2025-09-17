@@ -1,10 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
-
 const AdvancedPromotionalBanner: React.FC = () => {
   const [currentPromo, setCurrentPromo] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const promotionalContent = [
     {
       title: "🚀 BREAKTHROUGH: Advanced AI Consciousness 2026",
@@ -34,17 +32,13 @@ const AdvancedPromotionalBanner: React.FC = () => {
       features: ["Holographic Display", "Quantum Computing", "Reality Manipulation", "3D Interfaces"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promotionalContent.length);
     }, 8000);
-
     return () => clearInterval(timer);
   }, []);
-
   const currentContent = promotionalContent[currentPromo];
-
   return (
     <AnimatePresence>
       {isVisible && (

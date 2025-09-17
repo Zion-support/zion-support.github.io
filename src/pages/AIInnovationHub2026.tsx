@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -29,7 +28,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* AI Innovation Categories */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -38,7 +36,6 @@ const AIInnovationHub2026: React.FC = () => {
             Explore our comprehensive range of AI innovations across multiple domains
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -56,7 +53,6 @@ const AIInnovationHub2026: React.FC = () => {
               Explore Cognitive AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
@@ -73,7 +69,6 @@ const AIInnovationHub2026: React.FC = () => {
               Discover Quantum AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI</h3>
@@ -90,7 +85,6 @@ const AIInnovationHub2026: React.FC = () => {
               Learn About Autonomous AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural AI</h3>
@@ -107,7 +101,6 @@ const AIInnovationHub2026: React.FC = () => {
               Explore Neural AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Creative AI</h3>
@@ -124,7 +117,6 @@ const AIInnovationHub2026: React.FC = () => {
               Discover Creative AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Research AI</h3>
@@ -142,7 +134,6 @@ const AIInnovationHub2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -151,7 +142,6 @@ const AIInnovationHub2026: React.FC = () => {
               Our AI innovations are transforming industries and creating measurable impact
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
@@ -171,7 +161,6 @@ const AIInnovationHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the AI Innovation Revolution</h2>

@@ -1,5 +1,4 @@
 import * as React from "react";
-
 type RootProps = {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;

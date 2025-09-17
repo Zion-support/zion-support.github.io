@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface AccessibilityConfig {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -7,7 +6,6 @@ interface AccessibilityConfig {
   enableFocusManagement?: boolean;
   enableAriaLabels?: boolean;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
@@ -18,26 +16,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   const [focusVisible, setFocusVisible] = useState(false);
-
   // High contrast mode
   useEffect(() => {
     if (!enableHighContrast) return;
-
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(mediaQuery.matches);
-
     const handleChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
     };
-
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, [enableHighContrast]);
-
   // Apply high contrast styles
   useEffect(() => {
     if (!enableHighContrast) return;
-
     const root = document.documentElement;
     if (isHighContrast) {
       root.classList.add('high-contrast');
@@ -45,37 +37,30 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
       root.classList.remove('high-contrast');
     }
   }, [isHighContrast, enableHighContrast]);
-
   // Focus management
   useEffect(() => {
     if (!enableFocusManagement) return;
-
     const handleFocusIn = (e: FocusEvent) => {
       setFocusVisible(true);
       const target = e.target as HTMLElement;
       target.classList.add('focus-visible');
     };
-
     const handleFocusOut = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
       target.classList.remove('focus-visible');
     };
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         setFocusVisible(true);
       }
     };
-
     const handleMouseDown = () => {
       setFocusVisible(false);
     };
-
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
@@ -83,11 +68,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, [enableFocusManagement]);
-
   // Keyboard navigation
   useEffect(() => {
     if (!enableKeyboardNavigation) return;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {
@@ -97,7 +80,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
           (main as HTMLElement).focus();
         }
       }
-
       // Escape key handling
       if (e.key === 'Escape') {
         const modal = document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
@@ -109,18 +91,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardNavigation]);
-
   // Font size adjustment
   const adjustFontSize = useCallback((delta: number) => {
     const newSize = Math.max(12, Math.min(24, fontSize + delta));
     setFontSize(newSize);
     document.documentElement.style.fontSize = `${newSize}px`;
   }, [fontSize]);
-
   // Skip to main content link
   const SkipLink = () => (
     <a
@@ -137,12 +116,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
       Skip to main content
     </a>
   );
-
   // Accessibility controls
   const AccessibilityControls = () => (
     <div className="fixed top-4 right-4 z-40 bg-gray-800 text-white p-4 rounded-lg shadow-lg">
       <h3 className="text-lg font-semibold mb-3">Accessibility</h3>
-      
       <div className="space-y-3">
         <div>
           <label className="block text-sm font-medium mb-1">Font Size</label>
@@ -164,7 +141,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
             </button>
           </div>
         </div>
-
         <div>
           <label className="flex items-center space-x-2">
             <input
@@ -179,11 +155,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
       </div>
     </div>
   );
-
   // Add ARIA landmarks
   useEffect(() => {
     if (!enableAriaLabels) return;
-
     // Add main landmark if not present
     const main = document.querySelector('main, [role="main"]');
     if (!main) {
@@ -193,46 +167,38 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
         content.id = content.id || 'main-content';
       }
     }
-
     // Add navigation landmarks
     const navs = document.querySelectorAll('nav:not([role])');
     navs.forEach(nav => nav.setAttribute('role', 'navigation'));
-
     // Add banner landmark
     const header = document.querySelector('header:not([role])');
     if (header) {
       header.setAttribute('role', 'banner');
     }
-
     // Add contentinfo landmark
     const footer = document.querySelector('footer:not([role])');
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
     }
   }, [enableAriaLabels]);
-
   return (
     <>
       <SkipLink />
       <AccessibilityControls />
-      
       <style jsx global>{`
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
         }
-        
         .high-contrast * {
           background-color: var(--high-contrast-bg, #000000) !important;
           color: var(--high-contrast-text, #ffffff) !important;
           border-color: var(--high-contrast-border, #ffffff) !important;
         }
-        
         .focus-visible {
           outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
-        
         .sr-only {
           position: absolute;
           width: 1px;
@@ -244,7 +210,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
           white-space: nowrap;
           border: 0;
         }
-        
         .focus\:not-sr-only:focus {
           position: static;
           width: auto;
@@ -259,5 +224,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
     </>
   );
 };
-
 export default AccessibilityEnhancer;
