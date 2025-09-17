@@ -10,11 +10,11 @@ export type SEOProps = {
   type?: string;
 };
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
-  image = 'https://zion.app/images/zion-tech-group-logo.png',
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion App - Revolutionary AI Solutions',
+  description = 'Revolutionary AI solutions for enterprise transformation',
+  keywords = 'AI, artificial intelligence, enterprise solutions, automation',
+  image = 'https://zion.app/og-image.jpg',
   url = 'https://zion.app',
   type = 'website'
 }) => {
@@ -32,10 +32,13 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Helmet>
   );
 };
+<<<<<<< HEAD
 export default SEO;
 export { SEO };
+=======
+
+export default SEO;
+>>>>>>> origin/merged-prs

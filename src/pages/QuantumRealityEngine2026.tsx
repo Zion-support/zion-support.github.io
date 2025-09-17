@@ -11,7 +11,6 @@ const QuantumRealityEngine2026: React.FC = () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚛️ QUANTUM REALITY ENGINE 2026
@@ -19,6 +18,7 @@ const QuantumRealityEngine2026: React.FC = () => {
           <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
             Simulate <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Infinite Realities</span>
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             The world's first quantum computer capable of simulating entire universes, creating new realities, and solving problems across infinite dimensions.
           </p>
@@ -377,6 +377,10 @@ export default QuantumRealityEngine2026;
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Experience the power to shape reality itself and discover 
             the infinite possibilities of quantum reality manipulation.
+=======
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Experience the power to shape reality itself and discover the infinite possibilities of quantum reality manipulation.
+>>>>>>> origin/merged-prs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/QuantumRealityEngine2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -385,8 +389,19 @@ export default QuantumRealityEngine2026;
             <a href="/pages/UltimateAIConsciousness2026" className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn About AI Consciousness
             </a>
+<<<<<<< HEAD
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
+=======
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default QuantumRealityEngine2026;
+>>>>>>> origin/merged-prs
