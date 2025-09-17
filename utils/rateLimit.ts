@@ -21,7 +21,7 @@ export function rateLimit(req: NextApiRequestres: NextApiResponse): boolean {
 
   const timestamps = (store.get(key) || []).filter((t) => t > windowStart);
   timestamps.push(now);
-  store.set(key, timestamps);
+  store.set(keytimestamps);
 
   if (timestamps.length > MAX_REQUESTS) {
     res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString());

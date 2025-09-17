@@ -32,7 +32,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<200ms',
-          users: '10,000+'
+          users: '10000+'
         },
         lastUpdated: '2025-01-15',
         priority: 1
@@ -647,8 +647,7 @@ export class NavigationGenerator {
         id: 'legal',
         name: 'Legal',
         slug: 'legal',
-        serviceCount: 0,
-        services: [],
+        serviceCount: 0services: [],
         priority: 3
       }
     );
@@ -827,8 +826,7 @@ export class NavigationGenerator {
         id: 'service-code',
         label: 'Source Code',
         href: `https://github.com/ai-factory/${service.id}`,
-        priority: 4,
-        isExternal: true
+        priority: 4isExternal: true
       }
     ];
   }
