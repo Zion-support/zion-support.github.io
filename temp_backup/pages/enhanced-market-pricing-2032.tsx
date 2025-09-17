@@ -19,4 +19,5 @@ const enhanced-market-pricing-2032: React.FC = () => {
   );
 };
 
-export default enhanced-market-pricing-2032;
+
+export default AdvancedAITransformation2026;

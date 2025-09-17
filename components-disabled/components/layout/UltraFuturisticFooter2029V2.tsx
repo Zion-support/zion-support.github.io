@@ -9,4 +9,5 @@ const UltraFuturisticFooter2029V2: React.FC = () => {
   );
 };
 
-export default UltraFuturisticFooter2029V2;
+
+export default InteractiveContentShowcase2025;

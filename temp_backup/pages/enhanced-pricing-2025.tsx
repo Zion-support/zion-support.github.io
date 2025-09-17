@@ -19,4 +19,5 @@ const enhanced-pricing-2025: React.FC = () => {
   );
 };
 
-export default enhanced-pricing-2025;
+
+export default NextGenInnovationHub2044;

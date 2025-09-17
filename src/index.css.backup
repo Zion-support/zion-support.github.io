@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -121,7 +120,6 @@
 }
 
 /* Custom CSS Variables */
-=======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -140,7 +138,6 @@ body {
   min-height: 100vh;
 }
 
-<<<<<<< HEAD
 /* Custom utilities */
 .gradient-text {
   background: var(--primary-gradient);
@@ -272,11 +269,9 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-=======
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 >>>>>>> cursor/create-and-deploy-new-content-376e
-}

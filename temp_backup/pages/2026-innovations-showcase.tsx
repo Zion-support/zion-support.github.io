@@ -19,4 +19,5 @@ const 2026-innovations-showcase: React.FC = () => {
   );
 };
 
-export default 2026-innovations-showcase;
+
+export default NextGenTechRevolution2029;

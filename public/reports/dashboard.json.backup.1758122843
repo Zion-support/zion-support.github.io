@@ -1,0 +1,18 @@
+{
+<<<<<<< HEAD
+  "generatedAt": "2025-09-16T12:21:54.172Z",
+=======
+  "generatedAt": "2025-09-17T11:12:39.346Z",
+>>>>>>> origin/cursor/create-and-deploy-new-content-3512
+  "sections": {
+    "search": {
+      "pages": 535
+    },
+    "embeddings": {
+      "entries": 503
+    },
+    "talent": {
+      "profiles": 0
+    }
+  }
+}

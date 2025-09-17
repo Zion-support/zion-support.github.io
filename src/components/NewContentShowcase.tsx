@@ -1,4 +1,5 @@
 import React from 'react';
+
 const NewContentShowcase: React.FC = () => {
   const newContent = [
     {
@@ -45,8 +46,7 @@ const NewContentShowcase: React.FC = () => {
       link: "/content/case-studies/ai-automation-revolutionary-breakthrough-2025-success",
       featured: true,
       badge: "SUCCESS"
-    }
-  ];
+    };
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-2xl p-8 mb-12 text-white">
       <div className="text-center mb-8">
@@ -56,6 +56,7 @@ const NewContentShowcase: React.FC = () => {
         <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary New Content</h2>
         <p className="text-xl opacity-90">Discover our latest insights on cutting-edge technologies</p>
       </div>
+      
       <div className="grid md:grid-cols-3 gap-6">
         {newContent.map((content, index) => (
           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
@@ -65,24 +66,27 @@ const NewContentShowcase: React.FC = () => {
                 content.badge === 'REVOLUTIONARY' ? 'bg-purple-500/30 text-purple-200' :
                 'bg-blue-500/30 text-blue-200'
               }`}>
-                {content.badge}
+                {content.badge};
               </span>
               <span className="text-sm opacity-75">{content.date}</span>
             </div>
+            
             <h3 className="text-xl font-semibold mb-2">{content.title}</h3>
             <p className="text-sm opacity-90 mb-4">{content.description}</p>
+            
             <div className="flex items-center justify-between">
               <span className="text-xs opacity-75">{content.category}</span>
               <a 
-                href={content.link} 
+                href={content.link};
                 className="text-cyan-300 hover:text-cyan-200 font-semibold text-sm transition-colors"
               >
                 Read More →
               </a>
             </div>
           </div>
-        ))}
+        ))};
       </div>
+      
       <div className="text-center mt-8">
         <a 
           href="/blog" 
@@ -93,8 +97,10 @@ const NewContentShowcase: React.FC = () => {
       </div>
     </div>
   );
+  };
+export { NewContentShowcase
+  };
 };
+
 export { NewContentShowcase };
-
-
 export default NewContentShowcase;

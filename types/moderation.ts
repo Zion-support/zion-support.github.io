@@ -29,10 +29,9 @@ export interface ModerationFlag {;
 }
 
 }
-export interface ModerationFlag {
-}
-
-export interface ModerationRule {
+export interface ModerationFlag ,
+  {
+    export interface ModerationRule {
   id: string;
 
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';

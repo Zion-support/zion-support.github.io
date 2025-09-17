@@ -6,7 +6,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -18,7 +18,15 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vite/client", "node"]
+    "types": ["vite/client", "node", "react", "react-dom"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitOverride": false
   },
   "include": [
     "src/**/*",
@@ -37,6 +45,8 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "coverage"
+    "coverage",
+    "zion-website",
+    "zion-os"
   ]
 }

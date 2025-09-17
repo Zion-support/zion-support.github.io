@@ -19,4 +19,5 @@ const services-advertising-2025: React.FC = () => {
   );
 };
 
-export default services-advertising-2025;
+
+export default RevolutionaryServices2025;

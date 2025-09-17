@@ -9,4 +9,5 @@ const AccessibilityEnhancer: React.FC = () => {
   );
 };
 
-export default AccessibilityEnhancer;
+
+export default RevolutionaryAdBanner;

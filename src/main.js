@@ -7,5 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 const rootElement = document.getElementById('root');
 if (!rootElement) {
     throw new Error('Root element not found');
+}
 const root = createRoot(rootElement);
 root.render(_jsx(React.StrictMode, { children: _jsx(BrowserRouter, { children: _jsx(App, {}) }) }));

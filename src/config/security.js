@@ -1,8 +1,9 @@
+export const securityConfig = {
   csp: {
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:"],
       scriptSrc: ["'self'"],
       connectSrc: ["'self'"],
@@ -25,4 +26,6 @@
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
   },
+};
+
 export default securityConfig;
