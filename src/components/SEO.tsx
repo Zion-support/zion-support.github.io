@@ -15,7 +15,7 @@ interface SEOProps {
   robots?: string;
   noindex?: boolean;
   nofollow?: boolean;
-};
+}
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Holdings - Advanced Financial Solutions',
   description = 'Leading provider of comprehensive financial services, investment solutions, and wealth management strategies.',
@@ -46,9 +46,9 @@ const SEO: React.FC<SEOProps> = ({
           meta.setAttribute('property', name);
         } else {
           meta.setAttribute('name', name);
-        };
+        }
 document.head.appendChild(meta);
-      };
+      }
 meta.setAttribute('content', content);
   };
     // Basic meta tags
@@ -74,10 +74,10 @@ meta.setAttribute('content', content);
     // Article specific tags
     if (publishedTime) {
       updateMetaTag('article:published_time', publishedTime, true);
-    };
+    }
 if (modifiedTime) {
       updateMetaTag('article:modified_time', modifiedTime, true);
-    };
+    }
     // Canonical URL
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -85,9 +85,9 @@ if (modifiedTime) {
         link = document.createElement('link');
         link.setAttribute('rel', 'canonical');
         document.head.appendChild(link);
-      };
+      }
 link.setAttribute('href', canonical);
-    };
+    }
     // JSON-LD structured data
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -109,7 +109,7 @@ link.setAttribute('href', canonical);
     const existingJsonLd = document.querySelector('script[type="application/ld+json"]');
     if (existingJsonLd) {
       existingJsonLd.remove();
-    };
+    }
     // Add new JSON-LD
     const script = document.createElement('script');
     script.type = 'application/ld+json';

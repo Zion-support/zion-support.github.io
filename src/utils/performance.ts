@@ -7,9 +7,9 @@ export class PerformanceMonitor {
         this.observer = new PerformanceObserver(() => {});
       } catch {
         this.observer = null;
-      };
-    };
-  };
+      }
+    }
+  }
   reportMetrics(): void {
     if (typeof window === "undefined") return;
     try {
@@ -26,18 +26,18 @@ export class PerformanceMonitor {
       if (process.env.NODE_ENV !== "production") {
         // eslint-disable-next-line no-console
         console.log("Performance metrics", metrics);
-      };
+      }
     } catch {
       // no-op
-    };
-  };
+    }
+  }
   cleanup(): void {
     try {
       this.observer?.disconnect();
     } catch {
       // no-op
-    };
-  };
-};
+    }
+  }
+}
 export default PerformanceMonitor;
 

@@ -4,37 +4,37 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-};
+}
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-};
+}
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
-  };
+  }
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
-  };
+  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
-    };
+    }
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    };
+    }
     // Report to error tracking service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would integrate with services like Sentry, LogRocket, etc.
       console.error('Production error:', error);
-    };
-  };
+    }
+  }
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -43,7 +43,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-      };
+      }
       return (
         <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-800 text-white flex items-center justify-center p-4">
           <div className="text-center max-w-2xl mx-auto">
@@ -101,8 +101,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    };
+    }
     return this.props.children;
-  };
-};
+  }
+}
 export default EnhancedErrorBoundary;

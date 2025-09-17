@@ -77,7 +77,7 @@ function App() {
       setTimeout(() => {
         if (perfMonitor.reportMetrics) {
           perfMonitor.reportMetrics();
-        };
+        }
       }, 2000);
     };
     window.addEventListener('load', handleLoad);
@@ -85,7 +85,7 @@ function App() {
     return () => {
       if (perfMonitor.cleanup) {
         perfMonitor.cleanup();
-      };
+      }
       window.removeEventListener('load', handleLoad);
     };
   }, [prefetchResource, cacheResource, measurePerformance]);
@@ -155,6 +155,6 @@ function App() {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;

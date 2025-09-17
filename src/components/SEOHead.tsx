@@ -9,7 +9,7 @@ interface SEOHeadProps {
   url?: string;
   type?: string;
   structuredData?: object;
-};
+}
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions",
   description = "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations.",
