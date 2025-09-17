@@ -4,6 +4,7 @@
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
+  # ci: no-op edit to retrigger Netlify deployment
 
 [build.environment]
   NODE_VERSION = "20"
