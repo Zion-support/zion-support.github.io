@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const QuantumComputingRevolution2025: React.FC = () => {
+const AIInnovationHub2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container-custom section-padding">
@@ -12,10 +12,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient-purple">
-            Quantum Computing Revolution 2025
+            AI Innovation Hub 2025
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-            Unlock the power of quantum computing for unprecedented computational capabilities
+            Discover the latest breakthroughs in artificial intelligence and machine learning
           </p>
         </motion.div>
 
@@ -26,14 +26,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="card card-hover"
           >
-            <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum Algorithms</h3>
+            <h3 className="text-2xl font-bold mb-4 text-purple-400">Machine Learning</h3>
             <p className="text-gray-300 mb-4">
-              Advanced quantum algorithms for optimization, cryptography, and simulation.
+              Advanced ML algorithms and models for predictive analytics and automation.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Shor's Algorithm</li>
-              <li>• Grover's Algorithm</li>
-              <li>• Quantum Machine Learning</li>
+              <li>• Deep Learning Networks</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
             </ul>
           </motion.div>
 
@@ -43,14 +43,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="card card-hover"
           >
-            <h3 className="text-2xl font-bold mb-4 text-blue-400">Quantum Cryptography</h3>
+            <h3 className="text-2xl font-bold mb-4 text-blue-400">AI Automation</h3>
             <p className="text-gray-300 mb-4">
-              Unbreakable encryption methods using quantum principles.
+              Intelligent automation solutions that streamline business processes.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Quantum Key Distribution</li>
-              <li>• Post-Quantum Cryptography</li>
-              <li>• Quantum Random Number Generation</li>
+              <li>• Process Automation</li>
+              <li>• Intelligent Workflows</li>
+              <li>• Smart Decision Making</li>
             </ul>
           </motion.div>
 
@@ -60,14 +60,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="card card-hover"
           >
-            <h3 className="text-2xl font-bold mb-4 text-green-400">Quantum Simulation</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-400">AI Analytics</h3>
             <p className="text-gray-300 mb-4">
-              Simulate complex quantum systems for research and development.
+              Data-driven insights and predictive analytics powered by AI.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Molecular Simulation</li>
-              <li>• Material Science</li>
-              <li>• Drug Discovery</li>
+              <li>• Predictive Modeling</li>
+              <li>• Real-time Analytics</li>
+              <li>• Business Intelligence</li>
             </ul>
           </motion.div>
         </div>
@@ -82,7 +82,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
             href="/contact"
             className="btn-primary inline-flex items-center text-lg px-8 py-4"
           >
-            Explore Quantum Solutions
+            Explore AI Solutions
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -93,4 +93,4 @@ const QuantumComputingRevolution2025: React.FC = () => {
   );
 };
 
-export default QuantumComputingRevolution2025;
+export default AIInnovationHub2025;
