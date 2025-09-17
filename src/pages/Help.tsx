@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '../components/SEO';
 
 export default function Help() {
   return (
@@ -12,7 +13,6 @@ export default function Help() {
   );
 }
 
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -201,4 +201,3 @@ export default function Help() {
     </>
   );
 }
->>>>>>> origin/website-improvements-v2
