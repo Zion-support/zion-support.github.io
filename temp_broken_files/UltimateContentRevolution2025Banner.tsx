@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2025Banner.tsx
-import React from 'react';
-const UltimateContentRevolution2025Banner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -41,7 +37,6 @@ const UltimateContentRevolution2025Banner = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2025Banner.tsx
   return (
     <div>
       <div

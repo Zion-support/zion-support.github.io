@@ -1,8 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-const RevolutionaryTestimonialsShowcase: React.FC = () => {
-=======
 StarQuoteTrendingUpUsersAwardZap
 
 const testimonials = [
@@ -88,7 +83,6 @@ const stats = [
 ];
 
 export default function RevolutionaryTestimonialsShowcase() {
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTestimonialsShowcase.tsx
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,12 +100,9 @@ export default function RevolutionaryTestimonialsShowcase() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             'Don', 't just take our word for it. Hear from industry leaders 'who', 've transformed their businesses 
             with our AI solutions and achieved extraordinary results.
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-=======
           </p>
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTestimonialsShowcase.tsx
         {/* Stats */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,14 +119,10 @@ export default function RevolutionaryTestimonialsShowcase() {
               <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
               <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
               <div className="text-sm text-gray-600">{stat.label}</div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-          ))}
-=======
             </div>
           ))}
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTestimonialsShowcase.tsx
         {/* Featured Testimonials */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {testimonials.filter(testimonial => testimonial.featured).map((testimonialindex) => (
@@ -167,12 +154,9 @@ export default function RevolutionaryTestimonialsShowcase() {
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>
                   <div className="text-sm text-gray-600">{testimonial.title}{testimonial.company}</div>
                   <div className="text-xs text-blue-600">{testimonial.industry}</div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-=======
                 </div>
               </div>
             </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTestimonialsShowcase.tsx
           ))}
         {/* Additional Testimonials Grid */}
         <div
@@ -206,16 +190,12 @@ export default function RevolutionaryTestimonialsShowcase() {
                   <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
                   <div className="text-xs text-gray-600">{testimonial.title}</div>
                   <div className="text-xs text-blue-600">{testimonial.company}</div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-          ))}
-=======
                 </div>
               </div>
             </div>
           ))}
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTestimonialsShowcase.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -234,14 +214,11 @@ export default function RevolutionaryTestimonialsShowcase() {
             <button className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center">
               <Award className="w-5 h-5 mr-2" />
               View All Case Studies
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTestimonialsShowcase.tsx
-=======
             </button>
           </div>
         </div>
       </div>
     </section>
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTestimonialsShowcase.tsx
   );
 };
 
@@ -264,4 +241,3 @@ const function RevolutionaryTestimonialsShowcase() { = () => {
 };
 
 export default function RevolutionaryTestimonialsShowcase() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryTestimonialsShowcase.tsx

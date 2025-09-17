@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/CaseStudyShowcase2026.tsx
-import React from 'react';
-const CaseStudyShowcase2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -202,7 +198,6 @@ const CaseStudyShowcase2026 = () => {
 
   const filteredCaseStudies = caseStudies.filter(caseStudy => caseStudy.industry === activeIndustry);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/CaseStudyShowcase2026.tsx
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,10 +219,7 @@ const CaseStudyShowcase2026 = () => {
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/CaseStudyShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/CaseStudyShowcase2026.tsx
         {/* Industry Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -250,10 +242,7 @@ const CaseStudyShowcase2026 = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/CaseStudyShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/CaseStudyShowcase2026.tsx
         {/* Case Studies Grid */}
           <div
             key={activeIndustry}
@@ -378,10 +367,7 @@ const CaseStudyShowcase2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/CaseStudyShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/CaseStudyShowcase2026.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

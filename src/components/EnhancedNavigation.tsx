@@ -1,9 +1,17 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
 const EnhancedNavigation: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">EnhancedNavigation</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
   const navigationItems = [
     {
       title: 'Home',
@@ -20,154 +28,228 @@ const EnhancedNavigation: React.FC = () => {
         { title: 'AI Breakthrough 2026', path: '/pages/AIRevolutionaryBreakthrough2026' },
         { title: 'Synthetic Intelligence', path: '/pages/SyntheticIntelligence2026' },
         { title: 'Next Gen AI', path: '/pages/NextGenAIRevolution2026' },
-        { title: 'AI Transformation', path: '/pages/AdvancedAITransformation2026' },
-        { title: 'Transcendent AI 2033', path: '/pages/TranscendentAI2033' }
+        { title: 'AI Transformation', path: '/pages/AdvancedAITransformation2026' }
       ]
     },
     {
       title: 'Quantum Computing',
       path: '/quantum',
       icon: '⚛️',
-      description: 'Quantum computing and consciousness',
+      description: 'Quantum technology solutions',
       subItems: [
         { title: 'Quantum Revolution 2026', path: '/pages/QuantumComputingRevolution2026' },
-        { title: 'Quantum Neural Fusion', path: '/pages/QuantumNeuralFusion2026' },
-        { title: 'Quantum Consciousness 2033', path: '/pages/QuantumConsciousnessRevolution2033' }
+        { title: 'Advanced Quantum', path: '/pages/AdvancedQuantumComputing2026' },
+        { title: 'Quantum-Neural Fusion', path: '/pages/QuantumNeuralFusion2026' },
+        { title: 'Quantum Internet', path: '/pages/QuantumInternet2026' }
       ]
     },
     {
       title: 'Neural Interfaces',
       path: '/neural',
       icon: '🧬',
-<<<<<<< HEAD
-      description: 'Brain-computer interfaces and neural tech',
+      description: 'Brain-computer interfaces',
       subItems: [
-        { title: 'Neural Interface 2026', path: '/pages/NeuralInterfaceRevolution2026' },
-        { title: 'Consciousness AI 2026', path: '/pages/ConsciousnessAI2026' }
+        { title: 'Neural Revolution 2026', path: '/pages/NeuralInterfaceRevolution2026' },
+        { title: 'Consciousness AI', path: '/pages/ConsciousnessAI2026' },
+        { title: 'Meta Intelligence', path: '/pages/MetaIntelligence2026' }
       ]
     },
     {
-      title: 'Space Technology',
-      path: '/space',
+      title: 'Future Tech',
+      path: '/future',
       icon: '🚀',
-      description: 'Space exploration and technology',
+      description: 'Revolutionary technologies',
       subItems: [
-        { title: 'Space Tech Innovation 2026', path: '/pages/SpaceTechInnovation2026' },
-        { title: 'Next Gen Space Tech 2026', path: '/pages/NextGenSpaceTech2026' },
-        { title: 'Universal Tech Revolution 2033', path: '/pages/UniversalTechRevolution2033' }
+        { title: 'Ultimate Revolution 2026', path: '/pages/UltimateTechRevolution2026' },
+        { title: 'Next-Gen Showcase', path: '/pages/NextGenTechShowcase2026' },
+        { title: 'Revolutionary AI', path: '/pages/RevolutionaryAIBreakthrough2026' },
+        { title: 'Advanced AI 2027', path: '/pages/AdvancedAIRevolution2027' },
+        { title: 'Quantum Reality 2028', path: '/pages/QuantumRealityManipulation2028' },
+        { title: 'Transcendent Consciousness 2029', path: '/pages/TranscendentConsciousness2029' },
+        { title: 'Universal Tech 2030', path: '/pages/UniversalTechMastery2030' },
+        { title: 'Ultimate Tech 2033', path: '/pages/UltimateTechRevolution2033' }
       ]
     },
     {
-      title: 'Revolutionary 2033',
-      path: '/revolutionary-2033',
+      title: 'Emerging Tech',
+      path: '/emerging-tech',
       icon: '🌟',
-      description: 'Cutting-edge 2033 technologies',
+      description: 'Cutting-edge emerging technologies',
       subItems: [
-        { title: 'Transcendent AI 2033', path: '/pages/TranscendentAI2033' },
-        { title: 'Universal Tech Revolution 2033', path: '/pages/UniversalTechRevolution2033' },
-        { title: 'Quantum Consciousness 2033', path: '/pages/QuantumConsciousnessRevolution2033' }
+        { title: 'Holographic Reality', path: '/pages/AdvancedHolographicReality2026' },
+        { title: 'Metaverse Solutions', path: '/pages/AdvancedMetaverseSolutions2026' },
+        { title: 'Green Tech Revolution', path: '/pages/AdvancedGreenTechRevolution2026' },
+        { title: 'Cybersecurity Fortress', path: '/pages/AdvancedCybersecurityFortress2026' }
+      ]
+    },
+    {
+      title: 'Biotech & Space',
+      path: '/biotech',
+      icon: '🧬',
+      description: 'Biotechnology and space tech',
+      subItems: [
+        { title: 'Advanced Biotech', path: '/pages/AdvancedBiotechRevolution2026' },
+        { title: 'Space Innovation', path: '/pages/SpaceTechInnovation2026' },
+        { title: 'Next-Gen Space', path: '/pages/NextGenSpaceTech2026' }
+      ]
+    },
+    {
+      title: 'Robotics',
+      path: '/robotics',
+      icon: '🤖',
+      description: 'Advanced robotics solutions',
+      subItems: [
+        { title: 'Advanced Robotics', path: '/pages/AdvancedRobotics2026' },
+        { title: 'Robotics Revolution', path: '/pages/AdvancedRoboticsRevolution2026' }
+      ]
+    },
+    {
+      title: 'Resources',
+      path: '/resources',
+      icon: '📚',
+      description: 'Learning and insights',
+      subItems: [
+        { title: 'Tech Insights 2026', path: '/pages/ComprehensiveTechInsights2026' },
+        { title: 'Revolutionary Blog', path: '/pages/RevolutionaryTechBlog2026' },
+        { title: 'AI Innovation Guide', path: '/pages/AIInnovationGuide2025' },
+        { title: 'Quantum Applications', path: '/pages/QuantumComputingApplications2025' }
       ]
     }
   ];
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
-    <nav className="bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-lg border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="text-2xl">🚀</div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech</span>
             </Link>
           </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item) => (
-                <div key={item.title} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      location.pathname === item.path
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    }`}
-                  >
-                    <span className="mr-2">{item.icon}</span>
-                    {item.title}
-                  </Link>
-                  {/* Dropdown Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="relative group">
+                <Link
+                  to={item.path}
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive(item.path)
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  }`}
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.title}</span>
                   {item.subItems && (
-                    <div className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="py-1">
-                        <div className="px-4 py-2 border-b border-gray-200">
-                          <h3 className="text-sm font-semibold text-gray-900">{item.title}</h3>
-                          <p className="text-xs text-gray-500">{item.description}</p>
-                        </div>
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            to={subItem.path}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-150"
-                          >
-                            {subItem.title}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   )}
-                </div>
-              ))}
-            </div>
+                </Link>
+
+                {/* Dropdown Menu */}
+                {item.subItems && (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      <div className="px-4 py-2 border-b border-gray-100">
+                        <h3 className="text-sm font-semibold text-gray-900">{item.title}</h3>
+                        <p className="text-xs text-gray-500">{item.description}</p>
+                      </div>
+                      {item.subItems.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          to={subItem.path}
+                          className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                            isActive(subItem.path)
+                              ? 'text-blue-600 bg-blue-50'
+                              : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                          }`}
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/get-started"
+              className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
             >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                ) : (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
+                )}
+              </svg>
             </button>
           </div>
         </div>
-=======
-    },
 
->>>>>>> origin/feature/enhanced-content-showcase-2025
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
+          <div className="lg:hidden border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigationItems.map((item, index) => (
+                <div key={index}>
                   <Link
                     to={item.path}
-                    className={`block px-3 py-2 rounded-md text-base font-medium ${
-                      location.pathname === item.path
-                        ? 'bg-blue-100 text-blue-700'
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                      isActive(item.path)
+                        ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <span className="mr-2">{item.icon}</span>
-                    {item.title}
+                    <div className="flex items-center space-x-2">
+                      <span>{item.icon}</span>
+                      <span>{item.title}</span>
+                    </div>
                   </Link>
+                  
+                  {/* Mobile Submenu */}
                   {item.subItems && (
-                    <div className="ml-4 space-y-1">
-                      {item.subItems.map((subItem) => (
+                    <div className="ml-6 mt-1 space-y-1">
+                      {item.subItems.map((subItem, subIndex) => (
                         <Link
-                          key={subItem.title}
+                          key={subIndex}
                           to={subItem.path}
-                          className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                          className={`block px-3 py-2 rounded-md text-sm transition-colors duration-200 ${
+                            isActive(subItem.path)
+                              ? 'text-blue-600 bg-blue-50'
+                              : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.title}
@@ -177,29 +259,32 @@ const EnhancedNavigation: React.FC = () => {
                   )}
                 </div>
               ))}
+              
+              {/* Mobile CTA Buttons */}
+              <div className="pt-4 border-t border-gray-200">
+                <Link
+                  to="/contact"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Link
+                  to="/get-started"
+                  className="block px-3 py-2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-base font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
         )}
-=======
-import React from "react";
-
-const EnhancedNavigation = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">EnhancedNavigation</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-        </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
       </div>
-    </div>
+    </nav>
   );
-
+  };
+export default EnhancedNavigation;
 };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 export default EnhancedNavigation;

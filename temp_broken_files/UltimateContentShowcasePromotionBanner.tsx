@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcasePromotionBanner.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -8,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 ArrowRightStarTrendingUpUsersGlobeZapAwardClock
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcasePromotionBanner.tsx
 const UltimateContentShowcasePromotionBanner: React.FC = () => {
   return (
     <div
@@ -35,10 +31,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 and automation solutions transforming industries worldwide.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcasePromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcasePromotionBanner.tsx
             {/* Solutions List */}
             <div
               className="grid grid-cols-2 gap-2 mb-6"
@@ -50,10 +43,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcasePromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcasePromotionBanner.tsx
             {/* Features */}
             <div
               className="flex flex-wrap gap-4 mb-6"
@@ -65,10 +55,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcasePromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcasePromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -105,10 +92,7 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
               </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcasePromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcasePromotionBanner.tsx
               {/* Additional Stats */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-sm">

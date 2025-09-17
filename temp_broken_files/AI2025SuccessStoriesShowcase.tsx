@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025SuccessStoriesShowcase.tsx
-import React from 'react';
-const AI2025SuccessStoriesShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -118,7 +114,6 @@ const AI2025SuccessStoriesShowcase = () => {
     { name: "Logistics"count: "110+"icon: Globe }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025SuccessStoriesShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
@@ -141,10 +136,7 @@ const AI2025SuccessStoriesShowcase = () => {
             See the measurable impact and transformation stories.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025SuccessStoriesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025SuccessStoriesShowcase.tsx
         {/* Success Stories Carousel */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

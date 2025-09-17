@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStories2026Banner.tsx
-import React from 'react';
-const RevolutionarySuccessStories2026Banner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -33,7 +29,6 @@ const RevolutionarySuccessStories2026Banner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStories2026Banner.tsx
   return (
     <div
         opacity: isVisible ? 1 : 0

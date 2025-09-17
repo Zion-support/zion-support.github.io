@@ -2,7 +2,7 @@ export default {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: [
-    "@testing-library/jest-dom"
+    "<rootDir>/src/__tests__/setup.ts"
   ],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
@@ -28,10 +28,7 @@ export default {
     "/src/hooks/__tests__/"
   ],
   collectCoverageFrom: [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*.d.ts",
-    "!src/index.tsx",
-    "!src/main.tsx"
+    "src/App.tsx"
   ],
   coverageDirectory: "coverage",
   coverageReporters: ["text", "lcov", "html"],

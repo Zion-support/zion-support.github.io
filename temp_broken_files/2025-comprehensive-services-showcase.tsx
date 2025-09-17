@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase.tsx
-import React from 'react';
-const 2025-comprehensive-services-showcase: React.FC = () => {
-=======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { 
@@ -78,7 +74,6 @@ const allServices = [
         return true;
       });
 
->>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEO 
@@ -382,10 +377,7 @@ const allServices = [
               </div>
             )}
           </div>
-<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase.tsx
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
@@ -422,10 +414,7 @@ const allServices = [
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
@@ -438,10 +427,7 @@ const allServices = [
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"

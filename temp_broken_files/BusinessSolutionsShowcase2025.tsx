@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025.tsx
-import React from 'react';
-const BusinessSolutionsShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -155,7 +151,6 @@ const BusinessSolutionsShowcase2025 = () => {
 
   const currentCategory = categories[activeCategory];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025.tsx
   return (
     <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
@@ -176,10 +171,7 @@ const BusinessSolutionsShowcase2025 = () => {
             across every aspect of your organization.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025.tsx
         {/* Category Navigation */}
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
             {categories.map((categoryindex) => {
@@ -201,10 +193,7 @@ const BusinessSolutionsShowcase2025 = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025.tsx
         {/* Solutions Grid */}
           <div
             key={activeCategory}
@@ -259,10 +248,7 @@ const BusinessSolutionsShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025.tsx
         {/* Success Stories */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
@@ -287,10 +273,7 @@ const BusinessSolutionsShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2025.tsx
         {/* Call to Action */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">

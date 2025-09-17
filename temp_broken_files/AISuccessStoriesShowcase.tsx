@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-import React from 'react';
-const AISuccessStoriesShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -109,7 +105,6 @@ const AISuccessStoriesShowcase = () => {
 
   const currentStory = successStories[activeStory];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,10 +117,7 @@ const AISuccessStoriesShowcase = () => {
             <Star className="w-4 h-4 mr-2" />
             AI Success Stories
           </div>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
@@ -133,10 +125,7 @@ const AISuccessStoriesShowcase = () => {
             Real Results from
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> AI Implementation</span>
           </divh2>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
           <divp
             whileInView={{ opacity: 1, y: 0 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -162,10 +151,7 @@ const AISuccessStoriesShowcase = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {successStories.map((storyindex) => {
@@ -249,10 +235,7 @@ const AISuccessStoriesShowcase = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AISuccessStoriesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AISuccessStoriesShowcase.tsx
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

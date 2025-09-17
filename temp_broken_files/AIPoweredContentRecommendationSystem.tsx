@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystem.tsx
-import React from 'react';
-const AIPoweredContentRecommendationSystem: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -196,7 +192,6 @@ const AIPoweredContentRecommendationSystem = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystem.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -219,10 +214,7 @@ const AIPoweredContentRecommendationSystem = () => {
             Get personalized recommendations that match your reading patterns and preferences.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystem.tsx
         {/* AI Stats */}
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
@@ -242,10 +234,7 @@ const AIPoweredContentRecommendationSystem = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystem.tsx
         {/* Category Filter */}
         <div
           className="mb-8"
@@ -270,10 +259,7 @@ const AIPoweredContentRecommendationSystem = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystem.tsx
         {/* AI Processing Indicator */}
         {isLoading && (
           <div
@@ -390,10 +376,7 @@ const AIPoweredContentRecommendationSystem = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIPoweredContentRecommendationSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIPoweredContentRecommendationSystem.tsx
         {/* Load More */}
         <div
           className="text-center mt-12"

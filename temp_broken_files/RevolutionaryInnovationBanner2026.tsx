@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryInnovationBanner2026.tsx
-const RevolutionaryInnovationBanner2026: React.FC = () => {
-=======
 ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAwardLightbulb
 
 const RevolutionaryInnovationBanner2026 = () => {
@@ -43,7 +40,6 @@ const RevolutionaryInnovationBanner2026 = () => {
     { number: "24/7"label: "Availability"description: "Continuous operation guarantee" }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryInnovationBanner2026.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Animated background elements */}
@@ -74,10 +70,7 @@ const RevolutionaryInnovationBanner2026 = () => {
             create new possibilities that were once thought impossible.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryInnovationBanner2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryInnovationBanner2026.tsx
         {/* Innovations Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,10 +108,7 @@ const RevolutionaryInnovationBanner2026 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryInnovationBanner2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryInnovationBanner2026.tsx
         {/* Stats Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -141,10 +131,7 @@ const RevolutionaryInnovationBanner2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryInnovationBanner2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryInnovationBanner2026.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -159,11 +146,7 @@ const RevolutionaryInnovationBanner2026 = () => {
               these revolutionary technologies that will define the next decade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/RevolutionaryInnovationBanner2026.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryInnovationBanner2026.tsx
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
@@ -171,14 +154,6 @@ const RevolutionaryInnovationBanner2026 = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryInnovationBanner2026.tsx
-              </divbutton>
-              <divbutton
-                className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </divbutton>
-=======
               </button>
               
               <button
@@ -186,7 +161,6 @@ const RevolutionaryInnovationBanner2026 = () => {
               >
                 Learn More
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryInnovationBanner2026.tsx
             </div>
           </div>
         </div>

@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
 const NeuralRealityEngine2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
@@ -52,10 +48,7 @@ const NeuralRealityEngine2035: React.FC = () => {
             Harness the power of thought to create, modify, and control reality itself
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -129,10 +122,7 @@ const NeuralRealityEngine2035: React.FC = () => {
               Transform existence itself through neural reality control
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
           <div className="grid md:grid-cols-2 gap-8">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -149,10 +139,7 @@ const NeuralRealityEngine2035: React.FC = () => {
                 <li>• Matter Creation/Destruction</li>
               </ul>
             </div>
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-2xl p-8 border border-teal-500/30"
@@ -184,10 +171,7 @@ const NeuralRealityEngine2035: React.FC = () => {
             The most advanced neural reality technology ever created
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
         <div className="grid md:grid-cols-3 gap-8">
           <div
             whileInView={{ opacity: 1, y: 0 }}
@@ -213,10 +197,7 @@ const NeuralRealityEngine2035: React.FC = () => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
@@ -241,10 +222,7 @@ const NeuralRealityEngine2035: React.FC = () => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2035.tsx
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"

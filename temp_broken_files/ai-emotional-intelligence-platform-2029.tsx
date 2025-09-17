@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-const ai-emotional-intelligence-platform-2029: React.FC = () => {
-=======
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
@@ -156,7 +153,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
   return (
     <>
       <Head>
@@ -196,10 +192,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <Brain className="w-4 h-4 mr-2" />
               🚀 2029 Revolutionary AI Technology
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* Main Heading */}
             <divh1
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
@@ -210,20 +203,14 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <br />
               <span className="text-white">Platform</span>
             </divh1>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* Subheading */}
             <divp
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.
             </divp>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
@@ -248,10 +235,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 </span>
               </a>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             {/* Key Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -291,10 +275,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Our AI Emotional Intelligence Platform combines cutting-edge technology with human understanding to create truly empathetic AI systems.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -330,10 +311,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div
@@ -364,10 +342,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               From customer service to healthcare, our platform transforms industries with emotional intelligence.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
@@ -403,10 +378,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Flexible pricing options designed to scale with your business needs.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
               <div
@@ -472,10 +444,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               Contact us today to learn how our AI Emotional Intelligence Platform can revolutionize your customer experience and business outcomes.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -486,10 +455,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -499,10 +465,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -513,10 +476,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <p className="text-gray-300">{contactInfo.address}</p>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/ai-emotional-intelligence-platform-2029.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-emotional-intelligence-platform-2029.tsx
           <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

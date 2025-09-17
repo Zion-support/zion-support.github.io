@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ServiceWorkerRegistration.tsx
-import React from 'react';
-const ServiceWorkerRegistration: React.FC = () => {
-=======
 "use client";
 import React, { useEffect, useState } from 'react';
 import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
@@ -104,7 +100,6 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
     return null;
   }
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ServiceWorkerRegistration.tsx
   return (
     <div>
       {/* Update Available Notification */}

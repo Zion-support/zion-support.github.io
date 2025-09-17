@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-import React from 'react';
-const AITrendsPredictions2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -121,7 +117,6 @@ const AITrendsPredictions2026 = () => {
     { month: 'Dec 2026'event: 'Full Ecosystem 'Integration', 'status: 'upcoming' }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -159,10 +154,7 @@ const AITrendsPredictions2026 = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             AI Trends & Predictions 2026
           </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future of
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -174,10 +166,7 @@ const AITrendsPredictions2026 = () => {
             From quantum-enhanced AI to artificial consciousnessexplore the technologies that will revolutionize our world.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
         {/* Market Insights */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -194,10 +183,7 @@ const AITrendsPredictions2026 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
         {/* Predictions Grid */}
         <div
           className="mb-16"
@@ -254,10 +240,7 @@ const AITrendsPredictions2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
         {/* Detailed Prediction View */}
           <div
             key={activePrediction}
@@ -300,10 +283,7 @@ const AITrendsPredictions2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
         {/* Timeline */}
         <div
           className="mb-16"
@@ -346,10 +326,7 @@ const AITrendsPredictions2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AITrendsPredictions2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrendsPredictions2026.tsx
         {/* CTA Section */}
         <div
           className="text-center"

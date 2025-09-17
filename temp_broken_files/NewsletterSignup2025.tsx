@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup2025.tsx
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import { 
   Mail, 
@@ -13,7 +10,6 @@ import {
   Zap
 } from 'lucide-react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup2025.tsx
 const NewsletterSignup2025: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -105,10 +101,7 @@ const NewsletterSignup2025: React.FC = () => {
             and quantum computing.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup2025.tsx
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
           <div
@@ -131,10 +124,7 @@ const NewsletterSignup2025: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup2025.tsx
           {/* Signup Form */}
           <div
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
@@ -185,10 +175,7 @@ const NewsletterSignup2025: React.FC = () => {
             </p>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup2025.tsx
         <div
           className="text-center mt-12"
         >

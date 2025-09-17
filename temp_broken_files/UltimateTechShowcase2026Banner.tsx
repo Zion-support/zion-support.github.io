@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/UltimateTechShowcase2026Banner.tsx
-const UltimateTechShowcase2026Banner: React.FC = () => {
-=======
 ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAward
 
 const UltimateTechShowcase2026Banner = () => {
@@ -43,7 +40,6 @@ const UltimateTechShowcase2026Banner = () => {
     { number: "1M+"label: "Daily Active Users"icon: <Star className="w-6 h-6" /> }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechShowcase2026Banner.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
       {/* Animated background elements */}
@@ -73,10 +69,7 @@ const UltimateTechShowcase2026Banner = () => {
             that are reshaping industries and transforming the way we work and live.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateTechShowcase2026Banner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechShowcase2026Banner.tsx
         {/* Technology Showcase */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -119,10 +112,7 @@ const UltimateTechShowcase2026Banner = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateTechShowcase2026Banner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechShowcase2026Banner.tsx
         {/* Achievements */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -149,10 +139,7 @@ const UltimateTechShowcase2026Banner = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateTechShowcase2026Banner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechShowcase2026Banner.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -167,11 +154,7 @@ const UltimateTechShowcase2026Banner = () => {
               cutting-edge technology to revolutionize their operations and achieve unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/UltimateTechShowcase2026Banner.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechShowcase2026Banner.tsx
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
@@ -179,14 +162,6 @@ const UltimateTechShowcase2026Banner = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<<<<<<< HEAD:temp_broken_files/UltimateTechShowcase2026Banner.tsx
-              </divbutton>
-              <divbutton
-                className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
-              >
-                Schedule Demo
-              </divbutton>
-=======
               </button>
               
               <button
@@ -194,7 +169,6 @@ const UltimateTechShowcase2026Banner = () => {
               >
                 Schedule Demo
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateTechShowcase2026Banner.tsx
             </div>
           </div>
         </div>

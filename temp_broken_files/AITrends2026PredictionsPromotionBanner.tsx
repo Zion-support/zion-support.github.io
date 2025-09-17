@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AITrends2026PredictionsPromotionBanner.tsx
-import React from 'react';
-const AITrends2026PredictionsPromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -74,7 +70,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026PredictionsPromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -126,10 +121,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
                     technological breakthroughs expected in 2026.
                   </p>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AITrends2026PredictionsPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026PredictionsPromotionBanner.tsx
                 {/* Rotating Predictions */}
                 <div
                   key={currentPrediction}
@@ -154,10 +146,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AITrends2026PredictionsPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AITrends2026PredictionsPromotionBanner.tsx
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-8">
                   {stats.map((statindex) => (

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/reports.tsx
-const reports: React.FC = () => {
-=======
 import Head from 'next/head';
 import { 
   FileText, 
@@ -111,7 +108,6 @@ const ReportsPage: React.FC = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/reports.tsx
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -134,10 +130,7 @@ const ReportsPage: React.FC = () => {
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </divp>
-<<<<<<< HEAD:temp_broken_files/reports.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/reports.tsx
             <div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
             >
@@ -168,10 +161,7 @@ const ReportsPage: React.FC = () => {
                 Featured Report
               </h2>
             </div>
-<<<<<<< HEAD:temp_broken_files/reports.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/reports.tsx
             {reports.filter(report => report.featured).map((report, index) => (
               <div
                 key={index}
@@ -251,10 +241,7 @@ const ReportsPage: React.FC = () => {
                 Explore our comprehensive research across different technology domains
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/reports.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/reports.tsx
             {/* Category Pills */}
             <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -274,18 +261,11 @@ const ReportsPage: React.FC = () => {
                 </button>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/reports.tsx
-            {/* Reports Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {reports.filter(report => !report.featured).map((report, index) => (
-                <divarticle
-=======
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
                 <article
->>>>>>> origin/merge-new-content-1757989975:src/components/reports.tsx
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   whileInView={{ opacity: 1, y: 0 }}
@@ -325,11 +305,7 @@ const ReportsPage: React.FC = () => {
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
-<<<<<<< HEAD:temp_broken_files/reports.tsx
-                </divarticle>
-=======
                 </article>
->>>>>>> origin/merge-new-content-1757989975:src/components/reports.tsx
               ))}
             </div>
           </div>

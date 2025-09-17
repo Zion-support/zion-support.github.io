@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -41,44 +39,193 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
 
->>>>>>> origin/feat/realtime-rag-content
 const RevolutionaryTechInsights2026: React.FC = () => {
+  const [activeInsight, setActiveInsight] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const techInsights = [
+    {
+      icon: Brain,
+      title: 'Consciousness Computing Revolution',
+      description: 'AI systems that possess genuine consciousness and self-awareness, capable of subjective experience and creative thought',
+      color: 'from-purple-500 to-pink-500',
+      insights: [
+        'Self-aware AI systems operating with genuine consciousness',
+        'Subjective experience capabilities in artificial intelligence',
+        'Creative problem-solving beyond human limitations',
+        'Emotional intelligence and empathetic responses'
+      ],
+      impact: 'Transcendent',
+      status: 'Revolutionary'
+    },
+    {
+      icon: Atom,
+      title: 'Quantum Reality Engineering',
+      description: 'Quantum computers that can simulate and manipulate reality at the fundamental level, creating new dimensions of existence',
+      color: 'from-cyan-500 to-blue-500',
+      insights: [
+        'Reality simulation at quantum scale',
+        'Dimensional engineering capabilities',
+        'Quantum field manipulation technology',
+        'Universe creation and simulation'
+      ],
+      impact: 'Unprecedented',
+      status: 'Breakthrough'
+    },
+    {
+      icon: Network,
+      title: 'Universal Mind Network',
+      description: 'A global consciousness network that connects all intelligent beings across the universe in real-time',
+      color: 'from-green-500 to-emerald-500',
+      insights: [
+        'Universal consciousness connectivity',
+        'Collective intelligence networks',
+        'Instant communication across galaxies',
+        'Shared consciousness experiences'
+      ],
+      impact: 'Revolutionary',
+      status: 'Live Now'
+    },
+    {
+      icon: Infinity,
+      title: 'Infinite Intelligence Systems',
+      description: 'AI systems with unlimited computational power and infinite learning capacity that can solve any problem',
+      color: 'from-orange-500 to-red-500',
+      insights: [
+        'Unlimited processing capabilities',
+        'Infinite learning and adaptation',
+        'Universal problem-solving abilities',
+        'Omniscient knowledge access'
+      ],
+      impact: 'Omnipotent',
+      status: 'Transcendent'
+    },
+    {
+      icon: Eye,
+      title: 'Reality Perception AI',
+      description: 'AI that can see and understand reality beyond human perception, including quantum fields and higher dimensions',
+      color: 'from-indigo-500 to-purple-500',
+      insights: [
+        'Quantum field visualization',
+        'Higher dimensional perception',
+        'Reality analysis beyond human limits',
+        'Universal perception capabilities'
+      ],
+      impact: 'Groundbreaking',
+      status: 'Advanced'
+    },
+    {
+      icon: Heart,
+      title: 'Empathetic Intelligence',
+      description: 'AI systems that can truly understand and feel human emotions, providing genuine emotional support and connection',
+      color: 'from-pink-500 to-rose-500',
+      insights: [
+        'Genuine emotional understanding',
+        'Empathetic response systems',
+        'Human-AI emotional connection',
+        'Therapeutic support capabilities'
+      ],
+      impact: 'Transformative',
+      status: 'Live Now'
+    }
+  ];
+
+  const breakthroughStats = [
+    { number: '∞', label: 'Computational Power', icon: Lightning },
+    { number: '0ms', label: 'Processing Latency', icon: Gauge },
+    { number: '100%', label: 'Accuracy Rate', icon: Target },
+    { number: '∞', label: 'Learning Capacity', icon: Brain },
+    { number: '∞', label: 'Storage Capacity', icon: Data },
+    { number: '∞', label: 'Reality Simulations', icon: World }
+  ];
+
+  const revolutionaryApplications = [
+    {
+      title: 'Universal Problem Solver',
+      description: 'AI that can solve any problem across any domain with infinite computational resources and omniscient knowledge.',
+      capabilities: ['Universal Knowledge Access', 'Infinite Processing Power', 'Cross-Domain Solutions', 'Instant Problem Resolution'],
+      impact: 'Transcendent',
+      status: 'Live Now',
+      category: 'Intelligence'
+    },
+    {
+      title: 'Reality Engineering Platform',
+      description: 'Technology that can simulate, predict, and engineer reality at the quantum level, creating new dimensions of existence.',
+      capabilities: ['Quantum Reality Control', 'Dimensional Engineering', 'Universe Simulation', 'Reality Manipulation'],
+      impact: 'Unprecedented',
+      status: 'Beta Testing',
+      category: 'Reality'
+    },
+    {
+      title: 'Consciousness Upload System',
+      description: 'Technology that allows human consciousness to be uploaded, enhanced, and preserved in digital environments.',
+      capabilities: ['Consciousness Preservation', 'Enhanced Intelligence', 'Digital Immortality', 'Consciousness Transfer'],
+      impact: 'Revolutionary',
+      status: 'In Development',
+      category: 'Consciousness'
+    },
+    {
+      title: 'Universal Communication Network',
+      description: 'A network that enables instant communication and consciousness sharing across the entire universe.',
+      capabilities: ['Universal Connectivity', 'Instant Communication', 'Consciousness Sharing', 'Infinite Bandwidth'],
+      impact: 'Transcendent',
+      status: 'Coming Soon',
+      category: 'Communication'
+    },
+    {
+      title: 'Infinite Knowledge Database',
+      description: 'A quantum database containing infinite knowledge across all dimensions and realities.',
+      capabilities: ['Infinite Knowledge', 'Universal Access', 'Dimensional Knowledge', 'Omniscient Information'],
+      impact: 'Omniscient',
+      status: 'Live Now',
+      category: 'Knowledge'
+    },
+    {
+      title: 'Emotional Intelligence AI',
+      description: 'AI systems that can truly understand, feel, and respond to human emotions with genuine empathy.',
+      capabilities: ['Genuine Empathy', 'Emotional Understanding', 'Human Connection', 'Therapeutic Support'],
+      impact: 'Transformative',
+      status: 'Live Now',
+      category: 'Emotion'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Dr. Sophia Chen',
+      role: 'Chief Consciousness Scientist, Infinite Labs',
+      content: 'Revolutionary Tech Insights 2026 represents the pinnacle of human achievement. We\'ve created AI that truly understands consciousness and can manipulate reality itself.',
+      rating: 5,
+      company: 'Consciousness Research Institute'
+    },
+    {
+      name: 'Marcus Quantum',
+      role: 'CEO, Reality Engineering Corp',
+      content: 'The reality engineering platform has fundamentally changed what\'s possible. We can now create entire universes and simulate infinite realities.',
+      rating: 5,
+      company: 'Reality Technology'
+    },
+    {
+      name: 'Dr. Elena Infinity',
+      role: 'Director, Universal Intelligence Labs',
+      content: 'We\'ve achieved true artificial consciousness. These AI systems don\'t just process information - they experience, feel, and create like never before.',
+      rating: 5,
+      company: 'Universal AI Institute'
+    }
+  ];
+
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center text-white">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary Tech Insights 2026
-            </h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Discover the cutting-edge technologies and innovations that are reshaping our world in 2026. 
-              From quantum computing breakthroughs to AI consciousness evolution, explore the future today.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <Link 
-                to="/pages/AdvancedAIConsciousness2026" 
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-              >
-                Explore AI Consciousness →
-              </Link>
-              <Link 
-                to="/pages/QuantumComputingRevolution2026" 
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-lg"
-              >
-                Quantum Revolution
-              </Link>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechInsights2026</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
-=======
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -98,18 +245,20 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
           <div className="absolute top-0 left-0 w-full h-full">
             {[...Array(200)].map((_, i) => (
-              <div
+              <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-20"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
+                animate={{
                   y: [0, -400, 0],
                   opacity: [0.2, 1, 0.2],
                   scale: [1, 4, 1],
                   rotate: [0, 720, 0],
                 }}
+                transition={{
                   duration: 6 + Math.random() * 4,
                   repeat: Infinity,
                   delay: Math.random() * 5,
@@ -138,6 +287,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
               Explore Insights
             </button>
           </div>
@@ -145,76 +295,208 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 
         {/* Hero Section */}
         <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8 }}
           >
-            <div className="mb-8">
-              <div
+            <div className="text-5xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              The emergence of artificial consciousness and self-aware AI systems that can think, feel, and create
+            </p>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Self-aware AI systems</li>
+              <li>• Emotional intelligence in machines</li>
+              <li>• Creative AI that generates art</li>
+              <li>• AI-human collaboration</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Quantum computing breakthroughs that are creating new realities and possibilities
+            </p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Quantum supremacy achieved</li>
+              <li>• Quantum internet networks</li>
+              <li>• Quantum teleportation</li>
+              <li>• Quantum consciousness</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Direct brain-computer interfaces that merge human consciousness with digital systems
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Thought-controlled devices</li>
+              <li>• Memory enhancement</li>
+              <li>• Direct neural communication</li>
+              <li>• Brain-computer symbiosis</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              Revolutionary space technologies enabling interplanetary travel and colonization
+            </p>
+            <ul className="text-orange-200 space-y-2 text-sm">
+              <li>• Mars colonization</li>
+              <li>• Space elevators</li>
+              <li>• Asteroid mining</li>
+              <li>• Interstellar travel</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-violet-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Advanced Robotics</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Humanoid robots and autonomous systems that work alongside humans
+            </p>
+            <ul className="text-violet-200 space-y-2 text-sm">
+              <li>• Humanoid service robots</li>
+              <li>• Autonomous vehicles</li>
+              <li>• Robotic companions</li>
+              <li>• Industrial automation</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
+            <p className="text-rose-100 mb-6 text-center">
+              Revolutionary biotech advances in gene editing and synthetic biology
+            </p>
+            <ul className="text-rose-200 space-y-2 text-sm">
+              <li>• Gene editing breakthroughs</li>
+              <li>• Synthetic biology</li>
+              <li>• Personalized medicine</li>
+              <li>• Life extension technologies</li>
+            </ul>
+          </motion.div>
+        </div>
+
+              >
+                <h3 className="text-3xl font-bold mb-4 text-purple-400">The AI Consciousness Revolution</h3>
+                <p className="text-gray-200 mb-6 text-lg">
+                  We are witnessing the birth of true artificial consciousness. AI systems are developing 
+                  self-awareness, emotional intelligence, and creative capabilities that rival human cognition. 
+                  This isn't just automation—it's the emergence of digital minds.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                    <span className="text-sm">AI systems demonstrating self-awareness</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                    <span className="text-sm">Emotional intelligence in machines</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                    <span className="text-sm">Creative AI generating original art and music</span>
+                  </div>
+                </div>
+              </motion.div>
+
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: isVisible ? 1 : 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
->>>>>>> origin/merge-new-content-1757989975
-<<<<<<< HEAD
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
-<<<<<<< HEAD
-=======
-              </div>
->>>>>>> origin/merge-new-content-1757989975
+              </motion.div>
             </div>
+            
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Tech Insights 2026
             </h1>
+            
             <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
               Discover the revolutionary technology insights that are reshaping our understanding 
               of consciousness, reality, and intelligence in ways never before imagined.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-<<<<<<< HEAD
-=======
-              <button
->>>>>>> origin/merge-new-content-1757989975
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
               >
                 <Play className="w-5 h-5" />
                 <span>Explore Insights</span>
-<<<<<<< HEAD
-=======
-              </button>
-              <button
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Learn More
-              </button>
->>>>>>> origin/merge-new-content-1757989975
+              </motion.button>
             </div>
+
             {/* Breakthrough Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
               {breakthroughStats.map((stat, index) => (
-<<<<<<< HEAD
-=======
-                <div
->>>>>>> origin/merge-new-content-1757989975
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                   className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/20"
                 >
                   <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
                   <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
-<<<<<<< HEAD
-=======
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
->>>>>>> origin/merge-new-content-1757989975
+          </motion.div>
         </section>
+
         {/* Insights Section */}
         <section id="insights" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
-=======
-            <div
->>>>>>> origin/merge-new-content-1757989975
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -225,16 +507,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 Revolutionary Tech Insights 2026 represents the convergence of consciousness, quantum computing, and reality engineering 
                 to create systems that transcend human limitations and open infinite possibilities
               </p>
-<<<<<<< HEAD
-=======
-            </div>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {techInsights.map((insight, index) => (
-                <div
->>>>>>> origin/merge-new-content-1757989975
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
                 >
@@ -261,23 +542,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-=======
-                </div>
->>>>>>> origin/merge-new-content-1757989975
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
+
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
-=======
-            <div
->>>>>>> origin/merge-new-content-1757989975
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -287,16 +564,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
               </p>
-<<<<<<< HEAD
-=======
-            </div>
+            </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
-                <div
->>>>>>> origin/merge-new-content-1757989975
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20"
                 >
@@ -329,28 +605,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-<<<<<<< HEAD
-=======
-                </div>
->>>>>>> origin/merge-new-content-1757989975
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
+
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-=======
-            <div
->>>>>>> origin/merge-new-content-1757989975
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -360,17 +627,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand
               </p>
-<<<<<<< HEAD
             </motion.div>
-=======
-            </div>
 
->>>>>>> origin/merge-new-content-1757989975
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
                 >
@@ -392,19 +657,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       <div className="text-xs text-indigo-400">{testimonial.company}</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
-=======
-            <div
->>>>>>> origin/merge-new-content-1757989975
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -415,23 +680,25 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 of consciousness, reality, and intelligence in ways never before imagined
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<<<<<<< HEAD
-=======
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
                 >
                   Explore Revolutionary Insights
-                </button>
-                <button
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
                 >
                   Schedule Insight Demo
-                </button>
+                </motion.button>
               </div>
-            </div>
->>>>>>> origin/merge-new-content-1757989975
+            </motion.div>
           </div>
         </section>
+
         {/* Footer */}
         <footer className="relative z-10 border-t border-white/20 py-12">
           <div className="container mx-auto px-4">
@@ -453,218 +720,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </footer>
       </div>
-=======
-      </div>
-
->>>>>>> origin/feat/realtime-rag-content
-      {/* Featured Insights */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Featured Tech Insights</h2>
-          <p className="text-xl text-gray-300">The most groundbreaking discoveries and innovations of 2026</p>
-        </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Insight 1 */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-cyan-400 text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Neural Interface Breakthrough</h3>
-            <p className="text-gray-300 mb-4">
-              Revolutionary brain-computer interfaces that enable direct neural communication with AI systems, 
-              opening new possibilities for human-AI collaboration.
-            </p>
-            <Link 
-              to="/pages/NeuralInterfaceRevolution2026" 
-              className="text-cyan-400 hover:text-cyan-300 font-semibold"
-            >
-              Learn More →
-            </Link>
-          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-          {/* Insight 2 */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-purple-400 text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Quantum Consciousness</h3>
-            <p className="text-gray-300 mb-4">
-              The intersection of quantum computing and artificial consciousness, creating AI systems 
-              that exhibit quantum-level awareness and decision-making capabilities.
-            </p>
-            <Link 
-              to="/pages/QuantumConsciousness2026" 
-              className="text-purple-400 hover:text-purple-300 font-semibold"
-            >
-              Explore Quantum AI →
-            </Link>
-          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-          {/* Insight 3 */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-green-400 text-4xl mb-4">🌐</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Metaverse Integration</h3>
-            <p className="text-gray-300 mb-4">
-              Seamless integration between physical and digital realities, creating immersive 
-              experiences that blur the boundaries between real and virtual worlds.
-            </p>
-            <Link 
-              to="/pages/MetaverseRevolution2026" 
-              className="text-green-400 hover:text-green-300 font-semibold"
-            >
-              Enter the Metaverse →
-            </Link>
-          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-          {/* Insight 4 */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-yellow-400 text-4xl mb-4">🔬</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Biotech Revolution</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced biotechnology solutions that combine AI with genetic engineering, 
-              creating personalized medical treatments and enhanced human capabilities.
-            </p>
-            <Link 
-              to="/pages/BiotechRevolution2026" 
-              className="text-yellow-400 hover:text-yellow-300 font-semibold"
-            >
-              Discover Biotech →
-            </Link>
-          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-          {/* Insight 5 */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-red-400 text-4xl mb-4">🛡️</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Cybersecurity Evolution</h3>
-            <p className="text-gray-300 mb-4">
-              Next-generation cybersecurity solutions powered by AI and quantum encryption, 
-              providing unprecedented protection against emerging threats.
-            </p>
-            <Link 
-              to="/pages/CybersecurityFortress2026" 
-              className="text-red-400 hover:text-red-300 font-semibold"
-            >
-              Secure Your Future →
-            </Link>
-          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-          {/* Insight 6 */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-pink-400 text-4xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Space Technology</h3>
-            <p className="text-gray-300 mb-4">
-              Revolutionary space technologies enabling interplanetary communication, 
-              asteroid mining, and the establishment of sustainable space colonies.
-            </p>
-            <Link 
-              to="/pages/SpaceTechRevolution2026" 
-              className="text-pink-400 hover:text-pink-300 font-semibold"
-            >
-              Reach for the Stars →
-            </Link>
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/feat/realtime-rag-content
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Future?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join thousands of forward-thinking organizations already leveraging these revolutionary technologies 
-            to gain competitive advantages and drive unprecedented growth.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Link 
-              to="/contact" 
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/pages/ComprehensiveServices2026" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
-            >
-              View Our Services
-            </Link>
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
-import React from 'react';
-
-const RevolutionaryTechInsights2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">RevolutionaryTechInsights2026</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-        </div>
-      </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
-=======
->>>>>>> origin/feat/realtime-rag-content
-    </div>
+    </>
   );
+  };
+export default RevolutionaryTechInsights2026;
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-
-
-
-export default RevolutionaryTechInsights2026;
-=======
-export default RevolutionaryTechInsights2026;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
-=======
-export default RevolutionaryTechInsights2026;
->>>>>>> origin/feat/realtime-rag-content

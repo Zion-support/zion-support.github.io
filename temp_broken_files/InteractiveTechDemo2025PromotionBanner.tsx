@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveTechDemo2025PromotionBanner.tsx
-import React from 'react';
-const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -108,7 +104,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveTechDemo2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -300,10 +295,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   >
                     <Eye className="w-6 h-6 text-white" />
                   </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveTechDemo2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveTechDemo2025PromotionBanner.tsx
                   <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >

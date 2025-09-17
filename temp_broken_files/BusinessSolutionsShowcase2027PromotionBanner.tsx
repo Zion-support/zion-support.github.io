@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
-import React from 'react';
-const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -73,7 +69,6 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
     "Digital Transformation"
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -94,20 +89,14 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-blue-300 font-medium">Business Solutions 2027</span>
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* Main Heading */}
             <divh1
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent"
             >
               Business Solutions Showcase 2027
             </divh1>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* Subtitle */}
             <divp
               className="text-xl text-gray-300 leading-relaxed"
@@ -115,10 +104,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               Comprehensive technology solutions designed to accelerate your business growth
               enhance efficiencyand drive innovation across all industries and company sizes.
             </divp>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* Features Grid */}
             <div
               className="grid grid-cols-2 gap-3"
@@ -130,10 +116,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -149,10 +132,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
           {/* Right Content */}
           <div
             className="space-y-8"

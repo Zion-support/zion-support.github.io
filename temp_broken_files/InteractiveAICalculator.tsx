@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAICalculator.tsx
-import React from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 
 interface CalculatorInputs {
@@ -21,7 +18,6 @@ interface CalculationResult {
   netBenefit: number;
 }
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAICalculator.tsx
 const InteractiveAICalculator: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">

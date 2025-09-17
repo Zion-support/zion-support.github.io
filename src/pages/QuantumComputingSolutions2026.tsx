@@ -1,20 +1,32 @@
 import React from 'react';
-
 const QuantumComputingSolutions2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-      <main className="container mx-auto px-6 py-16">
-        <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Quantum Computing Solutions 2026
-        </h1>
-        <p className="text-lg text-white/80 max-w-3xl">
-          Explore practical applications of quantum algorithms, hybrid workflows, and optimization patterns that
-          deliver value with today’s devices while preparing for fault-tolerant systems.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <main className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Quantum Computing Solutions 2026
+          </h1>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Revolutionary quantum computing solutions that will transform your business in 2026
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Quantum Processing</h3>
+            <p className="text-gray-600">Advanced quantum processing capabilities</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Quantum Security</h3>
+            <p className="text-gray-600">Unbreakable quantum encryption</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Quantum Analytics</h3>
+            <p className="text-gray-600">Revolutionary data analysis</p>
+          </div>
+        </div>
       </main>
     </div>
   );
 };
-
 export default QuantumComputingSolutions2026;
-

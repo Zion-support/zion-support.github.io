@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentAdvertisingBanner2025.tsx
-import React from 'react';
-const UltimateContentAdvertisingBanner2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -81,7 +77,6 @@ const UltimateContentAdvertisingBanner2025 = () => {
 
   const currentContent = advertisingContent[currentSlide];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentAdvertisingBanner2025.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">
       {/* Animated Background */}
@@ -102,28 +97,19 @@ const UltimateContentAdvertisingBanner2025 = () => {
               >
                 {currentContent.icon}
               </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentAdvertisingBanner2025.tsx
-=======
               
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentAdvertisingBanner2025.tsx
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white mb-4"
               >
                 {currentContent.title}
               </divh2>
-<<<<<<< HEAD:temp_broken_files/UltimateContentAdvertisingBanner2025.tsx
-=======
               
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentAdvertisingBanner2025.tsx
               <divp
                 className="text-xl md:text-2xl text-blue-100 mb-6"
               >
                 {currentContent.subtitle}
               </divp>
-<<<<<<< HEAD:temp_broken_files/UltimateContentAdvertisingBanner2025.tsx
-=======
               
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentAdvertisingBanner2025.tsx
               <divp
                 className="text-lg text-gray-200 mb-8 max-w-4xl mx-auto"
               >
@@ -152,10 +138,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentAdvertisingBanner2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentAdvertisingBanner2025.tsx
             {/* Additional CTAs */}
             <div
               className="flex flex-wrap justify-center gap-4"
@@ -184,10 +167,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentAdvertisingBanner2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentAdvertisingBanner2025.tsx
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
           {advertisingContent.map((_index) => (

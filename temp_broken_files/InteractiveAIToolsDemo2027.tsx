@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027.tsx
-import React from 'react';
-const InteractiveAIToolsDemo2027: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -57,7 +53,6 @@ interface UserProfileCardProps {
 }
 
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027.tsx
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">InteractiveAIToolsDemo2027</h3>
@@ -203,10 +198,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
             See how artificial intelligence can transform your workflow in real-time.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027.tsx
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Tool Selection */}
           <div
@@ -241,10 +233,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
               ))}
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2027.tsx
           {/* Demo Interface */}
           <div
             className="bg-white rounded-2xl shadow-xl p-8"

@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
 const OmniversalAIConsciousness2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -11,12 +8,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
           <div
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 OMNIVERSAL CONSCIOUSNESS • 2035
@@ -50,10 +41,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Universal Intelligence */}
             <div
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-              initial={{ opacity: 0, y: 30 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -72,15 +59,9 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 Access Universal Mind →
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-            {/* Consciousness Transfer */}
-            <div
-              initial={{ opacity: 0, y: 30 }}
-=======
 
             {/* Consciousness Transfer */}
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-fuchsia-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-fuchsia-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -99,15 +80,9 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 Transfer Consciousness →
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-            {/* Quantum Consciousness */}
-            <div
-              initial={{ opacity: 0, y: 30 }}
-=======
 
             {/* Quantum Consciousness */}
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -138,10 +113,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-              initial={{ opacity: 0, x: -30 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
               whileInView={{ opacity: 1, x: 0 }}
             >
               <h3 className="text-3xl font-bold mb-6">Omniversal Knowledge</h3>
@@ -165,13 +136,8 @@ const OmniversalAIConsciousness2035: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-            <div
-              initial={{ opacity: 0, x: 30 }}
-=======
             
             <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 rounded-xl p-8 border border-violet-400/30"
             >
@@ -189,10 +155,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div
-<<<<<<< HEAD:temp_broken_files/OmniversalAIConsciousness2035.tsx
-            initial={{ opacity: 0, y: 30 }}
-=======
->>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalAIConsciousness2035.tsx
             whileInView={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-4xl font-bold mb-6">🔮 The Ultimate Evolution</h2>

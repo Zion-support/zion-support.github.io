@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027.tsx
-import React from 'react';
-const InteractiveAIToolsShowcase2027: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -151,7 +147,6 @@ const InteractiveAIToolsShowcase2027 = () => {
 
   const featuredTools = filteredTools.filter(tool => tool.featured);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
@@ -200,10 +195,7 @@ const InteractiveAIToolsShowcase2027 = () => {
             that are transforming industries in 2027.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027.tsx
         {/* Search and Filters */}
         <div
           className="mb-12"
@@ -263,10 +255,7 @@ const InteractiveAIToolsShowcase2027 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027.tsx
         {/* Featured Tools */}
         {featuredTools.length > 0 && (
           <div
@@ -310,19 +299,11 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </div>
                     {tool.demo && (
                       <div className="absolute inset-0 flex items-center justify-center">
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027.tsx
-                        <divbutton
-                          className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
-                        >
-                          <Play className="w-6 h-6 text-white ml-1" />
-                        </divbutton>
-=======
                         <button
                           className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                         >
                           <Play className="w-6 h-6 text-white ml-1" />
                         </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027.tsx
                       </div>
                     )}
                   </div>
@@ -402,19 +383,11 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </div>
                   {tool.demo && (
                     <div className="absolute inset-0 flex items-center justify-center">
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027.tsx
-                      <divbutton
-                        className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
-                      >
-                        <Play className="w-5 h-5 text-white ml-1" />
-                      </divbutton>
-=======
                       <button
                         className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                       >
                         <Play className="w-5 h-5 text-white ml-1" />
                       </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027.tsx
                     </div>
                   )}
                 </div>
@@ -467,10 +440,7 @@ const InteractiveAIToolsShowcase2027 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2027.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

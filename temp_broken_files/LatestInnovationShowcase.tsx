@@ -1,9 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/LatestInnovationShowcase.tsx
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/LatestInnovationShowcase.tsx
 const LatestInnovationShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white relative overflow-hidden">
@@ -54,10 +50,7 @@ const LatestInnovationShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/LatestInnovationShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/LatestInnovationShowcase.tsx
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
             {innovations.map((_, index) => (
@@ -86,22 +79,14 @@ const LatestInnovationShowcase: React.FC = () => {
         {/* Quick Access Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {innovations.map((innovation, index) => (
-<<<<<<< HEAD:temp_broken_files/LatestInnovationShowcase.tsx
-            <diva
-=======
             <a
->>>>>>> origin/merge-new-content-1757989975:src/components/LatestInnovationShowcase.tsx
               key={index}
               href={innovation.link}
               className={`bg-gradient-to-r ${innovation.color} text-white p-4 rounded-lg text-center hover:shadow-lg transition-all duration-300`}
             >
               <div className="text-2xl mb-2">{innovation.icon}</div>
               <div className="text-sm font-semibold">{innovation.title}</div>
-<<<<<<< HEAD:temp_broken_files/LatestInnovationShowcase.tsx
-            </diva>
-=======
             </a>
->>>>>>> origin/merge-new-content-1757989975:src/components/LatestInnovationShowcase.tsx
           ))}
         </div>
       </div>

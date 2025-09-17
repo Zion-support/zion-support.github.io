@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/NewContent2026UltimateShowcase.tsx
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2026UltimateShowcase.tsx
 const NewContent2026UltimateShowcase: React.FC = () => {
   return (
     <divsection
@@ -17,10 +14,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           >
             <span className="text-sm font-bold tracking-wide uppercase">🌟 New Content 2026</span>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewContent2026UltimateShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2026UltimateShowcase.tsx
           <divh2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
@@ -29,10 +23,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               Showcase 2026
             </span>
           </divh2>
-<<<<<<< HEAD:temp_broken_files/NewContent2026UltimateShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2026UltimateShowcase.tsx
           <divp
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
@@ -109,10 +100,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/NewContent2026UltimateShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContent2026UltimateShowcase.tsx
         {/* Trust Indicators */}
         <div
           className="mt-16 pt-8 border-t border-gray-200"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025.tsx
-import React from 'react';
-const RevolutionaryAIInnovations2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -190,7 +186,6 @@ const RevolutionaryAIInnovations2025 = () => {
 
   const currentInnovation = innovations[activeInnovation];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025.tsx
   return (
     <divsection 
       className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden"
@@ -229,19 +224,13 @@ const RevolutionaryAIInnovations2025 = () => {
             <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
             Revolutionary AI Innovations 2025
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025.tsx
           <divh2
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
           >
             The Future is Here
           </divh2>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025.tsx
           <divp
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
@@ -310,10 +299,7 @@ const RevolutionaryAIInnovations2025 = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025.tsx
           {/* Right Side - Visual Representation */}
           <div
             key={`visual-${activeInnovation}`}
@@ -357,10 +343,7 @@ const RevolutionaryAIInnovations2025 = () => {
               >
                 <currentInnovation.icon className="w-16 h-16 text-white" />
               </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIInnovations2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIInnovations2025.tsx
               {/* Stats Display */}
               <div className="absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-4">
                 {Object.entries(currentInnovation.stats).slice(04).map(([keyvalue]index) => (

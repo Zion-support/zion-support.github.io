@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/QuantumComputingRevolutionPromotionBanner.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -8,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 CpuAtomZapClockShieldGlobeTrendingUp
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingRevolutionPromotionBanner.tsx
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
   return (
     <div
@@ -39,10 +35,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 that are reshaping the boundaries of computational possibility.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingRevolutionPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingRevolutionPromotionBanner.tsx
             {/* Features List */}
             <div
               className="grid grid-cols-2 gap-2 mb-6"
@@ -54,10 +47,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingRevolutionPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingRevolutionPromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -94,10 +84,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 <div className="text-4xl font-bold text-white mb-2">{highlights[currentHighlight].value}</div>
                 <div className="text-gray-400 text-sm">{highlights[currentHighlight].label}</div>
               </div>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingRevolutionPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingRevolutionPromotionBanner.tsx
               {/* Quantum Metrics */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-sm">

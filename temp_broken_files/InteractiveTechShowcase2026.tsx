@@ -4,10 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD:src/components/InteractiveTechShowcase2026.tsx
-=======
 
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005:temp_broken_files/InteractiveTechShowcase2026.tsx
   const [activeDemo, setActiveDemo] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

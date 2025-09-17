@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationPromotionBanner.tsx
-import React from 'react';
-const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -43,7 +39,6 @@ const AI2025TrendsInnovationPromotionBanner = () => {
     "Predictive Analytics"
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationPromotionBanner.tsx
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -90,37 +85,22 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationPromotionBanner.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationPromotionBanner.tsx
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 Explore AI Trends
                 <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationPromotionBanner.tsx
-              </divbutton>
-              <divbutton
-=======
               </button>
               
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationPromotionBanner.tsx
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Clock className="w-5 h-5 mr-2" />
                 Limited Time
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationPromotionBanner.tsx
-              </divbutton>
-            </div>
-          </div>
-=======
               </button>
             </div>
           </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationPromotionBanner.tsx
           {/* Right Content - Stats Display */}
           <div
             className="relative"
@@ -166,10 +146,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             >
               <Star className="w-8 h-8 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025TrendsInnovationPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025TrendsInnovationPromotionBanner.tsx
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >

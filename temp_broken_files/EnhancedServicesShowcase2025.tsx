@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnhancedServicesShowcase2025.tsx
-import React from 'react';
-=======
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
   FaRocket, 
@@ -266,7 +263,6 @@ const services: Service[] = [
   }
 ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedServicesShowcase2025.tsx
 const EnhancedServicesShowcase2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -283,10 +279,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedServicesShowcase2025.tsx
         {/* Search and Filters */}
         <div
           className="mb-12"
@@ -313,10 +306,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </select>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedServicesShowcase2025.tsx
         {/* Category Tabs */}
         <div
           className="mb-12"
@@ -348,10 +338,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedServicesShowcase2025.tsx
         {/* Services Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -399,10 +386,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedServicesShowcase2025.tsx
         {/* No Results */}
         {filteredServices.length === 0 && (
           <div

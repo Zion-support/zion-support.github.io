@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026.tsx
-import React from 'react';
-const BusinessSuccessStoriesShowcase2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -231,7 +227,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026.tsx
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,10 +247,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             with our AI solutions. See the measurable impact on their bottom line.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026.tsx
         {/* Featured Stories */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -365,10 +357,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026.tsx
         {/* All Stories Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -441,10 +430,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2026.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

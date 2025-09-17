@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystem.tsx
-import React from 'react';
-const AdvancedContentManagementSystem: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -158,7 +154,6 @@ const AdvancedContentManagementSystem = () => {
     return typeConfig ? typeConfig.icon : Database;
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystem.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -187,10 +182,7 @@ const AdvancedContentManagementSystem = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystem.tsx
         {/* Stats Overview */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
@@ -214,10 +206,7 @@ const AdvancedContentManagementSystem = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystem.tsx
         {/* Navigation Tabs */}
         <div
           className="mb-8"
@@ -245,10 +234,7 @@ const AdvancedContentManagementSystem = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystem.tsx
         {/* Content Types Overview */}
         <div
           className="mb-8"
@@ -268,10 +254,7 @@ const AdvancedContentManagementSystem = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystem.tsx
         {/* Recent Content */}
         <div
           className="bg-white rounded-xl shadow-lg p-6"
@@ -363,10 +346,7 @@ const AdvancedContentManagementSystem = () => {
             </table>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystem.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystem.tsx
         {/* Analytics Charts Placeholder */}
         <div
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"

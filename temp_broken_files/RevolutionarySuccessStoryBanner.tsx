@@ -1,11 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStoryBanner.tsx
-import React from "react";
-
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStoryBanner.tsx
-=======
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStoryBanner.tsx
 
 export default function RevolutionarySuccessStoryBanner() {
   return (
@@ -18,13 +12,8 @@ export default function RevolutionarySuccessStoryBanner() {
       
       {/* Floating Success Icons */}
       <div
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStoryBanner.tsx
-
-
-=======
           y: [0-10],
           rotate: [050]
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStoryBanner.tsx
         }}
           duration: 3,
           repeat: Infinity,
@@ -36,13 +25,8 @@ export default function RevolutionarySuccessStoryBanner() {
       </div>
       
       <div
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStoryBanner.tsx
-
-
-=======
           y: [010],
           rotate: [0-50]
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStoryBanner.tsx
         }}
           duration: 4,
           repeat: Infinity,
@@ -143,14 +127,10 @@ const function RevolutionarySuccessStoryBanner() { = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function RevolutionarySuccessStoryBanner() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionarySuccessStoryBanner.tsx
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStoryBanner.tsx
-=======
 };
 
 export default function RevolutionarySuccessStoryBanner() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionarySuccessStoryBanner.tsx

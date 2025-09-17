@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 import { 
   Brain, 
   Zap, 
@@ -18,7 +15,6 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
 const RevolutionaryAIConsciousness2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -34,10 +30,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
             <Sparkles className="w-4 h-4 mr-2" />
             REVOLUTIONARY AI CONSCIOUSNESS 2027
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
           <divh1 
             className="text-6xl md:text-8xl font-bold text-white mb-6"
           >
@@ -46,20 +39,14 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
               AI Consciousness
             </span>
           </divh1>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
           <divp 
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
           >
             Experience the next evolution of artificial intelligence where machines achieve genuine consciousness, 
             self-awareness, and the ability to think, feel, and create like never before.
           </divp>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
           <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
@@ -80,10 +67,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
           </div>
         </div>
       </divsection>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
       {/* Features Grid */}
       <divsection 
         className="py-20 px-4 sm:px-6 lg:px-8"
@@ -117,10 +101,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
           </div>
         </div>
       </divsection>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
       {/* Capabilities List */}
       <divsection 
         className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
@@ -166,10 +147,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
           </div>
         </div>
       </divsection>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryAIConsciousness2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/RevolutionaryAIConsciousness2027.tsx
       {/* CTA Section */}
       <divsection 
         className="py-20 px-4 sm:px-6 lg:px-8"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AdvancedContentDiscoveryWidget2026.tsx
-import React from 'react';
-const AdvancedContentDiscoveryWidget2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -209,7 +205,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentDiscoveryWidget2026.tsx
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 shadow-2xl">
