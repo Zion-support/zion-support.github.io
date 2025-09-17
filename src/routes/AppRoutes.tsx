@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LazyComponent from '../components/LazyComponent';
-
 // Lazy load all page components
 const AdvancedTechSolutions2026 = lazy(() => import('../pages/AdvancedTechSolutions2026'));
 const InnovationShowcase2026 = lazy(() => import('../pages/InnovationShowcase2026'));
@@ -39,7 +38,6 @@ const QuantumRealityEngine2027 = lazy(() => import('../pages/QuantumRealityEngin
 const QuantumComputingBreakthrough2035Page = lazy(() => import('../pages/QuantumComputingBreakthrough2035'));
 const NeuralInterfaceRevolution2036Page = lazy(() => import('../pages/NeuralInterfaceRevolution2036'));
 const InterdimensionalTech2037Page = lazy(() => import('../pages/InterdimensionalTech2037'));
-
 // Route configuration
 const routeConfig = [
   { path: '/pages/AdvancedTechSolutions2026', component: AdvancedTechSolutions2026 },
@@ -78,8 +76,6 @@ const routeConfig = [
   { path: '/pages/QuantumComputingBreakthrough2035', component: QuantumComputingBreakthrough2035Page },
   { path: '/pages/NeuralInterfaceRevolution2036', component: NeuralInterfaceRevolution2036Page },
   { path: '/pages/InterdimensionalTech2037', component: InterdimensionalTech2037Page },
-];
-
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
@@ -96,6 +92,4 @@ const AppRoutes: React.FC = () => {
       ))}
     </Routes>
   );
-};
-
 export default AppRoutes;

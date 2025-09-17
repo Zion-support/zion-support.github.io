@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContent2026UltimateShowcase: React.FC = () => {
   return (
     <divsection
@@ -13,7 +12,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           >
             <span className="text-sm font-bold tracking-wide uppercase">🌟 New Content 2026</span>
           </div>
-
           <divh2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
@@ -22,7 +20,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               Showcase 2026
             </span>
           </divh2>
-
           <divp
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
@@ -30,7 +27,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
             and proven implementation frameworks that deliver extraordinary results.
           </divp>
         </div>
-
         {/* Content Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {contentItems.map((item, index) => (
@@ -50,13 +46,11 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                   {item.title}
                 </h3>
               </div>
-
               {/* Card Content */}
               <div className="p-8">
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                   {item.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {item.features.map((feature, featureIndex) => (
@@ -66,7 +60,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={item.href}
@@ -78,7 +71,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Additional Resources */}
         <div
           className="bg-white rounded-2xl shadow-xl p-8 text-center"
@@ -89,7 +81,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
             Get personalized implementation support and access to our exclusive AI transformation toolkit.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/services/ai-consulting"
@@ -105,7 +96,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div
           className="mt-16 pt-8 border-t border-gray-200"
@@ -125,7 +115,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
       </div>
     </divsection>
   );
-};
 
 export default NewContent2026UltimateShowcase;
 </div></div></div>

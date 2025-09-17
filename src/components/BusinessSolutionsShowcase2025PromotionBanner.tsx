@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -36,7 +35,6 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Center Metrics Rotator */}
               <div 
                 className="hidden md:flex items-center space-x-6"
@@ -70,7 +68,6 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
                   <div className="text-xs opacity-80">Support</div>
                 </div>
               </div>
-
               {/* Right Actions */}
               <div 
                 className="flex items-center space-x-3"
@@ -79,12 +76,10 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
                   <Users className="w-4 h-4" />
                   <span className="text-sm font-medium">Case Studies</span>
                 </button>
-                
                 <button className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
                   <span>Explore Solutions</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-                
                 <button 
                   onClick={handleDismiss}
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
@@ -93,7 +88,6 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Mobile Content */}
             <div 
               className="md:hidden flex items-center justify-between py-2 border-t border-white/20"
@@ -128,7 +122,6 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
@@ -168,7 +161,6 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default BusinessSolutionsShowcase2025PromotionBanner;
 </div></div>

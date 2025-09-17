@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
-
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -220,6 +219,5 @@ export default function SalaryInsightsPage() {
                 ))}
           )}
   );
-};
 
 export default salary-insights;

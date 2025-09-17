@@ -1,9 +1,7 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface FeaturedContent {
   id: string;
   title: string;
@@ -14,8 +12,6 @@ interface FeaturedContent {
   badgeColor: string;
   link: string;
   icon: string;
-}
-
 const featuredContent: FeaturedContent[] = [
   {
     id: '1',
@@ -61,7 +57,7 @@ const featuredContent: FeaturedContent[] = [
     link: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
     icon: '⚛️'
   }
-];
+};
 
 export default function FeaturedContentBanner() {
   const [currentIndexsetCurrentIndex] = useState(0);
@@ -136,6 +132,5 @@ export default function FeaturedContentBanner() {
                   {content.roi}
             ))}
   );
-};
 
 export default FeaturedContentBanner;

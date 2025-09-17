@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NEW_BLOG_POSTS_2029 } from "@/data/newBlogPosts2029";
-
 const LatestInsightsPromo: React.FC = () => {
   const posts = NEW_BLOG_POSTS_2029.slice(0, 3);
-
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -19,7 +17,6 @@ const LatestInsightsPromo: React.FC = () => {
             View all →
           </Link>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((post) => (
             <Link
@@ -55,6 +52,5 @@ const LatestInsightsPromo: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default LatestInsightsPromo;

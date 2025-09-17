@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function QuantumAIBreakthroughPromotionBanner() {
   return (
@@ -46,4 +47,4 @@ export default function QuantumAIBreakthroughPromotionBanner() {
             >
               Schedule Consultation
   );
-}
+};

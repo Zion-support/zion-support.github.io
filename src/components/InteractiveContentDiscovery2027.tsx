@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const InteractiveContentDiscovery2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
   const contentItems = [
     {
       id: 1,
@@ -62,7 +60,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
       tags: ["Services", "AI", "Quantum", "Space"]
     }
   ];
-
   const categories = [
     { key: 'all', label: 'All Content', icon: '🌟' },
     { key: 'innovation', label: 'Innovation', icon: '🧠' },
@@ -71,18 +68,14 @@ const InteractiveContentDiscovery2027: React.FC = () => {
     { key: 'blog', label: 'Blog', icon: '📚' },
     { key: 'services', label: 'Services', icon: '🚀' }
   ];
-
   const filteredItems = selectedCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === selectedCategory);
-
   const featuredItems = contentItems.filter(item => item.featured);
-
 const InteractiveContentDiscovery2027: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -102,7 +95,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
             and revolutionary innovations that are shaping the future.
           </p>
         </motion.div>
-
         {/* Featured Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -146,7 +138,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -164,7 +155,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
@@ -192,14 +182,12 @@ const InteractiveContentDiscovery2027: React.FC = () => {
                     </span>
                   )}
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {item.description}
                 </p>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag, tagIndex) => (
                     <span key={tagIndex} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">
@@ -207,7 +195,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">Explore →</span>
                   <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${item.color}`}></div>
@@ -216,7 +203,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
             ))}
           </AnimatePresence>
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -246,6 +232,5 @@ const InteractiveContentDiscovery2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveContentDiscovery2027;

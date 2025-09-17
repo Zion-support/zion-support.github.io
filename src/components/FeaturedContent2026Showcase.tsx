@@ -1,7 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarTrendingUpClockAwardSparkles
-
 interface ContentItem {
   title: string;
   description: string;
@@ -15,15 +14,13 @@ interface ContentItem {
   isTrending?: boolean;
   roi?: string;
   industry?: string;
-}
-
 interface FeaturedContent2026ShowcaseProps {
   title?: string;
   subtitle?: string;
   showStats?: boolean;
   maxItems?: number;
   className?: string;
-}
+};
 
 export default function FeaturedContent2026Showcase({
   title = "🚀 Revolutionary AI Content 2026",
@@ -241,5 +238,5 @@ export default function FeaturedContent2026Showcase({
               >
                 Download Free Playbook
   );
-}
+};
 export { FeaturedContent2026Showcase };

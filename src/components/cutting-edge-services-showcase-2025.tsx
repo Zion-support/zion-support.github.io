@@ -1,5 +1,4 @@
 import React from 'react';
-
 const cutting-edge-services-showcase-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,14 +7,11 @@ const cutting-edge-services-showcase-2025: React.FC = () => {
     </div>
   );
 };
-
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
-];
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -53,7 +49,7 @@ const serviceCategories = [
     gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length
   }
-];
+};
 
 export default function CuttingEdgeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -344,4 +340,4 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
     </>
   );
-}
+};

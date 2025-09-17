@@ -1,4 +1,5 @@
 import React from 'react';
+};
 
 export default function PerformanceOptimizer2026() {
   useEffect(() => {
@@ -61,4 +62,3 @@ export default function PerformanceOptimizer2026() {
     };
   }[]);
   return null;
-}

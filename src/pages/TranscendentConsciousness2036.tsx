@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const TranscendentConsciousness2036: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-900 via-purple-900 to-indigo-900 text-white">
@@ -8,7 +7,6 @@ const TranscendentConsciousness2036: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-indigo-600/20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
             className="text-center"
@@ -23,7 +21,6 @@ const TranscendentConsciousness2036: React.FC = () => {
               Achieve the highest state of consciousness evolution, transcending physical limitations 
               and achieving universal awareness and enlightenment
             </p>
-            
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <span className="px-4 py-2 bg-pink-500/20 text-pink-300 rounded-full text-sm font-semibold">
                 🧘 Universal Awareness
@@ -41,7 +38,6 @@ const TranscendentConsciousness2036: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -55,7 +51,6 @@ const TranscendentConsciousness2036: React.FC = () => {
             Progress through the stages of consciousness evolution to achieve transcendent awareness
           </p>
         </div>
-
         <div className="space-y-8">
           {[
             {
@@ -118,7 +113,6 @@ const TranscendentConsciousness2036: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Meditation and Training */}
       <div className="bg-gradient-to-r from-pink-900/50 to-indigo-900/50 py-20">
         <div className="container mx-auto px-4">
@@ -133,7 +127,6 @@ const TranscendentConsciousness2036: React.FC = () => {
               Guided programs to accelerate your consciousness evolution journey
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -209,7 +202,6 @@ const TranscendentConsciousness2036: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Metrics */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -223,7 +215,6 @@ const TranscendentConsciousness2036: React.FC = () => {
             Track your progress through advanced consciousness monitoring and analysis
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
@@ -265,7 +256,6 @@ const TranscendentConsciousness2036: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -291,6 +281,5 @@ const TranscendentConsciousness2036: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default TranscendentConsciousness2036;

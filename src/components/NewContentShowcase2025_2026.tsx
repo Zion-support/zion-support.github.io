@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CalendarIconClockIconArrowRightIconStarIcon } from '@heroicons/react/24/outline';
+};
 
 export default function NewContentShowcase2025_2026() {
   const featuredContent = [
@@ -111,6 +112,5 @@ export default function NewContentShowcase2025_2026() {
               >
                 Get Free Consultation
   );
-};
 
 export default NewContentShowcase2025_2026;

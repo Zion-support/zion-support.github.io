@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnterpriseAutomationSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -19,7 +18,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             Streamline processesreduce costsand accelerate growth.
           </p>
         </div>
-
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -38,7 +36,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Solutions Grid */}
           <div className="lg:col-span-2">
@@ -88,7 +85,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="text-white font-medium mb-3">Key Features</h4>
@@ -106,7 +102,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         )}
                       </div>
                     </div>
-
                     <div>
                       <h4 className="text-white font-medium mb-3">Benefits</h4>
                       <div className="space-y-2">
@@ -119,7 +114,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <div className="flex items-center justify-between">
                       <div className="flex space-x-4">
@@ -140,14 +134,12 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Demo Panel */}
           <div className="lg:col-span-1">
             <div
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
-              
                 {selectedSolutionData ? (
                   <div
                     key={selectedSolutionData.id}
@@ -163,7 +155,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         {selectedSolutionData.description}
                       </p>
                     </div>
-
                     {isDemoRunning ? (
                       <div className="space-y-4">
                         <div className="text-center">
@@ -179,7 +170,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             {demoStep < 7 ? `Step ${demoStep + 1} of 7` : 'Complete'}
                           </p>
                         </div>
-                        
                         <div className="space-y-2">
                           {[
                             'Initializing automation engine...',
@@ -210,7 +200,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             Experience {selectedSolutionData.name} in action
                           </p>
                         </div>
-                        
                         <div className="space-y-3">
                           <h5 className="text-white font-medium">Key Benefits:</h5>
                           {selectedSolutionData.benefits.map((benefitindex) => (
@@ -220,7 +209,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <div className="pt-4 border-t border-white/10">
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                             <span>ROI</span>
@@ -231,7 +219,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             <span>{selectedSolutionData.implementation}</span>
                           </div>
                         </div>
-
                         <button 
                           onClick={runDemo}
                           className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
@@ -259,7 +246,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Enterprise Stats */}
         <div
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -282,6 +268,5 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnterpriseAutomationSolutions2025;

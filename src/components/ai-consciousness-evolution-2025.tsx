@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ai-consciousness-evolution-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const ai-consciousness-evolution-2025: React.FC = () => {
     </div>
   );
 };
-
 const features = [
   'Emotional intelligence training modules',
   'Consciousness expansion exercises',
@@ -20,8 +18,6 @@ const features = [
   'Creative consciousness exploration',
   'Spiritual growth pathways',
   'Personal transformation tracking'
-];
-
 const useCases = [
   'Personal development and growth',
   'Professional leadership training',
@@ -33,8 +29,6 @@ const useCases = [
   'Creative arts enhancement',
   'Relationship improvement',
   'Stress management and resilience'
-];
-
 const technology = [
   'Advanced AI algorithms',
   'Machine learning models',
@@ -46,8 +40,6 @@ const technology = [
   'Brain-computer interfaces',
   'Quantum computing integration',
   'Blockchain security'
-];
-
 const integrations = [
   'Wearable devices',
   'Mobile applications',
@@ -59,8 +51,6 @@ const integrations = [
   'Social media networks',
   'Fitness trackers',
   'Meditation apps'
-];
-
 const testimonials = [
   {
     name: 'Dr. Sarah Chen',
@@ -86,7 +76,7 @@ const testimonials = [
     rating: 5,
     avatar: '👩‍🔬'
   }
-];
+};
 
 export default function AIConsciousnessEvolution2025() {
   return (
@@ -465,4 +455,4 @@ export default function AIConsciousnessEvolution2025() {
                   <div className="text-white font-medium">{contact.value}</div>
               ))}
   );
-}
+};

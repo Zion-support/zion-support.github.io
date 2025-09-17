@@ -1,13 +1,11 @@
 import { ArrowRight, BookOpen, Brain, Calendar, Clock, DollarSign, Heart, Star, TrendingUp, User, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { allBlogPosts } from '../data/blog-posts';
-
 const LatestContent2026 = () => {
   // Filter latest content from 2026
   const latestContent = allBlogPosts
     .filter(post => post.publishDate.startsWith('2025-01-21'))
     .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Customer Experience':
@@ -24,7 +22,6 @@ const LatestContent2026 = () => {
         return <Brain className="h-6 w-6" />;
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Customer Experience':
@@ -41,7 +38,6 @@ const LatestContent2026 = () => {
         return 'text-gray-500 bg-gray-100';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -51,7 +47,6 @@ const LatestContent2026 = () => {
           <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
           <div className="absolute bottom-10 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
@@ -68,7 +63,6 @@ const LatestContent2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Content Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
@@ -79,7 +73,6 @@ const LatestContent2026 = () => {
             Explore our latest articles covering the most advanced AI technologies and their real-world applications
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestContent.map((post) => (
             <article
@@ -95,7 +88,6 @@ const LatestContent2026 = () => {
                   </div>
                 </div>
               )}
-
               {/* Image placeholder */}
               <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -106,7 +98,6 @@ const LatestContent2026 = () => {
                   </div>
                 </div>
               </div>
-
               <div className="p-6">
                 {/* Meta information */}
                 <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -119,17 +110,14 @@ const LatestContent2026 = () => {
                     {post.readTime}
                   </div>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-purple-600 transition-colors">
                   {post.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {post.tags.slice(0, 3).map((tag) => (
@@ -141,7 +129,6 @@ const LatestContent2026 = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Read more link */}
                 <Link
                   to={`/blog/${post.slug}`}
@@ -154,7 +141,6 @@ const LatestContent2026 = () => {
             </article>
           ))}
         </div>
-
         {/* Call to action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white">
@@ -173,7 +159,6 @@ const LatestContent2026 = () => {
                 Explore All Articles
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              
               <Link
                 to="/contact"
                 className="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
@@ -187,6 +172,5 @@ const LatestContent2026 = () => {
       </div>
     </div>
   );
-};
 
 export default LatestContent2026;

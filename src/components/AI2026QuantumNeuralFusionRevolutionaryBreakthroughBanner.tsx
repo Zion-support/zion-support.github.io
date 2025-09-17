@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner() {
   return (
@@ -63,4 +64,4 @@ export default function AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-pink-400 rounded-full animate-ping opacity-75" style={{animationDelay: '2s'}}></div>
         <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-75" style={{animationDelay: '3s'}}></div>
   );
-}
+};

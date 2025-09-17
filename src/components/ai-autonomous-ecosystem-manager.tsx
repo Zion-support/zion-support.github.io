@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+};
 
 export default function AIAutonomousEcosystemManager() {
 	return (
@@ -23,4 +24,3 @@ export default function AIAutonomousEcosystemManager() {
 			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	);
-}

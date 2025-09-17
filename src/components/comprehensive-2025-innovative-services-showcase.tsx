@@ -1,5 +1,4 @@
 import React from 'react';
-
 const comprehensive-2025-innovative-services-showcase: React.FC = () => {
   return (
     <Layout>
@@ -15,7 +14,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
           'autonomous systems'
         ]}
       />
-      
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
         {/* Enhanced Background Elements */}
@@ -26,7 +24,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
           <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500"></div>
           <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500"></div>
         </div>
-        
         <div className="text-center max-w-6xl mx-auto relative z-10">
           <div
             className="space-y-6"
@@ -38,14 +35,12 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               <Star className="w-5 h-5" />
               <span>Innovation Leader 2025</span>
             </div>
-            
             <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               2025 Innovative Services
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
               Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
             </p>
-            
             {/* Enhanced Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -70,7 +65,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Categories */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
@@ -87,7 +81,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               Explore our comprehensive range of innovative services across cutting-edge technology domains
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
               const IconComponent = category.icon;
@@ -111,11 +104,11 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                   </div>
                 </div>
               );
+};
             })}
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -131,7 +124,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               Our most popular and innovative services that are transforming industries
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
@@ -149,7 +141,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                         Popular
                       </div>
                     )}
-                    
                     <div className="text-center mb-6">
                       <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>
                         {service.icon}
@@ -160,7 +151,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                         {service.price}<span className="text-lg text-gray-400">/{service.period}</span>
                       </div>
                     </div>
-                    
                     <div className="space-y-3 mb-6">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
@@ -169,7 +159,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    
                     {/* Market Info */}
                     <div className="border-t border-white/10 pt-4 space-y-2">
                       <div className="text-xs text-gray-400">
@@ -182,11 +171,11 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                   </div>
                 </div>
               );
+};
             })}
           </div>
         </div>
       </section>
-
       {/* All Services Grid */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
@@ -203,7 +192,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               Explore our entire collection of innovative services designed for the future
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
@@ -233,11 +221,11 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                   </div>
                 </div>
               );
+};
             })}
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -252,7 +240,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Get in touch with our team to discuss how our innovative services can drive your success
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
@@ -268,7 +255,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                 Email Us
               </a>
             </div>
-            
             <div className="text-sm text-gray-400">
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
@@ -278,6 +264,5 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
       </section>
     </Layout>
   );
-};
 
 export default Comprehensive2025InnovativeServicesShowcase;

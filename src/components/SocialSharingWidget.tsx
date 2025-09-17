@@ -1,11 +1,10 @@
 import React from 'react';
-
 interface SocialSharingWidgetProps {
   title: string;
   description: string;
   url: string;
   hashtags?: string[];
-}
+};
 
 export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }: SocialSharingWidgetProps) {
   const encodedTitle = encodeURIComponent(title);
@@ -80,6 +79,5 @@ export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }
             ))}
       )}
   );
-};
 
 export default SocialSharingWidget;

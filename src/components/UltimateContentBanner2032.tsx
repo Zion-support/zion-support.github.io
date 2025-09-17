@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentBanner2032 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -11,6 +10,5 @@ const UltimateContentBanner2032 = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateContentBanner2032;

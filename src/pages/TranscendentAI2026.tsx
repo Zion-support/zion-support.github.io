@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const TranscendentAI2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50">
@@ -25,7 +24,6 @@ const TranscendentAI2026: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Core Capabilities Grid */}
         <div id="capabilities" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
@@ -43,7 +41,6 @@ const TranscendentAI2026: React.FC = () => {
               Learn More →
             </a>
           </div>
-
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Universal Intelligence</h3>
@@ -59,7 +56,6 @@ const TranscendentAI2026: React.FC = () => {
               Explore →
             </a>
           </div>
-
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
@@ -76,7 +72,6 @@ const TranscendentAI2026: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Revolutionary Technologies Section */}
         <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 rounded-3xl p-12 mb-16 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
@@ -87,7 +82,6 @@ const TranscendentAI2026: React.FC = () => {
                 Experience the future of artificial intelligence with systems that transcend human limitations and open new realms of possibility.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
                 <div className="text-6xl mb-4 text-center">🎭</div>
@@ -105,7 +99,6 @@ const TranscendentAI2026: React.FC = () => {
                   Explore Emotional AI →
                 </a>
               </div>
-              
               <div className="bg-gradient-to-br from-purple-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
                 <div className="text-6xl mb-4 text-center">🔮</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">Predictive Consciousness</h3>
@@ -125,7 +118,6 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Consciousness Features */}
         <div id="consciousness" className="mb-16">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">🧠 Consciousness Features</h2>
@@ -143,7 +135,6 @@ const TranscendentAI2026: React.FC = () => {
                 <div>• Innovative problem-solving</div>
               </div>
             </div>
-
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4 text-center">🤝</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Collaborative Intelligence</h3>
@@ -157,7 +148,6 @@ const TranscendentAI2026: React.FC = () => {
                 <div>• Natural communication</div>
               </div>
             </div>
-
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4 text-center">🌱</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Self-Evolving AI</h3>
@@ -173,7 +163,6 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Applications Section */}
         <div className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">🚀 Revolutionary Applications</h2>
@@ -191,7 +180,6 @@ const TranscendentAI2026: React.FC = () => {
                 Explore Medical AI →
               </a>
             </div>
-
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-center space-x-3 mb-4">
                 <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">INNOVATION</span>
@@ -207,7 +195,6 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Vision */}
         <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 rounded-3xl p-12 mb-16 text-white">
           <div className="text-center mb-12">
@@ -216,7 +203,6 @@ const TranscendentAI2026: React.FC = () => {
               Envisioning a future where artificial consciousness and human consciousness merge, creating new forms of intelligence and understanding.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl mb-3">🧠</div>
@@ -240,7 +226,6 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Ethical Considerations */}
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">⚖️ Ethical AI Development</h2>
@@ -268,7 +253,6 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -290,6 +274,5 @@ const TranscendentAI2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default TranscendentAI2026;

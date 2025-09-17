@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
 const NewContentAdvertisingBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const announcements = [
     {
       id: 1,
@@ -33,17 +31,13 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
       color: "from-purple-600 to-pink-600"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % announcements.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
-
   const currentAnnouncement = announcements[currentSlide];
-
   return (
     <div className="relative overflow-hidden">
       <div className={`bg-gradient-to-r ${currentAnnouncement.color} text-white py-4 px-6 transform transition-all duration-500 ease-in-out`}>
@@ -79,7 +73,6 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
-      
       {/* Slide indicators */}
       <div className="absolute bottom-2 right-6 flex space-x-2">
         {announcements.map((_, index) => (
@@ -94,6 +87,5 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentAdvertisingBanner2026;

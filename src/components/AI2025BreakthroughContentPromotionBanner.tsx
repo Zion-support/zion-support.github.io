@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025BreakthroughContentPromotionBanner() {
   return (
@@ -72,4 +73,4 @@ export default function AI2025BreakthroughContentPromotionBanner() {
           <div className="mt-6 inline-flex items-center bg-red-500 bg-opacity-20 rounded-full px-4 py-2">
             <span className="text-sm font-semibold">⚡ Limited Time: Get Early Access to 2026 Content</span>
   );
-}
+};

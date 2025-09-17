@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-
 interface LeadGenerationFormProps {
   title?: string;
   subtitle?: string;
   variant?: 'default' | 'compact' | 'modal';
   onSuccess?: (data: any) => void;
-}
-
 const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
   title = "Get Your Free AI Consultation",
   subtitle = "Discover how our AI solutions can transform your business",
@@ -24,12 +21,10 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const industries = [
     'Technology', 'Healthcare', 'Finance', 'Manufacturing', 
     'Retail', 'Education', 'Government', 'Other'
   ];
-
   const interests = [
     'AI & Machine Learning',
     'Quantum Computing',
@@ -38,12 +33,10 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
     'Data Analytics',
     'Custom Development'
   ];
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
   const handleInterestToggle = (interest: string) => {
     setFormData(prev => ({
       ...prev,
@@ -52,11 +45,9 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
         : [...prev.interests, interest]
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate API call
     setTimeout(() => {
       setIsSubmitted(true);
@@ -64,7 +55,6 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
       onSuccess?.(formData);
     }, 2000);
   };
-
   if (isSubmitted) {
     return (
       <div
@@ -82,16 +72,14 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
         </div>
       </div>
     );
+};
   }
-
   const containerClasses = variant === 'compact' 
     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6'
     : variant === 'modal'
     ? 'bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto'
     : 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8';
-
   const textColor = variant === 'modal' ? 'text-gray-900' : 'text-white';
-
 const LeadGenerationForm: React.FC = () => {
   return (
     <div
@@ -106,7 +94,6 @@ const LeadGenerationForm: React.FC = () => {
           {subtitle}
         </p>
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
@@ -123,7 +110,6 @@ const LeadGenerationForm: React.FC = () => {
               placeholder="Enter your full name"
             />
           </div>
-
           <div>
             <label className={`block text-sm font-semibold mb-2 ${textColor}`}>
               Email Address *
@@ -139,7 +125,6 @@ const LeadGenerationForm: React.FC = () => {
             />
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label className={`block text-sm font-semibold mb-2 ${textColor}`}>
@@ -154,7 +139,6 @@ const LeadGenerationForm: React.FC = () => {
               placeholder="Your company name"
             />
           </div>
-
           <div>
             <label className={`block text-sm font-semibold mb-2 ${textColor}`}>
               Phone Number
@@ -169,7 +153,6 @@ const LeadGenerationForm: React.FC = () => {
             />
           </div>
         </div>
-
         <div>
           <label className={`block text-sm font-semibold mb-2 ${textColor}`}>
             Industry
@@ -188,7 +171,6 @@ const LeadGenerationForm: React.FC = () => {
             ))}
           </select>
         </div>
-
         <div>
           <label className={`block text-sm font-semibold mb-2 ${textColor}`}>
             Areas of Interest
@@ -210,7 +192,6 @@ const LeadGenerationForm: React.FC = () => {
             ))}
           </div>
         </div>
-
         <div>
           <label className={`block text-sm font-semibold mb-2 ${textColor}`}>
             Message
@@ -224,7 +205,6 @@ const LeadGenerationForm: React.FC = () => {
             placeholder="Tell us about your project or specific needs..."
           />
         </div>
-
         <button
           type="submit"
           disabled={isSubmitting}
@@ -232,13 +212,11 @@ const LeadGenerationForm: React.FC = () => {
         >
           {isSubmitting ? 'Submitting...' : 'Get Free Consultation →'}
         </button>
-
         <p className={`text-sm text-center opacity-75 ${textColor}`}>
           🔒 Your information is secure and will never be shared
         </p>
       </form>
     </div>
   );
-};
 
 export default LeadGenerationForm;

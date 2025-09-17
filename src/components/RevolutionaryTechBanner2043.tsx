@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const RevolutionaryTechBanner2043: React.FC = () => {
   return (
     <motion.div
@@ -58,6 +57,5 @@ const RevolutionaryTechBanner2043: React.FC = () => {
       </div>
     </motion.div>
   );
-};
 
 export default RevolutionaryTechBanner2043;

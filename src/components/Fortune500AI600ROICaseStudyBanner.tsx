@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target } from 'lucide-react';
+};
 
 export default function Fortune500AI600ROICaseStudyBanner() {
   return (
@@ -141,4 +142,4 @@ export default function Fortune500AI600ROICaseStudyBanner() {
             Schedule Strategy Session
             <ArrowRight className="ml-2 w-5 h-5" />
   );
-}
+};

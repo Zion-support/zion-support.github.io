@@ -1,8 +1,8 @@
 "use client";
 'use client';
-
 import React{ useState } from 'react';
 MailSendCheckCircle
+};
 
 export default function AdvancedNewsletter() {
   const [emailsetEmail] = useState('');
@@ -68,6 +68,5 @@ export default function AdvancedNewsletter() {
             <p>
               By subscribingyou agree to our privacy policy. Unsubscribe at any time.
   );
-};
 
 export default AdvancedNewsletter;

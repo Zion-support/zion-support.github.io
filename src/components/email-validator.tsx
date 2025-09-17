@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
+};
 
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState('');
@@ -45,6 +46,7 @@ export default function EmailValidatorPage() {
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) => 
       typos.includes(domain)
     );
+};
     let status = 'valid';
     let score = 100;
     let issues = [];
@@ -422,6 +424,5 @@ export default function EmailValidatorPage() {
               View Pricing
     </>
   );
-};
 
 export default email-validator;

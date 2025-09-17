@@ -19,11 +19,9 @@ import {
   Target,
   Award
 } from 'lucide-react';
-
 const FutureTechTrends2025 = () => {
   const [activeTrend, setActiveTrend] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -31,7 +29,6 @@ const FutureTechTrends2025 = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const trends = [
     {
       title: "Artificial General Intelligence",
@@ -74,7 +71,6 @@ const FutureTechTrends2025 = () => {
       timeline: "2025-2029"
     }
   ];
-
   const predictions = [
     {
       category: "AI & Machine Learning",
@@ -101,20 +97,17 @@ const FutureTechTrends2025 = () => {
       icon: Target
     }
   ];
-
   const stats = [
     { number: "$15T", label: "Market Value by 2030", icon: TrendingUp },
     { number: "2.5B", label: "AI-Powered Devices", icon: Globe },
     { number: "85%", label: "Businesses Using AI", icon: Users },
     { number: "500%", label: "Productivity Increase", icon: Award }
   ];
-
   return (
     <div className="relative py-20 px-4 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252280%2522%2520height%253D%252280%2522%2520viewBox%253D%25220%25200%252080%252080%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.03%2522%253E%253Cpath%2520d%253D%2522M40%252040c0-22.091-17.909-40-40-40v80c22.091%25200%252040-17.909%252040-40z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40" />
-      
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -127,20 +120,17 @@ const FutureTechTrends2025 = () => {
             <Sparkles className="w-5 h-5" />
             <span>FUTURE TECH TRENDS 2025</span>
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future is
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               {" "}Now
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover the revolutionary technologies that will reshape our world in 2025 and beyond. 
             From AI breakthroughs to quantum computing, the future is unfolding before our eyes.
           </p>
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -168,7 +158,6 @@ const FutureTechTrends2025 = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Trends Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <motion.div
@@ -220,7 +209,6 @@ const FutureTechTrends2025 = () => {
               ))}
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
@@ -258,7 +246,6 @@ const FutureTechTrends2025 = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
-              
               {/* Floating elements */}
               <div className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
               <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse delay-1000" />
@@ -266,7 +253,6 @@ const FutureTechTrends2025 = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Predictions */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -305,7 +291,6 @@ const FutureTechTrends2025 = () => {
             ))}
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -335,7 +320,6 @@ const FutureTechTrends2025 = () => {
       </div>
     </div>
   );
-};
 
 export default FutureTechTrends2025;
 </div></div></div></div></div>

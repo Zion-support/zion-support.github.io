@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -9,14 +8,11 @@ interface ContentItem {
   link: string;
   icon: string;
   featured: boolean;
-}
-
 const EnhancedContentSearch2026: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-
   const contentItems: ContentItem[] = [
     {
       id: 'revolutionary-breakthrough',
@@ -99,7 +95,6 @@ const EnhancedContentSearch2026: React.FC = () => {
       featured: false
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Content', icon: '🌟' },
     { id: 'breakthrough', name: 'Breakthroughs', icon: '🚀' },
@@ -110,12 +105,10 @@ const EnhancedContentSearch2026: React.FC = () => {
     { id: 'revolution', name: 'Revolution', icon: '🌟' },
     { id: 'consciousness', name: 'Consciousness', icon: '💭' }
   ];
-
   useEffect(() => {
     setIsSearching(true);
     const timer = setTimeout(() => {
       let filtered = contentItems;
-
       // Filter by search term
       if (searchTerm) {
         filtered = filtered.filter(item =>
@@ -123,20 +116,17 @@ const EnhancedContentSearch2026: React.FC = () => {
           item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
         );
+};
       }
-
       // Filter by category
       if (selectedCategory !== 'all') {
         filtered = filtered.filter(item => item.category === selectedCategory);
       }
-
       setFilteredContent(filtered);
       setIsSearching(false);
     }, 300);
-
     return () => clearTimeout(timer);
   }, [searchTerm, selectedCategory]);
-
   return (
     <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 mb-12">
       <div className="max-w-6xl mx-auto">
@@ -147,7 +137,6 @@ const EnhancedContentSearch2026: React.FC = () => {
             Discover our revolutionary technology content with advanced search and filtering
           </p>
         </div>
-
         {/* Search and Filter Controls */}
         <div className="mb-8">
           <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -171,7 +160,6 @@ const EnhancedContentSearch2026: React.FC = () => {
                 )}
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="md:w-64">
               <select
@@ -187,7 +175,6 @@ const EnhancedContentSearch2026: React.FC = () => {
               </select>
             </div>
           </div>
-
           {/* Quick Filter Tags */}
           <div className="flex flex-wrap gap-2">
             {['AI consciousness', 'quantum computing', 'neural interfaces', 'revolutionary', 'interactive'].map(tag => (
@@ -205,7 +192,6 @@ const EnhancedContentSearch2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Results */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-4">
@@ -222,7 +208,6 @@ const EnhancedContentSearch2026: React.FC = () => {
             )}
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredContent.map((item) => (
@@ -246,7 +231,6 @@ const EnhancedContentSearch2026: React.FC = () => {
                   <p className="text-gray-600 text-sm mb-3">{item.description}</p>
                 </div>
               </div>
-
               <div className="flex flex-wrap gap-1 mb-4">
                 {item.tags.slice(0, 3).map(tag => (
                   <span
@@ -262,7 +246,6 @@ const EnhancedContentSearch2026: React.FC = () => {
                   </span>
                 )}
               </div>
-
               <a
                 href={item.link}
                 className={`block w-full text-center py-2 px-4 rounded-lg font-semibold transition-all duration-300 ${
@@ -276,7 +259,6 @@ const EnhancedContentSearch2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* No Results */}
         {filteredContent.length === 0 && !isSearching && (
           <div className="text-center py-12">
@@ -299,6 +281,5 @@ const EnhancedContentSearch2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedContentSearch2026;

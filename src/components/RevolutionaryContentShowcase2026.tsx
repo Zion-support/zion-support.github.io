@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -11,7 +9,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const contentSlides = [
     {
       title: "Revolutionary Tech Trends 2026",
@@ -46,7 +43,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       features: ["Industry Analysis", "Future Predictions", "Technology Impact", "Innovation Metrics"]
     }
   ];
-
   return (
     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 text-white relative overflow-hidden">
@@ -64,7 +60,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               and insights that will shape the future of humanity.
             </p>
           </div>
-
           {/* Main Showcase */}
           <div className="relative">
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -96,7 +91,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Navigation Dots */}
             <div className="flex justify-center space-x-3 mt-8">
               {contentSlides.map((_, index) => (
@@ -110,7 +104,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Content Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {contentSlides.map((slide, index) => (
@@ -133,7 +126,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Stats Section */}
           <div className="grid md:grid-cols-4 gap-8 mt-12">
             <div className="text-center">
@@ -157,6 +149,5 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryContentShowcase2026;

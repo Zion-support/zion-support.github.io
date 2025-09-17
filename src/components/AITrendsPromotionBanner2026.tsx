@@ -11,34 +11,28 @@ import {
   Brain,
   Calendar
 } from 'lucide-react';
-
 const AITrendsPromotionBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentStat, setCurrentStat] = useState(0);
-
   const stats = [
     { value: "500%", label: "Average ROI", icon: <TrendingUp className="w-4 h-4" /> },
     { value: "85%", label: "Adoption Rate", icon: <BarChart3 className="w-4 h-4" /> },
     { value: "1000x", label: "Speed Increase", icon: <Zap className="w-4 h-4" /> },
     { value: "2026", label: "Breakthrough Year", icon: <Calendar className="w-4 h-4" /> }
   ];
-
   const trends = [
     "Conscious AI Systems",
     "Quantum AI Integration", 
     "Autonomous Operations",
     "Global AI Networks"
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStat((prev) => (prev + 1) % stats.length);
     }, 2500);
     return () => clearInterval(interval);
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -53,7 +47,6 @@ const AITrendsPromotionBanner2026 = () => {
           <div className="absolute top-4 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-bounce" />
           <div className="absolute bottom-4 right-20 w-24 h-24 bg-purple-500/10 rounded-full blur-xl animate-pulse" />
         </div>
-
         {/* Floating Icons */}
         <div className="absolute top-2 left-1/4 w-6 h-6 text-blue-400 animate-bounce">
           <Brain className="w-full h-full" />
@@ -64,7 +57,6 @@ const AITrendsPromotionBanner2026 = () => {
         <div className="absolute bottom-2 left-1/3 w-5 h-5 text-pink-400 animate-bounce">
           <Zap className="w-full h-full" />
         </div>
-
         <div className="relative z-10 py-4 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -79,7 +71,6 @@ const AITrendsPromotionBanner2026 = () => {
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                 </motion.div>
-                
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                   <div className="flex items-center gap-2">
                     <span className="text-yellow-400 font-bold text-sm uppercase tracking-wider">
@@ -87,11 +78,9 @@ const AITrendsPromotionBanner2026 = () => {
                     </span>
                     <div className="w-1 h-1 bg-yellow-400 rounded-full animate-pulse" />
                   </div>
-                  
                   <h3 className="text-white font-bold text-lg sm:text-xl">
                     AI Trends & Insights 2026
                   </h3>
-                  
                   <div className="flex items-center gap-2">
                     <span className="text-gray-300 text-sm">Top Trends:</span>
                     <div className="flex gap-1">
@@ -104,7 +93,6 @@ const AITrendsPromotionBanner2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Center Stats */}
               <div className="hidden md:flex items-center gap-6">
                 <AnimatePresence mode="wait">
@@ -124,7 +112,6 @@ const AITrendsPromotionBanner2026 = () => {
                   </motion.div>
                 </AnimatePresence>
               </div>
-
               {/* Right Content */}
               <div className="flex items-center gap-4">
                 <div className="hidden sm:flex items-center gap-4 text-sm text-gray-300">
@@ -137,7 +124,6 @@ const AITrendsPromotionBanner2026 = () => {
                     <span>Real-time Data</span>
                   </div>
                 </div>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -146,7 +132,6 @@ const AITrendsPromotionBanner2026 = () => {
                   View Trends
                   <ArrowRight className="w-4 h-4" />
                 </motion.button>
-
                 <button
                   onClick={() => setIsVisible(false)}
                   className="text-gray-400 hover:text-white transition-colors p-1"
@@ -157,7 +142,6 @@ const AITrendsPromotionBanner2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Progress Indicator */}
         <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500">
           <motion.div
@@ -170,6 +154,5 @@ const AITrendsPromotionBanner2026 = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default AITrendsPromotionBanner2026;

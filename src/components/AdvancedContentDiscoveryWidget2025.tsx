@@ -1,6 +1,5 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Search
@@ -27,6 +26,7 @@ import {
   Target
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AdvancedContentDiscoveryWidget2025() {
   const [searchQuerysetSearchQuery] = useState('');
@@ -300,6 +300,5 @@ export default function AdvancedContentDiscoveryWidget2025() {
             Load More Content
             <ArrowRight className="w-4 h-4" />
   );
-};
 
 export default AdvancedContentDiscoveryWidget2025;

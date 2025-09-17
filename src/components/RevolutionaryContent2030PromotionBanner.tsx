@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function RevolutionaryContent2030PromotionBanner() {
   return (
@@ -92,4 +93,4 @@ export default function RevolutionaryContent2030PromotionBanner() {
             >
               Our AI Services
   );
-}
+};

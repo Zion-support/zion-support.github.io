@@ -20,11 +20,9 @@ import {
   Clock,
   Eye
 } from 'lucide-react';
-
 const UltimateContentShowcaseCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentItems = [
     {
       id: 1,
@@ -117,7 +115,6 @@ const UltimateContentShowcaseCarousel = () => {
       href: "/green-tech-revolution"
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -126,27 +123,21 @@ const UltimateContentShowcaseCarousel = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, contentItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
-
   const slideVariants = {
     hidden: { opacity: 0, x: 300 },
     visible: { opacity: 1, x: 0 },
     exit: { opacity: 0, x: -300 }
   };
-
   const currentItem = contentItems[currentSlide];
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +160,6 @@ const UltimateContentShowcaseCarousel = () => {
             Discover the future today.
           </p>
         </motion.div>
-
         {/* Main Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -208,7 +198,6 @@ const UltimateContentShowcaseCarousel = () => {
                     </div>
                   </div>
                 </div>
-
                 <h3 className="text-3xl md:text-4xl font-bold text-white">
                   {currentItem.title}
                 </h3>
@@ -218,7 +207,6 @@ const UltimateContentShowcaseCarousel = () => {
                 <p className="text-lg text-gray-300 leading-relaxed">
                   {currentItem.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3">
                   {currentItem.features.map((feature, index) => (
@@ -234,7 +222,6 @@ const UltimateContentShowcaseCarousel = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <motion.button
@@ -255,7 +242,6 @@ const UltimateContentShowcaseCarousel = () => {
                   </motion.button>
                 </div>
               </div>
-
               {/* Image */}
               <motion.div
                 className="relative"
@@ -280,7 +266,6 @@ const UltimateContentShowcaseCarousel = () => {
               </motion.div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -295,7 +280,6 @@ const UltimateContentShowcaseCarousel = () => {
             <ArrowRight className="w-6 h-6" />
           </button>
         </div>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-12">
           {contentItems.map((_, index) => (
@@ -310,7 +294,6 @@ const UltimateContentShowcaseCarousel = () => {
             />
           ))}
         </div>
-
         {/* Auto-play Toggle */}
         <div className="flex justify-center mt-6">
           <button
@@ -328,7 +311,6 @@ const UltimateContentShowcaseCarousel = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateContentShowcaseCarousel;
 </div></div>

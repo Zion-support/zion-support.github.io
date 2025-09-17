@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SparklesBookOpenFileTextArrowRightStarClockCog
+};
 
 export default function NewContent2026ShowcaseBanner() {
   return (
@@ -109,4 +110,4 @@ export default function NewContent2026ShowcaseBanner() {
           <div className="text-sm opacity-70">
             Stay ahead of the AI revolution with our latest insights and breakthrough implementations
   );
-}
+};

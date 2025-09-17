@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-
 const RevolutionaryCaseStudies2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCase, setSelectedCase] = useState(0);
-
   const categories = [
     { id: 'all', name: 'All Industries', icon: '🌟' },
     { id: 'manufacturing', name: 'Manufacturing', icon: '🏭' },
@@ -17,11 +12,9 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
     { id: 'retail', name: 'Retail', icon: '🛒' },
     { id: 'technology', name: 'Technology', icon: '💻' }
   ];
-
   const caseStudies = [
     {
       id: 1,
-<<<<<<< HEAD
       title: "Fortune 500 Manufacturing Revolution",
       category: "manufacturing",
       company: "Global Manufacturing Corp",
@@ -147,13 +140,10 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600"
     }
   ];
-
   const filteredCases = selectedCategory === 'all' 
     ? caseStudies 
     : caseStudies.filter(case => case.category === selectedCategory);
-
   const currentCase = filteredCases[selectedCase];
-=======
       title: "Fortune 500 AI Transformation",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -261,20 +251,16 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
       author: "Robert Kim, Operations Director"
     }
   ];
-
   const stats = [
     { label: "Companies Transformed", value: "500+", icon: "🏢" },
     { label: "Total Cost Savings", value: "$2.5B+", icon: "💰" },
     { label: "Average Efficiency Gain", value: "400%", icon: "📈" },
     { label: "Success Rate", value: "99.8%", icon: "✅" }
   ];
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -286,7 +272,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Discover how leading companies are transforming their businesses with our cutting-edge AI and technology solutions
-=======
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
@@ -304,13 +289,10 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Discover how our revolutionary technologies have transformed businesses across industries. 
               Real results from real companies using cutting-edge AI and quantum computing solutions.
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
             </p>
           </motion.div>
         </div>
       </div>
-
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -329,7 +311,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Case Study Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredCases.map((caseStudy, index) => (
@@ -352,7 +333,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   {caseStudy.description}
                 </p>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {Object.entries(caseStudy.results).map(([key, value]) => (
                   <div key={key} className="text-center">
@@ -363,10 +343,8 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <button className="w-full bg-white/20 text-white py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold">
                 View Full Case Study →
-=======
       {/* Stats Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -390,7 +368,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           ))}
         </motion.div>
       </div>
-
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -402,7 +379,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
           <p className="text-xl opacity-80">Real transformations from real companies</p>
         </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-8">
           {caseStudies.map((study, index) => (
             <motion.div
@@ -420,15 +396,12 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   <div className="text-gray-400 text-sm">{study.industry}</div>
                 </div>
               </div>
-
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-2 text-red-400">Challenge:</h4>
                 <p className="text-gray-300 mb-4">{study.challenge}</p>
-                
                 <h4 className="text-lg font-semibold mb-2 text-blue-400">Solution:</h4>
                 <p className="text-gray-300 mb-4">{study.solution}</p>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold text-green-400">{study.results.efficiency}</div>
@@ -447,22 +420,17 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   <div className="text-sm text-gray-300">Timeline</div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-4 mb-4">
                 <p className="text-gray-200 italic mb-2">"{study.testimonial}"</p>
                 <div className="text-indigo-400 font-semibold">— {study.author}</div>
               </div>
-
               <button className={`w-full bg-gradient-to-r ${study.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 Read Full Case Study →
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
               </button>
             </motion.div>
           ))}
         </div>
       </div>
-
-<<<<<<< HEAD
         {/* Detailed Case Study View */}
         {currentCase && (
           <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
@@ -476,18 +444,15 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                     <p className="text-white/60">{currentCase.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-yellow-300">Challenge</h3>
                     <p className="text-white/90">{currentCase.challenge}</p>
                   </div>
-
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-yellow-300">Solution</h3>
                     <p className="text-white/90">{currentCase.solution}</p>
                   </div>
-
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-yellow-300">Technologies Used</h3>
                     <div className="flex flex-wrap gap-2">
@@ -500,7 +465,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div>
                 <div className="bg-white/10 rounded-xl p-8 mb-8">
                   <h3 className="text-2xl font-bold mb-6 text-center">Results</h3>
@@ -515,7 +479,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-400/30">
                   <div className="text-center">
                     <div className="text-4xl mb-4">💬</div>
@@ -529,7 +492,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </div>
           </div>
         )}
-
         {/* Call to Action */}
         <div className="text-center mt-20">
           <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
@@ -542,7 +504,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
-=======
       {/* Industry Breakdown */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -574,7 +535,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -594,13 +554,11 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-colors font-semibold text-lg">
               Download Case Studies
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
             </button>
           </div>
         </motion.div>
       </div>
     </div>
   );
-};
 
 export default RevolutionaryCaseStudies2025;

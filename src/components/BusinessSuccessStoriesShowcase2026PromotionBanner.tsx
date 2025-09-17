@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -12,7 +11,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl" />
         </div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -29,7 +27,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
               <span>Business Success Stories Showcase 2026</span>
               <Fire className="w-4 h-4 text-orange-400" />
             </div>
-
             {/* Title */}
             <divh2
               whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +40,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                 Real Businesses
               </span>
             </divh2>
-
             {/* Subtitle */}
             <divp
               whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +47,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
             >
               Discover how leading companies achieved unprecedented success with our AI solutions
             </divp>
-
             {/* Current Story Highlight */}
             <div
               key={currentStory}
@@ -66,7 +61,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                   <p className="text-purple-200">{currentStoryData.industry}</p>
                 </div>
               </div>
-              
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-400">{currentStoryData.result}</div>
@@ -78,7 +72,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Stats */}
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -95,9 +88,9 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                     <div className="text-sm text-purple-200">{stat.label}</div>
                   </div>
                 );
+};
               })}
             </div>
-
             {/* CTA Buttons */}
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +106,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                 Start Your Journey
               </button>
             </div>
-
             {/* Trust Indicators */}
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +125,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Visual */}
           <div
             whileInView={{ opacity: 1x: 0 }}
@@ -149,13 +140,11 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                   <span className="text-sm font-bold text-white">5.0</span>
                 </div>
               </div>
-
               {/* Story Content */}
               <div className="space-y-4">
                 {featuredStories.map((storyindex) => {
                   const StoryIcon = story.icon;
                   const isActive = index === currentStory;
-                  
                   return (
                     <div
                       key={index}
@@ -183,9 +172,9 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                       </div>
                     </div>
                   );
+};
                 })}
               </div>
-
               {/* Testimonial */}
               <div className="mt-6 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                 <div className="flex items-start gap-3">
@@ -206,27 +195,23 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Action Button */}
               <button className="w-full mt-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
                 Read Full Success Story
               </button>
             </div>
-
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <TrendingUp className="w-8 h-8 text-white" />
             </div>
-
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <Award className="w-6 h-6 text-white" />
             </div>
-
             <div
               className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg"
             >
@@ -234,7 +219,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Story Indicators */}
         <div className="flex justify-center gap-2 mt-8">
           {featuredStories.map((_index) => (
@@ -252,7 +236,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default BusinessSuccessStoriesShowcase2026PromotionBanner;
 </div></div></div></div></div></div>

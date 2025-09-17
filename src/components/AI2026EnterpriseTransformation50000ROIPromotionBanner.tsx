@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026EnterpriseTransformation50000ROIPromotionBanner() {
   return (
@@ -54,4 +55,4 @@ export default function AI2026EnterpriseTransformation50000ROIPromotionBanner() 
           <p className="text-sm text-gray-400 mt-6">
             Fortune 500 multinational corporation with operations across 50+ countries
   );
-}
+};

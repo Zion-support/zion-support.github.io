@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -10,7 +9,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600/90 via-purple-600/90 to-pink-600/90" />
-          
           {/* Floating AI Icons */}
           <div className="absolute top-4 left-8 w-6 h-6 text-white/20 animate-bounce">
             <Brain className="w-full h-full" />
@@ -24,7 +22,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
           <div className="absolute bottom-4 right-8 w-3 h-3 text-white/40 animate-pulse delay-500">
             <Sparkles className="w-full h-full" />
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Content */}
@@ -46,13 +43,11 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                   </div>
                 </div>
-
                 <divh2
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
                 >
                   🤖 Interactive AI Tools Suite 2025
                 </divh2>
-
                 <divp
                   className="text-indigo-100 text-lg mb-4 max-w-2xl"
                 >
@@ -61,7 +56,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                   <span className="font-semibold text-white"> 10x faster processing</span>and 
                   <span className="font-semibold text-white"> 24/7 availability</span>.
                 </divp>
-
                 <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
@@ -82,7 +76,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                     <span>Security Guard</span>
                   </div>
                 </div>
-
                 <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >
@@ -97,7 +90,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* AI Tools Preview */}
               <div
                 className="flex flex-col sm:flex-row lg:flex-col gap-4"
@@ -119,7 +111,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Dismiss Button */}
             <button
               onClick={handleDismiss}
@@ -129,14 +120,12 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
               <X className="w-5 h-5" />
             </button>
           </div>
-
           {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-pulse" />
         </div>
       )}
     </div>
   );
-};
 
 export default InteractiveAIToolsShowcase2025PromotionBanner;
 </div></div></div></div></div>

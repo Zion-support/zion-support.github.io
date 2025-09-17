@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025UltimateRevolutionaryBreakthroughBanner() {
   return (
@@ -45,4 +46,4 @@ export default function AI2025UltimateRevolutionaryBreakthroughBanner() {
           <div className="mt-8 text-sm text-gray-400">
             <p>Join thousands of businesses already experiencing the AI 2025 revolutionary breakthrough</p>
   );
-}
+};

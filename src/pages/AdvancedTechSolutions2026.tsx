@@ -1,13 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
-
 const AdvancedTechSolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -30,14 +27,12 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Revolutionary Technologies */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary Technologies</h2>
             <p className="text-xl text-gray-300">Breakthrough innovations that are reshaping industries</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🧠</div>
@@ -61,7 +56,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 Learn More →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">⚡</div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Quantum Computing</h3>
@@ -84,7 +78,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 Explore Quantum →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🧬</div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Bio-Integration</h3>
@@ -109,14 +102,12 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Industry Applications */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🏭 Industry Applications</h2>
             <p className="text-xl text-gray-300">Transforming every sector with advanced technology solutions</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
               <div className="flex items-center mb-6">
@@ -146,7 +137,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 Explore Healthcare Solutions →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🏭</div>
@@ -175,7 +165,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 Discover Manufacturing →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🏦</div>
@@ -204,7 +193,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 Explore Fintech →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🌐</div>
@@ -235,14 +223,12 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Technology Stack */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🔧 Advanced Technology Stack</h2>
             <p className="text-xl text-gray-300">Cutting-edge tools and frameworks powering the future</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl mb-4">🧠</div>
@@ -250,21 +236,18 @@ const AdvancedTechSolutions2026: React.FC = () => {
               <p className="text-gray-300 text-sm mb-4">TensorFlow, PyTorch, OpenAI GPT-5</p>
               <div className="text-xs text-gray-400">Advanced neural networks</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
               <p className="text-gray-300 text-sm mb-4">IBM Quantum, Google Cirq</p>
               <div className="text-xs text-gray-400">Quantum algorithms</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-white mb-2">Blockchain</h3>
               <p className="text-gray-300 text-sm mb-4">Ethereum 3.0, Solana, Polygon</p>
               <div className="text-xs text-gray-400">Decentralized systems</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-bold text-white mb-2">IoT & Edge</h3>
@@ -273,39 +256,33 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Implementation Process */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Implementation Process</h2>
             <p className="text-xl text-gray-300">Our proven methodology for deploying advanced technologies</p>
           </div>
-          
           <div className="grid md:grid-cols-5 gap-6">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">1</div>
               <h3 className="text-lg font-bold text-white mb-2">Discovery</h3>
               <p className="text-purple-200 text-sm">Assess current systems and identify opportunities</p>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">2</div>
               <h3 className="text-lg font-bold text-white mb-2">Design</h3>
               <p className="text-cyan-200 text-sm">Architect custom solutions for your needs</p>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">3</div>
               <h3 className="text-lg font-bold text-white mb-2">Develop</h3>
               <p className="text-emerald-200 text-sm">Build and test advanced technology solutions</p>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">4</div>
               <h3 className="text-lg font-bold text-white mb-2">Deploy</h3>
               <p className="text-orange-200 text-sm">Implement solutions with minimal disruption</p>
             </div>
-            
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">5</div>
               <h3 className="text-lg font-bold text-white mb-2">Optimize</h3>
@@ -313,7 +290,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-12">
@@ -335,12 +311,9 @@ const AdvancedTechSolutions2026: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Shield, Zap, Globe, Target, Users, TrendingUp, Brain, Atom, Database, Cloud } from 'lucide-react';
-
 const AdvancedTechSolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 text-white">
@@ -372,7 +345,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Solution Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-green-800/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-8 border border-green-500/20">
@@ -387,7 +359,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-2" />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
               <Shield className="w-8 h-8 text-white" />
@@ -400,7 +371,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-2" />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
               <Cloud className="w-8 h-8 text-white" />
@@ -414,7 +384,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-green-500/20">
           <h2 className="text-4xl font-bold text-center mb-12">Comprehensive Technology Stack</h2>
@@ -449,7 +418,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Solution Features */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Solution Features</h2>
@@ -466,7 +434,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-white" />
@@ -478,7 +445,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <TrendingUp className="w-6 h-6 text-white" />
@@ -491,7 +457,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -504,7 +469,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Globe className="w-6 h-6 text-white" />
@@ -516,7 +480,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Cpu className="w-6 h-6 text-white" />
@@ -531,7 +494,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Process */}
         <div className="bg-gradient-to-r from-blue-900/50 to-green-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-500/20">
           <h2 className="text-4xl font-bold text-center mb-12">Implementation Process</h2>
@@ -566,7 +528,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Proven Success Metrics</h2>
@@ -589,7 +550,6 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-12 border border-green-500/20">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -614,6 +574,5 @@ const AdvancedTechSolutions2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AdvancedTechSolutions2026;

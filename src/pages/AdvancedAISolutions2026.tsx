@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const AdvancedAISolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -34,7 +33,6 @@ const AdvancedAISolutions2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* AI Solutions Grid */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -46,7 +44,6 @@ const AdvancedAISolutions2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🚀 Advanced AI Solutions</h2>
           <p className="text-xl opacity-80">Cutting-edge AI technologies designed for enterprise success</p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Autonomous AI Agents */}
           <motion.div
@@ -73,7 +70,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               Learn More →
             </button>
           </motion.div>
-
           {/* Conversational AI */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -99,7 +95,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               Explore Features →
             </button>
           </motion.div>
-
           {/* Predictive Analytics */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -125,7 +120,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               View Analytics →
             </button>
           </motion.div>
-
           {/* Computer Vision */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -151,7 +145,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               See Examples →
             </button>
           </motion.div>
-
           {/* Natural Language Processing */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -177,7 +170,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               Try Demo →
             </button>
           </motion.div>
-
           {/* Machine Learning Platform */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -205,7 +197,6 @@ const AdvancedAISolutions2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Industry Applications */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -218,7 +209,6 @@ const AdvancedAISolutions2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🏭 Industry Applications</h2>
             <p className="text-xl opacity-80">AI solutions tailored for specific industries</p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -230,7 +220,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Healthcare</h3>
               <p className="text-sm opacity-80">Medical diagnosis, drug discovery, and patient care</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -241,7 +230,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Finance</h3>
               <p className="text-sm opacity-80">Fraud detection, risk assessment, and trading</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -252,7 +240,6 @@ const AdvancedAISolutions2026: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Automotive</h3>
               <p className="text-sm opacity-80">Autonomous vehicles and smart transportation</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -266,7 +253,6 @@ const AdvancedAISolutions2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -292,6 +278,5 @@ const AdvancedAISolutions2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AdvancedAISolutions2026;

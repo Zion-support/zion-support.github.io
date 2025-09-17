@@ -1,6 +1,5 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Brain
@@ -20,7 +19,6 @@ import {
   RefreshCw,
   Sparkles
 } from 'lucide-react';
-
 interface Innovation {
   id: string;
   title: string;
@@ -36,8 +34,6 @@ interface Innovation {
     accuracy: number;
     adoption: number;
   };
-}
-
 const innovations: Innovation[] = [
   {
     id: 'neural-consensus',
@@ -111,9 +107,8 @@ const innovations: Innovation[] = [
     color: 'from-indigo-500 to-purple-500',
     metrics: { efficiency: 94accuracy: 96adoption: 91 }
   }
-];
-
 const categories = [', 'All', 'AI 'Architecture', 'Quantum 'Computing', 'Automation'Human-AI 'Interaction', 'Security'Infrastructure'];
+};
 
 export default function AIInnovationShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
@@ -298,6 +293,5 @@ export default function AIInnovationShowcase2025() {
                 <span className="text-white text-lg">Loading innovation details...</span>
         )}
   );
-};
 
 export default AIInnovationShowcase2025;

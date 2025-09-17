@@ -1,5 +1,4 @@
 import React from "react";
-
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -12,7 +11,6 @@ const About = () => {
             We are a leading technology company dedicated to innovation and excellence
           </p>
         </div>
-        
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-8 backdrop-blur-sm border border-blue-400/20">
             <h2 className="text-3xl font-bold mb-6 text-blue-300">Our Mission</h2>
@@ -26,6 +24,5 @@ const About = () => {
       </div>
     </div>
   );
-};
 
 export default About;

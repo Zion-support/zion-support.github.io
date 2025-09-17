@@ -10,6 +10,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+};
 
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -255,4 +256,4 @@ export default function HomePage() {
           <EnhancedContactForm />
       <EnhancedFooter />
   );
-}
+};

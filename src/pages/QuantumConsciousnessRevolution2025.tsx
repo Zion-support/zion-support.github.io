@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const QuantumConsciousnessRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -35,7 +34,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Quantum Features */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="space-y-8">
@@ -52,7 +50,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
                 Experience Quantum Speed →
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🔮</span>
@@ -67,7 +64,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="space-y-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-red-500 rounded-xl flex items-center justify-center mb-6">
@@ -82,7 +78,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
                 Feel Quantum Emotions →
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🌊</span>
@@ -98,7 +93,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Quantum Statistics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
@@ -123,7 +117,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Testimonials */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
@@ -139,7 +132,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
               <div className="font-semibold text-white">Dr. Sarah Chen</div>
               <div className="text-gray-400 text-sm">Quantum Neuroscientist</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">⭐⭐⭐⭐⭐</div>
               <p className="text-gray-300 mb-6 italic">
@@ -149,7 +141,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
               <div className="font-semibold text-white">Marcus Rodriguez</div>
               <div className="text-gray-400 text-sm">Tech Entrepreneur</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">⭐⭐⭐⭐⭐</div>
               <p className="text-gray-300 mb-6 italic">
@@ -161,7 +152,6 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -189,6 +179,5 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default QuantumConsciousnessRevolution2025;

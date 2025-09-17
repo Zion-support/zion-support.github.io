@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContent2025DataRevolutionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
@@ -7,7 +6,6 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       </div>
-
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
@@ -21,16 +19,13 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
                   <span className="text-sm font-medium">500% ROI GUARANTEED</span>
                 </div>
               </div>
-
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
                 AI 2025: The Enterprise Data Revolution
               </h2>
-
               <p className="text-lg opacity-90 mb-6 max-w-2xl">
                 Discover how Fortune 500 companies are achieving 500% ROI with AI-powered data transformation. 
                 Complete implementation guide with real-world case studies and proven methodologies.
               </p>
-
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="bg-white/10 rounded-lg p-3 text-center">
@@ -50,7 +45,6 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
                   <div className="text-sm opacity-80">Speed Increase</div>
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -73,12 +67,10 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
                 </a>
               </div>
             </div>
-
             {/* Content Preview Cards */}
             <div className="hidden lg:block w-80">
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
                 <h3 className="text-lg font-semibold mb-4">Featured Content</h3>
-                
                 <div className="space-y-4">
                   {contentItems.map((itemindex) => (
                     <div
@@ -107,7 +99,6 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Progress Indicators */}
                 <div className="flex justify-center space-x-2 mt-4">
                   {contentItems.map((_index) => (
@@ -124,7 +115,6 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Dismiss Button */}
         <button
           onClick={handleDismiss}
@@ -138,6 +128,5 @@ const NewContent2025DataRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContent2025DataRevolutionBanner;

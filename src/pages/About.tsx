@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Heart
 } from 'lucide-react';
+};
 
 export default function About() {
   const stats = [
@@ -220,4 +221,4 @@ export default function About() {
                   View Careers
     </>
   );
-}
+};

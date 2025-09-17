@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const QuantumReality2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -34,7 +32,6 @@ const QuantumReality2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Breakthroughs */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -48,7 +45,6 @@ const QuantumReality2027: React.FC = () => {
             Experience the most advanced quantum technologies that are reshaping our understanding of reality
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -71,7 +67,6 @@ const QuantumReality2027: React.FC = () => {
               Experience Supremacy →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -93,7 +88,6 @@ const QuantumReality2027: React.FC = () => {
               Start Simulation →
             </button>
           </div>
-
           <div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -117,7 +111,6 @@ const QuantumReality2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Applications */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 py-20">
         <div className="container mx-auto px-4">
@@ -132,7 +125,6 @@ const QuantumReality2027: React.FC = () => {
               Discover how quantum computing is revolutionizing industries and solving impossible problems
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div
               initial={{ opacity: 0, x: -50 }}
@@ -151,7 +143,6 @@ const QuantumReality2027: React.FC = () => {
                 <li>• Personalized medicine</li>
               </ul>
             </div>
-
             <div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -172,7 +163,6 @@ const QuantumReality2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Future Vision */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -186,7 +176,6 @@ const QuantumReality2027: React.FC = () => {
             Imagine a world where quantum computing has unlocked the secrets of the universe and created technologies beyond our wildest dreams
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, y: 50 }}
@@ -200,7 +189,6 @@ const QuantumReality2027: React.FC = () => {
               A global quantum network enabling instant, secure communication across the planet
             </p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -213,7 +201,6 @@ const QuantumReality2027: React.FC = () => {
               AI systems powered by quantum computing with superhuman intelligence and creativity
             </p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -228,7 +215,6 @@ const QuantumReality2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
@@ -253,6 +239,5 @@ const QuantumReality2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default QuantumReality2027;

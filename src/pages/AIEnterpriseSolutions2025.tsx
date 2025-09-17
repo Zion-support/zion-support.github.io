@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AIEnterpriseSolutions2025: React.FC = () => {
   return (
     <>
@@ -9,7 +8,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
         <meta name="description" content="Transform your enterprise with our comprehensive AI solutions. From automation to analytics, we deliver measurable ROI and competitive advantage through cutting-edge AI technology." />
         <meta name="keywords" content="AI enterprise solutions, business automation, AI consulting, machine learning, artificial intelligence services" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -32,7 +30,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Services Overview */}
         <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +40,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                 from strategy and implementation to ongoing optimization and support.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* AI Strategy & Consulting */}
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
@@ -64,7 +60,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   <li>• Change Management Planning</li>
                 </ul>
               </div>
-
               {/* Intelligent Automation */}
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                 <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6">
@@ -84,7 +79,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   <li>• Continuous Improvement</li>
                 </ul>
               </div>
-
               {/* Predictive Analytics */}
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
@@ -104,7 +98,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   <li>• Market Trend Prediction</li>
                 </ul>
               </div>
-
               {/* AI-Powered Customer Experience */}
               <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                 <div className="w-16 h-16 bg-yellow-600 rounded-lg flex items-center justify-center mb-6">
@@ -124,7 +117,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   <li>• Omnichannel Support</li>
                 </ul>
               </div>
-
               {/* Data Intelligence */}
               <div className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                 <div className="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-6">
@@ -144,7 +136,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   <li>• Data Visualization</li>
                 </ul>
               </div>
-
               {/* AI Security & Compliance */}
               <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
                 <div className="w-16 h-16 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
@@ -167,7 +158,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Process */}
         <div className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,7 +168,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                 with minimal disruption to your business operations.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -189,7 +178,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   Analyze your current state, identify opportunities, and develop a comprehensive AI strategy.
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -199,7 +187,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   Create detailed technical specifications and implementation roadmap tailored to your needs.
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -209,7 +196,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                   Build, test, and validate AI solutions in controlled environments before deployment.
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -222,7 +208,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,7 +217,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
                 Our AI solutions deliver measurable results that transform businesses and drive sustainable growth.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-5xl font-bold text-white mb-2">500%</div>
@@ -257,7 +241,6 @@ const AIEnterpriseSolutions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="py-20 bg-gray-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -287,6 +270,5 @@ const AIEnterpriseSolutions2025: React.FC = () => {
       </div>
     </>
   );
-};
 
 export default AIEnterpriseSolutions2025;

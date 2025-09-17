@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-16 overflow-hidden">
@@ -7,7 +6,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252240%2522%2520height%253D%252240%2522%2520viewBox%253D%25220%25200%252040%252040%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Cpath%2520d%253D%2522M20%252020c0-11.046-8.954-20-20-20v20h20z%2522%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -23,7 +21,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             working with Zion Tech Group to implement next-generation AI technologies.
           </p>
         </div>
-
         {/* Key Results Highlight */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 text-center">
@@ -47,7 +44,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             <div className="text-sm text-green-300">Critical processes</div>
           </div>
         </div>
-
         {/* Company Profile */}
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -91,7 +87,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Transformation Journey */}
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-center mb-8">The Transformation Journey</h3>
@@ -119,7 +114,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-xl font-bold">2</span>
@@ -143,7 +137,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-xl font-bold">3</span>
@@ -169,7 +162,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* ROI Breakdown */}
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-12">
           <h3 className="text-2xl font-bold mb-6 text-center">ROI Breakdown Analysis</h3>
@@ -230,7 +222,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Key Success Factors */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-center mb-8">Key Success Factors</h3>
@@ -265,7 +256,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -284,7 +274,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
               <TrendingUp className="w-5 h-5 ml-2" />
             </a>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/tools/ai-roi-calculator"
@@ -302,7 +291,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div className="mt-12 pt-8 border-t border-white border-opacity-20">
           <div className="text-center">
@@ -319,6 +307,5 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default AI2026GlobalTransformation800ROISuccessBanner;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NextGenInnovationHub2036 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -11,6 +10,5 @@ const NextGenInnovationHub2036 = () => {
       </div>
     </div>
   );
-};
 
 export default NextGenInnovationHub2036;

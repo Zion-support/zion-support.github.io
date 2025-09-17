@@ -15,13 +15,10 @@ import {
   Users,
   DollarSign
 } from 'lucide-react';
-
 interface QuantumAI2026ContentPromotionBannerProps {
   onClose?: () => void;
   autoHide?: boolean;
   hideDelay?: number;
-}
-
 const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotionBannerProps> = ({ 
   onClose, 
   autoHide = true, 
@@ -29,7 +26,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const newContent = [
     {
       icon: Brain,
@@ -104,32 +100,25 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
       badge: "FREE"
     }
   ];
-
   useEffect(() => {
     if (autoHide) {
       const timer = setTimeout(() => {
         setIsVisible(false);
       }, hideDelay);
-
       return () => clearTimeout(timer);
     }
   }, [autoHide, hideDelay]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % newContent.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [newContent.length]);
-
   const handleClose = () => {
     setIsVisible(false);
     onClose?.();
   };
-
   const currentContent = newContent[currentSlide];
-
   const getBadgeColor = (badge: string) => {
     switch (badge) {
       case 'NEW': return 'bg-gradient-to-r from-green-500 to-emerald-500';
@@ -141,7 +130,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
     }
   };
-
   const getUrgencyColor = (urgency: string) => {
     switch (urgency) {
       case 'Revolutionary': return 'text-red-500';
@@ -152,9 +140,7 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
       default: return 'text-gray-500';
     }
   };
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -179,7 +165,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
                   ))}
                 </div>
               </div>
-
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-2">
                   <motion.div
@@ -197,7 +182,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
                     </span>
                   </motion.div>
                 </div>
-
                 <motion.div
                   key={currentSlide}
                   initial={{ opacity: 0, x: 20 }}
@@ -223,7 +207,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
                 </motion.div>
               </div>
             </div>
-
             {/* Action Section */}
             <div className="flex items-center space-x-4">
               <motion.a
@@ -235,7 +218,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
                 <span>Explore Now</span>
                 <ArrowRight className="w-4 h-4" />
               </motion.a>
-
               <button
                 onClick={handleClose}
                 className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-lg"
@@ -244,7 +226,6 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
               </button>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="mt-3 w-full bg-gray-700 rounded-full h-1">
             <motion.div
@@ -258,6 +239,5 @@ const QuantumAI2026ContentPromotionBanner: React.FC<QuantumAI2026ContentPromotio
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default QuantumAI2026ContentPromotionBanner;

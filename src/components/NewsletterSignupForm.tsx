@@ -1,15 +1,12 @@
 "use client";
 import React{ useState } from 'react';
 MailSendCheckCircleStarZapGiftArrowRight
-
 const benefits = [
   "Exclusive access to new content",
   "Early bird pricing on services",
   "Weekly tech insights & trends",
   "Free consultation calls",
   "Priority support & updates"
-];
-
 const testimonials = [
   {
     name: "Sarah Chen",
@@ -23,7 +20,7 @@ const testimonials = [
     content: "Early access to new features has given us a competitive edge. Amazing value!",
     rating: 5
   }
-];
+};
 
 export default function NewsletterSignupForm() {
   const [emailsetEmail] = useState('');
@@ -48,6 +45,7 @@ export default function NewsletterSignupForm() {
           <p className="text-green-100 text-sm">
             🎉 'You', 'll receive your first update within 24 hours with exclusive content and early access to new features!
     );
+};
   }
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 px-4 sm:px-6 lg:px-8">
@@ -137,6 +135,5 @@ export default function NewsletterSignupForm() {
                   <Star className="w-4 h-4" />
                   <span>4.9/5 rating</span>
   );
-};
 
 export default NewsletterSignupForm;

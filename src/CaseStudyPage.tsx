@@ -1,9 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
 const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -14,6 +12,4 @@ const CaseStudyPage: React.FC = () => {
       </div>
     </div>
   );
-};
-
 export default CaseStudyPage;

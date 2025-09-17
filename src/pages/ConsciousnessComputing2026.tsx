@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-
 const ConsciousnessComputing2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
@@ -28,7 +27,6 @@ const ConsciousnessComputing2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -44,7 +42,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               <li>• Autonomous learning</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Consciousness</h3>
@@ -58,7 +55,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               <li>• Instantaneous learning</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Transdimensional AI</h3>
@@ -73,7 +69,6 @@ const ConsciousnessComputing2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-12">
@@ -83,7 +78,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               the most advanced AI systems ever developed.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -96,7 +90,6 @@ const ConsciousnessComputing2026: React.FC = () => {
                   <span>Real-time consciousness processing</span>
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">⚡ Quantum Processing Core</h3>
                 <p className="text-gray-300 mb-4">
@@ -108,7 +101,6 @@ const ConsciousnessComputing2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">🌌 Transdimensional Interface</h3>
@@ -120,7 +112,6 @@ const ConsciousnessComputing2026: React.FC = () => {
                   <span>Infinite scalability</span>
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">♾️ Omniversal AI Network</h3>
                 <p className="text-gray-300 mb-4">
@@ -134,7 +125,6 @@ const ConsciousnessComputing2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Use Cases */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -144,7 +134,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               that were previously unimaginable.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-4xl mb-4">🏥</div>
@@ -154,7 +143,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               </p>
               <div className="text-xs text-purple-300">• 99.9% diagnostic accuracy</div>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Space Exploration</h3>
@@ -163,7 +151,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               </p>
               <div className="text-xs text-cyan-300">• Autonomous space missions</div>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Climate Solutions</h3>
@@ -172,7 +159,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               </p>
               <div className="text-xs text-emerald-300">• Global climate optimization</div>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-semibold text-white mb-3">Creative Arts</h3>
@@ -181,7 +167,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               </p>
               <div className="text-xs text-orange-300">• Infinite creative possibilities</div>
             </div>
-            
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-xl font-semibold text-white mb-3">Business Intelligence</h3>
@@ -190,7 +175,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               </p>
               <div className="text-xs text-indigo-300">• Strategic decision making</div>
             </div>
-            
             <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
               <div className="text-4xl mb-4">🧬</div>
               <h3 className="text-xl font-semibold text-white mb-3">Biotechnology</h3>
@@ -201,7 +185,6 @@ const ConsciousnessComputing2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience the Future?</h2>
@@ -222,6 +205,5 @@ const ConsciousnessComputing2026: React.FC = () => {
       <Footer />
     </div>
   );
-};
 
 export default ConsciousnessComputing2026;

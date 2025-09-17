@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
-}
-
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -14,19 +11,15 @@ const PerformanceOptimizer: React.FC = () => {
     memoryUsage: 0,
     bundleSize: 0
   });
-
   const [isOptimized, setIsOptimized] = useState(false);
-
   useEffect(() => {
     // Measure performance metrics
     const measurePerformance = () => {
       const startTime = performance.now();
-      
       // Simulate performance measurement
       setTimeout(() => {
         const endTime = performance.now();
         const loadTime = endTime - startTime;
-        
         setMetrics({
           loadTime: Math.round(loadTime),
           renderTime: Math.round(performance.now() - startTime),
@@ -35,26 +28,21 @@ const PerformanceOptimizer: React.FC = () => {
         });
       }, 100);
     };
-
     measurePerformance();
   }, []);
-
   const optimizePerformance = () => {
     // Simulate performance optimization
     setIsOptimized(true);
-    
     // Apply optimizations
     const images = document.querySelectorAll('img');
     images.forEach(img => {
       img.loading = 'lazy';
     });
-
     // Preload critical resources
     const criticalResources = [
       '/fonts/inter-var.woff2',
       '/styles.css'
     ];
-
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -65,13 +53,11 @@ const PerformanceOptimizer: React.FC = () => {
       }
       document.head.appendChild(link);
     });
-
     // Enable service worker for caching
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
   };
-
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-8">
       <div className="flex items-center justify-between mb-6">
@@ -82,7 +68,6 @@ const PerformanceOptimizer: React.FC = () => {
           {isOptimized ? 'Optimized' : 'Needs Optimization'}
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
           <div className="text-sm opacity-80">Load Time</div>
@@ -105,7 +90,6 @@ const PerformanceOptimizer: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col sm:flex-row gap-4">
         <button
           onClick={optimizePerformance}
@@ -118,12 +102,10 @@ const PerformanceOptimizer: React.FC = () => {
         >
           {isOptimized ? '✅ Optimized' : '⚡ Optimize Performance'}
         </button>
-        
         <button className="px-6 py-3 bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/30 transition-all duration-300">
           📊 View Detailed Metrics
         </button>
       </div>
-
       {isOptimized && (
         <div className="mt-6 p-4 bg-green-500/20 rounded-lg">
           <h4 className="font-semibold mb-2">✅ Optimizations Applied:</h4>
@@ -137,6 +119,5 @@ const PerformanceOptimizer: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default PerformanceOptimizer;

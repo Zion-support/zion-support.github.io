@@ -1,36 +1,27 @@
-<<<<<<< HEAD
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from '../App.tsx'
 import './index.css'
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
-=======
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
-
 const rootElement = document.getElementById('root');
-
 function renderApp() {
     const app = (
         <React.StrictMode>
             <App />
         </React.StrictMode>
     );
-    
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
     } else if (rootElement) {
         createRoot(rootElement).render(app);
     }
-}
-
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
@@ -39,17 +30,11 @@ function displayFatalError(message) {
                 <p>${message}</p>
             </div>`;
     }
-}
-
 try {
     renderApp();
 } catch (error) {
     console.error('Global error caught in main.tsx:', error);
     displayFatalError(error.message);
-}
-
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
-});
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5

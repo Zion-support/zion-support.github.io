@@ -89,8 +89,6 @@ export const revolutionaryContent2025 = [
     imageUrl: "/images/blog/metaverse-2-0-2025.jpg",
     slug: "metaverse-2-0-reality-blurring-experience"
   }
-];
-
 export const revolutionaryServices2025 = [
   {
     id: "qs-001",
@@ -176,4 +174,3 @@ export const revolutionaryServices2025 = [
     category: "Metaverse 2.0",
     featured: true
   }
-];

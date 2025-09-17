@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewlyAddedContentPromo: React.FC = () => {
 	return (
 		<section className="py-6 bg-blue-50 border-y border-blue-100">

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -24,7 +23,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
                   <TrendingUp className="w-5 h-5 text-white" />
                   <span className="text-white font-bold text-sm">TRANSFORM</span>
                 </div>
-                
                 <div className="hidden md:flex items-center gap-2 text-white">
                   <Users className="w-5 h-5 text-blue-300" />
                   <DollarSign className="w-5 h-5 text-green-300" />
@@ -32,7 +30,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
                   <Zap className="w-5 h-5 text-yellow-300" />
                 </div>
               </div>
-
               {/* Center Content */}
               <div className="flex-1 text-center px-4">
                 <divh2 
@@ -57,7 +54,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
                   Join industry leaders achieving unprecedented growth with our AI-powered solutions
                 </p>
               </div>
-
               {/* Right Actions */}
               <div className="flex items-center gap-3">
                 <divbutton
@@ -67,7 +63,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
                   Transform Now
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
-                
                 <divbutton
                   onClick={handleDismiss}
                   className="text-white/70 hover:text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300"
@@ -76,7 +71,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
                 </divbutton>
               </div>
             </div>
-
             {/* Mobile Layout */}
             <div className="md:hidden mt-3 pt-3 border-t border-blue-500/30">
               <div className="flex items-center justify-between">
@@ -92,7 +86,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
@@ -132,7 +125,6 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default BusinessTransformationShowcase2025PromotionBanner;
 </div></div></div></div></div></div>

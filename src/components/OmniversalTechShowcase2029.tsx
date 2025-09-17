@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const OmniversalTechShowcase2029: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const omniversalTechs = [
     {
       id: 1,
@@ -108,7 +106,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
       impact: "Eternal"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -116,7 +113,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
     }, 14000);
     return () => clearInterval(interval);
   }, []);
-
   return (
                   <div
       className="relative overflow-hidden"
@@ -125,7 +121,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
-        
         {/* Omniversal Particles */}
         {[...Array(40)].map((_, i) => (
           <div
@@ -138,7 +133,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -159,7 +153,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
             enabling creation of infinite realities, manipulation of all timelines, and achievement of true eternal existence
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -181,11 +174,9 @@ const OmniversalTechShowcase2029: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-xl text-gray-300 leading-relaxed">
                 {omniversalTechs[currentTech].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {omniversalTechs[currentTech].features.map((feature, index) => (
                   <div
@@ -197,7 +188,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-8">
                 {Object.entries(omniversalTechs[currentTech].stats).map(([key, value], index) => (
                   <div
@@ -210,7 +200,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -233,7 +222,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Omniversal Energy Effects */}
                 {[...Array(50)].map((_, i) => (
                   <div
@@ -248,7 +236,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-6 mt-16">
             {omniversalTechs.map((_, index) => (
@@ -263,7 +250,6 @@ const OmniversalTechShowcase2029: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-16"
@@ -287,6 +273,5 @@ const OmniversalTechShowcase2029: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default OmniversalTechShowcase2029;

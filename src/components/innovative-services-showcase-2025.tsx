@@ -1,5 +1,4 @@
 import React from 'react';
-
 const innovative-services-showcase-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const innovative-services-showcase-2025: React.FC = () => {
     </div>
   );
 };
-
 const serviceCategories = [
   {
     id: 'financial-technology',
@@ -100,7 +98,7 @@ const serviceCategories = [
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
   }
-];
+};
 
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -115,6 +113,7 @@ export default function InnovativeServicesShowcase2025() {
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
     )
   );
+};
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
@@ -321,4 +320,4 @@ export default function InnovativeServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
-}
+};

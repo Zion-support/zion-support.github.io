@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
-
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-[200px]">
@@ -10,14 +9,12 @@ const LoadingSpinner = () => (
       transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
     />
   </div>
-);
-
 // Lazy loading wrapper
 interface LazyComponentProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
   className?: string;
-}
+};
 
 export default function LazyComponent({ 
   component
@@ -29,7 +26,7 @@ export default function LazyComponent({
     <Suspense fallback={fallback}>
       <LazyLoadedComponent {...props} />
   );
-}
+};
 // Pre-configured lazy components for common use cases
 export const LazyROICalculator = (props: any) => (
   <LazyComponent 
@@ -37,18 +34,15 @@ export const LazyROICalculator = (props: any) => (
     fallback={<LoadingSpinner size="lg" text="Loading ROI Calculator..." />}
     {...props}
   />
-);
 export const LazyStructuredData = (props: any) => (
   <LazyComponent 
     component={() => import('./StructuredData')} 
     fallback={null}
     {...props}
   />
-);
 export const LazyInteractiveWidget = (props: any) => (
   <LazyComponent 
     component={() => import('./InteractiveContentDiscoveryWidget')} 
     fallback={<LoadingSpinner size="lg" text="Loading Interactive Widget..." />}
     {...props}
   />
-);

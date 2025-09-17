@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,7 +10,6 @@ const EnhancedContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { showSuccess, showError } = useToast();
-
   const services = [
     'AI & Machine Learning',
     'Quantum Computing',
@@ -21,22 +19,18 @@ const EnhancedContactForm: React.FC = () => {
     'Digital Transformation',
     'Other'
   ];
-
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     } else if (formData.name.trim().length < 2) {
       newErrors.name = 'Name must be at least 2 characters long';
     }
-
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.trim().length < 10) {
@@ -44,28 +38,21 @@ const EnhancedContactForm: React.FC = () => {
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters';
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!validateForm()) {
       showError('Validation Error', 'Please fix the errors in the form');
       return;
     }
-
     setIsSubmitting(true);
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       setIsSubmitted(true);
       showSuccess('Message Sent!', 'Thank you for contacting us. We\'ll get back to you soon.');
-      
       setFormData({
         name: '',
         email: '',
@@ -81,7 +68,6 @@ const EnhancedContactForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-
   const services = [
     'AI Business Intelligence',
     'Quantum Cybersecurity',
@@ -90,7 +76,6 @@ const EnhancedContactForm: React.FC = () => {
     'Neural Interface Development',
     'Other'
   ];
-
   const handleInputBlur = (name: keyof FormData) => {
     // Validate individual field on blur
     if (formData[name] && errors[name]) {
@@ -99,7 +84,6 @@ const EnhancedContactForm: React.FC = () => {
       setErrors(newErrors);
     }
   };
-
   if (isSubmitted) {
     return (
       <div
@@ -120,14 +104,13 @@ const EnhancedContactForm: React.FC = () => {
         </button>
       </div>
     );
+};
   }
-
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">EnhancedContactForm</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
 
 export default EnhancedContactForm;

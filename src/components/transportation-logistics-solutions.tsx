@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+};
 
 export default function TransportationLogisticsSolutions() {
   return (
@@ -14,4 +15,4 @@ export default function TransportationLogisticsSolutions() {
           <p className="text-gray-300">We help optimize routesreduce costsand increase reliability with AI-driven logistics platforms.</p>
     </>
   );
-}
+};

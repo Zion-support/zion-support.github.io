@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
-
 const EnhancedNewsletterSignup2026: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');
   };
-
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 mb-12 text-white text-center">
@@ -38,8 +33,8 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
         </div>
       </div>
     );
+};
   }
-
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
@@ -55,7 +50,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
             Get exclusive access to AI consciousness, quantum reality, and neural interfaces.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -79,7 +73,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h4 className="text-2xl font-bold mb-4 text-purple-400">What You'll Receive</h4>
               <ul className="space-y-3">
@@ -102,7 +95,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
               </ul>
             </div>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h4 className="text-2xl font-bold mb-6 text-center text-white">Get Started Today</h4>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -120,7 +112,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                   required
                 />
               </div>
-              
               <div className="space-y-4">
                 <label className="flex items-start space-x-3">
                   <input
@@ -133,7 +124,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                     the processing of my data for this purpose.
                   </span>
                 </label>
-                
                 <label className="flex items-start space-x-3">
                   <input
                     type="checkbox"
@@ -146,7 +136,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                   </span>
                 </label>
               </div>
-              
               <button
                 type="submit"
                 disabled={isLoading}
@@ -166,13 +155,11 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 )}
               </button>
             </form>
-            
             <p className="text-sm text-gray-300 text-center mt-4">
               Join over 50,000+ innovators already part of our community
             </p>
           </div>
         </div>
-
         <div className="text-center">
           <p className="text-lg opacity-90 mb-4">
             Ready to experience the future of technology?
@@ -195,6 +182,5 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedNewsletterSignup2026;

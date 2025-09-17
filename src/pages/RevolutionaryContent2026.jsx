@@ -18,16 +18,12 @@ import {
   Search
 } from 'lucide-react';
 import { blogPosts } from '../data/blog-posts';
-
 const RevolutionaryContent2026 = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-
   // Get the new revolutionary content (IDs 8001-8007)
   const revolutionaryContent = blogPosts.filter(post => post.id >= 8001);
-
   const categories = ['All', 'Synthetic Intelligence', 'Interdimensional Tech', 'Consciousness Technology', 'Reality Technology', 'Space AI', 'Temporal Technology', 'Communication Technology'];
-
   const filteredContent = revolutionaryContent.filter(post => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     const matchesSearch = searchQuery === '' || 
@@ -36,7 +32,6 @@ const RevolutionaryContent2026 = () => {
       post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const getCategoryIcon = (category) => {
     switch (category) {
       case 'Synthetic Intelligence': return Brain;
@@ -49,7 +44,6 @@ const RevolutionaryContent2026 = () => {
       default: return Sparkles;
     }
   };
-
   const getCategoryColor = (category) => {
     switch (category) {
       case 'Synthetic Intelligence': return 'from-purple-600 to-pink-600';
@@ -62,7 +56,6 @@ const RevolutionaryContent2026 = () => {
       default: return 'from-gray-600 to-gray-700';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4 py-16">
@@ -78,20 +71,17 @@ const RevolutionaryContent2026 = () => {
             REVOLUTIONARY CONTENT 2026
             <TrendingUp className="w-5 h-5" />
           </div>
-          
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             The Future of Technology
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block">
               Is Here
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Explore groundbreaking content covering the latest in synthetic intelligence, interdimensional computing, 
             consciousness transfer, and other revolutionary technologies that are reshaping our world.
           </p>
         </motion.div>
-
         {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,7 +104,6 @@ const RevolutionaryContent2026 = () => {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => {
@@ -133,12 +122,12 @@ const RevolutionaryContent2026 = () => {
                       {category}
                     </button>
                   );
+};
                 })}
               </div>
             </div>
           </div>
         </motion.div>
-
         {/* Content Grid */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -149,7 +138,6 @@ const RevolutionaryContent2026 = () => {
           {filteredContent.map((post, index) => {
             const Icon = getCategoryIcon(post.category);
             const colorClass = getCategoryColor(post.category);
-            
             return (
               <motion.div
                 key={post.id}
@@ -170,7 +158,6 @@ const RevolutionaryContent2026 = () => {
                         <span className="text-sm font-semibold">FEATURED</span>
                       </div>
                     </div>
-
                     {/* Content */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -179,7 +166,6 @@ const RevolutionaryContent2026 = () => {
                       <p className="text-gray-300 line-clamp-3 mb-4">
                         {post.excerpt}
                       </p>
-                      
                       {/* Author Info */}
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
@@ -191,7 +177,6 @@ const RevolutionaryContent2026 = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Footer */}
                     <div className="flex items-center justify-between pt-6 border-t border-white/10">
                       <div className="flex items-center gap-4 text-sm text-gray-400">
@@ -208,7 +193,6 @@ const RevolutionaryContent2026 = () => {
                           <span>{Math.floor(Math.random() * 2000) + 500} likes</span>
                         </div>
                       </div>
-                      
                       <div className="flex items-center gap-2 text-blue-400 group-hover:translate-x-1 transition-transform">
                         <span className="text-sm font-medium">Read More</span>
                         <ArrowRight className="w-4 h-4" />
@@ -218,9 +202,9 @@ const RevolutionaryContent2026 = () => {
                 </Link>
               </motion.div>
             );
+};
           })}
         </motion.div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -236,7 +220,6 @@ const RevolutionaryContent2026 = () => {
               Subscribe to our newsletter and be the first to discover the latest breakthroughs 
               in AI, quantum computing, and next-generation technologies.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/newsletter"
@@ -257,6 +240,5 @@ const RevolutionaryContent2026 = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryContent2026;

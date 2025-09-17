@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Award } from 'lucide-react';
-
 const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -11,20 +9,16 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
     }, 6000);
     return () => clearInterval(interval);
   }, []);
-
   const caseStudies = [
     {
           </p>
         </div>
-
         {/* Case Study Carousel */}
               </button>
             </div>
-            
             <p className="text-lg text-gray-300 mb-6">
               {caseStudies[currentStudy].description}
             </p>
-            
             <div className="flex items-center justify-between">
               <div className="text-2xl font-bold text-green-400">
                 {caseStudies[currentStudy].result}
@@ -40,7 +34,6 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-
         <div className="flex justify-center space-x-2 mt-6">
           {caseStudies.map((_, index) => (
             <button
@@ -55,6 +48,5 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
       </div>
     </motion.div>
   );
-};
 
 export default RevolutionaryCaseStudiesBanner2026;

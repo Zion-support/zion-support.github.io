@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TrustedRAGPlaybook2026: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 text-white">
@@ -21,6 +20,5 @@ const TrustedRAGPlaybook2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default TrustedRAGPlaybook2026;

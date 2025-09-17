@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapBrainTrendingUpTargetUsersAwardStarGlobe
+};
 
 export default function AI2025RevolutionaryContentPromotionBanner() {
   const features = [
@@ -130,6 +131,5 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               >
                 Explore All Content
   );
-};
 
 export default AI2025RevolutionaryContentPromotionBanner;

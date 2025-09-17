@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AI2025UltimateTransformation: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
@@ -9,7 +8,6 @@ const AI2025UltimateTransformation: React.FC = () => {
         <meta name="description" content="Experience the ultimate AI transformation with our revolutionary 2025 solutions. Achieve 1000% ROI, complete automation, and unprecedented business growth." />
         <meta name="keywords" content="AI transformation, business automation, 2025 AI solutions, enterprise AI, digital transformation" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -32,7 +30,6 @@ const AI2025UltimateTransformation: React.FC = () => {
             </span>
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -43,7 +40,6 @@ const AI2025UltimateTransformation: React.FC = () => {
               delivering 99.9% uptime and instant response to market changes.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum AI Processing</h3>
@@ -52,7 +48,6 @@ const AI2025UltimateTransformation: React.FC = () => {
               traditional systems, solving previously impossible problems.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold text-white mb-4">Predictive Intelligence</h3>
@@ -61,7 +56,6 @@ const AI2025UltimateTransformation: React.FC = () => {
               customer needs, and operational challenges before they occur.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold text-white mb-4">Real-Time Optimization</h3>
@@ -70,7 +64,6 @@ const AI2025UltimateTransformation: React.FC = () => {
               in real-time, delivering 500% efficiency improvements.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🛡️</div>
             <h3 className="text-2xl font-bold text-white mb-4">Advanced Security</h3>
@@ -79,7 +72,6 @@ const AI2025UltimateTransformation: React.FC = () => {
               protection for all business operations and data.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🌐</div>
             <h3 className="text-2xl font-bold text-white mb-4">Global Integration</h3>
@@ -89,7 +81,6 @@ const AI2025UltimateTransformation: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -114,7 +105,6 @@ const AI2025UltimateTransformation: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -136,6 +126,5 @@ const AI2025UltimateTransformation: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AI2025UltimateTransformation;

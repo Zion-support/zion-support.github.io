@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 CalculatorArrowRightZapDollarSignClockTarget
+};
 
 export default function AutomationSolutionsPromotionBanner() {
   return (
@@ -58,4 +59,4 @@ export default function AutomationSolutionsPromotionBanner() {
           <div className="mt-8 text-sm text-purple-200">
             <p>Transform your business with intelligent automation • Join 500+ successful implementations</p>
   );
-}
+};

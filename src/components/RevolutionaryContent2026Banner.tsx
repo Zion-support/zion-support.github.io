@@ -1,6 +1,5 @@
 import { ArrowRight, BookOpen, Brain, DollarSign, Heart, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryContent2026Banner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
@@ -9,7 +8,6 @@ const RevolutionaryContent2026Banner = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-12"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-white/5 to-transparent transform skew-y-12"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
@@ -19,13 +17,11 @@ const RevolutionaryContent2026Banner = () => {
             </h2>
             <Star className="h-10 w-10 text-yellow-400 ml-4 animate-spin" />
           </div>
-          
           <p className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-5xl mx-auto leading-relaxed">
             Experience the future of technology through our groundbreaking content covering 
             the most advanced AI innovations, sustainable solutions, and transformative breakthroughs
           </p>
         </div>
-
         {/* Content categories showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Left column */}
@@ -50,7 +46,6 @@ const RevolutionaryContent2026Banner = () => {
                 Explore AI Innovations <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
               <div className="flex items-center mb-4">
                 <Heart className="h-12 w-12 text-red-400 mr-4 group-hover:scale-110 transition-transform" />
@@ -72,7 +67,6 @@ const RevolutionaryContent2026Banner = () => {
               </Link>
             </div>
           </div>
-
           {/* Right column */}
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
@@ -95,7 +89,6 @@ const RevolutionaryContent2026Banner = () => {
                 Discover Financial AI <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
               <div className="flex items-center mb-4">
                 <BookOpen className="h-12 w-12 text-blue-400 mr-4 group-hover:scale-110 transition-transform" />
@@ -118,7 +111,6 @@ const RevolutionaryContent2026Banner = () => {
             </div>
           </div>
         </div>
-
         {/* Call to action section */}
         <div className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20">
           <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -136,7 +128,6 @@ const RevolutionaryContent2026Banner = () => {
               Explore All Content
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Link>
-            
             <Link
               to="/contact"
               className="group border-2 border-white text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
@@ -149,6 +140,5 @@ const RevolutionaryContent2026Banner = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryContent2026Banner;

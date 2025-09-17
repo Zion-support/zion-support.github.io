@@ -19,7 +19,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // Import analytics provider
 // import { AnalyticsProvider } from './context/AnalyticsContext';
 // import { ViewModeProvider } from './context/ViewModeContext';
-
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -31,7 +30,6 @@ const queryClient = new QueryClient({
 });
 
 const rootElement = document.getElementById('root');
-
 function renderApp() {
     const app = (
         <React.StrictMode>
@@ -44,7 +42,6 @@ function renderApp() {
             </HelmetProvider>
         </React.StrictMode>
     );
-    
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
     } else if (rootElement) {

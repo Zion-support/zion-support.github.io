@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2026ContentPromotionBanner: React.FC = () => {
   return (
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -8,13 +7,11 @@ const AI2026ContentPromotionBanner: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       </div>
-      
       {/* Floating Particles */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
       <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-ping delay-1000"></div>
       <div className="absolute bottom-20 left-1/3 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-2000"></div>
       <div className="absolute bottom-40 right-1/3 w-3 h-3 bg-pink-400 rounded-full animate-ping delay-3000"></div>
-      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -31,7 +28,6 @@ const AI2026ContentPromotionBanner: React.FC = () => {
             and revolutionary solutions that will define the future
           </p>
         </div>
-
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((featureindex) => (
@@ -62,7 +58,6 @@ const AI2026ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Highlighted Content */}
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 mb-16">
           <div className="text-center">
@@ -80,7 +75,6 @@ const AI2026ContentPromotionBanner: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="text-center">
@@ -96,7 +90,6 @@ const AI2026ContentPromotionBanner: React.FC = () => {
             <div className="text-white text-lg">Autonomous Operation</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <a
@@ -109,6 +102,5 @@ const AI2026ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AI2026ContentPromotionBanner;

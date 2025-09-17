@@ -19,8 +19,6 @@ export interface Service {
     rating: number;
     count: number;
   };
-}
-
 // New Revolutionary Services for 2026
 export const newServices2026: Service[] = [
   {
@@ -213,4 +211,3 @@ export const newServices2026: Service[] = [
     support: "Space AI operations team",
     reviews: { rating: 5.0, count: 3 }
   }
-];

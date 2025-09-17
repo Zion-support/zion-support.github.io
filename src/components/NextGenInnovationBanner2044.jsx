@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NextGenInnovationBanner2044= () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,6 +6,5 @@ const NextGenInnovationBanner2044= () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
 
 export default NextGenInnovationBanner2044;

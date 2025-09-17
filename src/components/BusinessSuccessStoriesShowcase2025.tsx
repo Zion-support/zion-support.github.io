@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessSuccessStoriesShowcase2025: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-green-50 py-20 overflow-hidden">
@@ -7,7 +6,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-green-400/20 to-blue-400/20 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -20,7 +18,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
             Discover how leading companies across industries have transformed their operations and achieved unprecedented growth with our AI and technology solutions.
           </p>
         </div>
-
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -35,7 +32,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Success Stories Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -54,7 +50,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Active Success Story */}
           <div
             key={activeStory}
@@ -72,15 +67,12 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
                     <p className="text-slate-600">{successStories[activeStory].industry} Industry</p>
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-slate-900 mb-2">Challenge:</h4>
                   <p className="text-slate-600 mb-4">{successStories[activeStory].challenge}</p>
-                  
                   <h4 className="font-semibold text-slate-900 mb-2">Solution:</h4>
                   <p className="text-slate-600 mb-4">{successStories[activeStory].solution}</p>
                 </div>
-
                 <div className="grid grid-cols-2 gap-4">
                   {successStories[activeStory].metrics.map((metricindex) => (
                     <div key={index} className="text-center p-4 bg-slate-50 rounded-xl">
@@ -91,7 +83,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Testimonial */}
               <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
@@ -115,7 +106,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Results Summary */}
         <div
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
@@ -126,7 +116,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
               Our solutions have delivered measurable results for companies of all sizes and industries.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">350%</div>
@@ -146,7 +135,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -169,7 +157,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default BusinessSuccessStoriesShowcase2025;
 </div></div>

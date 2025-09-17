@@ -10,8 +10,6 @@ export interface NewBlogPostMeta2029 {
   featured: boolean;
   imageUrl: string;
   slug: string;
-}
-
 export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
   {
     id: 9961,
@@ -251,5 +249,3 @@ export const NEW_BLOG_POSTS_2029: NewBlogPostMeta2029[] = [
     imageUrl: "/images/blog/production-eval-gates-2029.jpg",
     slug: "production-eval-gates-2029",
   },
-];
-

@@ -5,6 +5,7 @@ import {
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Calculator
 } from 'lucide-react';
+};
 
 export default function AIFinancialPlanningPlatform() {
   const features = [
@@ -194,6 +195,5 @@ export default function AIFinancialPlanningPlatform() {
                   Contact Sales
     </>
   );
-};
 
 export default ai-financial-planning-platform;

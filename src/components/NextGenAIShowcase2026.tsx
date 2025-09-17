@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NextGenAIShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden">
@@ -10,7 +9,6 @@ const NextGenAIShowcase2026: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-spin-slow" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div
@@ -27,11 +25,9 @@ const NextGenAIShowcase2026: React.FC = () => {
               Next-Gen AI Showcase 2026
             </h2>
           </div>
-          
             Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
             Witness revolutionary capabilities that will transform how we interact with technology.
           </divp>
-
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-lg"
@@ -45,7 +41,6 @@ const NextGenAIShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Main Demo Area */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Demo Showcase */}
@@ -69,7 +64,6 @@ const NextGenAIShowcase2026: React.FC = () => {
                     {demos[activeDemo].demo}
                   </div>
                 </div>
-
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
                     <div 
@@ -86,7 +80,6 @@ const NextGenAIShowcase2026: React.FC = () => {
                       </p>
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {demos[activeDemo].features.map((featureindex) => (
@@ -99,7 +92,6 @@ const NextGenAIShowcase2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4">
                     {Object.entries(demos[activeDemo].stats).map(([keyvalue]index) => (
@@ -115,7 +107,6 @@ const NextGenAIShowcase2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Demo Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
               {demos.map((demoindex) => (
@@ -136,7 +127,6 @@ const NextGenAIShowcase2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* AI Capabilities Panel */}
           <div className="space-y-6">
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
@@ -144,7 +134,6 @@ const NextGenAIShowcase2026: React.FC = () => {
                 <Rocket className="w-6 h-6 mr-2 text-cyan-400" />
                 AI Capabilities
               </h4>
-              
               <div className="space-y-4">
                 {aiCapabilities.map((capabilityindex) => (
                   <div
@@ -164,7 +153,6 @@ const NextGenAIShowcase2026: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Interactive Controls */}
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-xl font-bold text-white mb-4">Interactive Controls</h4>
@@ -191,7 +179,6 @@ const NextGenAIShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div
           className="text-center"
@@ -215,7 +202,6 @@ const NextGenAIShowcase2026: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default NextGenAIShowcase2026;
 </div></div></div></div></div></div></div>

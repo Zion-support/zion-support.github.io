@@ -14,26 +14,21 @@ import {
   Sparkles
 } from 'lucide-react';
 import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
-
 const ContentRecommendationSystem: React.FC = () => {
   const [recommendations, setRecommendations] = useState<any[]>([]);
   const [activeCategory, setActiveCategory] = useState('trending');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     loadRecommendations();
   }, []);
-
   const loadRecommendations = () => {
     const featured = getFeaturedBlogPosts();
     const recent = getRecentBlogPosts(6);
-    
     // Mix featured and recent content
     const mixed = [...featured.slice(0, 3), ...recent.slice(0, 3)];
     setRecommendations(mixed);
   };
-
   const categories = [
     { key: 'trending', label: 'Trending', icon: TrendingUp, color: 'from-red-500 to-pink-500' },
     { key: 'featured', label: 'Featured', icon: Star, color: 'from-yellow-500 to-orange-500' },
@@ -42,7 +37,6 @@ const ContentRecommendationSystem: React.FC = () => {
     { key: 'quantum', label: 'Quantum', icon: Zap, color: 'from-green-500 to-emerald-500' },
     { key: 'space', label: 'Space Tech', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
   ];
-
   const getCategoryIcon = (category: string) => {
     const categoryMap: { [key: string]: any } = {
       'AI Consciousness': Brain,
@@ -58,7 +52,6 @@ const ContentRecommendationSystem: React.FC = () => {
     };
     return categoryMap[category] || BookOpen;
   };
-
   const getCategoryColor = (category: string) => {
     const colorMap: { [key: string]: string } = {
       'AI Consciousness': 'from-purple-500 to-pink-500',
@@ -74,7 +67,6 @@ const ContentRecommendationSystem: React.FC = () => {
     };
     return colorMap[category] || 'from-gray-500 to-gray-600';
   };
-
   const filteredRecommendations = recommendations.filter(post => {
     if (activeCategory === 'trending') return post.featured;
     if (activeCategory === 'featured') return post.featured;
@@ -84,7 +76,6 @@ const ContentRecommendationSystem: React.FC = () => {
     if (activeCategory === 'space') return post.category.includes('Space') || post.tags.some((tag: string) => tag.includes('Space'));
     return true;
   });
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,20 +90,17 @@ const ContentRecommendationSystem: React.FC = () => {
             <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-blue-300 font-medium">Personalized Recommendations</span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Discover Your{' '}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Perfect Content
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our AI-powered recommendation system learns from your interests to surface the most relevant 
             and engaging content tailored just for you.
           </p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -136,9 +124,9 @@ const ContentRecommendationSystem: React.FC = () => {
                 {category.label}
               </button>
             );
+};
           })}
         </motion.div>
-
         {/* Content Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -150,7 +138,6 @@ const ContentRecommendationSystem: React.FC = () => {
             {filteredRecommendations.map((post, index) => {
               const IconComponent = getCategoryIcon(post.category);
               const categoryColor = getCategoryColor(post.category);
-              
               return (
                 <motion.div
                   key={post.id}
@@ -176,16 +163,13 @@ const ContentRecommendationSystem: React.FC = () => {
                       </div>
                     )}
                   </div>
-
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
-                  
                   <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center">
@@ -197,7 +181,6 @@ const ContentRecommendationSystem: React.FC = () => {
                       {Math.floor(Math.random() * 1000) + 100} views
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 3).map((tag: string, tagIndex: number) => (
@@ -209,14 +192,12 @@ const ContentRecommendationSystem: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Actions */}
                   <div className="flex items-center justify-between">
                     <button className="flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
-                    
                     <div className="flex items-center space-x-3">
                       <button className="p-2 rounded-lg bg-gray-700/50 text-gray-400 hover:text-red-400 hover:bg-red-500/20 transition-all duration-300">
                         <Heart className="w-4 h-4" />
@@ -228,10 +209,10 @@ const ContentRecommendationSystem: React.FC = () => {
                   </div>
                 </motion.div>
               );
+};
             })}
           </AnimatePresence>
         </motion.div>
-
         {/* Load More */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -244,7 +225,6 @@ const ContentRecommendationSystem: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </motion.div>
-
         {/* Personalization Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -279,6 +259,5 @@ const ContentRecommendationSystem: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ContentRecommendationSystem;

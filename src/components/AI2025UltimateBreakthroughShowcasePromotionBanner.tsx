@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3
+};
 
 export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
   return (
@@ -81,4 +82,4 @@ export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
           <div className="text-blue-200 text-sm">
             <span className="font-semibold">Limited Time:</span> Get exclusive access to breakthrough technologies and implementation guides
   );
-}
+};

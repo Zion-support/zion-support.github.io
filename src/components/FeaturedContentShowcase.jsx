@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, Users, Award, TrendingUp, Star, ArrowRight } from 'lucide-react';
-
 const FeaturedContentShowcase = () => {
   const showcaseItems = [
     {
@@ -41,7 +40,6 @@ const FeaturedContentShowcase = () => {
       slug: "consciousness-computing-global-impact-study"
     }
   ];
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,14 +52,12 @@ const FeaturedContentShowcase = () => {
             that are shaping the future of AI and technology.
           </p>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {showcaseItems.map((item, index) => (
             <div key={index} className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
                 {/* Header with gradient */}
                 <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>
-                
                 <div className="p-6">
                   {/* Badge and category */}
                   <div className="flex items-center justify-between mb-4">
@@ -70,22 +66,18 @@ const FeaturedContentShowcase = () => {
                     </span>
                     <span className="text-sm text-gray-500 font-medium">{item.category}</span>
                   </div>
-
                   {/* Icon */}
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${item.color} mb-4`}>
                     <item.icon className="h-6 w-6 text-white" />
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </h3>
-
                   {/* Description */}
                   <p className="text-gray-600 mb-6 line-clamp-3">
                     {item.description}
                   </p>
-
                   {/* Metrics */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -99,7 +91,6 @@ const FeaturedContentShowcase = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* CTA */}
                   <Link 
                     to={`/${item.type}/${item.slug}`}
@@ -113,7 +104,6 @@ const FeaturedContentShowcase = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
@@ -143,6 +133,5 @@ const FeaturedContentShowcase = () => {
       </div>
     </div>
   );
-};
 
 export default FeaturedContentShowcase;

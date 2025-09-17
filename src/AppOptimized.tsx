@@ -11,7 +11,6 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOHead from './components/SEOHead';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -19,7 +18,6 @@ const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
-
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
   defaultOptions: {

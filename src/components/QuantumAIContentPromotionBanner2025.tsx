@@ -1,10 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
 const QuantumAIContentPromotionBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const contentSlides = [
     {
       title: "🚀 NEW: Quantum-AI Hybrid Computing",
@@ -39,19 +37,14 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
       icon: "💰"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev: number) => (prev + 1) % contentSlides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [contentSlides.length]);
-
   if (!isVisible) return null;
-
   const currentContent = contentSlides[currentSlide];
-
   return (
     <AnimatePresence>
       <motion.div
@@ -64,7 +57,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
         <div className={`absolute inset-0 bg-gradient-to-r ${currentContent.gradient} opacity-90`}>
           <div className="absolute inset-0 bg-black opacity-20"></div>
         </div>
-
         {/* Animated background particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
@@ -85,7 +77,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
             />
           ))}
         </div>
-
         <div className="relative z-10 p-6 md:p-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between">
@@ -130,7 +121,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
                   </motion.a>
                 </div>
               </motion.div>
-
               {/* Close button */}
               <motion.button
                 onClick={() => setIsVisible(false)}
@@ -143,7 +133,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
                 </svg>
               </motion.button>
             </div>
-
             {/* Slide indicators */}
             <div className="flex justify-center gap-2 mt-6">
               {contentSlides.map((_, index) => (
@@ -158,7 +147,6 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Floating elements */}
         <div className="absolute top-10 right-10 text-white opacity-20">
           <motion.div
@@ -181,6 +169,5 @@ const QuantumAIContentPromotionBanner2025: React.FC = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default QuantumAIContentPromotionBanner2025;

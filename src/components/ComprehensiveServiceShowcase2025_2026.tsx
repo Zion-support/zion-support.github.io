@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
   return (
     <div className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
@@ -16,7 +15,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
           Comprehensive AI solutions designed to transform your business and accelerate growth in the digital age.
         </p>
       </div>
-
       {/* Service Navigation */}
       <div
         className="container mx-auto px-4 mb-12"
@@ -51,10 +49,10 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
                 </div>
               </divbutton>
             );
+};
           })}
         </div>
       </div>
-
       {/* Service Details */}
       <div
         key={activeService}
@@ -71,7 +69,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
                 {currentService.description}
               </p>
             </div>
-
             {/* Features */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
@@ -87,7 +84,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Benefits */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
@@ -104,7 +100,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Pricing & CTA */}
           <div className="space-y-8">
             {/* Pricing */}
@@ -123,7 +118,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
                 Get Started
               </button>
             </div>
-
             {/* Case Studies */}
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Success Stories</h3>
@@ -145,7 +139,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div
         className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-t border-white/20 py-16"
@@ -157,7 +150,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of companies already using our AI solutions to revolutionize their operations and achieve unprecedented growth.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <divbutton
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
@@ -176,7 +168,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ComprehensiveServiceShowcase2025_2026;
 </div></div></div>

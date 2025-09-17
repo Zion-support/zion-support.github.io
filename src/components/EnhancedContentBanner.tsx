@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedContentBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
@@ -20,12 +19,10 @@ const EnhancedContentBanner: React.FC = () => {
               ×
             </button>
           </div>
-          
           <p className="text-xl opacity-95 mb-8 max-w-4xl">
             Experience the future of technology with our groundbreaking new content. 
             From AI transformation to quantum computing, explore innovations that will reshape tomorrow.
           </p>
-
           {/* Carousel */}
           <div className="relative">
               <div
@@ -52,7 +49,6 @@ const EnhancedContentBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Navigation Controls */}
             <button
               onClick={prevSlide}
@@ -67,7 +63,6 @@ const EnhancedContentBanner: React.FC = () => {
               →
             </button>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-6">
             {featuredContent.map((_, index) => (
@@ -82,7 +77,6 @@ const EnhancedContentBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quick Access Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         {featuredContent.map((content, index) => (
@@ -103,7 +97,6 @@ const EnhancedContentBanner: React.FC = () => {
           </diva>
         ))}
       </div>
-
       {/* Interactive Stats */}
       <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 text-white mb-8">
         <div className="text-center mb-6">
@@ -129,7 +122,6 @@ const EnhancedContentBanner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
         <h3 className="text-3xl font-bold mb-4">Stay Ahead of the Curve</h3>
@@ -148,6 +140,5 @@ const EnhancedContentBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedContentBanner;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const PerformanceOptimizations: React.FC = () => {
   return (
     <>
@@ -51,6 +50,5 @@ const PerformanceOptimizations: React.FC = () => {
       />
     </>
   );
-};
 
 export default PerformanceOptimizations;

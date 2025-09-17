@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveAIDemo2025: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -8,7 +7,6 @@ const InteractiveAIDemo2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
       </div>
-
       <div
         className="relative z-10 container mx-auto px-4 py-16"
       >
@@ -19,7 +17,6 @@ const InteractiveAIDemo2025: React.FC = () => {
             <Bot className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Chat with the
             <br />
@@ -27,13 +24,11 @@ const InteractiveAIDemo2025: React.FC = () => {
               Future of AI
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
             quantum computingbusiness automationand future predictions.
           </p>
         </div>
-
         {/* Chat Interface */}
         <div
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
@@ -54,7 +49,6 @@ const InteractiveAIDemo2025: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Messages Container */}
           <div className="h-96 overflow-y-auto p-6 space-y-6">
             <div>
@@ -69,7 +63,6 @@ const InteractiveAIDemo2025: React.FC = () => {
                       : 'bg-white/10 text-gray-100'
                   } rounded-2xl p-4`}>
                     <p className="text-sm leading-relaxed">{message.content}</p>
-                    
                     {message.features && (
                       <div className="mt-3 flex flex-wrap gap-2">
                         {message.features.map((featureindex) => (
@@ -82,7 +75,6 @@ const InteractiveAIDemo2025: React.FC = () => {
                         ))}
                       </div>
                     )}
-                    
                     <div className="text-xs opacity-70 mt-2">
                       {message.timestamp.toLocaleTimeString()}
                     </div>
@@ -90,7 +82,6 @@ const InteractiveAIDemo2025: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Typing Indicator */}
             {isTyping && (
               <div
@@ -103,7 +94,6 @@ const InteractiveAIDemo2025: React.FC = () => {
               </div>
             )}
           </div>
-
           {/* Input Area */}
           <div className="border-t border-white/10 p-6">
             <div className="flex gap-4">
@@ -133,7 +123,6 @@ const InteractiveAIDemo2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Features Showcase */}
         <div
           className="mt-16 grid md:grid-cols-4 gap-6"
@@ -157,11 +146,11 @@ const InteractiveAIDemo2025: React.FC = () => {
                 <p className="text-purple-300 text-sm">{feature.description}</p>
               </div>
             );
+};
           })}
         </div>
       </div>
     </div>
   );
-};
 
 export default InteractiveAIDemo2025;

@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025SyntheticIntelligenceTransformationBanner() {
   return (
@@ -68,4 +69,4 @@ export default function AI2025SyntheticIntelligenceTransformationBanner() {
                   <div className="font-semibold">Chief Technology Officer</div>
                   <div>Fortune 500 Manufacturing Leader</div>
   );
-}
+};

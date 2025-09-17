@@ -1,9 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
-
 const AIInnovationHub2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('autonomous');
   const [isDemoRunning, setIsDemoRunning] = useState(false);
-
   const aiInnovations = {
     autonomous: {
       title: "Autonomous AI Systems",
@@ -54,7 +52,6 @@ const AIInnovationHub2026: React.FC = () => {
       demo: "collective-demo"
     }
   };
-
   const useCases = [
     {
       title: "Healthcare Revolution",
@@ -85,18 +82,15 @@ const AIInnovationHub2026: React.FC = () => {
       color: "from-yellow-500 to-orange-500"
     }
   ];
-
   const startDemo = () => {
     setIsDemoRunning(true);
     setTimeout(() => setIsDemoRunning(false), 3000);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50">
       {/* Hero Section */}
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -162,7 +156,6 @@ const AIInnovationHub2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* AI Innovation Showcase */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -177,7 +170,6 @@ const AIInnovationHub2026: React.FC = () => {
               Explore cutting-edge AI technologies that are defining the future of intelligence
             </p>
           </motion.div>
-
           {/* Innovation Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(aiInnovations).map(([key, innovation]) => (
@@ -195,7 +187,6 @@ const AIInnovationHub2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Innovation Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -242,7 +233,6 @@ const AIInnovationHub2026: React.FC = () => {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Real-World Applications */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
         <div className="container mx-auto">
@@ -257,7 +247,6 @@ const AIInnovationHub2026: React.FC = () => {
               See how our AI innovations are transforming industries and solving real-world challenges
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -278,9 +267,7 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       </div>
-
       {/* Revolutionary AI Technologies */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -295,7 +282,6 @@ const AIInnovationHub2026: React.FC = () => {
               Discover the most advanced AI technologies that are transforming businesses and creating new possibilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -358,7 +344,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Innovation Showcase */}
       <section className="py-20 bg-gradient-to-r from-purple-800/30 to-blue-800/30">
         <div className="container mx-auto px-4">
@@ -373,7 +358,6 @@ const AIInnovationHub2026: React.FC = () => {
               Experience our latest AI innovations through interactive demonstrations and real-world applications
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -397,7 +381,6 @@ const AIInnovationHub2026: React.FC = () => {
                 Try AI Consciousness Demo
               </button>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -424,7 +407,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -439,7 +421,6 @@ const AIInnovationHub2026: React.FC = () => {
               See how our AI innovations are transforming businesses and creating unprecedented value
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -481,7 +462,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Capabilities Matrix */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -496,7 +476,6 @@ const AIInnovationHub2026: React.FC = () => {
               Compare the capabilities and performance of different AI innovation categories
             </p>
           </motion.div>
-
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -569,7 +548,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Future Roadmap */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white">
         <div className="container mx-auto">
@@ -584,7 +562,6 @@ const AIInnovationHub2026: React.FC = () => {
               Our vision for the future of artificial intelligence and its impact on humanity
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -628,7 +605,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -655,6 +631,5 @@ const AIInnovationHub2026: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default AIInnovationHub2026;

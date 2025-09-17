@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16 overflow-hidden">
@@ -8,7 +7,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-transparent to-purple-600/20"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div
@@ -17,7 +15,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
             <Play className="w-4 h-4" />
             🎮 NEW: Interactive Technology Demo 2025
           </div>
-
           <divh2
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -26,14 +23,12 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
               Work in Real-Time
             </span>
           </divh2>
-
           <divp
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             Experience our revolutionary AI systems live in action. See how our technology 
             processes dataoptimizes processesand delivers results in real-time.
           </divp>
-
           {/* Interactive Demo Preview */}
           <div
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
@@ -45,7 +40,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
                 <span className="text-sm text-gray-400">Live Streaming</span>
               </div>
             </div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="bg-black/50 rounded-lg p-4">
@@ -68,7 +62,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
                     <div key={index} className="bg-white/5 rounded-lg p-3 text-center">
@@ -78,7 +71,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
@@ -97,7 +89,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Feature Icons */}
           <div
             className="flex flex-wrap justify-center gap-8 mb-12"
@@ -115,9 +106,9 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
                   <span className="text-white font-medium">{feature.text}</span>
                 </div>
               );
+};
             })}
           </div>
-
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -134,7 +125,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -142,7 +132,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveTechShowcase2025PromotionBanner;
 </div></div>

@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { ArrowRight, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react';
-
 const NextGenAIServices2025: React.FC = () => {
   const services = [
     {
@@ -57,7 +56,6 @@ const NextGenAIServices2025: React.FC = () => {
       trending: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -80,7 +78,6 @@ const NextGenAIServices2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -91,7 +88,6 @@ const NextGenAIServices2025: React.FC = () => {
             Our next-generation AI services are designed to transform your business and unlock unprecedented possibilities.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => {
             const IconComponent = service.icon;
@@ -141,10 +137,10 @@ const NextGenAIServices2025: React.FC = () => {
                 </CardContent>
               </Card>
             );
+};
           })}
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-gray-900 to-blue-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -166,6 +162,5 @@ const NextGenAIServices2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NextGenAIServices2025;

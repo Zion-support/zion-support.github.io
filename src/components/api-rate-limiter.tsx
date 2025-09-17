@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+};
 
 export default function APIRateLimiterPage() {
   const [endpoint, setEndpoint] = useState('');
@@ -306,13 +307,11 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
   }
-});
 console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
-});`}
               <Button
                 onClick={() => copyToClipboard(`const axios = require('axios');
 const apiKey = '${apiKey || 'your_api_key_here'}';
@@ -324,13 +323,11 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
   }
-});
 console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
-});`)}
                 variant="outline"
                 size="sm"
                 className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
@@ -351,17 +348,14 @@ headers = {
     'Authorization': f'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
-}
 response = requests.get(
     f'https://api.zion.tech{endpoint}',
     headers=headers
-)
 print('Response:', response.json())
 print('Rate Limit Info:', {
     'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')
-})`}
               <Button
                 onClick={() => copyToClipboard(`import requests
 api_key = '${apiKey || 'your_api_key_here'}'
@@ -371,17 +365,14 @@ headers = {
     'Authorization': f'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
-}
 response = requests.get(
     f'https://api.zion.tech{endpoint}',
     headers=headers
-)
 print('Response:', response.json())
 print('Rate Limit Info:', {
     'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')
-})`)}
                 variant="outline"
                 size="sm"
                 className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
@@ -412,6 +403,5 @@ print('Rate Limit Info:', {
               View Pricing
     </>
   );
-};
 
 export default api-rate-limiter;

@@ -16,10 +16,8 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-
 const AdvancedAISolutions2025 = () => {
   const [activeTab, setActiveTab] = useState('overview');
-
   const services = [
     {
       id: 'autonomous-ops',
@@ -106,7 +104,6 @@ const AdvancedAISolutions2025 = () => {
       category: 'Customer Experience'
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -127,14 +124,12 @@ const AdvancedAISolutions2025 = () => {
       rating: 5
     }
   ];
-
   const stats = [
     { label: 'AI Solutions Deployed', value: '500+', icon: Brain },
     { label: 'Client Satisfaction', value: '99.8%', icon: Star },
     { label: 'Uptime Guarantee', value: '99.99%', icon: Clock },
     { label: 'Cost Reduction', value: '45%', icon: TrendingUp }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -173,7 +168,6 @@ const AdvancedAISolutions2025 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,7 +191,6 @@ const AdvancedAISolutions2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,7 +203,6 @@ const AdvancedAISolutions2025 = () => {
               and drive unprecedented growth.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -230,9 +222,7 @@ const AdvancedAISolutions2025 = () => {
                     <span className="text-sm text-blue-600 font-medium">{service.category}</span>
                   </div>
                 </div>
-
                 <p className="text-gray-600 mb-6">{service.description}</p>
-
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-600">
@@ -241,7 +231,6 @@ const AdvancedAISolutions2025 = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-gray-900">{service.pricing}</span>
                   <motion.button
@@ -258,7 +247,6 @@ const AdvancedAISolutions2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,7 +258,6 @@ const AdvancedAISolutions2025 = () => {
               Real results from real businesses using our AI solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -296,7 +283,6 @@ const AdvancedAISolutions2025 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -333,6 +319,5 @@ const AdvancedAISolutions2025 = () => {
       </section>
     </div>
   );
-};
 
 export default AdvancedAISolutions2025;

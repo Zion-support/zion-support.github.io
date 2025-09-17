@@ -1,12 +1,10 @@
 import React from 'react';
-
 const RevolutionaryAdBanner2037: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-2/3 mb-6 md:mb-0">
@@ -35,7 +33,6 @@ const RevolutionaryAdBanner2037: React.FC = () => {
               </span>
             </div>
           </div>
-          
           <div className="md:w-1/3 text-center md:text-right">
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
               <div className="text-6xl mb-4">🚀</div>
@@ -66,6 +63,5 @@ const RevolutionaryAdBanner2037: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryAdBanner2037;

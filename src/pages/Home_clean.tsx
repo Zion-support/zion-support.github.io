@@ -7,10 +7,8 @@ import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBa
 import InteractiveTechShowcase2026 from '../components/InteractiveTechShowcase2026';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
-
   useEffect(() => {
     // Welcome notification
     addNotification({
@@ -20,7 +18,6 @@ const Home: React.FC = () => {
       duration: 5000
     });
   }, [addNotification]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -28,7 +25,6 @@ const Home: React.FC = () => {
         <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business." />
         <meta name="keywords" content="AI solutions, quantum computing, cybersecurity, technology innovation, Zion Tech Group" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div 
@@ -44,7 +40,6 @@ const Home: React.FC = () => {
             Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. 
             Discover the next generation of technology that will transform your business and reshape reality itself.
           </p>
-          
           {/* Call to Action Buttons */}
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Link 
@@ -67,7 +62,6 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </motion.div>
-
         {/* Featured Services Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
@@ -91,7 +85,6 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">⚛️</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Computing</h3>
@@ -108,7 +101,6 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🔒</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">AI Cybersecurity</h3>
@@ -126,7 +118,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Revolutionary Technology Showcase */}
         <motion.div 
           className="mt-20"
@@ -143,7 +134,6 @@ const Home: React.FC = () => {
               cutting-edge innovations, AI breakthroughs, and quantum computing advancements.
             </p>
           </div>
-
           {/* Technology Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-6 border border-cyan-400/30">
@@ -168,7 +158,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action Section */}
         <motion.div 
           className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30 mt-20"
@@ -201,6 +190,5 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default Home;

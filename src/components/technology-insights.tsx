@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
@@ -177,6 +178,5 @@ export default function TechnologyInsightsPage() {
                   Read Our Blog
     </>
   );
-};
 
 export default technology-insights;

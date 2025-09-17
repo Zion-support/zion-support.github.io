@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const UltimatePromotionBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentPromo, setCurrentPromo] = useState(0);
-
   const promotions = [
     {
       id: 1,
@@ -42,28 +40,22 @@ const UltimatePromotionBanner2025: React.FC = () => {
       urgency: "Exclusive"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promotions.length);
     }, 8000);
     return () => clearInterval(interval);
   }, [promotions.length]);
-
   const currentPromoData = promotions[currentPromo];
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   return (
     <div className={`bg-gradient-to-r ${currentPromoData.bgColor} text-white py-6 mb-8 relative overflow-hidden transition-all duration-500`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       {/* Close Button */}
       <button
         onClick={handleClose}
@@ -73,7 +65,6 @@ const UltimatePromotionBanner2025: React.FC = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4 flex-1">
@@ -92,7 +83,6 @@ const UltimatePromotionBanner2025: React.FC = () => {
               <p className="text-sm opacity-80">{currentPromoData.description}</p>
             </div>
           </div>
-
           <div className="flex items-center space-x-4">
             <button className={`bg-gradient-to-r ${currentPromoData.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
               {currentPromoData.cta} →
@@ -102,7 +92,6 @@ const UltimatePromotionBanner2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Progress Bar */}
         <div className="mt-4">
           <div className="w-full bg-white/20 rounded-full h-1">
@@ -112,7 +101,6 @@ const UltimatePromotionBanner2025: React.FC = () => {
             ></div>
           </div>
         </div>
-
         {/* Promo Navigation */}
         <div className="flex justify-center space-x-2 mt-4">
           {promotions.map((_, index) => (
@@ -128,7 +116,6 @@ const UltimatePromotionBanner2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-4 left-4 text-xl opacity-20 animate-bounce">
         🚀
@@ -141,6 +128,5 @@ const UltimatePromotionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimatePromotionBanner2025;

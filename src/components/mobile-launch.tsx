@@ -1,5 +1,4 @@
 import React from 'react';
-
 const mobile-launch: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,18 +7,15 @@ const mobile-launch: React.FC = () => {
     </div>
   );
 };
-
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
-
 const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
-
 const testimonials = [
   { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' },
-];
+};
 
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
@@ -148,4 +144,4 @@ export default function MobileLaunchPage() {
           <span>•</span>
           <a href="/download"><a className="underline">Shareable link: /download</a></a>
   );
-}
+};

@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026FuturePredictionsUltimatePromotionBanner() {
   return (
@@ -70,4 +71,4 @@ export default function AI2026FuturePredictionsUltimatePromotionBanner() {
       <div className="absolute bottom-10 right-10 w-16 h-16 bg-yellow-300/20 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-5 w-12 h-12 bg-purple-300/20 rounded-full animate-pulse delay-500"></div>
   );
-}
+};

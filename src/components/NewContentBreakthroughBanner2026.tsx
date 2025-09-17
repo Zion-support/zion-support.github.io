@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Zap, Brain, Target, TrendingUp, Users, Shield, Globe } from 'lucide-react';
-
 const NewContentBreakthroughBanner2026 = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25233B82F6%22%20fill-opacity%3D%220.1%22%253E%253Cpath%20d%3D%22M40%2040c0-22.091-17.909-40-40-40v80c22.091%200%2040-17.909%2040-40z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -16,7 +14,6 @@ const NewContentBreakthroughBanner2026 = () => {
             <Star className="h-5 w-5 mr-2" />
             BREAKTHROUGH CONTENT 2026
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Revolutionary
             <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -24,13 +21,11 @@ const NewContentBreakthroughBanner2026 = () => {
             </span>
             Now Available
           </h2>
-          
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto">
             Experience the most advanced AI technologies ever created. From quantum computing 
             to conscious AI systems - discover innovations that will revolutionize your business.
           </p>
         </div>
-
         {/* Breakthrough Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {[
@@ -82,7 +77,6 @@ const NewContentBreakthroughBanner2026 = () => {
             </div>
           ))}
         </div>
-
         {/* Featured Content Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {[
@@ -132,7 +126,6 @@ const NewContentBreakthroughBanner2026 = () => {
                   </span>
                 </div>
               </div>
-              
               <div className="p-8">
                 <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                   {content.title}
@@ -140,7 +133,6 @@ const NewContentBreakthroughBanner2026 = () => {
                 <p className="text-gray-300 mb-6 text-lg">
                   {content.description}
                 </p>
-                
                 <div className="space-y-3 mb-8">
                   {content.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start text-sm text-gray-300">
@@ -149,7 +141,6 @@ const NewContentBreakthroughBanner2026 = () => {
                     </div>
                   ))}
                 </div>
-                
                 <Link
                   to={content.link}
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 group-hover:scale-105"
@@ -161,7 +152,6 @@ const NewContentBreakthroughBanner2026 = () => {
             </div>
           ))}
         </div>
-
         {/* Additional Content Showcase */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {[
@@ -208,7 +198,6 @@ const NewContentBreakthroughBanner2026 = () => {
             </Link>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl p-12">
           <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -237,6 +226,5 @@ const NewContentBreakthroughBanner2026 = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentBreakthroughBanner2026;

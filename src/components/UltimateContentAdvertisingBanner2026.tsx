@@ -12,11 +12,9 @@ import {
   Cpu,
   Shield
 } from 'lucide-react';
-
 const UltimateContentAdvertisingBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentAd, setCurrentAd] = useState(0);
-
   const advertisements = [
     {
       id: 1,
@@ -63,25 +61,19 @@ const UltimateContentAdvertisingBanner2026 = () => {
       borderColor: "border-purple-500/20"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentAd((prev) => (prev + 1) % advertisements.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [advertisements.length]);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   const handleClick = (link) => {
     window.location.href = link;
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="fixed top-0 left-0 right-0 z-50 p-4">
       <AnimatePresence mode="wait">
@@ -96,7 +88,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
           <div className={`relative overflow-hidden rounded-2xl border-2 ${advertisements[currentAd].borderColor} ${advertisements[currentAd].bgColor} backdrop-blur-sm`}>
             {/* Background Gradient */}
             <div className={`absolute inset-0 bg-gradient-to-r ${advertisements[currentAd].color} opacity-20`}></div>
-            
             {/* Content */}
             <div className="relative p-6">
               <div className="flex items-center justify-between">
@@ -105,7 +96,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
                   <div className={`p-3 rounded-full bg-gradient-to-r ${advertisements[currentAd].color} text-white`}>
                     <advertisements[currentAd].icon className="w-6 h-6" />
                   </div>
-                  
                   {/* Text Content */}
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-white mb-1">
@@ -115,7 +105,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
                       {advertisements[currentAd].subtitle}
                     </p>
                   </div>
-                  
                   {/* CTA Button */}
                   <button
                     onClick={() => handleClick(advertisements[currentAd].link)}
@@ -125,7 +114,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-                
                 {/* Close Button */}
                 <button
                   onClick={handleClose}
@@ -135,7 +123,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
                 </button>
               </div>
             </div>
-            
             {/* Progress Bar */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
               <motion.div
@@ -148,7 +135,6 @@ const UltimateContentAdvertisingBanner2026 = () => {
           </div>
         </motion.div>
       </AnimatePresence>
-      
       {/* Dots Indicator */}
       <div className="flex justify-center mt-4 space-x-2">
         {advertisements.map((_, index) => (
@@ -163,6 +149,5 @@ const UltimateContentAdvertisingBanner2026 = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateContentAdvertisingBanner2026;

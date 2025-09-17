@@ -1,8 +1,6 @@
 'use client';
-
 import React from 'react';
 import Head from 'next/head';
-
 interface AdvancedSEOProps {
   title: string;
   description: string;
@@ -15,7 +13,7 @@ interface AdvancedSEOProps {
   author?: string;
   section?: string;
   tags?: string[];
-}
+};
 
 export default function AdvancedSEO({
   title,
@@ -109,4 +107,4 @@ export default function AdvancedSEO({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
   );
-}
+};

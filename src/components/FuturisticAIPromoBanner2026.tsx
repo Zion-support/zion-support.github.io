@@ -9,27 +9,22 @@ import {
   TrendingUp,
   Play
 } from 'lucide-react';
-
 const FuturisticAIPromoBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentMetric, setCurrentMetric] = useState(0);
-
   const metrics = [
     { value: "1M+ Ops/sec", label: "Processing Speed" },
     { value: "99.97%", label: "Accuracy Rate" },
     { value: "50M+", label: "Global Users" },
     { value: "99.99%", label: "Uptime" }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMetric((prev: number) => (prev + 1) % metrics.length);
     }, 2500);
     return () => clearInterval(interval);
   }, [metrics.length]);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -43,7 +38,6 @@ const FuturisticAIPromoBanner2026 = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/90 via-purple-600/90 to-pink-600/90">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
           </div>
-
           {/* Content */}
           <div className="relative z-10 px-4 py-3">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -90,7 +84,6 @@ const FuturisticAIPromoBanner2026 = () => {
                     <Brain className="w-5 h-5 text-pink-300" />
                   </motion.div>
                 </div>
-                
                 <div className="flex items-center space-x-3">
                   <span className="text-white font-bold text-lg">
                     🧠 Futuristic AI 2026:
@@ -111,7 +104,6 @@ const FuturisticAIPromoBanner2026 = () => {
                   </motion.div>
                 </div>
               </div>
-
               {/* Right Side - CTA and Close */}
               <div className="flex items-center space-x-4">
                 <motion.button
@@ -123,7 +115,6 @@ const FuturisticAIPromoBanner2026 = () => {
                   <span>Try Demo</span>
                   <ChevronRight className="w-4 h-4" />
                 </motion.button>
-
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -135,7 +126,6 @@ const FuturisticAIPromoBanner2026 = () => {
               </div>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
             <motion.div
@@ -150,6 +140,5 @@ const FuturisticAIPromoBanner2026 = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default FuturisticAIPromoBanner2026;

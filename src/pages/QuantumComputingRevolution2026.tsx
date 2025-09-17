@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const QuantumComputingRevolution2026: React.FC = () => {
   const [activeQuantum, setActiveQuantum] = useState('supremacy');
   const [quantumState, setQuantumState] = useState(0);
-
   const quantumTechnologies = {
     supremacy: {
       title: "Quantum Supremacy",
@@ -55,7 +53,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
       power: "Exact quantum simulation"
     }
   };
-
   const applications = [
     {
       title: "Drug Discovery",
@@ -86,7 +83,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
       color: "from-purple-500 to-pink-500"
     }
   ];
-
   const quantumTimeline = [
     {
       year: "2026",
@@ -113,16 +109,13 @@ const QuantumComputingRevolution2026: React.FC = () => {
       status: "Vision"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setQuantumState(prev => (prev + 1) % 4);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-
   return (
-
 const QuantumComputingRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
@@ -157,7 +150,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Capabilities */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -167,7 +159,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             information in ways that are impossible for classical computers.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -188,7 +179,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               <li>• Superposition states</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -208,7 +198,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               <li>• Future-proof protection</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -228,7 +217,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               <li>• Molecular modeling</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -248,7 +236,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               <li>• Resource allocation</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -268,7 +255,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               <li>• Quantum algorithms</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -290,7 +276,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Applications */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-20">
         <div className="container mx-auto px-4">
@@ -301,7 +286,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               problems that were previously impossible to tackle.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -319,7 +303,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                   <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Precision Medicine</span>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="text-3xl">💰</div>
@@ -335,7 +318,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                   <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Portfolio Optimization</span>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="text-3xl">🌍</div>
@@ -352,7 +334,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
@@ -369,7 +350,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                   <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Energy Storage</span>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="text-3xl">🚀</div>
@@ -385,7 +365,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                   <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Physics Simulation</span>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="text-3xl">🔐</div>
@@ -404,7 +383,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
       {/* Quantum Performance Metrics */}
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 py-20">
         <div className="container mx-auto px-4">
@@ -415,7 +393,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               across a wide range of applications and industries.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-6xl font-bold text-white mb-2">1000x</div>
@@ -439,7 +416,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -495,7 +471,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum State Visualization */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -510,7 +485,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               Watch quantum states evolve in real-time as we demonstrate quantum computing principles
             </p>
           </motion.div>
-
           <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
             <div className="relative z-10">
@@ -548,7 +522,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum Technologies */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -563,7 +536,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               Explore the revolutionary quantum technologies that are reshaping computing
             </p>
           </motion.div>
-
           {/* Technology Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(quantumTechnologies).map(([key, tech]) => (
@@ -581,7 +553,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Technology Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -626,7 +597,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Real-World Applications */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
         <div className="container mx-auto">
@@ -641,7 +611,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               See how quantum computing is solving real-world problems across industries
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {applications.map((app, index) => (
               <motion.div
@@ -662,7 +631,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum Timeline */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -677,7 +645,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               The roadmap to quantum supremacy and beyond
             </p>
           </motion.div>
-
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 to-pink-500"></div>
             {quantumTimeline.map((milestone, index) => (
@@ -715,7 +682,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum vs Classical Comparison */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
         <div className="container mx-auto">
@@ -730,7 +696,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
               See the dramatic difference in computational power and capabilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-6 text-center">Classical Computing</h3>
@@ -757,7 +722,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-6 text-center">Quantum Computing</h3>
               <div className="space-y-4">
@@ -786,7 +750,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -813,6 +776,5 @@ const QuantumComputingRevolution2026: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default QuantumComputingRevolution2026;

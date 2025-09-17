@@ -1,6 +1,5 @@
 import React from 'react';
 import { newBlogPosts2026, newServices2026 } from '../data/newContent2026';
-
 const NewContentShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
@@ -14,7 +13,6 @@ const NewContentShowcase2026: React.FC = () => {
             Discover the latest breakthroughs in AI, quantum computing, and autonomous systems that are reshaping the future of technology.
           </p>
         </div>
-
         {/* Featured Blog Posts */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -53,7 +51,6 @@ const NewContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Featured Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -104,7 +101,6 @@ const NewContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">
@@ -125,6 +121,5 @@ const NewContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentShowcase2026;

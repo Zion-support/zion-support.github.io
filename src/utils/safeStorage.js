@@ -1,6 +1,5 @@
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
-
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key) => {
@@ -11,7 +10,6 @@ export const safeStorage = {
       return null;
     }
   },
-  
   setItem: (key, value) => {
     try {
       if (typeof localStorage !== 'undefined') {
@@ -24,7 +22,6 @@ export const safeStorage = {
       return false;
     }
   },
-  
   removeItem: (key) => {
     try {
       if (typeof localStorage !== 'undefined') {
@@ -37,7 +34,6 @@ export const safeStorage = {
       return false;
     }
   },
-  
   clear: () => {
     try {
       if (typeof localStorage !== 'undefined') {
@@ -50,7 +46,6 @@ export const safeStorage = {
       return false;
     }
   },
-  
   // Safe sessionStorage operations
   sessionStorage: {
     getItem: (key) => {
@@ -61,7 +56,6 @@ export const safeStorage = {
         return null;
       }
     },
-    
     setItem: (key, value) => {
       try {
         sessionStorage.setItem(key, value);
@@ -71,7 +65,6 @@ export const safeStorage = {
         return false;
       }
     },
-    
     removeItem: (key) => {
       try {
         sessionStorage.removeItem(key);
@@ -81,7 +74,6 @@ export const safeStorage = {
         return false;
       }
     },
-    
     clear: () => {
       try {
         sessionStorage.clear();
@@ -92,7 +84,6 @@ export const safeStorage = {
       }
     }
   },
-  
   // JSON-safe operations
   json: {
     getItem: (key, storage = 'localStorage') => {
@@ -105,7 +96,6 @@ export const safeStorage = {
         return null;
       }
     },
-    
     setItem: (key, value, storage = 'localStorage') => {
       try {
         const storageObj = storage === 'sessionStorage' ? safeStorage.sessionStorage : safeStorage.localStorage;
@@ -116,6 +106,4 @@ export const safeStorage = {
       }
     }
   }
-};
-
 export default safeStorage;

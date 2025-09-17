@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Star, Clock, ArrowRight, Sparkles, Zap } from 'lucide-react';
-
 const NewContent2026AdvertisingBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const newContent = [
     {
       id: 5001,
@@ -38,7 +36,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
       icon: Star
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -46,7 +43,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -61,7 +57,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
           <div className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16 px-4 sm:px-6 lg:px-8">
             {/* Background Effects */}
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-            
             {/* Floating Particles */}
             <div className="absolute inset-0 overflow-hidden">
               {[...Array(20)].map((_, i) => (
@@ -85,7 +80,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                 />
               ))}
             </div>
-
             <div className="relative max-w-7xl mx-auto">
               {/* Header */}
               <div className="text-center mb-12">
@@ -98,7 +92,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
                   <span className="text-purple-300 font-medium">NEW CONTENT 2026</span>
                 </motion.div>
-                
                 <motion.h1
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -109,7 +102,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"> AI Content</span>
                   <br />Just Released
                 </motion.h1>
-                
                 <motion.p
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -119,7 +111,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   Discover groundbreaking AI technologies, consciousness breakthroughs, and interdimensional innovations that are reshaping our future
                 </motion.p>
               </div>
-
               {/* Content Carousel */}
               <div className="relative max-w-5xl mx-auto">
                 <div className="relative h-96 overflow-hidden rounded-2xl">
@@ -147,23 +138,19 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                                     <Clock className="w-4 h-4 text-white/80 ml-4 mr-1" />
                                     <span className="text-white/80 text-sm">{content.readTime}</span>
                                   </div>
-                                  
                                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
                                     {content.title}
                                   </h3>
-                                  
                                   <p className="text-white/90 text-lg leading-relaxed max-w-2xl">
                                     {content.excerpt}
                                   </p>
                                 </div>
-                                
                                 {content.featured && (
                                   <div className="ml-6 flex items-center">
                                     <Star className="w-6 h-6 text-yellow-400 fill-current" />
                                   </div>
                                 )}
                               </div>
-
                               {/* Action Button */}
                               <div className="flex items-center justify-between">
                                 <motion.button
@@ -174,7 +161,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                                   Read Full Article
                                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </motion.button>
-
                                 {/* Slide Indicators */}
                                 <div className="flex space-x-2">
                                   {newContent.map((_, idx) => (
@@ -193,9 +179,9 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                         )}
                       </AnimatePresence>
                     );
+};
                   })}
                 </div>
-
                 {/* Navigation Arrows */}
                 <button
                   onClick={() => setCurrentSlide((prev) => (prev - 1 + newContent.length) % newContent.length)}
@@ -210,7 +196,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   <ChevronRight className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Call to Action */}
               <motion.div
                 initial={{ y: 30, opacity: 0 }}
@@ -226,7 +211,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                   >
                     Explore All New Content
                   </motion.button>
-                  
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -235,7 +219,6 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
                     Subscribe to Updates
                   </motion.button>
                 </div>
-                
                 <p className="text-gray-400 mt-4 text-sm">
                   Join 50,000+ readers discovering the future of AI and technology
                 </p>
@@ -246,6 +229,5 @@ const NewContent2026AdvertisingBanner: React.FC = () => {
       )}
     </AnimatePresence>
   );
-};
 
 export default NewContent2026AdvertisingBanner;

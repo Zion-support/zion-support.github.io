@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryTechCarousel2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const techShowcases = [
     {
       title: "Synthetic Intelligence Revolution",
@@ -56,36 +54,28 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
       features: ["Digital Immortality", "Consciousness Backup", "Identity Preservation", "Eternal Life"]
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % techShowcases.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [techShowcases.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % techShowcases.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + techShowcases.length) % techShowcases.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   const currentShowcase = techShowcases[currentSlide];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900 py-16">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-cyan-600/10 to-pink-600/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,119,198,0.1),transparent_50%)]"></div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -97,7 +87,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
             From conscious AI to interdimensional travel - the future is now.
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative">
           {/* Navigation Arrows */}
@@ -110,7 +99,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700/80 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
@@ -120,7 +108,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Slide Content */}
           <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-3xl p-8 md:p-12 border border-gray-700/50 overflow-hidden">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -137,11 +124,9 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 <p className="text-lg text-gray-300 leading-relaxed">
                   {currentShowcase.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3">
                   {currentShowcase.features.map((feature, index) => (
@@ -151,7 +136,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     to={currentShowcase.link}
@@ -164,7 +148,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual Element */}
               <div className="relative">
                 <div className={`w-full h-64 md:h-80 bg-gradient-to-br ${currentShowcase.bgGradient} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
@@ -176,7 +159,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-3">
             {techShowcases.map((_, index) => (
@@ -193,7 +175,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <p className="text-gray-400 mb-4">
@@ -209,7 +190,6 @@ const RevolutionaryTechCarousel2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTechCarousel2026;
 </p></p>

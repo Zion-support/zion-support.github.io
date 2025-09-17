@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 PhoneMailMapPinCheckArrowRightTrendingUpStar
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+};
 
 export default function QuantumFinancialTradingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'));
@@ -39,4 +39,4 @@ export default function QuantumFinancialTradingPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
   );
-}
+};

@@ -1,7 +1,6 @@
 import React from 'react';
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -24,7 +23,6 @@ import React from 'react';
             </button>
           </div>
         </div>
-
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -40,7 +38,6 @@ import React from 'react';
               <li>• Fault-tolerant operations</li>
             </ul>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🔐</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Cryptography</h3>
@@ -54,7 +51,6 @@ import React from 'react';
               <li>• Quantum random number generation</li>
             </ul>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold text-white mb-4">Molecular Simulation</h3>
@@ -69,7 +65,6 @@ import React from 'react';
             </ul>
           </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Applications 2026</h2>
@@ -96,7 +91,6 @@ import React from 'react';
             </div>
           </div>
         </div>
-
         {/* Quantum Technology Stack */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Technology Stack</h2>
@@ -145,7 +139,6 @@ import React from 'react';
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Computing?</h2>
@@ -163,10 +156,8 @@ import React from 'react';
           </div>
         </div>
       </main>
-      
       <Footer />
 import { motion } from 'framer-motion';
-
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -201,14 +192,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Features Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Quantum Capabilities</h2>
           <p className="text-xl opacity-90">Unlock unprecedented computational power with our advanced quantum systems</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -228,7 +217,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Error correction algorithms</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +235,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Protein folding analysis</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -266,7 +253,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Quantum random number generation</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -285,7 +271,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Pattern recognition enhancement</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -304,7 +289,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Quantum communication protocols</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -325,7 +309,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Applications Section */}
       <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 py-20">
         <div className="container mx-auto px-4">
@@ -333,7 +316,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">🌟 Real-World Quantum Applications</h2>
             <p className="text-xl opacity-90">See how quantum computing is transforming industries today</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -361,7 +343,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -391,7 +372,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -412,6 +392,5 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AdvancedQuantumComputing2026;

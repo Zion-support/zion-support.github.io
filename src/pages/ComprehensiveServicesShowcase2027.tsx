@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const ComprehensiveServicesShowcase2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -8,7 +7,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         <title>ComprehensiveServicesShowcase2027 | Zion Tech Group</title>
         <meta name="description" content="ComprehensiveServicesShowcase2027 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -30,7 +28,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Services Overview */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -39,7 +36,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               From AI solutions to space technology, we offer comprehensive services across all major technology domains
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
@@ -66,7 +62,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Solutions */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -75,7 +70,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Our most popular and innovative solutions that are transforming industries worldwide
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -110,7 +104,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Get Started →
               </button>
             </div>
-
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
@@ -146,7 +139,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Pricing Tiers */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -155,7 +147,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Choose the perfect service tier for your business needs and budget
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -185,7 +176,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Get Started
               </button>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 relative"
@@ -223,7 +213,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 Get Started
               </button>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
@@ -258,7 +247,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <divsection className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 py-20">
@@ -281,6 +269,5 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ComprehensiveServicesShowcase2027;

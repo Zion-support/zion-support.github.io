@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InterdimensionalTechShowcase2027: React.FC = () => {
   return (
     <div
@@ -9,7 +8,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 via-purple-600/30 to-pink-600/30"></div>
-        
         {/* Floating Dimensional Portals */}
         {[...Array(15)].map((_, i) => (
           <div
@@ -22,7 +20,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -43,7 +40,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
             enabling travel between dimensions and manipulation of physical laws
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -65,11 +61,9 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-lg text-gray-300 leading-relaxed">
                 {interdimensionalTechs[currentDimension].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {interdimensionalTechs[currentDimension].features.map((feature, index) => (
                   <div
@@ -81,7 +75,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-6">
                 {Object.entries(interdimensionalTechs[currentDimension].stats).map(([key, value], index) => (
                   <div
@@ -94,7 +87,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -117,7 +109,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Dimensional Rift Effects */}
                 {[...Array(25)].map((_, i) => (
                   <div
@@ -132,7 +123,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-4 mt-12">
             {interdimensionalTechs.map((_, index) => (
@@ -147,7 +137,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-12"
@@ -171,6 +160,5 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InterdimensionalTechShowcase2027;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const SyntheticIntelligenceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-blue-900 to-purple-900">
@@ -35,7 +34,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Synthetic Intelligence Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-emerald-400/50 transition-all duration-300">
@@ -51,7 +49,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
               Watch Evolution →
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
               <span className="text-2xl">🎨</span>
@@ -65,7 +62,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
               See Creations →
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mb-6">
               <span className="text-2xl">🔬</span>
@@ -80,7 +76,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Capabilities */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
@@ -131,7 +126,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
@@ -146,7 +140,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
                 drug discovery by 10,000x, finding cures for previously incurable diseases.
               </p>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-cyan-400 text-6xl font-bold mb-4">∞</div>
               <h3 className="text-xl font-bold text-white mb-4">Creative Possibilities</h3>
@@ -155,7 +148,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
                 new art forms that transcend human imagination and creativity.
               </p>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-blue-400 text-6xl font-bold mb-4">100%</div>
               <h3 className="text-xl font-bold text-white mb-4">Problem Solving</h3>
@@ -166,7 +158,6 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -194,6 +185,5 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default SyntheticIntelligenceRevolution2025;

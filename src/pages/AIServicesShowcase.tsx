@@ -28,12 +28,14 @@ import {
   Sparkles
 } from "lucide-react";
 import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
+};
 
 export default function AIServicesShowcase() {
   const aiServices = COMPREHENSIVE_SERVICES.filter(service => 
     service.category.includes('AI') || 
     service.tags.some(tag => tag.toLowerCase().includes('ai'))
   );
+};
   const aiCategories = [
     {
       name: "AI Automation",
@@ -322,6 +324,5 @@ export default function AIServicesShowcase() {
       <Footer />
     </>
   );
-};
 
 export default AIServicesShowcase;

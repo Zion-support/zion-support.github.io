@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 const LatestContentBanner2026: React.FC = () => {
   const [currentContent, setCurrentContent] = useState(0);
-  
   const featuredContent = [
     {
       id: 'ai-2026-breakthrough',
@@ -38,15 +36,12 @@ const LatestContentBanner2026: React.FC = () => {
       link: '/content/conscious-ai-ethics-2026'
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % featuredContent.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [featuredContent.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 border-b border-white/20">
       {/* Animated Background */}
@@ -54,7 +49,6 @@ const LatestContentBanner2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Content Preview */}
@@ -65,7 +59,6 @@ const LatestContentBanner2026: React.FC = () => {
                 NEW CONTENT 2026
               </span>
             </div>
-            
             <div className="min-h-[120px] flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
                 {featuredContent[currentContent].title}
@@ -88,7 +81,6 @@ const LatestContentBanner2026: React.FC = () => {
                 </Link>
               </div>
             </div>
-
             {/* Content Indicators */}
             <div className="flex justify-center lg:justify-start gap-2 mt-6">
               {featuredContent.map((_, index) => (
@@ -104,7 +96,6 @@ const LatestContentBanner2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Visual Element */}
           <div className="flex-shrink-0">
             <div className="relative">
@@ -118,7 +109,6 @@ const LatestContentBanner2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Additional Features */}
         <div className="mt-8 pt-6 border-t border-white/10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -144,7 +134,6 @@ const LatestContentBanner2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="mt-8 text-center">
           <Link
@@ -160,6 +149,5 @@ const LatestContentBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default LatestContentBanner2026;

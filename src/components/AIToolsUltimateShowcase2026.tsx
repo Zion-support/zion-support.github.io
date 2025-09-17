@@ -1,11 +1,9 @@
 import React from 'react';
-
 const AIToolsUltimateShowcase2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div
@@ -15,28 +13,24 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
             <Sparkles className="w-5 h-5 text-indigo-400 mr-2" />
             <span className="text-indigo-300 font-medium">AI Tools Ultimate Collection 2026</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Powerful AI Tools for
             <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Every Business Need
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover our comprehensive collection of AI-powered tools designed to 
             revolutionize productivitydevelopmentanalyticsand more. 
             Choose from 50+ cutting-edge solutions.
           </p>
         </div>
-
         {/* Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => {
             const StatIcon = stat.icon;
-            
             return (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 mb-4">
@@ -50,16 +44,15 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 </div>
               </div>
             );
+};
           })}
         </div>
-
         {/* Category Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(categories).map(([keycategory]) => {
             const Icon = category.icon;
-            
             return (
               <button
                 key={key}
@@ -74,9 +67,9 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 <span className="font-medium">{category.title}</span>
               </button>
             );
+};
           })}
         </div>
-
         {/* Category Header */}
         <div
           key={activeCategory}
@@ -85,25 +78,22 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
           {(() => {
             const category = categories[activeCategory];
             const Icon = category.icon;
-            
             return (
               <div>
                 <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r ${category.color} mb-6`}>
                   <Icon className="w-10 h-10 text-white" />
                 </div>
-                
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   {category.title}
                 </h3>
-                
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   {category.description}
                 </p>
               </div>
             );
+};
           })()}
         </div>
-
         {/* Tools Grid */}
         <div
           key={activeCategory}
@@ -111,7 +101,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
         >
           {tools[activeCategory].map((toolindex) => {
             const ToolIcon = tool.icon;
-            
             return (
               <div
                 key={index}
@@ -132,16 +121,13 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                       <span className="text-sm font-bold text-white">{tool.rating}</span>
                     </div>
                   </div>
-
                   {/* Tool Info */}
                   <h4 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
                     {tool.name}
                   </h4>
-                  
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {tool.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2 mb-4">
                     {tool.features.map((featureIndex) => (
@@ -151,7 +137,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-sm text-gray-400">
@@ -164,7 +149,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                       {tool.price}
                     </div>
                   </div>
-
                   {/* Action Button */}
                   <button className={`w-full py-3 rounded-xl font-bold transition-all duration-300 ${
                     tool.price === 'Free'
@@ -174,7 +158,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                     {tool.price === 'Free' ? 'Get Started' : 'Try Free Trial'}
                   </button>
                 </div>
-
                 {/* Hover Effect */}
                 {hoveredTool === index && (
                   <div
@@ -185,33 +168,29 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 )}
               </div>
             );
+};
           })}
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-            
             <div className="relative z-10">
               <h3 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Workflow?
               </h3>
-              
               <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
                 Join over 1 million users who are already experiencing the power 
                 of our AI tools. Start your free trial today.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="group bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center justify-center">
                   <Rocket className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-                
                 <button className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 hover:scale-105 flex items-center justify-center">
                   <Play className="w-5 h-5 mr-2" />
                   Watch Demo
@@ -223,6 +202,5 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AIToolsUltimateShowcase2026;

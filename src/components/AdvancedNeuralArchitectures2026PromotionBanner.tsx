@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AdvancedNeuralArchitectures2026PromotionBanner() {
   return (
@@ -72,4 +73,4 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
             <a href="/services" className="text-purple-300 hover:text-white transition-colors">
               Our Services →
   );
-}
+};

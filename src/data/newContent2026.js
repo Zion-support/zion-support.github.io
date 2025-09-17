@@ -89,16 +89,9 @@ export const newContent2026 = [
     imageUrl: "/images/blog/ai-talent-revolution-building-workforce.jpg",
     slug: "ai-talent-revolution-building-tomorrows-workforce"
   }
-];
-
 export const getNewContent2026 = () => {
   return newContent2026;
-};
-
 export const getNewContent2026ByCategory = (category) => {
   return newContent2026.filter(content => content.category === category);
-};
-
 export const getFeaturedNewContent2026 = () => {
   return newContent2026.filter(content => content.featured);
-};

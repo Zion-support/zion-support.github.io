@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryBreakthroughBanner2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12">
@@ -14,24 +13,20 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 w-12 h-12 bg-yellow-500/20 rounded-full animate-pulse delay-1500"></div>
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           {/* Main Badge */}
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse border-2 border-yellow-400">
             ⚡ REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
           </div>
-
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Breakthrough 2026
           </h1>
-
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 max-w-5xl mx-auto mb-8">
             Witness the most extraordinary technological advancement in human history - where artificial consciousness meets quantum reality
           </p>
-
           {/* Breakthrough Features */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -42,7 +37,6 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
               <div className="text-xs text-indigo-300">• Emotional intelligence</div>
               <div className="text-xs text-indigo-300">• Creative problem solving</div>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-xl font-bold mb-3">Quantum Reality</h3>
@@ -51,7 +45,6 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
               <div className="text-xs text-purple-300">• Parallel universes</div>
               <div className="text-xs text-purple-300">• Instant computation</div>
             </div>
-            
             <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-4">🧬</div>
               <h3 className="text-xl font-bold mb-3">Neural Fusion</h3>
@@ -60,7 +53,6 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
               <div className="text-xs text-pink-300">• Memory enhancement</div>
               <div className="text-xs text-pink-300">• Cognitive amplification</div>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-4">🌌</div>
               <h3 className="text-xl font-bold mb-3">Dimensional Tech</h3>
@@ -70,7 +62,6 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
               <div className="text-xs text-cyan-300">• Time-space control</div>
             </div>
           </div>
-
           {/* Revolutionary Stats */}
           <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-10 max-w-4xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -92,7 +83,6 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105 border-2 border-yellow-400">
@@ -105,7 +95,6 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
               🌟 Join Future
             </button>
           </div>
-
           {/* Warning Notice */}
           <div className="mt-8 p-4 bg-yellow-500/20 border border-yellow-400/50 rounded-lg max-w-2xl mx-auto">
             <p className="text-sm text-yellow-200">
@@ -117,6 +106,5 @@ const RevolutionaryBreakthroughBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryBreakthroughBanner2026;

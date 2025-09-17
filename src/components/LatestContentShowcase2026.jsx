@@ -3,19 +3,16 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock, User, Tag, TrendingUp, Star, Eye } from 'lucide-react';
 import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-
 const LatestContentShowcase2026 = () => {
   const [activeTab, setActiveTab] = useState('blog');
   const featuredPosts = getFeaturedBlogPosts().slice(0, 6);
   const recentPosts = getRecentBlogPosts(6);
   const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured).slice(0, 6);
-
   const tabs = [
     { id: 'blog', label: 'Latest Blog Posts', count: featuredPosts.length },
     { id: 'services', label: 'Featured Services', count: featuredServices.length },
     { id: 'trending', label: 'Trending Content', count: recentPosts.length }
   ];
-
   const getContentByTab = () => {
     switch (activeTab) {
       case 'blog':
@@ -28,7 +25,6 @@ const LatestContentShowcase2026 = () => {
         return featuredPosts;
     }
   };
-
   const formatPrice = (price) => {
     if (price >= 1000000) {
       return `$${(price / 1000000).toFixed(1)}M`;
@@ -37,7 +33,6 @@ const LatestContentShowcase2026 = () => {
     }
     return `$${price}`;
   };
-
   const getCategoryColor = (category) => {
     const colors = {
       'Healthcare AI': 'from-blue-500 to-cyan-500',
@@ -96,7 +91,6 @@ const LatestContentShowcase2026 = () => {
     };
     return colors[category] || 'from-gray-500 to-slate-500';
   };
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +105,6 @@ const LatestContentShowcase2026 = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             LATEST CONTENT 2026
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -123,7 +116,6 @@ const LatestContentShowcase2026 = () => {
               Content & Solutions
             </span>
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -133,7 +125,6 @@ const LatestContentShowcase2026 = () => {
             Explore our latest blog posts, cutting-edge AI services, and trending content that's transforming industries worldwide.
           </motion.p>
         </div>
-
         {/* Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -158,7 +149,6 @@ const LatestContentShowcase2026 = () => {
             </button>
           ))}
         </motion.div>
-
         {/* Content Grid */}
         <motion.div
           key={activeTab}
@@ -188,14 +178,12 @@ const LatestContentShowcase2026 = () => {
                     {activeTab === 'services' ? <Star className="w-16 h-16" /> : <Eye className="w-16 h-16" />}
                   </div>
                 )}
-                
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${getCategoryColor(item.category)}`}>
                     {item.category}
                   </span>
                 </div>
-
                 {/* Featured Badge */}
                 {item.featured && (
                   <div className="absolute top-4 right-4">
@@ -205,17 +193,14 @@ const LatestContentShowcase2026 = () => {
                   </div>
                 )}
               </div>
-
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
                   {item.title}
                 </h3>
-                
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {item.excerpt || item.description}
                 </p>
-
                 {/* Meta Information */}
                 <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
                   {activeTab === 'blog' ? (
@@ -250,7 +235,6 @@ const LatestContentShowcase2026 = () => {
                     </>
                   )}
                 </div>
-
                 {/* Tags */}
                 {item.tags && (
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -264,7 +248,6 @@ const LatestContentShowcase2026 = () => {
                     ))}
                   </div>
                 )}
-
                 {/* CTA Button */}
                 <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   {activeTab === 'blog' ? 'Read More' : 'Learn More'}
@@ -274,7 +257,6 @@ const LatestContentShowcase2026 = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* View All Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -290,6 +272,5 @@ const LatestContentShowcase2026 = () => {
       </div>
     </div>
   );
-};
 
 export default LatestContentShowcase2026;

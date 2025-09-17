@@ -1,40 +1,30 @@
-<<<<<<< HEAD
-/**
  * Production-safe logging utility
  * Provides different logging levels and formats for production environments
  */
-
 export enum LogLevel {
   ERROR = 0,
   WARN = 1,
   INFO = 2,
   DEBUG = 3,
   TRACE = 4
-}
-
 export interface LogEntry {
   timestamp: string;
   level: LogLevel;
   message: string;
   data?: any;
   context?: string;
-}
-
 class ProductionLogger {
   private logLevel: LogLevel;
   private isProduction: boolean;
   private context?: string;
-
   constructor(logLevel: LogLevel = LogLevel.INFO, context?: string) {
     this.logLevel = logLevel;
     this.isProduction = process.env.NODE_ENV === 'production';
     this.context = context;
   }
-
   private shouldLog(level: LogLevel): boolean {
     return level <= this.logLevel;
   }
-
   private formatMessage(level: LogLevel, message: string, data?: any): LogEntry {
     return {
       timestamp: new Date().toISOString(),
@@ -44,12 +34,9 @@ class ProductionLogger {
       context: this.context
     };
   }
-
   private log(level: LogLevel, message: string, data?: any): void {
     if (!this.shouldLog(level)) return;
-
     const logEntry = this.formatMessage(level, message, data);
-    
     if (this.isProduction) {
       // In production, only log to console for errors and warnings
       if (level <= LogLevel.WARN) {
@@ -62,11 +49,9 @@ class ProductionLogger {
       this.logToConsole(level, message, data);
     }
   }
-
   private logToConsole(level: LogLevel, message: string, data?: any): void {
     const timestamp = new Date().toLocaleTimeString();
     const contextStr = this.context ? `[${this.context}]` : '';
-    
     switch (level) {
       case LogLevel.ERROR:
         console.error(`🔴 ${timestamp} ${contextStr}`, message, data || '');
@@ -85,53 +70,42 @@ class ProductionLogger {
         break;
     }
   }
-
   private sendToExternalLogger(logEntry: LogEntry): void {
     // In a real application, you would send this to your logging service
     // For now, we'll just store it in memory or localStorage for debugging
     try {
       const logs = JSON.parse(localStorage.getItem('app_logs') || '[]');
       logs.push(logEntry);
-      
       // Keep only the last 100 logs
       if (logs.length > 100) {
         logs.splice(0, logs.length - 100);
       }
-      
       localStorage.setItem('app_logs', JSON.stringify(logs));
     } catch (error) {
       // If localStorage fails, just ignore
     }
   }
-
   error(message: string, data?: any): void {
     this.log(LogLevel.ERROR, message, data);
   }
-
   warn(message: string, data?: any): void {
     this.log(LogLevel.WARN, message, data);
   }
-
   info(message: string, data?: any): void {
     this.log(LogLevel.INFO, message, data);
   }
-
   debug(message: string, data?: any): void {
     this.log(LogLevel.DEBUG, message, data);
   }
-
   trace(message: string, data?: any): void {
     this.log(LogLevel.TRACE, message, data);
   }
-
   setContext(context: string): void {
     this.context = context;
   }
-
   setLogLevel(level: LogLevel): void {
     this.logLevel = level;
   }
-
   getLogs(): LogEntry[] {
     try {
       return JSON.parse(localStorage.getItem('app_logs') || '[]');
@@ -139,15 +113,11 @@ class ProductionLogger {
       return [];
     }
   }
-
   clearLogs(): void {
     localStorage.removeItem('app_logs');
   }
-}
-
 // Create default logger instance
 const logger = new ProductionLogger();
-
 // Export convenience functions
 export const log = {
   error: (message: string, data?: any) => logger.error(message, data),
@@ -159,23 +129,15 @@ export const log = {
   setLogLevel: (level: LogLevel) => logger.setLogLevel(level),
   getLogs: () => logger.getLogs(),
   clearLogs: () => logger.clearLogs()
-};
-
 export default ProductionLogger;
-=======
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
   INFO: 'info';
   DEBUG: 'debug';
-}
-
 const LOG_LEVELS: LogLevel = {
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
     }
   }
-}
-
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5

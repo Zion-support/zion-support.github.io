@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-2def
-
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = {
     ai: {
       title: "Artificial Intelligence",
@@ -54,9 +49,7 @@ const NextGenTechShowcase2026: React.FC = () => {
       ]
     }
   };
-
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -79,7 +72,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Watch Demo
             </button>
           </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -109,10 +101,8 @@ const NextGenTechShowcase2026: React.FC = () => {
               </button>
             </div>
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-2def
         </div>
       </section>
-
       {/* Interactive Technology Tabs */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -127,7 +117,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Explore cutting-edge technologies that are defining the future
             </p>
           </motion.div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(technologies).map(([key, tech]) => (
@@ -145,7 +134,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -186,7 +174,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Innovation Timeline */}
       <section className="py-20 px-4 bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
         <div className="container mx-auto">
@@ -201,8 +188,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Major breakthroughs and milestones in next-generation technology
             </p>
           </motion.div>
-
-<<<<<<< HEAD
         {/* Featured Technologies */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
@@ -218,7 +203,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               <li>• Medical rehabilitation</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Computing</h3>
@@ -232,7 +216,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               <li>• Optimization algorithms</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Synthetic Intelligence</h3>
@@ -246,7 +229,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               <li>• Autonomous learning</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Metaverse Technology</h3>
@@ -260,7 +242,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               <li>• Social interaction platforms</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Biotechnology</h3>
@@ -274,7 +255,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               <li>• Human enhancement</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Space Technology</h3>
@@ -289,14 +269,12 @@ const NextGenTechShowcase2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Interactive Demo Section */}
         <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Interactive Technology Demo</h2>
             <p className="text-xl text-gray-300">Experience these technologies in action</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-lg p-6 border border-violet-400/30">
@@ -309,7 +287,6 @@ const NextGenTechShowcase2026: React.FC = () => {
                   Try Neural Control
                 </button>
               </div>
-              
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Simulation</h3>
                 <p className="text-gray-300 mb-4">
@@ -321,7 +298,6 @@ const NextGenTechShowcase2026: React.FC = () => {
                 </button>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">AI Creativity Lab</h3>
@@ -333,7 +309,6 @@ const NextGenTechShowcase2026: React.FC = () => {
                   Create with AI
                 </button>
               </div>
-              
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Metaverse Experience</h3>
                 <p className="text-gray-300 mb-4">
@@ -347,33 +322,28 @@ const NextGenTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Impact */}
         <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Technology Impact</h2>
             <p className="text-xl text-indigo-200">How these technologies are transforming industries</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-violet-400 mb-2">95%</div>
               <div className="text-lg text-white mb-2">Faster Processing</div>
               <div className="text-gray-400 text-sm">Quantum computing speed improvements</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">10x</div>
               <div className="text-lg text-white mb-2">Enhanced Creativity</div>
               <div className="text-gray-400 text-sm">AI-assisted creative output</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-400 mb-2">99.9%</div>
               <div className="text-lg text-white mb-2">Accuracy Rate</div>
               <div className="text-gray-400 text-sm">Neural interface precision</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-lg text-white mb-2">Global Connectivity</div>
@@ -381,7 +351,6 @@ const NextGenTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Vision */}
         <div className="text-center bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-2xl p-12 border border-violet-400/30">
           <h2 className="text-4xl font-bold text-white mb-6">The Future is Here</h2>
@@ -399,8 +368,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -441,15 +408,12 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
-
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const nextGenTechnologies = [
     {
       icon: Brain,
@@ -506,7 +470,6 @@ const NextGenTechShowcase2026: React.FC = () => {
       impact: 'Transformative'
     }
   ];
-
   const breakthroughStats = [
     { number: '∞', label: 'Computational Power', icon: Lightning },
     { number: '0ms', label: 'Processing Latency', icon: Gauge },
@@ -515,7 +478,6 @@ const NextGenTechShowcase2026: React.FC = () => {
     { number: '∞', label: 'Storage Capacity', icon: Data },
     { number: '∞', label: 'Reality Simulations', icon: World }
   ];
-
   const revolutionaryApplications = [
     {
       title: 'Universal Problem Solver',
@@ -566,7 +528,6 @@ const NextGenTechShowcase2026: React.FC = () => {
       category: 'Emotion'
     }
   ];
-
   const testimonials = [
     {
       name: 'Dr. Sophia Chen',
@@ -590,7 +551,6 @@ const NextGenTechShowcase2026: React.FC = () => {
       company: 'Universal AI Institute'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
       {/* Animated Background */}
@@ -620,7 +580,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Navigation */}
       <nav className="relative z-10 container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
@@ -644,7 +603,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           </button>
         </div>
       </nav>
-
       {/* Hero Section */}
       <section className="relative z-10 container mx-auto px-4 py-20 text-center">
         <motion.div
@@ -663,16 +621,13 @@ const NextGenTechShowcase2026: React.FC = () => {
               <span className="text-indigo-300">Beyond Imagination</span>
             </motion.div>
           </div>
-          
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Technology
           </h1>
-          
           <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
             Experience the future of technology where consciousness, reality, and intelligence converge to create 
             infinite possibilities and transcend the boundaries of what was once thought impossible.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -690,7 +645,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Explore Technologies
             </motion.button>
           </div>
-
           {/* Breakthrough Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
             {breakthroughStats.map((stat, index) => (
@@ -709,7 +663,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           </div>
         </motion.div>
       </section>
-
       {/* Technologies Section */}
       <section id="technologies" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
@@ -728,7 +681,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               to create systems that transcend human limitations and open infinite possibilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {nextGenTechnologies.map((technology, index) => (
               <motion.div
@@ -762,7 +714,6 @@ const NextGenTechShowcase2026: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -801,14 +752,11 @@ const NextGenTechShowcase2026: React.FC = () => {
                 <div className="text-cyan-400 text-sm font-semibold mb-2">{milestone.quarter}</div>
                 <h3 className="text-xl font-bold mb-3">{milestone.title}</h3>
                 <p className="text-cyan-100 text-sm">{milestone.description}</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-42b7
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
       {/* Applications Section */}
       <section id="applications" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
@@ -826,7 +774,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Next-Gen Technology applications that transcend the boundaries of reality and open infinite dimensions of possibility
             </p>
           </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-8">
             {revolutionaryApplications.map((application, index) => (
               <motion.div
@@ -871,7 +818,6 @@ const NextGenTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section id="testimonials" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
@@ -889,7 +835,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Hear from the pioneers who are experiencing Next-Gen Technology firsthand
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -920,7 +865,6 @@ const NextGenTechShowcase2026: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-=======
       {/* Technology Comparison */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -935,7 +879,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               Compare the capabilities and applications of next-generation technologies
             </p>
           </motion.div>
-
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -1006,13 +949,10 @@ const NextGenTechShowcase2026: React.FC = () => {
                 </tbody>
               </table>
             </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-42b7
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-<<<<<<< HEAD
       <section id="contact" className="relative z-10 py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -1043,7 +983,6 @@ const NextGenTechShowcase2026: React.FC = () => {
               >
                 Schedule Future Demo
               </motion.button>
-=======
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white">
         <div className="container mx-auto text-center">
           <motion.div
@@ -1062,13 +1001,10 @@ const NextGenTechShowcase2026: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold">
                 Download Report
               </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-42b7
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/20 py-12">
         <div className="container mx-auto px-4">
@@ -1089,12 +1025,7 @@ const NextGenTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </footer>
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> origin/cursor/create-and-deploy-new-content-42b7
     </div>
   );
-};
 
 export default NextGenTechShowcase2026;

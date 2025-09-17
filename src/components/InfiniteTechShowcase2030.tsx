@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InfiniteTechShowcase2030: React.FC = () => {
   return (
     <div
@@ -9,7 +8,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
-        
         {/* Infinite Particles */}
         {[...Array(50)].map((_, i) => (
           <div
@@ -22,7 +20,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -43,7 +40,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
             enabling creation of infinite realities, manipulation of all timelines, and achievement of true infinite existence
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -65,11 +61,9 @@ const InfiniteTechShowcase2030: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-xl text-gray-300 leading-relaxed">
                 {infiniteTechs[currentTech].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {infiniteTechs[currentTech].features.map((feature, index) => (
                   <div
@@ -81,7 +75,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-8">
                 {Object.entries(infiniteTechs[currentTech].stats).map(([key, value], index) => (
                   <div
@@ -94,7 +87,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -117,7 +109,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Infinite Energy Effects */}
                 {[...Array(60)].map((_, i) => (
                   <div
@@ -132,7 +123,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-6 mt-16">
             {infiniteTechs.map((_, index) => (
@@ -147,7 +137,6 @@ const InfiniteTechShowcase2030: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-16"
@@ -171,6 +160,5 @@ const InfiniteTechShowcase2030: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InfiniteTechShowcase2030;

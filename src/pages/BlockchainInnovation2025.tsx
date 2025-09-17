@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const BlockchainInnovation2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
@@ -30,7 +29,6 @@ const BlockchainInnovation2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Blockchain Technologies */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -38,7 +36,6 @@ const BlockchainInnovation2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Next-Generation Blockchain Technologies</h2>
             <p className="text-xl text-gray-300">Cutting-edge blockchain solutions powering the future of digital infrastructure</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -98,7 +95,6 @@ const BlockchainInnovation2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-teal-900/50 to-cyan-900/50">
         <div className="container mx-auto">
@@ -106,7 +102,6 @@ const BlockchainInnovation2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Industry Transformations</h2>
             <p className="text-xl text-gray-300">How blockchain is revolutionizing various sectors</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
@@ -200,7 +195,6 @@ const BlockchainInnovation2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Blockchain Statistics */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -208,7 +202,6 @@ const BlockchainInnovation2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain by the Numbers</h2>
             <p className="text-xl text-gray-300">The impact and growth of blockchain technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -244,7 +237,6 @@ const BlockchainInnovation2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Future of Blockchain */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/50 to-emerald-900/50">
         <div className="container mx-auto">
@@ -252,7 +244,6 @@ const BlockchainInnovation2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">The Future of Blockchain</h2>
             <p className="text-xl text-gray-300">Emerging trends and technologies shaping the next decade</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -286,7 +277,6 @@ const BlockchainInnovation2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -312,6 +302,5 @@ const BlockchainInnovation2025: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default BlockchainInnovation2025;

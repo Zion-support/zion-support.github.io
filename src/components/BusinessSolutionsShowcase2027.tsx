@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessSolutionsShowcase2027: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
@@ -8,7 +7,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -22,7 +20,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
             enhance efficiencyand drive innovation across all industries and company sizes.
           </p>
         </div>
-
         {/* Category Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -42,7 +39,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Solutions Display */}
           <div
             key={activeCategory}
@@ -62,7 +58,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
                     {categories[activeCategory].subtitle}
                   </p>
                 </div>
-
                 {/* Solutions Grid */}
                 <div className="grid md:grid-cols-3 gap-8">
                   {categories[activeCategory].solutions.map((solutionindex) => (
@@ -80,11 +75,9 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
                             <span className="text-sm text-blue-400 font-medium">{solution.roi}</span>
                           </div>
                         </div>
-                        
                         <p className="text-gray-300 mb-6 leading-relaxed">
                           {solution.description}
                         </p>
-
                         <div className="space-y-3 mb-6">
                           {solution.features.map((featureIndex) => (
                             <div key={featureIndex} className="flex items-center gap-3">
@@ -93,7 +86,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:gap-3">
                           Learn More
                           <ArrowRight className="w-4 h-4" />
@@ -106,7 +98,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
             )}
           </div>
         </div>
-
         {/* Stats Section */}
         <div
           className="mt-20"
@@ -129,7 +120,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div
           className="mt-20"
@@ -163,7 +153,6 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-20"
@@ -191,6 +180,5 @@ const BusinessSolutionsShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default BusinessSolutionsShowcase2027;

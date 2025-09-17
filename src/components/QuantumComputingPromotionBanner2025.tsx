@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumComputingPromotionBanner2025: React.FC = () => {
   return (
     <div>
@@ -16,7 +15,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
               >
                 QUANTUM REVOLUTION
               </div>
-              
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentFeature}`}
@@ -25,7 +23,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 <features[currentFeature].icon className="w-6 h-6 text-white" />
               </div>
             </div>
-
             {/* Center - Feature Content */}
             <div className="flex-1 text-center px-8">
               <div
@@ -40,7 +37,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/quantum-computing-showcase-2025">
@@ -52,7 +48,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
               </a>
-              
               <button
                 onClick={() => setIsVisible(false)}
                 className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
@@ -62,10 +57,8 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-cyan-500/5 to-purple-500/5 animate-pulse"></div>
-        
         {/* Quantum Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(25)].map((_i) => (
@@ -90,7 +83,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default QuantumComputingPromotionBanner2025;
 </div></div>

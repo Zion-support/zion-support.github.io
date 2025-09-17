@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
   return (
     <div
@@ -10,7 +9,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 via-orange-400/30 to-red-400/30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523000000%22%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M30%2030c0-16.569-13.431-30-30-30v30h30z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex items-center justify-between">
           {/* Left Content */}
@@ -28,19 +26,16 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
                 ))}
               </div>
             </div>
-
             <divh2
               className="text-xl md:text-3xl font-bold mb-2"
             >
               🏆 Revolutionary Case Studies 2027
             </divh2>
-
             <divp
               className="text-base md:text-lg text-gray-800 mb-4 max-w-2xl"
             >
               Discover how leading companies achieved extraordinary results with our AI solutions. Real projectsreal resultsreal transformation.
             </divp>
-
             <div
               className="flex flex-wrap items-center gap-3"
             >
@@ -55,7 +50,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Right Content - Rotating Stats */}
           <div
             className="hidden lg:flex items-center gap-8"
@@ -79,7 +73,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-            
             <div className="text-center">
               <div className="text-3xl font-bold text-gray-900 mb-1">
                 Proven
@@ -90,7 +83,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Progress Indicator */}
         <div
           className="mt-4"
@@ -105,7 +97,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
             />
           </div>
         </div>
-
         {/* Floating Elements */}
         <div
             y: [0-60],
@@ -119,7 +110,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
         >
           <TrendingUp className="w-3 h-3 text-gray-900" />
         </div>
-
         <div
             y: [060],
             rotate: [0-20]
@@ -134,7 +124,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
           <Award className="w-2 h-2 text-gray-900" />
         </div>
       </div>
-
       {/* Dismiss Button */}
       <button
         onClick={handleDismiss}
@@ -144,7 +133,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
       </button>
     </div>
   );
-};
 
 export default RevolutionaryCaseStudiesShowcase2027PromotionBanner;
 </div></div></div>

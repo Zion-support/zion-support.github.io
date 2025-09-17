@@ -12,11 +12,9 @@ import {
   Play,
   RotateCcw
 } from 'lucide-react';
-
 const FuturisticAIShowcase2026 = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-
   const demos = [
     {
       id: 1,
@@ -51,27 +49,21 @@ const FuturisticAIShowcase2026 = () => {
       metrics: { threats: "0", response: "Instant", coverage: "100%" }
     }
   ];
-
   useEffect(() => {
     if (!isPlaying) return;
-    
     const interval = setInterval(() => {
       setActiveDemo((prev) => (prev + 1) % demos.length);
     }, 4000);
-    
     return () => clearInterval(interval);
   }, [isPlaying, demos.length]);
-
   const handleDemoChange = (index: number) => {
     setActiveDemo(index);
     setIsPlaying(false);
   };
-
   const resetDemo = () => {
     setIsPlaying(true);
     setActiveDemo(0);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Header */}
@@ -90,7 +82,6 @@ const FuturisticAIShowcase2026 = () => {
               <Lightbulb className="w-12 h-12 text-yellow-400" />
             </motion.div>
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Futuristic AI
@@ -98,13 +89,11 @@ const FuturisticAIShowcase2026 = () => {
             <br />
             <span className="text-white">Showcase 2026</span>
           </h1>
-          
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Experience the next generation of artificial intelligence that's reshaping our world
           </p>
         </motion.div>
       </div>
-
       {/* Interactive Demo Section */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -131,7 +120,6 @@ const FuturisticAIShowcase2026 = () => {
                 </motion.button>
               </div>
             </div>
-
             {demos.map((demo, index) => (
               <motion.div
                 key={demo.id}
@@ -150,11 +138,9 @@ const FuturisticAIShowcase2026 = () => {
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${demo.color} flex items-center justify-center flex-shrink-0`}>
                     <demo.icon className="w-6 h-6 text-white" />
                   </div>
-                  
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">{demo.description}</p>
-                    
                     <div className="flex items-center space-x-4 mt-3">
                       {Object.entries(demo.metrics).map(([key, value]) => (
                         <div key={key} className="text-xs">
@@ -164,7 +150,6 @@ const FuturisticAIShowcase2026 = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <ArrowRight className={`w-5 h-5 transition-all duration-300 ${
                     activeDemo === index ? 'text-blue-400' : 'text-gray-400'
                   }`} />
@@ -172,7 +157,6 @@ const FuturisticAIShowcase2026 = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Demo Visualizer */}
           <div className="relative">
             <div className="bg-black/30 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
@@ -188,10 +172,8 @@ const FuturisticAIShowcase2026 = () => {
                   <div className={`w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r ${demos[activeDemo].color} flex items-center justify-center`}>
                     <demos[activeDemo].icon className="w-16 h-16 text-white" />
                   </div>
-                  
                   <h3 className="text-3xl font-bold mb-4">{demos[activeDemo].title}</h3>
                   <p className="text-gray-300 mb-8 leading-relaxed">{demos[activeDemo].description}</p>
-                  
                   <div className="grid grid-cols-3 gap-4">
                     {Object.entries(demos[activeDemo].metrics).map(([key, value], index) => (
                       <motion.div
@@ -209,7 +191,6 @@ const FuturisticAIShowcase2026 = () => {
                 </motion.div>
               </AnimatePresence>
             </div>
-            
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/30 rounded-full animate-pulse"></div>
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-400/30 rounded-full animate-bounce"></div>
@@ -217,7 +198,6 @@ const FuturisticAIShowcase2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Metrics */}
       <div className="bg-black/20 backdrop-blur-lg py-20">
         <div className="container mx-auto px-6">
@@ -234,7 +214,6 @@ const FuturisticAIShowcase2026 = () => {
               Real-world performance data from our AI systems deployed across global infrastructure
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { label: "Processing Speed", value: "1M+ Ops/sec", icon: Zap, color: "text-blue-400" },
@@ -259,7 +238,6 @@ const FuturisticAIShowcase2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-6 py-20">
         <motion.div
@@ -274,7 +252,6 @@ const FuturisticAIShowcase2026 = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the revolution and discover how our futuristic AI technologies can transform your business operations and unlock unprecedented possibilities.
           </p>
-          
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -287,6 +264,5 @@ const FuturisticAIShowcase2026 = () => {
       </div>
     </div>
   );
-};
 
 export default FuturisticAIShowcase2026;

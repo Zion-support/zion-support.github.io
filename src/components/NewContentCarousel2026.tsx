@@ -1,38 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NEW_BLOG_POSTS_2026, NEW_SERVICES_2026 } from '../data/newContent2026';
-
 const NewContentCarousel2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'blog' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const itemsPerView = 3;
   const blogItems = NEW_BLOG_POSTS_2026;
   const serviceItems = NEW_SERVICES_2026;
-
   const currentItems = activeTab === 'blog' ? blogItems : serviceItems;
   const maxIndex = Math.max(0, currentItems.length - itemsPerView);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
     }, 5000);
-
     return () => clearInterval(timer);
   }, [maxIndex]);
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
       <div className="container mx-auto px-4">
@@ -44,7 +35,6 @@ const NewContentCarousel2026: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Discover the latest breakthroughs in AI, quantum computing, neural interfaces, and autonomous systems
           </p>
-          
           {/* Tab Navigation */}
           <div className="flex justify-center space-x-4">
             <button
@@ -69,7 +59,6 @@ const NewContentCarousel2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           {/* Navigation Arrows */}
@@ -81,7 +70,6 @@ const NewContentCarousel2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -90,7 +78,6 @@ const NewContentCarousel2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Carousel Content */}
           <div className="overflow-hidden">
             <div 
@@ -122,20 +109,17 @@ const NewContentCarousel2026: React.FC = () => {
                         </h3>
                       </div>
                     </div>
-                    
                     {/* Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">
                         {item.excerpt || item.description}
                       </p>
-                      
                       {activeTab === 'blog' ? (
                         <>
                           <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                             <span>{item.author}</span>
                             <span>{item.readTime}</span>
                           </div>
-                          
                           <div className="flex flex-wrap gap-2 mb-4">
                             {item.tags.slice(0, 3).map((tag) => (
                               <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
@@ -143,7 +127,6 @@ const NewContentCarousel2026: React.FC = () => {
                               </span>
                             ))}
                           </div>
-                          
                           <Link
                             to={`/blog/${item.slug}`}
                             className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition-colors"
@@ -166,7 +149,6 @@ const NewContentCarousel2026: React.FC = () => {
                               <span className="ml-1 text-gray-500">({item.reviews.count})</span>
                             </div>
                           </div>
-                          
                           <div className="flex flex-wrap gap-2 mb-4">
                             {item.tags.slice(0, 3).map((tag) => (
                               <span key={tag} className="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs">
@@ -174,7 +156,6 @@ const NewContentCarousel2026: React.FC = () => {
                               </span>
                             ))}
                           </div>
-                          
                           <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                             Learn More
                           </button>
@@ -186,7 +167,6 @@ const NewContentCarousel2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
@@ -202,7 +182,6 @@ const NewContentCarousel2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <Link
@@ -218,7 +197,6 @@ const NewContentCarousel2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentCarousel2026;
 </p></p></p></p>

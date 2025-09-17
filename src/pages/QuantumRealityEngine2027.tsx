@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumRealityEngine2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -23,6 +22,5 @@ const QuantumRealityEngine2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default QuantumRealityEngine2027;

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 const RevolutionaryTechShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = {
     ai: {
       title: "AI Revolutionary Breakthrough 2026",
@@ -41,7 +39,6 @@ const RevolutionaryTechShowcase: React.FC = () => {
       ]
     }
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -58,7 +55,6 @@ const RevolutionaryTechShowcase: React.FC = () => {
             creating unprecedented opportunities for innovation and growth.
           </p>
         </div>
-
         {/* Technology Tabs */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800 p-2 rounded-2xl">
@@ -77,7 +73,6 @@ const RevolutionaryTechShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Active Technology Display */}
         <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-12 mb-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -106,7 +101,6 @@ const RevolutionaryTechShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Revolution?</h3>
@@ -125,6 +119,5 @@ const RevolutionaryTechShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTechShowcase;

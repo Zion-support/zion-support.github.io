@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -11,8 +10,6 @@ interface ContentItem {
   icon: string;
   featured: boolean;
   tags: string[];
-}
-
 const contentItems: ContentItem[] = [
   {
     id: 'ai-trends-2025-2030',
@@ -74,7 +71,7 @@ const contentItems: ContentItem[] = [
     featured: false,
     tags: ['artificial 'consciousness', 'synthetic 'minds', 'AI creativity']
   }
-];
+};
 
 export default function InteractiveContentDiscoveryWidget2030() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
@@ -94,6 +91,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
+};
     }
     setFilteredContent(filtered);
   }[selectedCategorysearchTerm]);
@@ -216,6 +214,5 @@ export default function InteractiveContentDiscoveryWidget2030() {
               >
                 Our Services
   );
-};
 
 export default InteractiveContentDiscoveryWidget2030;

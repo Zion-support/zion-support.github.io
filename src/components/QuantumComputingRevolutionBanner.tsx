@@ -12,34 +12,28 @@ import {
   Globe,
   CheckCircle
 } from 'lucide-react';
-
 const QuantumComputingRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "Quantum Supremacy",
     "1000x Speed Boost", 
     "Unbreakable Security",
     "Quantum AI Integration"
   ];
-
   const benefits = [
     { icon: Atom, text: "Exponential Speed" },
     { icon: Shield, text: "Unbreakable Security" },
     { icon: Brain, text: "Quantum AI" },
     { icon: Globe, text: "Global Network" }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -51,7 +45,6 @@ const QuantumComputingRevolutionBanner = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -67,7 +60,6 @@ const QuantumComputingRevolutionBanner = () => {
                   <span className="text-blue-400 text-sm font-medium">Quantum Computing Revolution 2027</span>
                 </div>
               </motion.div>
-
               <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -76,7 +68,6 @@ const QuantumComputingRevolutionBanner = () => {
               >
                 Quantum Computing Revolution is Here!
               </motion.h2>
-
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -96,7 +87,6 @@ const QuantumComputingRevolutionBanner = () => {
                   </motion.span>
                 </AnimatePresence>
               </motion.div>
-
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -106,7 +96,6 @@ const QuantumComputingRevolutionBanner = () => {
                 Harness the power of quantum mechanics to solve the world's most complex problems 
                 with unprecedented speed and accuracy. Experience the future of computing today.
               </motion.p>
-
               {/* Benefits */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -121,7 +110,6 @@ const QuantumComputingRevolutionBanner = () => {
                   </div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -147,7 +135,6 @@ const QuantumComputingRevolutionBanner = () => {
                 </motion.button>
               </motion.div>
             </div>
-
             {/* Right Content - Visual Element */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -171,7 +158,6 @@ const QuantumComputingRevolutionBanner = () => {
                 >
                   <Atom className="w-16 h-16 md:w-20 md:h-20 text-white" />
                 </motion.div>
-                
                 {/* Orbiting Electrons */}
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -187,7 +173,6 @@ const QuantumComputingRevolutionBanner = () => {
                   <div className="absolute left-0 top-1/2 w-3 h-3 bg-green-400 rounded-full transform -translate-x-1 -translate-y-1/2"></div>
                   <div className="absolute right-0 top-1/2 w-3 h-3 bg-yellow-400 rounded-full transform translate-x-1 -translate-y-1/2"></div>
                 </motion.div>
-
                 {/* Quantum Field Lines */}
                 <motion.div
                   animate={{ 
@@ -218,7 +203,6 @@ const QuantumComputingRevolutionBanner = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Close Button */}
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -228,7 +212,6 @@ const QuantumComputingRevolutionBanner = () => {
         >
           <X className="w-5 h-5" />
         </motion.button>
-
         {/* Progress Bar */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -240,6 +223,5 @@ const QuantumComputingRevolutionBanner = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default QuantumComputingRevolutionBanner;

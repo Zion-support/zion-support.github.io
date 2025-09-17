@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap
+};
 
 export default function AI2025ContentRevolution5000ROIBanner() {
   return (
@@ -106,4 +107,4 @@ export default function AI2025ContentRevolution5000ROIBanner() {
           <p className="text-green-200 text-sm">
             Join 500+ companies achieving breakthrough results with AI 2025
   );
-}
+};

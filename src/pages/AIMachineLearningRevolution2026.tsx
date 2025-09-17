@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIMachineLearningRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -28,14 +27,12 @@ const AIMachineLearningRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* AI Capabilities Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">🧠 Advanced AI Capabilities</h2>
           <p className="text-xl text-indigo-200">Revolutionary AI technologies that are reshaping industries</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎯</div>
@@ -52,7 +49,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               Learn More →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Generative AI 2.0</h3>
@@ -68,7 +64,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               Create with AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔍</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Computer Vision</h3>
@@ -84,7 +79,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               See Vision AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🗣️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Natural Language Processing</h3>
@@ -100,7 +94,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               Chat with AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Autonomous Systems</h3>
@@ -116,7 +109,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               Deploy Autonomous AI →
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Neural Networks</h3>
@@ -133,14 +125,12 @@ const AIMachineLearningRevolution2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🏭 Industry Applications</h2>
             <p className="text-xl text-indigo-200">How AI is transforming different sectors</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl mb-4">🏥</div>
@@ -164,14 +154,12 @@ const AIMachineLearningRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">📈 Success Stories</h2>
             <p className="text-xl text-indigo-200">Real results from our AI implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
               <div className="flex items-center space-x-2 mb-3">
@@ -182,7 +170,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               <p className="text-indigo-200 mb-4">AI-powered predictive maintenance reduced downtime by 75% and increased production efficiency by 400%.</p>
               <a href="#" className="text-indigo-400 hover:text-indigo-300 font-semibold">Read Case Study →</a>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">$50M</span>
@@ -192,7 +179,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
               <p className="text-purple-200 mb-4">AI-driven inventory optimization and demand forecasting saved $50M annually while improving customer satisfaction.</p>
               <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold">Learn More →</a>
             </div>
-            
             <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">99.8%</span>
@@ -204,7 +190,6 @@ const AIMachineLearningRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Harness the Power of AI?</h2>
@@ -223,6 +208,5 @@ const AIMachineLearningRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AIMachineLearningRevolution2026;

@@ -1,13 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import Header from '../Header';
 import Footer from '../Footer';
-
 const InnovationShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -30,14 +27,12 @@ const InnovationShowcase2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Featured Innovations */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Featured Innovations</h2>
             <p className="text-xl text-gray-300">Breakthrough technologies that are changing the world</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
@@ -71,7 +66,6 @@ const InnovationShowcase2026: React.FC = () => {
                 Experience Consciousness AI →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="text-6xl mr-4">⚡</div>
@@ -104,7 +98,6 @@ const InnovationShowcase2026: React.FC = () => {
                 Connect to Quantum Internet →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="text-6xl mr-4">🧬</div>
@@ -137,7 +130,6 @@ const InnovationShowcase2026: React.FC = () => {
                 Explore Genetic Enhancement →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="text-6xl mr-4">🌍</div>
@@ -172,14 +164,12 @@ const InnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Innovation Categories */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🔬 Innovation Categories</h2>
             <p className="text-xl text-gray-300">Explore breakthrough technologies across all sectors</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
               <div className="text-5xl mb-4 text-center">🧠</div>
@@ -195,7 +185,6 @@ const InnovationShowcase2026: React.FC = () => {
                 Explore AI Innovations →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <div className="text-5xl mb-4 text-center">⚡</div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Quantum Technology</h3>
@@ -210,7 +199,6 @@ const InnovationShowcase2026: React.FC = () => {
                 Discover Quantum →
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
               <div className="text-5xl mb-4 text-center">🧬</div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Biotechnology</h3>
@@ -227,33 +215,28 @@ const InnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Innovation Impact */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">📊 Innovation Impact</h2>
             <p className="text-xl text-gray-300">Measurable results from our breakthrough technologies</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl font-bold text-white mb-2">$500B+</div>
               <div className="text-gray-300 mb-2">Economic Impact</div>
               <div className="text-sm text-gray-400">Generated through innovation programs</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl font-bold text-white mb-2">10M+</div>
               <div className="text-gray-300 mb-2">Lives Improved</div>
               <div className="text-sm text-gray-400">Through breakthrough technologies</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl font-bold text-white mb-2">1000+</div>
               <div className="text-gray-300 mb-2">Patents Filed</div>
               <div className="text-sm text-gray-400">Revolutionary technology patents</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <div className="text-4xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300 mb-2">Countries</div>
@@ -261,33 +244,28 @@ const InnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Innovation Process */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🔬 Innovation Process</h2>
             <p className="text-xl text-gray-300">How we create breakthrough technologies</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">1</div>
               <h3 className="text-lg font-bold text-white mb-2">Research</h3>
               <p className="text-purple-200 text-sm">Deep scientific research and exploration</p>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">2</div>
               <h3 className="text-lg font-bold text-white mb-2">Prototype</h3>
               <p className="text-cyan-200 text-sm">Rapid prototyping and testing</p>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">3</div>
               <h3 className="text-lg font-bold text-white mb-2">Validate</h3>
               <p className="text-emerald-200 text-sm">Rigorous validation and optimization</p>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">4</div>
               <h3 className="text-lg font-bold text-white mb-2">Deploy</h3>
@@ -295,7 +273,6 @@ const InnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-12">
@@ -317,11 +294,8 @@ const InnovationShowcase2026: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
-=======
 import { Helmet } from 'react-helmet-async';
-
 const InnovationShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -329,7 +303,6 @@ const InnovationShowcase2026: React.FC = () => {
         <title>InnovationShowcase2026 | Zion Tech Group</title>
         <meta name="description" content="InnovationShowcase2026 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">InnovationShowcase2026</h1>
@@ -338,6 +311,5 @@ const InnovationShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InnovationShowcase2026;

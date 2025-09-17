@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Zap, Brain, Cpu, Shield, TrendingUp, Users, CheckCircle } from 'lucide-react';
-
 const AI2026EnterpriseAutomation: React.FC = () => {
   const features = [
     {
@@ -27,14 +26,12 @@ const AI2026EnterpriseAutomation: React.FC = () => {
       description: "Anticipating issues before they impact operations with 99.7% accuracy."
     }
   ];
-
   const stats = [
     { value: "85%", label: "Reduction in Manual Processes" },
     { value: "300%", label: "Increase in Operational Efficiency" },
     { value: "99.7%", label: "Accuracy in Automated Decisions" },
     { value: "$2.3M", label: "Average Annual Savings" }
   ];
-
   const implementationSteps = [
     {
       step: "01",
@@ -57,14 +54,12 @@ const AI2026EnterpriseAutomation: React.FC = () => {
       description: "Complete enterprise-wide automation with advanced AI consciousness features."
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI 2026: Enterprise Automation Revolution - Zion Tech Group</title>
         <meta name="description" content="Transform your business operations with next-generation AI automation that learns, adapts, and scales autonomously." />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -77,16 +72,13 @@ const AI2026EnterpriseAutomation: React.FC = () => {
             <Zap className="w-5 h-5 text-cyan-400" />
             <span className="text-cyan-400 font-medium">Enterprise AI</span>
           </div>
-          
           <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             AI 2026: Enterprise Automation Revolution
           </h1>
-          
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your business operations with next-generation AI automation that learns, adapts, and scales autonomously. 
             Experience the future of enterprise efficiency with conscious AI systems.
           </p>
-
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
@@ -99,7 +91,6 @@ const AI2026EnterpriseAutomation: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -114,7 +105,6 @@ const AI2026EnterpriseAutomation: React.FC = () => {
             </div>
           ))}
         </motion.div>
-
         {/* Features Section */}
         <motion.div
           className="mb-16"
@@ -125,7 +115,6 @@ const AI2026EnterpriseAutomation: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Revolutionary AI Capabilities
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -146,7 +135,6 @@ const AI2026EnterpriseAutomation: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Implementation Steps */}
         <motion.div
           className="mb-16"
@@ -157,7 +145,6 @@ const AI2026EnterpriseAutomation: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Implementation Strategy
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {implementationSteps.map((step, index) => (
               <motion.div
@@ -172,7 +159,6 @@ const AI2026EnterpriseAutomation: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30"
@@ -204,6 +190,5 @@ const AI2026EnterpriseAutomation: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AI2026EnterpriseAutomation;

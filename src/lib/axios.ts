@@ -1,19 +1,11 @@
-
 import { safeStorage } from '@/utils/safeStorage';
-
-
 export interface AxiosResponse<T = any> {
   data: T;
   status: number;
-}
-
 export interface AxiosError<T = any> extends Error {
   response?: AxiosResponse<T>;
-}
-
 type FulfilledFn = (value: any) => any | Promise<any>;
 type RejectedFn = (error: any) => any | Promise<any>;
-
 class InterceptorManager {
   handlers: ({ fulfilled?: FulfilledFn; rejected?: RejectedFn } | null)[] = [];
   use(fulfilled?: FulfilledFn, rejected?: RejectedFn): number {
@@ -25,12 +17,8 @@ class InterceptorManager {
       this.handlers[id] = {};
     }
   }
-}
-
 export interface RequestConfig extends RequestInit {
   withCredentials?: boolean;
-}
-
 export interface AxiosInstance {
   interceptors: { request: InterceptorManager; response: InterceptorManager };
   get<T = any>(
@@ -44,8 +32,6 @@ export interface AxiosInstance {
   ): Promise<AxiosResponse<T>>;
   patch<T = any>(url: string, data?: any, config?: RequestConfig): Promise<AxiosResponse<T>>;
   delete<T = any>(url: string, config?: RequestConfig): Promise<AxiosResponse<T>>;
-}
-
 export interface CustomAxiosStatic {
   create: typeof create;
   defaults: AxiosDefaults;
@@ -54,27 +40,18 @@ export interface CustomAxiosStatic {
   post: AxiosInstance['post'];
   patch: AxiosInstance['patch'];
   delete: AxiosInstance['delete'];
-}
-
 interface AxiosDefaults {
   headers: { common: Record<string, string> };
   baseURL?: string;
-}
-
 const globalDefaults: AxiosDefaults = {
   headers: { common: {} },
   baseURL: '',
-};
-
 const globalInterceptors = {
   request: new InterceptorManager(),
   response: new InterceptorManager(),
-};
-
 export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
   const baseURL = config.baseURL || '';
   const defaultWithCreds = !!config.withCredentials;
-
   const instance: AxiosInstance = {
     interceptors: { request: new InterceptorManager(), response: new InterceptorManager() },
     async get<T = any>(url: string, init: { params?: Record<string, any> } & RequestConfig = {} as any) {
@@ -105,7 +82,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       return request<T>(baseURL + url, 'DELETE', init);
     },
   };
-
   // Include global interceptors on the instance
   instance.interceptors.request.handlers.push(
     ...globalInterceptors.request.handlers
@@ -113,7 +89,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   instance.interceptors.response.handlers.push(
     ...globalInterceptors.response.handlers
   );
-
   async function request<T>(url: string, method: string, init: RequestConfig): Promise<AxiosResponse<T>> {
     let reqInit: RequestConfig = { ...init };
     // Run request interceptors
@@ -131,7 +106,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         }
       }
     }
-
     // Read authToken from cookies
     const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
       const [name, value] = cookie.split('=');
@@ -142,7 +116,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       cookies['authToken'] ||
       safeStorage.getItem('zion_token') ||
       safeStorage.getItem('token');
-
     const headers: Record<string, string> = { ...globalDefaults.headers.common };
     if (reqInit.headers) {
       if (reqInit.headers instanceof Headers) {
@@ -158,10 +131,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     if (authToken) {
       headers['Authorization'] = `Bearer ${authToken}`;
     }
-
     const withCreds = reqInit.withCredentials ?? defaultWithCreds;
     delete reqInit.withCredentials;
-
     const response = await fetch(url, {
       ...reqInit,
       method,
@@ -194,12 +165,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       throw err;
     }
   }
-
   return instance;
-}
-
 const defaultInstance = create();
-
 const customAxios: CustomAxiosStatic = {
   create,
   defaults: globalDefaults,
@@ -208,6 +175,4 @@ const customAxios: CustomAxiosStatic = {
   post: defaultInstance.post,
   patch: defaultInstance.patch,
   delete: defaultInstance.delete,
-};
-
 export default customAxios;

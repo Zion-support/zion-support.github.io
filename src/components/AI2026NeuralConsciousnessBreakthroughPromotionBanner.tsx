@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
   return (
@@ -97,4 +98,4 @@ export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
             <div className="text-gray-400 font-semibold">🏢 Fortune 500 Companies</div>
             <div className="text-gray-400 font-semibold">🔬 Research Institutions</div>
   );
-}
+};

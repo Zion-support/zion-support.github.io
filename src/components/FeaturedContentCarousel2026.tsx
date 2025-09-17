@@ -13,10 +13,8 @@ import {
   Rocket,
   Zap
 } from 'lucide-react';
-
 const FeaturedContentCarousel2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const featuredContent = [
     {
       id: 1,
@@ -103,17 +101,13 @@ const FeaturedContentCarousel2026: React.FC = () => {
       featured: false
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
     }, 8000);
-
     return () => clearInterval(timer);
   }, [featuredContent.length]);
-
   const currentContent = featuredContent[currentIndex];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-6">
@@ -135,7 +129,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
             Explore our cutting-edge content showcasing the future of technology, AI innovations, and revolutionary solutions transforming industries worldwide.
           </p>
         </motion.div>
-
         {/* Main Content Card */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
@@ -165,19 +158,15 @@ const FeaturedContentCarousel2026: React.FC = () => {
                       )}
                     </div>
                   </div>
-
                   <h3 className="text-4xl font-bold text-white mb-4">
                     {currentContent.title}
                   </h3>
-                  
                   <p className="text-xl text-purple-400 font-semibold mb-6">
                     {currentContent.subtitle}
                   </p>
-
                   <p className="text-gray-300 mb-8 leading-relaxed">
                     {currentContent.description}
                   </p>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-8">
                     {Object.entries(currentContent.stats).map(([key, value], index) => (
@@ -187,7 +176,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-8">
                     {currentContent.tags.map((tag, index) => (
@@ -199,7 +187,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center gap-6 mb-8 text-gray-400">
                     <div className="flex items-center gap-2">
@@ -215,7 +202,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
                       <span>{currentContent.rating}</span>
                     </div>
                   </div>
-
                   {/* CTA Button */}
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -227,7 +213,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
                     <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </div>
-
                 {/* Visual */}
                 <div className="relative">
                   <div className={`absolute inset-0 bg-gradient-to-br ${currentContent.gradient} opacity-20`}></div>
@@ -257,7 +242,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation */}
           <div className="flex justify-center gap-4 mt-8">
             {featuredContent.map((_, index) => (
@@ -272,7 +256,6 @@ const FeaturedContentCarousel2026: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Content Grid */}
           <div className="grid md:grid-cols-3 gap-6 mt-16">
             {featuredContent.slice(0, 3).map((content, index) => (
@@ -300,10 +283,8 @@ const FeaturedContentCarousel2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <h4 className="text-lg font-bold text-white mb-2">{content.title}</h4>
                 <p className="text-gray-300 text-sm leading-relaxed">{content.description}</p>
-                
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 text-yellow-400" />
@@ -318,6 +299,5 @@ const FeaturedContentCarousel2026: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default FeaturedContentCarousel2026;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const CaseStudyTechCorp2025: React.FC = () => {
   return (
     <>
@@ -9,7 +8,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
         <meta name="description" content="Discover how TechCorp achieved 500% ROI through our comprehensive AI transformation strategy, reducing costs by 60% while increasing productivity by 300%." />
         <meta name="keywords" content="AI transformation, case study, ROI, business automation, TechCorp, success story" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -32,7 +30,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Challenge Section */}
         <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +87,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Solution Section */}
         <div className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,7 +97,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                 from customer service to supply chain management.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -114,7 +109,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                   Deployed AI-powered automation across 200+ business processes, reducing manual work by 85%.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +120,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                   Implemented advanced analytics to predict market trends and optimize resource allocation.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +131,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                   Deployed conversational AI that handles 80% of customer inquiries with 95% satisfaction.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,7 +142,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                   AI continuously optimizes workflows, reducing bottlenecks and improving efficiency.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,7 +153,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                   AI-powered security systems provide real-time threat detection and compliance monitoring.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,7 +167,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Results Section */}
         <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,7 +176,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                 The results exceeded all expectations, delivering unprecedented value and positioning TechCorp as an industry leader.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">500%</div>
@@ -206,7 +194,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                 <div className="text-blue-100">Customer Satisfaction</div>
               </div>
             </div>
-            
             <div className="mt-16 grid lg:grid-cols-2 gap-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Key Performance Improvements</h3>
@@ -233,7 +220,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
                   </li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Financial Impact</h3>
                 <div className="space-y-4">
@@ -258,7 +244,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Testimonial Section */}
         <div className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -275,7 +260,6 @@ const CaseStudyTechCorp2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="py-20 bg-gray-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -304,6 +288,5 @@ const CaseStudyTechCorp2025: React.FC = () => {
       </div>
     </>
   );
-};
 
 export default CaseStudyTechCorp2025;

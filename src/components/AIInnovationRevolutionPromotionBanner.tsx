@@ -12,33 +12,27 @@ import {
   Lightbulb,
   Sparkles
 } from 'lucide-react';
-
 const AIInnovationRevolutionPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [currentBenefit, setCurrentBenefit] = useState(0);
-
   const benefits = [
     { icon: Brain, text: "99.7% AI Accuracy", color: "text-purple-400" },
     { icon: Zap, text: "1000x Faster Processing", color: "text-pink-400" },
     { icon: TrendingUp, text: "85% Cost Reduction", color: "text-green-400" },
     { icon: Award, text: "98% Customer Satisfaction", color: "text-yellow-400" }
   ];
-
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 1500);
     return () => clearTimeout(timer);
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBenefit((prev) => (prev + 1) % benefits.length);
     }, 2500);
     return () => clearInterval(interval);
   }, []);
-
   if (isDismissed) return null;
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -75,7 +69,6 @@ const AIInnovationRevolutionPromotionBanner = () => {
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
                 </div>
               </div>
-
               {/* Center - Main message */}
               <div className="flex-1 text-center px-4">
                 <motion.div
@@ -93,7 +86,6 @@ const AIInnovationRevolutionPromotionBanner = () => {
                   </span>
                 </motion.div>
               </div>
-
               {/* Right side - CTA and close */}
               <div className="flex items-center space-x-4">
                 <motion.button
@@ -113,7 +105,6 @@ const AIInnovationRevolutionPromotionBanner = () => {
                 </button>
               </div>
             </div>
-
             {/* Progress bar */}
             <motion.div
               className="h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
@@ -127,7 +118,6 @@ const AIInnovationRevolutionPromotionBanner = () => {
       )}
     </AnimatePresence>
   );
-};
 
 export default AIInnovationRevolutionPromotionBanner;
 </div></div>

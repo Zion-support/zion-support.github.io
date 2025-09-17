@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
 const InteractiveContentShowcase: React.FC = () => {
   const [activeContent, setActiveContent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
   const contentItems = [
     {
       id: 1,
@@ -85,7 +83,6 @@ const InteractiveContentShowcase: React.FC = () => {
       timeline: "Q1 2026"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -96,7 +93,6 @@ const InteractiveContentShowcase: React.FC = () => {
     }, 10000);
     return () => clearInterval(interval);
   }, []);
-
   const handleContentSelect = (index: number) => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -104,7 +100,6 @@ const InteractiveContentShowcase: React.FC = () => {
       setIsAnimating(false);
     }, 300);
   };
-
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -120,7 +115,6 @@ const InteractiveContentShowcase: React.FC = () => {
             Explore cutting-edge technologies with interactive features, dynamic content, and immersive experiences
           </p>
         </div>
-
         {/* Main Content Display */}
         <div className="mb-12">
           <div className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-3xl p-12 text-white transition-all duration-500 ${isAnimating ? 'scale-95 opacity-70' : 'scale-100 opacity-100'}`}>
@@ -134,14 +128,12 @@ const InteractiveContentShowcase: React.FC = () => {
                     {contentItems[activeContent].urgency}
                   </span>
                 </div>
-                
                 <h3 className="text-4xl font-bold mb-4">
                   {contentItems[activeContent].title}
                 </h3>
                 <p className="text-xl text-white/90 mb-6 leading-relaxed">
                   {contentItems[activeContent].description}
                 </p>
-
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   {Object.entries(contentItems[activeContent].stats).map(([key, value]) => (
                     <div key={key} className="bg-white/10 rounded-xl p-4 text-center">
@@ -150,7 +142,6 @@ const InteractiveContentShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-3 mb-6">
                   {contentItems[activeContent].features.map((feature, index) => (
                     <span
@@ -161,7 +152,6 @@ const InteractiveContentShowcase: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-sm text-white/70">Expected Launch</div>
@@ -175,7 +165,6 @@ const InteractiveContentShowcase: React.FC = () => {
                   </a>
                 </div>
               </div>
-
               <div className="text-center">
                 <div className="text-9xl mb-6 opacity-50 animate-bounce">
                   {contentItems[activeContent].icon}
@@ -186,7 +175,6 @@ const InteractiveContentShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {contentItems.map((item, index) => (
@@ -213,14 +201,12 @@ const InteractiveContentShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Technology Comparison */}
         <div className="bg-white rounded-3xl p-12 shadow-2xl mb-12">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Technology Comparison Matrix</h3>
             <p className="text-xl text-gray-600">Compare revolutionary technologies across key metrics</p>
           </div>
-
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -262,7 +248,6 @@ const InteractiveContentShowcase: React.FC = () => {
             </table>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12 text-white">
@@ -290,6 +275,5 @@ const InteractiveContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveContentShowcase;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const NewContent2027PromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
@@ -8,7 +7,6 @@ const NewContent2027PromotionBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }}></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -19,7 +17,6 @@ const NewContent2027PromotionBanner: React.FC = () => {
             that's transforming the future of human-AI collaboration.
           </p>
         </div>
-
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
@@ -37,7 +34,6 @@ const NewContent2027PromotionBanner: React.FC = () => {
               </Link>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-center">
               <div className="text-4xl mb-4">⚡</div>
@@ -53,7 +49,6 @@ const NewContent2027PromotionBanner: React.FC = () => {
               </Link>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-center">
               <div className="text-4xl mb-4">🔗</div>
@@ -70,7 +65,6 @@ const NewContent2027PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
@@ -88,7 +82,6 @@ const NewContent2027PromotionBanner: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Stats */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           <div className="bg-white/5 rounded-lg p-4">
@@ -111,6 +104,5 @@ const NewContent2027PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContent2027PromotionBanner;

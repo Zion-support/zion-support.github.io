@@ -1,5 +1,4 @@
 import React from 'react';
-
 const defi-nexus-platform: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const defi-nexus-platform: React.FC = () => {
     </div>
   );
 };
-
 const features = [
   'Multi-chain DeFi aggregation',
   'Automated yield optimization',
@@ -18,8 +16,6 @@ const features = [
   'DeFi analytics dashboard',
   'Mobile app integration',
   'Staking and governance'
-];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -42,7 +38,7 @@ const pricingPlans = [
     features: ['Custom DeFi solutions', 'White-label platform', 'API access', 'Priority support', 'Custom integrations'],
     popular: false
   }
-];
+};
 
 export default function DeFiNexusPlatform() {
   return (
@@ -200,4 +196,4 @@ export default function DeFiNexusPlatform() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
-}
+};

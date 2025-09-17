@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const UltimateTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-<<<<<<< HEAD
   const [currentDemo, setCurrentDemo] = useState(0);
-
   const techCategories = {
     ai: {
       title: "Artificial Intelligence Revolution",
@@ -63,9 +59,7 @@ const UltimateTechShowcase2026: React.FC = () => {
           stats: "99.9% accuracy"
         }
       ]
-=======
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = {
     ai: {
       title: "Artificial Intelligence Revolution",
@@ -96,12 +90,10 @@ const UltimateTechShowcase2026: React.FC = () => {
       color: "from-cyan-600 to-blue-600",
       bgColor: "from-cyan-600/20 to-blue-600/20",
       borderColor: "border-cyan-400/30"
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
     },
     neural: {
       title: "Neural Interface Technology",
       icon: "🧬",
-<<<<<<< HEAD
       color: "from-emerald-600 to-teal-600",
       description: "Bridge the gap between human consciousness and digital systems with direct thought control and memory enhancement.",
       features: [
@@ -156,16 +148,13 @@ const UltimateTechShowcase2026: React.FC = () => {
       ]
     }
   };
-
   const currentCategory = techCategories[activeTab as keyof typeof techCategories];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % currentCategory.demos.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [currentCategory.demos.length]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -194,14 +183,12 @@ const UltimateTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technology Categories */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Choose Your Technology</h2>
           <p className="text-xl opacity-90">Explore different categories of revolutionary technology</p>
         </div>
-
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(techCategories).map(([key, category]) => (
@@ -216,7 +203,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             >
               <span className="text-2xl mr-3">{category.icon}</span>
               {category.title}
-=======
       description: "Direct brain-computer communication and enhancement",
       features: [
         "Non-invasive brain-computer interfaces",
@@ -275,7 +261,6 @@ const UltimateTechShowcase2026: React.FC = () => {
       borderColor: "border-green-400/30"
     }
   };
-
   const handleTabChange = (tab: string) => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -283,7 +268,6 @@ const UltimateTechShowcase2026: React.FC = () => {
       setIsAnimating(false);
     }, 150);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -330,14 +314,12 @@ const UltimateTechShowcase2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary Technologies</h2>
           <p className="text-xl text-purple-200">Select a technology to explore its capabilities</p>
         </div>
-
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(technologies).map(([key, tech]) => (
             <button
@@ -351,12 +333,9 @@ const UltimateTechShowcase2026: React.FC = () => {
             >
               <span className="text-2xl mr-2">{tech.icon}</span>
               {tech.title}
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
             </button>
           ))}
         </div>
-
-<<<<<<< HEAD
         {/* Active Category Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -372,7 +351,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <div className="text-8xl mb-6">{currentCategory.icon}</div>
                 <h3 className="text-4xl font-bold mb-6">{currentCategory.title}</h3>
                 <p className="text-xl opacity-90 mb-8">{currentCategory.description}</p>
-                
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {currentCategory.features.map((feature, index) => (
                     <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -380,7 +358,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex gap-4">
                   <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                     Try Demo →
@@ -390,7 +367,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                   <h4 className="text-2xl font-bold mb-6 text-center">Live Demo</h4>
@@ -411,7 +387,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                       </div>
                     </motion.div>
                   </AnimatePresence>
-                  
                   <div className="flex justify-center space-x-2 mt-6">
                     {currentCategory.demos.map((_, index) => (
                       <button
@@ -424,7 +399,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-=======
         {/* Technology Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -444,7 +418,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 {technologies[activeTab as keyof typeof technologies].description}
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-2xl font-bold text-white mb-6">Key Features</h4>
@@ -463,7 +436,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                 <h4 className="text-2xl font-bold text-white mb-6">Live Demo</h4>
                 <div className="bg-black/20 rounded-lg p-6 mb-4">
@@ -487,21 +459,17 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <button className={`w-full bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Try Interactive Demo
                 </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
-
-<<<<<<< HEAD
       {/* Interactive Features Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Interactive Features</h2>
           <p className="text-xl opacity-90">Experience technology like never before</p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -516,7 +484,6 @@ const UltimateTechShowcase2026: React.FC = () => {
               Start Demo
             </button>
           </motion.div>
-
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
@@ -530,7 +497,6 @@ const UltimateTechShowcase2026: React.FC = () => {
               View Analytics
             </button>
           </motion.div>
-
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
@@ -543,14 +509,12 @@ const UltimateTechShowcase2026: React.FC = () => {
             <button className="w-full bg-white/20 text-white py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold">
               Explore Future
             </button>
-=======
       {/* Statistics Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">📊 Impact Statistics</h2>
           <p className="text-xl text-purple-200">Our technologies are already transforming industries worldwide</p>
         </div>
-
         <div className="grid md:grid-cols-4 gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -587,13 +551,10 @@ const UltimateTechShowcase2026: React.FC = () => {
           >
             <div className="text-4xl font-bold text-white mb-2">24/7</div>
             <div className="text-purple-200">Availability</div>
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
           </motion.div>
         </div>
       </div>
-
       {/* Call to Action */}
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h2>
@@ -607,7 +568,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-=======
       <div className="container mx-auto px-4 py-20">
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30">
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Transform Your Future?</h2>
@@ -621,21 +581,17 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-200 px-8 py-4 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors text-lg">
               Schedule Consultation
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
             </button>
           </div>
         </div>
       </div>
-=======
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-
 const UltimateTechShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -658,14 +614,12 @@ const UltimateTechShowcase2026: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Revolutionary Technologies Grid */}
         <section id="technologies" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">⚡ Revolutionary Technologies</h2>
             <p className="text-xl text-indigo-200">The most advanced tech innovations of 2026</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Revolution */}
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -684,7 +638,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Explore AI Revolution →
               </a>
             </div>
-
             {/* Quantum Computing */}
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">⚡</div>
@@ -702,7 +655,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Go Quantum →
               </a>
             </div>
-
             {/* Neural Interfaces */}
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🧬</div>
@@ -720,7 +672,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Connect Mind & Machine →
               </a>
             </div>
-
             {/* Quantum Neural Fusion */}
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🔬</div>
@@ -738,7 +689,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Experience Fusion →
               </a>
             </div>
-
             {/* Revolutionary Tech Blog */}
             <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">📚</div>
@@ -756,7 +706,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Read Latest Insights →
               </a>
             </div>
-
             {/* Comprehensive Tech Insights */}
             <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🔍</div>
@@ -776,7 +725,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Interactive Demo Section */}
         <section id="interactive" className="mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
@@ -784,7 +732,6 @@ const UltimateTechShowcase2026: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">🎮 Interactive Technology Experience</h2>
               <p className="text-xl text-indigo-200">Experience these revolutionary technologies in action</p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-black/50 rounded-lg p-6 text-center">
                 <div className="text-4xl mb-4">🎥</div>
@@ -794,7 +741,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   Launch Demo
                 </a>
               </div>
-              
               <div className="bg-black/50 rounded-lg p-6 text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-2">Quantum Computing Lab</h3>
@@ -803,7 +749,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   Enter Lab
                 </a>
               </div>
-              
               <div className="bg-black/50 rounded-lg p-6 text-center">
                 <div className="text-4xl mb-4">🧬</div>
                 <h3 className="text-xl font-bold text-white mb-2">Neural Interface Simulator</h3>
@@ -815,14 +760,12 @@ const UltimateTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Technology Impact */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🌍 Global Impact</h2>
             <p className="text-xl text-indigo-200">How these technologies are transforming the world</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-lg p-8 border border-green-400/30">
               <div className="text-5xl mb-4 text-center">🌱</div>
@@ -836,7 +779,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <li>• Neural Network Energy Optimization</li>
               </ul>
             </div>
-            
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-lg p-8 border border-blue-400/30">
               <div className="text-5xl mb-4 text-center">🏥</div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Healthcare</h3>
@@ -849,7 +791,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <li>• Neural Interface Prosthetics</li>
               </ul>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-8 border border-purple-400/30">
               <div className="text-5xl mb-4 text-center">🚀</div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Space Exploration</h3>
@@ -864,7 +805,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
@@ -883,11 +823,8 @@ const UltimateTechShowcase2026: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     </div>
   );
-};
 
 export default UltimateTechShowcase2026;

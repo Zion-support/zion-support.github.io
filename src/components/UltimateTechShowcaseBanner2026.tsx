@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const UltimateTechShowcaseBanner2026: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden">
@@ -10,7 +9,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white px-8 py-3 rounded-full text-lg font-bold mb-8 animate-bounce">
@@ -27,7 +25,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
             that are revolutionizing industries and transforming the future.
           </p>
         </div>
-
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* AI Innovation */}
@@ -59,7 +56,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
               Explore AI Hub
             </Link>
           </div>
-
           {/* Quantum Computing */}
           <div className="group bg-gradient-to-br from-cyan-900/50 to-blue-900/50 p-8 rounded-3xl backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-500 hover:scale-105">
             <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">⚛️</div>
@@ -89,7 +85,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
               Learn Quantum
             </Link>
           </div>
-
           {/* Edge AI */}
           <div className="group bg-gradient-to-br from-emerald-900/50 to-teal-900/50 p-8 rounded-3xl backdrop-blur-sm border border-emerald-400/20 hover:border-emerald-400/40 transition-all duration-500 hover:scale-105">
             <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📱</div>
@@ -119,7 +114,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
               Discover Edge AI
             </Link>
           </div>
-
           {/* AI Services */}
           <div className="group bg-gradient-to-br from-orange-900/50 to-red-900/50 p-8 rounded-3xl backdrop-blur-sm border border-orange-400/20 hover:border-orange-400/40 transition-all duration-500 hover:scale-105">
             <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
@@ -149,7 +143,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
               View Services
             </Link>
           </div>
-
           {/* AI Ethics */}
           <div className="group bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-3xl backdrop-blur-sm border border-purple-400/20 hover:border-purple-400/40 transition-all duration-500 hover:scale-105">
             <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">⚖️</div>
@@ -179,7 +172,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
               Learn Ethics
             </Link>
           </div>
-
           {/* Future Tech */}
           <div className="group bg-gradient-to-br from-indigo-900/50 to-purple-900/50 p-8 rounded-3xl backdrop-blur-sm border border-indigo-400/20 hover:border-indigo-400/40 transition-all duration-500 hover:scale-105">
             <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🚀</div>
@@ -210,7 +202,6 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -240,6 +231,5 @@ const UltimateTechShowcaseBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateTechShowcaseBanner2026;

@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function UltimateContentRevolutionBanner2025() {
   return (
@@ -91,4 +92,4 @@ export default function UltimateContentRevolutionBanner2025() {
         <div className="mt-12 text-sm opacity-80">
           <p>✨ Exclusive access to revolutionary content • 🚀 Limited time offer • 💎 Premium quality guaranteed</p>
   );
-}
+};

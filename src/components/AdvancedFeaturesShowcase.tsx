@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedFeaturesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -30,6 +29,5 @@ const AdvancedFeaturesShowcase: React.FC = () => {
                 ))}
           ))}
   );
-};
 
 export default AdvancedFeaturesShowcase;

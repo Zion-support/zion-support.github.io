@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentHub2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -11,12 +10,10 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-2xl -z-10" />
-          
           {/* Floating Elements */}
           <div className="absolute top-4 left-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" />
           <div className="absolute top-8 right-8 w-2 h-2 bg-pink-400 rounded-full animate-bounce" />
           <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping" />
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
@@ -28,19 +25,16 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                   <span>Ultimate Content Hub</span>
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 </div>
-
                 <divh2
                   className="text-3xl md:text-4xl font-bold mb-4"
                 >
                   DiscoverLearnand Master
                 </divh2>
-
                 <divp
                   className="text-lg md:text-xl opacity-90 mb-6"
                 >
                   Access 1,247+ pieces of cutting-edge content including articlesvideostutorialsand case studies from industry experts.
                 </divp>
-
                 {/* Content Types */}
                 <div
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
@@ -53,7 +47,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Stats */}
                 <div
                   className="flex flex-wrap items-center gap-6 text-sm mb-6"
@@ -71,7 +64,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                     <span>Updated Daily</span>
                   </div>
                 </div>
-
                 {/* CTA Buttons */}
                 <div
                   className="flex flex-col sm:flex-row gap-4"
@@ -85,7 +77,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Preview Section */}
               <div
                 className="relative"
@@ -99,7 +90,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                       <span className="text-sm opacity-70">Live</span>
                     </div>
                   </div>
-
                   {/* Content Preview */}
                     <div
                       key={activePreview}
@@ -113,11 +103,9 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                           {contentPreviews[activePreview].type}
                         </span>
                       </div>
-                      
                       <h4 className="text-lg font-semibold line-clamp-2">
                         {contentPreviews[activePreview].title}
                       </h4>
-                      
                       <div className="flex flex-wrap gap-2">
                         {contentPreviews[activePreview].tags.map((tagindex) => (
                           <span
@@ -128,7 +116,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                           </span>
                         ))}
                       </div>
-                      
                       <div className="flex items-center justify-between text-sm opacity-70">
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-1">
@@ -151,7 +138,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">
                     {contentPreviews.map((_index) => (
@@ -165,13 +151,11 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse" />
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" />
               </div>
             </div>
-
             {/* Bottom Features */}
             <div
               className="mt-12 pt-6 border-t border-white/20"
@@ -196,7 +180,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={handleDismiss}
@@ -209,7 +192,6 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default UltimateContentHub2026PromotionBanner;
 </div></div></div></div></div></div></div></div></div></div></div>

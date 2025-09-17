@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 const NewContentPromotionalBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const promotionalContent = [
     {
       id: 1,
@@ -39,21 +37,16 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       textColor: "text-white"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
     }, 4000);
-
     return () => clearInterval(timer);
   }, []);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white shadow-2xl">
       {/* Animated background */}
@@ -67,7 +60,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           <div className="absolute bottom-10 right-1/3 w-14 h-14 bg-blue-400 rounded-full opacity-20 animate-pulse delay-3000"></div>
         </div>
       </div>
-
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
@@ -79,7 +71,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                     <span className="text-2xl">✨</span>
                   </div>
                 </div>
-                
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-bold mb-1">
                     {promotionalContent[currentSlide].title}
@@ -104,7 +95,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Close button */}
             <button
               onClick={handleClose}
@@ -115,7 +105,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Progress indicators */}
           <div className="flex justify-center mt-4 space-x-2">
             {promotionalContent.map((_, index) => (
@@ -130,7 +119,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating elements */}
       <div className="absolute top-4 right-4 animate-bounce">
         <span className="text-2xl">🎉</span>
@@ -140,7 +128,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentPromotionalBanner2026;
 </p></p>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateBreakthroughBanner: React.FC = () => {
   return (
     <div
@@ -38,6 +37,5 @@ const UltimateBreakthroughBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateBreakthroughBanner;

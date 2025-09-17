@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const EnterpriseSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900">
@@ -30,7 +29,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Solution Categories */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -38,7 +36,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Enterprise Solutions</h2>
             <p className="text-xl text-gray-300">End-to-end solutions designed for enterprise-scale operations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -107,7 +104,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-900/50 to-indigo-900/50">
         <div className="container mx-auto">
@@ -115,7 +111,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-xl text-gray-300">Tailored solutions for different industry verticals</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
@@ -209,7 +204,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -217,7 +211,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-gray-300">A proven methodology for successful enterprise implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -262,7 +255,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Success Metrics */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/50 to-blue-900/50">
         <div className="container mx-auto">
@@ -270,7 +262,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Proven Success Metrics</h2>
             <p className="text-xl text-gray-300">Real results from our enterprise implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -306,7 +297,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -332,6 +322,5 @@ const EnterpriseSolutions2025: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default EnterpriseSolutions2025;

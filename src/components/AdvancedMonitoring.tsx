@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-
 interface ErrorLog {
   id: string;
   timestamp: Date;
@@ -10,8 +9,6 @@ interface ErrorLog {
   url: string;
   userAgent: string;
   userId?: string;
-}
-
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
@@ -21,8 +18,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   memoryUsage?: number;
-}
-
 interface UserSession {
   sessionId: string;
   startTime: Date;
@@ -34,7 +29,7 @@ interface UserSession {
     os: string;
     browser: string;
   };
-}
+};
 
 export default function AdvancedMonitoring() {
   const [errorsetErrors] = useState<ErrorLog[]>([]);
@@ -345,6 +340,5 @@ export default function AdvancedMonitoring() {
               ))}
       )}
   );
-};
 
 export default AdvancedMonitoring;

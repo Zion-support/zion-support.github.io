@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 const featuredContent = [
   {
     id: 1,
@@ -58,7 +57,7 @@ const featuredContent = [
     badgeColor: 'from-rose-500 to-pink-500',
     features: ['99.9% AGI'1Mx 'Faster', 'True Consciousness']
   }
-];
+};
 
 export default function FeaturedContentCarousel() {
   const [currentIndexsetCurrentIndex] = useState(0);
@@ -70,6 +69,7 @@ export default function FeaturedContentCarousel() {
       setCurrentIndex((prevIndex) => 
         prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
       );
+};
     }5000);
     return () => clearInterval(interval);
   }[isAutoPlaying]);
@@ -81,6 +81,7 @@ export default function FeaturedContentCarousel() {
     setCurrentIndex((prevIndex) => 
       prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
     );
+};
     setIsAutoPlaying(false);
   };
   const prevSlide = () => {
@@ -192,6 +193,5 @@ export default function FeaturedContentCarousel() {
                   ))}
             ))}
   );
-};
 
 export default FeaturedContentCarousel;

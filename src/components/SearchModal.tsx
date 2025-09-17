@@ -1,25 +1,16 @@
 import React from 'react';
-
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
-;
-
 interface SearchResult {
-
 interface SearchResult {;
   title: string;
   description: string;
   url: string;
   category: string;
-}
-
-
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
-}
-
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -46,7 +37,6 @@ const search_data: SearchResult[] = [;
     url: "/cloud - solutions",
     category: "Services",
   },
-
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -54,7 +44,6 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
-
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
@@ -105,7 +94,6 @@ const search_data: SearchResult[] = [;
     category: "Industries",
   },
   // Company;
-
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -136,32 +124,16 @@ const search_data: SearchResult[] = [;
     url: "/pricing"
     category: "Company"
   }
-];
-
-
-
-
-
-
-
-
-
-
-
-
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-
-
   useEffect(() => {;
     if (isOpen && inputRef && inputRef.current) {;
       inputRef && inputRef.current.focus();
     }
   }, [isOpen]);
-
   useEffect(() => {;
     // Load recent searches from localStorage;
     const saved = localStorage && localStorage.getItem("recent-searches");
@@ -176,12 +148,13 @@ const search_data: SearchResult[] = [;
           item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
-
       );
+};
       setResults(filtered);
     } else {;
       setResults([]);
-;
+};
+
 export default /**
  * SearchModal - Function description
  */
@@ -191,37 +164,32 @@ function SearchModal() {
   const [recent_searches, setRecentSearches] = useState < string[]>([]);
   const [selected_index, setSelectedIndex] = useState (0);
   const input_ref = useRef < HTMLInputElement>(null);
-;
   useEffect (() => {
     // Check condition
 if ( {) {
   $2
-}
       input_ref.current.focus ();
     }
   }, [is_open]);
-;
   useEffect (() => {
     // Load recent searches from local_storage;
     const saved = local_storage.get_item ("recent - searches");
     // Check condition
 if ( {) {
   $2
-}
       setRecentSearches (JSON.parse (saved));
     }
   }, []);
-;
   useEffect (() => {
     if () {) {
   $2
-}
       const filtered = search_data.filter (
         (item) =>;
           item.title.toLowerCase ().includes (query.toLowerCase ()) ||;
           item.description.toLowerCase ().includes (query.toLowerCase ()) ||;
           item.category.toLowerCase ().includes (query.toLowerCase ()),
       );
+};
       set_results (filtered);
     } else {
       set_results ([]);
@@ -291,33 +259,27 @@ if ( {) {
                 <div className="p-2">;
                   {results && results.map((result, index) => (;
                     <div
-;
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
 if ( {) {
   $2
-}
       on_close ();
     } else // Check condition
 if ( {) {
   $2
-}
       e.prevent_default ();
       setSelectedIndex ((prev) => Math.min (prev + 1, results.length - 1));
     } else // Check condition
 if ( {) {
   $2
-}
       e.prevent_default ();
       setSelectedIndex ((prev) => Math.max (prev - 1, 0));
     } else // Check condition
 if ( {) {
   $2
-}
       handleResultClick (results[selected_index]);
     }
   }
-;
   const handleResultClick = (result: SearchResult) =>: any {
     // Add to recent searches;
     const new_recent = [;
@@ -326,19 +288,15 @@ if ( {) {
     ].slice (0, 5);
     setRecentSearches (new_recent);
     local_storage.set_item ("recent - searches", JSON.stringify (new_recent));
-;
     // Navigate to result;
     window.location.href = result.url;
   }
-;
   const handleRecentClick = (search: string) =>: any {
     set_query (search);
   }
-;
   // Check condition
 if (return null) {
   $2
-}
   return (
     <div className="fixed inset - 0 z - 50 overflow - y-auto">;
       <div className="flex min - h-screen items - start justify - center p - 4 pt - 16">;
@@ -409,6 +367,5 @@ if (return null) {
       </div>;
     </div>;
   );
-};
 
 export default SearchModal;

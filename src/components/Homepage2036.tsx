@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Homepage2036: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,19 +7,14 @@ const Homepage2036: React.FC = () => {
     </div>
   );
 };
-
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
   ...real2036SpecializedServices.slice(0, 3)
-];
-
 const stats = [
   { label: 'Services Available', value: '500+', icon: <Rocket className="w-6 h-6" /> },
   { label: 'Market Coverage', value: '$200B+', icon: <TrendingUp className="w-6 h-6" /> },
   { label: 'Client Satisfaction', value: '98%', icon: <Star className="w-6 h-6" /> },
   { label: 'Global Reach', value: '50+', icon: <Globe className="w-6 h-6" /> }
-];
-
 const categories = [
   { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, count: 150, color: 'from-green-500 to-emerald-600' },
   { name: 'Quantum Technology', icon: <Atom className="w-6 h-6" />, count: 80, color: 'from-cyan-500 to-blue-600' },
@@ -28,7 +22,7 @@ const categories = [
   { name: 'IT Infrastructure', icon: <Cpu className="w-6 h-6" />, count: 120, color: 'from-orange-500 to-red-600' },
   { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, count: 90, color: 'from-blue-500 to-indigo-600' },
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6" />, count: 70, color: 'from-yellow-500 to-orange-600' }
-];
+};
 
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -330,4 +324,4 @@ export default function Homepage2036() {
                   <Phone className="w-5 h-5" />
                   Call Us Now
   );
-}
+};

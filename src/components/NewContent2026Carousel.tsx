@@ -1,20 +1,16 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const NewContent2026Carousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   const contentItems = [
     {
       type: "blog",
@@ -61,7 +57,6 @@ const NewContent2026Carousel: React.FC = () => {
       stats: { value: "40-60%", label: "Improvement Over Individual AI" }
     }
   ];
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-500';
@@ -70,7 +65,6 @@ const NewContent2026Carousel: React.FC = () => {
       default: return 'bg-gray-500';
     }
   };
-
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'blog': return 'Article';
@@ -79,18 +73,15 @@ const NewContent2026Carousel: React.FC = () => {
       default: return 'Content';
     }
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-5 animate-pulse"></div>
-      
       {/* Floating Elements */}
       <div className="absolute top-20 left-20 w-16 h-16 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
       <div className="absolute top-40 right-32 w-12 h-12 bg-indigo-500 rounded-full opacity-30 animate-bounce delay-1000"></div>
       <div className="absolute bottom-32 left-40 w-20 h-20 bg-purple-500 rounded-full opacity-25 animate-bounce delay-2000"></div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
@@ -113,7 +104,6 @@ const NewContent2026Carousel: React.FC = () => {
             and the future of collective AI intelligence
           </p>
         </motion.div>
-
         {/* Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -134,7 +124,6 @@ const NewContent2026Carousel: React.FC = () => {
                     </span>
                     <div className="text-sm opacity-70">New Release 2026</div>
                   </div>
-                  
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">
                     {contentItems[currentSlide].title}
                   </h3>
@@ -144,7 +133,6 @@ const NewContent2026Carousel: React.FC = () => {
                   <p className="text-lg opacity-80 mb-6 leading-relaxed">
                     {contentItems[currentSlide].description}
                   </p>
-
                   {/* Stats */}
                   <div className="flex items-center mb-6">
                     <div className="bg-white bg-opacity-20 rounded-full px-4 py-2 mr-4">
@@ -156,7 +144,6 @@ const NewContent2026Carousel: React.FC = () => {
                       {contentItems[currentSlide].stats.label}
                     </span>
                   </div>
-
                   <motion.a
                     href={contentItems[currentSlide].link}
                     whileHover={{ scale: 1.05 }}
@@ -169,7 +156,6 @@ const NewContent2026Carousel: React.FC = () => {
                     </svg>
                   </motion.a>
                 </div>
-
                 {/* Visual */}
                 <div className="flex-1">
                   <div className="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
@@ -196,7 +182,6 @@ const NewContent2026Carousel: React.FC = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Dots */}
           <div className="flex justify-center mt-8 space-x-3">
             {contentItems.map((_, index) => (
@@ -211,7 +196,6 @@ const NewContent2026Carousel: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length)}
@@ -230,7 +214,6 @@ const NewContent2026Carousel: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Call to Action */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -272,6 +255,5 @@ const NewContent2026Carousel: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContent2026Carousel;

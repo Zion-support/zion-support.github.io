@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedTechTrends2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
@@ -24,14 +23,12 @@ const AdvancedTechTrends2026: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Top Trends Section */}
         <section id="trends" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🔥 Top Technology Trends 2026</h2>
             <p className="text-xl opacity-90">The most impactful trends reshaping our digital future</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
@@ -67,7 +64,6 @@ const AdvancedTechTrends2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">⚡</div>
@@ -102,7 +98,6 @@ const AdvancedTechTrends2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🧬</div>
@@ -137,7 +132,6 @@ const AdvancedTechTrends2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🚀</div>
@@ -172,7 +166,6 @@ const AdvancedTechTrends2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🔬</div>
@@ -207,7 +200,6 @@ const AdvancedTechTrends2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">🌐</div>
@@ -244,14 +236,12 @@ const AdvancedTechTrends2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Trend Analysis */}
         <section id="analysis" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">📊 Trend Analysis & Predictions</h2>
             <p className="text-xl opacity-90">In-depth analysis of technology trends and future predictions</p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-600/30">
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Market Impact Analysis</h3>
@@ -294,7 +284,6 @@ const AdvancedTechTrends2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-slate-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-600/30">
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Future Predictions 2026-2030</h3>
               <div className="space-y-4">
@@ -322,14 +311,12 @@ const AdvancedTechTrends2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Industry Impact */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🏭 Industry Impact</h2>
             <p className="text-xl opacity-90">How these trends are transforming major industries</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 text-center">
               <div className="text-4xl mb-3">🏥</div>
@@ -337,21 +324,18 @@ const AdvancedTechTrends2026: React.FC = () => {
               <p className="text-blue-100 text-sm mb-4">AI diagnostics, personalized medicine, neural rehabilitation</p>
               <div className="text-blue-400 font-semibold text-sm">+300% Efficiency</div>
             </div>
-
             <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 text-center">
               <div className="text-4xl mb-3">🏭</div>
               <h3 className="text-xl font-bold mb-2 text-green-300">Manufacturing</h3>
               <p className="text-green-100 text-sm mb-4">Quantum-optimized production, AI quality control</p>
               <div className="text-green-400 font-semibold text-sm">+250% Productivity</div>
             </div>
-
             <div className="bg-gradient-to-br from-purple-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
               <div className="text-4xl mb-3">💼</div>
               <h3 className="text-xl font-bold mb-2 text-purple-300">Finance</h3>
               <p className="text-purple-100 text-sm mb-4">Quantum cryptography, AI trading, neural risk analysis</p>
               <div className="text-purple-400 font-semibold text-sm">+400% Security</div>
             </div>
-
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
               <div className="text-4xl mb-3">🚗</div>
               <h3 className="text-xl font-bold mb-2 text-orange-300">Transportation</h3>
@@ -360,7 +344,6 @@ const AdvancedTechTrends2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-violet-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 border border-violet-400/30">
           <h2 className="text-4xl font-bold mb-4">Stay Ahead of the Trends</h2>
@@ -379,6 +362,5 @@ const AdvancedTechTrends2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AdvancedTechTrends2026;

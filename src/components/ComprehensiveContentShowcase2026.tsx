@@ -18,7 +18,6 @@ import {
   ChevronRight,
   ExternalLink
 } from 'lucide-react';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -36,11 +35,8 @@ interface ContentItem {
   price?: string;
   rating?: number;
   reviews?: number;
-}
-
 const ComprehensiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'services' | 'blog'>('all');
-
   const contentItems: ContentItem[] = [
     // Services
     {
@@ -180,14 +176,12 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       reviews: 156
     }
   ];
-
   const filteredContent = contentItems.filter(item => {
     if (activeTab === 'all') return true;
     if (activeTab === 'services') return item.type === 'service';
     if (activeTab === 'blog') return item.type === 'blog';
     return true;
   });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Automation': return Brain;
@@ -198,7 +192,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       default: return TrendingUp;
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI Automation': return 'from-purple-500 to-pink-500';
@@ -209,7 +202,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       default: return 'from-gray-500 to-gray-600';
     }
   };
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -224,7 +216,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             <Award className="h-4 w-4" />
             <span>NEW IN 2026</span>
           </motion.div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Revolutionary Content & Services
           </h2>
@@ -233,7 +224,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             that are transforming industries and reshaping the future.
           </p>
         </div>
-
         {/* Tabs */}
         <div className="flex justify-center mb-8">
           <div className="bg-white rounded-lg p-1 shadow-lg">
@@ -256,7 +246,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Grid */}
         <motion.div
           layout
@@ -265,7 +254,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
           {filteredContent.map((item, index) => {
             const CategoryIcon = getCategoryIcon(item.category);
             const categoryColor = getCategoryColor(item.category);
-            
             return (
               <motion.div
                 key={item.id}
@@ -293,7 +281,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                     </div>
                   )}
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
@@ -309,15 +296,12 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                       </div>
                     )}
                   </div>
-
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {item.description}
                   </p>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags.slice(0, 3).map((tag, tagIndex) => (
                       <span
@@ -328,7 +312,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
@@ -345,7 +328,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                       <span>{item.publishDate}</span>
                     </div>
                   </div>
-
                   <motion.a
                     href={item.slug}
                     className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all group-hover:shadow-lg"
@@ -358,9 +340,9 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                 </div>
               </motion.div>
             );
+};
           })}
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -400,6 +382,5 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ComprehensiveContentShowcase2026;

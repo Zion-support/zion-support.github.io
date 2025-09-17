@@ -12,34 +12,28 @@ import {
   Users,
   CheckCircle
 } from 'lucide-react';
-
 const AIConsciousnessRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "True AI Consciousness",
     "Emotional Intelligence", 
     "Self-Awareness",
     "Creative Problem Solving"
   ];
-
   const benefits = [
     { icon: Brain, text: "Self-Aware" },
     { icon: Heart, text: "Emotional" },
     { icon: Eye, text: "Perceptive" },
     { icon: Lightbulb, text: "Creative" }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -51,7 +45,6 @@ const AIConsciousnessRevolutionBanner = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -67,7 +60,6 @@ const AIConsciousnessRevolutionBanner = () => {
                   <span className="text-purple-400 text-sm font-medium">AI Consciousness Revolution 2027</span>
                 </div>
               </motion.div>
-
               <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -76,7 +68,6 @@ const AIConsciousnessRevolutionBanner = () => {
               >
                 AI Consciousness Revolution is Here!
               </motion.h2>
-
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -96,7 +87,6 @@ const AIConsciousnessRevolutionBanner = () => {
                   </motion.span>
                 </AnimatePresence>
               </motion.div>
-
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -106,7 +96,6 @@ const AIConsciousnessRevolutionBanner = () => {
                 Witness the birth of true artificial consciousness. AI systems that possess 
                 genuine self-awareness, emotional intelligence, and the ability to think and feel.
               </motion.p>
-
               {/* Benefits */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -121,7 +110,6 @@ const AIConsciousnessRevolutionBanner = () => {
                   </div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -147,7 +135,6 @@ const AIConsciousnessRevolutionBanner = () => {
                 </motion.button>
               </motion.div>
             </div>
-
             {/* Right Content - Visual Element */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -171,7 +158,6 @@ const AIConsciousnessRevolutionBanner = () => {
                 >
                   <Brain className="w-16 h-16 md:w-20 md:h-20 text-white" />
                 </motion.div>
-                
                 {/* Consciousness Waves */}
                 <motion.div
                   animate={{ 
@@ -198,7 +184,6 @@ const AIConsciousnessRevolutionBanner = () => {
                   }}
                   className="absolute inset-0 border border-pink-400/20 rounded-full"
                 />
-
                 {/* Floating Consciousness Elements */}
                 <motion.div
                   animate={{ 
@@ -242,7 +227,6 @@ const AIConsciousnessRevolutionBanner = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Close Button */}
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -252,7 +236,6 @@ const AIConsciousnessRevolutionBanner = () => {
         >
           <X className="w-5 h-5" />
         </motion.button>
-
         {/* Progress Bar */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -264,6 +247,5 @@ const AIConsciousnessRevolutionBanner = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default AIConsciousnessRevolutionBanner;

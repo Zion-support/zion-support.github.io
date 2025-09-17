@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
 // Async thunk for login
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
@@ -23,18 +22,14 @@ export const loginUser = createAsyncThunk(
           }
         }, 1000);
       });
-
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);
-
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
@@ -58,18 +53,14 @@ export const signupUser = createAsyncThunk(
           }
         }, 1000);
       });
-
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);
-
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
@@ -83,8 +74,6 @@ export const logoutUser = createAsyncThunk(
       return rejectWithValue(error.message);
     }
   }
-);
-
 // Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
   'auth/checkAuthStatus',
@@ -92,7 +81,6 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-
       if (token && user) {
         return {
           user: JSON.parse(user),
@@ -105,16 +93,12 @@ export const checkAuthStatus = createAsyncThunk(
       return rejectWithValue(error.message);
     }
   }
-);
-
 const initialState = {
   user: null,
   token: localStorage.getItem('token'),
   isAuthenticated: false,
   isLoading: false,
   error: null
-};
-
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -148,7 +132,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Signup
     builder
       .addCase(signupUser.pending, (state) => {
@@ -166,7 +149,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Logout
     builder
       .addCase(logoutUser.pending, (state) => {
@@ -183,7 +165,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Check auth status
     builder
       .addCase(checkAuthStatus.pending, (state) => {
@@ -203,15 +184,11 @@ const authSlice = createSlice({
         state.token = null;
       });
   }
-});
-
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
-
 // Selectors
 export const selectUser = (state) => state.auth.user;
 export const selectToken = (state) => state.auth.token;
 export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
 export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
-
 export default authSlice.reducer;

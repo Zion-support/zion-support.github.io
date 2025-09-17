@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AITrendsPredictions2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -31,7 +30,6 @@ const AITrendsPredictions2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Center Features */}
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/80">
@@ -51,7 +49,6 @@ const AITrendsPredictions2025PromotionBanner: React.FC = () => {
                 <span className="text-sm">Quantum AI</span>
               </div>
             </div>
-
             {/* Right Actions */}
             <div className="flex items-center gap-3">
               <a
@@ -71,7 +68,6 @@ const AITrendsPredictions2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Features */}
           <div className="md:hidden pb-4">
             <div className="flex items-center justify-center gap-4 text-white/80">
@@ -94,7 +90,6 @@ const AITrendsPredictions2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
@@ -133,7 +128,6 @@ const AITrendsPredictions2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AITrendsPredictions2025PromotionBanner;
 </div></div></div>

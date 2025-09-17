@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryTechBanner2034: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white">
@@ -9,7 +8,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.05%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25224%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Main Banner */}
         <div
@@ -28,11 +26,9 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             </div>
             <span className="text-6xl animate-bounce">{bannerContent[currentSlide].icon}</span>
           </div>
-          
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             {bannerContent[currentSlide].description}
           </p>
-
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-full text-lg font-semibold animate-pulse">
               ✨ REVOLUTIONARY BREAKTHROUGH
@@ -44,7 +40,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               🌟 INFINITE POSSIBILITIES
             </span>
           </div>
-
           <div className="flex justify-center space-x-4">
             <a
               href={bannerContent[currentSlide].link}
@@ -57,7 +52,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-2 mb-8">
           {bannerContent.map((_, index) => (
@@ -70,7 +64,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Quick Access Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +82,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom Stats */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,6 +109,5 @@ const RevolutionaryTechBanner2034: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTechBanner2034;

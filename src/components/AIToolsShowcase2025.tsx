@@ -1,6 +1,5 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Brain
@@ -18,7 +17,6 @@ import {
   CheckCircle,
   Sparkles
 } from 'lucide-react';
-
 interface AITool {
   id: string;
   name: string;
@@ -30,8 +28,6 @@ interface AITool {
   rating: number;
   isNew?: boolean;
   isPopular?: boolean;
-}
-
 const aiTools: AITool[] = [
   {
     id: '1',
@@ -98,9 +94,8 @@ const aiTools: AITool[] = [
     rating: 4.8,
     isPopular: true
   }
-];
-
 const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content', 'Search'Communication'];
+};
 
 export default function AIToolsShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
@@ -225,6 +220,5 @@ export default function AIToolsShowcase2025() {
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                 View All Tools
   );
-};
 
 export default AIToolsShowcase2025;

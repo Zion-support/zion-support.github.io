@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateServiceShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
@@ -26,7 +25,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Service Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -44,7 +42,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
               <li>• AI consulting & strategy</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Computing</h3>
@@ -60,7 +57,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
               <li>• Quantum consulting</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Biotechnology</h3>
@@ -76,7 +72,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
               <li>• Microbiome engineering</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Space Technology</h3>
@@ -92,7 +87,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
               <li>• Space-based solar power</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Digital Transformation</h3>
@@ -108,7 +102,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
               <li>• Data analytics platforms</li>
             </ul>
           </div>
-          
           <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Research & Development</h3>
@@ -125,14 +118,12 @@ const UltimateServiceShowcase2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Service Implementation Process */}
         <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Service Implementation Process</h2>
             <p className="text-xl text-gray-300">How we deliver exceptional results</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
@@ -143,7 +134,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                 Comprehensive analysis of your needs, challenges, and opportunities to design the perfect solution.
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
                 2
@@ -153,7 +143,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                 Develop a detailed implementation strategy with clear milestones, timelines, and success metrics.
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
                 3
@@ -163,7 +152,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                 Execute the solution with our expert team, ensuring quality, security, and performance at every step.
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
                 4
@@ -175,14 +163,12 @@ const UltimateServiceShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-indigo-200">Real results from our service implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-6 border border-indigo-400/30">
@@ -202,7 +188,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Computing Breakthrough</h3>
                 <p className="text-gray-300 mb-4">
@@ -221,7 +206,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Biotech Innovation</h3>
@@ -240,7 +224,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
                 <h3 className="text-xl font-semibold text-white mb-3">Space Technology Deployment</h3>
                 <p className="text-gray-300 mb-4">
@@ -261,7 +244,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Service Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -269,33 +251,28 @@ const UltimateServiceShowcase2026: React.FC = () => {
             <div className="text-xl text-white mb-2">Projects Completed</div>
             <div className="text-gray-400">Successful implementations</div>
           </div>
-          
           <div className="text-center">
             <div className="text-6xl font-bold text-cyan-400 mb-2">99.9%</div>
             <div className="text-xl text-white mb-2">Success Rate</div>
             <div className="text-gray-400">Project delivery success</div>
           </div>
-          
           <div className="text-center">
             <div className="text-6xl font-bold text-emerald-400 mb-2">500+</div>
             <div className="text-xl text-white mb-2">Expert Team</div>
             <div className="text-gray-400">World-class professionals</div>
           </div>
-          
           <div className="text-center">
             <div className="text-6xl font-bold text-orange-400 mb-2">24/7</div>
             <div className="text-xl text-white mb-2">Support</div>
             <div className="text-gray-400">Round-the-clock assistance</div>
           </div>
         </div>
-
         {/* Pricing Tiers */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Service Tiers</h2>
             <p className="text-xl text-indigo-200">Choose the perfect service level for your needs</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-xl p-8 border border-gray-600/30">
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Starter</h3>
@@ -322,7 +299,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                 Get Started
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 rounded-xl p-8 border border-indigo-400/30 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -357,7 +333,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
                 Choose Plan
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-xl p-8 border border-gray-600/30">
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Enterprise</h3>
               <div className="text-4xl font-bold text-indigo-400 mb-6 text-center">Custom</div>
@@ -389,7 +364,6 @@ const UltimateServiceShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -409,6 +383,5 @@ const UltimateServiceShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateServiceShowcase2026;

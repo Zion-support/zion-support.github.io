@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightWrenchCodeDatabaseBarChart3ShieldZapBrainStar
+};
 
 export default function AIToolsUtilities2025Banner() {
   const tools = [
@@ -44,6 +45,7 @@ export default function AIToolsUtilities2025Banner() {
                     <IconComponent className="h-5 w-5 mr-2" />
                     <span className="text-sm font-medium">{tool.name}</span>
                 );
+};
               })}
             <div className="flex flex-wrap gap-4">
               <a 
@@ -89,6 +91,5 @@ export default function AIToolsUtilities2025Banner() {
               <div className="text-2xl font-bold text-yellow-400 mb-1">24/7</div>
               <div className="text-sm text-gray-400">Support Available</div>
   );
-};
 
 export default AIToolsUtilities2025Banner;

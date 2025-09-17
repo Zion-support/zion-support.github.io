@@ -1,7 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
-
 const services = [
   {
     id: 1,
@@ -99,9 +98,8 @@ const services = [
     popular: false,
     category: "Consulting"
   }
-];
-
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
+};
 
 export default function UltimateServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = React.useState("All");
@@ -230,6 +228,5 @@ export default function UltimateServicesShowcase2025() {
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
   );
-};
 
 export default UltimateServicesShowcase2025;

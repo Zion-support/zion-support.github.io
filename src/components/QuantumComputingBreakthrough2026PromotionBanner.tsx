@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function QuantumComputingBreakthrough2026PromotionBanner() {
   return (
@@ -79,4 +80,4 @@ export default function QuantumComputingBreakthrough2026PromotionBanner() {
             <p className="text-yellow-400 font-semibold animate-pulse">
               ⚡ Limited Time: Early access to quantum implementation toolkit
   );
-}
+};

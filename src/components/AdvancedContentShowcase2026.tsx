@@ -26,7 +26,6 @@ import {
   Database,
   Lock
 } from 'lucide-react';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -49,13 +48,10 @@ interface ContentItem {
     roi: number;
     impact: number;
   };
-}
-
 const AdvancedContentShowcase2026: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [sortBy, setSortBy] = useState('trending');
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
   const contentItems: ContentItem[] = [
     {
       id: 'ai-autonomous-business-operations-2026',
@@ -172,7 +168,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
       stats: { engagement: 87, roi: 300, impact: 93 }
     }
   ];
-
   const categories = [
     { id: 'all', label: 'All Content', icon: '🌟', count: contentItems.length },
     { id: 'Business AI', label: 'Business AI', icon: '🤖', count: contentItems.filter(item => item.category === 'Business AI').length },
@@ -182,14 +177,11 @@ const AdvancedContentShowcase2026: React.FC = () => {
     { id: 'Neural Interfaces', label: 'Neural Interfaces', icon: '🔗', count: contentItems.filter(item => item.category === 'Neural Interfaces').length },
     { id: 'Synthetic AI', label: 'Synthetic AI', icon: '🧬', count: contentItems.filter(item => item.category === 'Synthetic AI').length }
   ];
-
   const getFilteredContent = () => {
     let filtered = contentItems;
-    
     if (activeFilter !== 'all') {
       filtered = filtered.filter(item => item.category === activeFilter);
     }
-
     switch (sortBy) {
       case 'trending':
         return filtered.sort((a, b) => (b.views + b.likes) - (a.views + a.likes));
@@ -203,7 +195,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
         return filtered;
     }
   };
-
   const getUrgencyColor = (urgency: string) => {
     switch (urgency) {
       case 'Must Read':
@@ -222,7 +213,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
         return 'bg-gray-500 text-white';
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'article':
@@ -239,9 +229,7 @@ const AdvancedContentShowcase2026: React.FC = () => {
         return <BookOpen className="w-4 h-4" />;
     }
   };
-
   const filteredContent = getFilteredContent();
-
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -251,19 +239,16 @@ const AdvancedContentShowcase2026: React.FC = () => {
             <Sparkles className="w-5 h-5 text-purple-600 mr-2" />
             <span className="text-sm font-medium text-purple-700">ADVANCED CONTENT SHOWCASE 2026</span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Revolutionary
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> AI & Technology</span>
             <br />Insights & Research
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Explore cutting-edge research, breakthrough technologies, and revolutionary insights that are shaping the future of AI and technology. 
             From consciousness computing to interdimensional technology, discover what's possible.
           </p>
         </div>
-
         {/* Filters and Sorting */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12 space-y-4 lg:space-y-0">
           {/* Category Filters */}
@@ -286,7 +271,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Sort Options */}
           <div className="flex items-center space-x-4">
             <span className="text-sm font-medium text-gray-600">Sort by:</span>
@@ -302,7 +286,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
             </select>
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
           <AnimatePresence>
@@ -320,7 +303,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                 {/* Header with gradient background */}
                 <div className={`relative h-48 bg-gradient-to-br ${item.gradient} overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/20"></div>
-                  
                   {/* Content badges */}
                   <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                     {item.isNew && (
@@ -337,7 +319,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       {item.urgency}
                     </span>
                   </div>
-
                   {/* Category and type */}
                   <div className="absolute top-4 right-4 flex flex-col gap-2">
                     <span className="px-3 py-1 bg-white/90 text-gray-800 text-xs font-semibold rounded-full">
@@ -348,7 +329,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       {item.type.replace('-', ' ')}
                     </span>
                   </div>
-
                   {/* Read time */}
                   <div className="absolute bottom-4 left-4">
                     <div className="flex items-center text-white/90 text-sm bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm">
@@ -356,7 +336,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       {item.readTime}
                     </div>
                   </div>
-
                   {/* Stats overlay */}
                   <div className="absolute bottom-4 right-4">
                     <div className="flex items-center space-x-3 text-white/90 text-sm bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm">
@@ -371,7 +350,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   {/* Author and date */}
@@ -384,17 +362,14 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       {new Date(item.publishDate).toLocaleDateString()}
                     </div>
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors line-clamp-2">
                     {item.title}
                   </h3>
-
                   {/* Excerpt */}
                   <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
                     {item.excerpt}
                   </p>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -406,7 +381,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-4 p-3 bg-gray-50 rounded-lg">
                     <div className="text-center">
@@ -422,7 +396,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       <div className="text-xs text-gray-500">Impact</div>
                     </div>
                   </div>
-
                   {/* Actions */}
                   <div className="flex items-center justify-between">
                     <Link
@@ -432,7 +405,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       Read Full Article
                       <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
-
                     <div className="flex items-center space-x-3 text-gray-400">
                       <button className="hover:text-red-500 transition-colors">
                         <Heart className="w-4 h-4" />
@@ -450,7 +422,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
             ))}
           </AnimatePresence>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-12 text-white relative overflow-hidden">
@@ -458,7 +429,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
             </div>
-            
             <div className="relative z-10">
               <div className="text-6xl mb-6">🚀</div>
               <h3 className="text-3xl font-bold mb-4">
@@ -468,7 +438,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                 Join thousands of innovators, researchers, and business leaders who are already transforming their industries 
                 with our cutting-edge insights and revolutionary technologies.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/content-library"
@@ -478,7 +447,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                   Explore Full Library
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                
                 <Link
                   to="/newsletter-signup"
                   className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
@@ -493,6 +461,5 @@ const AdvancedContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AdvancedContentShowcase2026;

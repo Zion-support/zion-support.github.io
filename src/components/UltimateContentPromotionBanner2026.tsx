@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const UltimateContentPromotionBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "🚀 Autonomous Business AI - 300% Efficiency Gains",
     "⚛️ Quantum ML Platform - 1000x Faster Processing", 
@@ -11,17 +9,13 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
     "🔗 Neural Interfaces - Human-AI Symbiosis",
     "⚡ Edge AI Revolution - Ultra-Low Latency"
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
-
     return () => clearInterval(timer);
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-4 px-6 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
@@ -40,7 +34,6 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
             </p>
           </div>
         </div>
-        
         <div className="flex items-center space-x-4">
           <a
             href="/pages/NewContentShowcase2026"
@@ -58,7 +51,6 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
           </button>
         </div>
       </div>
-      
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-4 -left-4 w-8 h-8 bg-white bg-opacity-10 rounded-full animate-ping"></div>
@@ -67,6 +59,5 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateContentPromotionBanner2026;

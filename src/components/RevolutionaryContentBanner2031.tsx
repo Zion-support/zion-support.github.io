@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentBanner2031: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-16 mb-8 rounded-2xl relative overflow-hidden">
@@ -8,16 +7,13 @@ const RevolutionaryContentBanner2031: React.FC = () => {
         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           🌟 REVOLUTIONARY SHOWCASE • JANUARY 2031
         </div>
-        
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
           Revolutionary Technology Showcase 2031
         </h2>
-        
         <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
           Witness the convergence of artificial consciousness, quantum reality manipulation, and interdimensional 
           computing. Experience technologies that redefine the boundaries of existence and consciousness.
         </p>
-        
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🌌</div>
@@ -29,7 +25,6 @@ const RevolutionaryContentBanner2031: React.FC = () => {
               Experience Universal Mind →
             </a>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-xl font-bold mb-2">Quantum Reality Manipulator</h3>
@@ -40,7 +35,6 @@ const RevolutionaryContentBanner2031: React.FC = () => {
               Control Reality →
             </a>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🧠🌍</div>
             <h3 className="text-xl font-bold mb-2">Interdimensional Neural Matrix</h3>
@@ -52,7 +46,6 @@ const RevolutionaryContentBanner2031: React.FC = () => {
             </a>
           </div>
         </div>
-        
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/pages/RevolutionaryTechShowcase2031" className="bg-gradient-to-r from-cyan-600 to-pink-600 text-white px-8 py-4 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience Revolutionary Showcase →
@@ -64,6 +57,5 @@ const RevolutionaryContentBanner2031: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryContentBanner2031;

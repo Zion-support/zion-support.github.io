@@ -16,7 +16,6 @@ import {
   Globe,
   Users
 } from 'lucide-react';
-
 const RevolutionaryAIServices2026: React.FC = () => {
   const services = [
     {
@@ -62,7 +61,6 @@ const RevolutionaryAIServices2026: React.FC = () => {
       price: "Starting at $80,000/month"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -111,7 +109,6 @@ import {
   ArrowRight,
   Sparkles
 } from 'lucide-react';
-
 const RevolutionaryAIServices2026 = () => {
   const services = [
     {
@@ -275,14 +272,12 @@ const RevolutionaryAIServices2026 = () => {
       category: "Green Technology"
     }
   ];
-
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: Target },
     { number: "50+", label: "Countries Served", icon: Globe },
     { number: "$2B+", label: "Value Created", icon: TrendingUp },
     { number: "99%", label: "Success Rate", icon: Award }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -371,7 +366,6 @@ const RevolutionaryAIServices2026 = () => {
       category: "Metaverse Technology"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -392,7 +386,6 @@ const RevolutionaryAIServices2026 = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -400,7 +393,6 @@ const RevolutionaryAIServices2026 = () => {
         <meta name="description" content="Discover our revolutionary AI services including conscious AI systems, quantum processing, neural interfaces, and interdimensional computing solutions." />
         <meta name="keywords" content="AI services, conscious AI, quantum computing, neural interfaces, cybersecurity, interdimensional computing" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div 
@@ -416,7 +408,6 @@ const RevolutionaryAIServices2026 = () => {
             Experience the future of artificial intelligence with our groundbreaking services that push the boundaries of what's possible. 
             From conscious AI systems to interdimensional computing, we're redefining reality itself.
           </p>
-          
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Link 
               to="/pages/ConsciousAIRevolution2026" 
@@ -438,7 +429,6 @@ const RevolutionaryAIServices2026 = () => {
             </Link>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
@@ -455,11 +445,9 @@ const RevolutionaryAIServices2026 = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white">{service.title}</h3>
               </div>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-              
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-300">
@@ -468,18 +456,15 @@ const RevolutionaryAIServices2026 = () => {
                   </li>
                 ))}
               </ul>
-              
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 p-4 rounded-lg mb-4">
                 <p className="text-cyan-400 font-bold text-lg">{service.price}</p>
               </div>
-              
               <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
             </motion.div>
           ))}
         </div>
-
         {/* Testimonials */}
         <motion.div 
           className="mb-20"
@@ -509,7 +494,6 @@ const RevolutionaryAIServices2026 = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div 
           className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30"
@@ -584,7 +568,6 @@ const RevolutionaryAIServices2026 = () => {
               From synthetic intelligence to space technology, we're building the future today.
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -601,7 +584,6 @@ const RevolutionaryAIServices2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -624,7 +606,6 @@ const RevolutionaryAIServices2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -655,7 +636,6 @@ const RevolutionaryAIServices2026 = () => {
               Cutting-edge AI technologies that are reshaping industries and creating new possibilities for human advancement.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -674,9 +654,7 @@ const RevolutionaryAIServices2026 = () => {
                     <span className="text-sm text-blue-400">{service.category}</span>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
                     <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
@@ -691,7 +669,6 @@ const RevolutionaryAIServices2026 = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
                     <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
@@ -706,7 +683,6 @@ const RevolutionaryAIServices2026 = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="border-t border-white/20 pt-4">
                   <div className="text-lg font-bold text-white mb-2">{service.pricing}</div>
                   <motion.button
@@ -730,11 +706,9 @@ const RevolutionaryAIServices2026 = () => {
                     <span className="text-purple-400 text-sm font-medium">{service.category}</span>
                   </div>
                 </div>
-
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
@@ -743,7 +717,6 @@ const RevolutionaryAIServices2026 = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
                   <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105">
@@ -755,7 +728,6 @@ const RevolutionaryAIServices2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -786,7 +758,6 @@ const RevolutionaryAIServices2026 = () => {
               Leading organizations trust our revolutionary AI services to transform their operations.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -822,7 +793,6 @@ const RevolutionaryAIServices2026 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -882,6 +852,5 @@ const RevolutionaryAIServices2026 = () => {
       </section>
     </div>
   );
-};
 
 export default RevolutionaryAIServices2026;

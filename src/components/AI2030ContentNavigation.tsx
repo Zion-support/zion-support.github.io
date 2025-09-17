@@ -1,6 +1,5 @@
 "use client";
 'use client';
-
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CardContent } from '@/components/ui/card';
@@ -18,6 +17,7 @@ import {
   TrendingUp,
   Users
 } from 'lucide-react';
+};
 
 export default function AI2030ContentNavigation() {
   const [isExpandedsetIsExpanded] = useState(false);
@@ -208,6 +208,5 @@ export default function AI2030ContentNavigation() {
               </>
             )}
   );
-};
 
 export default AI2030ContentNavigation;

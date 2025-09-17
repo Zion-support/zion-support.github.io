@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import Card from './Card';
-
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const testimonials = [
     {
       id: 1,
@@ -47,31 +45,28 @@ const Testimonials: React.FC = () => {
       avatar: '/testimonials/lisa-wang.jpg'
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
+};
     }, 5000);
-
     return () => clearInterval(interval);
   }, [testimonials.length]);
-
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
+};
   };
-
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
+};
   };
-
   const currentTestimonial = testimonials[currentIndex];
-
   return (
     <section className="py-20 bg-gray-900/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +78,6 @@ const Testimonials: React.FC = () => {
             Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
           </p>
         </div>
-
         <div className="relative max-w-4xl mx-auto">
           <Card className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 p-8 md:p-12">
             <div className="text-center">
@@ -93,12 +87,10 @@ const Testimonials: React.FC = () => {
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
-
               {/* Testimonial Content */}
               <blockquote className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 "{currentTestimonial.content}"
               </blockquote>
-
               {/* Author Info */}
               <div className="flex items-center justify-center space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
@@ -116,7 +108,6 @@ const Testimonials: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Navigation */}
             <div className="flex justify-center mt-8 space-x-4">
               <button
@@ -126,7 +117,6 @@ const Testimonials: React.FC = () => {
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              
               <button
                 onClick={nextTestimonial}
                 className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 text-white transition-colors"
@@ -135,7 +125,6 @@ const Testimonials: React.FC = () => {
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
-
             {/* Dots Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
@@ -156,6 +145,5 @@ const Testimonials: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default Testimonials;

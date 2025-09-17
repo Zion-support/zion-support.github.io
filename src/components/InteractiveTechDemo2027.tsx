@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-
 const InteractiveTechDemo2027: React.FC = () => {
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
@@ -24,7 +22,6 @@ const InteractiveTechDemo2027: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Demo Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {demos.map((demo, index) => (
@@ -44,7 +41,6 @@ const InteractiveTechDemo2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Demo Content */}
         <AnimatePresence mode="wait">
           <div
@@ -65,7 +61,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                 <p className="text-xl opacity-90 mb-8">
                   {demos[activeDemo].description}
                 </p>
-                
                 <div className="space-y-4 mb-8">
                   {demos[activeDemo].features.map((feature, index) => (
                     <div
@@ -80,7 +75,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={startDemo}
@@ -105,7 +99,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Demo Visualization */}
               <div className="relative">
                 <div
@@ -118,7 +111,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                   <div className="relative z-10">
                     <div className="text-8xl mb-4">{demos[activeDemo].icon}</div>
                     <h4 className="text-2xl font-bold mb-4">Live Demo</h4>
-                    
                     {/* Progress Bar */}
                     <div className="mb-6">
                       <div className="bg-white/20 rounded-full h-4 mb-2">
@@ -132,7 +124,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                         {isPlaying ? `Demo Progress: ${progress}%` : 'Click Start Demo to begin'}
                       </p>
                     </div>
-
                     {/* Demo Stats */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-white/20 rounded-lg p-4">
@@ -155,8 +146,6 @@ const InteractiveTechDemo2027: React.FC = () => {
               </div>
             </div>
           </div>
-        
-
         {/* Call to Action */}
         <div
           initial={{ opacity: 0, y: 30 }}
@@ -190,6 +179,5 @@ const InteractiveTechDemo2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveTechDemo2027;

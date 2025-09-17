@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Atom, Cpu, Zap, Lock, Target, Users, TrendingUp, Shield, Lightbulb, Globe } from 'lucide-react';
-
 const QuantumComputingBreakthrough2025: React.FC = () => {
   const quantumFeatures = [
     {
@@ -41,7 +40,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       stats: "Quantum-resistant"
     }
   ];
-
   const applications = [
     {
       title: "Drug Discovery Revolution",
@@ -80,7 +78,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       category: "AI"
     }
   ];
-
   const timeline = [
     {
       year: "2025",
@@ -103,7 +100,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       description: "Seamless integration with artificial intelligence systems"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -119,16 +115,13 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <Atom className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-sm font-medium">Quantum Computing Breakthrough 2025</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Quantum Computing Revolution
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               The world's first commercially viable quantum computing breakthrough, delivering exponential 
               computational power that will transform every industry and solve humanity's greatest challenges.
             </p>
-            
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg">
                 <span className="text-lg font-semibold">1000+ Qubits</span>
@@ -140,7 +133,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 <span className="text-lg font-semibold">Quantum-Safe Security</span>
               </div>
             </div>
-            
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -152,7 +144,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Features Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -169,7 +160,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               Revolutionary quantum computing capabilities that redefine the boundaries of computation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {quantumFeatures.map((feature, index) => (
               <motion.div
@@ -194,7 +184,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Applications Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/30 to-gray-900/30">
         <div className="max-w-7xl mx-auto">
@@ -211,7 +200,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               Quantum computing applications already revolutionizing industries worldwide
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((app, index) => (
               <motion.div
@@ -236,7 +224,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Timeline Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -253,10 +240,8 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               The timeline of quantum computing breakthroughs and future milestones
             </p>
           </motion.div>
-
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-400"></div>
-            
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <motion.div
@@ -273,9 +258,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                       <p className="text-gray-300">{item.description}</p>
                     </div>
                   </div>
-                  
                   <div className="relative z-10 w-4 h-4 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full border-4 border-gray-900"></div>
-                  
                   <div className="w-1/2"></div>
                 </motion.div>
               ))}
@@ -283,7 +266,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Global Impact */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/30 to-gray-900/30">
         <div className="max-w-7xl mx-auto">
@@ -302,7 +284,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 The quantum computing revolution is already transforming industries and creating 
                 unprecedented opportunities for scientific discovery and technological advancement.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">100+</div>
@@ -325,7 +306,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -341,7 +321,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               Join the quantum computing revolution and discover how exponential computational power 
               can transform your organization and accelerate innovation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -351,7 +330,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 Quantum Computing Guide
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -365,6 +343,5 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default QuantumComputingBreakthrough2025;

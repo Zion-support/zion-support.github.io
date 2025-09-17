@@ -1,4 +1,5 @@
 import React from 'react';
+};
 
 export default function SecretsRotationAutomationPage() {
 	const features = [
@@ -30,4 +31,3 @@ export default function SecretsRotationAutomationPage() {
 							<ExternalLink className="w-4 h-4" /> Google Cloud KMS
 		</>
 	);
-}

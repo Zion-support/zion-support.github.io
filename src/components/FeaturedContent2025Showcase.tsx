@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FeaturedContent2025Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-white">
@@ -10,17 +9,14 @@ const FeaturedContent2025Showcase: React.FC = () => {
           <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-semibold">🌟 FEATURED CONTENT 2025</span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Must-Read Content for Business Leaders
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover the latest insights, strategies, and success stories from industry leaders. 
             Expert guidance to accelerate your AI transformation journey.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
             <div
@@ -39,7 +35,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className={`p-8 ${content.featured ? 'lg:p-12' : ''}`}>
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
@@ -47,19 +42,16 @@ const FeaturedContent2025Showcase: React.FC = () => {
                     </span>
                     <span className="text-gray-500 text-sm">{content.readTime}</span>
                   </div>
-                  
                   <h3 className={`font-bold text-gray-900 mb-4 leading-tight ${
                     content.featured ? 'text-2xl lg:text-3xl' : 'text-xl'
                   }`}>
                     {content.title}
                   </h3>
-                  
                   <p className={`text-gray-600 mb-6 leading-relaxed ${
                     content.featured ? 'text-lg' : ''
                   }`}>
                     {content.description}
                   </p>
-                  
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-3">
                       <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
@@ -70,7 +62,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <a
                     href={content.href}
                     className={`inline-flex items-center font-semibold transition-colors ${
@@ -83,14 +74,12 @@ const FeaturedContent2025Showcase: React.FC = () => {
                     <span className="ml-2">→</span>
                   </a>
                 </div>
-                
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
         </div>
-
         {/* Bottom Stats Section */}
         <div
           className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
@@ -114,7 +103,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div
           className="mt-12 text-center"
@@ -126,7 +114,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
             <p className="text-gray-600 mb-6">
               Get the newest insights, case studies, and implementation guides delivered to your inbox weekly.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -137,7 +124,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
                 Subscribe
               </button>
             </div>
-            
             <p className="text-xs text-gray-500 mt-4">
               No spam. Unsubscribe anytime. Privacy policy applies.
             </p>
@@ -146,6 +132,5 @@ const FeaturedContent2025Showcase: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default FeaturedContent2025Showcase;

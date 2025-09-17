@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function NeuralInterface2025BreakthroughBanner() {
   return (
@@ -25,4 +26,4 @@ export default function NeuralInterface2025BreakthroughBanner() {
             >
               Join Beta Program
   );
-}
+};

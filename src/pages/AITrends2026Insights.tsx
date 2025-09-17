@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Brain, Zap, Shield, Database } from 'lucide-react';
-
 const AITrends2026Insights: React.FC = () => {
   const trends = [
     {
@@ -35,7 +34,6 @@ const AITrends2026Insights: React.FC = () => {
       stats: "Infinite scalability"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -43,7 +41,6 @@ const AITrends2026Insights: React.FC = () => {
         <meta name="description" content="Discover the cutting-edge AI trends shaping 2026: conscious AI systems, quantum-neural fusion, autonomous cybersecurity, and multi-dimensional data processing." />
         <meta name="keywords" content="AI trends 2026, conscious AI, quantum computing, cybersecurity, neural networks, future technology" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <motion.div 
           className="text-center mb-16"
@@ -57,13 +54,11 @@ const AITrends2026Insights: React.FC = () => {
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Explore the groundbreaking AI technologies that are reshaping reality and transforming how we interact with intelligent systems.
           </p>
-          
           <div className="flex items-center justify-center gap-4 mb-8">
             <TrendingUp className="w-8 h-8 text-green-400" />
             <span className="text-xl text-green-400 font-semibold">Latest Trends</span>
           </div>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {trends.map((trend, index) => (
             <motion.div
@@ -85,7 +80,6 @@ const AITrends2026Insights: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         <motion.div 
           className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-purple-400/30"
           initial={{ opacity: 0, y: 20 }}
@@ -115,6 +109,5 @@ const AITrends2026Insights: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AITrends2026Insights;

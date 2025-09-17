@@ -1,11 +1,9 @@
 import React from 'react';
-
 const AI2025TrendsInnovationShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div
@@ -15,18 +13,15 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
             <Star className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-blue-300 font-medium">2025 AI Innovation Trends</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             The Future of
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI Innovation</span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover the revolutionary AI trends and innovations that will transform your business in 2025 and beyond. 
             Stay ahead of the curve with cutting-edge technology solutions.
           </p>
         </div>
-
         {/* Interactive Trends Carousel */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -56,7 +51,6 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Active Trend Display */}
             <div className="relative">
                 <div
@@ -72,11 +66,9 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
                       <p className="text-blue-300 font-medium">{trends[activeTrend].stats}</p>
                     </div>
                   </div>
-                  
                   <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                     {trends[activeTrend].description}
                   </p>
-                  
                   <div className="space-y-3">
                     {trends[activeTrend].features.map((featureindex) => (
                       <div key={index} className="flex items-center space-x-3">
@@ -90,7 +82,6 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Innovation Showcase */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Innovations</h3>
@@ -108,11 +99,9 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
                     {innovation.impact}
                   </span>
                 </div>
-                
                 <h4 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
                   {innovation.title}
                 </h4>
-                
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {innovation.description}
                 </p>
@@ -120,7 +109,6 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Benefits Stats */}
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Results</h3>
@@ -139,7 +127,6 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -157,6 +144,5 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default AI2025TrendsInnovationShowcase;

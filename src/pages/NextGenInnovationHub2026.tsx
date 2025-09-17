@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 const NextGenInnovationHub2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const innovations = {
     ai: [
       {
@@ -65,7 +63,6 @@ const NextGenInnovationHub2026: React.FC = () => {
       }
     ]
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -82,7 +79,6 @@ const NextGenInnovationHub2026: React.FC = () => {
             and unlock human potential in ways never before imagined.
           </p>
         </div>
-
         {/* Interactive Tabs */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800 rounded-lg p-2 flex space-x-2">
@@ -105,7 +101,6 @@ const NextGenInnovationHub2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {innovations[activeTab as keyof typeof innovations].map((innovation, index) => (
@@ -129,14 +124,12 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Interactive Lab Section */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">🔬 Innovation Laboratory</h2>
             <p className="text-xl text-gray-300">Experiment with cutting-edge technologies in our virtual lab</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6">
@@ -151,7 +144,6 @@ const NextGenInnovationHub2026: React.FC = () => {
                   Start Simulation
                 </button>
               </div>
-              
               <div className="bg-gradient-to-r from-green-600 to-cyan-600 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Quantum State Explorer</h3>
                 <p className="text-gray-200 mb-4">Visualize quantum states and entanglement</p>
@@ -165,7 +157,6 @@ const NextGenInnovationHub2026: React.FC = () => {
                 </button>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Gene Editing Interface</h3>
@@ -179,7 +170,6 @@ const NextGenInnovationHub2026: React.FC = () => {
                   Edit Genes
                 </button>
               </div>
-              
               <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Neural Interface Test</h3>
                 <p className="text-gray-200 mb-4">Test direct brain-computer communication</p>
@@ -195,7 +185,6 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Innovation Timeline */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Innovation Timeline 2026</h2>
@@ -222,7 +211,6 @@ const NextGenInnovationHub2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
@@ -242,6 +230,5 @@ const NextGenInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NextGenInnovationHub2026;

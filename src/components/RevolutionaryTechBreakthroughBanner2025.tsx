@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryTechBreakthroughBanner2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
@@ -33,6 +32,5 @@ const RevolutionaryTechBreakthroughBanner2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTechBreakthroughBanner2025;

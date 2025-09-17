@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveSuccessMetrics2025: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -9,7 +8,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div
@@ -20,11 +18,9 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
               Success Metrics 2025
             </h2>
           </div>
-          
             Real-time performance metrics showcasing unprecedented business transformation results.
             See how our clients achieve extraordinary growth and efficiency.
           </divp>
-
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300"
@@ -34,7 +30,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Main Metrics Display */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Current Metric Showcase */}
@@ -49,7 +44,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                     {metrics[currentMetric].chart}
                   </div>
                 </div>
-
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
                     <div className="p-4 bg-white/20 rounded-full mr-6">
@@ -64,11 +58,9 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                       </p>
                     </div>
                   </div>
-
                   <div className="text-6xl font-bold text-white mb-8">
                     {metrics[currentMetric].value}
                   </div>
-
                   <div className="grid grid-cols-2 gap-4">
                     {metrics[currentMetric].details.map((detailindex) => (
                       <div
@@ -83,7 +75,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Metric Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
               {metrics.map((_index) => (
@@ -102,7 +93,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Live Stats Panel */}
           <div className="space-y-6">
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
@@ -110,7 +100,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                 <Activity className="w-6 h-6 mr-2 text-green-400" />
                 Live Performance
               </h4>
-              
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-white mb-2">
@@ -123,7 +112,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                     />
                   </div>
                 </div>
-
                 <div>
                   <div className="flex justify-between text-white mb-2">
                     <span>Client Satisfaction</span>
@@ -135,7 +123,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                     />
                   </div>
                 </div>
-
                 <div>
                   <div className="flex justify-between text-white mb-2">
                     <span>Efficiency Boost</span>
@@ -149,7 +136,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Achievements */}
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-xl font-bold text-white mb-4">Achievements</h4>
@@ -170,7 +156,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Stats Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
@@ -196,7 +181,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default InteractiveSuccessMetrics2025;
 </div></div></div></div>

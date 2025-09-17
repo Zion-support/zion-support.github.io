@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025FuturePredictionsBanner() {
   return (
@@ -39,4 +40,4 @@ export default function AI2025FuturePredictionsBanner() {
               <h3 className="text-lg font-semibold mb-2">Global Integration</h3>
               <p className="text-sm opacity-90">Industry transformation</p>
   );
-}
+};

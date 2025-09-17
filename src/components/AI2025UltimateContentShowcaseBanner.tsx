@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025UltimateContentShowcaseBanner() {
   return (
@@ -83,4 +84,4 @@ export default function AI2025UltimateContentShowcaseBanner() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">1M+</div>
               <div className="text-indigo-200 text-sm">Users</div>
   );
-}
+};

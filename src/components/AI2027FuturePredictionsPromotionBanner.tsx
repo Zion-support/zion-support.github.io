@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2027FuturePredictionsPromotionBanner() {
   return (
@@ -44,4 +45,4 @@ export default function AI2027FuturePredictionsPromotionBanner() {
             >
               Get Started
   );
-}
+};

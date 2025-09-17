@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const EnhancedContentShowcase: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -32,14 +31,12 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Interactive Technology Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Portfolio</h2>
           <p className="text-xl opacity-80">Experience the future with our most advanced solutions</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +60,6 @@ const EnhancedContentShowcase: React.FC = () => {
               Explore AI →
             </button>
           </div>
-          
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group"
@@ -86,7 +82,6 @@ const EnhancedContentShowcase: React.FC = () => {
               Go Quantum →
             </button>
           </div>
-          
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 group"
@@ -109,7 +104,6 @@ const EnhancedContentShowcase: React.FC = () => {
               Connect Mind →
             </button>
           </div>
-          
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300 group"
@@ -132,7 +126,6 @@ const EnhancedContentShowcase: React.FC = () => {
               Explore Systems →
             </button>
           </div>
-          
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 group"
@@ -155,7 +148,6 @@ const EnhancedContentShowcase: React.FC = () => {
               Discover Edge AI →
             </button>
           </div>
-          
           <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300 group"
@@ -180,7 +172,6 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Interactive Demo Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 py-20">
         <div className="container mx-auto px-4">
@@ -188,7 +179,6 @@ const EnhancedContentShowcase: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Interactive Technology Demonstrations</h2>
             <p className="text-xl opacity-80">Experience our technologies in action with hands-on demos</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-4">🧠 AI Creativity Lab</h3>
@@ -203,7 +193,6 @@ const EnhancedContentShowcase: React.FC = () => {
                 Start AI Demo
               </button>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-4">⚛️ Quantum Simulator</h3>
               <p className="opacity-80 mb-6">Experience quantum computing power with our interactive simulator.</p>
@@ -224,33 +213,28 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Metrics */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Performance Metrics</h2>
           <p className="text-xl opacity-80">See the incredible performance of our technologies</p>
         </div>
-        
         <div className="grid md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-5xl font-bold text-blue-400 mb-2">99.9%</div>
             <div className="text-lg opacity-80">Accuracy Rate</div>
             <div className="text-sm opacity-60">Across all AI models</div>
           </div>
-          
           <div className="text-center">
             <div className="text-5xl font-bold text-purple-400 mb-2">10^15x</div>
             <div className="text-lg opacity-80">Speed Increase</div>
             <div className="text-sm opacity-60">Quantum processing power</div>
           </div>
-          
           <div className="text-center">
             <div className="text-5xl font-bold text-emerald-400 mb-2">&lt;1ms</div>
             <div className="text-lg opacity-80">Response Time</div>
             <div className="text-sm opacity-60">Real-time processing</div>
           </div>
-          
           <div className="text-center">
             <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
             <div className="text-lg opacity-80">Availability</div>
@@ -258,7 +242,6 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 py-20">
         <div className="container mx-auto px-4">
@@ -280,6 +263,5 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedContentShowcase;

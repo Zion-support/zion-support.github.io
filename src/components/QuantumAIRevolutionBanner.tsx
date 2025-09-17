@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCpuBrainZapShieldTrendingUp
+};
 
 export default function QuantumAIRevolutionBanner() {
   return (
@@ -91,4 +92,4 @@ export default function QuantumAIRevolutionBanner() {
             >
               Explore Quantum AI Services
   );
-}
+};

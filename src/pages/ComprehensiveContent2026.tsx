@@ -3,17 +3,14 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock, User, Tag, Star, TrendingUp, Zap, Globe, Shield, Brain, Search, Filter } from 'lucide-react';
 import { getFeaturedBlogPosts, getRecentBlogPosts, getBlogCategories, searchBlogPosts } from '../data/blog-posts';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-
 const ComprehensiveContent2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'services'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('newest');
-
   const allPosts = getFeaturedBlogPosts();
   const allServices = COMPREHENSIVE_SERVICES;
   const categories = getBlogCategories();
-
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai & machine learning':
@@ -31,7 +28,6 @@ const ComprehensiveContent2026: React.FC = () => {
         return TrendingUp;
     }
   };
-
   const formatPrice = (price: number, currency: string) => {
     if (price >= 1000000) {
       return `${currency}${(price / 1000000).toFixed(1)}M`;
@@ -40,10 +36,8 @@ const ComprehensiveContent2026: React.FC = () => {
     }
     return `${currency}${price}`;
   };
-
   const filterContent = () => {
     let content = [];
-    
     if (activeTab === 'all' || activeTab === 'blog') {
       let posts = allPosts;
       if (searchQuery) {
@@ -54,7 +48,6 @@ const ComprehensiveContent2026: React.FC = () => {
       }
       content = [...content, ...posts.map(post => ({ ...post, type: 'blog' }))];
     }
-    
     if (activeTab === 'all' || activeTab === 'services') {
       let services = allServices;
       if (searchQuery) {
@@ -63,13 +56,13 @@ const ComprehensiveContent2026: React.FC = () => {
           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
           service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
         );
+};
       }
       if (selectedCategory !== 'All') {
         services = services.filter(service => service.category === selectedCategory);
       }
       content = [...content, ...services.map(service => ({ ...service, type: 'service' }))];
     }
-
     // Sort content
     if (sortBy === 'newest') {
       content.sort((a, b) => {
@@ -85,12 +78,9 @@ const ComprehensiveContent2026: React.FC = () => {
       content = content.filter(item => item.type === 'service');
       content.sort((a, b) => b.price - a.price);
     }
-
     return content;
   };
-
   const filteredContent = filterContent();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -143,7 +133,6 @@ const ComprehensiveContent2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Tab Navigation */}
       <div className="bg-white shadow-lg">
         <div className="container mx-auto px-4">
@@ -183,7 +172,6 @@ const ComprehensiveContent2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Content Grid */}
       <div className="container mx-auto px-4 py-12">
         <motion.div
@@ -193,7 +181,6 @@ const ComprehensiveContent2026: React.FC = () => {
         >
           {filteredContent.map((item, index) => {
             const CategoryIcon = getCategoryIcon(item.category);
-            
             if (item.type === 'blog') {
               return (
                 <motion.div
@@ -220,13 +207,11 @@ const ComprehensiveContent2026: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{item.excerpt}</p>
-                    
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-2">
                         <User className="w-4 h-4 text-gray-400" />
@@ -237,7 +222,6 @@ const ComprehensiveContent2026: React.FC = () => {
                         <span className="text-sm text-gray-600">Featured</span>
                       </div>
                     </div>
-
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
@@ -248,7 +232,6 @@ const ComprehensiveContent2026: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center space-x-2 group">
                       <span>Read More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -256,6 +239,7 @@ const ComprehensiveContent2026: React.FC = () => {
                   </div>
                 </motion.div>
               );
+};
             } else {
               return (
                 <motion.div
@@ -285,13 +269,11 @@ const ComprehensiveContent2026: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{item.description}</p>
-                    
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-2">
                         <Clock className="w-4 h-4 text-gray-400" />
@@ -302,7 +284,6 @@ const ComprehensiveContent2026: React.FC = () => {
                         <span className="text-sm text-gray-600">AI Score: {item.aiScore}</span>
                       </div>
                     </div>
-
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
@@ -313,7 +294,6 @@ const ComprehensiveContent2026: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     <div className="space-y-2 mb-4">
                       {item.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-600">
@@ -322,7 +302,6 @@ const ComprehensiveContent2026: React.FC = () => {
                         </div>
                       ))}
                     </div>
-
                     <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors duration-300 flex items-center justify-center space-x-2 group">
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -330,10 +309,10 @@ const ComprehensiveContent2026: React.FC = () => {
                   </div>
                 </motion.div>
               );
+};
             }
           })}
         </motion.div>
-
         {filteredContent.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -348,6 +327,5 @@ const ComprehensiveContent2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ComprehensiveContent2026;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIConsciousnessRevolution2026 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -11,6 +10,5 @@ const AIConsciousnessRevolution2026 = () => {
       </div>
     </div>
   );
-};
 
 export default AIConsciousnessRevolution2026;

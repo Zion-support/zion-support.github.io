@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+};
 
 export default function AIEthicsGovernanceFramework() {
 	return (
@@ -23,4 +24,3 @@ export default function AIEthicsGovernanceFramework() {
 			canonical="https://ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	);
-}

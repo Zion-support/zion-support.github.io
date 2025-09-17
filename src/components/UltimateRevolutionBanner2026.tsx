@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const UltimateRevolutionBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTech, setCurrentTech] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
-    
     const interval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % 4);
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
-
   const technologies = [
     {
       title: "Consciousness Computing Matrix",
@@ -41,7 +36,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
       color: "from-orange-600 to-red-600"
     }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -53,7 +47,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.2),transparent_50%)]"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-10">
           <motion.div
@@ -64,7 +57,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
           >
             🚀 ULTIMATE: Tech Revolution 2026
           </motion.div>
-          
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -73,7 +65,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
           >
             The Ultimate Revolution
           </motion.h2>
-          
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -84,7 +75,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
             Consciousness computing, reality manipulation, and evolutionary enhancement await.
           </motion.p>
         </div>
-
         {/* Rotating Technology Showcase */}
         <div className="max-w-5xl mx-auto mb-10">
           <AnimatePresence mode="wait">
@@ -101,7 +91,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
               <p className="text-xl opacity-90">{technologies[currentTech].description}</p>
             </motion.div>
           </AnimatePresence>
-          
           {/* Technology Indicators */}
           <div className="flex justify-center mt-8 space-x-3">
             {technologies.map((_, index) => (
@@ -115,7 +104,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Action Buttons */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -136,7 +124,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
             🌟 Advanced Tech 2025 →
           </a>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -152,7 +139,6 @@ const UltimateRevolutionBanner2026: React.FC = () => {
             </div>
           ))}
         </motion.div>
-
         {/* Impact Stats */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -180,6 +166,5 @@ const UltimateRevolutionBanner2026: React.FC = () => {
       </div>
     </motion.div>
   );
-};
 
 export default UltimateRevolutionBanner2026;

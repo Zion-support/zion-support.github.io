@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function NewContent2025AdvancedAutomationBanner() {
   return (
@@ -25,4 +26,4 @@ export default function NewContent2025AdvancedAutomationBanner() {
             >
               Get Started Today
   );
-}
+};

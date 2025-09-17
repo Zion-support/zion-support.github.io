@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function NewBlogPosts2025Banner() {
   return (
@@ -107,4 +108,4 @@ export default function NewBlogPosts2025Banner() {
             >
               Explore More Articles
   );
-}
+};

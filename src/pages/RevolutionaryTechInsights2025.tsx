@@ -2,12 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
-
 const RevolutionaryTechInsights2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -34,7 +32,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Key Insights Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <motion.div
@@ -55,7 +52,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
               <li>• AI-human collaboration</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +70,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
               <li>• Optimization algorithms</li>
             </ul>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,7 +89,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
             </ul>
           </motion.div>
         </div>
-
         {/* Featured Articles */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">🌟 Featured Articles</h2>
@@ -117,7 +111,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
                 Read Full Article →
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -138,7 +131,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Technology Trends */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">📈 Technology Trends 2025</h2>
@@ -165,7 +157,6 @@ const RevolutionaryTechInsights2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -187,10 +178,8 @@ const RevolutionaryTechInsights2025: React.FC = () => {
           </div>
         </motion.div>
       </main>
-      
       <Footer />
     </div>
   );
-};
 
 export default RevolutionaryTechInsights2025;

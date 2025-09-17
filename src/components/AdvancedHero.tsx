@@ -1,6 +1,5 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface AdvancedHeroProps {
   title: string;
   subtitle: string;
@@ -8,7 +7,7 @@ interface AdvancedHeroProps {
   ctaText?: string;
   ctaLink?: string;
   backgroundImage?: string;
-}
+};
 
 export default function AdvancedHero({
   title,
@@ -50,4 +49,4 @@ export default function AdvancedHero({
             >
               Learn More
   );
-}
+};

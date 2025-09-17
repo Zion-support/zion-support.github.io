@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryInnovationBanner2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -10,7 +9,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-pink-400/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <div
@@ -21,20 +19,17 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
             <Lightbulb className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-blue-300 font-medium">Revolutionary Innovations 2026</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             The Next Wave of
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
             <br />
             is Here
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover groundbreaking technologies that will reshape entire industries and 
             create new possibilities that were once thought impossible.
           </p>
         </div>
-
         {/* Innovations Grid */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,11 +57,9 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
                   <span className="text-blue-300 text-sm font-medium">{innovation.impact}</span>
                 </div>
               </div>
-              
               <p className="text-gray-300 leading-relaxed mb-4">
                 {innovation.description}
               </p>
-              
               <div className="flex items-center text-sm text-gray-400">
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
                 <span>In Active Development</span>
@@ -74,7 +67,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Stats Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +75,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
           <h3 className="text-3xl font-bold text-center text-white mb-12">
             Unprecedented Performance Metrics
           </h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((statindex) => (
               <div
@@ -98,7 +89,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -108,12 +98,10 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
             <h3 className="text-3xl font-bold text-white mb-4">
               Be Among the First to Experience the Future
             </h3>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join our exclusive early access program and be the first to experience 
               these revolutionary technologies that will define the next decade.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
@@ -124,7 +112,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </divbutton>
-              
               <divbutton
                 className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
               >
@@ -136,7 +123,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryInnovationBanner2026;
 </div></div>

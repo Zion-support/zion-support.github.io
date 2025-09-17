@@ -1,4 +1,5 @@
 import React from 'react';
+};
 
 export default function AIPlaybook2025(): JSX.Element {
   return (
@@ -45,4 +46,4 @@ export default function AIPlaybook2025(): JSX.Element {
               >
                 Explore Services
   );
-}
+};

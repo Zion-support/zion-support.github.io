@@ -14,7 +14,6 @@ import {
   CheckCircle,
   Sparkles
 } from 'lucide-react';
-
 const NextGenAIContentHub2026 = () => {
   const features = [
     {
@@ -42,7 +41,6 @@ const NextGenAIContentHub2026 = () => {
       benefits: ["End-to-end encryption", "Threat detection", "Compliance assurance"]
     }
   ];
-
   const successStories = [
     {
       company: "TechCorp Global",
@@ -63,7 +61,6 @@ const NextGenAIContentHub2026 = () => {
       description: "AI-powered diagnostic tools reduced patient wait times and improved accuracy."
     }
   ];
-
   const technologies = [
     "Neural Interface Technology",
     "Quantum Consciousness Computing",
@@ -72,7 +69,6 @@ const NextGenAIContentHub2026 = () => {
     "Emotional AI Systems",
     "Global AI Collaboration Platform"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -118,7 +114,6 @@ const NextGenAIContentHub2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -136,7 +131,6 @@ const NextGenAIContentHub2026 = () => {
               cutting-edge technology stack and innovative solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -162,7 +156,6 @@ const NextGenAIContentHub2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Success Stories Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -179,7 +172,6 @@ const NextGenAIContentHub2026 = () => {
               See how leading companies are transforming their operations with our AI solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -207,7 +199,6 @@ const NextGenAIContentHub2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -224,7 +215,6 @@ const NextGenAIContentHub2026 = () => {
               Explore the revolutionary technologies that are shaping the future of AI.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
@@ -243,7 +233,6 @@ const NextGenAIContentHub2026 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -281,6 +270,5 @@ const NextGenAIContentHub2026 = () => {
       </section>
     </div>
   );
-};
 
 export default NextGenAIContentHub2026;

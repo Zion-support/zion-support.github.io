@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2040OmniversalConsciousness() {
   const [currentDimensionsetCurrentDimension] = useState(0);
@@ -176,6 +177,5 @@ export default function AI2040OmniversalConsciousness() {
             >
               View Singularity
   );
-};
 
 export default AI2040OmniversalConsciousness;

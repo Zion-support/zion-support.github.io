@@ -2,11 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, Users, TrendingUp, Star, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface FeaturedContentShowcase2026Props {
   className?: string;
-}
-
 const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = ({ className = '' }) => {
   const featuredContent = [
     {
@@ -62,7 +59,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       featured: false
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,7 +68,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -84,7 +79,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       }
     }
   };
-
   return (
     <div className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,7 +103,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
             that are shaping the future of enterprise automation and artificial intelligence.
           </p>
         </motion.div>
-
         {/* Content Grid */}
         <motion.div
           variants={containerVariants}
@@ -134,7 +127,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                     </span>
                   </div>
                 )}
-
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-90`} />
@@ -143,7 +135,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                   </div>
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   {/* Category & Stats */}
@@ -162,17 +153,14 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                       </div>
                     </div>
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-200">
                     {content.title}
                   </h3>
-
                   {/* Excerpt */}
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {content.excerpt}
                   </p>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {content.tags.map((tag, tagIndex) => (
@@ -184,7 +172,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                       </span>
                     ))}
                   </div>
-
                   {/* Meta & CTA */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
@@ -192,7 +179,6 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                       <span className="mr-4">{content.readTime}</span>
                       <span>{content.publishedDate}</span>
                     </div>
-
                     <Link
                       to={`/blog/${content.id}`}
                       className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200"
@@ -202,14 +188,12 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
                     </Link>
                   </div>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/5 group-hover:to-indigo-500/10 transition-all duration-300" />
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -245,6 +229,5 @@ const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = 
       </div>
     </div>
   );
-};
 
 export default FeaturedContentShowcase2026;

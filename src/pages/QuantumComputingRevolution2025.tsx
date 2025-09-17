@@ -19,7 +19,6 @@ import React from 'react';
             breaks encryption, and revolutionizes industries across the globe.
           </p>
         </motion.div>
-
         {/* Quantum Capabilities Grid */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -40,7 +39,6 @@ import React from 'react';
               <li>• Quantum advantage proven</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔐</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Quantum Cryptography</h3>
@@ -54,7 +52,6 @@ import React from 'react';
               <li>• Post-quantum security</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Molecular Simulation</h3>
@@ -69,7 +66,6 @@ import React from 'react';
             </ul>
           </div>
         </motion.div>
-
         {/* Quantum Applications */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -83,7 +79,6 @@ import React from 'react';
               Discover how quantum computing is transforming industries and solving previously impossible problems
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
@@ -97,7 +92,6 @@ import React from 'react';
                   <span className="px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-sm">Algorithmic Trading</span>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl p-6 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🧬 Healthcare & Life Sciences</h3>
                 <p className="text-purple-200 mb-4">
@@ -110,7 +104,6 @@ import React from 'react';
                 </div>
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🌍 Climate & Energy</h3>
@@ -123,7 +116,6 @@ import React from 'react';
                   <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">Carbon Capture</span>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-xl p-6 border border-orange-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🚀 Aerospace & Defense</h3>
                 <p className="text-orange-200 mb-4">
@@ -138,7 +130,6 @@ import React from 'react';
             </div>
           </div>
         </motion.div>
-
         {/* Quantum Hardware Showcase */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -152,7 +143,6 @@ import React from 'react';
               Cutting-edge quantum hardware and infrastructure powering the next generation of computing
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6">⚛️</div>
@@ -189,7 +179,6 @@ import React from 'react';
             </div>
           </div>
         </motion.div>
-
         {/* Quantum Software Stack */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -203,7 +192,6 @@ import React from 'react';
               Comprehensive software tools and frameworks for quantum algorithm development and deployment
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
@@ -218,7 +206,6 @@ import React from 'react';
                   <li>• Cloud quantum computing access</li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl p-6 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🧮 Quantum Algorithms Library</h3>
                 <p className="text-purple-200 mb-4">
@@ -232,7 +219,6 @@ import React from 'react';
                 </ul>
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">☁️ Quantum Cloud Platform</h3>
@@ -246,7 +232,6 @@ import React from 'react';
                   <li>• Hybrid classical-quantum workflows</li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-xl p-6 border border-orange-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🔍 Quantum Error Correction</h3>
                 <p className="text-orange-200 mb-4">
@@ -262,7 +247,6 @@ import React from 'react';
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -285,7 +269,6 @@ import React from 'react';
             </div>
           </div>
         </motion.div>
-
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50">
@@ -311,7 +294,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Quantum Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <motion.div
@@ -327,7 +309,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               advanced quantum processors and algorithms.
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -341,7 +322,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
               unprecedented accuracy and speed.
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -356,7 +336,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </p>
           </motion.div>
         </div>
-
         {/* Applications */}
         <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Applications</h2>
@@ -383,7 +362,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Revolution?</h2>
@@ -403,6 +381,5 @@ const QuantumComputingRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default QuantumComputingRevolution2025;

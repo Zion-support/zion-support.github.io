@@ -1,5 +1,4 @@
 import React from 'react';
-
 const resources: React.FC = () => {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -24,5 +23,5 @@ const resources: React.FC = () => {
               <div className="mt-3 text-cyan-300">Open →</div>
           ))}
   );
-};
+
 export default ResourcesPage;

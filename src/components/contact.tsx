@@ -12,6 +12,8 @@ import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+};
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -399,4 +401,4 @@ export default function ContactPage() {
                   <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>
       <UltraFuturisticFooter2029 />
   );
-}
+};

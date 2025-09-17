@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-
-
+};
 
 export default function QuantumCloudInfrastructurePage() {
   return (
@@ -27,4 +26,4 @@ export default function QuantumCloudInfrastructurePage() {
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
   );
-}
+};

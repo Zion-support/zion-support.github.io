@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2030FutureTechPreview: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,7 +6,6 @@ const AI2030FutureTechPreview: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
 
 export default AI2030FutureTechPreview;
 </p></p>

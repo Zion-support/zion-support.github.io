@@ -9,11 +9,9 @@ import {
   Sparkles,
   TrendingUp
 } from 'lucide-react';
-
 const RevolutionaryTechPromoBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     "Quantum AI Consciousness",
     "Neural Energy Optimization", 
@@ -22,16 +20,13 @@ const RevolutionaryTechPromoBanner2026 = () => {
     "Global Consciousness Network",
     "Space-Time Computing"
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev: number) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, [features.length]);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -45,7 +40,6 @@ const RevolutionaryTechPromoBanner2026 = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-pink-600/90">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
           </div>
-
           {/* Content */}
           <div className="relative z-10 px-4 py-3">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -66,7 +60,6 @@ const RevolutionaryTechPromoBanner2026 = () => {
                   </motion.div>
                   <Sparkles className="w-5 h-5 text-yellow-300" />
                 </div>
-                
                 <div className="flex items-center space-x-3">
                   <span className="text-white font-bold text-lg">
                     🚀 Revolutionary Tech 2026:
@@ -82,7 +75,6 @@ const RevolutionaryTechPromoBanner2026 = () => {
                   </motion.span>
                 </div>
               </div>
-
               {/* Right Side - CTA and Close */}
               <div className="flex items-center space-x-4">
                 <motion.button
@@ -94,7 +86,6 @@ const RevolutionaryTechPromoBanner2026 = () => {
                   <span>Explore Now</span>
                   <ChevronRight className="w-4 h-4" />
                 </motion.button>
-
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -106,7 +97,6 @@ const RevolutionaryTechPromoBanner2026 = () => {
               </div>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
             <motion.div
@@ -121,6 +111,5 @@ const RevolutionaryTechPromoBanner2026 = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default RevolutionaryTechPromoBanner2026;

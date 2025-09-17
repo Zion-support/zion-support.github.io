@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryTestimonialsShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-white">
@@ -119,6 +118,5 @@ const RevolutionaryTestimonialsShowcase: React.FC = () => {
               <Award className="w-5 h-5 mr-2" />
               View All Case Studies
   );
-};
 
 export default RevolutionaryTestimonialsShowcase;

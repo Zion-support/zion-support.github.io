@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ShowcaseItem {
   id: string;
   title: string;
@@ -16,7 +15,7 @@ interface ShowcaseItem {
     accuracy: string;
     speed: string;
   };
-}
+};
 
 export default function AnimatedContentShowcase() {
   const [currentIndexsetCurrentIndex] = useState(0);
@@ -240,6 +239,5 @@ export default function AnimatedContentShowcase() {
                     Explore →
             ))}
   );
-};
 
 export default AnimatedContentShowcase;

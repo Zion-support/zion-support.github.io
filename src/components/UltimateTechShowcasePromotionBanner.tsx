@@ -12,33 +12,27 @@ import {
   Award,
   Lightbulb
 } from 'lucide-react';
-
 const UltimateTechShowcasePromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     { icon: Brain, text: "AI Consciousness", color: "text-purple-400" },
     { icon: Cpu, text: "Quantum Computing", color: "text-blue-400" },
     { icon: Zap, text: "Neural Interfaces", color: "text-pink-400" },
     { icon: Lightbulb, text: "Revolutionary Tech", color: "text-yellow-400" }
   ];
-
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 1000);
     return () => clearTimeout(timer);
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-
   if (isDismissed) return null;
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -75,7 +69,6 @@ const UltimateTechShowcasePromotionBanner = () => {
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
                 </div>
               </div>
-
               {/* Center - Main message */}
               <div className="flex-1 text-center px-4">
                 <motion.div
@@ -93,7 +86,6 @@ const UltimateTechShowcasePromotionBanner = () => {
                   </span>
                 </motion.div>
               </div>
-
               {/* Right side - CTA and close */}
               <div className="flex items-center space-x-4">
                 <motion.button
@@ -113,7 +105,6 @@ const UltimateTechShowcasePromotionBanner = () => {
                 </button>
               </div>
             </div>
-
             {/* Progress bar */}
             <motion.div
               className="h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
@@ -127,7 +118,6 @@ const UltimateTechShowcasePromotionBanner = () => {
       )}
     </AnimatePresence>
   );
-};
 
 export default UltimateTechShowcasePromotionBanner;
 </div></div>

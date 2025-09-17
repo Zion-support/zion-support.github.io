@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarClockUserTrendingUpStarEyeThumbsUp
+};
 
 export default function FeaturedContentSection2025() {
   const featuredContent = [
@@ -186,6 +187,5 @@ export default function FeaturedContentSection2025() {
             >
               Get Custom Content
   );
-};
 
 export default FeaturedContentSection2025;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentShowcase2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-3xl p-12 mb-12">
@@ -15,7 +14,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           revolutionary breakthroughs, and next-generation solutions that will shape the future.
         </p>
       </div>
-
       {/* Featured Content Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {/* AI Consciousness */}
@@ -43,7 +41,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Explore Consciousness →
           </a>
         </div>
-
         {/* Metaverse Integration */}
         <div className="bg-gradient-to-br from-cyan-600 to-purple-600 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🌐</div>
@@ -69,7 +66,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Enter Metaverse →
           </a>
         </div>
-
         {/* Green Tech Revolution */}
         <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🌱</div>
@@ -95,7 +91,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Join Revolution →
           </a>
         </div>
-
         {/* Quantum Computing */}
         <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">⚡</div>
@@ -121,7 +116,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Explore Quantum →
           </a>
         </div>
-
         {/* Neural Interface */}
         <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🧬</div>
@@ -147,7 +141,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Neural Tech →
           </a>
         </div>
-
         {/* Space Technology */}
         <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🚀</div>
@@ -174,7 +167,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           </a>
         </div>
       </div>
-
       {/* Statistics Section */}
       <div className="bg-white rounded-2xl p-8 mb-8">
         <div className="text-center mb-8">
@@ -200,7 +192,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center">
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -220,6 +211,5 @@ const UltimateContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateContentShowcase2026;

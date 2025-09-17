@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const ComprehensiveServices2034: React.FC = () => {
   const services = [
     {
@@ -49,17 +48,14 @@ const ComprehensiveServices2034: React.FC = () => {
       ]
     }
   };
-
   return (
           </div>
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>ComprehensiveServices2034 | Zion Tech Group</title>
         <meta name="description" content="ComprehensiveServices2034 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -79,14 +75,12 @@ const ComprehensiveServices2034: React.FC = () => {
             <h2 className="text-4xl font-bold text-center mb-8">
               {serviceCategories[selectedCategory as keyof typeof serviceCategories].title}
             </h2>
-            
             {serviceCategories[selectedCategory as keyof typeof serviceCategories].services.map((service, index) => (
               <div key={index} className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-3xl font-bold mb-4">{service.name}</h3>
                     <p className="text-xl opacity-90 mb-6">{service.description}</p>
-                    
                     <div className="grid md:grid-cols-2 gap-4 mb-6">
                       <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4">
                         <div className="text-sm opacity-70 mb-1">Investment</div>
@@ -98,7 +92,6 @@ const ComprehensiveServices2034: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div>
                     <h4 className="text-xl font-bold mb-4">Key Features</h4>
                     <ul className="space-y-3 mb-6">
@@ -109,7 +102,6 @@ const ComprehensiveServices2034: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    
                     <div className="flex space-x-4">
                       <button className={`flex-1 bg-gradient-to-r ${serviceCategories[selectedCategory as keyof typeof serviceCategories].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                         Get Started
@@ -124,7 +116,6 @@ const ComprehensiveServices2034: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">📊 Our Success Metrics</h2>
@@ -147,7 +138,6 @@ const ComprehensiveServices2034: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Client Testimonials */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">💬 Client Testimonials</h2>
@@ -159,7 +149,6 @@ const ComprehensiveServices2034: React.FC = () => {
               </p>
               <div className="text-purple-300 font-semibold">- Sarah Chen, CEO, FutureCorp</div>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="text-4xl mb-4">"</div>
               <p className="text-cyan-100 mb-4 italic">
@@ -167,7 +156,6 @@ const ComprehensiveServices2034: React.FC = () => {
               </p>
               <div className="text-cyan-300 font-semibold">- Dr. Marcus Rodriguez, CTO, Quantum Dynamics</div>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">"</div>
               <p className="text-emerald-100 mb-4 italic">
@@ -177,7 +165,6 @@ const ComprehensiveServices2034: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
@@ -196,6 +183,5 @@ const ComprehensiveServices2034: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ComprehensiveServices2034;

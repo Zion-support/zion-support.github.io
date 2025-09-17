@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedAnalyticsDashboard: React.FC = () => {
   const [selectedTimeRange, setSelectedTimeRange] = useState<TimeRange>(timeRanges[1]);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
@@ -36,20 +35,15 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       transactions: 0
     }
   });
-
   const [isLoading, setIsLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState<string>('visitors');
-
   // Simulate data fetching
   const fetchAnalyticsData = useCallback(async () => {
     setIsLoading(true);
-    
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-
     // Generate mock data based on time range
     const multiplier = selectedTimeRange.days / 30; // Scale data based on time range
-
     const mockData: AnalyticsData = {
       visitors: {
         total: Math.round((Math.random() * 50000 + 10000) * multiplier),
@@ -84,15 +78,12 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
         transactions: Math.round((Math.random() * 1000 + 200) * multiplier)
       }
     };
-
     setAnalyticsData(mockData);
     setIsLoading(false);
   }, [selectedTimeRange]);
-
   useEffect(() => {
     fetchAnalyticsData();
   }, [fetchAnalyticsData]);
-
   const formatNumber = (num: number, type: 'currency' | 'percentage' | 'number' = 'number') => {
     if (type === 'currency') {
       return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num);
@@ -108,19 +99,16 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     }
     return num.toFixed(0);
   };
-
   const getGrowthColor = (growth: number) => {
     if (growth > 0) return 'text-green-600 dark:text-green-400';
     if (growth < 0) return 'text-red-600 dark:text-red-400';
     return 'text-gray-600 dark:text-gray-400';
   };
-
   const getGrowthIcon = (growth: number) => {
     if (growth > 0) return '📈';
     if (growth < 0) return '📉';
     return '➡️';
   };
-
   const MetricCard = ({ title, value, growth, type = 'number', icon }: {
     title: string;
     value: number;
@@ -148,7 +136,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       </div>
     </div>
   );
-
+};
   const ProgressBar = ({ value, max, label, color = 'blue' }: {
     value: number;
     max: number;
@@ -163,7 +151,6 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       red: 'bg-red-500',
       purple: 'bg-purple-500'
     };
-
     return (
       <div className="mb-4">
         <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -177,8 +164,8 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
         </div>
       </div>
     );
+};
   };
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto p-6">
@@ -192,14 +179,13 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
         </div>
       </div>
     );
+};
   }
-
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsDashboard</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
 
 export default AdvancedAnalyticsDashboard;

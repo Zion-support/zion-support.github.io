@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedPromotionalBanner: React.FC = () => {
   return (
     <motion.div
@@ -10,7 +9,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
     >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.1%22%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Content */}
@@ -26,7 +24,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
               <span className="ml-2 text-sm opacity-90">Experience the future today!</span>
             </div>
           </motion.div>
-
           {/* Center Content */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -47,7 +44,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
               <span>Neural Reality</span>
             </div>
           </motion.div>
-
           {/* Right Content */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -69,6 +65,5 @@ const EnhancedPromotionalBanner: React.FC = () => {
       </div>
     </motion.div>
   );
-};
 
 export default EnhancedPromotionalBanner;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
   return (
     <div>
@@ -9,12 +8,10 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
         >
           {/* Background with gradient */}
           <div className={`absolute inset-0 bg-gradient-to-r ${currentSlideData.bgColor} transition-all duration-1000`} />
-          
           {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] animate-pulse" />
           </div>
-
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(8)].map((_i) => (
@@ -36,7 +33,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
               />
             ))}
           </div>
-
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-between">
               {/* Left side - Content */}
@@ -49,7 +45,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
-
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-2">
@@ -60,19 +55,15 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                         ULTIMATE SHOWCASE
                       </span>
                     </div>
-                    
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </h2>
-                    
                     <p className="text-lg text-white/90 mb-2">
                       {currentSlideData.subtitle}
                     </p>
-                    
                     <p className="text-white/80 text-sm mb-4">
                       {currentSlideData.description}
                     </p>
-
                     {/* Features */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {features.map((featureindex) => (
@@ -84,7 +75,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
@@ -94,7 +84,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                         Explore Showcase
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
-                      
                       <a
                         href="/demo"
                         className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
@@ -106,7 +95,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right side - Visual elements */}
               <div className="hidden lg:block flex-shrink-0">
                 <div className="relative w-64 h-64">
@@ -114,15 +102,12 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                   <div
                     className="absolute inset-0 rounded-full border-2 border-white/20"
                   />
-                  
                   <div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
                   />
-                  
                   <div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
                   />
-
                   {/* Center content */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div
@@ -131,7 +116,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                       <currentSlideData.icon className="w-10 h-10 text-white" />
                     </div>
                   </div>
-
                   {/* Floating dots */}
                   {[...Array(6)].map((_i) => (
                     <div
@@ -152,7 +136,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Close button */}
               <button
                 onClick={() => setIsDismissed(true)}
@@ -161,7 +144,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {slides.map((_index) => (
@@ -181,7 +163,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default NewContent2025UltimateShowcasePromotionBanner;
 </div></div></div></div></div></div></div>

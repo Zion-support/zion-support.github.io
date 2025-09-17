@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIToolsPromotionBanner2026: React.FC = () => {
   return (
     <div>
@@ -29,7 +28,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Center Benefits */}
               <div className="hidden lg:flex items-center gap-6">
                 {benefits.map((benefitindex) => (
@@ -39,7 +37,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Right Actions */}
               <div className="flex items-center gap-3">
                 <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
@@ -60,7 +57,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Progress Bar */}
         <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
           <div
@@ -68,7 +64,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
-
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_i) => (
@@ -93,7 +88,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AIToolsPromotionBanner2026;
 </div></div>

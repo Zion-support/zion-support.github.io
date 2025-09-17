@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SocialProofMetrics: React.FC = () => {
   return (
     <div className="bg-white py-20 px-4">
@@ -74,6 +73,5 @@ const SocialProofMetrics: React.FC = () => {
               >
                 View All Success Stories
   );
-};
 
 export default SocialProofMetrics;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const QuantumBusinessAutomation2027: React.FC = () => {
   return (
     <>
@@ -9,7 +8,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
         <meta name="description" content="Revolutionary quantum-powered business automation solutions that transform enterprise operations with unprecedented speed and efficiency." />
         <meta name="keywords" content="quantum computing, business automation, enterprise solutions, quantum algorithms, process optimization" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -33,7 +31,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Key Features Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -50,7 +47,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                 <li>• Complex problem solving</li>
               </ul>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🤖</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Intelligent Automation</h3>
@@ -65,7 +61,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                 <li>• Autonomous decision making</li>
               </ul>
             </div>
-            
             <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">📊</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Data Analytics</h3>
@@ -81,7 +76,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
               </ul>
             </div>
           </div>
-
           {/* Revolutionary Capabilities */}
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
             <h2 className="text-4xl font-bold text-center mb-8">🌟 Revolutionary Capabilities</h2>
@@ -116,7 +110,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Applications */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-center mb-12">🌍 Quantum Automation Applications</h2>
@@ -135,7 +128,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                   <li>• Predictive maintenance</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-xl font-bold mb-3">Finance</h3>
@@ -150,7 +142,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                   <li>• Fraud detection</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
                 <div className="text-4xl mb-4">🏥</div>
                 <h3 className="text-xl font-bold mb-3">Healthcare</h3>
@@ -165,7 +156,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                   <li>• Medical imaging analysis</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
                 <div className="text-4xl mb-4">🚚</div>
                 <h3 className="text-xl font-bold mb-3">Logistics</h3>
@@ -180,7 +170,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                   <li>• Demand forecasting</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-teal-400/30">
                 <div className="text-4xl mb-4">🎓</div>
                 <h3 className="text-xl font-bold mb-3">Education</h3>
@@ -195,7 +184,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
                   <li>• Performance analytics</li>
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
                 <div className="text-4xl mb-4">🌐</div>
                 <h3 className="text-xl font-bold mb-3">Technology</h3>
@@ -212,7 +200,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Technical Specifications */}
           <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
             <h2 className="text-4xl font-bold text-center mb-8">⚙️ Technical Specifications</h2>
@@ -239,7 +226,6 @@ const QuantumBusinessAutomation2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Call to Action */}
           <div className="text-center bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -260,6 +246,5 @@ const QuantumBusinessAutomation2027: React.FC = () => {
       </div>
     </>
   );
-};
 
 export default QuantumBusinessAutomation2027;

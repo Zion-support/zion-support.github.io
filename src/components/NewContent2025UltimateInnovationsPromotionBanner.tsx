@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 BrainTrendingUpZapArrowRightStarSparkles
+};
 
 export default function NewContent2025UltimateInnovationsPromotionBanner() {
   return (
@@ -97,4 +98,4 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
             >
               Get Started Today
   );
-}
+};

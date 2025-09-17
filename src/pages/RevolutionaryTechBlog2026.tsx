@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryTechBlog2026: React.FC = () => {
   const blogPosts = [
     {
@@ -63,7 +62,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       featured: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -79,7 +77,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             Dive deep into the most groundbreaking technological innovations that are reshaping our world and defining the future of humanity
           </p>
         </div>
-
         {/* Featured Posts */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">🌟 Featured Articles</h2>
@@ -106,7 +103,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* All Posts Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">📖 All Articles</h2>
@@ -133,7 +129,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 text-center">
           <h2 className="text-4xl font-bold mb-6">🚀 Stay Updated</h2>
@@ -154,6 +149,5 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTechBlog2026;

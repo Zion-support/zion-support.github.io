@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Brain, Shield, Globe, Rocket } from 'lucide-react';
-
 const RevolutionaryTech2025: React.FC = () => {
   const features = [
     {
@@ -35,7 +34,6 @@ const RevolutionaryTech2025: React.FC = () => {
       stats: "Mars-ready infrastructure"
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -59,7 +57,6 @@ const RevolutionaryTech2025: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -93,7 +90,6 @@ const RevolutionaryTech2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -107,7 +103,6 @@ const RevolutionaryTech2025: React.FC = () => {
             Cutting-edge technology that pushes the boundaries of what's possible
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
@@ -125,7 +120,6 @@ const RevolutionaryTech2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Testimonials Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -139,7 +133,6 @@ const RevolutionaryTech2025: React.FC = () => {
             Industry leaders share their experience with our revolutionary technology
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -164,7 +157,6 @@ const RevolutionaryTech2025: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -189,6 +181,5 @@ const RevolutionaryTech2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTech2025;

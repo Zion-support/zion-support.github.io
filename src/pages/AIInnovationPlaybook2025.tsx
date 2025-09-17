@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIInnovationPlaybook2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -11,6 +10,5 @@ const AIInnovationPlaybook2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AIInnovationPlaybook2025;

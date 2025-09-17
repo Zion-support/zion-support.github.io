@@ -14,7 +14,6 @@ import {
   Lightbulb,
   Target
 } from 'lucide-react';
-
 const QuantumComputingRevolution2027 = () => {
   const quantumApplications = [
     {
@@ -66,14 +65,12 @@ const QuantumComputingRevolution2027 = () => {
       impact: "99.9% uptime guarantee"
     }
   ];
-
   const quantumStats = [
     { number: "1000x", label: "Faster Processing", icon: Zap },
     { number: "100%", label: "Security Guarantee", icon: Shield },
     { number: "500%", label: "Accuracy Improvement", icon: Target },
     { number: "99.9%", label: "System Reliability", icon: CheckCircle }
   ];
-
   const useCases = [
     {
       industry: "Healthcare",
@@ -96,7 +93,6 @@ const QuantumComputingRevolution2027 = () => {
       results: "1000x faster climate predictions, 99% accuracy in weather forecasting"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
@@ -135,7 +131,6 @@ const QuantumComputingRevolution2027 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -161,7 +156,6 @@ const QuantumComputingRevolution2027 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Quantum Applications */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -179,7 +173,6 @@ const QuantumComputingRevolution2027 = () => {
               unprecedented computational power and capabilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {quantumApplications.map((app, index) => (
               <motion.div
@@ -197,11 +190,9 @@ const QuantumComputingRevolution2027 = () => {
                     {app.title}
                   </h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {app.description}
                 </p>
-                
                 <div className="mb-6">
                   <div className="text-sm text-cyan-400 font-semibold mb-3">
                     Impact: {app.impact}
@@ -215,7 +206,6 @@ const QuantumComputingRevolution2027 = () => {
                     ))}
                   </div>
                 </div>
-                
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center group">
                   Explore Quantum Solutions
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -225,7 +215,6 @@ const QuantumComputingRevolution2027 = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Use Cases */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -242,7 +231,6 @@ const QuantumComputingRevolution2027 = () => {
               See how quantum computing is revolutionizing industries across the globe
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -271,7 +259,6 @@ const QuantumComputingRevolution2027 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -302,6 +289,5 @@ const QuantumComputingRevolution2027 = () => {
       </section>
     </div>
   );
-};
 
 export default QuantumComputingRevolution2027;

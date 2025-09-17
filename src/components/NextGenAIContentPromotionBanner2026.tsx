@@ -11,11 +11,9 @@ import {
   Users,
   Lightbulb
 } from 'lucide-react';
-
 const NextGenAIContentPromotionBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
@@ -38,16 +36,13 @@ const NextGenAIContentPromotionBanner2026 = () => {
       color: "from-green-500 to-emerald-500"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -58,13 +53,11 @@ const NextGenAIContentPromotionBanner2026 = () => {
       >
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
-        
         {/* Floating Elements */}
         <div className="absolute top-4 left-10 w-2 h-2 bg-blue-400 rounded-full animate-bounce" />
         <div className="absolute top-6 right-20 w-1 h-1 bg-purple-400 rounded-full animate-ping" />
         <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-pulse" />
         <div className="absolute bottom-6 right-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-bounce" />
-
         <div className="relative z-10 py-4 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -79,7 +72,6 @@ const NextGenAIContentPromotionBanner2026 = () => {
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                 </motion.div>
-                
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                   <div className="flex items-center gap-2">
                     <span className="text-yellow-400 font-bold text-sm uppercase tracking-wider">
@@ -87,11 +79,9 @@ const NextGenAIContentPromotionBanner2026 = () => {
                     </span>
                     <div className="w-1 h-1 bg-yellow-400 rounded-full animate-pulse" />
                   </div>
-                  
                   <h3 className="text-white font-bold text-lg sm:text-xl">
                     Next-Gen AI Content Hub
                   </h3>
-                  
                   <div className="flex items-center gap-2">
                     <span className="text-gray-300 text-sm">Featuring:</span>
                     <AnimatePresence mode="wait">
@@ -110,7 +100,6 @@ const NextGenAIContentPromotionBanner2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Content */}
               <div className="flex items-center gap-4">
                 <div className="hidden sm:flex items-center gap-4 text-sm text-gray-300">
@@ -123,7 +112,6 @@ const NextGenAIContentPromotionBanner2026 = () => {
                     <span>500% ROI</span>
                   </div>
                 </div>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -132,7 +120,6 @@ const NextGenAIContentPromotionBanner2026 = () => {
                   Explore Now
                   <ArrowRight className="w-4 h-4" />
                 </motion.button>
-
                 <button
                   onClick={() => setIsVisible(false)}
                   className="text-gray-400 hover:text-white transition-colors p-1"
@@ -143,11 +130,9 @@ const NextGenAIContentPromotionBanner2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Progress Bar */}
         <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" 
              style={{ width: '100%', animation: 'progress 10s linear infinite' }} />
-        
         <style jsx>{`
           @keyframes progress {
             0% { width: 0%; }
@@ -157,6 +142,5 @@ const NextGenAIContentPromotionBanner2026 = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
 
 export default NextGenAIContentPromotionBanner2026;

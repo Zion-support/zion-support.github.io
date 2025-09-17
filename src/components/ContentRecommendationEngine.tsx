@@ -1,9 +1,9 @@
 "use client";
 'use client';
-
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function ContentRecommendationEngine() {
   const [recommendationsetRecommendations] = useState([]);
@@ -139,6 +139,7 @@ export default function ContentRecommendationEngine() {
         ? prev.filter(id => id !== interestId)
         : [...previnterestId]
     );
+};
   };
   if (isLoading) {
     return (
@@ -151,6 +152,7 @@ export default function ContentRecommendationEngine() {
               <div className="h-3 bg-gray-200 rounded w-1/2"></div>
           ))}
     );
+};
   }
   return (
     <div className="bg-white rounded-xl shadow-lg p-8">
@@ -219,6 +221,5 @@ export default function ContentRecommendationEngine() {
         >
           Refresh Recommendations
   );
-};
 
 export default ContentRecommendationEngine;

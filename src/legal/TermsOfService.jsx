@@ -24,4 +24,3 @@ export default function TermsOfService() {
           <p>
             The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current.
     </div>);
-}

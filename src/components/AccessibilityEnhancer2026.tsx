@@ -1,4 +1,5 @@
 import React from 'react';
+};
 
 export default function AccessibilityEnhancer2026() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function AccessibilityEnhancer2026() {
       const focusableElements = document.querySelectorAll(
         'button[href]inputselectextarea[tabindex]:not([tabindex="-1"])'
       );
+};
       focusableElements.forEach(element => {
         element.addEventListener('focus'(e) => {
           const target = e.target as HTMLElement;
@@ -98,4 +100,3 @@ export default function AccessibilityEnhancer2026() {
     };
   }[]);
   return null;
-}

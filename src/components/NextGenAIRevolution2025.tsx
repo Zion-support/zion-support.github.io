@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Globe, Shield, Cpu, Database, Network, Sparkles } from 'lucide-react';
-
 const NextGenAIRevolution2025: React.FC = () => {
   const features = [
     {
@@ -41,7 +40,6 @@ const NextGenAIRevolution2025: React.FC = () => {
       color: "from-teal-500 to-blue-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
       <div className="container mx-auto px-6 py-20">
@@ -64,7 +62,6 @@ const NextGenAIRevolution2025: React.FC = () => {
             next-generation AI technologies that are reshaping industries and transforming the way we work.
           </p>
         </motion.div>
-
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => (
@@ -87,7 +84,6 @@ const NextGenAIRevolution2025: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -121,7 +117,6 @@ const NextGenAIRevolution2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -146,6 +141,5 @@ const NextGenAIRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NextGenAIRevolution2025;

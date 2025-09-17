@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function NewContent2025_2026ComprehensiveShowcase() {
   return (
@@ -166,4 +167,4 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             >
               View All Services
   );
-}
+};

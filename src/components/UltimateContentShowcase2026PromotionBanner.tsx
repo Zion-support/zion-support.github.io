@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function UltimateContentShowcase2026PromotionBanner() {
   return (
@@ -78,4 +79,4 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             >
               Start with AI 2026 Breakthrough
   );
-}
+};

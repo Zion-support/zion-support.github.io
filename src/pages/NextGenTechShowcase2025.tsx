@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
-
 const NextGenTechShowcase2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -35,7 +30,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 Get Started
               </a>
             </div>
-
       {/* Technologies Section */}
       <section id="technologies" className="py-20">
         <div className="container mx-auto px-4">
@@ -43,9 +37,7 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technologies</h2>
             <p className="text-xl text-orange-200">Discover the future of technology innovation</p>
           </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-100">
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -59,7 +51,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             Discover the most advanced technologies reshaping our world - from AI and quantum computing to neural interfaces and beyond.
           </p>
         </div>
-
         {/* Technology Showcase Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200">
@@ -75,7 +66,6 @@ const NextGenTechShowcase2025: React.FC = () => {
               <li>• Zero-downtime updates</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200">
             <div className="text-6xl mb-6 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-red-800">Quantum Computing</h3>
@@ -89,7 +79,6 @@ const NextGenTechShowcase2025: React.FC = () => {
               <li>• Unbreakable security</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-pink-200">
             <div className="text-6xl mb-6 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-pink-800">Neural Interfaces</h3>
@@ -103,7 +92,6 @@ const NextGenTechShowcase2025: React.FC = () => {
               <li>• Cognitive enhancement</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-200">
             <div className="text-6xl mb-6 text-center">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-purple-800">Edge AI & IoT</h3>
@@ -117,7 +105,6 @@ const NextGenTechShowcase2025: React.FC = () => {
               <li>• Scalable deployment</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-200">
             <div className="text-6xl mb-6 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-blue-800">Predictive Analytics</h3>
@@ -131,7 +118,6 @@ const NextGenTechShowcase2025: React.FC = () => {
               <li>• Strategic planning</li>
             </ul>
           </div>
-
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-green-200">
             <div className="text-6xl mb-6 text-center">🛡️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-green-800">Cybersecurity Fortress</h3>
@@ -146,7 +132,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Technology Impact Metrics */}
         <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-12 mb-16 text-white">
           <h2 className="text-4xl font-bold text-center mb-12">Technology Impact</h2>
@@ -169,7 +154,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Industry Applications</h2>
@@ -196,11 +180,9 @@ const NextGenTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Timeline */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Implementation Timeline</h2>
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-600/10 to-red-600/10"></div>
@@ -222,8 +204,6 @@ const NextGenTechShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
-
       {/* Technology Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -231,10 +211,8 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Revolutionary Technologies</h2>
             <p className="text-xl text-gray-600">Cutting-edge innovations transforming industries</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -250,7 +228,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Smart robotics</li>
                 <li>• Self-healing systems</li>
                 <li>• Adaptive algorithms</li>
-=======
               whileHover={{ scale: 1.05 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
@@ -263,12 +240,9 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Self-driving vehicles</li>
                 <li>• Autonomous drones</li>
                 <li>• Smart infrastructure</li>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
               </ul>
             </motion.div>
-
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -284,7 +258,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Augmented reality integration</li>
                 <li>• Digital twin technology</li>
                 <li>• Social VR platforms</li>
-=======
               whileHover={{ scale: 1.05 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
@@ -297,12 +270,9 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• 5G networks</li>
                 <li>• Edge processing</li>
                 <li>• IoT connectivity</li>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
               </ul>
             </motion.div>
-
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -320,7 +290,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Local AI inference</li>
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -337,7 +306,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Synthetic biology</li>
                 <li>• Personalized medicine</li>
                 <li>• Bio-manufacturing</li>
-=======
               whileHover={{ scale: 1.05 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
@@ -350,12 +318,9 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Gene editing</li>
                 <li>• Synthetic biology</li>
                 <li>• Personalized medicine</li>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
               </ul>
             </motion.div>
-
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -371,7 +336,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Time series forecasting</li>
                 <li>• Risk assessment</li>
                 <li>• Optimization algorithms</li>
-=======
               whileHover={{ scale: 1.05 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
@@ -384,12 +348,9 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Carbon capture</li>
                 <li>• Renewable energy</li>
                 <li>• Green materials</li>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
               </ul>
             </motion.div>
-
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
@@ -405,7 +366,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Carbon capture technology</li>
                 <li>• Smart grid solutions</li>
                 <li>• Sustainable materials</li>
-=======
               whileHover={{ scale: 1.05 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
@@ -420,7 +380,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Mixed reality</li>
               </ul>
             </motion.div>
-
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
@@ -434,14 +393,11 @@ const NextGenTechShowcase2025: React.FC = () => {
                 <li>• Zero-trust security</li>
                 <li>• AI-powered threat detection</li>
                 <li>• Quantum encryption</li>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
               </ul>
             </motion.div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
       {/* Innovation Areas */}
       <section className="py-20 bg-gradient-to-r from-orange-800/50 to-red-800/50">
         <div className="container mx-auto px-4">
@@ -449,7 +405,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Innovation Areas</h2>
             <p className="text-xl text-orange-200">Leading the transformation across industries</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-6xl mb-4">🏥</div>
@@ -474,7 +429,6 @@ const NextGenTechShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Future Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -482,7 +436,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">🔮 Future Vision</h2>
             <p className="text-xl text-orange-200">Shaping the world of tomorrow</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-6xl mb-4">⚡</div>
@@ -507,7 +460,6 @@ const NextGenTechShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -525,8 +477,6 @@ const NextGenTechShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-
       {/* Innovation Showcase */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -534,7 +484,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🎯 Innovation Showcase</h2>
             <p className="text-xl text-gray-600">Real-world applications of next-generation technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -549,7 +498,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-2xl">🏭</div>
                 <div>
@@ -563,7 +511,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white text-2xl">🌱</div>
@@ -577,7 +524,6 @@ const NextGenTechShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-2xl">🎓</div>
                 <div>
@@ -594,7 +540,6 @@ const NextGenTechShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Timeline */}
       <section className="py-16 px-4 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto">
@@ -602,8 +547,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">⏰ Technology Timeline</h2>
             <p className="text-xl opacity-90">The evolution of next-generation technology</p>
           </div>
-          
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -635,7 +578,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-pink-50 to-orange-50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Success Stories</h2>
@@ -666,7 +608,6 @@ const NextGenTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Embrace the Future</h2>
@@ -682,14 +623,9 @@ const NextGenTechShowcase2025: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
-=======
       </section>
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
->>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
     </div>
   );
-};
 
 export default NextGenTechShowcase2025;

@@ -43,20 +43,16 @@ import TranscendentAI2027 from './pages/TranscendentAI2027';
 import QuantumConsciousnessRevolution2027 from './pages/QuantumConsciousnessRevolution2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import SpaceTimeComputing2027 from './pages/SpaceTimeComputing2027';
-
 export default function App(): JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <Header />
-        
         {/* Revolutionary Content Banner */}
         <RevolutionaryContentBanner2026 />
-        
         {/* NEW: Revolutionary Content Banner 2027 */}
         <RevolutionaryContentBanner2027 />
-        
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -111,22 +107,18 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
-
                 {/* NEW: Enhanced Content Showcase 2026 */}
                 <div className="mb-12">
                   <NewContentShowcase2026 />
                 </div>
-
                 {/* Revolutionary Content Showcase 2026 */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2026 />
                 </div>
-
                 {/* NEW: Ultimate Content Showcase 2027 */}
                 <div className="mb-12">
                   <UltimateContentShowcase2027 />
                 </div>
-
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -213,7 +205,6 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
-
                 {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -222,7 +213,6 @@ export default function App(): JSX.Element {
                   </div>
                   <DynamicContentCarousel />
                 </div>
-
                 {/* Featured New Services */}
                 <section className="mb-12">
                   <div className="text-center mb-6">
@@ -253,7 +243,6 @@ export default function App(): JSX.Element {
                     <a href="/pages/ComprehensiveServices2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">View all services</a>
                   </div>
                 </section>
-
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -266,7 +255,6 @@ export default function App(): JSX.Element {
                       View AI Services →
                     </a>
                   </div>
-                  
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">🔗</div>
                     <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
@@ -277,7 +265,6 @@ export default function App(): JSX.Element {
                       Explore Blockchain →
                     </a>
                   </div>
-                  
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">☁️</div>
                     <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>
@@ -289,7 +276,6 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
-
                 {/* Success Stories Section */}
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-12">
                   <div className="text-center mb-8">
@@ -332,7 +318,6 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
-
                 {/* Latest News Section */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
                   <div className="text-center mb-8">
@@ -375,7 +360,6 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
-
                 {/* Interactive Technology Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -384,12 +368,10 @@ export default function App(): JSX.Element {
                   </div>
                   <InteractiveTechShowcase />
                 </div>
-
                 {/* NEW: Interactive Tech Demos 2026 */}
                 <div className="mb-12">
                   <InteractiveTechDemo2026 />
                 </div>
-
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -484,12 +466,9 @@ export default function App(): JSX.Element {
             </main>
           } />
         </Routes>
-        
         <Footer />
-        
         {/* Performance Optimizer */}
         <PerformanceOptimizer />
       </div>
     </Router>
   );
-}

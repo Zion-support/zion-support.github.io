@@ -16,7 +16,6 @@ import {
   Target,
   Globe
 } from 'lucide-react';
-
 const NeuralInterfaceBreakthrough2027 = () => {
   const interfaceTypes = [
     {
@@ -68,7 +67,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
       impact: "500% problem-solving speed"
     }
   ];
-
   const applications = [
     {
       category: "Healthcare",
@@ -115,14 +113,12 @@ const NeuralInterfaceBreakthrough2027 = () => {
       ]
     }
   ];
-
   const stats = [
     { number: "500%", label: "Cognitive Enhancement", icon: Brain },
     { number: "99.9%", label: "Accuracy Rate", icon: Target },
     { number: "1000x", label: "Sensory Range", icon: Eye },
     { number: "300%", label: "Emotional Connection", icon: Heart }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900">
       {/* Hero Section */}
@@ -161,7 +157,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +182,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Interface Types */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -205,7 +199,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
               human-computer interaction and cognitive enhancement
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {interfaceTypes.map((interfaceType, index) => (
               <motion.div
@@ -223,11 +216,9 @@ const NeuralInterfaceBreakthrough2027 = () => {
                     {interfaceType.title}
                   </h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {interfaceType.description}
                 </p>
-                
                 <div className="mb-6">
                   <div className="text-sm text-pink-400 font-semibold mb-3">
                     Impact: {interfaceType.impact}
@@ -241,7 +232,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
                     ))}
                   </div>
                 </div>
-                
                 <button className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group">
                   Explore Interface
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -251,7 +241,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
           </div>
         </div>
       </section>
-
       {/* Applications */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -268,7 +257,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
               See how neural interfaces are transforming industries and improving lives
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {applications.map((app, index) => (
               <motion.div
@@ -286,11 +274,9 @@ const NeuralInterfaceBreakthrough2027 = () => {
                     {app.category}
                   </h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {app.description}
                 </p>
-                
                 <div className="space-y-3">
                   {app.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-start text-sm text-gray-300">
@@ -304,7 +290,6 @@ const NeuralInterfaceBreakthrough2027 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -335,6 +320,5 @@ const NeuralInterfaceBreakthrough2027 = () => {
       </section>
     </div>
   );
-};
 
 export default NeuralInterfaceBreakthrough2027;

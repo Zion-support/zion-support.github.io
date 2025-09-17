@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025TrendsPredictionsPromotionBanner() {
   return (
@@ -39,4 +40,4 @@ export default function AI2025TrendsPredictionsPromotionBanner() {
           <div className="mt-8 text-sm text-gray-400">
             Comprehensive 15-minute read with actionable insights
   );
-}
+};

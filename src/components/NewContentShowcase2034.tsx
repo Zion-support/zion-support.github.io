@@ -1,31 +1,26 @@
 import React from 'react';
-
 const NewContentShowcase2034: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white py-20 mb-12">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.03%22%253E%253Cpath%20d%3D%22M40%2040c0-22.091-17.909-40-40-40v40h40z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-50"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16">
           {/* Badge */}
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-lg font-bold mb-8 animate-pulse">
             🆕 NEW CONTENT • JANUARY 2034
           </div>
-          
           {/* Main Title */}
           <h2 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-200 via-blue-200 to-indigo-200 bg-clip-text text-transparent">
             🌟 New Content Showcase 2034
           </h2>
-          
           {/* Subtitle */}
           <p className="text-2xl md:text-3xl opacity-90 max-w-5xl mx-auto mb-12 leading-relaxed">
             Discover our latest revolutionary content featuring cutting-edge technology, 
             interactive experiences, and breakthrough innovations that will define the future.
           </p>
         </div>
-        
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Featured Content 1 */}
@@ -53,7 +48,6 @@ const NewContentShowcase2034: React.FC = () => {
               Explore AI Revolution →
             </button>
           </div>
-          
           {/* Featured Content 2 */}
           <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 group">
             <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">⚛️</div>
@@ -79,7 +73,6 @@ const NewContentShowcase2034: React.FC = () => {
               Enter Quantum Realm →
             </button>
           </div>
-          
           {/* Featured Content 3 */}
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300 group">
             <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🌌</div>
@@ -106,14 +99,12 @@ const NewContentShowcase2034: React.FC = () => {
             </button>
           </div>
         </div>
-        
         {/* Interactive Features */}
         <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">🎮 Interactive Features</h3>
             <p className="text-xl opacity-90">Experience our content with cutting-edge interactive technology</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 group">
               <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🎯</div>
@@ -137,7 +128,6 @@ const NewContentShowcase2034: React.FC = () => {
             </div>
           </div>
         </div>
-        
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -154,13 +144,11 @@ const NewContentShowcase2034: React.FC = () => {
           </div>
         </div>
       </div>
-      
       {/* Floating Elements */}
       <div className="absolute top-16 left-16 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-16 right-16 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
     </div>
   );
-};
 
 export default NewContentShowcase2034;

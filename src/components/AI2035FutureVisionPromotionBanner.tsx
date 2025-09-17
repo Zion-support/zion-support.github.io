@@ -9,6 +9,7 @@ import {
   Star,
   Sparkles
 } from 'lucide-react';
+};
 
 export default function AI2035FutureVisionPromotionBanner() {
   return (
@@ -70,4 +71,4 @@ export default function AI2035FutureVisionPromotionBanner() {
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
             <span className="text-sm">Expert-curated content</span>
   );
-}
+};

@@ -20,6 +20,7 @@ import {
   Github,
   Terminal
 } from 'lucide-react';
+};
 
 export default function ApiToolsPage() {
   const apiTools = [
@@ -414,6 +415,5 @@ export default function ApiToolsPage() {
               View Documentation
     </>
   );
-};
 
 export default api-tools;

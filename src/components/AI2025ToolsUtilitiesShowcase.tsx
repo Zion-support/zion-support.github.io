@@ -1,11 +1,9 @@
 import React from 'react';
-
 const AI2025ToolsUtilitiesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.04%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div
@@ -15,18 +13,15 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
             <Wrench className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-indigo-300 font-medium">AI Tools & Utilities</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Powerful AI Tools for
             <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent"> Every Need</span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
             boost productivityand drive innovation across all aspects of your business.
           </p>
         </div>
-
         {/* Category Navigation */}
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4">
@@ -56,7 +51,6 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {filteredTools.map((toolindex) => (
@@ -77,16 +71,13 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
                     <div className="text-sm text-gray-400">{tool.users} users</div>
                   </div>
                 </div>
-
                 {/* Tool Info */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
                   {tool.name}
                 </h3>
-                
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {tool.description}
                 </p>
-
                 {/* Features */}
                 <div className="space-y-2 mb-6">
                   {tool.features.map((featureIndex) => (
@@ -96,7 +87,6 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Price and Actions */}
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">{tool.price}</div>
@@ -116,7 +106,6 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Key Features */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Tools?</h3>
@@ -135,7 +124,6 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -159,6 +147,5 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default AI2025ToolsUtilitiesShowcase;

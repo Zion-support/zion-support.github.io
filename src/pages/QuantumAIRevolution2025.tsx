@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const QuantumAIRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -9,7 +8,6 @@ const QuantumAIRevolution2025: React.FC = () => {
         <meta name="description" content="Experience the quantum AI revolution with breakthrough technology that solves impossible problems and delivers unprecedented business results." />
         <meta name="keywords" content="quantum AI, breakthrough technology, 2025 AI, quantum computing, revolutionary solutions" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -32,7 +30,6 @@ const QuantumAIRevolution2025: React.FC = () => {
             </span>
           </div>
         </div>
-
         {/* Quantum Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -43,7 +40,6 @@ const QuantumAIRevolution2025: React.FC = () => {
               solving complex problems 1000x faster than classical computers.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🔬</div>
             <h3 className="text-2xl font-bold text-white mb-4">Molecular Simulation</h3>
@@ -52,7 +48,6 @@ const QuantumAIRevolution2025: React.FC = () => {
               materials science, and chemical engineering breakthroughs.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🔐</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Encryption</h3>
@@ -61,7 +56,6 @@ const QuantumAIRevolution2025: React.FC = () => {
               absolute security for all business operations and data.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">📊</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Analytics</h3>
@@ -70,7 +64,6 @@ const QuantumAIRevolution2025: React.FC = () => {
               instantly, revealing insights impossible to discover otherwise.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-2xl font-bold text-white mb-4">Optimization Mastery</h3>
@@ -79,7 +72,6 @@ const QuantumAIRevolution2025: React.FC = () => {
               supply chain, and resource allocation problems in real-time.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold text-white mb-4">Parallel Universes</h3>
@@ -89,7 +81,6 @@ const QuantumAIRevolution2025: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -134,7 +125,6 @@ const QuantumAIRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Performance Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -154,7 +144,6 @@ const QuantumAIRevolution2025: React.FC = () => {
             <div className="text-white text-lg">Security Breaches</div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -176,6 +165,5 @@ const QuantumAIRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default QuantumAIRevolution2025;

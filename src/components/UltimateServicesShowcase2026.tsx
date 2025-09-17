@@ -14,10 +14,8 @@ import {
   Star,
   TrendingUp
 } from 'lucide-react';
-
 const UltimateServicesShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai-solutions');
-
   const services = {
     'ai-solutions': {
       title: 'AI Solutions',
@@ -134,7 +132,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
       }
     }
   };
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -158,9 +155,7 @@ const UltimateServicesShowcase2026: React.FC = () => {
       avatar: "EK"
     }
   ];
-
   const currentService = services[activeTab as keyof typeof services];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,7 +174,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
             Discover our comprehensive suite of cutting-edge technologies designed to revolutionize your business and accelerate innovation.
           </p>
         </motion.div>
-
         {/* Service Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(services).map(([key, service]) => (
@@ -197,7 +191,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Service Content */}
         <motion.div
           key={activeTab}
@@ -214,11 +207,9 @@ const UltimateServicesShowcase2026: React.FC = () => {
               </div>
               <h3 className="text-3xl font-bold text-white">{currentService.title}</h3>
             </div>
-
             <p className="text-xl text-gray-300 leading-relaxed">
               {currentService.description}
             </p>
-
             <div className="grid grid-cols-2 gap-6">
               {Object.entries(currentService.stats).map(([key, value]) => (
                 <div key={key} className="text-center">
@@ -227,13 +218,11 @@ const UltimateServicesShowcase2026: React.FC = () => {
                 </div>
               ))}
             </div>
-
             <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </div>
-
           {/* Features Grid */}
           <div className="grid grid-cols-2 gap-4">
             {currentService.features.map((feature, index) => (
@@ -252,7 +241,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -291,7 +279,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -318,6 +305,5 @@ const UltimateServicesShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateServicesShowcase2026;

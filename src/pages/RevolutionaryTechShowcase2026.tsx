@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       title: "Quantum Consciousness AI",
@@ -41,7 +39,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
       color: "from-indigo-600 to-purple-600"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -50,10 +47,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -70,7 +65,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             These breakthrough innovations represent the pinnacle of human achievement and the dawn of a new era.
           </p>
         </div>
-
         {/* Interactive Technology Carousel */}
         <div className="relative mb-16">
           <div className="overflow-hidden rounded-2xl">
@@ -117,7 +111,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
             {technologies.map((_, index) => (
@@ -131,7 +124,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {technologies.map((tech, index) => (
@@ -153,14 +145,12 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Interactive Lab Section */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">🔬 Revolutionary Technology Lab</h2>
             <p className="text-xl text-gray-300">Experience these technologies in our state-of-the-art virtual laboratory</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6">
@@ -176,7 +166,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                   Launch Simulation
                 </button>
               </div>
-              
               <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Neural-Quantum Interface</h3>
                 <p className="text-gray-200 mb-4">Control quantum systems with your thoughts</p>
@@ -191,7 +180,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                 </button>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Synthetic Universe Creator</h3>
@@ -206,7 +194,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                   Create Universe
                 </button>
               </div>
-              
               <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Molecular AI Laboratory</h3>
                 <p className="text-gray-200 mb-4">Manipulate matter at the atomic level</p>
@@ -223,7 +210,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Impact Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -243,7 +229,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <div className="text-gray-300">Continuous Innovation</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Revolution</h2>
@@ -263,6 +248,5 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryTechShowcase2026;

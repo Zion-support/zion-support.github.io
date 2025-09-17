@@ -22,8 +22,6 @@ export interface AdvancedAIService {
   isNew?: boolean;
   discount?: number;
   urgency?: string;
-}
-
 export const ADVANCED_AI_SERVICES_2026: AdvancedAIService[] = [
   {
     id: "ai-consciousness-2026",
@@ -157,4 +155,3 @@ export const ADVANCED_AI_SERVICES_2026: AdvancedAIService[] = [
     discount: 15,
     urgency: "Predict the Future"
   }
-];

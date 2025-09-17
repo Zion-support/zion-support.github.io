@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function NewBreakthroughContentPromotionBanner2025() {
   return (
@@ -104,4 +105,4 @@ export default function NewBreakthroughContentPromotionBanner2025() {
             >
               Get Started Now
   );
-}
+};

@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarBrainZapAtomBot
+};
 
 export default function NewContent2025InnovationShowcaseBanner() {
   return (
@@ -71,4 +72,4 @@ export default function NewContent2025InnovationShowcaseBanner() {
             >
               Get Started Today
   );
-}
+};

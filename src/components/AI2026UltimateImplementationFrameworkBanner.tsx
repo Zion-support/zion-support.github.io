@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users } from 'lucide-react';
+};
 
 export default function AI2026UltimateImplementationFrameworkBanner() {
   return (
@@ -120,4 +121,4 @@ export default function AI2026UltimateImplementationFrameworkBanner() {
             Start Your AI Transformation
             <ArrowRight className="ml-2 w-5 h-5" />
   );
-}
+};

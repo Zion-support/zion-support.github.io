@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025UltimateAutomationRevolutionPromotionBanner() {
   return (
@@ -85,4 +86,4 @@ export default function AI2025UltimateAutomationRevolutionPromotionBanner() {
               <div className="text-lg font-bold">Apple</div>
               <div className="text-lg font-bold">Tesla</div>
   );
-}
+};

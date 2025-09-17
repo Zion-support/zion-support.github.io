@@ -1,12 +1,8 @@
 import React from 'react';
-
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
-;
-
 interface LazyImageProps {
-
 interface LazyImageProps {;
   src: string;
   alt: string;
@@ -19,11 +15,11 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
-}
+};
+
 export default function LazyImage({
   src
   alt
@@ -73,6 +69,7 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
+};
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
@@ -98,6 +95,7 @@ export default function LazyImage({
         </div>;
       </div>;
     );
+};
   }
   return (
     <div ref={imgRef} className={`relative ${className}`} style={style}>;
@@ -111,7 +109,8 @@ export default function LazyImage({
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
-}
+};
+
 export default /**
  * LazyImage - Function description
  */
@@ -120,18 +119,15 @@ function LazyImage() {
   const [isInView, setIsInView] = useState (priority);
   const [has_error, setHasError] = useState (false);
   const img_ref = useRef < HTMLDivElement>(null);
-;
   useEffect (() => {
     // Check condition
 if (return) {
   $2
-}
     const observer = new IntersectionObserver (
       ([entry]) => {
         // Check condition
 if ( {) {
   $2
-}
           setIsInView (true);
           observer.disconnect ();
         }
@@ -141,30 +137,25 @@ if ( {) {
         root_margin: "50px",
       },
     );
-;
+};
     // Check condition
 if ( {) {
   $2
-}
       observer.observe (img_ref.current);
     }
     return () => observer.disconnect ();
   }, [priority]);
-;
   const handle_load = () =>: any {
     setIsLoaded (true);
     on_load?.();
   }
-;
   const handle_error = () =>: any {
     setHasError (true);
     on_error?.();
   }
-;
   // Check condition
 if ( {) {
   $2
-}
     return (
       <div;
         ref={img_ref}
@@ -202,4 +193,3 @@ if ( {) {
           }`}
         />)}
     </div>);
-}

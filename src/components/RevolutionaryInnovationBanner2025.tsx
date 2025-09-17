@@ -16,11 +16,9 @@ import {
   Sparkles,
   Rocket
 } from 'lucide-react';
-
 const RevolutionaryInnovationBanner2025 = () => {
   const [currentStat, setCurrentStat] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -28,14 +26,12 @@ const RevolutionaryInnovationBanner2025 = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
   const stats = [
     { number: "500%", label: "Average ROI Increase", icon: TrendingUp },
     { number: "10,000+", label: "Companies Transformed", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
     { number: "200+", label: "Countries Served", icon: Globe }
   ];
-
   const innovations = [
     {
       title: "AI-Powered Automation",
@@ -62,13 +58,11 @@ const RevolutionaryInnovationBanner2025 = () => {
       color: "from-red-500 to-orange-500"
     }
   ];
-
   return (
     <div className="relative py-20 px-4 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%2522100%2522%2520height%253D%2522100%2522%2520viewBox%253D%25220%25200%2520100%2520100%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.05%2522%253E%253Cpath%2520d%253D%2522M50%252050c0-27.614-22.386-50-50-50v100c27.614%25200%252050-22.386%252050-50z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30" />
-      
       <div className="relative max-w-7xl mx-auto">
         {/* Main Banner */}
         <motion.div
@@ -81,7 +75,6 @@ const RevolutionaryInnovationBanner2025 = () => {
             <Rocket className="w-5 h-5" />
             <span>🚀 REVOLUTIONARY BREAKTHROUGH 2025</span>
           </div>
-          
           <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-tight">
             The Future of
             <br />
@@ -91,12 +84,10 @@ const RevolutionaryInnovationBanner2025 = () => {
             <br />
             Starts Here
           </h1>
-          
           <p className="text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
             Experience the most advanced, cutting-edge technology that's transforming industries 
             and reshaping the world as we know it. Join the revolution today.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 flex items-center gap-3">
               <Play className="w-6 h-6" />
@@ -108,7 +99,6 @@ const RevolutionaryInnovationBanner2025 = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -136,7 +126,6 @@ const RevolutionaryInnovationBanner2025 = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Innovation Showcase */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -147,7 +136,6 @@ const RevolutionaryInnovationBanner2025 = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
             Revolutionary Innovations
           </h2>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {innovations.map((innovation, index) => (
               <motion.div
@@ -170,7 +158,6 @@ const RevolutionaryInnovationBanner2025 = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Success Stories */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -186,7 +173,6 @@ const RevolutionaryInnovationBanner2025 = () => {
               See how our revolutionary technology has transformed businesses worldwide
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
@@ -197,7 +183,6 @@ const RevolutionaryInnovationBanner2025 = () => {
                 "Increased efficiency by 300% and reduced costs by 50% in just 6 months"
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                 <TrendingUp className="w-10 h-10 text-white" />
@@ -207,7 +192,6 @@ const RevolutionaryInnovationBanner2025 = () => {
                 "Scaled from 0 to $10M ARR in 18 months with our AI-powered solutions"
               </p>
             </div>
-            
             <div className="text-center">
               <div className="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                 <Globe className="w-10 h-10 text-white" />
@@ -219,7 +203,6 @@ const RevolutionaryInnovationBanner2025 = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Final CTA */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -248,7 +231,6 @@ const RevolutionaryInnovationBanner2025 = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryInnovationBanner2025;
 </div></div>

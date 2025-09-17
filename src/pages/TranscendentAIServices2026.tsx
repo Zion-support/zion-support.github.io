@@ -12,7 +12,6 @@ import {
   Rocket,
   Star
 } from 'lucide-react';
-
 const TranscendentAIServices2026 = () => {
   const services = [
     {
@@ -142,7 +141,6 @@ const TranscendentAIServices2026 = () => {
       category: "Infinite AI"
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -152,7 +150,6 @@ const TranscendentAIServices2026 = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -163,7 +160,6 @@ const TranscendentAIServices2026 = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -204,7 +200,6 @@ const TranscendentAIServices2026 = () => {
           </motion.div>
         </div>
       </motion.div>
-
       {/* Services Grid */}
       <motion.div 
         className="py-20 px-4"
@@ -219,7 +214,6 @@ const TranscendentAIServices2026 = () => {
           >
             Revolutionary AI Services
           </motion.h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <motion.div
@@ -239,11 +233,9 @@ const TranscendentAIServices2026 = () => {
                     </span>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-300 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -255,7 +247,6 @@ const TranscendentAIServices2026 = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <motion.button 
@@ -271,7 +262,6 @@ const TranscendentAIServices2026 = () => {
           </div>
         </div>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div 
         className="py-20 px-4 text-center bg-gradient-to-r from-purple-800/50 to-blue-800/50"
@@ -298,6 +288,5 @@ const TranscendentAIServices2026 = () => {
       </motion.div>
     </div>
   );
-};
 
 export default TranscendentAIServices2026;

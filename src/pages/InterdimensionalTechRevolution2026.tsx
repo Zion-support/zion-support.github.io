@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InterdimensionalTechRevolution2026 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -9,7 +8,6 @@ const InterdimensionalTechRevolution2026 = () => {
           <p className="text-lg opacity-90">Revolutionary technology solutions</p>
         </div>
       </div>
-
         {/* Dimensional Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -30,7 +28,6 @@ const InterdimensionalTechRevolution2026 = () => {
               </span>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
@@ -47,7 +44,6 @@ const InterdimensionalTechRevolution2026 = () => {
               Enter Gateway →
             </button>
           </motion.div>
-
           {/* Quantum Dimensional AI */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}
@@ -68,7 +64,6 @@ const InterdimensionalTechRevolution2026 = () => {
               Connect AI →
             </button>
           </motion.div>
-
           {/* Reality Manipulation Engine */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}
@@ -89,7 +84,6 @@ const InterdimensionalTechRevolution2026 = () => {
               Manipulate Reality →
             </button>
           </motion.div>
-
               <li>• Collective consciousness networks</li>
             </ul>
             <div className="text-center">
@@ -99,7 +93,6 @@ const InterdimensionalTechRevolution2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Interdimensional Applications</h2>
@@ -136,7 +129,6 @@ const InterdimensionalTechRevolution2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Safety and Ethics */}
         <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-red-400">Safety & Ethics</h2>
@@ -161,7 +153,6 @@ const InterdimensionalTechRevolution2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Dimensions?</h2>
@@ -177,7 +168,6 @@ const InterdimensionalTechRevolution2026 = () => {
               Manipulate Reality →
             </button>
           </div>
-
           {/* Parallel Universe Mining */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}
@@ -198,7 +188,6 @@ const InterdimensionalTechRevolution2026 = () => {
               Start Mining →
             </button>
           </motion.div>
-
           {/* Dimensional Communication */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}
@@ -219,7 +208,6 @@ const InterdimensionalTechRevolution2026 = () => {
               Connect Now →
             </button>
           </motion.div>
-
           {/* Multiverse Database */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}
@@ -242,7 +230,6 @@ const InterdimensionalTechRevolution2026 = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Dimensional Statistics */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -257,7 +244,6 @@ const InterdimensionalTechRevolution2026 = () => {
               The incredible reach of our interdimensional technologies
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -294,7 +280,6 @@ const InterdimensionalTechRevolution2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Success Stories */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -308,7 +293,6 @@ const InterdimensionalTechRevolution2026 = () => {
             Real results from our interdimensional technology implementations
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -321,7 +305,6 @@ const InterdimensionalTechRevolution2026 = () => {
             </p>
             <div className="text-indigo-300 font-semibold">- NASA Advanced Projects</div>
           </motion.div>
-
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
@@ -333,7 +316,6 @@ const InterdimensionalTechRevolution2026 = () => {
             </p>
             <div className="text-purple-300 font-semibold">- Global Health Institute</div>
           </motion.div>
-
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
@@ -347,7 +329,6 @@ const InterdimensionalTechRevolution2026 = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -371,6 +352,5 @@ const InterdimensionalTechRevolution2026 = () => {
       </div>
     </div>
   );
-};
 
 export default InterdimensionalTechRevolution2026;

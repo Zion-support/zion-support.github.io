@@ -1,6 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainCpuZapTrendingUpGlobe
+};
 
 export default function AI2026FuturePredictionsRevolutionaryBanner() {
   return (
@@ -68,4 +69,4 @@ export default function AI2026FuturePredictionsRevolutionaryBanner() {
       {/* Bottom gradient */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400"></div>
   );
-}
+};

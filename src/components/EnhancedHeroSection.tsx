@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedHeroSection: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -11,6 +10,5 @@ const EnhancedHeroSection: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedHeroSection;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -11,7 +10,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       >
         <Accessibility className="w-6 h-6" />
       </divbutton>
-
       {/* Accessibility Panel */}
       <div>
         {isOpen && (
@@ -30,7 +28,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 <RotateCcw className="w-4 h-4" />
               </button>
             </div>
-
             <div className="space-y-4">
               {/* High Contrast */}
               <div className="flex items-center justify-between">
@@ -50,7 +47,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   />
                 </button>
               </div>
-
               {/* Large Text */}
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -69,7 +65,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   />
                 </button>
               </div>
-
               {/* Reduced Motion */}
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -88,7 +83,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   />
                 </button>
               </div>
-
               {/* High Saturation */}
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -107,7 +101,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   />
                 </button>
               </div>
-
               {/* Focus Indicator */}
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -126,7 +119,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   />
                 </button>
               </div>
-
               {/* Font Size Slider */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -141,7 +133,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
-
               {/* Line Height Slider */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -157,7 +148,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
-
               {/* Letter Spacing Slider */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -174,7 +164,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 />
               </div>
             </div>
-
             {/* Status Indicators */}
             <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
@@ -191,6 +180,5 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedAccessibilityEnhancer;

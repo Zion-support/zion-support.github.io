@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const AdvancedTechBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTech, setCurrentTech] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
-    
     const interval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % 4);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
-
   const technologies = [
     {
       title: "Neural Quantum Processing",
@@ -41,7 +36,6 @@ const AdvancedTechBanner2025: React.FC = () => {
       color: "from-orange-600 to-red-600"
     }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -52,7 +46,6 @@ const AdvancedTechBanner2025: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-8">
           <motion.div
@@ -63,7 +56,6 @@ const AdvancedTechBanner2025: React.FC = () => {
           >
             🚀 NEW: Advanced Tech Showcase 2025
           </motion.div>
-          
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -72,7 +64,6 @@ const AdvancedTechBanner2025: React.FC = () => {
           >
             Revolutionary Technologies
           </motion.h2>
-          
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -83,7 +74,6 @@ const AdvancedTechBanner2025: React.FC = () => {
             data storage, and human-computer interaction.
           </motion.p>
         </div>
-
         {/* Rotating Technology Showcase */}
         <div className="max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
@@ -100,7 +90,6 @@ const AdvancedTechBanner2025: React.FC = () => {
               <p className="text-lg opacity-90">{technologies[currentTech].description}</p>
             </motion.div>
           </AnimatePresence>
-          
           {/* Technology Indicators */}
           <div className="flex justify-center mt-6 space-x-2">
             {technologies.map((_, index) => (
@@ -114,7 +103,6 @@ const AdvancedTechBanner2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Action Buttons */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -135,7 +123,6 @@ const AdvancedTechBanner2025: React.FC = () => {
             🌌 Ultimate Breakthrough →
           </a>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -153,6 +140,5 @@ const AdvancedTechBanner2025: React.FC = () => {
       </div>
     </motion.div>
   );
-};
 
 export default AdvancedTechBanner2025;

@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026QuantumConsciousnessPromotionBanner() {
   return (
@@ -74,4 +75,4 @@ export default function AI2026QuantumConsciousnessPromotionBanner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/50 to-transparent"></div>
   );
-}
+};

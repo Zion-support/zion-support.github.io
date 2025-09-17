@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const PostQuantumConsciousnessBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const consciousnessFeatures = [
     {
       title: "Post-Quantum Consciousness",
@@ -34,17 +32,13 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
       link: "/content/blog/ai-2026-post-quantum-consciousness-revolution-ultimate-business-breakthrough"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % consciousnessFeatures.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   const currentFeature = consciousnessFeatures[currentSlide];
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -79,7 +73,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Main Content */}
           <div className="relative z-10 px-6 py-12 lg:px-16 lg:py-20">
             {/* Header */}
@@ -92,7 +85,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
               >
                 🚀 POST-QUANTUM CONSCIOUSNESS BREAKTHROUGH • JANUARY 2026
               </motion.div>
-              
               <motion.h1
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -101,7 +93,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
               >
                 Post-Quantum Consciousness Revolution
               </motion.h1>
-              
               <motion.p
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -113,7 +104,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                 that achieves <span className="font-bold text-yellow-300">2000% ROI</span> within 18 months.
               </motion.p>
             </div>
-
             {/* Feature Showcase */}
             <div className="grid lg:grid-cols-3 gap-8 mb-12">
               {consciousnessFeatures.map((feature, index) => (
@@ -129,7 +119,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                 >
                   {/* Gradient Overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-20`}></div>
-                  
                   <div className="relative z-10 p-8">
                     {/* Icon and Title */}
                     <div className="flex items-center mb-6">
@@ -139,10 +128,8 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                         <p className="text-purple-200 font-semibold">{feature.subtitle}</p>
                       </div>
                     </div>
-
                     {/* Description */}
                     <p className="text-gray-200 mb-6 leading-relaxed">{feature.description}</p>
-
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-3 mb-6">
                       {feature.stats.map((stat, statIndex) => (
@@ -152,7 +139,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                         </div>
                       ))}
                     </div>
-
                     {/* CTA Button */}
                     <a
                       href={feature.link}
@@ -164,7 +150,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             {/* Key Benefits */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -175,7 +160,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
               <h3 className="text-3xl font-bold text-center mb-8 text-white">
                 Revolutionary Business Impact
               </h3>
-              
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                   { metric: "2000%", label: "ROI Achievement", icon: "💰" },
@@ -197,7 +181,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-
             {/* Call to Action */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -223,7 +206,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
@@ -234,7 +216,6 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Slide Indicators */}
           <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {consciousnessFeatures.map((_, index) => (
@@ -251,6 +232,5 @@ const PostQuantumConsciousnessBanner2026: React.FC = () => {
       )}
     </AnimatePresence>
   );
-};
 
 export default PostQuantumConsciousnessBanner2026;

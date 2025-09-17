@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026EnterpriseTransformationPromotionBanner() {
   return (
@@ -82,4 +83,4 @@ export default function AI2026EnterpriseTransformationPromotionBanner() {
             <p className="text-yellow-400 font-semibold animate-pulse">
               ⚡ Limited Time: Free implementation consultation
   );
-}
+};

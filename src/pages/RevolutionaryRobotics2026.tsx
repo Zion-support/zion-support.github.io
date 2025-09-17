@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryRobotics2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -21,7 +20,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -42,7 +40,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🏭</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Manufacturing</h3>
@@ -60,7 +57,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚁</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Swarm Robotics</h3>
@@ -78,7 +74,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🏥</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Medical Robotics</h3>
@@ -96,7 +91,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌊</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Underwater Robotics</h3>
@@ -114,7 +108,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
               </span>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Robotics</h3>
@@ -133,7 +126,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Capabilities Showcase */}
         <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -159,7 +151,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Application Areas */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -202,7 +193,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Vision */}
         <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -226,7 +216,6 @@ const RevolutionaryRobotics2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Embrace the Robotic Revolution</h2>
@@ -246,6 +235,5 @@ const RevolutionaryRobotics2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryRobotics2026;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Cpu, Brain, Sparkles, Shield } from 'lucide-react';
-
 const NewServicesShowcase2026: React.FC = () => {
   const services = [
     {
@@ -95,7 +94,6 @@ const NewServicesShowcase2026: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,20 +108,17 @@ const NewServicesShowcase2026: React.FC = () => {
             <Star className="w-5 h-5 text-purple-600 mr-2" />
             <span className="text-purple-700 dark:text-purple-300 font-medium">New Services 2026</span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Revolutionary
             <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               AI Services
             </span>
           </h2>
-          
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Transform your business with our cutting-edge AI, quantum computing, and neural interface solutions. 
             Built for the future, delivering results today.
           </p>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
@@ -141,27 +136,22 @@ const NewServicesShowcase2026: React.FC = () => {
                   </div>
                 </div>
               )}
-              
               <div className={`relative h-full p-8 rounded-2xl bg-white dark:bg-slate-800 border-2 ${service.borderColor} hover:shadow-2xl transition-all duration-300 group-hover:transform group-hover:scale-105`}>
                 {/* Icon */}
                 <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${service.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {service.icon}
                 </div>
-                
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 {/* Price */}
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                   {service.price}
                 </div>
-                
                 {/* Features */}
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
@@ -171,7 +161,6 @@ const NewServicesShowcase2026: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 {/* CTA Button */}
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -181,14 +170,12 @@ const NewServicesShowcase2026: React.FC = () => {
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
-                
                 {/* Hover Effect */}
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
               </div>
             </motion.div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -225,6 +212,5 @@ const NewServicesShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewServicesShowcase2026;

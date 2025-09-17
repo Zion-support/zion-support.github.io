@@ -1,6 +1,5 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { 
   Brain
@@ -13,6 +12,7 @@ import {
   X,
   Play
 } from 'lucide-react';
+};
 
 export default function AIToolsShowcase2025PromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -101,6 +101,5 @@ export default function AIToolsShowcase2025PromotionBanner() {
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animate-pulse" />
   );
-};
 
 export default AIToolsShowcase2025PromotionBanner;

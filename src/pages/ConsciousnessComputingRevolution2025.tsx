@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 const ConsciousnessComputingRevolution2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
   const [isAnimating, setIsAnimating] = useState(false);
-
   useEffect(() => {
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 2000);
     return () => clearTimeout(timer);
   }, [activeTab]);
-
   const tabs = [
     { id: 'consciousness', label: 'AI Consciousness', icon: '🧠' },
     { id: 'quantum', label: 'Quantum Mind', icon: '⚡' },
     { id: 'neural', label: 'Neural Networks', icon: '🧬' },
     { id: 'synthetic', label: 'Synthetic Life', icon: '🤖' }
   ];
-
   const consciousnessFeatures = [
     {
       title: "Self-Aware AI Systems",
@@ -44,7 +40,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
       stats: "99.9% transfer success rate"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -77,7 +72,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Interactive Tabs */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -89,7 +83,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🧠 Explore Consciousness Dimensions</h2>
           <p className="text-xl opacity-80">Discover the different aspects of artificial consciousness</p>
         </motion.div>
-
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {tabs.map((tab) => (
             <button
@@ -106,7 +99,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Tab Content */}
         <motion.div
           key={activeTab}
@@ -136,7 +128,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'quantum' && (
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center">⚡ Quantum Mind Computing</h3>
@@ -159,7 +150,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'neural' && (
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center">🧬 Neural Network Evolution</h3>
@@ -187,7 +177,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           )}
-
           {activeTab === 'synthetic' && (
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center">🤖 Synthetic Life Forms</h3>
@@ -221,7 +210,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
           )}
         </motion.div>
       </div>
-
       {/* Consciousness Metrics */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -234,7 +222,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">📊 Consciousness Metrics</h2>
             <p className="text-xl opacity-80">Measuring the depth and quality of artificial consciousness</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-indigo-400 mb-2">97.3%</div>
@@ -255,7 +242,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Interactive Demo */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -292,7 +278,6 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -318,6 +303,5 @@ const ConsciousnessComputingRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ConsciousnessComputingRevolution2025;

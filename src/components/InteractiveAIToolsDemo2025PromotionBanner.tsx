@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -11,7 +10,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse" />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -23,7 +21,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               <Zap className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-yellow-400 font-semibold">Interactive AI Demo</span>
             </div>
-
             {/* Main Headline */}
             <div
             >
@@ -38,7 +35,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 No signup required - just click and create!
               </p>
             </div>
-
             {/* Rotating Tool Showcase */}
             <div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -64,7 +60,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Benefits Grid */}
             <div
               className="grid grid-cols-2 gap-4"
@@ -76,7 +71,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -92,7 +86,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Right Content - Interactive Preview */}
           <div className="relative">
             <div
@@ -108,7 +101,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                   </div>
                   <div className="text-sm text-gray-400">AI Tools Demo</div>
                 </div>
-
                 {/* Tool Selection */}
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold text-white">Select AI Tool</h3>
@@ -130,7 +122,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Input/Output Preview */}
                 <div className="space-y-4">
                   <div>
@@ -139,7 +130,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                       "Create a professional email about our new AI product launch..."
                     </div>
                   </div>
-                  
                   <div>
                     <label className="block text-sm font-semibold text-white mb-2">Output</label>
                     <div className="bg-slate-700 rounded-lg p-3 text-gray-300 text-sm">
@@ -153,7 +143,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <button className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white py-2 px-4 rounded-lg text-sm font-semibold flex items-center justify-center">
@@ -164,7 +153,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                     Reset
                   </button>
                 </div>
-
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                   <div className="text-center">
@@ -177,11 +165,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 rounded-2xl pointer-events-none" />
             </div>
-
             {/* Floating Elements */}
             <div
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
@@ -195,7 +181,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-6 h-6 text-black" />
             </div>
-
             <div
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
                 y: [010],
@@ -210,7 +195,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Stats */}
         <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -225,7 +209,6 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveAIToolsDemo2025PromotionBanner;
 </div></div></div></div></div></div></div></div>

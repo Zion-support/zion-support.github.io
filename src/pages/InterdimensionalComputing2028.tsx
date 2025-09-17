@@ -14,7 +14,6 @@ import {
   Infinity,
   Sparkles
 } from 'lucide-react';
-
 const InterdimensionalComputing2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -55,7 +54,6 @@ const InterdimensionalComputing2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +65,6 @@ const InterdimensionalComputing2028: React.FC = () => {
               Access knowledge and solutions from infinite parallel universes and alternate realities
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
@@ -78,7 +75,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 Quantum tunneling through dimensional barriers to access parallel universes and alternate realities
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="w-6 h-6 text-white" />
@@ -88,7 +84,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 Access solutions from parallel universes and synthesize insights across infinite dimensional spaces
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-green-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-green-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <Brain className="w-6 h-6 text-white" />
@@ -98,7 +93,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 Combine insights from multiple dimensions to create solutions that transcend dimensional limitations
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-pink-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <Layers className="w-6 h-6 text-white" />
@@ -108,7 +102,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 Access scientific knowledge from advanced civilizations and parallel technological developments
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-yellow-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
                 <Sparkles className="w-6 h-6 text-white" />
@@ -118,7 +111,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 Discover innovations from parallel universes and accelerate development through dimensional collaboration
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-red-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Infinity className="w-6 h-6 text-white" />
@@ -131,7 +123,6 @@ const InterdimensionalComputing2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +134,6 @@ const InterdimensionalComputing2028: React.FC = () => {
               See how interdimensional computing is transforming every industry
             </p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center mb-6">
@@ -171,7 +161,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
@@ -198,7 +187,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-green-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
@@ -225,7 +213,6 @@ const InterdimensionalComputing2028: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mr-4">
@@ -255,7 +242,6 @@ const InterdimensionalComputing2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,7 +253,6 @@ const InterdimensionalComputing2028: React.FC = () => {
               See how interdimensional computing is transforming the world
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2">
@@ -276,7 +261,6 @@ const InterdimensionalComputing2028: React.FC = () => {
               <div className="text-white font-semibold mb-2">Acceleration</div>
               <div className="text-gray-300">Space technology development</div>
             </div>
-
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
                 ∞
@@ -284,7 +268,6 @@ const InterdimensionalComputing2028: React.FC = () => {
               <div className="text-white font-semibold mb-2">Possibilities</div>
               <div className="text-gray-300">Access to infinite realities</div>
             </div>
-
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 100%
@@ -292,7 +275,6 @@ const InterdimensionalComputing2028: React.FC = () => {
               <div className="text-white font-semibold mb-2">Success Rate</div>
               <div className="text-gray-300">Problem solving across dimensions</div>
             </div>
-
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-2">
                 ∞
@@ -303,7 +285,6 @@ const InterdimensionalComputing2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -333,6 +314,5 @@ const InterdimensionalComputing2028: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InterdimensionalComputing2028;

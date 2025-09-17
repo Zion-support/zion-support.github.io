@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumAI2025RevolutionBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
@@ -7,7 +6,6 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -24,7 +22,6 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
             Complete implementation guide with real-world case studies and proven results.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {/* Featured Content Cards */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -41,7 +38,6 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
               Read Guide →
             </a>
           </div>
-
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Generative AI Revolution</h3>
@@ -56,7 +52,6 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
               Explore Now →
             </a>
           </div>
-
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
             <div className="text-3xl mb-4">💎</div>
             <h3 className="text-xl font-bold mb-3">2000% ROI Success Story</h3>
@@ -72,7 +67,6 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
@@ -92,7 +86,6 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
             <div className="text-sm text-gray-300">Success Rate</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,6 +109,5 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
       </div>
     </section>
   );
-};
 
 export default QuantumAI2025RevolutionBanner;

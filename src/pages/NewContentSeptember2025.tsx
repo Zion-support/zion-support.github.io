@@ -1,4 +1,5 @@
 import React from 'react';
+};
 
 export default function NewContentSeptember2025(): JSX.Element {
 	return (
@@ -38,4 +39,3 @@ export default function NewContentSeptember2025(): JSX.Element {
 					<a href="/contact" className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">
 						Discuss Implementation →
 	);
-}

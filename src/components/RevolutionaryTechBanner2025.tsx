@@ -1,5 +1,4 @@
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
@@ -10,7 +9,6 @@
               Watch Demo
             </button>
 import React from 'react';
-
 const RevolutionaryTechBanner2025 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -21,6 +19,5 @@ const RevolutionaryTechBanner2025 = () => {
         </div>
       </div>
   );
-};
 
 export default RevolutionaryTechBanner2025;

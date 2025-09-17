@@ -2385,8 +2385,6 @@ export const blogPosts = [
     imageUrl: "/images/blog/real-time-evals-guardrails-2026.jpg",
     slug: "real-time-evals-ship-guardrails-fast"
   }
-];
-
 // Fresh promoted content (2025-09-16)
 export const newPromoted2025 = [
   {
@@ -2440,8 +2438,6 @@ export const newPromoted2025 = [
     imageUrl: "/images/blog/evidence-driven-ai-governance-2026.jpg",
     slug: "ai-2026-evidence-driven-ai-governance"
   }
-];
-
 // Latest additions (2025-09-16)
 const latest2025 = [
   {
@@ -2541,26 +2537,16 @@ const latest2025 = [
     imageUrl: "/images/blog/agentic-systems-maturity-2026.jpg",
     slug: "ai-2026-operational-maturity-models-for-agentic-systems"
   }
-];
-
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug);
-};
-
 export const getBlogPostsByCategory = (category) => {
   return blogPosts.filter(post => post.category === category);
-};
-
 export const getFeaturedBlogPosts = () => {
   return BLOG_POSTS.filter(post => post.featured);
-};
-
 export const getRecentBlogPosts = (limit = 3) => {
   return [...BLOG_POSTS]
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit);
-};
-
 export const searchBlogPosts = (query) => {
   const searchTerm = query.toLowerCase();
   return blogPosts.filter(post =>
@@ -2569,16 +2555,12 @@ export const searchBlogPosts = (query) => {
     post.content.toLowerCase().includes(searchTerm) ||
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   );
-};
-
 export const getBlogCategories = () => {
   const categories = [...new Set(blogPosts.map(post => post.category))];
   return categories.map(category => ({
     name: category,
     count: blogPosts.filter(post => post.category === category).length
   }));
-};
-
 export const getBlogTags = () => {
   const allTags = blogPosts.flatMap(post => post.tags);
   const uniqueTags = [...new Set(allTags)];
@@ -2586,8 +2568,6 @@ export const getBlogTags = () => {
     name: tag,
     count: allTags.filter(t => t === tag).length
   }));
-};
-
 // New content added for enhanced engagement
 export const newContent2026 = [
   {
@@ -3163,8 +3143,6 @@ export const newContent2026 = [
     imageUrl: "/images/blog/incident-lifecycle-playbook-2026.jpg",
     slug: "ai-2026-incident-lifecycle-playbook"
   }
-];
-
 // Additional fresh content (2029 preview)
 export const extraContent2029 = [
   {
@@ -3430,8 +3408,6 @@ export const extraContent2029 = [
     imageUrl: "/images/blog/edge-ai-2025.jpg",
     slug: "edge-ai-bringing-intelligence-network-edge"
   }
-];
-
 // Latest 2026 Content - Fresh and Engaging
 const latestContent2026 = [
   {
@@ -3509,14 +3485,11 @@ const latestContent2026 = [
     imageUrl: "/images/blog/ai-powered-education-2026.jpg",
     slug: "ai-powered-education-personalized-learning-revolution"
   }
-];
-
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
-
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)

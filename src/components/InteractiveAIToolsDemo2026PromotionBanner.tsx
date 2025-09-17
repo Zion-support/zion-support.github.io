@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -11,7 +10,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(8)].map((_i) => (
@@ -33,7 +31,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
             />
           ))}
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             {/* Left Content */}
@@ -46,20 +43,17 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
                   INTERACTIVE DEMO
                 </span>
               </div>
-
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🎮 Interactive AI Tools Demo 2026
               </divh2>
-
               <divp
                 className="text-lg text-blue-200 mb-6 max-w-2xl"
               >
                 Experience the power of our cutting-edge AI tools through hands-on interactive demonstrations. 
                 See real-time performance metrics and instant results.
               </divp>
-
               {/* Rotating Tool Display */}
               <div
                 key={currentTool}
@@ -73,7 +67,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
                   <div className="text-sm text-blue-300">Live Demo Available</div>
                 </div>
               </div>
-
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
@@ -85,7 +78,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Stats */}
               <div
                 className="flex space-x-6 mb-6"
@@ -97,7 +89,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -113,7 +104,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Right Content - Animated Icons */}
             <div
               className="hidden lg:flex items-center space-x-4"
@@ -136,7 +126,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Dismiss Button */}
         <button
           onClick={() => setIsDismissed(true)}
@@ -144,7 +133,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
         >
           <X className="w-5 h-5" />
         </button>
-
         {/* Pulse Effect */}
         <div
           className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20"
@@ -152,7 +140,6 @@ const InteractiveAIToolsDemo2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveAIToolsDemo2026PromotionBanner;
 </div></div></div></div>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ContentOptimizer: React.FC = () => {
   return (
     <div id="content-optimizer">
@@ -13,6 +12,5 @@ const ContentOptimizer: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default ContentOptimizer;

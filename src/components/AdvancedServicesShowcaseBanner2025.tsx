@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AdvancedServicesShowcaseBanner2025() {
   return (
@@ -97,4 +98,4 @@ export default function AdvancedServicesShowcaseBanner2025() {
       <div className="absolute bottom-20 left-20 w-12 h-12 bg-cyan-400/20 rounded-full animate-bounce" style={{animationDelay: '2s'}}></div>
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-pink-400/20 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
   );
-}
+};

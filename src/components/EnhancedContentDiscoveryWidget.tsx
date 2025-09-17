@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -14,7 +13,7 @@ interface ContentItem {
   borderColor: string;
   roi?: string;
   featured?: boolean;
-}
+};
 
 export default function EnhancedContentDiscoveryWidget() {
   const [searchTermsetSearchTerm] = useState('');
@@ -269,6 +268,5 @@ export default function EnhancedContentDiscoveryWidget() {
               >
                 Browse All Content
   );
-};
 
 export default EnhancedContentDiscoveryWidget;

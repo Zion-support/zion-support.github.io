@@ -14,7 +14,6 @@ import {
   CheckCircle,
   Lightbulb
 } from 'lucide-react';
-
 const AI2027BreakthroughInnovations = () => {
   const innovations = [
     {
@@ -66,14 +65,12 @@ const AI2027BreakthroughInnovations = () => {
       features: ["Predictive modeling", "Risk prevention", "Proactive solutions", "Future forecasting"]
     }
   ];
-
   const stats = [
     { number: "1000%", label: "Average ROI Increase", icon: TrendingUp },
     { number: "99.9%", label: "System Uptime", icon: CheckCircle },
     { number: "500%", label: "Productivity Boost", icon: Zap },
     { number: "95%", label: "Cost Reduction", icon: Database }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -111,7 +108,6 @@ const AI2027BreakthroughInnovations = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -137,7 +133,6 @@ const AI2027BreakthroughInnovations = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Innovations Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -154,7 +149,6 @@ const AI2027BreakthroughInnovations = () => {
               Discover the breakthrough technologies that are reshaping the future of AI and business
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
               <motion.div
@@ -172,11 +166,9 @@ const AI2027BreakthroughInnovations = () => {
                     {innovation.title}
                   </h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {innovation.description}
                 </p>
-                
                 <div className="mb-6">
                   <div className="text-sm text-blue-400 font-semibold mb-3">
                     Impact: {innovation.impact}
@@ -190,7 +182,6 @@ const AI2027BreakthroughInnovations = () => {
                     ))}
                   </div>
                 </div>
-                
                 <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -200,7 +191,6 @@ const AI2027BreakthroughInnovations = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -231,6 +221,5 @@ const AI2027BreakthroughInnovations = () => {
       </section>
     </div>
   );
-};
 
 export default AI2027BreakthroughInnovations;

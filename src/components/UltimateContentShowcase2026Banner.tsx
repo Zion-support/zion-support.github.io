@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Zap, Brain, Target } from 'lucide-react';
-
 const UltimateContentShowcase2026Banner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full mb-6">
             <Star className="h-4 w-4 mr-2" />
             NEW: Ultimate Content Showcase 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover the
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -23,13 +20,11 @@ const UltimateContentShowcase2026Banner = () => {
             </span>
             of 2026
           </h2>
-          
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Explore groundbreaking AI technologies, quantum computing breakthroughs, and revolutionary 
             solutions that will transform your business forever.
           </p>
         </div>
-
         {/* Feature Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {[
@@ -68,7 +63,6 @@ const UltimateContentShowcase2026Banner = () => {
             </div>
           ))}
         </div>
-
         {/* Content Showcase Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {[
@@ -127,7 +121,6 @@ const UltimateContentShowcase2026Banner = () => {
             </Link>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -149,6 +142,5 @@ const UltimateContentShowcase2026Banner = () => {
       </div>
     </div>
   );
-};
 
 export default UltimateContentShowcase2026Banner;

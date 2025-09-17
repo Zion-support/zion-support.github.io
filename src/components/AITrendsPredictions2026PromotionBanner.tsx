@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AITrendsPredictions2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -30,7 +29,6 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
               ))}
             </div>
           </div>
-
           <div className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
@@ -48,19 +46,16 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   🔮 AI Trends & Predictions 2026
                 </divh2>
-
                 <divp
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Discover groundbreaking AI trends: Quantum AINeural InterfacesAutonomous Systemsand AI Consciousness
                 </divp>
-
                 {/* Prediction Icons */}
                 <div
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
@@ -74,7 +69,6 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Right Content - CTA */}
               <div
                 className="flex flex-col sm:flex-row items-center gap-4"
@@ -83,14 +77,12 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
                   <div className="text-3xl font-bold text-yellow-400 mb-1">$500B</div>
                   <div className="text-sm text-cyan-200">Market Value</div>
                 </div>
-                
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-indigo-900 rounded-full font-bold hover:shadow-lg transition-all duration-300 flex items-center group">
                   <Target className="w-5 h-5 mr-2" />
                   View Predictions
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
-
               {/* Dismiss Button */}
               <divbutton
                 onClick={handleDismiss}
@@ -100,7 +92,6 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
               </divbutton>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 origin-left"
@@ -110,6 +101,5 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-};
 
 export default AITrendsPredictions2026PromotionBanner;

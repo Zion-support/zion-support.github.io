@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TechnologyInsights2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -11,6 +10,5 @@ const TechnologyInsights2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default TechnologyInsights2025;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const NeuralInterfaceTechnology2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">
@@ -9,7 +8,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         <meta name="description" content="Exploring the latest developments in brain-computer interfaces and their transformative potential for human-AI interaction." />
         <meta name="keywords" content="neural interfaces, brain-computer interface, human-AI integration, mind-machine connection, future technology" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -32,7 +30,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
             <span>12 min read</span>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
@@ -42,7 +39,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
               By creating direct communication pathways between the human brain and digital systems, we're entering an era 
               where thoughts can directly control technology.
             </p>
-            
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gradient-to-br from-orange-600 to-red-600 p-6 rounded-xl">
                 <h3 className="text-xl font-semibold text-white mb-3">Invasive Interfaces</h3>
@@ -57,7 +53,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                 <p className="text-gray-200 text-sm">Positioned on brain surface for balanced quality and safety</p>
               </div>
             </div>
-
             <h3 className="text-2xl font-bold text-white mb-4">Current Applications</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -80,7 +75,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-r from-orange-600 to-pink-600 p-8 rounded-2xl text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Market Projections</h3>
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -98,7 +92,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Future Applications</h3>
             <div className="grid md:grid-cols-2 gap-6">
@@ -126,6 +119,5 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NeuralInterfaceTechnology2026;

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function ContentPromoBanner() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -55,6 +56,5 @@ export default function ContentPromoBanner() {
             >
               Download Free
   );
-};
 
 export default ContentPromoBanner;

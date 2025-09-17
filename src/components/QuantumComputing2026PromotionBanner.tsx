@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function QuantumComputing2026PromotionBanner() {
   return (
@@ -65,4 +66,4 @@ export default function QuantumComputing2026PromotionBanner() {
           <p className="text-white/70 text-sm mt-4">
             Join the quantum revolution - 5,000+ companies already achieving quantum supremacy
   );
-}
+};

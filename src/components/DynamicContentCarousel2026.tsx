@@ -13,7 +13,6 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
-
 interface ContentItem {
   id: string;
   type: 'blog' | 'service' | 'case-study' | 'announcement';
@@ -30,13 +29,10 @@ interface ContentItem {
   tags?: string[];
   ctaText?: string;
   ctaUrl?: string;
-}
-
 const DynamicContentCarousel2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
   const contentItems: ContentItem[] = [
     {
       id: 'transcendent-ai-blog',
@@ -129,7 +125,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       ctaUrl: '/services/quantum-neural-fusion-interface'
     }
   ];
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return Brain;
@@ -139,7 +134,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       default: return Star;
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-600 to-cyan-600';
@@ -149,7 +143,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       default: return 'from-gray-600 to-gray-700';
     }
   };
-
   const getTypeText = (type: string) => {
     switch (type) {
       case 'blog': return 'Blog Post';
@@ -159,7 +152,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       default: return 'Content';
     }
   };
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -168,21 +160,16 @@ const DynamicContentCarousel2026: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, contentItems.length]);
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
-
   const currentItem = contentItems[currentIndex];
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-20 overflow-hidden">
       {/* Background Elements */}
@@ -208,7 +195,6 @@ const DynamicContentCarousel2026: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -227,7 +213,6 @@ const DynamicContentCarousel2026: React.FC = () => {
             that are reshaping our world.
           </p>
         </motion.div>
-
         {/* Main Carousel */}
         <div className="relative">
           {/* Navigation Arrows */}
@@ -237,14 +222,12 @@ const DynamicContentCarousel2026: React.FC = () => {
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-
           {/* Auto-play Toggle */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -252,7 +235,6 @@ const DynamicContentCarousel2026: React.FC = () => {
           >
             {isAutoPlaying ? 'Pause' : 'Play'}
           </button>
-
           {/* Carousel Content */}
           <div className="relative h-96 md:h-[500px] rounded-3xl overflow-hidden">
             <AnimatePresence mode="wait">
@@ -266,14 +248,12 @@ const DynamicContentCarousel2026: React.FC = () => {
               >
                 <div className={`bg-gradient-to-br ${getTypeColor(currentItem.type)} h-full`}>
                   <div className="absolute inset-0 bg-black/20"></div>
-                  
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-10 left-10 w-32 h-32 border border-white/30 rounded-full"></div>
                     <div className="absolute bottom-10 right-10 w-24 h-24 border border-white/30 rounded-full"></div>
                     <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white/30 rounded-full"></div>
                   </div>
-
                   <div className="relative z-10 h-full flex items-center">
                     <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                       {/* Content */}
@@ -292,17 +272,14 @@ const DynamicContentCarousel2026: React.FC = () => {
                             </span>
                           )}
                         </div>
-
                         {/* Title */}
                         <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight">
                           {currentItem.title}
                         </h3>
-
                         {/* Description */}
                         <p className="text-lg text-white/90 leading-relaxed">
                           {currentItem.description}
                         </p>
-
                         {/* Meta Information */}
                         <div className="flex flex-wrap items-center gap-6 text-white/80">
                           {currentItem.author && (
@@ -330,7 +307,6 @@ const DynamicContentCarousel2026: React.FC = () => {
                             </div>
                           )}
                         </div>
-
                         {/* Tags */}
                         {currentItem.tags && (
                           <div className="flex flex-wrap gap-2">
@@ -344,7 +320,6 @@ const DynamicContentCarousel2026: React.FC = () => {
                             ))}
                           </div>
                         )}
-
                         {/* CTA Button */}
                         <div className="pt-4">
                           <button className="group relative px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
@@ -356,7 +331,6 @@ const DynamicContentCarousel2026: React.FC = () => {
                           </button>
                         </div>
                       </div>
-
                       {/* Visual */}
                       <div className="relative">
                         <div className="relative w-full h-80 bg-white/10 backdrop-blur-sm rounded-2xl p-8 flex items-center justify-center">
@@ -368,14 +342,12 @@ const DynamicContentCarousel2026: React.FC = () => {
                           >
                             {React.createElement(getTypeIcon(currentItem.type), { className: "w-16 h-16 text-white" })}
                           </motion.div>
-
                           {/* Price Display */}
                           {currentItem.price && (
                             <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
                               <div className="text-2xl font-bold text-white">{currentItem.price}</div>
                             </div>
                           )}
-
                           {/* Floating Elements */}
                           <motion.div
                             className="absolute top-4 left-4 w-8 h-8 bg-white/20 rounded-full"
@@ -395,7 +367,6 @@ const DynamicContentCarousel2026: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {contentItems.map((_, index) => (
@@ -411,7 +382,6 @@ const DynamicContentCarousel2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -443,6 +413,5 @@ const DynamicContentCarousel2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default DynamicContentCarousel2026;

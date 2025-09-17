@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2025RevolutionaryBreakthroughUltimateBanner() {
   return (
@@ -76,4 +77,4 @@ export default function AI2025RevolutionaryBreakthroughUltimateBanner() {
       <div className="absolute bottom-20 left-20 w-5 h-5 bg-pink-400 rounded-full animate-bounce delay-1000"></div>
       <div className="absolute bottom-10 right-10 w-2 h-2 bg-green-400 rounded-full animate-bounce delay-1500"></div>
   );
-}
+};

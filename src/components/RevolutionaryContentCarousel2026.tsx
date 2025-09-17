@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Pause, Star, Clock, User } from 'lucide-react';
-
 const RevolutionaryContentCarousel2026 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-
   const revolutionaryContent = [
     {
       id: 1,
@@ -73,40 +71,36 @@ const RevolutionaryContentCarousel2026 = () => {
       link: "/omniversal-ai-consciousness-2026"
     }
   ];
-
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => 
           prevIndex === revolutionaryContent.length - 1 ? 0 : prevIndex + 1
         );
+};
       }, 5000);
       return () => clearInterval(interval);
     }
   }, [isPlaying, revolutionaryContent.length]);
-
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === revolutionaryContent.length - 1 ? 0 : prevIndex + 1
     );
+};
   };
-
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? revolutionaryContent.length - 1 : prevIndex - 1
     );
+};
   };
-
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
-
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
-
   const currentContent = revolutionaryContent[currentIndex];
-
   return (
     <div className="relative w-full h-[600px] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Main Carousel */}
@@ -129,7 +123,6 @@ const RevolutionaryContentCarousel2026 = () => {
                 }}
               />
             </div>
-
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -145,7 +138,6 @@ const RevolutionaryContentCarousel2026 = () => {
                       {currentContent.category}
                     </span>
                   </motion.div>
-
                   <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -154,7 +146,6 @@ const RevolutionaryContentCarousel2026 = () => {
                   >
                     {currentContent.title}
                   </motion.h2>
-
                   <motion.h3
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -163,7 +154,6 @@ const RevolutionaryContentCarousel2026 = () => {
                   >
                     {currentContent.subtitle}
                   </motion.h3>
-
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -172,7 +162,6 @@ const RevolutionaryContentCarousel2026 = () => {
                   >
                     {currentContent.description}
                   </motion.p>
-
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -186,7 +175,6 @@ const RevolutionaryContentCarousel2026 = () => {
                       Learn More
                     </button>
                   </motion.div>
-
                   {/* Meta Information */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -210,7 +198,6 @@ const RevolutionaryContentCarousel2026 = () => {
                     )}
                   </motion.div>
                 </div>
-
                 {/* Visual Element */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -224,7 +211,6 @@ const RevolutionaryContentCarousel2026 = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation Controls */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
           {/* Play/Pause Button */}
@@ -234,7 +220,6 @@ const RevolutionaryContentCarousel2026 = () => {
           >
             {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
           </button>
-
           {/* Dots Indicator */}
           <div className="flex gap-2">
             {revolutionaryContent.map((_, index) => (
@@ -249,7 +234,6 @@ const RevolutionaryContentCarousel2026 = () => {
               />
             ))}
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -265,7 +249,6 @@ const RevolutionaryContentCarousel2026 = () => {
           </button>
         </div>
       </div>
-
       {/* Content Preview Strip */}
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
         <div className="max-w-7xl mx-auto">
@@ -295,7 +278,6 @@ const RevolutionaryContentCarousel2026 = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryContentCarousel2026;
 </div></div>

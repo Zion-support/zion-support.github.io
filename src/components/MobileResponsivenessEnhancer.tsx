@@ -1,4 +1,5 @@
 import React from 'react';
+};
 
 export default function MobileResponsivenessEnhancer() {
   const [isMobilesetIsMobile] = useState(false);
@@ -46,4 +47,3 @@ export default function MobileResponsivenessEnhancer() {
     };
   }[isMobile]);
   return null;
-}

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 const InteractiveTechDemo2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('quantum');
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
-
   const demos = [
     {
       id: 'quantum',
@@ -60,21 +58,18 @@ const InteractiveTechDemo2026: React.FC = () => {
       ]
     }
   ];
-
   const quantumData = [
     { problem: 'Traveling Salesman (10 cities)', classical: '2.5s', quantum: '0.1s', speedup: '25x' },
     { problem: 'Protein Folding Simulation', classical: '24h', quantum: '2h', speedup: '12x' },
     { problem: 'Cryptographic Key Generation', classical: '1h', quantum: '0.01s', speedup: '360,000x' },
     { problem: 'Financial Portfolio Optimization', classical: '30min', quantum: '0.5s', speedup: '3,600x' }
   ];
-
   const neuralData = [
     { metric: 'Neural Signal Strength', value: 87, unit: '%', color: 'bg-green-500' },
     { metric: 'Thought Recognition Accuracy', value: 94, unit: '%', color: 'bg-blue-500' },
     { metric: 'Emotion Detection Rate', value: 91, unit: '%', color: 'bg-purple-500' },
     { metric: 'Response Time', value: 0.3, unit: 's', color: 'bg-orange-500' }
   ];
-
   useEffect(() => {
     if (isRunning) {
       const interval = setInterval(() => {
@@ -89,12 +84,10 @@ const InteractiveTechDemo2026: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isRunning]);
-
   const startDemo = () => {
     setIsRunning(true);
     setProgress(0);
   };
-
   const renderQuantumDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">
@@ -123,7 +116,6 @@ const InteractiveTechDemo2026: React.FC = () => {
           ))}
         </div>
       </div>
-      
       <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg p-6">
         <h4 className="text-xl font-bold mb-4">Quantum Circuit Visualization</h4>
         <div className="grid grid-cols-4 gap-2 mb-4">
@@ -145,7 +137,7 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-
+};
   const renderNeuralDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">
@@ -175,7 +167,6 @@ const InteractiveTechDemo2026: React.FC = () => {
           ))}
         </div>
       </div>
-      
       <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-6">
         <h4 className="text-xl font-bold mb-4">Brain Activity Visualization</h4>
         <div className="grid grid-cols-8 gap-1">
@@ -198,7 +189,7 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-
+};
   const renderAIDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">
@@ -242,7 +233,7 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-
+};
   const renderHologramDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">
@@ -270,7 +261,7 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-
+};
   const renderDemoContent = () => {
     switch (activeDemo) {
       case 'quantum':
@@ -285,7 +276,6 @@ const InteractiveTechDemo2026: React.FC = () => {
         return null;
     }
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16">
       <div className="container mx-auto px-4">
@@ -293,7 +283,6 @@ const InteractiveTechDemo2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-4">Interactive Technology Demos</h2>
           <p className="text-xl text-purple-200">Experience the future of technology firsthand</p>
         </div>
-
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Demo Selection */}
           <div className="space-y-4">
@@ -316,7 +305,6 @@ const InteractiveTechDemo2026: React.FC = () => {
               </motion.button>
             ))}
           </div>
-
           {/* Demo Content */}
           <div className="lg:col-span-3">
             <motion.div
@@ -347,7 +335,6 @@ const InteractiveTechDemo2026: React.FC = () => {
                   {isRunning ? 'Running...' : 'Start Demo'}
                 </button>
               </div>
-
               {isRunning && (
                 <div className="mb-6">
                   <div className="flex justify-between text-sm mb-2">
@@ -362,12 +349,10 @@ const InteractiveTechDemo2026: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {renderDemoContent()}
             </motion.div>
           </div>
         </div>
-
         {/* Features List */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -391,6 +376,5 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveTechDemo2026;

@@ -1,7 +1,6 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentPreview {
   title: string;
   description: string;
@@ -10,8 +9,6 @@ interface ContentPreview {
   badgeColor: string;
   icon: string;
   roi?: string;
-}
-
 const contentPreviews: ContentPreview[] = [
   {
     title: "AI 2025 Ultimate Breakthrough Revolution",
@@ -40,7 +37,7 @@ const contentPreviews: ContentPreview[] = [
     icon: "🔮",
     roi: "25,000% ROI"
   }
-];
+};
 
 export default function NewsletterSignupWithPreviews() {
   const [emailsetEmail] = useState('');
@@ -79,6 +76,7 @@ export default function NewsletterSignupWithPreviews() {
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 <span>Revolutionary case studies</span>
     );
+};
   }
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16">
@@ -167,6 +165,5 @@ export default function NewsletterSignupWithPreviews() {
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
   );
-};
 
 export default NewsletterSignupWithPreviews;

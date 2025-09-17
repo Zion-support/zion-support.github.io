@@ -23,7 +23,6 @@ import {
   getBlogTags, 
   searchBlogPosts 
 } from '../data/blog-posts';
-
 const ComprehensiveContentShowcase2026: React.FC = () => {
   const [posts, setPosts] = useState(blogPosts);
   const [searchQuery, setSearchQuery] = useState('');
@@ -33,32 +32,27 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
   const [sortBy, setSortBy] = useState('date');
   const [categories, setCategories] = useState([]);
   const [tags, setTags] = useState([]);
-
   useEffect(() => {
     setCategories(getBlogCategories());
     setTags(getBlogTags());
   }, []);
-
   useEffect(() => {
     let filteredPosts = [...blogPosts];
-
     // Search filter
     if (searchQuery) {
       filteredPosts = searchBlogPosts(searchQuery);
     }
-
     // Category filter
     if (selectedCategory !== 'All') {
       filteredPosts = filteredPosts.filter(post => post.category === selectedCategory);
     }
-
     // Tag filter
     if (selectedTag !== 'All') {
       filteredPosts = filteredPosts.filter(post => 
         post.tags.some(tag => tag === selectedTag)
       );
+};
     }
-
     // Sort
     switch (sortBy) {
       case 'date':
@@ -74,10 +68,8 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
         filteredPosts.sort((a, b) => parseInt(a.readTime) - parseInt(b.readTime));
         break;
     }
-
     setPosts(filteredPosts);
   }, [searchQuery, selectedCategory, selectedTag, sortBy]);
-
   const handleShare = (post) => {
     if (navigator.share) {
       navigator.share({
@@ -89,7 +81,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       navigator.clipboard.writeText(window.location.origin + `/blog/${post.slug}`);
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -99,7 +90,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
           <div className="absolute top-40 right-32 w-24 h-24 bg-purple-500/20 rounded-full animate-bounce"></div>
           <div className="absolute bottom-20 left-1/3 w-16 h-16 bg-cyan-500/20 rounded-full animate-ping"></div>
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Content
@@ -111,7 +101,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             Explore our comprehensive collection of cutting-edge technology insights, 
             breakthrough research, and revolutionary innovations
           </p>
-          
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
               <BookOpen className="w-5 h-5 text-yellow-400 mr-2" />
@@ -128,7 +117,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Filters and Search */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -144,7 +132,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -158,7 +145,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                 </option>
               ))}
             </select>
-
             {/* Tag Filter */}
             <select
               value={selectedTag}
@@ -172,7 +158,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                 </option>
               ))}
             </select>
-
             {/* Sort */}
             <select
               value={sortBy}
@@ -185,7 +170,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
               <option value="readTime">Sort by Read Time</option>
             </select>
           </div>
-
           {/* View Mode Toggle */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -202,14 +186,12 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                 <List className="w-5 h-5" />
               </button>
             </div>
-
             <div className="text-white">
               Showing {posts.length} articles
             </div>
           </div>
         </div>
       </div>
-
       {/* Content Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {viewMode === 'grid' ? (
@@ -241,7 +223,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Post Content */}
                 <div className="p-6">
                   <div className="flex items-center mb-3">
@@ -253,15 +234,12 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                       {post.readTime}
                     </div>
                   </div>
-
                   <h2 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors line-clamp-2">
                     {post.title}
                   </h2>
-
                   <p className="text-blue-200 text-sm mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 3).map((tag, index) => (
@@ -273,7 +251,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Author and Actions */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -285,7 +262,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                         <div className="text-gray-400 text-xs">{post.authorRole}</div>
                       </div>
                     </div>
-
                     <div className="flex items-center space-x-2">
                       <button
                         onClick={() => handleShare(post)}
@@ -326,7 +302,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                       </div>
                     )}
                   </div>
-
                   {/* Post Content */}
                   <div className="flex-1">
                     <div className="flex items-center mb-2">
@@ -342,15 +317,12 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                         {new Date(post.publishDate).toLocaleDateString()}
                       </div>
                     </div>
-
                     <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
                       {post.title}
                     </h2>
-
                     <p className="text-blue-200 mb-4 line-clamp-2">
                       {post.excerpt}
                     </p>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags.map((tag, index) => (
@@ -362,7 +334,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* Author and Actions */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -374,7 +345,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
                           <div className="text-gray-400 text-sm">{post.authorRole}</div>
                         </div>
                       </div>
-
                       <div className="flex items-center space-x-3">
                         <button
                           onClick={() => handleShare(post)}
@@ -397,7 +367,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             ))}
           </div>
         )}
-
         {posts.length === 0 && (
           <div className="text-center py-20">
             <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -408,6 +377,5 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ComprehensiveContentShowcase2026;

@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function AI2026BreakthroughBanner() {
   return (
@@ -68,4 +69,4 @@ export default function AI2026BreakthroughBanner() {
               <div className="text-3xl md:text-4xl font-bold text-indigo-400 mb-2">99.9%</div>
               <div className="text-gray-300 text-sm">Consciousness Level</div>
   );
-}
+};

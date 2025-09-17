@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturePredictionsShowcase2025: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
@@ -8,7 +7,6 @@ const FuturePredictionsShowcase2025: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-indigo-500/10 to-transparent"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -23,7 +21,6 @@ const FuturePredictionsShowcase2025: React.FC = () => {
             from 2025 to 2030 and beyond.
           </p>
         </div>
-
         {/* Year Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -46,9 +43,9 @@ const FuturePredictionsShowcase2025: React.FC = () => {
                 <span className="text-sm opacity-75">{yearData.title}</span>
               </button>
             );
+};
           })}
         </div>
-
         {/* Predictions Display */}
           <div
             key={activeYear}
@@ -64,7 +61,6 @@ const FuturePredictionsShowcase2025: React.FC = () => {
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                     {/* Gradient Overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${predictions[activeYear].color} opacity-10 rounded-3xl group-hover:opacity-20 transition-opacity duration-500`}></div>
-                    
                     {/* Content */}
                     <div className="relative z-10">
                       <div className="flex items-center gap-4 mb-6">
@@ -83,11 +79,9 @@ const FuturePredictionsShowcase2025: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      
                       <p className="text-gray-300 text-lg leading-relaxed mb-6">
                         {prediction.description}
                       </p>
-                      
                       <div className="flex items-center gap-2 text-indigo-400 font-semibold group-hover:text-indigo-300 transition-colors">
                         <span>Learn More</span>
                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -96,10 +90,10 @@ const FuturePredictionsShowcase2025: React.FC = () => {
                   </div>
                 </div>
               );
+};
             })}
           </div>
         </div>
-
         {/* Timeline Visualization */}
         <div
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
@@ -108,7 +102,6 @@ const FuturePredictionsShowcase2025: React.FC = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-orange-500 rounded-full"></div>
-            
             {/* Timeline Points */}
             <div className="flex justify-between items-center">
               {years.map((yearindex) => {
@@ -125,11 +118,11 @@ const FuturePredictionsShowcase2025: React.FC = () => {
                     </div>
                   </div>
                 );
+};
               })}
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -143,6 +136,5 @@ const FuturePredictionsShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default FuturePredictionsShowcase2025;

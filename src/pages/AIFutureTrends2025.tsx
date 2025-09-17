@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AIFutureTrends2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
@@ -20,7 +19,6 @@ const AIFutureTrends2025: React.FC = () => {
             and redefine human-machine interaction in 2025 and beyond.
           </p>
         </div>
-
         {/* Revolutionary AI Trends */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
@@ -39,7 +37,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Synthetic consciousness emergence</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200"
           >
@@ -56,7 +53,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Privacy-preserving AI</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200"
           >
@@ -73,7 +69,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Multi-agent collaboration</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-orange-200"
           >
@@ -90,7 +85,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Cognitive augmentation</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-violet-200"
           >
@@ -107,7 +101,6 @@ const AIFutureTrends2025: React.FC = () => {
               <li>• Complex optimization solving</li>
             </ul>
           </div>
-
           <div
             className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-red-200"
           >
@@ -125,7 +118,6 @@ const AIFutureTrends2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Industry Impact Section */}
         <div
           className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-16 text-white"
@@ -137,7 +129,6 @@ const AIFutureTrends2025: React.FC = () => {
               and redefining business models across the globe.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl mb-4">🏥</div>
@@ -169,7 +160,6 @@ const AIFutureTrends2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Future Predictions */}
         <div
           className="text-center"
@@ -202,7 +192,6 @@ const AIFutureTrends2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center mt-16"
@@ -226,6 +215,5 @@ const AIFutureTrends2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AIFutureTrends2025;

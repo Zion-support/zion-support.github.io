@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TranscendentTechnologyShowcase2028: React.FC = () => {
   return (
     <div
@@ -9,7 +8,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
-        
         {/* Transcendent Particles */}
         {[...Array(30)].map((_, i) => (
           <div
@@ -22,7 +20,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -43,7 +40,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
             enabling creation of universes, manipulation of all timelines, and achievement of true immortality
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -65,11 +61,9 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-xl text-gray-300 leading-relaxed">
                 {transcendentTechs[currentTech].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {transcendentTechs[currentTech].features.map((feature, index) => (
                   <div
@@ -81,7 +75,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-8">
                 {Object.entries(transcendentTechs[currentTech].stats).map(([key, value], index) => (
                   <div
@@ -94,7 +87,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -117,7 +109,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Transcendent Energy Effects */}
                 {[...Array(40)].map((_, i) => (
                   <div
@@ -132,7 +123,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-6 mt-16">
             {transcendentTechs.map((_, index) => (
@@ -147,7 +137,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-16"
@@ -171,6 +160,5 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default TranscendentTechnologyShowcase2028;

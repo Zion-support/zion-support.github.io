@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const NewContentPromotionBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPromo, setCurrentPromo] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -11,7 +9,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   const promotions = [
     {
       title: "🚀 Revolutionary Tech Trends 2026",
@@ -38,7 +35,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
       icon: "⚡"
     }
   ];
-
   return (
     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
       <div className={`bg-gradient-to-r ${promotions[currentPromo].gradient} rounded-3xl p-8 mb-12 text-white relative overflow-hidden`}>
@@ -79,7 +75,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
             </div>
           </div>
         </div>
-        
         {/* Progress Indicator */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {promotions.map((_, index) => (
@@ -94,6 +89,5 @@ const NewContentPromotionBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentPromotionBanner2026;

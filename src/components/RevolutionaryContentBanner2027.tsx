@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentBanner2027: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 text-white">
@@ -19,7 +18,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
           />
         ))}
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="text-center mb-8">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full text-lg font-bold mb-6 animate-bounce">
@@ -33,7 +31,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             Transcendent AI, and Revolutionary Breakthroughs that will reshape civilization
           </p>
         </div>
-
         {/* Revolutionary Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Ultimate Tech Revolution 2027 */}
@@ -54,7 +51,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
               Explore Revolution →
             </a>
           </div>
-
           {/* Transcendent AI 2027 */}
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">✨</div>
@@ -73,7 +69,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
               Experience Transcendence →
             </a>
           </div>
-
           {/* Quantum Consciousness 2027 */}
           <div className="bg-gradient-to-br from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 group">
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">⚛️</div>
@@ -93,7 +88,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Additional Revolutionary Features */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-lg p-4 border border-green-500/30 text-center">
@@ -113,7 +107,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             <div className="text-sm font-semibold text-indigo-300">Quantum Fusion</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/30">
@@ -135,6 +128,5 @@ const RevolutionaryContentBanner2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryContentBanner2027;

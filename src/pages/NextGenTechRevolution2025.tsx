@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NextGenTechRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -15,6 +14,5 @@ const NextGenTechRevolution2025: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default NextGenTechRevolution2025;

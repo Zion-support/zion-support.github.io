@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-
 const InteractiveTechShowcase2039: React.FC = () => {
   const [selectedTech, setSelectedTech] = useState('ai');
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = {
     ai: {
       name: "Conscious AI Systems",
@@ -60,7 +58,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
       }
     }
   };
-
   const handleTechChange = (tech: string) => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -68,9 +65,7 @@ const InteractiveTechShowcase2039: React.FC = () => {
       setIsAnimating(false);
     }, 300);
   };
-
   const currentTech = technologies[selectedTech as keyof typeof technologies];
-
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -84,7 +79,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
             Experience the most revolutionary technologies through interactive demonstrations
           </p>
         </div>
-
         {/* Technology Selector */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
@@ -104,7 +98,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Main Content Area */}
         <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
           <div className="grid lg:grid-cols-2 gap-12">
@@ -115,7 +108,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
                 <h3 className="text-4xl font-bold mb-4">{currentTech.name}</h3>
                 <p className="text-xl opacity-90">{currentTech.description}</p>
               </div>
-
               <div className="mb-8">
                 <h4 className="text-2xl font-bold mb-4">Key Features</h4>
                 <ul className="space-y-3">
@@ -127,7 +119,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className="mb-8">
                 <h4 className="text-2xl font-bold mb-4">Performance Metrics</h4>
                 <div className="space-y-4">
@@ -147,23 +138,19 @@ const InteractiveTechShowcase2039: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
                 Experience {currentTech.name} →
               </button>
             </div>
-
             {/* Right Side - Interactive Demo */}
             <div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                 <h4 className="text-2xl font-bold mb-6 text-center">Interactive Demo</h4>
-                
                 <div className="space-y-6">
                   <div className="text-center">
                     <div className="text-6xl mb-4">🎮</div>
                     <p className="text-lg mb-6">Experience this technology in action</p>
                   </div>
-
                   <div className="grid grid-cols-2 gap-4">
                     <button className="bg-white/20 backdrop-blur-sm text-white p-4 rounded-lg hover:bg-white/30 transition-all duration-300">
                       <div className="text-2xl mb-2">🧠</div>
@@ -182,7 +169,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
                       <div className="text-sm">Predict Future</div>
                     </button>
                   </div>
-
                   <div className="text-center">
                     <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       Launch Full Demo
@@ -193,7 +179,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">All Revolutionary Technologies</h3>
@@ -218,6 +203,5 @@ const InteractiveTechShowcase2039: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default InteractiveTechShowcase2039;

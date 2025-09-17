@@ -3,10 +3,8 @@ import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { ArrowRight, Sparkles, Zap, Brain, Atom } from 'lucide-react';
-
 const RevolutionaryServicesBanner2025: React.FC = () => {
   const [currentService, setCurrentService] = useState(0);
-  
   const revolutionaryServices = [
     {
       id: 'conscious-ai',
@@ -36,24 +34,20 @@ const RevolutionaryServicesBanner2025: React.FC = () => {
       price: 'Starting at $30K'
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentService((prev) => (prev + 1) % revolutionaryServices.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [revolutionaryServices.length]);
-
   const current = revolutionaryServices[currentService];
   const IconComponent = current.icon;
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-16">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black mb-4 animate-bounce">
@@ -67,7 +61,6 @@ const RevolutionaryServicesBanner2025: React.FC = () => {
             Discover our groundbreaking AI and quantum computing services that are reshaping the technological landscape.
           </p>
         </div>
-
         {/* Featured Service Card */}
         <div className="max-w-4xl mx-auto mb-8">
           <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-500">
@@ -107,7 +100,6 @@ const RevolutionaryServicesBanner2025: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-
         {/* Service Indicators */}
         <div className="flex justify-center gap-3 mb-8">
           {revolutionaryServices.map((_, index) => (
@@ -122,7 +114,6 @@ const RevolutionaryServicesBanner2025: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
@@ -138,7 +129,6 @@ const RevolutionaryServicesBanner2025: React.FC = () => {
             <div className="text-gray-300">AI Operations</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-8">
           <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:from-yellow-500 hover:to-orange-600 font-bold">
@@ -150,6 +140,5 @@ const RevolutionaryServicesBanner2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default RevolutionaryServicesBanner2025;

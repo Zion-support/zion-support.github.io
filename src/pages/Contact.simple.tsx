@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
@@ -12,7 +11,6 @@ const Contact: React.FC = () => {
             Get in touch with our team for custom solutions and support.
           </p>
         </div>
-        
         <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/10">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -36,7 +34,6 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div>
               <form className="space-y-6">
                 <div>
@@ -73,6 +70,5 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default Contact;

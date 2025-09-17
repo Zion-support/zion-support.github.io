@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const NewContentPromotionBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl shadow-2xl">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-indigo-500/30"></div>
-      
       {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
@@ -15,7 +13,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
         <div className="absolute bottom-20 left-32 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-32 right-10 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-500"></div>
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -25,20 +22,17 @@ const NewContentPromotionBanner2025: React.FC = () => {
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                 New Content Available
               </div>
-              
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 Revolutionary Tech Insights
                 <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
                   2025 Edition
                 </span>
               </h2>
-              
               <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl">
                 Discover the latest breakthroughs in AI, quantum computing, neural interfaces, 
                 and synthetic intelligence. Our expert researchers share cutting-edge insights 
                 that are shaping the future of technology.
               </p>
-
               {/* Feature Highlights */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="text-center">
@@ -58,7 +52,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
                   <div className="text-white/80 text-sm">Possibilities</div>
                 </div>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -78,7 +71,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
                 </Link>
               </div>
             </div>
-
             {/* Featured Articles Preview */}
             <div className="flex-1 max-w-md">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -120,6 +112,5 @@ const NewContentPromotionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewContentPromotionBanner2025;

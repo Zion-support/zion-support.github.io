@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContent2025UltimateTransformationBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16">
@@ -95,6 +94,5 @@ const NewContent2025UltimateTransformationBanner: React.FC = () => {
               >
                 View All Content
   );
-};
 
 export default NewContent2025UltimateTransformationBanner;

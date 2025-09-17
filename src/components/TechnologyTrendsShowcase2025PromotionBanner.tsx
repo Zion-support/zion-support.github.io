@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -15,7 +14,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
           <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-700" />
         </div>
       </div>
-
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -31,11 +29,9 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                   NEW: Technology Trends Showcase 2025
                 </span>
               </div>
-
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
                 The Future of Technology is Here Today
               </h2>
-              
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <span className="text-lg opacity-90">Trending:</span>
                 <div
@@ -48,7 +44,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
                 <div className="flex items-center gap-1">
                   <CheckCircle className="w-4 h-4" />
@@ -64,7 +59,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Center - Rotating Trends */}
             <div className="hidden md:flex items-center gap-8">
               {trends.map((trendindex) => {
@@ -82,9 +76,9 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                     <div className="text-lg font-bold">{trend.adoption}</div>
                   </div>
                 );
+};
               })}
             </div>
-
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <divbutton
@@ -94,7 +88,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                 Explore Trends
                 <ArrowRight className="w-4 h-4" />
               </divbutton>
-              
               <divbutton
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
@@ -102,7 +95,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                 Future Ready
               </divbutton>
             </div>
-
             {/* Close Button */}
             <divbutton
               onClick={() => setIsVisible(false)}
@@ -112,7 +104,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
             </divbutton>
           </div>
         </div>
-
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
           <div
@@ -122,7 +113,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default TechnologyTrendsShowcase2025PromotionBanner;
 </div></div></div></div></div></div></div></div></div>

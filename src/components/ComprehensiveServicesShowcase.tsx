@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+};
 
 export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -311,6 +312,5 @@ export default function ComprehensiveServicesShowcase() {
               >
                 Call +1 302 464 0950
   );
-};
 
 export default ComprehensiveServicesShowcase;

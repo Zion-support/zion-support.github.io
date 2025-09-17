@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const EnhancedHome: React.FC = () => {
   return (
     <div className="min-h-screen">
@@ -9,10 +8,8 @@ const EnhancedHome: React.FC = () => {
         description="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and data analytics solutions. Expert technology consulting and implementation."
         keywords="AI solutions, cybersecurity, cloud computing, data analytics, technology consulting"
       />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <divh1
@@ -23,14 +20,12 @@ const EnhancedHome: React.FC = () => {
                 Cutting-Edge Technology
               </span>
             </divh1>
-            
             <divp
               className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
             >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics. 
               Empowering businesses to thrive in the digital age.
             </divp>
-            
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
@@ -46,7 +41,6 @@ const EnhancedHome: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-            
             {/* Stats */}
             <div
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
@@ -62,12 +56,12 @@ const EnhancedHome: React.FC = () => {
                     <div className="text-blue-200 text-sm">{stat.label}</div>
                   </div>
                 );
+};
               })}
             </div>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +74,6 @@ const EnhancedHome: React.FC = () => {
               technology solutions that drive innovation and growth.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -109,7 +102,6 @@ const EnhancedHome: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +113,6 @@ const EnhancedHome: React.FC = () => {
               Don't just take our word for it - hear from the businesses we've transformed.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -153,13 +144,10 @@ const EnhancedHome: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Highlight */}
       <ServicesHighlight />
-
       {/* Content Showcase */}
       <ContentShowcase />
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -188,7 +176,6 @@ const EnhancedHome: React.FC = () => {
       </section>
     </div>
   );
-};
 
 export default EnhancedHome;
 </div></div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+};
 
 export default function NewContent2026Banner() {
   return (
@@ -38,4 +39,4 @@ export default function NewContent2026Banner() {
           <Link href="/content" className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
             View All Content →
   );
-}
+};

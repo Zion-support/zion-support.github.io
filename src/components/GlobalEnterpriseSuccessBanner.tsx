@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function GlobalEnterpriseSuccessBanner() {
   return (
@@ -59,4 +60,4 @@ export default function GlobalEnterpriseSuccessBanner() {
             <div className="text-lg text-green-400 font-bold">
               Sarah JohnsonCEOGlobal Enterprise Solutions
   );
-}
+};

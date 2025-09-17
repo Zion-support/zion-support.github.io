@@ -13,10 +13,8 @@ import {
   Globe
 } from 'lucide-react';
 import { NEW_BLOG_POSTS_2027, NEW_SERVICES_2027 } from '../data/newContent2027';
-
 const FeaturedContentShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'blog' | 'services'>('blog');
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,7 +24,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -37,7 +34,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
       }
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai transformation':
@@ -54,7 +50,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
         return <Star className="w-5 h-5" />;
     }
   };
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -72,7 +67,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
             that are reshaping the future of business and technology.
           </p>
         </motion.div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
           <div className="bg-white rounded-full p-1 shadow-lg">
@@ -98,7 +92,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Content Display */}
         <motion.div
           variants={containerVariants}
@@ -125,10 +118,8 @@ const FeaturedContentShowcase2027: React.FC = () => {
                     </h3>
                   </div>
                 </div>
-                
                 <div className="p-6">
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
@@ -145,7 +136,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
                       <span>{new Date(post.publishDate).toLocaleDateString()}</span>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 3).map((tag) => (
                       <span
@@ -156,7 +146,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   <a
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 group-hover:scale-105"
@@ -189,10 +178,8 @@ const FeaturedContentShowcase2027: React.FC = () => {
                     </h3>
                   </div>
                 </div>
-                
                 <div className="p-6">
                   <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-                  
                   <div className="flex items-center justify-between text-lg font-bold mb-4">
                     <span className="text-emerald-600">
                       {service.currency}{service.price.toLocaleString()}
@@ -203,7 +190,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
                       <span className="text-gray-500 text-sm">({service.reviews.count})</span>
                     </div>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Benefits:</h4>
                     <ul className="space-y-1">
@@ -215,7 +201,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (
                       <span
@@ -226,7 +211,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 group-hover:scale-105 flex items-center justify-center space-x-2">
                     <span>Get Started</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -236,7 +220,6 @@ const FeaturedContentShowcase2027: React.FC = () => {
             ))
           )}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -265,6 +248,5 @@ const FeaturedContentShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default FeaturedContentShowcase2027;

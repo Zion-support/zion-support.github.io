@@ -1,11 +1,9 @@
 import React from 'react';
-
 const AI2025LatestInnovationsShowcase: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
@@ -25,7 +23,6 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
         </div>
-
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
@@ -50,7 +47,6 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   {/* Animated Background Elements */}
                   <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
@@ -59,7 +55,6 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center gap-3 mt-6">
             {innovations.map((_index) => (
@@ -75,7 +70,6 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Features Grid */}
         <div
           className="grid md:grid-cols-3 gap-8 mb-16"
@@ -93,7 +87,6 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -119,6 +112,5 @@ const AI2025LatestInnovationsShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default AI2025LatestInnovationsShowcase;

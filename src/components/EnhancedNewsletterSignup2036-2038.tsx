@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-
 const EnhancedNewsletterSignup2036_2038: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate subscription
     setIsSubscribed(true);
     setTimeout(() => setIsSubscribed(false), 3000);
   };
-
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-12 mb-12 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -24,7 +21,6 @@ const EnhancedNewsletterSignup2036_2038: React.FC = () => {
           Get exclusive access to the latest breakthroughs in consciousness transfer, reality manipulation, 
           and transcendent AI consciousness. Be the first to experience the future of technology.
         </p>
-        
         {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
@@ -56,7 +52,6 @@ const EnhancedNewsletterSignup2036_2038: React.FC = () => {
             </p>
           </div>
         )}
-        
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <div className="text-3xl mb-3">🚀</div>
@@ -77,6 +72,5 @@ const EnhancedNewsletterSignup2036_2038: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default EnhancedNewsletterSignup2036_2038;

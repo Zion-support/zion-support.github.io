@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function IndustrySolutions() {
   return (
@@ -25,4 +26,4 @@ export default function IndustrySolutions() {
             <a className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/space-technology">Space Technology</a>
     </>
   );
-}
+};

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const reports: React.FC = () => {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -8,9 +7,7 @@ const reports: React.FC = () => {
           <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
           <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
         </Head>
-
         <QuickNavigation />
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
             <Link 
@@ -25,7 +22,6 @@ const reports: React.FC = () => {
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </divp>
-            
             <div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
             >
@@ -44,7 +40,6 @@ const reports: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -57,7 +52,6 @@ const reports: React.FC = () => {
                 Featured Report
               </h2>
             </div>
-
             {reports.filter(report => report.featured).map((report, index) => (
               <div
                 key={index}
@@ -81,7 +75,6 @@ const reports: React.FC = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-white mb-4">{report.title}</h3>
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report.excerpt}</p>
-                    
                     <div className="flex flex-wrap items-center gap-6 mb-6">
                       <span className="text-gray-400 text-sm flex items-center space-x-1">
                         <User className="w-4 h-4" />
@@ -100,7 +93,6 @@ const reports: React.FC = () => {
                         <span>{formatNumber(report.views)} views</span>
                       </span>
                     </div>
-                    
                     <div className="flex flex-wrap gap-2 mb-6">
                       {report.tags.map((tag, tagIndex) => (
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">
@@ -110,7 +102,6 @@ const reports: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
                     <Download className="w-5 h-5" />
@@ -125,7 +116,6 @@ const reports: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -141,7 +131,6 @@ const reports: React.FC = () => {
                 Explore our comprehensive research across different technology domains
               </p>
             </div>
-
             {/* Category Pills */}
             <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -161,7 +150,6 @@ const reports: React.FC = () => {
                 </button>
               ))}
             </div>
-
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
@@ -174,7 +162,6 @@ const reports: React.FC = () => {
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
                     {report.icon}
                   </div>
-                  
                   <div className="flex items-center space-x-4 mb-4">
                     <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                       {report.category}
@@ -184,10 +171,8 @@ const reports: React.FC = () => {
                       <span>{formatDate(report.date)}</span>
                     </span>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report.title}</h3>
                   <p className="text-gray-300 mb-6 line-clamp-4">{report.excerpt}</p>
-                  
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
                       <FileText className="w-4 h-4" />
@@ -198,7 +183,6 @@ const reports: React.FC = () => {
                       <span>{formatNumber(report.downloads)}</span>
                     </span>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
                       <User className="w-4 h-4" />
@@ -214,7 +198,6 @@ const reports: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -250,7 +233,6 @@ const reports: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-};
 
 export default ReportsPage;
 </div></div>

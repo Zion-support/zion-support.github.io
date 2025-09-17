@@ -1,5 +1,6 @@
 "use client";
 import React{ useState } from 'react';
+};
 
 export default function AdvancedNewsletterSignup() {
   const [emailsetEmail] = useState('');
@@ -24,6 +25,7 @@ export default function AdvancedNewsletterSignup() {
         <div className="text-sm text-green-200">
           Get ready for insights that will transform your business!
     );
+};
   }
   return (
     <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl p-8 relative overflow-hidden">
@@ -86,6 +88,5 @@ export default function AdvancedNewsletterSignup() {
             <div className="text-white font-bold text-lg">Enterprises</div>
             <div className="text-white font-bold text-lg">Governments</div>
   );
-};
 
 export default AdvancedNewsletterSignup;

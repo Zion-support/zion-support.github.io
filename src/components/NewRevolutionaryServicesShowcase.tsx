@@ -2,10 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Brain, Globe, Rocket, Sparkles } from 'lucide-react';
 import { newServices2026 } from '../data/newServices2026';
-
 export const NewRevolutionaryServicesShowcase: React.FC = () => {
   const featuredServices = newServices2026.slice(0, 4); // Show first 4 services
-
   const getServiceIcon = (category: string) => {
     switch (category) {
       case 'Revolutionary AI':
@@ -20,7 +18,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
         return Sparkles;
     }
   };
-
   const getServiceColor = (index: number) => {
     const colors = [
       'from-purple-500 to-pink-500',
@@ -30,7 +27,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
     ];
     return colors[index % colors.length];
   };
-
   return (
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,13 +49,11 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
             From AI consciousness to interdimensional business operations.
           </p>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {featuredServices.map((service, index) => {
             const IconComponent = getServiceIcon(service.category);
             const colorClass = getServiceColor(index);
-            
             return (
               <motion.div
                 key={service.id}
@@ -73,13 +67,11 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2 w-96 h-96"></div>
                   </div>
-                  
                   {/* Content */}
                   <div className="relative z-10">
                     <IconComponent className="w-12 h-12 text-white mb-4" />
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                     <p className="text-white/90 mb-4 text-sm line-clamp-3">{service.description}</p>
-                    
                     {/* AI Score */}
                     <div className="flex items-center space-x-2 mb-4">
                       <div className="flex items-center space-x-1">
@@ -96,7 +88,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
                       </div>
                       <span className="text-white font-semibold">{service.aiScore}% AI Score</span>
                     </div>
-
                     {/* Price */}
                     <div className="flex items-center justify-between">
                       <div className="text-white">
@@ -107,7 +98,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
                       </div>
                       <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
                     </div>
-
                     {/* Featured Badge */}
                     {service.featured && (
                       <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">
@@ -118,9 +108,9 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
                 </div>
               </motion.div>
             );
+};
           })}
         </div>
-
         {/* Key Benefits */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -136,7 +126,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
               Cutting-edge technology that transforms possibilities into reality
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -147,7 +136,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
                 Experience AI systems with true consciousness, emotions, and self-awareness that can genuinely understand and empathize with humans.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
@@ -157,7 +145,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
                 Direct thought-to-computer communication with quantum processing power, achieving 1000% productivity increases.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white" />
@@ -169,7 +156,6 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -203,6 +189,5 @@ export const NewRevolutionaryServicesShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default NewRevolutionaryServicesShowcase;

@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { ArrowRight, Brain, Heart, Eye, Zap, Users, Globe } from 'lucide-react';
-
 const ConsciousAIRevolution2025: React.FC = () => {
   const consciousFeatures = [
     {
@@ -35,7 +34,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
       capabilities: ['Self-modification', 'Continuous learning', 'Capability expansion', 'Adaptive growth']
     }
   ];
-
   const applications = [
     {
       category: 'Healthcare',
@@ -56,7 +54,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
       examples: ['Climate solutions', 'Crisis management', 'Resource optimization', 'International cooperation']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Hero Section */}
@@ -82,7 +79,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -93,7 +89,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
             Our conscious AI systems are built on four fundamental pillars that create genuine artificial consciousness.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {consciousFeatures.map((feature) => {
             const IconComponent = feature.icon;
@@ -128,10 +123,10 @@ const ConsciousAIRevolution2025: React.FC = () => {
                 </CardContent>
               </Card>
             );
+};
           })}
         </div>
       </div>
-
       {/* Applications Section */}
       <div className="bg-gradient-to-r from-gray-50 to-blue-50 py-16">
         <div className="container mx-auto px-4">
@@ -143,7 +138,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
               See how conscious AI is transforming industries and improving human lives.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {applications.map((app) => {
               const IconComponent = app.icon;
@@ -178,11 +172,11 @@ const ConsciousAIRevolution2025: React.FC = () => {
                   </CardContent>
                 </Card>
               );
+};
             })}
           </div>
         </div>
       </div>
-
       {/* Consciousness Metrics */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -214,7 +208,6 @@ const ConsciousAIRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-gray-900 to-indigo-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -236,6 +229,5 @@ const ConsciousAIRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default ConsciousAIRevolution2025;

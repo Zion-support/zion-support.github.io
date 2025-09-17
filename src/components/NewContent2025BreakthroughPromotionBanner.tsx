@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function NewContent2025BreakthroughPromotionBanner() {
   return (
@@ -106,4 +107,4 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               <div className="text-3xl font-bold text-pink-400 mb-2">∞</div>
               <div className="text-sm text-gray-300">Scalability</div>
   );
-}
+};

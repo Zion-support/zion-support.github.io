@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryAIInnovations2025: React.FC = () => {
   return (
     <divsection 
@@ -30,7 +29,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-10 blur-3xl"
         />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -40,20 +38,17 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
             <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
             Revolutionary AI Innovations 2025
           </div>
-          
           <divh2
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
           >
             The Future is Here
           </divh2>
-          
           <divp
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology
           </divp>
         </div>
-
         {/* Main Innovation Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Side - Innovation Details */}
@@ -71,25 +66,20 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <h3 className="text-4xl md:text-5xl font-bold mb-4">
               {currentInnovation.title}
             </h3>
-            
             <p className="text-xl text-purple-200 mb-6">
               {currentInnovation.subtitle}
             </p>
-            
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
               {currentInnovation.description}
             </p>
-
             {/* Impact Badge */}
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-lg mb-8">
               <Zap className="w-6 h-6 mr-3" />
               {currentInnovation.impact}
             </div>
-
             {/* Features */}
             <div className="space-y-4">
               <h4 className="text-xl font-bold text-white mb-4">Key Features:</h4>
@@ -102,7 +92,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <a
@@ -122,7 +111,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Side - Visual Representation */}
           <div
             key={`visual-${activeInnovation}`}
@@ -153,7 +141,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
                   className={`w-24 h-24 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute bottom-1/4 right-1/4`}
                 />
               </div>
-
               {/* Main Icon */}
               <div
                   scale: [1.1],
@@ -167,7 +154,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
               >
                 <currentInnovation.icon className="w-16 h-16 text-white" />
               </div>
-
               {/* Stats Display */}
               <div className="absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-4">
                 {Object.entries(currentInnovation.stats).slice(04).map(([keyvalue]index) => (
@@ -183,7 +169,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Innovation Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {innovations.map((innovationindex) => (
@@ -201,7 +186,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -235,7 +219,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
       </div>
     </divsection>
   );
-};
 
 export default RevolutionaryAIInnovations2025;
 </div></div></div></div></div></div></div>

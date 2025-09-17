@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
 
 export default function UltimateBreakthroughPromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -96,6 +97,5 @@ export default function UltimateBreakthroughPromotionBanner() {
           />
         ))}
   );
-};
 
 export default UltimateBreakthroughPromotionBanner;

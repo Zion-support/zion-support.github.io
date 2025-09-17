@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CardContent } from '@/components/ui/card';
@@ -17,6 +16,7 @@ import {
   Rocket,
   Star
 } from 'lucide-react';
+};
 
 export default function AI2030ContentShowcaseBanner() {
   return (
@@ -142,4 +142,4 @@ export default function AI2030ContentShowcaseBanner() {
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                   Explore Our Services
   );
-}
+};

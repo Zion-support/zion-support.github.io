@@ -21,7 +21,6 @@ import {
   DollarSign,
   CheckCircle
 } from "lucide-react";
-
 interface ServiceComparison {
   category: string;
   icon: React.ReactNode;
@@ -35,8 +34,6 @@ interface ServiceComparison {
   support: string;
   features: string[];
   limitations: string[];
-}
-
 const SERVICE_COMPARISONS: ServiceComparison[] = [
   {
     category: "AI & Machine Learning",
@@ -230,7 +227,7 @@ const SERVICE_COMPARISONS: ServiceComparison[] = [
       "Content creation needed"
     ]
   }
-];
+};
 
 export default function ServicesComparison() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -460,4 +457,4 @@ export default function ServicesComparison() {
               <Mail className="h-5 w-5 mr-2" />
               Request Custom Quote
   );
-}
+};
