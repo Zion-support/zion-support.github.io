@@ -541,8 +541,18 @@
   },
   {
     "route": "/contact",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Contact Us"
+  },
+  {
+    "route": "/contact",
+    "title": "",
+    "h1": "Contact Us"
+=======
     "title": "contact | Zion Tech Group",
     "h1": "contact"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5da7
   },
   {
     "route": "/contact",
@@ -1126,8 +1136,18 @@
   },
   {
     "route": "/services",
+<<<<<<< HEAD
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/services",
+    "title": "",
+    "h1": "Our Comprehensive Services"
+=======
     "title": "services | Zion Tech Group",
     "h1": "services"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5da7
   },
   {
     "route": "/signup",
@@ -2000,6 +2020,8 @@
     "h1": "Governed Tooling in Practice (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-grounded-generation-guardrails",
     "title": "AI 2026: Grounded Generation Guardrails — Blueprint",
     "h1": "AI 2026: Grounded Generation Guardrails — Blueprint"
@@ -2015,6 +2037,7 @@
     "h1": "AI 2026: Next‑Gen Real‑Time Guardrails"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5da7
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
@@ -2446,7 +2469,22 @@
   },
   {
     "route": "/admin/learn",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Learning Admin"
+  },
+  {
+    "route": "/academy/futurescape",
+    "title": "Futurescape Academy - Zion Tech Group",
+    "h1": "Futurescape Academy"
+  },
+  {
+    "route": "/academy/storybook",
+    "title": "Storybook Academy - Zion Tech Group",
+    "h1": "Storybook Academy"
+=======
     "title": "index | Zion Tech Group",
     "h1": "index"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5da7
   }
 ]
