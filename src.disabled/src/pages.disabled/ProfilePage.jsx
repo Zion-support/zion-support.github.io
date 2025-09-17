@@ -36,6 +36,7 @@ export default function ProfilePage({ }: ProfilePageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
 
 }

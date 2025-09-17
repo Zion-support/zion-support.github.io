@@ -1,5 +1,3 @@
-
-
   const featuredPosts: PostListItem[] = [
     {
       id: 'ai-governance-2025',
@@ -63,4 +61,24 @@
       excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
       category: 'Cybersecurity',
       author: 'Dr. James Wilson',
+    { name: 'AI Solutions', count: 4, active: false },
+    { name: 'Accessibility', count: 1, active: false },
+    { name: 'Infrastructure', count: 1, active: false },
+            href="/blog/ai-ops-cost-optimization-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                AO
+                AG
+                AG
+                  AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  Cut cloud and ops costs with AI-driven rightsizing and predictive autoscaling without sacrificing reliability.
+                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
                 </p>

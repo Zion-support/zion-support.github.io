@@ -36,6 +36,7 @@ export default function EquipmentDetail({ }: EquipmentDetailProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
 
 }

@@ -1,3 +1,4 @@
+import React from "react";
 
 const AlertDialog = () => {
   return (
@@ -9,8 +10,14 @@ const AlertDialog = () => {
         </div>
       </div>
     </div>
-  )
+import * as React from "react";
+
+type RootProps = {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+=======
+  );
 };
 
 export default AlertDialog;
-

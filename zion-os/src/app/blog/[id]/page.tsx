@@ -80,10 +80,13 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
     readTime: '9 min read',
     ]
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '8 min read',
-    content: [
+      'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
+      'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
+      'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
+      'Enterprises moving to autonomous agents need safety woven into architecture, not bolted on. This playbook outlines pragmatic controls that preserve velocity while containing risk.',
+      'We cover policy engines, capability scoping, red-teaming, incident response, and post-incident learning loops. Templates and reference checklists are included to accelerate implementation.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
@@ -249,6 +252,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     ]
   },
 =======
+=======
   'ai-safety-red-teaming-2025': {
     id: 'ai-safety-red-teaming-2025',
     title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
@@ -277,14 +281,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
       'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
       'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
-};
-
-export function generateStaticParams() {
-  return Object.keys(POSTS).map((id) => ({ id }));
-}
-
-export default function BlogDetailPage({ params }: { params: { id: string } }) {
-  const post = POSTS[params.id];
 =======
 export default function BlogPostPage({ params }: Params) {
   const post = getPostById(params.id);
@@ -324,6 +320,20 @@ export default function BlogPostPage({ params }: Params) {
       </div>
     </article>
   );
+}
+
+}
+
+}
+}
+=======
+}
+=======
+=======
+}
+
+}
+
 }
 
 =======

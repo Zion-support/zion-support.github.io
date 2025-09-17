@@ -9,7 +9,6 @@ const navigation = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Research', href: '/research' },
   { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navigation() {
