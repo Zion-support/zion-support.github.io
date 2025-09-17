@@ -8,8 +8,6 @@ import PerformanceMonitor from "./components/PerformanceMonitor";
 import ErrorBoundary from "./components/ErrorBoundary";
 import SEOHead from "./components/SEOHead";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
-import { PerformanceMonitor as PerfMonitor } from "./utils/performance";
-import { SecurityManager, defaultSecurityConfig } from "./utils/security";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -43,22 +41,23 @@ const LoadingSpinner = () => (
 function App() {
   useEffect(() => {
     // Initialize performance monitoring
-    const perfMonitor = new PerfMonitor();
-    
-    // Initialize security
-    const securityManager = new SecurityManager(defaultSecurityConfig);
+    const perfMonitor = new PerformanceMonitor();
     
     // Report performance metrics after page load
     const handleLoad = () => {
       setTimeout(() => {
-        perfMonitor.reportMetrics();
+        if (perfMonitor.reportMetrics) {
+          perfMonitor.reportMetrics();
+        }
       }, 2000);
     };
     
     window.addEventListener('load', handleLoad);
     
     return () => {
-      perfMonitor.cleanup();
+      if (perfMonitor.cleanup) {
+        perfMonitor.cleanup();
+      }
       window.removeEventListener('load', handleLoad);
     };
   }, []);
