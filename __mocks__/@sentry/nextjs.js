@@ -31,7 +31,7 @@ const Sentry = {
   wrapErrorGetInitialPropsWithSentry: jest.fn((handler) => handler),
   // If you use any specific Sentry integrations or features, mock them as needed
 };
-<<<<<<< HEAD
+
 // Export individual functions for compatibility
 export const init = Sentry.init;
 export const captureException = Sentry.captureException;
@@ -51,7 +51,5 @@ export const wrapAppGetInitialPropsWithSentry =
   Sentry.wrapAppGetInitialPropsWithSentry;
 export const wrapErrorGetInitialPropsWithSentry =
   Sentry.wrapErrorGetInitialPropsWithSentry;
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7fa1
 export default Sentry;
