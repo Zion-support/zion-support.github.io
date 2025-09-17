@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:src/pages/UltimateTechRevolution2027.tsx.backup
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-9601
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -6,6 +7,9 @@ import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 import { motion } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/pages/UltimateTechRevolution2027.tsx
 
 const UltimateTechRevolution2027: React.FC = () => {
   return (
