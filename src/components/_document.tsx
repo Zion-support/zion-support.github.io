@@ -10,6 +10,5 @@ const _document: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default _document;

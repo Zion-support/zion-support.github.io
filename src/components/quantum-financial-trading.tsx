@@ -10,6 +10,5 @@ const quantumFinancialTrading: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default quantumFinancialTrading;

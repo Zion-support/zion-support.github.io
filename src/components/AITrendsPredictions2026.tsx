@@ -10,6 +10,5 @@ const AITrendsPredictions2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AITrendsPredictions2026;

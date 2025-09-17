@@ -10,6 +10,5 @@ const UltimateContentDiscovery2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentDiscovery2026;

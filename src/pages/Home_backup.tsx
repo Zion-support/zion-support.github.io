@@ -10,6 +10,5 @@ const Home_backup: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default Home_backup;

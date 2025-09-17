@@ -10,6 +10,5 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InnovativeServicesShowcase2025;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet }  from 'react-helmet-async';
+
 const RevolutionaryTech2027: React.FC = () => {
   return (
     <>
@@ -7,6 +8,7 @@ const RevolutionaryTech2027: React.FC = () => {
         <title>Revolutionary Tech 2027 - Zion Tech Group</title>
         <meta name="description" content="Discover the revolutionary technologies that will shape 2027" />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -17,6 +19,7 @@ const RevolutionaryTech2027: React.FC = () => {
               Experience the most revolutionary technological breakthroughs reshaping our world
             </p>
           </div>
+          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
               <h2 className="text-2xl font-bold mb-4">AI Revolution</h2>
@@ -30,6 +33,7 @@ const RevolutionaryTech2027: React.FC = () => {
                 <li>• Autonomous Decision Making</li>
               </ul>
             </div>
+            
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
               <h2 className="text-2xl font-bold mb-4">Quantum Computing</h2>
               <p className="text-gray-300 mb-6">
@@ -47,6 +51,5 @@ const RevolutionaryTech2027: React.FC = () => {
       </div>
     </>
   );
-  }
-];
+  };
 export default RevolutionaryTech2027;

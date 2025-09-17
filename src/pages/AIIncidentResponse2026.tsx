@@ -42,6 +42,5 @@ const AIIncidentResponse2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIIncidentResponse2026;

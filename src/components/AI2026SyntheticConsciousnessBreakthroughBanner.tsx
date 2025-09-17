@@ -10,6 +10,5 @@ const AI2026SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2026SyntheticConsciousnessBreakthroughBanner;

@@ -10,6 +10,5 @@ const AI2026UltimateServicesShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2026UltimateServicesShowcase;

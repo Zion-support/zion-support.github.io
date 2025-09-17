@@ -10,6 +10,5 @@ const AdvancedSEO: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedSEO;

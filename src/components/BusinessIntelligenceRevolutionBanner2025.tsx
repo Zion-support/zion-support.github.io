@@ -10,6 +10,5 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BusinessIntelligenceRevolutionBanner2025;

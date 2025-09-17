@@ -10,6 +10,5 @@ const AITransformationGuide2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AITransformationGuide2025;

@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
                   Message
                 </label>
                 <textarea
-                  rows={4}
+                  rows={4};
                   className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>
@@ -70,6 +70,5 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default Contact;

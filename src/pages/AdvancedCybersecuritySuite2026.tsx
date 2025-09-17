@@ -10,6 +10,5 @@ const AdvancedCybersecuritySuite2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedCybersecuritySuite2026;

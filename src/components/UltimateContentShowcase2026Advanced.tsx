@@ -10,6 +10,5 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentShowcase2026Advanced;

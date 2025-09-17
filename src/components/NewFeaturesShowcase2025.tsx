@@ -10,6 +10,5 @@ const NewFeaturesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewFeaturesShowcase2025;

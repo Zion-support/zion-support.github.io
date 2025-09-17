@@ -42,6 +42,5 @@ const BiotechRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BiotechRevolution2025;

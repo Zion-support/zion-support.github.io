@@ -10,6 +10,5 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedAccessibilityEnhancer;

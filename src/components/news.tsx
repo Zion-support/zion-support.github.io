@@ -10,6 +10,5 @@ const news: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default news;

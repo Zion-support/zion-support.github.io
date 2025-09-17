@@ -10,6 +10,5 @@ const AutonomousSystems2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AutonomousSystems2025Banner;

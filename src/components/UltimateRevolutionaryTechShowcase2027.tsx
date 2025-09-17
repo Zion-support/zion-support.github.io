@@ -10,6 +10,5 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateRevolutionaryTechShowcase2027;

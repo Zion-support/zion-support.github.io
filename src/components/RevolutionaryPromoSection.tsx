@@ -10,6 +10,5 @@ const RevolutionaryPromoSection: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryPromoSection;

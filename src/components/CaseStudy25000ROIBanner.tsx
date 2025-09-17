@@ -10,6 +10,5 @@ const CaseStudy25000ROIBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default CaseStudy25000ROIBanner;

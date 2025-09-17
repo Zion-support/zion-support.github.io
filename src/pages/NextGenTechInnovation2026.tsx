@@ -10,6 +10,5 @@ const NextGenTechInnovation2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenTechInnovation2026;

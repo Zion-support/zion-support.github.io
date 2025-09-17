@@ -10,6 +10,5 @@ const AI2026NeuralInterfacesPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2026NeuralInterfacesPromotionBanner;

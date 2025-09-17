@@ -10,6 +10,5 @@ const AdvancedNewsletter: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedNewsletter;

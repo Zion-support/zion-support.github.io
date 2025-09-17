@@ -10,6 +10,5 @@ const UltimateEnterpriseTransformationShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateEnterpriseTransformationShowcase;

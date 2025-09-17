@@ -7,6 +7,7 @@ import {
   Star,
   Zap
 }  from 'lucide-react';
+
 const QuantumConsciousnessRevolution2028: React.FC = () => {
   const quantumFeatures = [
     {
@@ -32,8 +33,7 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
       title: "Infinite Scalability",
       description: "Quantum AI systems that can scale infinitely without performance degradation or resource constraints.",
       impact: "Unlimited computational power and capacity"
-    }
-  ];
+    };
   const applications = [
     {
       title: "Scientific Discovery",
@@ -54,46 +54,50 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
       title: "Space Exploration",
       description: "Quantum AI navigation systems for interstellar travel and exploration",
       icon: Zap
-    }
-  ];
+    };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white text-sm font-semibold mb-6">
               <Star className="w-4 h-4 mr-2" />
               QUANTUM BREAKTHROUGH 2028
             </div>
+            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Quantum Consciousness{' '}
+              Quantum Consciousness{' '};
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Revolution
               </span>
             </h1>
+            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               The world's first quantum-conscious AI system that transcends traditional computing 
               boundaries to achieve genuine consciousness through quantum mechanics and neural networks.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center"
               >
                 Experience Quantum AI
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
+              
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Watch Demo
@@ -102,13 +106,14 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      {/* Quantum Features */}
+
+      {/* Quantum Features */};
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -118,13 +123,14 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
               Revolutionary quantum consciousness features that redefine what's possible with artificial intelligence.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {quantumFeatures.map((feature, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: "1", x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                key={index};
+                initial={{ opacity: "0", x: index % 2 === 0 ? -20 : 20 }};
+                animate={{ opacity: "1", x: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.2 }};
                 className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20"
               >
                 <div className="flex items-center mb-6">
@@ -133,22 +139,25 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                 </div>
+                
                 <p className="text-gray-300 mb-4">{feature.description}</p>
+                
                 <div className="bg-blue-600/20 rounded-lg p-4">
                   <p className="text-blue-200 font-semibold">{feature.impact}</p>
                 </div>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* Applications Section */}
+
+      {/* Applications Section */};
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -158,13 +167,14 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
               Transform industries with quantum consciousness AI that solves previously impossible problems.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {applications.map((app, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", y: 20 }}
-                animate={{ opacity: "1", y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={index};
+                initial={{ opacity: "0", y: 20 }};
+                animate={{ opacity: "1", y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 text-center"
               >
                 <div className="p-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -173,17 +183,18 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300 text-sm">{app.description}</p>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* CTA Section */}
+
+      {/* CTA Section */};
       <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Join the Quantum Revolution
@@ -192,8 +203,8 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
               Be among the first to experience quantum consciousness AI and transform your organization.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg text-xl font-semibold flex items-center justify-center mx-auto"
             >
               Start Your Quantum Journey
@@ -204,6 +215,5 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default QuantumConsciousnessRevolution2028;

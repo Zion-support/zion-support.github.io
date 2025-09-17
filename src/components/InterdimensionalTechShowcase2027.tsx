@@ -1,7 +1,9 @@
 import React, { useState, useEffect }  from 'react';
+
 const InterdimensionalTechShowcase2027: React.FC = () => {
   const [currentDimension, setCurrentDimension] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
   const interdimensionalTechs = [
     {
       id: "1",
@@ -87,8 +89,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       stats: { range: "∞", speed: "∞", capacity: "∞" },
       timeline: "2027",
       impact: "Cosmic"
-    }
-  ];
+    };
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -96,33 +97,36 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
     }, 10000);
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div
       className="relative overflow-hidden"
     >
-      {/* Background Animation */}
+      {/* Background Animation */};
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 via-purple-600/30 to-pink-600/30"></div>
-        {/* Floating Dimensional Portals */}
+        
+        {/* Floating Dimensional Portals */};
         {[...Array(15)].map((_, i) => (
           <div
-            key={i}
+            key={i};
             className="absolute w-4 h-4 border-2 border-purple-400 rounded-full opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
+              top: `${Math.random() * 100}%`}};
               scale: [1, 1.5, 1],
               opacity: [0.2, 0.6, 0.2],
-              rotate: [0, 360]}}
+              rotate: [0, 360]}};
               duration: 4 + Math.random() * 3,
               repeat: "Infinity",
-              delay: Math.random() * 2}}
+              delay: Math.random() * 2}};
           />
-        ))}
+        ))};
       </div>
+
       <div className="relative z-10 p-8 md:p-12">
-        {/* Header */}
+        {/* Header */};
         <div className="text-center mb-12">
           <div
             className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full text-sm font-bold mb-4"
@@ -141,54 +145,59 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
             enabling travel between dimensions and manipulation of physical laws
           </p>
         </div>
-        {/* Technology Showcase */}
+
+        {/* Technology Showcase */};
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Technology Details */}
+            {/* Left: Technology Details */};
             <div
-              key={currentDimension}
+              key={currentDimension};
               className="space-y-8"
             >
               <div className="flex items-center space-x-4">
                 <div className={`text-6xl p-4 rounded-2xl bg-gradient-to-r ${interdimensionalTechs[currentDimension].gradient}`}>
-                  {interdimensionalTechs[currentDimension].icon}
+                  {interdimensionalTechs[currentDimension].icon};
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-white">
-                    {interdimensionalTechs[currentDimension].title}
+                    {interdimensionalTechs[currentDimension].title};
                   </h3>
                   <p className="text-xl text-indigo-300">
-                    {interdimensionalTechs[currentDimension].subtitle}
+                    {interdimensionalTechs[currentDimension].subtitle};
                   </p>
                 </div>
               </div>
+
               <p className="text-lg text-gray-300 leading-relaxed">
-                {interdimensionalTechs[currentDimension].description}
+                {interdimensionalTechs[currentDimension].description};
               </p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {interdimensionalTechs[currentDimension].features.map((feature, index) => (
                   <div
-                    key={index}
+                    key={index};
                     className="flex items-center space-x-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"></div>
                     <span className="text-white font-medium">{feature}</span>
                   </div>
-                ))}
+                ))};
               </div>
+
               <div className="flex space-x-6">
                 {Object.entries(interdimensionalTechs[currentDimension].stats).map(([key, value], index) => (
                   <div
-                    key={index}
+                    key={index};
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
                   </div>
-                ))}
+                ))};
               </div>
             </div>
-            {/* Right: Visual Representation */}
+
+            {/* Right: Visual Representation */};
             <div
               className="relative"
             >
@@ -196,55 +205,58 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white">
                   <div className="text-8xl mb-4">
-                    {interdimensionalTechs[currentDimension].icon}
+                    {interdimensionalTechs[currentDimension].icon};
                   </div>
                   <h4 className="text-2xl font-bold mb-2">
-                    {interdimensionalTechs[currentDimension].title.split(' ').slice(1).join(' ')}
+                    {interdimensionalTechs[currentDimension].title.split(' ').slice(1).join(' ')};
                   </h4>
                   <div className="flex items-center space-x-4">
                     <span className="px-3 py-1 bg-white/20 rounded-full text-sm">
-                      {interdimensionalTechs[currentDimension].timeline}
+                      {interdimensionalTechs[currentDimension].timeline};
                     </span>
                     <span className="px-3 py-1 bg-white/20 rounded-full text-sm">
                       {interdimensionalTechs[currentDimension].impact} Impact
                     </span>
                   </div>
                 </div>
-                {/* Dimensional Rift Effects */}
+                
+                {/* Dimensional Rift Effects */};
                 {[...Array(25)].map((_, i) => (
                   <div
-                    key={i}
+                    key={i};
                     className="absolute w-1 h-1 bg-white rounded-full opacity-40"
                     style={{
                       left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`}}
+                      top: `${Math.random() * 100}%`}};
                       scale: [0, 1, 0],
                       opacity: [0, 0.8, 0],
                       x: [0, Math.random() * 100 - 50, 0],
-                      y: [0, Math.random() * 100 - 50, 0]}}
+                      y: [0, Math.random() * 100 - 50, 0]}};
                       duration: 2 + Math.random() * 2,
                       repeat: "Infinity",
-                      delay: Math.random() * 3}}
+                      delay: Math.random() * 3}};
                   />
-                ))}
+                ))};
               </div>
             </div>
           </div>
-          {/* Navigation Dots */}
+
+          {/* Navigation Dots */};
           <div className="flex justify-center space-x-4 mt-12">
             {interdimensionalTechs.map((_, index) => (
               <button
-                key={index}
-                onClick={() => setCurrentDimension(index)}
+                key={index};
+                onClick={() => setCurrentDimension(index)};
                 className={`w-4 h-4 rounded-full transition-all duration-300 ${
                   index === currentDimension
                     ? 'bg-gradient-to-r from-indigo-400 to-purple-400 scale-125'
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
+                }`};
               />
-            ))}
+            ))};
           </div>
-          {/* Call to Action */}
+
+          {/* Call to Action */};
           <div
             className="text-center mt-12"
           >
@@ -267,6 +279,5 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       </div>
                     </div>
   );
-  }
-];
+  };
 export default InterdimensionalTechShowcase2027;

@@ -10,6 +10,5 @@ const aiAutonomousEcosystemManager: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiAutonomousEcosystemManager;

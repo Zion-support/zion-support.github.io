@@ -18,8 +18,7 @@ export interface Service {
   reviews: {
     rating: number;
     count: number;
-  }
-];
+  };
 // Import new revolutionary services
 import { newServices2026 }  from './newServices2026';
 import { newServices2026 as newServices2026Content }  from './newContent2026';
@@ -42,7 +41,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Advanced Neural Networks", "Consciousness Algorithms", "Emotional Processing", "Quantum Computing"],
     deliveryTime: "12-18 months",
     support: "Dedicated consciousness support team",
-    reviews: { rating: 5.0, count: 1 }
+    reviews: { rating: 5.0, count: 1 };
   },
   {
     id: "quantum-neural-001",
@@ -61,7 +60,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Quantum Processors", "Neural Implants", "Brain-Computer Interfaces", "Quantum Algorithms"],
     deliveryTime: "8-12 months",
     support: "Specialized quantum support",
-    reviews: { rating: 4.9, count: 3 }
+    reviews: { rating: 4.9, count: 3 };
   },
   {
     id: "interdimensional-ai-001",
@@ -80,7 +79,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Quantum Entanglement", "Dimensional Physics", "Parallel Processing", "Reality Interfaces"],
     deliveryTime: "18-24 months",
     support: "Interdimensional support team",
-    reviews: { rating: 5.0, count: 1 }
+    reviews: { rating: 5.0, count: 1 };
   },
   {
     id: "omniversal-ai-001",
@@ -99,7 +98,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Omniversal Physics", "Transcendent Algorithms", "Universal Networks", "Reality Manipulation"],
     deliveryTime: "24-36 months",
     support: "Omniversal support entity",
-    reviews: { rating: 5.0, count: 1 }
+    reviews: { rating: 5.0, count: 1 };
   },
   {
     id: "ai-automation-001",
@@ -118,7 +117,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Python", "TensorFlow", "RPA", "APIs"],
     deliveryTime: "4-6 weeks",
     support: "24/7 technical support",
-    reviews: { rating: 4.9, count: 127 }
+    reviews: { rating: 4.9, count: 127 };
   },
   {
     id: "ai-content-001",
@@ -137,7 +136,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["GPT-4", "BERT", "OpenAI API", "Content management"],
     deliveryTime: "2-3 weeks",
     support: "Email and phone support",
-    reviews: { rating: 4.8, count: 89 }
+    reviews: { rating: 4.8, count: 89 };
   },
   {
     id: "ai-analytics-001",
@@ -156,7 +155,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Python", "Scikit-learn", "Pandas", "Tableau"],
     deliveryTime: "6-8 weeks",
     support: "Dedicated account manager",
-    reviews: { rating: 4.9, count: 156 }
+    reviews: { rating: 4.9, count: 156 };
   },
   {
     id: "ai-security-001",
@@ -175,7 +174,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["TensorFlow", "Keras", "Security APIs", "Cloud platforms"],
     deliveryTime: "8-10 weeks",
     support: "24/7 security monitoring",
-    reviews: { rating: 4.9, count: 203 }
+    reviews: { rating: 4.9, count: 203 };
   },
   {
     id: "ai-chatbot-001",
@@ -194,7 +193,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Dialogflow", "Rasa", "NLP", "APIs"],
     deliveryTime: "3-4 weeks",
     support: "Email support",
-    reviews: { rating: 4.7, count: 94 }
+    reviews: { rating: 4.7, count: 94 };
   },
   {
     id: "ai-recommendation-001",
@@ -213,7 +212,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Python", "Scikit-learn", "TensorFlow", "Redis"],
     deliveryTime: "5-7 weeks",
     support: "Technical support",
-    reviews: { rating: 4.8, count: 67 }
+    reviews: { rating: 4.8, count: 67 };
   },
   {
     id: "neural-interface-001",
@@ -232,7 +231,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["EEG", "Machine Learning", "Signal Processing", "Real-time Systems"],
     deliveryTime: "12-16 weeks",
     support: "24/7 expert support",
-    reviews: { rating: 4.9, count: 45 }
+    reviews: { rating: 4.9, count: 45 };
   },
   {
     id: "quantum-computing-001",
@@ -251,7 +250,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Qiskit", "Cirq", "Quantum Hardware", "Quantum Algorithms"],
     deliveryTime: "20-24 weeks",
     support: "Quantum computing experts",
-    reviews: { rating: 4.9, count: 23 }
+    reviews: { rating: 4.9, count: 23 };
   },
   {
     id: "consciousness-ai-001",
@@ -270,7 +269,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Advanced Neural Networks", "Consciousness Algorithms", "Quantum Processing", "Self-Modification"],
     deliveryTime: "24-32 weeks",
     support: "Consciousness AI experts",
-    reviews: { rating: 5.0, count: 12 }
+    reviews: { rating: 5.0, count: 12 };
   },
   {
     id: "holographic-computing-001",
@@ -289,7 +288,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Holographic Displays", "Spatial Computing", "3D Rendering", "Gesture AI"],
     deliveryTime: "16-20 weeks",
     support: "Holographic technology experts",
-    reviews: { rating: 4.9, count: 34 }
+    reviews: { rating: 4.9, count: 34 };
   },
   {
     id: "space-tech-001",
@@ -308,7 +307,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Space AI", "Satellite Technology", "Space Robotics", "Interplanetary Networks"],
     deliveryTime: "24-32 weeks",
     support: "Space technology specialists",
-    reviews: { rating: 5.0, count: 18 }
+    reviews: { rating: 5.0, count: 18 };
   },
   {
     id: "biotech-ai-001",
@@ -327,7 +326,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Bioinformatics", "Machine Learning", "Genomics", "Drug Discovery AI"],
     deliveryTime: "20-28 weeks",
     support: "Biotech AI experts",
-    reviews: { rating: 4.9, count: 42 }
+    reviews: { rating: 4.9, count: 42 };
   },
   {
     id: "autonomous-teams-001",
@@ -346,7 +345,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Advanced AI", "Team Management", "Strategic Planning", "Decision Making"],
     deliveryTime: "18-24 weeks",
     support: "Autonomous systems experts",
-    reviews: { rating: 4.8, count: 67 }
+    reviews: { rating: 4.8, count: 67 };
   },
   {
     id: "metaverse-business-001",
@@ -365,7 +364,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Unity", "Unreal Engine", "WebXR", "Blockchain"],
     deliveryTime: "20-28 weeks",
     support: "Metaverse specialists",
-    reviews: { rating: 4.9, count: 89 }
+    reviews: { rating: 4.9, count: 89 };
   },
   {
     id: "edge-computing-001",
@@ -384,7 +383,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Kubernetes", "Docker", "TensorFlow Lite", "Edge AI"],
     deliveryTime: "12-16 weeks",
     support: "Edge computing experts",
-    reviews: { rating: 4.8, count: 156 }
+    reviews: { rating: 4.8, count: 156 };
   },
   {
     id: "digital-twin-001",
@@ -403,7 +402,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["IoT", "Machine Learning", "3D Modeling", "Real-time Analytics"],
     deliveryTime: "16-22 weeks",
     support: "Digital twin specialists",
-    reviews: { rating: 4.9, count: 78 }
+    reviews: { rating: 4.9, count: 78 };
   },
   {
     id: "blockchain-3-0-001",
@@ -422,7 +421,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Ethereum", "Solidity", "Web3", "IPFS"],
     deliveryTime: "18-26 weeks",
     support: "Blockchain architects",
-    reviews: { rating: 4.8, count: 134 }
+    reviews: { rating: 4.8, count: 134 };
   },
   {
     id: "ar-business-001",
@@ -441,7 +440,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["ARKit", "ARCore", "Unity", "Vuforia"],
     deliveryTime: "10-14 weeks",
     support: "AR development experts",
-    reviews: { rating: 4.7, count: 112 }
+    reviews: { rating: 4.7, count: 112 };
   },
   {
     id: "5g-connectivity-001",
@@ -460,7 +459,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["5G NR", "Network Slicing", "MEC", "SDN"],
     deliveryTime: "14-20 weeks",
     support: "5G network specialists",
-    reviews: { rating: 4.6, count: 95 }
+    reviews: { rating: 4.6, count: 95 };
   },
   {
     id: "quantum-ai-001",
@@ -479,7 +478,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     technologies: ["Qiskit", "Cirq", "Quantum ML", "Quantum Algorithms"],
     deliveryTime: "24-32 weeks",
     support: "Quantum computing experts",
-    reviews: { rating: 4.9, count: 45 }
+    reviews: { rating: 4.9, count: 45 };
   },
   ...newServices2026
-];

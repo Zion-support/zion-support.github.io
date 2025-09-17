@@ -10,6 +10,5 @@ const LazyComponent: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default LazyComponent;

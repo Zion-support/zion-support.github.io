@@ -10,6 +10,5 @@ const NewContent2025CloudOptimizationBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewContent2025CloudOptimizationBanner;

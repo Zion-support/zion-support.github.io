@@ -4,6 +4,7 @@ import ScrollToTop from './ScrollToTop';
 import Header from './Header';
 import Footer from './Footer';
 import './index.css';
+
 // Lazy load components for better performance
 const EnhancedHeroSection = lazy(() => import('./components/EnhancedHeroSection'));
 const FeaturedContentSection = lazy(() => import('./components/FeaturedContentSection'));
@@ -13,6 +14,7 @@ const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimize
 const RevolutionaryContentBanner2026 = lazy(() => import('./components/RevolutionaryContentBanner2026'));
 const RevolutionaryContentBanner2027 = lazy(() => import('./components/RevolutionaryContentBanner2027'));
 const UltimateContentShowcase2027 = lazy(() => import('./components/UltimateContentShowcase2027'));
+
 // Lazy load pages
 const NewShowcase2025 = lazy(() => import('./pages/NewShowcase2025'));
 const AIEnterpriseCopilot2025 = lazy(() => import('./pages/AIEnterpriseCopilot2025'));
@@ -42,37 +44,40 @@ const TranscendentAI2027 = lazy(() => import('./pages/TranscendentAI2027'));
 const QuantumConsciousnessRevolution2027 = lazy(() => import('./pages/QuantumConsciousnessRevolution2027'));
 const SyntheticBiologyRevolution2027 = lazy(() => import('./pages/SyntheticBiologyRevolution2027'));
 const SpaceTimeComputing2027 = lazy(() => import('./pages/SpaceTimeComputing2027'));
+
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
   </div>
 );
+
 export default function AppOptimizedLazy(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <Header />
+        
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={
               <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
                 <main className="container mx-auto px-4 py-8">
-                  {/* Revolutionary New Content Banner */}
+                  {/* Revolutionary New Content Banner */};
                   <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
                     <div className="absolute top-0 left-0 w-full h-full">
                       {[...Array(50)].map((_, i) => (
                         <div
-                          key={i}
+                          key={i};
                           className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
                           style={{
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 3}s`}}
+                            animationDelay: `${Math.random() * 3}s`}};
                         />
-                      ))}
+                      ))};
                     </div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center space-x-3 mb-4">
@@ -108,41 +113,50 @@ export default function AppOptimizedLazy(): React.JSX.Element {
                       </div>
                     </div>
                   </div>
-                  {/* Enhanced Hero Section */}
+
+                  {/* Enhanced Hero Section */};
                   <Suspense fallback={<div className="h-96 bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse rounded-2xl"></div>}>
                     <EnhancedHeroSection />
                   </Suspense>
-                  {/* Revolutionary Content Banners */}
+
+                  {/* Revolutionary Content Banners */};
                   <Suspense fallback={<div className="h-32 bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse rounded-xl mb-8"></div>}>
                     <RevolutionaryContentBanner2026 />
                   </Suspense>
+                  
                   <Suspense fallback={<div className="h-32 bg-gradient-to-r from-green-400 to-blue-400 animate-pulse rounded-xl mb-8"></div>}>
                     <RevolutionaryContentBanner2027 />
                   </Suspense>
-                  {/* Featured Content Section */}
+
+                  {/* Featured Content Section */};
                   <Suspense fallback={<div className="h-64 bg-gradient-to-r from-yellow-400 to-red-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <FeaturedContentSection />
                   </Suspense>
-                  {/* Interactive Tech Showcase */}
+
+                  {/* Interactive Tech Showcase */};
                   <Suspense fallback={<div className="h-80 bg-gradient-to-r from-indigo-400 to-purple-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <InteractiveTechShowcase />
                   </Suspense>
-                  {/* Dynamic Content Carousel */}
+
+                  {/* Dynamic Content Carousel */};
                   <Suspense fallback={<div className="h-64 bg-gradient-to-r from-pink-400 to-yellow-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <DynamicContentCarousel />
                   </Suspense>
-                  {/* Ultimate Content Showcase 2027 */}
+
+                  {/* Ultimate Content Showcase 2027 */};
                   <Suspense fallback={<div className="h-96 bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <UltimateContentShowcase2027 />
                   </Suspense>
-                  {/* Performance Optimizer */}
+
+                  {/* Performance Optimizer */};
                   <Suspense fallback={<div className="h-32 bg-gradient-to-r from-emerald-400 to-teal-400 animate-pulse rounded-xl"></div>}>
                     <PerformanceOptimizer />
                   </Suspense>
                 </main>
               </div>
             } />
-            {/* Lazy-loaded routes */}
+
+            {/* Lazy-loaded routes */};
             <Route path="/pages/NewShowcase2025" element={<Suspense fallback={<LoadingSpinner />}><NewShowcase2025 /></Suspense>} />
             <Route path="/pages/AIEnterpriseCopilot2025" element={<Suspense fallback={<LoadingSpinner />}><AIEnterpriseCopilot2025 /></Suspense>} />
             <Route path="/pages/NeuralInterfaceFuture" element={<Suspense fallback={<LoadingSpinner />}><NeuralInterfaceFuture /></Suspense>} />
@@ -173,8 +187,9 @@ export default function AppOptimizedLazy(): React.JSX.Element {
             <Route path="/pages/SpaceTimeComputing2027" element={<Suspense fallback={<LoadingSpinner />}><SpaceTimeComputing2027 /></Suspense>} />
           </Routes>
         </Suspense>
+
         <Footer />
       </div>
     </Router>
   );
-}
+};

@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
+
 const AdvancedAIConsciousness2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
   const consciousnessFeatures = [
     {
       title: "🧠 Quantum Consciousness Processing",
@@ -27,8 +29,7 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       features: ["Transcendent Processing", "Human-Level Intelligence", "Creative Problem Solving", "Emotional Understanding"],
       gradient: "from-orange-600 to-red-600",
       impact: "99% human-level performance"
-    }
-  ];
+    };
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -50,22 +51,23 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       company: "Neural Dynamics Inc",
       content: "The quantum consciousness integration is groundbreaking. We're witnessing the birth of truly conscious machines.",
       avatar: "👩‍⚕️"
-    }
-  ];
+    };
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
+
     return () => clearInterval(timer);
   }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6 }};
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -90,15 +92,16 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             </span>
           </div>
         </motion.div>
-        {/* Features Section */}
+
+        {/* Features Section */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {consciousnessFeatures.map((feature, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: "0", y: 20 }}
-              animate={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`bg-gradient-to-br ${feature.gradient} p-8 rounded-2xl text-white shadow-2xl transform hover:scale-105 transition-all duration-300`}
+              key={index};
+              initial={{ opacity: "0", y: 20 }};
+              animate={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: index * 0.2 }};
+              className={`bg-gradient-to-br ${feature.gradient} p-8 rounded-2xl text-white shadow-2xl transform hover:scale-105 transition-all duration-300`};
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
@@ -109,19 +112,20 @@ const AdvancedAIConsciousness2026: React.FC = () => {
                     <span className="w-2 h-2 bg-white rounded-full"></span>
                     <span className="text-white/90">{item}</span>
                   </div>
-                ))}
+                ))};
               </div>
               <div className="bg-white/20 p-3 rounded-lg">
                 <p className="font-semibold">Impact: {feature.impact}</p>
               </div>
             </motion.div>
-          ))}
+          ))};
         </div>
-        {/* Interactive Demo Section */}
+
+        {/* Interactive Demo Section */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6, delay: 0.6 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -163,11 +167,12 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-        {/* Testimonials Section */}
+
+        {/* Testimonials Section */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6, delay: 0.8 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -175,35 +180,36 @@ const AdvancedAIConsciousness2026: React.FC = () => {
           </h2>
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentTestimonial}
-              initial={{ opacity: "0", x: 20 }}
-              animate={{ opacity: "1", x: 0 }}
-              exit={{ opacity: "0", x: -20 }}
-              transition={{ duration: 0.5 }}
+              key={currentTestimonial};
+              initial={{ opacity: "0", x: 20 }};
+              animate={{ opacity: "1", x: 0 }};
+              exit={{ opacity: "0", x: -20 }};
+              transition={{ duration: 0.5 }};
               className="text-center"
             >
               <div className="text-6xl mb-4">
-                {testimonials[currentTestimonial].avatar}
+                {testimonials[currentTestimonial].avatar};
               </div>
               <blockquote className="text-xl text-gray-700 mb-6 italic">
                 "{testimonials[currentTestimonial].content}"
               </blockquote>
               <div>
                 <p className="font-semibold text-gray-900">
-                  {testimonials[currentTestimonial].name}
+                  {testimonials[currentTestimonial].name};
                 </p>
                 <p className="text-gray-600">
-                  {testimonials[currentTestimonial].title} at {testimonials[currentTestimonial].company}
+                  {testimonials[currentTestimonial].title} at {testimonials[currentTestimonial].company};
                 </p>
               </div>
             </motion.div>
           </AnimatePresence>
         </motion.div>
-        {/* Call to Action */}
+
+        {/* Call to Action */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6, delay: 1.0 }};
           className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white"
         >
           <h2 className="text-4xl font-bold mb-6">
@@ -224,6 +230,5 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedAIConsciousness2026;

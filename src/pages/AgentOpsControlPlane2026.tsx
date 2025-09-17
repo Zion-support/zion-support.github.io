@@ -42,6 +42,5 @@ const AgentOpsControlPlane2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AgentOpsControlPlane2026;

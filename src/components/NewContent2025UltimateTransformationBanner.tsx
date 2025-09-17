@@ -10,6 +10,5 @@ const NewContent2025UltimateTransformationBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewContent2025UltimateTransformationBanner;

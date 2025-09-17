@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet }  from 'react-helmet-async';
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
+
 const NextGenInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -9,8 +10,9 @@ const NextGenInnovationHub2026: React.FC = () => {
         <title>Next-Gen Innovation Hub 2026 | Zion Tech Group</title>
         <meta name="description" content="Explore the future of innovation with our Next-Gen Innovation Hub featuring cutting-edge technologies for 2026." />
       </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION • JANUARY 2026
@@ -22,7 +24,8 @@ const NextGenInnovationHub2026: React.FC = () => {
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
         </div>
-        {/* Innovation Categories */}
+
+        {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">🧠</div>
@@ -34,6 +37,7 @@ const NextGenInnovationHub2026: React.FC = () => {
               Explore AI →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
@@ -44,6 +48,7 @@ const NextGenInnovationHub2026: React.FC = () => {
               Learn More →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <div className="text-4xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
@@ -55,7 +60,8 @@ const NextGenInnovationHub2026: React.FC = () => {
             </button>
           </div>
         </div>
-        {/* Innovation Showcase */}
+
+        {/* Innovation Showcase */};
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Innovation Showcase</h3>
@@ -88,7 +94,8 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Call to Action */}
+
+        {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12">
             <h3 className="text-4xl font-bold mb-6">🚀 Ready to Innovate?</h3>
@@ -108,6 +115,5 @@ const NextGenInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenInnovationHub2026;

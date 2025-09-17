@@ -10,6 +10,5 @@ const EnhancedContentDiscoveryWidget: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedContentDiscoveryWidget;

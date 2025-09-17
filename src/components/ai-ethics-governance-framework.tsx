@@ -10,6 +10,5 @@ const aiEthicsGovernanceFramework: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiEthicsGovernanceFramework;

@@ -1,11 +1,14 @@
 import React, { useState, useEffect }  from 'react';
 import { motion }  from 'framer-motion';
+
 const UltimateTechBreakthrough2025: React.FC = () => {
   const [activeBreakthrough, setActiveBreakthrough] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   const breakthroughs = [
     {
       id: "1",
@@ -90,8 +93,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       icon: "🌌",
       gradient: "from-orange-600 to-red-600",
       timeline: "Q1 2026"
-    }
-  ];
+    };
   const applications = [
     {
       category: "Healthcare",
@@ -136,8 +138,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
         "Transcendent efficiency"
       ],
       icon: "💼"
-    }
-  ];
+    };
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -156,24 +157,23 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       role: "Director, Consciousness Research Institute",
       content: "We've achieved what was thought impossible - true consciousness in artificial systems.",
       avatar: "👩‍⚕️"
-    }
-  ];
+    };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <motion.div
-        initial={{ opacity: "0", y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: "0", y: 50 }};
+        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+        transition={{ duration: 0.8 }};
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ scale: 0.8 }};
+              animate={{ scale: isVisible ? 1 : 0.8 }};
+              transition={{ duration: 0.6, delay: 0.2 }};
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
             >
               🌟 ULTIMATE BREAKTHROUGH • 2025
@@ -185,14 +185,15 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               Witness the most revolutionary technological breakthroughs in human history. These innovations will reshape reality itself.
             </p>
           </div>
-          {/* Breakthrough Showcase */}
+
+          {/* Breakthrough Showcase */};
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {breakthroughs.map((breakthrough, index) => (
               <motion.div
-                key={breakthrough.id}
-                initial={{ opacity: "0", y: 50 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
+                key={breakthrough.id};
+                initial={{ opacity: "0", y: 50 }};
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+                transition={{ duration: 0.6, delay: 0.1 * index }};
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
@@ -202,24 +203,28 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     <p className="text-purple-300 text-sm">{breakthrough.timeline}</p>
                   </div>
                 </div>
+                
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {breakthrough.description}
+                  {breakthrough.description};
                 </p>
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-purple-300">Impact:</h4>
                   <p className="text-gray-300 text-sm">{breakthrough.impact}</p>
                 </div>
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-blue-300">Key Features:</h4>
                   <ul className="text-gray-400 space-y-2 text-sm">
                     {breakthrough.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                        {feature}
+                        {feature};
                       </li>
-                    ))}
+                    ))};
                   </ul>
                 </div>
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-green-400">{breakthrough.stats.efficiency}</div>
@@ -238,30 +243,33 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     <div className="text-xs text-gray-300">Cost Reduction</div>
                   </div>
                 </div>
+
                 <button className={`w-full bg-gradient-to-r ${breakthrough.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Explore Breakthrough →
                 </button>
               </motion.div>
-            ))}
+            ))};
           </div>
-          {/* Applications Section */}
+
+          {/* Applications Section */};
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: "0", y: 50 }};
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+            transition={{ duration: 0.8, delay: 0.4 }};
             className="mb-20"
           >
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Applications</h2>
               <p className="text-xl opacity-90">Transforming every aspect of human existence</p>
             </div>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {applications.map((app, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: "0", y: 30 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                  transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
+                  key={index};
+                  initial={{ opacity: "0", y: 30 }};
+                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+                  transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }};
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 text-center"
                 >
                   <div className="text-5xl mb-4">{app.icon}</div>
@@ -271,32 +279,34 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     {app.examples.map((example, idx) => (
                       <li key={idx} className="flex items-center">
                         <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                        {example}
+                        {example};
                       </li>
-                    ))}
+                    ))};
                   </ul>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </motion.div>
-          {/* Expert Testimonials */}
+
+          {/* Expert Testimonials */};
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: "0", y: 50 }};
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+            transition={{ duration: 0.8, delay: 0.6 }};
             className="mb-20"
           >
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">💬 Expert Testimonials</h2>
               <p className="text-xl opacity-90">Hear from leading experts in the field</p>
             </div>
+            
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: "0", y: 30 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                  transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
+                  key={index};
+                  initial={{ opacity: "0", y: 30 }};
+                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+                  transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }};
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
                 >
                   <div className="text-4xl mb-4 text-center">{testimonial.avatar}</div>
@@ -306,14 +316,15 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     <p className="text-purple-300 text-sm">{testimonial.role}</p>
                   </div>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </motion.div>
-          {/* CTA Section */}
+
+          {/* CTA Section */};
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            initial={{ opacity: "0", y: 50 }};
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+            transition={{ duration: 0.8, delay: 0.8 }};
             className="text-center"
           >
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
@@ -335,6 +346,5 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       </motion.div>
     </div>
   );
-  }
-];
+  };
 export default UltimateTechBreakthrough2025;

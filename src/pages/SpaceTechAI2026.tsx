@@ -1,9 +1,10 @@
 import React from 'react';
+
 const SpaceTechAI2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 SPACE TECHNOLOGY • 2026
@@ -23,7 +24,8 @@ const SpaceTechAI2026: React.FC = () => {
             </button>
           </div>
         </div>
-        {/* Revolutionary Space Technologies */}
+
+        {/* Revolutionary Space Technologies */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🛸</div>
@@ -37,6 +39,7 @@ const SpaceTechAI2026: React.FC = () => {
               <li>• Real-time problem solving</li>
             </ul>
           </div>
+          
           <div className="bg-gradient-to-br from-slate-800/50 to-indigo-800/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌍</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Planetary Terraforming</h3>
@@ -49,6 +52,7 @@ const SpaceTechAI2026: React.FC = () => {
               <li>• Ecosystem engineering</li>
             </ul>
           </div>
+          
           <div className="bg-gradient-to-br from-slate-800/50 to-cyan-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Propulsion</h3>
@@ -62,7 +66,8 @@ const SpaceTechAI2026: React.FC = () => {
             </ul>
           </div>
         </div>
-        {/* Mission Capabilities */}
+
+        {/* Mission Capabilities */};
         <div className="bg-gradient-to-r from-slate-800/80 via-purple-800/80 to-indigo-800/80 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">🌟 Mission Capabilities</h2>
@@ -70,6 +75,7 @@ const SpaceTechAI2026: React.FC = () => {
               Our space technology AI systems are capable of executing complex missions across the solar system and beyond
             </p>
           </div>
+          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -81,6 +87,7 @@ const SpaceTechAI2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">⛏️</div>
                 <div>
@@ -90,6 +97,7 @@ const SpaceTechAI2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🏠</div>
                 <div>
@@ -100,6 +108,7 @@ const SpaceTechAI2026: React.FC = () => {
                 </div>
               </div>
             </div>
+            
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🌌</div>
@@ -110,6 +119,7 @@ const SpaceTechAI2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🛡️</div>
                 <div>
@@ -119,6 +129,7 @@ const SpaceTechAI2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">📡</div>
                 <div>
@@ -131,12 +142,14 @@ const SpaceTechAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Current Missions */}
+
+        {/* Current Missions */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🚀 Active Missions</h2>
             <p className="text-xl opacity-90">Currently deployed space technology missions across the solar system</p>
           </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm p-6 rounded-xl border border-purple-400/30 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🔴</div>
@@ -148,6 +161,7 @@ const SpaceTechAI2026: React.FC = () => {
                 ✓ 15% atmosphere modified
               </div>
             </div>
+            
             <div className="bg-gradient-to-br from-slate-800/50 to-indigo-800/50 backdrop-blur-sm p-6 rounded-xl border border-indigo-400/30 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🌙</div>
               <h3 className="text-xl font-semibold mb-3">Lunar Base Construction</h3>
@@ -158,6 +172,7 @@ const SpaceTechAI2026: React.FC = () => {
                 ✓ 60% base complete
               </div>
             </div>
+            
             <div className="bg-gradient-to-br from-slate-800/50 to-cyan-800/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-400/30 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">☄️</div>
               <h3 className="text-xl font-semibold mb-3">Asteroid Belt Mining</h3>
@@ -168,6 +183,7 @@ const SpaceTechAI2026: React.FC = () => {
                 ✓ 2,000 tons extracted
               </div>
             </div>
+            
             <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm p-6 rounded-xl border border-purple-400/30 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🪐</div>
               <h3 className="text-xl font-semibold mb-3">Jupiter Moon Survey</h3>
@@ -178,6 +194,7 @@ const SpaceTechAI2026: React.FC = () => {
                 ✓ 3 moons surveyed
               </div>
             </div>
+            
             <div className="bg-gradient-to-br from-slate-800/50 to-indigo-800/50 backdrop-blur-sm p-6 rounded-xl border border-indigo-400/30 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🌌</div>
               <h3 className="text-xl font-semibold mb-3">Interstellar Probe</h3>
@@ -188,6 +205,7 @@ const SpaceTechAI2026: React.FC = () => {
                 ✓ 0.1% light speed achieved
               </div>
             </div>
+            
             <div className="bg-gradient-to-br from-slate-800/50 to-cyan-800/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-400/30 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold mb-3">Planetary Defense Network</h3>
@@ -200,7 +218,8 @@ const SpaceTechAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Technology Showcase */}
+
+        {/* Technology Showcase */};
         <div className="bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-cyan-400/30">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">🔬 Breakthrough Technologies</h2>
@@ -208,6 +227,7 @@ const SpaceTechAI2026: React.FC = () => {
               Revolutionary technologies that are making space exploration and colonization possible
             </p>
           </div>
+          
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center">🚀 Propulsion Systems</h3>
@@ -226,6 +246,7 @@ const SpaceTechAI2026: React.FC = () => {
                 </div>
               </div>
             </div>
+            
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center">🧠 AI Systems</h3>
               <div className="space-y-4">
@@ -245,7 +266,8 @@ const SpaceTechAI2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* CTA Section */}
+
+        {/* CTA Section */};
         <div className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
           <h2 className="text-4xl font-bold mb-6">Join the Space Revolution</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -264,6 +286,5 @@ const SpaceTechAI2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SpaceTechAI2026;

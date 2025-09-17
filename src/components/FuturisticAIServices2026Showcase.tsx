@@ -10,6 +10,5 @@ const FuturisticAIServices2026Showcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default FuturisticAIServices2026Showcase;

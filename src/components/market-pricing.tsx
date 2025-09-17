@@ -10,6 +10,5 @@ const marketPricing: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default marketPricing;

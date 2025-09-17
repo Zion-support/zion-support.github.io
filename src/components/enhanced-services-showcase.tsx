@@ -10,6 +10,5 @@ const enhancedServicesShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default enhancedServicesShowcase;

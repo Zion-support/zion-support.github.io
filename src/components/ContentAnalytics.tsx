@@ -10,6 +10,5 @@ const ContentAnalytics: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ContentAnalytics;

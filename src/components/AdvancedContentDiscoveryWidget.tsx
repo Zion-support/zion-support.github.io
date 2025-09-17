@@ -10,6 +10,5 @@ const AdvancedContentDiscoveryWidget: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedContentDiscoveryWidget;

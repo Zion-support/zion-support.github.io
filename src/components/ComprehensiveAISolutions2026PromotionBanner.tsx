@@ -10,6 +10,5 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ComprehensiveAISolutions2026PromotionBanner;

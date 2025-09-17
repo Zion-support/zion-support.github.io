@@ -10,6 +10,5 @@ const AIInnovationPlaybook2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIInnovationPlaybook2025;

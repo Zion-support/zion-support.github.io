@@ -10,6 +10,5 @@ const SocialSharing: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SocialSharing;

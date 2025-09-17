@@ -10,6 +10,5 @@ const AI2025ContentRevolutionBreakthroughBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025ContentRevolutionBreakthroughBanner;

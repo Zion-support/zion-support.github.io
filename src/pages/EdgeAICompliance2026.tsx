@@ -42,6 +42,5 @@ const EdgeAICompliance2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EdgeAICompliance2026;

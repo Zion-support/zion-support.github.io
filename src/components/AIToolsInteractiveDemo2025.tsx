@@ -10,6 +10,5 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIToolsInteractiveDemo2025;

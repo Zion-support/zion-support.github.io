@@ -6,8 +6,7 @@ const firebaseConfig = {
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID}
-];
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID};
 const app = initializeApp(firebaseConfig);
 // Firestore tries to use IndexedDB for persistence which can fail in
 // environments where access to local storage is blocked (e.g. third-party
@@ -16,10 +15,9 @@ const app = initializeApp(firebaseConfig);
 let db: Firestore; // Explicitly typed db
 try {
   db = getFirestore(app);
-} ,catch (e) {
+} catch (e) {
   console.warn('Firestore storage unavailable, using memory cache.', e);
   db = initializeFirestore(app, { localCache: memoryLocalCache() });
-}
+};
 export { db
-  }
-];
+  };

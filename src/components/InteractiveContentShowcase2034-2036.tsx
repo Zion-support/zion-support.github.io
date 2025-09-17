@@ -10,6 +10,5 @@ const interactiveContentShowcase20342036: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default interactiveContentShowcase20342036;

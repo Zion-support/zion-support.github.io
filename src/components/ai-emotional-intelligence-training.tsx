@@ -10,6 +10,5 @@ const aiEmotionalIntelligenceTraining: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiEmotionalIntelligenceTraining;

@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
+
 const RevolutionaryTechTrends2026: React.FC = () => {
   const [currentTrend, setCurrentTrend] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
   const trends = [
     {
       title: "Synthetic Intelligence",
@@ -48,15 +50,13 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       timeline: "2026-2031",
       applications: ["Mental Health", "Learning Enhancement", "Creative Expression", "Human-AI Collaboration"],
       gradient: "from-violet-600 to-fuchsia-600"
-    }
-  ];
+    };
   const marketData = [
     { sector: "AI & Machine Learning", growth: "450%", value: "$2.3T", timeline: "2026-2030" },
     { sector: "Quantum Computing", growth: "800%", value: "$1.8T", timeline: "2026-2030" },
     { sector: "Neural Interfaces", growth: "600%", value: "$1.2T", timeline: "2026-2030" },
     { sector: "Holographic Tech", growth: "350%", value: "$800B", timeline: "2026-2030" },
-    { sector: "Consciousness Tech", growth: "1000%", value: "$500B", timeline: "2026-2030" }
-  ];
+    { sector: "Consciousness Tech", growth: "1000%", value: "$500B", timeline: "2026-2030" };
   const predictions = [
     {
       year: "2026",
@@ -87,26 +87,26 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       prediction: "Consciousness computing enables human-AI consciousness fusion",
       probability: "40%",
       impact: "Transcendent"
-    }
-  ];
+    };
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentTrend((prev) => (prev + 1) % trends.length);
       }, 5000);
       return () => clearInterval(interval);
-    }
+    };
   }, [isAutoPlaying, trends.length]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 50 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -130,25 +130,27 @@ const RevolutionaryTechTrends2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      {/* Market Data */}
+
+      {/* Market Data */};
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: "0", y: 30 }}
-            whileInView={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: "0", y: 30 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.6 }};
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold mb-4">Market Projections 2026-2030</h2>
             <p className="text-xl opacity-80">Exponential growth in revolutionary technologies</p>
           </motion.div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {marketData.map((data, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", scale: 0.8 }}
-                whileInView={{ opacity: "1", scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key={index};
+                initial={{ opacity: "0", scale: 0.8 }};
+                whileInView={{ opacity: "1", scale: 1 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
               >
                 <div className="text-2xl font-bold text-purple-400 mb-2">{data.growth}</div>
@@ -157,17 +159,18 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                 <div className="text-sm text-green-400 font-semibold mb-1">{data.value}</div>
                 <div className="text-xs opacity-60">{data.timeline}</div>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* Trends Carousel */}
+
+      {/* Trends Carousel */};
       <div className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            whileInView={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 50 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">Revolutionary Technology Trends</h2>
@@ -176,23 +179,25 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               creating new possibilities for human advancement.
             </p>
           </motion.div>
-          {/* Main Trend Display */}
+
+          {/* Main Trend Display */};
           <div className="relative max-w-6xl mx-auto mb-12">
             <div className="relative overflow-hidden rounded-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={currentTrend}
-                  initial={{ opacity: "0", x: 300 }}
-                  animate={{ opacity: "1", x: 0 }}
-                  exit={{ opacity: "0", x: -300 }}
-                  transition={{ duration: 0.5 }}
-                  className={`bg-gradient-to-br ${trends[currentTrend].gradient} p-12 rounded-2xl`}
+                  key={currentTrend};
+                  initial={{ opacity: "0", x: 300 }};
+                  animate={{ opacity: "1", x: 0 }};
+                  exit={{ opacity: "0", x: -300 }};
+                  transition={{ duration: 0.5 }};
+                  className={`bg-gradient-to-br ${trends[currentTrend].gradient} p-12 rounded-2xl`};
                 >
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                       <div className="text-8xl mb-6">{trends[currentTrend].icon}</div>
                       <h3 className="text-4xl font-bold mb-6">{trends[currentTrend].title}</h3>
                       <p className="text-xl opacity-90 mb-8">{trends[currentTrend].description}</p>
+                      
                       <div className="flex items-center space-x-6 mb-8">
                         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
                           <div className="text-2xl font-bold">{trends[currentTrend].impact}</div>
@@ -203,10 +208,12 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                           <div className="text-sm opacity-80">Timeline</div>
                         </div>
                       </div>
+                      
                       <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                         Learn More →
                       </button>
                     </div>
+                    
                     <div>
                       <h4 className="text-2xl font-bold mb-6">Key Applications</h4>
                       <div className="grid grid-cols-2 gap-4">
@@ -214,33 +221,36 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
                             <span className="text-sm font-semibold">{app}</span>
                           </div>
-                        ))}
+                        ))};
                       </div>
                     </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
-            {/* Navigation Controls */}
+
+            {/* Navigation Controls */};
             <button
-              onClick={() => setCurrentTrend((prev) => (prev - 1 + trends.length) % trends.length)}
+              onClick={() => setCurrentTrend((prev) => (prev - 1 + trends.length) % trends.length)};
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
+            
             <button
-              onClick={() => setCurrentTrend((prev) => (prev + 1) % trends.length)}
+              onClick={() => setCurrentTrend((prev) => (prev + 1) % trends.length)};
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-            {/* Play/Pause Button */}
+
+            {/* Play/Pause Button */};
             <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)};
               className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
             >
               {isAutoPlaying ? (
@@ -251,30 +261,32 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
-              )}
+              )};
             </button>
           </div>
-          {/* Trend Indicators */}
+
+          {/* Trend Indicators */};
           <div className="flex justify-center space-x-3 mb-12">
             {trends.map((_, index) => (
               <button
-                key={index}
-                onClick={() => setCurrentTrend(index)}
+                key={index};
+                onClick={() => setCurrentTrend(index)};
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentTrend ? 'bg-white' : 'bg-white/30'
-                }`}
+                }`};
               />
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* Predictions */}
+
+      {/* Predictions */};
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            whileInView={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 50 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">Future Predictions</h2>
@@ -282,13 +294,14 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               Expert predictions for the next five years of technological advancement
             </p>
           </motion.div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {predictions.map((prediction, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", y: 50 }}
-                whileInView={{ opacity: "1", y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key={index};
+                initial={{ opacity: "0", y: 50 }};
+                whileInView={{ opacity: "1", y: 0 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -300,23 +313,24 @@ const RevolutionaryTechTrends2026: React.FC = () => {
                       ? 'bg-yellow-500/20 text-yellow-400'
                       : 'bg-red-500/20 text-red-400'
                   }`}>
-                    {prediction.probability}
+                    {prediction.probability};
                   </div>
                 </div>
                 <p className="text-lg opacity-90 mb-4">{prediction.prediction}</p>
                 <div className="text-sm text-purple-400 font-semibold">{prediction.impact} Impact</div>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* Call to Action */}
+
+      {/* Call to Action */};
       <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: "0", y: 50 }}
-            whileInView={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 50 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
           >
             <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -336,6 +350,5 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryTechTrends2026;

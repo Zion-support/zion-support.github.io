@@ -10,12 +10,11 @@ export const SkipToMainContent: React.FC = () => {
         if (main) {
           main.focus();
           main.scrollIntoView({ behavior: 'smooth' });
-        }
-      }}
+        };
+      }};
     >
       Skip to main content
     </a>
   );
-  }
-];
+  };
 export default SkipToMainContent;

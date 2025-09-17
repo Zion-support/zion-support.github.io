@@ -42,6 +42,5 @@ const NextGenAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenAIRevolution2026;

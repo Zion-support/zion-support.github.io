@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { Helmet }  from 'react-helmet-async';
+
 const RevolutionaryTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeTech, setActiveTech] = useState(0);
+
   const techCategories = [
     {
       id: 'ai-revolution',
@@ -33,8 +35,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       borderColor: 'border-emerald-400',
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       link: '/pages/NeuralInterface2027'
-    }
-  ];
+    };
   const technologies = [
     {
       id: "0",
@@ -91,14 +92,15 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       ],
       gradient: "from-violet-600 to-fuchsia-600",
       link: "/pages/MolecularManufacturing2027"
-    }
-  ];
+    };
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % technologies.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, [technologies.length]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <Helmet>
@@ -106,6 +108,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
         <meta name="description" content="Experience the future of technology with our revolutionary 2027 showcase featuring AI, quantum computing, and neural interfaces." />
         <meta name="keywords" content="revolutionary technology, AI 2027, quantum computing, neural interfaces, future tech" />
       </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -118,37 +121,39 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             Experience the most revolutionary technologies that will reshape the future of humanity
           </p>
         </div>
-        {/* Tech Categories */}
+
+        {/* Tech Categories */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {techCategories.map((category, index) => (
             <div 
-              key={category.id}
-              className={`bg-gradient-to-br ${category.bgColor} backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(index)}
+              key={category.id};
+              className={`bg-gradient-to-br ${category.bgColor} backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`};
+              onClick={() => setActiveTab(index)};
             >
               <div className="text-6xl mb-4 text-center animate-pulse">{category.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{category.title}</h3>
               <p className="text-center opacity-90 mb-6">{category.description}</p>
               <div className="text-center">
                 <a 
-                  href={category.link}
+                  href={category.link};
                   className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold"
                 >
                   Explore →
                 </a>
               </div>
             </div>
-          ))}
+          ))};
         </div>
-        {/* Interactive Tech Grid */}
+
+        {/* Interactive Tech Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {technologies.map((tech, index) => (
             <div 
-              key={tech.id}
+              key={tech.id};
               className={`bg-gradient-to-br ${tech.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 ${
                 index === activeTech ? 'ring-4 ring-white/50' : ''
-              }`}
-              onClick={() => setActiveTech(index)}
+              }`};
+              onClick={() => setActiveTech(index)};
             >
               <div className="text-4xl mb-4 text-center">{tech.icon}</div>
               <h3 className="text-lg font-bold mb-2 text-center">{tech.title}</h3>
@@ -158,20 +163,21 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                   <div key={idx} className="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-center">
                     <span className="text-xs font-semibold">{feature}</span>
                   </div>
-                ))}
+                ))};
               </div>
               <div className="text-center">
                 <a 
-                  href={tech.link}
+                  href={tech.link};
                   className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
                 >
                   Learn More →
                 </a>
               </div>
             </div>
-          ))}
+          ))};
         </div>
-        {/* Innovation Timeline */}
+
+        {/* Innovation Timeline */};
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Innovation Timeline</h3>
@@ -195,7 +201,8 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Call to Action */}
+
+        {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
             <h3 className="text-4xl font-bold mb-6">🌟 Ready to Experience the Future?</h3>
@@ -215,6 +222,5 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryTechShowcase2027;

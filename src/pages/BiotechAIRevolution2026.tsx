@@ -1,9 +1,10 @@
 import React from 'react';
+
 const BiotechAIRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🧬 BIOTECH REVOLUTION • 2026
@@ -23,7 +24,8 @@ const BiotechAIRevolution2026: React.FC = () => {
             </button>
           </div>
         </div>
-        {/* Revolutionary Breakthroughs */}
+
+        {/* Revolutionary Breakthroughs */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-l-4 border-green-500">
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -37,6 +39,7 @@ const BiotechAIRevolution2026: React.FC = () => {
               <li>• Personalized medicine</li>
             </ul>
           </div>
+          
           <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-l-4 border-emerald-500">
             <div className="text-6xl mb-4 text-center">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Synthetic Biology</h3>
@@ -49,6 +52,7 @@ const BiotechAIRevolution2026: React.FC = () => {
               <li>• Carbon capture systems</li>
             </ul>
           </div>
+          
           <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-l-4 border-teal-500">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Neural Enhancement</h3>
@@ -62,7 +66,8 @@ const BiotechAIRevolution2026: React.FC = () => {
             </ul>
           </div>
         </div>
-        {/* Medical Breakthroughs */}
+
+        {/* Medical Breakthroughs */};
         <div className="bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 rounded-3xl p-12 text-white mb-16">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">🏥 Medical Revolution</h2>
@@ -70,6 +75,7 @@ const BiotechAIRevolution2026: React.FC = () => {
               Our biotech AI systems are revolutionizing medicine with breakthrough treatments and cures
             </p>
           </div>
+          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -81,6 +87,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🦠</div>
                 <div>
@@ -90,6 +97,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">❤️</div>
                 <div>
@@ -100,6 +108,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
+            
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🧬</div>
@@ -110,6 +119,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🦠</div>
                 <div>
@@ -119,6 +129,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">🧠</div>
                 <div>
@@ -131,12 +142,14 @@ const BiotechAIRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Agricultural Revolution */}
+
+        {/* Agricultural Revolution */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🌾 Agricultural Revolution</h2>
             <p className="text-xl text-gray-600">Feeding the world sustainably with AI-enhanced agriculture</p>
           </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-4xl mb-4">🌱</div>
@@ -148,6 +161,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ 300% yield increase
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-4xl mb-4">🐛</div>
               <h3 className="text-xl font-semibold mb-3">Beneficial Microbes</h3>
@@ -158,6 +172,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ 50% less fertilizer needed
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-semibold mb-3">Climate Adaptation</h3>
@@ -168,6 +183,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ Survives +5°C temperature
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-4xl mb-4">🥩</div>
               <h3 className="text-xl font-semibold mb-3">Lab-Grown Meat</h3>
@@ -178,6 +194,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ 95% less water usage
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-4xl mb-4">🦠</div>
               <h3 className="text-xl font-semibold mb-3">Pest Control</h3>
@@ -188,6 +205,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ 100% organic pest control
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-4xl mb-4">💧</div>
               <h3 className="text-xl font-semibold mb-3">Water Efficiency</h3>
@@ -200,7 +218,8 @@ const BiotechAIRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Human Enhancement */}
+
+        {/* Human Enhancement */};
         <div className="bg-gradient-to-r from-emerald-600/20 via-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-green-400/30">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6 text-gray-900">🚀 Human Enhancement</h2>
@@ -208,6 +227,7 @@ const BiotechAIRevolution2026: React.FC = () => {
               Pushing the boundaries of human potential with AI-guided biological enhancements
             </p>
           </div>
+          
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center text-gray-900">🧠 Cognitive Enhancement</h3>
@@ -226,6 +246,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 </div>
               </div>
             </div>
+            
             <div>
               <h3 className="text-3xl font-bold mb-6 text-center text-gray-900">💪 Physical Enhancement</h3>
               <div className="space-y-4">
@@ -245,12 +266,14 @@ const BiotechAIRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Success Stories */}
+
+        {/* Success Stories */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🏆 Breakthrough Success Stories</h2>
             <p className="text-xl text-gray-600">Real results from our biotech AI revolution</p>
           </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center space-x-2 mb-3">
@@ -263,6 +286,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ 95% cure rate achieved
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">BREAKTHROUGH</span>
@@ -274,6 +298,7 @@ const BiotechAIRevolution2026: React.FC = () => {
                 ✓ 90% success rate
               </div>
             </div>
+            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">ENHANCED</span>
@@ -287,7 +312,8 @@ const BiotechAIRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* CTA Section */}
+
+        {/* CTA Section */};
         <div className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Join the Biotech Revolution</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -306,6 +332,5 @@ const BiotechAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BiotechAIRevolution2026;

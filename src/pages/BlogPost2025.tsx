@@ -10,6 +10,5 @@ const BlogPost2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BlogPost2025;

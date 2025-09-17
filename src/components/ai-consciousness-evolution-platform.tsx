@@ -10,6 +10,5 @@ const aiConsciousnessEvolutionPlatform: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiConsciousnessEvolutionPlatform;

@@ -32,8 +32,7 @@ export interface Service {
   reviews: {
     rating: number;
     count: number;
-  }
-];
+  };
 // New Blog Posts for 2026
 export const newBlogPosts2026: BlogPost[] = [
   {
@@ -110,8 +109,7 @@ export const newBlogPosts2026: BlogPost[] = [
     featured: "true",
     imageUrl: "/images/blog/edge-ai-revolution-2026.jpg",
     slug: "edge-ai-revolution-intelligent-devices-2026"
-  }
-];
+  };
 // New Services for 2026
 export const newServices2026: Service[] = [
   {
@@ -131,7 +129,7 @@ export const newServices2026: Service[] = [
     technologies: ["Advanced Neural Networks", "Reinforcement Learning", "Predictive Analytics", "Quantum Computing"],
     deliveryTime: "18-24 months",
     support: "24/7 autonomous system monitoring",
-    reviews: { rating: 4.9, count: 47 }
+    reviews: { rating: 4.9, count: 47 };
   },
   {
     id: "quantum-ml-platform-001",
@@ -150,7 +148,7 @@ export const newServices2026: Service[] = [
     technologies: ["Quantum Processors", "Quantum Algorithms", "Hybrid Systems", "Advanced ML"],
     deliveryTime: "24-30 months",
     support: "Quantum computing specialists",
-    reviews: { rating: 5.0, count: 23 }
+    reviews: { rating: 5.0, count: 23 };
   },
   {
     id: "conscious-ai-development-001",
@@ -169,7 +167,7 @@ export const newServices2026: Service[] = [
     technologies: ["Consciousness Algorithms", "Emotional Processing", "Ethical AI", "Advanced Neural Networks"],
     deliveryTime: "36-48 months",
     support: "Consciousness research team",
-    reviews: { rating: 5.0, count: 12 }
+    reviews: { rating: 5.0, count: 12 };
   },
   {
     id: "neural-interface-system-001",
@@ -188,7 +186,7 @@ export const newServices2026: Service[] = [
     technologies: ["Neural Implants", "Signal Processing", "AI Integration", "Biocompatible Materials"],
     deliveryTime: "12-18 months",
     support: "Neural interface specialists",
-    reviews: { rating: 4.8, count: 31 }
+    reviews: { rating: 4.8, count: 31 };
   },
   {
     id: "edge-ai-ecosystem-001",
@@ -207,7 +205,5 @@ export const newServices2026: Service[] = [
     technologies: ["Edge AI Chips", "Optimized ML", "IoT Protocols", "Real-time Systems"],
     deliveryTime: "9-12 months",
     support: "Edge AI specialists",
-    reviews: { rating: 4.7, count: 56 }
-  }
-];
-];
+    reviews: { rating: 4.7, count: 56 };
+  };

@@ -17,7 +17,7 @@ const HomeLanding: React.FC = () => {
       </div>
     </div>
   );
-  }
+  };
 const AppEntrypoint: React.FC = () => {
   return (
     <Router>
@@ -27,5 +27,5 @@ const AppEntrypoint: React.FC = () => {
       </Routes>
     </Router>
   );
-  }
+  };
 export default AppEntrypoint;

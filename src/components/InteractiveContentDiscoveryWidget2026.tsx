@@ -10,6 +10,5 @@ const InteractiveContentDiscoveryWidget2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveContentDiscoveryWidget2026;

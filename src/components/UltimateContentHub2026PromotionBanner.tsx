@@ -10,6 +10,5 @@ const UltimateContentHub2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentHub2026PromotionBanner;

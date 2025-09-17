@@ -18,8 +18,7 @@ export interface Service {
   reviews: {
     rating: number;
     count: number;
-  }
-];
+  };
 // New Revolutionary Services for 2026
 export const newServices2026: Service[] = [
   {
@@ -58,7 +57,7 @@ export const newServices2026: Service[] = [
     technologies: ["Consciousness Algorithms", "Emotional Processing", "Quantum Neural Networks", "Self-Awareness AI"],
     deliveryTime: "18-24 months",
     support: "Dedicated consciousness engineering team",
-    reviews: { rating: 5.0, count: 15 }
+    reviews: { rating: 5.0, count: 15 };
   },
   {
     id: "quantum-neural-enterprise-001",
@@ -96,7 +95,7 @@ export const newServices2026: Service[] = [
     technologies: ["Quantum Processors", "Neural Implants", "Brain-Computer Interfaces", "Quantum Algorithms"],
     deliveryTime: "12-18 months",
     support: "24/7 quantum-neural specialists",
-    reviews: { rating: 4.9, count: 8 }
+    reviews: { rating: 4.9, count: 8 };
   },
   {
     id: "interdimensional-business-suite-001",
@@ -134,7 +133,7 @@ export const newServices2026: Service[] = [
     technologies: ["Quantum Entanglement", "Parallel Universe Physics", "Interdimensional Networks", "Multi-Reality AI"],
     deliveryTime: "24-36 months",
     support: "Interdimensional business consultants",
-    reviews: { rating: 5.0, count: 5 }
+    reviews: { rating: 5.0, count: 5 };
   },
   {
     id: "synthetic-life-platform-001",
@@ -172,7 +171,7 @@ export const newServices2026: Service[] = [
     technologies: ["Synthetic Biology", "Genetic Algorithms", "Evolutionary Programming", "Environmental AI"],
     deliveryTime: "20-30 months",
     support: "Synthetic biology research team",
-    reviews: { rating: 5.0, count: 7 }
+    reviews: { rating: 5.0, count: 7 };
   },
   {
     id: "cosmic-ai-network-001",
@@ -210,7 +209,5 @@ export const newServices2026: Service[] = [
     technologies: ["Space AI", "Quantum Communication", "Interplanetary Networks", "Cosmic Computing"],
     deliveryTime: "36-48 months",
     support: "Space AI operations team",
-    reviews: { rating: 5.0, count: 3 }
-  }
-];
-];
+    reviews: { rating: 5.0, count: 3 };
+  };

@@ -10,6 +10,5 @@ const UltimateContentRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentRevolution2026;

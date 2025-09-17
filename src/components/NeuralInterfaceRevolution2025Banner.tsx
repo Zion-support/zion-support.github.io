@@ -10,6 +10,5 @@ const NeuralInterfaceRevolution2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NeuralInterfaceRevolution2025Banner;

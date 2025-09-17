@@ -10,6 +10,5 @@ const InteractiveTechShowcase2026Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveTechShowcase2026Banner;

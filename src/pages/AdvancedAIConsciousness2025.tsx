@@ -10,6 +10,5 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedAIConsciousness2025;

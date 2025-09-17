@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function AppSafe() {
   return (
     <div style={{ padding: 16 }}>
@@ -6,4 +7,4 @@ export default function AppSafe() {
       <p>Build entry placeholder. Refer to Next.js app/ for actual site.</p>
     </div>
   );
-}
+};

@@ -10,6 +10,5 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryServicesShowcase2026;

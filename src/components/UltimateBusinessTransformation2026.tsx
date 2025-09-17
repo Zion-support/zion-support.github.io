@@ -10,6 +10,5 @@ const UltimateBusinessTransformation2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateBusinessTransformation2026;

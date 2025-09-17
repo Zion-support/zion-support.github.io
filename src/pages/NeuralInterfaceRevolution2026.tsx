@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
+
 const NeuralInterfaceRevolution2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [connectionStatus, setConnectionStatus] = useState('disconnected');
+
   const neuralFeatures = [
     {
       title: "🧠 Direct Brain-Computer Interface",
@@ -27,8 +29,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       features: ["3D Holographic Display", "Neural Command Recognition", "Spatial Computing", "Immersive Interaction"],
       gradient: "from-purple-600 to-pink-600",
       latency: "< 5ms"
-    }
-  ];
+    };
   const demoSessions = [
     {
       name: "Mind-Controlled Navigation",
@@ -47,8 +48,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       description: "Communicate with AI systems through direct neural interface",
       icon: "💬",
       status: "ready"
-    }
-  ];
+    };
   useEffect(() => {
     const timer = setInterval(() => {
       setConnectionStatus(prev => 
@@ -56,16 +56,18 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
         prev === 'syncing' ? 'connected' : 'connected'
       );
     }, 3000);
+
     return () => clearInterval(timer);
   }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-100">
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6 }};
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -90,11 +92,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </span>
           </div>
         </motion.div>
-        {/* Connection Status */}
+
+        {/* Connection Status */};
         <motion.div
-          initial={{ opacity: "0", scale: 0.9 }}
-          animate={{ opacity: "1", scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: "0", scale: 0.9 }};
+          animate={{ opacity: "1", scale: 1 }};
+          transition={{ duration: 0.6, delay: 0.2 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16 text-center"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -109,7 +112,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             <span className="text-lg font-semibold capitalize">
               {connectionStatus === 'connected' ? 'Neural Link Active' :
                connectionStatus === 'syncing' ? 'Syncing Neural Data' :
-               'Interface Disconnected'}
+               'Interface Disconnected'};
             </span>
           </div>
           <div className="grid md:grid-cols-4 gap-4">
@@ -131,15 +134,16 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-        {/* Features Section */}
+
+        {/* Features Section */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {neuralFeatures.map((feature, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: "0", y: 20 }}
-              animate={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`bg-gradient-to-br ${feature.gradient} p-8 rounded-2xl text-white shadow-2xl transform hover:scale-105 transition-all duration-300`}
+              key={index};
+              initial={{ opacity: "0", y: 20 }};
+              animate={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: index * 0.2 }};
+              className={`bg-gradient-to-br ${feature.gradient} p-8 rounded-2xl text-white shadow-2xl transform hover:scale-105 transition-all duration-300`};
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
@@ -150,19 +154,20 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                     <span className="w-2 h-2 bg-white rounded-full"></span>
                     <span className="text-white/90">{item}</span>
                   </div>
-                ))}
+                ))};
               </div>
               <div className="bg-white/20 p-3 rounded-lg">
                 <p className="font-semibold">Latency: {feature.latency}</p>
               </div>
             </motion.div>
-          ))}
+          ))};
         </div>
-        {/* Interactive Demo Section */}
+
+        {/* Interactive Demo Section */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6, delay: 0.6 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -171,16 +176,16 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {demoSessions.map((demo, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", scale: 0.9 }}
-                animate={{ opacity: "1", scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+                key={index};
+                initial={{ opacity: "0", scale: 0.9 }};
+                animate={{ opacity: "1", scale: 1 }};
+                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }};
                 className={`p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
                   activeDemo === index 
                     ? 'border-green-500 bg-green-50' 
                     : 'border-gray-200 bg-gray-50 hover:border-green-300'
-                }`}
-                onClick={() => setActiveDemo(index)}
+                }`};
+                onClick={() => setActiveDemo(index)};
               >
                 <div className="text-3xl mb-3">{demo.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{demo.name}</h3>
@@ -190,10 +195,10 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                     ? 'bg-green-100 text-green-800' 
                     : 'bg-gray-100 text-gray-600'
                 }`}>
-                  {demo.status === 'active' ? 'Active' : 'Ready'}
+                  {demo.status === 'active' ? 'Active' : 'Ready'};
                 </div>
               </motion.div>
-            ))}
+            ))};
           </div>
           <div className="mt-8 text-center">
             <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
@@ -201,11 +206,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </button>
           </div>
         </motion.div>
-        {/* Technology Deep Dive */}
+
+        {/* Technology Deep Dive */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6, delay: 0.8 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -248,11 +254,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-        {/* Call to Action */}
+
+        {/* Call to Action */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: "1", y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          transition={{ duration: 0.6, delay: 1.0 }};
           className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white"
         >
           <h2 className="text-4xl font-bold mb-6">
@@ -273,6 +280,5 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NeuralInterfaceRevolution2026;

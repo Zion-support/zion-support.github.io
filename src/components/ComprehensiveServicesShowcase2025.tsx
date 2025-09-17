@@ -10,6 +10,5 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ComprehensiveServicesShowcase2025;

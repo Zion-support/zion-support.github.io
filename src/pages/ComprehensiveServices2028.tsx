@@ -9,6 +9,7 @@ import {
   Smartphone,
   Star
 }  from 'lucide-react';
+
 const ComprehensiveServices2028: React.FC = () => {
   const serviceCategories = [
     {
@@ -94,57 +95,60 @@ const ComprehensiveServices2028: React.FC = () => {
         "Prototyping & Testing"
       ],
       gradient: "from-pink-500 to-rose-500"
-    }
-  ];
+    };
   const stats = [
     { number: "500+", label: "Projects Completed", icon: Star },
     { number: "99.9%", label: "Client Satisfaction", icon: Star },
     { number: "24/7", label: "Support Available", icon: Globe },
-    { number: "∞", label: "Scalability", icon: Brain }
-  ];
+    { number: "∞", label: "Scalability", icon: Brain };
   const technologies = [
     "Quantum Computing", "Neural Interfaces", "AI Consciousness", "Quantum Encryption",
     "Autonomous Systems", "Neural Networks", "Quantum AI", "Brain-Computer Interfaces",
     "Predictive Analytics", "Quantum Security", "Self-Evolving AI", "Infinite Scalability"
-  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white text-sm font-semibold mb-6">
               <Star className="w-4 h-4 mr-2" />
               COMPREHENSIVE SERVICES 2028
             </div>
+            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Revolutionary{' '}
+              Revolutionary{' '};
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Tech Services
               </span>
             </h1>
+            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our comprehensive suite of AI-powered services, 
               quantum computing solutions, and neural interface technologies.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center"
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
+              
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Get Consultation
@@ -153,16 +157,17 @@ const ComprehensiveServices2028: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      {/* Stats Section */}
+
+      {/* Stats Section */};
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", y: 20 }}
-                animate={{ opacity: "1", y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={index};
+                initial={{ opacity: "0", y: 20 }};
+                animate={{ opacity: "1", y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
                 className="text-center"
               >
                 <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6">
@@ -171,17 +176,18 @@ const ComprehensiveServices2028: React.FC = () => {
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* Service Categories */}
+
+      {/* Service Categories */};
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -191,13 +197,14 @@ const ComprehensiveServices2028: React.FC = () => {
               Comprehensive technology services powered by quantum computing, AI consciousness, and neural interfaces.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", y: 20 }}
-                animate={{ opacity: "1", y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={index};
+                initial={{ opacity: "0", y: 20 }};
+                animate={{ opacity: "1", y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20"
               >
                 <div className="flex items-center mb-6">
@@ -206,27 +213,30 @@ const ComprehensiveServices2028: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
+                
                 <p className="text-gray-300 mb-6">{category.description}</p>
+                
                 <div className="space-y-3">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex items-center">
                       <div className={`w-2 h-2 bg-gradient-to-r ${category.gradient} rounded-full mr-3`} />
                       <span className="text-gray-300 text-sm">{service}</span>
                     </div>
-                  ))}
+                  ))};
                 </div>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* Technologies Section */}
+
+      {/* Technologies Section */};
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -236,28 +246,30 @@ const ComprehensiveServices2028: React.FC = () => {
               We leverage the most advanced technologies to deliver revolutionary solutions.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map((tech, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", scale: 0.8 }}
-                animate={{ opacity: "1", scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                key={index};
+                initial={{ opacity: "0", scale: 0.8 }};
+                animate={{ opacity: "1", scale: 1 }};
+                transition={{ duration: 0.5, delay: index * 0.05 }};
                 className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-4 text-center border border-blue-500/20"
               >
                 <span className="text-white font-semibold">{tech}</span>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-      {/* CTA Section */}
+
+      {/* CTA Section */};
       <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: "0", y: 20 }}
-            animate={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: "0", y: 20 }};
+            animate={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.8 }};
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -266,8 +278,8 @@ const ComprehensiveServices2028: React.FC = () => {
               Join thousands of organizations already leveraging our revolutionary technology services.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg text-xl font-semibold flex items-center justify-center mx-auto"
             >
               Start Your Project
@@ -278,6 +290,5 @@ const ComprehensiveServices2028: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ComprehensiveServices2028;

@@ -42,6 +42,5 @@ const BlogPost_Jan2026_EdgeAIRevolution: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BlogPost_Jan2026_EdgeAIRevolution;

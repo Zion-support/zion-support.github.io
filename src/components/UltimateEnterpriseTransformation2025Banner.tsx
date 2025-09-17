@@ -10,6 +10,5 @@ const UltimateEnterpriseTransformation2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateEnterpriseTransformation2025Banner;

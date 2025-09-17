@@ -10,6 +10,5 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenAIInnovationPromotionBanner;

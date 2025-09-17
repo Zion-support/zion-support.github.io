@@ -10,6 +10,5 @@ const UltimateInnovation2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateInnovation2025Banner;

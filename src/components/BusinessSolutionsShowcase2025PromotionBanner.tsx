@@ -10,6 +10,5 @@ const BusinessSolutionsShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BusinessSolutionsShowcase2025PromotionBanner;

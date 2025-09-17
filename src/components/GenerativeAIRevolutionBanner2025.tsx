@@ -10,6 +10,5 @@ const GenerativeAIRevolutionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default GenerativeAIRevolutionBanner2025;

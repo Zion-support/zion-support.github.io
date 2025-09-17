@@ -10,6 +10,5 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentRevolution2025Banner;

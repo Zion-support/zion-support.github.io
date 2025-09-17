@@ -10,6 +10,5 @@ const automatedFinancialAnalyticsPlatform: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default automatedFinancialAnalyticsPlatform;

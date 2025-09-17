@@ -10,6 +10,5 @@ const EnhancedContentBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedContentBanner;

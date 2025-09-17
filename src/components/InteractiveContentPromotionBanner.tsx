@@ -10,6 +10,5 @@ const InteractiveContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveContentPromotionBanner;

@@ -10,6 +10,5 @@ const NewsletterSignupWithPreviews: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewsletterSignupWithPreviews;

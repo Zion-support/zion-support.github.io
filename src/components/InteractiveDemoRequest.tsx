@@ -10,6 +10,5 @@ const InteractiveDemoRequest: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveDemoRequest;

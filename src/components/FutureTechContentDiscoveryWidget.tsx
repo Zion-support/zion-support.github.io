@@ -10,6 +10,5 @@ const FutureTechContentDiscoveryWidget: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default FutureTechContentDiscoveryWidget;

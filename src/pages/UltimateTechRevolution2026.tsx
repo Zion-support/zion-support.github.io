@@ -1,9 +1,10 @@
 import React from 'react';
+
 const UltimateTechRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full text-lg font-bold mb-6">
             🚀 ULTIMATE TECH REVOLUTION 2026
@@ -16,7 +17,8 @@ const UltimateTechRevolution2026: React.FC = () => {
             From quantum consciousness to synthetic intelligence, discover the technologies that will define the next decade.
           </p>
         </div>
-        {/* Revolutionary Technologies Grid */}
+
+        {/* Revolutionary Technologies Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-800 to-pink-800 rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🧠</div>
@@ -32,6 +34,7 @@ const UltimateTechRevolution2026: React.FC = () => {
               <span className="text-sm text-gray-400">Q1 2026</span>
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-blue-800 to-cyan-800 rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4">Synthetic Intelligence</h3>
@@ -46,6 +49,7 @@ const UltimateTechRevolution2026: React.FC = () => {
               <span className="text-sm text-gray-400">Q2 2026</span>
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-green-800 to-emerald-800 rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">Neural-Space Interface</h3>
@@ -60,6 +64,7 @@ const UltimateTechRevolution2026: React.FC = () => {
               <span className="text-sm text-gray-400">Q3 2026</span>
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-red-800 to-orange-800 rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🔬</div>
             <h3 className="text-2xl font-bold mb-4">Bio-Quantum Computing</h3>
@@ -74,6 +79,7 @@ const UltimateTechRevolution2026: React.FC = () => {
               <span className="text-sm text-gray-400">Q4 2026</span>
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-indigo-800 to-purple-800 rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🌍</div>
             <h3 className="text-2xl font-bold mb-4">Planetary AI Network</h3>
@@ -88,6 +94,7 @@ const UltimateTechRevolution2026: React.FC = () => {
               <span className="text-sm text-gray-400">Ongoing</span>
             </div>
           </div>
+
           <div className="bg-gradient-to-br from-pink-800 to-rose-800 rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🚀</div>
             <h3 className="text-2xl font-bold mb-4">Space-Time Manipulation</h3>
@@ -103,7 +110,8 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Impact Statistics */}
+
+        {/* Impact Statistics */};
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Impact Metrics</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -125,7 +133,8 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Call to Action */}
+
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -144,6 +153,5 @@ const UltimateTechRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateTechRevolution2026;

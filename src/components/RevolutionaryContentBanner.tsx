@@ -1,6 +1,8 @@
 import React, { useState, useEffect }  from 'react';
+
 const RevolutionaryContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const banners = [
     {
       title: "🚀 Revolutionary Tech Breakthrough 2025",
@@ -15,8 +17,7 @@ const RevolutionaryContentBanner: React.FC = () => {
       link: "/pages/NextGenInnovationHub2026",
       gradient: "from-green-600 to-teal-600",
       textColor: "text-white"
-    }
-  ];
+    };
   const featuredContent = [
     {
       title: "Revolutionary Tech Breakthrough 2025",
@@ -40,19 +41,20 @@ const RevolutionaryContentBanner: React.FC = () => {
       gradient: "from-blue-600 to-indigo-600",
       icon: "🤖",
       badge: "TRENDING"
-    }
-  ];
+    };
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [banners.length]);
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
-      {/* Animated Background */}
+      {/* Animated Background */};
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 opacity-30"></div>
+      
       <div className="relative z-10 py-16 px-8">
         <div className="text-center">
           <div className="mb-8">
@@ -70,67 +72,69 @@ const RevolutionaryContentBanner: React.FC = () => {
             Discover groundbreaking content that's reshaping the future of technology and innovation
           </p>
         </div>
-        {/* Main Banner Carousel */}
+
+        {/* Main Banner Carousel */};
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           {banners.map((banner, index) => (
             <div
-              key={index}
+              key={index};
               className={`absolute inset-0 bg-gradient-to-br ${banner.gradient} flex items-center justify-center transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
+              }`};
             >
               <div className="text-center text-white p-8">
                 <h3 className="text-3xl font-bold mb-4">{banner.title}</h3>
                 <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{banner.description}</p>
                 <a 
-                  href={banner.link}
-                  className={`inline-block bg-white ${banner.textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                  href={banner.link};
+                  className={`inline-block bg-white ${banner.textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`};
                 >
                   Explore Now →
                 </a>
               </div>
             </div>
-          ))}
+          ))};
         </div>
-        {/* Featured Content Grid */}
+
+        {/* Featured Content Grid */};
         <div className="grid md:grid-cols-3 gap-6">
           {featuredContent.map((content, index) => (
             <div
-              key={index}
-              className={`bg-gradient-to-br ${content.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20`}
+              key={index};
+              className={`bg-gradient-to-br ${content.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20`};
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-4xl">{content.icon}</span>
                 <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">
-                  {content.badge}
+                  {content.badge};
                 </span>
               </div>
               <h3 className="text-xl font-bold mb-3">{content.title}</h3>
               <p className="text-sm opacity-90 mb-4">{content.description}</p>
               <a 
-                href={content.link}
+                href={content.link};
                 className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
               >
                 Learn More →
               </a>
             </div>
-          ))}
+          ))};
         </div>
-        {/* Navigation Dots */}
+
+        {/* Navigation Dots */};
         <div className="flex justify-center mt-8 space-x-2">
           {banners.map((_, index) => (
             <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
+              key={index};
+              onClick={() => setCurrentSlide(index)};
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-              }`}
+              }`};
             />
-          ))}
+          ))};
         </div>
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentBanner;

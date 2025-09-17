@@ -10,6 +10,5 @@ const AI2030ContentShowcaseBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2030ContentShowcaseBanner;

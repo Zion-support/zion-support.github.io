@@ -1,6 +1,8 @@
 import React, { useState, useEffect }  from 'react';
+
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides = [
     {
       id: "1",
@@ -41,14 +43,14 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       image: "🌐",
       gradient: "from-indigo-600 to-blue-600",
       link: "/pages/UniversalConsciousnessNetwork2040"
-    }
-  ];
+    };
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
+
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
@@ -62,11 +64,12 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             Discover the most revolutionary technologies that will reshape humanity's future
           </p>
         </div>
+
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }};
             >
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
@@ -77,8 +80,8 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                         <h3 className="text-3xl font-bold mb-4">{slide.title}</h3>
                         <p className="text-lg opacity-90 mb-6">{slide.description}</p>
                         <a 
-                          href={slide.link}
-                          className={`inline-block bg-gradient-to-r ${slide.gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
+                          href={slide.link};
+                          className={`inline-block bg-gradient-to-r ${slide.gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`};
                         >
                           Explore Technology →
                         </a>
@@ -109,26 +112,28 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
-          {/* Navigation Dots */}
+
+          {/* Navigation Dots */};
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
               <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
+                key={index};
+                onClick={() => setCurrentSlide(index)};
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide 
                     ? 'bg-purple-500 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
+                }`};
               />
-            ))}
+            ))};
           </div>
-          {/* Navigation Arrows */}
+
+          {/* Navigation Arrows */};
           <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+            onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +141,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             </svg>
           </button>
           <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+            onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)};
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,6 +152,5 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentCarousel2036;

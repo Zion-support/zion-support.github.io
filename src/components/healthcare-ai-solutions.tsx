@@ -10,6 +10,5 @@ const healthcareAiSolutions: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default healthcareAiSolutions;

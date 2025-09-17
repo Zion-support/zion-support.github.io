@@ -42,6 +42,5 @@ const OperationalEvalGates2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default OperationalEvalGates2026;

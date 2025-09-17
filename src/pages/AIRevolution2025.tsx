@@ -10,6 +10,5 @@ const AIRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIRevolution2025;

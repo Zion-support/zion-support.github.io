@@ -10,6 +10,5 @@ const intelligentProjectManagementSuite: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default intelligentProjectManagementSuite;

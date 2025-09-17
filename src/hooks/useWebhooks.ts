@@ -5,7 +5,10 @@ export interface Webhook {
   events: string[];
   secret?: string;
   failureCount: number;
-}
+<<<<<<< HEAD
+};
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export interface WebhookEvent {
   id: string;
   webhookId: string;
@@ -16,11 +19,17 @@ export interface WebhookEvent {
   createdAt: string;
   lastAttempt?: string;
   error?: string;
-}
+<<<<<<< HEAD
+};
 export interface UseWebhooksOptions {
   autoRefresh?: boolean;
   refreshInterval?: number;
-}
+};
+=======
+interface UseWebhooksOptions {
+  autoRefresh?: boolean;
+  refreshInterval?: number;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const { autoRefresh = true, refreshInterval = 30000 } = options;
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
@@ -35,14 +44,19 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       const response = await fetch('/api/webhooks');
       if (!response.ok) {
         throw new Error('Failed to fetch webhooks');
-      }
+<<<<<<< HEAD
+      };
 const data = await response.json();
+=======
+      }
+      const data = await response.json();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       setWebhooks(data.webhooks || []);
-    } ,catch (err) {
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhooks');
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Fetch webhook events
   const fetchEvents = useCallback(async (webhookId?: string) => {
@@ -53,14 +67,19 @@ const data = await response.json();
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Failed to fetch webhook events');
-      }
+<<<<<<< HEAD
+      };
 const data = await response.json();
+=======
+      }
+      const data = await response.json();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       setEvents(data.events || []);
-    } ,catch (err) {
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Create webhook
   const createWebhook = useCallback(async (webhookData: Omit<Webhook, 'id' | 'createdAt' | 'failureCount'>) => {
@@ -70,45 +89,59 @@ const data = await response.json();
       const response = await fetch('/api/webhooks', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(webhookData)});
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookData),
+      });
       if (!response.ok) {
         throw new Error('Failed to create webhook');
-      }
+<<<<<<< HEAD
+      };
 const newWebhook = await response.json();
+=======
+      }
+      const newWebhook = await response.json();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       setWebhooks(prev => [...prev, newWebhook]);
       return newWebhook;
-    } ,catch (err) {
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create webhook');
       throw err;
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Update webhook
-  const updateWebhook = useCallback(async (id: "string", updates: Partial<Webhook>) => {
+  const updateWebhook = useCallback(async (id: string, updates: Partial<Webhook>) => {
     try {
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhooks/${id}`, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(updates)});
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updates),
+      });
       if (!response.ok) {
         throw new Error('Failed to update webhook');
-      }
+<<<<<<< HEAD
+      };
 const updatedWebhook = await response.json();
+=======
+      }
+      const updatedWebhook = await response.json();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       setWebhooks(prev => prev.map(webhook => 
         webhook.id === id ? updatedWebhook : webhook
       ));
       return updatedWebhook;
-    } ,catch (err) {
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to update webhook');
       throw err;
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Delete webhook
   const deleteWebhook = useCallback(async (id: string) => {
@@ -116,17 +149,23 @@ const updatedWebhook = await response.json();
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhooks/${id}`, {
-        method: 'DELETE'});
+        method: 'DELETE',
+      });
       if (!response.ok) {
         throw new Error('Failed to delete webhook');
-      }
+<<<<<<< HEAD
+      };
 setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
-    } ,catch (err) {
+=======
+      }
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to delete webhook');
       throw err;
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Test webhook
   const testWebhook = useCallback(async (id: string) => {
@@ -134,18 +173,24 @@ setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhooks/${id}/test`, {
-        method: 'POST'});
+        method: 'POST',
+      });
       if (!response.ok) {
         throw new Error('Failed to test webhook');
-      }
+<<<<<<< HEAD
+      };
 const result = await response.json();
+=======
+      }
+      const result = await response.json();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       return result;
-    } ,catch (err) {
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to test webhook');
       throw err;
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Retry failed event
   const retryEvent = useCallback(async (eventId: string) => {
@@ -153,18 +198,24 @@ const result = await response.json();
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhook-events/${eventId}/retry`, {
-        method: 'POST'});
+        method: 'POST',
+      });
       if (!response.ok) {
         throw new Error('Failed to retry webhook event');
-      }
+<<<<<<< HEAD
+      };
 const result = await response.json();
+=======
+      }
+      const result = await response.json();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       return result;
-    } ,catch (err) {
+    } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to retry webhook event');
       throw err;
-    } ,finally {
+    } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Auto-refresh effect
   useEffect(() => {
@@ -174,7 +225,7 @@ const result = await response.json();
         fetchEvents();
       }, refreshInterval);
       return () => clearInterval(interval);
-    }
+    };
   }, [autoRefresh, refreshInterval, fetchWebhooks, fetchEvents]);
   // Initial load
   useEffect(() => {
@@ -192,7 +243,10 @@ const result = await response.json();
     updateWebhook,
     deleteWebhook,
     testWebhook,
-    retryEvent}
-];
-  }
-];
+<<<<<<< HEAD
+    retryEvent};
+  };
+=======
+    retryEvent,
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

@@ -10,6 +10,5 @@ const UltimateContentShowcaseBanner2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentShowcaseBanner2025;

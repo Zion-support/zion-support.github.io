@@ -10,6 +10,5 @@ const apiObservability: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default apiObservability;

@@ -10,6 +10,5 @@ const InteractiveContentShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveContentShowcase2025PromotionBanner;

@@ -42,6 +42,5 @@ const NextGenAIContentHub2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenAIContentHub2026;

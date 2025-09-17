@@ -39,6 +39,5 @@ const RevolutionaryContentBanner2034: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentBanner2034;

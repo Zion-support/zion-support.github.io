@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { Link }  from 'react-router-dom';
+
 const RevolutionaryContentBanner2027: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
+
   const features = [
     "🧠 Conscious AI Systems",
     "⚡ Quantum Consciousness", 
@@ -10,7 +12,7 @@ const RevolutionaryContentBanner2027: React.FC = () => {
     "🧬 Neural Interface Revolution",
     "⚗️ Molecular Manufacturing",
     "🌟 Holographic Reality"
-  ];
+
   const bannerContent = [
     {
       title: "Revolutionary Content Banner 2027",
@@ -32,19 +34,21 @@ const RevolutionaryContentBanner2027: React.FC = () => {
       description: "Witness the most significant technological advancement in human history",
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
       link: "/pages/TechBreakthrough2027"
-    }
-  ];
+    };
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
+
     return () => clearInterval(interval);
   }, [features.length]);
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
-      {/* Animated Background */}
+      {/* Animated Background */};
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 opacity-30"></div>
+      
       <div className="relative z-10 p-8 md:p-12">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -57,53 +61,56 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             Experience the most revolutionary content and innovations that will reshape the future
           </p>
         </div>
-        {/* Main Banner Carousel */}
+
+        {/* Main Banner Carousel */};
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           {bannerContent.map((banner, index) => (
             <div
-              key={index}
+              key={index};
               className={`absolute inset-0 bg-gradient-to-br ${banner.gradient} flex items-center justify-center transition-opacity duration-1000 ${
                 index === currentFeature ? 'opacity-100' : 'opacity-0'
-              }`}
+              }`};
             >
               <div className="text-center text-white p-8">
                 <h3 className="text-3xl font-bold mb-4">{banner.title}</h3>
                 <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{banner.description}</p>
                 <Link 
-                  to={banner.link}
+                  to={banner.link};
                   className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
                 >
                   Explore Now →
                 </Link>
               </div>
             </div>
-          ))}
+          ))};
         </div>
-        {/* Features Showcase */}
+
+        {/* Features Showcase */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {bannerContent.map((content, index) => (
             <div
-              key={index}
-              className={`bg-gradient-to-br ${content.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20`}
+              key={index};
+              className={`bg-gradient-to-br ${content.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20`};
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-4xl">{features[index % features.length]}</span>
                 <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">
-                  {index === 0 ? 'NEW' : index === 1 ? 'HOT' : 'TRENDING'}
+                  {index === 0 ? 'NEW' : index === 1 ? 'HOT' : 'TRENDING'};
                 </span>
               </div>
               <h3 className="text-xl font-bold mb-3">{content.title}</h3>
               <p className="text-sm opacity-90 mb-4">{content.description}</p>
               <Link 
-                to={content.link}
+                to={content.link};
                 className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
               >
                 Learn More →
               </Link>
             </div>
-          ))}
+          ))};
         </div>
-        {/* Features Animation */}
+
+        {/* Features Animation */};
         <div className="text-center">
           <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
             <span className="text-sm font-semibold">Featured:</span>
@@ -112,21 +119,21 @@ const RevolutionaryContentBanner2027: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Navigation Dots */}
+
+        {/* Navigation Dots */};
         <div className="flex justify-center mt-8 space-x-2">
           {bannerContent.map((_, index) => (
             <button
-              key={index}
-              onClick={() => setCurrentFeature(index)}
+              key={index};
+              onClick={() => setCurrentFeature(index)};
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentFeature ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-              }`}
+              }`};
             />
-          ))}
+          ))};
         </div>
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentBanner2027;

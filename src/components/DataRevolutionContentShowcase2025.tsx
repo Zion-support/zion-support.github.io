@@ -10,6 +10,5 @@ const DataRevolutionContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default DataRevolutionContentShowcase2025;

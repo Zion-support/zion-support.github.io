@@ -10,6 +10,5 @@ const UserEngagementWidget: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UserEngagementWidget;

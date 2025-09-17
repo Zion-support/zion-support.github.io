@@ -10,6 +10,5 @@ const AIInnovationShowcase2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIInnovationShowcase2026PromotionBanner;

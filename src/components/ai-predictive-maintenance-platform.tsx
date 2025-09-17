@@ -10,6 +10,5 @@ const aiPredictiveMaintenancePlatform: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiPredictiveMaintenancePlatform;

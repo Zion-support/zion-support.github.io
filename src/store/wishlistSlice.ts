@@ -1,18 +1,20 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 interface WishlistItem {
   listingId: string;
   name: string;
   price: number;
   image?: string;
-}
+};
 interface WishlistState {
   items: WishlistItem[];
   itemCount: number;
-}
+};
 const initialState: WishlistState = {
   items: [],
   itemCount: 0
 };
+
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
@@ -22,7 +24,7 @@ const wishlistSlice = createSlice({
       if (!existingItem) {
         state.items.push(action.payload);
         state.itemCount = state.items.length;
-      }
+      };
     },
     removeFromWishlist: (state, action: PayloadAction<string>) => {
       state.items = state.items.filter(item => item.listingId !== action.payload);
@@ -31,8 +33,10 @@ const wishlistSlice = createSlice({
     clearWishlist: (state) => {
       state.items = [];
       state.itemCount = 0;
-    }
-  }
+    };
+  };
 });
+
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
+
 export default wishlistSlice.reducer;

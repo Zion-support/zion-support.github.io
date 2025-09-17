@@ -10,6 +10,5 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedContentRecommendationEngine;

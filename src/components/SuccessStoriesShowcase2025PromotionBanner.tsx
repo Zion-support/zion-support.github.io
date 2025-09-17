@@ -10,6 +10,5 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SuccessStoriesShowcase2025PromotionBanner;

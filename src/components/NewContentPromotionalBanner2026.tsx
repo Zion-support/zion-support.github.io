@@ -10,6 +10,5 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewContentPromotionalBanner2026;

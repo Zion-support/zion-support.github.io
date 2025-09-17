@@ -1,12 +1,15 @@
 import React, { useState, useEffect }  from 'react';
 import { motion, AnimatePresence }  from 'framer-motion';
 import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, Users, Shield, Globe, Atom }  from 'lucide-react';
+
 const ComprehensiveContentShowcase2026: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   const categories = [
     {
       name: "AI Breakthroughs",
@@ -31,8 +34,7 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       icon: "TrendingUp",
       color: "from-orange-600 to-red-600",
       bgColor: "from-orange-600/20 to-red-600/20"
-    }
-  ];
+    };
   const contentItems = [
     {
       title: "AI Revolutionary Breakthrough 2026",
@@ -121,17 +123,17 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       rating: "5",
       views: "1.3M",
       gradient: "from-pink-600 to-rose-600"
-    }
-  ];
+    };
   const filteredContent = contentItems.filter(item => item.category === activeCategory);
+
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Header */};
         <motion.div
-          initial={{ opacity: "0", y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: "0", y: 30 }};
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+          transition={{ duration: 0.8 }};
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -141,102 +143,108 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             Explore the most groundbreaking technologies and innovations that are reshaping our future
           </p>
         </motion.div>
-        {/* Category Tabs */}
+
+        {/* Category Tabs */};
         <motion.div
-          initial={{ opacity: "0", y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
+          transition={{ duration: 0.8, delay: 0.2 }};
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category, index) => (
             <button
-              key={index}
-              onClick={() => setActiveCategory(index)}
+              key={index};
+              onClick={() => setActiveCategory(index)};
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeCategory === index
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                   : `bg-gradient-to-r ${category.bgColor} text-gray-300 hover:text-white border border-gray-600/30`
-              }`}
+              }`};
             >
               <category.icon className="w-5 h-5" />
               <span>{category.name}</span>
             </button>
-          ))}
+          ))};
         </motion.div>
-        {/* Content Grid */}
+
+        {/* Content Grid */};
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isVisible ? 1 : 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0 }};
+          animate={{ opacity: isVisible ? 1 : 0 }};
+          transition={{ duration: 0.8, delay: 0.4 }};
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
             {filteredContent.map((item, index) => (
               <motion.div
-                key={`${activeCategory}-${index}`}
-                initial={{ opacity: "0", y: "50", scale: 0.9 }}
-                animate={{ opacity: "1", y: "0", scale: 1 }}
-                exit={{ opacity: "0", y: -50, scale: 0.9 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gradient-to-br ${item.gradient} p-6 rounded-2xl border border-white/20 hover:scale-105 transition-all duration-300 group`}
+                key={`${activeCategory}-${index}`};
+                initial={{ opacity: "0", y: "50", scale: 0.9 }};
+                animate={{ opacity: "1", y: "0", scale: 1 }};
+                exit={{ opacity: "0", y: -50, scale: 0.9 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
+                className={`bg-gradient-to-br ${item.gradient} p-6 rounded-2xl border border-white/20 hover:scale-105 transition-all duration-300 group`};
               >
-                {/* Header */}
+                {/* Header */};
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-4xl">{item.image}</div>
                   <div className="flex items-center space-x-2">
                     <div className="flex">
                       {[...Array(item.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
+                      ))};
                     </div>
                     <span className="text-white/80 text-sm">{item.views} views</span>
                   </div>
                 </div>
-                {/* Content */}
+
+                {/* Content */};
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors">
-                  {item.title}
+                  {item.title};
                 </h3>
                 <p className="text-white/80 mb-4 text-sm leading-relaxed">
-                  {item.description}
+                  {item.description};
                 </p>
-                {/* Features */}
+
+                {/* Features */};
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                   <div className="flex flex-wrap gap-1">
                     {item.features.slice(0, 2).map((feature, featureIndex) => (
                       <span
-                        key={featureIndex}
+                        key={featureIndex};
                         className="bg-white/20 text-white/90 text-xs px-2 py-1 rounded-full"
                       >
-                        {feature}
+                        {feature};
                       </span>
-                    ))}
+                    ))};
                     {item.features.length > 2 && (
                       <span className="text-white/60 text-xs">
                         +{item.features.length - 2} more
                       </span>
-                    )}
+                    )};
                   </div>
                 </div>
-                {/* CTA */}
+
+                {/* CTA */};
                 <motion.a
-                  href={item.link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  href={item.link};
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
                   className="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 group-hover:bg-white group-hover:text-gray-900"
                 >
                   <span>Explore Now</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </motion.a>
               </motion.div>
-            ))}
+            ))};
           </AnimatePresence>
         </motion.div>
-        {/* Bottom CTA */}
+
+        {/* Bottom CTA */};
         <motion.div
-          initial={{ opacity: "0", y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: "0", y: 30 }};
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+          transition={{ duration: 0.8, delay: 0.8 }};
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-400/30">
@@ -260,6 +268,5 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ComprehensiveContentShowcase2026;

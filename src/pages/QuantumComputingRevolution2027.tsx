@@ -42,6 +42,5 @@ const QuantumComputingRevolution2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default QuantumComputingRevolution2027;

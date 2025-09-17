@@ -42,6 +42,5 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SyntheticIntelligenceRevolution2025;

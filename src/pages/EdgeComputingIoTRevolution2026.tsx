@@ -10,6 +10,5 @@ const EdgeComputingIoTRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EdgeComputingIoTRevolution2026;

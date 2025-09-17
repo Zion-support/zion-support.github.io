@@ -10,6 +10,5 @@ const aiAutonomousResearchAssistant: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiAutonomousResearchAssistant;

@@ -42,6 +42,5 @@ const AI2026UltimateInnovationHub: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2026UltimateInnovationHub;

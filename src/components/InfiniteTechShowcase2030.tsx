@@ -10,6 +10,5 @@ const InfiniteTechShowcase2030: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InfiniteTechShowcase2030;
