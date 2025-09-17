@@ -2,6 +2,12 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,7 +15,9 @@
 =======
 echo "Resolving all merge conflicts by accepting our version..."
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -19,6 +27,14 @@ echo "Resolving all merge conflicts by accepting our version..."
 echo "Resolving all merge conflicts by accepting our version..."
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -31,16 +47,25 @@ echo "Resolving all merge conflicts by accepting our version..."
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
->>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -57,7 +82,11 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
@@ -67,10 +96,13 @@ echo "Resolving all merge conflicts by accepting our version..."
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -93,8 +125,76 @@ echo "Resolving all merge conflicts by accepting our version..."
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -105,7 +205,13 @@ echo "🔧 Resolving ALL remaining merge conflicts..."
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,6 +224,8 @@ echo "🔧 Resolving ALL remaining merge conflicts..."
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -130,8 +238,11 @@ echo "🔧 Resolving ALL remaining merge conflicts..."
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,15 +250,29 @@ echo "🔧 Resolving ALL remaining merge conflicts..."
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 =======
 echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-a12c
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -155,6 +280,7 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -164,10 +290,29 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -176,9 +321,24 @@ echo "Resolving all merge conflicts by accepting our version..."
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-0dce
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
@@ -186,9 +346,16 @@ echo "Resolving all merge conflicts by accepting our version..."
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -197,15 +364,24 @@ echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -226,45 +402,71 @@ echo "Resolving all merge conflicts by accepting our version..."
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
-
-echo "Found files with conflicts:"
-echo "$files_with_conflicts"
-
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
-    
-    # Create a backup
-    cp "$file" "$file.backup.$(date +%s)"
-    
-    # Use git checkout --ours to resolve conflicts
-    git checkout --ours "$file" 2>/dev/null || echo "Could not resolve $file with git checkout --ours"
-    
-    # If git checkout didn't work, try manual resolution
-    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
-        echo "Manual resolution needed for $file"
-        # Remove all conflict markers and keep the first version (HEAD)
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
+# Accept our version for all conflicted files
+git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}' | while read file; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflict in: $file"
+        git checkout --ours "$file"
+        git add "$file"
     fi
 done
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -274,8 +476,24 @@ done
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
@@ -283,17 +501,32 @@ done
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
@@ -305,16 +538,32 @@ done
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -326,7 +575,9 @@ done
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -334,23 +585,53 @@ done
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 echo "🎉 All conflict resolution complete!"
 =======
 <<<<<<< HEAD
@@ -358,6 +639,7 @@ echo "🎉 All conflict resolution complete!"
 >>>>>>> cursor/create-and-deploy-new-content-df8e
 =======
 >>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+>>>>>>> cursor/create-and-deploy-new-content-079e
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
@@ -388,12 +670,12 @@ for file in $conflicted_files; do
     git add "$file"
 done
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-87a1
+echo "All merge conflicts resolved!"
+<<<<<<< HEAD
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 =======
-echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-df8e
 =======
 echo "All merge conflicts resolved!"
@@ -405,10 +687,16 @@ echo "All merge conflicts resolved!"
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 <<<<<<< HEAD
@@ -421,23 +709,32 @@ echo "All merge conflicts resolved!"
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -447,6 +744,11 @@ echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
@@ -454,21 +756,40 @@ echo "All merge conflicts resolved!"
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -484,6 +805,21 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-079e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -494,18 +830,36 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
@@ -513,7 +867,9 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 >>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0dce
@@ -530,11 +886,56 @@ echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+=======
 >>>>>>> cursor/create-and-deploy-new-content-0dce
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4cdf
+>>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+# For files that were deleted by us but modified by them, keep them deleted
+git status --porcelain | grep "^DU" | awk '{print $2}' | while read file; do
+    echo "Keeping deleted: $file"
+    git rm "$file"
+done
+
+# For files that were added by them but not by us, remove them
+git status --porcelain | grep "^AU" | awk '{print $2}' | while read file; do
+    echo "Removing added file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by accepting our clean version"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad

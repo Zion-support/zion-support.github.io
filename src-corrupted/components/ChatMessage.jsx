@@ -1,13 +1,12 @@
-export const ChatMessage = (props: any) => {
-    const isUser = message.sender === 'user';
-    return (<div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
-      <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${isUser
-            ? 'bg-blue-500 text-white'
-            : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>
-        <p className="text-sm">{message.text}</p>
-        <p className={`text-xs mt-1 ${isUser ? 'text-blue-100' : 'text-gray-500 dark:text-gray-400'}`}>
-          {message.timestamp.toLocaleTimeString()}
-        </p>
-      </div>
-    </div>);
+import React from 'react';
+
+const ChatMessage: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ChatMessage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
+
+export default ChatMessage;

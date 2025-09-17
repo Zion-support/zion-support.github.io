@@ -37,6 +37,8 @@ export default function ForgotPassword({ }: ForgotPasswordProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ForgotPassword.jsx
 }
 }

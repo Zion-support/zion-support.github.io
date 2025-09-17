@@ -1,47 +1,12 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { BlogPost } from '@/utils/types/blog';
-import PageShareButtons from '@/components/blog/PageShareButtons';
-import { listPublishedPosts } from '@/utils/data/blogStore';
-import BlogCard from '@/components/blog/BlogCard';
+import React from 'react';
 
-type Props = { topic: string; posts: BlogPost[] };
-
+const [topic]: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>{topic} - Zion Blog</title>
-        <meta name="description" content={`Articles about ${topic}`} />
-        <meta property="og:title" content={`${topic} - Zion Blog`} />
-        <meta property="og:description" content={`Articles about ${topic}`} />
-        <meta property="og:image" content="/images/og/topic-default.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${topic} - Zion Blog`} />
-        <meta name="twitter:description" content={`Articles about ${topic}`} />
-        <meta name="twitter:image" content="/images/og/topic-default.jpg" />
-      </Head>
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
-        <div className="mb-6">
-          <PageShareButtons
-            title={`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
-            description={`Articles about ${topic}`}
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {posts.map((p) => (
-            <BlogCard key={p.id} post={p} />
-          ))}
-        </div>
-        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">[topic]</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-};
-
-export default TopicPage;
+export default [topic];

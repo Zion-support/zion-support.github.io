@@ -1,4 +1,12 @@
-import _React,{ useState } from "react";";" import { Button } from "@/components/ui/button";";" import { Input } from "@/components/ui/input";";" import { useEnqueueSnackbar } from '@/context';";" export const MobileEmailCapture = () => {;";" const [email,setEmail] = useState("); const [isSubmitting,setIsSubmitting] = useState(false); const [isSuccess,setIsSuccess] = useState(false); const enqueueSnackbar = useEnqueueSnackbar(); const handleSubmit = async(e) => {; e.preventDefault(); if(!email || isSubmitting); return; setIsSubmitting(true); try {;"}}}
-import React,{ useState } from \"react\";\";\" import { Button } from \"@/components/ui/button\";\";\" import { Input } from \"@/components/ui/input\";\";\" import { useEnqueueSnackbar } from \'@/context\';\";\" export const MobileEmailCapture = () => {;\";\" const [email,setEmail] = useState(\"); const [isSubmitting,setIsSubmitting] = useState(false); const [isSuccess,setIsSuccess] = useState(false); const enqueueSnackbar = useEnqueueSnackbar(); const handleSubmit = async(e) => {; e.preventDefault(); if(!email || isSubmitting); return; setIsSubmitting(true); try {;\"}}}
-const React,{ useState } from "react";";" import { Button } from "@/components/ui/button";";" import { Input } from "@/components/ui/input";";" import { useEnqueueSnackbar } from "@/context";";" export const MobileEmailCapture = () => {;";" const [email,setEmail] = useState("); const [isSubmitting,setIsSubmitting] = useState(false); const [isSuccess,setIsSuccess] = useState(false); const enqueueSnackbar = useEnqueueSnackbar(); const handleSubmit = async(e) => {; e.preventDefault(); if(!email | isSubmitting); return; setIsSubmitting(true); try {;"}}}'"'"
-import _React,{ useState } from "react";";" import { Button } from "@/components/ui/button";";" import { Input } from "@/components/ui/input";";" import { useEnqueueSnackbar } from '@/context';";" export const MobileEmailCapture = () => {;";" const [email,setEmail] = useState("); const [isSubmitting,setIsSubmitting] = useState(false); const [isSuccess,setIsSuccess] = useState(false); const enqueueSnackbar = useEnqueueSnackbar(); const handleSubmit = async(e) => {; e.preventDefault(); if(!email || isSubmitting); return; setIsSubmitting(true); try {;"}}}
+import React from 'react';
+
+const MobileEmailCapture.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MobileEmailCapture.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default MobileEmailCapture.js;

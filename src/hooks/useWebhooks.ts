@@ -1,4 +1,3 @@
-
 export interface Webhook {
   id: string;
   name: string;
@@ -6,8 +5,6 @@ export interface Webhook {
   events: string[];
   secret?: string;
   failureCount: number;
-}
-
 export interface WebhookEvent {
   id: string;
   webhookId: string;
@@ -18,16 +15,11 @@ export interface WebhookEvent {
   createdAt: string;
   lastAttempt?: string;
   error?: string;
-}
-
 interface UseWebhooksOptions {
   autoRefresh?: boolean;
   refreshInterval?: number;
-}
-
 export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const { autoRefresh = true, refreshInterval = 30000 } = options;
-  
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [events, setEvents] = useState<WebhookEvent[]>([]);
   const [loading, setLoading] = useState(false);
@@ -36,13 +28,11 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
     try {
       setLoading(true);
       setError(null);
-      
       // Simulate API call - replace with actual API endpoint
       const response = await fetch('/api/webhooks');
       if (!response.ok) {
         throw new Error('Failed to fetch webhooks');
       }
-      
       const data = await response.json();
       setWebhooks(data.webhooks || []);
     } catch (err) {
@@ -51,19 +41,16 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Fetch webhook events
   const fetchEvents = useCallback(async (webhookId?: string) => {
     try {
       setLoading(true);
       setError(null);
-      
       const url = webhookId ? `/api/webhooks/${webhookId}/events` : '/api/webhook-events';
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Failed to fetch webhook events');
       }
-      
       const data = await response.json();
       setEvents(data.events || []);
     } catch (err) {
@@ -72,13 +59,11 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Create webhook
   const createWebhook = useCallback(async (webhookData: Omit<Webhook, 'id' | 'createdAt' | 'failureCount'>) => {
     try {
       setLoading(true);
       setError(null);
-      
       const response = await fetch('/api/webhooks', {
         method: 'POST',
         headers: {
@@ -86,11 +71,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         },
         body: JSON.stringify(webhookData),
       });
-      
       if (!response.ok) {
         throw new Error('Failed to create webhook');
       }
-      
       const newWebhook = await response.json();
       setWebhooks(prev => [...prev, newWebhook]);
       return newWebhook;
@@ -101,13 +84,11 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Update webhook
   const updateWebhook = useCallback(async (id: string, updates: Partial<Webhook>) => {
     try {
       setLoading(true);
       setError(null);
-      
       const response = await fetch(`/api/webhooks/${id}`, {
         method: 'PUT',
         headers: {
@@ -115,11 +96,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         },
         body: JSON.stringify(updates),
       });
-      
       if (!response.ok) {
         throw new Error('Failed to update webhook');
       }
-      
       const updatedWebhook = await response.json();
       setWebhooks(prev => prev.map(webhook => 
         webhook.id === id ? updatedWebhook : webhook
@@ -132,21 +111,17 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Delete webhook
   const deleteWebhook = useCallback(async (id: string) => {
     try {
       setLoading(true);
       setError(null);
-      
       const response = await fetch(`/api/webhooks/${id}`, {
         method: 'DELETE',
       });
-      
       if (!response.ok) {
         throw new Error('Failed to delete webhook');
       }
-      
       setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to delete webhook');
@@ -155,21 +130,17 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Test webhook
   const testWebhook = useCallback(async (id: string) => {
     try {
       setLoading(true);
       setError(null);
-      
       const response = await fetch(`/api/webhooks/${id}/test`, {
         method: 'POST',
       });
-      
       if (!response.ok) {
         throw new Error('Failed to test webhook');
       }
-      
       const result = await response.json();
       return result;
     } catch (err) {
@@ -179,21 +150,17 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Retry failed event
   const retryEvent = useCallback(async (eventId: string) => {
     try {
       setLoading(true);
       setError(null);
-      
       const response = await fetch(`/api/webhook-events/${eventId}/retry`, {
         method: 'POST',
       });
-      
       if (!response.ok) {
         throw new Error('Failed to retry webhook event');
       }
-      
       const result = await response.json();
       return result;
     } catch (err) {
@@ -203,7 +170,6 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(false);
     }
   }, []);
-
   // Auto-refresh effect
   useEffect(() => {
     if (autoRefresh) {
@@ -211,17 +177,14 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         fetchWebhooks();
         fetchEvents();
       }, refreshInterval);
-
       return () => clearInterval(interval);
     }
   }, [autoRefresh, refreshInterval, fetchWebhooks, fetchEvents]);
-
   // Initial load
   useEffect(() => {
     fetchWebhooks();
     fetchEvents();
   }, [fetchWebhooks, fetchEvents]);
-
   return {
     webhooks,
     events,
@@ -235,5 +198,3 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
     testWebhook,
     retryEvent,
   };
-};
-
