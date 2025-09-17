@@ -1,7 +1,6 @@
 import React from 'react';
 
 const RevolutionaryTechShowcase2036: React.FC = () => {
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
 
   const demos = [
@@ -77,33 +76,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               </button>
             ))}
           </div>
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY SHOWCASE • JANUARY 2036
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Tech Showcase 2036
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing
-          </p>
-<<<<<<< HEAD
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Showcase →
-            </button>
-            <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Interactive Demo
-            </button>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
         </div>
 
         {/* Interactive Technology Grid */}

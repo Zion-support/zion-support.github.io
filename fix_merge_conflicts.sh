@@ -1,28 +1,29 @@
 #!/bin/bash
 
+# Script to fix merge conflicts by choosing HEAD version
+echo "Fixing merge conflicts by choosing HEAD version..."
+
 # Find all files with merge conflicts
-files_with_conflicts=$(find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD")
+files_with_conflicts=$(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-echo "Found files with merge conflicts:"
-echo "$files_with_conflicts"
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
 
-# For each file, remove merge conflict markers and keep the HEAD version
 for file in $files_with_conflicts; do
-    echo "Fixing merge conflicts in: $file"
+    echo "Fixing: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove merge conflict markers and keep HEAD content
-    sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /c\
-    ' "$file"
+    # Use sed to fix merge conflicts by choosing HEAD version
+    # This removes everything from ======= to >>>>>>> and keeps only HEAD content
+    sed -i '/=======/,/>>>>>>>/d' "$file"
     
-    # Remove any remaining conflict markers
-    sed -i '/^=======$/d' "$file"
+    # Remove the <<<<<<< HEAD line
     sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
     
-    echo "Fixed: $file"
+    # Remove any remaining merge conflict markers
+    sed -i '/^>>>>>>>/d' "$file"
+    sed -i '/^=======$/d' "$file"
 done
 
-echo "Merge conflicts fixed in all files"
+echo "Merge conflicts fixed!"

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -38,13 +37,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
                 Explore Parallel Worlds
               </button>
             </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
         </div>
       </div>
 
-<<<<<<< HEAD
         {/* Dimensional Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -69,30 +64,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
-=======
-      {/* Interdimensional Technologies */}
-      <div className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold mb-6">🌌 Interdimensional Technologies</h2>
-          <p className="text-xl opacity-80 max-w-3xl mx-auto">
-            Access technologies from infinite parallel dimensions and universes
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Dimension Gateway */}
-          <motion.div
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:shadow-2xl transition-all duration-300"
-          >
-            <div className="text-6xl mb-6 text-center">🚪🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Dimension Gateway</h3>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
             <p className="text-indigo-100 mb-6 text-center">
               Stable portals that allow safe travel between dimensions and parallel universes
             </p>
@@ -149,7 +120,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
           </motion.div>
 
-<<<<<<< HEAD
               <li>• Collective consciousness networks</li>
             </ul>
             <div className="text-center">
@@ -238,8 +208,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
           </div>
 
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           {/* Parallel Universe Mining */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}

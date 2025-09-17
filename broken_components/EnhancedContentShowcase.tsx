@@ -698,16 +698,6 @@ const EnhancedContentShowcase: React.FC = () => {
             <a
               href={slide.link}
               className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
-=======
-      {/* Content Grid */}
-      <div className="p-8">
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentCategories[activeTab as keyof typeof contentCategories].content.map((item, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-gray-300 hover:-translate-y-1"
->>>>>>> cursor/create-and-deploy-new-content-6f93:src/components/EnhancedContentShowcase.tsx
             >
               Explore Now →
             </a>
@@ -718,96 +708,6 @@ const EnhancedContentShowcase: React.FC = () => {
               {contentCategories[activeCategory].content.map((item, index) => (
                 <motion.div
 <<<<<<< HEAD:broken_components/EnhancedContentShowcase.tsx
-=======
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  onHoverStart={() => setHoveredCard(index)}
-                  onHoverEnd={() => setHoveredCard(null)}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 cursor-pointer relative overflow-hidden"
-          </div>
-        </div>
-
-          </div>
-        </div>
-
-        {/* Quick Access Grid */}
-        <div className="mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Content</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {showcaseItems.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => goToSlide(index)}
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
-                    {item.category}
-                  </span>
-                  <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
-                    {item.year}
-                  </span>
-                </div>
-                <div className="text-4xl mb-4 text-center">{item.image}</div>
-                <h4 className="text-xl font-bold mb-3 text-center">{item.title}</h4>
-                <p className="text-sm opacity-90 text-center mb-4">{item.description}</p>
-                <a
-                  href={item.link}
-                  className="block w-full bg-white/20 text-white text-center py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
-                >
-                  Explore →
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
-        <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-          Dive deeper into our revolutionary technologies and discover how they can transform your business
-        </p>
-        <div className="flex justify-center space-x-4">
-          <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-            Start Your Journey →
-          </a>
-          <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
-            View All Innovations
-          </a>
-        </div>
-      {/* Quick Access Grid */}
-      <div className="mt-12 grid md:grid-cols-3 gap-6">
-        {contentSlides.map((slide, index) => (
-          <motion.div
-            key={slide.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`bg-gradient-to-br ${slide.bgGradient} backdrop-blur-sm rounded-xl p-6 border ${slide.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
-            onClick={() => goToSlide(index)}
-          >
-            <div className="text-4xl mb-3 text-center">{slide.image}</div>
-            <h3 className="text-xl font-bold text-white mb-2 text-center">{slide.title}</h3>
-            <p className="text-gray-200 text-sm text-center mb-4">{slide.description}</p>
-            <a
-              href={slide.link}
-              className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
-            >
-              Explore Now →
-            </a>
-          </motion.div>
-        ))}
-            {/* Content Cards */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {contentCategories[activeCategory].content.map((item, index) => (
-                <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93:src/components/EnhancedContentShowcase.tsx
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
