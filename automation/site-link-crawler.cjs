@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 const axios = require('axios');
 const cheerio = require('cheerio');
 const urlLib = require('url');

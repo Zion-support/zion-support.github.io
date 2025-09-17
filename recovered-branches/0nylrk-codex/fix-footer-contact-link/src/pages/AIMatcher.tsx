@@ -1,37 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const AIMatcher: React.FC = () => {
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI Matchmaker</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Describe your needs and our AI will match you with the perfect services, talents, or equipment.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                I'm looking for:
-              </label>
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <SelectValue placeholder="All Categories" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  <SelectItem value="all" className="text-white">All Categories</SelectItem>
-                  <SelectItem value="service" className="text-white">Services</SelectItem>
-                  <SelectItem value="talent" className="text-white">Talent</SelectItem>
-                  <SelectItem value="equipment" className="text-white">Equipment</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-            />
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>AIMatcher | Zion Tech Group</title>
+        <meta name="description" content="AIMatcher - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AIMatcher</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
+  );
+};
+
+export default AIMatcher;

@@ -1,29 +1,12 @@
+import React from 'react';
 
-interface PortfolioItem {
-  title: string;
-  description: string;
-}
-
-interface PortfolioListProps {
-  projects: PortfolioItem[];
-}
-
-export function PortfolioList({ projects }: PortfolioListProps) {
-  if (!projects.length) return null;
-
+const PortfolioList: React.FC = () => {
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">
-      <CardHeader>
-        <CardTitle>Portfolio</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <ul className="space-y-2 list-disc ml-5">
-            <li key={i}>
-              <span className="font-medium">{p.title}:</span> {p.description}
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PortfolioList</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default PortfolioList;

@@ -1,10 +1,20 @@
-import React from 'react';
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-guardrail-scorecards-executive-brief', title: 'Guardrail Scorecards — Executive Brief (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-zero-downtime-agent-rollouts', title: 'AI 2026: Zero‑Downtime Agent Rollouts', tag: 'New' },
+  { href: '/blog/ai-2026-agentic-cost-controls-deep-dive', title: 'Agentic Cost Controls — Deep Dive (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-enterprise-ai-readiness-checklist', title: 'Enterprise AI Readiness Checklist (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-production-agent-runbooks-templates', title: 'Production Agent Runbooks — Templates (2026)', tag: 'New' },
+  { href: '/blog/trusted-rag-2026-grounded-answer-scorecards', title: 'Trusted RAG — Grounded Answer Scorecards (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-eval-gated-safety-scorecards', title: 'Eval‑Gated Safety Scorecards (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-enterprise-ai-readiness-checklist', title: 'Enterprise AI Readiness Checklist (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-evidence-hub-architecture', title: 'Production Evidence Hub Architecture (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-policy-as-code-starter-kit', title: 'Policy‑as‑Code Starter Kit (2026)', tag: 'New' },
   { href: '/blog/ai-2026-agentic-observability-overview', title: 'Agentic Observability — Executive Overview (2026)', tag: 'New' },
   { href: '/blog/ai-2026-agent-posture-management', title: 'Agent Posture Management — Executive Guide (2026)', tag: 'Featured' },
+  { href: '/blog/ai-2026-executive-ai-security-playbook', title: 'Executive AI Security Playbook (2026)', tag: 'New' },
   { href: '/blog/ai-2026-trusted-rag-guardrailed-retrieval', title: 'Trusted RAG — Guardrailed Retrieval (2026)', tag: 'New' },
   { href: '/blog/ai-2026-operational-reliability-blueprint', title: 'Operational Reliability Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2026-real-world-eval-gates-case-studies', title: 'Real‑World Eval Gates — Case Studies (2026)', tag: 'New' },

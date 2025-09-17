@@ -1,40 +1,76 @@
-// Notification utilities
-interface NotificationOptions {
-// Notifications utility for handling browser notifications and toast messages
-
-interface NotificationOptions {
 /**
- * Notification utility for handling browser notifications
- * with fallbacks and error handling
+ * Notification utility for handling browser notifications and in-app notifications
  */
 
 export interface NotificationOptions {
-// Notifications utility for handling browser notifications and toast messages
-
-interface NotificationOptions {
-// Notification utilities
-interface NotificationOptions {
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
-  data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
   actions?: NotificationAction[];
 }
 
-interface NotificationAction {
+export interface NotificationAction {
   action: string;
   title: string;
   icon?: string;
 }
 
+export const notifications = {
+  // Check if notifications are supported
+  isSupported: (): boolean => {
+    return typeof window !== 'undefined' && 'Notification' in window;
+  },
+
+  // Request notification permission
+  requestPermission: async (): Promise<NotificationPermission> => {
+    if (!notifications.isSupported()) {
+      return 'denied';
+    }
+
+    try {
+      const permission = await Notification.requestPermission();
+      return permission;
+    } catch (error) {
+      console.warn('Failed to request notification permission:', error);
+      return 'denied';
+  data?: any;
+}
+
+export interface NotificationAction {
+  action: string;
+  title: string;
+  icon?: string;
+}
+
+export interface InAppNotification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
+  message: string;
+  duration?: number;
+  action?: {
+    label: string;
+    onClick: () => void;
+  };
+}
+
 class NotificationManager {
   private permission: NotificationPermission = 'default';
+  private inAppNotifications: InAppNotification[] = [];
+  private listeners: ((notifications: InAppNotification[]) => void)[] = [];
 
+  constructor() {
+    this.permission = Notification.permission;
+  }
+
+  /**
+   * Request notification permission
+   */
   async requestPermission(): Promise<NotificationPermission> {
     if ('Notification' in window) {
       this.permission = await Notification.requestPermission();
@@ -42,73 +78,39 @@ class NotificationManager {
     return this.permission;
   }
 
-  async showNotification(options: NotificationOptions): Promise<Notification | null> {
-    if (!('Notification' in window)) {
-      console.warn('This browser does not support notifications');
-      return null;
+  // Check current permission status
+  getPermission: (): NotificationPermission => {
+    if (!notifications.isSupported()) {
+      return 'denied';
     }
-
-    if (this.permission !== 'granted') {
-      this.permission = await this.requestPermission();
-      if (this.permission !== 'granted') {
-        console.warn('Notification permission denied');
-        return null;
-      }
-  requireInteraction?: boolean;
-  silent?: boolean;
-  vibrate?: number[];
-}
-
-export const notifications = {
-  /**
-   * Check if notifications are supported
-   */
-  isSupported: (): boolean => {
-    return typeof window !== 'undefined' && 'Notification' in window;
+    return Notification.permission;
   },
+
+  // Show a notification
+  show: (options: NotificationOptions): Notification | null => {
+    if (!notifications.isSupported() || Notification.permission !== 'granted') {
+      console.warn('Notifications not supported or permission not granted');
+  /**
+   * Check if notifications are supported and permitted
+   */
+  isSupported(): boolean {
+    return 'Notification' in window;
+  }
 
   /**
    * Check if notifications are permitted
    */
-  getPermission: (): NotificationPermission => {
-    if (!notifications.isSupported()) return 'denied';
-    return Notification.permission;
-  },
+  isPermitted(): boolean {
+    return this.permission === 'granted';
+  }
 
   /**
-   * Request notification permission
+   * Show a browser notification
    */
-  requestPermission: async (): Promise<NotificationPermission> => {
-    if (!notifications.isSupported()) return 'denied';
-    
-    try {
-      const permission = await Notification.requestPermission();
-      return permission;
-    } catch (error) {
-      console.warn('Failed to request notification permission:', error);
-      return 'denied';
-    }
-  },
-
-  /**
-   * Show a notification
-   */
-  show: (options: NotificationOptions): Notification | null => {
-    if (!notifications.isSupported()) {
-      console.warn('Notifications not supported');
+  async showBrowserNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!this.isSupported() || !this.isPermitted()) {
+      console.warn('Notifications not supported or not permitted');
       return null;
-    }
-
-    if (Notification.permission !== 'granted') {
-      console.warn('Notification permission not granted');
-      return null;
-  data?: any;
-  requireInteraction?: boolean;
-  silent?: boolean;
-  timestamp?: number;
-  actions?: NotificationAction[];
-}
-
     }
 
     try {
@@ -117,14 +119,12 @@ export const notifications = {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
-        data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
-        requireInteraction: options.requireInteraction || false,
-        silent: options.silent || false,
-        vibrate: options.vibrate
+        actions: options.actions,
+        data: options.data
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -136,105 +136,235 @@ export const notifications = {
 
       return notification;
     } catch (error) {
-      console.error('Error showing notification:', error);
+      console.error('Failed to show browser notification:', error);
       return null;
     }
   }
 
-  showSuccess(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/success.png',
-      tag: 'success',
-    });
-  }
-
-  showError(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      console.warn('Failed to show notification:', error);
-      return null;
-    }
-  },
-
-  /**
-   * Show a success notification
-   */
+  // Show a success notification
   success: (title: string, body?: string): Notification | null => {
     return notifications.show({
       title,
       body,
       icon: '/icons/success.png',
-      tag: 'success'
+      tag: 'success',
     });
   },
 
-  /**
-   * Show an error notification
-   */
+  // Show an error notification
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
-      console.error('Error showing notification:', error);
-      return null;
-    }
-  }
-
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
-      requireInteraction: true
+      requireInteraction: true,
     });
   },
 
-  /**
-   * Show an info notification
-   */
+  // Show an info notification
   info: (title: string, body?: string): Notification | null => {
     return notifications.show({
       title,
       body,
       icon: '/icons/info.png',
-      tag: 'info'
+      tag: 'info',
     });
   },
 
-  /**
-   * Show a warning notification
-   */
+  // Show a warning notification
   warning: (title: string, body?: string): Notification | null => {
     return notifications.show({
       title,
       body,
       icon: '/icons/warning.png',
-      tag: 'warning'
-    });
-  }
-};
-
-export default notifications;
-      requireInteraction: true,
-    });
-  }
-
-  showInfo(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/info.png',
-      tag: 'info',
-    });
-  }
-
-  showWarning(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/warning.png',
       tag: 'warning',
+  /**
+   * Add an in-app notification
+   */
+  addInAppNotification(notification: Omit<InAppNotification, 'id'>): string {
+    const id = `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const newNotification: InAppNotification = {
+      id,
+      duration: 5000, // Default 5 seconds
+      ...notification
+    };
+
+    this.inAppNotifications.push(newNotification);
+    this.notifyListeners();
+
+    // Auto-remove after duration
+    if (newNotification.duration && newNotification.duration > 0) {
+      setTimeout(() => {
+        this.removeInAppNotification(id);
+      }, newNotification.duration);
+    }
+
+    return id;
+  }
+
+  /**
+   * Remove an in-app notification
+   */
+  removeInAppNotification(id: string): void {
+    this.inAppNotifications = this.inAppNotifications.filter(n => n.id !== id);
+    this.notifyListeners();
+  }
+
+  /**
+   * Clear all in-app notifications
+   */
+  clearInAppNotifications(): void {
+    this.inAppNotifications = [];
+    this.notifyListeners();
+  }
+
+  /**
+   * Get all in-app notifications
+   */
+  getInAppNotifications(): InAppNotification[] {
+    return [...this.inAppNotifications];
+  }
+
+  /**
+   * Subscribe to in-app notification changes
+   */
+  subscribe(listener: (notifications: InAppNotification[]) => void): () => void {
+    this.listeners.push(listener);
+    
+    // Return unsubscribe function
+    return () => {
+      this.listeners = this.listeners.filter(l => l !== listener);
+    };
+  }
+
+  private notifyListeners(): void {
+    this.listeners.forEach(listener => {
+      try {
+        listener([...this.inAppNotifications]);
+      } catch (error) {
+        console.error('Error in notification listener:', error);
+      }
     });
+  },
+
+  // Close all notifications
+  closeAll: (): void => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.getNotifications().then(notifications => {
+          notifications.forEach(notification => notification.close());
+        });
+      });
+    }
+  },
+
+  // Close notifications by tag
+  closeByTag: (tag: string): void => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.getNotifications().then(notifications => {
+          notifications
+            .filter(notification => notification.tag === tag)
+            .forEach(notification => notification.close());
+        });
+      });
+    }
+  }
+
+  /**
+   * Convenience methods for different notification types
+   */
+  success(title: string, message: string, options?: Partial<NotificationOptions>): string {
+    return this.addInAppNotification({
+      type: 'success',
+      title,
+      message
+    });
+  }
+
+  error(title: string, message: string, options?: Partial<NotificationOptions>): string {
+    return this.addInAppNotification({
+      type: 'error',
+      title,
+      message,
+      duration: 8000 // Errors stay longer
+    });
+  }
+
+  warning(title: string, message: string, options?: Partial<NotificationOptions>): string {
+    return this.addInAppNotification({
+      type: 'warning',
+      title,
+      message
+    });
+  }
+
+  info(title: string, message: string, options?: Partial<NotificationOptions>): string {
+    return this.addInAppNotification({
+      type: 'info',
+      title,
+      message
+    });
+  }
+
+  /**
+   * Show a toast notification (browser + in-app)
+   */
+  async toast(title: string, message: string, type: InAppNotification['type'] = 'info', showBrowser = false): Promise<string> {
+    const id = this.addInAppNotification({
+      type,
+      title,
+      message
+    });
+
+    if (showBrowser && this.isPermitted()) {
+      await this.showBrowserNotification({
+        title,
+        body: message,
+        icon: this.getIconForType(type)
+      });
+    }
+
+    return id;
+  }
+
+  private getIconForType(type: InAppNotification['type']): string {
+    const icons = {
+      success: '/icons/success.png',
+      error: '/icons/error.png',
+      warning: '/icons/warning.png',
+      info: '/icons/info.png'
+    };
+    return icons[type] || '/favicon.ico';
   }
 }
 
-export const notificationManager = new NotificationManager();
+// Create default instance
+const notificationManager = new NotificationManager();
+
+// Export convenience functions
+export const notifications = {
+  requestPermission: () => notificationManager.requestPermission(),
+  isSupported: () => notificationManager.isSupported(),
+  isPermitted: () => notificationManager.isPermitted(),
+  showBrowser: (options: NotificationOptions) => notificationManager.showBrowserNotification(options),
+  success: (title: string, message: string) => notificationManager.success(title, message),
+  error: (title: string, message: string) => notificationManager.error(title, message),
+  warning: (title: string, message: string) => notificationManager.warning(title, message),
+  info: (title: string, message: string) => notificationManager.info(title, message),
+  toast: (title: string, message: string, type?: InAppNotification['type'], showBrowser?: boolean) => 
+    notificationManager.toast(title, message, type, showBrowser),
+  subscribe: (listener: (notifications: InAppNotification[]) => void) => notificationManager.subscribe(listener),
+  getNotifications: () => notificationManager.getInAppNotifications(),
+  remove: (id: string) => notificationManager.removeInAppNotification(id),
+  clear: () => notificationManager.clearInAppNotifications()
+};
+
 export default notificationManager;
+// Notification utilities
+interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+        actions: options.actions || []

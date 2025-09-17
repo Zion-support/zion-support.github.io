@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -40,8 +39,6 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   const [activeInsight, setActiveInsight] = useState(0);
@@ -223,7 +220,12 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">RevolutionaryTechInsights2026</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -285,12 +287,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
->>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
               Explore Insights
             </button>
           </div>
@@ -303,9 +300,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            <div className="mb-8">
-=======
             <div className="text-5xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
             <p className="text-purple-100 mb-6 text-center">
@@ -438,14 +432,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 </div>
               </motion.div>
 
->>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: isVisible ? 1 : 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-<<<<<<< HEAD
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>
@@ -551,11 +544,8 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   </ul>
                 </motion.div>
               ))}
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Applications Section */}
@@ -672,8 +662,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36
 
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
@@ -734,9 +722,8 @@ const RevolutionaryTechInsights2026: React.FC = () => {
       </div>
     </>
   );
+  };
+export default RevolutionaryTechInsights2026;
 };
 
-<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36

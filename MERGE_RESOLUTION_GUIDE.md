@@ -72,8 +72,7 @@ If local git commands fail:
 ### Method 3: Manual File Editing
 For critical files with conflicts:
 1. Open each conflicted file
-2. Look for ``, ``, `>>>>>>> branch` markers
-3. Choose which version to keep or merge both
+2. Look for ``, ``, `3. Choose which version to keep or merge both
 4. Remove conflict markers
 5. Save and commit
 

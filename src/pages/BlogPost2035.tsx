@@ -4,7 +4,7 @@ const BlogPost2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
-        {/* Header */}
+        {/* Header */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6">
             📝 BLOG POST • JANUARY 2035
@@ -24,7 +24,7 @@ const BlogPost2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Article Content */}
+        {/* Article Content */};
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl p-12 mb-12">
             <div className="prose prose-lg max-w-none">
@@ -137,7 +137,7 @@ const BlogPost2035: React.FC = () => {
             </div>
           </div>
 
-          {/* Related Articles */}
+          {/* Related Articles */};
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
             <div className="grid md:grid-cols-3 gap-6">
@@ -167,6 +167,5 @@ const BlogPost2035: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default BlogPost2035;

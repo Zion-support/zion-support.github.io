@@ -3,99 +3,14 @@ import Link from 'next/link'
 
 const posts = [
   {
-    slug: 'ai-2026-production-rag-latency-budgets',
-    title: 'AI 2026: Production RAG Latency Budgets',
-    summary:
-      'A pragmatic framework to set, monitor, and enforce latency budgets for production RAG systems.'
-  },
-  {
-    slug: 'ai-2026-safe-agent-actions-blueprint',
-    title: 'AI 2026: Safe Agent Actions — Blueprint',
-    summary:
-      'Risk‑tiered tools, approvals, budgets, and policy checks for safe agent actions.'
-  },
-  {
-    slug: 'ai-2026-operational-evals-blueprint',
-    title: 'AI 2026: Operational Evals Blueprint',
-    summary:
-      'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
-  },
-  {
-    slug: 'ai-2026-agentic-slo-dashboards-blueprint',
-    title: 'AI 2026: Agentic SLO Dashboards — Blueprint',
-    summary:
-      'Define SLIs, wire eval gates, and link traces/policy events to incidents.'
-  },
-  {
-    slug: 'ai-2026-risk-and-guardrails-operating-model',
-    title: 'AI 2026: Risk & Guardrails Operating Model',
-    summary:
-      'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
-  },
-  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary:
-      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+    summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
   },
   {
-    slug: 'ai-2026-trustworthy-model-routing',
-    title: 'AI 2026: Trustworthy Model Routing — Field Guide',
-    summary:
-      'Evidence-backed routing with eval gates, risk tiers, and explicit budgets.'
-  },
-  {
-    slug: 'ai-2026-sovereign-ai-commerce',
-    title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
-    summary:
-      'Reference architecture, safety gates, and rollout checklist for AI commerce.',
-  },
-  {
-    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
-    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
-    summary:
-      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
-  },
-  {
-    slug: 'ai-2026-autonomous-ops-sre-for-agents',
-    title: 'AI 2026: Autonomous Ops and SRE for Agents',
-    summary:
-      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
-  },
-  {
-    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
-    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
-    summary:
-      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
-  },
-  {
-    slug: 'ai-2026-autonomous-ops-sre-for-agents',
-    title: 'AI 2026: Autonomous Ops and SRE for Agents',
-    summary:
-      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
-  },
-  {
-    slug: 'ai-2026-realtime-evals-at-scale',
-    title: 'AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates',
-    summary:
-      'Wire objective evals into CI/CD and runtime for reliable AI systems.'
-  },
-  {
-    slug: 'ai-2026-enterprise-rag-observability',
-    title: 'AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry',
-    summary:
-      'Operate RAG with deep telemetry, groundedness checks, and governance hooks.'
-  },
-  {
-    slug: 'ai-2026-autonomous-procurement-blueprint',
-    title: 'AI 2026: Autonomous Procurement Blueprint',
-    summary:
-      'From sourcing to contract ops with policy-as-code and measurable savings.'
-  },
-  {
-    slug: 'ai-2026-governed-tool-use-blueprint',
-    title: 'AI 2026: Governed Tool Use — Blueprint',
-    summary: 'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary: 'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
   },
   {
     slug: 'ai-2026-production-agent-postmortems',
@@ -108,14 +23,10 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-  },
-  {
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
-  },
-  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -138,12 +49,6 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-  },
-  {
-    slug: 'ai-2026-agent-orchestration-enterprise-guide',
-    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
-    summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.',
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
@@ -337,36 +242,38 @@ const posts = [
     slug: 'ai-2026-real-time-retrieval-architectures',
     title: 'AI 2026: Real‑Time Retrieval Architectures',
     summary: 'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.'
+    summary: 'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
   }
 ]
 
-export default function BlogIndexPage() {
+export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
-          <p className="text-gray-600 mb-10">Insights, frameworks, and blueprints from Zion Tech Group.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.slug} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:shadow-sm transition">
-                <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-700">
-                    {post.title}
-                  </Link>
-                </h2>
-                <p className="text-gray-600">{post.summary}</p>
-                <div className="mt-4">
-                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold">
-                    Read →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">Blog</h1>
+          <p className="mt-4 text-xl text-gray-600">Latest insights and updates</p>
         </div>
-      </section>
+        
+        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          {posts.map((post) => (
+            <article key={post.slug} className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">
+                <Link href={`/blog/${post.slug}`} className="hover:text-blue-600">
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="text-gray-600 mb-4">{post.summary}</p>
+              <Link 
+                href={`/blog/${post.slug}`}
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Read more →
+              </Link>
+            </article>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
-

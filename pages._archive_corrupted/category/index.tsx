@@ -1,28 +1,12 @@
-import type { NextPage } from 'next';
-import EnhancedLayout from '../../components/EnhancedLayout';
-import Link from 'next/link';
-const "CategoryIndexPage": NextPage = () => {
+import React from 'react';
+
+const index: React.FC = () => {
   return (
-    <EnhancedLayout>
-      <section>
-        <h1 className="text-3xl font-bold mb-4">Categories</h1>
-        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link>
-          </li>
-          <li>
-            <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link>
-          </li>
-          <li>
-            <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link>
-          </li>
-          <li>
-            <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link>
-          </li>
-        </ul>
-      </section>
-    </EnhancedLayout>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">index</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
-export default CategoryIndexPage;
+
+export default index;

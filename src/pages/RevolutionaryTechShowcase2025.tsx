@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect }  from 'react';
+import { motion }  from 'framer-motion';
+import { Helmet }  from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -14,7 +12,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
   const technologies = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Systems",
       description: "Revolutionary AI that exhibits self-awareness and emotional intelligence, capable of understanding context and making autonomous decisions.",
       features: [
@@ -27,7 +25,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-purple-600 to-pink-600"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Neural Networks",
       description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power and speed.",
       features: [
@@ -40,7 +38,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600"
     },
     {
-      id: 3,
+      id: "3",
       title: "Interdimensional Computing",
       description: "Access computing resources across multiple dimensions, enabling infinite scalability and processing power.",
       features: [
@@ -53,7 +51,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600"
     },
     {
-      id: 4,
+      id: "4",
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces that enable thought-based control and seamless human-AI integration.",
       features: [
@@ -64,32 +62,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       ],
       icon: "🧬",
       gradient: "from-orange-600 to-red-600"
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
+    };
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -108,9 +81,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       result: "99.9% accuracy rate",
       description: "Revolutionary neural interfaces achieved 99.9% accuracy in thought-based control systems.",
       logo: "🧠"
-    }
-  ];
-
+    };
   return (
     <>
       <Helmet>
@@ -142,26 +113,26 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               "publisher": {
                 "@type": "Organization",
                 "name": "Zion Tech Group"
-              }
-            }
-          })}
+              };
+            };
+          })};
         </script>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: "0", y: 50 }};
+        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+        transition={{ duration: 0.8 }};
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ scale: 0.8 }};
+              animate={{ scale: isVisible ? 1 : 0.8 }};
+              transition={{ duration: 0.6, delay: 0.2 }};
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
             >
               🌟 REVOLUTIONARY TECHNOLOGY • JANUARY 2025
@@ -174,41 +145,41 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             </p>
           </div>
 
-          {/* Technology Grid */}
+          {/* Technology Grid */};
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {technologies.map((tech, index) => (
               <motion.div
-                key={tech.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
+                key={tech.id};
+                initial={{ opacity: "0", y: 50 }};
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+                transition={{ duration: 0.6, delay: 0.1 * index }};
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
               >
                 <div className="text-6xl mb-4 text-center">{tech.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {tech.description}
+                  {tech.description};
                 </p>
                 <ul className="text-gray-400 space-y-2 mb-6 text-xs">
                   {tech.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                      {feature}
+                      {feature};
                     </li>
-                  ))}
+                  ))};
                 </ul>
                 <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Explore Technology →
                 </button>
               </motion.div>
-            ))}
+            ))};
           </div>
 
-          {/* Interactive Demo Section */}
+          {/* Interactive Demo Section */};
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: "0", scale: 0.9 }};
+            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }};
+            transition={{ duration: 0.8, delay: 0.4 }};
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 mb-20 border border-purple-400/30"
           >
             <div className="text-center mb-8">
@@ -238,11 +209,11 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Case Studies */}
+          {/* Case Studies */};
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: "0", y: 50 }};
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+            transition={{ duration: 0.8, delay: 0.6 }};
             className="mb-20"
           >
             <div className="text-center mb-12">
@@ -253,10 +224,10 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                  transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
+                  key={index};
+                  initial={{ opacity: "0", y: 30 }};
+                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+                  transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }};
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{study.logo}</div>
@@ -264,15 +235,15 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                   <div className="text-2xl font-bold text-green-400 mb-4">{study.result}</div>
                   <p className="text-gray-300 text-sm leading-relaxed">{study.description}</p>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </motion.div>
 
-          {/* CTA Section */}
+          {/* CTA Section */};
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            initial={{ opacity: "0", y: 50 }};
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+            transition={{ duration: 0.8, delay: 0.8 }};
             className="text-center"
           >
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
@@ -294,9 +265,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       </motion.div>
       </div>
     </>
-      </div>
-    </>
   );
-};
-
+  };
 export default RevolutionaryTechShowcase2025;

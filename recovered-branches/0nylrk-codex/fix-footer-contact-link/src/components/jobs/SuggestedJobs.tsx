@@ -1,102 +1,12 @@
+import React from 'react';
 
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-
-interface SuggestedJobsProps {
-  talentId?: string;
-}
-
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
-  const { 
-      appliedMatches 
-    } 
-  } = useJobSuggestions(currentTalentId);
-
-  };
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center p-6">
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />
-      </div>
-    );
-  }
-
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />;
-  }
-  
+const SuggestedJobs: React.FC = () => {
   return (
-    <div className="space-y-6">
-      {/* New Matches Section */}
-      {newMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">New Job Matches</h3>
-            <Badge className="bg-green-100 text-green-800 border-green-300">
-              {newMatches.length} New
-            </Badge>
-          </div>
-          
-          <div className="grid gap-4 md:grid-cols-2">
-            {newMatches.map(match => (
-              <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
-              />
-            ))}
-          </div>
-        </div>
-      )}
-      
-      {/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Previously Viewed</h3>
-          </div>
-          
-          <div className="grid gap-4 md:grid-cols-2">
-            {viewedMatches.map(match => (
-              <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
-              />
-            ))}
-          </div>
-        </div>
-      )}
-      
-      {/* Applied Jobs Section */}
-      {appliedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Applied Jobs</h3>
-          </div>
-          
-          <div className="grid gap-4 md:grid-cols-2">
-            {appliedMatches.map(match => (
-              <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
-              />
-            ))}
-          </div>
-        </div>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SuggestedJobs</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default SuggestedJobs;
