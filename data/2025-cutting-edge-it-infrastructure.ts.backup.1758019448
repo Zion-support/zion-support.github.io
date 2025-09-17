@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+    tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security',
+    price: '$4,999',
+    period: '/month',
+    description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',
+    features: [
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

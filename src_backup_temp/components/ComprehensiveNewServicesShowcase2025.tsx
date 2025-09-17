@@ -102,7 +102,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             Discover our comprehensive suite of innovative Micro SAAS, IT Infrastructure, and AI services 
             designed to transform your business and drive unprecedented growth.
           </p>
-=======
         </div>
         {/* Search and Filter Section */}"
         <div className="mb-12">"
@@ -145,7 +144,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                 <MapPin className="w-5 h-5" />
                 <span className="font-semibold">Middletown, DE</span>
               </div>
-=======
             </div>
             {/* Sort */}
             <select
@@ -188,7 +186,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   </div>
                 )}
               </div>
-=======
 
               {/* Description */}"
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -219,7 +216,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                       <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"   />                      <span>{feature}</span>
                     </div>
                   ))}
-=======
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
@@ -404,7 +400,6 @@ export default ComprehensiveNewServicesShowcase2025;'"`
   );
 }
 export default ComprehensiveNewServicesShowcase2025;
-=======
 </motion>
 </motion>
 </motion>

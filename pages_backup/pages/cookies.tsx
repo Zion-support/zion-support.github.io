@@ -2,19 +2,17 @@
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
-import { motion } from 'framer-motion';
+
 import {
 
 
@@ -122,7 +120,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+
 import {;
   Shield,;
   Settings,;
@@ -784,15 +782,15 @@ if (return) {
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-import { motion } from 'framer-motion';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -854,7 +852,6 @@ origin/automation-improvements-final
 
   );
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
 
@@ -863,15 +860,12 @@ origin/automation-improvements-final
   )
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

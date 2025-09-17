@@ -6,11 +6,6 @@ import { cn } from "@/lib/utils"
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
-<<<<<<< HEAD
->(({ classNamevalue...props }ref) => (
-=======
->(({ className, value, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <ProgressPrimitive.Root
     ref={ref}
     className={cn(

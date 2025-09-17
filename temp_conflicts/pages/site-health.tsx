@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head',
-=======
-import Head from 'next/head';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function SiteHealth() {
   return (
@@ -61,12 +56,6 @@ export default function SiteHealth() {
             {[
               { title: 'Accessibility', desc: 'WCAG checks with actionable fixes and reports.', href: '/reports/seo' },
               { title: 'Performance', desc: 'Core Web Vitals and performance budgets.', href: '/reports/seo' },
-<<<<<<< HEAD
-              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
-=======
-              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' },
-            ].map((card) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Link key={card.title} href={card.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -81,11 +70,6 @@ export default function SiteHealth() {
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
-<<<<<<< HEAD
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm: grid-cols-2">
-=======
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2">
->>>>>>> origin/auto/autonomy-17186719616
             <a href="/reports/seo/latest.json" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Latest SEO Report JSON ↗</a>
             <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard →</a>
           </div>
@@ -103,9 +87,4 @@ export default function SiteHealth() {
         </section>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

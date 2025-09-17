@@ -63,8 +63,6 @@ import { use_router } from 'next / router';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -323,7 +321,6 @@ const SearchResultCard: React.FC<{;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         </div>
@@ -585,7 +582,6 @@ const FilterSidebar: React.FC<{;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 {option.label}
               </label>
@@ -646,7 +642,6 @@ const FilterSidebar: React.FC<{;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           </SelectTrigger>
@@ -903,7 +898,6 @@ export const SearchResultsPage: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
@@ -934,7 +928,6 @@ export const SearchResultsPage: React.FC = () => {
     min_rating: 0,
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
     sort: 'relevance',
   });
@@ -1246,7 +1239,6 @@ export const SearchResultsPage: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           </div>

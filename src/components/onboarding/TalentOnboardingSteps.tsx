@@ -15,15 +15,13 @@ export function TalentOnboardingSteps() {
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
-      action: "Update",
-    },
+>>>>>>> origin/merged-prs
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
-      action: "Add Skills",
-    },
+>>>>>>> origin/merged-prs
     {
       id: "availability",
       label: "Set your availability",
@@ -39,6 +37,9 @@ export function TalentOnboardingSteps() {
       action: "View Matches",
     },
   ];
-  
-  return <OnboardingTracker steps={steps} />;
-}
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+
+>>>>>>> origin/merged-prs

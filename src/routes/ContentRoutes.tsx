@@ -76,7 +76,8 @@ const ContentRoutes = () => {
 
       {/* New Content Showcase */}
       <Route path="/new-content-showcase" element={<NewContentShowcase />} />
-
+      {/* New Content Showcase */}
+      <Route path="/new-content-showcase" element={<NewContentShowcase />} />
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
 

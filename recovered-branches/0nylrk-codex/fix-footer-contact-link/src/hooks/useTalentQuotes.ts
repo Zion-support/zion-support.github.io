@@ -19,12 +19,6 @@ export const useTalentQuotes = () => {
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'talent', talentId],
     queryFn: () => quoteRequestService.getByTalentId(talentId),
-<<<<<<< HEAD
-    enabled: !!talentId});
-=======
-    enabled: !!talentId,
-  });
->>>>>>> origin/auto/autonomy-17186719616
 
   // Count unread quotes
   const unreadCount = allQuotes.filter(
@@ -112,10 +106,4 @@ export const useTalentQuotes = () => {
     markAsResponded: (id: string) => 
       updateStatusMutation.mutate({ id, status: 'responded' }),
     toggleArchive: (id: string, isArchived: boolean) => 
-<<<<<<< HEAD
-      toggleArchiveMutation.mutate({ id, isArchived })};
-=======
-      toggleArchiveMutation.mutate({ id, isArchived }),
-  };
->>>>>>> origin/auto/autonomy-17186719616
 };

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Atom, ArrowRight, CheckCircle, Zap, Target, Users, 
-  TrendingUp, Shield, Cpu, Database, Globe, Star, Lock
-} from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
-=======
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Atom, ArrowRight, CheckCircle, Zap, Target, Users, 
-  TrendingUp, Shield, Cpu, Database, Globe, Star, Lock
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function QuantumComputingPage() {
   const services = [
@@ -58,11 +37,6 @@ export default function QuantumComputingPage() {
       price: "$899/month",
       icon: Cpu
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const benefits = [
     {
@@ -85,11 +59,6 @@ export default function QuantumComputingPage() {
       title: "Future-Ready",
       description: "Stay ahead of the curve with cutting-edge quantum technology"
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -259,11 +228,6 @@ export default function QuantumComputingPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-=======
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
->>>>>>> origin/auto/autonomy-17186719616
             >
               <span>Start Quantum Journey</span>
               <ArrowRight className="w-5 h-5" />
@@ -274,9 +238,4 @@ export default function QuantumComputingPage() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

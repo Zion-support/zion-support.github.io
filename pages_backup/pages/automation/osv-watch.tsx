@@ -59,7 +59,6 @@ export default function OsvWatchPage() {
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">OSV Vulnerability Watch</h1>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {results.length === 0 ? (
           <p className="mt-6 text-sm">No known vulnerabilities found.</p>
         ) : (
@@ -71,7 +70,6 @@ export default function OsvWatchPage() {
                   {r.vulns.slice(0, 5).map((v, i) => (
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   ))}
                 </ul>
               </li>
@@ -122,7 +120,6 @@ export default function OsvWatchPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

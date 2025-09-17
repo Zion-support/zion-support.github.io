@@ -159,7 +159,6 @@ if (email.length > 254) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     }
     // Additional checks;
@@ -340,7 +339,6 @@ onClick={clearResults}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
@@ -424,7 +422,6 @@ onClick={copyResults}
                 </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
               )}
 {validationResults.length > 0 ? (
@@ -447,8 +444,6 @@ key={index}
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           Score: {result.score}
 
 </span>;
@@ -473,7 +468,6 @@ key={index}
 
 
                             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
                           </ul>;
 
@@ -484,7 +478,6 @@ key={index}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                       )}
                       {result.hasTypo && (
@@ -518,7 +511,6 @@ key={index}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
 <section className=&quot;py - 20 bg - gray - 800 & quot;>;
@@ -680,6 +672,4 @@ href=&quot;/pricing&quot;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 

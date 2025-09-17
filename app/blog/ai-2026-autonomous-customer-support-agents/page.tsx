@@ -79,7 +79,6 @@ const AutonomousCustomerSupportAgentsPage: React.FC = () => {
   );
 };
 
-export default AutonomousCustomerSupportAgentsPage;
 
 import React from 'react';
 import Link from 'next/link';

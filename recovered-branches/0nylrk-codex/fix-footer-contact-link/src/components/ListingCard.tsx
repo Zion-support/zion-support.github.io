@@ -18,32 +18,10 @@ interface ListingCardProps {
 
 export function ListingCard({ 
   id,
-<<<<<<< HEAD
-  title
-  description
-  image
-  category
-  tags
-  author
-  authorImage
-=======
-  title, 
-  description, 
-  image, 
-  category, 
-  tags, 
-  author, 
-  authorImage, 
->>>>>>> origin/auto/autonomy-17186719616
   className,
   profileType = 'service'
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
-<<<<<<< HEAD
-  // In a real appthis would be a proper ID from the database
-=======
-  // In a real app, this would be a proper ID from the database
->>>>>>> origin/auto/autonomy-17186719616
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
   return (
@@ -74,11 +52,6 @@ export function ListingCard({
         
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-            {tags.map((tagi) => (
-=======
-            {tags.map((tag, i) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>

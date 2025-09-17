@@ -106,7 +106,6 @@ const PostJob: NextPage = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -141,7 +140,6 @@ const PostJob: NextPage = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

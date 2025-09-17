@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {;
   Loader2,;
   AlertTriangle,;
@@ -47,7 +47,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
 
 
 import React, { useState, useEffect } from 'react',;
-import { motion, AnimatePresence } from 'framer-motion',;
+
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -271,18 +271,14 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='space-y-4'>;
       {showProgress && (;
         <div className='w-full bg-muted rounded-full h-2'>;
           <motion&& motion.div
             className='bg-primary h-2 rounded-full'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -680,7 +676,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -985,9 +980,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   itemCount,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1016,7 +1009,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

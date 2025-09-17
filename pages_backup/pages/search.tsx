@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import Layout from './components/Layout';
 
 import {
@@ -144,7 +144,7 @@ const filters = [
 export default function SearchPage() {
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   Search,
   Filter,
@@ -213,7 +213,7 @@ export default function SearchPage() {;
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {;
   Search, Filter, Grid, List, ArrowRight, ExternalLink,;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
@@ -560,7 +560,6 @@ export default function SearchPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Layout>;
@@ -881,7 +880,6 @@ export default function SearchPage(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1203,11 +1201,8 @@ origin/automation-improvements-final
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   >
@@ -1710,7 +1705,6 @@ origin/automation-improvements-final
                       </div>
 
 
->>>>>>> origin/automation-improvements-final
 
 
 
@@ -1793,7 +1787,6 @@ origin/automation-improvements-final
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1872,7 +1865,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             </AnimatePresence>
@@ -1919,9 +1911,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   )
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 }
   )

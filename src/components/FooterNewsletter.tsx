@@ -100,17 +100,3 @@ export function FooterNewsletter(): React.ReactElement {
         type="submit"
         aria-label="Subscribe to newsletter"
         disabled={isSubmitting}
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-      >
-        {isSubmitting ? (
-          <>
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-            Subscribing...
-          </>
-        ) : (
-          'Subscribe'
-        )}
-      </Button>
-    </form>
-  );
-} 

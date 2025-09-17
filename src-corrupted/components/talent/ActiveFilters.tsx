@@ -295,7 +295,6 @@ export function ActiveFilters({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         Clear All
       </Button>
@@ -307,7 +306,6 @@ export function ActiveFilters({;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

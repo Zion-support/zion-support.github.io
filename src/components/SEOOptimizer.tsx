@@ -1,519 +1,254 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  TrendingUp,
-  Target,
-  Zap,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Settings,
-  BarChart3,
-  Globe,
-  Smartphone,
-  Monitor,
-  Eye,
-  Clock,
-  Star,
-  ArrowUpRight,
-  RefreshCw
-} from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SEOAnalysis {
-  score: number;
-  issues: SEOIssue[];
-  suggestions: SEOSuggestion[];
-  metrics: SEOMetrics;
-  lastUpdated: Date;
-}
-
-interface SEOIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  fixable: boolean;
-  category: 'content' | 'technical' | 'performance' | 'accessibility';
-}
-
-interface SEOSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  priority: 'high' | 'medium' | 'low';
-  effort: 'low' | 'medium' | 'high';
-  estimatedImpact: number;
-}
-
-interface SEOMetrics {
-  pageSpeed: number;
-  mobileFriendliness: number;
-  accessibility: number;
-  bestPractices: number;
-  seoScore: number;
-  coreWebVitals: {
-    lcp: number;
-    fid: number;
-    cls: number;
-  };
-}
-
-interface SEOOptimizerProps {
-  url?: string;
-  autoAnalyze?: boolean;
-  showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void;
-}
-
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  url,
-  autoAnalyze = true,
-  showDetails = false,
-  onAnalysisComplete
-}) => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  // Mock SEO analysis data (in real app, this would come from actual analysis)
-  const mockAnalysis: SEOAnalysis = useMemo(() => ({
-    score: 87,
-    issues: [
-      {
-        id: '1',
-        type: 'warning',
-        title: 'Missing Meta Description',
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
-        impact: 'medium',
-        fixable: true,
-        category: 'content'
-      },
-      {
-        id: '2',
-        type: 'error',
-        title: 'Slow Page Load Time',
-        description: 'Page load time is above the recommended 3-second threshold.',
-        impact: 'high',
-        fixable: true,
-        category: 'performance'
-      },
-      {
-        id: '3',
-        type: 'info',
-        title: 'Missing Alt Text',
-        description: 'Some images are missing alt text, which affects accessibility.',
-        impact: 'low',
-        fixable: true,
-        category: 'accessibility'
-      }
+const SEOOptimizer: React.FC = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading technology company specializing in AI, quantum computing, neural interfaces, and revolutionary tech solutions",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://facebook.com/ziontechgroup",
+      "https://instagram.com/ziontechgroup",
+      "https://youtube.com/ziontechgroup"
     ],
-    suggestions: [
-      {
-        id: '1',
-        title: 'Optimize Images',
-        description: 'Compress and optimize images to improve page load speed.',
-        priority: 'high',
-        effort: 'medium',
-        estimatedImpact: 15
-      },
-      {
-        id: '2',
-        title: 'Add Schema Markup',
-        description: 'Implement structured data to improve search engine understanding.',
-        priority: 'medium',
-        effort: 'low',
-        estimatedImpact: 8
-      },
-      {
-        id: '3',
-        title: 'Improve Internal Linking',
-        description: 'Add more internal links to improve page authority distribution.',
-        priority: 'low',
-        effort: 'low',
-        estimatedImpact: 5
-      }
-    ],
-    metrics: {
-      pageSpeed: 78,
-      mobileFriendliness: 92,
-      accessibility: 85,
-      bestPractices: 88,
-      seoScore: 87,
-      coreWebVitals: {
-        lcp: 2.8,
-        fid: 45,
-        cls: 0.08
-      }
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service",
+      "availableLanguage": "English"
     },
-    lastUpdated: new Date()
-  }), []);
-
-  // Analyze SEO
-  const analyzeSEO = useCallback(async () => {
-    setIsAnalyzing(true);
-
-    // Simulate analysis delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setAnalysis(mockAnalysis);
-    setIsAnalyzing(false);
-    onAnalysisComplete?.(mockAnalysis);
-  }, [mockAnalysis, onAnalysisComplete]);
-
-  // Auto-analyze on mount
-  useEffect(() => {
-    if (autoAnalyze) {
-      analyzeSEO();
-    }
-  }, [autoAnalyze, analyzeSEO]);
-
-  // Get score color
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Innovation Drive",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94105",
+      "addressCountry": "US"
+    },
+    "foundingDate": "2020",
+    "numberOfEmployees": "500+",
+    "services": [
+      {
+        "@type": "Service",
+        "name": "AI Solutions",
+        "description": "Advanced artificial intelligence solutions including AI consciousness, machine learning, and autonomous systems"
+      },
+      {
+        "@type": "Service",
+        "name": "Quantum Computing",
+        "description": "Quantum computing solutions including quantum-neural fusion and quantum encryption"
+      },
+      {
+        "@type": "Service",
+        "name": "Cybersecurity",
+        "description": "Next-generation cybersecurity solutions with AI-powered threat detection and quantum encryption"
+      },
+      {
+        "@type": "Service",
+        "name": "Business Intelligence",
+        "description": "Advanced business intelligence platform with real-time analytics and predictive insights"
+      }
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Revolutionary Tech Solutions 2026",
+        "description": "Cutting-edge technology solutions that transform industries",
+        "url": "https://ziontechgroup.com/pages/RevolutionaryTechSolutions2026"
+      },
+      {
+        "@type": "Offer",
+        "name": "Advanced Business Intelligence 2026",
+        "description": "AI-powered business intelligence platform for data-driven decisions",
+        "url": "https://ziontechgroup.com/pages/AdvancedBusinessIntelligence2026"
+      },
+      {
+        "@type": "Offer",
+        "name": "Next-Gen Cybersecurity 2026",
+        "description": "Advanced cybersecurity solutions powered by AI and quantum encryption",
+        "url": "https://ziontechgroup.com/pages/NextGenCybersecurity2026"
+      }
+    ]
   };
 
-  // Get score background
-  const getScoreBackground = (score: number) => {
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Zion Tech Group's AI solutions revolutionary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our AI solutions feature consciousness capabilities, quantum-neural fusion, and autonomous decision-making that goes beyond traditional AI systems. We achieve 500% efficiency improvements and 60% cost reductions for our clients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does quantum computing benefit my business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our quantum computing solutions provide unprecedented processing power, enabling complex calculations in seconds that would take traditional computers years. This translates to faster insights, better predictions, and competitive advantages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What cybersecurity threats do you protect against?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We protect against AI-powered attacks, quantum threats, IoT vulnerabilities, and targeted attacks using our next-generation cybersecurity platform with 99.9% threat detection accuracy and 0.1s response time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can I see results from your solutions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most clients see measurable results within 30 days, with full transformation typically achieved within 6 months. Our solutions deliver 300% faster insights and 500% ROI on average."
+        }
+      }
+    ]
   };
-
-  // Get impact color
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'high': return 'text-red-500';
-      case 'medium': return 'text-yellow-500';
-      case 'low': return 'text-blue-500';
-      default: return 'text-zion-slate';
-    }
-  };
-
-  // Get priority color
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'text-red-500 bg-red-50 border-red-200';
-      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
-      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
-      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200';
-    }
-  };
-
-  // Filter issues by category
-  const filteredIssues = useMemo(() => {
-    if (selectedCategory === 'all') return analysis?.issues || [];
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [];
-  }, [analysis, selectedCategory]);
-
-  // Filter suggestions by priority
-  const filteredSuggestions = useMemo(() => {
-    return analysis?.suggestions.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority];
-    }) || [];
-  }, [analysis]);
-
-  if (!analysis && !isAnalyzing) {
-    return (
-      <div className="text-center py-8">
-        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />
-        <p className="text-zion-slate/60">No SEO analysis available</p>
-        <button
-          onClick={analyzeSEO}
-          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors"
-        >
-          Analyze SEO
-        </button>
-      </div>
-    );
-  }
 
   return (
-    <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
-            <Search className="w-6 h-6 text-white" />
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer</h3>
-            <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
-          </div>
-        </div>
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>Zion Tech Group - Revolutionary Technology Solutions 2026 | AI, Quantum Computing, Cybersecurity</title>
+      <meta name="title" content="Zion Tech Group - Revolutionary Technology Solutions 2026 | AI, Quantum Computing, Cybersecurity" />
+      <meta name="description" content="Leading technology company offering revolutionary AI solutions, quantum computing, neural interfaces, cybersecurity, and business intelligence. Transform your business with cutting-edge technology." />
+      <meta name="keywords" content="AI solutions, quantum computing, neural interfaces, cybersecurity, business intelligence, technology innovation, artificial intelligence, machine learning, quantum encryption, neural reality interface, business transformation" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
 
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={() => setShowAdvanced(!showAdvanced)}
-            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
-            title="Advanced settings"
-          >
-            <Settings className="w-5 h-5 text-zion-slate" />
-          </button>
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ziontechgroup.com/" />
+      <meta property="og:title" content="Zion Tech Group - Revolutionary Technology Solutions 2026" />
+      <meta property="og:description" content="Leading technology company offering revolutionary AI solutions, quantum computing, neural interfaces, cybersecurity, and business intelligence." />
+      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
 
-          <button
-            onClick={analyzeSEO}
-            disabled={isAnalyzing}
-            className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
-          >
-            {isAnalyzing ? (
-              <>
-                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                <span>Analyzing...</span>
-              </>
-            ) : (
-              <>
-                <RefreshCw className="w-4 h-4" />
-                <span>Refresh</span>
-              </>
-            )}
-          </button>
-        </div>
-      </div>
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://ziontechgroup.com/" />
+      <meta name="twitter:title" content="Zion Tech Group - Revolutionary Technology Solutions 2026" />
+      <meta name="twitter:description" content="Leading technology company offering revolutionary AI solutions, quantum computing, neural interfaces, cybersecurity, and business intelligence." />
+      <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:site" content="@ziontechgroup" />
 
-      {isAnalyzing ? (
-        <div className="text-center py-12">
-          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-zion-slate/60">Analyzing your page...</p>
-        </div>
-      ) : analysis ? (
-        <>
-          {/* Overall Score */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-4">
-              <h4 className="text-lg font-semibold text-zion-slate-dark">Overall Score</h4>
-              <span className="text-sm text-zion-slate/60">
-                Last updated: {analysis.lastUpdated.toLocaleTimeString()}
-              </span>
-            </div>
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#8B5CF6" />
+      <meta name="msapplication-TileColor" content="#8B5CF6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-tooltip" content="Revolutionary Technology Solutions" />
 
-            <div className="flex items-center space-x-6">
-              <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>
-                <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>
-                  {analysis.score}
-                </span>
-              </div>
+      {/* Canonical URL */}
+      <link rel="canonical" href="https://ziontechgroup.com/" />
 
-              <div className="flex-1">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-3 bg-zion-slate/5 rounded-lg">
-                    <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.pageSpeed}</div>
-                    <div className="text-xs text-zion-slate/60">Page Speed</div>
-                  </div>
+      {/* Alternate Languages */}
+      <link rel="alternate" hrefLang="en" href="https://ziontechgroup.com/" />
+      <link rel="alternate" hrefLang="es" href="https://ziontechgroup.com/es/" />
+      <link rel="alternate" hrefLang="fr" href="https://ziontechgroup.com/fr/" />
+      <link rel="alternate" hrefLang="de" href="https://ziontechgroup.com/de/" />
 
-                  <div className="text-center p-3 bg-zion-slate/5 rounded-lg">
-                    <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.mobileFriendliness}</div>
-                    <div className="text-xs text-zion-slate/60">Mobile</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
 
-          {/* Core Web Vitals */}
-          <div className="mb-8">
-            <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>
-            <div className="grid grid-cols-3 gap-4">
-              <div className={`p-4 rounded-lg border ${
-                analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
-              }`}>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.lcp}s
-                  </div>
-                  <div className="text-sm text-zion-slate/60">LCP</div>
-                  <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'Good' : 'Needs improvement'}
-                  </div>
-                </div>
-              </div>
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
-              <div className={`p-4 rounded-lg border ${
-                analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
-              }`}>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.fid}ms
-                  </div>
-                  <div className="text-sm text-zion-slate/60">FID</div>
-                  <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.fid <= 100 ? 'Good' : 'Needs improvement'}
-                  </div>
-                </div>
-              </div>
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      
+      <script type="application/ld+json">
+        {JSON.stringify(faqStructuredData)}
+      </script>
 
-              <div className={`p-4 rounded-lg border ${
-                analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
-              }`}>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.cls}
-                  </div>
-                  <div className="text-sm text-zion-slate/60">CLS</div>
-                  <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.cls <= 0.1 ? 'Good' : 'Needs improvement'}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Additional Structured Data for Services */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Revolutionary Technology Services",
+          "description": "Comprehensive list of our cutting-edge technology services",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Revolutionary Tech Solutions 2026",
+              "description": "AI consciousness, quantum-neural fusion, neural reality interfaces",
+              "url": "https://ziontechgroup.com/pages/RevolutionaryTechSolutions2026"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Advanced Business Intelligence 2026",
+              "description": "Real-time analytics, predictive insights, automated decision making",
+              "url": "https://ziontechgroup.com/pages/AdvancedBusinessIntelligence2026"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Next-Gen Cybersecurity 2026",
+              "description": "AI threat detection, quantum encryption, zero trust architecture",
+              "url": "https://ziontechgroup.com/pages/NextGenCybersecurity2026"
+            }
+          ]
+        })}
+      </script>
 
-          {/* Issues */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-4">
-              <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
-
-              <div className="flex space-x-1">
-                {['all', 'content', 'technical', 'performance', 'accessibility'].map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-zion-cyan text-white'
-                        : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'
-                    }`}
-                  >
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <AnimatePresence>
-                {filteredIssues.map((issue) => (
-                  <motion.div
-                    key={issue.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className={`p-4 rounded-lg border-l-4 ${
-                      issue.type === 'error' ? 'border-red-500 bg-red-50' :
-                      issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :
-                      'border-blue-500 bg-blue-50'
-                    }`}
-                  >
-                    <div className="flex items-start space-x-3">
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
-                      ) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
-                      ) : (
-                        <Info className="w-5 h-5 text-blue-500 mt-0.5" />
-                      )}
-
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>
-                          <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(issue.impact)}`}>
-                            {issue.impact} impact
-                          </span>
-                        </div>
-                        <p className="text-sm text-zion-slate/70">{issue.description}</p>
-                        {issue.fixable && (
-                          <button className="mt-2 text-xs text-zion-cyan hover:text-zion-cyan/80 transition-colors">
-                            Learn how to fix →
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
-          </div>
-
-          {/* Suggestions */}
-          <div className="mb-6">
-            <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>
-            <div className="space-y-3">
-              {filteredSuggestions.slice(0, 3).map((suggestion) => (
-                <motion.div
-                  key={suggestion.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h5 className="font-medium text-zion-slate-dark mb-1">{suggestion.title}</h5>
-                      <p className="text-sm text-zion-slate/70 mb-2">{suggestion.description}</p>
-                      <div className="flex items-center space-x-4 text-xs text-zion-slate/60">
-                        <span>Priority: {suggestion.priority}</span>
-                        <span>Effort: {suggestion.effort}</span>
-                        <span>Impact: +{suggestion.estimatedImpact} points</span>
-                      </div>
-                    </div>
-
-                    <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">
-                      <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Advanced Settings */}
-          <AnimatePresence>
-            {showAdvanced && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="border-t border-zion-slate/20 pt-6"
-              >
-                <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 bg-zion-slate/5 rounded-lg">
-                    <h5 className="font-medium text-zion-slate-dark mb-2">Analysis Frequency</h5>
-                    <select className="w-full p-2 border border-zion-slate/20 rounded-lg text-sm">
-                      <option>Daily</option>
-                      <option>Weekly</option>
-                      <option>Monthly</option>
-                    </select>
-                  </div>
-
-                  <div className="p-4 bg-zion-slate/5 rounded-lg">
-                    <h5 className="font-medium text-zion-slate-dark mb-2">Notification Level</h5>
-                    <select className="w-full p-2 border border-zion-slate/20 rounded-lg text-sm">
-                      <option>All issues</option>
-                      <option>High impact only</option>
-                      <option>Errors only</option>
-                    </select>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </>
-      ) : null}
-    </div>
+      {/* Breadcrumb Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ziontechgroup.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Technology Solutions",
+              "item": "https://ziontechgroup.com/#solutions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Revolutionary Tech 2026",
+              "item": "https://ziontechgroup.com/pages/RevolutionaryTechSolutions2026"
+            }
+          ]
+        })}
+      </script>
+    </Helmet>
   );
 };
 
-// Hook for using SEO optimization
-export const useSEOOptimization = () => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-
-  const optimizePage = useCallback(async () => {
-    setIsOptimizing(true);
-    // Implement actual optimization logic here
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsOptimizing(false);
-  }, []);
-
-  return {
-    analysis,
-    isOptimizing,
-    optimizePage
-  };
-};
+export default SEOOptimizer;

@@ -17,7 +17,6 @@ import { readJson } from '../../utils/fsDb',;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -51,12 +50,10 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   }
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   }
@@ -99,8 +96,6 @@ export default function SupportRequests(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -150,7 +145,6 @@ export default function SupportRequests(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

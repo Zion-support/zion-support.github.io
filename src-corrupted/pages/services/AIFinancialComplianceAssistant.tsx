@@ -19,7 +19,6 @@
   
         'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
       ],;
-=======
       features[;'
         'Up to 1,000 transactions/month','
         'Basic compliance monitoring','
@@ -28,7 +27,6 @@
         'Basic reporting','
         'Up to 5 user licenses','        'Core compliance frameworks'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: fals e
     },

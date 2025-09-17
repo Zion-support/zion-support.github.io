@@ -1,1 +1,2 @@
-
+// Type definitions index
+export {};

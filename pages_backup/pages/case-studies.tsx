@@ -32,9 +32,8 @@ import React from 'react';
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+
 
 
   ArrowRight,

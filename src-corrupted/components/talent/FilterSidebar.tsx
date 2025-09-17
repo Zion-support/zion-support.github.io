@@ -90,8 +90,6 @@ export function FilterSidebar({
 
   isMobileFilterOpen,}: FilterSidebarProps) {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -159,8 +157,6 @@ export function FilterSidebar({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -476,7 +472,6 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('skills')}
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
         isMobileFilterOpen={isMobileFilterOpen}
       />;
 

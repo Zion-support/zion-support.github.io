@@ -1,6 +1,4 @@
 
-import {
-  Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -88,5 +86,3 @@ export function TestimonialCarousel() {
         </div>
       </div>
     </section>
-  );
-}

@@ -68,7 +68,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           }
         </p>

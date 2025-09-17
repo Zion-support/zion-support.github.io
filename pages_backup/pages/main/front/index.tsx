@@ -1,10 +1,10 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 export default function FrontLanding() {
   return (
 
@@ -20,11 +20,10 @@ export default function FrontLanding() {
         <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
       </Head>
 
-import { motion } from 'framer-motion';
+
 export default function FrontLanding() {
   return (
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
 
@@ -88,12 +87,8 @@ export default function FrontLanding() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           </div>
@@ -156,7 +151,6 @@ export default function FrontLanding() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -198,7 +192,6 @@ export default function FrontLanding() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                   key={k}
@@ -286,11 +279,9 @@ export default function FrontLanding() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             ].map(f => (              <motion.article
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
                 key={f.title}
@@ -478,7 +469,7 @@ export default function FrontLanding() {
                 <motion.div;
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 export default function FrontLanding(req, res) {
   try {
   return (;
@@ -854,7 +845,6 @@ export default function FrontLanding(req, res) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

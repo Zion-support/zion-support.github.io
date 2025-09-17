@@ -1,160 +1,95 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Quick merge script using existing infrastructure
-echo "🚀 Quick merge process starting..."
-
-# Use existing comprehensive merge script if available
-if [ -f "comprehensive-merge-all-prs.sh" ]; then
-    echo "Using existing comprehensive merge script..."
-    bash comprehensive-merge-all-prs.sh
-elif [ -f "bulk-merge-all-prs.sh" ]; then
-    echo "Using existing bulk merge script..."
-    bash bulk-merge-all-prs.sh
-elif [ -f "complete_merge_all_prs.sh" ]; then
-    echo "Using existing complete merge script..."
-    bash complete_merge_all_prs.sh
-else
-    echo "No existing merge script found, using basic git commands..."
-    
-    # Basic merge process
-    git checkout main
-    git pull origin main
-    
-    # Get current branch if not main
-    CURRENT_BRANCH=$(git branch --show-current)
-    if [ "$CURRENT_BRANCH" != "main" ]; then
-        echo "Merging current branch: $CURRENT_BRANCH"
-        git merge $CURRENT_BRANCH --no-edit
-        git push origin main
-    fi
-    
-    echo "✅ Basic merge completed!"
-fi
-=======
-# Quick merge script - processes just a few branches at a time
-
+# Quick merge script to handle open PRs
 set -e
 
-echo "Starting quick merge of open pull requests..."
-echo "=================================================="
+echo "🚀 Starting quick merge for open PRs..."
 
-# Ensure we're on main branch
-if [ "$(git branch --show-current)" != "main" ]; then
-    echo "Switching to main branch..."
-    git checkout main
-fi
+# Check current status
+echo "📊 Current git status:"
+git status --short
 
-# Get just 5 recent branches
-echo "Fetching 5 most recent branches..."
+# Ensure we're on main and up to date
+echo "🔄 Switching to main and pulling latest..."
+git checkout main
+git pull origin main
+
+# Get all cursor branches
+echo "📋 Fetching all cursor branches..."
 git fetch --all
 
-RECENT_BRANCHES=$(git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/remotes/origin/ | grep -v "origin/main" | grep -v "backup" | head -5)
+# Get list of cursor branches
+BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
 
-echo "Processing 5 recent branches:"
-echo "$RECENT_BRANCHES"
-echo ""
-
-# Counter
-SUCCESSFUL=0
-FAILED=0
+echo "📊 Found cursor branches:"
+echo "$BRANCHES"
 
 # Process each branch
-while IFS= read -r branch; do
-    if [ -n "$branch" ]; then
-        branch_name=$(echo "$branch" | sed 's/origin\///')
-        echo "Processing: $branch_name"
-        
-        # Create temp branch
-        temp_branch="temp-$(date +%s)-$branch_name"
-        
-        # Try to checkout
-        if git checkout -b "$temp_branch" "origin/$branch_name" 2>/dev/null; then
-            echo "  ✅ Checked out $branch_name"
+for branch in $BRANCHES; do
+    echo "🔄 Processing branch: $branch"
+    
+    # Check if branch exists and can be merged
+    if git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        if ! git branch --merged main | grep -q "$branch"; then
+            echo "✅ Attempting to merge $branch..."
             
-            # Try to merge with main
-            if git merge main --no-edit --no-ff 2>/dev/null; then
-                echo "  ✅ Merged with main"
-                
-                # Switch back to main and merge
-                git checkout main
-                if git merge "$temp_branch" --no-edit --no-ff 2>/dev/null; then
-                    echo "  ✅ Merged into main"
-                    
-                    # Clean up
-                    git branch -D "$temp_branch"
-                    
-                    # Try to push
-                    if git push origin main 2>/dev/null; then
-                        echo "  ✅ Pushed to origin/main"
-                        SUCCESSFUL=$((SUCCESSFUL + 1))
-                    else
-                        echo "  ⚠️  Failed to push"
-                        FAILED=$((FAILED + 1))
-                    fi
-                else
-                    echo "  ❌ Failed to merge into main"
-                    git merge --abort 2>/dev/null || true
-                    git checkout main
-                    git branch -D "$temp_branch" 2>/dev/null || true
-                    FAILED=$((FAILED + 1))
-                fi
+            # Try to merge
+            if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+                echo "✅ Successfully merged $branch"
+                git commit -m "Merge $branch into main - $(date)"
             else
-                echo "  ⚠️  Merge conflict, resolving..."
+                echo "⚠️  Merge conflicts in $branch, resolving..."
                 
-                # Resolve conflicts by taking incoming changes
-                git checkout --theirs . 2>/dev/null || true
-                git add . 2>/dev/null || true
+                # Get conflicted files
+                CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
                 
-                if git commit -m "Resolve conflicts for $branch_name" 2>/dev/null; then
-                    echo "  ✅ Conflicts resolved"
+                if [ -n "$CONFLICTED_FILES" ]; then
+                    echo "📋 Conflicted files: $CONFLICTED_FILES"
                     
-                    # Switch back to main and merge
-                    git checkout main
-                    if git merge "$temp_branch" --no-edit --no-ff 2>/dev/null; then
-                        echo "  ✅ Merged resolved conflicts into main"
-                        
-                        # Clean up and push
-                        git branch -D "$temp_branch"
-                        if git push origin main 2>/dev/null; then
-                            echo "  ✅ Pushed to origin/main"
-                            SUCCESSFUL=$((SUCCESSFUL + 1))
-                        else
-                            echo "  ⚠️  Failed to push"
-                            FAILED=$((FAILED + 1))
+                    # Resolve conflicts by keeping main version for critical files
+                    for file in $CONFLICTED_FILES; do
+                        if [ -f "$file" ]; then
+                            echo "🔧 Resolving conflicts in $file..."
+                            
+                            # For critical files, keep main version
+                            if [[ "$file" == "package.json" || "$file" == "package-lock.json" || "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
+                                echo "📦 Critical file, keeping main version..."
+                                git checkout --ours "$file"
+                            else
+                                echo "📝 Regular file, keeping both versions..."
+                                # Remove conflict markers
+                                sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+                                sed -i '/>>>>>>> /d' "$file"
+                            fi
                         fi
-                    else
-                        echo "  ❌ Failed to merge resolved conflicts"
-                        git merge --abort 2>/dev/null || true
-                        git checkout main
-                        git branch -D "$temp_branch" 2>/dev/null || true
-                        FAILED=$((FAILED + 1))
-                    fi
+                    done
+                    
+                    # Add resolved files
+                    git add .
+                    
+                    # Commit the merge
+                    git commit -m "Resolve merge conflicts for $branch - $(date)"
+                    
+                    echo "✅ Successfully resolved conflicts and merged $branch"
                 else
-                    echo "  ❌ Failed to commit resolved conflicts"
-                    git checkout main
-                    git branch -D "$temp_branch" 2>/dev/null || true
-                    FAILED=$((FAILED + 1))
+                    echo "❌ No conflicted files found, aborting merge..."
+                    git merge --abort
                 fi
             fi
         else
-            echo "  ❌ Failed to checkout $branch_name"
-            FAILED=$((FAILED + 1))
+            echo "⏭️  Branch $branch already merged, skipping..."
         fi
-        
-        echo ""
+    else
+        echo "❌ Branch $branch doesn't exist, skipping..."
     fi
-done <<< "$RECENT_BRANCHES"
+    
+    echo "---"
+done
 
-echo "=================================================="
-echo "Quick merge completed!"
-echo "Successful: $SUCCESSFUL"
-echo "Failed: $FAILED"
-echo "=================================================="
+# Push changes
+echo "💾 Pushing changes to remote..."
+git push origin main
 
-# Clean up temp branches
-echo "Cleaning up..."
-git branch | grep "temp-" | xargs -r git branch -D
-
-echo "Done!"
->>>>>>> origin/auto/autonomy-17186719616
+echo "🎉 Quick merge completed!"
+echo "📊 Final status:"
+git status --short

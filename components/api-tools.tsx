@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-  Code
-  Database
-  Globe
-  Shield
-  Zap
-  Bot
-  BarChart3
-=======
-  Code, 
-  Database, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Bot, 
-  BarChart3, 
->>>>>>> origin/auto/autonomy-17186719616
   Lock,
   ArrowRight,
   CheckCircle,
@@ -67,15 +46,6 @@ export default function ApiToolsPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'DataSync API - Real-time Data Synchronization',
-<<<<<<< HEAD
-      description: 'Seamlessly sync data across multiple databasesapplicationsand cloud services in real-time.',
-      features: [
-        'Multi-database support (PostgreSQLMySQLMongoDB)',
-=======
-      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
-      features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)',
->>>>>>> origin/auto/autonomy-17186719616
         'Real-time change detection and propagation',
         'Conflict resolution and data validation',
         'Webhook support for custom integrations',
@@ -100,11 +70,6 @@ export default function ApiToolsPage() {
     {
       icon: <Globe className="w-8 h-8 text-white" />,
       title: 'GeoAPI - Advanced Geospatial Services',
-<<<<<<< HEAD
-      description: 'Comprehensive geolocationmappingand spatial analysis APIs for location-based applications.',
-=======
-      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Global geocoding and reverse geocoding',
         'Real-time traffic and routing optimization',
@@ -131,21 +96,11 @@ export default function ApiToolsPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'AuthGuard API - Enterprise Authentication',
-<<<<<<< HEAD
-      description: 'Securescalable authentication and authorization system with advanced security features.',
-=======
-      description: 'Secure, scalable authentication and authorization system with advanced security features.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Multi-factor authentication (MFA)',
         'OAuth 2.0 and OpenID Connect support',
         'Role-based access control (RBAC)',
         'Advanced threat detection and prevention',
-<<<<<<< HEAD
-        'Compliance with SOC2GDPRand HIPAA'
-=======
-        'Compliance with SOC2, GDPR, and HIPAA'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       pricing: {
         free: '1,000 users/month',
@@ -166,11 +121,6 @@ export default function ApiToolsPage() {
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'WebhookHub - Intelligent Webhook Management',
-<<<<<<< HEAD
-      description: 'Reliable webhook deliveryretry logicand event processing for modern applications.',
-=======
-      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Guaranteed webhook delivery with retry logic',
         'Event filtering and transformation',
@@ -197,11 +147,6 @@ export default function ApiToolsPage() {
     {
       icon: <Bot className="w-8 h-8 text-white" />,
       title: 'NLP API - Natural Language Processing',
-<<<<<<< HEAD
-      description: 'Advanced text analysisentiment detectionand language understanding capabilities.',
-=======
-      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Text classification and categorization',
         'Sentiment analysis and emotion detection',
@@ -233,11 +178,6 @@ export default function ApiToolsPage() {
         'Real-time data aggregation and analysis',
         'Custom dashboard creation and sharing',
         'Advanced filtering and segmentation',
-<<<<<<< HEAD
-        'Export capabilities (CSVJSONPDF)',
-=======
-        'Export capabilities (CSV, JSON, PDF)',
->>>>>>> origin/auto/autonomy-17186719616
         'Scheduled reports and alerts'
       ],
       pricing: {
@@ -259,11 +199,6 @@ export default function ApiToolsPage() {
     {
       icon: <Lock className="w-8 h-8 text-white" />,
       title: 'EncryptAPI - Data Encryption Services',
-<<<<<<< HEAD
-      description: 'Enterprise-grade encryptionhashingand cryptographic operations for secure applications.',
-=======
-      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'AES-256 encryption and decryption',
         'Secure key management and rotation',
@@ -289,13 +224,6 @@ export default function ApiToolsPage() {
     }
   ];
 
-<<<<<<< HEAD
-  const categories = [', 'All', 'Development', 'Data', 'Location', 'Security', 'Integration'AI/'ML', 'Analytics'];
-  const [selectedCategorysetSelectedCategory] = React.useState('All');
-=======
-  const categories = ['All', 'Development', 'Data', 'Location', 'Security', 'Integration', 'AI/ML', 'Analytics'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
->>>>>>> origin/auto/autonomy-17186719616
 
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
@@ -305,15 +233,6 @@ export default function ApiToolsPage() {
     <>
       <Head>
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
-<<<<<<< HEAD
-        <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronizationwe provide the building blocks you need." />
-        <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
-        <meta property="og:description" content="Powerful APIs and developer tools for modern applications. AIsecurityanalyticsand more." />
-=======
-        <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
-        <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
-        <meta property="og:description" content="Powerful APIs and developer tools for modern applications. AI, security, analytics, and more." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -331,11 +250,6 @@ export default function ApiToolsPage() {
             Powerful API Tools & Services
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-<<<<<<< HEAD
-            Build fasterscale betterand deliver more with our comprehensive collection of developer APIs. Each tool is designed for performancereliabilityand ease of integration.
-=======
-            Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -364,20 +278,10 @@ export default function ApiToolsPage() {
               {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentationSDKsand support.
-=======
-              {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {filteredTools.map((toolindex) => (
-=======
-            {filteredTools.map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
@@ -427,11 +331,6 @@ export default function ApiToolsPage() {
                     </div>
 
                     <ul className="space-y-2 mb-6">
-<<<<<<< HEAD
-                      {tool.features.slice(03).map((featureIndex) => (
-=======
-                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -495,11 +394,6 @@ export default function ApiToolsPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Comprehensive Documentation</h3>
               <p className="text-gray-400 mb-6">
-<<<<<<< HEAD
-                Detailed API referencescode examplesand integration guides for every service.
-=======
-                Detailed API references, code examples, and integration guides for every service.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <Button href="/docs" variant="outline" size="sm">
                 Explore Docs
@@ -532,10 +426,6 @@ export default function ApiToolsPage() {
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               </Button>
             </Card>
           </div>

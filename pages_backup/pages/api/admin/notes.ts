@@ -58,9 +58,7 @@ interface Note {
 
 const notesStore: Note[] = [];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     if (req.method === 'GET') {

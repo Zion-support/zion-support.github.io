@@ -41,7 +41,6 @@ AccordionItem.displayName = "AccordionItem"
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const AccordionTrigger = React.forwardRef<
@@ -106,7 +105,6 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

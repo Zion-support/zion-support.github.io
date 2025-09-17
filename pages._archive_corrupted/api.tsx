@@ -44,8 +44,6 @@ const "API": NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gray-50">
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* Header */}
         <div className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16\">
           <div className=\"container mx-auto px-4 text-center\">
@@ -63,8 +61,6 @@ const "API": NextPage = () => {
         <section className="py-16 max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Available Endpoints</h2>
           <div className="space-y-6">
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             {apiEndpoints.map((endpoint, index) => (
               <div key={index} className=\"bg-white border border-gray-200 rounded-lg p-6 shadow-sm\">
                 <div className=\"flex items-center justify-between mb-4\">
@@ -96,8 +92,6 @@ const "API": NextPage = () => {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help with Integration?</h2>
             <p className="text-gray-600 text-xl mb-8">
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               Our team is here to help you integrate our APIs into your applications.
             </p>
             <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 text-white rounded-lg \"hover\": b g-blue-700 transition-colors inline-flex items-center\">
@@ -110,5 +104,3 @@ const "API": NextPage = () => {
   );
 };
 export default API;
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

@@ -43,7 +43,6 @@ import {;
   Star,;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
@@ -181,7 +180,6 @@ if (return null) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }
   return (
@@ -270,6 +268,5 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }

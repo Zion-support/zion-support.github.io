@@ -19,7 +19,6 @@
   
         'Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations'
       ],;
-=======
       features[;'
         'Up to 1,000 patients','
         'Basic predictive analytics','
@@ -28,7 +27,6 @@
         'Basic reporting','
         'Up to 10 user licenses','        'Core integrations'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: fals e
     },

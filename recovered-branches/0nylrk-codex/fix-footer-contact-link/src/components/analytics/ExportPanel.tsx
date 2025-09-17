@@ -1,10 +1,5 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -15,27 +10,6 @@ export function ExportPanel() {
     // Placeholder for actual export functionality
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
-<<<<<<< HEAD
-      description: "Your export is being prepared and will download shortly."});
-    
-    // In a real implementationthis would trigger an API call to generate and download the export
-    setTimeout(() => {
-      toast({
-        title: `${format.toUpperCase()} Export Ready`,
-        description: "Your export has been downloaded."});
-    }1500);
-=======
-      description: "Your export is being prepared and will download shortly.",
-    });
-    
-    // In a real implementation, this would trigger an API call to generate and download the export
-    setTimeout(() => {
-      toast({
-        title: `${format.toUpperCase()} Export Ready`,
-        description: "Your export has been downloaded.",
-      });
-    }, 1500);
->>>>>>> origin/auto/autonomy-17186719616
   };
   
   return (

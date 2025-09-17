@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import type { GetServerSideProps, NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-import { BlogPost } from '@/utils/types/blog',
-import PageShareButtons from '@/components/blog/PageShareButtons',
-import { listPublishedPosts } from '@/utils/data/blogStore',
-import BlogCard from '@/components/blog/BlogCard',
-
-type Props = { topic: string, posts: BlogPost[] },
-=======
-import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { BlogPost } from '@/utils/types/blog';
-import PageShareButtons from '@/components/blog/PageShareButtons';
-import { listPublishedPosts } from '@/utils/data/blogStore';
-import BlogCard from '@/components/blog/BlogCard';
-
-type Props = { topic: string; posts: BlogPost[] };
->>>>>>> origin/auto/autonomy-17186719616
 
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
@@ -53,26 +32,3 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const topic = String(ctx.params?.topic || ''),
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic)),
-  return { props: { topic, posts } },
-},
-
-export default TopicPage,
-=======
-  );
-};
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const topic = String(ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-  return { props: { topic, posts } };
-};
-
-export default TopicPage;
->>>>>>> origin/auto/autonomy-17186719616

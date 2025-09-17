@@ -1,5 +1,6 @@
-import React from 'react';
-import FeatureCard from './components/FeatureCard';
+import React from 'react'
+import Link from 'next/link'
+import FeatureCard from './components/FeatureCard'
 
 export default function HomePage() {
   const features = [
@@ -75,49 +76,14 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="hero-gradient absolute inset-0 -z-10"></div>
-          
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text">Launch Sovereign</span>
-              <br />
-              <span className="text-white">AI-Powered Digital Economies</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
-              Built for the future of decentralized business.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-                🚀 Launch Your Economy
-              </a>
-              <a href="/admin/instances" className="btn-secondary hover-lift">
-                📊 View Instances
-              </a>
-              <a href="/news" className="btn-secondary hover-lift">
-                📰 See what's new in 2025
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Promo Banner - New Articles */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
-          <a
-            href="/blog/agent-safety-red-teaming-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
-          >
+      {/* Promo: Latest Article */}
+      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -150,6 +116,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+              <br />
+              <span className="text-white">AI-Powered Digital Economies</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+                🚀 Launch Your Economy
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift">
+                📊 View Instances
+              </a>
+              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
+                📰 New: Agent Safety Red Teaming 2025
+              </a>
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift">
+                📰 New: Agentic Supply Chains 2025
+              </a>
+              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift">
+                📰 New: Edge AI Compliance 2025
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -164,14 +165,15 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
+              <div key={index}>
+                <FeatureCard
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  features={feature.features}
+                  gradient={feature.gradient}
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -252,6 +254,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

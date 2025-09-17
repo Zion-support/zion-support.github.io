@@ -205,7 +205,6 @@ class AutomationRunner {
     if (!status) return;
 
     console.log('\n📊 Git Status Summary:');
-    console.log('=====================');
 
     if (status.staged.length > 0) {
       console.log(`\n📦 Staged files (${status.staged.length}):`);

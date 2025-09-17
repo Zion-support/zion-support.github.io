@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -41,17 +40,17 @@ import {
   Lock
 } from 'lucide-react';
 
-export function Header() {
+function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState('');
 	const location = useLocation();
 
 	const quickActions = [
 		{
-			name: 'Latest Insights',
-			href: '/blog/latest',
+			name: 'New: Edge Agents Guide',
+			href: '/blog/ai-2026-edge-agents-production-guide',
 			icon: Sparkles,
-			description: 'Read our newest research',
+			description: 'Fresh: production blueprint',
 			featured: true,
 			color: 'from-amber-500 to-orange-600'
 		},
@@ -218,4 +217,7 @@ export function Header() {
 		</header>
 	);
 }
+
+export { Header };
+export default Header;
 

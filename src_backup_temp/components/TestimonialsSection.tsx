@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {
-import { motion, AnimatePresence  } from 'framer-motion';
+
 export default function Page(props: any) {
 ,
   {
@@ -30,7 +30,7 @@ export default function Page(props: any) {
     company: "Healthcare Innovations",;"
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {;
-import { motion, AnimatePresence  } from 'framer-motion';
+
 ;
 export default function Page(props: any) {;
 ,;
@@ -59,7 +59,6 @@ export default function Page(props: any) {;
     verified: tru e;
   }";
     company: "Healthcare Innovations",;";
-=======
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;"
     industry: "Healthcare",;"
@@ -281,7 +280,6 @@ export const TestimonialsSection: React.FC = props {
                       ? 'bg-cyan-400 scale-125'';
                       : 'bg-white/30 hover: b g-white/50'`;
                   }`}`;
-=======
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'
@@ -331,7 +329,6 @@ export const TestimonialsSection: React.FC = props {
       </div>;
     </section>;
   )};";
-=======
             </div>
             <button
               onClick={nextTestimonial}"
@@ -373,7 +370,6 @@ export const TestimonialsSection: React.FC = props {
             </button>;
           </div>;
         </div>;
-=======
         {/* Trust Indicators */}
         <motion.div"
           className="mt-20 text-center"
@@ -418,7 +414,6 @@ export const TestimonialsSection: React.FC = props {
 </any>;
 </typeof>;
 </typeof>;
-=======
 </any>
 </typeof>
 </typeof>

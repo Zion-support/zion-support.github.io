@@ -26,7 +26,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
   fallback = <div>Loading...</div>,;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;

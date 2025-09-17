@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react',
-
-export default function CodeQualityCheckerPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResults, setAnalysisResults] = useState(null),
-  const [codeInput, setCodeInput] = useState(''),
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-
-export default function CodeQualityCheckerPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [codeInput, setCodeInput] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -28,64 +5,21 @@ export default function CodeQualityCheckerPage() {
       title: 'Multi-Language Support',
       description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-<<<<<<< HEAD
-      gradient: 'from-teal-400 to-cyan-500'},
-=======
-      gradient: 'from-teal-400 to-cyan-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <CheckCircle className="w-8 h-8 text-white" />,
       title: 'Code Quality Metrics',
       description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-<<<<<<< HEAD
-      gradient: 'from-green-400 to-emerald-500'},
-=======
-      gradient: 'from-green-400 to-emerald-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Real-Time Analysis',
       description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-<<<<<<< HEAD
-      gradient: 'from-orange-400 to-red-500'},
-=======
-      gradient: 'from-orange-400 to-red-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Scanning',
       description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-<<<<<<< HEAD
-      gradient: 'from-purple-400 to-indigo-500'}],
-
-  const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checks', 'React best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hints', 'Security scanning'] },
-    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyle', 'SonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysis', 'Memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vet', 'Performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS Fixer', 'Security analysis'] }
-  ],
-=======
-      gradient: 'from-purple-400 to-indigo-500',
-    },
-  ];
-
-  const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rules', 'TypeScript checks', 'React best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 compliance', 'Type hints', 'Security scanning'] },
-    { name: 'Java', icon: '☕', features: ['PMD rules', 'Checkstyle', 'SonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci-lint', 'Go vet', 'Performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'] }
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const pricing = [
     {
@@ -94,18 +28,6 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Perfect for individual developers and small projects',
       features: [
-<<<<<<< HEAD
-        '100 code analyses/monthBasic quality metrics',
-        '5 programming languagesEmail support',
-        'Basic reportingCommunity rules'
-=======
-        '100 code analyses/month',
-        'Basic quality metrics',
-        '5 programming languages',
-        'Email support',
-        'Basic reporting',
-        'Community rules'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false
     },
@@ -115,21 +37,6 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Ideal for development teams and growing companies',
       features: [
-<<<<<<< HEAD
-        '500 code analyses/monthAdvanced quality metrics',
-        'All programming languagesPriority support',
-        'Advanced reportingCustom rules',
-        'Team collaborationAPI access'
-=======
-        '500 code analyses/month',
-        'Advanced quality metrics',
-        'All programming languages',
-        'Priority support',
-        'Advanced reporting',
-        'Custom rules',
-        'Team collaboration',
-        'API access'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true
     },
@@ -139,39 +46,6 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'For large organizations with complex codebases',
       features: [
-<<<<<<< HEAD
-        'Unlimited analysesEnterprise metrics',
-        'Custom language support24/7 dedicated support',
-        'Custom reportingWhite-label options',
-        'On-premise deploymentCustom integrations'
-      ],
-      popular: false
-    }
-  ],
-
-  const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return,
-    
-    setIsAnalyzing(true),
-=======
-        'Unlimited analyses',
-        'Enterprise metrics',
-        'Custom language support',
-        '24/7 dedicated support',
-        'Custom reporting',
-        'White-label options',
-        'On-premise deployment',
-        'Custom integrations'
-      ],
-      popular: false
-    }
-  ];
-
-  const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return;
-    
-    setIsAnalyzing(true);
->>>>>>> origin/auto/autonomy-17186719616
     // Simulate code analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -189,25 +63,6 @@ export default function CodeQualityCheckerPage() {
           securityScore: '92%'
         },
         recommendations: [
-<<<<<<< HEAD
-          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functions',
-          'Add proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
-        ]
-      }),
-      setIsAnalyzing(false),
-    }, 3000),
-  },
-=======
-          'Use const for immutable variables to improve code clarity',
-          'Break down large functions into smaller, more focused functions',
-          'Add proper error handling for better robustness',
-          'Consider adding JSDoc comments for better documentation'
-        ]
-      });
-      setIsAnalyzing(false);
-    }, 3000);
-  };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -531,11 +386,6 @@ export default function CodeQualityCheckerPage() {
           <p className="text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of developers using our code quality checker to write better, safer, and more maintainable code.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
-=======
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
             <Button
               href="/contact"
               size="lg"
@@ -556,9 +406,4 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

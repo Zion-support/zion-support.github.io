@@ -2,11 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { MailSend } from "lucide-react";
-=======
-import { Mail, Send } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
@@ -16,17 +11,6 @@ interface ProfileContactProps {
   profileType: 'service' | 'talent';
 }
 
-<<<<<<< HEAD
-export function ProfileContact({ emailprofileNameprofileType }: ProfileContactProps) {
-  const [messagesetMessage] = useState("");
-  const [subjectsetSubject] = useState("");
-  const [isSendingsetIsSending] = useState(false);
-=======
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isSending, setIsSending] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,14 +23,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       setSubject("");
       toast({
         title: "Message Sent",
-<<<<<<< HEAD
-        description: `Your message has been sent to ${profileName}.`});
-    }1000);
-=======
-        description: `Your message has been sent to ${profileName}.`,
-      });
-    }, 1000);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (

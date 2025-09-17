@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React{ useState } from 'react';
-
-export default function ElasticSearchSearch() {
-  const [querysetQuery] = useState('');
-
-  const search = () => {
-    // Placeholder for actual ElasticSearch request
-    console.log('ElasticSearch query'query);
-=======
-import React, { useState } from 'react';
-
-export default function ElasticSearchSearch() {
-  const [query, setQuery] = useState('');
-
-  const search = () => {
-    // Placeholder for actual ElasticSearch request
-    console.log('ElasticSearch query', query);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (

@@ -3,14 +3,13 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { motion } from "framer-motion";
+
 
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
-import { motion  } from './framer-motion';
+
 import {
-=======
 import {
 
 
@@ -27,7 +26,6 @@ import {
   Code,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -37,7 +35,6 @@ import {
 
 
 
-=======
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -47,7 +44,6 @@ import {
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -108,7 +104,6 @@ import {
     github: "https://github.com/davidkim"
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
-=======
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / klebersantos",
     twitter: "https://twitter.com / klebersantos",
@@ -173,7 +168,6 @@ import {
     github: "https://github.com / davidkim",
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
     image: "/api / placeholder / 300 / 300",
@@ -183,12 +177,8 @@ import {
     expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
 
   },
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-=======
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -217,8 +207,6 @@ import {
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 
   }
->>>>>>> origin/automation-improvements-final
-=======
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -231,7 +219,6 @@ import {
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
 
 
-=======
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -260,9 +247,7 @@ import {
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -322,7 +307,6 @@ const stats = [
   { number: "15+", label: "Years Experience" }
   { number: "25+", label: "Countries Represented" }
   { number: "95%", label: "Employee Satisfaction" }
-=======
 import {;
   ArrowRight,;
   Phone,;
@@ -425,7 +409,6 @@ const teamMembers = [;
 ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -670,7 +653,6 @@ const teamMembers = [;
               href="/contact"
 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-=======
 ;
 const stats = [;
   { number: "65+", label: "Team Members" },
@@ -928,8 +910,6 @@ function TeamPage() {
 
 
 
-=======
-=======
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -944,8 +924,6 @@ function TeamPage() {
       </div>
     </>
 
->>>>>>> origin/automation-improvements-final
-=======
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
               Get Free Consultation;
             </Link>;
@@ -964,7 +942,6 @@ function TeamPage() {
             <div className="flex items-center justify-center">;
               <MapPin className="w-6 h-6 mr-2" />;
               <span>364 E Main St STE 1008, Middletown DE 19709</span>;
-=======
       {/* Contact CTA Section */}
       <section className="py - 20 bg - gray - 50">;
         <div className="container mx - auto px - 4 text - center">;
@@ -996,7 +973,6 @@ function TeamPage() {
             <div className="flex items - center justify - center">;
               <MapPin className="w - 6 h - 6 mr - 2" />;
               <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -1043,12 +1019,9 @@ export default function TeamPage() {;
   return (
 
 
-=======
 
-=======
 
     <>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
@@ -1064,10 +1037,6 @@ export default function TeamPage() {;
 
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </>;
   );
   return (
@@ -1087,7 +1056,6 @@ export default function TeamPage() {;
   );
 
 }
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
@@ -1102,12 +1070,10 @@ export default function TeamPage() {
 	)
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Layout>);
 }
 import Head from './next / head';
-import { motion  } from './framer-motion';
+
 import { Brain, Cloud, Shield, Users  } from './lucide-react';
 ;
 const team_members = [;
@@ -1179,13 +1145,9 @@ function TeamPage() {
     </>);
 ;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

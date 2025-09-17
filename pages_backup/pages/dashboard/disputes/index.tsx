@@ -87,7 +87,6 @@ export default function AdminDisputesDashboard() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
@@ -166,8 +165,6 @@ export default function AdminDisputesDashboard() {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <EnhancedLayout>
@@ -310,7 +307,6 @@ if (return list) {
                     </Link>                  </td>;
                 </tr>))}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
             </tbody>;
           </table>;
@@ -324,11 +320,8 @@ if (return list) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

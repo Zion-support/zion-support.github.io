@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseMemouseState } from "react";
-=======
-import React, { useEffect, useMemo, useState } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import Badges from "./Badges";
 
 type Tx = {
@@ -25,28 +19,10 @@ function getUserId(): string {
   const fromStorage = window.localStorage.getItem("zion_user_id");
   if (fromStorage) return fromStorage;
   const generated = "demo-user";
-<<<<<<< HEAD
-  window.localStorage.setItem("zion_user_id"generated);
-=======
-  window.localStorage.setItem("zion_user_id", generated);
->>>>>>> origin/auto/autonomy-17186719616
   return generated;
 }
 
 export default function WalletPanel() {
-<<<<<<< HEAD
-  const [summarysetSummary] = useState<Summary | null>(null);
-  const [tabsetTab] = useState<"earnings" | "spending" | "redeem">("earnings");
-  const [ethAddressetEthAddress] = useState<string | null>(null);
-
-  const userId = useMemo(() => getUserId()[]);
-=======
-  const [summary, setSummary] = useState<Summary | null>(null);
-  const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
-  const [ethAddress, setEthAddress] = useState<string | null>(null);
-
-  const userId = useMemo(() => getUserId(), []);
->>>>>>> origin/auto/autonomy-17186719616
 
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
@@ -56,26 +32,10 @@ export default function WalletPanel() {
 
   useEffect(() => {
     refresh();
-<<<<<<< HEAD
-  }[]);
-=======
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   const balance = summary?.wallet.balance ?? 0;
   const symbol = summary?.config.symbol ?? "ZION$";
   const earnings = (summary?.transactions || []).filter((t) =>
-<<<<<<< HEAD
-    ["earn"issue"].includes(t.type)
-  );
-  const spending = (summary?.transactions || []).filter((t) =>
-    ["burn"revoke"redeem"].includes(t.type)
-=======
-    ["earn", "issue"].includes(t.type)
-  );
-  const spending = (summary?.transactions || []).filter((t) =>
-    ["burn", "revoke", "redeem"].includes(t.type)
->>>>>>> origin/auto/autonomy-17186719616
   );
 
   const nextBadgeThreshold = useMemo(() => {
@@ -84,15 +44,6 @@ export default function WalletPanel() {
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
     return balance;
-<<<<<<< HEAD
-  }[balance]);
-
-  const progress = Math.min(100Math.floor((balance / nextBadgeThreshold) * 100));
-=======
-  }, [balance]);
-
-  const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
->>>>>>> origin/auto/autonomy-17186719616
 
   async function connectWallet() {
     if (typeof window === "undefined") return;
@@ -111,18 +62,6 @@ export default function WalletPanel() {
 
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return;
-<<<<<<< HEAD
-    const res = await fetch("/api/wallet/redeem"{
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userIdamount })});
-=======
-    const res = await fetch("/api/wallet/redeem", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, amount }),
-    });
->>>>>>> origin/auto/autonomy-17186719616
     const data = await res.json();
     if (data.error) {
       alert(data.error);

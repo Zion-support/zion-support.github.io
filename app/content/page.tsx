@@ -13,6 +13,133 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Added Sept 2025: New content promotions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Routing</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-governed-model-routing" className="hover:underline">
+              AI 2026: Governed Model Routing
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Align budget, latency, and quality with policy-as-code routing and live evaluations.
+          </p>
+          <Link href="/content/ai-2026-governed-model-routing" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Runbooks</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-rollback-runbooks" className="hover:underline">
+              AI 2026: Agent Rollback Runbooks
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Scorecard-driven rollback patterns to keep autonomy safe and auditable in production.
+          </p>
+          <Link href="/content/ai-2026-agent-rollback-runbooks" className="text-rose-700 font-semibold">Open Runbooks →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-bundles-blueprint" className="hover:underline">
+              AI 2026: Evidence Bundles Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Package traces, evals, and policy events into verifiable bundles for audits and reviews.
+          </p>
+          <Link href="/content/ai-2026-evidence-bundles-blueprint" className="text-emerald-700 font-semibold">Read Blueprint →</Link>
+        </article>
+        {/* New: Sept 2025 additions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Quickstart</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="hover:underline">
+              Evidence‑Driven Operations (Quickstart)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation‑first delivery with policy gates, incident runbooks, and auditable evidence.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="text-purple-700 font-semibold">Start Here →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blog</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-safe-rollouts-in-production" className="hover:underline">
+              Safe Rollouts in Production
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Progressive exposure with eval gates, observability, and automated rollbacks.
+          </p>
+          <Link href="/blog/ai-2026-safe-rollouts-in-production" className="text-indigo-700 font-semibold">Read Article →</Link>
+        </article>
+        {/* New items added September 2025 */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="hover:underline">
+              AI 2026: Trusted Autonomy Field Manual
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical controls to ship safe, cost-aware agent systems in production.
+          </p>
+          <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="text-fuchsia-700 font-semibold">Read Manual →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Incident Response</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-incident-response-runbook" className="hover:underline">
+              AI 2026: Agent Incident Response Runbook
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Detect, triage, contain, and learn from agent incidents with evidence-first playbooks.
+          </p>
+          <Link href="/content/ai-2026-agent-incident-response-runbook" className="text-rose-700 font-semibold">Open Runbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-posture-management" className="hover:underline">
+              AI 2026: Agent Posture Management — Practical Guide
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Continuously assess and harden agents across identity, tools, data, and runtime with evaluation gates and policy-as-code.
+          </p>
+          <Link href="/content/ai-2026-agent-posture-management" className="text-fuchsia-700 font-semibold">Read Guide →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
+              Secure Agentic Data Pipelines (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Zero-trust, policy-as-code data flows with lineage, ABAC, and continuous verification.
+          </p>
+          <Link href="/content/secure-agentic-data-pipelines-2026" className="text-emerald-600 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Reliability</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/responsible-ai-evaluation-ops-2026" className="hover:underline">
+              Responsible AI Evaluation Ops (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Metrics, scenario harnesses, and CI/CD gates for trustworthy AI delivery.
+          </p>
+          <Link href="/content/responsible-ai-evaluation-ops-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -26,7 +153,33 @@ export default function ContentIndexPage() {
           <Link href="/content/ai-2026-evidence-driven-operations" className="text-indigo-700 font-semibold">Read Guide →</Link>
         </article>
         <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-red-700 mb-2">Security</div>
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="hover:underline">
+              Responsible AI Operations Blueprint (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Implement policy-as-code, evals, and incident playbooks to ship reliable AI at scale.
+          </p>
+          <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="hover:underline">
+              Foundational Models Cost Optimization (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce AI infra costs 30–70% with routing, caching, and distillation strategies.
+          </p>
+          <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="text-emerald-700 font-semibold">Read Playbook →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="hover:underline">
               AI 2026: Agent Red Teaming Blueprint
@@ -63,6 +216,57 @@ export default function ContentIndexPage() {
           <Link href="/content/ai-2026-operational-guardrails" className="text-rose-700 font-semibold">Read Guide →</Link>
         </article>
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="hover:underline">
+              Responsible AI Operations Blueprint (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Implement policy-as-code, evals, and incident playbooks to ship reliable AI at scale.
+          </p>
+          <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="hover:underline">
+              Foundational Models Cost Optimization (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce AI infra costs 30–70% with routing, caching, and distillation strategies.
+          </p>
+          <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="text-emerald-700 font-semibold">Read Playbook →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-autonomous-cost-optimization-blueprint" className="hover:underline">
+              Autonomous Cost Optimization 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce cloud and AI spend with agentic automation and policy-as-code guardrails.
+          </p>
+          <Link href="/content/ai-2026-autonomous-cost-optimization-blueprint" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-blue-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agentic-sales-acceleration-playbook" className="hover:underline">
+              Agentic Sales Acceleration 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Deploy revenue agents for enrichment, outreach, and scheduling with compliance.
+          </p>
+          <Link href="/content/ai-2026-agentic-sales-acceleration-playbook" className="text-blue-600 font-semibold">Read Playbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
@@ -87,6 +291,7 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/ai-agents-roi-playbook-2026" className="text-orange-600 font-semibold">Read Playbook →</Link>
         </article>
+
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -155,79 +360,30 @@ export default function ContentIndexPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/genai-governance-2026" className="hover:underline">
-              GenAI Governance 2026
+            <Link href="/blog/ai-2026-autonomous-operations-framework" className="hover:underline">
+              AI 2026: Autonomous Operations Framework
             </Link>
           </h2>
           <p className="text-gray-600 mb-4">
-            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
+            Build self-healing, self-optimizing systems that reduce manual intervention by 90% and achieve 99.9% uptime.
           </p>
-          <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+          <Link href="/blog/ai-2026-autonomous-operations-framework" className="text-indigo-700 font-semibold">Read Framework →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Revolution</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/ai-2026-evals-maturity-model" className="hover:underline">
-              AI 2026: LLM Evals Maturity Model
+            <Link href="/blog/ai-2026-predictive-maintenance-revolution" className="hover:underline">
+              AI 2026: Predictive Maintenance Revolution
             </Link>
           </h2>
           <p className="text-gray-600 mb-4">
-            A staged path from ad-hoc tests to continuous, governance-aligned evaluations.
+            Revolutionize maintenance operations with AI-powered analytics that reduce downtime by 85% and costs by 60%.
           </p>
-          <Link href="/content/ai-2026-evals-maturity-model" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+          <Link href="/blog/ai-2026-predictive-maintenance-revolution" className="text-emerald-700 font-semibold">Read Revolution →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-emerald-700 mb-2">Safety</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/ai-2026-agent-safety-certification" className="hover:underline">
-              AI 2026: Agent Safety Certification
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Certification levels, audit criteria, and runtime compliance for enterprise agents.
-          </p>
-          <Link href="/content/ai-2026-agent-safety-certification" className="text-emerald-700 font-semibold">Read Guide →</Link>
-        </article>
-
-        <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-purple-700 mb-2">Governance</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/ai-2026-agent-governance-policy-as-code" className="hover:underline">
-              AI 2026: Agent Governance Policy-as-Code
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Codify controls and attestations for automated, continuous compliance.
-          </p>
-          <Link href="/content/ai-2026-agent-governance-policy-as-code" className="text-purple-600 font-semibold">Read Article →</Link>
-        </article>
-
-        <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-emerald-700 mb-2">Framework</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/ai-2026-agent-risk-management-framework" className="hover:underline">
-              AI 2026: Agent Risk Management Framework
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Threat models, layered controls, and runtime guardrails for enterprise agents.
-          </p>
-          <Link href="/content/ai-2026-agent-risk-management-framework" className="text-emerald-700 font-semibold">Read Framework →</Link>
-        </article>
-
-        <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/agent-observability-2026" className="hover:underline">
-              Agent Observability 2026
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Build an end-to-end observability stack for AI agents with metrics, tracing, and evals.
-          </p>
-          <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
@@ -241,6 +397,23 @@ export default function ContentIndexPage() {
             Practical governance: policy-as-code, evals, monitoring, and risk workflows for trustworthy AI.
           </p>
           <Link href="/content/enterprise-ai-governance-2026" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/agent-observability-2026" className="hover:underline">
+              Agent Observability 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Build an end-to-end observability stack for AI agents with metrics, tracing, and evals.
+          </p>
+          <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
         </article>
       </div>
     </main>

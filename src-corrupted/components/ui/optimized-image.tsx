@@ -10,7 +10,7 @@ import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {;
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next / image';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib / utils';
 import { image_optimization } from '@/utils / performance';
@@ -304,7 +304,7 @@ if ( {) {
 
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
-import { motion, AnimatePresence } from 'framer-motion',;
+
 import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { imageOptimization } from '@/utils/performance',;
@@ -512,7 +512,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -619,7 +618,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             {/* Loading progress */}
@@ -648,7 +646,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           >
@@ -768,8 +765,6 @@ interface ImageGalleryProps {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

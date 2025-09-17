@@ -71,8 +71,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
         <Trash2 className="h-3 w-3" />;
       </Button>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
     </Badge>;
   );

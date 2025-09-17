@@ -33,42 +33,31 @@ BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
 resolve_conflicts() {
     local file="$1"
     local branch="$2"
-    
+
     echo "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-<<<<<<< HEAD
-    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # Remove conflict markers and try to keep both versions
-            sed -i '/        fi
-=======
-    if grep -q "<<<<<<< HEAD" "$file"; then
+
+    # Detect git conflict markers
+    if grep -q "<<<<<<< " "$file"; then
         echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
+
+        # Backup conflicted file
         cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
+
+        # Prefer main for critical files; otherwise strip markers keeping 'theirs'
         if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            echo "📦 package file detected, preferring main version"
+            git checkout --ours -- "$file" || true
+            git add "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            echo "⚙️  config file detected, preferring main version"
+            git checkout --ours -- "$file" || true
+            git add "$file"
         else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            echo "📝 regular file, preferring incoming changes"
+            git checkout --theirs -- "$file" || true
+            git add "$file"
         fi
->>>>>>> origin/auto/autonomy-17186719616
-        
+
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
@@ -187,9 +176,11 @@ process_batch() {
         echo "---"
     done
     
-    # Push changes after each batch
+    # Sync and push changes after each batch
+    echo "🔄 Syncing with origin/main before push..."
+    git pull --rebase origin main || true
     echo "💾 Pushing batch changes to remote..."
-    git push origin main
+    git push origin main || true
     
     echo "✅ Batch $CURRENT_BATCH completed: $batch_success successful, $batch_failures failed"
     echo "---"

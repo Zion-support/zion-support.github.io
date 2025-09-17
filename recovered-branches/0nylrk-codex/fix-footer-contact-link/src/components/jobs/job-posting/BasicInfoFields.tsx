@@ -1,46 +1,13 @@
-<<<<<<< HEAD
-import React{ useState } from "react";
-import { Control } from "react-hook-form";
-import { 
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-=======
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
-import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
->>>>>>> origin/auto/autonomy-17186719616
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
-<<<<<<< HEAD
-import { CardContent } from "@/components/ui/card";
-=======
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface BasicInfoFieldsProps {
   control: Control<any>;
 }
 
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-<<<<<<< HEAD
-  const [minBudgetsetMinBudget] = useState<string>("");
-  const [maxBudgetsetMaxBudget] = useState<string>("");
-
-  const handleSuggestionApplied = (min: numbermax: number) => {
-=======
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-
-  const handleSuggestionApplied = (min: number, max: number) => {
->>>>>>> origin/auto/autonomy-17186719616
     setMinBudget(min.toString());
     setMaxBudget(max.toString());
   };
@@ -105,11 +72,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         <FormField
           control={control}
           name="budgetMin"
-<<<<<<< HEAD
-          render={({ field: { onChange...rest } }) => (
-=======
-          render={({ field: { onChange, ...rest } }) => (
->>>>>>> origin/auto/autonomy-17186719616
             <FormItem>
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
@@ -132,11 +94,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         <FormField
           control={control}
           name="budgetMax"
-<<<<<<< HEAD
-          render={({ field: { onChange...rest } }) => (
-=======
-          render={({ field: { onChange, ...rest } }) => (
->>>>>>> origin/auto/autonomy-17186719616
             <FormItem>
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
@@ -168,10 +125,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         </CardContent>
       </Card>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       <FormField
         control={control}
         name="location"
@@ -179,11 +132,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-<<<<<<< HEAD
-              <Input placeholder="e.g. RemoteSan Franciscoetc." {...field} />
-=======
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
->>>>>>> origin/auto/autonomy-17186719616
             </FormControl>
             <FormMessage />
           </FormItem>

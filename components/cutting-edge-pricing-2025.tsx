@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  CheckZapShieldBrainAtomTargetRocketStarTrendingUpAwardUsersArrowRightExternalLinkPhoneMailMapPin
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
@@ -97,68 +83,29 @@ const serviceCategories = [
     name: 'AI & Consciousness Services',
     icon: <Brain className="w-8 h-8" />,
     color: 'from-cyan-500 to-blue-500',
-<<<<<<< HEAD
-    services: cuttingEdgeAIServices2025.slice(06),
-=======
-    services: cuttingEdgeAIServices2025.slice(0, 6),
->>>>>>> origin/auto/autonomy-17186719616
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
   },
   {
     name: 'Quantum & Emerging Tech',
     icon: <Atom className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500',
-<<<<<<< HEAD
-    services: cuttingEdgeQuantumServices2025.slice(06),
-=======
-    services: cuttingEdgeQuantumServices2025.slice(0, 6),
->>>>>>> origin/auto/autonomy-17186719616
     description: 'Breakthrough quantum computing and space technology solutions'
   },
   {
     name: 'Enterprise IT Solutions',
     icon: <Shield className="w-8 h-8" />,
     color: 'from-blue-500 to-cyan-500',
-<<<<<<< HEAD
-    services: cuttingEdgeEnterpriseITServices2025.slice(06),
-=======
-    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6),
->>>>>>> origin/auto/autonomy-17186719616
     description: 'Advanced enterprise infrastructure and security solutions'
   },
   {
     name: 'Micro SAAS Solutions',
     icon: <Rocket className="w-8 h-8" />,
     color: 'from-teal-500 to-emerald-500',
-<<<<<<< HEAD
-    services: cuttingEdgeMicroSaasServices2025.slice(06),
-=======
-    services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
->>>>>>> origin/auto/autonomy-17186719616
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
 
 const stats = [
-<<<<<<< HEAD
-  { number: '25+'label: 'Cutting-Edge 'Services', 'icon: Starcolor: 'text-cyan-400' },
-  { number: '$500B+'label: 'Market 'Coverage', 'icon: TrendingUpcolor: 'text-purple-400' },
-  { number: '99.9%'label: 'Success 'Rate', 'icon: Awardcolor: 'text-green-400' },
-  { number: '24/7'label: 'Expert 'Support', 'icon: Userscolor: 'text-pink-400' }
-];
-
-export default function CuttingEdgePricing2025() {
-  const [selectedCategorysetSelectedCategory] = useState('all');
-=======
-  { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
-  { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
-  { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-];
-
-export default function CuttingEdgePricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> origin/auto/autonomy-17186719616
 
   const allServices = [
     ...cuttingEdgeAIServices2025,
@@ -182,11 +129,6 @@ export default function CuttingEdgePricing2025() {
   };
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { y: 20opacity: 0 },
-=======
-    hidden: { y: 20, opacity: 0 },
->>>>>>> origin/auto/autonomy-17186719616
     visible: {
       y: 0,
       opacity: 1,
@@ -200,15 +142,6 @@ export default function CuttingEdgePricing2025() {
     <>
       <Head>
         <title>Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions</title>
-<<<<<<< HEAD
-        <meta name="description" content="Discover competitive pricing for our revolutionary cutting-edge services including AI consciousnessquantum computingspace miningand advanced enterprise solutions." />
-        <meta name="keywords" content="cutting-edge pricingAI services pricingquantum computing pricingenterprise IT pricingmicro SAAS pricing" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-=======
-        <meta name="description" content="Discover competitive pricing for our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions." />
-        <meta name="keywords" content="cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -225,15 +158,6 @@ export default function CuttingEdgePricing2025() {
             >
               <motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.9 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 1delay: 0.2 }}
-=======
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Cutting-Edge
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
@@ -245,11 +169,6 @@ export default function CuttingEdgePricing2025() {
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-=======
-                transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
                 a competitive advantage while maintaining affordability and value.
@@ -260,15 +179,6 @@ export default function CuttingEdgePricing2025() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.6 }}
-              >
-                {stats.map((statindex) => (
-=======
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                {stats.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -307,25 +217,10 @@ export default function CuttingEdgePricing2025() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-              {pricingTiers.map((tierindex) => (
-=======
-              {pricingTiers.map((tier, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative group ${
-
-=======
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative group ${
->>>>>>> origin/auto/autonomy-17186719616
                     tier.popular ? 'scale-105' : ''
                   }`}
                 >
@@ -353,11 +248,6 @@ export default function CuttingEdgePricing2025() {
                     </div>
 
                     <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                      {tier.features.map((featureIndex) => (
-=======
-                      {tier.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <li key={featureIndex} className="flex items-start">
                           <Check className="w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0" />
                           <span className="text-white/80">{feature}</span>
@@ -440,11 +330,6 @@ export default function CuttingEdgePricing2025() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-<<<<<<< HEAD
-              {filteredServices.map((serviceindex) => (
-=======
-              {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -469,11 +354,6 @@ export default function CuttingEdgePricing2025() {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                      {service.tags.slice(03).map((tagIndex) => (
-=======
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"

@@ -1,14 +1,5 @@
 
 import { Certification } from '@/types/resume';
-<<<<<<< HEAD
-import { CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-EditTrash2
-=======
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { format } from 'date-fns';
 
 interface CertificationsListProps {
@@ -17,11 +8,6 @@ interface CertificationsListProps {
   onDelete: (id: string) => void;
 }
 
-<<<<<<< HEAD
-export function CertificationsList({ certificationsonEditonDelete }: CertificationsListProps) {
-=======
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
->>>>>>> origin/auto/autonomy-17186719616
   if (certifications.length === 0) {
     return null;
   }
@@ -39,19 +25,6 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <p className="text-xs text-muted-foreground mt-1">
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
-<<<<<<< HEAD
-                    : format(cert.issue_date'MMM yyyy')) : 'N/A'}
-                  {cert.expiration_date && (
-                    <> · Expires: {typeof cert.expiration_date === 'string' 
-                      ? cert.expiration_date 
-                      : format(cert.expiration_date'MMM yyyy')}
-=======
-                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
-                  {cert.expiration_date && (
-                    <> · Expires: {typeof cert.expiration_date === 'string' 
-                      ? cert.expiration_date 
-                      : format(cert.expiration_date, 'MMM yyyy')}
->>>>>>> origin/auto/autonomy-17186719616
                     </>
                   )}
                 </p>

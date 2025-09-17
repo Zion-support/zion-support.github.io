@@ -51,7 +51,6 @@ import Revolutionary2026UltimateHero from '../components / sections / Revolution
 import Revolutionary2026UltimateServicesShowcase from '../components / sections / Revolutionary2026UltimateServicesShowcase';
 import {Phone, Mail} from 'lucide-react';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         <meta
           name='description'
@@ -241,7 +240,6 @@ function Revolutionary2026ServicesPage() {
               logo: 'https://ziontechgroup && ziontechgroup.com/logo && logo.png',
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               description:
                 'Revolutionary AI, quantum computing, and emerging technology services for 2026'
@@ -344,7 +342,6 @@ function Revolutionary2026ServicesPage() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -452,12 +449,8 @@ function Revolutionary2026ServicesPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   Ready to Experience the Future?
@@ -536,12 +529,9 @@ function Revolutionary2026ServicesPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

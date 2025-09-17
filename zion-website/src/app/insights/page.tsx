@@ -10,6 +10,14 @@ const articles = [
     date: '2025-09-10',
   },
   {
+    title: 'Measuring Agentic ROI',
+    description:
+      'A practical framework to quantify value and align cost with outcomes for multi-agent systems.',
+    href: '/insights/measuring-agentic-roi',
+    tag: 'Framework',
+    date: '2025-09-15',
+  },
+  {
     title: 'Designing Trustworthy AI Systems',
     description:
       'Frameworks and practices for security, governance, and human-in-the-loop control in production AI.',
@@ -24,6 +32,14 @@ const articles = [
     href: '/insights/scaling-genai-platforms',
     tag: 'Playbook',
     date: '2025-07-30',
+  },
+  {
+    title: 'Autonomous Experimentation Playbook (2026)',
+    description:
+      'How to run continuous, policy-safe experiments with eval gates and auto-rollback.',
+    href: '/blog/ai-2026-autonomous-experimentation-playbook',
+    tag: 'Playbook',
+    date: '2025-09-15',
   },
 ]
 

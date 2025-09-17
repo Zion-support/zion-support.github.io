@@ -1,199 +1,253 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { Search, X } from 'lucide-react'
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { fireEvent } from '@/lib/analytics';
-import { SearchSuggestion } from '@/types/search';
-import { slugify } from '@/lib/slugify';
-import { useDebounce } from '@/hooks/useDebounce';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+"use client";
 
-/**
- * SearchBar component props
- */
-interface SearchBarProps {
-  /**
-   * The current value of the search input
-   */
-  value: string;
-  /**
-   * Function to call when the search input changes
-   * @param {string} val - The new value of the search input
-   */
-  onChange: (val: string) => void;
-  /**
-   * Function to call when a suggestion is selected
-   * @param {SearchSuggestion} suggestion - The selected suggestion
-   */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
-  /**
-   * The placeholder text for the search input
-   */
-  placeholder?: string;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useRef, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
+}
+const SearchBar: React.FC = () => {
+
+interface SearchResult {;
+  title: string, description: string,;
+  url: string, type: 'service' | 'page' | 'category',;
 }
 
-/**
- * SearchBar component that allows users to search for content.
- */
-export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
-  const router = useRouter();
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [focused, setFocused] = useState(false);
-  const [highlightedIndex, setHighlightedIndex] = useState(-1);
-  const listId = 'searchbar-autocomplete-list';
-  const debounced = useDebounce(value, 150);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!debounced) {
-      setSuggestions([]);
-      setHighlightedIndex(-1);
-      return;
+const SearchBar: React.FC = () => {
+  const [query, set_query] = useState ('');
+  const [results, set_results] = useState < SearchResult[]>([]);
+  const [is_open, setIsOpen] = useState (false);
+  const [is_loading, setIsLoading] = useState (false);
+  const search_ref = useRef < HTMLDivElement>(null);
+  const input_ref = useRef < HTMLInputElement>(null);
+;
+  // Mock search data - in a real app, this would come from an API;
+  const search_data: SearchResult[] = [;
+    {
+      title: 'Micro SaaS Products'
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more'
+      url: '/micro-saas'
+      type: 'category'
     }
-    const controller = new AbortController();
-    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch suggestions');
-        return res.json();
-      })
-      .then(data => {
-        if (Array.isArray(data)) {
-          setSuggestions(data.slice(0, 5));
-        } else {
-          setSuggestions([]);
-        }
-        setHighlightedIndex(-1);
-      })
-      .catch(() => setSuggestions([]));
-    return () => controller.abort();
-  }, [debounced]);
+    {
+      title: 'AI Services',
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      url: '/ai - services',
+      type: 'category',
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it - services',
+      type: 'category',
+    },
 
-  useOnClickOutside(containerRef, () => {
-    setFocused(false);
-    setHighlightedIndex(-1);
-  });
+    {
+      title: 'Cloud Cost Guard'
+      description: 'FinOps Assistant for anomaly detection and cost optimization'
+      url: '/services'
+      type: 'service'
+    }
+    {
+      title: 'Contact Us'
+      description: 'Get in touch with our experts for consultation and quotes'
+      url: '/contact'
+      type: 'page'
+    }
+    {
+      title: 'Pricing'
+      description: 'View our transparent pricing for all services'
+      url: '/pricing'
+      type: 'page'
+    }
+  ];
 
-  const handleSelect = (suggestion: SearchSuggestion) => {
-    onChange(suggestion.text);
-    if (onSelectSuggestion) onSelectSuggestion(suggestion);
 
-    const searchQuery = encodeURIComponent(suggestion.text);
-    router.push(`/search?q=${searchQuery}`);
-    fireEvent('search', { search_term: suggestion.text });
-    setFocused(false);
-    setHighlightedIndex(-1);
-    inputRef.current?.blur();
-  };
+  // Mock search data - in a real app, this would come from an API;
+  const searchData: SearchResult[] = [;
+    {;
+      title: 'Micro SaaS Products',;
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',;
+      url: '/micro-saas',;
+      type: 'category',;
+    },;
+    {;
+      title: 'AI Services',;
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',;
+      url: '/ai-services',;
+      type: 'category',;
+    },;
+    {;
+      title: 'IT Services',;
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',;
+      url: '/it-services',;
+      type: 'category',;
+    },;
+    {;
+      title: 'Cloud Cost Guard',;
+      description: 'FinOps Assistant for anomaly detection and cost optimization',;
+      url: '/services',;
+      type: 'service',;
+    },;
+    {;
+      title: 'Contact Us',;
+      description: 'Get in touch with our experts for consultation and quotes',;
+      url: '/contact',;
+      type: 'page',;
+    },;
+    {;
+      title: 'Pricing',;
+      description: 'View our transparent pricing for all services',;
+      url: '/pricing',;
+      type: 'page',;
+    },;
+  ];
+  const handleSearch = async (searchQuery: string) => {;
+    if (!searchQuery && searchQuery.trim()) {;
+      setResults([]);
+      setIsOpen(false);
+      return,;
 
+    }
+    setIsLoading(true);
+
+
+    // Simulate API delay;
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const filteredResults = searchData && searchData.filter(item =>;
+      item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+
+    );
+    setResults(filteredResults);
+    setIsOpen(true);
+    setIsLoading(false);
+
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setQuery(value);
+    handleSearch(value)
+  }
+  const handleResultClick = () => {
+    setIsOpen(false)
+    setQuery('')
+  }
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+    setIsOpen(false)
+    inputRef.current?.blur()
+  }
+  }
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, []);
   return (
-    <div
-      className="relative w-full"
-      ref={containerRef}
-      role="combobox"
-      aria-expanded={focused && suggestions.length > 0}
-      aria-haspopup="listbox"
-      aria-controls={listId}
-      data-testid="search-bar"
-    >
+    <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
-        <Input
+        <input
           ref={inputRef}
           type="text"
-          id="main-search-input"
-          name="search"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={(e) => {
-            setFocused(true);
-            // Ensure the input receives focus properly
-            e.target.setSelectionRange(e.target.value.length, e.target.value.length);
-          }}
-          onBlur={(e) => {
-            // Only blur if not clicking on suggestions
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
-              setFocused(false);
-              setHighlightedIndex(-1);
-            }
-          }}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="search"
-          onKeyDown={(e) => {
-            if (!focused || suggestions.length === 0) {
-              if (e.key === 'Escape') {
-                e.preventDefault();
-                setFocused(false);
-                setHighlightedIndex(-1);
-                inputRef.current?.blur();
-              }
-              // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key === 'Enter' && value.trim()) {
-                e.preventDefault(); // Prevent form submission if SearchBar is in a form
-                fireEvent('search', { search_term: value });
-                router.push(`/search?q=${encodeURIComponent(value)}`);
-                setFocused(false);
-                inputRef.current?.blur();
-              }
-              return;
-            }
-
-            switch (e.key) {
-              case 'ArrowDown':
-                e.preventDefault();
-                setHighlightedIndex((prev) => (prev + 1) % suggestions.length);
-                break;
-              case 'ArrowUp':
-                e.preventDefault();
-                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length);
-                break;
-              case 'Enter':
-                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
-                  e.preventDefault();
-                  handleSelect(suggestions[highlightedIndex]);
-                } else if (value.trim()) {
-                  // This case should ideally be handled by the form's onSubmit,
-                  // but if SearchBar is used standalone, this provides a fallback.
-                  e.preventDefault();
-                  fireEvent('search', { search_term: value });
-                  router.push(`/search?q=${encodeURIComponent(value)}`);
-                  setFocused(false);
-                  inputRef.current?.blur();
-                }
-                break;
-              case 'Escape':
-                e.preventDefault();
-                setFocused(false);
-                setHighlightedIndex(-1);
-                inputRef.current?.blur();
-                break;
-              default:
-                break;
-            }
-          }}
+          placeholder="Search services, pages..."
+          value={query}
+          onChange={handleInputChange}
+          onFocus={() => query && setIsOpen(true)}
+          className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
-        {value && (
-          <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-            aria-label="Clear search"
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+          <svg
+            className="w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <X className="h-4 w-4" />
-          </button>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
+        {isLoading && (
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
+          </div>
         )}
       </div>
-      <AutocompleteSuggestions
-        suggestions={suggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelect}
-        visible={focused}
-        highlightedIndex={highlightedIndex}
-        listId={listId}
-      />
+
+      {/* Search Results Dropdown */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+          {results.length > 0 ? (
+            <div className="py-2">
+              {results.map((result, index) => (
+                <a
+                  key={index}
+                  href={result.url}
+                  onClick={handleResultClick}
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                        result.type === 'service' ? 'bg-blue-500' :
+                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                      }`}></div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">
+                        {result.title}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate">
+                        {result.description}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          ) : query && !isLoading ? (
+            <div className="px-4 py-3 text-sm text-gray-500">
+              No results found for &quot;{query}&quot;
+            </div>
+          ) : null}
+        </div>
+      )}
     </div>
   );
-}
+
+export default SearchBar;
+

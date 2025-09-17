@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -239,12 +239,12 @@ export function SignUpForm() {
           ? "Already have an account? "
           : "Don't have an account? "
         }
-        <Link
+        <a
           href="/login"
           className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer"
         >
           Sign In
-        </Link>
+        </a>
       </p>
     </div>
   );

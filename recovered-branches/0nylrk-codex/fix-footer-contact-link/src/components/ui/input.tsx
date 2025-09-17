@@ -1,15 +1,5 @@
 import * as React from "react"
 
-<<<<<<< HEAD
-
-const Input = React.forwardRef<HTMLInputElementReact.ComponentProps<"input">>(
-  ({ classNametype...props }ref) => {
-=======
-import { cn } from "@/lib/utils"
-
-const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
-  ({ className, type, ...props }, ref) => {
->>>>>>> origin/auto/autonomy-17186719616
     return (
       <input
         type={type}

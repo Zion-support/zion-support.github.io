@@ -444,7 +444,7 @@ const ServicesIndex: NextPage = () => {;
 
     }
   ];
-import { motion } from 'framer-motion';
+
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
 interface IndexProps {
@@ -453,7 +453,6 @@ interface IndexProps {
 
 export default function ServicesIndex() {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
   return (
     <>

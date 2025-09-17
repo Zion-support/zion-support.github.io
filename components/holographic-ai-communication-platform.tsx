@@ -1,10 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-PhoneMailMapPinCheckArrowRightEye
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 

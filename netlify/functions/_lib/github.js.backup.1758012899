@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+=======
+  });
+  if (resp.status === 404) return null;
+  if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`);
+  return resp.json();
+    body: JSON.stringify(body)
+  });
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
+  }
+
+
+
+
+=======
+  return resp.json();
+}
+
+module.exports = { upsertFile };
+>>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

@@ -47,7 +47,6 @@ import { logErrorToProduction } from '@/utils / production_logger';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

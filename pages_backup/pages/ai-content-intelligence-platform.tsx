@@ -2,7 +2,7 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award;
   Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code;
@@ -59,7 +59,7 @@ const features = [
 
 import Head from 'next / head';
 import Link from 'next / link';
-import {motion} from 'framer-motion';
+
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 const contact_info = {
@@ -173,7 +173,7 @@ const useCases = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 const contactInfo = {
@@ -257,7 +257,7 @@ const useCases = [
   },
 ];
 
-import { motion } from 'framer-motion';
+
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
   Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,;
@@ -885,8 +885,6 @@ export default function AIContentIntelligencePlatform() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1218,11 +1216,8 @@ export default function AIContentIntelligencePlatform() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

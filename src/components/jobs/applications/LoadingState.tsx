@@ -1,3 +1,6 @@
+  );
+};
+>>>>>>> origin/merged-prs
 
 import { Loader2 } from 'lucide-react'
 

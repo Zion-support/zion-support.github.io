@@ -51,14 +51,3 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}

@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { SEO } from '@/components/SEO';
-import { Check, Star, Zap, Brain, Server, Shield, Building } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('monthly');
@@ -378,4 +375,3 @@ const PricingPage: React.FC = () => {
   );
 };
 
-export default PricingPage;

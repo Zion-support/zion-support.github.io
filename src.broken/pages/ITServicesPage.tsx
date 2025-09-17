@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import { 
-  Server,
-=======
-import React from 'react';
-import { 
-  Server, 
->>>>>>> origin/auto/autonomy-17186719616
   Cloud, 
   Shield, 
   Code, 
@@ -28,11 +19,6 @@ import {
   Lock,
   Users,
   BarChart3
-<<<<<<< HEAD
-} from 'lucide-react',
-=======
-} from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function ITServicesPage() {
   const itServices = [
@@ -216,11 +202,6 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/infrastructure-management"
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const additionalServices = [
     {
@@ -247,22 +228,12 @@ export default function ITServicesPage() {
       pricing: "From $150/hour",
       icon: <Users className="w-8 h-8 text-orange-400" />
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const stats = [
     { label: "Infrastructure Deployed", value: "200+" },
     { label: "Security Audits", value: "150+" },
     { label: "Uptime Guarantee", value: "99.9%" },
     { label: "Client Satisfaction", value: "97%" }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -537,11 +508,6 @@ export default function ITServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-=======
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
->>>>>>> origin/auto/autonomy-17186719616
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -596,9 +562,4 @@ export default function ITServicesPage() {
         </div>
       </footer>
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

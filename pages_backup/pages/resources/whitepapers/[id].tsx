@@ -172,7 +172,6 @@ const whitepapers = {;
     return res.status(500).json({ error: "Internal server error" });
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
@@ -270,12 +269,8 @@ function WhitepaperPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
@@ -296,12 +291,8 @@ function WhitepaperPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
@@ -338,8 +329,6 @@ function WhitepaperPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             <section className="mb-12">
@@ -360,11 +349,8 @@ function WhitepaperPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                 </button>
                 <p className="text-white/60 text-sm mt-4">
@@ -382,12 +368,8 @@ function WhitepaperPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
@@ -676,10 +658,7 @@ export default function WhitepaperPage(req, res) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     </>);
   }
@@ -746,10 +725,8 @@ const whitepapers = {
     }
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

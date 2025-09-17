@@ -197,7 +197,6 @@ export function PaymentMethods() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
         <Button className="gap-1">
@@ -222,7 +221,6 @@ export function PaymentMethods() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

@@ -148,7 +148,6 @@ export function MobileHeader(): any ({;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             <Button 
               <span className='sr-only'>Settings</span>            </Button>            <Button 
             <Button 

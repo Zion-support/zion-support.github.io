@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const DigitalTwinsRevolutionizingIndustry40Chat = () => {
   return (
@@ -21,14 +14,3 @@ const DigitalTwinsRevolutionizingIndustry40Chat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default DigitalTwinsRevolutionizingIndustry40Chat,
-=======
-  );
-};
-
-export default DigitalTwinsRevolutionizingIndustry40Chat;
->>>>>>> origin/auto/autonomy-17186719616

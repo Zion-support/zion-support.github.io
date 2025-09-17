@@ -5,10 +5,3 @@ export default function AccessibilityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Accessibility</h1>
           <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-            We are committed to making our website and services accessible to everyone.
-          </p>
-        </div>
-      </section>
-    </div>
-  );
-}

@@ -13,8 +13,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -130,7 +128,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -249,7 +246,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       setGeneratedMarkdown(data && data.markdown || '');
     } catch (e) {;
       console && console.error(e);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
       alert('Generation failed');
     } finally {;
@@ -381,7 +377,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     value: string;
   ) {;
     setDistribution(prev => {      const copy = [...prev];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const item = { ...copy[index] };
       if (key === 'percent') item && item.percent = Number(value);
       if (key === 'label') item && item.label = value;
@@ -392,7 +387,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   const [jurisdiction, set_jurisdiction] = useState < string>('US');
   const [operator_prompt, setOperatorPrompt] = useState < string>(
     defaultOperatorPrompt);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   function removeDistributionItem(index: number) {;
     setDistribution((prev) => prev.filter((_, i) => i !== index));
@@ -520,8 +514,6 @@ if (item.label = value) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -569,11 +561,8 @@ if (item.label = value) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -614,13 +603,9 @@ if (item.label = value) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -716,12 +701,8 @@ if (item.label = value) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 </div>
@@ -791,13 +772,9 @@ if (item.label = value) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -859,12 +836,8 @@ if (item.label = value) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               </div>
@@ -888,7 +861,6 @@ function buildLocalMarkdown(input: {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -975,7 +947,6 @@ function MarkdownPreview({
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
     });
     return map;  }, [markdown]);
@@ -1010,7 +981,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

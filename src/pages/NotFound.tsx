@@ -1,66 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  ArrowLeft, 
-  ArrowRight, 
-  MessageCircle, 
-  Search, 
-  HelpCircle,
-  Cloud,
-  Shield,
-  Brain,
-  Zap,
-  Users,
-  BarChart3
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
-const popularCategories = [
-  {
-    title: 'AI & Machine Learning',
-    icon: Brain,
-    services: [
-      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence' },
-      { name: 'AI Content Creation', path: '/services/ai-content-creation' },
-      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity' },
-      { name: 'AI Project Management', path: '/services/ai-project-management' }
-    ]
-  },
-  {
-    title: 'Cloud & Infrastructure',
-    icon: Cloud,
-    services: [
-      { name: 'Cloud DevOps', path: '/services/cloud-devops' },
-      { name: 'IT Infrastructure', path: '/services/it-infrastructure' },
-      { name: 'Digital Twin', path: '/services/digital-twin' },
-      { name: 'Micro SaaS Solutions', path: '/services/micro-saas' }
-    ]
-  },
-  {
-    title: 'Cybersecurity',
-    icon: Shield,
-    services: [
-      { name: 'Zero Trust Network', path: '/services/zero-trust-network-access' },
-      { name: 'Security Headers & CSP', path: '/services/security-headers-csp' },
-      { name: 'Compliance Assistant', path: '/services/ai-compliance-assistant' },
-      { name: 'Threat Intelligence', path: '/services/ai-autonomous-threat-intelligence' }
-    ]
-  },
-  {
-    title: 'Emerging Technologies',
-    icon: Zap,
-    services: [
-      { name: 'Quantum Computing', path: '/services/quantum-computing' },
-      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing' },
-      { name: 'Space Technology', path: '/services/space-tech' },
-      { name: 'AI Quantum Hybrid', path: '/services/ai-quantum-hybrid-platform' }
-    ]
-  }
-];
-
-export default function NotFound() {
   return (
     <motion.div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -252,4 +189,3 @@ export default function NotFound() {
       </section>
     </motion.div>
   );
-}

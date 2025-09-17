@@ -32,9 +32,7 @@ class ErrorBoundary extends React.Component {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 import React from "react";
 import Layout from "../components/Layout";

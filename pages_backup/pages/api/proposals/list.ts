@@ -61,7 +61,6 @@ function handler() {
 if ( {) {
   $2
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 
 }
@@ -91,10 +90,8 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

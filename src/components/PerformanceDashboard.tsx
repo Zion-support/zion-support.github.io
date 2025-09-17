@@ -1,221 +1,156 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  buildSize: string;
-  pageCount: number;
   loadTime: number;
-  healthStatus: 'healthy' | 'warning' | 'error';
-}
-
-interface Improvement {
-  id: string;
-  title: string;
-  description: string;
-  status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'security' | 'ux' | 'build';
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  networkRequests: number;
+  errors: number;
 }
 
 const PerformanceDashboard: React.FC = () => {
-  const [metrics] = useState<PerformanceMetrics>({
-    buildSize: '959 MB',
-    pageCount: 166,
-    loadTime: 1.2,
-    healthStatus: 'healthy'
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    networkRequests: 0,
+    errors: 0
   });
 
-  const improvements: Improvement[] = [
-    {
-      id: '1',
-      title: 'Fixed Search Bar Issues',
-      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
-      status: 'completed',
-      impact: 'high',
-      category: 'ux'
-    },
-    {
-      id: '2', 
-      title: 'Environment Validation System',
-      description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
-      status: 'completed',
-      impact: 'high',
-      category: 'build'
-    },
-    {
-      id: '3',
-      title: 'NextAuth Configuration Fix',
-      description: 'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security'
-    },
-    {
-      id: '4',
-      title: 'API Client Error Handling',
-      description: 'Improved global error handling with better retry logic and user feedback',
-      status: 'completed',
-      impact: 'medium',
-      category: 'ux'
-    },
-    {
-      id: '5',
-      title: 'Bundle Analyzer Integration',
-      description: 'Added bundle analysis tools to identify and optimize large dependencies',
-      status: 'completed',
-      impact: 'medium',
-      category: 'performance'
-    },
-    {
-      id: '6',
-      title: 'Health Check Endpoint',
-      description: 'Created production monitoring endpoint for environment and service health',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security'
-    }
-  ];
+  const [isVisible, setIsVisible] = useState(false);
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
-    }
-  };
+  useEffect(() => {
+    // Measure performance metrics
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      
+      // Measure render time
+      const renderStart = performance.now();
+      requestAnimationFrame(() => {
+        const renderTime = performance.now() - renderStart;
+        
+        // Get memory usage if available
+        const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+        
+        // Count network requests
+        const networkRequests = performance.getEntriesByType('resource').length;
+        
+        // Count errors
+        const errors = performance.getEntriesByType('error').length;
+        
+        setMetrics({
+          loadTime,
+          renderTime,
+          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
+          bundleSize: 0, // This would be calculated from actual bundle analysis
+          networkRequests,
+          errors
+        });
+      });
+    };
 
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'high': return 'bg-red-100 text-red-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+    // Measure after initial load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
-  };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />;
-      case 'security': return <Shield className="h-4 w-4" />;
-      case 'ux': return <Search className="h-4 w-4" />;
-      case 'build': return <TrendingUp className="h-4 w-4" />;
-      default: return <CheckCircle className="h-4 w-4" />;
-    }
-  };
+    // Monitor performance continuously
+    const interval = setInterval(measurePerformance, 5000);
 
-  const completedImprovements = improvements.filter(imp => imp.status === 'completed');
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+      clearInterval(interval);
+    };
+  }, []);
+
+  // Toggle dashboard visibility with keyboard shortcut
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(!isVisible);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isVisible]);
+
+  if (!isVisible) {
+    return (
+      <div className="fixed bottom-4 right-4 z-50">
+        <button
+          onClick={() => setIsVisible(true)}
+          className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+          title="Open Performance Dashboard (Ctrl+Shift+P)"
+        >
+          📊
+        </button>
+      </div>
+    );
+  }
 
   return (
-    <div className="space-y-6 p-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
-        <Badge className="bg-green-100 text-green-800">
-          {completedImprovements.length} Improvements Completed
-        </Badge>
+    <div className="fixed top-4 right-4 z-50 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-500 hover:text-gray-700"
+        >
+          ✕
+        </button>
       </div>
 
-      {/* Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.pageCount}</div>
-            <p className="text-xs text-gray-500">Generated pages</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.loadTime}s</div>
-            <p className="text-xs text-gray-500">Average page load</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-semibold text-green-600">Healthy</span>
-            </div>
-          </CardContent>
-        </Card>
+      <div className="space-y-3">
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600">Load Time:</span>
+          <span className={`text-sm font-medium ${metrics.loadTime > 3000 ? 'text-red-600' : metrics.loadTime > 1000 ? 'text-yellow-600' : 'text-green-600'}`}>
+            {metrics.loadTime.toFixed(0)}ms
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600">Render Time:</span>
+          <span className={`text-sm font-medium ${metrics.renderTime > 100 ? 'text-red-600' : metrics.renderTime > 50 ? 'text-yellow-600' : 'text-green-600'}`}>
+            {metrics.renderTime.toFixed(2)}ms
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600">Memory Usage:</span>
+          <span className={`text-sm font-medium ${metrics.memoryUsage > 100 ? 'text-red-600' : metrics.memoryUsage > 50 ? 'text-yellow-600' : 'text-green-600'}`}>
+            {metrics.memoryUsage}MB
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600">Network Requests:</span>
+          <span className="text-sm font-medium text-blue-600">
+            {metrics.networkRequests}
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600">Errors:</span>
+          <span className={`text-sm font-medium ${metrics.errors > 0 ? 'text-red-600' : 'text-green-600'}`}>
+            {metrics.errors}
+          </span>
+        </div>
       </div>
 
-      {/* Completed Improvements */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <CheckCircle className="h-5 w-5 text-green-500" />
-            <span>Completed Improvements</span>
-          </CardTitle>
-          <CardDescription>
-            Recent performance and functionality improvements that have been implemented
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {completedImprovements.map((improvement) => (
-              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
-                <div className="flex-shrink-0 mt-1">
-                  {getCategoryIcon(improvement.category)}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">
-                      {improvement.title}
-                    </h3>
-                    <div className="flex items-center space-x-2">
-                      <Badge className={getImpactColor(improvement.impact)}>
-                        {improvement.impact} impact
-                      </Badge>
-                      {getStatusIcon(improvement.status)}
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {improvement.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Action Buttons */}
-      <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment', '_blank')} variant="outline">
-          <Shield className="h-4 w-4 mr-2" />
-          Check Health Status
-        </Button>
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
-          <TrendingUp className="h-4 w-4 mr-2" />
-          Bundle Analysis
-        </Button>
+      <div className="mt-4 pt-3 border-t border-gray-200">
+        <div className="text-xs text-gray-500">
+          Press Ctrl+Shift+P to toggle
+        </div>
       </div>
     </div>
   );
 };
 
-export default PerformanceDashboard; 
+export default PerformanceDashboard;

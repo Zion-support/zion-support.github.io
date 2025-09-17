@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -58,7 +57,6 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
 
 
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';

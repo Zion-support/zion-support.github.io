@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function AISeosuitePage() {
   const features = [
@@ -19,109 +6,48 @@ export default function AISeosuitePage() {
       title: 'AI Keyword Research',
       description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-<<<<<<< HEAD
-      gradient: 'from-blue-400 to-cyan-500'},
-=======
-      gradient: 'from-blue-400 to-cyan-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
       title: 'Ranking Analytics',
       description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-<<<<<<< HEAD
-      gradient: 'from-green-400 to-emerald-500'},
-=======
-      gradient: 'from-green-400 to-emerald-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Target className="w-8 h-8 text-white" />,
       title: 'Content Optimization',
       description: 'AI-powered content analysis and optimization suggestions to improve search visibility.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-<<<<<<< HEAD
-      gradient: 'from-purple-400 to-indigo-500'},
-=======
-      gradient: 'from-purple-400 to-indigo-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-<<<<<<< HEAD
-      gradient: 'from-orange-400 to-red-500'},
-=======
-      gradient: 'from-orange-400 to-red-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Globe className="w-8 h-8 text-white" />,
       title: 'Local SEO',
       description: 'Optimize for local search with location-based keyword research and citation management.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-<<<<<<< HEAD
-      gradient: 'from-teal-400 to-blue-500'},
-=======
-      gradient: 'from-teal-400 to-blue-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Automated Reports',
       description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-<<<<<<< HEAD
-      gradient: 'from-pink-400 to-rose-500'}],
-=======
-      gradient: 'from-pink-400 to-rose-500',
-    },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const seoTools = [
     {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
-<<<<<<< HEAD
-      tools: ['Long-tail keyword finderCompetitor keyword analysis', 'Search volume estimationKeyword difficulty scoring', 'Trending keywords']
-=======
-      tools: ['Long-tail keyword finder', 'Competitor keyword analysis', 'Search volume estimation', 'Keyword difficulty scoring', 'Trending keywords']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
-<<<<<<< HEAD
-      tools: ['Content optimizationMeta tag generator', 'Schema markup builderInternal linking suggestions', 'Image optimization']
-=======
-      tools: ['Content optimization', 'Meta tag generator', 'Schema markup builder', 'Internal linking suggestions', 'Image optimization']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
-<<<<<<< HEAD
-      tools: ['Site audit toolPage speed analyzer', 'Mobile optimizationCore Web Vitals', 'XML sitemap generator']
-=======
-      tools: ['Site audit tool', 'Page speed analyzer', 'Mobile optimization', 'Core Web Vitals', 'XML sitemap generator']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-<<<<<<< HEAD
-      tools: ['Ranking trackerTraffic analysis', 'Conversion trackingCompetitor monitoring', 'Custom dashboards']
-    }
-  ],
-=======
-      tools: ['Ranking tracker', 'Traffic analysis', 'Conversion tracking', 'Competitor monitoring', 'Custom dashboards']
-    }
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const pricingPlans = [
     {
@@ -130,18 +56,6 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-<<<<<<< HEAD
-        'Up to 5 websitesBasic keyword research',
-        'Monthly site auditsEmail support',
-        'Basic reportingMobile app access'
-=======
-        'Up to 5 websites',
-        'Basic keyword research',
-        'Monthly site audits',
-        'Email support',
-        'Basic reporting',
-        'Mobile app access'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       color: 'border-gray-600',
@@ -153,21 +67,6 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-<<<<<<< HEAD
-        'Up to 25 websitesAdvanced keyword research',
-        'Weekly site auditsPriority support',
-        'Advanced reportingCompetitor analysis',
-        'API accessWhite-label reports'
-=======
-        'Up to 25 websites',
-        'Advanced keyword research',
-        'Weekly site audits',
-        'Priority support',
-        'Advanced reporting',
-        'Competitor analysis',
-        'API access',
-        'White-label reports'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       color: 'border-blue-500',
@@ -179,31 +78,11 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-<<<<<<< HEAD
-        'Unlimited websitesFull SEO suite',
-        'Daily site auditsDedicated support',
-        'Custom reportingAdvanced analytics',
-        'SLA guaranteeOn-premise option'
-=======
-        'Unlimited websites',
-        'Full SEO suite',
-        'Daily site audits',
-        'Dedicated support',
-        'Custom reporting',
-        'Advanced analytics',
-        'SLA guarantee',
-        'On-premise option'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
@@ -214,67 +93,33 @@ export default function AISeosuitePage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const useCases = [
     {
       title: 'E-commerce Websites',
       description: 'Optimize product pages, category pages, and search functionality for better conversions.',
       icon: '🛍️',
-<<<<<<< HEAD
-      benefits: ['Higher search rankingsIncreased organic traffic', 'Better conversion ratesCompetitive advantage']
-=======
-      benefits: ['Higher search rankings', 'Increased organic traffic', 'Better conversion rates', 'Competitive advantage']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Content Marketing',
       description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
       icon: '📝',
-<<<<<<< HEAD
-      benefits: ['Better content visibilityHigher engagement rates', 'More organic trafficAuthority building']
-=======
-      benefits: ['Better content visibility', 'Higher engagement rates', 'More organic traffic', 'Authority building']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
       icon: '📍',
-<<<<<<< HEAD
-      benefits: ['Local search dominanceIncreased foot traffic', 'Better customer acquisitionCompetitive positioning']
-=======
-      benefits: ['Local search dominance', 'Increased foot traffic', 'Better customer acquisition', 'Competitive positioning']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'SaaS Companies',
       description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
       icon: '💻',
-<<<<<<< HEAD
-      benefits: ['Higher conversion ratesBetter user experience', 'Reduced acquisition costsMarket expansion']
-    }
-  ],
-=======
-      benefits: ['Higher conversion rates', 'Better user experience', 'Reduced acquisition costs', 'Market expansion']
-    }
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const successMetrics = [
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -586,11 +431,6 @@ export default function AISeosuitePage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-=======
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
->>>>>>> origin/auto/autonomy-17186719616
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Dominate Search Rankings?
@@ -621,9 +461,4 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

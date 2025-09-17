@@ -297,8 +297,6 @@ export default function ITServices() {
       "delivery": '8-18 weeks',
       "category": 'Cloud Services'
     },
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     {
       \"title\": \'AI-Powered IT Operations\',
       \"description\": \'Intelligent IT operations with AI-driven automation and optimization\',
@@ -2252,8 +2250,6 @@ export default function ITServices() {
     { "name": 'Monitoring', "icon": BarChart 3, "description": 'Prometheus, Grafana, ELK Stack' },
     { "name": 'Databases', "icon": Databas e, "description": 'PostgreSQL, MongoDB, Redis' },
     { "name": 'Networking', "icon": Networ k, "description": 'Cisco, Fortinet, SD-WAN' }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ];
   const benefits = [{
       \"title\": \'Reduced Downtime\',
@@ -2493,5 +2489,3 @@ export default function ITServices() {
     </PageTransition>
   )
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

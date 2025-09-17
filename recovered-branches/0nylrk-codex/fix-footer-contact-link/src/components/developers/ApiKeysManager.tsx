@@ -1,76 +1,18 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-import { CheckClockKeyMoreVerticalRefreshCwX } from "lucide-react";
-import { format } from "date-fns";
-import { useApiKeystype ApiKeyScope } from "@/hooks/useApiKeys";
-
-import { Button } from "@/components/ui/button";
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { DialogContentDialogDescriptionDialogFooterDialogHeaderDialogTitleDialogTrigger } from "@/components/ui/dialog";
-=======
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
-import { format } from "date-fns";
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
->>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
-import { DropdownMenuContentDropdownMenuItemDropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { AlertDialogActionAlertDialogCancelAlertDialogContentAlertDialogDescriptionAlertDialogFooterAlertDialogHeaderAlertDialogTitle } from "@/components/ui/alert-dialog";
-=======
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
->>>>>>> origin/auto/autonomy-17186719616
 
 import CodeBlock from "./CodeBlock";
 
 export function ApiKeysManager() {
   const { 
-<<<<<<< HEAD
-    keys
-    loading
-    newApiKey,
-    fetchApiKeys
-    createApiKey
-    regenerateApiKey
-=======
-    keys, 
-    loading, 
-    newApiKey,
-    fetchApiKeys, 
-    createApiKey, 
-    regenerateApiKey, 
->>>>>>> origin/auto/autonomy-17186719616
     revokeApiKey,
     clearNewApiKey
   } = useApiKeys();
   
-<<<<<<< HEAD
-  const [showCreateDialogsetShowCreateDialog] = useState(false);
-  const [showDeleteConfirmsetShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirmsetShowRegenerateConfirm] = useState<string | null>(null);
-  
-  // Create key form state
-  const [keyNamesetKeyName] = useState("");
-  const [selectedScopesetSelectedScopes] = useState<ApiKeyScope[]>([]);
-=======
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
-  
-  // Create key form state
-  const [keyName, setKeyName] = useState("");
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
->>>>>>> origin/auto/autonomy-17186719616
 
   // Load keys on mount
   useState(() => {
@@ -80,11 +22,6 @@ export function ApiKeysManager() {
   const handleCreateKey = async () => {
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
     
-<<<<<<< HEAD
-    await createApiKey(keyNameselectedScopes);
-=======
-    await createApiKey(keyName, selectedScopes);
->>>>>>> origin/auto/autonomy-17186719616
     setShowCreateDialog(false);
     setKeyName("");
     setSelectedScopes([]);
@@ -102,31 +39,12 @@ export function ApiKeysManager() {
   
   // Scope options
   const scopeOptions: { value: ApiKeyScope; label: string; description: string }[] = [
-<<<<<<< HEAD
-    { value: 'jobs:read'label: 'Read Jobs'description: 'Access to view job listings' },
-    { value: 'jobs:write'label: 'Write Jobs'description: 'Create and manage job listings' },
-    { value: 'talent:read'label: 'Read Talent'description: 'Access to view talent profiles' },
-    { value: 'quotes:write'label: 'Write Quotes'description: 'Create and manage quotes' },
-    { value: 'webhooks:manage'label: 'Manage Webhooks'description: 'Set up and manage webhook endpoints' }];
-=======
-    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
-    { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
-    { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
-    { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
-    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev => 
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
-<<<<<<< HEAD
-        : [...prevscope]
-=======
-        : [...prev, scope]
->>>>>>> origin/auto/autonomy-17186719616
     );
   };
   
@@ -310,41 +228,21 @@ export function ApiKeysManager() {
                 </div>
                 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
-<<<<<<< HEAD
-                  <span>Created: {format(new Date(key.created_at)'MMM dyyyy')}</span>
-=======
-                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
->>>>>>> origin/auto/autonomy-17186719616
                   <Popover>
                     <PopoverTrigger className="flex items-center hover:text-zinc-300">
                       <Clock size={12} className="mr-1" />
                       Last used: {key.last_used_at 
-<<<<<<< HEAD
-                        ? format(new Date(key.last_used_at)'MMM dyyyy') 
-=======
-                        ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
->>>>>>> origin/auto/autonomy-17186719616
                         : 'Never'}
                     </PopoverTrigger>
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at 
-<<<<<<< HEAD
-                          ? format(new Date(key.last_used_at)'MMM dyyyy HH:mm:ss')
-=======
-                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
->>>>>>> origin/auto/autonomy-17186719616
                           : 'This API key has never been used'}
                       </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
-<<<<<<< HEAD
-                    <span>Expires: {format(new Date(key.expires_at)'MMM dyyyy')}</span>
-=======
-                    <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
->>>>>>> origin/auto/autonomy-17186719616
                   )}
                 </div>
               </div>

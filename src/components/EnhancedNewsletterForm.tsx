@@ -1,13 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState, useRef } from "react";
-import { Mail } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
 
 export function EnhancedNewsletterForm() {
 
-  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
@@ -21,9 +14,6 @@ export function EnhancedNewsletterForm() {
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
 
-    const trimmed = email.trim();
-    if (!EMAIL_REGEX.test(trimmed)) {
-      toast.error("Invalid email");
       return;
     }
 
@@ -57,7 +47,6 @@ export function EnhancedNewsletterForm() {
     } finally {
       setIsSubmitting(false);
     }
-  };
 
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -70,11 +59,6 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
-      
-      {isSubmitted ? (
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
-          <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -114,4 +98,3 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   );
-}

@@ -18,12 +18,8 @@ import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucid
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 export default function AgenticRAGPage() {
 	const contactInfo = {
@@ -74,7 +70,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 					</div>
 				</div>
@@ -103,7 +98,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -136,7 +130,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 					</div>
 				</div>
@@ -154,7 +147,6 @@ export default function AgenticRAGPage() {
 
 	return (_<UltraFuturisticMatrixBackground>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -172,10 +164,7 @@ export default function AgenticRAGPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 					</div>
 				</div>
@@ -207,10 +196,7 @@ export default function AgenticRAGPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -242,10 +228,7 @@ export default function AgenticRAGPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 					</div>
 				</div>
@@ -270,14 +253,10 @@ export default function AgenticRAGPage() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
