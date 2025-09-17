@@ -2440,6 +2440,14 @@
     "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-trustworthy-model-routing-starter",
+    "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
+    "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-6ef3
     "route": "/blog/ai-automation-trends-2025",
     "title": "ai-automation-trends-2025 | Zion Tech Group",
     "h1": "ai-automation-trends-2025"
