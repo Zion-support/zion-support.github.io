@@ -1,5 +1,9 @@
 # Netlify build configuration for Vite app
+<<<<<<< HEAD
+# noop: retrigger netlify build (2025-09-17 19:45 UTC)
+=======
 # noop: retrigger netlify build ('')
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-3e7a
 [build]
   # Build the root Vite app and publish static assets
   command = "npm run build:netlify"
