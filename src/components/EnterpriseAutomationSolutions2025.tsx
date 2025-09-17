@@ -11,6 +11,5 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnterpriseAutomationSolutions2025;

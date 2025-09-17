@@ -45,6 +45,5 @@ const QuantumComputingGuide2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default QuantumComputingGuide2026;

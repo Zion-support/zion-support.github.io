@@ -11,6 +11,5 @@ const errorBoundaryComplex: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default errorBoundaryComplex;

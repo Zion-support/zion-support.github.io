@@ -11,6 +11,5 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryAIInnovations2025;

@@ -17,7 +17,7 @@ const FutureTechBreakthroughs2026 = () => {
       </Helmet>
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto text-center">
@@ -42,7 +42,7 @@ const FutureTechBreakthroughs2026 = () => {
           </div>
         </section>
 
-        {/* Breakthrough Technologies */}
+        {/* Breakthrough Technologies */};
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -54,7 +54,7 @@ const FutureTechBreakthroughs2026 = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Consciousness Breakthrough */}
+              {/* AI Consciousness Breakthrough */};
               <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
                 <div className="text-6xl mb-6 text-center">🧠</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">AI Consciousness Breakthrough</h3>
@@ -85,7 +85,7 @@ const FutureTechBreakthroughs2026 = () => {
                 </div>
               </div>
 
-              {/* Quantum Internet */}
+              {/* Quantum Internet */};
               <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
                 <div className="text-6xl mb-6 text-center">🌐</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">Quantum Internet</h3>
@@ -116,7 +116,7 @@ const FutureTechBreakthroughs2026 = () => {
                 </div>
               </div>
 
-              {/* Neural Interface Implants */}
+              {/* Neural Interface Implants */};
               <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
                 <div className="text-6xl mb-6 text-center">🧬</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">Neural Interface Implants</h3>
@@ -147,7 +147,7 @@ const FutureTechBreakthroughs2026 = () => {
                 </div>
               </div>
 
-              {/* Fusion Power */}
+              {/* Fusion Power */};
               <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
                 <div className="text-6xl mb-6 text-center">⚡</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">Fusion Power</h3>
@@ -178,7 +178,7 @@ const FutureTechBreakthroughs2026 = () => {
                 </div>
               </div>
 
-              {/* Space Elevator */}
+              {/* Space Elevator */};
               <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
                 <div className="text-6xl mb-6 text-center">🚀</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">Space Elevator</h3>
@@ -209,7 +209,7 @@ const FutureTechBreakthroughs2026 = () => {
                 </div>
               </div>
 
-              {/* Digital Immortality */}
+              {/* Digital Immortality */};
               <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
                 <div className="text-6xl mb-6 text-center">💾</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">Digital Immortality</h3>
@@ -243,7 +243,7 @@ const FutureTechBreakthroughs2026 = () => {
           </div>
         </section>
 
-        {/* Impact Timeline */}
+        {/* Impact Timeline */};
         <section className="py-20 px-4 bg-black/20">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -305,7 +305,7 @@ const FutureTechBreakthroughs2026 = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30">
@@ -331,6 +331,5 @@ const FutureTechBreakthroughs2026 = () => {
       </main>
     </>
   );
-  }
-];
+  };
 export default FutureTechBreakthroughs2026;

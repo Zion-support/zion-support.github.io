@@ -11,6 +11,5 @@ const UltimateBreakthrough2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateBreakthrough2025PromotionBanner;

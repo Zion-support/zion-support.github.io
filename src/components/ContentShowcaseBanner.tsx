@@ -11,6 +11,5 @@ const ContentShowcaseBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ContentShowcaseBanner;

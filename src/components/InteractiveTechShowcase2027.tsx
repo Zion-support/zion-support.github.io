@@ -35,9 +35,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       borderColor: 'border-emerald-400',
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       link: '/pages/NeuralInterfaceRevolution2027'
-    }
-  ];
-
+    };
   const technologies = [
     {
       id: "0",
@@ -94,9 +92,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       ],
       gradient: "from-violet-600 to-fuchsia-600",
       link: "/pages/MolecularManufacturing2027"
-    }
-  ];
-
+    };
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % technologies.length);
@@ -112,9 +108,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
         setActiveTech(index);
         setIsAnimating(false);
       }, 300);
-    }
-  }
-];
+    };
+  };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -130,38 +125,38 @@ const InteractiveTechShowcase2027: React.FC = () => {
           </p>
         </div>
 
-        {/* Tech Categories */}
+        {/* Tech Categories */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {techCategories.map((category, index) => (
             <div 
-              key={category.id}
-              className={`bg-gradient-to-br ${category.bgColor} backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(index)}
+              key={category.id};
+              className={`bg-gradient-to-br ${category.bgColor} backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`};
+              onClick={() => setActiveTab(index)};
             >
               <div className="text-6xl mb-4 text-center animate-pulse">{category.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{category.title}</h3>
               <p className="text-center opacity-90 mb-6">{category.description}</p>
               <div className="text-center">
                 <a 
-                  href={category.link}
+                  href={category.link};
                   className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold"
                 >
                   Explore →
                 </a>
               </div>
             </div>
-          ))}
+          ))};
         </div>
 
-        {/* Interactive Tech Grid */}
+        {/* Interactive Tech Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {technologies.map((tech, index) => (
             <div 
-              key={tech.id}
+              key={tech.id};
               className={`bg-gradient-to-br ${tech.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 ${
                 index === activeTech ? 'ring-4 ring-white/50' : ''
-              }`}
-              onClick={() => handleTechClick(index)}
+              }`};
+              onClick={() => handleTechClick(index)};
             >
               <div className="text-4xl mb-4 text-center">{tech.icon}</div>
               <h3 className="text-lg font-bold mb-2 text-center">{tech.title}</h3>
@@ -171,21 +166,21 @@ const InteractiveTechShowcase2027: React.FC = () => {
                   <div key={idx} className="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-center">
                     <span className="text-xs font-semibold">{feature}</span>
                   </div>
-                ))}
+                ))};
               </div>
               <div className="text-center">
                 <a 
-                  href={tech.link}
+                  href={tech.link};
                   className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
                 >
                   Learn More →
                 </a>
               </div>
             </div>
-          ))}
+          ))};
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Ready to Experience the Future?</h3>
@@ -205,6 +200,5 @@ const InteractiveTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveTechShowcase2027;

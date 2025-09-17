@@ -11,6 +11,5 @@ const RevolutionarySuccessStories2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionarySuccessStories2026;

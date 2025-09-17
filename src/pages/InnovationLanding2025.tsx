@@ -11,6 +11,5 @@ const InnovationLanding2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InnovationLanding2025;

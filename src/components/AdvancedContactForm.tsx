@@ -11,6 +11,5 @@ const AdvancedContactForm: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedContactForm;

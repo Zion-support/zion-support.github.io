@@ -11,6 +11,5 @@ const AdvancedAutomationMastery2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedAutomationMastery2025Banner;

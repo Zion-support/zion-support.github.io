@@ -5,21 +5,18 @@ interface User {
   email: string;
   name: string;
   avatar?: string;
-}
-
-,interface AuthState {
+};
+interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
   error: string | null;
-}
-
-,const initialState: AuthState = {
+};
+const initialState: AuthState = {
   user: "null",
   isAuthenticated: "false",
   isLoading: "false",
-  error: "null"}
-];
+  error: "null"};
 const authSlice = createSlice({
   name: 'auth',
   initialState,

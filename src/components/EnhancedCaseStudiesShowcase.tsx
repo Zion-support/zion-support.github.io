@@ -11,6 +11,5 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedCaseStudiesShowcase;

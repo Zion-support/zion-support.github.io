@@ -45,6 +45,5 @@ const AI2027UltimateBreakthrough: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2027UltimateBreakthrough;

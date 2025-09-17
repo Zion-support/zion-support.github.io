@@ -11,6 +11,5 @@ const AI2027ContentShowcaseBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2027ContentShowcaseBanner;

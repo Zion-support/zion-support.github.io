@@ -69,16 +69,15 @@ function App() {
       setTimeout(() => {
         if (perfMonitor.reportMetrics) {
           perfMonitor.reportMetrics();
-        }
+        };
       }, 2000);
-    }
-    
+    };
     window.addEventListener('load', handleLoad);
     
     return () => {
       if (perfMonitor.cleanup) {
         perfMonitor.cleanup();
-      }
+      };
       window.removeEventListener('load', handleLoad);
     };
   }, [prefetchResource, cacheResource, measurePerformance]);
@@ -120,13 +119,13 @@ function App() {
               </div>
               <Navigation />
               
-              {/* Main Content with enhanced Suspense and Error Boundary */}
+              {/* Main Content with enhanced Suspense and Error Boundary */};
               <main id="main-content" className="pt-20 min-h-screen" role="main">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
                     
-                    {/* Catch all route */}
+                    {/* Catch all route */};
                     <Route path="*" element={<Home />} />
                   </Routes>
                 </Suspense>
@@ -139,6 +138,5 @@ function App() {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-}
-
+};
 export default App;

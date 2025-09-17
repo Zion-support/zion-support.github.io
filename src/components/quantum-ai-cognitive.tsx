@@ -11,6 +11,5 @@ const quantumAiCognitive: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default quantumAiCognitive;

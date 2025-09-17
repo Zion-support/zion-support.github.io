@@ -4,7 +4,7 @@ const RealityManipulation2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎭 REALITY MANIPULATION • 2026
@@ -18,7 +18,7 @@ const RealityManipulation2026: React.FC = () => {
           </p>
         </div>
 
-        {/* Reality Manipulation Features */}
+        {/* Reality Manipulation Features */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌀</div>
@@ -105,7 +105,7 @@ const RealityManipulation2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Reality Manipulation Achievements */}
+        {/* Reality Manipulation Achievements */};
         <div className="bg-gradient-to-r from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-violet-400/30">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">🎭 Reality Manipulation Achievements</h2>
@@ -181,7 +181,7 @@ const RealityManipulation2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Reality Manipulation Examples */}
+        {/* Reality Manipulation Examples */};
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">🎭 Reality Manipulation Examples</h2>
@@ -217,7 +217,7 @@ const RealityManipulation2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Manipulate Reality?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -236,6 +236,5 @@ const RealityManipulation2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RealityManipulation2026;

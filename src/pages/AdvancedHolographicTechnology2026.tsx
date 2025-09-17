@@ -11,6 +11,5 @@ const AdvancedHolographicTechnology2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedHolographicTechnology2026;

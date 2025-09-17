@@ -11,6 +11,5 @@ const InteractiveContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveContentShowcase2025;

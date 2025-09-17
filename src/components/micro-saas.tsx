@@ -11,6 +11,5 @@ const microSaas: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default microSaas;

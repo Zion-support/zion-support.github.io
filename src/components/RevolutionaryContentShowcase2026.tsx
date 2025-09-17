@@ -11,7 +11,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       icon: "🚀",
       link: "/pages/RevolutionaryTechBreakthrough2026",
       gradient: "from-purple-600 to-pink-600",
-      features: ["Quantum Supremacy", "Neural Interfaces", "Autonomous AI", "Space Technology"]
+      features: ["Quantum Supremacy", "Neural Interfaces", "Autonomous AI", "Space Technology"];
     },
     {
       title: "Next-Gen Innovation Hub 2026",
@@ -19,10 +19,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       icon: "🌟",
       link: "/pages/NextGenInnovationHub2026",
       gradient: "from-cyan-600 to-blue-600",
-      features: ["Research Labs", "Innovation Process", "Global Network", "Breakthrough Ideas"]
-    }
-  ];
-
+      features: ["Research Labs", "Innovation Process", "Global Network", "Breakthrough Ideas"];
+    };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -38,10 +36,10 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {contentItems.map((item, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: "0", y: 20 }}
-              animate={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={index};
+              initial={{ opacity: "0", y: 20 }};
+              animate={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.5, delay: index * 0.1 }};
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-center">
@@ -51,26 +49,25 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 <div className="flex flex-wrap justify-center gap-2 mb-6">
                   {item.features.map((feature, featureIndex) => (
                     <span
-                      key={featureIndex}
+                      key={featureIndex};
                       className="px-3 py-1 bg-white/10 rounded-full text-sm"
                     >
-                      {feature}
+                      {feature};
                     </span>
-                  ))}
+                  ))};
                 </div>
                 <a
-                  href={item.link}
-                  className={`inline-block px-6 py-3 bg-gradient-to-r ${item.gradient} rounded-lg text-white font-semibold hover:shadow-lg transition-all duration-300`}
+                  href={item.link};
+                  className={`inline-block px-6 py-3 bg-gradient-to-r ${item.gradient} rounded-lg text-white font-semibold hover:shadow-lg transition-all duration-300`};
                 >
                   Explore More
                 </a>
               </div>
             </motion.div>
-          ))}
+          ))};
         </div>
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentShowcase2026;

@@ -11,6 +11,5 @@ const FeaturedContentBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default FeaturedContentBanner;

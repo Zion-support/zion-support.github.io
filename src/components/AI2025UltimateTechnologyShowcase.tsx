@@ -11,6 +11,5 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025UltimateTechnologyShowcase;

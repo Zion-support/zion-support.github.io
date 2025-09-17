@@ -11,6 +11,5 @@ const AdvancedErrorBoundary: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedErrorBoundary;

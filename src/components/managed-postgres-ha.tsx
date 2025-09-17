@@ -11,6 +11,5 @@ const managedPostgresHa: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default managedPostgresHa;

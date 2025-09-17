@@ -11,6 +11,5 @@ const UltimateAIAssistant2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateAIAssistant2027;

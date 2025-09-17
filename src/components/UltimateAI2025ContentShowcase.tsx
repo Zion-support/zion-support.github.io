@@ -11,6 +11,5 @@ const UltimateAI2025ContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateAI2025ContentShowcase;

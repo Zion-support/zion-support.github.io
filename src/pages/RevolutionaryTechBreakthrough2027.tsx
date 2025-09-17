@@ -17,7 +17,7 @@ const RevolutionaryTechBreakthrough2027: React.FC = () => {
           </p>
         </div>
 
-        {/* Revolutionary Features Grid */}
+        {/* Revolutionary Features Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -62,7 +62,7 @@ const RevolutionaryTechBreakthrough2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">Ready for the Revolution?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -80,6 +80,5 @@ const RevolutionaryTechBreakthrough2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryTechBreakthrough2027;

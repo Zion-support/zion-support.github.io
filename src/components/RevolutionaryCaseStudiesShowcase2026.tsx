@@ -11,6 +11,5 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryCaseStudiesShowcase2026;

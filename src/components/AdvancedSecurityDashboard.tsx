@@ -11,6 +11,5 @@ const AdvancedSecurityDashboard: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedSecurityDashboard;

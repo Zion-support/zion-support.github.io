@@ -28,6 +28,5 @@ const SpaceTechRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SpaceTechRevolution2026;

@@ -11,6 +11,5 @@ const zeroTrustSecurityPlatform: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default zeroTrustSecurityPlatform;

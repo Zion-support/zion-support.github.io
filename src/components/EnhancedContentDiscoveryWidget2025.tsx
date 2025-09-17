@@ -11,6 +11,5 @@ const EnhancedContentDiscoveryWidget2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedContentDiscoveryWidget2025;

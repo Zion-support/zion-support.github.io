@@ -11,6 +11,5 @@ const AdvancedSecurity: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedSecurity;

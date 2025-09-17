@@ -11,6 +11,5 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025QuantumBreakthroughPromotionBanner;

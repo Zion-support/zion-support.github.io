@@ -11,6 +11,5 @@ const AdvancedStateManager: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedStateManager;

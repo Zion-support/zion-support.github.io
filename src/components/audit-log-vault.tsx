@@ -11,6 +11,5 @@ const auditLogVault: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default auditLogVault;

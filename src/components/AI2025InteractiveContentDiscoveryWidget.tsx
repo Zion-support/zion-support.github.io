@@ -11,6 +11,5 @@ const AI2025InteractiveContentDiscoveryWidget: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025InteractiveContentDiscoveryWidget;
